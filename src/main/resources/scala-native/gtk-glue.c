@@ -1,4 +1,5 @@
 #include <string.h>
+#include <graphene.h>
 
 void __sn_wrap_gtk_graphene_simd4f_add(const graphene_simd4f_t *a, const graphene_simd4f_t *b, graphene_simd4f_t *____return) {
   graphene_simd4f_t ____ret = graphene_simd4f_add(*a, *b);
