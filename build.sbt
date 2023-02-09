@@ -1,3 +1,4 @@
+resolvers ++= Resolver.sonatypeOssRepos("snapshots")
 import bindgen.interface.Binding
 import bindgen.plugin.BindgenMode
 enablePlugins(ScalaNativePlugin, BindgenPlugin)
@@ -21,10 +22,11 @@ bindgenMode := BindgenMode.Manual(
 bindgenBindings += {
   Binding(
     headerFile = findGtkHeader(),
-    packageName = "gtk",
+    packageName = "libgtk",
     clangFlags = pkgConfig("gtk4", "cflags"),
     cImports = List("graphene.h"),
-    multiFile = true
+    multiFile = true,
+    opaqueStructs = Set("G*")
   )
 }
 
