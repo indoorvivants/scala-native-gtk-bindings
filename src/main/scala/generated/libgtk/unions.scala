@@ -1,4 +1,4 @@
-package gtk
+package libgtk
 package unions
 
 import _root_.scala.scalanative.unsafe.*
@@ -6,13 +6,19 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-import _root_.gtk.enumerations.*
-import _root_.gtk.aliases.*
-import _root_.gtk.structs.*
-import _root_.gtk.unions.*
+import _root_.libgtk.enumerations.*
+import _root_.libgtk.aliases.*
+import _root_.libgtk.structs.*
+import _root_.libgtk.unions.*
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+*/
 opaque type GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object GDoubleIEEE754:
+  /**
+   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+  */
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct4Tag[guint, guint, guint, guint]
@@ -55,8 +61,14 @@ object GDoubleIEEE754:
     def mpn : GDoubleIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]]
     def mpn_=(value: GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+*/
 opaque type GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
 object GFloatIEEE754:
+  /**
+   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+  */
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[guint, guint, guint]
@@ -96,6 +108,9 @@ object GFloatIEEE754:
     def mpn : GFloatIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[GFloatIEEE754.Struct0]]
     def mpn_=(value: GFloatIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GFloatIEEE754.Struct0]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+*/
 opaque type GMutex = CArray[Byte, Nat._8]
 object GMutex:
   given _tag: Tag[GMutex] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -120,6 +135,9 @@ object GMutex:
     def i : CArray[guint, Nat._2] = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]]
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+*/
 opaque type GTokenValue = CArray[Byte, Nat._8]
 object GTokenValue:
   given _tag: Tag[GTokenValue] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -224,12 +242,21 @@ object GTokenValue:
     def v_error : guint = !struct.at(0).asInstanceOf[Ptr[guint]]
     def v_error_=(value: guint): Unit = !struct.at(0).asInstanceOf[Ptr[guint]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+*/
 opaque type GTypeCValue = CArray[Byte, Nat._1]
 object GTypeCValue:
   given _tag: Tag[GTypeCValue] = Tag.CArray[CChar, Nat._1](Tag.Byte, Tag.Nat1)
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+*/
 opaque type _GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object _GDoubleIEEE754:
+  /**
+   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+  */
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct4Tag[guint, guint, guint, guint]
@@ -272,8 +299,14 @@ object _GDoubleIEEE754:
     def mpn : _GDoubleIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]]
     def mpn_=(value: _GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+*/
 opaque type _GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
 object _GFloatIEEE754:
+  /**
+   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+  */
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[guint, guint, guint]
@@ -313,6 +346,9 @@ object _GFloatIEEE754:
     def mpn : _GFloatIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GFloatIEEE754.Struct0]]
     def mpn_=(value: _GFloatIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GFloatIEEE754.Struct0]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+*/
 opaque type _GMutex = CArray[Byte, Nat._8]
 object _GMutex:
   given _tag: Tag[_GMutex] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -337,6 +373,9 @@ object _GMutex:
     def i : CArray[guint, Nat._2] = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]]
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+*/
 opaque type _GTokenValue = CArray[Byte, Nat._8]
 object _GTokenValue:
   given _tag: Tag[_GTokenValue] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -441,12 +480,21 @@ object _GTokenValue:
     def v_error : guint = !struct.at(0).asInstanceOf[Ptr[guint]]
     def v_error_=(value: guint): Unit = !struct.at(0).asInstanceOf[Ptr[guint]] = value
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+*/
 opaque type _GTypeCValue = CArray[Byte, Nat._1]
 object _GTypeCValue:
   given _tag: Tag[_GTypeCValue] = Tag.CArray[CChar, Nat._1](Tag.Byte, Tag.Nat1)
 
+/**
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_path_data_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object _cairo_path_data_t:
+  /**
+   * [bindgen] header: /usr/include/cairo/cairo.h
+  */
   opaque type Struct0 = CStruct2[cairo_path_data_type_t, CInt]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct2Tag[cairo_path_data_type_t, CInt]
@@ -461,6 +509,9 @@ object _cairo_path_data_t:
       def type_=(value: cairo_path_data_type_t): Unit = !struct.at1 = value
       def length : CInt = struct._2
       def length_=(value: CInt): Unit = !struct.at2 = value
+  /**
+   * [bindgen] header: /usr/include/cairo/cairo.h
+  */
   opaque type Struct1 = CStruct2[Double, Double]
   object Struct1:
     given _tag: Tag[Struct1] = Tag.materializeCStruct2Tag[Double, Double]
@@ -497,6 +548,9 @@ object _cairo_path_data_t:
     def point : _cairo_path_data_t.Struct1 = !struct.at(0).asInstanceOf[Ptr[_cairo_path_data_t.Struct1]]
     def point_=(value: _cairo_path_data_t.Struct1): Unit = !struct.at(0).asInstanceOf[Ptr[_cairo_path_data_t.Struct1]] = value
 
+/**
+ * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+*/
 opaque type _hb_var_int_t = CArray[Byte, Nat._4]
 object _hb_var_int_t:
   given _tag: Tag[_hb_var_int_t] = Tag.CArray[CChar, Nat._4](Tag.Byte, Tag.Nat4)
@@ -553,8 +607,14 @@ object _hb_var_int_t:
     def i8 : CArray[int8_t, Nat._4] = !struct.at(0).asInstanceOf[Ptr[CArray[int8_t, Nat._4]]]
     def i8_=(value: CArray[int8_t, Nat._4]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[int8_t, Nat._4]]] = value
 
+/**
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type cairo_path_data_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object cairo_path_data_t:
+  /**
+   * [bindgen] header: /usr/include/cairo/cairo.h
+  */
   opaque type Struct0 = CStruct2[cairo_path_data_type_t, CInt]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct2Tag[cairo_path_data_type_t, CInt]
@@ -569,6 +629,9 @@ object cairo_path_data_t:
       def type_=(value: cairo_path_data_type_t): Unit = !struct.at1 = value
       def length : CInt = struct._2
       def length_=(value: CInt): Unit = !struct.at2 = value
+  /**
+   * [bindgen] header: /usr/include/cairo/cairo.h
+  */
   opaque type Struct1 = CStruct2[Double, Double]
   object Struct1:
     given _tag: Tag[Struct1] = Tag.materializeCStruct2Tag[Double, Double]
@@ -605,6 +668,9 @@ object cairo_path_data_t:
     def point : cairo_path_data_t.Struct1 = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct1]]
     def point_=(value: cairo_path_data_t.Struct1): Unit = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct1]] = value
 
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 opaque type graphene_simd4f_uif_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object graphene_simd4f_uif_t:
   given _tag: Tag[graphene_simd4f_uif_t] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
@@ -629,6 +695,9 @@ object graphene_simd4f_uif_t:
     def f : CArray[Float, Nat._4] = !struct.at(0).asInstanceOf[Ptr[CArray[Float, Nat._4]]]
     def f_=(value: CArray[Float, Nat._4]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[Float, Nat._4]]] = value
 
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 opaque type graphene_simd4f_union_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object graphene_simd4f_union_t:
   given _tag: Tag[graphene_simd4f_union_t] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
@@ -653,6 +722,9 @@ object graphene_simd4f_union_t:
     def f : CArray[Float, Nat._4] = !struct.at(0).asInstanceOf[Ptr[CArray[Float, Nat._4]]]
     def f_=(value: CArray[Float, Nat._4]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[Float, Nat._4]]] = value
 
+/**
+ * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+*/
 opaque type hb_var_int_t = CArray[Byte, Nat._4]
 object hb_var_int_t:
   given _tag: Tag[hb_var_int_t] = Tag.CArray[CChar, Nat._4](Tag.Byte, Tag.Nat4)
