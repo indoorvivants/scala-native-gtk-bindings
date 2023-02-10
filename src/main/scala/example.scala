@@ -1,10 +1,7 @@
 package sample
 
-import gtk.functions.*
-import gtk.enumerations.*
-import gtk.structs.*
-import gtk.aliases.*
-import gtk.fluent.*
+import libgtk.all.*
+import libgtk.fluent.*
 
 import scalanative.unsafe.*
 

@@ -1,11 +1,11 @@
-package gtk
+package libgtk
 package fluent
 
 import scalanative.unsafe.*
 
-import gtk.aliases.*
-import gtk.functions.g_signal_connect_data
-import gtk.enumerations.GConnectFlags
+import libgtk.aliases.*
+import libgtk.functions.g_signal_connect_data
+import libgtk.enumerations.GConnectFlags
 
 extension [T <: CFuncPtr](inline ptr: T)
   inline def asGCallback: GCallback =
