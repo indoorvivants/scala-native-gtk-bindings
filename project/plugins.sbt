@@ -12,8 +12,10 @@ addSbtPlugin(
   "com.indoorvivants" % "subatomic-plugin" % "0.0.7"
 )
 
+val BindgenVersion = sys.env.getOrElse("SN_BINDGEN_VERSION",  "0.0.15+8-e0506710-SNAPSHOT")
+
 addSbtPlugin(
-  "com.indoorvivants" % "bindgen-sbt-plugin" % "0.0.15+8-e0506710-SNAPSHOT"
+  "com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion
 )
 
 addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.11.0")
