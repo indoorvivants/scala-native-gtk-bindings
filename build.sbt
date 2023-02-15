@@ -51,3 +51,10 @@ def findGtkHeader() = {
       )
     )
 }
+
+pushRemoteCacheTo := Some(
+  MavenCache(
+    "local-cache",
+    (ThisBuild / baseDirectory).value / "target" / "remote-cache"
+  )
+)

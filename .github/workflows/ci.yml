@@ -14,14 +14,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - uses: coursier/cache-action@v6      
+
+      - name: SBT remote cache
+        id: remote-cache
+        uses: actions/cache@v3
+        with:
+          path: ./target/remote-cache
+          key: ${{ runner.os }}-remote-cache
+
+      - name: Pull cache 
+        run: sbt --client pullRemoteCache || echo 'remote cache not found'
 
       - name: Install GTK
         run: sudo apt-get install libgtk-4-dev
 
       - name: Build binary
-        run: sbt nativeLink
+        run: sbt --client nativeLink
+
+      - name: Push cache 
+        run: sbt --client pushRemoteCache
 
   mergify-build-checkpoint:
     runs-on: ubuntu-latest
