@@ -1,4 +1,4 @@
-package gtk
+package libgtk
 package enumerations
 
 import _root_.scala.scalanative.unsafe.*
@@ -6,17 +6,22 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-private[gtk] trait CEnum[T](using eq: T =:= Int):
+private[libgtk] trait CEnum[T](using eq: T =:= Int):
   given Tag[T] = Tag.Int.asInstanceOf[Tag[T]]
   extension (inline t: T) 
     inline def int: CInt = eq.apply(t)
     inline def value: CInt = eq.apply(t)
-private[gtk] trait CEnumU[T](using eq: T =:= UInt):
+private[libgtk] trait CEnumU[T](using eq: T =:= UInt):
   given Tag[T] = Tag.UInt.asInstanceOf[Tag[T]]
   extension (inline t: T)
    inline def int: CInt = eq.apply(t).toInt
    inline def uint: CUnsignedInt = eq.apply(t)
    inline def value: CUnsignedInt = eq.apply(t)
+/**
+ * GAppInfoCreateFlags: _APP_INFO_CREATE_NONE: No flags. _APP_INFO_CREATE_NEEDS_TERMINAL: Application opens in a terminal window. _APP_INFO_CREATE_SUPPORTS_URIS: Application supports URI arguments. _APP_INFO_CREATE_SUPPORTS_STARTUP_NOTIFICATION: Application supports startup notification. Since 2.26
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GAppInfoCreateFlags = CUnsignedInt
 object GAppInfoCreateFlags extends CEnumU[GAppInfoCreateFlags]:
   given _tag: Tag[GAppInfoCreateFlags] = Tag.UInt
@@ -26,7 +31,7 @@ object GAppInfoCreateFlags extends CEnumU[GAppInfoCreateFlags]:
   val G_APP_INFO_CREATE_SUPPORTS_URIS = define(2)
   val G_APP_INFO_CREATE_SUPPORTS_STARTUP_NOTIFICATION = define(4)
   inline def getName(inline value: GAppInfoCreateFlags): Option[String] =
-    value match
+    inline value match
       case G_APP_INFO_CREATE_NONE => Some("G_APP_INFO_CREATE_NONE")
       case G_APP_INFO_CREATE_NEEDS_TERMINAL => Some("G_APP_INFO_CREATE_NEEDS_TERMINAL")
       case G_APP_INFO_CREATE_SUPPORTS_URIS => Some("G_APP_INFO_CREATE_SUPPORTS_URIS")
@@ -37,6 +42,11 @@ object GAppInfoCreateFlags extends CEnumU[GAppInfoCreateFlags]:
     inline def |(b: GAppInfoCreateFlags): GAppInfoCreateFlags = a | b
     inline def is(b: GAppInfoCreateFlags): Boolean = (a & b) == b
 
+/**
+ * GApplicationFlags: _APPLICATION_FLAGS_NONE: Default _APPLICATION_IS_SERVICE: Run as a service. In this mode, registration fails if the service is already running, and the application will initially wait up to 10 seconds for an initial activation message to arrive. _APPLICATION_IS_LAUNCHER: Don't try to become the primary instance. _APPLICATION_HANDLES_OPEN: This application handles opening files (in the primary instance). Note that this flag only affects the default implementation of local_command_line(), and has no effect if %G_APPLICATION_HANDLES_COMMAND_LINE is given. See g_application_run() for details. _APPLICATION_HANDLES_COMMAND_LINE: This application handles command line arguments (in the primary instance). Note that this flag only affect the default implementation of local_command_line(). See g_application_run() for details. _APPLICATION_SEND_ENVIRONMENT: Send the environment of the launching process to the primary instance. Set this flag if your application is expected to behave differently depending on certain environment variables. For instance, an editor might be expected to use the `GIT_COMMITTER_NAME` environment variable when editing a git commit message. The environment is available to the #GApplication::command-line signal handler, via g_application_command_line_getenv(). _APPLICATION_NON_UNIQUE: Make no attempts to do any of the typical single-instance application negotiation, even if the application ID is given. The application neither attempts to become the owner of the application ID nor does it check if an existing owner already exists. Everything occurs in the local process. Since: 2.30. _APPLICATION_CAN_OVERRIDE_APP_ID: Allow users to override the application ID from the command line with `--gapplication-app-id`. Since: 2.48 _APPLICATION_ALLOW_REPLACEMENT: Allow another instance to take over the bus name. Since: 2.60 _APPLICATION_REPLACE: Take over from another instance. This flag is usually set by passing `--gapplication-replace` on the commandline. Since: 2.60
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GApplicationFlags = CUnsignedInt
 object GApplicationFlags extends CEnumU[GApplicationFlags]:
   given _tag: Tag[GApplicationFlags] = Tag.UInt
@@ -52,7 +62,7 @@ object GApplicationFlags extends CEnumU[GApplicationFlags]:
   val G_APPLICATION_ALLOW_REPLACEMENT = define(128)
   val G_APPLICATION_REPLACE = define(256)
   inline def getName(inline value: GApplicationFlags): Option[String] =
-    value match
+    inline value match
       case G_APPLICATION_FLAGS_NONE => Some("G_APPLICATION_FLAGS_NONE")
       case G_APPLICATION_IS_SERVICE => Some("G_APPLICATION_IS_SERVICE")
       case G_APPLICATION_IS_LAUNCHER => Some("G_APPLICATION_IS_LAUNCHER")
@@ -69,6 +79,9 @@ object GApplicationFlags extends CEnumU[GApplicationFlags]:
     inline def |(b: GApplicationFlags): GApplicationFlags = a | b
     inline def is(b: GApplicationFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gstrfuncs.h
+*/
 opaque type GAsciiType = CUnsignedInt
 object GAsciiType extends CEnumU[GAsciiType]:
   given _tag: Tag[GAsciiType] = Tag.UInt
@@ -85,7 +98,7 @@ object GAsciiType extends CEnumU[GAsciiType]:
   val G_ASCII_UPPER = define(512)
   val G_ASCII_XDIGIT = define(1024)
   inline def getName(inline value: GAsciiType): Option[String] =
-    value match
+    inline value match
       case G_ASCII_ALNUM => Some("G_ASCII_ALNUM")
       case G_ASCII_ALPHA => Some("G_ASCII_ALPHA")
       case G_ASCII_CNTRL => Some("G_ASCII_CNTRL")
@@ -103,6 +116,11 @@ object GAsciiType extends CEnumU[GAsciiType]:
     inline def |(b: GAsciiType): GAsciiType = a | b
     inline def is(b: GAsciiType): Boolean = (a & b) == b
 
+/**
+ * GAskPasswordFlags: _ASK_PASSWORD_NEED_PASSWORD: operation requires a password. _ASK_PASSWORD_NEED_USERNAME: operation requires a username. _ASK_PASSWORD_NEED_DOMAIN: operation requires a domain. _ASK_PASSWORD_SAVING_SUPPORTED: operation supports saving settings. _ASK_PASSWORD_ANONYMOUS_SUPPORTED: operation supports anonymous users. _ASK_PASSWORD_TCRYPT: operation takes TCRYPT parameters (Since: 2.58)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GAskPasswordFlags = CUnsignedInt
 object GAskPasswordFlags extends CEnumU[GAskPasswordFlags]:
   given _tag: Tag[GAskPasswordFlags] = Tag.UInt
@@ -114,7 +132,7 @@ object GAskPasswordFlags extends CEnumU[GAskPasswordFlags]:
   val G_ASK_PASSWORD_ANONYMOUS_SUPPORTED = define(16)
   val G_ASK_PASSWORD_TCRYPT = define(32)
   inline def getName(inline value: GAskPasswordFlags): Option[String] =
-    value match
+    inline value match
       case G_ASK_PASSWORD_NEED_PASSWORD => Some("G_ASK_PASSWORD_NEED_PASSWORD")
       case G_ASK_PASSWORD_NEED_USERNAME => Some("G_ASK_PASSWORD_NEED_USERNAME")
       case G_ASK_PASSWORD_NEED_DOMAIN => Some("G_ASK_PASSWORD_NEED_DOMAIN")
@@ -127,6 +145,11 @@ object GAskPasswordFlags extends CEnumU[GAskPasswordFlags]:
     inline def |(b: GAskPasswordFlags): GAskPasswordFlags = a | b
     inline def is(b: GAskPasswordFlags): Boolean = (a & b) == b
 
+/**
+ * GBindingFlags: _BINDING_DEFAULT: The default binding; if the source property changes, the target property is updated with its value. _BINDING_BIDIRECTIONAL: Bidirectional binding; if either the property of the source or the property of the target changes, the other is updated. _BINDING_SYNC_CREATE: Synchronize the values of the source and target properties when creating the binding; the direction of the synchronization is always from the source to the target. _BINDING_INVERT_BOOLEAN: If the two properties being bound are booleans, setting one to %TRUE will result in the other being set to %FALSE and vice versa. This flag will only work for boolean properties, and cannot be used when passing custom transformation functions to g_object_bind_property_full().
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gbinding.h
+*/
 opaque type GBindingFlags = CUnsignedInt
 object GBindingFlags extends CEnumU[GBindingFlags]:
   given _tag: Tag[GBindingFlags] = Tag.UInt
@@ -136,7 +159,7 @@ object GBindingFlags extends CEnumU[GBindingFlags]:
   val G_BINDING_SYNC_CREATE = define(2)
   val G_BINDING_INVERT_BOOLEAN = define(4)
   inline def getName(inline value: GBindingFlags): Option[String] =
-    value match
+    inline value match
       case G_BINDING_DEFAULT => Some("G_BINDING_DEFAULT")
       case G_BINDING_BIDIRECTIONAL => Some("G_BINDING_BIDIRECTIONAL")
       case G_BINDING_SYNC_CREATE => Some("G_BINDING_SYNC_CREATE")
@@ -147,6 +170,11 @@ object GBindingFlags extends CEnumU[GBindingFlags]:
     inline def |(b: GBindingFlags): GBindingFlags = a | b
     inline def is(b: GBindingFlags): Boolean = (a & b) == b
 
+/**
+ * GBookmarkFileError: _BOOKMARK_FILE_ERROR_INVALID_URI: URI was ill-formed _BOOKMARK_FILE_ERROR_INVALID_VALUE: a requested field was not found _BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED: a requested application did not register a bookmark _BOOKMARK_FILE_ERROR_URI_NOT_FOUND: a requested URI was not found _BOOKMARK_FILE_ERROR_READ: document was ill formed _BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING: the text being parsed was in an unknown encoding _BOOKMARK_FILE_ERROR_WRITE: an error occurred while writing _BOOKMARK_FILE_ERROR_FILE_NOT_FOUND: requested file was not found
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gbookmarkfile.h
+*/
 opaque type GBookmarkFileError = CUnsignedInt
 object GBookmarkFileError extends CEnumU[GBookmarkFileError]:
   given _tag: Tag[GBookmarkFileError] = Tag.UInt
@@ -160,7 +188,7 @@ object GBookmarkFileError extends CEnumU[GBookmarkFileError]:
   val G_BOOKMARK_FILE_ERROR_WRITE = define(6)
   val G_BOOKMARK_FILE_ERROR_FILE_NOT_FOUND = define(7)
   inline def getName(inline value: GBookmarkFileError): Option[String] =
-    value match
+    inline value match
       case G_BOOKMARK_FILE_ERROR_INVALID_URI => Some("G_BOOKMARK_FILE_ERROR_INVALID_URI")
       case G_BOOKMARK_FILE_ERROR_INVALID_VALUE => Some("G_BOOKMARK_FILE_ERROR_INVALID_VALUE")
       case G_BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED => Some("G_BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED")
@@ -175,6 +203,11 @@ object GBookmarkFileError extends CEnumU[GBookmarkFileError]:
     inline def |(b: GBookmarkFileError): GBookmarkFileError = a | b
     inline def is(b: GBookmarkFileError): Boolean = (a & b) == b
 
+/**
+ * GBusNameOwnerFlags: _BUS_NAME_OWNER_FLAGS_NONE: No flags set. _BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT: Allow another message bus connection to claim the name. _BUS_NAME_OWNER_FLAGS_REPLACE: If another message bus connection owns the name and have specified %G_BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT, then take the name from the other connection. _BUS_NAME_OWNER_FLAGS_DO_NOT_QUEUE: If another message bus connection owns the name, immediately return an error from g_bus_own_name() rather than entering the waiting queue for that name. (Since 2.54)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GBusNameOwnerFlags = CUnsignedInt
 object GBusNameOwnerFlags extends CEnumU[GBusNameOwnerFlags]:
   given _tag: Tag[GBusNameOwnerFlags] = Tag.UInt
@@ -184,7 +217,7 @@ object GBusNameOwnerFlags extends CEnumU[GBusNameOwnerFlags]:
   val G_BUS_NAME_OWNER_FLAGS_REPLACE = define(2)
   val G_BUS_NAME_OWNER_FLAGS_DO_NOT_QUEUE = define(4)
   inline def getName(inline value: GBusNameOwnerFlags): Option[String] =
-    value match
+    inline value match
       case G_BUS_NAME_OWNER_FLAGS_NONE => Some("G_BUS_NAME_OWNER_FLAGS_NONE")
       case G_BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT => Some("G_BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT")
       case G_BUS_NAME_OWNER_FLAGS_REPLACE => Some("G_BUS_NAME_OWNER_FLAGS_REPLACE")
@@ -195,6 +228,11 @@ object GBusNameOwnerFlags extends CEnumU[GBusNameOwnerFlags]:
     inline def |(b: GBusNameOwnerFlags): GBusNameOwnerFlags = a | b
     inline def is(b: GBusNameOwnerFlags): Boolean = (a & b) == b
 
+/**
+ * GBusNameWatcherFlags: _BUS_NAME_WATCHER_FLAGS_NONE: No flags set. _BUS_NAME_WATCHER_FLAGS_AUTO_START: If no-one owns the name when beginning to watch the name, ask the bus to launch an owner for the name.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GBusNameWatcherFlags = CUnsignedInt
 object GBusNameWatcherFlags extends CEnumU[GBusNameWatcherFlags]:
   given _tag: Tag[GBusNameWatcherFlags] = Tag.UInt
@@ -202,7 +240,7 @@ object GBusNameWatcherFlags extends CEnumU[GBusNameWatcherFlags]:
   val G_BUS_NAME_WATCHER_FLAGS_NONE = define(0)
   val G_BUS_NAME_WATCHER_FLAGS_AUTO_START = define(1)
   inline def getName(inline value: GBusNameWatcherFlags): Option[String] =
-    value match
+    inline value match
       case G_BUS_NAME_WATCHER_FLAGS_NONE => Some("G_BUS_NAME_WATCHER_FLAGS_NONE")
       case G_BUS_NAME_WATCHER_FLAGS_AUTO_START => Some("G_BUS_NAME_WATCHER_FLAGS_AUTO_START")
       case _ => None
@@ -211,6 +249,11 @@ object GBusNameWatcherFlags extends CEnumU[GBusNameWatcherFlags]:
     inline def |(b: GBusNameWatcherFlags): GBusNameWatcherFlags = a | b
     inline def is(b: GBusNameWatcherFlags): Boolean = (a & b) == b
 
+/**
+ * GBusType: _BUS_TYPE_STARTER: An alias for the message bus that activated the process, if any. _BUS_TYPE_NONE: Not a message bus. _BUS_TYPE_SYSTEM: The system-wide message bus. _BUS_TYPE_SESSION: The login session message bus.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GBusType = CInt
 object GBusType extends CEnum[GBusType]:
   given _tag: Tag[GBusType] = Tag.Int
@@ -220,7 +263,7 @@ object GBusType extends CEnum[GBusType]:
   val G_BUS_TYPE_SYSTEM = define(1)
   val G_BUS_TYPE_SESSION = define(2)
   inline def getName(inline value: GBusType): Option[String] =
-    value match
+    inline value match
       case G_BUS_TYPE_STARTER => Some("G_BUS_TYPE_STARTER")
       case G_BUS_TYPE_NONE => Some("G_BUS_TYPE_NONE")
       case G_BUS_TYPE_SYSTEM => Some("G_BUS_TYPE_SYSTEM")
@@ -231,6 +274,11 @@ object GBusType extends CEnum[GBusType]:
     inline def |(b: GBusType): GBusType = a | b
     inline def is(b: GBusType): Boolean = (a & b) == b
 
+/**
+ * GChecksumType: _CHECKSUM_MD5: Use the MD5 hashing algorithm _CHECKSUM_SHA1: Use the SHA-1 hashing algorithm _CHECKSUM_SHA256: Use the SHA-256 hashing algorithm _CHECKSUM_SHA384: Use the SHA-384 hashing algorithm (Since: 2.51) _CHECKSUM_SHA512: Use the SHA-512 hashing algorithm (Since: 2.36)
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gchecksum.h
+*/
 opaque type GChecksumType = CUnsignedInt
 object GChecksumType extends CEnumU[GChecksumType]:
   given _tag: Tag[GChecksumType] = Tag.UInt
@@ -241,7 +289,7 @@ object GChecksumType extends CEnumU[GChecksumType]:
   val G_CHECKSUM_SHA512 = define(3)
   val G_CHECKSUM_SHA384 = define(4)
   inline def getName(inline value: GChecksumType): Option[String] =
-    value match
+    inline value match
       case G_CHECKSUM_MD5 => Some("G_CHECKSUM_MD5")
       case G_CHECKSUM_SHA1 => Some("G_CHECKSUM_SHA1")
       case G_CHECKSUM_SHA256 => Some("G_CHECKSUM_SHA256")
@@ -253,6 +301,11 @@ object GChecksumType extends CEnumU[GChecksumType]:
     inline def |(b: GChecksumType): GChecksumType = a | b
     inline def is(b: GChecksumType): Boolean = (a & b) == b
 
+/**
+ * GConnectFlags: _CONNECT_AFTER: whether the handler should be called before or after the default handler of the signal. _CONNECT_SWAPPED: whether the instance and data should be swapped when calling the handler; see g_signal_connect_swapped() for an example.
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+*/
 opaque type GConnectFlags = CUnsignedInt
 object GConnectFlags extends CEnumU[GConnectFlags]:
   given _tag: Tag[GConnectFlags] = Tag.UInt
@@ -260,7 +313,7 @@ object GConnectFlags extends CEnumU[GConnectFlags]:
   val G_CONNECT_AFTER = define(1)
   val G_CONNECT_SWAPPED = define(2)
   inline def getName(inline value: GConnectFlags): Option[String] =
-    value match
+    inline value match
       case G_CONNECT_AFTER => Some("G_CONNECT_AFTER")
       case G_CONNECT_SWAPPED => Some("G_CONNECT_SWAPPED")
       case _ => None
@@ -269,6 +322,11 @@ object GConnectFlags extends CEnumU[GConnectFlags]:
     inline def |(b: GConnectFlags): GConnectFlags = a | b
     inline def is(b: GConnectFlags): Boolean = (a & b) == b
 
+/**
+ * GConvertError: _CONVERT_ERROR_NO_CONVERSION: Conversion between the requested character sets is not supported. _CONVERT_ERROR_ILLEGAL_SEQUENCE: Invalid byte sequence in conversion input; or the character sequence could not be represented in the target character set. _CONVERT_ERROR_FAILED: Conversion failed for some reason. _CONVERT_ERROR_PARTIAL_INPUT: Partial character sequence at end of input. _CONVERT_ERROR_BAD_URI: URI is invalid. _CONVERT_ERROR_NOT_ABSOLUTE_PATH: Pathname is not an absolute path. _CONVERT_ERROR_NO_MEMORY: No memory available. Since: 2.40 _CONVERT_ERROR_EMBEDDED_NUL: An embedded NUL character is present in conversion output where a NUL-terminated string is expected. Since: 2.56
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gconvert.h
+*/
 opaque type GConvertError = CUnsignedInt
 object GConvertError extends CEnumU[GConvertError]:
   given _tag: Tag[GConvertError] = Tag.UInt
@@ -282,7 +340,7 @@ object GConvertError extends CEnumU[GConvertError]:
   val G_CONVERT_ERROR_NO_MEMORY = define(6)
   val G_CONVERT_ERROR_EMBEDDED_NUL = define(7)
   inline def getName(inline value: GConvertError): Option[String] =
-    value match
+    inline value match
       case G_CONVERT_ERROR_NO_CONVERSION => Some("G_CONVERT_ERROR_NO_CONVERSION")
       case G_CONVERT_ERROR_ILLEGAL_SEQUENCE => Some("G_CONVERT_ERROR_ILLEGAL_SEQUENCE")
       case G_CONVERT_ERROR_FAILED => Some("G_CONVERT_ERROR_FAILED")
@@ -297,6 +355,11 @@ object GConvertError extends CEnumU[GConvertError]:
     inline def |(b: GConvertError): GConvertError = a | b
     inline def is(b: GConvertError): Boolean = (a & b) == b
 
+/**
+ * GConverterFlags: _CONVERTER_NO_FLAGS: No flags. _CONVERTER_INPUT_AT_END: At end of input data _CONVERTER_FLUSH: Flush data
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GConverterFlags = CUnsignedInt
 object GConverterFlags extends CEnumU[GConverterFlags]:
   given _tag: Tag[GConverterFlags] = Tag.UInt
@@ -305,7 +368,7 @@ object GConverterFlags extends CEnumU[GConverterFlags]:
   val G_CONVERTER_INPUT_AT_END = define(1)
   val G_CONVERTER_FLUSH = define(2)
   inline def getName(inline value: GConverterFlags): Option[String] =
-    value match
+    inline value match
       case G_CONVERTER_NO_FLAGS => Some("G_CONVERTER_NO_FLAGS")
       case G_CONVERTER_INPUT_AT_END => Some("G_CONVERTER_INPUT_AT_END")
       case G_CONVERTER_FLUSH => Some("G_CONVERTER_FLUSH")
@@ -315,6 +378,11 @@ object GConverterFlags extends CEnumU[GConverterFlags]:
     inline def |(b: GConverterFlags): GConverterFlags = a | b
     inline def is(b: GConverterFlags): Boolean = (a & b) == b
 
+/**
+ * GConverterResult: _CONVERTER_ERROR: There was an error during conversion. _CONVERTER_CONVERTED: Some data was consumed or produced _CONVERTER_FINISHED: The conversion is finished _CONVERTER_FLUSHED: Flushing is finished
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GConverterResult = CUnsignedInt
 object GConverterResult extends CEnumU[GConverterResult]:
   given _tag: Tag[GConverterResult] = Tag.UInt
@@ -324,7 +392,7 @@ object GConverterResult extends CEnumU[GConverterResult]:
   val G_CONVERTER_FINISHED = define(2)
   val G_CONVERTER_FLUSHED = define(3)
   inline def getName(inline value: GConverterResult): Option[String] =
-    value match
+    inline value match
       case G_CONVERTER_ERROR => Some("G_CONVERTER_ERROR")
       case G_CONVERTER_CONVERTED => Some("G_CONVERTER_CONVERTED")
       case G_CONVERTER_FINISHED => Some("G_CONVERTER_FINISHED")
@@ -335,6 +403,11 @@ object GConverterResult extends CEnumU[GConverterResult]:
     inline def |(b: GConverterResult): GConverterResult = a | b
     inline def is(b: GConverterResult): Boolean = (a & b) == b
 
+/**
+ * GCredentialsType: _CREDENTIALS_TYPE_INVALID: Indicates an invalid native credential type. _CREDENTIALS_TYPE_LINUX_UCRED: The native credentials type is a `struct ucred`. _CREDENTIALS_TYPE_FREEBSD_CMSGCRED: The native credentials type is a `struct cmsgcred`. _CREDENTIALS_TYPE_OPENBSD_SOCKPEERCRED: The native credentials type is a `struct sockpeercred`. Added in 2.30. _CREDENTIALS_TYPE_SOLARIS_UCRED: The native credentials type is a `ucred_t`. Added in 2.40. _CREDENTIALS_TYPE_NETBSD_UNPCBID: The native credentials type is a `struct unpcbid`. Added in 2.42. _CREDENTIALS_TYPE_APPLE_XUCRED: The native credentials type is a `struct xucred`. Added in 2.66. _CREDENTIALS_TYPE_WIN32_PID: The native credentials type is a PID `DWORD`. Added in 2.72.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GCredentialsType = CUnsignedInt
 object GCredentialsType extends CEnumU[GCredentialsType]:
   given _tag: Tag[GCredentialsType] = Tag.UInt
@@ -348,7 +421,7 @@ object GCredentialsType extends CEnumU[GCredentialsType]:
   val G_CREDENTIALS_TYPE_APPLE_XUCRED = define(6)
   val G_CREDENTIALS_TYPE_WIN32_PID = define(7)
   inline def getName(inline value: GCredentialsType): Option[String] =
-    value match
+    inline value match
       case G_CREDENTIALS_TYPE_INVALID => Some("G_CREDENTIALS_TYPE_INVALID")
       case G_CREDENTIALS_TYPE_LINUX_UCRED => Some("G_CREDENTIALS_TYPE_LINUX_UCRED")
       case G_CREDENTIALS_TYPE_FREEBSD_CMSGCRED => Some("G_CREDENTIALS_TYPE_FREEBSD_CMSGCRED")
@@ -363,6 +436,11 @@ object GCredentialsType extends CEnumU[GCredentialsType]:
     inline def |(b: GCredentialsType): GCredentialsType = a | b
     inline def is(b: GCredentialsType): Boolean = (a & b) == b
 
+/**
+ * GDBusCallFlags: _DBUS_CALL_FLAGS_NONE: No flags set. _DBUS_CALL_FLAGS_NO_AUTO_START: The bus must not launch an owner for the destination name in response to this method invocation. _DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION: the caller is prepared to wait for interactive authorization. Since 2.46.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusCallFlags = CUnsignedInt
 object GDBusCallFlags extends CEnumU[GDBusCallFlags]:
   given _tag: Tag[GDBusCallFlags] = Tag.UInt
@@ -371,7 +449,7 @@ object GDBusCallFlags extends CEnumU[GDBusCallFlags]:
   val G_DBUS_CALL_FLAGS_NO_AUTO_START = define(1)
   val G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION = define(2)
   inline def getName(inline value: GDBusCallFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_CALL_FLAGS_NONE => Some("G_DBUS_CALL_FLAGS_NONE")
       case G_DBUS_CALL_FLAGS_NO_AUTO_START => Some("G_DBUS_CALL_FLAGS_NO_AUTO_START")
       case G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION => Some("G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION")
@@ -381,6 +459,11 @@ object GDBusCallFlags extends CEnumU[GDBusCallFlags]:
     inline def |(b: GDBusCallFlags): GDBusCallFlags = a | b
     inline def is(b: GDBusCallFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusCapabilityFlags: _DBUS_CAPABILITY_FLAGS_NONE: No flags set. _DBUS_CAPABILITY_FLAGS_UNIX_FD_PASSING: The connection supports exchanging UNIX file descriptors with the remote peer.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusCapabilityFlags = CUnsignedInt
 object GDBusCapabilityFlags extends CEnumU[GDBusCapabilityFlags]:
   given _tag: Tag[GDBusCapabilityFlags] = Tag.UInt
@@ -388,7 +471,7 @@ object GDBusCapabilityFlags extends CEnumU[GDBusCapabilityFlags]:
   val G_DBUS_CAPABILITY_FLAGS_NONE = define(0)
   val G_DBUS_CAPABILITY_FLAGS_UNIX_FD_PASSING = define(1)
   inline def getName(inline value: GDBusCapabilityFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_CAPABILITY_FLAGS_NONE => Some("G_DBUS_CAPABILITY_FLAGS_NONE")
       case G_DBUS_CAPABILITY_FLAGS_UNIX_FD_PASSING => Some("G_DBUS_CAPABILITY_FLAGS_UNIX_FD_PASSING")
       case _ => None
@@ -397,6 +480,11 @@ object GDBusCapabilityFlags extends CEnumU[GDBusCapabilityFlags]:
     inline def |(b: GDBusCapabilityFlags): GDBusCapabilityFlags = a | b
     inline def is(b: GDBusCapabilityFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusConnectionFlags: _DBUS_CONNECTION_FLAGS_NONE: No flags set. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT: Perform authentication against server. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_SERVER: Perform authentication against client. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS: When authenticating as a server, allow the anonymous authentication method. _DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION: Pass this flag if connecting to a peer that is a message bus. This means that the Hello() method will be invoked as part of the connection setup. _DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING: If set, processing of D-Bus messages is delayed until g_dbus_connection_start_message_processing() is called. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER: When authenticating as a server, require the UID of the peer to be the same as the UID of the server. (Since: 2.68)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusConnectionFlags = CUnsignedInt
 object GDBusConnectionFlags extends CEnumU[GDBusConnectionFlags]:
   given _tag: Tag[GDBusConnectionFlags] = Tag.UInt
@@ -409,7 +497,7 @@ object GDBusConnectionFlags extends CEnumU[GDBusConnectionFlags]:
   val G_DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING = define(16)
   val G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER = define(32)
   inline def getName(inline value: GDBusConnectionFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_CONNECTION_FLAGS_NONE => Some("G_DBUS_CONNECTION_FLAGS_NONE")
       case G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT => Some("G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT")
       case G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_SERVER => Some("G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_SERVER")
@@ -423,6 +511,11 @@ object GDBusConnectionFlags extends CEnumU[GDBusConnectionFlags]:
     inline def |(b: GDBusConnectionFlags): GDBusConnectionFlags = a | b
     inline def is(b: GDBusConnectionFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusError: _DBUS_ERROR_FAILED: A generic error; "something went wrong" - see the error message for more. _DBUS_ERROR_NO_MEMORY: There was not enough memory to complete an operation. _DBUS_ERROR_SERVICE_UNKNOWN: The bus doesn't know how to launch a service to supply the bus name you wanted. _DBUS_ERROR_NAME_HAS_NO_OWNER: The bus name you referenced doesn't exist (i.e. no application owns it). _DBUS_ERROR_NO_REPLY: No reply to a message expecting one, usually means a timeout occurred. _DBUS_ERROR_IO_ERROR: Something went wrong reading or writing to a socket, for example. _DBUS_ERROR_BAD_ADDRESS: A D-Bus bus address was malformed. _DBUS_ERROR_NOT_SUPPORTED: Requested operation isn't supported (like ENOSYS on UNIX). _DBUS_ERROR_LIMITS_EXCEEDED: Some limited resource is exhausted. _DBUS_ERROR_ACCESS_DENIED: Security restrictions don't allow doing what you're trying to do. _DBUS_ERROR_AUTH_FAILED: Authentication didn't work. _DBUS_ERROR_NO_SERVER: Unable to connect to server (probably caused by ECONNREFUSED on a socket). _DBUS_ERROR_TIMEOUT: Certain timeout errors, possibly ETIMEDOUT on a socket. Note that %G_DBUS_ERROR_NO_REPLY is used for message reply timeouts. Warning: this is confusingly-named given that %G_DBUS_ERROR_TIMED_OUT also exists. We can't fix it for compatibility reasons so just be careful. _DBUS_ERROR_NO_NETWORK: No network access (probably ENETUNREACH on a socket). _DBUS_ERROR_ADDRESS_IN_USE: Can't bind a socket since its address is in use (i.e. EADDRINUSE). _DBUS_ERROR_DISCONNECTED: The connection is disconnected and you're trying to use it. _DBUS_ERROR_INVALID_ARGS: Invalid arguments passed to a method call. _DBUS_ERROR_FILE_NOT_FOUND: Missing file. _DBUS_ERROR_FILE_EXISTS: Existing file and the operation you're using does not silently overwrite. _DBUS_ERROR_UNKNOWN_METHOD: Method name you invoked isn't known by the object you invoked it on. _DBUS_ERROR_UNKNOWN_OBJECT: Object you invoked a method on isn't known. Since 2.42 _DBUS_ERROR_UNKNOWN_INTERFACE: Interface you invoked a method on isn't known by the object. Since 2.42 _DBUS_ERROR_UNKNOWN_PROPERTY: Property you tried to access isn't known by the object. Since 2.42 _DBUS_ERROR_PROPERTY_READ_ONLY: Property you tried to set is read-only. Since 2.42 _DBUS_ERROR_TIMED_OUT: Certain timeout errors, e.g. while starting a service. Warning: this is confusingly-named given that %G_DBUS_ERROR_TIMEOUT also exists. We can't fix it for compatibility reasons so just be careful. _DBUS_ERROR_MATCH_RULE_NOT_FOUND: Tried to remove or modify a match rule that didn't exist. _DBUS_ERROR_MATCH_RULE_INVALID: The match rule isn't syntactically valid. _DBUS_ERROR_SPAWN_EXEC_FAILED: While starting a new process, the exec() call failed. _DBUS_ERROR_SPAWN_FORK_FAILED: While starting a new process, the fork() call failed. _DBUS_ERROR_SPAWN_CHILD_EXITED: While starting a new process, the child exited with a status code. _DBUS_ERROR_SPAWN_CHILD_SIGNALED: While starting a new process, the child exited on a signal. _DBUS_ERROR_SPAWN_FAILED: While starting a new process, something went wrong. _DBUS_ERROR_SPAWN_SETUP_FAILED: We failed to setup the environment correctly. _DBUS_ERROR_SPAWN_CONFIG_INVALID: We failed to setup the config parser correctly. _DBUS_ERROR_SPAWN_SERVICE_INVALID: Bus name was not valid. _DBUS_ERROR_SPAWN_SERVICE_NOT_FOUND: Service file not found in system-services directory. _DBUS_ERROR_SPAWN_PERMISSIONS_INVALID: Permissions are incorrect on the setuid helper. _DBUS_ERROR_SPAWN_FILE_INVALID: Service file invalid (Name, User or Exec missing). _DBUS_ERROR_SPAWN_NO_MEMORY: Tried to get a UNIX process ID and it wasn't available. _DBUS_ERROR_UNIX_PROCESS_ID_UNKNOWN: Tried to get a UNIX process ID and it wasn't available. _DBUS_ERROR_INVALID_SIGNATURE: A type signature is not valid. _DBUS_ERROR_INVALID_FILE_CONTENT: A file contains invalid syntax or is otherwise broken. _DBUS_ERROR_SELINUX_SECURITY_CONTEXT_UNKNOWN: Asked for SELinux security context and it wasn't available. _DBUS_ERROR_ADT_AUDIT_DATA_UNKNOWN: Asked for ADT audit data and it wasn't available. _DBUS_ERROR_OBJECT_PATH_IN_USE: There's already an object with the requested object path.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusError = CUnsignedInt
 object GDBusError extends CEnumU[GDBusError]:
   given _tag: Tag[GDBusError] = Tag.UInt
@@ -473,7 +566,7 @@ object GDBusError extends CEnumU[GDBusError]:
   val G_DBUS_ERROR_UNKNOWN_PROPERTY = define(43)
   val G_DBUS_ERROR_PROPERTY_READ_ONLY = define(44)
   inline def getName(inline value: GDBusError): Option[String] =
-    value match
+    inline value match
       case G_DBUS_ERROR_FAILED => Some("G_DBUS_ERROR_FAILED")
       case G_DBUS_ERROR_NO_MEMORY => Some("G_DBUS_ERROR_NO_MEMORY")
       case G_DBUS_ERROR_SERVICE_UNKNOWN => Some("G_DBUS_ERROR_SERVICE_UNKNOWN")
@@ -525,6 +618,11 @@ object GDBusError extends CEnumU[GDBusError]:
     inline def |(b: GDBusError): GDBusError = a | b
     inline def is(b: GDBusError): Boolean = (a & b) == b
 
+/**
+ * GDBusInterfaceSkeletonFlags: _DBUS_INTERFACE_SKELETON_FLAGS_NONE: No flags set. _DBUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD: Each method invocation is handled in a thread dedicated to the invocation. This means that the method implementation can use blocking IO without blocking any other part of the process. It also means that the method implementation must use locking to access data structures used by other threads.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusInterfaceSkeletonFlags = CUnsignedInt
 object GDBusInterfaceSkeletonFlags extends CEnumU[GDBusInterfaceSkeletonFlags]:
   given _tag: Tag[GDBusInterfaceSkeletonFlags] = Tag.UInt
@@ -532,7 +630,7 @@ object GDBusInterfaceSkeletonFlags extends CEnumU[GDBusInterfaceSkeletonFlags]:
   val G_DBUS_INTERFACE_SKELETON_FLAGS_NONE = define(0)
   val G_DBUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD = define(1)
   inline def getName(inline value: GDBusInterfaceSkeletonFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_INTERFACE_SKELETON_FLAGS_NONE => Some("G_DBUS_INTERFACE_SKELETON_FLAGS_NONE")
       case G_DBUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD => Some("G_DBUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD")
       case _ => None
@@ -541,6 +639,11 @@ object GDBusInterfaceSkeletonFlags extends CEnumU[GDBusInterfaceSkeletonFlags]:
     inline def |(b: GDBusInterfaceSkeletonFlags): GDBusInterfaceSkeletonFlags = a | b
     inline def is(b: GDBusInterfaceSkeletonFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusMessageByteOrder: _DBUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN: The byte order is big endian. _DBUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN: The byte order is little endian.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusMessageByteOrder = CUnsignedInt
 object GDBusMessageByteOrder extends CEnumU[GDBusMessageByteOrder]:
   given _tag: Tag[GDBusMessageByteOrder] = Tag.UInt
@@ -548,7 +651,7 @@ object GDBusMessageByteOrder extends CEnumU[GDBusMessageByteOrder]:
   val G_DBUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN = define(66)
   val G_DBUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN = define(108)
   inline def getName(inline value: GDBusMessageByteOrder): Option[String] =
-    value match
+    inline value match
       case G_DBUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN => Some("G_DBUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN")
       case G_DBUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN => Some("G_DBUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN")
       case _ => None
@@ -557,6 +660,11 @@ object GDBusMessageByteOrder extends CEnumU[GDBusMessageByteOrder]:
     inline def |(b: GDBusMessageByteOrder): GDBusMessageByteOrder = a | b
     inline def is(b: GDBusMessageByteOrder): Boolean = (a & b) == b
 
+/**
+ * GDBusMessageFlags: _DBUS_MESSAGE_FLAGS_NONE: No flags set. _DBUS_MESSAGE_FLAGS_NO_REPLY_EXPECTED: A reply is not expected. _DBUS_MESSAGE_FLAGS_NO_AUTO_START: The bus must not launch an owner for the destination name in response to this message. _DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION: If set on a method call, this flag means that the caller is prepared to wait for interactive authorization. Since 2.46.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusMessageFlags = CUnsignedInt
 object GDBusMessageFlags extends CEnumU[GDBusMessageFlags]:
   given _tag: Tag[GDBusMessageFlags] = Tag.UInt
@@ -566,7 +674,7 @@ object GDBusMessageFlags extends CEnumU[GDBusMessageFlags]:
   val G_DBUS_MESSAGE_FLAGS_NO_AUTO_START = define(2)
   val G_DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION = define(4)
   inline def getName(inline value: GDBusMessageFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_MESSAGE_FLAGS_NONE => Some("G_DBUS_MESSAGE_FLAGS_NONE")
       case G_DBUS_MESSAGE_FLAGS_NO_REPLY_EXPECTED => Some("G_DBUS_MESSAGE_FLAGS_NO_REPLY_EXPECTED")
       case G_DBUS_MESSAGE_FLAGS_NO_AUTO_START => Some("G_DBUS_MESSAGE_FLAGS_NO_AUTO_START")
@@ -577,6 +685,11 @@ object GDBusMessageFlags extends CEnumU[GDBusMessageFlags]:
     inline def |(b: GDBusMessageFlags): GDBusMessageFlags = a | b
     inline def is(b: GDBusMessageFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusMessageHeaderField: _DBUS_MESSAGE_HEADER_FIELD_INVALID: Not a valid header field. _DBUS_MESSAGE_HEADER_FIELD_PATH: The object path. _DBUS_MESSAGE_HEADER_FIELD_INTERFACE: The interface name. _DBUS_MESSAGE_HEADER_FIELD_MEMBER: The method or signal name. _DBUS_MESSAGE_HEADER_FIELD_ERROR_NAME: The name of the error that occurred. _DBUS_MESSAGE_HEADER_FIELD_REPLY_SERIAL: The serial number the message is a reply to. _DBUS_MESSAGE_HEADER_FIELD_DESTINATION: The name the message is intended for. _DBUS_MESSAGE_HEADER_FIELD_SENDER: Unique name of the sender of the message (filled in by the bus). _DBUS_MESSAGE_HEADER_FIELD_SIGNATURE: The signature of the message body. _DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS: The number of UNIX file descriptors that accompany the message.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusMessageHeaderField = CUnsignedInt
 object GDBusMessageHeaderField extends CEnumU[GDBusMessageHeaderField]:
   given _tag: Tag[GDBusMessageHeaderField] = Tag.UInt
@@ -592,7 +705,7 @@ object GDBusMessageHeaderField extends CEnumU[GDBusMessageHeaderField]:
   val G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE = define(8)
   val G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS = define(9)
   inline def getName(inline value: GDBusMessageHeaderField): Option[String] =
-    value match
+    inline value match
       case G_DBUS_MESSAGE_HEADER_FIELD_INVALID => Some("G_DBUS_MESSAGE_HEADER_FIELD_INVALID")
       case G_DBUS_MESSAGE_HEADER_FIELD_PATH => Some("G_DBUS_MESSAGE_HEADER_FIELD_PATH")
       case G_DBUS_MESSAGE_HEADER_FIELD_INTERFACE => Some("G_DBUS_MESSAGE_HEADER_FIELD_INTERFACE")
@@ -609,6 +722,11 @@ object GDBusMessageHeaderField extends CEnumU[GDBusMessageHeaderField]:
     inline def |(b: GDBusMessageHeaderField): GDBusMessageHeaderField = a | b
     inline def is(b: GDBusMessageHeaderField): Boolean = (a & b) == b
 
+/**
+ * GDBusMessageType: _DBUS_MESSAGE_TYPE_INVALID: Message is of invalid type. _DBUS_MESSAGE_TYPE_METHOD_CALL: Method call. _DBUS_MESSAGE_TYPE_METHOD_RETURN: Method reply. _DBUS_MESSAGE_TYPE_ERROR: Error reply. _DBUS_MESSAGE_TYPE_SIGNAL: Signal emission.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusMessageType = CUnsignedInt
 object GDBusMessageType extends CEnumU[GDBusMessageType]:
   given _tag: Tag[GDBusMessageType] = Tag.UInt
@@ -619,7 +737,7 @@ object GDBusMessageType extends CEnumU[GDBusMessageType]:
   val G_DBUS_MESSAGE_TYPE_ERROR = define(3)
   val G_DBUS_MESSAGE_TYPE_SIGNAL = define(4)
   inline def getName(inline value: GDBusMessageType): Option[String] =
-    value match
+    inline value match
       case G_DBUS_MESSAGE_TYPE_INVALID => Some("G_DBUS_MESSAGE_TYPE_INVALID")
       case G_DBUS_MESSAGE_TYPE_METHOD_CALL => Some("G_DBUS_MESSAGE_TYPE_METHOD_CALL")
       case G_DBUS_MESSAGE_TYPE_METHOD_RETURN => Some("G_DBUS_MESSAGE_TYPE_METHOD_RETURN")
@@ -631,6 +749,11 @@ object GDBusMessageType extends CEnumU[GDBusMessageType]:
     inline def |(b: GDBusMessageType): GDBusMessageType = a | b
     inline def is(b: GDBusMessageType): Boolean = (a & b) == b
 
+/**
+ * GDBusObjectManagerClientFlags: _DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE: No flags set. _DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START: If not set and the manager is for a well-known name, then request the bus to launch an owner for the name if no-one owns the name. This flag can only be used in managers for well-known names.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusObjectManagerClientFlags = CUnsignedInt
 object GDBusObjectManagerClientFlags extends CEnumU[GDBusObjectManagerClientFlags]:
   given _tag: Tag[GDBusObjectManagerClientFlags] = Tag.UInt
@@ -638,7 +761,7 @@ object GDBusObjectManagerClientFlags extends CEnumU[GDBusObjectManagerClientFlag
   val G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE = define(0)
   val G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START = define(1)
   inline def getName(inline value: GDBusObjectManagerClientFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE => Some("G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE")
       case G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START => Some("G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START")
       case _ => None
@@ -647,6 +770,11 @@ object GDBusObjectManagerClientFlags extends CEnumU[GDBusObjectManagerClientFlag
     inline def |(b: GDBusObjectManagerClientFlags): GDBusObjectManagerClientFlags = a | b
     inline def is(b: GDBusObjectManagerClientFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusPropertyInfoFlags: _DBUS_PROPERTY_INFO_FLAGS_NONE: No flags set. _DBUS_PROPERTY_INFO_FLAGS_READABLE: Property is readable. _DBUS_PROPERTY_INFO_FLAGS_WRITABLE: Property is writable.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusPropertyInfoFlags = CUnsignedInt
 object GDBusPropertyInfoFlags extends CEnumU[GDBusPropertyInfoFlags]:
   given _tag: Tag[GDBusPropertyInfoFlags] = Tag.UInt
@@ -655,7 +783,7 @@ object GDBusPropertyInfoFlags extends CEnumU[GDBusPropertyInfoFlags]:
   val G_DBUS_PROPERTY_INFO_FLAGS_READABLE = define(1)
   val G_DBUS_PROPERTY_INFO_FLAGS_WRITABLE = define(2)
   inline def getName(inline value: GDBusPropertyInfoFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_PROPERTY_INFO_FLAGS_NONE => Some("G_DBUS_PROPERTY_INFO_FLAGS_NONE")
       case G_DBUS_PROPERTY_INFO_FLAGS_READABLE => Some("G_DBUS_PROPERTY_INFO_FLAGS_READABLE")
       case G_DBUS_PROPERTY_INFO_FLAGS_WRITABLE => Some("G_DBUS_PROPERTY_INFO_FLAGS_WRITABLE")
@@ -665,6 +793,11 @@ object GDBusPropertyInfoFlags extends CEnumU[GDBusPropertyInfoFlags]:
     inline def |(b: GDBusPropertyInfoFlags): GDBusPropertyInfoFlags = a | b
     inline def is(b: GDBusPropertyInfoFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusProxyFlags: _DBUS_PROXY_FLAGS_NONE: No flags set. _DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES: Don't load properties. _DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS: Don't connect to signals on the remote object. _DBUS_PROXY_FLAGS_DO_NOT_AUTO_START: If the proxy is for a well-known name, do not ask the bus to launch an owner during proxy initialization or a method call. This flag is only meaningful in proxies for well-known names. _DBUS_PROXY_FLAGS_GET_INVALIDATED_PROPERTIES: If set, the property value for any __invalidated property__ will be (asynchronously) retrieved upon receiving the [`PropertiesChanged`](http://dbus.freedesktop.org/doc/dbus-specification.html#standard-interfaces-properties) D-Bus signal and the property will not cause emission of the #GDBusProxy::g-properties-changed signal. When the value is received the #GDBusProxy::g-properties-changed signal is emitted for the property along with the retrieved value. Since 2.32. _DBUS_PROXY_FLAGS_DO_NOT_AUTO_START_AT_CONSTRUCTION: If the proxy is for a well-known name, do not ask the bus to launch an owner during proxy initialization, but allow it to be autostarted by a method call. This flag is only meaningful in proxies for well-known names, and only if %G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START is not also specified. _DBUS_PROXY_FLAGS_NO_MATCH_RULE: Don't actually send the AddMatch D-Bus call for this signal subscription. This gives you more control over which match rules you add (but you must add them manually). (Since: 2.72)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusProxyFlags = CUnsignedInt
 object GDBusProxyFlags extends CEnumU[GDBusProxyFlags]:
   given _tag: Tag[GDBusProxyFlags] = Tag.UInt
@@ -677,7 +810,7 @@ object GDBusProxyFlags extends CEnumU[GDBusProxyFlags]:
   val G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START_AT_CONSTRUCTION = define(16)
   val G_DBUS_PROXY_FLAGS_NO_MATCH_RULE = define(32)
   inline def getName(inline value: GDBusProxyFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_PROXY_FLAGS_NONE => Some("G_DBUS_PROXY_FLAGS_NONE")
       case G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES => Some("G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES")
       case G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS => Some("G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS")
@@ -691,6 +824,11 @@ object GDBusProxyFlags extends CEnumU[GDBusProxyFlags]:
     inline def |(b: GDBusProxyFlags): GDBusProxyFlags = a | b
     inline def is(b: GDBusProxyFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusSendMessageFlags: _DBUS_SEND_MESSAGE_FLAGS_NONE: No flags set. _DBUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL: Do not automatically assign a serial number from the #GDBusConnection object when sending a message.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusSendMessageFlags = CUnsignedInt
 object GDBusSendMessageFlags extends CEnumU[GDBusSendMessageFlags]:
   given _tag: Tag[GDBusSendMessageFlags] = Tag.UInt
@@ -698,7 +836,7 @@ object GDBusSendMessageFlags extends CEnumU[GDBusSendMessageFlags]:
   val G_DBUS_SEND_MESSAGE_FLAGS_NONE = define(0)
   val G_DBUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL = define(1)
   inline def getName(inline value: GDBusSendMessageFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_SEND_MESSAGE_FLAGS_NONE => Some("G_DBUS_SEND_MESSAGE_FLAGS_NONE")
       case G_DBUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL => Some("G_DBUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL")
       case _ => None
@@ -707,6 +845,11 @@ object GDBusSendMessageFlags extends CEnumU[GDBusSendMessageFlags]:
     inline def |(b: GDBusSendMessageFlags): GDBusSendMessageFlags = a | b
     inline def is(b: GDBusSendMessageFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusServerFlags: _DBUS_SERVER_FLAGS_NONE: No flags set. _DBUS_SERVER_FLAGS_RUN_IN_THREAD: All #GDBusServer::new-connection signals will run in separated dedicated threads (see signal for details). _DBUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS: Allow the anonymous authentication method. _DBUS_SERVER_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER: Require the UID of the peer to be the same as the UID of the server when authenticating. (Since: 2.68)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusServerFlags = CUnsignedInt
 object GDBusServerFlags extends CEnumU[GDBusServerFlags]:
   given _tag: Tag[GDBusServerFlags] = Tag.UInt
@@ -716,7 +859,7 @@ object GDBusServerFlags extends CEnumU[GDBusServerFlags]:
   val G_DBUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS = define(2)
   val G_DBUS_SERVER_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER = define(4)
   inline def getName(inline value: GDBusServerFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_SERVER_FLAGS_NONE => Some("G_DBUS_SERVER_FLAGS_NONE")
       case G_DBUS_SERVER_FLAGS_RUN_IN_THREAD => Some("G_DBUS_SERVER_FLAGS_RUN_IN_THREAD")
       case G_DBUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS => Some("G_DBUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS")
@@ -727,6 +870,11 @@ object GDBusServerFlags extends CEnumU[GDBusServerFlags]:
     inline def |(b: GDBusServerFlags): GDBusServerFlags = a | b
     inline def is(b: GDBusServerFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusSignalFlags: _DBUS_SIGNAL_FLAGS_NONE: No flags set. _DBUS_SIGNAL_FLAGS_NO_MATCH_RULE: Don't actually send the AddMatch D-Bus call for this signal subscription. This gives you more control over which match rules you add (but you must add them manually). _DBUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE: Match first arguments that contain a bus or interface name with the given namespace. _DBUS_SIGNAL_FLAGS_MATCH_ARG0_PATH: Match first arguments that contain an object path that is either equivalent to the given path, or one of the paths is a subpath of the other.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusSignalFlags = CUnsignedInt
 object GDBusSignalFlags extends CEnumU[GDBusSignalFlags]:
   given _tag: Tag[GDBusSignalFlags] = Tag.UInt
@@ -736,7 +884,7 @@ object GDBusSignalFlags extends CEnumU[GDBusSignalFlags]:
   val G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE = define(2)
   val G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_PATH = define(4)
   inline def getName(inline value: GDBusSignalFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_SIGNAL_FLAGS_NONE => Some("G_DBUS_SIGNAL_FLAGS_NONE")
       case G_DBUS_SIGNAL_FLAGS_NO_MATCH_RULE => Some("G_DBUS_SIGNAL_FLAGS_NO_MATCH_RULE")
       case G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE => Some("G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE")
@@ -747,6 +895,11 @@ object GDBusSignalFlags extends CEnumU[GDBusSignalFlags]:
     inline def |(b: GDBusSignalFlags): GDBusSignalFlags = a | b
     inline def is(b: GDBusSignalFlags): Boolean = (a & b) == b
 
+/**
+ * GDBusSubtreeFlags: _DBUS_SUBTREE_FLAGS_NONE: No flags set. _DBUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES: Method calls to objects not in the enumerated range will still be dispatched. This is useful if you want to dynamically spawn objects in the subtree.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDBusSubtreeFlags = CUnsignedInt
 object GDBusSubtreeFlags extends CEnumU[GDBusSubtreeFlags]:
   given _tag: Tag[GDBusSubtreeFlags] = Tag.UInt
@@ -754,7 +907,7 @@ object GDBusSubtreeFlags extends CEnumU[GDBusSubtreeFlags]:
   val G_DBUS_SUBTREE_FLAGS_NONE = define(0)
   val G_DBUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES = define(1)
   inline def getName(inline value: GDBusSubtreeFlags): Option[String] =
-    value match
+    inline value match
       case G_DBUS_SUBTREE_FLAGS_NONE => Some("G_DBUS_SUBTREE_FLAGS_NONE")
       case G_DBUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES => Some("G_DBUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES")
       case _ => None
@@ -763,6 +916,11 @@ object GDBusSubtreeFlags extends CEnumU[GDBusSubtreeFlags]:
     inline def |(b: GDBusSubtreeFlags): GDBusSubtreeFlags = a | b
     inline def is(b: GDBusSubtreeFlags): Boolean = (a & b) == b
 
+/**
+ * GDataStreamByteOrder: _DATA_STREAM_BYTE_ORDER_BIG_ENDIAN: Selects Big Endian byte order. _DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN: Selects Little Endian byte order. _DATA_STREAM_BYTE_ORDER_HOST_ENDIAN: Selects endianness based on host machine's architecture.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDataStreamByteOrder = CUnsignedInt
 object GDataStreamByteOrder extends CEnumU[GDataStreamByteOrder]:
   given _tag: Tag[GDataStreamByteOrder] = Tag.UInt
@@ -771,7 +929,7 @@ object GDataStreamByteOrder extends CEnumU[GDataStreamByteOrder]:
   val G_DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN = define(1)
   val G_DATA_STREAM_BYTE_ORDER_HOST_ENDIAN = define(2)
   inline def getName(inline value: GDataStreamByteOrder): Option[String] =
-    value match
+    inline value match
       case G_DATA_STREAM_BYTE_ORDER_BIG_ENDIAN => Some("G_DATA_STREAM_BYTE_ORDER_BIG_ENDIAN")
       case G_DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN => Some("G_DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN")
       case G_DATA_STREAM_BYTE_ORDER_HOST_ENDIAN => Some("G_DATA_STREAM_BYTE_ORDER_HOST_ENDIAN")
@@ -781,6 +939,11 @@ object GDataStreamByteOrder extends CEnumU[GDataStreamByteOrder]:
     inline def |(b: GDataStreamByteOrder): GDataStreamByteOrder = a | b
     inline def is(b: GDataStreamByteOrder): Boolean = (a & b) == b
 
+/**
+ * GDataStreamNewlineType: _DATA_STREAM_NEWLINE_TYPE_LF: Selects "LF" line endings, common on most modern UNIX platforms. _DATA_STREAM_NEWLINE_TYPE_CR: Selects "CR" line endings. _DATA_STREAM_NEWLINE_TYPE_CR_LF: Selects "CR, LF" line ending, common on Microsoft Windows. _DATA_STREAM_NEWLINE_TYPE_ANY: Automatically try to handle any line ending type.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDataStreamNewlineType = CUnsignedInt
 object GDataStreamNewlineType extends CEnumU[GDataStreamNewlineType]:
   given _tag: Tag[GDataStreamNewlineType] = Tag.UInt
@@ -790,7 +953,7 @@ object GDataStreamNewlineType extends CEnumU[GDataStreamNewlineType]:
   val G_DATA_STREAM_NEWLINE_TYPE_CR_LF = define(2)
   val G_DATA_STREAM_NEWLINE_TYPE_ANY = define(3)
   inline def getName(inline value: GDataStreamNewlineType): Option[String] =
-    value match
+    inline value match
       case G_DATA_STREAM_NEWLINE_TYPE_LF => Some("G_DATA_STREAM_NEWLINE_TYPE_LF")
       case G_DATA_STREAM_NEWLINE_TYPE_CR => Some("G_DATA_STREAM_NEWLINE_TYPE_CR")
       case G_DATA_STREAM_NEWLINE_TYPE_CR_LF => Some("G_DATA_STREAM_NEWLINE_TYPE_CR_LF")
@@ -801,6 +964,9 @@ object GDataStreamNewlineType extends CEnumU[GDataStreamNewlineType]:
     inline def |(b: GDataStreamNewlineType): GDataStreamNewlineType = a | b
     inline def is(b: GDataStreamNewlineType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+*/
 opaque type GDateDMY = CUnsignedInt
 object GDateDMY extends CEnumU[GDateDMY]:
   given _tag: Tag[GDateDMY] = Tag.UInt
@@ -809,7 +975,7 @@ object GDateDMY extends CEnumU[GDateDMY]:
   val G_DATE_MONTH = define(1)
   val G_DATE_YEAR = define(2)
   inline def getName(inline value: GDateDMY): Option[String] =
-    value match
+    inline value match
       case G_DATE_DAY => Some("G_DATE_DAY")
       case G_DATE_MONTH => Some("G_DATE_MONTH")
       case G_DATE_YEAR => Some("G_DATE_YEAR")
@@ -819,6 +985,9 @@ object GDateDMY extends CEnumU[GDateDMY]:
     inline def |(b: GDateDMY): GDateDMY = a | b
     inline def is(b: GDateDMY): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+*/
 opaque type GDateMonth = CUnsignedInt
 object GDateMonth extends CEnumU[GDateMonth]:
   given _tag: Tag[GDateMonth] = Tag.UInt
@@ -837,7 +1006,7 @@ object GDateMonth extends CEnumU[GDateMonth]:
   val G_DATE_NOVEMBER = define(11)
   val G_DATE_DECEMBER = define(12)
   inline def getName(inline value: GDateMonth): Option[String] =
-    value match
+    inline value match
       case G_DATE_BAD_MONTH => Some("G_DATE_BAD_MONTH")
       case G_DATE_JANUARY => Some("G_DATE_JANUARY")
       case G_DATE_FEBRUARY => Some("G_DATE_FEBRUARY")
@@ -857,6 +1026,9 @@ object GDateMonth extends CEnumU[GDateMonth]:
     inline def |(b: GDateMonth): GDateMonth = a | b
     inline def is(b: GDateMonth): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+*/
 opaque type GDateWeekday = CUnsignedInt
 object GDateWeekday extends CEnumU[GDateWeekday]:
   given _tag: Tag[GDateWeekday] = Tag.UInt
@@ -870,7 +1042,7 @@ object GDateWeekday extends CEnumU[GDateWeekday]:
   val G_DATE_SATURDAY = define(6)
   val G_DATE_SUNDAY = define(7)
   inline def getName(inline value: GDateWeekday): Option[String] =
-    value match
+    inline value match
       case G_DATE_BAD_WEEKDAY => Some("G_DATE_BAD_WEEKDAY")
       case G_DATE_MONDAY => Some("G_DATE_MONDAY")
       case G_DATE_TUESDAY => Some("G_DATE_TUESDAY")
@@ -885,13 +1057,18 @@ object GDateWeekday extends CEnumU[GDateWeekday]:
     inline def |(b: GDateWeekday): GDateWeekday = a | b
     inline def is(b: GDateWeekday): Boolean = (a & b) == b
 
+/**
+ * GDriveStartFlags: _DRIVE_START_NONE: No flags set.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDriveStartFlags = CUnsignedInt
 object GDriveStartFlags extends CEnumU[GDriveStartFlags]:
   given _tag: Tag[GDriveStartFlags] = Tag.UInt
   inline def define(inline a: Long): GDriveStartFlags = a.toUInt
   val G_DRIVE_START_NONE = define(0)
   inline def getName(inline value: GDriveStartFlags): Option[String] =
-    value match
+    inline value match
       case G_DRIVE_START_NONE => Some("G_DRIVE_START_NONE")
       case _ => None
   extension (a: GDriveStartFlags)
@@ -899,6 +1076,11 @@ object GDriveStartFlags extends CEnumU[GDriveStartFlags]:
     inline def |(b: GDriveStartFlags): GDriveStartFlags = a | b
     inline def is(b: GDriveStartFlags): Boolean = (a & b) == b
 
+/**
+ * GDriveStartStopType: _DRIVE_START_STOP_TYPE_UNKNOWN: Unknown or drive doesn't support start/stop. _DRIVE_START_STOP_TYPE_SHUTDOWN: The stop method will physically shut down the drive and e.g. power down the port the drive is attached to. _DRIVE_START_STOP_TYPE_NETWORK: The start/stop methods are used for connecting/disconnect to the drive over the network. _DRIVE_START_STOP_TYPE_MULTIDISK: The start/stop methods will assemble/disassemble a virtual drive from several physical drives. _DRIVE_START_STOP_TYPE_PASSWORD: The start/stop methods will unlock/lock the disk (for example using the ATA <quote>SECURITY UNLOCK DEVICE</quote> command)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GDriveStartStopType = CUnsignedInt
 object GDriveStartStopType extends CEnumU[GDriveStartStopType]:
   given _tag: Tag[GDriveStartStopType] = Tag.UInt
@@ -909,7 +1091,7 @@ object GDriveStartStopType extends CEnumU[GDriveStartStopType]:
   val G_DRIVE_START_STOP_TYPE_MULTIDISK = define(3)
   val G_DRIVE_START_STOP_TYPE_PASSWORD = define(4)
   inline def getName(inline value: GDriveStartStopType): Option[String] =
-    value match
+    inline value match
       case G_DRIVE_START_STOP_TYPE_UNKNOWN => Some("G_DRIVE_START_STOP_TYPE_UNKNOWN")
       case G_DRIVE_START_STOP_TYPE_SHUTDOWN => Some("G_DRIVE_START_STOP_TYPE_SHUTDOWN")
       case G_DRIVE_START_STOP_TYPE_NETWORK => Some("G_DRIVE_START_STOP_TYPE_NETWORK")
@@ -921,6 +1103,11 @@ object GDriveStartStopType extends CEnumU[GDriveStartStopType]:
     inline def |(b: GDriveStartStopType): GDriveStartStopType = a | b
     inline def is(b: GDriveStartStopType): Boolean = (a & b) == b
 
+/**
+ * GEmblemOrigin: _EMBLEM_ORIGIN_UNKNOWN: Emblem of unknown origin _EMBLEM_ORIGIN_DEVICE: Emblem adds device-specific information _EMBLEM_ORIGIN_LIVEMETADATA: Emblem depicts live metadata, such as "readonly" _EMBLEM_ORIGIN_TAG: Emblem comes from a user-defined tag, e.g. set by nautilus (in the future)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GEmblemOrigin = CUnsignedInt
 object GEmblemOrigin extends CEnumU[GEmblemOrigin]:
   given _tag: Tag[GEmblemOrigin] = Tag.UInt
@@ -930,7 +1117,7 @@ object GEmblemOrigin extends CEnumU[GEmblemOrigin]:
   val G_EMBLEM_ORIGIN_LIVEMETADATA = define(2)
   val G_EMBLEM_ORIGIN_TAG = define(3)
   inline def getName(inline value: GEmblemOrigin): Option[String] =
-    value match
+    inline value match
       case G_EMBLEM_ORIGIN_UNKNOWN => Some("G_EMBLEM_ORIGIN_UNKNOWN")
       case G_EMBLEM_ORIGIN_DEVICE => Some("G_EMBLEM_ORIGIN_DEVICE")
       case G_EMBLEM_ORIGIN_LIVEMETADATA => Some("G_EMBLEM_ORIGIN_LIVEMETADATA")
@@ -941,6 +1128,9 @@ object GEmblemOrigin extends CEnumU[GEmblemOrigin]:
     inline def |(b: GEmblemOrigin): GEmblemOrigin = a | b
     inline def is(b: GEmblemOrigin): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+*/
 opaque type GErrorType = CUnsignedInt
 object GErrorType extends CEnumU[GErrorType]:
   given _tag: Tag[GErrorType] = Tag.UInt
@@ -954,7 +1144,7 @@ object GErrorType extends CEnumU[GErrorType]:
   val G_ERR_FLOAT_RADIX = define(6)
   val G_ERR_FLOAT_MALFORMED = define(7)
   inline def getName(inline value: GErrorType): Option[String] =
-    value match
+    inline value match
       case G_ERR_UNKNOWN => Some("G_ERR_UNKNOWN")
       case G_ERR_UNEXP_EOF => Some("G_ERR_UNEXP_EOF")
       case G_ERR_UNEXP_EOF_IN_STRING => Some("G_ERR_UNEXP_EOF_IN_STRING")
@@ -969,6 +1159,11 @@ object GErrorType extends CEnumU[GErrorType]:
     inline def |(b: GErrorType): GErrorType = a | b
     inline def is(b: GErrorType): Boolean = (a & b) == b
 
+/**
+ * GFileAttributeInfoFlags: _FILE_ATTRIBUTE_INFO_NONE: no flags set. _FILE_ATTRIBUTE_INFO_COPY_WITH_FILE: copy the attribute values when the file is copied. _FILE_ATTRIBUTE_INFO_COPY_WHEN_MOVED: copy the attribute values when the file is moved.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileAttributeInfoFlags = CUnsignedInt
 object GFileAttributeInfoFlags extends CEnumU[GFileAttributeInfoFlags]:
   given _tag: Tag[GFileAttributeInfoFlags] = Tag.UInt
@@ -977,7 +1172,7 @@ object GFileAttributeInfoFlags extends CEnumU[GFileAttributeInfoFlags]:
   val G_FILE_ATTRIBUTE_INFO_COPY_WITH_FILE = define(1)
   val G_FILE_ATTRIBUTE_INFO_COPY_WHEN_MOVED = define(2)
   inline def getName(inline value: GFileAttributeInfoFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_ATTRIBUTE_INFO_NONE => Some("G_FILE_ATTRIBUTE_INFO_NONE")
       case G_FILE_ATTRIBUTE_INFO_COPY_WITH_FILE => Some("G_FILE_ATTRIBUTE_INFO_COPY_WITH_FILE")
       case G_FILE_ATTRIBUTE_INFO_COPY_WHEN_MOVED => Some("G_FILE_ATTRIBUTE_INFO_COPY_WHEN_MOVED")
@@ -987,6 +1182,11 @@ object GFileAttributeInfoFlags extends CEnumU[GFileAttributeInfoFlags]:
     inline def |(b: GFileAttributeInfoFlags): GFileAttributeInfoFlags = a | b
     inline def is(b: GFileAttributeInfoFlags): Boolean = (a & b) == b
 
+/**
+ * GFileAttributeStatus: _FILE_ATTRIBUTE_STATUS_UNSET: Attribute value is unset (empty). _FILE_ATTRIBUTE_STATUS_SET: Attribute value is set. _FILE_ATTRIBUTE_STATUS_ERROR_SETTING: Indicates an error in setting the value.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileAttributeStatus = CUnsignedInt
 object GFileAttributeStatus extends CEnumU[GFileAttributeStatus]:
   given _tag: Tag[GFileAttributeStatus] = Tag.UInt
@@ -995,7 +1195,7 @@ object GFileAttributeStatus extends CEnumU[GFileAttributeStatus]:
   val G_FILE_ATTRIBUTE_STATUS_SET = define(1)
   val G_FILE_ATTRIBUTE_STATUS_ERROR_SETTING = define(2)
   inline def getName(inline value: GFileAttributeStatus): Option[String] =
-    value match
+    inline value match
       case G_FILE_ATTRIBUTE_STATUS_UNSET => Some("G_FILE_ATTRIBUTE_STATUS_UNSET")
       case G_FILE_ATTRIBUTE_STATUS_SET => Some("G_FILE_ATTRIBUTE_STATUS_SET")
       case G_FILE_ATTRIBUTE_STATUS_ERROR_SETTING => Some("G_FILE_ATTRIBUTE_STATUS_ERROR_SETTING")
@@ -1005,6 +1205,11 @@ object GFileAttributeStatus extends CEnumU[GFileAttributeStatus]:
     inline def |(b: GFileAttributeStatus): GFileAttributeStatus = a | b
     inline def is(b: GFileAttributeStatus): Boolean = (a & b) == b
 
+/**
+ * GFileAttributeType: _FILE_ATTRIBUTE_TYPE_INVALID: indicates an invalid or uninitialized type. _FILE_ATTRIBUTE_TYPE_STRING: a null terminated UTF8 string. _FILE_ATTRIBUTE_TYPE_BYTE_STRING: a zero terminated string of non-zero bytes. _FILE_ATTRIBUTE_TYPE_BOOLEAN: a boolean value. _FILE_ATTRIBUTE_TYPE_UINT32: an unsigned 4-byte/32-bit integer. _FILE_ATTRIBUTE_TYPE_INT32: a signed 4-byte/32-bit integer. _FILE_ATTRIBUTE_TYPE_UINT64: an unsigned 8-byte/64-bit integer. _FILE_ATTRIBUTE_TYPE_INT64: a signed 8-byte/64-bit integer. _FILE_ATTRIBUTE_TYPE_OBJECT: a #GObject. _FILE_ATTRIBUTE_TYPE_STRINGV: a %NULL terminated char **. Since 2.22
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileAttributeType = CUnsignedInt
 object GFileAttributeType extends CEnumU[GFileAttributeType]:
   given _tag: Tag[GFileAttributeType] = Tag.UInt
@@ -1020,7 +1225,7 @@ object GFileAttributeType extends CEnumU[GFileAttributeType]:
   val G_FILE_ATTRIBUTE_TYPE_OBJECT = define(8)
   val G_FILE_ATTRIBUTE_TYPE_STRINGV = define(9)
   inline def getName(inline value: GFileAttributeType): Option[String] =
-    value match
+    inline value match
       case G_FILE_ATTRIBUTE_TYPE_INVALID => Some("G_FILE_ATTRIBUTE_TYPE_INVALID")
       case G_FILE_ATTRIBUTE_TYPE_STRING => Some("G_FILE_ATTRIBUTE_TYPE_STRING")
       case G_FILE_ATTRIBUTE_TYPE_BYTE_STRING => Some("G_FILE_ATTRIBUTE_TYPE_BYTE_STRING")
@@ -1037,6 +1242,11 @@ object GFileAttributeType extends CEnumU[GFileAttributeType]:
     inline def |(b: GFileAttributeType): GFileAttributeType = a | b
     inline def is(b: GFileAttributeType): Boolean = (a & b) == b
 
+/**
+ * GFileCopyFlags: _FILE_COPY_NONE: No flags set. _FILE_COPY_OVERWRITE: Overwrite any existing files _FILE_COPY_BACKUP: Make a backup of any existing files. _FILE_COPY_NOFOLLOW_SYMLINKS: Don't follow symlinks. _FILE_COPY_ALL_METADATA: Copy all file metadata instead of just default set used for copy (see #GFileInfo). _FILE_COPY_NO_FALLBACK_FOR_MOVE: Don't use copy and delete fallback if native move not supported. _FILE_COPY_TARGET_DEFAULT_PERMS: Leaves target file with default perms, instead of setting the source file perms.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileCopyFlags = CUnsignedInt
 object GFileCopyFlags extends CEnumU[GFileCopyFlags]:
   given _tag: Tag[GFileCopyFlags] = Tag.UInt
@@ -1049,7 +1259,7 @@ object GFileCopyFlags extends CEnumU[GFileCopyFlags]:
   val G_FILE_COPY_NO_FALLBACK_FOR_MOVE = define(16)
   val G_FILE_COPY_TARGET_DEFAULT_PERMS = define(32)
   inline def getName(inline value: GFileCopyFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_COPY_NONE => Some("G_FILE_COPY_NONE")
       case G_FILE_COPY_OVERWRITE => Some("G_FILE_COPY_OVERWRITE")
       case G_FILE_COPY_BACKUP => Some("G_FILE_COPY_BACKUP")
@@ -1063,6 +1273,11 @@ object GFileCopyFlags extends CEnumU[GFileCopyFlags]:
     inline def |(b: GFileCopyFlags): GFileCopyFlags = a | b
     inline def is(b: GFileCopyFlags): Boolean = (a & b) == b
 
+/**
+ * GFileCreateFlags: _FILE_CREATE_NONE: No flags set. _FILE_CREATE_PRIVATE: Create a file that can only be accessed by the current user. _FILE_CREATE_REPLACE_DESTINATION: Replace the destination as if it didn't exist before. Don't try to keep any old permissions, replace instead of following links. This is generally useful if you're doing a "copy over" rather than a "save new version of" replace operation. You can think of it as "unlink destination" before writing to it, although the implementation may not be exactly like that. This flag can only be used with g_file_replace() and its variants, including g_file_replace_contents(). Since 2.20
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileCreateFlags = CUnsignedInt
 object GFileCreateFlags extends CEnumU[GFileCreateFlags]:
   given _tag: Tag[GFileCreateFlags] = Tag.UInt
@@ -1071,7 +1286,7 @@ object GFileCreateFlags extends CEnumU[GFileCreateFlags]:
   val G_FILE_CREATE_PRIVATE = define(1)
   val G_FILE_CREATE_REPLACE_DESTINATION = define(2)
   inline def getName(inline value: GFileCreateFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_CREATE_NONE => Some("G_FILE_CREATE_NONE")
       case G_FILE_CREATE_PRIVATE => Some("G_FILE_CREATE_PRIVATE")
       case G_FILE_CREATE_REPLACE_DESTINATION => Some("G_FILE_CREATE_REPLACE_DESTINATION")
@@ -1081,6 +1296,9 @@ object GFileCreateFlags extends CEnumU[GFileCreateFlags]:
     inline def |(b: GFileCreateFlags): GFileCreateFlags = a | b
     inline def is(b: GFileCreateFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gfileutils.h
+*/
 opaque type GFileError = CUnsignedInt
 object GFileError extends CEnumU[GFileError]:
   given _tag: Tag[GFileError] = Tag.UInt
@@ -1111,7 +1329,7 @@ object GFileError extends CEnumU[GFileError]:
   val G_FILE_ERROR_NOSYS = define(23)
   val G_FILE_ERROR_FAILED = define(24)
   inline def getName(inline value: GFileError): Option[String] =
-    value match
+    inline value match
       case G_FILE_ERROR_EXIST => Some("G_FILE_ERROR_EXIST")
       case G_FILE_ERROR_ISDIR => Some("G_FILE_ERROR_ISDIR")
       case G_FILE_ERROR_ACCES => Some("G_FILE_ERROR_ACCES")
@@ -1143,6 +1361,11 @@ object GFileError extends CEnumU[GFileError]:
     inline def |(b: GFileError): GFileError = a | b
     inline def is(b: GFileError): Boolean = (a & b) == b
 
+/**
+ * GFileMeasureFlags: _FILE_MEASURE_NONE: No flags set. _FILE_MEASURE_REPORT_ANY_ERROR: Report any error encountered while traversing the directory tree. Normally errors are only reported for the toplevel file. _FILE_MEASURE_APPARENT_SIZE: Tally usage based on apparent file sizes. Normally, the block-size is used, if available, as this is a more accurate representation of disk space used. Compare with `du --apparent-size`. _FILE_MEASURE_NO_XDEV: Do not cross mount point boundaries. Compare with `du -x`.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileMeasureFlags = CUnsignedInt
 object GFileMeasureFlags extends CEnumU[GFileMeasureFlags]:
   given _tag: Tag[GFileMeasureFlags] = Tag.UInt
@@ -1152,7 +1375,7 @@ object GFileMeasureFlags extends CEnumU[GFileMeasureFlags]:
   val G_FILE_MEASURE_APPARENT_SIZE = define(4)
   val G_FILE_MEASURE_NO_XDEV = define(8)
   inline def getName(inline value: GFileMeasureFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_MEASURE_NONE => Some("G_FILE_MEASURE_NONE")
       case G_FILE_MEASURE_REPORT_ANY_ERROR => Some("G_FILE_MEASURE_REPORT_ANY_ERROR")
       case G_FILE_MEASURE_APPARENT_SIZE => Some("G_FILE_MEASURE_APPARENT_SIZE")
@@ -1163,6 +1386,11 @@ object GFileMeasureFlags extends CEnumU[GFileMeasureFlags]:
     inline def |(b: GFileMeasureFlags): GFileMeasureFlags = a | b
     inline def is(b: GFileMeasureFlags): Boolean = (a & b) == b
 
+/**
+ * GFileMonitorEvent: _FILE_MONITOR_EVENT_CHANGED: a file changed. _FILE_MONITOR_EVENT_CHANGES_DONE_HINT: a hint that this was probably the last change in a set of changes. _FILE_MONITOR_EVENT_DELETED: a file was deleted. _FILE_MONITOR_EVENT_CREATED: a file was created. _FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED: a file attribute was changed. _FILE_MONITOR_EVENT_PRE_UNMOUNT: the file location will soon be unmounted. _FILE_MONITOR_EVENT_UNMOUNTED: the file location was unmounted. _FILE_MONITOR_EVENT_MOVED: the file was moved -- only sent if the (deprecated) %G_FILE_MONITOR_SEND_MOVED flag is set _FILE_MONITOR_EVENT_RENAMED: the file was renamed within the current directory -- only sent if the %G_FILE_MONITOR_WATCH_MOVES flag is set. Since: 2.46. _FILE_MONITOR_EVENT_MOVED_IN: the file was moved into the monitored directory from another location -- only sent if the %G_FILE_MONITOR_WATCH_MOVES flag is set. Since: 2.46. _FILE_MONITOR_EVENT_MOVED_OUT: the file was moved out of the monitored directory to another location -- only sent if the %G_FILE_MONITOR_WATCH_MOVES flag is set. Since: 2.46
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileMonitorEvent = CUnsignedInt
 object GFileMonitorEvent extends CEnumU[GFileMonitorEvent]:
   given _tag: Tag[GFileMonitorEvent] = Tag.UInt
@@ -1179,7 +1407,7 @@ object GFileMonitorEvent extends CEnumU[GFileMonitorEvent]:
   val G_FILE_MONITOR_EVENT_MOVED_IN = define(9)
   val G_FILE_MONITOR_EVENT_MOVED_OUT = define(10)
   inline def getName(inline value: GFileMonitorEvent): Option[String] =
-    value match
+    inline value match
       case G_FILE_MONITOR_EVENT_CHANGED => Some("G_FILE_MONITOR_EVENT_CHANGED")
       case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT => Some("G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT")
       case G_FILE_MONITOR_EVENT_DELETED => Some("G_FILE_MONITOR_EVENT_DELETED")
@@ -1197,6 +1425,11 @@ object GFileMonitorEvent extends CEnumU[GFileMonitorEvent]:
     inline def |(b: GFileMonitorEvent): GFileMonitorEvent = a | b
     inline def is(b: GFileMonitorEvent): Boolean = (a & b) == b
 
+/**
+ * GFileMonitorFlags: _FILE_MONITOR_NONE: No flags set. _FILE_MONITOR_WATCH_MOUNTS: Watch for mount events. _FILE_MONITOR_SEND_MOVED: Pair DELETED and CREATED events caused by file renames (moves) and send a single G_FILE_MONITOR_EVENT_MOVED event instead (NB: not supported on all backends; the default behaviour -without specifying this flag- is to send single DELETED and CREATED events). Deprecated since 2.46: use %G_FILE_MONITOR_WATCH_MOVES instead. _FILE_MONITOR_WATCH_HARD_LINKS: Watch for changes to the file made via another hard link. Since 2.36. _FILE_MONITOR_WATCH_MOVES: Watch for rename operations on a monitored directory. This causes %G_FILE_MONITOR_EVENT_RENAMED, %G_FILE_MONITOR_EVENT_MOVED_IN and %G_FILE_MONITOR_EVENT_MOVED_OUT events to be emitted when possible. Since: 2.46.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileMonitorFlags = CUnsignedInt
 object GFileMonitorFlags extends CEnumU[GFileMonitorFlags]:
   given _tag: Tag[GFileMonitorFlags] = Tag.UInt
@@ -1207,7 +1440,7 @@ object GFileMonitorFlags extends CEnumU[GFileMonitorFlags]:
   val G_FILE_MONITOR_WATCH_HARD_LINKS = define(4)
   val G_FILE_MONITOR_WATCH_MOVES = define(8)
   inline def getName(inline value: GFileMonitorFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_MONITOR_NONE => Some("G_FILE_MONITOR_NONE")
       case G_FILE_MONITOR_WATCH_MOUNTS => Some("G_FILE_MONITOR_WATCH_MOUNTS")
       case G_FILE_MONITOR_SEND_MOVED => Some("G_FILE_MONITOR_SEND_MOVED")
@@ -1219,6 +1452,11 @@ object GFileMonitorFlags extends CEnumU[GFileMonitorFlags]:
     inline def |(b: GFileMonitorFlags): GFileMonitorFlags = a | b
     inline def is(b: GFileMonitorFlags): Boolean = (a & b) == b
 
+/**
+ * GFileQueryInfoFlags: _FILE_QUERY_INFO_NONE: No flags set. _FILE_QUERY_INFO_NOFOLLOW_SYMLINKS: Don't follow symlinks.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileQueryInfoFlags = CUnsignedInt
 object GFileQueryInfoFlags extends CEnumU[GFileQueryInfoFlags]:
   given _tag: Tag[GFileQueryInfoFlags] = Tag.UInt
@@ -1226,7 +1464,7 @@ object GFileQueryInfoFlags extends CEnumU[GFileQueryInfoFlags]:
   val G_FILE_QUERY_INFO_NONE = define(0)
   val G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS = define(1)
   inline def getName(inline value: GFileQueryInfoFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_QUERY_INFO_NONE => Some("G_FILE_QUERY_INFO_NONE")
       case G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS => Some("G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS")
       case _ => None
@@ -1235,6 +1473,11 @@ object GFileQueryInfoFlags extends CEnumU[GFileQueryInfoFlags]:
     inline def |(b: GFileQueryInfoFlags): GFileQueryInfoFlags = a | b
     inline def is(b: GFileQueryInfoFlags): Boolean = (a & b) == b
 
+/**
+ * GFileSetContentsFlags: _FILE_SET_CONTENTS_NONE: No guarantees about file consistency or durability. The most dangerous setting, which is slightly faster than other settings. _FILE_SET_CONTENTS_CONSISTENT: Guarantee file consistency: after a crash, either the old version of the file or the new version of the file will be available, but not a mixture. On Unix systems this equates to an `fsync()` on the file and use of an atomic `rename()` of the new version of the file over the old. _FILE_SET_CONTENTS_DURABLE: Guarantee file durability: after a crash, the new version of the file will be available. On Unix systems this equates to an `fsync()` on the file (if %G_FILE_SET_CONTENTS_CONSISTENT is unset), or the effects of %G_FILE_SET_CONTENTS_CONSISTENT plus an `fsync()` on the directory containing the file after calling `rename()`. _FILE_SET_CONTENTS_ONLY_EXISTING: Only apply consistency and durability guarantees if the file already exists. This may speed up file operations if the file doesn’t currently exist, but may result in a corrupted version of the new file if the system crashes while writing it.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gfileutils.h
+*/
 opaque type GFileSetContentsFlags = CUnsignedInt
 object GFileSetContentsFlags extends CEnumU[GFileSetContentsFlags]:
   given _tag: Tag[GFileSetContentsFlags] = Tag.UInt
@@ -1244,7 +1487,7 @@ object GFileSetContentsFlags extends CEnumU[GFileSetContentsFlags]:
   val G_FILE_SET_CONTENTS_DURABLE = define(2)
   val G_FILE_SET_CONTENTS_ONLY_EXISTING = define(4)
   inline def getName(inline value: GFileSetContentsFlags): Option[String] =
-    value match
+    inline value match
       case G_FILE_SET_CONTENTS_NONE => Some("G_FILE_SET_CONTENTS_NONE")
       case G_FILE_SET_CONTENTS_CONSISTENT => Some("G_FILE_SET_CONTENTS_CONSISTENT")
       case G_FILE_SET_CONTENTS_DURABLE => Some("G_FILE_SET_CONTENTS_DURABLE")
@@ -1255,6 +1498,9 @@ object GFileSetContentsFlags extends CEnumU[GFileSetContentsFlags]:
     inline def |(b: GFileSetContentsFlags): GFileSetContentsFlags = a | b
     inline def is(b: GFileSetContentsFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gfileutils.h
+*/
 opaque type GFileTest = CUnsignedInt
 object GFileTest extends CEnumU[GFileTest]:
   given _tag: Tag[GFileTest] = Tag.UInt
@@ -1265,7 +1511,7 @@ object GFileTest extends CEnumU[GFileTest]:
   val G_FILE_TEST_IS_EXECUTABLE = define(8)
   val G_FILE_TEST_EXISTS = define(16)
   inline def getName(inline value: GFileTest): Option[String] =
-    value match
+    inline value match
       case G_FILE_TEST_IS_REGULAR => Some("G_FILE_TEST_IS_REGULAR")
       case G_FILE_TEST_IS_SYMLINK => Some("G_FILE_TEST_IS_SYMLINK")
       case G_FILE_TEST_IS_DIR => Some("G_FILE_TEST_IS_DIR")
@@ -1277,6 +1523,11 @@ object GFileTest extends CEnumU[GFileTest]:
     inline def |(b: GFileTest): GFileTest = a | b
     inline def is(b: GFileTest): Boolean = (a & b) == b
 
+/**
+ * GFileType: _FILE_TYPE_UNKNOWN: File's type is unknown. _FILE_TYPE_REGULAR: File handle represents a regular file. _FILE_TYPE_DIRECTORY: File handle represents a directory. _FILE_TYPE_SYMBOLIC_LINK: File handle represents a symbolic link (Unix systems). _FILE_TYPE_SPECIAL: File is a "special" file, such as a socket, fifo, block device, or character device. _FILE_TYPE_SHORTCUT: File is a shortcut (Windows systems). _FILE_TYPE_MOUNTABLE: File is a mountable location.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFileType = CUnsignedInt
 object GFileType extends CEnumU[GFileType]:
   given _tag: Tag[GFileType] = Tag.UInt
@@ -1289,7 +1540,7 @@ object GFileType extends CEnumU[GFileType]:
   val G_FILE_TYPE_SHORTCUT = define(5)
   val G_FILE_TYPE_MOUNTABLE = define(6)
   inline def getName(inline value: GFileType): Option[String] =
-    value match
+    inline value match
       case G_FILE_TYPE_UNKNOWN => Some("G_FILE_TYPE_UNKNOWN")
       case G_FILE_TYPE_REGULAR => Some("G_FILE_TYPE_REGULAR")
       case G_FILE_TYPE_DIRECTORY => Some("G_FILE_TYPE_DIRECTORY")
@@ -1303,6 +1554,11 @@ object GFileType extends CEnumU[GFileType]:
     inline def |(b: GFileType): GFileType = a | b
     inline def is(b: GFileType): Boolean = (a & b) == b
 
+/**
+ * GFilesystemPreviewType: _FILESYSTEM_PREVIEW_TYPE_IF_ALWAYS: Only preview files if user has explicitly requested it. _FILESYSTEM_PREVIEW_TYPE_IF_LOCAL: Preview files if user has requested preview of "local" files. _FILESYSTEM_PREVIEW_TYPE_NEVER: Never preview files.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GFilesystemPreviewType = CUnsignedInt
 object GFilesystemPreviewType extends CEnumU[GFilesystemPreviewType]:
   given _tag: Tag[GFilesystemPreviewType] = Tag.UInt
@@ -1311,7 +1567,7 @@ object GFilesystemPreviewType extends CEnumU[GFilesystemPreviewType]:
   val G_FILESYSTEM_PREVIEW_TYPE_IF_LOCAL = define(1)
   val G_FILESYSTEM_PREVIEW_TYPE_NEVER = define(2)
   inline def getName(inline value: GFilesystemPreviewType): Option[String] =
-    value match
+    inline value match
       case G_FILESYSTEM_PREVIEW_TYPE_IF_ALWAYS => Some("G_FILESYSTEM_PREVIEW_TYPE_IF_ALWAYS")
       case G_FILESYSTEM_PREVIEW_TYPE_IF_LOCAL => Some("G_FILESYSTEM_PREVIEW_TYPE_IF_LOCAL")
       case G_FILESYSTEM_PREVIEW_TYPE_NEVER => Some("G_FILESYSTEM_PREVIEW_TYPE_NEVER")
@@ -1321,6 +1577,9 @@ object GFilesystemPreviewType extends CEnumU[GFilesystemPreviewType]:
     inline def |(b: GFilesystemPreviewType): GFilesystemPreviewType = a | b
     inline def is(b: GFilesystemPreviewType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+*/
 opaque type GFormatSizeFlags = CUnsignedInt
 object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
   given _tag: Tag[GFormatSizeFlags] = Tag.UInt
@@ -1330,7 +1589,7 @@ object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
   val G_FORMAT_SIZE_IEC_UNITS = define(2)
   val G_FORMAT_SIZE_BITS = define(4)
   inline def getName(inline value: GFormatSizeFlags): Option[String] =
-    value match
+    inline value match
       case G_FORMAT_SIZE_DEFAULT => Some("G_FORMAT_SIZE_DEFAULT")
       case G_FORMAT_SIZE_LONG_FORMAT => Some("G_FORMAT_SIZE_LONG_FORMAT")
       case G_FORMAT_SIZE_IEC_UNITS => Some("G_FORMAT_SIZE_IEC_UNITS")
@@ -1341,6 +1600,9 @@ object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
     inline def |(b: GFormatSizeFlags): GFormatSizeFlags = a | b
     inline def is(b: GFormatSizeFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+*/
 opaque type GHookFlagMask = CUnsignedInt
 object GHookFlagMask extends CEnumU[GHookFlagMask]:
   given _tag: Tag[GHookFlagMask] = Tag.UInt
@@ -1349,7 +1611,7 @@ object GHookFlagMask extends CEnumU[GHookFlagMask]:
   val G_HOOK_FLAG_IN_CALL = define(2)
   val G_HOOK_FLAG_MASK = define(15)
   inline def getName(inline value: GHookFlagMask): Option[String] =
-    value match
+    inline value match
       case G_HOOK_FLAG_ACTIVE => Some("G_HOOK_FLAG_ACTIVE")
       case G_HOOK_FLAG_IN_CALL => Some("G_HOOK_FLAG_IN_CALL")
       case G_HOOK_FLAG_MASK => Some("G_HOOK_FLAG_MASK")
@@ -1359,6 +1621,9 @@ object GHookFlagMask extends CEnumU[GHookFlagMask]:
     inline def |(b: GHookFlagMask): GHookFlagMask = a | b
     inline def is(b: GHookFlagMask): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+*/
 opaque type GIOChannelError = CUnsignedInt
 object GIOChannelError extends CEnumU[GIOChannelError]:
   given _tag: Tag[GIOChannelError] = Tag.UInt
@@ -1373,7 +1638,7 @@ object GIOChannelError extends CEnumU[GIOChannelError]:
   val G_IO_CHANNEL_ERROR_PIPE = define(7)
   val G_IO_CHANNEL_ERROR_FAILED = define(8)
   inline def getName(inline value: GIOChannelError): Option[String] =
-    value match
+    inline value match
       case G_IO_CHANNEL_ERROR_FBIG => Some("G_IO_CHANNEL_ERROR_FBIG")
       case G_IO_CHANNEL_ERROR_INVAL => Some("G_IO_CHANNEL_ERROR_INVAL")
       case G_IO_CHANNEL_ERROR_IO => Some("G_IO_CHANNEL_ERROR_IO")
@@ -1389,6 +1654,9 @@ object GIOChannelError extends CEnumU[GIOChannelError]:
     inline def |(b: GIOChannelError): GIOChannelError = a | b
     inline def is(b: GIOChannelError): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+*/
 opaque type GIOCondition = CUnsignedInt
 object GIOCondition extends CEnumU[GIOCondition]:
   given _tag: Tag[GIOCondition] = Tag.UInt
@@ -1400,7 +1668,7 @@ object GIOCondition extends CEnumU[GIOCondition]:
   val G_IO_HUP = define(16)
   val G_IO_NVAL = define(32)
   inline def getName(inline value: GIOCondition): Option[String] =
-    value match
+    inline value match
       case G_IO_IN => Some("G_IO_IN")
       case G_IO_OUT => Some("G_IO_OUT")
       case G_IO_PRI => Some("G_IO_PRI")
@@ -1413,6 +1681,9 @@ object GIOCondition extends CEnumU[GIOCondition]:
     inline def |(b: GIOCondition): GIOCondition = a | b
     inline def is(b: GIOCondition): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+*/
 opaque type GIOError = CUnsignedInt
 object GIOError extends CEnumU[GIOError]:
   given _tag: Tag[GIOError] = Tag.UInt
@@ -1422,7 +1693,7 @@ object GIOError extends CEnumU[GIOError]:
   val G_IO_ERROR_INVAL = define(2)
   val G_IO_ERROR_UNKNOWN = define(3)
   inline def getName(inline value: GIOError): Option[String] =
-    value match
+    inline value match
       case G_IO_ERROR_NONE => Some("G_IO_ERROR_NONE")
       case G_IO_ERROR_AGAIN => Some("G_IO_ERROR_AGAIN")
       case G_IO_ERROR_INVAL => Some("G_IO_ERROR_INVAL")
@@ -1433,6 +1704,11 @@ object GIOError extends CEnumU[GIOError]:
     inline def |(b: GIOError): GIOError = a | b
     inline def is(b: GIOError): Boolean = (a & b) == b
 
+/**
+ * GIOErrorEnum: _IO_ERROR_FAILED: Generic error condition for when an operation fails and no more specific #GIOErrorEnum value is defined. _IO_ERROR_NOT_FOUND: File not found. _IO_ERROR_EXISTS: File already exists. _IO_ERROR_IS_DIRECTORY: File is a directory. _IO_ERROR_NOT_DIRECTORY: File is not a directory. _IO_ERROR_NOT_EMPTY: File is a directory that isn't empty. _IO_ERROR_NOT_REGULAR_FILE: File is not a regular file. _IO_ERROR_NOT_SYMBOLIC_LINK: File is not a symbolic link. _IO_ERROR_NOT_MOUNTABLE_FILE: File cannot be mounted. _IO_ERROR_FILENAME_TOO_LONG: Filename is too many characters. _IO_ERROR_INVALID_FILENAME: Filename is invalid or contains invalid characters. _IO_ERROR_TOO_MANY_LINKS: File contains too many symbolic links. _IO_ERROR_NO_SPACE: No space left on drive. _IO_ERROR_INVALID_ARGUMENT: Invalid argument. _IO_ERROR_PERMISSION_DENIED: Permission denied. _IO_ERROR_NOT_SUPPORTED: Operation (or one of its parameters) not supported _IO_ERROR_NOT_MOUNTED: File isn't mounted. _IO_ERROR_ALREADY_MOUNTED: File is already mounted. _IO_ERROR_CLOSED: File was closed. _IO_ERROR_CANCELLED: Operation was cancelled. See #GCancellable. _IO_ERROR_PENDING: Operations are still pending. _IO_ERROR_READ_ONLY: File is read only. _IO_ERROR_CANT_CREATE_BACKUP: Backup couldn't be created. _IO_ERROR_WRONG_ETAG: File's Entity Tag was incorrect. _IO_ERROR_TIMED_OUT: Operation timed out. _IO_ERROR_WOULD_RECURSE: Operation would be recursive. _IO_ERROR_BUSY: File is busy. _IO_ERROR_WOULD_BLOCK: Operation would block. _IO_ERROR_HOST_NOT_FOUND: Host couldn't be found (remote operations). _IO_ERROR_WOULD_MERGE: Operation would merge files. _IO_ERROR_FAILED_HANDLED: Operation failed and a helper program has already interacted with the user. Do not display any error dialog. _IO_ERROR_TOO_MANY_OPEN_FILES: The current process has too many files open and can't open any more. Duplicate descriptors do count toward this limit. Since 2.20 _IO_ERROR_NOT_INITIALIZED: The object has not been initialized. Since 2.22 _IO_ERROR_ADDRESS_IN_USE: The requested address is already in use. Since 2.22 _IO_ERROR_PARTIAL_INPUT: Need more input to finish operation. Since 2.24 _IO_ERROR_INVALID_DATA: The input data was invalid. Since 2.24 _IO_ERROR_DBUS_ERROR: A remote object generated an error that doesn't correspond to a locally registered #GError error domain. Use g_dbus_error_get_remote_error() to extract the D-Bus error name and g_dbus_error_strip_remote_error() to fix up the message so it matches what was received on the wire. Since 2.26. _IO_ERROR_HOST_UNREACHABLE: Host unreachable. Since 2.26 _IO_ERROR_NETWORK_UNREACHABLE: Network unreachable. Since 2.26 _IO_ERROR_CONNECTION_REFUSED: Connection refused. Since 2.26 _IO_ERROR_PROXY_FAILED: Connection to proxy server failed. Since 2.26 _IO_ERROR_PROXY_AUTH_FAILED: Proxy authentication failed. Since 2.26 _IO_ERROR_PROXY_NEED_AUTH: Proxy server needs authentication. Since 2.26 _IO_ERROR_PROXY_NOT_ALLOWED: Proxy connection is not allowed by ruleset. Since 2.26 _IO_ERROR_BROKEN_PIPE: Broken pipe. Since 2.36 _IO_ERROR_CONNECTION_CLOSED: Connection closed by peer. Note that this is the same code as %G_IO_ERROR_BROKEN_PIPE; before 2.44 some "connection closed" errors returned %G_IO_ERROR_BROKEN_PIPE, but others returned %G_IO_ERROR_FAILED. Now they should all return the same value, which has this more logical name. Since 2.44. _IO_ERROR_NOT_CONNECTED: Transport endpoint is not connected. Since 2.44 _IO_ERROR_MESSAGE_TOO_LARGE: Message too large. Since 2.48.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GIOErrorEnum = CUnsignedInt
 object GIOErrorEnum extends CEnumU[GIOErrorEnum]:
   given _tag: Tag[GIOErrorEnum] = Tag.UInt
@@ -1486,7 +1762,7 @@ object GIOErrorEnum extends CEnumU[GIOErrorEnum]:
   val G_IO_ERROR_NOT_CONNECTED = define(45)
   val G_IO_ERROR_MESSAGE_TOO_LARGE = define(46)
   inline def getName(inline value: GIOErrorEnum): Option[String] =
-    value match
+    inline value match
       case G_IO_ERROR_FAILED => Some("G_IO_ERROR_FAILED")
       case G_IO_ERROR_NOT_FOUND => Some("G_IO_ERROR_NOT_FOUND")
       case G_IO_ERROR_EXISTS => Some("G_IO_ERROR_EXISTS")
@@ -1541,6 +1817,9 @@ object GIOErrorEnum extends CEnumU[GIOErrorEnum]:
     inline def |(b: GIOErrorEnum): GIOErrorEnum = a | b
     inline def is(b: GIOErrorEnum): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+*/
 opaque type GIOFlags = CUnsignedInt
 object GIOFlags extends CEnumU[GIOFlags]:
   given _tag: Tag[GIOFlags] = Tag.UInt
@@ -1555,7 +1834,7 @@ object GIOFlags extends CEnumU[GIOFlags]:
   val G_IO_FLAG_GET_MASK = define(31)
   val G_IO_FLAG_SET_MASK = define(3)
   inline def getName(inline value: GIOFlags): Option[String] =
-    value match
+    inline value match
       case G_IO_FLAG_APPEND => Some("G_IO_FLAG_APPEND")
       case G_IO_FLAG_NONBLOCK => Some("G_IO_FLAG_NONBLOCK")
       case G_IO_FLAG_IS_READABLE => Some("G_IO_FLAG_IS_READABLE")
@@ -1571,6 +1850,11 @@ object GIOFlags extends CEnumU[GIOFlags]:
     inline def |(b: GIOFlags): GIOFlags = a | b
     inline def is(b: GIOFlags): Boolean = (a & b) == b
 
+/**
+ * GIOModuleScopeFlags: _IO_MODULE_SCOPE_NONE: No module scan flags _IO_MODULE_SCOPE_BLOCK_DUPLICATES: When using this scope to load or scan modules, automatically block a modules which has the same base basename as previously loaded module.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GIOModuleScopeFlags = CUnsignedInt
 object GIOModuleScopeFlags extends CEnumU[GIOModuleScopeFlags]:
   given _tag: Tag[GIOModuleScopeFlags] = Tag.UInt
@@ -1578,7 +1862,7 @@ object GIOModuleScopeFlags extends CEnumU[GIOModuleScopeFlags]:
   val G_IO_MODULE_SCOPE_NONE = define(0)
   val G_IO_MODULE_SCOPE_BLOCK_DUPLICATES = define(1)
   inline def getName(inline value: GIOModuleScopeFlags): Option[String] =
-    value match
+    inline value match
       case G_IO_MODULE_SCOPE_NONE => Some("G_IO_MODULE_SCOPE_NONE")
       case G_IO_MODULE_SCOPE_BLOCK_DUPLICATES => Some("G_IO_MODULE_SCOPE_BLOCK_DUPLICATES")
       case _ => None
@@ -1587,6 +1871,9 @@ object GIOModuleScopeFlags extends CEnumU[GIOModuleScopeFlags]:
     inline def |(b: GIOModuleScopeFlags): GIOModuleScopeFlags = a | b
     inline def is(b: GIOModuleScopeFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+*/
 opaque type GIOStatus = CUnsignedInt
 object GIOStatus extends CEnumU[GIOStatus]:
   given _tag: Tag[GIOStatus] = Tag.UInt
@@ -1596,7 +1883,7 @@ object GIOStatus extends CEnumU[GIOStatus]:
   val G_IO_STATUS_EOF = define(2)
   val G_IO_STATUS_AGAIN = define(3)
   inline def getName(inline value: GIOStatus): Option[String] =
-    value match
+    inline value match
       case G_IO_STATUS_ERROR => Some("G_IO_STATUS_ERROR")
       case G_IO_STATUS_NORMAL => Some("G_IO_STATUS_NORMAL")
       case G_IO_STATUS_EOF => Some("G_IO_STATUS_EOF")
@@ -1607,6 +1894,11 @@ object GIOStatus extends CEnumU[GIOStatus]:
     inline def |(b: GIOStatus): GIOStatus = a | b
     inline def is(b: GIOStatus): Boolean = (a & b) == b
 
+/**
+ * GIOStreamSpliceFlags: _IO_STREAM_SPLICE_NONE: Do not close either stream. _IO_STREAM_SPLICE_CLOSE_STREAM1: Close the first stream after the splice. _IO_STREAM_SPLICE_CLOSE_STREAM2: Close the second stream after the splice. _IO_STREAM_SPLICE_WAIT_FOR_BOTH: Wait for both splice operations to finish before calling the callback.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GIOStreamSpliceFlags = CUnsignedInt
 object GIOStreamSpliceFlags extends CEnumU[GIOStreamSpliceFlags]:
   given _tag: Tag[GIOStreamSpliceFlags] = Tag.UInt
@@ -1616,7 +1908,7 @@ object GIOStreamSpliceFlags extends CEnumU[GIOStreamSpliceFlags]:
   val G_IO_STREAM_SPLICE_CLOSE_STREAM2 = define(2)
   val G_IO_STREAM_SPLICE_WAIT_FOR_BOTH = define(4)
   inline def getName(inline value: GIOStreamSpliceFlags): Option[String] =
-    value match
+    inline value match
       case G_IO_STREAM_SPLICE_NONE => Some("G_IO_STREAM_SPLICE_NONE")
       case G_IO_STREAM_SPLICE_CLOSE_STREAM1 => Some("G_IO_STREAM_SPLICE_CLOSE_STREAM1")
       case G_IO_STREAM_SPLICE_CLOSE_STREAM2 => Some("G_IO_STREAM_SPLICE_CLOSE_STREAM2")
@@ -1627,6 +1919,9 @@ object GIOStreamSpliceFlags extends CEnumU[GIOStreamSpliceFlags]:
     inline def |(b: GIOStreamSpliceFlags): GIOStreamSpliceFlags = a | b
     inline def is(b: GIOStreamSpliceFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gkeyfile.h
+*/
 opaque type GKeyFileError = CUnsignedInt
 object GKeyFileError extends CEnumU[GKeyFileError]:
   given _tag: Tag[GKeyFileError] = Tag.UInt
@@ -1638,7 +1933,7 @@ object GKeyFileError extends CEnumU[GKeyFileError]:
   val G_KEY_FILE_ERROR_GROUP_NOT_FOUND = define(4)
   val G_KEY_FILE_ERROR_INVALID_VALUE = define(5)
   inline def getName(inline value: GKeyFileError): Option[String] =
-    value match
+    inline value match
       case G_KEY_FILE_ERROR_UNKNOWN_ENCODING => Some("G_KEY_FILE_ERROR_UNKNOWN_ENCODING")
       case G_KEY_FILE_ERROR_PARSE => Some("G_KEY_FILE_ERROR_PARSE")
       case G_KEY_FILE_ERROR_NOT_FOUND => Some("G_KEY_FILE_ERROR_NOT_FOUND")
@@ -1651,6 +1946,9 @@ object GKeyFileError extends CEnumU[GKeyFileError]:
     inline def |(b: GKeyFileError): GKeyFileError = a | b
     inline def is(b: GKeyFileError): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gkeyfile.h
+*/
 opaque type GKeyFileFlags = CUnsignedInt
 object GKeyFileFlags extends CEnumU[GKeyFileFlags]:
   given _tag: Tag[GKeyFileFlags] = Tag.UInt
@@ -1659,7 +1957,7 @@ object GKeyFileFlags extends CEnumU[GKeyFileFlags]:
   val G_KEY_FILE_KEEP_COMMENTS = define(1)
   val G_KEY_FILE_KEEP_TRANSLATIONS = define(2)
   inline def getName(inline value: GKeyFileFlags): Option[String] =
-    value match
+    inline value match
       case G_KEY_FILE_NONE => Some("G_KEY_FILE_NONE")
       case G_KEY_FILE_KEEP_COMMENTS => Some("G_KEY_FILE_KEEP_COMMENTS")
       case G_KEY_FILE_KEEP_TRANSLATIONS => Some("G_KEY_FILE_KEEP_TRANSLATIONS")
@@ -1669,6 +1967,9 @@ object GKeyFileFlags extends CEnumU[GKeyFileFlags]:
     inline def |(b: GKeyFileFlags): GKeyFileFlags = a | b
     inline def is(b: GKeyFileFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+*/
 opaque type GLogLevelFlags = CInt
 object GLogLevelFlags extends CEnum[GLogLevelFlags]:
   given _tag: Tag[GLogLevelFlags] = Tag.Int
@@ -1683,7 +1984,7 @@ object GLogLevelFlags extends CEnum[GLogLevelFlags]:
   val G_LOG_LEVEL_DEBUG = define(128)
   val G_LOG_LEVEL_MASK = define(-4)
   inline def getName(inline value: GLogLevelFlags): Option[String] =
-    value match
+    inline value match
       case G_LOG_FLAG_RECURSION => Some("G_LOG_FLAG_RECURSION")
       case G_LOG_FLAG_FATAL => Some("G_LOG_FLAG_FATAL")
       case G_LOG_LEVEL_ERROR => Some("G_LOG_LEVEL_ERROR")
@@ -1699,6 +2000,11 @@ object GLogLevelFlags extends CEnum[GLogLevelFlags]:
     inline def |(b: GLogLevelFlags): GLogLevelFlags = a | b
     inline def is(b: GLogLevelFlags): Boolean = (a & b) == b
 
+/**
+ * GLogWriterOutput: _LOG_WRITER_HANDLED: Log writer has handled the log entry. _LOG_WRITER_UNHANDLED: Log writer could not handle the log entry.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+*/
 opaque type GLogWriterOutput = CUnsignedInt
 object GLogWriterOutput extends CEnumU[GLogWriterOutput]:
   given _tag: Tag[GLogWriterOutput] = Tag.UInt
@@ -1706,7 +2012,7 @@ object GLogWriterOutput extends CEnumU[GLogWriterOutput]:
   val G_LOG_WRITER_HANDLED = define(1)
   val G_LOG_WRITER_UNHANDLED = define(0)
   inline def getName(inline value: GLogWriterOutput): Option[String] =
-    value match
+    inline value match
       case G_LOG_WRITER_HANDLED => Some("G_LOG_WRITER_HANDLED")
       case G_LOG_WRITER_UNHANDLED => Some("G_LOG_WRITER_UNHANDLED")
       case _ => None
@@ -1715,6 +2021,11 @@ object GLogWriterOutput extends CEnumU[GLogWriterOutput]:
     inline def |(b: GLogWriterOutput): GLogWriterOutput = a | b
     inline def is(b: GLogWriterOutput): Boolean = (a & b) == b
 
+/**
+ * GMainContextFlags: _MAIN_CONTEXT_FLAGS_NONE: Default behaviour. _MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING: Assume that polling for events will free the thread to process other jobs. That's useful if you're using `g_main_context_{prepare,query,check,dispatch}` to integrate GMainContext in other event loops.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+*/
 opaque type GMainContextFlags = CUnsignedInt
 object GMainContextFlags extends CEnumU[GMainContextFlags]:
   given _tag: Tag[GMainContextFlags] = Tag.UInt
@@ -1722,7 +2033,7 @@ object GMainContextFlags extends CEnumU[GMainContextFlags]:
   val G_MAIN_CONTEXT_FLAGS_NONE = define(0)
   val G_MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING = define(1)
   inline def getName(inline value: GMainContextFlags): Option[String] =
-    value match
+    inline value match
       case G_MAIN_CONTEXT_FLAGS_NONE => Some("G_MAIN_CONTEXT_FLAGS_NONE")
       case G_MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING => Some("G_MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING")
       case _ => None
@@ -1731,6 +2042,9 @@ object GMainContextFlags extends CEnumU[GMainContextFlags]:
     inline def |(b: GMainContextFlags): GMainContextFlags = a | b
     inline def is(b: GMainContextFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+*/
 opaque type GMarkupCollectType = CUnsignedInt
 object GMarkupCollectType extends CEnumU[GMarkupCollectType]:
   given _tag: Tag[GMarkupCollectType] = Tag.UInt
@@ -1742,7 +2056,7 @@ object GMarkupCollectType extends CEnumU[GMarkupCollectType]:
   val G_MARKUP_COLLECT_TRISTATE = define(4)
   val G_MARKUP_COLLECT_OPTIONAL = define(65536)
   inline def getName(inline value: GMarkupCollectType): Option[String] =
-    value match
+    inline value match
       case G_MARKUP_COLLECT_INVALID => Some("G_MARKUP_COLLECT_INVALID")
       case G_MARKUP_COLLECT_STRING => Some("G_MARKUP_COLLECT_STRING")
       case G_MARKUP_COLLECT_STRDUP => Some("G_MARKUP_COLLECT_STRDUP")
@@ -1755,6 +2069,11 @@ object GMarkupCollectType extends CEnumU[GMarkupCollectType]:
     inline def |(b: GMarkupCollectType): GMarkupCollectType = a | b
     inline def is(b: GMarkupCollectType): Boolean = (a & b) == b
 
+/**
+ * GMarkupError: _MARKUP_ERROR_BAD_UTF8: text being parsed was not valid UTF-8 _MARKUP_ERROR_EMPTY: document contained nothing, or only whitespace _MARKUP_ERROR_PARSE: document was ill-formed _MARKUP_ERROR_UNKNOWN_ELEMENT: error should be set by #GMarkupParser functions; element wasn't known _MARKUP_ERROR_UNKNOWN_ATTRIBUTE: error should be set by #GMarkupParser functions; attribute wasn't known _MARKUP_ERROR_INVALID_CONTENT: error should be set by #GMarkupParser functions; content was invalid _MARKUP_ERROR_MISSING_ATTRIBUTE: error should be set by #GMarkupParser functions; a required attribute was missing
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+*/
 opaque type GMarkupError = CUnsignedInt
 object GMarkupError extends CEnumU[GMarkupError]:
   given _tag: Tag[GMarkupError] = Tag.UInt
@@ -1767,7 +2086,7 @@ object GMarkupError extends CEnumU[GMarkupError]:
   val G_MARKUP_ERROR_INVALID_CONTENT = define(5)
   val G_MARKUP_ERROR_MISSING_ATTRIBUTE = define(6)
   inline def getName(inline value: GMarkupError): Option[String] =
-    value match
+    inline value match
       case G_MARKUP_ERROR_BAD_UTF8 => Some("G_MARKUP_ERROR_BAD_UTF8")
       case G_MARKUP_ERROR_EMPTY => Some("G_MARKUP_ERROR_EMPTY")
       case G_MARKUP_ERROR_PARSE => Some("G_MARKUP_ERROR_PARSE")
@@ -1781,6 +2100,11 @@ object GMarkupError extends CEnumU[GMarkupError]:
     inline def |(b: GMarkupError): GMarkupError = a | b
     inline def is(b: GMarkupError): Boolean = (a & b) == b
 
+/**
+ * GMarkupParseFlags: _MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG: flag you should not use _MARKUP_TREAT_CDATA_AS_TEXT: When this flag is set, CDATA marked sections are not passed literally to the function of the parser. Instead, the content of the section (without the `<![CDATA[` and `]]>`) is passed to the
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+*/
 opaque type GMarkupParseFlags = CUnsignedInt
 object GMarkupParseFlags extends CEnumU[GMarkupParseFlags]:
   given _tag: Tag[GMarkupParseFlags] = Tag.UInt
@@ -1790,7 +2114,7 @@ object GMarkupParseFlags extends CEnumU[GMarkupParseFlags]:
   val G_MARKUP_PREFIX_ERROR_POSITION = define(4)
   val G_MARKUP_IGNORE_QUALIFIED = define(8)
   inline def getName(inline value: GMarkupParseFlags): Option[String] =
-    value match
+    inline value match
       case G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG => Some("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG")
       case G_MARKUP_TREAT_CDATA_AS_TEXT => Some("G_MARKUP_TREAT_CDATA_AS_TEXT")
       case G_MARKUP_PREFIX_ERROR_POSITION => Some("G_MARKUP_PREFIX_ERROR_POSITION")
@@ -1801,6 +2125,11 @@ object GMarkupParseFlags extends CEnumU[GMarkupParseFlags]:
     inline def |(b: GMarkupParseFlags): GMarkupParseFlags = a | b
     inline def is(b: GMarkupParseFlags): Boolean = (a & b) == b
 
+/**
+ * GMemoryMonitorWarningLevel: _MEMORY_MONITOR_WARNING_LEVEL_LOW: Memory on the device is low, processes should free up unneeded resources (for example, in-memory caches) so they can be used elsewhere. _MEMORY_MONITOR_WARNING_LEVEL_MEDIUM: Same as _MEMORY_MONITOR_WARNING_LEVEL_LOW but the device has even less free memory, so processes should try harder to free up unneeded resources. If your process does not need to stay running, it is a good time for it to quit. _MEMORY_MONITOR_WARNING_LEVEL_CRITICAL: The system will soon start terminating processes to reclaim memory, including background processes.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GMemoryMonitorWarningLevel = CUnsignedInt
 object GMemoryMonitorWarningLevel extends CEnumU[GMemoryMonitorWarningLevel]:
   given _tag: Tag[GMemoryMonitorWarningLevel] = Tag.UInt
@@ -1809,7 +2138,7 @@ object GMemoryMonitorWarningLevel extends CEnumU[GMemoryMonitorWarningLevel]:
   val G_MEMORY_MONITOR_WARNING_LEVEL_MEDIUM = define(100)
   val G_MEMORY_MONITOR_WARNING_LEVEL_CRITICAL = define(255)
   inline def getName(inline value: GMemoryMonitorWarningLevel): Option[String] =
-    value match
+    inline value match
       case G_MEMORY_MONITOR_WARNING_LEVEL_LOW => Some("G_MEMORY_MONITOR_WARNING_LEVEL_LOW")
       case G_MEMORY_MONITOR_WARNING_LEVEL_MEDIUM => Some("G_MEMORY_MONITOR_WARNING_LEVEL_MEDIUM")
       case G_MEMORY_MONITOR_WARNING_LEVEL_CRITICAL => Some("G_MEMORY_MONITOR_WARNING_LEVEL_CRITICAL")
@@ -1819,6 +2148,11 @@ object GMemoryMonitorWarningLevel extends CEnumU[GMemoryMonitorWarningLevel]:
     inline def |(b: GMemoryMonitorWarningLevel): GMemoryMonitorWarningLevel = a | b
     inline def is(b: GMemoryMonitorWarningLevel): Boolean = (a & b) == b
 
+/**
+ * GModuleError: _MODULE_ERROR_FAILED: there was an error loading or opening a module file _MODULE_ERROR_CHECK_FAILED: a module returned an error from its `g_module_check_init()` function
+
+ * [bindgen] header: /usr/include/glib-2.0/gmodule.h
+*/
 opaque type GModuleError = CUnsignedInt
 object GModuleError extends CEnumU[GModuleError]:
   given _tag: Tag[GModuleError] = Tag.UInt
@@ -1826,7 +2160,7 @@ object GModuleError extends CEnumU[GModuleError]:
   val G_MODULE_ERROR_FAILED = define(0)
   val G_MODULE_ERROR_CHECK_FAILED = define(1)
   inline def getName(inline value: GModuleError): Option[String] =
-    value match
+    inline value match
       case G_MODULE_ERROR_FAILED => Some("G_MODULE_ERROR_FAILED")
       case G_MODULE_ERROR_CHECK_FAILED => Some("G_MODULE_ERROR_CHECK_FAILED")
       case _ => None
@@ -1835,6 +2169,11 @@ object GModuleError extends CEnumU[GModuleError]:
     inline def |(b: GModuleError): GModuleError = a | b
     inline def is(b: GModuleError): Boolean = (a & b) == b
 
+/**
+ * GModuleFlags: _MODULE_BIND_LAZY: specifies that symbols are only resolved when needed. The default action is to bind all symbols when the module is loaded. _MODULE_BIND_LOCAL: specifies that symbols in the module should not be added to the global name space. The default action on most platforms is to place symbols in the module in the global name space, which may cause conflicts with existing symbols. _MODULE_BIND_MASK: mask for all flags.
+
+ * [bindgen] header: /usr/include/glib-2.0/gmodule.h
+*/
 opaque type GModuleFlags = CUnsignedInt
 object GModuleFlags extends CEnumU[GModuleFlags]:
   given _tag: Tag[GModuleFlags] = Tag.UInt
@@ -1843,7 +2182,7 @@ object GModuleFlags extends CEnumU[GModuleFlags]:
   val G_MODULE_BIND_LOCAL = define(2)
   val G_MODULE_BIND_MASK = define(3)
   inline def getName(inline value: GModuleFlags): Option[String] =
-    value match
+    inline value match
       case G_MODULE_BIND_LAZY => Some("G_MODULE_BIND_LAZY")
       case G_MODULE_BIND_LOCAL => Some("G_MODULE_BIND_LOCAL")
       case G_MODULE_BIND_MASK => Some("G_MODULE_BIND_MASK")
@@ -1853,13 +2192,18 @@ object GModuleFlags extends CEnumU[GModuleFlags]:
     inline def |(b: GModuleFlags): GModuleFlags = a | b
     inline def is(b: GModuleFlags): Boolean = (a & b) == b
 
+/**
+ * GMountMountFlags: _MOUNT_MOUNT_NONE: No flags set.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GMountMountFlags = CUnsignedInt
 object GMountMountFlags extends CEnumU[GMountMountFlags]:
   given _tag: Tag[GMountMountFlags] = Tag.UInt
   inline def define(inline a: Long): GMountMountFlags = a.toUInt
   val G_MOUNT_MOUNT_NONE = define(0)
   inline def getName(inline value: GMountMountFlags): Option[String] =
-    value match
+    inline value match
       case G_MOUNT_MOUNT_NONE => Some("G_MOUNT_MOUNT_NONE")
       case _ => None
   extension (a: GMountMountFlags)
@@ -1867,6 +2211,11 @@ object GMountMountFlags extends CEnumU[GMountMountFlags]:
     inline def |(b: GMountMountFlags): GMountMountFlags = a | b
     inline def is(b: GMountMountFlags): Boolean = (a & b) == b
 
+/**
+ * GMountOperationResult: _MOUNT_OPERATION_HANDLED: The request was fulfilled and the user specified data is now available _MOUNT_OPERATION_ABORTED: The user requested the mount operation to be aborted _MOUNT_OPERATION_UNHANDLED: The request was unhandled (i.e. not implemented)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GMountOperationResult = CUnsignedInt
 object GMountOperationResult extends CEnumU[GMountOperationResult]:
   given _tag: Tag[GMountOperationResult] = Tag.UInt
@@ -1875,7 +2224,7 @@ object GMountOperationResult extends CEnumU[GMountOperationResult]:
   val G_MOUNT_OPERATION_ABORTED = define(1)
   val G_MOUNT_OPERATION_UNHANDLED = define(2)
   inline def getName(inline value: GMountOperationResult): Option[String] =
-    value match
+    inline value match
       case G_MOUNT_OPERATION_HANDLED => Some("G_MOUNT_OPERATION_HANDLED")
       case G_MOUNT_OPERATION_ABORTED => Some("G_MOUNT_OPERATION_ABORTED")
       case G_MOUNT_OPERATION_UNHANDLED => Some("G_MOUNT_OPERATION_UNHANDLED")
@@ -1885,6 +2234,11 @@ object GMountOperationResult extends CEnumU[GMountOperationResult]:
     inline def |(b: GMountOperationResult): GMountOperationResult = a | b
     inline def is(b: GMountOperationResult): Boolean = (a & b) == b
 
+/**
+ * GMountUnmountFlags: _MOUNT_UNMOUNT_NONE: No flags set. _MOUNT_UNMOUNT_FORCE: Unmount even if there are outstanding file operations on the mount.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GMountUnmountFlags = CUnsignedInt
 object GMountUnmountFlags extends CEnumU[GMountUnmountFlags]:
   given _tag: Tag[GMountUnmountFlags] = Tag.UInt
@@ -1892,7 +2246,7 @@ object GMountUnmountFlags extends CEnumU[GMountUnmountFlags]:
   val G_MOUNT_UNMOUNT_NONE = define(0)
   val G_MOUNT_UNMOUNT_FORCE = define(1)
   inline def getName(inline value: GMountUnmountFlags): Option[String] =
-    value match
+    inline value match
       case G_MOUNT_UNMOUNT_NONE => Some("G_MOUNT_UNMOUNT_NONE")
       case G_MOUNT_UNMOUNT_FORCE => Some("G_MOUNT_UNMOUNT_FORCE")
       case _ => None
@@ -1901,6 +2255,11 @@ object GMountUnmountFlags extends CEnumU[GMountUnmountFlags]:
     inline def |(b: GMountUnmountFlags): GMountUnmountFlags = a | b
     inline def is(b: GMountUnmountFlags): Boolean = (a & b) == b
 
+/**
+ * GNetworkConnectivity: _NETWORK_CONNECTIVITY_LOCAL: The host is not configured with a route to the Internet; it may or may not be connected to a local network. _NETWORK_CONNECTIVITY_LIMITED: The host is connected to a network, but does not appear to be able to reach the full Internet, perhaps due to upstream network problems. _NETWORK_CONNECTIVITY_PORTAL: The host is behind a captive portal and cannot reach the full Internet. _NETWORK_CONNECTIVITY_FULL: The host is connected to a network, and appears to be able to reach the full Internet.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GNetworkConnectivity = CUnsignedInt
 object GNetworkConnectivity extends CEnumU[GNetworkConnectivity]:
   given _tag: Tag[GNetworkConnectivity] = Tag.UInt
@@ -1910,7 +2269,7 @@ object GNetworkConnectivity extends CEnumU[GNetworkConnectivity]:
   val G_NETWORK_CONNECTIVITY_PORTAL = define(3)
   val G_NETWORK_CONNECTIVITY_FULL = define(4)
   inline def getName(inline value: GNetworkConnectivity): Option[String] =
-    value match
+    inline value match
       case G_NETWORK_CONNECTIVITY_LOCAL => Some("G_NETWORK_CONNECTIVITY_LOCAL")
       case G_NETWORK_CONNECTIVITY_LIMITED => Some("G_NETWORK_CONNECTIVITY_LIMITED")
       case G_NETWORK_CONNECTIVITY_PORTAL => Some("G_NETWORK_CONNECTIVITY_PORTAL")
@@ -1921,6 +2280,11 @@ object GNetworkConnectivity extends CEnumU[GNetworkConnectivity]:
     inline def |(b: GNetworkConnectivity): GNetworkConnectivity = a | b
     inline def is(b: GNetworkConnectivity): Boolean = (a & b) == b
 
+/**
+ * GNormalizeMode: _NORMALIZE_DEFAULT: standardize differences that do not affect the text content, such as the above-mentioned accent representation _NORMALIZE_NFD: another name for %G_NORMALIZE_DEFAULT _NORMALIZE_DEFAULT_COMPOSE: like %G_NORMALIZE_DEFAULT, but with composed forms rather than a maximally decomposed form _NORMALIZE_NFC: another name for %G_NORMALIZE_DEFAULT_COMPOSE _NORMALIZE_ALL: beyond %G_NORMALIZE_DEFAULT also standardize the "compatibility" characters in Unicode, such as SUPERSCRIPT THREE to the standard forms (in this case DIGIT THREE). Formatting information may be lost but for most text operations such characters should be considered the same _NORMALIZE_NFKD: another name for %G_NORMALIZE_ALL _NORMALIZE_ALL_COMPOSE: like %G_NORMALIZE_ALL, but with composed forms rather than a maximally decomposed form _NORMALIZE_NFKC: another name for %G_NORMALIZE_ALL_COMPOSE
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+*/
 opaque type GNormalizeMode = CUnsignedInt
 object GNormalizeMode extends CEnumU[GNormalizeMode]:
   given _tag: Tag[GNormalizeMode] = Tag.UInt
@@ -1934,7 +2298,7 @@ object GNormalizeMode extends CEnumU[GNormalizeMode]:
   val G_NORMALIZE_ALL_COMPOSE = define(3)
   val G_NORMALIZE_NFKC = define(3)
   inline def getName(inline value: GNormalizeMode): Option[String] =
-    value match
+    inline value match
       case G_NORMALIZE_DEFAULT => Some("G_NORMALIZE_DEFAULT")
       case G_NORMALIZE_NFD => Some("G_NORMALIZE_NFD")
       case G_NORMALIZE_DEFAULT_COMPOSE => Some("G_NORMALIZE_DEFAULT_COMPOSE")
@@ -1949,6 +2313,11 @@ object GNormalizeMode extends CEnumU[GNormalizeMode]:
     inline def |(b: GNormalizeMode): GNormalizeMode = a | b
     inline def is(b: GNormalizeMode): Boolean = (a & b) == b
 
+/**
+ * GNotificationPriority: _NOTIFICATION_PRIORITY_LOW: for notifications that do not require immediate attention - typically used for contextual background information, such as contact birthdays or local weather _NOTIFICATION_PRIORITY_NORMAL: the default priority, to be used for the majority of notifications (for example email messages, software updates, completed download/sync operations) _NOTIFICATION_PRIORITY_HIGH: for events that require more attention, usually because responses are time-sensitive (for example chat and SMS messages or alarms) _NOTIFICATION_PRIORITY_URGENT: for urgent notifications, or notifications that require a response in a short space of time (for example phone calls or emergency warnings)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GNotificationPriority = CUnsignedInt
 object GNotificationPriority extends CEnumU[GNotificationPriority]:
   given _tag: Tag[GNotificationPriority] = Tag.UInt
@@ -1958,7 +2327,7 @@ object GNotificationPriority extends CEnumU[GNotificationPriority]:
   val G_NOTIFICATION_PRIORITY_HIGH = define(2)
   val G_NOTIFICATION_PRIORITY_URGENT = define(3)
   inline def getName(inline value: GNotificationPriority): Option[String] =
-    value match
+    inline value match
       case G_NOTIFICATION_PRIORITY_NORMAL => Some("G_NOTIFICATION_PRIORITY_NORMAL")
       case G_NOTIFICATION_PRIORITY_LOW => Some("G_NOTIFICATION_PRIORITY_LOW")
       case G_NOTIFICATION_PRIORITY_HIGH => Some("G_NOTIFICATION_PRIORITY_HIGH")
@@ -1969,6 +2338,11 @@ object GNotificationPriority extends CEnumU[GNotificationPriority]:
     inline def |(b: GNotificationPriority): GNotificationPriority = a | b
     inline def is(b: GNotificationPriority): Boolean = (a & b) == b
 
+/**
+ * GNumberParserError: _NUMBER_PARSER_ERROR_INVALID: String was not a valid number. _NUMBER_PARSER_ERROR_OUT_OF_BOUNDS: String was a number, but out of bounds.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gstrfuncs.h
+*/
 opaque type GNumberParserError = CUnsignedInt
 object GNumberParserError extends CEnumU[GNumberParserError]:
   given _tag: Tag[GNumberParserError] = Tag.UInt
@@ -1976,7 +2350,7 @@ object GNumberParserError extends CEnumU[GNumberParserError]:
   val G_NUMBER_PARSER_ERROR_INVALID = define(0)
   val G_NUMBER_PARSER_ERROR_OUT_OF_BOUNDS = define(1)
   inline def getName(inline value: GNumberParserError): Option[String] =
-    value match
+    inline value match
       case G_NUMBER_PARSER_ERROR_INVALID => Some("G_NUMBER_PARSER_ERROR_INVALID")
       case G_NUMBER_PARSER_ERROR_OUT_OF_BOUNDS => Some("G_NUMBER_PARSER_ERROR_OUT_OF_BOUNDS")
       case _ => None
@@ -1985,6 +2359,9 @@ object GNumberParserError extends CEnumU[GNumberParserError]:
     inline def |(b: GNumberParserError): GNumberParserError = a | b
     inline def is(b: GNumberParserError): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+*/
 opaque type GOnceStatus = CUnsignedInt
 object GOnceStatus extends CEnumU[GOnceStatus]:
   given _tag: Tag[GOnceStatus] = Tag.UInt
@@ -1993,7 +2370,7 @@ object GOnceStatus extends CEnumU[GOnceStatus]:
   val G_ONCE_STATUS_PROGRESS = define(1)
   val G_ONCE_STATUS_READY = define(2)
   inline def getName(inline value: GOnceStatus): Option[String] =
-    value match
+    inline value match
       case G_ONCE_STATUS_NOTCALLED => Some("G_ONCE_STATUS_NOTCALLED")
       case G_ONCE_STATUS_PROGRESS => Some("G_ONCE_STATUS_PROGRESS")
       case G_ONCE_STATUS_READY => Some("G_ONCE_STATUS_READY")
@@ -2003,6 +2380,11 @@ object GOnceStatus extends CEnumU[GOnceStatus]:
     inline def |(b: GOnceStatus): GOnceStatus = a | b
     inline def is(b: GOnceStatus): Boolean = (a & b) == b
 
+/**
+ * GOptionArg: _OPTION_ARG_NONE: No extra argument. This is useful for simple flags. _OPTION_ARG_STRING: The option takes a UTF-8 string argument. _OPTION_ARG_INT: The option takes an integer argument. _OPTION_ARG_CALLBACK: The option provides a callback (of type #GOptionArgFunc) to parse the extra argument. _OPTION_ARG_FILENAME: The option takes a filename as argument, which will be in the GLib filename encoding rather than UTF-8. _OPTION_ARG_STRING_ARRAY: The option takes a string argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_FILENAME_ARRAY: The option takes a filename as argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_DOUBLE: The option takes a double argument. The argument can be formatted either for the user's locale or for the "C" locale. Since 2.12 _OPTION_ARG_INT64: The option takes a 64-bit integer. Like %G_OPTION_ARG_INT but for larger numbers. The number can be in decimal base, or in hexadecimal (when prefixed with `0x`, for example, `0xffffffff`). Since 2.12
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+*/
 opaque type GOptionArg = CUnsignedInt
 object GOptionArg extends CEnumU[GOptionArg]:
   given _tag: Tag[GOptionArg] = Tag.UInt
@@ -2017,7 +2399,7 @@ object GOptionArg extends CEnumU[GOptionArg]:
   val G_OPTION_ARG_DOUBLE = define(7)
   val G_OPTION_ARG_INT64 = define(8)
   inline def getName(inline value: GOptionArg): Option[String] =
-    value match
+    inline value match
       case G_OPTION_ARG_NONE => Some("G_OPTION_ARG_NONE")
       case G_OPTION_ARG_STRING => Some("G_OPTION_ARG_STRING")
       case G_OPTION_ARG_INT => Some("G_OPTION_ARG_INT")
@@ -2033,6 +2415,11 @@ object GOptionArg extends CEnumU[GOptionArg]:
     inline def |(b: GOptionArg): GOptionArg = a | b
     inline def is(b: GOptionArg): Boolean = (a & b) == b
 
+/**
+ * GOptionError: _OPTION_ERROR_UNKNOWN_OPTION: An option was not known to the parser. This error will only be reported, if the parser hasn't been instructed to ignore unknown options, see g_option_context_set_ignore_unknown_options(). _OPTION_ERROR_BAD_VALUE: A value couldn't be parsed. _OPTION_ERROR_FAILED: A #GOptionArgFunc callback failed.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+*/
 opaque type GOptionError = CUnsignedInt
 object GOptionError extends CEnumU[GOptionError]:
   given _tag: Tag[GOptionError] = Tag.UInt
@@ -2041,7 +2428,7 @@ object GOptionError extends CEnumU[GOptionError]:
   val G_OPTION_ERROR_BAD_VALUE = define(1)
   val G_OPTION_ERROR_FAILED = define(2)
   inline def getName(inline value: GOptionError): Option[String] =
-    value match
+    inline value match
       case G_OPTION_ERROR_UNKNOWN_OPTION => Some("G_OPTION_ERROR_UNKNOWN_OPTION")
       case G_OPTION_ERROR_BAD_VALUE => Some("G_OPTION_ERROR_BAD_VALUE")
       case G_OPTION_ERROR_FAILED => Some("G_OPTION_ERROR_FAILED")
@@ -2051,6 +2438,11 @@ object GOptionError extends CEnumU[GOptionError]:
     inline def |(b: GOptionError): GOptionError = a | b
     inline def is(b: GOptionError): Boolean = (a & b) == b
 
+/**
+ * GOptionFlags: _OPTION_FLAG_NONE: No flags. Since: 2.42. _OPTION_FLAG_HIDDEN: The option doesn't appear in `--help` output. _OPTION_FLAG_IN_MAIN: The option appears in the main section of the `--help` output, even if it is defined in a group. _OPTION_FLAG_REVERSE: For options of the %G_OPTION_ARG_NONE kind, this flag indicates that the sense of the option is reversed. _OPTION_FLAG_NO_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the callback does not take any argument (like a %G_OPTION_ARG_NONE option). Since 2.8 _OPTION_FLAG_FILENAME: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument should be passed to the callback in the GLib filename encoding rather than UTF-8. Since 2.8 _OPTION_FLAG_OPTIONAL_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument supply is optional. If no argument is given then data of %GOptionParseFunc will be set to NULL. Since 2.8 _OPTION_FLAG_NOALIAS: This flag turns off the automatic conflict resolution which prefixes long option names with `groupname-` if there is a conflict. This option should only be used in situations where aliasing is necessary to model some legacy commandline interface. It is not safe to use this option, unless all option groups are under your direct control. Since 2.8.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+*/
 opaque type GOptionFlags = CUnsignedInt
 object GOptionFlags extends CEnumU[GOptionFlags]:
   given _tag: Tag[GOptionFlags] = Tag.UInt
@@ -2064,7 +2456,7 @@ object GOptionFlags extends CEnumU[GOptionFlags]:
   val G_OPTION_FLAG_OPTIONAL_ARG = define(32)
   val G_OPTION_FLAG_NOALIAS = define(64)
   inline def getName(inline value: GOptionFlags): Option[String] =
-    value match
+    inline value match
       case G_OPTION_FLAG_NONE => Some("G_OPTION_FLAG_NONE")
       case G_OPTION_FLAG_HIDDEN => Some("G_OPTION_FLAG_HIDDEN")
       case G_OPTION_FLAG_IN_MAIN => Some("G_OPTION_FLAG_IN_MAIN")
@@ -2079,6 +2471,11 @@ object GOptionFlags extends CEnumU[GOptionFlags]:
     inline def |(b: GOptionFlags): GOptionFlags = a | b
     inline def is(b: GOptionFlags): Boolean = (a & b) == b
 
+/**
+ * GOutputStreamSpliceFlags: _OUTPUT_STREAM_SPLICE_NONE: Do not close either stream. _OUTPUT_STREAM_SPLICE_CLOSE_SOURCE: Close the source stream after the splice. _OUTPUT_STREAM_SPLICE_CLOSE_TARGET: Close the target stream after the splice.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GOutputStreamSpliceFlags = CUnsignedInt
 object GOutputStreamSpliceFlags extends CEnumU[GOutputStreamSpliceFlags]:
   given _tag: Tag[GOutputStreamSpliceFlags] = Tag.UInt
@@ -2087,7 +2484,7 @@ object GOutputStreamSpliceFlags extends CEnumU[GOutputStreamSpliceFlags]:
   val G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE = define(1)
   val G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET = define(2)
   inline def getName(inline value: GOutputStreamSpliceFlags): Option[String] =
-    value match
+    inline value match
       case G_OUTPUT_STREAM_SPLICE_NONE => Some("G_OUTPUT_STREAM_SPLICE_NONE")
       case G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE => Some("G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE")
       case G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET => Some("G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET")
@@ -2097,6 +2494,11 @@ object GOutputStreamSpliceFlags extends CEnumU[GOutputStreamSpliceFlags]:
     inline def |(b: GOutputStreamSpliceFlags): GOutputStreamSpliceFlags = a | b
     inline def is(b: GOutputStreamSpliceFlags): Boolean = (a & b) == b
 
+/**
+ * GParamFlags: _PARAM_READABLE: the parameter is readable _PARAM_WRITABLE: the parameter is writable _PARAM_READWRITE: alias for %G_PARAM_READABLE | %G_PARAM_WRITABLE _PARAM_CONSTRUCT: the parameter will be set upon object construction _PARAM_CONSTRUCT_ONLY: the parameter can only be set upon object construction _PARAM_LAX_VALIDATION: upon parameter conversion (see g_param_value_convert()) strict validation is not required _PARAM_STATIC_NAME: the string used as name when constructing the parameter is guaranteed to remain valid and unmodified for the lifetime of the parameter. Since 2.8 _PARAM_STATIC_NICK: the string used as nick when constructing the parameter is guaranteed to remain valid and unmmodified for the lifetime of the parameter. Since 2.8 _PARAM_STATIC_BLURB: the string used as blurb when constructing the parameter is guaranteed to remain valid and unmodified for the lifetime of the parameter. Since 2.8 _PARAM_EXPLICIT_NOTIFY: calls to g_object_set_property() for this property will not automatically result in a "notify" signal being emitted: the implementation must call g_object_notify() themselves in case the property actually changes. Since: 2.42. _PARAM_PRIVATE: internal _PARAM_DEPRECATED: the parameter is deprecated and will be removed in a future version. A warning will be generated if it is used while running with G_ENABLE_DIAGNOSTIC=1. Since 2.26
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+*/
 opaque type GParamFlags = CInt
 object GParamFlags extends CEnum[GParamFlags]:
   given _tag: Tag[GParamFlags] = Tag.Int
@@ -2114,7 +2516,7 @@ object GParamFlags extends CEnum[GParamFlags]:
   val G_PARAM_EXPLICIT_NOTIFY = define(1073741824)
   val G_PARAM_DEPRECATED = define(-2147483648)
   inline def getName(inline value: GParamFlags): Option[String] =
-    value match
+    inline value match
       case G_PARAM_READABLE => Some("G_PARAM_READABLE")
       case G_PARAM_WRITABLE => Some("G_PARAM_WRITABLE")
       case G_PARAM_READWRITE => Some("G_PARAM_READWRITE")
@@ -2133,6 +2535,11 @@ object GParamFlags extends CEnum[GParamFlags]:
     inline def |(b: GParamFlags): GParamFlags = a | b
     inline def is(b: GParamFlags): Boolean = (a & b) == b
 
+/**
+ * GPasswordSave: _PASSWORD_SAVE_NEVER: never save a password. _PASSWORD_SAVE_FOR_SESSION: save a password for the session. _PASSWORD_SAVE_PERMANENTLY: save a password permanently.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GPasswordSave = CUnsignedInt
 object GPasswordSave extends CEnumU[GPasswordSave]:
   given _tag: Tag[GPasswordSave] = Tag.UInt
@@ -2141,7 +2548,7 @@ object GPasswordSave extends CEnumU[GPasswordSave]:
   val G_PASSWORD_SAVE_FOR_SESSION = define(1)
   val G_PASSWORD_SAVE_PERMANENTLY = define(2)
   inline def getName(inline value: GPasswordSave): Option[String] =
-    value match
+    inline value match
       case G_PASSWORD_SAVE_NEVER => Some("G_PASSWORD_SAVE_NEVER")
       case G_PASSWORD_SAVE_FOR_SESSION => Some("G_PASSWORD_SAVE_FOR_SESSION")
       case G_PASSWORD_SAVE_PERMANENTLY => Some("G_PASSWORD_SAVE_PERMANENTLY")
@@ -2151,6 +2558,11 @@ object GPasswordSave extends CEnumU[GPasswordSave]:
     inline def |(b: GPasswordSave): GPasswordSave = a | b
     inline def is(b: GPasswordSave): Boolean = (a & b) == b
 
+/**
+ * GPollableReturn: _POLLABLE_RETURN_FAILED: Generic error condition for when an operation fails. _POLLABLE_RETURN_OK: The operation was successfully finished. _POLLABLE_RETURN_WOULD_BLOCK: The operation would block.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GPollableReturn = CInt
 object GPollableReturn extends CEnum[GPollableReturn]:
   given _tag: Tag[GPollableReturn] = Tag.Int
@@ -2159,7 +2571,7 @@ object GPollableReturn extends CEnum[GPollableReturn]:
   val G_POLLABLE_RETURN_OK = define(1)
   val G_POLLABLE_RETURN_WOULD_BLOCK = define(-27)
   inline def getName(inline value: GPollableReturn): Option[String] =
-    value match
+    inline value match
       case G_POLLABLE_RETURN_FAILED => Some("G_POLLABLE_RETURN_FAILED")
       case G_POLLABLE_RETURN_OK => Some("G_POLLABLE_RETURN_OK")
       case G_POLLABLE_RETURN_WOULD_BLOCK => Some("G_POLLABLE_RETURN_WOULD_BLOCK")
@@ -2169,6 +2581,11 @@ object GPollableReturn extends CEnum[GPollableReturn]:
     inline def |(b: GPollableReturn): GPollableReturn = a | b
     inline def is(b: GPollableReturn): Boolean = (a & b) == b
 
+/**
+ * GRegexCompileFlags: _REGEX_CASELESS: Letters in the pattern match both upper- and lowercase letters. This option can be changed within a pattern by a "(?i)" option setting. _REGEX_MULTILINE: By default, GRegex treats the strings as consisting of a single line of characters (even if it actually contains newlines). The "start of line" metacharacter ("^") matches only at the start of the string, while the "end of line" metacharacter ("$") matches only at the end of the string, or before a terminating newline (unless %G_REGEX_DOLLAR_ENDONLY is set). When %G_REGEX_MULTILINE is set, the "start of line" and "end of line" constructs match immediately following or immediately before any newline in the string, respectively, as well as at the very start and end. This can be changed within a pattern by a "(?m)" option setting. _REGEX_DOTALL: A dot metacharacter (".") in the pattern matches all characters, including newlines. Without it, newlines are excluded. This option can be changed within a pattern by a ("?s") option setting. _REGEX_EXTENDED: Whitespace data characters in the pattern are totally ignored except when escaped or inside a character class. Whitespace does not include the VT character (code 11). In addition, characters between an unescaped "#" outside a character class and the next newline character, inclusive, are also ignored. This can be changed within a pattern by a "(?x)" option setting. _REGEX_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_DOLLAR_ENDONLY: A dollar metacharacter ("$") in the pattern matches only at the end of the string. Without this option, a dollar also matches immediately before the final character if it is a newline (but not before any other newlines). This option is ignored if %G_REGEX_MULTILINE is set. _REGEX_UNGREEDY: Inverts the "greediness" of the quantifiers so that they are not greedy by default, but become greedy if followed by "?". It can also be set by a "(?U)" option setting within the pattern. _REGEX_RAW: Usually strings must be valid UTF-8 strings, using this flag they are considered as a raw sequence of bytes. _REGEX_NO_AUTO_CAPTURE: Disables the use of numbered capturing parentheses in the pattern. Any opening parenthesis that is not followed by "?" behaves as if it were followed by "?:" but named parentheses can still be used for capturing (and they acquire numbers in the usual way). _REGEX_OPTIMIZE: Optimize the regular expression. If the pattern will be used many times, then it may be worth the effort to optimize it to improve the speed of matches. _REGEX_FIRSTLINE: Limits an unanchored pattern to match before (or at) the first newline. Since: 2.34 _REGEX_DUPNAMES: Names used to identify capturing subpatterns need not be unique. This can be helpful for certain types of pattern when it is known that only one instance of the named subpattern can ever be matched. _REGEX_NEWLINE_CR: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_LF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_CRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequence is ''. _REGEX_NEWLINE_ANYCRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequences are '', '', and ''. Since: 2.34 _REGEX_BSR_ANYCRLF: Usually any newline character or character sequence is recognised. If this option is set, then "\R" only recognizes the newline characters '', '' and ''. Since: 2.34 _REGEX_JAVASCRIPT_COMPAT: Changes behaviour so that it is compatible with JavaScript rather than PCRE. Since: 2.34
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+*/
 opaque type GRegexCompileFlags = CUnsignedInt
 object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
   given _tag: Tag[GRegexCompileFlags] = Tag.UInt
@@ -2192,7 +2609,7 @@ object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
   val G_REGEX_BSR_ANYCRLF = define(8388608)
   val G_REGEX_JAVASCRIPT_COMPAT = define(33554432)
   inline def getName(inline value: GRegexCompileFlags): Option[String] =
-    value match
+    inline value match
       case G_REGEX_CASELESS => Some("G_REGEX_CASELESS")
       case G_REGEX_MULTILINE => Some("G_REGEX_MULTILINE")
       case G_REGEX_DOTALL => Some("G_REGEX_DOTALL")
@@ -2217,6 +2634,11 @@ object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
     inline def |(b: GRegexCompileFlags): GRegexCompileFlags = a | b
     inline def is(b: GRegexCompileFlags): Boolean = (a & b) == b
 
+/**
+ * GRegexError: _REGEX_ERROR_COMPILE: Compilation of the regular expression failed. _REGEX_ERROR_OPTIMIZE: Optimization of the regular expression failed. _REGEX_ERROR_REPLACE: Replacement failed due to an ill-formed replacement string. _REGEX_ERROR_MATCH: The match process failed. _REGEX_ERROR_INTERNAL: Internal error of the regular expression engine. Since 2.16 _REGEX_ERROR_STRAY_BACKSLASH: "\\" at end of pattern. Since 2.16 _REGEX_ERROR_MISSING_CONTROL_CHAR: "\\c" at end of pattern. Since 2.16 _REGEX_ERROR_UNRECOGNIZED_ESCAPE: Unrecognized character follows "\\". Since 2.16 _REGEX_ERROR_QUANTIFIERS_OUT_OF_ORDER: Numbers out of order in "{}" quantifier. Since 2.16 _REGEX_ERROR_QUANTIFIER_TOO_BIG: Number too big in "{}" quantifier. Since 2.16 _REGEX_ERROR_UNTERMINATED_CHARACTER_CLASS: Missing terminating "]" for character class. Since 2.16 _REGEX_ERROR_INVALID_ESCAPE_IN_CHARACTER_CLASS: Invalid escape sequence in character class. Since 2.16 _REGEX_ERROR_RANGE_OUT_OF_ORDER: Range out of order in character class. Since 2.16 _REGEX_ERROR_NOTHING_TO_REPEAT: Nothing to repeat. Since 2.16 _REGEX_ERROR_UNRECOGNIZED_CHARACTER: Unrecognized character after "(?", "(?<" or "(?P". Since 2.16 _REGEX_ERROR_POSIX_NAMED_CLASS_OUTSIDE_CLASS: POSIX named classes are supported only within a class. Since 2.16 _REGEX_ERROR_UNMATCHED_PARENTHESIS: Missing terminating ")" or ")" without opening "(". Since 2.16 _REGEX_ERROR_INEXISTENT_SUBPATTERN_REFERENCE: Reference to non-existent subpattern. Since 2.16 _REGEX_ERROR_UNTERMINATED_COMMENT: Missing terminating ")" after comment. Since 2.16 _REGEX_ERROR_EXPRESSION_TOO_LARGE: Regular expression too large. Since 2.16 _REGEX_ERROR_MEMORY_ERROR: Failed to get memory. Since 2.16 _REGEX_ERROR_VARIABLE_LENGTH_LOOKBEHIND: Lookbehind assertion is not fixed length. Since 2.16 _REGEX_ERROR_MALFORMED_CONDITION: Malformed number or name after "(?(". Since 2.16 _REGEX_ERROR_TOO_MANY_CONDITIONAL_BRANCHES: Conditional group contains more than two branches. Since 2.16 _REGEX_ERROR_ASSERTION_EXPECTED: Assertion expected after "(?(". Since 2.16 _REGEX_ERROR_UNKNOWN_POSIX_CLASS_NAME: Unknown POSIX class name. Since 2.16 _REGEX_ERROR_POSIX_COLLATING_ELEMENTS_NOT_SUPPORTED: POSIX collating elements are not supported. Since 2.16 _REGEX_ERROR_HEX_CODE_TOO_LARGE: Character value in "\\x{...}" sequence is too large. Since 2.16 _REGEX_ERROR_INVALID_CONDITION: Invalid condition "(?(0)". Since 2.16 _REGEX_ERROR_SINGLE_BYTE_MATCH_IN_LOOKBEHIND: \C not allowed in lookbehind assertion. Since 2.16 _REGEX_ERROR_INFINITE_LOOP: Recursive call could loop indefinitely. Since 2.16 _REGEX_ERROR_MISSING_SUBPATTERN_NAME_TERMINATOR: Missing terminator in subpattern name. Since 2.16 _REGEX_ERROR_DUPLICATE_SUBPATTERN_NAME: Two named subpatterns have the same name. Since 2.16 _REGEX_ERROR_MALFORMED_PROPERTY: Malformed "\\P" or "\\p" sequence. Since 2.16 _REGEX_ERROR_UNKNOWN_PROPERTY: Unknown property name after "\\P" or "\\p". Since 2.16 _REGEX_ERROR_SUBPATTERN_NAME_TOO_LONG: Subpattern name is too long (maximum 32 characters). Since 2.16 _REGEX_ERROR_TOO_MANY_SUBPATTERNS: Too many named subpatterns (maximum 10,000). Since 2.16 _REGEX_ERROR_INVALID_OCTAL_VALUE: Octal value is greater than "\\377". Since 2.16 _REGEX_ERROR_TOO_MANY_BRANCHES_IN_DEFINE: "DEFINE" group contains more than one branch. Since 2.16 _REGEX_ERROR_DEFINE_REPETION: Repeating a "DEFINE" group is not allowed. This error is never raised. Since: 2.16 Deprecated: 2.34 _REGEX_ERROR_INCONSISTENT_NEWLINE_OPTIONS: Inconsistent newline options. Since 2.16 _REGEX_ERROR_MISSING_BACK_REFERENCE: "\\g" is not followed by a braced, angle-bracketed, or quoted name or number, or by a plain number. Since: 2.16 _REGEX_ERROR_INVALID_RELATIVE_REFERENCE: relative reference must not be zero. Since: 2.34 _REGEX_ERROR_BACKTRACKING_CONTROL_VERB_ARGUMENT_FORBIDDEN: the backtracing control verb used does not allow an argument. Since: 2.34 _REGEX_ERROR_UNKNOWN_BACKTRACKING_CONTROL_VERB: unknown backtracing control verb. Since: 2.34 _REGEX_ERROR_NUMBER_TOO_BIG: number is too big in escape sequence. Since: 2.34 _REGEX_ERROR_MISSING_SUBPATTERN_NAME: Missing subpattern name. Since: 2.34 _REGEX_ERROR_MISSING_DIGIT: Missing digit. Since 2.34 _REGEX_ERROR_INVALID_DATA_CHARACTER: In JavaScript compatibility mode, "[" is an invalid data character. Since: 2.34 _REGEX_ERROR_EXTRA_SUBPATTERN_NAME: different names for subpatterns of the same number are not allowed. Since: 2.34 _REGEX_ERROR_BACKTRACKING_CONTROL_VERB_ARGUMENT_REQUIRED: the backtracing control verb requires an argument. Since: 2.34 _REGEX_ERROR_INVALID_CONTROL_CHAR: "\\c" must be followed by an ASCII character. Since: 2.34 _REGEX_ERROR_MISSING_NAME: "\\k" is not followed by a braced, angle-bracketed, or quoted name. Since: 2.34 _REGEX_ERROR_NOT_SUPPORTED_IN_CLASS: "\\N" is not supported in a class. Since: 2.34 _REGEX_ERROR_TOO_MANY_FORWARD_REFERENCES: too many forward references. Since: 2.34 _REGEX_ERROR_NAME_TOO_LONG: the name is too long in "(*MARK)", "(*PRUNE)", "(*SKIP)", or "(*THEN)". Since: 2.34 _REGEX_ERROR_CHARACTER_VALUE_TOO_LARGE: the character value in the \u sequence is too large. Since: 2.34
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+*/
 opaque type GRegexError = CUnsignedInt
 object GRegexError extends CEnumU[GRegexError]:
   given _tag: Tag[GRegexError] = Tag.UInt
@@ -2279,7 +2701,7 @@ object GRegexError extends CEnumU[GRegexError]:
   val G_REGEX_ERROR_NAME_TOO_LONG = define(175)
   val G_REGEX_ERROR_CHARACTER_VALUE_TOO_LARGE = define(176)
   inline def getName(inline value: GRegexError): Option[String] =
-    value match
+    inline value match
       case G_REGEX_ERROR_COMPILE => Some("G_REGEX_ERROR_COMPILE")
       case G_REGEX_ERROR_OPTIMIZE => Some("G_REGEX_ERROR_OPTIMIZE")
       case G_REGEX_ERROR_REPLACE => Some("G_REGEX_ERROR_REPLACE")
@@ -2343,6 +2765,11 @@ object GRegexError extends CEnumU[GRegexError]:
     inline def |(b: GRegexError): GRegexError = a | b
     inline def is(b: GRegexError): Boolean = (a & b) == b
 
+/**
+ * GRegexMatchFlags: _REGEX_MATCH_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_MATCH_NOTBOL: Specifies that first character of the string is not the beginning of a line, so the circumflex metacharacter should not match before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes circumflex never to match. This option affects only the behaviour of the circumflex metacharacter, it does not affect "\A". _REGEX_MATCH_NOTEOL: Specifies that the end of the subject string is not the end of a line, so the dollar metacharacter should not match it nor (except in multiline mode) a newline immediately before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes dollar never to match. This option affects only the behaviour of the dollar metacharacter, it does not affect "\Z" or "\z". _REGEX_MATCH_NOTEMPTY: An empty string is not considered to be a valid match if this option is set. If there are alternatives in the pattern, they are tried. If all the alternatives match the empty string, the entire match fails. For example, if the pattern "a?b?" is applied to a string not beginning with "a" or "b", it matches the empty string at the start of the string. With this flag set, this match is not valid, so GRegex searches further into the string for occurrences of "a" or "b". _REGEX_MATCH_PARTIAL: Turns on the partial matching feature, for more documentation on partial matching see g_match_info_is_partial_match(). _REGEX_MATCH_NEWLINE_CR: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_LF: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_CRLF: Overrides the newline definition set when creating a new #GRegex, setting the '' characters sequence as line terminator. _REGEX_MATCH_NEWLINE_ANY: Overrides the newline definition set when creating a new #GRegex, any Unicode newline sequence is recognised as a newline. These are '', '' and ' single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. _REGEX_MATCH_NEWLINE_ANYCRLF: Overrides the newline definition set when creating a new #GRegex; any '', '', or '' character sequence is recognized as a newline. Since: 2.34 _REGEX_MATCH_BSR_ANYCRLF: Overrides the newline definition for "\R" set when creating a new #GRegex; only '', '', or '' character sequences are recognized as a newline by "\R". Since: 2.34 _REGEX_MATCH_BSR_ANY: Overrides the newline definition for "\R" set when creating a new #GRegex; any Unicode newline character or character sequence are recognized as a newline by "\R". These are '', '' and ' single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. Since: 2.34 _REGEX_MATCH_PARTIAL_SOFT: An alias for %G_REGEX_MATCH_PARTIAL. Since: 2.34 _REGEX_MATCH_PARTIAL_HARD: Turns on the partial matching feature. In contrast to to %G_REGEX_MATCH_PARTIAL_SOFT, this stops matching as soon as a partial match is found, without continuing to search for a possible complete match. See g_match_info_is_partial_match() for more information. Since: 2.34 _REGEX_MATCH_NOTEMPTY_ATSTART: Like %G_REGEX_MATCH_NOTEMPTY, but only applied to the start of the matched string. For anchored patterns this can only happen for pattern containing "\K". Since: 2.34
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+*/
 opaque type GRegexMatchFlags = CUnsignedInt
 object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
   given _tag: Tag[GRegexMatchFlags] = Tag.UInt
@@ -2363,7 +2790,7 @@ object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
   val G_REGEX_MATCH_PARTIAL_HARD = define(134217728)
   val G_REGEX_MATCH_NOTEMPTY_ATSTART = define(268435456)
   inline def getName(inline value: GRegexMatchFlags): Option[String] =
-    value match
+    inline value match
       case G_REGEX_MATCH_ANCHORED => Some("G_REGEX_MATCH_ANCHORED")
       case G_REGEX_MATCH_NOTBOL => Some("G_REGEX_MATCH_NOTBOL")
       case G_REGEX_MATCH_NOTEOL => Some("G_REGEX_MATCH_NOTEOL")
@@ -2385,6 +2812,11 @@ object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
     inline def |(b: GRegexMatchFlags): GRegexMatchFlags = a | b
     inline def is(b: GRegexMatchFlags): Boolean = (a & b) == b
 
+/**
+ * GResolverError: _RESOLVER_ERROR_NOT_FOUND: the requested name/address/service was not found _RESOLVER_ERROR_TEMPORARY_FAILURE: the requested information could not be looked up due to a network error or similar problem _RESOLVER_ERROR_INTERNAL: unknown error
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GResolverError = CUnsignedInt
 object GResolverError extends CEnumU[GResolverError]:
   given _tag: Tag[GResolverError] = Tag.UInt
@@ -2393,7 +2825,7 @@ object GResolverError extends CEnumU[GResolverError]:
   val G_RESOLVER_ERROR_TEMPORARY_FAILURE = define(1)
   val G_RESOLVER_ERROR_INTERNAL = define(2)
   inline def getName(inline value: GResolverError): Option[String] =
-    value match
+    inline value match
       case G_RESOLVER_ERROR_NOT_FOUND => Some("G_RESOLVER_ERROR_NOT_FOUND")
       case G_RESOLVER_ERROR_TEMPORARY_FAILURE => Some("G_RESOLVER_ERROR_TEMPORARY_FAILURE")
       case G_RESOLVER_ERROR_INTERNAL => Some("G_RESOLVER_ERROR_INTERNAL")
@@ -2403,6 +2835,11 @@ object GResolverError extends CEnumU[GResolverError]:
     inline def |(b: GResolverError): GResolverError = a | b
     inline def is(b: GResolverError): Boolean = (a & b) == b
 
+/**
+ * GResolverNameLookupFlags: _RESOLVER_NAME_LOOKUP_FLAGS_DEFAULT: default behavior (same as g_resolver_lookup_by_name()) _RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY: only resolve ipv4 addresses _RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY: only resolve ipv6 addresses
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+*/
 opaque type GResolverNameLookupFlags = CUnsignedInt
 object GResolverNameLookupFlags extends CEnumU[GResolverNameLookupFlags]:
   given _tag: Tag[GResolverNameLookupFlags] = Tag.UInt
@@ -2411,7 +2848,7 @@ object GResolverNameLookupFlags extends CEnumU[GResolverNameLookupFlags]:
   val G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY = define(1)
   val G_RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY = define(2)
   inline def getName(inline value: GResolverNameLookupFlags): Option[String] =
-    value match
+    inline value match
       case G_RESOLVER_NAME_LOOKUP_FLAGS_DEFAULT => Some("G_RESOLVER_NAME_LOOKUP_FLAGS_DEFAULT")
       case G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY => Some("G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY")
       case G_RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY => Some("G_RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY")
@@ -2421,6 +2858,11 @@ object GResolverNameLookupFlags extends CEnumU[GResolverNameLookupFlags]:
     inline def |(b: GResolverNameLookupFlags): GResolverNameLookupFlags = a | b
     inline def is(b: GResolverNameLookupFlags): Boolean = (a & b) == b
 
+/**
+ * GResolverRecordType: _RESOLVER_RECORD_SRV: look up DNS SRV records for a domain _RESOLVER_RECORD_MX: look up DNS MX records for a domain _RESOLVER_RECORD_TXT: look up DNS TXT records for a name _RESOLVER_RECORD_SOA: look up DNS SOA records for a zone _RESOLVER_RECORD_NS: look up DNS NS records for a domain
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GResolverRecordType = CUnsignedInt
 object GResolverRecordType extends CEnumU[GResolverRecordType]:
   given _tag: Tag[GResolverRecordType] = Tag.UInt
@@ -2431,7 +2873,7 @@ object GResolverRecordType extends CEnumU[GResolverRecordType]:
   val G_RESOLVER_RECORD_SOA = define(4)
   val G_RESOLVER_RECORD_NS = define(5)
   inline def getName(inline value: GResolverRecordType): Option[String] =
-    value match
+    inline value match
       case G_RESOLVER_RECORD_SRV => Some("G_RESOLVER_RECORD_SRV")
       case G_RESOLVER_RECORD_MX => Some("G_RESOLVER_RECORD_MX")
       case G_RESOLVER_RECORD_TXT => Some("G_RESOLVER_RECORD_TXT")
@@ -2443,6 +2885,11 @@ object GResolverRecordType extends CEnumU[GResolverRecordType]:
     inline def |(b: GResolverRecordType): GResolverRecordType = a | b
     inline def is(b: GResolverRecordType): Boolean = (a & b) == b
 
+/**
+ * GResourceError: _RESOURCE_ERROR_NOT_FOUND: no file was found at the requested path _RESOURCE_ERROR_INTERNAL: unknown error
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GResourceError = CUnsignedInt
 object GResourceError extends CEnumU[GResourceError]:
   given _tag: Tag[GResourceError] = Tag.UInt
@@ -2450,7 +2897,7 @@ object GResourceError extends CEnumU[GResourceError]:
   val G_RESOURCE_ERROR_NOT_FOUND = define(0)
   val G_RESOURCE_ERROR_INTERNAL = define(1)
   inline def getName(inline value: GResourceError): Option[String] =
-    value match
+    inline value match
       case G_RESOURCE_ERROR_NOT_FOUND => Some("G_RESOURCE_ERROR_NOT_FOUND")
       case G_RESOURCE_ERROR_INTERNAL => Some("G_RESOURCE_ERROR_INTERNAL")
       case _ => None
@@ -2459,6 +2906,11 @@ object GResourceError extends CEnumU[GResourceError]:
     inline def |(b: GResourceError): GResourceError = a | b
     inline def is(b: GResourceError): Boolean = (a & b) == b
 
+/**
+ * GResourceFlags: _RESOURCE_FLAGS_NONE: No flags set. _RESOURCE_FLAGS_COMPRESSED: The file is compressed.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GResourceFlags = CUnsignedInt
 object GResourceFlags extends CEnumU[GResourceFlags]:
   given _tag: Tag[GResourceFlags] = Tag.UInt
@@ -2466,7 +2918,7 @@ object GResourceFlags extends CEnumU[GResourceFlags]:
   val G_RESOURCE_FLAGS_NONE = define(0)
   val G_RESOURCE_FLAGS_COMPRESSED = define(1)
   inline def getName(inline value: GResourceFlags): Option[String] =
-    value match
+    inline value match
       case G_RESOURCE_FLAGS_NONE => Some("G_RESOURCE_FLAGS_NONE")
       case G_RESOURCE_FLAGS_COMPRESSED => Some("G_RESOURCE_FLAGS_COMPRESSED")
       case _ => None
@@ -2475,13 +2927,18 @@ object GResourceFlags extends CEnumU[GResourceFlags]:
     inline def |(b: GResourceFlags): GResourceFlags = a | b
     inline def is(b: GResourceFlags): Boolean = (a & b) == b
 
+/**
+ * GResourceLookupFlags: _RESOURCE_LOOKUP_FLAGS_NONE: No flags set.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GResourceLookupFlags = CUnsignedInt
 object GResourceLookupFlags extends CEnumU[GResourceLookupFlags]:
   given _tag: Tag[GResourceLookupFlags] = Tag.UInt
   inline def define(inline a: Long): GResourceLookupFlags = a.toUInt
   val G_RESOURCE_LOOKUP_FLAGS_NONE = define(0)
   inline def getName(inline value: GResourceLookupFlags): Option[String] =
-    value match
+    inline value match
       case G_RESOURCE_LOOKUP_FLAGS_NONE => Some("G_RESOURCE_LOOKUP_FLAGS_NONE")
       case _ => None
   extension (a: GResourceLookupFlags)
@@ -2489,6 +2946,9 @@ object GResourceLookupFlags extends CEnumU[GResourceLookupFlags]:
     inline def |(b: GResourceLookupFlags): GResourceLookupFlags = a | b
     inline def is(b: GResourceLookupFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+*/
 opaque type GSeekType = CUnsignedInt
 object GSeekType extends CEnumU[GSeekType]:
   given _tag: Tag[GSeekType] = Tag.UInt
@@ -2497,7 +2957,7 @@ object GSeekType extends CEnumU[GSeekType]:
   val G_SEEK_SET = define(1)
   val G_SEEK_END = define(2)
   inline def getName(inline value: GSeekType): Option[String] =
-    value match
+    inline value match
       case G_SEEK_CUR => Some("G_SEEK_CUR")
       case G_SEEK_SET => Some("G_SEEK_SET")
       case G_SEEK_END => Some("G_SEEK_END")
@@ -2507,6 +2967,11 @@ object GSeekType extends CEnumU[GSeekType]:
     inline def |(b: GSeekType): GSeekType = a | b
     inline def is(b: GSeekType): Boolean = (a & b) == b
 
+/**
+ * GSettingsBindFlags: _SETTINGS_BIND_DEFAULT: Equivalent to `G_SETTINGS_BIND_GET|G_SETTINGS_BIND_SET` _SETTINGS_BIND_GET: Update the #GObject property when the setting changes. It is an error to use this flag if the property is not writable. _SETTINGS_BIND_SET: Update the setting when the #GObject property changes. It is an error to use this flag if the property is not readable. _SETTINGS_BIND_NO_SENSITIVITY: Do not try to bind a "sensitivity" property to the writability of the setting _SETTINGS_BIND_GET_NO_CHANGES: When set in addition to %G_SETTINGS_BIND_GET, set the #GObject property value initially from the setting, but do not listen for changes of the setting _SETTINGS_BIND_INVERT_BOOLEAN: When passed to g_settings_bind(), uses a pair of mapping functions that invert the boolean value when mapping between the setting and the property. The setting and property must both be booleans. You cannot pass this flag to g_settings_bind_with_mapping().
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+*/
 opaque type GSettingsBindFlags = CUnsignedInt
 object GSettingsBindFlags extends CEnumU[GSettingsBindFlags]:
   given _tag: Tag[GSettingsBindFlags] = Tag.UInt
@@ -2518,7 +2983,7 @@ object GSettingsBindFlags extends CEnumU[GSettingsBindFlags]:
   val G_SETTINGS_BIND_GET_NO_CHANGES = define(8)
   val G_SETTINGS_BIND_INVERT_BOOLEAN = define(16)
   inline def getName(inline value: GSettingsBindFlags): Option[String] =
-    value match
+    inline value match
       case G_SETTINGS_BIND_DEFAULT => Some("G_SETTINGS_BIND_DEFAULT")
       case G_SETTINGS_BIND_GET => Some("G_SETTINGS_BIND_GET")
       case G_SETTINGS_BIND_SET => Some("G_SETTINGS_BIND_SET")
@@ -2531,6 +2996,9 @@ object GSettingsBindFlags extends CEnumU[GSettingsBindFlags]:
     inline def |(b: GSettingsBindFlags): GSettingsBindFlags = a | b
     inline def is(b: GSettingsBindFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gshell.h
+*/
 opaque type GShellError = CUnsignedInt
 object GShellError extends CEnumU[GShellError]:
   given _tag: Tag[GShellError] = Tag.UInt
@@ -2539,7 +3007,7 @@ object GShellError extends CEnumU[GShellError]:
   val G_SHELL_ERROR_EMPTY_STRING = define(1)
   val G_SHELL_ERROR_FAILED = define(2)
   inline def getName(inline value: GShellError): Option[String] =
-    value match
+    inline value match
       case G_SHELL_ERROR_BAD_QUOTING => Some("G_SHELL_ERROR_BAD_QUOTING")
       case G_SHELL_ERROR_EMPTY_STRING => Some("G_SHELL_ERROR_EMPTY_STRING")
       case G_SHELL_ERROR_FAILED => Some("G_SHELL_ERROR_FAILED")
@@ -2549,6 +3017,11 @@ object GShellError extends CEnumU[GShellError]:
     inline def |(b: GShellError): GShellError = a | b
     inline def is(b: GShellError): Boolean = (a & b) == b
 
+/**
+ * GSignalFlags: _SIGNAL_RUN_FIRST: Invoke the object method handler in the first emission stage. _SIGNAL_RUN_LAST: Invoke the object method handler in the third emission stage. _SIGNAL_RUN_CLEANUP: Invoke the object method handler in the last emission stage. _SIGNAL_NO_RECURSE: Signals being emitted for an object while currently being in emission for this very object will not be emitted recursively, but instead cause the first emission to be restarted. _SIGNAL_DETAILED: This signal supports "::detail" appendices to the signal name upon handler connections and emissions. _SIGNAL_ACTION: Action signals are signals that may freely be emitted on alive objects from user code via g_signal_emit() and friends, without the need of being embedded into extra code that performs pre or post emission adjustments on the object. They can also be thought of as object methods which can be called generically by third-party code. _SIGNAL_NO_HOOKS: No emissions hooks are supported for this signal. _SIGNAL_MUST_COLLECT: Varargs signal emission will always collect the arguments, even if there are no signal handlers connected. Since 2.30. _SIGNAL_DEPRECATED: The signal is deprecated and will be removed in a future version. A warning will be generated if it is connected while running with G_ENABLE_DIAGNOSTIC=1. Since 2.32. _SIGNAL_ACCUMULATOR_FIRST_RUN: Only used in #GSignalAccumulator accumulator functions for the #GSignalInvocationHint::run_type field to mark the first call to the accumulator function for a signal emission. Since 2.68.
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+*/
 opaque type GSignalFlags = CUnsignedInt
 object GSignalFlags extends CEnumU[GSignalFlags]:
   given _tag: Tag[GSignalFlags] = Tag.UInt
@@ -2564,7 +3037,7 @@ object GSignalFlags extends CEnumU[GSignalFlags]:
   val G_SIGNAL_DEPRECATED = define(256)
   val G_SIGNAL_ACCUMULATOR_FIRST_RUN = define(131072)
   inline def getName(inline value: GSignalFlags): Option[String] =
-    value match
+    inline value match
       case G_SIGNAL_RUN_FIRST => Some("G_SIGNAL_RUN_FIRST")
       case G_SIGNAL_RUN_LAST => Some("G_SIGNAL_RUN_LAST")
       case G_SIGNAL_RUN_CLEANUP => Some("G_SIGNAL_RUN_CLEANUP")
@@ -2581,6 +3054,11 @@ object GSignalFlags extends CEnumU[GSignalFlags]:
     inline def |(b: GSignalFlags): GSignalFlags = a | b
     inline def is(b: GSignalFlags): Boolean = (a & b) == b
 
+/**
+ * GSignalMatchType: _SIGNAL_MATCH_ID: The signal id must be equal. _SIGNAL_MATCH_DETAIL: The signal detail must be equal. _SIGNAL_MATCH_CLOSURE: The closure must be the same. _SIGNAL_MATCH_FUNC: The C closure callback must be the same. _SIGNAL_MATCH_DATA: The closure data must be the same. _SIGNAL_MATCH_UNBLOCKED: Only unblocked signals may be matched.
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+*/
 opaque type GSignalMatchType = CUnsignedInt
 object GSignalMatchType extends CEnumU[GSignalMatchType]:
   given _tag: Tag[GSignalMatchType] = Tag.UInt
@@ -2592,7 +3070,7 @@ object GSignalMatchType extends CEnumU[GSignalMatchType]:
   val G_SIGNAL_MATCH_DATA = define(16)
   val G_SIGNAL_MATCH_UNBLOCKED = define(32)
   inline def getName(inline value: GSignalMatchType): Option[String] =
-    value match
+    inline value match
       case G_SIGNAL_MATCH_ID => Some("G_SIGNAL_MATCH_ID")
       case G_SIGNAL_MATCH_DETAIL => Some("G_SIGNAL_MATCH_DETAIL")
       case G_SIGNAL_MATCH_CLOSURE => Some("G_SIGNAL_MATCH_CLOSURE")
@@ -2605,6 +3083,9 @@ object GSignalMatchType extends CEnumU[GSignalMatchType]:
     inline def |(b: GSignalMatchType): GSignalMatchType = a | b
     inline def is(b: GSignalMatchType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gslice.h
+*/
 opaque type GSliceConfig = CUnsignedInt
 object GSliceConfig extends CEnumU[GSliceConfig]:
   given _tag: Tag[GSliceConfig] = Tag.UInt
@@ -2616,7 +3097,7 @@ object GSliceConfig extends CEnumU[GSliceConfig]:
   val G_SLICE_CONFIG_CHUNK_SIZES = define(5)
   val G_SLICE_CONFIG_CONTENTION_COUNTER = define(6)
   inline def getName(inline value: GSliceConfig): Option[String] =
-    value match
+    inline value match
       case G_SLICE_CONFIG_ALWAYS_MALLOC => Some("G_SLICE_CONFIG_ALWAYS_MALLOC")
       case G_SLICE_CONFIG_BYPASS_MAGAZINES => Some("G_SLICE_CONFIG_BYPASS_MAGAZINES")
       case G_SLICE_CONFIG_WORKING_SET_MSECS => Some("G_SLICE_CONFIG_WORKING_SET_MSECS")
@@ -2629,6 +3110,11 @@ object GSliceConfig extends CEnumU[GSliceConfig]:
     inline def |(b: GSliceConfig): GSliceConfig = a | b
     inline def is(b: GSliceConfig): Boolean = (a & b) == b
 
+/**
+ * GSocketClientEvent: _SOCKET_CLIENT_RESOLVING: The client is doing a DNS lookup. _SOCKET_CLIENT_RESOLVED: The client has completed a DNS lookup. _SOCKET_CLIENT_CONNECTING: The client is connecting to a remote host (either a proxy or the destination server). _SOCKET_CLIENT_CONNECTED: The client has connected to a remote host. _SOCKET_CLIENT_PROXY_NEGOTIATING: The client is negotiating with a proxy to connect to the destination server. _SOCKET_CLIENT_PROXY_NEGOTIATED: The client has negotiated with the proxy server. _SOCKET_CLIENT_TLS_HANDSHAKING: The client is performing a TLS handshake. _SOCKET_CLIENT_TLS_HANDSHAKED: The client has performed a TLS handshake. _SOCKET_CLIENT_COMPLETE: The client is done with a particular #GSocketConnectable.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSocketClientEvent = CUnsignedInt
 object GSocketClientEvent extends CEnumU[GSocketClientEvent]:
   given _tag: Tag[GSocketClientEvent] = Tag.UInt
@@ -2643,7 +3129,7 @@ object GSocketClientEvent extends CEnumU[GSocketClientEvent]:
   val G_SOCKET_CLIENT_TLS_HANDSHAKED = define(7)
   val G_SOCKET_CLIENT_COMPLETE = define(8)
   inline def getName(inline value: GSocketClientEvent): Option[String] =
-    value match
+    inline value match
       case G_SOCKET_CLIENT_RESOLVING => Some("G_SOCKET_CLIENT_RESOLVING")
       case G_SOCKET_CLIENT_RESOLVED => Some("G_SOCKET_CLIENT_RESOLVED")
       case G_SOCKET_CLIENT_CONNECTING => Some("G_SOCKET_CLIENT_CONNECTING")
@@ -2659,6 +3145,11 @@ object GSocketClientEvent extends CEnumU[GSocketClientEvent]:
     inline def |(b: GSocketClientEvent): GSocketClientEvent = a | b
     inline def is(b: GSocketClientEvent): Boolean = (a & b) == b
 
+/**
+ * GSocketFamily: _SOCKET_FAMILY_INVALID: no address family _SOCKET_FAMILY_IPV4: the IPv4 family _SOCKET_FAMILY_IPV6: the IPv6 family _SOCKET_FAMILY_UNIX: the UNIX domain family
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSocketFamily = CUnsignedInt
 object GSocketFamily extends CEnumU[GSocketFamily]:
   given _tag: Tag[GSocketFamily] = Tag.UInt
@@ -2668,7 +3159,7 @@ object GSocketFamily extends CEnumU[GSocketFamily]:
   val G_SOCKET_FAMILY_IPV4 = define(2)
   val G_SOCKET_FAMILY_IPV6 = define(10)
   inline def getName(inline value: GSocketFamily): Option[String] =
-    value match
+    inline value match
       case G_SOCKET_FAMILY_INVALID => Some("G_SOCKET_FAMILY_INVALID")
       case G_SOCKET_FAMILY_UNIX => Some("G_SOCKET_FAMILY_UNIX")
       case G_SOCKET_FAMILY_IPV4 => Some("G_SOCKET_FAMILY_IPV4")
@@ -2679,6 +3170,11 @@ object GSocketFamily extends CEnumU[GSocketFamily]:
     inline def |(b: GSocketFamily): GSocketFamily = a | b
     inline def is(b: GSocketFamily): Boolean = (a & b) == b
 
+/**
+ * GSocketListenerEvent: _SOCKET_LISTENER_BINDING: The listener is about to bind a socket. _SOCKET_LISTENER_BOUND: The listener has bound a socket. _SOCKET_LISTENER_LISTENING: The listener is about to start listening on this socket. _SOCKET_LISTENER_LISTENED: The listener is now listening on this socket.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSocketListenerEvent = CUnsignedInt
 object GSocketListenerEvent extends CEnumU[GSocketListenerEvent]:
   given _tag: Tag[GSocketListenerEvent] = Tag.UInt
@@ -2688,7 +3184,7 @@ object GSocketListenerEvent extends CEnumU[GSocketListenerEvent]:
   val G_SOCKET_LISTENER_LISTENING = define(2)
   val G_SOCKET_LISTENER_LISTENED = define(3)
   inline def getName(inline value: GSocketListenerEvent): Option[String] =
-    value match
+    inline value match
       case G_SOCKET_LISTENER_BINDING => Some("G_SOCKET_LISTENER_BINDING")
       case G_SOCKET_LISTENER_BOUND => Some("G_SOCKET_LISTENER_BOUND")
       case G_SOCKET_LISTENER_LISTENING => Some("G_SOCKET_LISTENER_LISTENING")
@@ -2699,6 +3195,11 @@ object GSocketListenerEvent extends CEnumU[GSocketListenerEvent]:
     inline def |(b: GSocketListenerEvent): GSocketListenerEvent = a | b
     inline def is(b: GSocketListenerEvent): Boolean = (a & b) == b
 
+/**
+ * GSocketMsgFlags: _SOCKET_MSG_NONE: No flags. _SOCKET_MSG_OOB: Request to send/receive out of band data. _SOCKET_MSG_PEEK: Read data from the socket without removing it from the queue. _SOCKET_MSG_DONTROUTE: Don't use a gateway to send out the packet, only send to hosts on directly connected networks.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSocketMsgFlags = CUnsignedInt
 object GSocketMsgFlags extends CEnumU[GSocketMsgFlags]:
   given _tag: Tag[GSocketMsgFlags] = Tag.UInt
@@ -2708,7 +3209,7 @@ object GSocketMsgFlags extends CEnumU[GSocketMsgFlags]:
   val G_SOCKET_MSG_PEEK = define(2)
   val G_SOCKET_MSG_DONTROUTE = define(4)
   inline def getName(inline value: GSocketMsgFlags): Option[String] =
-    value match
+    inline value match
       case G_SOCKET_MSG_NONE => Some("G_SOCKET_MSG_NONE")
       case G_SOCKET_MSG_OOB => Some("G_SOCKET_MSG_OOB")
       case G_SOCKET_MSG_PEEK => Some("G_SOCKET_MSG_PEEK")
@@ -2719,6 +3220,11 @@ object GSocketMsgFlags extends CEnumU[GSocketMsgFlags]:
     inline def |(b: GSocketMsgFlags): GSocketMsgFlags = a | b
     inline def is(b: GSocketMsgFlags): Boolean = (a & b) == b
 
+/**
+ * GSocketProtocol: _SOCKET_PROTOCOL_UNKNOWN: The protocol type is unknown _SOCKET_PROTOCOL_DEFAULT: The default protocol for the family/type _SOCKET_PROTOCOL_TCP: TCP over IP _SOCKET_PROTOCOL_UDP: UDP over IP _SOCKET_PROTOCOL_SCTP: SCTP over IP
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSocketProtocol = CInt
 object GSocketProtocol extends CEnum[GSocketProtocol]:
   given _tag: Tag[GSocketProtocol] = Tag.Int
@@ -2729,7 +3235,7 @@ object GSocketProtocol extends CEnum[GSocketProtocol]:
   val G_SOCKET_PROTOCOL_UDP = define(17)
   val G_SOCKET_PROTOCOL_SCTP = define(132)
   inline def getName(inline value: GSocketProtocol): Option[String] =
-    value match
+    inline value match
       case G_SOCKET_PROTOCOL_UNKNOWN => Some("G_SOCKET_PROTOCOL_UNKNOWN")
       case G_SOCKET_PROTOCOL_DEFAULT => Some("G_SOCKET_PROTOCOL_DEFAULT")
       case G_SOCKET_PROTOCOL_TCP => Some("G_SOCKET_PROTOCOL_TCP")
@@ -2741,6 +3247,11 @@ object GSocketProtocol extends CEnum[GSocketProtocol]:
     inline def |(b: GSocketProtocol): GSocketProtocol = a | b
     inline def is(b: GSocketProtocol): Boolean = (a & b) == b
 
+/**
+ * GSocketType: _SOCKET_TYPE_INVALID: Type unknown or wrong _SOCKET_TYPE_STREAM: Reliable connection-based byte streams (e.g. TCP). _SOCKET_TYPE_DATAGRAM: Connectionless, unreliable datagram passing. (e.g. UDP) _SOCKET_TYPE_SEQPACKET: Reliable connection-based passing of datagrams of fixed maximum length (e.g. SCTP).
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSocketType = CUnsignedInt
 object GSocketType extends CEnumU[GSocketType]:
   given _tag: Tag[GSocketType] = Tag.UInt
@@ -2750,7 +3261,7 @@ object GSocketType extends CEnumU[GSocketType]:
   val G_SOCKET_TYPE_DATAGRAM = define(2)
   val G_SOCKET_TYPE_SEQPACKET = define(3)
   inline def getName(inline value: GSocketType): Option[String] =
-    value match
+    inline value match
       case G_SOCKET_TYPE_INVALID => Some("G_SOCKET_TYPE_INVALID")
       case G_SOCKET_TYPE_STREAM => Some("G_SOCKET_TYPE_STREAM")
       case G_SOCKET_TYPE_DATAGRAM => Some("G_SOCKET_TYPE_DATAGRAM")
@@ -2761,6 +3272,11 @@ object GSocketType extends CEnumU[GSocketType]:
     inline def |(b: GSocketType): GSocketType = a | b
     inline def is(b: GSocketType): Boolean = (a & b) == b
 
+/**
+ * GSpawnError: _SPAWN_ERROR_FORK: Fork failed due to lack of memory. _SPAWN_ERROR_READ: Read or select on pipes failed. _SPAWN_ERROR_CHDIR: Changing to working directory failed. _SPAWN_ERROR_ACCES: execv() returned `EACCES` _SPAWN_ERROR_PERM: execv() returned `EPERM` _SPAWN_ERROR_TOO_BIG: execv() returned `E2BIG` _SPAWN_ERROR_2BIG: deprecated alias for %G_SPAWN_ERROR_TOO_BIG (deprecated since GLib 2.32) _SPAWN_ERROR_NOEXEC: execv() returned `ENOEXEC` _SPAWN_ERROR_NAMETOOLONG: execv() returned `ENAMETOOLONG` _SPAWN_ERROR_NOENT: execv() returned `ENOENT` _SPAWN_ERROR_NOMEM: execv() returned `ENOMEM` _SPAWN_ERROR_NOTDIR: execv() returned `ENOTDIR` _SPAWN_ERROR_LOOP: execv() returned `ELOOP` _SPAWN_ERROR_TXTBUSY: execv() returned `ETXTBUSY` _SPAWN_ERROR_IO: execv() returned `EIO` _SPAWN_ERROR_NFILE: execv() returned `ENFILE` _SPAWN_ERROR_MFILE: execv() returned `EMFILE` _SPAWN_ERROR_INVAL: execv() returned `EINVAL` _SPAWN_ERROR_ISDIR: execv() returned `EISDIR` _SPAWN_ERROR_LIBBAD: execv() returned `ELIBBAD` _SPAWN_ERROR_FAILED: Some other fatal failure, `error->message` should explain.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gspawn.h
+*/
 opaque type GSpawnError = CUnsignedInt
 object GSpawnError extends CEnumU[GSpawnError]:
   given _tag: Tag[GSpawnError] = Tag.UInt
@@ -2787,7 +3303,7 @@ object GSpawnError extends CEnumU[GSpawnError]:
   val G_SPAWN_ERROR_LIBBAD = define(18)
   val G_SPAWN_ERROR_FAILED = define(19)
   inline def getName(inline value: GSpawnError): Option[String] =
-    value match
+    inline value match
       case G_SPAWN_ERROR_FORK => Some("G_SPAWN_ERROR_FORK")
       case G_SPAWN_ERROR_READ => Some("G_SPAWN_ERROR_READ")
       case G_SPAWN_ERROR_CHDIR => Some("G_SPAWN_ERROR_CHDIR")
@@ -2815,6 +3331,11 @@ object GSpawnError extends CEnumU[GSpawnError]:
     inline def |(b: GSpawnError): GSpawnError = a | b
     inline def is(b: GSpawnError): Boolean = (a & b) == b
 
+/**
+ * GSpawnFlags: _SPAWN_DEFAULT: no flags, default behaviour _SPAWN_LEAVE_DESCRIPTORS_OPEN: the parent's open file descriptors will be inherited by the child; otherwise all descriptors except stdin, stdout and stderr will be closed before calling exec() in the child. _SPAWN_DO_NOT_REAP_CHILD: the child will not be automatically reaped; you must use g_child_watch_add() yourself (or call waitpid() or handle `SIGCHLD` yourself), or the child will become a zombie. _SPAWN_SEARCH_PATH: `argv[0]` need not be an absolute path, it will be looked for in the user's `PATH`. _SPAWN_STDOUT_TO_DEV_NULL: the child's standard output will be discarded, instead of going to the same location as the parent's standard output. _SPAWN_STDERR_TO_DEV_NULL: the child's standard error will be discarded. _SPAWN_CHILD_INHERITS_STDIN: the child will inherit the parent's standard input (by default, the child's standard input is attached to `/dev/null`). _SPAWN_FILE_AND_ARGV_ZERO: the first element of `argv` is the file to execute, while the remaining elements are the actual argument vector to pass to the file. Normally g_spawn_async_with_pipes() uses `argv[0]` as the file to execute, and passes all of `argv` to the child. _SPAWN_SEARCH_PATH_FROM_ENVP: if `argv[0]` is not an absolute path, it will be looked for in the `PATH` from the passed child environment. Since: 2.34 _SPAWN_CLOEXEC_PIPES: create all pipes with the `O_CLOEXEC` flag set. Since: 2.40
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gspawn.h
+*/
 opaque type GSpawnFlags = CUnsignedInt
 object GSpawnFlags extends CEnumU[GSpawnFlags]:
   given _tag: Tag[GSpawnFlags] = Tag.UInt
@@ -2830,7 +3351,7 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
   val G_SPAWN_SEARCH_PATH_FROM_ENVP = define(128)
   val G_SPAWN_CLOEXEC_PIPES = define(256)
   inline def getName(inline value: GSpawnFlags): Option[String] =
-    value match
+    inline value match
       case G_SPAWN_DEFAULT => Some("G_SPAWN_DEFAULT")
       case G_SPAWN_LEAVE_DESCRIPTORS_OPEN => Some("G_SPAWN_LEAVE_DESCRIPTORS_OPEN")
       case G_SPAWN_DO_NOT_REAP_CHILD => Some("G_SPAWN_DO_NOT_REAP_CHILD")
@@ -2847,6 +3368,11 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
     inline def |(b: GSpawnFlags): GSpawnFlags = a | b
     inline def is(b: GSpawnFlags): Boolean = (a & b) == b
 
+/**
+ * GSubprocessFlags: _SUBPROCESS_FLAGS_NONE: No flags. _SUBPROCESS_FLAGS_STDIN_PIPE: create a pipe for the stdin of the spawned process that can be accessed with g_subprocess_get_stdin_pipe(). _SUBPROCESS_FLAGS_STDIN_INHERIT: stdin is inherited from the calling process. _SUBPROCESS_FLAGS_STDOUT_PIPE: create a pipe for the stdout of the spawned process that can be accessed with g_subprocess_get_stdout_pipe(). _SUBPROCESS_FLAGS_STDOUT_SILENCE: silence the stdout of the spawned process (ie: redirect to `/dev/null`). _SUBPROCESS_FLAGS_STDERR_PIPE: create a pipe for the stderr of the spawned process that can be accessed with g_subprocess_get_stderr_pipe(). _SUBPROCESS_FLAGS_STDERR_SILENCE: silence the stderr of the spawned process (ie: redirect to `/dev/null`). _SUBPROCESS_FLAGS_STDERR_MERGE: merge the stderr of the spawned process with whatever the stdout happens to be. This is a good way of directing both streams to a common log file, for example. _SUBPROCESS_FLAGS_INHERIT_FDS: spawned processes will inherit the file descriptors of their parent, unless those descriptors have been explicitly marked as close-on-exec. This flag has no effect over the "standard" file descriptors (stdin, stdout, stderr). _SUBPROCESS_FLAGS_SEARCH_PATH_FROM_ENVP: if path searching is needed when spawning the subprocess, use the `PATH` in the launcher environment. (Since: 2.72)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GSubprocessFlags = CUnsignedInt
 object GSubprocessFlags extends CEnumU[GSubprocessFlags]:
   given _tag: Tag[GSubprocessFlags] = Tag.UInt
@@ -2862,7 +3388,7 @@ object GSubprocessFlags extends CEnumU[GSubprocessFlags]:
   val G_SUBPROCESS_FLAGS_INHERIT_FDS = define(128)
   val G_SUBPROCESS_FLAGS_SEARCH_PATH_FROM_ENVP = define(256)
   inline def getName(inline value: GSubprocessFlags): Option[String] =
-    value match
+    inline value match
       case G_SUBPROCESS_FLAGS_NONE => Some("G_SUBPROCESS_FLAGS_NONE")
       case G_SUBPROCESS_FLAGS_STDIN_PIPE => Some("G_SUBPROCESS_FLAGS_STDIN_PIPE")
       case G_SUBPROCESS_FLAGS_STDIN_INHERIT => Some("G_SUBPROCESS_FLAGS_STDIN_INHERIT")
@@ -2879,13 +3405,18 @@ object GSubprocessFlags extends CEnumU[GSubprocessFlags]:
     inline def |(b: GSubprocessFlags): GSubprocessFlags = a | b
     inline def is(b: GSubprocessFlags): Boolean = (a & b) == b
 
+/**
+ * GTestDBusFlags: _TEST_DBUS_NONE: No flags.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTestDBusFlags = CUnsignedInt
 object GTestDBusFlags extends CEnumU[GTestDBusFlags]:
   given _tag: Tag[GTestDBusFlags] = Tag.UInt
   inline def define(inline a: Long): GTestDBusFlags = a.toUInt
   val G_TEST_DBUS_NONE = define(0)
   inline def getName(inline value: GTestDBusFlags): Option[String] =
-    value match
+    inline value match
       case G_TEST_DBUS_NONE => Some("G_TEST_DBUS_NONE")
       case _ => None
   extension (a: GTestDBusFlags)
@@ -2893,6 +3424,9 @@ object GTestDBusFlags extends CEnumU[GTestDBusFlags]:
     inline def |(b: GTestDBusFlags): GTestDBusFlags = a | b
     inline def is(b: GTestDBusFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+*/
 opaque type GTestFileType = CUnsignedInt
 object GTestFileType extends CEnumU[GTestFileType]:
   given _tag: Tag[GTestFileType] = Tag.UInt
@@ -2900,7 +3434,7 @@ object GTestFileType extends CEnumU[GTestFileType]:
   val G_TEST_DIST = define(0)
   val G_TEST_BUILT = define(1)
   inline def getName(inline value: GTestFileType): Option[String] =
-    value match
+    inline value match
       case G_TEST_DIST => Some("G_TEST_DIST")
       case G_TEST_BUILT => Some("G_TEST_BUILT")
       case _ => None
@@ -2909,6 +3443,9 @@ object GTestFileType extends CEnumU[GTestFileType]:
     inline def |(b: GTestFileType): GTestFileType = a | b
     inline def is(b: GTestFileType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+*/
 opaque type GTestLogType = CUnsignedInt
 object GTestLogType extends CEnumU[GTestLogType]:
   given _tag: Tag[GTestLogType] = Tag.UInt
@@ -2926,7 +3463,7 @@ object GTestLogType extends CEnumU[GTestLogType]:
   val G_TEST_LOG_START_SUITE = define(10)
   val G_TEST_LOG_STOP_SUITE = define(11)
   inline def getName(inline value: GTestLogType): Option[String] =
-    value match
+    inline value match
       case G_TEST_LOG_NONE => Some("G_TEST_LOG_NONE")
       case G_TEST_LOG_ERROR => Some("G_TEST_LOG_ERROR")
       case G_TEST_LOG_START_BINARY => Some("G_TEST_LOG_START_BINARY")
@@ -2945,6 +3482,9 @@ object GTestLogType extends CEnumU[GTestLogType]:
     inline def |(b: GTestLogType): GTestLogType = a | b
     inline def is(b: GTestLogType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+*/
 opaque type GTestResult = CUnsignedInt
 object GTestResult extends CEnumU[GTestResult]:
   given _tag: Tag[GTestResult] = Tag.UInt
@@ -2954,7 +3494,7 @@ object GTestResult extends CEnumU[GTestResult]:
   val G_TEST_RUN_FAILURE = define(2)
   val G_TEST_RUN_INCOMPLETE = define(3)
   inline def getName(inline value: GTestResult): Option[String] =
-    value match
+    inline value match
       case G_TEST_RUN_SUCCESS => Some("G_TEST_RUN_SUCCESS")
       case G_TEST_RUN_SKIPPED => Some("G_TEST_RUN_SKIPPED")
       case G_TEST_RUN_FAILURE => Some("G_TEST_RUN_FAILURE")
@@ -2965,6 +3505,9 @@ object GTestResult extends CEnumU[GTestResult]:
     inline def |(b: GTestResult): GTestResult = a | b
     inline def is(b: GTestResult): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+*/
 opaque type GTestSubprocessFlags = CUnsignedInt
 object GTestSubprocessFlags extends CEnumU[GTestSubprocessFlags]:
   given _tag: Tag[GTestSubprocessFlags] = Tag.UInt
@@ -2973,7 +3516,7 @@ object GTestSubprocessFlags extends CEnumU[GTestSubprocessFlags]:
   val G_TEST_SUBPROCESS_INHERIT_STDOUT = define(2)
   val G_TEST_SUBPROCESS_INHERIT_STDERR = define(4)
   inline def getName(inline value: GTestSubprocessFlags): Option[String] =
-    value match
+    inline value match
       case G_TEST_SUBPROCESS_INHERIT_STDIN => Some("G_TEST_SUBPROCESS_INHERIT_STDIN")
       case G_TEST_SUBPROCESS_INHERIT_STDOUT => Some("G_TEST_SUBPROCESS_INHERIT_STDOUT")
       case G_TEST_SUBPROCESS_INHERIT_STDERR => Some("G_TEST_SUBPROCESS_INHERIT_STDERR")
@@ -2983,6 +3526,11 @@ object GTestSubprocessFlags extends CEnumU[GTestSubprocessFlags]:
     inline def |(b: GTestSubprocessFlags): GTestSubprocessFlags = a | b
     inline def is(b: GTestSubprocessFlags): Boolean = (a & b) == b
 
+/**
+ * GTestTrapFlags: _TEST_TRAP_SILENCE_STDOUT: Redirect stdout of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stdout(). _TEST_TRAP_SILENCE_STDERR: Redirect stderr of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stderr(). _TEST_TRAP_INHERIT_STDIN: If this flag is given, stdin of the child process is shared with stdin of its parent process. It is redirected to `/dev/null` otherwise.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+*/
 opaque type GTestTrapFlags = CUnsignedInt
 object GTestTrapFlags extends CEnumU[GTestTrapFlags]:
   given _tag: Tag[GTestTrapFlags] = Tag.UInt
@@ -2991,7 +3539,7 @@ object GTestTrapFlags extends CEnumU[GTestTrapFlags]:
   val G_TEST_TRAP_SILENCE_STDERR = define(256)
   val G_TEST_TRAP_INHERIT_STDIN = define(512)
   inline def getName(inline value: GTestTrapFlags): Option[String] =
-    value match
+    inline value match
       case G_TEST_TRAP_SILENCE_STDOUT => Some("G_TEST_TRAP_SILENCE_STDOUT")
       case G_TEST_TRAP_SILENCE_STDERR => Some("G_TEST_TRAP_SILENCE_STDERR")
       case G_TEST_TRAP_INHERIT_STDIN => Some("G_TEST_TRAP_INHERIT_STDIN")
@@ -3001,13 +3549,16 @@ object GTestTrapFlags extends CEnumU[GTestTrapFlags]:
     inline def |(b: GTestTrapFlags): GTestTrapFlags = a | b
     inline def is(b: GTestTrapFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+*/
 opaque type GThreadError = CUnsignedInt
 object GThreadError extends CEnumU[GThreadError]:
   given _tag: Tag[GThreadError] = Tag.UInt
   inline def define(inline a: Long): GThreadError = a.toUInt
   val G_THREAD_ERROR_AGAIN = define(0)
   inline def getName(inline value: GThreadError): Option[String] =
-    value match
+    inline value match
       case G_THREAD_ERROR_AGAIN => Some("G_THREAD_ERROR_AGAIN")
       case _ => None
   extension (a: GThreadError)
@@ -3015,6 +3566,9 @@ object GThreadError extends CEnumU[GThreadError]:
     inline def |(b: GThreadError): GThreadError = a | b
     inline def is(b: GThreadError): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+*/
 opaque type GThreadPriority = CUnsignedInt
 object GThreadPriority extends CEnumU[GThreadPriority]:
   given _tag: Tag[GThreadPriority] = Tag.UInt
@@ -3024,7 +3578,7 @@ object GThreadPriority extends CEnumU[GThreadPriority]:
   val G_THREAD_PRIORITY_HIGH = define(2)
   val G_THREAD_PRIORITY_URGENT = define(3)
   inline def getName(inline value: GThreadPriority): Option[String] =
-    value match
+    inline value match
       case G_THREAD_PRIORITY_LOW => Some("G_THREAD_PRIORITY_LOW")
       case G_THREAD_PRIORITY_NORMAL => Some("G_THREAD_PRIORITY_NORMAL")
       case G_THREAD_PRIORITY_HIGH => Some("G_THREAD_PRIORITY_HIGH")
@@ -3035,6 +3589,11 @@ object GThreadPriority extends CEnumU[GThreadPriority]:
     inline def |(b: GThreadPriority): GThreadPriority = a | b
     inline def is(b: GThreadPriority): Boolean = (a & b) == b
 
+/**
+ * GTimeType: _TIME_TYPE_STANDARD: the time is in local standard time _TIME_TYPE_DAYLIGHT: the time is in local daylight time _TIME_TYPE_UNIVERSAL: the time is in UTC
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gtimezone.h
+*/
 opaque type GTimeType = CUnsignedInt
 object GTimeType extends CEnumU[GTimeType]:
   given _tag: Tag[GTimeType] = Tag.UInt
@@ -3043,7 +3602,7 @@ object GTimeType extends CEnumU[GTimeType]:
   val G_TIME_TYPE_DAYLIGHT = define(1)
   val G_TIME_TYPE_UNIVERSAL = define(2)
   inline def getName(inline value: GTimeType): Option[String] =
-    value match
+    inline value match
       case G_TIME_TYPE_STANDARD => Some("G_TIME_TYPE_STANDARD")
       case G_TIME_TYPE_DAYLIGHT => Some("G_TIME_TYPE_DAYLIGHT")
       case G_TIME_TYPE_UNIVERSAL => Some("G_TIME_TYPE_UNIVERSAL")
@@ -3053,6 +3612,11 @@ object GTimeType extends CEnumU[GTimeType]:
     inline def |(b: GTimeType): GTimeType = a | b
     inline def is(b: GTimeType): Boolean = (a & b) == b
 
+/**
+ * GTlsAuthenticationMode: _TLS_AUTHENTICATION_NONE: client authentication not required _TLS_AUTHENTICATION_REQUESTED: client authentication is requested _TLS_AUTHENTICATION_REQUIRED: client authentication is required
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsAuthenticationMode = CUnsignedInt
 object GTlsAuthenticationMode extends CEnumU[GTlsAuthenticationMode]:
   given _tag: Tag[GTlsAuthenticationMode] = Tag.UInt
@@ -3061,7 +3625,7 @@ object GTlsAuthenticationMode extends CEnumU[GTlsAuthenticationMode]:
   val G_TLS_AUTHENTICATION_REQUESTED = define(1)
   val G_TLS_AUTHENTICATION_REQUIRED = define(2)
   inline def getName(inline value: GTlsAuthenticationMode): Option[String] =
-    value match
+    inline value match
       case G_TLS_AUTHENTICATION_NONE => Some("G_TLS_AUTHENTICATION_NONE")
       case G_TLS_AUTHENTICATION_REQUESTED => Some("G_TLS_AUTHENTICATION_REQUESTED")
       case G_TLS_AUTHENTICATION_REQUIRED => Some("G_TLS_AUTHENTICATION_REQUIRED")
@@ -3071,6 +3635,11 @@ object GTlsAuthenticationMode extends CEnumU[GTlsAuthenticationMode]:
     inline def |(b: GTlsAuthenticationMode): GTlsAuthenticationMode = a | b
     inline def is(b: GTlsAuthenticationMode): Boolean = (a & b) == b
 
+/**
+ * GTlsCertificateFlags: _TLS_CERTIFICATE_UNKNOWN_CA: The signing certificate authority is not known. _TLS_CERTIFICATE_BAD_IDENTITY: The certificate does not match the expected identity of the site that it was retrieved from. _TLS_CERTIFICATE_NOT_ACTIVATED: The certificate's activation time is still in the future _TLS_CERTIFICATE_EXPIRED: The certificate has expired _TLS_CERTIFICATE_REVOKED: The certificate has been revoked according to the #GTlsConnection's certificate revocation list. _TLS_CERTIFICATE_INSECURE: The certificate's algorithm is considered insecure. _TLS_CERTIFICATE_GENERIC_ERROR: Some other error occurred validating the certificate _TLS_CERTIFICATE_VALIDATE_ALL: the combination of all of the above flags
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsCertificateFlags = CUnsignedInt
 object GTlsCertificateFlags extends CEnumU[GTlsCertificateFlags]:
   given _tag: Tag[GTlsCertificateFlags] = Tag.UInt
@@ -3084,7 +3653,7 @@ object GTlsCertificateFlags extends CEnumU[GTlsCertificateFlags]:
   val G_TLS_CERTIFICATE_GENERIC_ERROR = define(64)
   val G_TLS_CERTIFICATE_VALIDATE_ALL = define(127)
   inline def getName(inline value: GTlsCertificateFlags): Option[String] =
-    value match
+    inline value match
       case G_TLS_CERTIFICATE_UNKNOWN_CA => Some("G_TLS_CERTIFICATE_UNKNOWN_CA")
       case G_TLS_CERTIFICATE_BAD_IDENTITY => Some("G_TLS_CERTIFICATE_BAD_IDENTITY")
       case G_TLS_CERTIFICATE_NOT_ACTIVATED => Some("G_TLS_CERTIFICATE_NOT_ACTIVATED")
@@ -3099,13 +3668,18 @@ object GTlsCertificateFlags extends CEnumU[GTlsCertificateFlags]:
     inline def |(b: GTlsCertificateFlags): GTlsCertificateFlags = a | b
     inline def is(b: GTlsCertificateFlags): Boolean = (a & b) == b
 
+/**
+ * GTlsCertificateRequestFlags: _TLS_CERTIFICATE_REQUEST_NONE: No flags
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsCertificateRequestFlags = CUnsignedInt
 object GTlsCertificateRequestFlags extends CEnumU[GTlsCertificateRequestFlags]:
   given _tag: Tag[GTlsCertificateRequestFlags] = Tag.UInt
   inline def define(inline a: Long): GTlsCertificateRequestFlags = a.toUInt
   val G_TLS_CERTIFICATE_REQUEST_NONE = define(0)
   inline def getName(inline value: GTlsCertificateRequestFlags): Option[String] =
-    value match
+    inline value match
       case G_TLS_CERTIFICATE_REQUEST_NONE => Some("G_TLS_CERTIFICATE_REQUEST_NONE")
       case _ => None
   extension (a: GTlsCertificateRequestFlags)
@@ -3113,6 +3687,11 @@ object GTlsCertificateRequestFlags extends CEnumU[GTlsCertificateRequestFlags]:
     inline def |(b: GTlsCertificateRequestFlags): GTlsCertificateRequestFlags = a | b
     inline def is(b: GTlsCertificateRequestFlags): Boolean = (a & b) == b
 
+/**
+ * GTlsChannelBindingError: _TLS_CHANNEL_BINDING_ERROR_NOT_IMPLEMENTED: Either entire binding retrieval facility or specific binding type is not implemented in the TLS backend. _TLS_CHANNEL_BINDING_ERROR_INVALID_STATE: The handshake is not yet complete on the connection which is a strong requirement for any existing binding type. _TLS_CHANNEL_BINDING_ERROR_NOT_AVAILABLE: Handshake is complete but binding data is not available. That normally indicates the TLS implementation failed to provide the binding data. For example, some implementations do not provide a peer certificate for resumed connections. _TLS_CHANNEL_BINDING_ERROR_NOT_SUPPORTED: Binding type is not supported on the current connection. This error could be triggered when requesting `tls-server-end-point` binding data for a certificate which has no hash function or uses multiple hash functions. _TLS_CHANNEL_BINDING_ERROR_GENERAL_ERROR: Any other backend error preventing binding data retrieval.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsChannelBindingError = CUnsignedInt
 object GTlsChannelBindingError extends CEnumU[GTlsChannelBindingError]:
   given _tag: Tag[GTlsChannelBindingError] = Tag.UInt
@@ -3123,7 +3702,7 @@ object GTlsChannelBindingError extends CEnumU[GTlsChannelBindingError]:
   val G_TLS_CHANNEL_BINDING_ERROR_NOT_SUPPORTED = define(3)
   val G_TLS_CHANNEL_BINDING_ERROR_GENERAL_ERROR = define(4)
   inline def getName(inline value: GTlsChannelBindingError): Option[String] =
-    value match
+    inline value match
       case G_TLS_CHANNEL_BINDING_ERROR_NOT_IMPLEMENTED => Some("G_TLS_CHANNEL_BINDING_ERROR_NOT_IMPLEMENTED")
       case G_TLS_CHANNEL_BINDING_ERROR_INVALID_STATE => Some("G_TLS_CHANNEL_BINDING_ERROR_INVALID_STATE")
       case G_TLS_CHANNEL_BINDING_ERROR_NOT_AVAILABLE => Some("G_TLS_CHANNEL_BINDING_ERROR_NOT_AVAILABLE")
@@ -3135,6 +3714,11 @@ object GTlsChannelBindingError extends CEnumU[GTlsChannelBindingError]:
     inline def |(b: GTlsChannelBindingError): GTlsChannelBindingError = a | b
     inline def is(b: GTlsChannelBindingError): Boolean = (a & b) == b
 
+/**
+ * GTlsChannelBindingType: _TLS_CHANNEL_BINDING_TLS_UNIQUE: [`tls-unique`](https://tools.ietf.org/html/rfc5929#section-3) binding type _TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT: [`tls-server-end-point`](https://tools.ietf.org/html/rfc5929#section-4) binding type
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsChannelBindingType = CUnsignedInt
 object GTlsChannelBindingType extends CEnumU[GTlsChannelBindingType]:
   given _tag: Tag[GTlsChannelBindingType] = Tag.UInt
@@ -3142,7 +3726,7 @@ object GTlsChannelBindingType extends CEnumU[GTlsChannelBindingType]:
   val G_TLS_CHANNEL_BINDING_TLS_UNIQUE = define(0)
   val G_TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT = define(1)
   inline def getName(inline value: GTlsChannelBindingType): Option[String] =
-    value match
+    inline value match
       case G_TLS_CHANNEL_BINDING_TLS_UNIQUE => Some("G_TLS_CHANNEL_BINDING_TLS_UNIQUE")
       case G_TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT => Some("G_TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT")
       case _ => None
@@ -3151,6 +3735,11 @@ object GTlsChannelBindingType extends CEnumU[GTlsChannelBindingType]:
     inline def |(b: GTlsChannelBindingType): GTlsChannelBindingType = a | b
     inline def is(b: GTlsChannelBindingType): Boolean = (a & b) == b
 
+/**
+ * GTlsDatabaseLookupFlags: _TLS_DATABASE_LOOKUP_NONE: No lookup flags _TLS_DATABASE_LOOKUP_KEYPAIR: Restrict lookup to certificates that have a private key.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsDatabaseLookupFlags = CUnsignedInt
 object GTlsDatabaseLookupFlags extends CEnumU[GTlsDatabaseLookupFlags]:
   given _tag: Tag[GTlsDatabaseLookupFlags] = Tag.UInt
@@ -3158,7 +3747,7 @@ object GTlsDatabaseLookupFlags extends CEnumU[GTlsDatabaseLookupFlags]:
   val G_TLS_DATABASE_LOOKUP_NONE = define(0)
   val G_TLS_DATABASE_LOOKUP_KEYPAIR = define(1)
   inline def getName(inline value: GTlsDatabaseLookupFlags): Option[String] =
-    value match
+    inline value match
       case G_TLS_DATABASE_LOOKUP_NONE => Some("G_TLS_DATABASE_LOOKUP_NONE")
       case G_TLS_DATABASE_LOOKUP_KEYPAIR => Some("G_TLS_DATABASE_LOOKUP_KEYPAIR")
       case _ => None
@@ -3167,13 +3756,18 @@ object GTlsDatabaseLookupFlags extends CEnumU[GTlsDatabaseLookupFlags]:
     inline def |(b: GTlsDatabaseLookupFlags): GTlsDatabaseLookupFlags = a | b
     inline def is(b: GTlsDatabaseLookupFlags): Boolean = (a & b) == b
 
+/**
+ * GTlsDatabaseVerifyFlags: _TLS_DATABASE_VERIFY_NONE: No verification flags
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsDatabaseVerifyFlags = CUnsignedInt
 object GTlsDatabaseVerifyFlags extends CEnumU[GTlsDatabaseVerifyFlags]:
   given _tag: Tag[GTlsDatabaseVerifyFlags] = Tag.UInt
   inline def define(inline a: Long): GTlsDatabaseVerifyFlags = a.toUInt
   val G_TLS_DATABASE_VERIFY_NONE = define(0)
   inline def getName(inline value: GTlsDatabaseVerifyFlags): Option[String] =
-    value match
+    inline value match
       case G_TLS_DATABASE_VERIFY_NONE => Some("G_TLS_DATABASE_VERIFY_NONE")
       case _ => None
   extension (a: GTlsDatabaseVerifyFlags)
@@ -3181,6 +3775,11 @@ object GTlsDatabaseVerifyFlags extends CEnumU[GTlsDatabaseVerifyFlags]:
     inline def |(b: GTlsDatabaseVerifyFlags): GTlsDatabaseVerifyFlags = a | b
     inline def is(b: GTlsDatabaseVerifyFlags): Boolean = (a & b) == b
 
+/**
+ * GTlsError: _TLS_ERROR_UNAVAILABLE: No TLS provider is available _TLS_ERROR_MISC: Miscellaneous TLS error _TLS_ERROR_BAD_CERTIFICATE: The certificate presented could not be parsed or failed validation. _TLS_ERROR_NOT_TLS: The TLS handshake failed because the peer does not seem to be a TLS server. _TLS_ERROR_HANDSHAKE: The TLS handshake failed because the peer's certificate was not acceptable. _TLS_ERROR_CERTIFICATE_REQUIRED: The TLS handshake failed because the server requested a client-side certificate, but none was provided. See g_tls_connection_set_certificate(). _TLS_ERROR_EOF: The TLS connection was closed without proper notice, which may indicate an attack. See g_tls_connection_set_require_close_notify(). _TLS_ERROR_INAPPROPRIATE_FALLBACK: The TLS handshake failed because the client sent the fallback SCSV, indicating a protocol downgrade attack. Since: 2.60 _TLS_ERROR_BAD_CERTIFICATE_PASSWORD: The certificate failed to load because a password was incorrect. Since: 2.72
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsError = CUnsignedInt
 object GTlsError extends CEnumU[GTlsError]:
   given _tag: Tag[GTlsError] = Tag.UInt
@@ -3195,7 +3794,7 @@ object GTlsError extends CEnumU[GTlsError]:
   val G_TLS_ERROR_INAPPROPRIATE_FALLBACK = define(7)
   val G_TLS_ERROR_BAD_CERTIFICATE_PASSWORD = define(8)
   inline def getName(inline value: GTlsError): Option[String] =
-    value match
+    inline value match
       case G_TLS_ERROR_UNAVAILABLE => Some("G_TLS_ERROR_UNAVAILABLE")
       case G_TLS_ERROR_MISC => Some("G_TLS_ERROR_MISC")
       case G_TLS_ERROR_BAD_CERTIFICATE => Some("G_TLS_ERROR_BAD_CERTIFICATE")
@@ -3211,6 +3810,11 @@ object GTlsError extends CEnumU[GTlsError]:
     inline def |(b: GTlsError): GTlsError = a | b
     inline def is(b: GTlsError): Boolean = (a & b) == b
 
+/**
+ * GTlsInteractionResult: _TLS_INTERACTION_UNHANDLED: The interaction was unhandled (i.e. not implemented). _TLS_INTERACTION_HANDLED: The interaction completed, and resulting data is available. _TLS_INTERACTION_FAILED: The interaction has failed, or was cancelled. and the operation should be aborted.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsInteractionResult = CUnsignedInt
 object GTlsInteractionResult extends CEnumU[GTlsInteractionResult]:
   given _tag: Tag[GTlsInteractionResult] = Tag.UInt
@@ -3219,7 +3823,7 @@ object GTlsInteractionResult extends CEnumU[GTlsInteractionResult]:
   val G_TLS_INTERACTION_HANDLED = define(1)
   val G_TLS_INTERACTION_FAILED = define(2)
   inline def getName(inline value: GTlsInteractionResult): Option[String] =
-    value match
+    inline value match
       case G_TLS_INTERACTION_UNHANDLED => Some("G_TLS_INTERACTION_UNHANDLED")
       case G_TLS_INTERACTION_HANDLED => Some("G_TLS_INTERACTION_HANDLED")
       case G_TLS_INTERACTION_FAILED => Some("G_TLS_INTERACTION_FAILED")
@@ -3229,6 +3833,11 @@ object GTlsInteractionResult extends CEnumU[GTlsInteractionResult]:
     inline def |(b: GTlsInteractionResult): GTlsInteractionResult = a | b
     inline def is(b: GTlsInteractionResult): Boolean = (a & b) == b
 
+/**
+ * GTlsProtocolVersion: _TLS_PROTOCOL_VERSION_UNKNOWN: No protocol version or unknown protocol version _TLS_PROTOCOL_VERSION_SSL_3_0: SSL 3.0, which is insecure and should not be used _TLS_PROTOCOL_VERSION_TLS_1_0: TLS 1.0, which is insecure and should not be used _TLS_PROTOCOL_VERSION_TLS_1_1: TLS 1.1, which is insecure and should not be used _TLS_PROTOCOL_VERSION_TLS_1_2: TLS 1.2, defined by [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) _TLS_PROTOCOL_VERSION_TLS_1_3: TLS 1.3, defined by [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) _TLS_PROTOCOL_VERSION_DTLS_1_0: DTLS 1.0, which is insecure and should not be used _TLS_PROTOCOL_VERSION_DTLS_1_2: DTLS 1.2, defined by [RFC 6347](https://datatracker.ietf.org/doc/html/rfc6347)
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsProtocolVersion = CUnsignedInt
 object GTlsProtocolVersion extends CEnumU[GTlsProtocolVersion]:
   given _tag: Tag[GTlsProtocolVersion] = Tag.UInt
@@ -3242,7 +3851,7 @@ object GTlsProtocolVersion extends CEnumU[GTlsProtocolVersion]:
   val G_TLS_PROTOCOL_VERSION_DTLS_1_0 = define(201)
   val G_TLS_PROTOCOL_VERSION_DTLS_1_2 = define(202)
   inline def getName(inline value: GTlsProtocolVersion): Option[String] =
-    value match
+    inline value match
       case G_TLS_PROTOCOL_VERSION_UNKNOWN => Some("G_TLS_PROTOCOL_VERSION_UNKNOWN")
       case G_TLS_PROTOCOL_VERSION_SSL_3_0 => Some("G_TLS_PROTOCOL_VERSION_SSL_3_0")
       case G_TLS_PROTOCOL_VERSION_TLS_1_0 => Some("G_TLS_PROTOCOL_VERSION_TLS_1_0")
@@ -3257,6 +3866,11 @@ object GTlsProtocolVersion extends CEnumU[GTlsProtocolVersion]:
     inline def |(b: GTlsProtocolVersion): GTlsProtocolVersion = a | b
     inline def is(b: GTlsProtocolVersion): Boolean = (a & b) == b
 
+/**
+ * GTlsRehandshakeMode: _TLS_REHANDSHAKE_NEVER: Never allow rehandshaking _TLS_REHANDSHAKE_SAFELY: Allow safe rehandshaking only _TLS_REHANDSHAKE_UNSAFELY: Allow unsafe rehandshaking
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GTlsRehandshakeMode = CUnsignedInt
 object GTlsRehandshakeMode extends CEnumU[GTlsRehandshakeMode]:
   given _tag: Tag[GTlsRehandshakeMode] = Tag.UInt
@@ -3265,7 +3879,7 @@ object GTlsRehandshakeMode extends CEnumU[GTlsRehandshakeMode]:
   val G_TLS_REHANDSHAKE_SAFELY = define(1)
   val G_TLS_REHANDSHAKE_UNSAFELY = define(2)
   inline def getName(inline value: GTlsRehandshakeMode): Option[String] =
-    value match
+    inline value match
       case G_TLS_REHANDSHAKE_NEVER => Some("G_TLS_REHANDSHAKE_NEVER")
       case G_TLS_REHANDSHAKE_SAFELY => Some("G_TLS_REHANDSHAKE_SAFELY")
       case G_TLS_REHANDSHAKE_UNSAFELY => Some("G_TLS_REHANDSHAKE_UNSAFELY")
@@ -3275,6 +3889,9 @@ object GTlsRehandshakeMode extends CEnumU[GTlsRehandshakeMode]:
     inline def |(b: GTlsRehandshakeMode): GTlsRehandshakeMode = a | b
     inline def is(b: GTlsRehandshakeMode): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+*/
 opaque type GTokenType = CUnsignedInt
 object GTokenType extends CEnumU[GTokenType]:
   given _tag: Tag[GTokenType] = Tag.UInt
@@ -3304,7 +3921,7 @@ object GTokenType extends CEnumU[GTokenType]:
   val G_TOKEN_COMMENT_MULTI = define(269)
   val G_TOKEN_LAST = define(270)
   inline def getName(inline value: GTokenType): Option[String] =
-    value match
+    inline value match
       case G_TOKEN_EOF => Some("G_TOKEN_EOF")
       case G_TOKEN_LEFT_PAREN => Some("G_TOKEN_LEFT_PAREN")
       case G_TOKEN_RIGHT_PAREN => Some("G_TOKEN_RIGHT_PAREN")
@@ -3335,6 +3952,9 @@ object GTokenType extends CEnumU[GTokenType]:
     inline def |(b: GTokenType): GTokenType = a | b
     inline def is(b: GTokenType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+*/
 opaque type GTraverseFlags = CUnsignedInt
 object GTraverseFlags extends CEnumU[GTraverseFlags]:
   given _tag: Tag[GTraverseFlags] = Tag.UInt
@@ -3346,7 +3966,7 @@ object GTraverseFlags extends CEnumU[GTraverseFlags]:
   val G_TRAVERSE_LEAFS = define(1)
   val G_TRAVERSE_NON_LEAFS = define(2)
   inline def getName(inline value: GTraverseFlags): Option[String] =
-    value match
+    inline value match
       case G_TRAVERSE_LEAVES => Some("G_TRAVERSE_LEAVES")
       case G_TRAVERSE_NON_LEAVES => Some("G_TRAVERSE_NON_LEAVES")
       case G_TRAVERSE_ALL => Some("G_TRAVERSE_ALL")
@@ -3359,6 +3979,9 @@ object GTraverseFlags extends CEnumU[GTraverseFlags]:
     inline def |(b: GTraverseFlags): GTraverseFlags = a | b
     inline def is(b: GTraverseFlags): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+*/
 opaque type GTraverseType = CUnsignedInt
 object GTraverseType extends CEnumU[GTraverseType]:
   given _tag: Tag[GTraverseType] = Tag.UInt
@@ -3368,7 +3991,7 @@ object GTraverseType extends CEnumU[GTraverseType]:
   val G_POST_ORDER = define(2)
   val G_LEVEL_ORDER = define(3)
   inline def getName(inline value: GTraverseType): Option[String] =
-    value match
+    inline value match
       case G_IN_ORDER => Some("G_IN_ORDER")
       case G_PRE_ORDER => Some("G_PRE_ORDER")
       case G_POST_ORDER => Some("G_POST_ORDER")
@@ -3379,6 +4002,11 @@ object GTraverseType extends CEnumU[GTraverseType]:
     inline def |(b: GTraverseType): GTraverseType = a | b
     inline def is(b: GTraverseType): Boolean = (a & b) == b
 
+/**
+ * GTypeDebugFlags: _TYPE_DEBUG_NONE: Print no messages _TYPE_DEBUG_OBJECTS: Print messages about object bookkeeping _TYPE_DEBUG_SIGNALS: Print messages about signal emissions _TYPE_DEBUG_MASK: Mask covering all debug flags _TYPE_DEBUG_INSTANCE_COUNT: Keep a count of instances of each type
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+*/
 opaque type GTypeDebugFlags = CUnsignedInt
 object GTypeDebugFlags extends CEnumU[GTypeDebugFlags]:
   given _tag: Tag[GTypeDebugFlags] = Tag.UInt
@@ -3389,7 +4017,7 @@ object GTypeDebugFlags extends CEnumU[GTypeDebugFlags]:
   val G_TYPE_DEBUG_INSTANCE_COUNT = define(4)
   val G_TYPE_DEBUG_MASK = define(7)
   inline def getName(inline value: GTypeDebugFlags): Option[String] =
-    value match
+    inline value match
       case G_TYPE_DEBUG_NONE => Some("G_TYPE_DEBUG_NONE")
       case G_TYPE_DEBUG_OBJECTS => Some("G_TYPE_DEBUG_OBJECTS")
       case G_TYPE_DEBUG_SIGNALS => Some("G_TYPE_DEBUG_SIGNALS")
@@ -3401,6 +4029,11 @@ object GTypeDebugFlags extends CEnumU[GTypeDebugFlags]:
     inline def |(b: GTypeDebugFlags): GTypeDebugFlags = a | b
     inline def is(b: GTypeDebugFlags): Boolean = (a & b) == b
 
+/**
+ * GTypeFlags: _TYPE_FLAG_ABSTRACT: Indicates an abstract type. No instances can be created for an abstract type _TYPE_FLAG_VALUE_ABSTRACT: Indicates an abstract value type, i.e. a type that introduces a value table, but can't be used for g_value_init() _TYPE_FLAG_FINAL: Indicates a final type. A final type is a non-derivable leaf node in a deep derivable type hierarchy tree. Since: 2.70
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+*/
 opaque type GTypeFlags = CUnsignedInt
 object GTypeFlags extends CEnumU[GTypeFlags]:
   given _tag: Tag[GTypeFlags] = Tag.UInt
@@ -3409,7 +4042,7 @@ object GTypeFlags extends CEnumU[GTypeFlags]:
   val G_TYPE_FLAG_VALUE_ABSTRACT = define(32)
   val G_TYPE_FLAG_FINAL = define(64)
   inline def getName(inline value: GTypeFlags): Option[String] =
-    value match
+    inline value match
       case G_TYPE_FLAG_ABSTRACT => Some("G_TYPE_FLAG_ABSTRACT")
       case G_TYPE_FLAG_VALUE_ABSTRACT => Some("G_TYPE_FLAG_VALUE_ABSTRACT")
       case G_TYPE_FLAG_FINAL => Some("G_TYPE_FLAG_FINAL")
@@ -3419,6 +4052,11 @@ object GTypeFlags extends CEnumU[GTypeFlags]:
     inline def |(b: GTypeFlags): GTypeFlags = a | b
     inline def is(b: GTypeFlags): Boolean = (a & b) == b
 
+/**
+ * GTypeFundamentalFlags: _TYPE_FLAG_CLASSED: Indicates a classed type _TYPE_FLAG_INSTANTIATABLE: Indicates an instantiatable type (implies classed) _TYPE_FLAG_DERIVABLE: Indicates a flat derivable type _TYPE_FLAG_DEEP_DERIVABLE: Indicates a deep derivable type (implies derivable)
+
+ * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+*/
 opaque type GTypeFundamentalFlags = CUnsignedInt
 object GTypeFundamentalFlags extends CEnumU[GTypeFundamentalFlags]:
   given _tag: Tag[GTypeFundamentalFlags] = Tag.UInt
@@ -3428,7 +4066,7 @@ object GTypeFundamentalFlags extends CEnumU[GTypeFundamentalFlags]:
   val G_TYPE_FLAG_DERIVABLE = define(4)
   val G_TYPE_FLAG_DEEP_DERIVABLE = define(8)
   inline def getName(inline value: GTypeFundamentalFlags): Option[String] =
-    value match
+    inline value match
       case G_TYPE_FLAG_CLASSED => Some("G_TYPE_FLAG_CLASSED")
       case G_TYPE_FLAG_INSTANTIATABLE => Some("G_TYPE_FLAG_INSTANTIATABLE")
       case G_TYPE_FLAG_DERIVABLE => Some("G_TYPE_FLAG_DERIVABLE")
@@ -3439,6 +4077,11 @@ object GTypeFundamentalFlags extends CEnumU[GTypeFundamentalFlags]:
     inline def |(b: GTypeFundamentalFlags): GTypeFundamentalFlags = a | b
     inline def is(b: GTypeFundamentalFlags): Boolean = (a & b) == b
 
+/**
+ * GUnicodeBreakType: _UNICODE_BREAK_MANDATORY: Mandatory Break (BK) _UNICODE_BREAK_CARRIAGE_RETURN: Carriage Return (CR) _UNICODE_BREAK_LINE_FEED: Line Feed (LF) _UNICODE_BREAK_COMBINING_MARK: Attached Characters and Combining Marks (CM) _UNICODE_BREAK_SURROGATE: Surrogates (SG) _UNICODE_BREAK_ZERO_WIDTH_SPACE: Zero Width Space (ZW) _UNICODE_BREAK_INSEPARABLE: Inseparable (IN) _UNICODE_BREAK_NON_BREAKING_GLUE: Non-breaking ("Glue") (GL) _UNICODE_BREAK_CONTINGENT: Contingent Break Opportunity (CB) _UNICODE_BREAK_SPACE: Space (SP) _UNICODE_BREAK_AFTER: Break Opportunity After (BA) _UNICODE_BREAK_BEFORE: Break Opportunity Before (BB) _UNICODE_BREAK_BEFORE_AND_AFTER: Break Opportunity Before and After (B2) _UNICODE_BREAK_HYPHEN: Hyphen (HY) _UNICODE_BREAK_NON_STARTER: Nonstarter (NS) _UNICODE_BREAK_OPEN_PUNCTUATION: Opening Punctuation (OP) _UNICODE_BREAK_CLOSE_PUNCTUATION: Closing Punctuation (CL) _UNICODE_BREAK_QUOTATION: Ambiguous Quotation (QU) _UNICODE_BREAK_EXCLAMATION: Exclamation/Interrogation (EX) _UNICODE_BREAK_IDEOGRAPHIC: Ideographic (ID) _UNICODE_BREAK_NUMERIC: Numeric (NU) _UNICODE_BREAK_INFIX_SEPARATOR: Infix Separator (Numeric) (IS) _UNICODE_BREAK_SYMBOL: Symbols Allowing Break After (SY) _UNICODE_BREAK_ALPHABETIC: Ordinary Alphabetic and Symbol Characters (AL) _UNICODE_BREAK_PREFIX: Prefix (Numeric) (PR) _UNICODE_BREAK_POSTFIX: Postfix (Numeric) (PO) _UNICODE_BREAK_COMPLEX_CONTEXT: Complex Content Dependent (South East Asian) (SA) _UNICODE_BREAK_AMBIGUOUS: Ambiguous (Alphabetic or Ideographic) (AI) _UNICODE_BREAK_UNKNOWN: Unknown (XX) _UNICODE_BREAK_NEXT_LINE: Next Line (NL) _UNICODE_BREAK_WORD_JOINER: Word Joiner (WJ) _UNICODE_BREAK_HANGUL_L_JAMO: Hangul L Jamo (JL) _UNICODE_BREAK_HANGUL_V_JAMO: Hangul V Jamo (JV) _UNICODE_BREAK_HANGUL_T_JAMO: Hangul T Jamo (JT) _UNICODE_BREAK_HANGUL_LV_SYLLABLE: Hangul LV Syllable (H2) _UNICODE_BREAK_HANGUL_LVT_SYLLABLE: Hangul LVT Syllable (H3) _UNICODE_BREAK_CLOSE_PARANTHESIS: Closing Parenthesis (CP). Since 2.28. Deprecated: 2.70: Use %G_UNICODE_BREAK_CLOSE_PARENTHESIS instead. _UNICODE_BREAK_CLOSE_PARENTHESIS: Closing Parenthesis (CP). Since 2.70 _UNICODE_BREAK_CONDITIONAL_JAPANESE_STARTER: Conditional Japanese Starter (CJ). Since: 2.32 _UNICODE_BREAK_HEBREW_LETTER: Hebrew Letter (HL). Since: 2.32 _UNICODE_BREAK_REGIONAL_INDICATOR: Regional Indicator (RI). Since: 2.36 _UNICODE_BREAK_EMOJI_BASE: Emoji Base (EB). Since: 2.50 _UNICODE_BREAK_EMOJI_MODIFIER: Emoji Modifier (EM). Since: 2.50 _UNICODE_BREAK_ZERO_WIDTH_JOINER: Zero Width Joiner (ZWJ). Since: 2.50
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+*/
 opaque type GUnicodeBreakType = CUnsignedInt
 object GUnicodeBreakType extends CEnumU[GUnicodeBreakType]:
   given _tag: Tag[GUnicodeBreakType] = Tag.UInt
@@ -3488,7 +4131,7 @@ object GUnicodeBreakType extends CEnumU[GUnicodeBreakType]:
   val G_UNICODE_BREAK_EMOJI_MODIFIER = define(41)
   val G_UNICODE_BREAK_ZERO_WIDTH_JOINER = define(42)
   inline def getName(inline value: GUnicodeBreakType): Option[String] =
-    value match
+    inline value match
       case G_UNICODE_BREAK_MANDATORY => Some("G_UNICODE_BREAK_MANDATORY")
       case G_UNICODE_BREAK_CARRIAGE_RETURN => Some("G_UNICODE_BREAK_CARRIAGE_RETURN")
       case G_UNICODE_BREAK_LINE_FEED => Some("G_UNICODE_BREAK_LINE_FEED")
@@ -3539,6 +4182,11 @@ object GUnicodeBreakType extends CEnumU[GUnicodeBreakType]:
     inline def |(b: GUnicodeBreakType): GUnicodeBreakType = a | b
     inline def is(b: GUnicodeBreakType): Boolean = (a & b) == b
 
+/**
+ * GUnicodeScript: _UNICODE_SCRIPT_INVALID_CODE: a value never returned from g_unichar_get_script() _UNICODE_SCRIPT_COMMON: a character used by multiple different scripts _UNICODE_SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _UNICODE_SCRIPT_ARABIC: Arabic _UNICODE_SCRIPT_ARMENIAN: Armenian _UNICODE_SCRIPT_BENGALI: Bengali _UNICODE_SCRIPT_BOPOMOFO: Bopomofo _UNICODE_SCRIPT_CHEROKEE: Cherokee _UNICODE_SCRIPT_COPTIC: Coptic _UNICODE_SCRIPT_CYRILLIC: Cyrillic _UNICODE_SCRIPT_DESERET: Deseret _UNICODE_SCRIPT_DEVANAGARI: Devanagari _UNICODE_SCRIPT_ETHIOPIC: Ethiopic _UNICODE_SCRIPT_GEORGIAN: Georgian _UNICODE_SCRIPT_GOTHIC: Gothic _UNICODE_SCRIPT_GREEK: Greek _UNICODE_SCRIPT_GUJARATI: Gujarati _UNICODE_SCRIPT_GURMUKHI: Gurmukhi _UNICODE_SCRIPT_HAN: Han _UNICODE_SCRIPT_HANGUL: Hangul _UNICODE_SCRIPT_HEBREW: Hebrew _UNICODE_SCRIPT_HIRAGANA: Hiragana _UNICODE_SCRIPT_KANNADA: Kannada _UNICODE_SCRIPT_KATAKANA: Katakana _UNICODE_SCRIPT_KHMER: Khmer _UNICODE_SCRIPT_LAO: Lao _UNICODE_SCRIPT_LATIN: Latin _UNICODE_SCRIPT_MALAYALAM: Malayalam _UNICODE_SCRIPT_MONGOLIAN: Mongolian _UNICODE_SCRIPT_MYANMAR: Myanmar _UNICODE_SCRIPT_OGHAM: Ogham _UNICODE_SCRIPT_OLD_ITALIC: Old Italic _UNICODE_SCRIPT_ORIYA: Oriya _UNICODE_SCRIPT_RUNIC: Runic _UNICODE_SCRIPT_SINHALA: Sinhala _UNICODE_SCRIPT_SYRIAC: Syriac _UNICODE_SCRIPT_TAMIL: Tamil _UNICODE_SCRIPT_TELUGU: Telugu _UNICODE_SCRIPT_THAANA: Thaana _UNICODE_SCRIPT_THAI: Thai _UNICODE_SCRIPT_TIBETAN: Tibetan _UNICODE_SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _UNICODE_SCRIPT_YI: Yi _UNICODE_SCRIPT_TAGALOG: Tagalog _UNICODE_SCRIPT_HANUNOO: Hanunoo _UNICODE_SCRIPT_BUHID: Buhid _UNICODE_SCRIPT_TAGBANWA: Tagbanwa _UNICODE_SCRIPT_BRAILLE: Braille _UNICODE_SCRIPT_CYPRIOT: Cypriot _UNICODE_SCRIPT_LIMBU: Limbu _UNICODE_SCRIPT_OSMANYA: Osmanya _UNICODE_SCRIPT_SHAVIAN: Shavian _UNICODE_SCRIPT_LINEAR_B: Linear B _UNICODE_SCRIPT_TAI_LE: Tai Le _UNICODE_SCRIPT_UGARITIC: Ugaritic _UNICODE_SCRIPT_NEW_TAI_LUE: New Tai Lue _UNICODE_SCRIPT_BUGINESE: Buginese _UNICODE_SCRIPT_GLAGOLITIC: Glagolitic _UNICODE_SCRIPT_TIFINAGH: Tifinagh _UNICODE_SCRIPT_SYLOTI_NAGRI: Syloti Nagri _UNICODE_SCRIPT_OLD_PERSIAN: Old Persian _UNICODE_SCRIPT_KHAROSHTHI: Kharoshthi _UNICODE_SCRIPT_UNKNOWN: an unassigned code point _UNICODE_SCRIPT_BALINESE: Balinese _UNICODE_SCRIPT_CUNEIFORM: Cuneiform _UNICODE_SCRIPT_PHOENICIAN: Phoenician _UNICODE_SCRIPT_PHAGS_PA: Phags-pa _UNICODE_SCRIPT_NKO: N'Ko _UNICODE_SCRIPT_KAYAH_LI: Kayah Li. Since 2.16.3 _UNICODE_SCRIPT_LEPCHA: Lepcha. Since 2.16.3 _UNICODE_SCRIPT_REJANG: Rejang. Since 2.16.3 _UNICODE_SCRIPT_SUNDANESE: Sundanese. Since 2.16.3 _UNICODE_SCRIPT_SAURASHTRA: Saurashtra. Since 2.16.3 _UNICODE_SCRIPT_CHAM: Cham. Since 2.16.3 _UNICODE_SCRIPT_OL_CHIKI: Ol Chiki. Since 2.16.3 _UNICODE_SCRIPT_VAI: Vai. Since 2.16.3 _UNICODE_SCRIPT_CARIAN: Carian. Since 2.16.3 _UNICODE_SCRIPT_LYCIAN: Lycian. Since 2.16.3 _UNICODE_SCRIPT_LYDIAN: Lydian. Since 2.16.3 _UNICODE_SCRIPT_AVESTAN: Avestan. Since 2.26 _UNICODE_SCRIPT_BAMUM: Bamum. Since 2.26 _UNICODE_SCRIPT_EGYPTIAN_HIEROGLYPHS: Egyptian Hieroglpyhs. Since 2.26 _UNICODE_SCRIPT_IMPERIAL_ARAMAIC: Imperial Aramaic. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PAHLAVI: Inscriptional Pahlavi. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PARTHIAN: Inscriptional Parthian. Since 2.26 _UNICODE_SCRIPT_JAVANESE: Javanese. Since 2.26 _UNICODE_SCRIPT_KAITHI: Kaithi. Since 2.26 _UNICODE_SCRIPT_LISU: Lisu. Since 2.26 _UNICODE_SCRIPT_MEETEI_MAYEK: Meetei Mayek. Since 2.26 _UNICODE_SCRIPT_OLD_SOUTH_ARABIAN: Old South Arabian. Since 2.26 _UNICODE_SCRIPT_OLD_TURKIC: Old Turkic. Since 2.28 _UNICODE_SCRIPT_SAMARITAN: Samaritan. Since 2.26 _UNICODE_SCRIPT_TAI_THAM: Tai Tham. Since 2.26 _UNICODE_SCRIPT_TAI_VIET: Tai Viet. Since 2.26 _UNICODE_SCRIPT_BATAK: Batak. Since 2.28 _UNICODE_SCRIPT_BRAHMI: Brahmi. Since 2.28 _UNICODE_SCRIPT_MANDAIC: Mandaic. Since 2.28 _UNICODE_SCRIPT_CHAKMA: Chakma. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 2.32 _UNICODE_SCRIPT_MIAO: Miao. Since: 2.32 _UNICODE_SCRIPT_SHARADA: Sharada. Since: 2.32 _UNICODE_SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 2.32 _UNICODE_SCRIPT_TAKRI: Takri. Since: 2.32 _UNICODE_SCRIPT_BASSA_VAH: Bassa. Since: 2.42 _UNICODE_SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 2.42 _UNICODE_SCRIPT_DUPLOYAN: Duployan. Since: 2.42 _UNICODE_SCRIPT_ELBASAN: Elbasan. Since: 2.42 _UNICODE_SCRIPT_GRANTHA: Grantha. Since: 2.42 _UNICODE_SCRIPT_KHOJKI: Kjohki. Since: 2.42 _UNICODE_SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 2.42 _UNICODE_SCRIPT_LINEAR_A: Linear A. Since: 2.42 _UNICODE_SCRIPT_MAHAJANI: Mahajani. Since: 2.42 _UNICODE_SCRIPT_MANICHAEAN: Manichaean. Since: 2.42 _UNICODE_SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 2.42 _UNICODE_SCRIPT_MODI: Modi. Since: 2.42 _UNICODE_SCRIPT_MRO: Mro. Since: 2.42 _UNICODE_SCRIPT_NABATAEAN: Nabataean. Since: 2.42 _UNICODE_SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 2.42 _UNICODE_SCRIPT_OLD_PERMIC: Old Permic. Since: 2.42 _UNICODE_SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 2.42 _UNICODE_SCRIPT_PALMYRENE: Palmyrene. Since: 2.42 _UNICODE_SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 2.42 _UNICODE_SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 2.42 _UNICODE_SCRIPT_SIDDHAM: Siddham. Since: 2.42 _UNICODE_SCRIPT_TIRHUTA: Tirhuta. Since: 2.42 _UNICODE_SCRIPT_WARANG_CITI: Warang Citi. Since: 2.42 _UNICODE_SCRIPT_AHOM: Ahom. Since: 2.48 _UNICODE_SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 2.48 _UNICODE_SCRIPT_HATRAN: Hatran. Since: 2.48 _UNICODE_SCRIPT_MULTANI: Multani. Since: 2.48 _UNICODE_SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 2.48 _UNICODE_SCRIPT_SIGNWRITING: Signwriting. Since: 2.48 _UNICODE_SCRIPT_ADLAM: Adlam. Since: 2.50 _UNICODE_SCRIPT_BHAIKSUKI: Bhaiksuki. Since: 2.50 _UNICODE_SCRIPT_MARCHEN: Marchen. Since: 2.50 _UNICODE_SCRIPT_NEWA: Newa. Since: 2.50 _UNICODE_SCRIPT_OSAGE: Osage. Since: 2.50 _UNICODE_SCRIPT_TANGUT: Tangut. Since: 2.50 _UNICODE_SCRIPT_MASARAM_GONDI: Masaram Gondi. Since: 2.54 _UNICODE_SCRIPT_NUSHU: Nushu. Since: 2.54 _UNICODE_SCRIPT_SOYOMBO: Soyombo. Since: 2.54 _UNICODE_SCRIPT_ZANABAZAR_SQUARE: Zanabazar Square. Since: 2.54 _UNICODE_SCRIPT_DOGRA: Dogra. Since: 2.58 _UNICODE_SCRIPT_GUNJALA_GONDI: Gunjala Gondi. Since: 2.58 _UNICODE_SCRIPT_HANIFI_ROHINGYA: Hanifi Rohingya. Since: 2.58 _UNICODE_SCRIPT_MAKASAR: Makasar. Since: 2.58 _UNICODE_SCRIPT_MEDEFAIDRIN: Medefaidrin. Since: 2.58 _UNICODE_SCRIPT_OLD_SOGDIAN: Old Sogdian. Since: 2.58 _UNICODE_SCRIPT_SOGDIAN: Sogdian. Since: 2.58 _UNICODE_SCRIPT_ELYMAIC: Elym. Since: 2.62 _UNICODE_SCRIPT_NANDINAGARI: Nand. Since: 2.62 _UNICODE_SCRIPT_NYIAKENG_PUACHUE_HMONG: Rohg. Since: 2.62 _UNICODE_SCRIPT_WANCHO: Wcho. Since: 2.62 _UNICODE_SCRIPT_CHORASMIAN: Chorasmian. Since: 2.66 _UNICODE_SCRIPT_DIVES_AKURU: Dives Akuru. Since: 2.66 _UNICODE_SCRIPT_KHITAN_SMALL_SCRIPT: Khitan small script. Since: 2.66 _UNICODE_SCRIPT_YEZIDI: Yezidi. Since: 2.66 _UNICODE_SCRIPT_CYPRO_MINOAN: Cypro-Minoan. Since: 2.72 _UNICODE_SCRIPT_OLD_UYGHUR: Old Uyghur. Since: 2.72 _UNICODE_SCRIPT_TANGSA: Tangsa. Since: 2.72 _UNICODE_SCRIPT_TOTO: Toto. Since: 2.72 _UNICODE_SCRIPT_VITHKUQI: Vithkuqi. Since: 2.72 _UNICODE_SCRIPT_MATH: Mathematical notation. Since: 2.72
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+*/
 opaque type GUnicodeScript = CInt
 object GUnicodeScript extends CEnum[GUnicodeScript]:
   given _tag: Tag[GUnicodeScript] = Tag.Int
@@ -3708,7 +4356,7 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
   val G_UNICODE_SCRIPT_VITHKUQI = define(161)
   val G_UNICODE_SCRIPT_MATH = define(162)
   inline def getName(inline value: GUnicodeScript): Option[String] =
-    value match
+    inline value match
       case G_UNICODE_SCRIPT_INVALID_CODE => Some("G_UNICODE_SCRIPT_INVALID_CODE")
       case G_UNICODE_SCRIPT_COMMON => Some("G_UNICODE_SCRIPT_COMMON")
       case G_UNICODE_SCRIPT_INHERITED => Some("G_UNICODE_SCRIPT_INHERITED")
@@ -3879,6 +4527,11 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
     inline def |(b: GUnicodeScript): GUnicodeScript = a | b
     inline def is(b: GUnicodeScript): Boolean = (a & b) == b
 
+/**
+ * GUnicodeType: _UNICODE_CONTROL: General category "Other, Control" (Cc) _UNICODE_FORMAT: General category "Other, Format" (Cf) _UNICODE_UNASSIGNED: General category "Other, Not Assigned" (Cn) _UNICODE_PRIVATE_USE: General category "Other, Private Use" (Co) _UNICODE_SURROGATE: General category "Other, Surrogate" (Cs) _UNICODE_LOWERCASE_LETTER: General category "Letter, Lowercase" (Ll) _UNICODE_MODIFIER_LETTER: General category "Letter, Modifier" (Lm) _UNICODE_OTHER_LETTER: General category "Letter, Other" (Lo) _UNICODE_TITLECASE_LETTER: General category "Letter, Titlecase" (Lt) _UNICODE_UPPERCASE_LETTER: General category "Letter, Uppercase" (Lu) _UNICODE_SPACING_MARK: General category "Mark, Spacing" (Mc) _UNICODE_ENCLOSING_MARK: General category "Mark, Enclosing" (Me) _UNICODE_NON_SPACING_MARK: General category "Mark, Nonspacing" (Mn) _UNICODE_DECIMAL_NUMBER: General category "Number, Decimal Digit" (Nd) _UNICODE_LETTER_NUMBER: General category "Number, Letter" (Nl) _UNICODE_OTHER_NUMBER: General category "Number, Other" (No) _UNICODE_CONNECT_PUNCTUATION: General category "Punctuation, Connector" (Pc) _UNICODE_DASH_PUNCTUATION: General category "Punctuation, Dash" (Pd) _UNICODE_CLOSE_PUNCTUATION: General category "Punctuation, Close" (Pe) _UNICODE_FINAL_PUNCTUATION: General category "Punctuation, Final quote" (Pf) _UNICODE_INITIAL_PUNCTUATION: General category "Punctuation, Initial quote" (Pi) _UNICODE_OTHER_PUNCTUATION: General category "Punctuation, Other" (Po) _UNICODE_OPEN_PUNCTUATION: General category "Punctuation, Open" (Ps) _UNICODE_CURRENCY_SYMBOL: General category "Symbol, Currency" (Sc) _UNICODE_MODIFIER_SYMBOL: General category "Symbol, Modifier" (Sk) _UNICODE_MATH_SYMBOL: General category "Symbol, Math" (Sm) _UNICODE_OTHER_SYMBOL: General category "Symbol, Other" (So) _UNICODE_LINE_SEPARATOR: General category "Separator, Line" (Zl) _UNICODE_PARAGRAPH_SEPARATOR: General category "Separator, Paragraph" (Zp) _UNICODE_SPACE_SEPARATOR: General category "Separator, Space" (Zs)
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+*/
 opaque type GUnicodeType = CUnsignedInt
 object GUnicodeType extends CEnumU[GUnicodeType]:
   given _tag: Tag[GUnicodeType] = Tag.UInt
@@ -3914,7 +4567,7 @@ object GUnicodeType extends CEnumU[GUnicodeType]:
   val G_UNICODE_PARAGRAPH_SEPARATOR = define(28)
   val G_UNICODE_SPACE_SEPARATOR = define(29)
   inline def getName(inline value: GUnicodeType): Option[String] =
-    value match
+    inline value match
       case G_UNICODE_CONTROL => Some("G_UNICODE_CONTROL")
       case G_UNICODE_FORMAT => Some("G_UNICODE_FORMAT")
       case G_UNICODE_UNASSIGNED => Some("G_UNICODE_UNASSIGNED")
@@ -3951,6 +4604,11 @@ object GUnicodeType extends CEnumU[GUnicodeType]:
     inline def |(b: GUnicodeType): GUnicodeType = a | b
     inline def is(b: GUnicodeType): Boolean = (a & b) == b
 
+/**
+ * GUnixSocketAddressType: _UNIX_SOCKET_ADDRESS_INVALID: invalid _UNIX_SOCKET_ADDRESS_ANONYMOUS: anonymous _UNIX_SOCKET_ADDRESS_PATH: a filesystem path _UNIX_SOCKET_ADDRESS_ABSTRACT: an abstract name _UNIX_SOCKET_ADDRESS_ABSTRACT_PADDED: an abstract name, 0-padded to the full length of a unix socket name
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GUnixSocketAddressType = CUnsignedInt
 object GUnixSocketAddressType extends CEnumU[GUnixSocketAddressType]:
   given _tag: Tag[GUnixSocketAddressType] = Tag.UInt
@@ -3961,7 +4619,7 @@ object GUnixSocketAddressType extends CEnumU[GUnixSocketAddressType]:
   val G_UNIX_SOCKET_ADDRESS_ABSTRACT = define(3)
   val G_UNIX_SOCKET_ADDRESS_ABSTRACT_PADDED = define(4)
   inline def getName(inline value: GUnixSocketAddressType): Option[String] =
-    value match
+    inline value match
       case G_UNIX_SOCKET_ADDRESS_INVALID => Some("G_UNIX_SOCKET_ADDRESS_INVALID")
       case G_UNIX_SOCKET_ADDRESS_ANONYMOUS => Some("G_UNIX_SOCKET_ADDRESS_ANONYMOUS")
       case G_UNIX_SOCKET_ADDRESS_PATH => Some("G_UNIX_SOCKET_ADDRESS_PATH")
@@ -3973,6 +4631,11 @@ object GUnixSocketAddressType extends CEnumU[GUnixSocketAddressType]:
     inline def |(b: GUnixSocketAddressType): GUnixSocketAddressType = a | b
     inline def is(b: GUnixSocketAddressType): Boolean = (a & b) == b
 
+/**
+ * GUriError: _URI_ERROR_FAILED: Generic error if no more specific error is available. See the error message for details. _URI_ERROR_BAD_SCHEME: The scheme of a URI could not be parsed. _URI_ERROR_BAD_USER: The user/userinfo of a URI could not be parsed. _URI_ERROR_BAD_PASSWORD: The password of a URI could not be parsed. _URI_ERROR_BAD_AUTH_PARAMS: The authentication parameters of a URI could not be parsed. _URI_ERROR_BAD_HOST: The host of a URI could not be parsed. _URI_ERROR_BAD_PORT: The port of a URI could not be parsed. _URI_ERROR_BAD_PATH: The path of a URI could not be parsed. _URI_ERROR_BAD_QUERY: The query of a URI could not be parsed. _URI_ERROR_BAD_FRAGMENT: The fragment of a URI could not be parsed.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+*/
 opaque type GUriError = CUnsignedInt
 object GUriError extends CEnumU[GUriError]:
   given _tag: Tag[GUriError] = Tag.UInt
@@ -3988,7 +4651,7 @@ object GUriError extends CEnumU[GUriError]:
   val G_URI_ERROR_BAD_QUERY = define(8)
   val G_URI_ERROR_BAD_FRAGMENT = define(9)
   inline def getName(inline value: GUriError): Option[String] =
-    value match
+    inline value match
       case G_URI_ERROR_FAILED => Some("G_URI_ERROR_FAILED")
       case G_URI_ERROR_BAD_SCHEME => Some("G_URI_ERROR_BAD_SCHEME")
       case G_URI_ERROR_BAD_USER => Some("G_URI_ERROR_BAD_USER")
@@ -4005,6 +4668,11 @@ object GUriError extends CEnumU[GUriError]:
     inline def |(b: GUriError): GUriError = a | b
     inline def is(b: GUriError): Boolean = (a & b) == b
 
+/**
+ * GUriFlags: _URI_FLAGS_NONE: No flags set. _URI_FLAGS_PARSE_RELAXED: Parse the URI more relaxedly than the [RFC 3986](https://tools.ietf.org/html/rfc3986) grammar specifies, fixing up or ignoring common mistakes in URIs coming from external sources. This is also needed for some obscure URI schemes where `;` separates the host from the path. Don’t use this flag unless you need to. _URI_FLAGS_HAS_PASSWORD: The userinfo field may contain a password, which will be separated from the username by `:`. _URI_FLAGS_HAS_AUTH_PARAMS: The userinfo may contain additional authentication-related parameters, which will be separated from the username and/or password by `;`. _URI_FLAGS_NON_DNS: The host component should not be assumed to be a DNS hostname or IP address (for example, for `smb` URIs with NetBIOS hostnames). _URI_FLAGS_ENCODED: When parsing a URI, this indicates that `%`-encoded characters in the userinfo, path, query, and fragment fields should not be decoded. (And likewise the host field if %G_URI_FLAGS_NON_DNS is also set.) When building a URI, it indicates that you have already `%`-encoded the components, and so #GUri should not do any encoding itself. _URI_FLAGS_ENCODED_QUERY: Same as %G_URI_FLAGS_ENCODED, for the query field only. _URI_FLAGS_ENCODED_PATH: Same as %G_URI_FLAGS_ENCODED, for the path only. _URI_FLAGS_ENCODED_FRAGMENT: Same as %G_URI_FLAGS_ENCODED, for the fragment only. _URI_FLAGS_SCHEME_NORMALIZE: A scheme-based normalization will be applied. For example, when parsing an HTTP URI changing omitted path to `/` and omitted port to `80`; and when building a URI, changing empty path to `/` and default port `80`). This only supports a subset of known schemes. (Since: 2.68)
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+*/
 opaque type GUriFlags = CUnsignedInt
 object GUriFlags extends CEnumU[GUriFlags]:
   given _tag: Tag[GUriFlags] = Tag.UInt
@@ -4020,7 +4688,7 @@ object GUriFlags extends CEnumU[GUriFlags]:
   val G_URI_FLAGS_ENCODED_FRAGMENT = define(128)
   val G_URI_FLAGS_SCHEME_NORMALIZE = define(256)
   inline def getName(inline value: GUriFlags): Option[String] =
-    value match
+    inline value match
       case G_URI_FLAGS_NONE => Some("G_URI_FLAGS_NONE")
       case G_URI_FLAGS_PARSE_RELAXED => Some("G_URI_FLAGS_PARSE_RELAXED")
       case G_URI_FLAGS_HAS_PASSWORD => Some("G_URI_FLAGS_HAS_PASSWORD")
@@ -4037,6 +4705,11 @@ object GUriFlags extends CEnumU[GUriFlags]:
     inline def |(b: GUriFlags): GUriFlags = a | b
     inline def is(b: GUriFlags): Boolean = (a & b) == b
 
+/**
+ * GUriHideFlags: _URI_HIDE_NONE: No flags set. _URI_HIDE_USERINFO: Hide the userinfo. _URI_HIDE_PASSWORD: Hide the password. _URI_HIDE_AUTH_PARAMS: Hide the auth_params. _URI_HIDE_QUERY: Hide the query. _URI_HIDE_FRAGMENT: Hide the fragment.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+*/
 opaque type GUriHideFlags = CUnsignedInt
 object GUriHideFlags extends CEnumU[GUriHideFlags]:
   given _tag: Tag[GUriHideFlags] = Tag.UInt
@@ -4048,7 +4721,7 @@ object GUriHideFlags extends CEnumU[GUriHideFlags]:
   val G_URI_HIDE_QUERY = define(8)
   val G_URI_HIDE_FRAGMENT = define(16)
   inline def getName(inline value: GUriHideFlags): Option[String] =
-    value match
+    inline value match
       case G_URI_HIDE_NONE => Some("G_URI_HIDE_NONE")
       case G_URI_HIDE_USERINFO => Some("G_URI_HIDE_USERINFO")
       case G_URI_HIDE_PASSWORD => Some("G_URI_HIDE_PASSWORD")
@@ -4061,6 +4734,11 @@ object GUriHideFlags extends CEnumU[GUriHideFlags]:
     inline def |(b: GUriHideFlags): GUriHideFlags = a | b
     inline def is(b: GUriHideFlags): Boolean = (a & b) == b
 
+/**
+ * GUriParamsFlags: _URI_PARAMS_NONE: No flags set. _URI_PARAMS_CASE_INSENSITIVE: Parameter names are case insensitive. _URI_PARAMS_WWW_FORM: Replace `+` with space character. Only useful for URLs on the web, using the `https` or `http` schemas. _URI_PARAMS_PARSE_RELAXED: See %G_URI_FLAGS_PARSE_RELAXED.
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+*/
 opaque type GUriParamsFlags = CUnsignedInt
 object GUriParamsFlags extends CEnumU[GUriParamsFlags]:
   given _tag: Tag[GUriParamsFlags] = Tag.UInt
@@ -4070,7 +4748,7 @@ object GUriParamsFlags extends CEnumU[GUriParamsFlags]:
   val G_URI_PARAMS_WWW_FORM = define(2)
   val G_URI_PARAMS_PARSE_RELAXED = define(4)
   inline def getName(inline value: GUriParamsFlags): Option[String] =
-    value match
+    inline value match
       case G_URI_PARAMS_NONE => Some("G_URI_PARAMS_NONE")
       case G_URI_PARAMS_CASE_INSENSITIVE => Some("G_URI_PARAMS_CASE_INSENSITIVE")
       case G_URI_PARAMS_WWW_FORM => Some("G_URI_PARAMS_WWW_FORM")
@@ -4081,6 +4759,11 @@ object GUriParamsFlags extends CEnumU[GUriParamsFlags]:
     inline def |(b: GUriParamsFlags): GUriParamsFlags = a | b
     inline def is(b: GUriParamsFlags): Boolean = (a & b) == b
 
+/**
+ * GUserDirectory: _USER_DIRECTORY_DESKTOP: the user's Desktop directory _USER_DIRECTORY_DOCUMENTS: the user's Documents directory _USER_DIRECTORY_DOWNLOAD: the user's Downloads directory _USER_DIRECTORY_MUSIC: the user's Music directory _USER_DIRECTORY_PICTURES: the user's Pictures directory _USER_DIRECTORY_PUBLIC_SHARE: the user's shared directory _USER_DIRECTORY_TEMPLATES: the user's Templates directory _USER_DIRECTORY_VIDEOS: the user's Movies directory _USER_N_DIRECTORIES: the number of enum values
+
+ * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+*/
 opaque type GUserDirectory = CUnsignedInt
 object GUserDirectory extends CEnumU[GUserDirectory]:
   given _tag: Tag[GUserDirectory] = Tag.UInt
@@ -4095,7 +4778,7 @@ object GUserDirectory extends CEnumU[GUserDirectory]:
   val G_USER_DIRECTORY_VIDEOS = define(7)
   val G_USER_N_DIRECTORIES = define(8)
   inline def getName(inline value: GUserDirectory): Option[String] =
-    value match
+    inline value match
       case G_USER_DIRECTORY_DESKTOP => Some("G_USER_DIRECTORY_DESKTOP")
       case G_USER_DIRECTORY_DOCUMENTS => Some("G_USER_DIRECTORY_DOCUMENTS")
       case G_USER_DIRECTORY_DOWNLOAD => Some("G_USER_DIRECTORY_DOWNLOAD")
@@ -4111,6 +4794,9 @@ object GUserDirectory extends CEnumU[GUserDirectory]:
     inline def |(b: GUserDirectory): GUserDirectory = a | b
     inline def is(b: GUserDirectory): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+*/
 opaque type GVariantClass = CUnsignedInt
 object GVariantClass extends CEnumU[GVariantClass]:
   given _tag: Tag[GVariantClass] = Tag.UInt
@@ -4134,7 +4820,7 @@ object GVariantClass extends CEnumU[GVariantClass]:
   val G_VARIANT_CLASS_TUPLE = define(40)
   val G_VARIANT_CLASS_DICT_ENTRY = define(123)
   inline def getName(inline value: GVariantClass): Option[String] =
-    value match
+    inline value match
       case G_VARIANT_CLASS_BOOLEAN => Some("G_VARIANT_CLASS_BOOLEAN")
       case G_VARIANT_CLASS_BYTE => Some("G_VARIANT_CLASS_BYTE")
       case G_VARIANT_CLASS_INT16 => Some("G_VARIANT_CLASS_INT16")
@@ -4159,6 +4845,9 @@ object GVariantClass extends CEnumU[GVariantClass]:
     inline def |(b: GVariantClass): GVariantClass = a | b
     inline def is(b: GVariantClass): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+*/
 opaque type GVariantParseError = CUnsignedInt
 object GVariantParseError extends CEnumU[GVariantParseError]:
   given _tag: Tag[GVariantParseError] = Tag.UInt
@@ -4183,7 +4872,7 @@ object GVariantParseError extends CEnumU[GVariantParseError]:
   val G_VARIANT_PARSE_ERROR_VALUE_EXPECTED = define(17)
   val G_VARIANT_PARSE_ERROR_RECURSION = define(18)
   inline def getName(inline value: GVariantParseError): Option[String] =
-    value match
+    inline value match
       case G_VARIANT_PARSE_ERROR_FAILED => Some("G_VARIANT_PARSE_ERROR_FAILED")
       case G_VARIANT_PARSE_ERROR_BASIC_TYPE_EXPECTED => Some("G_VARIANT_PARSE_ERROR_BASIC_TYPE_EXPECTED")
       case G_VARIANT_PARSE_ERROR_CANNOT_INFER_TYPE => Some("G_VARIANT_PARSE_ERROR_CANNOT_INFER_TYPE")
@@ -4209,6 +4898,11 @@ object GVariantParseError extends CEnumU[GVariantParseError]:
     inline def |(b: GVariantParseError): GVariantParseError = a | b
     inline def is(b: GVariantParseError): Boolean = (a & b) == b
 
+/**
+ * GZlibCompressorFormat: _ZLIB_COMPRESSOR_FORMAT_ZLIB: deflate compression with zlib header _ZLIB_COMPRESSOR_FORMAT_GZIP: gzip file format _ZLIB_COMPRESSOR_FORMAT_RAW: deflate compression with no header
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type GZlibCompressorFormat = CUnsignedInt
 object GZlibCompressorFormat extends CEnumU[GZlibCompressorFormat]:
   given _tag: Tag[GZlibCompressorFormat] = Tag.UInt
@@ -4217,7 +4911,7 @@ object GZlibCompressorFormat extends CEnumU[GZlibCompressorFormat]:
   val G_ZLIB_COMPRESSOR_FORMAT_GZIP = define(1)
   val G_ZLIB_COMPRESSOR_FORMAT_RAW = define(2)
   inline def getName(inline value: GZlibCompressorFormat): Option[String] =
-    value match
+    inline value match
       case G_ZLIB_COMPRESSOR_FORMAT_ZLIB => Some("G_ZLIB_COMPRESSOR_FORMAT_ZLIB")
       case G_ZLIB_COMPRESSOR_FORMAT_GZIP => Some("G_ZLIB_COMPRESSOR_FORMAT_GZIP")
       case G_ZLIB_COMPRESSOR_FORMAT_RAW => Some("G_ZLIB_COMPRESSOR_FORMAT_RAW")
@@ -4227,6 +4921,11 @@ object GZlibCompressorFormat extends CEnumU[GZlibCompressorFormat]:
     inline def |(b: GZlibCompressorFormat): GZlibCompressorFormat = a | b
     inline def is(b: GZlibCompressorFormat): Boolean = (a & b) == b
 
+/**
+ * GdkAnchorHints: _ANCHOR_FLIP_X: allow flipping anchors horizontally _ANCHOR_FLIP_Y: allow flipping anchors vertically _ANCHOR_SLIDE_X: allow sliding surface horizontally _ANCHOR_SLIDE_Y: allow sliding surface vertically _ANCHOR_RESIZE_X: allow resizing surface horizontally _ANCHOR_RESIZE_Y: allow resizing surface vertically _ANCHOR_FLIP: allow flipping anchors on both axes _ANCHOR_SLIDE: allow sliding surface on both axes _ANCHOR_RESIZE: allow resizing surface on both axes
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkpopuplayout.h
+*/
 opaque type GdkAnchorHints = CUnsignedInt
 object GdkAnchorHints extends CEnumU[GdkAnchorHints]:
   given _tag: Tag[GdkAnchorHints] = Tag.UInt
@@ -4241,7 +4940,7 @@ object GdkAnchorHints extends CEnumU[GdkAnchorHints]:
   val GDK_ANCHOR_SLIDE = define(12)
   val GDK_ANCHOR_RESIZE = define(48)
   inline def getName(inline value: GdkAnchorHints): Option[String] =
-    value match
+    inline value match
       case GDK_ANCHOR_FLIP_X => Some("GDK_ANCHOR_FLIP_X")
       case GDK_ANCHOR_FLIP_Y => Some("GDK_ANCHOR_FLIP_Y")
       case GDK_ANCHOR_SLIDE_X => Some("GDK_ANCHOR_SLIDE_X")
@@ -4257,6 +4956,11 @@ object GdkAnchorHints extends CEnumU[GdkAnchorHints]:
     inline def |(b: GdkAnchorHints): GdkAnchorHints = a | b
     inline def is(b: GdkAnchorHints): Boolean = (a & b) == b
 
+/**
+ * GdkAxisFlags: _AXIS_FLAG_X: X axis is present _AXIS_FLAG_Y: Y axis is present _AXIS_FLAG_DELTA_X: Scroll X delta axis is present _AXIS_FLAG_DELTA_Y: Scroll Y delta axis is present _AXIS_FLAG_PRESSURE: Pressure axis is present _AXIS_FLAG_XTILT: X tilt axis is present _AXIS_FLAG_YTILT: Y tilt axis is present _AXIS_FLAG_WHEEL: Wheel axis is present _AXIS_FLAG_DISTANCE: Distance axis is present _AXIS_FLAG_ROTATION: Z-axis rotation is present _AXIS_FLAG_SLIDER: Slider axis is present
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkAxisFlags = CUnsignedInt
 object GdkAxisFlags extends CEnumU[GdkAxisFlags]:
   given _tag: Tag[GdkAxisFlags] = Tag.UInt
@@ -4273,7 +4977,7 @@ object GdkAxisFlags extends CEnumU[GdkAxisFlags]:
   val GDK_AXIS_FLAG_ROTATION = define(1024)
   val GDK_AXIS_FLAG_SLIDER = define(2048)
   inline def getName(inline value: GdkAxisFlags): Option[String] =
-    value match
+    inline value match
       case GDK_AXIS_FLAG_X => Some("GDK_AXIS_FLAG_X")
       case GDK_AXIS_FLAG_Y => Some("GDK_AXIS_FLAG_Y")
       case GDK_AXIS_FLAG_DELTA_X => Some("GDK_AXIS_FLAG_DELTA_X")
@@ -4291,6 +4995,11 @@ object GdkAxisFlags extends CEnumU[GdkAxisFlags]:
     inline def |(b: GdkAxisFlags): GdkAxisFlags = a | b
     inline def is(b: GdkAxisFlags): Boolean = (a & b) == b
 
+/**
+ * GdkAxisUse: _AXIS_IGNORE: the axis is ignored. _AXIS_X: the axis is used as the x axis. _AXIS_Y: the axis is used as the y axis. _AXIS_DELTA_X: the axis is used as the scroll x delta _AXIS_DELTA_Y: the axis is used as the scroll y delta _AXIS_PRESSURE: the axis is used for pressure information. _AXIS_XTILT: the axis is used for x tilt information. _AXIS_YTILT: the axis is used for y tilt information. _AXIS_WHEEL: the axis is used for wheel information. _AXIS_DISTANCE: the axis is used for pen/tablet distance information _AXIS_ROTATION: the axis is used for pen rotation information _AXIS_SLIDER: the axis is used for pen slider information _AXIS_LAST: a constant equal to the numerically highest axis value.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkAxisUse = CUnsignedInt
 object GdkAxisUse extends CEnumU[GdkAxisUse]:
   given _tag: Tag[GdkAxisUse] = Tag.UInt
@@ -4309,7 +5018,7 @@ object GdkAxisUse extends CEnumU[GdkAxisUse]:
   val GDK_AXIS_SLIDER = define(11)
   val GDK_AXIS_LAST = define(12)
   inline def getName(inline value: GdkAxisUse): Option[String] =
-    value match
+    inline value match
       case GDK_AXIS_IGNORE => Some("GDK_AXIS_IGNORE")
       case GDK_AXIS_X => Some("GDK_AXIS_X")
       case GDK_AXIS_Y => Some("GDK_AXIS_Y")
@@ -4329,13 +5038,18 @@ object GdkAxisUse extends CEnumU[GdkAxisUse]:
     inline def |(b: GdkAxisUse): GdkAxisUse = a | b
     inline def is(b: GdkAxisUse): Boolean = (a & b) == b
 
+/**
+ * GdkColorspace: _COLORSPACE_RGB: Indicates a red/green/blue additive color space.
+
+ * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+*/
 opaque type GdkColorspace = CUnsignedInt
 object GdkColorspace extends CEnumU[GdkColorspace]:
   given _tag: Tag[GdkColorspace] = Tag.UInt
   inline def define(inline a: Long): GdkColorspace = a.toUInt
   val GDK_COLORSPACE_RGB = define(0)
   inline def getName(inline value: GdkColorspace): Option[String] =
-    value match
+    inline value match
       case GDK_COLORSPACE_RGB => Some("GDK_COLORSPACE_RGB")
       case _ => None
   extension (a: GdkColorspace)
@@ -4343,6 +5057,11 @@ object GdkColorspace extends CEnumU[GdkColorspace]:
     inline def |(b: GdkColorspace): GdkColorspace = a | b
     inline def is(b: GdkColorspace): Boolean = (a & b) == b
 
+/**
+ * GdkCrossingMode: _CROSSING_NORMAL: crossing because of pointer motion. _CROSSING_GRAB: crossing because a grab is activated. _CROSSING_UNGRAB: crossing because a grab is deactivated. _CROSSING_GTK_GRAB: crossing because a GTK grab is activated. _CROSSING_GTK_UNGRAB: crossing because a GTK grab is deactivated. _CROSSING_STATE_CHANGED: crossing because a GTK widget changed state (e.g. sensitivity). _CROSSING_TOUCH_BEGIN: crossing because a touch sequence has begun, this event is synthetic as the pointer might have not left the surface. _CROSSING_TOUCH_END: crossing because a touch sequence has ended, this event is synthetic as the pointer might have not left the surface. _CROSSING_DEVICE_SWITCH: crossing because of a device switch (i.e. a mouse taking control of the pointer after a touch device), this event is synthetic as the pointer didn’t leave the surface.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkevents.h
+*/
 opaque type GdkCrossingMode = CUnsignedInt
 object GdkCrossingMode extends CEnumU[GdkCrossingMode]:
   given _tag: Tag[GdkCrossingMode] = Tag.UInt
@@ -4357,7 +5076,7 @@ object GdkCrossingMode extends CEnumU[GdkCrossingMode]:
   val GDK_CROSSING_TOUCH_END = define(7)
   val GDK_CROSSING_DEVICE_SWITCH = define(8)
   inline def getName(inline value: GdkCrossingMode): Option[String] =
-    value match
+    inline value match
       case GDK_CROSSING_NORMAL => Some("GDK_CROSSING_NORMAL")
       case GDK_CROSSING_GRAB => Some("GDK_CROSSING_GRAB")
       case GDK_CROSSING_UNGRAB => Some("GDK_CROSSING_UNGRAB")
@@ -4373,6 +5092,11 @@ object GdkCrossingMode extends CEnumU[GdkCrossingMode]:
     inline def |(b: GdkCrossingMode): GdkCrossingMode = a | b
     inline def is(b: GdkCrossingMode): Boolean = (a & b) == b
 
+/**
+ * GdkDevicePadFeature: _DEVICE_PAD_FEATURE_BUTTON: a button _DEVICE_PAD_FEATURE_RING: a ring-shaped interactive area _DEVICE_PAD_FEATURE_STRIP: a straight interactive area
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkdevicepad.h
+*/
 opaque type GdkDevicePadFeature = CUnsignedInt
 object GdkDevicePadFeature extends CEnumU[GdkDevicePadFeature]:
   given _tag: Tag[GdkDevicePadFeature] = Tag.UInt
@@ -4381,7 +5105,7 @@ object GdkDevicePadFeature extends CEnumU[GdkDevicePadFeature]:
   val GDK_DEVICE_PAD_FEATURE_RING = define(1)
   val GDK_DEVICE_PAD_FEATURE_STRIP = define(2)
   inline def getName(inline value: GdkDevicePadFeature): Option[String] =
-    value match
+    inline value match
       case GDK_DEVICE_PAD_FEATURE_BUTTON => Some("GDK_DEVICE_PAD_FEATURE_BUTTON")
       case GDK_DEVICE_PAD_FEATURE_RING => Some("GDK_DEVICE_PAD_FEATURE_RING")
       case GDK_DEVICE_PAD_FEATURE_STRIP => Some("GDK_DEVICE_PAD_FEATURE_STRIP")
@@ -4391,6 +5115,11 @@ object GdkDevicePadFeature extends CEnumU[GdkDevicePadFeature]:
     inline def |(b: GdkDevicePadFeature): GdkDevicePadFeature = a | b
     inline def is(b: GdkDevicePadFeature): Boolean = (a & b) == b
 
+/**
+ * GdkDeviceToolType: _DEVICE_TOOL_TYPE_UNKNOWN: Tool is of an unknown type. _DEVICE_TOOL_TYPE_PEN: Tool is a standard tablet stylus. _DEVICE_TOOL_TYPE_ERASER: Tool is standard tablet eraser. _DEVICE_TOOL_TYPE_BRUSH: Tool is a brush stylus. _DEVICE_TOOL_TYPE_PENCIL: Tool is a pencil stylus. _DEVICE_TOOL_TYPE_AIRBRUSH: Tool is an airbrush stylus. _DEVICE_TOOL_TYPE_MOUSE: Tool is a mouse. _DEVICE_TOOL_TYPE_LENS: Tool is a lens cursor.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkdevicetool.h
+*/
 opaque type GdkDeviceToolType = CUnsignedInt
 object GdkDeviceToolType extends CEnumU[GdkDeviceToolType]:
   given _tag: Tag[GdkDeviceToolType] = Tag.UInt
@@ -4404,7 +5133,7 @@ object GdkDeviceToolType extends CEnumU[GdkDeviceToolType]:
   val GDK_DEVICE_TOOL_TYPE_MOUSE = define(6)
   val GDK_DEVICE_TOOL_TYPE_LENS = define(7)
   inline def getName(inline value: GdkDeviceToolType): Option[String] =
-    value match
+    inline value match
       case GDK_DEVICE_TOOL_TYPE_UNKNOWN => Some("GDK_DEVICE_TOOL_TYPE_UNKNOWN")
       case GDK_DEVICE_TOOL_TYPE_PEN => Some("GDK_DEVICE_TOOL_TYPE_PEN")
       case GDK_DEVICE_TOOL_TYPE_ERASER => Some("GDK_DEVICE_TOOL_TYPE_ERASER")
@@ -4419,6 +5148,11 @@ object GdkDeviceToolType extends CEnumU[GdkDeviceToolType]:
     inline def |(b: GdkDeviceToolType): GdkDeviceToolType = a | b
     inline def is(b: GdkDeviceToolType): Boolean = (a & b) == b
 
+/**
+ * GdkDragAction: _ACTION_COPY: Copy the data. _ACTION_MOVE: Move the data, i.e. first copy it, then delete it from the source using the DELETE target of the X selection protocol. _ACTION_LINK: Add a link to the data. Note that this is only useful if source and destination agree on what it means, and is not supported on all platforms. _ACTION_ASK: Ask the user what to do with the data.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkDragAction = CUnsignedInt
 object GdkDragAction extends CEnumU[GdkDragAction]:
   given _tag: Tag[GdkDragAction] = Tag.UInt
@@ -4428,7 +5162,7 @@ object GdkDragAction extends CEnumU[GdkDragAction]:
   val GDK_ACTION_LINK = define(4)
   val GDK_ACTION_ASK = define(8)
   inline def getName(inline value: GdkDragAction): Option[String] =
-    value match
+    inline value match
       case GDK_ACTION_COPY => Some("GDK_ACTION_COPY")
       case GDK_ACTION_MOVE => Some("GDK_ACTION_MOVE")
       case GDK_ACTION_LINK => Some("GDK_ACTION_LINK")
@@ -4439,6 +5173,11 @@ object GdkDragAction extends CEnumU[GdkDragAction]:
     inline def |(b: GdkDragAction): GdkDragAction = a | b
     inline def is(b: GdkDragAction): Boolean = (a & b) == b
 
+/**
+ * GdkDragCancelReason: _DRAG_CANCEL_NO_TARGET: There is no suitable drop target. _DRAG_CANCEL_USER_CANCELLED: Drag cancelled by the user _DRAG_CANCEL_ERROR: Unspecified error.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkdrag.h
+*/
 opaque type GdkDragCancelReason = CUnsignedInt
 object GdkDragCancelReason extends CEnumU[GdkDragCancelReason]:
   given _tag: Tag[GdkDragCancelReason] = Tag.UInt
@@ -4447,7 +5186,7 @@ object GdkDragCancelReason extends CEnumU[GdkDragCancelReason]:
   val GDK_DRAG_CANCEL_USER_CANCELLED = define(1)
   val GDK_DRAG_CANCEL_ERROR = define(2)
   inline def getName(inline value: GdkDragCancelReason): Option[String] =
-    value match
+    inline value match
       case GDK_DRAG_CANCEL_NO_TARGET => Some("GDK_DRAG_CANCEL_NO_TARGET")
       case GDK_DRAG_CANCEL_USER_CANCELLED => Some("GDK_DRAG_CANCEL_USER_CANCELLED")
       case GDK_DRAG_CANCEL_ERROR => Some("GDK_DRAG_CANCEL_ERROR")
@@ -4457,6 +5196,11 @@ object GdkDragCancelReason extends CEnumU[GdkDragCancelReason]:
     inline def |(b: GdkDragCancelReason): GdkDragCancelReason = a | b
     inline def is(b: GdkDragCancelReason): Boolean = (a & b) == b
 
+/**
+ * GdkEventType: _DELETE: the window manager has requested that the toplevel surface be hidden or destroyed, usually when the user clicks on a special icon in the title bar. _MOTION_NOTIFY: the pointer (usually a mouse) has moved. _BUTTON_PRESS: a mouse button has been pressed. _BUTTON_RELEASE: a mouse button has been released. _KEY_PRESS: a key has been pressed. _KEY_RELEASE: a key has been released. _ENTER_NOTIFY: the pointer has entered the surface. _LEAVE_NOTIFY: the pointer has left the surface. _FOCUS_CHANGE: the keyboard focus has entered or left the surface. _PROXIMITY_IN: an input device has moved into contact with a sensing surface (e.g. a touchscreen or graphics tablet). _PROXIMITY_OUT: an input device has moved out of contact with a sensing surface. _DRAG_ENTER: the mouse has entered the surface while a drag is in progress. _DRAG_LEAVE: the mouse has left the surface while a drag is in progress. _DRAG_MOTION: the mouse has moved in the surface while a drag is in progress. _DROP_START: a drop operation onto the surface has started. _SCROLL: the scroll wheel was turned _GRAB_BROKEN: a pointer or keyboard grab was broken. _TOUCH_BEGIN: A new touch event sequence has just started. _TOUCH_UPDATE: A touch event sequence has been updated. _TOUCH_END: A touch event sequence has finished. _TOUCH_CANCEL: A touch event sequence has been canceled. _TOUCHPAD_SWIPE: A touchpad swipe gesture event, the current state is determined by its phase field. _TOUCHPAD_PINCH: A touchpad pinch gesture event, the current state is determined by its phase field. _PAD_BUTTON_PRESS: A tablet pad button press event. _PAD_BUTTON_RELEASE: A tablet pad button release event. _PAD_RING: A tablet pad axis event from a "ring". _PAD_STRIP: A tablet pad axis event from a "strip". _PAD_GROUP_MODE: A tablet pad group mode change. _TOUCHPAD_HOLD: A touchpad hold gesture event, the current state is determined by its phase field. Since: 4.6 _EVENT_LAST: marks the end of the GdkEventType enumeration.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkevents.h
+*/
 opaque type GdkEventType = CUnsignedInt
 object GdkEventType extends CEnumU[GdkEventType]:
   given _tag: Tag[GdkEventType] = Tag.UInt
@@ -4492,7 +5236,7 @@ object GdkEventType extends CEnumU[GdkEventType]:
   val GDK_TOUCHPAD_HOLD = define(28)
   val GDK_EVENT_LAST = define(29)
   inline def getName(inline value: GdkEventType): Option[String] =
-    value match
+    inline value match
       case GDK_DELETE => Some("GDK_DELETE")
       case GDK_MOTION_NOTIFY => Some("GDK_MOTION_NOTIFY")
       case GDK_BUTTON_PRESS => Some("GDK_BUTTON_PRESS")
@@ -4529,6 +5273,11 @@ object GdkEventType extends CEnumU[GdkEventType]:
     inline def |(b: GdkEventType): GdkEventType = a | b
     inline def is(b: GdkEventType): Boolean = (a & b) == b
 
+/**
+ * GdkFrameClockPhase: _FRAME_CLOCK_PHASE_NONE: no phase _FRAME_CLOCK_PHASE_FLUSH_EVENTS: corresponds to GdkFrameClock::flush-events. Should not be handled by applications. _FRAME_CLOCK_PHASE_BEFORE_PAINT: corresponds to GdkFrameClock::before-paint. Should not be handled by applications. _FRAME_CLOCK_PHASE_UPDATE: corresponds to GdkFrameClock::update. _FRAME_CLOCK_PHASE_LAYOUT: corresponds to GdkFrameClock::layout. Should not be handled by applicatiosn. _FRAME_CLOCK_PHASE_PAINT: corresponds to GdkFrameClock::paint. _FRAME_CLOCK_PHASE_RESUME_EVENTS: corresponds to GdkFrameClock::resume-events. Should not be handled by applications. _FRAME_CLOCK_PHASE_AFTER_PAINT: corresponds to GdkFrameClock::after-paint. Should not be handled by applications.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkframeclock.h
+*/
 opaque type GdkFrameClockPhase = CUnsignedInt
 object GdkFrameClockPhase extends CEnumU[GdkFrameClockPhase]:
   given _tag: Tag[GdkFrameClockPhase] = Tag.UInt
@@ -4542,7 +5291,7 @@ object GdkFrameClockPhase extends CEnumU[GdkFrameClockPhase]:
   val GDK_FRAME_CLOCK_PHASE_RESUME_EVENTS = define(32)
   val GDK_FRAME_CLOCK_PHASE_AFTER_PAINT = define(64)
   inline def getName(inline value: GdkFrameClockPhase): Option[String] =
-    value match
+    inline value match
       case GDK_FRAME_CLOCK_PHASE_NONE => Some("GDK_FRAME_CLOCK_PHASE_NONE")
       case GDK_FRAME_CLOCK_PHASE_FLUSH_EVENTS => Some("GDK_FRAME_CLOCK_PHASE_FLUSH_EVENTS")
       case GDK_FRAME_CLOCK_PHASE_BEFORE_PAINT => Some("GDK_FRAME_CLOCK_PHASE_BEFORE_PAINT")
@@ -4557,6 +5306,11 @@ object GdkFrameClockPhase extends CEnumU[GdkFrameClockPhase]:
     inline def |(b: GdkFrameClockPhase): GdkFrameClockPhase = a | b
     inline def is(b: GdkFrameClockPhase): Boolean = (a & b) == b
 
+/**
+ * GdkFullscreenMode: _FULLSCREEN_ON_CURRENT_MONITOR: Fullscreen on current monitor only. _FULLSCREEN_ON_ALL_MONITORS: Span across all monitors when fullscreen.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdktoplevel.h
+*/
 opaque type GdkFullscreenMode = CUnsignedInt
 object GdkFullscreenMode extends CEnumU[GdkFullscreenMode]:
   given _tag: Tag[GdkFullscreenMode] = Tag.UInt
@@ -4564,7 +5318,7 @@ object GdkFullscreenMode extends CEnumU[GdkFullscreenMode]:
   val GDK_FULLSCREEN_ON_CURRENT_MONITOR = define(0)
   val GDK_FULLSCREEN_ON_ALL_MONITORS = define(1)
   inline def getName(inline value: GdkFullscreenMode): Option[String] =
-    value match
+    inline value match
       case GDK_FULLSCREEN_ON_CURRENT_MONITOR => Some("GDK_FULLSCREEN_ON_CURRENT_MONITOR")
       case GDK_FULLSCREEN_ON_ALL_MONITORS => Some("GDK_FULLSCREEN_ON_ALL_MONITORS")
       case _ => None
@@ -4573,6 +5327,11 @@ object GdkFullscreenMode extends CEnumU[GdkFullscreenMode]:
     inline def |(b: GdkFullscreenMode): GdkFullscreenMode = a | b
     inline def is(b: GdkFullscreenMode): Boolean = (a & b) == b
 
+/**
+ * GdkGLAPI: _GL_API_GL: The OpenGL API _GL_API_GLES: The OpenGL ES API
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkglcontext.h
+*/
 opaque type GdkGLAPI = CUnsignedInt
 object GdkGLAPI extends CEnumU[GdkGLAPI]:
   given _tag: Tag[GdkGLAPI] = Tag.UInt
@@ -4580,7 +5339,7 @@ object GdkGLAPI extends CEnumU[GdkGLAPI]:
   val GDK_GL_API_GL = define(1)
   val GDK_GL_API_GLES = define(2)
   inline def getName(inline value: GdkGLAPI): Option[String] =
-    value match
+    inline value match
       case GDK_GL_API_GL => Some("GDK_GL_API_GL")
       case GDK_GL_API_GLES => Some("GDK_GL_API_GLES")
       case _ => None
@@ -4589,6 +5348,11 @@ object GdkGLAPI extends CEnumU[GdkGLAPI]:
     inline def |(b: GdkGLAPI): GdkGLAPI = a | b
     inline def is(b: GdkGLAPI): Boolean = (a & b) == b
 
+/**
+ * GdkGLError: _GL_ERROR_NOT_AVAILABLE: OpenGL support is not available _GL_ERROR_UNSUPPORTED_FORMAT: The requested visual format is not supported _GL_ERROR_UNSUPPORTED_PROFILE: The requested profile is not supported _GL_ERROR_COMPILATION_FAILED: The shader compilation failed _GL_ERROR_LINK_FAILED: The shader linking failed
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkGLError = CUnsignedInt
 object GdkGLError extends CEnumU[GdkGLError]:
   given _tag: Tag[GdkGLError] = Tag.UInt
@@ -4599,7 +5363,7 @@ object GdkGLError extends CEnumU[GdkGLError]:
   val GDK_GL_ERROR_COMPILATION_FAILED = define(3)
   val GDK_GL_ERROR_LINK_FAILED = define(4)
   inline def getName(inline value: GdkGLError): Option[String] =
-    value match
+    inline value match
       case GDK_GL_ERROR_NOT_AVAILABLE => Some("GDK_GL_ERROR_NOT_AVAILABLE")
       case GDK_GL_ERROR_UNSUPPORTED_FORMAT => Some("GDK_GL_ERROR_UNSUPPORTED_FORMAT")
       case GDK_GL_ERROR_UNSUPPORTED_PROFILE => Some("GDK_GL_ERROR_UNSUPPORTED_PROFILE")
@@ -4611,6 +5375,11 @@ object GdkGLError extends CEnumU[GdkGLError]:
     inline def |(b: GdkGLError): GdkGLError = a | b
     inline def is(b: GdkGLError): Boolean = (a & b) == b
 
+/**
+ * GdkGravity: _GRAVITY_NORTH_WEST: the reference point is at the top left corner. _GRAVITY_NORTH: the reference point is in the middle of the top edge. _GRAVITY_NORTH_EAST: the reference point is at the top right corner. _GRAVITY_WEST: the reference point is at the middle of the left edge. _GRAVITY_CENTER: the reference point is at the center of the surface. _GRAVITY_EAST: the reference point is at the middle of the right edge. _GRAVITY_SOUTH_WEST: the reference point is at the lower left corner. _GRAVITY_SOUTH: the reference point is at the middle of the lower edge. _GRAVITY_SOUTH_EAST: the reference point is at the lower right corner. _GRAVITY_STATIC: the reference point is at the top left corner of the surface itself, ignoring window manager decorations.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkGravity = CUnsignedInt
 object GdkGravity extends CEnumU[GdkGravity]:
   given _tag: Tag[GdkGravity] = Tag.UInt
@@ -4626,7 +5395,7 @@ object GdkGravity extends CEnumU[GdkGravity]:
   val GDK_GRAVITY_SOUTH_EAST = define(9)
   val GDK_GRAVITY_STATIC = define(10)
   inline def getName(inline value: GdkGravity): Option[String] =
-    value match
+    inline value match
       case GDK_GRAVITY_NORTH_WEST => Some("GDK_GRAVITY_NORTH_WEST")
       case GDK_GRAVITY_NORTH => Some("GDK_GRAVITY_NORTH")
       case GDK_GRAVITY_NORTH_EAST => Some("GDK_GRAVITY_NORTH_EAST")
@@ -4643,6 +5412,11 @@ object GdkGravity extends CEnumU[GdkGravity]:
     inline def |(b: GdkGravity): GdkGravity = a | b
     inline def is(b: GdkGravity): Boolean = (a & b) == b
 
+/**
+ * GdkInputSource: _SOURCE_MOUSE: the device is a mouse. (This will be reported for the core pointer, even if it is something else, such as a trackball.) _SOURCE_PEN: the device is a stylus of a graphics tablet or similar device. _SOURCE_KEYBOARD: the device is a keyboard. _SOURCE_TOUCHSCREEN: the device is a direct-input touch device, such as a touchscreen or tablet _SOURCE_TOUCHPAD: the device is an indirect touch device, such as a touchpad _SOURCE_TRACKPOINT: the device is a trackpoint _SOURCE_TABLET_PAD: the device is a "pad", a collection of buttons, rings and strips found in drawing tablets
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkdevice.h
+*/
 opaque type GdkInputSource = CUnsignedInt
 object GdkInputSource extends CEnumU[GdkInputSource]:
   given _tag: Tag[GdkInputSource] = Tag.UInt
@@ -4655,7 +5429,7 @@ object GdkInputSource extends CEnumU[GdkInputSource]:
   val GDK_SOURCE_TRACKPOINT = define(5)
   val GDK_SOURCE_TABLET_PAD = define(6)
   inline def getName(inline value: GdkInputSource): Option[String] =
-    value match
+    inline value match
       case GDK_SOURCE_MOUSE => Some("GDK_SOURCE_MOUSE")
       case GDK_SOURCE_PEN => Some("GDK_SOURCE_PEN")
       case GDK_SOURCE_KEYBOARD => Some("GDK_SOURCE_KEYBOARD")
@@ -4669,6 +5443,11 @@ object GdkInputSource extends CEnumU[GdkInputSource]:
     inline def |(b: GdkInputSource): GdkInputSource = a | b
     inline def is(b: GdkInputSource): Boolean = (a & b) == b
 
+/**
+ * GdkInterpType: _INTERP_NEAREST: Nearest neighbor sampling; this is the fastest and lowest quality mode. Quality is normally unacceptable when scaling down, but may be OK when scaling up. _INTERP_TILES: This is an accurate simulation of the PostScript image operator without any interpolation enabled. Each pixel is rendered as a tiny parallelogram of solid color, the edges of which are implemented with antialiasing. It resembles nearest neighbor for enlargement, and bilinear for reduction. _INTERP_BILINEAR: Best quality/speed balance; use this mode by default. Bilinear interpolation. For enlargement, it is equivalent to point-sampling the ideal bilinear-interpolated image. For reduction, it is equivalent to laying down small tiles and integrating over the coverage area. _INTERP_HYPER: This is the slowest and highest quality reconstruction function. It is derived from the hyperbolic filters in Wolberg's "Digital Image Warping", and is formally defined as the hyperbolic-filter sampling the ideal hyperbolic-filter interpolated image (the filter is designed to be idempotent for 1:1 pixel mapping). **Deprecated**: this interpolation filter is deprecated, as in reality it has a lower quality than the _INTERP_BILINEAR filter (Since: 2.38)
+
+ * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
+*/
 opaque type GdkInterpType = CUnsignedInt
 object GdkInterpType extends CEnumU[GdkInterpType]:
   given _tag: Tag[GdkInterpType] = Tag.UInt
@@ -4678,7 +5457,7 @@ object GdkInterpType extends CEnumU[GdkInterpType]:
   val GDK_INTERP_BILINEAR = define(2)
   val GDK_INTERP_HYPER = define(3)
   inline def getName(inline value: GdkInterpType): Option[String] =
-    value match
+    inline value match
       case GDK_INTERP_NEAREST => Some("GDK_INTERP_NEAREST")
       case GDK_INTERP_TILES => Some("GDK_INTERP_TILES")
       case GDK_INTERP_BILINEAR => Some("GDK_INTERP_BILINEAR")
@@ -4689,6 +5468,11 @@ object GdkInterpType extends CEnumU[GdkInterpType]:
     inline def |(b: GdkInterpType): GdkInterpType = a | b
     inline def is(b: GdkInterpType): Boolean = (a & b) == b
 
+/**
+ * GdkKeyMatch: _KEY_MATCH_NONE: The key event does not match _KEY_MATCH_PARTIAL: The key event matches if keyboard state (specifically, the currently active group) is ignored _KEY_MATCH_EXACT: The key event matches
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkevents.h
+*/
 opaque type GdkKeyMatch = CUnsignedInt
 object GdkKeyMatch extends CEnumU[GdkKeyMatch]:
   given _tag: Tag[GdkKeyMatch] = Tag.UInt
@@ -4697,7 +5481,7 @@ object GdkKeyMatch extends CEnumU[GdkKeyMatch]:
   val GDK_KEY_MATCH_PARTIAL = define(1)
   val GDK_KEY_MATCH_EXACT = define(2)
   inline def getName(inline value: GdkKeyMatch): Option[String] =
-    value match
+    inline value match
       case GDK_KEY_MATCH_NONE => Some("GDK_KEY_MATCH_NONE")
       case GDK_KEY_MATCH_PARTIAL => Some("GDK_KEY_MATCH_PARTIAL")
       case GDK_KEY_MATCH_EXACT => Some("GDK_KEY_MATCH_EXACT")
@@ -4707,6 +5491,11 @@ object GdkKeyMatch extends CEnumU[GdkKeyMatch]:
     inline def |(b: GdkKeyMatch): GdkKeyMatch = a | b
     inline def is(b: GdkKeyMatch): Boolean = (a & b) == b
 
+/**
+ * GdkMemoryFormat: _MEMORY_B8G8R8A8_PREMULTIPLIED: 4 bytes; for blue, green, red, alpha. The color values are premultiplied with the alpha value. _MEMORY_A8R8G8B8_PREMULTIPLIED: 4 bytes; for alpha, red, green, blue. The color values are premultiplied with the alpha value. _MEMORY_R8G8B8A8_PREMULTIPLIED: 4 bytes; for red, green, blue, alpha The color values are premultiplied with the alpha value. _MEMORY_B8G8R8A8: 4 bytes; for blue, green, red, alpha. _MEMORY_A8R8G8B8: 4 bytes; for alpha, red, green, blue. _MEMORY_R8G8B8A8: 4 bytes; for red, green, blue, alpha. _MEMORY_A8B8G8R8: 4 bytes; for alpha, blue, green, red. _MEMORY_R8G8B8: 3 bytes; for red, green, blue. The data is opaque. _MEMORY_B8G8R8: 3 bytes; for blue, green, red. The data is opaque. _MEMORY_R16G16B16: 3 guint16 values; for red, green, blue. Since: 4.6 _MEMORY_R16G16B16A16_PREMULTIPLIED: 4 guint16 values; for red, green, blue, alpha. The color values are premultiplied with the alpha value. Since: 4.6 _MEMORY_R16G16B16A16: 4 guint16 values; for red, green, blue, alpha. Since: 4.6 _MEMORY_R16G16B16_FLOAT: 3 half-float values; for red, green, blue. The data is opaque. Since: 4.6 _MEMORY_R16G16B16A16_FLOAT_PREMULTIPLIED: 4 half-float values; for red, green, blue and alpha. The color values are premultiplied with the alpha value. Since: 4.6 _MEMORY_R16G16B16A16_FLOAT: 4 half-float values; for red, green, blue and alpha. Since: 4.6 _MEMORY_B32G32R32_FLOAT: 3 float values; for blue, green, red. The data is opaque. Since: 4.6 _MEMORY_R32G32B32A32_FLOAT_PREMULTIPLIED: 4 float values; for red, green, blue and alpha. The color values are premultiplied with the alpha value. Since: 4.6 _MEMORY_R32G32B32A32_FLOAT: 4 float values; for red, green, blue and alpha. Since: 4.6 _MEMORY_N_FORMATS: The number of formats. This value will change as more formats get added, so do not rely on its concrete integer.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkMemoryFormat = CUnsignedInt
 object GdkMemoryFormat extends CEnumU[GdkMemoryFormat]:
   given _tag: Tag[GdkMemoryFormat] = Tag.UInt
@@ -4731,7 +5520,7 @@ object GdkMemoryFormat extends CEnumU[GdkMemoryFormat]:
   val GDK_MEMORY_R32G32B32A32_FLOAT = define(17)
   val GDK_MEMORY_N_FORMATS = define(18)
   inline def getName(inline value: GdkMemoryFormat): Option[String] =
-    value match
+    inline value match
       case GDK_MEMORY_B8G8R8A8_PREMULTIPLIED => Some("GDK_MEMORY_B8G8R8A8_PREMULTIPLIED")
       case GDK_MEMORY_A8R8G8B8_PREMULTIPLIED => Some("GDK_MEMORY_A8R8G8B8_PREMULTIPLIED")
       case GDK_MEMORY_R8G8B8A8_PREMULTIPLIED => Some("GDK_MEMORY_R8G8B8A8_PREMULTIPLIED")
@@ -4757,6 +5546,11 @@ object GdkMemoryFormat extends CEnumU[GdkMemoryFormat]:
     inline def |(b: GdkMemoryFormat): GdkMemoryFormat = a | b
     inline def is(b: GdkMemoryFormat): Boolean = (a & b) == b
 
+/**
+ * GdkModifierType: _SHIFT_MASK: the Shift key. _LOCK_MASK: a Lock key (depending on the modifier mapping of the X server this may either be CapsLock or ShiftLock). _CONTROL_MASK: the Control key. _ALT_MASK: the fourth modifier key (it depends on the modifier mapping of the X server which key is interpreted as this modifier, but normally it is the Alt key). _BUTTON1_MASK: the first mouse button. _BUTTON2_MASK: the second mouse button. _BUTTON3_MASK: the third mouse button. _BUTTON4_MASK: the fourth mouse button. _BUTTON5_MASK: the fifth mouse button. _SUPER_MASK: the Super modifier _HYPER_MASK: the Hyper modifier _META_MASK: the Meta modifier
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkModifierType = CUnsignedInt
 object GdkModifierType extends CEnumU[GdkModifierType]:
   given _tag: Tag[GdkModifierType] = Tag.UInt
@@ -4774,7 +5568,7 @@ object GdkModifierType extends CEnumU[GdkModifierType]:
   val GDK_HYPER_MASK = define(134217728)
   val GDK_META_MASK = define(268435456)
   inline def getName(inline value: GdkModifierType): Option[String] =
-    value match
+    inline value match
       case GDK_SHIFT_MASK => Some("GDK_SHIFT_MASK")
       case GDK_LOCK_MASK => Some("GDK_LOCK_MASK")
       case GDK_CONTROL_MASK => Some("GDK_CONTROL_MASK")
@@ -4793,6 +5587,11 @@ object GdkModifierType extends CEnumU[GdkModifierType]:
     inline def |(b: GdkModifierType): GdkModifierType = a | b
     inline def is(b: GdkModifierType): Boolean = (a & b) == b
 
+/**
+ * GdkNotifyType: _NOTIFY_ANCESTOR: the surface is entered from an ancestor or left towards an ancestor. _NOTIFY_VIRTUAL: the pointer moves between an ancestor and an inferior of the surface. _NOTIFY_INFERIOR: the surface is entered from an inferior or left towards an inferior. _NOTIFY_NONLINEAR: the surface is entered from or left towards a surface which is neither an ancestor nor an inferior. _NOTIFY_NONLINEAR_VIRTUAL: the pointer moves between two surfaces which are not ancestors of each other and the surface is part of the ancestor chain between one of these surfaces and their least common ancestor. _NOTIFY_UNKNOWN: an unknown type of enter/leave event occurred.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkevents.h
+*/
 opaque type GdkNotifyType = CUnsignedInt
 object GdkNotifyType extends CEnumU[GdkNotifyType]:
   given _tag: Tag[GdkNotifyType] = Tag.UInt
@@ -4804,7 +5603,7 @@ object GdkNotifyType extends CEnumU[GdkNotifyType]:
   val GDK_NOTIFY_NONLINEAR_VIRTUAL = define(4)
   val GDK_NOTIFY_UNKNOWN = define(5)
   inline def getName(inline value: GdkNotifyType): Option[String] =
-    value match
+    inline value match
       case GDK_NOTIFY_ANCESTOR => Some("GDK_NOTIFY_ANCESTOR")
       case GDK_NOTIFY_VIRTUAL => Some("GDK_NOTIFY_VIRTUAL")
       case GDK_NOTIFY_INFERIOR => Some("GDK_NOTIFY_INFERIOR")
@@ -4817,6 +5616,11 @@ object GdkNotifyType extends CEnumU[GdkNotifyType]:
     inline def |(b: GdkNotifyType): GdkNotifyType = a | b
     inline def is(b: GdkNotifyType): Boolean = (a & b) == b
 
+/**
+ * GdkPaintableFlags: _PAINTABLE_STATIC_SIZE: The size is immutable. The [signal::invalidate-size] signal will never be emitted. _PAINTABLE_STATIC_CONTENTS: The content is immutable. The [signal::invalidate-contents] signal will never be emitted.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkpaintable.h
+*/
 opaque type GdkPaintableFlags = CUnsignedInt
 object GdkPaintableFlags extends CEnumU[GdkPaintableFlags]:
   given _tag: Tag[GdkPaintableFlags] = Tag.UInt
@@ -4824,7 +5628,7 @@ object GdkPaintableFlags extends CEnumU[GdkPaintableFlags]:
   val GDK_PAINTABLE_STATIC_SIZE = define(1)
   val GDK_PAINTABLE_STATIC_CONTENTS = define(2)
   inline def getName(inline value: GdkPaintableFlags): Option[String] =
-    value match
+    inline value match
       case GDK_PAINTABLE_STATIC_SIZE => Some("GDK_PAINTABLE_STATIC_SIZE")
       case GDK_PAINTABLE_STATIC_CONTENTS => Some("GDK_PAINTABLE_STATIC_CONTENTS")
       case _ => None
@@ -4833,6 +5637,11 @@ object GdkPaintableFlags extends CEnumU[GdkPaintableFlags]:
     inline def |(b: GdkPaintableFlags): GdkPaintableFlags = a | b
     inline def is(b: GdkPaintableFlags): Boolean = (a & b) == b
 
+/**
+ * GdkPixbufAlphaMode: _PIXBUF_ALPHA_BILEVEL: A bilevel clipping mask (black and white) will be created and used to draw the image. Pixels below 0.5 opacity will be considered fully transparent, and all others will be considered fully opaque. _PIXBUF_ALPHA_FULL: For now falls back to #GDK_PIXBUF_ALPHA_BILEVEL. In the future it will do full alpha compositing.
+
+ * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+*/
 opaque type GdkPixbufAlphaMode = CUnsignedInt
 object GdkPixbufAlphaMode extends CEnumU[GdkPixbufAlphaMode]:
   given _tag: Tag[GdkPixbufAlphaMode] = Tag.UInt
@@ -4840,7 +5649,7 @@ object GdkPixbufAlphaMode extends CEnumU[GdkPixbufAlphaMode]:
   val GDK_PIXBUF_ALPHA_BILEVEL = define(0)
   val GDK_PIXBUF_ALPHA_FULL = define(1)
   inline def getName(inline value: GdkPixbufAlphaMode): Option[String] =
-    value match
+    inline value match
       case GDK_PIXBUF_ALPHA_BILEVEL => Some("GDK_PIXBUF_ALPHA_BILEVEL")
       case GDK_PIXBUF_ALPHA_FULL => Some("GDK_PIXBUF_ALPHA_FULL")
       case _ => None
@@ -4849,6 +5658,11 @@ object GdkPixbufAlphaMode extends CEnumU[GdkPixbufAlphaMode]:
     inline def |(b: GdkPixbufAlphaMode): GdkPixbufAlphaMode = a | b
     inline def is(b: GdkPixbufAlphaMode): Boolean = (a & b) == b
 
+/**
+ * GdkPixbufError: _PIXBUF_ERROR_CORRUPT_IMAGE: An image file was broken somehow. _PIXBUF_ERROR_INSUFFICIENT_MEMORY: Not enough memory. _PIXBUF_ERROR_BAD_OPTION: A bad option was passed to a pixbuf save module. _PIXBUF_ERROR_UNKNOWN_TYPE: Unknown image type. _PIXBUF_ERROR_UNSUPPORTED_OPERATION: Don't know how to perform the given operation on the type of image at hand. _PIXBUF_ERROR_FAILED: Generic failure code, something went wrong. _PIXBUF_ERROR_INCOMPLETE_ANIMATION: Only part of the animation was loaded.
+
+ * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+*/
 opaque type GdkPixbufError = CUnsignedInt
 object GdkPixbufError extends CEnumU[GdkPixbufError]:
   given _tag: Tag[GdkPixbufError] = Tag.UInt
@@ -4861,7 +5675,7 @@ object GdkPixbufError extends CEnumU[GdkPixbufError]:
   val GDK_PIXBUF_ERROR_FAILED = define(5)
   val GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION = define(6)
   inline def getName(inline value: GdkPixbufError): Option[String] =
-    value match
+    inline value match
       case GDK_PIXBUF_ERROR_CORRUPT_IMAGE => Some("GDK_PIXBUF_ERROR_CORRUPT_IMAGE")
       case GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY => Some("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY")
       case GDK_PIXBUF_ERROR_BAD_OPTION => Some("GDK_PIXBUF_ERROR_BAD_OPTION")
@@ -4875,6 +5689,11 @@ object GdkPixbufError extends CEnumU[GdkPixbufError]:
     inline def |(b: GdkPixbufError): GdkPixbufError = a | b
     inline def is(b: GdkPixbufError): Boolean = (a & b) == b
 
+/**
+ * GdkPixbufRotation: _PIXBUF_ROTATE_NONE: No rotation. _PIXBUF_ROTATE_COUNTERCLOCKWISE: Rotate by 90 degrees. _PIXBUF_ROTATE_UPSIDEDOWN: Rotate by 180 degrees. _PIXBUF_ROTATE_CLOCKWISE: Rotate by 270 degrees.
+
+ * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
+*/
 opaque type GdkPixbufRotation = CUnsignedInt
 object GdkPixbufRotation extends CEnumU[GdkPixbufRotation]:
   given _tag: Tag[GdkPixbufRotation] = Tag.UInt
@@ -4884,7 +5703,7 @@ object GdkPixbufRotation extends CEnumU[GdkPixbufRotation]:
   val GDK_PIXBUF_ROTATE_UPSIDEDOWN = define(180)
   val GDK_PIXBUF_ROTATE_CLOCKWISE = define(270)
   inline def getName(inline value: GdkPixbufRotation): Option[String] =
-    value match
+    inline value match
       case GDK_PIXBUF_ROTATE_NONE => Some("GDK_PIXBUF_ROTATE_NONE")
       case GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE => Some("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE")
       case GDK_PIXBUF_ROTATE_UPSIDEDOWN => Some("GDK_PIXBUF_ROTATE_UPSIDEDOWN")
@@ -4895,6 +5714,11 @@ object GdkPixbufRotation extends CEnumU[GdkPixbufRotation]:
     inline def |(b: GdkPixbufRotation): GdkPixbufRotation = a | b
     inline def is(b: GdkPixbufRotation): Boolean = (a & b) == b
 
+/**
+ * GdkScrollDirection: _SCROLL_UP: the surface is scrolled up. _SCROLL_DOWN: the surface is scrolled down. _SCROLL_LEFT: the surface is scrolled to the left. _SCROLL_RIGHT: the surface is scrolled to the right. _SCROLL_SMOOTH: the scrolling is determined by the delta values in scroll events. See gdk_scroll_event_get_deltas()
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkevents.h
+*/
 opaque type GdkScrollDirection = CUnsignedInt
 object GdkScrollDirection extends CEnumU[GdkScrollDirection]:
   given _tag: Tag[GdkScrollDirection] = Tag.UInt
@@ -4905,7 +5729,7 @@ object GdkScrollDirection extends CEnumU[GdkScrollDirection]:
   val GDK_SCROLL_RIGHT = define(3)
   val GDK_SCROLL_SMOOTH = define(4)
   inline def getName(inline value: GdkScrollDirection): Option[String] =
-    value match
+    inline value match
       case GDK_SCROLL_UP => Some("GDK_SCROLL_UP")
       case GDK_SCROLL_DOWN => Some("GDK_SCROLL_DOWN")
       case GDK_SCROLL_LEFT => Some("GDK_SCROLL_LEFT")
@@ -4917,6 +5741,11 @@ object GdkScrollDirection extends CEnumU[GdkScrollDirection]:
     inline def |(b: GdkScrollDirection): GdkScrollDirection = a | b
     inline def is(b: GdkScrollDirection): Boolean = (a & b) == b
 
+/**
+ * GdkSeatCapabilities: _SEAT_CAPABILITY_NONE: No input capabilities _SEAT_CAPABILITY_POINTER: The seat has a pointer (e.g. mouse) _SEAT_CAPABILITY_TOUCH: The seat has touchscreen(s) attached _SEAT_CAPABILITY_TABLET_STYLUS: The seat has drawing tablet(s) attached _SEAT_CAPABILITY_KEYBOARD: The seat has keyboard(s) attached _SEAT_CAPABILITY_TABLET_PAD: The seat has drawing tablet pad(s) attached _SEAT_CAPABILITY_ALL_POINTING: The union of all pointing capabilities _SEAT_CAPABILITY_ALL: The union of all capabilities
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkseat.h
+*/
 opaque type GdkSeatCapabilities = CUnsignedInt
 object GdkSeatCapabilities extends CEnumU[GdkSeatCapabilities]:
   given _tag: Tag[GdkSeatCapabilities] = Tag.UInt
@@ -4930,7 +5759,7 @@ object GdkSeatCapabilities extends CEnumU[GdkSeatCapabilities]:
   val GDK_SEAT_CAPABILITY_ALL_POINTING = define(7)
   val GDK_SEAT_CAPABILITY_ALL = define(15)
   inline def getName(inline value: GdkSeatCapabilities): Option[String] =
-    value match
+    inline value match
       case GDK_SEAT_CAPABILITY_NONE => Some("GDK_SEAT_CAPABILITY_NONE")
       case GDK_SEAT_CAPABILITY_POINTER => Some("GDK_SEAT_CAPABILITY_POINTER")
       case GDK_SEAT_CAPABILITY_TOUCH => Some("GDK_SEAT_CAPABILITY_TOUCH")
@@ -4945,6 +5774,11 @@ object GdkSeatCapabilities extends CEnumU[GdkSeatCapabilities]:
     inline def |(b: GdkSeatCapabilities): GdkSeatCapabilities = a | b
     inline def is(b: GdkSeatCapabilities): Boolean = (a & b) == b
 
+/**
+ * GdkSubpixelLayout: _SUBPIXEL_LAYOUT_UNKNOWN: The layout is not known _SUBPIXEL_LAYOUT_NONE: Not organized in this way _SUBPIXEL_LAYOUT_HORIZONTAL_RGB: The layout is horizontal, the order is RGB _SUBPIXEL_LAYOUT_HORIZONTAL_BGR: The layout is horizontal, the order is BGR _SUBPIXEL_LAYOUT_VERTICAL_RGB: The layout is vertical, the order is RGB _SUBPIXEL_LAYOUT_VERTICAL_BGR: The layout is vertical, the order is BGR
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkmonitor.h
+*/
 opaque type GdkSubpixelLayout = CUnsignedInt
 object GdkSubpixelLayout extends CEnumU[GdkSubpixelLayout]:
   given _tag: Tag[GdkSubpixelLayout] = Tag.UInt
@@ -4956,7 +5790,7 @@ object GdkSubpixelLayout extends CEnumU[GdkSubpixelLayout]:
   val GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB = define(4)
   val GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR = define(5)
   inline def getName(inline value: GdkSubpixelLayout): Option[String] =
-    value match
+    inline value match
       case GDK_SUBPIXEL_LAYOUT_UNKNOWN => Some("GDK_SUBPIXEL_LAYOUT_UNKNOWN")
       case GDK_SUBPIXEL_LAYOUT_NONE => Some("GDK_SUBPIXEL_LAYOUT_NONE")
       case GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB => Some("GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB")
@@ -4969,6 +5803,11 @@ object GdkSubpixelLayout extends CEnumU[GdkSubpixelLayout]:
     inline def |(b: GdkSubpixelLayout): GdkSubpixelLayout = a | b
     inline def is(b: GdkSubpixelLayout): Boolean = (a & b) == b
 
+/**
+ * GdkSurfaceEdge: _SURFACE_EDGE_NORTH_WEST: the top left corner. _SURFACE_EDGE_NORTH: the top edge. _SURFACE_EDGE_NORTH_EAST: the top right corner. _SURFACE_EDGE_WEST: the left edge. _SURFACE_EDGE_EAST: the right edge. _SURFACE_EDGE_SOUTH_WEST: the lower left corner. _SURFACE_EDGE_SOUTH: the lower edge. _SURFACE_EDGE_SOUTH_EAST: the lower right corner.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdktoplevel.h
+*/
 opaque type GdkSurfaceEdge = CUnsignedInt
 object GdkSurfaceEdge extends CEnumU[GdkSurfaceEdge]:
   given _tag: Tag[GdkSurfaceEdge] = Tag.UInt
@@ -4982,7 +5821,7 @@ object GdkSurfaceEdge extends CEnumU[GdkSurfaceEdge]:
   val GDK_SURFACE_EDGE_SOUTH = define(6)
   val GDK_SURFACE_EDGE_SOUTH_EAST = define(7)
   inline def getName(inline value: GdkSurfaceEdge): Option[String] =
-    value match
+    inline value match
       case GDK_SURFACE_EDGE_NORTH_WEST => Some("GDK_SURFACE_EDGE_NORTH_WEST")
       case GDK_SURFACE_EDGE_NORTH => Some("GDK_SURFACE_EDGE_NORTH")
       case GDK_SURFACE_EDGE_NORTH_EAST => Some("GDK_SURFACE_EDGE_NORTH_EAST")
@@ -4997,6 +5836,11 @@ object GdkSurfaceEdge extends CEnumU[GdkSurfaceEdge]:
     inline def |(b: GdkSurfaceEdge): GdkSurfaceEdge = a | b
     inline def is(b: GdkSurfaceEdge): Boolean = (a & b) == b
 
+/**
+ * GdkTextureError: _TEXTURE_ERROR_TOO_LARGE: Not enough memory to handle this image _TEXTURE_ERROR_CORRUPT_IMAGE: The image data appears corrupted _TEXTURE_ERROR_UNSUPPORTED_CONTENT: The image contains features that cannot be loaded _TEXTURE_ERROR_UNSUPPORTED_FORMAT: The image format is not supported
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdktexture.h
+*/
 opaque type GdkTextureError = CUnsignedInt
 object GdkTextureError extends CEnumU[GdkTextureError]:
   given _tag: Tag[GdkTextureError] = Tag.UInt
@@ -5006,7 +5850,7 @@ object GdkTextureError extends CEnumU[GdkTextureError]:
   val GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT = define(2)
   val GDK_TEXTURE_ERROR_UNSUPPORTED_FORMAT = define(3)
   inline def getName(inline value: GdkTextureError): Option[String] =
-    value match
+    inline value match
       case GDK_TEXTURE_ERROR_TOO_LARGE => Some("GDK_TEXTURE_ERROR_TOO_LARGE")
       case GDK_TEXTURE_ERROR_CORRUPT_IMAGE => Some("GDK_TEXTURE_ERROR_CORRUPT_IMAGE")
       case GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT => Some("GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT")
@@ -5017,6 +5861,11 @@ object GdkTextureError extends CEnumU[GdkTextureError]:
     inline def |(b: GdkTextureError): GdkTextureError = a | b
     inline def is(b: GdkTextureError): Boolean = (a & b) == b
 
+/**
+ * GdkTitlebarGesture: _TITLEBAR_GESTURE_DOUBLE_CLICK: _TITLEBAR_GESTURE_RIGHT_CLICK: _TITLEBAR_GESTURE_MIDDLE_CLICK:
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdktoplevel.h
+*/
 opaque type GdkTitlebarGesture = CUnsignedInt
 object GdkTitlebarGesture extends CEnumU[GdkTitlebarGesture]:
   given _tag: Tag[GdkTitlebarGesture] = Tag.UInt
@@ -5025,7 +5874,7 @@ object GdkTitlebarGesture extends CEnumU[GdkTitlebarGesture]:
   val GDK_TITLEBAR_GESTURE_RIGHT_CLICK = define(2)
   val GDK_TITLEBAR_GESTURE_MIDDLE_CLICK = define(3)
   inline def getName(inline value: GdkTitlebarGesture): Option[String] =
-    value match
+    inline value match
       case GDK_TITLEBAR_GESTURE_DOUBLE_CLICK => Some("GDK_TITLEBAR_GESTURE_DOUBLE_CLICK")
       case GDK_TITLEBAR_GESTURE_RIGHT_CLICK => Some("GDK_TITLEBAR_GESTURE_RIGHT_CLICK")
       case GDK_TITLEBAR_GESTURE_MIDDLE_CLICK => Some("GDK_TITLEBAR_GESTURE_MIDDLE_CLICK")
@@ -5035,6 +5884,11 @@ object GdkTitlebarGesture extends CEnumU[GdkTitlebarGesture]:
     inline def |(b: GdkTitlebarGesture): GdkTitlebarGesture = a | b
     inline def is(b: GdkTitlebarGesture): Boolean = (a & b) == b
 
+/**
+ * GdkToplevelState: _TOPLEVEL_STATE_MINIMIZED: the surface is minimized _TOPLEVEL_STATE_MAXIMIZED: the surface is maximized _TOPLEVEL_STATE_STICKY: the surface is sticky _TOPLEVEL_STATE_FULLSCREEN: the surface is maximized without decorations _TOPLEVEL_STATE_ABOVE: the surface is kept above other surfaces _TOPLEVEL_STATE_BELOW: the surface is kept below other surfaces _TOPLEVEL_STATE_FOCUSED: the surface is presented as focused (with active decorations) _TOPLEVEL_STATE_TILED: the surface is in a tiled state _TOPLEVEL_STATE_TOP_TILED: whether the top edge is tiled _TOPLEVEL_STATE_TOP_RESIZABLE: whether the top edge is resizable _TOPLEVEL_STATE_RIGHT_TILED: whether the right edge is tiled _TOPLEVEL_STATE_RIGHT_RESIZABLE: whether the right edge is resizable _TOPLEVEL_STATE_BOTTOM_TILED: whether the bottom edge is tiled _TOPLEVEL_STATE_BOTTOM_RESIZABLE: whether the bottom edge is resizable _TOPLEVEL_STATE_LEFT_TILED: whether the left edge is tiled _TOPLEVEL_STATE_LEFT_RESIZABLE: whether the left edge is resizable
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdktoplevel.h
+*/
 opaque type GdkToplevelState = CUnsignedInt
 object GdkToplevelState extends CEnumU[GdkToplevelState]:
   given _tag: Tag[GdkToplevelState] = Tag.UInt
@@ -5056,7 +5910,7 @@ object GdkToplevelState extends CEnumU[GdkToplevelState]:
   val GDK_TOPLEVEL_STATE_LEFT_TILED = define(16384)
   val GDK_TOPLEVEL_STATE_LEFT_RESIZABLE = define(32768)
   inline def getName(inline value: GdkToplevelState): Option[String] =
-    value match
+    inline value match
       case GDK_TOPLEVEL_STATE_MINIMIZED => Some("GDK_TOPLEVEL_STATE_MINIMIZED")
       case GDK_TOPLEVEL_STATE_MAXIMIZED => Some("GDK_TOPLEVEL_STATE_MAXIMIZED")
       case GDK_TOPLEVEL_STATE_STICKY => Some("GDK_TOPLEVEL_STATE_STICKY")
@@ -5079,6 +5933,11 @@ object GdkToplevelState extends CEnumU[GdkToplevelState]:
     inline def |(b: GdkToplevelState): GdkToplevelState = a | b
     inline def is(b: GdkToplevelState): Boolean = (a & b) == b
 
+/**
+ * GdkTouchpadGesturePhase: _TOUCHPAD_GESTURE_PHASE_BEGIN: The gesture has begun. _TOUCHPAD_GESTURE_PHASE_UPDATE: The gesture has been updated. _TOUCHPAD_GESTURE_PHASE_END: The gesture was finished, changes should be permanently applied. _TOUCHPAD_GESTURE_PHASE_CANCEL: The gesture was cancelled, all changes should be undone.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkevents.h
+*/
 opaque type GdkTouchpadGesturePhase = CUnsignedInt
 object GdkTouchpadGesturePhase extends CEnumU[GdkTouchpadGesturePhase]:
   given _tag: Tag[GdkTouchpadGesturePhase] = Tag.UInt
@@ -5088,7 +5947,7 @@ object GdkTouchpadGesturePhase extends CEnumU[GdkTouchpadGesturePhase]:
   val GDK_TOUCHPAD_GESTURE_PHASE_END = define(2)
   val GDK_TOUCHPAD_GESTURE_PHASE_CANCEL = define(3)
   inline def getName(inline value: GdkTouchpadGesturePhase): Option[String] =
-    value match
+    inline value match
       case GDK_TOUCHPAD_GESTURE_PHASE_BEGIN => Some("GDK_TOUCHPAD_GESTURE_PHASE_BEGIN")
       case GDK_TOUCHPAD_GESTURE_PHASE_UPDATE => Some("GDK_TOUCHPAD_GESTURE_PHASE_UPDATE")
       case GDK_TOUCHPAD_GESTURE_PHASE_END => Some("GDK_TOUCHPAD_GESTURE_PHASE_END")
@@ -5099,6 +5958,11 @@ object GdkTouchpadGesturePhase extends CEnumU[GdkTouchpadGesturePhase]:
     inline def |(b: GdkTouchpadGesturePhase): GdkTouchpadGesturePhase = a | b
     inline def is(b: GdkTouchpadGesturePhase): Boolean = (a & b) == b
 
+/**
+ * GdkVulkanError: _VULKAN_ERROR_UNSUPPORTED: Vulkan is not supported on this backend or has not been compiled in. _VULKAN_ERROR_NOT_AVAILABLE: Vulkan support is not available on this Surface
+
+ * [bindgen] header: /usr/include/gtk-4.0/gdk/gdkenums.h
+*/
 opaque type GdkVulkanError = CUnsignedInt
 object GdkVulkanError extends CEnumU[GdkVulkanError]:
   given _tag: Tag[GdkVulkanError] = Tag.UInt
@@ -5106,7 +5970,7 @@ object GdkVulkanError extends CEnumU[GdkVulkanError]:
   val GDK_VULKAN_ERROR_UNSUPPORTED = define(0)
   val GDK_VULKAN_ERROR_NOT_AVAILABLE = define(1)
   inline def getName(inline value: GdkVulkanError): Option[String] =
-    value match
+    inline value match
       case GDK_VULKAN_ERROR_UNSUPPORTED => Some("GDK_VULKAN_ERROR_UNSUPPORTED")
       case GDK_VULKAN_ERROR_NOT_AVAILABLE => Some("GDK_VULKAN_ERROR_NOT_AVAILABLE")
       case _ => None
@@ -5115,6 +5979,11 @@ object GdkVulkanError extends CEnumU[GdkVulkanError]:
     inline def |(b: GdkVulkanError): GdkVulkanError = a | b
     inline def is(b: GdkVulkanError): Boolean = (a & b) == b
 
+/**
+ * GskBlendMode: _BLEND_MODE_DEFAULT: The default blend mode, which specifies no blending _BLEND_MODE_MULTIPLY: The source color is multiplied by the destination and replaces the destination _BLEND_MODE_SCREEN: Multiplies the complements of the destination and source color values, then complements the result. _BLEND_MODE_OVERLAY: Multiplies or screens the colors, depending on the destination color value. This is the inverse of hard-list _BLEND_MODE_DARKEN: Selects the darker of the destination and source colors _BLEND_MODE_LIGHTEN: Selects the lighter of the destination and source colors _BLEND_MODE_COLOR_DODGE: Brightens the destination color to reflect the source color _BLEND_MODE_COLOR_BURN: Darkens the destination color to reflect the source color _BLEND_MODE_HARD_LIGHT: Multiplies or screens the colors, depending on the source color value _BLEND_MODE_SOFT_LIGHT: Darkens or lightens the colors, depending on the source color value _BLEND_MODE_DIFFERENCE: Subtracts the darker of the two constituent colors from the lighter color _BLEND_MODE_EXCLUSION: Produces an effect similar to that of the difference mode but lower in contrast _BLEND_MODE_COLOR: Creates a color with the hue and saturation of the source color and the luminosity of the destination color _BLEND_MODE_HUE: Creates a color with the hue of the source color and the saturation and luminosity of the destination color _BLEND_MODE_SATURATION: Creates a color with the saturation of the source color and the hue and luminosity of the destination color _BLEND_MODE_LUMINOSITY: Creates a color with the luminosity of the source color and the hue and saturation of the destination color
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskBlendMode = CUnsignedInt
 object GskBlendMode extends CEnumU[GskBlendMode]:
   given _tag: Tag[GskBlendMode] = Tag.UInt
@@ -5136,7 +6005,7 @@ object GskBlendMode extends CEnumU[GskBlendMode]:
   val GSK_BLEND_MODE_SATURATION = define(14)
   val GSK_BLEND_MODE_LUMINOSITY = define(15)
   inline def getName(inline value: GskBlendMode): Option[String] =
-    value match
+    inline value match
       case GSK_BLEND_MODE_DEFAULT => Some("GSK_BLEND_MODE_DEFAULT")
       case GSK_BLEND_MODE_MULTIPLY => Some("GSK_BLEND_MODE_MULTIPLY")
       case GSK_BLEND_MODE_SCREEN => Some("GSK_BLEND_MODE_SCREEN")
@@ -5159,6 +6028,11 @@ object GskBlendMode extends CEnumU[GskBlendMode]:
     inline def |(b: GskBlendMode): GskBlendMode = a | b
     inline def is(b: GskBlendMode): Boolean = (a & b) == b
 
+/**
+ * GskCorner: _CORNER_TOP_LEFT: The top left corner _CORNER_TOP_RIGHT: The top right corner _CORNER_BOTTOM_RIGHT: The bottom right corner _CORNER_BOTTOM_LEFT: The bottom left corner
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskCorner = CUnsignedInt
 object GskCorner extends CEnumU[GskCorner]:
   given _tag: Tag[GskCorner] = Tag.UInt
@@ -5168,7 +6042,7 @@ object GskCorner extends CEnumU[GskCorner]:
   val GSK_CORNER_BOTTOM_RIGHT = define(2)
   val GSK_CORNER_BOTTOM_LEFT = define(3)
   inline def getName(inline value: GskCorner): Option[String] =
-    value match
+    inline value match
       case GSK_CORNER_TOP_LEFT => Some("GSK_CORNER_TOP_LEFT")
       case GSK_CORNER_TOP_RIGHT => Some("GSK_CORNER_TOP_RIGHT")
       case GSK_CORNER_BOTTOM_RIGHT => Some("GSK_CORNER_BOTTOM_RIGHT")
@@ -5179,6 +6053,11 @@ object GskCorner extends CEnumU[GskCorner]:
     inline def |(b: GskCorner): GskCorner = a | b
     inline def is(b: GskCorner): Boolean = (a & b) == b
 
+/**
+ * GskGLUniformType: _GL_UNIFORM_TYPE_NONE: No type, used for uninitialized or unspecified values. _GL_UNIFORM_TYPE_FLOAT: A float uniform _GL_UNIFORM_TYPE_INT: A GLSL int / gint32 uniform _GL_UNIFORM_TYPE_UINT: A GLSL uint / guint32 uniform _GL_UNIFORM_TYPE_BOOL: A GLSL bool / gboolean uniform _GL_UNIFORM_TYPE_VEC2: A GLSL vec2 / graphene_vec2_t uniform _GL_UNIFORM_TYPE_VEC3: A GLSL vec3 / graphene_vec3_t uniform _GL_UNIFORM_TYPE_VEC4: A GLSL vec4 / graphene_vec4_t uniform
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskGLUniformType = CUnsignedInt
 object GskGLUniformType extends CEnumU[GskGLUniformType]:
   given _tag: Tag[GskGLUniformType] = Tag.UInt
@@ -5192,7 +6071,7 @@ object GskGLUniformType extends CEnumU[GskGLUniformType]:
   val GSK_GL_UNIFORM_TYPE_VEC3 = define(6)
   val GSK_GL_UNIFORM_TYPE_VEC4 = define(7)
   inline def getName(inline value: GskGLUniformType): Option[String] =
-    value match
+    inline value match
       case GSK_GL_UNIFORM_TYPE_NONE => Some("GSK_GL_UNIFORM_TYPE_NONE")
       case GSK_GL_UNIFORM_TYPE_FLOAT => Some("GSK_GL_UNIFORM_TYPE_FLOAT")
       case GSK_GL_UNIFORM_TYPE_INT => Some("GSK_GL_UNIFORM_TYPE_INT")
@@ -5207,6 +6086,11 @@ object GskGLUniformType extends CEnumU[GskGLUniformType]:
     inline def |(b: GskGLUniformType): GskGLUniformType = a | b
     inline def is(b: GskGLUniformType): Boolean = (a & b) == b
 
+/**
+ * GskRenderNodeType: _NOT_A_RENDER_NODE: Error type. No node will ever have this type. _CONTAINER_NODE: A node containing a stack of children _CAIRO_NODE: A node drawing a `cairo_surface_t` _COLOR_NODE: A node drawing a single color rectangle _LINEAR_GRADIENT_NODE: A node drawing a linear gradient _REPEATING_LINEAR_GRADIENT_NODE: A node drawing a repeating linear gradient _RADIAL_GRADIENT_NODE: A node drawing a radial gradient _REPEATING_RADIAL_GRADIENT_NODE: A node drawing a repeating radial gradient _CONIC_GRADIENT_NODE: A node drawing a conic gradient _BORDER_NODE: A node stroking a border around an area _TEXTURE_NODE: A node drawing a `GdkTexture` _INSET_SHADOW_NODE: A node drawing an inset shadow _OUTSET_SHADOW_NODE: A node drawing an outset shadow _TRANSFORM_NODE: A node that renders its child after applying a matrix transform _OPACITY_NODE: A node that changes the opacity of its child _COLOR_MATRIX_NODE: A node that applies a color matrix to every pixel _REPEAT_NODE: A node that repeats the child's contents _CLIP_NODE: A node that clips its child to a rectangular area _ROUNDED_CLIP_NODE: A node that clips its child to a rounded rectangle _SHADOW_NODE: A node that draws a shadow below its child _BLEND_NODE: A node that blends two children together _CROSS_FADE_NODE: A node that cross-fades between two children _TEXT_NODE: A node containing a glyph string _BLUR_NODE: A node that applies a blur _DEBUG_NODE: Debug information that does not affect the rendering _GL_SHADER_NODE: A node that uses OpenGL fragment shaders to render
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskRenderNodeType = CUnsignedInt
 object GskRenderNodeType extends CEnumU[GskRenderNodeType]:
   given _tag: Tag[GskRenderNodeType] = Tag.UInt
@@ -5238,7 +6122,7 @@ object GskRenderNodeType extends CEnumU[GskRenderNodeType]:
   val GSK_DEBUG_NODE = define(24)
   val GSK_GL_SHADER_NODE = define(25)
   inline def getName(inline value: GskRenderNodeType): Option[String] =
-    value match
+    inline value match
       case GSK_NOT_A_RENDER_NODE => Some("GSK_NOT_A_RENDER_NODE")
       case GSK_CONTAINER_NODE => Some("GSK_CONTAINER_NODE")
       case GSK_CAIRO_NODE => Some("GSK_CAIRO_NODE")
@@ -5271,6 +6155,11 @@ object GskRenderNodeType extends CEnumU[GskRenderNodeType]:
     inline def |(b: GskRenderNodeType): GskRenderNodeType = a | b
     inline def is(b: GskRenderNodeType): Boolean = (a & b) == b
 
+/**
+ * GskScalingFilter: _SCALING_FILTER_LINEAR: linear interpolation filter _SCALING_FILTER_NEAREST: nearest neighbor interpolation filter _SCALING_FILTER_TRILINEAR: linear interpolation along each axis, plus mipmap generation, with linear interpolation along the mipmap levels
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskScalingFilter = CUnsignedInt
 object GskScalingFilter extends CEnumU[GskScalingFilter]:
   given _tag: Tag[GskScalingFilter] = Tag.UInt
@@ -5279,7 +6168,7 @@ object GskScalingFilter extends CEnumU[GskScalingFilter]:
   val GSK_SCALING_FILTER_NEAREST = define(1)
   val GSK_SCALING_FILTER_TRILINEAR = define(2)
   inline def getName(inline value: GskScalingFilter): Option[String] =
-    value match
+    inline value match
       case GSK_SCALING_FILTER_LINEAR => Some("GSK_SCALING_FILTER_LINEAR")
       case GSK_SCALING_FILTER_NEAREST => Some("GSK_SCALING_FILTER_NEAREST")
       case GSK_SCALING_FILTER_TRILINEAR => Some("GSK_SCALING_FILTER_TRILINEAR")
@@ -5289,6 +6178,11 @@ object GskScalingFilter extends CEnumU[GskScalingFilter]:
     inline def |(b: GskScalingFilter): GskScalingFilter = a | b
     inline def is(b: GskScalingFilter): Boolean = (a & b) == b
 
+/**
+ * GskSerializationError: _SERIALIZATION_UNSUPPORTED_FORMAT: The format can not be identified _SERIALIZATION_UNSUPPORTED_VERSION: The version of the data is not understood _SERIALIZATION_INVALID_DATA: The given data may not exist in a proper serialization
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskSerializationError = CUnsignedInt
 object GskSerializationError extends CEnumU[GskSerializationError]:
   given _tag: Tag[GskSerializationError] = Tag.UInt
@@ -5297,7 +6191,7 @@ object GskSerializationError extends CEnumU[GskSerializationError]:
   val GSK_SERIALIZATION_UNSUPPORTED_VERSION = define(1)
   val GSK_SERIALIZATION_INVALID_DATA = define(2)
   inline def getName(inline value: GskSerializationError): Option[String] =
-    value match
+    inline value match
       case GSK_SERIALIZATION_UNSUPPORTED_FORMAT => Some("GSK_SERIALIZATION_UNSUPPORTED_FORMAT")
       case GSK_SERIALIZATION_UNSUPPORTED_VERSION => Some("GSK_SERIALIZATION_UNSUPPORTED_VERSION")
       case GSK_SERIALIZATION_INVALID_DATA => Some("GSK_SERIALIZATION_INVALID_DATA")
@@ -5307,6 +6201,11 @@ object GskSerializationError extends CEnumU[GskSerializationError]:
     inline def |(b: GskSerializationError): GskSerializationError = a | b
     inline def is(b: GskSerializationError): Boolean = (a & b) == b
 
+/**
+ * GskTransformCategory: _TRANSFORM_CATEGORY_UNKNOWN: The category of the matrix has not been determined. _TRANSFORM_CATEGORY_ANY: Analyzing the matrix concluded that it does not fit in any other category. _TRANSFORM_CATEGORY_3D: The matrix is a 3D matrix. This means that the w column (the last column) has the values (0, 0, 0, 1). _TRANSFORM_CATEGORY_2D: The matrix is a 2D matrix. This is equivalent to graphene_matrix_is_2d() returning %TRUE. In particular, this means that Cairo can deal with the matrix. _TRANSFORM_CATEGORY_2D_AFFINE: The matrix is a combination of 2D scale and 2D translation operations. In particular, this means that any rectangle can be transformed exactly using this matrix. _TRANSFORM_CATEGORY_2D_TRANSLATE: The matrix is a 2D translation. _TRANSFORM_CATEGORY_IDENTITY: The matrix is the identity matrix.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gsk/gskenums.h
+*/
 opaque type GskTransformCategory = CUnsignedInt
 object GskTransformCategory extends CEnumU[GskTransformCategory]:
   given _tag: Tag[GskTransformCategory] = Tag.UInt
@@ -5319,7 +6218,7 @@ object GskTransformCategory extends CEnumU[GskTransformCategory]:
   val GSK_TRANSFORM_CATEGORY_2D_TRANSLATE = define(5)
   val GSK_TRANSFORM_CATEGORY_IDENTITY = define(6)
   inline def getName(inline value: GskTransformCategory): Option[String] =
-    value match
+    inline value match
       case GSK_TRANSFORM_CATEGORY_UNKNOWN => Some("GSK_TRANSFORM_CATEGORY_UNKNOWN")
       case GSK_TRANSFORM_CATEGORY_ANY => Some("GSK_TRANSFORM_CATEGORY_ANY")
       case GSK_TRANSFORM_CATEGORY_3D => Some("GSK_TRANSFORM_CATEGORY_3D")
@@ -5333,6 +6232,11 @@ object GskTransformCategory extends CEnumU[GskTransformCategory]:
     inline def |(b: GskTransformCategory): GskTransformCategory = a | b
     inline def is(b: GskTransformCategory): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleAutocomplete: _ACCESSIBLE_AUTOCOMPLETE_NONE: Automatic suggestions are not displayed. _ACCESSIBLE_AUTOCOMPLETE_INLINE: When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret. _ACCESSIBLE_AUTOCOMPLETE_LIST: When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. _ACCESSIBLE_AUTOCOMPLETE_BOTH: When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. If displayed, one value in the collection is automatically selected, and the text needed to complete the automatically selected value appears after the caret in the input.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleAutocomplete = CUnsignedInt
 object GtkAccessibleAutocomplete extends CEnumU[GtkAccessibleAutocomplete]:
   given _tag: Tag[GtkAccessibleAutocomplete] = Tag.UInt
@@ -5342,7 +6246,7 @@ object GtkAccessibleAutocomplete extends CEnumU[GtkAccessibleAutocomplete]:
   val GTK_ACCESSIBLE_AUTOCOMPLETE_LIST = define(2)
   val GTK_ACCESSIBLE_AUTOCOMPLETE_BOTH = define(3)
   inline def getName(inline value: GtkAccessibleAutocomplete): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_AUTOCOMPLETE_NONE => Some("GTK_ACCESSIBLE_AUTOCOMPLETE_NONE")
       case GTK_ACCESSIBLE_AUTOCOMPLETE_INLINE => Some("GTK_ACCESSIBLE_AUTOCOMPLETE_INLINE")
       case GTK_ACCESSIBLE_AUTOCOMPLETE_LIST => Some("GTK_ACCESSIBLE_AUTOCOMPLETE_LIST")
@@ -5353,6 +6257,11 @@ object GtkAccessibleAutocomplete extends CEnumU[GtkAccessibleAutocomplete]:
     inline def |(b: GtkAccessibleAutocomplete): GtkAccessibleAutocomplete = a | b
     inline def is(b: GtkAccessibleAutocomplete): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleInvalidState: _ACCESSIBLE_INVALID_FALSE: There are no detected errors in the value _ACCESSIBLE_INVALID_TRUE: The value entered by the user has failed validation _ACCESSIBLE_INVALID_GRAMMAR: A grammatical error was detected _ACCESSIBLE_INVALID_SPELLING: A spelling error was detected
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleInvalidState = CUnsignedInt
 object GtkAccessibleInvalidState extends CEnumU[GtkAccessibleInvalidState]:
   given _tag: Tag[GtkAccessibleInvalidState] = Tag.UInt
@@ -5362,7 +6271,7 @@ object GtkAccessibleInvalidState extends CEnumU[GtkAccessibleInvalidState]:
   val GTK_ACCESSIBLE_INVALID_GRAMMAR = define(2)
   val GTK_ACCESSIBLE_INVALID_SPELLING = define(3)
   inline def getName(inline value: GtkAccessibleInvalidState): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_INVALID_FALSE => Some("GTK_ACCESSIBLE_INVALID_FALSE")
       case GTK_ACCESSIBLE_INVALID_TRUE => Some("GTK_ACCESSIBLE_INVALID_TRUE")
       case GTK_ACCESSIBLE_INVALID_GRAMMAR => Some("GTK_ACCESSIBLE_INVALID_GRAMMAR")
@@ -5373,6 +6282,11 @@ object GtkAccessibleInvalidState extends CEnumU[GtkAccessibleInvalidState]:
     inline def |(b: GtkAccessibleInvalidState): GtkAccessibleInvalidState = a | b
     inline def is(b: GtkAccessibleInvalidState): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleProperty: _ACCESSIBLE_PROPERTY_AUTOCOMPLETE: Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made. Value type: [enum] _ACCESSIBLE_PROPERTY_DESCRIPTION: Defines a string value that describes or annotates the current element. Value type: string _ACCESSIBLE_PROPERTY_HAS_POPUP: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element. _ACCESSIBLE_PROPERTY_KEY_SHORTCUTS: Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element. Value type: string _ACCESSIBLE_PROPERTY_LABEL: Defines a string value that labels the current element. Value type: string _ACCESSIBLE_PROPERTY_LEVEL: Defines the hierarchical level of an element within a structure. Value type: integer _ACCESSIBLE_PROPERTY_MODAL: Indicates whether an element is modal when displayed. Value type: boolean _ACCESSIBLE_PROPERTY_MULTI_LINE: Indicates whether a text box accepts multiple lines of input or only a single line. Value type: boolean _ACCESSIBLE_PROPERTY_MULTI_SELECTABLE: Indicates that the user may select more than one item from the current selectable descendants. Value type: boolean _ACCESSIBLE_PROPERTY_ORIENTATION: Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous. Value type: [enum] _ACCESSIBLE_PROPERTY_PLACEHOLDER: Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. A hint could be a sample value or a brief description of the expected format. Value type: string _ACCESSIBLE_PROPERTY_READ_ONLY: Indicates that the element is not editable, but is otherwise operable. Value type: boolean _ACCESSIBLE_PROPERTY_REQUIRED: Indicates that user input is required on the element before a form may be submitted. Value type: boolean _ACCESSIBLE_PROPERTY_ROLE_DESCRIPTION: Defines a human-readable, author-localized description for the role of an element. Value type: string _ACCESSIBLE_PROPERTY_SORT: Indicates if items in a table or grid are sorted in ascending or descending order. Value type: [enum] _ACCESSIBLE_PROPERTY_VALUE_MAX: Defines the maximum allowed value for a range widget. Value type: double _ACCESSIBLE_PROPERTY_VALUE_MIN: Defines the minimum allowed value for a range widget. Value type: double _ACCESSIBLE_PROPERTY_VALUE_NOW: Defines the current value for a range widget. Value type: double _ACCESSIBLE_PROPERTY_VALUE_TEXT: Defines the human readable text alternative of aria-valuenow for a range widget. Value type: string
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleProperty = CUnsignedInt
 object GtkAccessibleProperty extends CEnumU[GtkAccessibleProperty]:
   given _tag: Tag[GtkAccessibleProperty] = Tag.UInt
@@ -5397,7 +6311,7 @@ object GtkAccessibleProperty extends CEnumU[GtkAccessibleProperty]:
   val GTK_ACCESSIBLE_PROPERTY_VALUE_NOW = define(17)
   val GTK_ACCESSIBLE_PROPERTY_VALUE_TEXT = define(18)
   inline def getName(inline value: GtkAccessibleProperty): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_PROPERTY_AUTOCOMPLETE => Some("GTK_ACCESSIBLE_PROPERTY_AUTOCOMPLETE")
       case GTK_ACCESSIBLE_PROPERTY_DESCRIPTION => Some("GTK_ACCESSIBLE_PROPERTY_DESCRIPTION")
       case GTK_ACCESSIBLE_PROPERTY_HAS_POPUP => Some("GTK_ACCESSIBLE_PROPERTY_HAS_POPUP")
@@ -5423,6 +6337,11 @@ object GtkAccessibleProperty extends CEnumU[GtkAccessibleProperty]:
     inline def |(b: GtkAccessibleProperty): GtkAccessibleProperty = a | b
     inline def is(b: GtkAccessibleProperty): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleRelation: _ACCESSIBLE_RELATION_ACTIVE_DESCENDANT: Identifies the currently active element when focus is on a composite widget, combobox, textbox, group, or application. Value type: reference _ACCESSIBLE_RELATION_COL_COUNT: Defines the total number of columns in a table, grid, or treegrid. Value type: integer _ACCESSIBLE_RELATION_COL_INDEX: Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid. Value type: integer _ACCESSIBLE_RELATION_COL_INDEX_TEXT: Defines a human readable text alternative of %GTK_ACCESSIBLE_RELATION_COL_INDEX. Value type: string _ACCESSIBLE_RELATION_COL_SPAN: Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid. Value type: integer _ACCESSIBLE_RELATION_CONTROLS: Identifies the element (or elements) whose contents or presence are controlled by the current element. Value type: reference _ACCESSIBLE_RELATION_DESCRIBED_BY: Identifies the element (or elements) that describes the object. Value type: reference _ACCESSIBLE_RELATION_DETAILS: Identifies the element (or elements) that provide additional information related to the object. Value type: reference _ACCESSIBLE_RELATION_ERROR_MESSAGE: Identifies the element that provides an error message for an object. Value type: reference _ACCESSIBLE_RELATION_FLOW_TO: Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion, allows assistive technology to override the general default of reading in document source order. Value type: reference _ACCESSIBLE_RELATION_LABELLED_BY: Identifies the element (or elements) that labels the current element. Value type: reference _ACCESSIBLE_RELATION_OWNS: Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship between elements where the widget hierarchy cannot be used to represent the relationship. Value type: reference _ACCESSIBLE_RELATION_POS_IN_SET: Defines an element's number or position in the current set of listitems or treeitems. Value type: integer _ACCESSIBLE_RELATION_ROW_COUNT: Defines the total number of rows in a table, grid, or treegrid. Value type: integer _ACCESSIBLE_RELATION_ROW_INDEX: Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid. Value type: integer _ACCESSIBLE_RELATION_ROW_INDEX_TEXT: Defines a human readable text alternative of aria-rowindex. Value type: string _ACCESSIBLE_RELATION_ROW_SPAN: Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid. Value type: integer _ACCESSIBLE_RELATION_SET_SIZE: Defines the number of items in the current set of listitems or treeitems. Value type: integer
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleRelation = CUnsignedInt
 object GtkAccessibleRelation extends CEnumU[GtkAccessibleRelation]:
   given _tag: Tag[GtkAccessibleRelation] = Tag.UInt
@@ -5446,7 +6365,7 @@ object GtkAccessibleRelation extends CEnumU[GtkAccessibleRelation]:
   val GTK_ACCESSIBLE_RELATION_ROW_SPAN = define(16)
   val GTK_ACCESSIBLE_RELATION_SET_SIZE = define(17)
   inline def getName(inline value: GtkAccessibleRelation): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_RELATION_ACTIVE_DESCENDANT => Some("GTK_ACCESSIBLE_RELATION_ACTIVE_DESCENDANT")
       case GTK_ACCESSIBLE_RELATION_COL_COUNT => Some("GTK_ACCESSIBLE_RELATION_COL_COUNT")
       case GTK_ACCESSIBLE_RELATION_COL_INDEX => Some("GTK_ACCESSIBLE_RELATION_COL_INDEX")
@@ -5471,6 +6390,11 @@ object GtkAccessibleRelation extends CEnumU[GtkAccessibleRelation]:
     inline def |(b: GtkAccessibleRelation): GtkAccessibleRelation = a | b
     inline def is(b: GtkAccessibleRelation): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleRole: _ACCESSIBLE_ROLE_ALERT: An element with important, and usually time-sensitive, information _ACCESSIBLE_ROLE_ALERT_DIALOG: A type of dialog that contains an alert message _ACCESSIBLE_ROLE_BANNER: Unused _ACCESSIBLE_ROLE_BUTTON: An input element that allows for user-triggered actions when clicked or pressed _ACCESSIBLE_ROLE_CAPTION: Unused _ACCESSIBLE_ROLE_CELL: Unused _ACCESSIBLE_ROLE_CHECKBOX: A checkable input element that has three possible values: `true`, `false`, or `mixed` _ACCESSIBLE_ROLE_COLUMN_HEADER: A header in a columned list. _ACCESSIBLE_ROLE_COMBO_BOX: An input that controls another element, such as a list or a grid, that can dynamically pop up to help the user set the value of the input _ACCESSIBLE_ROLE_COMMAND: Abstract role. _ACCESSIBLE_ROLE_COMPOSITE: Abstract role. _ACCESSIBLE_ROLE_DIALOG: A dialog is a window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response. _ACCESSIBLE_ROLE_DOCUMENT: Unused _ACCESSIBLE_ROLE_FEED: Unused _ACCESSIBLE_ROLE_FORM: Unused _ACCESSIBLE_ROLE_GENERIC: Unused _ACCESSIBLE_ROLE_GRID: A grid of items. _ACCESSIBLE_ROLE_GRID_CELL: An item in a grid or tree grid. _ACCESSIBLE_ROLE_GROUP: An element that groups multiple widgets. GTK uses this role for various containers, like [class], [class], and [class]. _ACCESSIBLE_ROLE_HEADING: Unused _ACCESSIBLE_ROLE_IMG: An image. _ACCESSIBLE_ROLE_INPUT: Abstract role. _ACCESSIBLE_ROLE_LABEL: A visible name or caption for a user interface component. _ACCESSIBLE_ROLE_LANDMARK: Abstract role. _ACCESSIBLE_ROLE_LEGEND: Unused _ACCESSIBLE_ROLE_LINK: A clickable link. _ACCESSIBLE_ROLE_LIST: A list of items. _ACCESSIBLE_ROLE_LIST_BOX: Unused. _ACCESSIBLE_ROLE_LIST_ITEM: An item in a list. _ACCESSIBLE_ROLE_LOG: Unused _ACCESSIBLE_ROLE_MAIN: Unused _ACCESSIBLE_ROLE_MARQUEE: Unused _ACCESSIBLE_ROLE_MATH: Unused _ACCESSIBLE_ROLE_METER: An element that represents a value within a known range. _ACCESSIBLE_ROLE_MENU: A menu. _ACCESSIBLE_ROLE_MENU_BAR: A menubar. _ACCESSIBLE_ROLE_MENU_ITEM: An item in a menu. _ACCESSIBLE_ROLE_MENU_ITEM_CHECKBOX: A check item in a menu. _ACCESSIBLE_ROLE_MENU_ITEM_RADIO: A radio item in a menu. _ACCESSIBLE_ROLE_NAVIGATION: Unused _ACCESSIBLE_ROLE_NONE: An element that is not represented to accessibility technologies. _ACCESSIBLE_ROLE_NOTE: Unused _ACCESSIBLE_ROLE_OPTION: Unused _ACCESSIBLE_ROLE_PRESENTATION: An element that is not represented to accessibility technologies. _ACCESSIBLE_ROLE_PROGRESS_BAR: An element that displays the progress status for tasks that take a long time. _ACCESSIBLE_ROLE_RADIO: A checkable input in a group of radio roles, only one of which can be checked at a time. _ACCESSIBLE_ROLE_RADIO_GROUP: Unused _ACCESSIBLE_ROLE_RANGE: Abstract role. _ACCESSIBLE_ROLE_REGION: Unused _ACCESSIBLE_ROLE_ROW: A row in a columned list. _ACCESSIBLE_ROLE_ROW_GROUP: Unused _ACCESSIBLE_ROLE_ROW_HEADER: Unused _ACCESSIBLE_ROLE_SCROLLBAR: A graphical object that controls the scrolling of content within a viewing area, regardless of whether the content is fully displayed within the viewing area. _ACCESSIBLE_ROLE_SEARCH: Unused _ACCESSIBLE_ROLE_SEARCH_BOX: A type of textbox intended for specifying search criteria. _ACCESSIBLE_ROLE_SECTION: Abstract role. _ACCESSIBLE_ROLE_SECTION_HEAD: Abstract role. _ACCESSIBLE_ROLE_SELECT: Abstract role. _ACCESSIBLE_ROLE_SEPARATOR: A divider that separates and distinguishes sections of content or groups of menuitems. _ACCESSIBLE_ROLE_SLIDER: A user input where the user selects a value from within a given range. _ACCESSIBLE_ROLE_SPIN_BUTTON: A form of range that expects the user to select from among discrete choices. _ACCESSIBLE_ROLE_STATUS: Unused _ACCESSIBLE_ROLE_STRUCTURE: Abstract role. _ACCESSIBLE_ROLE_SWITCH: A type of checkbox that represents on/off values, as opposed to checked/unchecked values. _ACCESSIBLE_ROLE_TAB: An item in a list of tab used for switching pages. _ACCESSIBLE_ROLE_TABLE: Unused _ACCESSIBLE_ROLE_TAB_LIST: A list of tabs for switching pages. _ACCESSIBLE_ROLE_TAB_PANEL: A page in a notebook or stack. _ACCESSIBLE_ROLE_TEXT_BOX: A type of input that allows free-form text as its value. _ACCESSIBLE_ROLE_TIME: Unused _ACCESSIBLE_ROLE_TIMER: Unused _ACCESSIBLE_ROLE_TOOLBAR: Unused _ACCESSIBLE_ROLE_TOOLTIP: Unused _ACCESSIBLE_ROLE_TREE: Unused _ACCESSIBLE_ROLE_TREE_GRID: A treeview-like, columned list. _ACCESSIBLE_ROLE_TREE_ITEM: Unused _ACCESSIBLE_ROLE_WIDGET: An interactive component of a graphical user interface. This is the role that GTK uses by default for widgets. _ACCESSIBLE_ROLE_WINDOW: An application window.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleRole = CUnsignedInt
 object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
   given _tag: Tag[GtkAccessibleRole] = Tag.UInt
@@ -5554,7 +6478,7 @@ object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
   val GTK_ACCESSIBLE_ROLE_WIDGET = define(76)
   val GTK_ACCESSIBLE_ROLE_WINDOW = define(77)
   inline def getName(inline value: GtkAccessibleRole): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_ROLE_ALERT => Some("GTK_ACCESSIBLE_ROLE_ALERT")
       case GTK_ACCESSIBLE_ROLE_ALERT_DIALOG => Some("GTK_ACCESSIBLE_ROLE_ALERT_DIALOG")
       case GTK_ACCESSIBLE_ROLE_BANNER => Some("GTK_ACCESSIBLE_ROLE_BANNER")
@@ -5639,6 +6563,11 @@ object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
     inline def |(b: GtkAccessibleRole): GtkAccessibleRole = a | b
     inline def is(b: GtkAccessibleRole): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleSort: _ACCESSIBLE_SORT_NONE: There is no defined sort applied to the column. _ACCESSIBLE_SORT_ASCENDING: Items are sorted in ascending order by this column. _ACCESSIBLE_SORT_DESCENDING: Items are sorted in descending order by this column. _ACCESSIBLE_SORT_OTHER: A sort algorithm other than ascending or descending has been applied.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleSort = CUnsignedInt
 object GtkAccessibleSort extends CEnumU[GtkAccessibleSort]:
   given _tag: Tag[GtkAccessibleSort] = Tag.UInt
@@ -5648,7 +6577,7 @@ object GtkAccessibleSort extends CEnumU[GtkAccessibleSort]:
   val GTK_ACCESSIBLE_SORT_DESCENDING = define(2)
   val GTK_ACCESSIBLE_SORT_OTHER = define(3)
   inline def getName(inline value: GtkAccessibleSort): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_SORT_NONE => Some("GTK_ACCESSIBLE_SORT_NONE")
       case GTK_ACCESSIBLE_SORT_ASCENDING => Some("GTK_ACCESSIBLE_SORT_ASCENDING")
       case GTK_ACCESSIBLE_SORT_DESCENDING => Some("GTK_ACCESSIBLE_SORT_DESCENDING")
@@ -5659,6 +6588,11 @@ object GtkAccessibleSort extends CEnumU[GtkAccessibleSort]:
     inline def |(b: GtkAccessibleSort): GtkAccessibleSort = a | b
     inline def is(b: GtkAccessibleSort): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleState: _ACCESSIBLE_STATE_BUSY: A “busy” state. This state has boolean values _ACCESSIBLE_STATE_CHECKED: A “checked” state; indicates the current state of a [class]. Value type: [enum] _ACCESSIBLE_STATE_DISABLED: A “disabled” state; corresponds to the [property:sensitive] property. It indicates a UI element that is perceivable, but not editable or operable. Value type: boolean _ACCESSIBLE_STATE_EXPANDED: An “expanded” state; corresponds to the [property:expanded] property. Value type: boolean or undefined _ACCESSIBLE_STATE_HIDDEN: A “hidden” state; corresponds to the [property:visible] property. You can use this state explicitly on UI elements that should not be exposed to an assistive technology. Value type: boolean See also: %GTK_ACCESSIBLE_STATE_DISABLED _ACCESSIBLE_STATE_INVALID: An “invalid” state; set when a widget is showing an error. Value type: [enum] _ACCESSIBLE_STATE_PRESSED: A “pressed” state; indicates the current state of a [class]. Value type: [enum] enumeration _ACCESSIBLE_STATE_SELECTED: A “selected” state; set when a widget is selected. Value type: boolean or undefined
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleState = CUnsignedInt
 object GtkAccessibleState extends CEnumU[GtkAccessibleState]:
   given _tag: Tag[GtkAccessibleState] = Tag.UInt
@@ -5672,7 +6606,7 @@ object GtkAccessibleState extends CEnumU[GtkAccessibleState]:
   val GTK_ACCESSIBLE_STATE_PRESSED = define(6)
   val GTK_ACCESSIBLE_STATE_SELECTED = define(7)
   inline def getName(inline value: GtkAccessibleState): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_STATE_BUSY => Some("GTK_ACCESSIBLE_STATE_BUSY")
       case GTK_ACCESSIBLE_STATE_CHECKED => Some("GTK_ACCESSIBLE_STATE_CHECKED")
       case GTK_ACCESSIBLE_STATE_DISABLED => Some("GTK_ACCESSIBLE_STATE_DISABLED")
@@ -5687,6 +6621,11 @@ object GtkAccessibleState extends CEnumU[GtkAccessibleState]:
     inline def |(b: GtkAccessibleState): GtkAccessibleState = a | b
     inline def is(b: GtkAccessibleState): Boolean = (a & b) == b
 
+/**
+ * GtkAccessibleTristate: _ACCESSIBLE_TRISTATE_FALSE: The state is `false` _ACCESSIBLE_TRISTATE_TRUE: The state is `true` _ACCESSIBLE_TRISTATE_MIXED: The state is `mixed`
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAccessibleTristate = CUnsignedInt
 object GtkAccessibleTristate extends CEnumU[GtkAccessibleTristate]:
   given _tag: Tag[GtkAccessibleTristate] = Tag.UInt
@@ -5695,7 +6634,7 @@ object GtkAccessibleTristate extends CEnumU[GtkAccessibleTristate]:
   val GTK_ACCESSIBLE_TRISTATE_TRUE = define(1)
   val GTK_ACCESSIBLE_TRISTATE_MIXED = define(2)
   inline def getName(inline value: GtkAccessibleTristate): Option[String] =
-    value match
+    inline value match
       case GTK_ACCESSIBLE_TRISTATE_FALSE => Some("GTK_ACCESSIBLE_TRISTATE_FALSE")
       case GTK_ACCESSIBLE_TRISTATE_TRUE => Some("GTK_ACCESSIBLE_TRISTATE_TRUE")
       case GTK_ACCESSIBLE_TRISTATE_MIXED => Some("GTK_ACCESSIBLE_TRISTATE_MIXED")
@@ -5705,6 +6644,11 @@ object GtkAccessibleTristate extends CEnumU[GtkAccessibleTristate]:
     inline def |(b: GtkAccessibleTristate): GtkAccessibleTristate = a | b
     inline def is(b: GtkAccessibleTristate): Boolean = (a & b) == b
 
+/**
+ * GtkAlign: _ALIGN_FILL: stretch to fill all space if possible, center if no meaningful way to stretch _ALIGN_START: snap to left or top side, leaving space on right or bottom _ALIGN_END: snap to right or bottom side, leaving space on left or top _ALIGN_CENTER: center natural width of widget inside the allocation _ALIGN_BASELINE: align the widget according to the baseline. See [class.Widget].
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkAlign = CUnsignedInt
 object GtkAlign extends CEnumU[GtkAlign]:
   given _tag: Tag[GtkAlign] = Tag.UInt
@@ -5715,7 +6659,7 @@ object GtkAlign extends CEnumU[GtkAlign]:
   val GTK_ALIGN_CENTER = define(3)
   val GTK_ALIGN_BASELINE = define(4)
   inline def getName(inline value: GtkAlign): Option[String] =
-    value match
+    inline value match
       case GTK_ALIGN_FILL => Some("GTK_ALIGN_FILL")
       case GTK_ALIGN_START => Some("GTK_ALIGN_START")
       case GTK_ALIGN_END => Some("GTK_ALIGN_END")
@@ -5727,6 +6671,9 @@ object GtkAlign extends CEnumU[GtkAlign]:
     inline def |(b: GtkAlign): GtkAlign = a | b
     inline def is(b: GtkAlign): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkapplication.h
+*/
 opaque type GtkApplicationInhibitFlags = CUnsignedInt
 object GtkApplicationInhibitFlags extends CEnumU[GtkApplicationInhibitFlags]:
   given _tag: Tag[GtkApplicationInhibitFlags] = Tag.UInt
@@ -5736,7 +6683,7 @@ object GtkApplicationInhibitFlags extends CEnumU[GtkApplicationInhibitFlags]:
   val GTK_APPLICATION_INHIBIT_SUSPEND = define(4)
   val GTK_APPLICATION_INHIBIT_IDLE = define(8)
   inline def getName(inline value: GtkApplicationInhibitFlags): Option[String] =
-    value match
+    inline value match
       case GTK_APPLICATION_INHIBIT_LOGOUT => Some("GTK_APPLICATION_INHIBIT_LOGOUT")
       case GTK_APPLICATION_INHIBIT_SWITCH => Some("GTK_APPLICATION_INHIBIT_SWITCH")
       case GTK_APPLICATION_INHIBIT_SUSPEND => Some("GTK_APPLICATION_INHIBIT_SUSPEND")
@@ -5747,6 +6694,11 @@ object GtkApplicationInhibitFlags extends CEnumU[GtkApplicationInhibitFlags]:
     inline def |(b: GtkApplicationInhibitFlags): GtkApplicationInhibitFlags = a | b
     inline def is(b: GtkApplicationInhibitFlags): Boolean = (a & b) == b
 
+/**
+ * GtkArrowType: _ARROW_UP: Represents an upward pointing arrow. _ARROW_DOWN: Represents a downward pointing arrow. _ARROW_LEFT: Represents a left pointing arrow. _ARROW_RIGHT: Represents a right pointing arrow. _ARROW_NONE: No arrow.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkArrowType = CUnsignedInt
 object GtkArrowType extends CEnumU[GtkArrowType]:
   given _tag: Tag[GtkArrowType] = Tag.UInt
@@ -5757,7 +6709,7 @@ object GtkArrowType extends CEnumU[GtkArrowType]:
   val GTK_ARROW_RIGHT = define(3)
   val GTK_ARROW_NONE = define(4)
   inline def getName(inline value: GtkArrowType): Option[String] =
-    value match
+    inline value match
       case GTK_ARROW_UP => Some("GTK_ARROW_UP")
       case GTK_ARROW_DOWN => Some("GTK_ARROW_DOWN")
       case GTK_ARROW_LEFT => Some("GTK_ARROW_LEFT")
@@ -5769,6 +6721,11 @@ object GtkArrowType extends CEnumU[GtkArrowType]:
     inline def |(b: GtkArrowType): GtkArrowType = a | b
     inline def is(b: GtkArrowType): Boolean = (a & b) == b
 
+/**
+ * GtkAssistantPageType: _ASSISTANT_PAGE_CONTENT: The page has regular contents. Both the Back and forward buttons will be shown. _ASSISTANT_PAGE_INTRO: The page contains an introduction to the assistant task. Only the Forward button will be shown if there is a next page. _ASSISTANT_PAGE_CONFIRM: The page lets the user confirm or deny the changes. The Back and Apply buttons will be shown. _ASSISTANT_PAGE_SUMMARY: The page informs the user of the changes done. Only the Close button will be shown. _ASSISTANT_PAGE_PROGRESS: Used for tasks that take a long time to complete, blocks the assistant until the page is marked as complete. Only the back button will be shown. _ASSISTANT_PAGE_CUSTOM: Used for when other page types are not appropriate. No buttons will be shown, and the application must add its own buttons through gtk_assistant_add_action_widget().
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkassistant.h
+*/
 opaque type GtkAssistantPageType = CUnsignedInt
 object GtkAssistantPageType extends CEnumU[GtkAssistantPageType]:
   given _tag: Tag[GtkAssistantPageType] = Tag.UInt
@@ -5780,7 +6737,7 @@ object GtkAssistantPageType extends CEnumU[GtkAssistantPageType]:
   val GTK_ASSISTANT_PAGE_PROGRESS = define(4)
   val GTK_ASSISTANT_PAGE_CUSTOM = define(5)
   inline def getName(inline value: GtkAssistantPageType): Option[String] =
-    value match
+    inline value match
       case GTK_ASSISTANT_PAGE_CONTENT => Some("GTK_ASSISTANT_PAGE_CONTENT")
       case GTK_ASSISTANT_PAGE_INTRO => Some("GTK_ASSISTANT_PAGE_INTRO")
       case GTK_ASSISTANT_PAGE_CONFIRM => Some("GTK_ASSISTANT_PAGE_CONFIRM")
@@ -5793,6 +6750,11 @@ object GtkAssistantPageType extends CEnumU[GtkAssistantPageType]:
     inline def |(b: GtkAssistantPageType): GtkAssistantPageType = a | b
     inline def is(b: GtkAssistantPageType): Boolean = (a & b) == b
 
+/**
+ * GtkBaselinePosition: _BASELINE_POSITION_TOP: Align the baseline at the top _BASELINE_POSITION_CENTER: Center the baseline _BASELINE_POSITION_BOTTOM: Align the baseline at the bottom
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkBaselinePosition = CUnsignedInt
 object GtkBaselinePosition extends CEnumU[GtkBaselinePosition]:
   given _tag: Tag[GtkBaselinePosition] = Tag.UInt
@@ -5801,7 +6763,7 @@ object GtkBaselinePosition extends CEnumU[GtkBaselinePosition]:
   val GTK_BASELINE_POSITION_CENTER = define(1)
   val GTK_BASELINE_POSITION_BOTTOM = define(2)
   inline def getName(inline value: GtkBaselinePosition): Option[String] =
-    value match
+    inline value match
       case GTK_BASELINE_POSITION_TOP => Some("GTK_BASELINE_POSITION_TOP")
       case GTK_BASELINE_POSITION_CENTER => Some("GTK_BASELINE_POSITION_CENTER")
       case GTK_BASELINE_POSITION_BOTTOM => Some("GTK_BASELINE_POSITION_BOTTOM")
@@ -5811,6 +6773,11 @@ object GtkBaselinePosition extends CEnumU[GtkBaselinePosition]:
     inline def |(b: GtkBaselinePosition): GtkBaselinePosition = a | b
     inline def is(b: GtkBaselinePosition): Boolean = (a & b) == b
 
+/**
+ * GtkBorderStyle: _BORDER_STYLE_NONE: No visible border _BORDER_STYLE_HIDDEN: Same as %GTK_BORDER_STYLE_NONE _BORDER_STYLE_SOLID: A single line segment _BORDER_STYLE_INSET: Looks as if the content is sunken into the canvas _BORDER_STYLE_OUTSET: Looks as if the content is coming out of the canvas _BORDER_STYLE_DOTTED: A series of round dots _BORDER_STYLE_DASHED: A series of square-ended dashes _BORDER_STYLE_DOUBLE: Two parallel lines with some space between them _BORDER_STYLE_GROOVE: Looks as if it were carved in the canvas _BORDER_STYLE_RIDGE: Looks as if it were coming out of the canvas
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkBorderStyle = CUnsignedInt
 object GtkBorderStyle extends CEnumU[GtkBorderStyle]:
   given _tag: Tag[GtkBorderStyle] = Tag.UInt
@@ -5826,7 +6793,7 @@ object GtkBorderStyle extends CEnumU[GtkBorderStyle]:
   val GTK_BORDER_STYLE_GROOVE = define(8)
   val GTK_BORDER_STYLE_RIDGE = define(9)
   inline def getName(inline value: GtkBorderStyle): Option[String] =
-    value match
+    inline value match
       case GTK_BORDER_STYLE_NONE => Some("GTK_BORDER_STYLE_NONE")
       case GTK_BORDER_STYLE_HIDDEN => Some("GTK_BORDER_STYLE_HIDDEN")
       case GTK_BORDER_STYLE_SOLID => Some("GTK_BORDER_STYLE_SOLID")
@@ -5843,13 +6810,18 @@ object GtkBorderStyle extends CEnumU[GtkBorderStyle]:
     inline def |(b: GtkBorderStyle): GtkBorderStyle = a | b
     inline def is(b: GtkBorderStyle): Boolean = (a & b) == b
 
+/**
+ * GtkBuilderClosureFlags: _BUILDER_CLOSURE_SWAPPED: The closure should be created swapped. See g_cclosure_new_swap() for details.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkbuilderscope.h
+*/
 opaque type GtkBuilderClosureFlags = CUnsignedInt
 object GtkBuilderClosureFlags extends CEnumU[GtkBuilderClosureFlags]:
   given _tag: Tag[GtkBuilderClosureFlags] = Tag.UInt
   inline def define(inline a: Long): GtkBuilderClosureFlags = a.toUInt
   val GTK_BUILDER_CLOSURE_SWAPPED = define(1)
   inline def getName(inline value: GtkBuilderClosureFlags): Option[String] =
-    value match
+    inline value match
       case GTK_BUILDER_CLOSURE_SWAPPED => Some("GTK_BUILDER_CLOSURE_SWAPPED")
       case _ => None
   extension (a: GtkBuilderClosureFlags)
@@ -5857,6 +6829,11 @@ object GtkBuilderClosureFlags extends CEnumU[GtkBuilderClosureFlags]:
     inline def |(b: GtkBuilderClosureFlags): GtkBuilderClosureFlags = a | b
     inline def is(b: GtkBuilderClosureFlags): Boolean = (a & b) == b
 
+/**
+ * GtkBuilderError: _BUILDER_ERROR_INVALID_TYPE_FUNCTION: A type-func attribute didn’t name a function that returns a `GType`. _BUILDER_ERROR_UNHANDLED_TAG: The input contained a tag that `GtkBuilder` can’t handle. _BUILDER_ERROR_MISSING_ATTRIBUTE: An attribute that is required by `GtkBuilder` was missing. _BUILDER_ERROR_INVALID_ATTRIBUTE: `GtkBuilder` found an attribute that it doesn’t understand. _BUILDER_ERROR_INVALID_TAG: `GtkBuilder` found a tag that it doesn’t understand. _BUILDER_ERROR_MISSING_PROPERTY_VALUE: A required property value was missing. _BUILDER_ERROR_INVALID_VALUE: `GtkBuilder` couldn’t parse some attribute value. _BUILDER_ERROR_VERSION_MISMATCH: The input file requires a newer version of GTK. _BUILDER_ERROR_DUPLICATE_ID: An object id occurred twice. _BUILDER_ERROR_OBJECT_TYPE_REFUSED: A specified object type is of the same type or derived from the type of the composite class being extended with builder XML. _BUILDER_ERROR_TEMPLATE_MISMATCH: The wrong type was specified in a composite class’s template XML _BUILDER_ERROR_INVALID_PROPERTY: The specified property is unknown for the object class. _BUILDER_ERROR_INVALID_SIGNAL: The specified signal is unknown for the object class. _BUILDER_ERROR_INVALID_ID: An object id is unknown. _BUILDER_ERROR_INVALID_FUNCTION: A function could not be found. This often happens when symbols are set to be kept private. Compiling code with -rdynamic or using the `gmodule-export-2.0` pkgconfig module can fix this problem.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkbuilder.h
+*/
 opaque type GtkBuilderError = CUnsignedInt
 object GtkBuilderError extends CEnumU[GtkBuilderError]:
   given _tag: Tag[GtkBuilderError] = Tag.UInt
@@ -5877,7 +6854,7 @@ object GtkBuilderError extends CEnumU[GtkBuilderError]:
   val GTK_BUILDER_ERROR_INVALID_ID = define(13)
   val GTK_BUILDER_ERROR_INVALID_FUNCTION = define(14)
   inline def getName(inline value: GtkBuilderError): Option[String] =
-    value match
+    inline value match
       case GTK_BUILDER_ERROR_INVALID_TYPE_FUNCTION => Some("GTK_BUILDER_ERROR_INVALID_TYPE_FUNCTION")
       case GTK_BUILDER_ERROR_UNHANDLED_TAG => Some("GTK_BUILDER_ERROR_UNHANDLED_TAG")
       case GTK_BUILDER_ERROR_MISSING_ATTRIBUTE => Some("GTK_BUILDER_ERROR_MISSING_ATTRIBUTE")
@@ -5899,6 +6876,11 @@ object GtkBuilderError extends CEnumU[GtkBuilderError]:
     inline def |(b: GtkBuilderError): GtkBuilderError = a | b
     inline def is(b: GtkBuilderError): Boolean = (a & b) == b
 
+/**
+ * GtkButtonsType: _BUTTONS_NONE: no buttons at all _BUTTONS_OK: an OK button _BUTTONS_CLOSE: a Close button _BUTTONS_CANCEL: a Cancel button _BUTTONS_YES_NO: Yes and No buttons _BUTTONS_OK_CANCEL: OK and Cancel buttons
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkmessagedialog.h
+*/
 opaque type GtkButtonsType = CUnsignedInt
 object GtkButtonsType extends CEnumU[GtkButtonsType]:
   given _tag: Tag[GtkButtonsType] = Tag.UInt
@@ -5910,7 +6892,7 @@ object GtkButtonsType extends CEnumU[GtkButtonsType]:
   val GTK_BUTTONS_YES_NO = define(4)
   val GTK_BUTTONS_OK_CANCEL = define(5)
   inline def getName(inline value: GtkButtonsType): Option[String] =
-    value match
+    inline value match
       case GTK_BUTTONS_NONE => Some("GTK_BUTTONS_NONE")
       case GTK_BUTTONS_OK => Some("GTK_BUTTONS_OK")
       case GTK_BUTTONS_CLOSE => Some("GTK_BUTTONS_CLOSE")
@@ -5923,6 +6905,11 @@ object GtkButtonsType extends CEnumU[GtkButtonsType]:
     inline def |(b: GtkButtonsType): GtkButtonsType = a | b
     inline def is(b: GtkButtonsType): Boolean = (a & b) == b
 
+/**
+ * GtkCellRendererAccelMode: _CELL_RENDERER_ACCEL_MODE_GTK: GTK accelerators mode _CELL_RENDERER_ACCEL_MODE_OTHER: Other accelerator mode
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkcellrendereraccel.h
+*/
 opaque type GtkCellRendererAccelMode = CUnsignedInt
 object GtkCellRendererAccelMode extends CEnumU[GtkCellRendererAccelMode]:
   given _tag: Tag[GtkCellRendererAccelMode] = Tag.UInt
@@ -5930,7 +6917,7 @@ object GtkCellRendererAccelMode extends CEnumU[GtkCellRendererAccelMode]:
   val GTK_CELL_RENDERER_ACCEL_MODE_GTK = define(0)
   val GTK_CELL_RENDERER_ACCEL_MODE_OTHER = define(1)
   inline def getName(inline value: GtkCellRendererAccelMode): Option[String] =
-    value match
+    inline value match
       case GTK_CELL_RENDERER_ACCEL_MODE_GTK => Some("GTK_CELL_RENDERER_ACCEL_MODE_GTK")
       case GTK_CELL_RENDERER_ACCEL_MODE_OTHER => Some("GTK_CELL_RENDERER_ACCEL_MODE_OTHER")
       case _ => None
@@ -5939,6 +6926,11 @@ object GtkCellRendererAccelMode extends CEnumU[GtkCellRendererAccelMode]:
     inline def |(b: GtkCellRendererAccelMode): GtkCellRendererAccelMode = a | b
     inline def is(b: GtkCellRendererAccelMode): Boolean = (a & b) == b
 
+/**
+ * GtkCellRendererMode: _CELL_RENDERER_MODE_INERT: The cell is just for display and cannot be interacted with. Note that this doesn’t mean that eg. the row being drawn can’t be selected -- just that a particular element of it cannot be individually modified. _CELL_RENDERER_MODE_ACTIVATABLE: The cell can be clicked. _CELL_RENDERER_MODE_EDITABLE: The cell can be edited or otherwise modified.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkcellrenderer.h
+*/
 opaque type GtkCellRendererMode = CUnsignedInt
 object GtkCellRendererMode extends CEnumU[GtkCellRendererMode]:
   given _tag: Tag[GtkCellRendererMode] = Tag.UInt
@@ -5947,7 +6939,7 @@ object GtkCellRendererMode extends CEnumU[GtkCellRendererMode]:
   val GTK_CELL_RENDERER_MODE_ACTIVATABLE = define(1)
   val GTK_CELL_RENDERER_MODE_EDITABLE = define(2)
   inline def getName(inline value: GtkCellRendererMode): Option[String] =
-    value match
+    inline value match
       case GTK_CELL_RENDERER_MODE_INERT => Some("GTK_CELL_RENDERER_MODE_INERT")
       case GTK_CELL_RENDERER_MODE_ACTIVATABLE => Some("GTK_CELL_RENDERER_MODE_ACTIVATABLE")
       case GTK_CELL_RENDERER_MODE_EDITABLE => Some("GTK_CELL_RENDERER_MODE_EDITABLE")
@@ -5957,6 +6949,11 @@ object GtkCellRendererMode extends CEnumU[GtkCellRendererMode]:
     inline def |(b: GtkCellRendererMode): GtkCellRendererMode = a | b
     inline def is(b: GtkCellRendererMode): Boolean = (a & b) == b
 
+/**
+ * GtkCellRendererState: _CELL_RENDERER_SELECTED: The cell is currently selected, and probably has a selection colored background to render to. _CELL_RENDERER_PRELIT: The mouse is hovering over the cell. _CELL_RENDERER_INSENSITIVE: The cell is drawn in an insensitive manner _CELL_RENDERER_SORTED: The cell is in a sorted row _CELL_RENDERER_FOCUSED: The cell is in the focus row. _CELL_RENDERER_EXPANDABLE: The cell is in a row that can be expanded _CELL_RENDERER_EXPANDED: The cell is in a row that is expanded
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkcellrenderer.h
+*/
 opaque type GtkCellRendererState = CUnsignedInt
 object GtkCellRendererState extends CEnumU[GtkCellRendererState]:
   given _tag: Tag[GtkCellRendererState] = Tag.UInt
@@ -5969,7 +6966,7 @@ object GtkCellRendererState extends CEnumU[GtkCellRendererState]:
   val GTK_CELL_RENDERER_EXPANDABLE = define(32)
   val GTK_CELL_RENDERER_EXPANDED = define(64)
   inline def getName(inline value: GtkCellRendererState): Option[String] =
-    value match
+    inline value match
       case GTK_CELL_RENDERER_SELECTED => Some("GTK_CELL_RENDERER_SELECTED")
       case GTK_CELL_RENDERER_PRELIT => Some("GTK_CELL_RENDERER_PRELIT")
       case GTK_CELL_RENDERER_INSENSITIVE => Some("GTK_CELL_RENDERER_INSENSITIVE")
@@ -5983,6 +6980,11 @@ object GtkCellRendererState extends CEnumU[GtkCellRendererState]:
     inline def |(b: GtkCellRendererState): GtkCellRendererState = a | b
     inline def is(b: GtkCellRendererState): Boolean = (a & b) == b
 
+/**
+ * GtkConstraintAttribute: _CONSTRAINT_ATTRIBUTE_NONE: No attribute, used for constant relations _CONSTRAINT_ATTRIBUTE_LEFT: The left edge of a widget, regardless of text direction _CONSTRAINT_ATTRIBUTE_RIGHT: The right edge of a widget, regardless of text direction _CONSTRAINT_ATTRIBUTE_TOP: The top edge of a widget _CONSTRAINT_ATTRIBUTE_BOTTOM: The bottom edge of a widget _CONSTRAINT_ATTRIBUTE_START: The leading edge of a widget, depending on text direction; equivalent to %GTK_CONSTRAINT_ATTRIBUTE_LEFT for LTR languages, and %GTK_CONSTRAINT_ATTRIBUTE_RIGHT for RTL ones _CONSTRAINT_ATTRIBUTE_END: The trailing edge of a widget, depending on text direction; equivalent to %GTK_CONSTRAINT_ATTRIBUTE_RIGHT for LTR languages, and %GTK_CONSTRAINT_ATTRIBUTE_LEFT for RTL ones _CONSTRAINT_ATTRIBUTE_WIDTH: The width of a widget _CONSTRAINT_ATTRIBUTE_HEIGHT: The height of a widget _CONSTRAINT_ATTRIBUTE_CENTER_X: The center of a widget, on the horizontal axis _CONSTRAINT_ATTRIBUTE_CENTER_Y: The center of a widget, on the vertical axis _CONSTRAINT_ATTRIBUTE_BASELINE: The baseline of a widget
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkConstraintAttribute = CUnsignedInt
 object GtkConstraintAttribute extends CEnumU[GtkConstraintAttribute]:
   given _tag: Tag[GtkConstraintAttribute] = Tag.UInt
@@ -6000,7 +7002,7 @@ object GtkConstraintAttribute extends CEnumU[GtkConstraintAttribute]:
   val GTK_CONSTRAINT_ATTRIBUTE_CENTER_Y = define(10)
   val GTK_CONSTRAINT_ATTRIBUTE_BASELINE = define(11)
   inline def getName(inline value: GtkConstraintAttribute): Option[String] =
-    value match
+    inline value match
       case GTK_CONSTRAINT_ATTRIBUTE_NONE => Some("GTK_CONSTRAINT_ATTRIBUTE_NONE")
       case GTK_CONSTRAINT_ATTRIBUTE_LEFT => Some("GTK_CONSTRAINT_ATTRIBUTE_LEFT")
       case GTK_CONSTRAINT_ATTRIBUTE_RIGHT => Some("GTK_CONSTRAINT_ATTRIBUTE_RIGHT")
@@ -6019,6 +7021,11 @@ object GtkConstraintAttribute extends CEnumU[GtkConstraintAttribute]:
     inline def |(b: GtkConstraintAttribute): GtkConstraintAttribute = a | b
     inline def is(b: GtkConstraintAttribute): Boolean = (a & b) == b
 
+/**
+ * GtkConstraintRelation: _CONSTRAINT_RELATION_EQ: Equal _CONSTRAINT_RELATION_LE: Less than, or equal _CONSTRAINT_RELATION_GE: Greater than, or equal
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkConstraintRelation = CInt
 object GtkConstraintRelation extends CEnum[GtkConstraintRelation]:
   given _tag: Tag[GtkConstraintRelation] = Tag.Int
@@ -6027,7 +7034,7 @@ object GtkConstraintRelation extends CEnum[GtkConstraintRelation]:
   val GTK_CONSTRAINT_RELATION_EQ = define(0)
   val GTK_CONSTRAINT_RELATION_GE = define(1)
   inline def getName(inline value: GtkConstraintRelation): Option[String] =
-    value match
+    inline value match
       case GTK_CONSTRAINT_RELATION_LE => Some("GTK_CONSTRAINT_RELATION_LE")
       case GTK_CONSTRAINT_RELATION_EQ => Some("GTK_CONSTRAINT_RELATION_EQ")
       case GTK_CONSTRAINT_RELATION_GE => Some("GTK_CONSTRAINT_RELATION_GE")
@@ -6037,6 +7044,11 @@ object GtkConstraintRelation extends CEnum[GtkConstraintRelation]:
     inline def |(b: GtkConstraintRelation): GtkConstraintRelation = a | b
     inline def is(b: GtkConstraintRelation): Boolean = (a & b) == b
 
+/**
+ * GtkConstraintStrength: _CONSTRAINT_STRENGTH_REQUIRED: The constraint is required towards solving the layout _CONSTRAINT_STRENGTH_STRONG: A strong constraint _CONSTRAINT_STRENGTH_MEDIUM: A medium constraint _CONSTRAINT_STRENGTH_WEAK: A weak constraint
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkConstraintStrength = CUnsignedInt
 object GtkConstraintStrength extends CEnumU[GtkConstraintStrength]:
   given _tag: Tag[GtkConstraintStrength] = Tag.UInt
@@ -6046,7 +7058,7 @@ object GtkConstraintStrength extends CEnumU[GtkConstraintStrength]:
   val GTK_CONSTRAINT_STRENGTH_MEDIUM = define(1000)
   val GTK_CONSTRAINT_STRENGTH_WEAK = define(1)
   inline def getName(inline value: GtkConstraintStrength): Option[String] =
-    value match
+    inline value match
       case GTK_CONSTRAINT_STRENGTH_REQUIRED => Some("GTK_CONSTRAINT_STRENGTH_REQUIRED")
       case GTK_CONSTRAINT_STRENGTH_STRONG => Some("GTK_CONSTRAINT_STRENGTH_STRONG")
       case GTK_CONSTRAINT_STRENGTH_MEDIUM => Some("GTK_CONSTRAINT_STRENGTH_MEDIUM")
@@ -6057,6 +7069,11 @@ object GtkConstraintStrength extends CEnumU[GtkConstraintStrength]:
     inline def |(b: GtkConstraintStrength): GtkConstraintStrength = a | b
     inline def is(b: GtkConstraintStrength): Boolean = (a & b) == b
 
+/**
+ * GtkConstraintVflParserError: _CONSTRAINT_VFL_PARSER_ERROR_INVALID_SYMBOL: Invalid or unknown symbol _CONSTRAINT_VFL_PARSER_ERROR_INVALID_ATTRIBUTE: Invalid or unknown attribute _CONSTRAINT_VFL_PARSER_ERROR_INVALID_VIEW: Invalid or unknown view _CONSTRAINT_VFL_PARSER_ERROR_INVALID_METRIC: Invalid or unknown metric _CONSTRAINT_VFL_PARSER_ERROR_INVALID_PRIORITY: Invalid or unknown priority _CONSTRAINT_VFL_PARSER_ERROR_INVALID_RELATION: Invalid or unknown relation
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkConstraintVflParserError = CUnsignedInt
 object GtkConstraintVflParserError extends CEnumU[GtkConstraintVflParserError]:
   given _tag: Tag[GtkConstraintVflParserError] = Tag.UInt
@@ -6068,7 +7085,7 @@ object GtkConstraintVflParserError extends CEnumU[GtkConstraintVflParserError]:
   val GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_PRIORITY = define(4)
   val GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_RELATION = define(5)
   inline def getName(inline value: GtkConstraintVflParserError): Option[String] =
-    value match
+    inline value match
       case GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_SYMBOL => Some("GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_SYMBOL")
       case GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_ATTRIBUTE => Some("GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_ATTRIBUTE")
       case GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_VIEW => Some("GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_VIEW")
@@ -6081,6 +7098,11 @@ object GtkConstraintVflParserError extends CEnumU[GtkConstraintVflParserError]:
     inline def |(b: GtkConstraintVflParserError): GtkConstraintVflParserError = a | b
     inline def is(b: GtkConstraintVflParserError): Boolean = (a & b) == b
 
+/**
+ * GtkCornerType: _CORNER_TOP_LEFT: Place the scrollbars on the right and bottom of the widget (default behaviour). _CORNER_BOTTOM_LEFT: Place the scrollbars on the top and right of the widget. _CORNER_TOP_RIGHT: Place the scrollbars on the left and bottom of the widget. _CORNER_BOTTOM_RIGHT: Place the scrollbars on the top and left of the widget.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkscrolledwindow.h
+*/
 opaque type GtkCornerType = CUnsignedInt
 object GtkCornerType extends CEnumU[GtkCornerType]:
   given _tag: Tag[GtkCornerType] = Tag.UInt
@@ -6090,7 +7112,7 @@ object GtkCornerType extends CEnumU[GtkCornerType]:
   val GTK_CORNER_TOP_RIGHT = define(2)
   val GTK_CORNER_BOTTOM_RIGHT = define(3)
   inline def getName(inline value: GtkCornerType): Option[String] =
-    value match
+    inline value match
       case GTK_CORNER_TOP_LEFT => Some("GTK_CORNER_TOP_LEFT")
       case GTK_CORNER_BOTTOM_LEFT => Some("GTK_CORNER_BOTTOM_LEFT")
       case GTK_CORNER_TOP_RIGHT => Some("GTK_CORNER_TOP_RIGHT")
@@ -6101,6 +7123,11 @@ object GtkCornerType extends CEnumU[GtkCornerType]:
     inline def |(b: GtkCornerType): GtkCornerType = a | b
     inline def is(b: GtkCornerType): Boolean = (a & b) == b
 
+/**
+ * GtkCssParserError: _CSS_PARSER_ERROR_FAILED: Unknown failure. _CSS_PARSER_ERROR_SYNTAX: The given text does not form valid syntax _CSS_PARSER_ERROR_IMPORT: Failed to import a resource _CSS_PARSER_ERROR_NAME: The given name has not been defined _CSS_PARSER_ERROR_UNKNOWN_VALUE: The given value is not correct
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/css/gtkcssenums.h
+*/
 opaque type GtkCssParserError = CUnsignedInt
 object GtkCssParserError extends CEnumU[GtkCssParserError]:
   given _tag: Tag[GtkCssParserError] = Tag.UInt
@@ -6111,7 +7138,7 @@ object GtkCssParserError extends CEnumU[GtkCssParserError]:
   val GTK_CSS_PARSER_ERROR_NAME = define(3)
   val GTK_CSS_PARSER_ERROR_UNKNOWN_VALUE = define(4)
   inline def getName(inline value: GtkCssParserError): Option[String] =
-    value match
+    inline value match
       case GTK_CSS_PARSER_ERROR_FAILED => Some("GTK_CSS_PARSER_ERROR_FAILED")
       case GTK_CSS_PARSER_ERROR_SYNTAX => Some("GTK_CSS_PARSER_ERROR_SYNTAX")
       case GTK_CSS_PARSER_ERROR_IMPORT => Some("GTK_CSS_PARSER_ERROR_IMPORT")
@@ -6123,6 +7150,11 @@ object GtkCssParserError extends CEnumU[GtkCssParserError]:
     inline def |(b: GtkCssParserError): GtkCssParserError = a | b
     inline def is(b: GtkCssParserError): Boolean = (a & b) == b
 
+/**
+ * GtkCssParserWarning: _CSS_PARSER_WARNING_DEPRECATED: The given construct is deprecated and will be removed in a future version _CSS_PARSER_WARNING_SYNTAX: A syntax construct was used that should be avoided _CSS_PARSER_WARNING_UNIMPLEMENTED: A feature is not implemented
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/css/gtkcssenums.h
+*/
 opaque type GtkCssParserWarning = CUnsignedInt
 object GtkCssParserWarning extends CEnumU[GtkCssParserWarning]:
   given _tag: Tag[GtkCssParserWarning] = Tag.UInt
@@ -6131,7 +7163,7 @@ object GtkCssParserWarning extends CEnumU[GtkCssParserWarning]:
   val GTK_CSS_PARSER_WARNING_SYNTAX = define(1)
   val GTK_CSS_PARSER_WARNING_UNIMPLEMENTED = define(2)
   inline def getName(inline value: GtkCssParserWarning): Option[String] =
-    value match
+    inline value match
       case GTK_CSS_PARSER_WARNING_DEPRECATED => Some("GTK_CSS_PARSER_WARNING_DEPRECATED")
       case GTK_CSS_PARSER_WARNING_SYNTAX => Some("GTK_CSS_PARSER_WARNING_SYNTAX")
       case GTK_CSS_PARSER_WARNING_UNIMPLEMENTED => Some("GTK_CSS_PARSER_WARNING_UNIMPLEMENTED")
@@ -6141,6 +7173,11 @@ object GtkCssParserWarning extends CEnumU[GtkCssParserWarning]:
     inline def |(b: GtkCssParserWarning): GtkCssParserWarning = a | b
     inline def is(b: GtkCssParserWarning): Boolean = (a & b) == b
 
+/**
+ * GtkDebugFlags: _DEBUG_TEXT: Information about GtkTextView _DEBUG_TREE: Information about GtkTreeView _DEBUG_KEYBINDINGS: Information about keyboard shortcuts _DEBUG_MODULES: Information about modules and extensions _DEBUG_GEOMETRY: Information about size allocation _DEBUG_ICONTHEME: Information about icon themes _DEBUG_PRINTING: Information about printing _DEBUG_BUILDER: Trace GtkBuilder operation _DEBUG_SIZE_REQUEST: Information about size requests _DEBUG_NO_CSS_CACHE: Disable the style property cache _DEBUG_INTERACTIVE: Open the GTK inspector _DEBUG_TOUCHSCREEN: Pretend the pointer is a touchscreen _DEBUG_ACTIONS: Information about actions and menu models _DEBUG_LAYOUT: Information from layout managers _DEBUG_SNAPSHOT: Include debug render nodes in the generated snapshots _DEBUG_CONSTRAINTS: Information from the constraints solver _DEBUG_BUILDER_OBJECTS: Log unused GtkBuilder objects _DEBUG_A11Y: Information about accessibility state changes _DEBUG_ICONFALLBACK: Information about icon fallback. Since: 4.2
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkdebug.h
+*/
 opaque type GtkDebugFlags = CUnsignedInt
 object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
   given _tag: Tag[GtkDebugFlags] = Tag.UInt
@@ -6165,7 +7202,7 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
   val GTK_DEBUG_A11Y = define(131072)
   val GTK_DEBUG_ICONFALLBACK = define(262144)
   inline def getName(inline value: GtkDebugFlags): Option[String] =
-    value match
+    inline value match
       case GTK_DEBUG_TEXT => Some("GTK_DEBUG_TEXT")
       case GTK_DEBUG_TREE => Some("GTK_DEBUG_TREE")
       case GTK_DEBUG_KEYBINDINGS => Some("GTK_DEBUG_KEYBINDINGS")
@@ -6191,6 +7228,11 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
     inline def |(b: GtkDebugFlags): GtkDebugFlags = a | b
     inline def is(b: GtkDebugFlags): Boolean = (a & b) == b
 
+/**
+ * GtkDeleteType: _DELETE_CHARS: Delete characters. _DELETE_WORD_ENDS: Delete only the portion of the word to the left/right of cursor if we’re in the middle of a word. _DELETE_WORDS: Delete words. _DELETE_DISPLAY_LINES: Delete display-lines. Display-lines refers to the visible lines, with respect to the current line breaks. As opposed to paragraphs, which are defined by line breaks in the input. _DELETE_DISPLAY_LINE_ENDS: Delete only the portion of the display-line to the left/right of cursor. _DELETE_PARAGRAPH_ENDS: Delete to the end of the paragraph. Like C-k in Emacs (or its reverse). _DELETE_PARAGRAPHS: Delete entire line. Like C-k in pico. _DELETE_WHITESPACE: Delete only whitespace. Like M-\ in Emacs.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkDeleteType = CUnsignedInt
 object GtkDeleteType extends CEnumU[GtkDeleteType]:
   given _tag: Tag[GtkDeleteType] = Tag.UInt
@@ -6204,7 +7246,7 @@ object GtkDeleteType extends CEnumU[GtkDeleteType]:
   val GTK_DELETE_PARAGRAPHS = define(6)
   val GTK_DELETE_WHITESPACE = define(7)
   inline def getName(inline value: GtkDeleteType): Option[String] =
-    value match
+    inline value match
       case GTK_DELETE_CHARS => Some("GTK_DELETE_CHARS")
       case GTK_DELETE_WORD_ENDS => Some("GTK_DELETE_WORD_ENDS")
       case GTK_DELETE_WORDS => Some("GTK_DELETE_WORDS")
@@ -6219,6 +7261,11 @@ object GtkDeleteType extends CEnumU[GtkDeleteType]:
     inline def |(b: GtkDeleteType): GtkDeleteType = a | b
     inline def is(b: GtkDeleteType): Boolean = (a & b) == b
 
+/**
+ * GtkDialogFlags: _DIALOG_MODAL: Make the constructed dialog modal _DIALOG_DESTROY_WITH_PARENT: Destroy the dialog when its parent is destroyed _DIALOG_USE_HEADER_BAR: Create dialog with actions in header bar instead of action area
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkdialog.h
+*/
 opaque type GtkDialogFlags = CUnsignedInt
 object GtkDialogFlags extends CEnumU[GtkDialogFlags]:
   given _tag: Tag[GtkDialogFlags] = Tag.UInt
@@ -6227,7 +7274,7 @@ object GtkDialogFlags extends CEnumU[GtkDialogFlags]:
   val GTK_DIALOG_DESTROY_WITH_PARENT = define(2)
   val GTK_DIALOG_USE_HEADER_BAR = define(4)
   inline def getName(inline value: GtkDialogFlags): Option[String] =
-    value match
+    inline value match
       case GTK_DIALOG_MODAL => Some("GTK_DIALOG_MODAL")
       case GTK_DIALOG_DESTROY_WITH_PARENT => Some("GTK_DIALOG_DESTROY_WITH_PARENT")
       case GTK_DIALOG_USE_HEADER_BAR => Some("GTK_DIALOG_USE_HEADER_BAR")
@@ -6237,6 +7284,11 @@ object GtkDialogFlags extends CEnumU[GtkDialogFlags]:
     inline def |(b: GtkDialogFlags): GtkDialogFlags = a | b
     inline def is(b: GtkDialogFlags): Boolean = (a & b) == b
 
+/**
+ * GtkDirectionType: _DIR_TAB_FORWARD: Move forward. _DIR_TAB_BACKWARD: Move backward. _DIR_UP: Move up. _DIR_DOWN: Move down. _DIR_LEFT: Move left. _DIR_RIGHT: Move right.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkDirectionType = CUnsignedInt
 object GtkDirectionType extends CEnumU[GtkDirectionType]:
   given _tag: Tag[GtkDirectionType] = Tag.UInt
@@ -6248,7 +7300,7 @@ object GtkDirectionType extends CEnumU[GtkDirectionType]:
   val GTK_DIR_LEFT = define(4)
   val GTK_DIR_RIGHT = define(5)
   inline def getName(inline value: GtkDirectionType): Option[String] =
-    value match
+    inline value match
       case GTK_DIR_TAB_FORWARD => Some("GTK_DIR_TAB_FORWARD")
       case GTK_DIR_TAB_BACKWARD => Some("GTK_DIR_TAB_BACKWARD")
       case GTK_DIR_UP => Some("GTK_DIR_UP")
@@ -6261,6 +7313,11 @@ object GtkDirectionType extends CEnumU[GtkDirectionType]:
     inline def |(b: GtkDirectionType): GtkDirectionType = a | b
     inline def is(b: GtkDirectionType): Boolean = (a & b) == b
 
+/**
+ * GtkEditableProperties: _EDITABLE_PROP_TEXT: the property id for [property.Editable:text] _EDITABLE_PROP_CURSOR_POSITION: the property id for [property.Editable:cursor-position] _EDITABLE_PROP_SELECTION_BOUND: the property id for [property.Editable:selection-bound] _EDITABLE_PROP_EDITABLE: the property id for [property.Editable:editable] _EDITABLE_PROP_WIDTH_CHARS: the property id for [property.Editable:width-chars] _EDITABLE_PROP_MAX_WIDTH_CHARS: the property id for [property.Editable:max-width-chars] _EDITABLE_PROP_XALIGN: the property id for [property.Editable:xalign] _EDITABLE_PROP_ENABLE_UNDO: the property id for [property.Editable:enable-undo] _EDITABLE_NUM_PROPERTIES: the number of properties
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkeditable.h
+*/
 opaque type GtkEditableProperties = CUnsignedInt
 object GtkEditableProperties extends CEnumU[GtkEditableProperties]:
   given _tag: Tag[GtkEditableProperties] = Tag.UInt
@@ -6275,7 +7332,7 @@ object GtkEditableProperties extends CEnumU[GtkEditableProperties]:
   val GTK_EDITABLE_PROP_ENABLE_UNDO = define(7)
   val GTK_EDITABLE_NUM_PROPERTIES = define(8)
   inline def getName(inline value: GtkEditableProperties): Option[String] =
-    value match
+    inline value match
       case GTK_EDITABLE_PROP_TEXT => Some("GTK_EDITABLE_PROP_TEXT")
       case GTK_EDITABLE_PROP_CURSOR_POSITION => Some("GTK_EDITABLE_PROP_CURSOR_POSITION")
       case GTK_EDITABLE_PROP_SELECTION_BOUND => Some("GTK_EDITABLE_PROP_SELECTION_BOUND")
@@ -6291,6 +7348,11 @@ object GtkEditableProperties extends CEnumU[GtkEditableProperties]:
     inline def |(b: GtkEditableProperties): GtkEditableProperties = a | b
     inline def is(b: GtkEditableProperties): Boolean = (a & b) == b
 
+/**
+ * GtkEntryIconPosition: _ENTRY_ICON_PRIMARY: At the beginning of the entry (depending on the text direction). _ENTRY_ICON_SECONDARY: At the end of the entry (depending on the text direction).
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkentry.h
+*/
 opaque type GtkEntryIconPosition = CUnsignedInt
 object GtkEntryIconPosition extends CEnumU[GtkEntryIconPosition]:
   given _tag: Tag[GtkEntryIconPosition] = Tag.UInt
@@ -6298,7 +7360,7 @@ object GtkEntryIconPosition extends CEnumU[GtkEntryIconPosition]:
   val GTK_ENTRY_ICON_PRIMARY = define(0)
   val GTK_ENTRY_ICON_SECONDARY = define(1)
   inline def getName(inline value: GtkEntryIconPosition): Option[String] =
-    value match
+    inline value match
       case GTK_ENTRY_ICON_PRIMARY => Some("GTK_ENTRY_ICON_PRIMARY")
       case GTK_ENTRY_ICON_SECONDARY => Some("GTK_ENTRY_ICON_SECONDARY")
       case _ => None
@@ -6307,6 +7369,11 @@ object GtkEntryIconPosition extends CEnumU[GtkEntryIconPosition]:
     inline def |(b: GtkEntryIconPosition): GtkEntryIconPosition = a | b
     inline def is(b: GtkEntryIconPosition): Boolean = (a & b) == b
 
+/**
+ * GtkEventControllerScrollFlags: _EVENT_CONTROLLER_SCROLL_NONE: Don't emit scroll. _EVENT_CONTROLLER_SCROLL_VERTICAL: Emit scroll with vertical deltas. _EVENT_CONTROLLER_SCROLL_HORIZONTAL: Emit scroll with horizontal deltas. _EVENT_CONTROLLER_SCROLL_DISCRETE: Only emit deltas that are multiples of 1. _EVENT_CONTROLLER_SCROLL_KINETIC: Emit ::decelerate after continuous scroll finishes. _EVENT_CONTROLLER_SCROLL_BOTH_AXES: Emit scroll on both axes.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkeventcontrollerscroll.h
+*/
 opaque type GtkEventControllerScrollFlags = CUnsignedInt
 object GtkEventControllerScrollFlags extends CEnumU[GtkEventControllerScrollFlags]:
   given _tag: Tag[GtkEventControllerScrollFlags] = Tag.UInt
@@ -6318,7 +7385,7 @@ object GtkEventControllerScrollFlags extends CEnumU[GtkEventControllerScrollFlag
   val GTK_EVENT_CONTROLLER_SCROLL_KINETIC = define(8)
   val GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES = define(3)
   inline def getName(inline value: GtkEventControllerScrollFlags): Option[String] =
-    value match
+    inline value match
       case GTK_EVENT_CONTROLLER_SCROLL_NONE => Some("GTK_EVENT_CONTROLLER_SCROLL_NONE")
       case GTK_EVENT_CONTROLLER_SCROLL_VERTICAL => Some("GTK_EVENT_CONTROLLER_SCROLL_VERTICAL")
       case GTK_EVENT_CONTROLLER_SCROLL_HORIZONTAL => Some("GTK_EVENT_CONTROLLER_SCROLL_HORIZONTAL")
@@ -6331,6 +7398,11 @@ object GtkEventControllerScrollFlags extends CEnumU[GtkEventControllerScrollFlag
     inline def |(b: GtkEventControllerScrollFlags): GtkEventControllerScrollFlags = a | b
     inline def is(b: GtkEventControllerScrollFlags): Boolean = (a & b) == b
 
+/**
+ * GtkEventSequenceState: _EVENT_SEQUENCE_NONE: The sequence is handled, but not grabbed. _EVENT_SEQUENCE_CLAIMED: The sequence is handled and grabbed. _EVENT_SEQUENCE_DENIED: The sequence is denied.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkEventSequenceState = CUnsignedInt
 object GtkEventSequenceState extends CEnumU[GtkEventSequenceState]:
   given _tag: Tag[GtkEventSequenceState] = Tag.UInt
@@ -6339,7 +7411,7 @@ object GtkEventSequenceState extends CEnumU[GtkEventSequenceState]:
   val GTK_EVENT_SEQUENCE_CLAIMED = define(1)
   val GTK_EVENT_SEQUENCE_DENIED = define(2)
   inline def getName(inline value: GtkEventSequenceState): Option[String] =
-    value match
+    inline value match
       case GTK_EVENT_SEQUENCE_NONE => Some("GTK_EVENT_SEQUENCE_NONE")
       case GTK_EVENT_SEQUENCE_CLAIMED => Some("GTK_EVENT_SEQUENCE_CLAIMED")
       case GTK_EVENT_SEQUENCE_DENIED => Some("GTK_EVENT_SEQUENCE_DENIED")
@@ -6349,6 +7421,11 @@ object GtkEventSequenceState extends CEnumU[GtkEventSequenceState]:
     inline def |(b: GtkEventSequenceState): GtkEventSequenceState = a | b
     inline def is(b: GtkEventSequenceState): Boolean = (a & b) == b
 
+/**
+ * GtkFileChooserAction: _FILE_CHOOSER_ACTION_OPEN: Indicates open mode. The file chooser will only let the user pick an existing file. _FILE_CHOOSER_ACTION_SAVE: Indicates save mode. The file chooser will let the user pick an existing file, or type in a new filename. _FILE_CHOOSER_ACTION_SELECT_FOLDER: Indicates an Open mode for selecting folders. The file chooser will let the user pick an existing folder.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkfilechooser.h
+*/
 opaque type GtkFileChooserAction = CUnsignedInt
 object GtkFileChooserAction extends CEnumU[GtkFileChooserAction]:
   given _tag: Tag[GtkFileChooserAction] = Tag.UInt
@@ -6357,7 +7434,7 @@ object GtkFileChooserAction extends CEnumU[GtkFileChooserAction]:
   val GTK_FILE_CHOOSER_ACTION_SAVE = define(1)
   val GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER = define(2)
   inline def getName(inline value: GtkFileChooserAction): Option[String] =
-    value match
+    inline value match
       case GTK_FILE_CHOOSER_ACTION_OPEN => Some("GTK_FILE_CHOOSER_ACTION_OPEN")
       case GTK_FILE_CHOOSER_ACTION_SAVE => Some("GTK_FILE_CHOOSER_ACTION_SAVE")
       case GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER => Some("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER")
@@ -6367,6 +7444,11 @@ object GtkFileChooserAction extends CEnumU[GtkFileChooserAction]:
     inline def |(b: GtkFileChooserAction): GtkFileChooserAction = a | b
     inline def is(b: GtkFileChooserAction): Boolean = (a & b) == b
 
+/**
+ * GtkFileChooserError: _FILE_CHOOSER_ERROR_NONEXISTENT: Indicates that a file does not exist. _FILE_CHOOSER_ERROR_BAD_FILENAME: Indicates a malformed filename. _FILE_CHOOSER_ERROR_ALREADY_EXISTS: Indicates a duplicate path (e.g. when adding a bookmark). _FILE_CHOOSER_ERROR_INCOMPLETE_HOSTNAME: Indicates an incomplete hostname (e.g. "http://foo" without a slash after that).
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkfilechooser.h
+*/
 opaque type GtkFileChooserError = CUnsignedInt
 object GtkFileChooserError extends CEnumU[GtkFileChooserError]:
   given _tag: Tag[GtkFileChooserError] = Tag.UInt
@@ -6376,7 +7458,7 @@ object GtkFileChooserError extends CEnumU[GtkFileChooserError]:
   val GTK_FILE_CHOOSER_ERROR_ALREADY_EXISTS = define(2)
   val GTK_FILE_CHOOSER_ERROR_INCOMPLETE_HOSTNAME = define(3)
   inline def getName(inline value: GtkFileChooserError): Option[String] =
-    value match
+    inline value match
       case GTK_FILE_CHOOSER_ERROR_NONEXISTENT => Some("GTK_FILE_CHOOSER_ERROR_NONEXISTENT")
       case GTK_FILE_CHOOSER_ERROR_BAD_FILENAME => Some("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME")
       case GTK_FILE_CHOOSER_ERROR_ALREADY_EXISTS => Some("GTK_FILE_CHOOSER_ERROR_ALREADY_EXISTS")
@@ -6387,6 +7469,11 @@ object GtkFileChooserError extends CEnumU[GtkFileChooserError]:
     inline def |(b: GtkFileChooserError): GtkFileChooserError = a | b
     inline def is(b: GtkFileChooserError): Boolean = (a & b) == b
 
+/**
+ * GtkFilterChange: _FILTER_CHANGE_DIFFERENT: The filter change cannot be described with any of the other enumeration values. _FILTER_CHANGE_LESS_STRICT: The filter is less strict than it was before: All items that it used to return %TRUE for still return %TRUE, others now may, too. _FILTER_CHANGE_MORE_STRICT: The filter is more strict than it was before: All items that it used to return %FALSE for still return %FALSE, others now may, too.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkfilter.h
+*/
 opaque type GtkFilterChange = CUnsignedInt
 object GtkFilterChange extends CEnumU[GtkFilterChange]:
   given _tag: Tag[GtkFilterChange] = Tag.UInt
@@ -6395,7 +7482,7 @@ object GtkFilterChange extends CEnumU[GtkFilterChange]:
   val GTK_FILTER_CHANGE_LESS_STRICT = define(1)
   val GTK_FILTER_CHANGE_MORE_STRICT = define(2)
   inline def getName(inline value: GtkFilterChange): Option[String] =
-    value match
+    inline value match
       case GTK_FILTER_CHANGE_DIFFERENT => Some("GTK_FILTER_CHANGE_DIFFERENT")
       case GTK_FILTER_CHANGE_LESS_STRICT => Some("GTK_FILTER_CHANGE_LESS_STRICT")
       case GTK_FILTER_CHANGE_MORE_STRICT => Some("GTK_FILTER_CHANGE_MORE_STRICT")
@@ -6405,6 +7492,11 @@ object GtkFilterChange extends CEnumU[GtkFilterChange]:
     inline def |(b: GtkFilterChange): GtkFilterChange = a | b
     inline def is(b: GtkFilterChange): Boolean = (a & b) == b
 
+/**
+ * GtkFilterMatch: _FILTER_MATCH_SOME: The filter matches some items, gtk_filter_match() may return %TRUE or %FALSE _FILTER_MATCH_NONE: The filter does not match any item, gtk_filter_match() will always return %FALSE. _FILTER_MATCH_ALL: The filter matches all items, gtk_filter_match() will alays return %TRUE.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkfilter.h
+*/
 opaque type GtkFilterMatch = CUnsignedInt
 object GtkFilterMatch extends CEnumU[GtkFilterMatch]:
   given _tag: Tag[GtkFilterMatch] = Tag.UInt
@@ -6413,7 +7505,7 @@ object GtkFilterMatch extends CEnumU[GtkFilterMatch]:
   val GTK_FILTER_MATCH_NONE = define(1)
   val GTK_FILTER_MATCH_ALL = define(2)
   inline def getName(inline value: GtkFilterMatch): Option[String] =
-    value match
+    inline value match
       case GTK_FILTER_MATCH_SOME => Some("GTK_FILTER_MATCH_SOME")
       case GTK_FILTER_MATCH_NONE => Some("GTK_FILTER_MATCH_NONE")
       case GTK_FILTER_MATCH_ALL => Some("GTK_FILTER_MATCH_ALL")
@@ -6423,6 +7515,11 @@ object GtkFilterMatch extends CEnumU[GtkFilterMatch]:
     inline def |(b: GtkFilterMatch): GtkFilterMatch = a | b
     inline def is(b: GtkFilterMatch): Boolean = (a & b) == b
 
+/**
+ * GtkFontChooserLevel: _FONT_CHOOSER_LEVEL_FAMILY: Allow selecting a font family _FONT_CHOOSER_LEVEL_STYLE: Allow selecting a specific font face _FONT_CHOOSER_LEVEL_SIZE: Allow selecting a specific font size _FONT_CHOOSER_LEVEL_VARIATIONS: Allow changing OpenType font variation axes _FONT_CHOOSER_LEVEL_FEATURES: Allow selecting specific OpenType font features
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkfontchooser.h
+*/
 opaque type GtkFontChooserLevel = CUnsignedInt
 object GtkFontChooserLevel extends CEnumU[GtkFontChooserLevel]:
   given _tag: Tag[GtkFontChooserLevel] = Tag.UInt
@@ -6433,7 +7530,7 @@ object GtkFontChooserLevel extends CEnumU[GtkFontChooserLevel]:
   val GTK_FONT_CHOOSER_LEVEL_VARIATIONS = define(4)
   val GTK_FONT_CHOOSER_LEVEL_FEATURES = define(8)
   inline def getName(inline value: GtkFontChooserLevel): Option[String] =
-    value match
+    inline value match
       case GTK_FONT_CHOOSER_LEVEL_FAMILY => Some("GTK_FONT_CHOOSER_LEVEL_FAMILY")
       case GTK_FONT_CHOOSER_LEVEL_STYLE => Some("GTK_FONT_CHOOSER_LEVEL_STYLE")
       case GTK_FONT_CHOOSER_LEVEL_SIZE => Some("GTK_FONT_CHOOSER_LEVEL_SIZE")
@@ -6445,6 +7542,11 @@ object GtkFontChooserLevel extends CEnumU[GtkFontChooserLevel]:
     inline def |(b: GtkFontChooserLevel): GtkFontChooserLevel = a | b
     inline def is(b: GtkFontChooserLevel): Boolean = (a & b) == b
 
+/**
+ * GtkIconLookupFlags: _ICON_LOOKUP_FORCE_REGULAR: Try to always load regular icons, even when symbolic icon names are given _ICON_LOOKUP_FORCE_SYMBOLIC: Try to always load symbolic icons, even when regular icon names are given _ICON_LOOKUP_PRELOAD: Starts loading the texture in the background so it is ready when later needed.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkicontheme.h
+*/
 opaque type GtkIconLookupFlags = CUnsignedInt
 object GtkIconLookupFlags extends CEnumU[GtkIconLookupFlags]:
   given _tag: Tag[GtkIconLookupFlags] = Tag.UInt
@@ -6453,7 +7555,7 @@ object GtkIconLookupFlags extends CEnumU[GtkIconLookupFlags]:
   val GTK_ICON_LOOKUP_FORCE_SYMBOLIC = define(2)
   val GTK_ICON_LOOKUP_PRELOAD = define(4)
   inline def getName(inline value: GtkIconLookupFlags): Option[String] =
-    value match
+    inline value match
       case GTK_ICON_LOOKUP_FORCE_REGULAR => Some("GTK_ICON_LOOKUP_FORCE_REGULAR")
       case GTK_ICON_LOOKUP_FORCE_SYMBOLIC => Some("GTK_ICON_LOOKUP_FORCE_SYMBOLIC")
       case GTK_ICON_LOOKUP_PRELOAD => Some("GTK_ICON_LOOKUP_PRELOAD")
@@ -6463,6 +7565,11 @@ object GtkIconLookupFlags extends CEnumU[GtkIconLookupFlags]:
     inline def |(b: GtkIconLookupFlags): GtkIconLookupFlags = a | b
     inline def is(b: GtkIconLookupFlags): Boolean = (a & b) == b
 
+/**
+ * GtkIconSize: _ICON_SIZE_INHERIT: Keep the size of the parent element _ICON_SIZE_NORMAL: Size similar to text size _ICON_SIZE_LARGE: Large size, for example in an icon view
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkIconSize = CUnsignedInt
 object GtkIconSize extends CEnumU[GtkIconSize]:
   given _tag: Tag[GtkIconSize] = Tag.UInt
@@ -6471,7 +7578,7 @@ object GtkIconSize extends CEnumU[GtkIconSize]:
   val GTK_ICON_SIZE_NORMAL = define(1)
   val GTK_ICON_SIZE_LARGE = define(2)
   inline def getName(inline value: GtkIconSize): Option[String] =
-    value match
+    inline value match
       case GTK_ICON_SIZE_INHERIT => Some("GTK_ICON_SIZE_INHERIT")
       case GTK_ICON_SIZE_NORMAL => Some("GTK_ICON_SIZE_NORMAL")
       case GTK_ICON_SIZE_LARGE => Some("GTK_ICON_SIZE_LARGE")
@@ -6481,6 +7588,11 @@ object GtkIconSize extends CEnumU[GtkIconSize]:
     inline def |(b: GtkIconSize): GtkIconSize = a | b
     inline def is(b: GtkIconSize): Boolean = (a & b) == b
 
+/**
+ * GtkIconThemeError: _ICON_THEME_NOT_FOUND: The icon specified does not exist in the theme _ICON_THEME_FAILED: An unspecified error occurred.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkicontheme.h
+*/
 opaque type GtkIconThemeError = CUnsignedInt
 object GtkIconThemeError extends CEnumU[GtkIconThemeError]:
   given _tag: Tag[GtkIconThemeError] = Tag.UInt
@@ -6488,7 +7600,7 @@ object GtkIconThemeError extends CEnumU[GtkIconThemeError]:
   val GTK_ICON_THEME_NOT_FOUND = define(0)
   val GTK_ICON_THEME_FAILED = define(1)
   inline def getName(inline value: GtkIconThemeError): Option[String] =
-    value match
+    inline value match
       case GTK_ICON_THEME_NOT_FOUND => Some("GTK_ICON_THEME_NOT_FOUND")
       case GTK_ICON_THEME_FAILED => Some("GTK_ICON_THEME_FAILED")
       case _ => None
@@ -6497,6 +7609,11 @@ object GtkIconThemeError extends CEnumU[GtkIconThemeError]:
     inline def |(b: GtkIconThemeError): GtkIconThemeError = a | b
     inline def is(b: GtkIconThemeError): Boolean = (a & b) == b
 
+/**
+ * GtkIconViewDropPosition: _ICON_VIEW_NO_DROP: no drop possible _ICON_VIEW_DROP_INTO: dropped item replaces the item _ICON_VIEW_DROP_LEFT: dropped item is inserted to the left _ICON_VIEW_DROP_RIGHT: dropped item is inserted to the right _ICON_VIEW_DROP_ABOVE: dropped item is inserted above _ICON_VIEW_DROP_BELOW: dropped item is inserted below
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkiconview.h
+*/
 opaque type GtkIconViewDropPosition = CUnsignedInt
 object GtkIconViewDropPosition extends CEnumU[GtkIconViewDropPosition]:
   given _tag: Tag[GtkIconViewDropPosition] = Tag.UInt
@@ -6508,7 +7625,7 @@ object GtkIconViewDropPosition extends CEnumU[GtkIconViewDropPosition]:
   val GTK_ICON_VIEW_DROP_ABOVE = define(4)
   val GTK_ICON_VIEW_DROP_BELOW = define(5)
   inline def getName(inline value: GtkIconViewDropPosition): Option[String] =
-    value match
+    inline value match
       case GTK_ICON_VIEW_NO_DROP => Some("GTK_ICON_VIEW_NO_DROP")
       case GTK_ICON_VIEW_DROP_INTO => Some("GTK_ICON_VIEW_DROP_INTO")
       case GTK_ICON_VIEW_DROP_LEFT => Some("GTK_ICON_VIEW_DROP_LEFT")
@@ -6521,6 +7638,11 @@ object GtkIconViewDropPosition extends CEnumU[GtkIconViewDropPosition]:
     inline def |(b: GtkIconViewDropPosition): GtkIconViewDropPosition = a | b
     inline def is(b: GtkIconViewDropPosition): Boolean = (a & b) == b
 
+/**
+ * GtkImageType: _IMAGE_EMPTY: there is no image displayed by the widget _IMAGE_ICON_NAME: the widget contains a named icon _IMAGE_GICON: the widget contains a `GIcon` _IMAGE_PAINTABLE: the widget contains a `GdkPaintable`
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkimage.h
+*/
 opaque type GtkImageType = CUnsignedInt
 object GtkImageType extends CEnumU[GtkImageType]:
   given _tag: Tag[GtkImageType] = Tag.UInt
@@ -6530,7 +7652,7 @@ object GtkImageType extends CEnumU[GtkImageType]:
   val GTK_IMAGE_GICON = define(2)
   val GTK_IMAGE_PAINTABLE = define(3)
   inline def getName(inline value: GtkImageType): Option[String] =
-    value match
+    inline value match
       case GTK_IMAGE_EMPTY => Some("GTK_IMAGE_EMPTY")
       case GTK_IMAGE_ICON_NAME => Some("GTK_IMAGE_ICON_NAME")
       case GTK_IMAGE_GICON => Some("GTK_IMAGE_GICON")
@@ -6541,6 +7663,11 @@ object GtkImageType extends CEnumU[GtkImageType]:
     inline def |(b: GtkImageType): GtkImageType = a | b
     inline def is(b: GtkImageType): Boolean = (a & b) == b
 
+/**
+ * GtkInputHints: _INPUT_HINT_NONE: No special behaviour suggested _INPUT_HINT_SPELLCHECK: Suggest checking for typos _INPUT_HINT_NO_SPELLCHECK: Suggest not checking for typos _INPUT_HINT_WORD_COMPLETION: Suggest word completion _INPUT_HINT_LOWERCASE: Suggest to convert all text to lowercase _INPUT_HINT_UPPERCASE_CHARS: Suggest to capitalize all text _INPUT_HINT_UPPERCASE_WORDS: Suggest to capitalize the first character of each word _INPUT_HINT_UPPERCASE_SENTENCES: Suggest to capitalize the first word of each sentence _INPUT_HINT_INHIBIT_OSK: Suggest to not show an onscreen keyboard (e.g for a calculator that already has all the keys). _INPUT_HINT_VERTICAL_WRITING: The text is vertical _INPUT_HINT_EMOJI: Suggest offering Emoji support _INPUT_HINT_NO_EMOJI: Suggest not offering Emoji support _INPUT_HINT_PRIVATE: Request that the input method should not update personalized data (like typing history)
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkInputHints = CUnsignedInt
 object GtkInputHints extends CEnumU[GtkInputHints]:
   given _tag: Tag[GtkInputHints] = Tag.UInt
@@ -6559,7 +7686,7 @@ object GtkInputHints extends CEnumU[GtkInputHints]:
   val GTK_INPUT_HINT_NO_EMOJI = define(1024)
   val GTK_INPUT_HINT_PRIVATE = define(2048)
   inline def getName(inline value: GtkInputHints): Option[String] =
-    value match
+    inline value match
       case GTK_INPUT_HINT_NONE => Some("GTK_INPUT_HINT_NONE")
       case GTK_INPUT_HINT_SPELLCHECK => Some("GTK_INPUT_HINT_SPELLCHECK")
       case GTK_INPUT_HINT_NO_SPELLCHECK => Some("GTK_INPUT_HINT_NO_SPELLCHECK")
@@ -6579,6 +7706,11 @@ object GtkInputHints extends CEnumU[GtkInputHints]:
     inline def |(b: GtkInputHints): GtkInputHints = a | b
     inline def is(b: GtkInputHints): Boolean = (a & b) == b
 
+/**
+ * GtkInputPurpose: _INPUT_PURPOSE_FREE_FORM: Allow any character _INPUT_PURPOSE_ALPHA: Allow only alphabetic characters _INPUT_PURPOSE_DIGITS: Allow only digits _INPUT_PURPOSE_NUMBER: Edited field expects numbers _INPUT_PURPOSE_PHONE: Edited field expects phone number _INPUT_PURPOSE_URL: Edited field expects URL _INPUT_PURPOSE_EMAIL: Edited field expects email address _INPUT_PURPOSE_NAME: Edited field expects the name of a person _INPUT_PURPOSE_PASSWORD: Like %GTK_INPUT_PURPOSE_FREE_FORM, but characters are hidden _INPUT_PURPOSE_PIN: Like %GTK_INPUT_PURPOSE_DIGITS, but characters are hidden _INPUT_PURPOSE_TERMINAL: Allow any character, in addition to control codes
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkInputPurpose = CUnsignedInt
 object GtkInputPurpose extends CEnumU[GtkInputPurpose]:
   given _tag: Tag[GtkInputPurpose] = Tag.UInt
@@ -6595,7 +7727,7 @@ object GtkInputPurpose extends CEnumU[GtkInputPurpose]:
   val GTK_INPUT_PURPOSE_PIN = define(9)
   val GTK_INPUT_PURPOSE_TERMINAL = define(10)
   inline def getName(inline value: GtkInputPurpose): Option[String] =
-    value match
+    inline value match
       case GTK_INPUT_PURPOSE_FREE_FORM => Some("GTK_INPUT_PURPOSE_FREE_FORM")
       case GTK_INPUT_PURPOSE_ALPHA => Some("GTK_INPUT_PURPOSE_ALPHA")
       case GTK_INPUT_PURPOSE_DIGITS => Some("GTK_INPUT_PURPOSE_DIGITS")
@@ -6613,6 +7745,11 @@ object GtkInputPurpose extends CEnumU[GtkInputPurpose]:
     inline def |(b: GtkInputPurpose): GtkInputPurpose = a | b
     inline def is(b: GtkInputPurpose): Boolean = (a & b) == b
 
+/**
+ * GtkJustification: _JUSTIFY_LEFT: The text is placed at the left edge of the label. _JUSTIFY_RIGHT: The text is placed at the right edge of the label. _JUSTIFY_CENTER: The text is placed in the center of the label. _JUSTIFY_FILL: The text is placed is distributed across the label.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkJustification = CUnsignedInt
 object GtkJustification extends CEnumU[GtkJustification]:
   given _tag: Tag[GtkJustification] = Tag.UInt
@@ -6622,7 +7759,7 @@ object GtkJustification extends CEnumU[GtkJustification]:
   val GTK_JUSTIFY_CENTER = define(2)
   val GTK_JUSTIFY_FILL = define(3)
   inline def getName(inline value: GtkJustification): Option[String] =
-    value match
+    inline value match
       case GTK_JUSTIFY_LEFT => Some("GTK_JUSTIFY_LEFT")
       case GTK_JUSTIFY_RIGHT => Some("GTK_JUSTIFY_RIGHT")
       case GTK_JUSTIFY_CENTER => Some("GTK_JUSTIFY_CENTER")
@@ -6633,6 +7770,11 @@ object GtkJustification extends CEnumU[GtkJustification]:
     inline def |(b: GtkJustification): GtkJustification = a | b
     inline def is(b: GtkJustification): Boolean = (a & b) == b
 
+/**
+ * GtkLevelBarMode: _LEVEL_BAR_MODE_CONTINUOUS: the bar has a continuous mode _LEVEL_BAR_MODE_DISCRETE: the bar has a discrete mode
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkLevelBarMode = CUnsignedInt
 object GtkLevelBarMode extends CEnumU[GtkLevelBarMode]:
   given _tag: Tag[GtkLevelBarMode] = Tag.UInt
@@ -6640,7 +7782,7 @@ object GtkLevelBarMode extends CEnumU[GtkLevelBarMode]:
   val GTK_LEVEL_BAR_MODE_CONTINUOUS = define(0)
   val GTK_LEVEL_BAR_MODE_DISCRETE = define(1)
   inline def getName(inline value: GtkLevelBarMode): Option[String] =
-    value match
+    inline value match
       case GTK_LEVEL_BAR_MODE_CONTINUOUS => Some("GTK_LEVEL_BAR_MODE_CONTINUOUS")
       case GTK_LEVEL_BAR_MODE_DISCRETE => Some("GTK_LEVEL_BAR_MODE_DISCRETE")
       case _ => None
@@ -6649,6 +7791,11 @@ object GtkLevelBarMode extends CEnumU[GtkLevelBarMode]:
     inline def |(b: GtkLevelBarMode): GtkLevelBarMode = a | b
     inline def is(b: GtkLevelBarMode): Boolean = (a & b) == b
 
+/**
+ * GtkLicense: _LICENSE_UNKNOWN: No license specified _LICENSE_CUSTOM: A license text is going to be specified by the developer _LICENSE_GPL_2_0: The GNU General Public License, version 2.0 or later _LICENSE_GPL_3_0: The GNU General Public License, version 3.0 or later _LICENSE_LGPL_2_1: The GNU Lesser General Public License, version 2.1 or later _LICENSE_LGPL_3_0: The GNU Lesser General Public License, version 3.0 or later _LICENSE_BSD: The BSD standard license _LICENSE_MIT_X11: The MIT/X11 standard license _LICENSE_ARTISTIC: The Artistic License, version 2.0 _LICENSE_GPL_2_0_ONLY: The GNU General Public License, version 2.0 only _LICENSE_GPL_3_0_ONLY: The GNU General Public License, version 3.0 only _LICENSE_LGPL_2_1_ONLY: The GNU Lesser General Public License, version 2.1 only _LICENSE_LGPL_3_0_ONLY: The GNU Lesser General Public License, version 3.0 only _LICENSE_AGPL_3_0: The GNU Affero General Public License, version 3.0 or later _LICENSE_AGPL_3_0_ONLY: The GNU Affero General Public License, version 3.0 only _LICENSE_BSD_3: The 3-clause BSD licence _LICENSE_APACHE_2_0: The Apache License, version 2.0 _LICENSE_MPL_2_0: The Mozilla Public License, version 2.0
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkaboutdialog.h
+*/
 opaque type GtkLicense = CUnsignedInt
 object GtkLicense extends CEnumU[GtkLicense]:
   given _tag: Tag[GtkLicense] = Tag.UInt
@@ -6672,7 +7819,7 @@ object GtkLicense extends CEnumU[GtkLicense]:
   val GTK_LICENSE_APACHE_2_0 = define(16)
   val GTK_LICENSE_MPL_2_0 = define(17)
   inline def getName(inline value: GtkLicense): Option[String] =
-    value match
+    inline value match
       case GTK_LICENSE_UNKNOWN => Some("GTK_LICENSE_UNKNOWN")
       case GTK_LICENSE_CUSTOM => Some("GTK_LICENSE_CUSTOM")
       case GTK_LICENSE_GPL_2_0 => Some("GTK_LICENSE_GPL_2_0")
@@ -6697,6 +7844,11 @@ object GtkLicense extends CEnumU[GtkLicense]:
     inline def |(b: GtkLicense): GtkLicense = a | b
     inline def is(b: GtkLicense): Boolean = (a & b) == b
 
+/**
+ * GtkMessageType: _MESSAGE_INFO: Informational message _MESSAGE_WARNING: Non-fatal warning message _MESSAGE_QUESTION: Question requiring a choice _MESSAGE_ERROR: Fatal error message _MESSAGE_OTHER: None of the above
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkMessageType = CUnsignedInt
 object GtkMessageType extends CEnumU[GtkMessageType]:
   given _tag: Tag[GtkMessageType] = Tag.UInt
@@ -6707,7 +7859,7 @@ object GtkMessageType extends CEnumU[GtkMessageType]:
   val GTK_MESSAGE_ERROR = define(3)
   val GTK_MESSAGE_OTHER = define(4)
   inline def getName(inline value: GtkMessageType): Option[String] =
-    value match
+    inline value match
       case GTK_MESSAGE_INFO => Some("GTK_MESSAGE_INFO")
       case GTK_MESSAGE_WARNING => Some("GTK_MESSAGE_WARNING")
       case GTK_MESSAGE_QUESTION => Some("GTK_MESSAGE_QUESTION")
@@ -6719,6 +7871,11 @@ object GtkMessageType extends CEnumU[GtkMessageType]:
     inline def |(b: GtkMessageType): GtkMessageType = a | b
     inline def is(b: GtkMessageType): Boolean = (a & b) == b
 
+/**
+ * GtkMovementStep: _MOVEMENT_LOGICAL_POSITIONS: Move forward or back by graphemes _MOVEMENT_VISUAL_POSITIONS: Move left or right by graphemes _MOVEMENT_WORDS: Move forward or back by words _MOVEMENT_DISPLAY_LINES: Move up or down lines (wrapped lines) _MOVEMENT_DISPLAY_LINE_ENDS: Move to either end of a line _MOVEMENT_PARAGRAPHS: Move up or down paragraphs (newline-ended lines) _MOVEMENT_PARAGRAPH_ENDS: Move to either end of a paragraph _MOVEMENT_PAGES: Move by pages _MOVEMENT_BUFFER_ENDS: Move to ends of the buffer _MOVEMENT_HORIZONTAL_PAGES: Move horizontally by pages
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkMovementStep = CUnsignedInt
 object GtkMovementStep extends CEnumU[GtkMovementStep]:
   given _tag: Tag[GtkMovementStep] = Tag.UInt
@@ -6734,7 +7891,7 @@ object GtkMovementStep extends CEnumU[GtkMovementStep]:
   val GTK_MOVEMENT_BUFFER_ENDS = define(8)
   val GTK_MOVEMENT_HORIZONTAL_PAGES = define(9)
   inline def getName(inline value: GtkMovementStep): Option[String] =
-    value match
+    inline value match
       case GTK_MOVEMENT_LOGICAL_POSITIONS => Some("GTK_MOVEMENT_LOGICAL_POSITIONS")
       case GTK_MOVEMENT_VISUAL_POSITIONS => Some("GTK_MOVEMENT_VISUAL_POSITIONS")
       case GTK_MOVEMENT_WORDS => Some("GTK_MOVEMENT_WORDS")
@@ -6751,6 +7908,11 @@ object GtkMovementStep extends CEnumU[GtkMovementStep]:
     inline def |(b: GtkMovementStep): GtkMovementStep = a | b
     inline def is(b: GtkMovementStep): Boolean = (a & b) == b
 
+/**
+ * GtkNaturalWrapMode: _NATURAL_WRAP_INHERIT: Inherit the minimum size request. In particular, this should be used with %PANGO_WRAP_CHAR. _NATURAL_WRAP_NONE: Try not to wrap the text. This mode is the closest to GTK3's behavior but can lead to a wide label leaving lots of empty space below the text. _NATURAL_WRAP_WORD: Attempt to wrap at word boundaries. This is useful in particular when using %PANGO_WRAP_WORD_CHAR as the wrap mode.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkNaturalWrapMode = CUnsignedInt
 object GtkNaturalWrapMode extends CEnumU[GtkNaturalWrapMode]:
   given _tag: Tag[GtkNaturalWrapMode] = Tag.UInt
@@ -6759,7 +7921,7 @@ object GtkNaturalWrapMode extends CEnumU[GtkNaturalWrapMode]:
   val GTK_NATURAL_WRAP_NONE = define(1)
   val GTK_NATURAL_WRAP_WORD = define(2)
   inline def getName(inline value: GtkNaturalWrapMode): Option[String] =
-    value match
+    inline value match
       case GTK_NATURAL_WRAP_INHERIT => Some("GTK_NATURAL_WRAP_INHERIT")
       case GTK_NATURAL_WRAP_NONE => Some("GTK_NATURAL_WRAP_NONE")
       case GTK_NATURAL_WRAP_WORD => Some("GTK_NATURAL_WRAP_WORD")
@@ -6769,6 +7931,11 @@ object GtkNaturalWrapMode extends CEnumU[GtkNaturalWrapMode]:
     inline def |(b: GtkNaturalWrapMode): GtkNaturalWrapMode = a | b
     inline def is(b: GtkNaturalWrapMode): Boolean = (a & b) == b
 
+/**
+ * GtkNotebookTab: _NOTEBOOK_TAB_FIRST: the first tab in the notebook _NOTEBOOK_TAB_LAST: the last tab in the notebook
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtknotebook.h
+*/
 opaque type GtkNotebookTab = CUnsignedInt
 object GtkNotebookTab extends CEnumU[GtkNotebookTab]:
   given _tag: Tag[GtkNotebookTab] = Tag.UInt
@@ -6776,7 +7943,7 @@ object GtkNotebookTab extends CEnumU[GtkNotebookTab]:
   val GTK_NOTEBOOK_TAB_FIRST = define(0)
   val GTK_NOTEBOOK_TAB_LAST = define(1)
   inline def getName(inline value: GtkNotebookTab): Option[String] =
-    value match
+    inline value match
       case GTK_NOTEBOOK_TAB_FIRST => Some("GTK_NOTEBOOK_TAB_FIRST")
       case GTK_NOTEBOOK_TAB_LAST => Some("GTK_NOTEBOOK_TAB_LAST")
       case _ => None
@@ -6785,6 +7952,11 @@ object GtkNotebookTab extends CEnumU[GtkNotebookTab]:
     inline def |(b: GtkNotebookTab): GtkNotebookTab = a | b
     inline def is(b: GtkNotebookTab): Boolean = (a & b) == b
 
+/**
+ * GtkNumberUpLayout: _NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_TOP_TO_BOTTOM: ![](layout-lrtb.png) _NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_BOTTOM_TO_TOP: ![](layout-lrbt.png) _NUMBER_UP_LAYOUT_RIGHT_TO_LEFT_TOP_TO_BOTTOM: ![](layout-rltb.png) _NUMBER_UP_LAYOUT_RIGHT_TO_LEFT_BOTTOM_TO_TOP: ![](layout-rlbt.png) _NUMBER_UP_LAYOUT_TOP_TO_BOTTOM_LEFT_TO_RIGHT: ![](layout-tblr.png) _NUMBER_UP_LAYOUT_TOP_TO_BOTTOM_RIGHT_TO_LEFT: ![](layout-tbrl.png) _NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_LEFT_TO_RIGHT: ![](layout-btlr.png) _NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_RIGHT_TO_LEFT: ![](layout-btrl.png)
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkNumberUpLayout = CUnsignedInt
 object GtkNumberUpLayout extends CEnumU[GtkNumberUpLayout]:
   given _tag: Tag[GtkNumberUpLayout] = Tag.UInt
@@ -6798,7 +7970,7 @@ object GtkNumberUpLayout extends CEnumU[GtkNumberUpLayout]:
   val GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_LEFT_TO_RIGHT = define(6)
   val GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_RIGHT_TO_LEFT = define(7)
   inline def getName(inline value: GtkNumberUpLayout): Option[String] =
-    value match
+    inline value match
       case GTK_NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_TOP_TO_BOTTOM => Some("GTK_NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_TOP_TO_BOTTOM")
       case GTK_NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_BOTTOM_TO_TOP => Some("GTK_NUMBER_UP_LAYOUT_LEFT_TO_RIGHT_BOTTOM_TO_TOP")
       case GTK_NUMBER_UP_LAYOUT_RIGHT_TO_LEFT_TOP_TO_BOTTOM => Some("GTK_NUMBER_UP_LAYOUT_RIGHT_TO_LEFT_TOP_TO_BOTTOM")
@@ -6813,6 +7985,11 @@ object GtkNumberUpLayout extends CEnumU[GtkNumberUpLayout]:
     inline def |(b: GtkNumberUpLayout): GtkNumberUpLayout = a | b
     inline def is(b: GtkNumberUpLayout): Boolean = (a & b) == b
 
+/**
+ * GtkOrdering: _ORDERING_SMALLER: the first value is smaller than the second _ORDERING_EQUAL: the two values are equal _ORDERING_LARGER: the first value is larger than the second
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkOrdering = CInt
 object GtkOrdering extends CEnum[GtkOrdering]:
   given _tag: Tag[GtkOrdering] = Tag.Int
@@ -6821,7 +7998,7 @@ object GtkOrdering extends CEnum[GtkOrdering]:
   val GTK_ORDERING_EQUAL = define(0)
   val GTK_ORDERING_LARGER = define(1)
   inline def getName(inline value: GtkOrdering): Option[String] =
-    value match
+    inline value match
       case GTK_ORDERING_SMALLER => Some("GTK_ORDERING_SMALLER")
       case GTK_ORDERING_EQUAL => Some("GTK_ORDERING_EQUAL")
       case GTK_ORDERING_LARGER => Some("GTK_ORDERING_LARGER")
@@ -6831,6 +8008,11 @@ object GtkOrdering extends CEnum[GtkOrdering]:
     inline def |(b: GtkOrdering): GtkOrdering = a | b
     inline def is(b: GtkOrdering): Boolean = (a & b) == b
 
+/**
+ * GtkOrientation: _ORIENTATION_HORIZONTAL: The element is in horizontal orientation. _ORIENTATION_VERTICAL: The element is in vertical orientation.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkOrientation = CUnsignedInt
 object GtkOrientation extends CEnumU[GtkOrientation]:
   given _tag: Tag[GtkOrientation] = Tag.UInt
@@ -6838,7 +8020,7 @@ object GtkOrientation extends CEnumU[GtkOrientation]:
   val GTK_ORIENTATION_HORIZONTAL = define(0)
   val GTK_ORIENTATION_VERTICAL = define(1)
   inline def getName(inline value: GtkOrientation): Option[String] =
-    value match
+    inline value match
       case GTK_ORIENTATION_HORIZONTAL => Some("GTK_ORIENTATION_HORIZONTAL")
       case GTK_ORIENTATION_VERTICAL => Some("GTK_ORIENTATION_VERTICAL")
       case _ => None
@@ -6847,6 +8029,11 @@ object GtkOrientation extends CEnumU[GtkOrientation]:
     inline def |(b: GtkOrientation): GtkOrientation = a | b
     inline def is(b: GtkOrientation): Boolean = (a & b) == b
 
+/**
+ * GtkOverflow: _OVERFLOW_VISIBLE: No change is applied. Content is drawn at the specified position. _OVERFLOW_HIDDEN: Content is clipped to the bounds of the area. Content outside the area is not drawn and cannot be interacted with.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkOverflow = CUnsignedInt
 object GtkOverflow extends CEnumU[GtkOverflow]:
   given _tag: Tag[GtkOverflow] = Tag.UInt
@@ -6854,7 +8041,7 @@ object GtkOverflow extends CEnumU[GtkOverflow]:
   val GTK_OVERFLOW_VISIBLE = define(0)
   val GTK_OVERFLOW_HIDDEN = define(1)
   inline def getName(inline value: GtkOverflow): Option[String] =
-    value match
+    inline value match
       case GTK_OVERFLOW_VISIBLE => Some("GTK_OVERFLOW_VISIBLE")
       case GTK_OVERFLOW_HIDDEN => Some("GTK_OVERFLOW_HIDDEN")
       case _ => None
@@ -6863,6 +8050,11 @@ object GtkOverflow extends CEnumU[GtkOverflow]:
     inline def |(b: GtkOverflow): GtkOverflow = a | b
     inline def is(b: GtkOverflow): Boolean = (a & b) == b
 
+/**
+ * GtkPackType: _PACK_START: The child is packed into the start of the widget _PACK_END: The child is packed into the end of the widget
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPackType = CUnsignedInt
 object GtkPackType extends CEnumU[GtkPackType]:
   given _tag: Tag[GtkPackType] = Tag.UInt
@@ -6870,7 +8062,7 @@ object GtkPackType extends CEnumU[GtkPackType]:
   val GTK_PACK_START = define(0)
   val GTK_PACK_END = define(1)
   inline def getName(inline value: GtkPackType): Option[String] =
-    value match
+    inline value match
       case GTK_PACK_START => Some("GTK_PACK_START")
       case GTK_PACK_END => Some("GTK_PACK_END")
       case _ => None
@@ -6879,6 +8071,11 @@ object GtkPackType extends CEnumU[GtkPackType]:
     inline def |(b: GtkPackType): GtkPackType = a | b
     inline def is(b: GtkPackType): Boolean = (a & b) == b
 
+/**
+ * GtkPadActionType: _PAD_ACTION_BUTTON: Action is triggered by a pad button _PAD_ACTION_RING: Action is triggered by a pad ring _PAD_ACTION_STRIP: Action is triggered by a pad strip
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkpadcontroller.h
+*/
 opaque type GtkPadActionType = CUnsignedInt
 object GtkPadActionType extends CEnumU[GtkPadActionType]:
   given _tag: Tag[GtkPadActionType] = Tag.UInt
@@ -6887,7 +8084,7 @@ object GtkPadActionType extends CEnumU[GtkPadActionType]:
   val GTK_PAD_ACTION_RING = define(1)
   val GTK_PAD_ACTION_STRIP = define(2)
   inline def getName(inline value: GtkPadActionType): Option[String] =
-    value match
+    inline value match
       case GTK_PAD_ACTION_BUTTON => Some("GTK_PAD_ACTION_BUTTON")
       case GTK_PAD_ACTION_RING => Some("GTK_PAD_ACTION_RING")
       case GTK_PAD_ACTION_STRIP => Some("GTK_PAD_ACTION_STRIP")
@@ -6897,6 +8094,11 @@ object GtkPadActionType extends CEnumU[GtkPadActionType]:
     inline def |(b: GtkPadActionType): GtkPadActionType = a | b
     inline def is(b: GtkPadActionType): Boolean = (a & b) == b
 
+/**
+ * GtkPageOrientation: _PAGE_ORIENTATION_PORTRAIT: Portrait mode. _PAGE_ORIENTATION_LANDSCAPE: Landscape mode. _PAGE_ORIENTATION_REVERSE_PORTRAIT: Reverse portrait mode. _PAGE_ORIENTATION_REVERSE_LANDSCAPE: Reverse landscape mode.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPageOrientation = CUnsignedInt
 object GtkPageOrientation extends CEnumU[GtkPageOrientation]:
   given _tag: Tag[GtkPageOrientation] = Tag.UInt
@@ -6906,7 +8108,7 @@ object GtkPageOrientation extends CEnumU[GtkPageOrientation]:
   val GTK_PAGE_ORIENTATION_REVERSE_PORTRAIT = define(2)
   val GTK_PAGE_ORIENTATION_REVERSE_LANDSCAPE = define(3)
   inline def getName(inline value: GtkPageOrientation): Option[String] =
-    value match
+    inline value match
       case GTK_PAGE_ORIENTATION_PORTRAIT => Some("GTK_PAGE_ORIENTATION_PORTRAIT")
       case GTK_PAGE_ORIENTATION_LANDSCAPE => Some("GTK_PAGE_ORIENTATION_LANDSCAPE")
       case GTK_PAGE_ORIENTATION_REVERSE_PORTRAIT => Some("GTK_PAGE_ORIENTATION_REVERSE_PORTRAIT")
@@ -6917,6 +8119,11 @@ object GtkPageOrientation extends CEnumU[GtkPageOrientation]:
     inline def |(b: GtkPageOrientation): GtkPageOrientation = a | b
     inline def is(b: GtkPageOrientation): Boolean = (a & b) == b
 
+/**
+ * GtkPageSet: _PAGE_SET_ALL: All pages. _PAGE_SET_EVEN: Even pages. _PAGE_SET_ODD: Odd pages.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPageSet = CUnsignedInt
 object GtkPageSet extends CEnumU[GtkPageSet]:
   given _tag: Tag[GtkPageSet] = Tag.UInt
@@ -6925,7 +8132,7 @@ object GtkPageSet extends CEnumU[GtkPageSet]:
   val GTK_PAGE_SET_EVEN = define(1)
   val GTK_PAGE_SET_ODD = define(2)
   inline def getName(inline value: GtkPageSet): Option[String] =
-    value match
+    inline value match
       case GTK_PAGE_SET_ALL => Some("GTK_PAGE_SET_ALL")
       case GTK_PAGE_SET_EVEN => Some("GTK_PAGE_SET_EVEN")
       case GTK_PAGE_SET_ODD => Some("GTK_PAGE_SET_ODD")
@@ -6935,6 +8142,11 @@ object GtkPageSet extends CEnumU[GtkPageSet]:
     inline def |(b: GtkPageSet): GtkPageSet = a | b
     inline def is(b: GtkPageSet): Boolean = (a & b) == b
 
+/**
+ * GtkPanDirection: _PAN_DIRECTION_LEFT: panned towards the left _PAN_DIRECTION_RIGHT: panned towards the right _PAN_DIRECTION_UP: panned upwards _PAN_DIRECTION_DOWN: panned downwards
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPanDirection = CUnsignedInt
 object GtkPanDirection extends CEnumU[GtkPanDirection]:
   given _tag: Tag[GtkPanDirection] = Tag.UInt
@@ -6944,7 +8156,7 @@ object GtkPanDirection extends CEnumU[GtkPanDirection]:
   val GTK_PAN_DIRECTION_UP = define(2)
   val GTK_PAN_DIRECTION_DOWN = define(3)
   inline def getName(inline value: GtkPanDirection): Option[String] =
-    value match
+    inline value match
       case GTK_PAN_DIRECTION_LEFT => Some("GTK_PAN_DIRECTION_LEFT")
       case GTK_PAN_DIRECTION_RIGHT => Some("GTK_PAN_DIRECTION_RIGHT")
       case GTK_PAN_DIRECTION_UP => Some("GTK_PAN_DIRECTION_UP")
@@ -6955,6 +8167,11 @@ object GtkPanDirection extends CEnumU[GtkPanDirection]:
     inline def |(b: GtkPanDirection): GtkPanDirection = a | b
     inline def is(b: GtkPanDirection): Boolean = (a & b) == b
 
+/**
+ * GtkPickFlags: _PICK_DEFAULT: The default behavior, include widgets that are receiving events _PICK_INSENSITIVE: Include widgets that are insensitive _PICK_NON_TARGETABLE: Include widgets that are marked as non-targetable. See [property:can-target]
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPickFlags = CUnsignedInt
 object GtkPickFlags extends CEnumU[GtkPickFlags]:
   given _tag: Tag[GtkPickFlags] = Tag.UInt
@@ -6963,7 +8180,7 @@ object GtkPickFlags extends CEnumU[GtkPickFlags]:
   val GTK_PICK_INSENSITIVE = define(1)
   val GTK_PICK_NON_TARGETABLE = define(2)
   inline def getName(inline value: GtkPickFlags): Option[String] =
-    value match
+    inline value match
       case GTK_PICK_DEFAULT => Some("GTK_PICK_DEFAULT")
       case GTK_PICK_INSENSITIVE => Some("GTK_PICK_INSENSITIVE")
       case GTK_PICK_NON_TARGETABLE => Some("GTK_PICK_NON_TARGETABLE")
@@ -6973,6 +8190,11 @@ object GtkPickFlags extends CEnumU[GtkPickFlags]:
     inline def |(b: GtkPickFlags): GtkPickFlags = a | b
     inline def is(b: GtkPickFlags): Boolean = (a & b) == b
 
+/**
+ * GtkPolicyType: _POLICY_ALWAYS: The scrollbar is always visible. The view size is independent of the content. _POLICY_AUTOMATIC: The scrollbar will appear and disappear as necessary. For example, when all of a `GtkTreeView` can not be seen. _POLICY_NEVER: The scrollbar should never appear. In this mode the content determines the size. _POLICY_EXTERNAL: Don't show a scrollbar, but don't force the size to follow the content. This can be used e.g. to make multiple scrolled windows share a scrollbar.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkscrolledwindow.h
+*/
 opaque type GtkPolicyType = CUnsignedInt
 object GtkPolicyType extends CEnumU[GtkPolicyType]:
   given _tag: Tag[GtkPolicyType] = Tag.UInt
@@ -6982,7 +8204,7 @@ object GtkPolicyType extends CEnumU[GtkPolicyType]:
   val GTK_POLICY_NEVER = define(2)
   val GTK_POLICY_EXTERNAL = define(3)
   inline def getName(inline value: GtkPolicyType): Option[String] =
-    value match
+    inline value match
       case GTK_POLICY_ALWAYS => Some("GTK_POLICY_ALWAYS")
       case GTK_POLICY_AUTOMATIC => Some("GTK_POLICY_AUTOMATIC")
       case GTK_POLICY_NEVER => Some("GTK_POLICY_NEVER")
@@ -6993,13 +8215,18 @@ object GtkPolicyType extends CEnumU[GtkPolicyType]:
     inline def |(b: GtkPolicyType): GtkPolicyType = a | b
     inline def is(b: GtkPolicyType): Boolean = (a & b) == b
 
+/**
+ * GtkPopoverMenuFlags: _POPOVER_MENU_NESTED: Create submenus as nested popovers. Without this flag, submenus are created as sliding pages that replace the main menu.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkpopovermenu.h
+*/
 opaque type GtkPopoverMenuFlags = CUnsignedInt
 object GtkPopoverMenuFlags extends CEnumU[GtkPopoverMenuFlags]:
   given _tag: Tag[GtkPopoverMenuFlags] = Tag.UInt
   inline def define(inline a: Long): GtkPopoverMenuFlags = a.toUInt
   val GTK_POPOVER_MENU_NESTED = define(1)
   inline def getName(inline value: GtkPopoverMenuFlags): Option[String] =
-    value match
+    inline value match
       case GTK_POPOVER_MENU_NESTED => Some("GTK_POPOVER_MENU_NESTED")
       case _ => None
   extension (a: GtkPopoverMenuFlags)
@@ -7007,6 +8234,11 @@ object GtkPopoverMenuFlags extends CEnumU[GtkPopoverMenuFlags]:
     inline def |(b: GtkPopoverMenuFlags): GtkPopoverMenuFlags = a | b
     inline def is(b: GtkPopoverMenuFlags): Boolean = (a & b) == b
 
+/**
+ * GtkPositionType: _POS_LEFT: The feature is at the left edge. _POS_RIGHT: The feature is at the right edge. _POS_TOP: The feature is at the top edge. _POS_BOTTOM: The feature is at the bottom edge.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPositionType = CUnsignedInt
 object GtkPositionType extends CEnumU[GtkPositionType]:
   given _tag: Tag[GtkPositionType] = Tag.UInt
@@ -7016,7 +8248,7 @@ object GtkPositionType extends CEnumU[GtkPositionType]:
   val GTK_POS_TOP = define(2)
   val GTK_POS_BOTTOM = define(3)
   inline def getName(inline value: GtkPositionType): Option[String] =
-    value match
+    inline value match
       case GTK_POS_LEFT => Some("GTK_POS_LEFT")
       case GTK_POS_RIGHT => Some("GTK_POS_RIGHT")
       case GTK_POS_TOP => Some("GTK_POS_TOP")
@@ -7027,6 +8259,11 @@ object GtkPositionType extends CEnumU[GtkPositionType]:
     inline def |(b: GtkPositionType): GtkPositionType = a | b
     inline def is(b: GtkPositionType): Boolean = (a & b) == b
 
+/**
+ * GtkPrintDuplex: _PRINT_DUPLEX_SIMPLEX: No duplex. _PRINT_DUPLEX_HORIZONTAL: Horizontal duplex. _PRINT_DUPLEX_VERTICAL: Vertical duplex.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPrintDuplex = CUnsignedInt
 object GtkPrintDuplex extends CEnumU[GtkPrintDuplex]:
   given _tag: Tag[GtkPrintDuplex] = Tag.UInt
@@ -7035,7 +8272,7 @@ object GtkPrintDuplex extends CEnumU[GtkPrintDuplex]:
   val GTK_PRINT_DUPLEX_HORIZONTAL = define(1)
   val GTK_PRINT_DUPLEX_VERTICAL = define(2)
   inline def getName(inline value: GtkPrintDuplex): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_DUPLEX_SIMPLEX => Some("GTK_PRINT_DUPLEX_SIMPLEX")
       case GTK_PRINT_DUPLEX_HORIZONTAL => Some("GTK_PRINT_DUPLEX_HORIZONTAL")
       case GTK_PRINT_DUPLEX_VERTICAL => Some("GTK_PRINT_DUPLEX_VERTICAL")
@@ -7045,6 +8282,11 @@ object GtkPrintDuplex extends CEnumU[GtkPrintDuplex]:
     inline def |(b: GtkPrintDuplex): GtkPrintDuplex = a | b
     inline def is(b: GtkPrintDuplex): Boolean = (a & b) == b
 
+/**
+ * GtkPrintError: _PRINT_ERROR_GENERAL: An unspecified error occurred. _PRINT_ERROR_INTERNAL_ERROR: An internal error occurred. _PRINT_ERROR_NOMEM: A memory allocation failed. _PRINT_ERROR_INVALID_FILE: An error occurred while loading a page setup or paper size from a key file.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkprintoperation.h
+*/
 opaque type GtkPrintError = CUnsignedInt
 object GtkPrintError extends CEnumU[GtkPrintError]:
   given _tag: Tag[GtkPrintError] = Tag.UInt
@@ -7054,7 +8296,7 @@ object GtkPrintError extends CEnumU[GtkPrintError]:
   val GTK_PRINT_ERROR_NOMEM = define(2)
   val GTK_PRINT_ERROR_INVALID_FILE = define(3)
   inline def getName(inline value: GtkPrintError): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_ERROR_GENERAL => Some("GTK_PRINT_ERROR_GENERAL")
       case GTK_PRINT_ERROR_INTERNAL_ERROR => Some("GTK_PRINT_ERROR_INTERNAL_ERROR")
       case GTK_PRINT_ERROR_NOMEM => Some("GTK_PRINT_ERROR_NOMEM")
@@ -7065,6 +8307,11 @@ object GtkPrintError extends CEnumU[GtkPrintError]:
     inline def |(b: GtkPrintError): GtkPrintError = a | b
     inline def is(b: GtkPrintError): Boolean = (a & b) == b
 
+/**
+ * GtkPrintOperationAction: _PRINT_OPERATION_ACTION_PRINT_DIALOG: Show the print dialog. _PRINT_OPERATION_ACTION_PRINT: Start to print without showing the print dialog, based on the current print settings. _PRINT_OPERATION_ACTION_PREVIEW: Show the print preview. _PRINT_OPERATION_ACTION_EXPORT: Export to a file. This requires the export-filename property to be set.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkprintoperation.h
+*/
 opaque type GtkPrintOperationAction = CUnsignedInt
 object GtkPrintOperationAction extends CEnumU[GtkPrintOperationAction]:
   given _tag: Tag[GtkPrintOperationAction] = Tag.UInt
@@ -7074,7 +8321,7 @@ object GtkPrintOperationAction extends CEnumU[GtkPrintOperationAction]:
   val GTK_PRINT_OPERATION_ACTION_PREVIEW = define(2)
   val GTK_PRINT_OPERATION_ACTION_EXPORT = define(3)
   inline def getName(inline value: GtkPrintOperationAction): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG => Some("GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG")
       case GTK_PRINT_OPERATION_ACTION_PRINT => Some("GTK_PRINT_OPERATION_ACTION_PRINT")
       case GTK_PRINT_OPERATION_ACTION_PREVIEW => Some("GTK_PRINT_OPERATION_ACTION_PREVIEW")
@@ -7085,6 +8332,11 @@ object GtkPrintOperationAction extends CEnumU[GtkPrintOperationAction]:
     inline def |(b: GtkPrintOperationAction): GtkPrintOperationAction = a | b
     inline def is(b: GtkPrintOperationAction): Boolean = (a & b) == b
 
+/**
+ * GtkPrintOperationResult: _PRINT_OPERATION_RESULT_ERROR: An error has occurred. _PRINT_OPERATION_RESULT_APPLY: The print settings should be stored. _PRINT_OPERATION_RESULT_CANCEL: The print operation has been canceled, the print settings should not be stored. _PRINT_OPERATION_RESULT_IN_PROGRESS: The print operation is not complete yet. This value will only be returned when running asynchronously.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkprintoperation.h
+*/
 opaque type GtkPrintOperationResult = CUnsignedInt
 object GtkPrintOperationResult extends CEnumU[GtkPrintOperationResult]:
   given _tag: Tag[GtkPrintOperationResult] = Tag.UInt
@@ -7094,7 +8346,7 @@ object GtkPrintOperationResult extends CEnumU[GtkPrintOperationResult]:
   val GTK_PRINT_OPERATION_RESULT_CANCEL = define(2)
   val GTK_PRINT_OPERATION_RESULT_IN_PROGRESS = define(3)
   inline def getName(inline value: GtkPrintOperationResult): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_OPERATION_RESULT_ERROR => Some("GTK_PRINT_OPERATION_RESULT_ERROR")
       case GTK_PRINT_OPERATION_RESULT_APPLY => Some("GTK_PRINT_OPERATION_RESULT_APPLY")
       case GTK_PRINT_OPERATION_RESULT_CANCEL => Some("GTK_PRINT_OPERATION_RESULT_CANCEL")
@@ -7105,6 +8357,11 @@ object GtkPrintOperationResult extends CEnumU[GtkPrintOperationResult]:
     inline def |(b: GtkPrintOperationResult): GtkPrintOperationResult = a | b
     inline def is(b: GtkPrintOperationResult): Boolean = (a & b) == b
 
+/**
+ * GtkPrintPages: _PRINT_PAGES_ALL: All pages. _PRINT_PAGES_CURRENT: Current page. _PRINT_PAGES_RANGES: Range of pages. _PRINT_PAGES_SELECTION: Selected pages.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPrintPages = CUnsignedInt
 object GtkPrintPages extends CEnumU[GtkPrintPages]:
   given _tag: Tag[GtkPrintPages] = Tag.UInt
@@ -7114,7 +8371,7 @@ object GtkPrintPages extends CEnumU[GtkPrintPages]:
   val GTK_PRINT_PAGES_RANGES = define(2)
   val GTK_PRINT_PAGES_SELECTION = define(3)
   inline def getName(inline value: GtkPrintPages): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_PAGES_ALL => Some("GTK_PRINT_PAGES_ALL")
       case GTK_PRINT_PAGES_CURRENT => Some("GTK_PRINT_PAGES_CURRENT")
       case GTK_PRINT_PAGES_RANGES => Some("GTK_PRINT_PAGES_RANGES")
@@ -7125,6 +8382,11 @@ object GtkPrintPages extends CEnumU[GtkPrintPages]:
     inline def |(b: GtkPrintPages): GtkPrintPages = a | b
     inline def is(b: GtkPrintPages): Boolean = (a & b) == b
 
+/**
+ * GtkPrintQuality: _PRINT_QUALITY_LOW: Low quality. _PRINT_QUALITY_NORMAL: Normal quality. _PRINT_QUALITY_HIGH: High quality. _PRINT_QUALITY_DRAFT: Draft quality.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPrintQuality = CUnsignedInt
 object GtkPrintQuality extends CEnumU[GtkPrintQuality]:
   given _tag: Tag[GtkPrintQuality] = Tag.UInt
@@ -7134,7 +8396,7 @@ object GtkPrintQuality extends CEnumU[GtkPrintQuality]:
   val GTK_PRINT_QUALITY_HIGH = define(2)
   val GTK_PRINT_QUALITY_DRAFT = define(3)
   inline def getName(inline value: GtkPrintQuality): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_QUALITY_LOW => Some("GTK_PRINT_QUALITY_LOW")
       case GTK_PRINT_QUALITY_NORMAL => Some("GTK_PRINT_QUALITY_NORMAL")
       case GTK_PRINT_QUALITY_HIGH => Some("GTK_PRINT_QUALITY_HIGH")
@@ -7145,6 +8407,11 @@ object GtkPrintQuality extends CEnumU[GtkPrintQuality]:
     inline def |(b: GtkPrintQuality): GtkPrintQuality = a | b
     inline def is(b: GtkPrintQuality): Boolean = (a & b) == b
 
+/**
+ * GtkPrintStatus: _PRINT_STATUS_INITIAL: The printing has not started yet; this status is set initially, and while the print dialog is shown. _PRINT_STATUS_PREPARING: This status is set while the begin-print signal is emitted and during pagination. _PRINT_STATUS_GENERATING_DATA: This status is set while the pages are being rendered. _PRINT_STATUS_SENDING_DATA: The print job is being sent off to the printer. _PRINT_STATUS_PENDING: The print job has been sent to the printer, but is not printed for some reason, e.g. the printer may be stopped. _PRINT_STATUS_PENDING_ISSUE: Some problem has occurred during printing, e.g. a paper jam. _PRINT_STATUS_PRINTING: The printer is processing the print job. _PRINT_STATUS_FINISHED: The printing has been completed successfully. _PRINT_STATUS_FINISHED_ABORTED: The printing has been aborted.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkprintoperation.h
+*/
 opaque type GtkPrintStatus = CUnsignedInt
 object GtkPrintStatus extends CEnumU[GtkPrintStatus]:
   given _tag: Tag[GtkPrintStatus] = Tag.UInt
@@ -7159,7 +8426,7 @@ object GtkPrintStatus extends CEnumU[GtkPrintStatus]:
   val GTK_PRINT_STATUS_FINISHED = define(7)
   val GTK_PRINT_STATUS_FINISHED_ABORTED = define(8)
   inline def getName(inline value: GtkPrintStatus): Option[String] =
-    value match
+    inline value match
       case GTK_PRINT_STATUS_INITIAL => Some("GTK_PRINT_STATUS_INITIAL")
       case GTK_PRINT_STATUS_PREPARING => Some("GTK_PRINT_STATUS_PREPARING")
       case GTK_PRINT_STATUS_GENERATING_DATA => Some("GTK_PRINT_STATUS_GENERATING_DATA")
@@ -7175,6 +8442,11 @@ object GtkPrintStatus extends CEnumU[GtkPrintStatus]:
     inline def |(b: GtkPrintStatus): GtkPrintStatus = a | b
     inline def is(b: GtkPrintStatus): Boolean = (a & b) == b
 
+/**
+ * GtkPropagationLimit: _LIMIT_NONE: Events are handled regardless of what their target is. _LIMIT_SAME_NATIVE: Events are only handled if their target is in the same [iface] as the event controllers widget. Note that some event types have two targets (origin and destination).
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPropagationLimit = CUnsignedInt
 object GtkPropagationLimit extends CEnumU[GtkPropagationLimit]:
   given _tag: Tag[GtkPropagationLimit] = Tag.UInt
@@ -7182,7 +8454,7 @@ object GtkPropagationLimit extends CEnumU[GtkPropagationLimit]:
   val GTK_LIMIT_NONE = define(0)
   val GTK_LIMIT_SAME_NATIVE = define(1)
   inline def getName(inline value: GtkPropagationLimit): Option[String] =
-    value match
+    inline value match
       case GTK_LIMIT_NONE => Some("GTK_LIMIT_NONE")
       case GTK_LIMIT_SAME_NATIVE => Some("GTK_LIMIT_SAME_NATIVE")
       case _ => None
@@ -7191,6 +8463,11 @@ object GtkPropagationLimit extends CEnumU[GtkPropagationLimit]:
     inline def |(b: GtkPropagationLimit): GtkPropagationLimit = a | b
     inline def is(b: GtkPropagationLimit): Boolean = (a & b) == b
 
+/**
+ * GtkPropagationPhase: _PHASE_NONE: Events are not delivered. _PHASE_CAPTURE: Events are delivered in the capture phase. The capture phase happens before the bubble phase, runs from the toplevel down to the event widget. This option should only be used on containers that might possibly handle events before their children do. _PHASE_BUBBLE: Events are delivered in the bubble phase. The bubble phase happens after the capture phase, and before the default handlers are run. This phase runs from the event widget, up to the toplevel. _PHASE_TARGET: Events are delivered in the default widget event handlers, note that widget implementations must chain up on button, motion, touch and grab broken handlers for controllers in this phase to be run.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkPropagationPhase = CUnsignedInt
 object GtkPropagationPhase extends CEnumU[GtkPropagationPhase]:
   given _tag: Tag[GtkPropagationPhase] = Tag.UInt
@@ -7200,7 +8477,7 @@ object GtkPropagationPhase extends CEnumU[GtkPropagationPhase]:
   val GTK_PHASE_BUBBLE = define(2)
   val GTK_PHASE_TARGET = define(3)
   inline def getName(inline value: GtkPropagationPhase): Option[String] =
-    value match
+    inline value match
       case GTK_PHASE_NONE => Some("GTK_PHASE_NONE")
       case GTK_PHASE_CAPTURE => Some("GTK_PHASE_CAPTURE")
       case GTK_PHASE_BUBBLE => Some("GTK_PHASE_BUBBLE")
@@ -7211,6 +8488,11 @@ object GtkPropagationPhase extends CEnumU[GtkPropagationPhase]:
     inline def |(b: GtkPropagationPhase): GtkPropagationPhase = a | b
     inline def is(b: GtkPropagationPhase): Boolean = (a & b) == b
 
+/**
+ * GtkRecentManagerError: _RECENT_MANAGER_ERROR_NOT_FOUND: the URI specified does not exists in the recently used resources list. _RECENT_MANAGER_ERROR_INVALID_URI: the URI specified is not valid. _RECENT_MANAGER_ERROR_INVALID_ENCODING: the supplied string is not UTF-8 encoded. _RECENT_MANAGER_ERROR_NOT_REGISTERED: no application has registered the specified item. _RECENT_MANAGER_ERROR_READ: failure while reading the recently used resources file. _RECENT_MANAGER_ERROR_WRITE: failure while writing the recently used resources file. _RECENT_MANAGER_ERROR_UNKNOWN: unspecified error.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkrecentmanager.h
+*/
 opaque type GtkRecentManagerError = CUnsignedInt
 object GtkRecentManagerError extends CEnumU[GtkRecentManagerError]:
   given _tag: Tag[GtkRecentManagerError] = Tag.UInt
@@ -7223,7 +8505,7 @@ object GtkRecentManagerError extends CEnumU[GtkRecentManagerError]:
   val GTK_RECENT_MANAGER_ERROR_WRITE = define(5)
   val GTK_RECENT_MANAGER_ERROR_UNKNOWN = define(6)
   inline def getName(inline value: GtkRecentManagerError): Option[String] =
-    value match
+    inline value match
       case GTK_RECENT_MANAGER_ERROR_NOT_FOUND => Some("GTK_RECENT_MANAGER_ERROR_NOT_FOUND")
       case GTK_RECENT_MANAGER_ERROR_INVALID_URI => Some("GTK_RECENT_MANAGER_ERROR_INVALID_URI")
       case GTK_RECENT_MANAGER_ERROR_INVALID_ENCODING => Some("GTK_RECENT_MANAGER_ERROR_INVALID_ENCODING")
@@ -7237,6 +8519,11 @@ object GtkRecentManagerError extends CEnumU[GtkRecentManagerError]:
     inline def |(b: GtkRecentManagerError): GtkRecentManagerError = a | b
     inline def is(b: GtkRecentManagerError): Boolean = (a & b) == b
 
+/**
+ * GtkResponseType: _RESPONSE_NONE: Returned if an action widget has no response id, or if the dialog gets programmatically hidden or destroyed _RESPONSE_REJECT: Generic response id, not used by GTK dialogs _RESPONSE_ACCEPT: Generic response id, not used by GTK dialogs _RESPONSE_DELETE_EVENT: Returned if the dialog is deleted _RESPONSE_OK: Returned by OK buttons in GTK dialogs _RESPONSE_CANCEL: Returned by Cancel buttons in GTK dialogs _RESPONSE_CLOSE: Returned by Close buttons in GTK dialogs _RESPONSE_YES: Returned by Yes buttons in GTK dialogs _RESPONSE_NO: Returned by No buttons in GTK dialogs _RESPONSE_APPLY: Returned by Apply buttons in GTK dialogs _RESPONSE_HELP: Returned by Help buttons in GTK dialogs
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkdialog.h
+*/
 opaque type GtkResponseType = CInt
 object GtkResponseType extends CEnum[GtkResponseType]:
   given _tag: Tag[GtkResponseType] = Tag.Int
@@ -7253,7 +8540,7 @@ object GtkResponseType extends CEnum[GtkResponseType]:
   val GTK_RESPONSE_APPLY = define(-10)
   val GTK_RESPONSE_HELP = define(-11)
   inline def getName(inline value: GtkResponseType): Option[String] =
-    value match
+    inline value match
       case GTK_RESPONSE_NONE => Some("GTK_RESPONSE_NONE")
       case GTK_RESPONSE_REJECT => Some("GTK_RESPONSE_REJECT")
       case GTK_RESPONSE_ACCEPT => Some("GTK_RESPONSE_ACCEPT")
@@ -7271,6 +8558,9 @@ object GtkResponseType extends CEnum[GtkResponseType]:
     inline def |(b: GtkResponseType): GtkResponseType = a | b
     inline def is(b: GtkResponseType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkrevealer.h
+*/
 opaque type GtkRevealerTransitionType = CUnsignedInt
 object GtkRevealerTransitionType extends CEnumU[GtkRevealerTransitionType]:
   given _tag: Tag[GtkRevealerTransitionType] = Tag.UInt
@@ -7286,7 +8576,7 @@ object GtkRevealerTransitionType extends CEnumU[GtkRevealerTransitionType]:
   val GTK_REVEALER_TRANSITION_TYPE_SWING_UP = define(8)
   val GTK_REVEALER_TRANSITION_TYPE_SWING_DOWN = define(9)
   inline def getName(inline value: GtkRevealerTransitionType): Option[String] =
-    value match
+    inline value match
       case GTK_REVEALER_TRANSITION_TYPE_NONE => Some("GTK_REVEALER_TRANSITION_TYPE_NONE")
       case GTK_REVEALER_TRANSITION_TYPE_CROSSFADE => Some("GTK_REVEALER_TRANSITION_TYPE_CROSSFADE")
       case GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT => Some("GTK_REVEALER_TRANSITION_TYPE_SLIDE_RIGHT")
@@ -7303,6 +8593,11 @@ object GtkRevealerTransitionType extends CEnumU[GtkRevealerTransitionType]:
     inline def |(b: GtkRevealerTransitionType): GtkRevealerTransitionType = a | b
     inline def is(b: GtkRevealerTransitionType): Boolean = (a & b) == b
 
+/**
+ * GtkScrollStep: _SCROLL_STEPS: Scroll in steps. _SCROLL_PAGES: Scroll by pages. _SCROLL_ENDS: Scroll to ends. _SCROLL_HORIZONTAL_STEPS: Scroll in horizontal steps. _SCROLL_HORIZONTAL_PAGES: Scroll by horizontal pages. _SCROLL_HORIZONTAL_ENDS: Scroll to the horizontal ends.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkScrollStep = CUnsignedInt
 object GtkScrollStep extends CEnumU[GtkScrollStep]:
   given _tag: Tag[GtkScrollStep] = Tag.UInt
@@ -7314,7 +8609,7 @@ object GtkScrollStep extends CEnumU[GtkScrollStep]:
   val GTK_SCROLL_HORIZONTAL_PAGES = define(4)
   val GTK_SCROLL_HORIZONTAL_ENDS = define(5)
   inline def getName(inline value: GtkScrollStep): Option[String] =
-    value match
+    inline value match
       case GTK_SCROLL_STEPS => Some("GTK_SCROLL_STEPS")
       case GTK_SCROLL_PAGES => Some("GTK_SCROLL_PAGES")
       case GTK_SCROLL_ENDS => Some("GTK_SCROLL_ENDS")
@@ -7327,6 +8622,11 @@ object GtkScrollStep extends CEnumU[GtkScrollStep]:
     inline def |(b: GtkScrollStep): GtkScrollStep = a | b
     inline def is(b: GtkScrollStep): Boolean = (a & b) == b
 
+/**
+ * GtkScrollType: _SCROLL_NONE: No scrolling. _SCROLL_JUMP: Jump to new location. _SCROLL_STEP_BACKWARD: Step backward. _SCROLL_STEP_FORWARD: Step forward. _SCROLL_PAGE_BACKWARD: Page backward. _SCROLL_PAGE_FORWARD: Page forward. _SCROLL_STEP_UP: Step up. _SCROLL_STEP_DOWN: Step down. _SCROLL_PAGE_UP: Page up. _SCROLL_PAGE_DOWN: Page down. _SCROLL_STEP_LEFT: Step to the left. _SCROLL_STEP_RIGHT: Step to the right. _SCROLL_PAGE_LEFT: Page to the left. _SCROLL_PAGE_RIGHT: Page to the right. _SCROLL_START: Scroll to start. _SCROLL_END: Scroll to end.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkScrollType = CUnsignedInt
 object GtkScrollType extends CEnumU[GtkScrollType]:
   given _tag: Tag[GtkScrollType] = Tag.UInt
@@ -7348,7 +8648,7 @@ object GtkScrollType extends CEnumU[GtkScrollType]:
   val GTK_SCROLL_START = define(14)
   val GTK_SCROLL_END = define(15)
   inline def getName(inline value: GtkScrollType): Option[String] =
-    value match
+    inline value match
       case GTK_SCROLL_NONE => Some("GTK_SCROLL_NONE")
       case GTK_SCROLL_JUMP => Some("GTK_SCROLL_JUMP")
       case GTK_SCROLL_STEP_BACKWARD => Some("GTK_SCROLL_STEP_BACKWARD")
@@ -7371,6 +8671,11 @@ object GtkScrollType extends CEnumU[GtkScrollType]:
     inline def |(b: GtkScrollType): GtkScrollType = a | b
     inline def is(b: GtkScrollType): Boolean = (a & b) == b
 
+/**
+ * GtkScrollablePolicy: _SCROLL_MINIMUM: Scrollable adjustments are based on the minimum size _SCROLL_NATURAL: Scrollable adjustments are based on the natural size
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkScrollablePolicy = CUnsignedInt
 object GtkScrollablePolicy extends CEnumU[GtkScrollablePolicy]:
   given _tag: Tag[GtkScrollablePolicy] = Tag.UInt
@@ -7378,7 +8683,7 @@ object GtkScrollablePolicy extends CEnumU[GtkScrollablePolicy]:
   val GTK_SCROLL_MINIMUM = define(0)
   val GTK_SCROLL_NATURAL = define(1)
   inline def getName(inline value: GtkScrollablePolicy): Option[String] =
-    value match
+    inline value match
       case GTK_SCROLL_MINIMUM => Some("GTK_SCROLL_MINIMUM")
       case GTK_SCROLL_NATURAL => Some("GTK_SCROLL_NATURAL")
       case _ => None
@@ -7387,6 +8692,11 @@ object GtkScrollablePolicy extends CEnumU[GtkScrollablePolicy]:
     inline def |(b: GtkScrollablePolicy): GtkScrollablePolicy = a | b
     inline def is(b: GtkScrollablePolicy): Boolean = (a & b) == b
 
+/**
+ * GtkSelectionMode: _SELECTION_NONE: No selection is possible. _SELECTION_SINGLE: Zero or one element may be selected. _SELECTION_BROWSE: Exactly one element is selected. In some circumstances, such as initially or during a search operation, it’s possible for no element to be selected with %GTK_SELECTION_BROWSE. What is really enforced is that the user can’t deselect a currently selected element except by selecting another element. _SELECTION_MULTIPLE: Any number of elements may be selected. The Ctrl key may be used to enlarge the selection, and Shift key to select between the focus and the child pointed to. Some widgets may also allow Click-drag to select a range of elements.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSelectionMode = CUnsignedInt
 object GtkSelectionMode extends CEnumU[GtkSelectionMode]:
   given _tag: Tag[GtkSelectionMode] = Tag.UInt
@@ -7396,7 +8706,7 @@ object GtkSelectionMode extends CEnumU[GtkSelectionMode]:
   val GTK_SELECTION_BROWSE = define(2)
   val GTK_SELECTION_MULTIPLE = define(3)
   inline def getName(inline value: GtkSelectionMode): Option[String] =
-    value match
+    inline value match
       case GTK_SELECTION_NONE => Some("GTK_SELECTION_NONE")
       case GTK_SELECTION_SINGLE => Some("GTK_SELECTION_SINGLE")
       case GTK_SELECTION_BROWSE => Some("GTK_SELECTION_BROWSE")
@@ -7407,6 +8717,11 @@ object GtkSelectionMode extends CEnumU[GtkSelectionMode]:
     inline def |(b: GtkSelectionMode): GtkSelectionMode = a | b
     inline def is(b: GtkSelectionMode): Boolean = (a & b) == b
 
+/**
+ * GtkSensitivityType: _SENSITIVITY_AUTO: The control is made insensitive if no action can be triggered _SENSITIVITY_ON: The control is always sensitive _SENSITIVITY_OFF: The control is always insensitive
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSensitivityType = CUnsignedInt
 object GtkSensitivityType extends CEnumU[GtkSensitivityType]:
   given _tag: Tag[GtkSensitivityType] = Tag.UInt
@@ -7415,7 +8730,7 @@ object GtkSensitivityType extends CEnumU[GtkSensitivityType]:
   val GTK_SENSITIVITY_ON = define(1)
   val GTK_SENSITIVITY_OFF = define(2)
   inline def getName(inline value: GtkSensitivityType): Option[String] =
-    value match
+    inline value match
       case GTK_SENSITIVITY_AUTO => Some("GTK_SENSITIVITY_AUTO")
       case GTK_SENSITIVITY_ON => Some("GTK_SENSITIVITY_ON")
       case GTK_SENSITIVITY_OFF => Some("GTK_SENSITIVITY_OFF")
@@ -7425,13 +8740,18 @@ object GtkSensitivityType extends CEnumU[GtkSensitivityType]:
     inline def |(b: GtkSensitivityType): GtkSensitivityType = a | b
     inline def is(b: GtkSensitivityType): Boolean = (a & b) == b
 
+/**
+ * GtkShortcutActionFlags: _SHORTCUT_ACTION_EXCLUSIVE: The action is the only action that can be activated. If this flag is not set, a future activation may select a different action.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkshortcutaction.h
+*/
 opaque type GtkShortcutActionFlags = CUnsignedInt
 object GtkShortcutActionFlags extends CEnumU[GtkShortcutActionFlags]:
   given _tag: Tag[GtkShortcutActionFlags] = Tag.UInt
   inline def define(inline a: Long): GtkShortcutActionFlags = a.toUInt
   val GTK_SHORTCUT_ACTION_EXCLUSIVE = define(1)
   inline def getName(inline value: GtkShortcutActionFlags): Option[String] =
-    value match
+    inline value match
       case GTK_SHORTCUT_ACTION_EXCLUSIVE => Some("GTK_SHORTCUT_ACTION_EXCLUSIVE")
       case _ => None
   extension (a: GtkShortcutActionFlags)
@@ -7439,6 +8759,11 @@ object GtkShortcutActionFlags extends CEnumU[GtkShortcutActionFlags]:
     inline def |(b: GtkShortcutActionFlags): GtkShortcutActionFlags = a | b
     inline def is(b: GtkShortcutActionFlags): Boolean = (a & b) == b
 
+/**
+ * GtkShortcutScope: _SHORTCUT_SCOPE_LOCAL: Shortcuts are handled inside the widget the controller belongs to. _SHORTCUT_SCOPE_MANAGED: Shortcuts are handled by the first ancestor that is a [iface] _SHORTCUT_SCOPE_GLOBAL: Shortcuts are handled by the root widget.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkShortcutScope = CUnsignedInt
 object GtkShortcutScope extends CEnumU[GtkShortcutScope]:
   given _tag: Tag[GtkShortcutScope] = Tag.UInt
@@ -7447,7 +8772,7 @@ object GtkShortcutScope extends CEnumU[GtkShortcutScope]:
   val GTK_SHORTCUT_SCOPE_MANAGED = define(1)
   val GTK_SHORTCUT_SCOPE_GLOBAL = define(2)
   inline def getName(inline value: GtkShortcutScope): Option[String] =
-    value match
+    inline value match
       case GTK_SHORTCUT_SCOPE_LOCAL => Some("GTK_SHORTCUT_SCOPE_LOCAL")
       case GTK_SHORTCUT_SCOPE_MANAGED => Some("GTK_SHORTCUT_SCOPE_MANAGED")
       case GTK_SHORTCUT_SCOPE_GLOBAL => Some("GTK_SHORTCUT_SCOPE_GLOBAL")
@@ -7457,6 +8782,11 @@ object GtkShortcutScope extends CEnumU[GtkShortcutScope]:
     inline def |(b: GtkShortcutScope): GtkShortcutScope = a | b
     inline def is(b: GtkShortcutScope): Boolean = (a & b) == b
 
+/**
+ * GtkShortcutType: _SHORTCUT_ACCELERATOR: The shortcut is a keyboard accelerator. The GtkShortcutsShortcut:accelerator property will be used. _SHORTCUT_GESTURE_PINCH: The shortcut is a pinch gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE_STRETCH: The shortcut is a stretch gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE_ROTATE_CLOCKWISE: The shortcut is a clockwise rotation gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE_ROTATE_COUNTERCLOCKWISE: The shortcut is a counterclockwise rotation gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE_TWO_FINGER_SWIPE_LEFT: The shortcut is a two-finger swipe gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE_TWO_FINGER_SWIPE_RIGHT: The shortcut is a two-finger swipe gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE: The shortcut is a gesture. The GtkShortcutsShortcut:icon property will be used. _SHORTCUT_GESTURE_SWIPE_LEFT: The shortcut is a swipe gesture. GTK provides an icon and subtitle. _SHORTCUT_GESTURE_SWIPE_RIGHT: The shortcut is a swipe gesture. GTK provides an icon and subtitle.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkshortcutsshortcut.h
+*/
 opaque type GtkShortcutType = CUnsignedInt
 object GtkShortcutType extends CEnumU[GtkShortcutType]:
   given _tag: Tag[GtkShortcutType] = Tag.UInt
@@ -7472,7 +8802,7 @@ object GtkShortcutType extends CEnumU[GtkShortcutType]:
   val GTK_SHORTCUT_GESTURE_SWIPE_LEFT = define(8)
   val GTK_SHORTCUT_GESTURE_SWIPE_RIGHT = define(9)
   inline def getName(inline value: GtkShortcutType): Option[String] =
-    value match
+    inline value match
       case GTK_SHORTCUT_ACCELERATOR => Some("GTK_SHORTCUT_ACCELERATOR")
       case GTK_SHORTCUT_GESTURE_PINCH => Some("GTK_SHORTCUT_GESTURE_PINCH")
       case GTK_SHORTCUT_GESTURE_STRETCH => Some("GTK_SHORTCUT_GESTURE_STRETCH")
@@ -7489,6 +8819,11 @@ object GtkShortcutType extends CEnumU[GtkShortcutType]:
     inline def |(b: GtkShortcutType): GtkShortcutType = a | b
     inline def is(b: GtkShortcutType): Boolean = (a & b) == b
 
+/**
+ * GtkSizeGroupMode: _SIZE_GROUP_NONE: group has no effect _SIZE_GROUP_HORIZONTAL: group affects horizontal requisition _SIZE_GROUP_VERTICAL: group affects vertical requisition _SIZE_GROUP_BOTH: group affects both horizontal and vertical requisition
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSizeGroupMode = CUnsignedInt
 object GtkSizeGroupMode extends CEnumU[GtkSizeGroupMode]:
   given _tag: Tag[GtkSizeGroupMode] = Tag.UInt
@@ -7498,7 +8833,7 @@ object GtkSizeGroupMode extends CEnumU[GtkSizeGroupMode]:
   val GTK_SIZE_GROUP_VERTICAL = define(2)
   val GTK_SIZE_GROUP_BOTH = define(3)
   inline def getName(inline value: GtkSizeGroupMode): Option[String] =
-    value match
+    inline value match
       case GTK_SIZE_GROUP_NONE => Some("GTK_SIZE_GROUP_NONE")
       case GTK_SIZE_GROUP_HORIZONTAL => Some("GTK_SIZE_GROUP_HORIZONTAL")
       case GTK_SIZE_GROUP_VERTICAL => Some("GTK_SIZE_GROUP_VERTICAL")
@@ -7509,6 +8844,11 @@ object GtkSizeGroupMode extends CEnumU[GtkSizeGroupMode]:
     inline def |(b: GtkSizeGroupMode): GtkSizeGroupMode = a | b
     inline def is(b: GtkSizeGroupMode): Boolean = (a & b) == b
 
+/**
+ * GtkSizeRequestMode: _SIZE_REQUEST_HEIGHT_FOR_WIDTH: Prefer height-for-width geometry management _SIZE_REQUEST_WIDTH_FOR_HEIGHT: Prefer width-for-height geometry management _SIZE_REQUEST_CONSTANT_SIZE: Don’t trade height-for-width or width-for-height
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSizeRequestMode = CUnsignedInt
 object GtkSizeRequestMode extends CEnumU[GtkSizeRequestMode]:
   given _tag: Tag[GtkSizeRequestMode] = Tag.UInt
@@ -7517,7 +8857,7 @@ object GtkSizeRequestMode extends CEnumU[GtkSizeRequestMode]:
   val GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT = define(1)
   val GTK_SIZE_REQUEST_CONSTANT_SIZE = define(2)
   inline def getName(inline value: GtkSizeRequestMode): Option[String] =
-    value match
+    inline value match
       case GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH => Some("GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH")
       case GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT => Some("GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT")
       case GTK_SIZE_REQUEST_CONSTANT_SIZE => Some("GTK_SIZE_REQUEST_CONSTANT_SIZE")
@@ -7527,6 +8867,11 @@ object GtkSizeRequestMode extends CEnumU[GtkSizeRequestMode]:
     inline def |(b: GtkSizeRequestMode): GtkSizeRequestMode = a | b
     inline def is(b: GtkSizeRequestMode): Boolean = (a & b) == b
 
+/**
+ * GtkSortType: _SORT_ASCENDING: Sorting is in ascending order. _SORT_DESCENDING: Sorting is in descending order.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSortType = CUnsignedInt
 object GtkSortType extends CEnumU[GtkSortType]:
   given _tag: Tag[GtkSortType] = Tag.UInt
@@ -7534,7 +8879,7 @@ object GtkSortType extends CEnumU[GtkSortType]:
   val GTK_SORT_ASCENDING = define(0)
   val GTK_SORT_DESCENDING = define(1)
   inline def getName(inline value: GtkSortType): Option[String] =
-    value match
+    inline value match
       case GTK_SORT_ASCENDING => Some("GTK_SORT_ASCENDING")
       case GTK_SORT_DESCENDING => Some("GTK_SORT_DESCENDING")
       case _ => None
@@ -7543,6 +8888,11 @@ object GtkSortType extends CEnumU[GtkSortType]:
     inline def |(b: GtkSortType): GtkSortType = a | b
     inline def is(b: GtkSortType): Boolean = (a & b) == b
 
+/**
+ * GtkSorterChange: _SORTER_CHANGE_DIFFERENT: The sorter change cannot be described by any of the other enumeration values _SORTER_CHANGE_INVERTED: The sort order was inverted. Comparisons that returned %GTK_ORDERING_SMALLER now return %GTK_ORDERING_LARGER and vice versa. Other comparisons return the same values as before. _SORTER_CHANGE_LESS_STRICT: The sorter is less strict: Comparisons may now return %GTK_ORDERING_EQUAL that did not do so before. _SORTER_CHANGE_MORE_STRICT: The sorter is more strict: Comparisons that did return %GTK_ORDERING_EQUAL may not do so anymore.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtksorter.h
+*/
 opaque type GtkSorterChange = CUnsignedInt
 object GtkSorterChange extends CEnumU[GtkSorterChange]:
   given _tag: Tag[GtkSorterChange] = Tag.UInt
@@ -7552,7 +8902,7 @@ object GtkSorterChange extends CEnumU[GtkSorterChange]:
   val GTK_SORTER_CHANGE_LESS_STRICT = define(2)
   val GTK_SORTER_CHANGE_MORE_STRICT = define(3)
   inline def getName(inline value: GtkSorterChange): Option[String] =
-    value match
+    inline value match
       case GTK_SORTER_CHANGE_DIFFERENT => Some("GTK_SORTER_CHANGE_DIFFERENT")
       case GTK_SORTER_CHANGE_INVERTED => Some("GTK_SORTER_CHANGE_INVERTED")
       case GTK_SORTER_CHANGE_LESS_STRICT => Some("GTK_SORTER_CHANGE_LESS_STRICT")
@@ -7563,6 +8913,11 @@ object GtkSorterChange extends CEnumU[GtkSorterChange]:
     inline def |(b: GtkSorterChange): GtkSorterChange = a | b
     inline def is(b: GtkSorterChange): Boolean = (a & b) == b
 
+/**
+ * GtkSorterOrder: _SORTER_ORDER_PARTIAL: A partial order. Any `GtkOrdering` is possible. _SORTER_ORDER_NONE: No order, all elements are considered equal. gtk_sorter_compare() will only return %GTK_ORDERING_EQUAL. _SORTER_ORDER_TOTAL: A total order. gtk_sorter_compare() will only return %GTK_ORDERING_EQUAL if an item is compared with itself. Two different items will never cause this value to be returned.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtksorter.h
+*/
 opaque type GtkSorterOrder = CUnsignedInt
 object GtkSorterOrder extends CEnumU[GtkSorterOrder]:
   given _tag: Tag[GtkSorterOrder] = Tag.UInt
@@ -7571,7 +8926,7 @@ object GtkSorterOrder extends CEnumU[GtkSorterOrder]:
   val GTK_SORTER_ORDER_NONE = define(1)
   val GTK_SORTER_ORDER_TOTAL = define(2)
   inline def getName(inline value: GtkSorterOrder): Option[String] =
-    value match
+    inline value match
       case GTK_SORTER_ORDER_PARTIAL => Some("GTK_SORTER_ORDER_PARTIAL")
       case GTK_SORTER_ORDER_NONE => Some("GTK_SORTER_ORDER_NONE")
       case GTK_SORTER_ORDER_TOTAL => Some("GTK_SORTER_ORDER_TOTAL")
@@ -7581,6 +8936,11 @@ object GtkSorterOrder extends CEnumU[GtkSorterOrder]:
     inline def |(b: GtkSorterOrder): GtkSorterOrder = a | b
     inline def is(b: GtkSorterOrder): Boolean = (a & b) == b
 
+/**
+ * GtkSpinButtonUpdatePolicy: _UPDATE_ALWAYS: When refreshing your `GtkSpinButton`, the value is always displayed _UPDATE_IF_VALID: When refreshing your `GtkSpinButton`, the value is only displayed if it is valid within the bounds of the spin button's adjustment
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkspinbutton.h
+*/
 opaque type GtkSpinButtonUpdatePolicy = CUnsignedInt
 object GtkSpinButtonUpdatePolicy extends CEnumU[GtkSpinButtonUpdatePolicy]:
   given _tag: Tag[GtkSpinButtonUpdatePolicy] = Tag.UInt
@@ -7588,7 +8948,7 @@ object GtkSpinButtonUpdatePolicy extends CEnumU[GtkSpinButtonUpdatePolicy]:
   val GTK_UPDATE_ALWAYS = define(0)
   val GTK_UPDATE_IF_VALID = define(1)
   inline def getName(inline value: GtkSpinButtonUpdatePolicy): Option[String] =
-    value match
+    inline value match
       case GTK_UPDATE_ALWAYS => Some("GTK_UPDATE_ALWAYS")
       case GTK_UPDATE_IF_VALID => Some("GTK_UPDATE_IF_VALID")
       case _ => None
@@ -7597,6 +8957,11 @@ object GtkSpinButtonUpdatePolicy extends CEnumU[GtkSpinButtonUpdatePolicy]:
     inline def |(b: GtkSpinButtonUpdatePolicy): GtkSpinButtonUpdatePolicy = a | b
     inline def is(b: GtkSpinButtonUpdatePolicy): Boolean = (a & b) == b
 
+/**
+ * GtkSpinType: _SPIN_STEP_FORWARD: Increment by the adjustments step increment. _SPIN_STEP_BACKWARD: Decrement by the adjustments step increment. _SPIN_PAGE_FORWARD: Increment by the adjustments page increment. _SPIN_PAGE_BACKWARD: Decrement by the adjustments page increment. _SPIN_HOME: Go to the adjustments lower bound. _SPIN_END: Go to the adjustments upper bound. _SPIN_USER_DEFINED: Change by a specified amount.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkspinbutton.h
+*/
 opaque type GtkSpinType = CUnsignedInt
 object GtkSpinType extends CEnumU[GtkSpinType]:
   given _tag: Tag[GtkSpinType] = Tag.UInt
@@ -7609,7 +8974,7 @@ object GtkSpinType extends CEnumU[GtkSpinType]:
   val GTK_SPIN_END = define(5)
   val GTK_SPIN_USER_DEFINED = define(6)
   inline def getName(inline value: GtkSpinType): Option[String] =
-    value match
+    inline value match
       case GTK_SPIN_STEP_FORWARD => Some("GTK_SPIN_STEP_FORWARD")
       case GTK_SPIN_STEP_BACKWARD => Some("GTK_SPIN_STEP_BACKWARD")
       case GTK_SPIN_PAGE_FORWARD => Some("GTK_SPIN_PAGE_FORWARD")
@@ -7623,6 +8988,9 @@ object GtkSpinType extends CEnumU[GtkSpinType]:
     inline def |(b: GtkSpinType): GtkSpinType = a | b
     inline def is(b: GtkSpinType): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkstack.h
+*/
 opaque type GtkStackTransitionType = CUnsignedInt
 object GtkStackTransitionType extends CEnumU[GtkStackTransitionType]:
   given _tag: Tag[GtkStackTransitionType] = Tag.UInt
@@ -7651,7 +9019,7 @@ object GtkStackTransitionType extends CEnumU[GtkStackTransitionType]:
   val GTK_STACK_TRANSITION_TYPE_ROTATE_RIGHT = define(21)
   val GTK_STACK_TRANSITION_TYPE_ROTATE_LEFT_RIGHT = define(22)
   inline def getName(inline value: GtkStackTransitionType): Option[String] =
-    value match
+    inline value match
       case GTK_STACK_TRANSITION_TYPE_NONE => Some("GTK_STACK_TRANSITION_TYPE_NONE")
       case GTK_STACK_TRANSITION_TYPE_CROSSFADE => Some("GTK_STACK_TRANSITION_TYPE_CROSSFADE")
       case GTK_STACK_TRANSITION_TYPE_SLIDE_RIGHT => Some("GTK_STACK_TRANSITION_TYPE_SLIDE_RIGHT")
@@ -7681,6 +9049,11 @@ object GtkStackTransitionType extends CEnumU[GtkStackTransitionType]:
     inline def |(b: GtkStackTransitionType): GtkStackTransitionType = a | b
     inline def is(b: GtkStackTransitionType): Boolean = (a & b) == b
 
+/**
+ * GtkStateFlags: _STATE_FLAG_NORMAL: State during normal operation _STATE_FLAG_ACTIVE: Widget is active _STATE_FLAG_PRELIGHT: Widget has a mouse pointer over it _STATE_FLAG_SELECTED: Widget is selected _STATE_FLAG_INSENSITIVE: Widget is insensitive _STATE_FLAG_INCONSISTENT: Widget is inconsistent _STATE_FLAG_FOCUSED: Widget has the keyboard focus _STATE_FLAG_BACKDROP: Widget is in a background toplevel window _STATE_FLAG_DIR_LTR: Widget is in left-to-right text direction _STATE_FLAG_DIR_RTL: Widget is in right-to-left text direction _STATE_FLAG_LINK: Widget is a link _STATE_FLAG_VISITED: The location the widget points to has already been visited _STATE_FLAG_CHECKED: Widget is checked _STATE_FLAG_DROP_ACTIVE: Widget is highlighted as a drop target for DND _STATE_FLAG_FOCUS_VISIBLE: Widget has the visible focus _STATE_FLAG_FOCUS_WITHIN: Widget contains the keyboard focus
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkStateFlags = CUnsignedInt
 object GtkStateFlags extends CEnumU[GtkStateFlags]:
   given _tag: Tag[GtkStateFlags] = Tag.UInt
@@ -7702,7 +9075,7 @@ object GtkStateFlags extends CEnumU[GtkStateFlags]:
   val GTK_STATE_FLAG_FOCUS_VISIBLE = define(8192)
   val GTK_STATE_FLAG_FOCUS_WITHIN = define(16384)
   inline def getName(inline value: GtkStateFlags): Option[String] =
-    value match
+    inline value match
       case GTK_STATE_FLAG_NORMAL => Some("GTK_STATE_FLAG_NORMAL")
       case GTK_STATE_FLAG_ACTIVE => Some("GTK_STATE_FLAG_ACTIVE")
       case GTK_STATE_FLAG_PRELIGHT => Some("GTK_STATE_FLAG_PRELIGHT")
@@ -7725,6 +9098,11 @@ object GtkStateFlags extends CEnumU[GtkStateFlags]:
     inline def |(b: GtkStateFlags): GtkStateFlags = a | b
     inline def is(b: GtkStateFlags): Boolean = (a & b) == b
 
+/**
+ * GtkStringFilterMatchMode: _STRING_FILTER_MATCH_MODE_EXACT: The search string and text must match exactly. _STRING_FILTER_MATCH_MODE_SUBSTRING: The search string must be contained as a substring inside the text. _STRING_FILTER_MATCH_MODE_PREFIX: The text must begin with the search string.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkstringfilter.h
+*/
 opaque type GtkStringFilterMatchMode = CUnsignedInt
 object GtkStringFilterMatchMode extends CEnumU[GtkStringFilterMatchMode]:
   given _tag: Tag[GtkStringFilterMatchMode] = Tag.UInt
@@ -7733,7 +9111,7 @@ object GtkStringFilterMatchMode extends CEnumU[GtkStringFilterMatchMode]:
   val GTK_STRING_FILTER_MATCH_MODE_SUBSTRING = define(1)
   val GTK_STRING_FILTER_MATCH_MODE_PREFIX = define(2)
   inline def getName(inline value: GtkStringFilterMatchMode): Option[String] =
-    value match
+    inline value match
       case GTK_STRING_FILTER_MATCH_MODE_EXACT => Some("GTK_STRING_FILTER_MATCH_MODE_EXACT")
       case GTK_STRING_FILTER_MATCH_MODE_SUBSTRING => Some("GTK_STRING_FILTER_MATCH_MODE_SUBSTRING")
       case GTK_STRING_FILTER_MATCH_MODE_PREFIX => Some("GTK_STRING_FILTER_MATCH_MODE_PREFIX")
@@ -7743,6 +9121,9 @@ object GtkStringFilterMatchMode extends CEnumU[GtkStringFilterMatchMode]:
     inline def |(b: GtkStringFilterMatchMode): GtkStringFilterMatchMode = a | b
     inline def is(b: GtkStringFilterMatchMode): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkstylecontext.h
+*/
 opaque type GtkStyleContextPrintFlags = CUnsignedInt
 object GtkStyleContextPrintFlags extends CEnumU[GtkStyleContextPrintFlags]:
   given _tag: Tag[GtkStyleContextPrintFlags] = Tag.UInt
@@ -7752,7 +9133,7 @@ object GtkStyleContextPrintFlags extends CEnumU[GtkStyleContextPrintFlags]:
   val GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE = define(2)
   val GTK_STYLE_CONTEXT_PRINT_SHOW_CHANGE = define(4)
   inline def getName(inline value: GtkStyleContextPrintFlags): Option[String] =
-    value match
+    inline value match
       case GTK_STYLE_CONTEXT_PRINT_NONE => Some("GTK_STYLE_CONTEXT_PRINT_NONE")
       case GTK_STYLE_CONTEXT_PRINT_RECURSE => Some("GTK_STYLE_CONTEXT_PRINT_RECURSE")
       case GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE => Some("GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE")
@@ -7763,6 +9144,11 @@ object GtkStyleContextPrintFlags extends CEnumU[GtkStyleContextPrintFlags]:
     inline def |(b: GtkStyleContextPrintFlags): GtkStyleContextPrintFlags = a | b
     inline def is(b: GtkStyleContextPrintFlags): Boolean = (a & b) == b
 
+/**
+ * GtkSymbolicColor: _SYMBOLIC_COLOR_FOREGROUND: The default foreground color _SYMBOLIC_COLOR_ERROR: Indication color for errors _SYMBOLIC_COLOR_WARNING: Indication color for warnings _SYMBOLIC_COLOR_SUCCESS: Indication color for success
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSymbolicColor = CUnsignedInt
 object GtkSymbolicColor extends CEnumU[GtkSymbolicColor]:
   given _tag: Tag[GtkSymbolicColor] = Tag.UInt
@@ -7772,7 +9158,7 @@ object GtkSymbolicColor extends CEnumU[GtkSymbolicColor]:
   val GTK_SYMBOLIC_COLOR_WARNING = define(2)
   val GTK_SYMBOLIC_COLOR_SUCCESS = define(3)
   inline def getName(inline value: GtkSymbolicColor): Option[String] =
-    value match
+    inline value match
       case GTK_SYMBOLIC_COLOR_FOREGROUND => Some("GTK_SYMBOLIC_COLOR_FOREGROUND")
       case GTK_SYMBOLIC_COLOR_ERROR => Some("GTK_SYMBOLIC_COLOR_ERROR")
       case GTK_SYMBOLIC_COLOR_WARNING => Some("GTK_SYMBOLIC_COLOR_WARNING")
@@ -7783,6 +9169,11 @@ object GtkSymbolicColor extends CEnumU[GtkSymbolicColor]:
     inline def |(b: GtkSymbolicColor): GtkSymbolicColor = a | b
     inline def is(b: GtkSymbolicColor): Boolean = (a & b) == b
 
+/**
+ * GtkSystemSetting: _SYSTEM_SETTING_DPI: the [property.Settings:gtk-xft-dpi] setting has changed _SYSTEM_SETTING_FONT_NAME: The [property.Settings:gtk-font-name] setting has changed _SYSTEM_SETTING_FONT_CONFIG: The font configuration has changed in a way that requires text to be redrawn. This can be any of the [property.Settings:gtk-xft-antialias], [property.Settings:gtk-xft-hinting], [property.Settings:gtk-xft-hintstyle], [property.Settings:gtk-xft-rgba] or [property.Settings:gtk-fontconfig-timestamp] settings _SYSTEM_SETTING_DISPLAY: The display has changed _SYSTEM_SETTING_ICON_THEME: The icon theme has changed in a way that requires icons to be looked up again
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkSystemSetting = CUnsignedInt
 object GtkSystemSetting extends CEnumU[GtkSystemSetting]:
   given _tag: Tag[GtkSystemSetting] = Tag.UInt
@@ -7793,7 +9184,7 @@ object GtkSystemSetting extends CEnumU[GtkSystemSetting]:
   val GTK_SYSTEM_SETTING_DISPLAY = define(3)
   val GTK_SYSTEM_SETTING_ICON_THEME = define(4)
   inline def getName(inline value: GtkSystemSetting): Option[String] =
-    value match
+    inline value match
       case GTK_SYSTEM_SETTING_DPI => Some("GTK_SYSTEM_SETTING_DPI")
       case GTK_SYSTEM_SETTING_FONT_NAME => Some("GTK_SYSTEM_SETTING_FONT_NAME")
       case GTK_SYSTEM_SETTING_FONT_CONFIG => Some("GTK_SYSTEM_SETTING_FONT_CONFIG")
@@ -7805,6 +9196,11 @@ object GtkSystemSetting extends CEnumU[GtkSystemSetting]:
     inline def |(b: GtkSystemSetting): GtkSystemSetting = a | b
     inline def is(b: GtkSystemSetting): Boolean = (a & b) == b
 
+/**
+ * GtkTextDirection: _TEXT_DIR_NONE: No direction. _TEXT_DIR_LTR: Left to right text direction. _TEXT_DIR_RTL: Right to left text direction.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkTextDirection = CUnsignedInt
 object GtkTextDirection extends CEnumU[GtkTextDirection]:
   given _tag: Tag[GtkTextDirection] = Tag.UInt
@@ -7813,7 +9209,7 @@ object GtkTextDirection extends CEnumU[GtkTextDirection]:
   val GTK_TEXT_DIR_LTR = define(1)
   val GTK_TEXT_DIR_RTL = define(2)
   inline def getName(inline value: GtkTextDirection): Option[String] =
-    value match
+    inline value match
       case GTK_TEXT_DIR_NONE => Some("GTK_TEXT_DIR_NONE")
       case GTK_TEXT_DIR_LTR => Some("GTK_TEXT_DIR_LTR")
       case GTK_TEXT_DIR_RTL => Some("GTK_TEXT_DIR_RTL")
@@ -7823,6 +9219,11 @@ object GtkTextDirection extends CEnumU[GtkTextDirection]:
     inline def |(b: GtkTextDirection): GtkTextDirection = a | b
     inline def is(b: GtkTextDirection): Boolean = (a & b) == b
 
+/**
+ * GtkTextExtendSelection: _TEXT_EXTEND_SELECTION_WORD: Selects the current word. It is triggered by a double-click for example. _TEXT_EXTEND_SELECTION_LINE: Selects the current line. It is triggered by a triple-click for example.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktextview.h
+*/
 opaque type GtkTextExtendSelection = CUnsignedInt
 object GtkTextExtendSelection extends CEnumU[GtkTextExtendSelection]:
   given _tag: Tag[GtkTextExtendSelection] = Tag.UInt
@@ -7830,7 +9231,7 @@ object GtkTextExtendSelection extends CEnumU[GtkTextExtendSelection]:
   val GTK_TEXT_EXTEND_SELECTION_WORD = define(0)
   val GTK_TEXT_EXTEND_SELECTION_LINE = define(1)
   inline def getName(inline value: GtkTextExtendSelection): Option[String] =
-    value match
+    inline value match
       case GTK_TEXT_EXTEND_SELECTION_WORD => Some("GTK_TEXT_EXTEND_SELECTION_WORD")
       case GTK_TEXT_EXTEND_SELECTION_LINE => Some("GTK_TEXT_EXTEND_SELECTION_LINE")
       case _ => None
@@ -7839,6 +9240,11 @@ object GtkTextExtendSelection extends CEnumU[GtkTextExtendSelection]:
     inline def |(b: GtkTextExtendSelection): GtkTextExtendSelection = a | b
     inline def is(b: GtkTextExtendSelection): Boolean = (a & b) == b
 
+/**
+ * GtkTextSearchFlags: _TEXT_SEARCH_VISIBLE_ONLY: Search only visible data. A search match may have invisible text interspersed. _TEXT_SEARCH_TEXT_ONLY: Search only text. A match may have paintables or child widgets mixed inside the matched range. _TEXT_SEARCH_CASE_INSENSITIVE: The text will be matched regardless of what case it is in.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktextiter.h
+*/
 opaque type GtkTextSearchFlags = CUnsignedInt
 object GtkTextSearchFlags extends CEnumU[GtkTextSearchFlags]:
   given _tag: Tag[GtkTextSearchFlags] = Tag.UInt
@@ -7847,7 +9253,7 @@ object GtkTextSearchFlags extends CEnumU[GtkTextSearchFlags]:
   val GTK_TEXT_SEARCH_TEXT_ONLY = define(2)
   val GTK_TEXT_SEARCH_CASE_INSENSITIVE = define(4)
   inline def getName(inline value: GtkTextSearchFlags): Option[String] =
-    value match
+    inline value match
       case GTK_TEXT_SEARCH_VISIBLE_ONLY => Some("GTK_TEXT_SEARCH_VISIBLE_ONLY")
       case GTK_TEXT_SEARCH_TEXT_ONLY => Some("GTK_TEXT_SEARCH_TEXT_ONLY")
       case GTK_TEXT_SEARCH_CASE_INSENSITIVE => Some("GTK_TEXT_SEARCH_CASE_INSENSITIVE")
@@ -7857,6 +9263,11 @@ object GtkTextSearchFlags extends CEnumU[GtkTextSearchFlags]:
     inline def |(b: GtkTextSearchFlags): GtkTextSearchFlags = a | b
     inline def is(b: GtkTextSearchFlags): Boolean = (a & b) == b
 
+/**
+ * GtkTextViewLayer: _TEXT_VIEW_LAYER_BELOW_TEXT: The layer rendered below the text (but above the background). _TEXT_VIEW_LAYER_ABOVE_TEXT: The layer rendered above the text.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktextview.h
+*/
 opaque type GtkTextViewLayer = CUnsignedInt
 object GtkTextViewLayer extends CEnumU[GtkTextViewLayer]:
   given _tag: Tag[GtkTextViewLayer] = Tag.UInt
@@ -7864,7 +9275,7 @@ object GtkTextViewLayer extends CEnumU[GtkTextViewLayer]:
   val GTK_TEXT_VIEW_LAYER_BELOW_TEXT = define(0)
   val GTK_TEXT_VIEW_LAYER_ABOVE_TEXT = define(1)
   inline def getName(inline value: GtkTextViewLayer): Option[String] =
-    value match
+    inline value match
       case GTK_TEXT_VIEW_LAYER_BELOW_TEXT => Some("GTK_TEXT_VIEW_LAYER_BELOW_TEXT")
       case GTK_TEXT_VIEW_LAYER_ABOVE_TEXT => Some("GTK_TEXT_VIEW_LAYER_ABOVE_TEXT")
       case _ => None
@@ -7873,6 +9284,11 @@ object GtkTextViewLayer extends CEnumU[GtkTextViewLayer]:
     inline def |(b: GtkTextViewLayer): GtkTextViewLayer = a | b
     inline def is(b: GtkTextViewLayer): Boolean = (a & b) == b
 
+/**
+ * GtkTextWindowType: _TEXT_WINDOW_WIDGET: Window that floats over scrolling areas. _TEXT_WINDOW_TEXT: Scrollable text window. _TEXT_WINDOW_LEFT: Left side border window. _TEXT_WINDOW_RIGHT: Right side border window. _TEXT_WINDOW_TOP: Top border window. _TEXT_WINDOW_BOTTOM: Bottom border window.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktextview.h
+*/
 opaque type GtkTextWindowType = CUnsignedInt
 object GtkTextWindowType extends CEnumU[GtkTextWindowType]:
   given _tag: Tag[GtkTextWindowType] = Tag.UInt
@@ -7884,7 +9300,7 @@ object GtkTextWindowType extends CEnumU[GtkTextWindowType]:
   val GTK_TEXT_WINDOW_TOP = define(5)
   val GTK_TEXT_WINDOW_BOTTOM = define(6)
   inline def getName(inline value: GtkTextWindowType): Option[String] =
-    value match
+    inline value match
       case GTK_TEXT_WINDOW_WIDGET => Some("GTK_TEXT_WINDOW_WIDGET")
       case GTK_TEXT_WINDOW_TEXT => Some("GTK_TEXT_WINDOW_TEXT")
       case GTK_TEXT_WINDOW_LEFT => Some("GTK_TEXT_WINDOW_LEFT")
@@ -7897,6 +9313,11 @@ object GtkTextWindowType extends CEnumU[GtkTextWindowType]:
     inline def |(b: GtkTextWindowType): GtkTextWindowType = a | b
     inline def is(b: GtkTextWindowType): Boolean = (a & b) == b
 
+/**
+ * GtkTreeModelFlags: _TREE_MODEL_ITERS_PERSIST: iterators survive all signals emitted by the tree _TREE_MODEL_LIST_ONLY: the model is a list only, and never has children
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktreemodel.h
+*/
 opaque type GtkTreeModelFlags = CUnsignedInt
 object GtkTreeModelFlags extends CEnumU[GtkTreeModelFlags]:
   given _tag: Tag[GtkTreeModelFlags] = Tag.UInt
@@ -7904,7 +9325,7 @@ object GtkTreeModelFlags extends CEnumU[GtkTreeModelFlags]:
   val GTK_TREE_MODEL_ITERS_PERSIST = define(1)
   val GTK_TREE_MODEL_LIST_ONLY = define(2)
   inline def getName(inline value: GtkTreeModelFlags): Option[String] =
-    value match
+    inline value match
       case GTK_TREE_MODEL_ITERS_PERSIST => Some("GTK_TREE_MODEL_ITERS_PERSIST")
       case GTK_TREE_MODEL_LIST_ONLY => Some("GTK_TREE_MODEL_LIST_ONLY")
       case _ => None
@@ -7913,6 +9334,11 @@ object GtkTreeModelFlags extends CEnumU[GtkTreeModelFlags]:
     inline def |(b: GtkTreeModelFlags): GtkTreeModelFlags = a | b
     inline def is(b: GtkTreeModelFlags): Boolean = (a & b) == b
 
+/**
+ * GtkTreeViewColumnSizing: _TREE_VIEW_COLUMN_GROW_ONLY: Columns only get bigger in reaction to changes in the model _TREE_VIEW_COLUMN_AUTOSIZE: Columns resize to be the optimal size every time the model changes. _TREE_VIEW_COLUMN_FIXED: Columns are a fixed numbers of pixels wide.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktreeviewcolumn.h
+*/
 opaque type GtkTreeViewColumnSizing = CUnsignedInt
 object GtkTreeViewColumnSizing extends CEnumU[GtkTreeViewColumnSizing]:
   given _tag: Tag[GtkTreeViewColumnSizing] = Tag.UInt
@@ -7921,7 +9347,7 @@ object GtkTreeViewColumnSizing extends CEnumU[GtkTreeViewColumnSizing]:
   val GTK_TREE_VIEW_COLUMN_AUTOSIZE = define(1)
   val GTK_TREE_VIEW_COLUMN_FIXED = define(2)
   inline def getName(inline value: GtkTreeViewColumnSizing): Option[String] =
-    value match
+    inline value match
       case GTK_TREE_VIEW_COLUMN_GROW_ONLY => Some("GTK_TREE_VIEW_COLUMN_GROW_ONLY")
       case GTK_TREE_VIEW_COLUMN_AUTOSIZE => Some("GTK_TREE_VIEW_COLUMN_AUTOSIZE")
       case GTK_TREE_VIEW_COLUMN_FIXED => Some("GTK_TREE_VIEW_COLUMN_FIXED")
@@ -7931,6 +9357,11 @@ object GtkTreeViewColumnSizing extends CEnumU[GtkTreeViewColumnSizing]:
     inline def |(b: GtkTreeViewColumnSizing): GtkTreeViewColumnSizing = a | b
     inline def is(b: GtkTreeViewColumnSizing): Boolean = (a & b) == b
 
+/**
+ * GtkTreeViewDropPosition: _TREE_VIEW_DROP_BEFORE: dropped row is inserted before _TREE_VIEW_DROP_AFTER: dropped row is inserted after _TREE_VIEW_DROP_INTO_OR_BEFORE: dropped row becomes a child or is inserted before _TREE_VIEW_DROP_INTO_OR_AFTER: dropped row becomes a child or is inserted after
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtktreeview.h
+*/
 opaque type GtkTreeViewDropPosition = CUnsignedInt
 object GtkTreeViewDropPosition extends CEnumU[GtkTreeViewDropPosition]:
   given _tag: Tag[GtkTreeViewDropPosition] = Tag.UInt
@@ -7940,7 +9371,7 @@ object GtkTreeViewDropPosition extends CEnumU[GtkTreeViewDropPosition]:
   val GTK_TREE_VIEW_DROP_INTO_OR_BEFORE = define(2)
   val GTK_TREE_VIEW_DROP_INTO_OR_AFTER = define(3)
   inline def getName(inline value: GtkTreeViewDropPosition): Option[String] =
-    value match
+    inline value match
       case GTK_TREE_VIEW_DROP_BEFORE => Some("GTK_TREE_VIEW_DROP_BEFORE")
       case GTK_TREE_VIEW_DROP_AFTER => Some("GTK_TREE_VIEW_DROP_AFTER")
       case GTK_TREE_VIEW_DROP_INTO_OR_BEFORE => Some("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE")
@@ -7951,6 +9382,11 @@ object GtkTreeViewDropPosition extends CEnumU[GtkTreeViewDropPosition]:
     inline def |(b: GtkTreeViewDropPosition): GtkTreeViewDropPosition = a | b
     inline def is(b: GtkTreeViewDropPosition): Boolean = (a & b) == b
 
+/**
+ * GtkTreeViewGridLines: _TREE_VIEW_GRID_LINES_NONE: No grid lines. _TREE_VIEW_GRID_LINES_HORIZONTAL: Horizontal grid lines. _TREE_VIEW_GRID_LINES_VERTICAL: Vertical grid lines. _TREE_VIEW_GRID_LINES_BOTH: Horizontal and vertical grid lines.
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkTreeViewGridLines = CUnsignedInt
 object GtkTreeViewGridLines extends CEnumU[GtkTreeViewGridLines]:
   given _tag: Tag[GtkTreeViewGridLines] = Tag.UInt
@@ -7960,7 +9396,7 @@ object GtkTreeViewGridLines extends CEnumU[GtkTreeViewGridLines]:
   val GTK_TREE_VIEW_GRID_LINES_VERTICAL = define(2)
   val GTK_TREE_VIEW_GRID_LINES_BOTH = define(3)
   inline def getName(inline value: GtkTreeViewGridLines): Option[String] =
-    value match
+    inline value match
       case GTK_TREE_VIEW_GRID_LINES_NONE => Some("GTK_TREE_VIEW_GRID_LINES_NONE")
       case GTK_TREE_VIEW_GRID_LINES_HORIZONTAL => Some("GTK_TREE_VIEW_GRID_LINES_HORIZONTAL")
       case GTK_TREE_VIEW_GRID_LINES_VERTICAL => Some("GTK_TREE_VIEW_GRID_LINES_VERTICAL")
@@ -7971,6 +9407,11 @@ object GtkTreeViewGridLines extends CEnumU[GtkTreeViewGridLines]:
     inline def |(b: GtkTreeViewGridLines): GtkTreeViewGridLines = a | b
     inline def is(b: GtkTreeViewGridLines): Boolean = (a & b) == b
 
+/**
+ * GtkUnit: _UNIT_NONE: No units. _UNIT_POINTS: Dimensions in points. _UNIT_INCH: Dimensions in inches. _UNIT_MM: Dimensions in millimeters
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkUnit = CUnsignedInt
 object GtkUnit extends CEnumU[GtkUnit]:
   given _tag: Tag[GtkUnit] = Tag.UInt
@@ -7980,7 +9421,7 @@ object GtkUnit extends CEnumU[GtkUnit]:
   val GTK_UNIT_INCH = define(2)
   val GTK_UNIT_MM = define(3)
   inline def getName(inline value: GtkUnit): Option[String] =
-    value match
+    inline value match
       case GTK_UNIT_NONE => Some("GTK_UNIT_NONE")
       case GTK_UNIT_POINTS => Some("GTK_UNIT_POINTS")
       case GTK_UNIT_INCH => Some("GTK_UNIT_INCH")
@@ -7991,6 +9432,11 @@ object GtkUnit extends CEnumU[GtkUnit]:
     inline def |(b: GtkUnit): GtkUnit = a | b
     inline def is(b: GtkUnit): Boolean = (a & b) == b
 
+/**
+ * GtkWrapMode: _WRAP_NONE: do not wrap lines; just make the text area wider _WRAP_CHAR: wrap text, breaking lines anywhere the cursor can appear (between characters, usually - if you want to be technical, between graphemes, see pango_get_log_attrs()) _WRAP_WORD: wrap text, breaking lines in between words _WRAP_WORD_CHAR: wrap text, breaking lines in between words, or if that is not enough, also between graphemes
+
+ * [bindgen] header: /usr/include/gtk-4.0/gtk/gtkenums.h
+*/
 opaque type GtkWrapMode = CUnsignedInt
 object GtkWrapMode extends CEnumU[GtkWrapMode]:
   given _tag: Tag[GtkWrapMode] = Tag.UInt
@@ -8000,7 +9446,7 @@ object GtkWrapMode extends CEnumU[GtkWrapMode]:
   val GTK_WRAP_WORD = define(2)
   val GTK_WRAP_WORD_CHAR = define(3)
   inline def getName(inline value: GtkWrapMode): Option[String] =
-    value match
+    inline value match
       case GTK_WRAP_NONE => Some("GTK_WRAP_NONE")
       case GTK_WRAP_CHAR => Some("GTK_WRAP_CHAR")
       case GTK_WRAP_WORD => Some("GTK_WRAP_WORD")
@@ -8011,6 +9457,11 @@ object GtkWrapMode extends CEnumU[GtkWrapMode]:
     inline def |(b: GtkWrapMode): GtkWrapMode = a | b
     inline def is(b: GtkWrapMode): Boolean = (a & b) == b
 
+/**
+ * PangoAlignment: _ALIGN_LEFT: Put all available space on the right _ALIGN_CENTER: Center the line within the available space _ALIGN_RIGHT: Put all available space on the left
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+*/
 opaque type PangoAlignment = CUnsignedInt
 object PangoAlignment extends CEnumU[PangoAlignment]:
   given _tag: Tag[PangoAlignment] = Tag.UInt
@@ -8019,7 +9470,7 @@ object PangoAlignment extends CEnumU[PangoAlignment]:
   val PANGO_ALIGN_CENTER = define(1)
   val PANGO_ALIGN_RIGHT = define(2)
   inline def getName(inline value: PangoAlignment): Option[String] =
-    value match
+    inline value match
       case PANGO_ALIGN_LEFT => Some("PANGO_ALIGN_LEFT")
       case PANGO_ALIGN_CENTER => Some("PANGO_ALIGN_CENTER")
       case PANGO_ALIGN_RIGHT => Some("PANGO_ALIGN_RIGHT")
@@ -8029,6 +9480,11 @@ object PangoAlignment extends CEnumU[PangoAlignment]:
     inline def |(b: PangoAlignment): PangoAlignment = a | b
     inline def is(b: PangoAlignment): Boolean = (a & b) == b
 
+/**
+ * PangoAttrType: _ATTR_INVALID: does not happen _ATTR_LANGUAGE: language ([struct.AttrLanguage]) _ATTR_FAMILY: font family name list ([struct.AttrString]) _ATTR_STYLE: font slant style ([struct.AttrInt]) _ATTR_WEIGHT: font weight ([struct.AttrInt]) _ATTR_VARIANT: font variant (normal or small caps) ([struct.AttrInt]) _ATTR_STRETCH: font stretch ([struct.AttrInt]) _ATTR_SIZE: font size in points scaled by %PANGO_SCALE ([struct.AttrInt]) _ATTR_FONT_DESC: font description ([struct.AttrFontDesc]) _ATTR_FOREGROUND: foreground color ([struct.AttrColor]) _ATTR_BACKGROUND: background color ([struct.AttrColor]) _ATTR_UNDERLINE: whether the text has an underline ([struct.AttrInt]) _ATTR_STRIKETHROUGH: whether the text is struck-through ([struct.AttrInt]) _ATTR_RISE: baseline displacement ([struct.AttrInt]) _ATTR_SHAPE: shape ([struct.AttrShape]) _ATTR_SCALE: font size scale factor ([struct.AttrFloat]) _ATTR_FALLBACK: whether fallback is enabled ([struct.AttrInt]) _ATTR_LETTER_SPACING: letter spacing ([struct]) _ATTR_UNDERLINE_COLOR: underline color ([struct.AttrColor]) _ATTR_STRIKETHROUGH_COLOR: strikethrough color ([struct.AttrColor]) _ATTR_ABSOLUTE_SIZE: font size in pixels scaled by %PANGO_SCALE ([struct.AttrInt]) _ATTR_GRAVITY: base text gravity ([struct.AttrInt]) _ATTR_GRAVITY_HINT: gravity hint ([struct.AttrInt]) _ATTR_FONT_FEATURES: OpenType font features ([struct.AttrFontFeatures]). Since 1.38 _ATTR_FOREGROUND_ALPHA: foreground alpha ([struct.AttrInt]). Since 1.38 _ATTR_BACKGROUND_ALPHA: background alpha ([struct.AttrInt]). Since 1.38 _ATTR_ALLOW_BREAKS: whether breaks are allowed ([struct.AttrInt]). Since 1.44 _ATTR_SHOW: how to render invisible characters ([struct.AttrInt]). Since 1.44 _ATTR_INSERT_HYPHENS: whether to insert hyphens at intra-word line breaks ([struct.AttrInt]). Since 1.44 _ATTR_OVERLINE: whether the text has an overline ([struct.AttrInt]). Since 1.46 _ATTR_OVERLINE_COLOR: overline color ([struct.AttrColor]). Since 1.46 _ATTR_LINE_HEIGHT: line height factor ([struct.AttrFloat]). Since: 1.50 _ATTR_ABSOLUTE_LINE_HEIGHT: line height ([struct.AttrInt]). Since: 1.50 _ATTR_WORD: override segmentation to classify the range of the attribute as a single word ([struct.AttrInt]). Since 1.50 _ATTR_SENTENCE: override segmentation to classify the range of the attribute as a single sentence ([struct.AttrInt]). Since 1.50 _ATTR_BASELINE_SHIFT: baseline displacement ([struct.AttrInt]). Since 1.50 _ATTR_FONT_SCALE: font-relative size change ([struct.AttrInt]). Since 1.50
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoAttrType = CUnsignedInt
 object PangoAttrType extends CEnumU[PangoAttrType]:
   given _tag: Tag[PangoAttrType] = Tag.UInt
@@ -8072,7 +9528,7 @@ object PangoAttrType extends CEnumU[PangoAttrType]:
   val PANGO_ATTR_BASELINE_SHIFT = define(36)
   val PANGO_ATTR_FONT_SCALE = define(37)
   inline def getName(inline value: PangoAttrType): Option[String] =
-    value match
+    inline value match
       case PANGO_ATTR_INVALID => Some("PANGO_ATTR_INVALID")
       case PANGO_ATTR_LANGUAGE => Some("PANGO_ATTR_LANGUAGE")
       case PANGO_ATTR_FAMILY => Some("PANGO_ATTR_FAMILY")
@@ -8117,6 +9573,11 @@ object PangoAttrType extends CEnumU[PangoAttrType]:
     inline def |(b: PangoAttrType): PangoAttrType = a | b
     inline def is(b: PangoAttrType): Boolean = (a & b) == b
 
+/**
+ * PangoBaselineShift: _BASELINE_SHIFT_NONE: Leave the baseline unchanged _BASELINE_SHIFT_SUPERSCRIPT: Shift the baseline to the superscript position, relative to the previous run _BASELINE_SHIFT_SUBSCRIPT: Shift the baseline to the subscript position, relative to the previous run
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoBaselineShift = CUnsignedInt
 object PangoBaselineShift extends CEnumU[PangoBaselineShift]:
   given _tag: Tag[PangoBaselineShift] = Tag.UInt
@@ -8125,7 +9586,7 @@ object PangoBaselineShift extends CEnumU[PangoBaselineShift]:
   val PANGO_BASELINE_SHIFT_SUPERSCRIPT = define(1)
   val PANGO_BASELINE_SHIFT_SUBSCRIPT = define(2)
   inline def getName(inline value: PangoBaselineShift): Option[String] =
-    value match
+    inline value match
       case PANGO_BASELINE_SHIFT_NONE => Some("PANGO_BASELINE_SHIFT_NONE")
       case PANGO_BASELINE_SHIFT_SUPERSCRIPT => Some("PANGO_BASELINE_SHIFT_SUPERSCRIPT")
       case PANGO_BASELINE_SHIFT_SUBSCRIPT => Some("PANGO_BASELINE_SHIFT_SUBSCRIPT")
@@ -8135,6 +9596,11 @@ object PangoBaselineShift extends CEnumU[PangoBaselineShift]:
     inline def |(b: PangoBaselineShift): PangoBaselineShift = a | b
     inline def is(b: PangoBaselineShift): Boolean = (a & b) == b
 
+/**
+ * PangoBidiType: _BIDI_TYPE_L: Left-to-Right _BIDI_TYPE_LRE: Left-to-Right Embedding _BIDI_TYPE_LRO: Left-to-Right Override _BIDI_TYPE_R: Right-to-Left _BIDI_TYPE_AL: Right-to-Left Arabic _BIDI_TYPE_RLE: Right-to-Left Embedding _BIDI_TYPE_RLO: Right-to-Left Override _BIDI_TYPE_PDF: Pop Directional Format _BIDI_TYPE_EN: European Number _BIDI_TYPE_ES: European Number Separator _BIDI_TYPE_ET: European Number Terminator _BIDI_TYPE_AN: Arabic Number _BIDI_TYPE_CS: Common Number Separator _BIDI_TYPE_NSM: Nonspacing Mark _BIDI_TYPE_BN: Boundary Neutral _BIDI_TYPE_B: Paragraph Separator _BIDI_TYPE_S: Segment Separator _BIDI_TYPE_WS: Whitespace _BIDI_TYPE_ON: Other Neutrals _BIDI_TYPE_LRI: Left-to-Right isolate. Since 1.48.6 _BIDI_TYPE_RLI: Right-to-Left isolate. Since 1.48.6 _BIDI_TYPE_FSI: First strong isolate. Since 1.48.6 _BIDI_TYPE_PDI: Pop directional isolate. Since 1.48.6
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-bidi-type.h
+*/
 opaque type PangoBidiType = CUnsignedInt
 object PangoBidiType extends CEnumU[PangoBidiType]:
   given _tag: Tag[PangoBidiType] = Tag.UInt
@@ -8163,7 +9629,7 @@ object PangoBidiType extends CEnumU[PangoBidiType]:
   val PANGO_BIDI_TYPE_FSI = define(21)
   val PANGO_BIDI_TYPE_PDI = define(22)
   inline def getName(inline value: PangoBidiType): Option[String] =
-    value match
+    inline value match
       case PANGO_BIDI_TYPE_L => Some("PANGO_BIDI_TYPE_L")
       case PANGO_BIDI_TYPE_LRE => Some("PANGO_BIDI_TYPE_LRE")
       case PANGO_BIDI_TYPE_LRO => Some("PANGO_BIDI_TYPE_LRO")
@@ -8193,6 +9659,11 @@ object PangoBidiType extends CEnumU[PangoBidiType]:
     inline def |(b: PangoBidiType): PangoBidiType = a | b
     inline def is(b: PangoBidiType): Boolean = (a & b) == b
 
+/**
+ * PangoCoverageLevel: _COVERAGE_NONE: The character is not representable with the font. _COVERAGE_FALLBACK: The character is represented in a way that may be comprehensible but is not the correct graphical form. For instance, a Hangul character represented as a a sequence of Jamos, or a Latin transliteration of a Cyrillic word. _COVERAGE_APPROXIMATE: The character is represented as basically the correct graphical form, but with a stylistic variant inappropriate for the current script. _COVERAGE_EXACT: The character is represented as the correct graphical form.
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+*/
 opaque type PangoCoverageLevel = CUnsignedInt
 object PangoCoverageLevel extends CEnumU[PangoCoverageLevel]:
   given _tag: Tag[PangoCoverageLevel] = Tag.UInt
@@ -8202,7 +9673,7 @@ object PangoCoverageLevel extends CEnumU[PangoCoverageLevel]:
   val PANGO_COVERAGE_APPROXIMATE = define(2)
   val PANGO_COVERAGE_EXACT = define(3)
   inline def getName(inline value: PangoCoverageLevel): Option[String] =
-    value match
+    inline value match
       case PANGO_COVERAGE_NONE => Some("PANGO_COVERAGE_NONE")
       case PANGO_COVERAGE_FALLBACK => Some("PANGO_COVERAGE_FALLBACK")
       case PANGO_COVERAGE_APPROXIMATE => Some("PANGO_COVERAGE_APPROXIMATE")
@@ -8213,6 +9684,11 @@ object PangoCoverageLevel extends CEnumU[PangoCoverageLevel]:
     inline def |(b: PangoCoverageLevel): PangoCoverageLevel = a | b
     inline def is(b: PangoCoverageLevel): Boolean = (a & b) == b
 
+/**
+ * PangoDirection: _DIRECTION_LTR: A strong left-to-right direction _DIRECTION_RTL: A strong right-to-left direction _DIRECTION_TTB_LTR: Deprecated value; treated the same as `PANGO_DIRECTION_RTL`. _DIRECTION_TTB_RTL: Deprecated value; treated the same as `PANGO_DIRECTION_LTR` _DIRECTION_WEAK_LTR: A weak left-to-right direction _DIRECTION_WEAK_RTL: A weak right-to-left direction _DIRECTION_NEUTRAL: No direction specified
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-direction.h
+*/
 opaque type PangoDirection = CUnsignedInt
 object PangoDirection extends CEnumU[PangoDirection]:
   given _tag: Tag[PangoDirection] = Tag.UInt
@@ -8225,7 +9701,7 @@ object PangoDirection extends CEnumU[PangoDirection]:
   val PANGO_DIRECTION_WEAK_RTL = define(5)
   val PANGO_DIRECTION_NEUTRAL = define(6)
   inline def getName(inline value: PangoDirection): Option[String] =
-    value match
+    inline value match
       case PANGO_DIRECTION_LTR => Some("PANGO_DIRECTION_LTR")
       case PANGO_DIRECTION_RTL => Some("PANGO_DIRECTION_RTL")
       case PANGO_DIRECTION_TTB_LTR => Some("PANGO_DIRECTION_TTB_LTR")
@@ -8239,6 +9715,11 @@ object PangoDirection extends CEnumU[PangoDirection]:
     inline def |(b: PangoDirection): PangoDirection = a | b
     inline def is(b: PangoDirection): Boolean = (a & b) == b
 
+/**
+ * PangoEllipsizeMode: _ELLIPSIZE_NONE: No ellipsization _ELLIPSIZE_START: Omit characters at the start of the text _ELLIPSIZE_MIDDLE: Omit characters in the middle of the text _ELLIPSIZE_END: Omit characters at the end of the text
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+*/
 opaque type PangoEllipsizeMode = CUnsignedInt
 object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
   given _tag: Tag[PangoEllipsizeMode] = Tag.UInt
@@ -8248,7 +9729,7 @@ object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
   val PANGO_ELLIPSIZE_MIDDLE = define(2)
   val PANGO_ELLIPSIZE_END = define(3)
   inline def getName(inline value: PangoEllipsizeMode): Option[String] =
-    value match
+    inline value match
       case PANGO_ELLIPSIZE_NONE => Some("PANGO_ELLIPSIZE_NONE")
       case PANGO_ELLIPSIZE_START => Some("PANGO_ELLIPSIZE_START")
       case PANGO_ELLIPSIZE_MIDDLE => Some("PANGO_ELLIPSIZE_MIDDLE")
@@ -8259,6 +9740,11 @@ object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
     inline def |(b: PangoEllipsizeMode): PangoEllipsizeMode = a | b
     inline def is(b: PangoEllipsizeMode): Boolean = (a & b) == b
 
+/**
+ * PangoFontMask: _FONT_MASK_FAMILY: the font family is specified. _FONT_MASK_STYLE: the font style is specified. _FONT_MASK_VARIANT: the font variant is specified. _FONT_MASK_WEIGHT: the font weight is specified. _FONT_MASK_STRETCH: the font stretch is specified. _FONT_MASK_SIZE: the font size is specified. _FONT_MASK_GRAVITY: the font gravity is specified (Since: 1.16.) _FONT_MASK_VARIATIONS: OpenType font variations are specified (Since: 1.42)
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+*/
 opaque type PangoFontMask = CUnsignedInt
 object PangoFontMask extends CEnumU[PangoFontMask]:
   given _tag: Tag[PangoFontMask] = Tag.UInt
@@ -8272,7 +9758,7 @@ object PangoFontMask extends CEnumU[PangoFontMask]:
   val PANGO_FONT_MASK_GRAVITY = define(64)
   val PANGO_FONT_MASK_VARIATIONS = define(128)
   inline def getName(inline value: PangoFontMask): Option[String] =
-    value match
+    inline value match
       case PANGO_FONT_MASK_FAMILY => Some("PANGO_FONT_MASK_FAMILY")
       case PANGO_FONT_MASK_STYLE => Some("PANGO_FONT_MASK_STYLE")
       case PANGO_FONT_MASK_VARIANT => Some("PANGO_FONT_MASK_VARIANT")
@@ -8287,6 +9773,11 @@ object PangoFontMask extends CEnumU[PangoFontMask]:
     inline def |(b: PangoFontMask): PangoFontMask = a | b
     inline def is(b: PangoFontMask): Boolean = (a & b) == b
 
+/**
+ * PangoFontScale: _FONT_SCALE_NONE: Leave the font size unchanged _FONT_SCALE_SUPERSCRIPT: Change the font to a size suitable for superscripts _FONT_SCALE_SUBSCRIPT: Change the font to a size suitable for subscripts _FONT_SCALE_SMALL_CAPS: Change the font to a size suitable for Small Caps
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoFontScale = CUnsignedInt
 object PangoFontScale extends CEnumU[PangoFontScale]:
   given _tag: Tag[PangoFontScale] = Tag.UInt
@@ -8296,7 +9787,7 @@ object PangoFontScale extends CEnumU[PangoFontScale]:
   val PANGO_FONT_SCALE_SUBSCRIPT = define(2)
   val PANGO_FONT_SCALE_SMALL_CAPS = define(3)
   inline def getName(inline value: PangoFontScale): Option[String] =
-    value match
+    inline value match
       case PANGO_FONT_SCALE_NONE => Some("PANGO_FONT_SCALE_NONE")
       case PANGO_FONT_SCALE_SUPERSCRIPT => Some("PANGO_FONT_SCALE_SUPERSCRIPT")
       case PANGO_FONT_SCALE_SUBSCRIPT => Some("PANGO_FONT_SCALE_SUBSCRIPT")
@@ -8307,6 +9798,11 @@ object PangoFontScale extends CEnumU[PangoFontScale]:
     inline def |(b: PangoFontScale): PangoFontScale = a | b
     inline def is(b: PangoFontScale): Boolean = (a & b) == b
 
+/**
+ * PangoGravity: _GRAVITY_SOUTH: Glyphs stand upright (default) _GRAVITY_EAST: Glyphs are rotated 90 degrees counter-clockwise. _GRAVITY_NORTH: Glyphs are upside-down. _GRAVITY_WEST: Glyphs are rotated 90 degrees clockwise. _GRAVITY_AUTO: Gravity is resolved from the context matrix
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-gravity.h
+*/
 opaque type PangoGravity = CUnsignedInt
 object PangoGravity extends CEnumU[PangoGravity]:
   given _tag: Tag[PangoGravity] = Tag.UInt
@@ -8317,7 +9813,7 @@ object PangoGravity extends CEnumU[PangoGravity]:
   val PANGO_GRAVITY_WEST = define(3)
   val PANGO_GRAVITY_AUTO = define(4)
   inline def getName(inline value: PangoGravity): Option[String] =
-    value match
+    inline value match
       case PANGO_GRAVITY_SOUTH => Some("PANGO_GRAVITY_SOUTH")
       case PANGO_GRAVITY_EAST => Some("PANGO_GRAVITY_EAST")
       case PANGO_GRAVITY_NORTH => Some("PANGO_GRAVITY_NORTH")
@@ -8329,6 +9825,11 @@ object PangoGravity extends CEnumU[PangoGravity]:
     inline def |(b: PangoGravity): PangoGravity = a | b
     inline def is(b: PangoGravity): Boolean = (a & b) == b
 
+/**
+ * PangoGravityHint: _GRAVITY_HINT_NATURAL: scripts will take their natural gravity based on the base gravity and the script. This is the default. _GRAVITY_HINT_STRONG: always use the base gravity set, regardless of the script. _GRAVITY_HINT_LINE: for scripts not in their natural direction (eg. Latin in East gravity), choose per-script gravity such that every script respects the line progression. This means, Latin and Arabic will take opposite gravities and both flow top-to-bottom for example.
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-gravity.h
+*/
 opaque type PangoGravityHint = CUnsignedInt
 object PangoGravityHint extends CEnumU[PangoGravityHint]:
   given _tag: Tag[PangoGravityHint] = Tag.UInt
@@ -8337,7 +9838,7 @@ object PangoGravityHint extends CEnumU[PangoGravityHint]:
   val PANGO_GRAVITY_HINT_STRONG = define(1)
   val PANGO_GRAVITY_HINT_LINE = define(2)
   inline def getName(inline value: PangoGravityHint): Option[String] =
-    value match
+    inline value match
       case PANGO_GRAVITY_HINT_NATURAL => Some("PANGO_GRAVITY_HINT_NATURAL")
       case PANGO_GRAVITY_HINT_STRONG => Some("PANGO_GRAVITY_HINT_STRONG")
       case PANGO_GRAVITY_HINT_LINE => Some("PANGO_GRAVITY_HINT_LINE")
@@ -8347,6 +9848,11 @@ object PangoGravityHint extends CEnumU[PangoGravityHint]:
     inline def |(b: PangoGravityHint): PangoGravityHint = a | b
     inline def is(b: PangoGravityHint): Boolean = (a & b) == b
 
+/**
+ * PangoLayoutDeserializeError: _LAYOUT_DESERIALIZE_INVALID: Unspecified error _LAYOUT_DESERIALIZE_INVALID_VALUE: A JSon value could not be interpreted _LAYOUT_DESERIALIZE_MISSING_VALUE: A required JSon member was not found
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+*/
 opaque type PangoLayoutDeserializeError = CUnsignedInt
 object PangoLayoutDeserializeError extends CEnumU[PangoLayoutDeserializeError]:
   given _tag: Tag[PangoLayoutDeserializeError] = Tag.UInt
@@ -8355,7 +9861,7 @@ object PangoLayoutDeserializeError extends CEnumU[PangoLayoutDeserializeError]:
   val PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE = define(1)
   val PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE = define(2)
   inline def getName(inline value: PangoLayoutDeserializeError): Option[String] =
-    value match
+    inline value match
       case PANGO_LAYOUT_DESERIALIZE_INVALID => Some("PANGO_LAYOUT_DESERIALIZE_INVALID")
       case PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE => Some("PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE")
       case PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE => Some("PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE")
@@ -8365,6 +9871,11 @@ object PangoLayoutDeserializeError extends CEnumU[PangoLayoutDeserializeError]:
     inline def |(b: PangoLayoutDeserializeError): PangoLayoutDeserializeError = a | b
     inline def is(b: PangoLayoutDeserializeError): Boolean = (a & b) == b
 
+/**
+ * PangoLayoutDeserializeFlags: _LAYOUT_DESERIALIZE_DEFAULT: Default behavior _LAYOUT_DESERIALIZE_CONTEXT: Apply context information from the serialization to the `PangoContext`
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+*/
 opaque type PangoLayoutDeserializeFlags = CUnsignedInt
 object PangoLayoutDeserializeFlags extends CEnumU[PangoLayoutDeserializeFlags]:
   given _tag: Tag[PangoLayoutDeserializeFlags] = Tag.UInt
@@ -8372,7 +9883,7 @@ object PangoLayoutDeserializeFlags extends CEnumU[PangoLayoutDeserializeFlags]:
   val PANGO_LAYOUT_DESERIALIZE_DEFAULT = define(0)
   val PANGO_LAYOUT_DESERIALIZE_CONTEXT = define(1)
   inline def getName(inline value: PangoLayoutDeserializeFlags): Option[String] =
-    value match
+    inline value match
       case PANGO_LAYOUT_DESERIALIZE_DEFAULT => Some("PANGO_LAYOUT_DESERIALIZE_DEFAULT")
       case PANGO_LAYOUT_DESERIALIZE_CONTEXT => Some("PANGO_LAYOUT_DESERIALIZE_CONTEXT")
       case _ => None
@@ -8381,6 +9892,11 @@ object PangoLayoutDeserializeFlags extends CEnumU[PangoLayoutDeserializeFlags]:
     inline def |(b: PangoLayoutDeserializeFlags): PangoLayoutDeserializeFlags = a | b
     inline def is(b: PangoLayoutDeserializeFlags): Boolean = (a & b) == b
 
+/**
+ * PangoLayoutSerializeFlags: _LAYOUT_SERIALIZE_DEFAULT: Default behavior _LAYOUT_SERIALIZE_CONTEXT: Include context information _LAYOUT_SERIALIZE_OUTPUT: Include information about the formatted output
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+*/
 opaque type PangoLayoutSerializeFlags = CUnsignedInt
 object PangoLayoutSerializeFlags extends CEnumU[PangoLayoutSerializeFlags]:
   given _tag: Tag[PangoLayoutSerializeFlags] = Tag.UInt
@@ -8389,7 +9905,7 @@ object PangoLayoutSerializeFlags extends CEnumU[PangoLayoutSerializeFlags]:
   val PANGO_LAYOUT_SERIALIZE_CONTEXT = define(1)
   val PANGO_LAYOUT_SERIALIZE_OUTPUT = define(2)
   inline def getName(inline value: PangoLayoutSerializeFlags): Option[String] =
-    value match
+    inline value match
       case PANGO_LAYOUT_SERIALIZE_DEFAULT => Some("PANGO_LAYOUT_SERIALIZE_DEFAULT")
       case PANGO_LAYOUT_SERIALIZE_CONTEXT => Some("PANGO_LAYOUT_SERIALIZE_CONTEXT")
       case PANGO_LAYOUT_SERIALIZE_OUTPUT => Some("PANGO_LAYOUT_SERIALIZE_OUTPUT")
@@ -8399,6 +9915,11 @@ object PangoLayoutSerializeFlags extends CEnumU[PangoLayoutSerializeFlags]:
     inline def |(b: PangoLayoutSerializeFlags): PangoLayoutSerializeFlags = a | b
     inline def is(b: PangoLayoutSerializeFlags): Boolean = (a & b) == b
 
+/**
+ * PangoOverline: _OVERLINE_NONE: no overline should be drawn _OVERLINE_SINGLE: Draw a single line above the ink extents of the text being underlined.
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoOverline = CUnsignedInt
 object PangoOverline extends CEnumU[PangoOverline]:
   given _tag: Tag[PangoOverline] = Tag.UInt
@@ -8406,7 +9927,7 @@ object PangoOverline extends CEnumU[PangoOverline]:
   val PANGO_OVERLINE_NONE = define(0)
   val PANGO_OVERLINE_SINGLE = define(1)
   inline def getName(inline value: PangoOverline): Option[String] =
-    value match
+    inline value match
       case PANGO_OVERLINE_NONE => Some("PANGO_OVERLINE_NONE")
       case PANGO_OVERLINE_SINGLE => Some("PANGO_OVERLINE_SINGLE")
       case _ => None
@@ -8415,6 +9936,9 @@ object PangoOverline extends CEnumU[PangoOverline]:
     inline def |(b: PangoOverline): PangoOverline = a | b
     inline def is(b: PangoOverline): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+*/
 opaque type PangoRenderPart = CUnsignedInt
 object PangoRenderPart extends CEnumU[PangoRenderPart]:
   given _tag: Tag[PangoRenderPart] = Tag.UInt
@@ -8425,7 +9949,7 @@ object PangoRenderPart extends CEnumU[PangoRenderPart]:
   val PANGO_RENDER_PART_STRIKETHROUGH = define(3)
   val PANGO_RENDER_PART_OVERLINE = define(4)
   inline def getName(inline value: PangoRenderPart): Option[String] =
-    value match
+    inline value match
       case PANGO_RENDER_PART_FOREGROUND => Some("PANGO_RENDER_PART_FOREGROUND")
       case PANGO_RENDER_PART_BACKGROUND => Some("PANGO_RENDER_PART_BACKGROUND")
       case PANGO_RENDER_PART_UNDERLINE => Some("PANGO_RENDER_PART_UNDERLINE")
@@ -8437,6 +9961,11 @@ object PangoRenderPart extends CEnumU[PangoRenderPart]:
     inline def |(b: PangoRenderPart): PangoRenderPart = a | b
     inline def is(b: PangoRenderPart): Boolean = (a & b) == b
 
+/**
+ * PangoScript: _SCRIPT_INVALID_CODE: a value never returned from pango_script_for_unichar() _SCRIPT_COMMON: a character used by multiple different scripts _SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _SCRIPT_ARABIC: Arabic _SCRIPT_ARMENIAN: Armenian _SCRIPT_BENGALI: Bengali _SCRIPT_BOPOMOFO: Bopomofo _SCRIPT_CHEROKEE: Cherokee _SCRIPT_COPTIC: Coptic _SCRIPT_CYRILLIC: Cyrillic _SCRIPT_DESERET: Deseret _SCRIPT_DEVANAGARI: Devanagari _SCRIPT_ETHIOPIC: Ethiopic _SCRIPT_GEORGIAN: Georgian _SCRIPT_GOTHIC: Gothic _SCRIPT_GREEK: Greek _SCRIPT_GUJARATI: Gujarati _SCRIPT_GURMUKHI: Gurmukhi _SCRIPT_HAN: Han _SCRIPT_HANGUL: Hangul _SCRIPT_HEBREW: Hebrew _SCRIPT_HIRAGANA: Hiragana _SCRIPT_KANNADA: Kannada _SCRIPT_KATAKANA: Katakana _SCRIPT_KHMER: Khmer _SCRIPT_LAO: Lao _SCRIPT_LATIN: Latin _SCRIPT_MALAYALAM: Malayalam _SCRIPT_MONGOLIAN: Mongolian _SCRIPT_MYANMAR: Myanmar _SCRIPT_OGHAM: Ogham _SCRIPT_OLD_ITALIC: Old Italic _SCRIPT_ORIYA: Oriya _SCRIPT_RUNIC: Runic _SCRIPT_SINHALA: Sinhala _SCRIPT_SYRIAC: Syriac _SCRIPT_TAMIL: Tamil _SCRIPT_TELUGU: Telugu _SCRIPT_THAANA: Thaana _SCRIPT_THAI: Thai _SCRIPT_TIBETAN: Tibetan _SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _SCRIPT_YI: Yi _SCRIPT_TAGALOG: Tagalog _SCRIPT_HANUNOO: Hanunoo _SCRIPT_BUHID: Buhid _SCRIPT_TAGBANWA: Tagbanwa _SCRIPT_BRAILLE: Braille _SCRIPT_CYPRIOT: Cypriot _SCRIPT_LIMBU: Limbu _SCRIPT_OSMANYA: Osmanya _SCRIPT_SHAVIAN: Shavian _SCRIPT_LINEAR_B: Linear B _SCRIPT_TAI_LE: Tai Le _SCRIPT_UGARITIC: Ugaritic _SCRIPT_NEW_TAI_LUE: New Tai Lue. Since 1.10 _SCRIPT_BUGINESE: Buginese. Since 1.10 _SCRIPT_GLAGOLITIC: Glagolitic. Since 1.10 _SCRIPT_TIFINAGH: Tifinagh. Since 1.10 _SCRIPT_SYLOTI_NAGRI: Syloti Nagri. Since 1.10 _SCRIPT_OLD_PERSIAN: Old Persian. Since 1.10 _SCRIPT_KHAROSHTHI: Kharoshthi. Since 1.10 _SCRIPT_UNKNOWN: an unassigned code point. Since 1.14 _SCRIPT_BALINESE: Balinese. Since 1.14 _SCRIPT_CUNEIFORM: Cuneiform. Since 1.14 _SCRIPT_PHOENICIAN: Phoenician. Since 1.14 _SCRIPT_PHAGS_PA: Phags-pa. Since 1.14 _SCRIPT_NKO: N'Ko. Since 1.14 _SCRIPT_KAYAH_LI: Kayah Li. Since 1.20.1 _SCRIPT_LEPCHA: Lepcha. Since 1.20.1 _SCRIPT_REJANG: Rejang. Since 1.20.1 _SCRIPT_SUNDANESE: Sundanese. Since 1.20.1 _SCRIPT_SAURASHTRA: Saurashtra. Since 1.20.1 _SCRIPT_CHAM: Cham. Since 1.20.1 _SCRIPT_OL_CHIKI: Ol Chiki. Since 1.20.1 _SCRIPT_VAI: Vai. Since 1.20.1 _SCRIPT_CARIAN: Carian. Since 1.20.1 _SCRIPT_LYCIAN: Lycian. Since 1.20.1 _SCRIPT_LYDIAN: Lydian. Since 1.20.1 _SCRIPT_BATAK: Batak. Since 1.32 _SCRIPT_BRAHMI: Brahmi. Since 1.32 _SCRIPT_MANDAIC: Mandaic. Since 1.32 _SCRIPT_CHAKMA: Chakma. Since: 1.32 _SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 1.32 _SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 1.32 _SCRIPT_MIAO: Miao. Since: 1.32 _SCRIPT_SHARADA: Sharada. Since: 1.32 _SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 1.32 _SCRIPT_TAKRI: Takri. Since: 1.32 _SCRIPT_BASSA_VAH: Bassa. Since: 1.40 _SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 1.40 _SCRIPT_DUPLOYAN: Duployan. Since: 1.40 _SCRIPT_ELBASAN: Elbasan. Since: 1.40 _SCRIPT_GRANTHA: Grantha. Since: 1.40 _SCRIPT_KHOJKI: Kjohki. Since: 1.40 _SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 1.40 _SCRIPT_LINEAR_A: Linear A. Since: 1.40 _SCRIPT_MAHAJANI: Mahajani. Since: 1.40 _SCRIPT_MANICHAEAN: Manichaean. Since: 1.40 _SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 1.40 _SCRIPT_MODI: Modi. Since: 1.40 _SCRIPT_MRO: Mro. Since: 1.40 _SCRIPT_NABATAEAN: Nabataean. Since: 1.40 _SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 1.40 _SCRIPT_OLD_PERMIC: Old Permic. Since: 1.40 _SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 1.40 _SCRIPT_PALMYRENE: Palmyrene. Since: 1.40 _SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 1.40 _SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 1.40 _SCRIPT_SIDDHAM: Siddham. Since: 1.40 _SCRIPT_TIRHUTA: Tirhuta. Since: 1.40 _SCRIPT_WARANG_CITI: Warang Citi. Since: 1.40 _SCRIPT_AHOM: Ahom. Since: 1.40 _SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 1.40 _SCRIPT_HATRAN: Hatran. Since: 1.40 _SCRIPT_MULTANI: Multani. Since: 1.40 _SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 1.40 _SCRIPT_SIGNWRITING: Signwriting. Since: 1.40
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-script.h
+*/
 opaque type PangoScript = CInt
 object PangoScript extends CEnum[PangoScript]:
   given _tag: Tag[PangoScript] = Tag.Int
@@ -8560,7 +10089,7 @@ object PangoScript extends CEnum[PangoScript]:
   val PANGO_SCRIPT_OLD_HUNGARIAN = define(115)
   val PANGO_SCRIPT_SIGNWRITING = define(116)
   inline def getName(inline value: PangoScript): Option[String] =
-    value match
+    inline value match
       case PANGO_SCRIPT_INVALID_CODE => Some("PANGO_SCRIPT_INVALID_CODE")
       case PANGO_SCRIPT_COMMON => Some("PANGO_SCRIPT_COMMON")
       case PANGO_SCRIPT_INHERITED => Some("PANGO_SCRIPT_INHERITED")
@@ -8685,6 +10214,11 @@ object PangoScript extends CEnum[PangoScript]:
     inline def |(b: PangoScript): PangoScript = a | b
     inline def is(b: PangoScript): Boolean = (a & b) == b
 
+/**
+ * PangoShapeFlags: _SHAPE_NONE: Default value _SHAPE_ROUND_POSITIONS: Round glyph positions and widths to whole device units This option should be set if the target renderer can't do subpixel positioning of glyphs
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+*/
 opaque type PangoShapeFlags = CUnsignedInt
 object PangoShapeFlags extends CEnumU[PangoShapeFlags]:
   given _tag: Tag[PangoShapeFlags] = Tag.UInt
@@ -8692,7 +10226,7 @@ object PangoShapeFlags extends CEnumU[PangoShapeFlags]:
   val PANGO_SHAPE_NONE = define(0)
   val PANGO_SHAPE_ROUND_POSITIONS = define(1)
   inline def getName(inline value: PangoShapeFlags): Option[String] =
-    value match
+    inline value match
       case PANGO_SHAPE_NONE => Some("PANGO_SHAPE_NONE")
       case PANGO_SHAPE_ROUND_POSITIONS => Some("PANGO_SHAPE_ROUND_POSITIONS")
       case _ => None
@@ -8701,6 +10235,11 @@ object PangoShapeFlags extends CEnumU[PangoShapeFlags]:
     inline def |(b: PangoShapeFlags): PangoShapeFlags = a | b
     inline def is(b: PangoShapeFlags): Boolean = (a & b) == b
 
+/**
+ * PangoShowFlags: _SHOW_NONE: No special treatment for invisible characters _SHOW_SPACES: Render spaces, tabs and newlines visibly _SHOW_LINE_BREAKS: Render line breaks visibly _SHOW_IGNORABLES: Render default-ignorable Unicode characters visibly
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoShowFlags = CUnsignedInt
 object PangoShowFlags extends CEnumU[PangoShowFlags]:
   given _tag: Tag[PangoShowFlags] = Tag.UInt
@@ -8710,7 +10249,7 @@ object PangoShowFlags extends CEnumU[PangoShowFlags]:
   val PANGO_SHOW_LINE_BREAKS = define(2)
   val PANGO_SHOW_IGNORABLES = define(4)
   inline def getName(inline value: PangoShowFlags): Option[String] =
-    value match
+    inline value match
       case PANGO_SHOW_NONE => Some("PANGO_SHOW_NONE")
       case PANGO_SHOW_SPACES => Some("PANGO_SHOW_SPACES")
       case PANGO_SHOW_LINE_BREAKS => Some("PANGO_SHOW_LINE_BREAKS")
@@ -8721,6 +10260,11 @@ object PangoShowFlags extends CEnumU[PangoShowFlags]:
     inline def |(b: PangoShowFlags): PangoShowFlags = a | b
     inline def is(b: PangoShowFlags): Boolean = (a & b) == b
 
+/**
+ * PangoStretch: _STRETCH_ULTRA_CONDENSED: ultra condensed width _STRETCH_EXTRA_CONDENSED: extra condensed width _STRETCH_CONDENSED: condensed width _STRETCH_SEMI_CONDENSED: semi condensed width _STRETCH_NORMAL: the normal width _STRETCH_SEMI_EXPANDED: semi expanded width _STRETCH_EXPANDED: expanded width _STRETCH_EXTRA_EXPANDED: extra expanded width _STRETCH_ULTRA_EXPANDED: ultra expanded width
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+*/
 opaque type PangoStretch = CUnsignedInt
 object PangoStretch extends CEnumU[PangoStretch]:
   given _tag: Tag[PangoStretch] = Tag.UInt
@@ -8735,7 +10279,7 @@ object PangoStretch extends CEnumU[PangoStretch]:
   val PANGO_STRETCH_EXTRA_EXPANDED = define(7)
   val PANGO_STRETCH_ULTRA_EXPANDED = define(8)
   inline def getName(inline value: PangoStretch): Option[String] =
-    value match
+    inline value match
       case PANGO_STRETCH_ULTRA_CONDENSED => Some("PANGO_STRETCH_ULTRA_CONDENSED")
       case PANGO_STRETCH_EXTRA_CONDENSED => Some("PANGO_STRETCH_EXTRA_CONDENSED")
       case PANGO_STRETCH_CONDENSED => Some("PANGO_STRETCH_CONDENSED")
@@ -8751,6 +10295,11 @@ object PangoStretch extends CEnumU[PangoStretch]:
     inline def |(b: PangoStretch): PangoStretch = a | b
     inline def is(b: PangoStretch): Boolean = (a & b) == b
 
+/**
+ * PangoStyle: _STYLE_NORMAL: the font is upright. _STYLE_OBLIQUE: the font is slanted, but in a roman style. _STYLE_ITALIC: the font is slanted in an italic style.
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+*/
 opaque type PangoStyle = CUnsignedInt
 object PangoStyle extends CEnumU[PangoStyle]:
   given _tag: Tag[PangoStyle] = Tag.UInt
@@ -8759,7 +10308,7 @@ object PangoStyle extends CEnumU[PangoStyle]:
   val PANGO_STYLE_OBLIQUE = define(1)
   val PANGO_STYLE_ITALIC = define(2)
   inline def getName(inline value: PangoStyle): Option[String] =
-    value match
+    inline value match
       case PANGO_STYLE_NORMAL => Some("PANGO_STYLE_NORMAL")
       case PANGO_STYLE_OBLIQUE => Some("PANGO_STYLE_OBLIQUE")
       case PANGO_STYLE_ITALIC => Some("PANGO_STYLE_ITALIC")
@@ -8769,6 +10318,11 @@ object PangoStyle extends CEnumU[PangoStyle]:
     inline def |(b: PangoStyle): PangoStyle = a | b
     inline def is(b: PangoStyle): Boolean = (a & b) == b
 
+/**
+ * PangoTabAlign: _TAB_LEFT: the text appears to the right of the tab stop position _TAB_RIGHT: the text appears to the left of the tab stop position until the available space is filled. Since: 1.50 _TAB_CENTER: the text is centered at the tab stop position until the available space is filled. Since: 1.50 _TAB_DECIMAL: text before the first occurrence of the decimal point character appears to the left of the tab stop position (until the available space is filled), the rest to the right. Since: 1.50
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+*/
 opaque type PangoTabAlign = CUnsignedInt
 object PangoTabAlign extends CEnumU[PangoTabAlign]:
   given _tag: Tag[PangoTabAlign] = Tag.UInt
@@ -8778,7 +10332,7 @@ object PangoTabAlign extends CEnumU[PangoTabAlign]:
   val PANGO_TAB_CENTER = define(2)
   val PANGO_TAB_DECIMAL = define(3)
   inline def getName(inline value: PangoTabAlign): Option[String] =
-    value match
+    inline value match
       case PANGO_TAB_LEFT => Some("PANGO_TAB_LEFT")
       case PANGO_TAB_RIGHT => Some("PANGO_TAB_RIGHT")
       case PANGO_TAB_CENTER => Some("PANGO_TAB_CENTER")
@@ -8789,6 +10343,11 @@ object PangoTabAlign extends CEnumU[PangoTabAlign]:
     inline def |(b: PangoTabAlign): PangoTabAlign = a | b
     inline def is(b: PangoTabAlign): Boolean = (a & b) == b
 
+/**
+ * PangoTextTransform: _TEXT_TRANSFORM_NONE: Leave text unchanged _TEXT_TRANSFORM_LOWERCASE: Display letters and numbers as lowercase _TEXT_TRANSFORM_UPPERCASE: Display letters and numbers as uppercase _TEXT_TRANSFORM_CAPITALIZE: Display the first character of a word in titlecase
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoTextTransform = CUnsignedInt
 object PangoTextTransform extends CEnumU[PangoTextTransform]:
   given _tag: Tag[PangoTextTransform] = Tag.UInt
@@ -8798,7 +10357,7 @@ object PangoTextTransform extends CEnumU[PangoTextTransform]:
   val PANGO_TEXT_TRANSFORM_UPPERCASE = define(2)
   val PANGO_TEXT_TRANSFORM_CAPITALIZE = define(3)
   inline def getName(inline value: PangoTextTransform): Option[String] =
-    value match
+    inline value match
       case PANGO_TEXT_TRANSFORM_NONE => Some("PANGO_TEXT_TRANSFORM_NONE")
       case PANGO_TEXT_TRANSFORM_LOWERCASE => Some("PANGO_TEXT_TRANSFORM_LOWERCASE")
       case PANGO_TEXT_TRANSFORM_UPPERCASE => Some("PANGO_TEXT_TRANSFORM_UPPERCASE")
@@ -8809,6 +10368,11 @@ object PangoTextTransform extends CEnumU[PangoTextTransform]:
     inline def |(b: PangoTextTransform): PangoTextTransform = a | b
     inline def is(b: PangoTextTransform): Boolean = (a & b) == b
 
+/**
+ * PangoUnderline: _UNDERLINE_NONE: no underline should be drawn _UNDERLINE_SINGLE: a single underline should be drawn _UNDERLINE_DOUBLE: a double underline should be drawn _UNDERLINE_LOW: a single underline should be drawn at a position beneath the ink extents of the text being underlined. This should be used only for underlining single characters, such as for keyboard accelerators. %PANGO_UNDERLINE_SINGLE should be used for extended portions of text. _UNDERLINE_ERROR: an underline indicating an error should be drawn below. The exact style of rendering is up to the `PangoRenderer` in use, but typical styles include wavy or dotted lines. This underline is typically used to indicate an error such as a possible mispelling; in some cases a contrasting color may automatically be used. This type of underlining is available since Pango 1.4. _UNDERLINE_SINGLE_LINE: Like _UNDERLINE_SINGLE, but drawn continuously across multiple runs. This type of underlining is available since Pango 1.46. _UNDERLINE_DOUBLE_LINE: Like _UNDERLINE_DOUBLE, but drawn continuously across multiple runs. This type of underlining is available since Pango 1.46. _UNDERLINE_ERROR_LINE: Like _UNDERLINE_ERROR, but drawn continuously across multiple runs. This type of underlining is available since Pango 1.46.
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+*/
 opaque type PangoUnderline = CUnsignedInt
 object PangoUnderline extends CEnumU[PangoUnderline]:
   given _tag: Tag[PangoUnderline] = Tag.UInt
@@ -8822,7 +10386,7 @@ object PangoUnderline extends CEnumU[PangoUnderline]:
   val PANGO_UNDERLINE_DOUBLE_LINE = define(6)
   val PANGO_UNDERLINE_ERROR_LINE = define(7)
   inline def getName(inline value: PangoUnderline): Option[String] =
-    value match
+    inline value match
       case PANGO_UNDERLINE_NONE => Some("PANGO_UNDERLINE_NONE")
       case PANGO_UNDERLINE_SINGLE => Some("PANGO_UNDERLINE_SINGLE")
       case PANGO_UNDERLINE_DOUBLE => Some("PANGO_UNDERLINE_DOUBLE")
@@ -8837,6 +10401,11 @@ object PangoUnderline extends CEnumU[PangoUnderline]:
     inline def |(b: PangoUnderline): PangoUnderline = a | b
     inline def is(b: PangoUnderline): Boolean = (a & b) == b
 
+/**
+ * PangoVariant: _VARIANT_NORMAL: A normal font. _VARIANT_SMALL_CAPS: A font with the lower case characters replaced by smaller variants of the capital characters. _VARIANT_ALL_SMALL_CAPS: A font with all characters replaced by smaller variants of the capital characters. Since: 1.50 _VARIANT_PETITE_CAPS: A font with the lower case characters replaced by smaller variants of the capital characters. Petite Caps can be even smaller than Small Caps. Since: 1.50 _VARIANT_ALL_PETITE_CAPS: A font with all characters replaced by smaller variants of the capital characters. Petite Caps can be even smaller than Small Caps. Since: 1.50 _VARIANT_UNICASE: A font with the upper case characters replaced by smaller variants of the capital letters. Since: 1.50 _VARIANT_TITLE_CAPS: A font with capital letters that are more suitable for all-uppercase titles. Since: 1.50
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+*/
 opaque type PangoVariant = CUnsignedInt
 object PangoVariant extends CEnumU[PangoVariant]:
   given _tag: Tag[PangoVariant] = Tag.UInt
@@ -8849,7 +10418,7 @@ object PangoVariant extends CEnumU[PangoVariant]:
   val PANGO_VARIANT_UNICASE = define(5)
   val PANGO_VARIANT_TITLE_CAPS = define(6)
   inline def getName(inline value: PangoVariant): Option[String] =
-    value match
+    inline value match
       case PANGO_VARIANT_NORMAL => Some("PANGO_VARIANT_NORMAL")
       case PANGO_VARIANT_SMALL_CAPS => Some("PANGO_VARIANT_SMALL_CAPS")
       case PANGO_VARIANT_ALL_SMALL_CAPS => Some("PANGO_VARIANT_ALL_SMALL_CAPS")
@@ -8863,6 +10432,11 @@ object PangoVariant extends CEnumU[PangoVariant]:
     inline def |(b: PangoVariant): PangoVariant = a | b
     inline def is(b: PangoVariant): Boolean = (a & b) == b
 
+/**
+ * PangoWeight: _WEIGHT_THIN: the thin weight (= 100) Since: 1.24 _WEIGHT_ULTRALIGHT: the ultralight weight (= 200) _WEIGHT_LIGHT: the light weight (= 300) _WEIGHT_SEMILIGHT: the semilight weight (= 350) Since: 1.36.7 _WEIGHT_BOOK: the book weight (= 380) Since: 1.24) _WEIGHT_NORMAL: the default weight (= 400) _WEIGHT_MEDIUM: the normal weight (= 500) Since: 1.24 _WEIGHT_SEMIBOLD: the semibold weight (= 600) _WEIGHT_BOLD: the bold weight (= 700) _WEIGHT_ULTRABOLD: the ultrabold weight (= 800) _WEIGHT_HEAVY: the heavy weight (= 900) _WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000) Since: 1.24
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+*/
 opaque type PangoWeight = CUnsignedInt
 object PangoWeight extends CEnumU[PangoWeight]:
   given _tag: Tag[PangoWeight] = Tag.UInt
@@ -8880,7 +10454,7 @@ object PangoWeight extends CEnumU[PangoWeight]:
   val PANGO_WEIGHT_HEAVY = define(900)
   val PANGO_WEIGHT_ULTRAHEAVY = define(1000)
   inline def getName(inline value: PangoWeight): Option[String] =
-    value match
+    inline value match
       case PANGO_WEIGHT_THIN => Some("PANGO_WEIGHT_THIN")
       case PANGO_WEIGHT_ULTRALIGHT => Some("PANGO_WEIGHT_ULTRALIGHT")
       case PANGO_WEIGHT_LIGHT => Some("PANGO_WEIGHT_LIGHT")
@@ -8899,6 +10473,11 @@ object PangoWeight extends CEnumU[PangoWeight]:
     inline def |(b: PangoWeight): PangoWeight = a | b
     inline def is(b: PangoWeight): Boolean = (a & b) == b
 
+/**
+ * PangoWrapMode: _WRAP_WORD: wrap lines at word boundaries. _WRAP_CHAR: wrap lines at character boundaries. _WRAP_WORD_CHAR: wrap lines at word boundaries, but fall back to character boundaries if there is not enough space for a full word.
+
+ * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+*/
 opaque type PangoWrapMode = CUnsignedInt
 object PangoWrapMode extends CEnumU[PangoWrapMode]:
   given _tag: Tag[PangoWrapMode] = Tag.UInt
@@ -8907,7 +10486,7 @@ object PangoWrapMode extends CEnumU[PangoWrapMode]:
   val PANGO_WRAP_CHAR = define(1)
   val PANGO_WRAP_WORD_CHAR = define(2)
   inline def getName(inline value: PangoWrapMode): Option[String] =
-    value match
+    inline value match
       case PANGO_WRAP_WORD => Some("PANGO_WRAP_WORD")
       case PANGO_WRAP_CHAR => Some("PANGO_WRAP_CHAR")
       case PANGO_WRAP_WORD_CHAR => Some("PANGO_WRAP_WORD_CHAR")
@@ -8917,6 +10496,11 @@ object PangoWrapMode extends CEnumU[PangoWrapMode]:
     inline def |(b: PangoWrapMode): PangoWrapMode = a | b
     inline def is(b: PangoWrapMode): Boolean = (a & b) == b
 
+/**
+ * GTlsPasswordFlags: _TLS_PASSWORD_NONE: No flags _TLS_PASSWORD_RETRY: The password was wrong, and the user should retry. _TLS_PASSWORD_MANY_TRIES: Hint to the user that the password has been wrong many times, and the user may not have many chances left. _TLS_PASSWORD_FINAL_TRY: Hint to the user that this is the last try to get this password right. _TLS_PASSWORD_PKCS11_USER: For PKCS #11, the user PIN is required. Since: 2.70. _TLS_PASSWORD_PKCS11_SECURITY_OFFICER: For PKCS #11, the security officer PIN is required. Since: 2.70. _TLS_PASSWORD_PKCS11_CONTEXT_SPECIFIC: For PKCS #11, the context-specific PIN is required. Since: 2.70.
+
+ * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+*/
 opaque type _GTlsPasswordFlags = CUnsignedInt
 object _GTlsPasswordFlags extends CEnumU[_GTlsPasswordFlags]:
   given _tag: Tag[_GTlsPasswordFlags] = Tag.UInt
@@ -8929,7 +10513,7 @@ object _GTlsPasswordFlags extends CEnumU[_GTlsPasswordFlags]:
   val G_TLS_PASSWORD_PKCS11_SECURITY_OFFICER = define(32)
   val G_TLS_PASSWORD_PKCS11_CONTEXT_SPECIFIC = define(64)
   inline def getName(inline value: _GTlsPasswordFlags): Option[String] =
-    value match
+    inline value match
       case G_TLS_PASSWORD_NONE => Some("G_TLS_PASSWORD_NONE")
       case G_TLS_PASSWORD_RETRY => Some("G_TLS_PASSWORD_RETRY")
       case G_TLS_PASSWORD_MANY_TRIES => Some("G_TLS_PASSWORD_MANY_TRIES")
@@ -8943,6 +10527,11 @@ object _GTlsPasswordFlags extends CEnumU[_GTlsPasswordFlags]:
     inline def |(b: _GTlsPasswordFlags): _GTlsPasswordFlags = a | b
     inline def is(b: _GTlsPasswordFlags): Boolean = (a & b) == b
 
+/**
+ * cairo_antialias_t: _ANTIALIAS_DEFAULT: Use the default antialiasing for the subsystem and target device, since 1.0 _ANTIALIAS_NONE: Use a bilevel alpha mask, since 1.0 _ANTIALIAS_GRAY: Perform single-color antialiasing (using shades of gray for black text on a white background, for example), since 1.0 _ANTIALIAS_SUBPIXEL: Perform antialiasing by taking advantage of the order of subpixel elements on devices such as LCD panels, since 1.0 _ANTIALIAS_FAST: Hint that the backend should perform some antialiasing but prefer speed over quality, since 1.12 _ANTIALIAS_GOOD: The backend should balance quality against performance, since 1.12 _ANTIALIAS_BEST: Hint that the backend should render at the highest quality, sacrificing speed if necessary, since 1.12
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_antialias = CUnsignedInt
 object _cairo_antialias extends CEnumU[_cairo_antialias]:
   given _tag: Tag[_cairo_antialias] = Tag.UInt
@@ -8955,7 +10544,7 @@ object _cairo_antialias extends CEnumU[_cairo_antialias]:
   val CAIRO_ANTIALIAS_GOOD = define(5)
   val CAIRO_ANTIALIAS_BEST = define(6)
   inline def getName(inline value: _cairo_antialias): Option[String] =
-    value match
+    inline value match
       case CAIRO_ANTIALIAS_DEFAULT => Some("CAIRO_ANTIALIAS_DEFAULT")
       case CAIRO_ANTIALIAS_NONE => Some("CAIRO_ANTIALIAS_NONE")
       case CAIRO_ANTIALIAS_GRAY => Some("CAIRO_ANTIALIAS_GRAY")
@@ -8969,6 +10558,11 @@ object _cairo_antialias extends CEnumU[_cairo_antialias]:
     inline def |(b: _cairo_antialias): _cairo_antialias = a | b
     inline def is(b: _cairo_antialias): Boolean = (a & b) == b
 
+/**
+ * cairo_content_t: _CONTENT_COLOR: The surface will hold color content only. (Since 1.0) _CONTENT_ALPHA: The surface will hold alpha content only. (Since 1.0) _CONTENT_COLOR_ALPHA: The surface will hold color and alpha content. (Since 1.0)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_content = CUnsignedInt
 object _cairo_content extends CEnumU[_cairo_content]:
   given _tag: Tag[_cairo_content] = Tag.UInt
@@ -8977,7 +10571,7 @@ object _cairo_content extends CEnumU[_cairo_content]:
   val CAIRO_CONTENT_ALPHA = define(8192)
   val CAIRO_CONTENT_COLOR_ALPHA = define(12288)
   inline def getName(inline value: _cairo_content): Option[String] =
-    value match
+    inline value match
       case CAIRO_CONTENT_COLOR => Some("CAIRO_CONTENT_COLOR")
       case CAIRO_CONTENT_ALPHA => Some("CAIRO_CONTENT_ALPHA")
       case CAIRO_CONTENT_COLOR_ALPHA => Some("CAIRO_CONTENT_COLOR_ALPHA")
@@ -8987,6 +10581,11 @@ object _cairo_content extends CEnumU[_cairo_content]:
     inline def |(b: _cairo_content): _cairo_content = a | b
     inline def is(b: _cairo_content): Boolean = (a & b) == b
 
+/**
+ * cairo_device_type_t: _DEVICE_TYPE_DRM: The device is of type Direct Render Manager, since 1.10 _DEVICE_TYPE_GL: The device is of type OpenGL, since 1.10 _DEVICE_TYPE_SCRIPT: The device is of type script, since 1.10 _DEVICE_TYPE_XCB: The device is of type xcb, since 1.10 _DEVICE_TYPE_XLIB: The device is of type xlib, since 1.10 _DEVICE_TYPE_XML: The device is of type XML, since 1.10 _DEVICE_TYPE_COGL: The device is of type cogl, since 1.12 _DEVICE_TYPE_WIN32: The device is of type win32, since 1.12 _DEVICE_TYPE_INVALID: The device is invalid, since 1.10
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_device_type = CInt
 object _cairo_device_type extends CEnum[_cairo_device_type]:
   given _tag: Tag[_cairo_device_type] = Tag.Int
@@ -9001,7 +10600,7 @@ object _cairo_device_type extends CEnum[_cairo_device_type]:
   val CAIRO_DEVICE_TYPE_WIN32 = define(7)
   val CAIRO_DEVICE_TYPE_INVALID = define(-1)
   inline def getName(inline value: _cairo_device_type): Option[String] =
-    value match
+    inline value match
       case CAIRO_DEVICE_TYPE_DRM => Some("CAIRO_DEVICE_TYPE_DRM")
       case CAIRO_DEVICE_TYPE_GL => Some("CAIRO_DEVICE_TYPE_GL")
       case CAIRO_DEVICE_TYPE_SCRIPT => Some("CAIRO_DEVICE_TYPE_SCRIPT")
@@ -9017,6 +10616,11 @@ object _cairo_device_type extends CEnum[_cairo_device_type]:
     inline def |(b: _cairo_device_type): _cairo_device_type = a | b
     inline def is(b: _cairo_device_type): Boolean = (a & b) == b
 
+/**
+ * cairo_extend_t: _EXTEND_NONE: pixels outside of the source pattern are fully transparent (Since 1.0) _EXTEND_REPEAT: the pattern is tiled by repeating (Since 1.0) _EXTEND_REFLECT: the pattern is tiled by reflecting at the edges (Since 1.0; but only implemented for surface patterns since 1.6) _EXTEND_PAD: pixels outside of the pattern copy the closest pixel from the source (Since 1.2; but only implemented for surface patterns since 1.6)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_extend = CUnsignedInt
 object _cairo_extend extends CEnumU[_cairo_extend]:
   given _tag: Tag[_cairo_extend] = Tag.UInt
@@ -9026,7 +10630,7 @@ object _cairo_extend extends CEnumU[_cairo_extend]:
   val CAIRO_EXTEND_REFLECT = define(2)
   val CAIRO_EXTEND_PAD = define(3)
   inline def getName(inline value: _cairo_extend): Option[String] =
-    value match
+    inline value match
       case CAIRO_EXTEND_NONE => Some("CAIRO_EXTEND_NONE")
       case CAIRO_EXTEND_REPEAT => Some("CAIRO_EXTEND_REPEAT")
       case CAIRO_EXTEND_REFLECT => Some("CAIRO_EXTEND_REFLECT")
@@ -9037,6 +10641,11 @@ object _cairo_extend extends CEnumU[_cairo_extend]:
     inline def |(b: _cairo_extend): _cairo_extend = a | b
     inline def is(b: _cairo_extend): Boolean = (a & b) == b
 
+/**
+ * cairo_fill_rule_t: _FILL_RULE_WINDING: If the path crosses the ray from left-to-right, counts +1. If the path crosses the ray from right to left, counts -1. (Left and right are determined from the perspective of looking along the ray from the starting point.) If the total count is non-zero, the point will be filled. (Since 1.0) _FILL_RULE_EVEN_ODD: Counts the total number of intersections, without regard to the orientation of the contour. If the total number of intersections is odd, the point will be filled. (Since 1.0)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_fill_rule = CUnsignedInt
 object _cairo_fill_rule extends CEnumU[_cairo_fill_rule]:
   given _tag: Tag[_cairo_fill_rule] = Tag.UInt
@@ -9044,7 +10653,7 @@ object _cairo_fill_rule extends CEnumU[_cairo_fill_rule]:
   val CAIRO_FILL_RULE_WINDING = define(0)
   val CAIRO_FILL_RULE_EVEN_ODD = define(1)
   inline def getName(inline value: _cairo_fill_rule): Option[String] =
-    value match
+    inline value match
       case CAIRO_FILL_RULE_WINDING => Some("CAIRO_FILL_RULE_WINDING")
       case CAIRO_FILL_RULE_EVEN_ODD => Some("CAIRO_FILL_RULE_EVEN_ODD")
       case _ => None
@@ -9053,6 +10662,11 @@ object _cairo_fill_rule extends CEnumU[_cairo_fill_rule]:
     inline def |(b: _cairo_fill_rule): _cairo_fill_rule = a | b
     inline def is(b: _cairo_fill_rule): Boolean = (a & b) == b
 
+/**
+ * cairo_filter_t: _FILTER_FAST: A high-performance filter, with quality similar to %CAIRO_FILTER_NEAREST (Since 1.0) _FILTER_GOOD: A reasonable-performance filter, with quality similar to %CAIRO_FILTER_BILINEAR (Since 1.0) _FILTER_BEST: The highest-quality available, performance may not be suitable for interactive use. (Since 1.0) _FILTER_NEAREST: Nearest-neighbor filtering (Since 1.0) _FILTER_BILINEAR: Linear interpolation in two dimensions (Since 1.0) _FILTER_GAUSSIAN: This filter value is currently unimplemented, and should not be used in current code. (Since 1.0)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_filter = CUnsignedInt
 object _cairo_filter extends CEnumU[_cairo_filter]:
   given _tag: Tag[_cairo_filter] = Tag.UInt
@@ -9064,7 +10678,7 @@ object _cairo_filter extends CEnumU[_cairo_filter]:
   val CAIRO_FILTER_BILINEAR = define(4)
   val CAIRO_FILTER_GAUSSIAN = define(5)
   inline def getName(inline value: _cairo_filter): Option[String] =
-    value match
+    inline value match
       case CAIRO_FILTER_FAST => Some("CAIRO_FILTER_FAST")
       case CAIRO_FILTER_GOOD => Some("CAIRO_FILTER_GOOD")
       case CAIRO_FILTER_BEST => Some("CAIRO_FILTER_BEST")
@@ -9077,6 +10691,11 @@ object _cairo_filter extends CEnumU[_cairo_filter]:
     inline def |(b: _cairo_filter): _cairo_filter = a | b
     inline def is(b: _cairo_filter): Boolean = (a & b) == b
 
+/**
+ * cairo_font_slant_t: _FONT_SLANT_NORMAL: Upright font style, since 1.0 _FONT_SLANT_ITALIC: Italic font style, since 1.0 _FONT_SLANT_OBLIQUE: Oblique font style, since 1.0
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_font_slant = CUnsignedInt
 object _cairo_font_slant extends CEnumU[_cairo_font_slant]:
   given _tag: Tag[_cairo_font_slant] = Tag.UInt
@@ -9085,7 +10704,7 @@ object _cairo_font_slant extends CEnumU[_cairo_font_slant]:
   val CAIRO_FONT_SLANT_ITALIC = define(1)
   val CAIRO_FONT_SLANT_OBLIQUE = define(2)
   inline def getName(inline value: _cairo_font_slant): Option[String] =
-    value match
+    inline value match
       case CAIRO_FONT_SLANT_NORMAL => Some("CAIRO_FONT_SLANT_NORMAL")
       case CAIRO_FONT_SLANT_ITALIC => Some("CAIRO_FONT_SLANT_ITALIC")
       case CAIRO_FONT_SLANT_OBLIQUE => Some("CAIRO_FONT_SLANT_OBLIQUE")
@@ -9095,6 +10714,11 @@ object _cairo_font_slant extends CEnumU[_cairo_font_slant]:
     inline def |(b: _cairo_font_slant): _cairo_font_slant = a | b
     inline def is(b: _cairo_font_slant): Boolean = (a & b) == b
 
+/**
+ * cairo_font_type_t: _FONT_TYPE_TOY: The font was created using cairo's toy font api (Since: 1.2) _FONT_TYPE_FT: The font is of type FreeType (Since: 1.2) _FONT_TYPE_WIN32: The font is of type Win32 (Since: 1.2) _FONT_TYPE_QUARTZ: The font is of type Quartz (Since: 1.6, in 1.2 and 1.4 it was named CAIRO_FONT_TYPE_ATSUI) _FONT_TYPE_USER: The font was create using cairo's user font api (Since: 1.8)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_font_type = CUnsignedInt
 object _cairo_font_type extends CEnumU[_cairo_font_type]:
   given _tag: Tag[_cairo_font_type] = Tag.UInt
@@ -9105,7 +10729,7 @@ object _cairo_font_type extends CEnumU[_cairo_font_type]:
   val CAIRO_FONT_TYPE_QUARTZ = define(3)
   val CAIRO_FONT_TYPE_USER = define(4)
   inline def getName(inline value: _cairo_font_type): Option[String] =
-    value match
+    inline value match
       case CAIRO_FONT_TYPE_TOY => Some("CAIRO_FONT_TYPE_TOY")
       case CAIRO_FONT_TYPE_FT => Some("CAIRO_FONT_TYPE_FT")
       case CAIRO_FONT_TYPE_WIN32 => Some("CAIRO_FONT_TYPE_WIN32")
@@ -9117,6 +10741,11 @@ object _cairo_font_type extends CEnumU[_cairo_font_type]:
     inline def |(b: _cairo_font_type): _cairo_font_type = a | b
     inline def is(b: _cairo_font_type): Boolean = (a & b) == b
 
+/**
+ * cairo_font_weight_t: _FONT_WEIGHT_NORMAL: Normal font weight, since 1.0 _FONT_WEIGHT_BOLD: Bold font weight, since 1.0
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_font_weight = CUnsignedInt
 object _cairo_font_weight extends CEnumU[_cairo_font_weight]:
   given _tag: Tag[_cairo_font_weight] = Tag.UInt
@@ -9124,7 +10753,7 @@ object _cairo_font_weight extends CEnumU[_cairo_font_weight]:
   val CAIRO_FONT_WEIGHT_NORMAL = define(0)
   val CAIRO_FONT_WEIGHT_BOLD = define(1)
   inline def getName(inline value: _cairo_font_weight): Option[String] =
-    value match
+    inline value match
       case CAIRO_FONT_WEIGHT_NORMAL => Some("CAIRO_FONT_WEIGHT_NORMAL")
       case CAIRO_FONT_WEIGHT_BOLD => Some("CAIRO_FONT_WEIGHT_BOLD")
       case _ => None
@@ -9133,6 +10762,11 @@ object _cairo_font_weight extends CEnumU[_cairo_font_weight]:
     inline def |(b: _cairo_font_weight): _cairo_font_weight = a | b
     inline def is(b: _cairo_font_weight): Boolean = (a & b) == b
 
+/**
+ * cairo_format_t: _FORMAT_INVALID: no such format exists or is supported. _FORMAT_ARGB32: each pixel is a 32-bit quantity, with alpha in the upper 8 bits, then red, then green, then blue. The 32-bit quantities are stored native-endian. Pre-multiplied alpha is used. (That is, 50% transparent red is 0x80800000, not 0x80ff0000.) (Since 1.0) _FORMAT_RGB24: each pixel is a 32-bit quantity, with the upper 8 bits unused. Red, Green, and Blue are stored in the remaining 24 bits in that order. (Since 1.0) _FORMAT_A8: each pixel is a 8-bit quantity holding an alpha value. (Since 1.0) _FORMAT_A1: each pixel is a 1-bit quantity holding an alpha value. Pixels are packed together into 32-bit quantities. The ordering of the bits matches the endianness of the platform. On a big-endian machine, the first pixel is in the uppermost bit, on a little-endian machine the first pixel is in the least-significant bit. (Since 1.0) _FORMAT_RGB16_565: each pixel is a 16-bit quantity with red in the upper 5 bits, then green in the middle 6 bits, and blue in the lower 5 bits. (Since 1.2) _FORMAT_RGB30: like RGB24 but with 10bpc. (Since 1.12)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_format = CInt
 object _cairo_format extends CEnum[_cairo_format]:
   given _tag: Tag[_cairo_format] = Tag.Int
@@ -9145,7 +10779,7 @@ object _cairo_format extends CEnum[_cairo_format]:
   val CAIRO_FORMAT_RGB16_565 = define(4)
   val CAIRO_FORMAT_RGB30 = define(5)
   inline def getName(inline value: _cairo_format): Option[String] =
-    value match
+    inline value match
       case CAIRO_FORMAT_INVALID => Some("CAIRO_FORMAT_INVALID")
       case CAIRO_FORMAT_ARGB32 => Some("CAIRO_FORMAT_ARGB32")
       case CAIRO_FORMAT_RGB24 => Some("CAIRO_FORMAT_RGB24")
@@ -9159,6 +10793,11 @@ object _cairo_format extends CEnum[_cairo_format]:
     inline def |(b: _cairo_format): _cairo_format = a | b
     inline def is(b: _cairo_format): Boolean = (a & b) == b
 
+/**
+ * cairo_hint_metrics_t: _HINT_METRICS_DEFAULT: Hint metrics in the default manner for the font backend and target device, since 1.0 _HINT_METRICS_OFF: Do not hint font metrics, since 1.0 _HINT_METRICS_ON: Hint font metrics, since 1.0
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_hint_metrics = CUnsignedInt
 object _cairo_hint_metrics extends CEnumU[_cairo_hint_metrics]:
   given _tag: Tag[_cairo_hint_metrics] = Tag.UInt
@@ -9167,7 +10806,7 @@ object _cairo_hint_metrics extends CEnumU[_cairo_hint_metrics]:
   val CAIRO_HINT_METRICS_OFF = define(1)
   val CAIRO_HINT_METRICS_ON = define(2)
   inline def getName(inline value: _cairo_hint_metrics): Option[String] =
-    value match
+    inline value match
       case CAIRO_HINT_METRICS_DEFAULT => Some("CAIRO_HINT_METRICS_DEFAULT")
       case CAIRO_HINT_METRICS_OFF => Some("CAIRO_HINT_METRICS_OFF")
       case CAIRO_HINT_METRICS_ON => Some("CAIRO_HINT_METRICS_ON")
@@ -9177,6 +10816,11 @@ object _cairo_hint_metrics extends CEnumU[_cairo_hint_metrics]:
     inline def |(b: _cairo_hint_metrics): _cairo_hint_metrics = a | b
     inline def is(b: _cairo_hint_metrics): Boolean = (a & b) == b
 
+/**
+ * cairo_hint_style_t: _HINT_STYLE_DEFAULT: Use the default hint style for font backend and target device, since 1.0 _HINT_STYLE_NONE: Do not hint outlines, since 1.0 _HINT_STYLE_SLIGHT: Hint outlines slightly to improve contrast while retaining good fidelity to the original shapes, since 1.0 _HINT_STYLE_MEDIUM: Hint outlines with medium strength giving a compromise between fidelity to the original shapes and contrast, since 1.0 _HINT_STYLE_FULL: Hint outlines to maximize contrast, since 1.0
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_hint_style = CUnsignedInt
 object _cairo_hint_style extends CEnumU[_cairo_hint_style]:
   given _tag: Tag[_cairo_hint_style] = Tag.UInt
@@ -9187,7 +10831,7 @@ object _cairo_hint_style extends CEnumU[_cairo_hint_style]:
   val CAIRO_HINT_STYLE_MEDIUM = define(3)
   val CAIRO_HINT_STYLE_FULL = define(4)
   inline def getName(inline value: _cairo_hint_style): Option[String] =
-    value match
+    inline value match
       case CAIRO_HINT_STYLE_DEFAULT => Some("CAIRO_HINT_STYLE_DEFAULT")
       case CAIRO_HINT_STYLE_NONE => Some("CAIRO_HINT_STYLE_NONE")
       case CAIRO_HINT_STYLE_SLIGHT => Some("CAIRO_HINT_STYLE_SLIGHT")
@@ -9199,6 +10843,11 @@ object _cairo_hint_style extends CEnumU[_cairo_hint_style]:
     inline def |(b: _cairo_hint_style): _cairo_hint_style = a | b
     inline def is(b: _cairo_hint_style): Boolean = (a & b) == b
 
+/**
+ * cairo_line_cap_t: _LINE_CAP_BUTT: start(stop) the line exactly at the start(end) point (Since 1.0) _LINE_CAP_ROUND: use a round ending, the center of the circle is the end point (Since 1.0) _LINE_CAP_SQUARE: use squared ending, the center of the square is the end point (Since 1.0)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_line_cap = CUnsignedInt
 object _cairo_line_cap extends CEnumU[_cairo_line_cap]:
   given _tag: Tag[_cairo_line_cap] = Tag.UInt
@@ -9207,7 +10856,7 @@ object _cairo_line_cap extends CEnumU[_cairo_line_cap]:
   val CAIRO_LINE_CAP_ROUND = define(1)
   val CAIRO_LINE_CAP_SQUARE = define(2)
   inline def getName(inline value: _cairo_line_cap): Option[String] =
-    value match
+    inline value match
       case CAIRO_LINE_CAP_BUTT => Some("CAIRO_LINE_CAP_BUTT")
       case CAIRO_LINE_CAP_ROUND => Some("CAIRO_LINE_CAP_ROUND")
       case CAIRO_LINE_CAP_SQUARE => Some("CAIRO_LINE_CAP_SQUARE")
@@ -9217,6 +10866,11 @@ object _cairo_line_cap extends CEnumU[_cairo_line_cap]:
     inline def |(b: _cairo_line_cap): _cairo_line_cap = a | b
     inline def is(b: _cairo_line_cap): Boolean = (a & b) == b
 
+/**
+ * cairo_line_join_t: _LINE_JOIN_MITER: use a sharp (angled) corner, see cairo_set_miter_limit() (Since 1.0) _LINE_JOIN_ROUND: use a rounded join, the center of the circle is the joint point (Since 1.0) _LINE_JOIN_BEVEL: use a cut-off join, the join is cut off at half the line width from the joint point (Since 1.0)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_line_join = CUnsignedInt
 object _cairo_line_join extends CEnumU[_cairo_line_join]:
   given _tag: Tag[_cairo_line_join] = Tag.UInt
@@ -9225,7 +10879,7 @@ object _cairo_line_join extends CEnumU[_cairo_line_join]:
   val CAIRO_LINE_JOIN_ROUND = define(1)
   val CAIRO_LINE_JOIN_BEVEL = define(2)
   inline def getName(inline value: _cairo_line_join): Option[String] =
-    value match
+    inline value match
       case CAIRO_LINE_JOIN_MITER => Some("CAIRO_LINE_JOIN_MITER")
       case CAIRO_LINE_JOIN_ROUND => Some("CAIRO_LINE_JOIN_ROUND")
       case CAIRO_LINE_JOIN_BEVEL => Some("CAIRO_LINE_JOIN_BEVEL")
@@ -9235,6 +10889,11 @@ object _cairo_line_join extends CEnumU[_cairo_line_join]:
     inline def |(b: _cairo_line_join): _cairo_line_join = a | b
     inline def is(b: _cairo_line_join): Boolean = (a & b) == b
 
+/**
+ * cairo_operator_t: _OPERATOR_CLEAR: clear destination layer (bounded) (Since 1.0) _OPERATOR_SOURCE: replace destination layer (bounded) (Since 1.0) _OPERATOR_OVER: draw source layer on top of destination layer (bounded) (Since 1.0) _OPERATOR_IN: draw source where there was destination content (unbounded) (Since 1.0) _OPERATOR_OUT: draw source where there was no destination content (unbounded) (Since 1.0) _OPERATOR_ATOP: draw source on top of destination content and only there (Since 1.0) _OPERATOR_DEST: ignore the source (Since 1.0) _OPERATOR_DEST_OVER: draw destination on top of source (Since 1.0) _OPERATOR_DEST_IN: leave destination only where there was source content (unbounded) (Since 1.0) _OPERATOR_DEST_OUT: leave destination only where there was no source content (Since 1.0) _OPERATOR_DEST_ATOP: leave destination on top of source content and only there (unbounded) (Since 1.0) _OPERATOR_XOR: source and destination are shown where there is only one of them (Since 1.0) _OPERATOR_ADD: source and destination layers are accumulated (Since 1.0) _OPERATOR_SATURATE: like over, but assuming source and dest are disjoint geometries (Since 1.0) _OPERATOR_MULTIPLY: source and destination layers are multiplied. This causes the result to be at least as dark as the darker inputs. (Since 1.10) _OPERATOR_SCREEN: source and destination are complemented and multiplied. This causes the result to be at least as light as the lighter inputs. (Since 1.10) _OPERATOR_OVERLAY: multiplies or screens, depending on the lightness of the destination color. (Since 1.10) _OPERATOR_DARKEN: replaces the destination with the source if it is darker, otherwise keeps the source. (Since 1.10) _OPERATOR_LIGHTEN: replaces the destination with the source if it is lighter, otherwise keeps the source. (Since 1.10) _OPERATOR_COLOR_DODGE: brightens the destination color to reflect the source color. (Since 1.10) _OPERATOR_COLOR_BURN: darkens the destination color to reflect the source color. (Since 1.10) _OPERATOR_HARD_LIGHT: Multiplies or screens, dependent on source color. (Since 1.10) _OPERATOR_SOFT_LIGHT: Darkens or lightens, dependent on source color. (Since 1.10) _OPERATOR_DIFFERENCE: Takes the difference of the source and destination color. (Since 1.10) _OPERATOR_EXCLUSION: Produces an effect similar to difference, but with lower contrast. (Since 1.10) _OPERATOR_HSL_HUE: Creates a color with the hue of the source and the saturation and luminosity of the target. (Since 1.10) _OPERATOR_HSL_SATURATION: Creates a color with the saturation of the source and the hue and luminosity of the target. Painting with this mode onto a gray area produces no change. (Since 1.10) _OPERATOR_HSL_COLOR: Creates a color with the hue and saturation of the source and the luminosity of the target. This preserves the gray levels of the target and is useful for coloring monochrome images or tinting color images. (Since 1.10) _OPERATOR_HSL_LUMINOSITY: Creates a color with the luminosity of the source and the hue and saturation of the target. This produces an inverse effect to _OPERATOR_HSL_COLOR. (Since 1.10)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_operator = CUnsignedInt
 object _cairo_operator extends CEnumU[_cairo_operator]:
   given _tag: Tag[_cairo_operator] = Tag.UInt
@@ -9269,7 +10928,7 @@ object _cairo_operator extends CEnumU[_cairo_operator]:
   val CAIRO_OPERATOR_HSL_COLOR = define(27)
   val CAIRO_OPERATOR_HSL_LUMINOSITY = define(28)
   inline def getName(inline value: _cairo_operator): Option[String] =
-    value match
+    inline value match
       case CAIRO_OPERATOR_CLEAR => Some("CAIRO_OPERATOR_CLEAR")
       case CAIRO_OPERATOR_SOURCE => Some("CAIRO_OPERATOR_SOURCE")
       case CAIRO_OPERATOR_OVER => Some("CAIRO_OPERATOR_OVER")
@@ -9305,6 +10964,11 @@ object _cairo_operator extends CEnumU[_cairo_operator]:
     inline def |(b: _cairo_operator): _cairo_operator = a | b
     inline def is(b: _cairo_operator): Boolean = (a & b) == b
 
+/**
+ * cairo_path_data_type_t: _PATH_MOVE_TO: A move-to operation, since 1.0 _PATH_LINE_TO: A line-to operation, since 1.0 _PATH_CURVE_TO: A curve-to operation, since 1.0 _PATH_CLOSE_PATH: A close-path operation, since 1.0
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_path_data_type = CUnsignedInt
 object _cairo_path_data_type extends CEnumU[_cairo_path_data_type]:
   given _tag: Tag[_cairo_path_data_type] = Tag.UInt
@@ -9314,7 +10978,7 @@ object _cairo_path_data_type extends CEnumU[_cairo_path_data_type]:
   val CAIRO_PATH_CURVE_TO = define(2)
   val CAIRO_PATH_CLOSE_PATH = define(3)
   inline def getName(inline value: _cairo_path_data_type): Option[String] =
-    value match
+    inline value match
       case CAIRO_PATH_MOVE_TO => Some("CAIRO_PATH_MOVE_TO")
       case CAIRO_PATH_LINE_TO => Some("CAIRO_PATH_LINE_TO")
       case CAIRO_PATH_CURVE_TO => Some("CAIRO_PATH_CURVE_TO")
@@ -9325,6 +10989,11 @@ object _cairo_path_data_type extends CEnumU[_cairo_path_data_type]:
     inline def |(b: _cairo_path_data_type): _cairo_path_data_type = a | b
     inline def is(b: _cairo_path_data_type): Boolean = (a & b) == b
 
+/**
+ * cairo_pattern_type_t: _PATTERN_TYPE_SOLID: The pattern is a solid (uniform) color. It may be opaque or translucent, since 1.2. _PATTERN_TYPE_SURFACE: The pattern is a based on a surface (an image), since 1.2. _PATTERN_TYPE_LINEAR: The pattern is a linear gradient, since 1.2. _PATTERN_TYPE_RADIAL: The pattern is a radial gradient, since 1.2. _PATTERN_TYPE_MESH: The pattern is a mesh, since 1.12. _PATTERN_TYPE_RASTER_SOURCE: The pattern is a user pattern providing raster data, since 1.12.
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_pattern_type = CUnsignedInt
 object _cairo_pattern_type extends CEnumU[_cairo_pattern_type]:
   given _tag: Tag[_cairo_pattern_type] = Tag.UInt
@@ -9336,7 +11005,7 @@ object _cairo_pattern_type extends CEnumU[_cairo_pattern_type]:
   val CAIRO_PATTERN_TYPE_MESH = define(4)
   val CAIRO_PATTERN_TYPE_RASTER_SOURCE = define(5)
   inline def getName(inline value: _cairo_pattern_type): Option[String] =
-    value match
+    inline value match
       case CAIRO_PATTERN_TYPE_SOLID => Some("CAIRO_PATTERN_TYPE_SOLID")
       case CAIRO_PATTERN_TYPE_SURFACE => Some("CAIRO_PATTERN_TYPE_SURFACE")
       case CAIRO_PATTERN_TYPE_LINEAR => Some("CAIRO_PATTERN_TYPE_LINEAR")
@@ -9349,6 +11018,11 @@ object _cairo_pattern_type extends CEnumU[_cairo_pattern_type]:
     inline def |(b: _cairo_pattern_type): _cairo_pattern_type = a | b
     inline def is(b: _cairo_pattern_type): Boolean = (a & b) == b
 
+/**
+ * cairo_region_overlap_t: _REGION_OVERLAP_IN: The contents are entirely inside the region. (Since 1.10) _REGION_OVERLAP_OUT: The contents are entirely outside the region. (Since 1.10) _REGION_OVERLAP_PART: The contents are partially inside and partially outside the region. (Since 1.10)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_region_overlap = CUnsignedInt
 object _cairo_region_overlap extends CEnumU[_cairo_region_overlap]:
   given _tag: Tag[_cairo_region_overlap] = Tag.UInt
@@ -9357,7 +11031,7 @@ object _cairo_region_overlap extends CEnumU[_cairo_region_overlap]:
   val CAIRO_REGION_OVERLAP_OUT = define(1)
   val CAIRO_REGION_OVERLAP_PART = define(2)
   inline def getName(inline value: _cairo_region_overlap): Option[String] =
-    value match
+    inline value match
       case CAIRO_REGION_OVERLAP_IN => Some("CAIRO_REGION_OVERLAP_IN")
       case CAIRO_REGION_OVERLAP_OUT => Some("CAIRO_REGION_OVERLAP_OUT")
       case CAIRO_REGION_OVERLAP_PART => Some("CAIRO_REGION_OVERLAP_PART")
@@ -9367,6 +11041,11 @@ object _cairo_region_overlap extends CEnumU[_cairo_region_overlap]:
     inline def |(b: _cairo_region_overlap): _cairo_region_overlap = a | b
     inline def is(b: _cairo_region_overlap): Boolean = (a & b) == b
 
+/**
+ * cairo_status_t: _STATUS_SUCCESS: no error has occurred (Since 1.0) _STATUS_NO_MEMORY: out of memory (Since 1.0) _STATUS_INVALID_RESTORE: cairo_restore() called without matching cairo_save() (Since 1.0) _STATUS_INVALID_POP_GROUP: no saved group to pop, i.e. cairo_pop_group() without matching cairo_push_group() (Since 1.0) _STATUS_NO_CURRENT_POINT: no current point defined (Since 1.0) _STATUS_INVALID_MATRIX: invalid matrix (not invertible) (Since 1.0) _STATUS_INVALID_STATUS: invalid value for an input #cairo_status_t (Since 1.0) _STATUS_NULL_POINTER: %NULL pointer (Since 1.0) _STATUS_INVALID_STRING: input string not valid UTF-8 (Since 1.0) _STATUS_INVALID_PATH_DATA: input path data not valid (Since 1.0) _STATUS_READ_ERROR: error while reading from input stream (Since 1.0) _STATUS_WRITE_ERROR: error while writing to output stream (Since 1.0) _STATUS_SURFACE_FINISHED: target surface has been finished (Since 1.0) _STATUS_SURFACE_TYPE_MISMATCH: the surface type is not appropriate for the operation (Since 1.0) _STATUS_PATTERN_TYPE_MISMATCH: the pattern type is not appropriate for the operation (Since 1.0) _STATUS_INVALID_CONTENT: invalid value for an input #cairo_content_t (Since 1.0) _STATUS_INVALID_FORMAT: invalid value for an input #cairo_format_t (Since 1.0) _STATUS_INVALID_VISUAL: invalid value for an input Visual* (Since 1.0) _STATUS_FILE_NOT_FOUND: file not found (Since 1.0) _STATUS_INVALID_DASH: invalid value for a dash setting (Since 1.0) _STATUS_INVALID_DSC_COMMENT: invalid value for a DSC comment (Since 1.2) _STATUS_INVALID_INDEX: invalid index passed to getter (Since 1.4) _STATUS_CLIP_NOT_REPRESENTABLE: clip region not representable in desired format (Since 1.4) _STATUS_TEMP_FILE_ERROR: error creating or writing to a temporary file (Since 1.6) _STATUS_INVALID_STRIDE: invalid value for stride (Since 1.6) _STATUS_FONT_TYPE_MISMATCH: the font type is not appropriate for the operation (Since 1.8) _STATUS_USER_FONT_IMMUTABLE: the user-font is immutable (Since 1.8) _STATUS_USER_FONT_ERROR: error occurred in a user-font callback function (Since 1.8) _STATUS_NEGATIVE_COUNT: negative number used where it is not allowed (Since 1.8) _STATUS_INVALID_CLUSTERS: input clusters do not represent the accompanying text and glyph array (Since 1.8) _STATUS_INVALID_SLANT: invalid value for an input #cairo_font_slant_t (Since 1.8) _STATUS_INVALID_WEIGHT: invalid value for an input #cairo_font_weight_t (Since 1.8) _STATUS_INVALID_SIZE: invalid value (typically too big) for the size of the input (surface, pattern, etc.) (Since 1.10) _STATUS_USER_FONT_NOT_IMPLEMENTED: user-font method not implemented (Since 1.10) _STATUS_DEVICE_TYPE_MISMATCH: the device type is not appropriate for the operation (Since 1.10) _STATUS_DEVICE_ERROR: an operation to the device caused an unspecified error (Since 1.10) _STATUS_INVALID_MESH_CONSTRUCTION: a mesh pattern construction operation was used outside of a cairo_mesh_pattern_begin_patch()/cairo_mesh_pattern_end_patch() pair (Since 1.12) _STATUS_DEVICE_FINISHED: target device has been finished (Since 1.12) _STATUS_JBIG2_GLOBAL_MISSING: %CAIRO_MIME_TYPE_JBIG2_GLOBAL_ID has been used on at least one image but no image provided %CAIRO_MIME_TYPE_JBIG2_GLOBAL (Since 1.14) _STATUS_PNG_ERROR: error occurred in libpng while reading from or writing to a PNG file (Since 1.16) _STATUS_FREETYPE_ERROR: error occurred in libfreetype (Since 1.16) _STATUS_WIN32_GDI_ERROR: error occurred in the Windows Graphics Device Interface (Since 1.16) _STATUS_TAG_ERROR: invalid tag name, attributes, or nesting (Since 1.16) _STATUS_LAST_STATUS: this is a special value indicating the number of status values defined in this enumeration. When using this value, note that the version of cairo at run-time may have additional status values defined than the value of this symbol at compile-time. (Since 1.10)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_status = CUnsignedInt
 object _cairo_status extends CEnumU[_cairo_status]:
   given _tag: Tag[_cairo_status] = Tag.UInt
@@ -9416,7 +11095,7 @@ object _cairo_status extends CEnumU[_cairo_status]:
   val CAIRO_STATUS_TAG_ERROR = define(42)
   val CAIRO_STATUS_LAST_STATUS = define(43)
   inline def getName(inline value: _cairo_status): Option[String] =
-    value match
+    inline value match
       case CAIRO_STATUS_SUCCESS => Some("CAIRO_STATUS_SUCCESS")
       case CAIRO_STATUS_NO_MEMORY => Some("CAIRO_STATUS_NO_MEMORY")
       case CAIRO_STATUS_INVALID_RESTORE => Some("CAIRO_STATUS_INVALID_RESTORE")
@@ -9467,6 +11146,11 @@ object _cairo_status extends CEnumU[_cairo_status]:
     inline def |(b: _cairo_status): _cairo_status = a | b
     inline def is(b: _cairo_status): Boolean = (a & b) == b
 
+/**
+ * cairo_subpixel_order_t: _SUBPIXEL_ORDER_DEFAULT: Use the default subpixel order for for the target device, since 1.0 _SUBPIXEL_ORDER_RGB: Subpixel elements are arranged horizontally with red at the left, since 1.0 _SUBPIXEL_ORDER_BGR: Subpixel elements are arranged horizontally with blue at the left, since 1.0 _SUBPIXEL_ORDER_VRGB: Subpixel elements are arranged vertically with red at the top, since 1.0 _SUBPIXEL_ORDER_VBGR: Subpixel elements are arranged vertically with blue at the top, since 1.0
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_subpixel_order = CUnsignedInt
 object _cairo_subpixel_order extends CEnumU[_cairo_subpixel_order]:
   given _tag: Tag[_cairo_subpixel_order] = Tag.UInt
@@ -9477,7 +11161,7 @@ object _cairo_subpixel_order extends CEnumU[_cairo_subpixel_order]:
   val CAIRO_SUBPIXEL_ORDER_VRGB = define(3)
   val CAIRO_SUBPIXEL_ORDER_VBGR = define(4)
   inline def getName(inline value: _cairo_subpixel_order): Option[String] =
-    value match
+    inline value match
       case CAIRO_SUBPIXEL_ORDER_DEFAULT => Some("CAIRO_SUBPIXEL_ORDER_DEFAULT")
       case CAIRO_SUBPIXEL_ORDER_RGB => Some("CAIRO_SUBPIXEL_ORDER_RGB")
       case CAIRO_SUBPIXEL_ORDER_BGR => Some("CAIRO_SUBPIXEL_ORDER_BGR")
@@ -9489,6 +11173,11 @@ object _cairo_subpixel_order extends CEnumU[_cairo_subpixel_order]:
     inline def |(b: _cairo_subpixel_order): _cairo_subpixel_order = a | b
     inline def is(b: _cairo_subpixel_order): Boolean = (a & b) == b
 
+/**
+ * cairo_surface_type_t: _SURFACE_TYPE_IMAGE: The surface is of type image, since 1.2 _SURFACE_TYPE_PDF: The surface is of type pdf, since 1.2 _SURFACE_TYPE_PS: The surface is of type ps, since 1.2 _SURFACE_TYPE_XLIB: The surface is of type xlib, since 1.2 _SURFACE_TYPE_XCB: The surface is of type xcb, since 1.2 _SURFACE_TYPE_GLITZ: The surface is of type glitz, since 1.2 _SURFACE_TYPE_QUARTZ: The surface is of type quartz, since 1.2 _SURFACE_TYPE_WIN32: The surface is of type win32, since 1.2 _SURFACE_TYPE_BEOS: The surface is of type beos, since 1.2 _SURFACE_TYPE_DIRECTFB: The surface is of type directfb, since 1.2 _SURFACE_TYPE_SVG: The surface is of type svg, since 1.2 _SURFACE_TYPE_OS2: The surface is of type os2, since 1.4 _SURFACE_TYPE_WIN32_PRINTING: The surface is a win32 printing surface, since 1.6 _SURFACE_TYPE_QUARTZ_IMAGE: The surface is of type quartz_image, since 1.6 _SURFACE_TYPE_SCRIPT: The surface is of type script, since 1.10 _SURFACE_TYPE_QT: The surface is of type Qt, since 1.10 _SURFACE_TYPE_RECORDING: The surface is of type recording, since 1.10 _SURFACE_TYPE_VG: The surface is a OpenVG surface, since 1.10 _SURFACE_TYPE_GL: The surface is of type OpenGL, since 1.10 _SURFACE_TYPE_DRM: The surface is of type Direct Render Manager, since 1.10 _SURFACE_TYPE_TEE: The surface is of type 'tee' (a multiplexing surface), since 1.10 _SURFACE_TYPE_XML: The surface is of type XML (for debugging), since 1.10 _SURFACE_TYPE_SUBSURFACE: The surface is a subsurface created with cairo_surface_create_for_rectangle(), since 1.10 _SURFACE_TYPE_COGL: This surface is of type Cogl, since 1.12
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_surface_type = CUnsignedInt
 object _cairo_surface_type extends CEnumU[_cairo_surface_type]:
   given _tag: Tag[_cairo_surface_type] = Tag.UInt
@@ -9519,7 +11208,7 @@ object _cairo_surface_type extends CEnumU[_cairo_surface_type]:
   val CAIRO_SURFACE_TYPE_SUBSURFACE = define(23)
   val CAIRO_SURFACE_TYPE_COGL = define(24)
   inline def getName(inline value: _cairo_surface_type): Option[String] =
-    value match
+    inline value match
       case CAIRO_SURFACE_TYPE_IMAGE => Some("CAIRO_SURFACE_TYPE_IMAGE")
       case CAIRO_SURFACE_TYPE_PDF => Some("CAIRO_SURFACE_TYPE_PDF")
       case CAIRO_SURFACE_TYPE_PS => Some("CAIRO_SURFACE_TYPE_PS")
@@ -9551,13 +11240,18 @@ object _cairo_surface_type extends CEnumU[_cairo_surface_type]:
     inline def |(b: _cairo_surface_type): _cairo_surface_type = a | b
     inline def is(b: _cairo_surface_type): Boolean = (a & b) == b
 
+/**
+ * cairo_text_cluster_flags_t: _TEXT_CLUSTER_FLAG_BACKWARD: The clusters in the cluster array map to glyphs in the glyph array from end to start. (Since 1.8)
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type _cairo_text_cluster_flags = CUnsignedInt
 object _cairo_text_cluster_flags extends CEnumU[_cairo_text_cluster_flags]:
   given _tag: Tag[_cairo_text_cluster_flags] = Tag.UInt
   inline def define(inline a: Long): _cairo_text_cluster_flags = a.toUInt
   val CAIRO_TEXT_CLUSTER_FLAG_BACKWARD = define(1)
   inline def getName(inline value: _cairo_text_cluster_flags): Option[String] =
-    value match
+    inline value match
       case CAIRO_TEXT_CLUSTER_FLAG_BACKWARD => Some("CAIRO_TEXT_CLUSTER_FLAG_BACKWARD")
       case _ => None
   extension (a: _cairo_text_cluster_flags)
@@ -9565,6 +11259,11 @@ object _cairo_text_cluster_flags extends CEnumU[_cairo_text_cluster_flags]:
     inline def |(b: _cairo_text_cluster_flags): _cairo_text_cluster_flags = a | b
     inline def is(b: _cairo_text_cluster_flags): Boolean = (a & b) == b
 
+/**
+ * cairo_surface_observer_mode_t: _SURFACE_OBSERVER_NORMAL: no recording is done _SURFACE_OBSERVER_RECORD_OPERATIONS: operations are recorded
+
+ * [bindgen] header: /usr/include/cairo/cairo.h
+*/
 opaque type cairo_surface_observer_mode_t = CUnsignedInt
 object cairo_surface_observer_mode_t extends CEnumU[cairo_surface_observer_mode_t]:
   given _tag: Tag[cairo_surface_observer_mode_t] = Tag.UInt
@@ -9572,7 +11271,7 @@ object cairo_surface_observer_mode_t extends CEnumU[cairo_surface_observer_mode_
   val CAIRO_SURFACE_OBSERVER_NORMAL = define(0)
   val CAIRO_SURFACE_OBSERVER_RECORD_OPERATIONS = define(1)
   inline def getName(inline value: cairo_surface_observer_mode_t): Option[String] =
-    value match
+    inline value match
       case CAIRO_SURFACE_OBSERVER_NORMAL => Some("CAIRO_SURFACE_OBSERVER_NORMAL")
       case CAIRO_SURFACE_OBSERVER_RECORD_OPERATIONS => Some("CAIRO_SURFACE_OBSERVER_RECORD_OPERATIONS")
       case _ => None
@@ -9581,6 +11280,11 @@ object cairo_surface_observer_mode_t extends CEnumU[cairo_surface_observer_mode_
     inline def |(b: cairo_surface_observer_mode_t): cairo_surface_observer_mode_t = a | b
     inline def is(b: cairo_surface_observer_mode_t): Boolean = (a & b) == b
 
+/**
+ * graphene_euler_order_t: _EULER_ORDER_DEFAULT: Rotate in the default order; the default order is one of the following enumeration values _EULER_ORDER_XYZ: Rotate in the X, Y, and Z order. Deprecated in Graphene 1.10, it's an alias for %GRAPHENE_EULER_ORDER_SXYZ _EULER_ORDER_YZX: Rotate in the Y, Z, and X order. Deprecated in Graphene 1.10, it's an alias for %GRAPHENE_EULER_ORDER_SYZX _EULER_ORDER_ZXY: Rotate in the Z, X, and Y order. Deprecated in Graphene 1.10, it's an alias for %GRAPHENE_EULER_ORDER_SZXY _EULER_ORDER_XZY: Rotate in the X, Z, and Y order. Deprecated in Graphene 1.10, it's an alias for %GRAPHENE_EULER_ORDER_SXZY _EULER_ORDER_YXZ: Rotate in the Y, X, and Z order. Deprecated in Graphene 1.10, it's an alias for %GRAPHENE_EULER_ORDER_SYXZ _EULER_ORDER_ZYX: Rotate in the Z, Y, and X order. Deprecated in Graphene 1.10, it's an alias for %GRAPHENE_EULER_ORDER_SZYX _EULER_ORDER_SXYZ: Defines a static rotation along the X, Y, and Z axes (Since: 1.10) _EULER_ORDER_SXYX: Defines a static rotation along the X, Y, and X axes (Since: 1.10) _EULER_ORDER_SXZY: Defines a static rotation along the X, Z, and Y axes (Since: 1.10) _EULER_ORDER_SXZX: Defines a static rotation along the X, Z, and X axes (Since: 1.10) _EULER_ORDER_SYZX: Defines a static rotation along the Y, Z, and X axes (Since: 1.10) _EULER_ORDER_SYZY: Defines a static rotation along the Y, Z, and Y axes (Since: 1.10) _EULER_ORDER_SYXZ: Defines a static rotation along the Y, X, and Z axes (Since: 1.10) _EULER_ORDER_SYXY: Defines a static rotation along the Y, X, and Y axes (Since: 1.10) _EULER_ORDER_SZXY: Defines a static rotation along the Z, X, and Y axes (Since: 1.10) _EULER_ORDER_SZXZ: Defines a static rotation along the Z, X, and Z axes (Since: 1.10) _EULER_ORDER_SZYX: Defines a static rotation along the Z, Y, and X axes (Since: 1.10) _EULER_ORDER_SZYZ: Defines a static rotation along the Z, Y, and Z axes (Since: 1.10) _EULER_ORDER_RZYX: Defines a relative rotation along the Z, Y, and X axes (Since: 1.10) _EULER_ORDER_RXYX: Defines a relative rotation along the X, Y, and X axes (Since: 1.10) _EULER_ORDER_RYZX: Defines a relative rotation along the Y, Z, and X axes (Since: 1.10) _EULER_ORDER_RXZX: Defines a relative rotation along the X, Z, and X axes (Since: 1.10) _EULER_ORDER_RXZY: Defines a relative rotation along the X, Z, and Y axes (Since: 1.10) _EULER_ORDER_RYZY: Defines a relative rotation along the Y, Z, and Y axes (Since: 1.10) _EULER_ORDER_RZXY: Defines a relative rotation along the Z, X, and Y axes (Since: 1.10) _EULER_ORDER_RYXY: Defines a relative rotation along the Y, X, and Y axes (Since: 1.10) _EULER_ORDER_RYXZ: Defines a relative rotation along the Y, X, and Z axes (Since: 1.10) _EULER_ORDER_RZXZ: Defines a relative rotation along the Z, X, and Z axes (Since: 1.10) _EULER_ORDER_RXYZ: Defines a relative rotation along the X, Y, and Z axes (Since: 1.10) _EULER_ORDER_RZYZ: Defines a relative rotation along the Z, Y, and Z axes (Since: 1.10)
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-euler.h
+*/
 opaque type graphene_euler_order_t = CInt
 object graphene_euler_order_t extends CEnum[graphene_euler_order_t]:
   given _tag: Tag[graphene_euler_order_t] = Tag.Int
@@ -9617,7 +11321,7 @@ object graphene_euler_order_t extends CEnum[graphene_euler_order_t]:
   val GRAPHENE_EULER_ORDER_RXYZ = define(28)
   val GRAPHENE_EULER_ORDER_RZYZ = define(29)
   inline def getName(inline value: graphene_euler_order_t): Option[String] =
-    value match
+    inline value match
       case GRAPHENE_EULER_ORDER_DEFAULT => Some("GRAPHENE_EULER_ORDER_DEFAULT")
       case GRAPHENE_EULER_ORDER_XYZ => Some("GRAPHENE_EULER_ORDER_XYZ")
       case GRAPHENE_EULER_ORDER_YZX => Some("GRAPHENE_EULER_ORDER_YZX")
@@ -9655,6 +11359,11 @@ object graphene_euler_order_t extends CEnum[graphene_euler_order_t]:
     inline def |(b: graphene_euler_order_t): graphene_euler_order_t = a | b
     inline def is(b: graphene_euler_order_t): Boolean = (a & b) == b
 
+/**
+ * graphene_ray_intersection_kind_t: _RAY_INTERSECTION_KIND_NONE: No intersection _RAY_INTERSECTION_KIND_ENTER: The ray is entering the intersected object _RAY_INTERSECTION_KIND_LEAVE: The ray is leaving the intersected object
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-ray.h
+*/
 opaque type graphene_ray_intersection_kind_t = CUnsignedInt
 object graphene_ray_intersection_kind_t extends CEnumU[graphene_ray_intersection_kind_t]:
   given _tag: Tag[graphene_ray_intersection_kind_t] = Tag.UInt
@@ -9663,7 +11372,7 @@ object graphene_ray_intersection_kind_t extends CEnumU[graphene_ray_intersection
   val GRAPHENE_RAY_INTERSECTION_KIND_ENTER = define(1)
   val GRAPHENE_RAY_INTERSECTION_KIND_LEAVE = define(2)
   inline def getName(inline value: graphene_ray_intersection_kind_t): Option[String] =
-    value match
+    inline value match
       case GRAPHENE_RAY_INTERSECTION_KIND_NONE => Some("GRAPHENE_RAY_INTERSECTION_KIND_NONE")
       case GRAPHENE_RAY_INTERSECTION_KIND_ENTER => Some("GRAPHENE_RAY_INTERSECTION_KIND_ENTER")
       case GRAPHENE_RAY_INTERSECTION_KIND_LEAVE => Some("GRAPHENE_RAY_INTERSECTION_KIND_LEAVE")
@@ -9673,6 +11382,11 @@ object graphene_ray_intersection_kind_t extends CEnumU[graphene_ray_intersection
     inline def |(b: graphene_ray_intersection_kind_t): graphene_ray_intersection_kind_t = a | b
     inline def is(b: graphene_ray_intersection_kind_t): Boolean = (a & b) == b
 
+/**
+ * hb_buffer_cluster_level_t: _BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES: Return cluster values grouped by graphemes into monotone order. _BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS: Return cluster values grouped into monotone order. _BUFFER_CLUSTER_LEVEL_CHARACTERS: Don't group cluster values. _BUFFER_CLUSTER_LEVEL_DEFAULT: Default cluster level, equal to _BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES.
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_buffer_cluster_level_t = CUnsignedInt
 object hb_buffer_cluster_level_t extends CEnumU[hb_buffer_cluster_level_t]:
   given _tag: Tag[hb_buffer_cluster_level_t] = Tag.UInt
@@ -9682,7 +11396,7 @@ object hb_buffer_cluster_level_t extends CEnumU[hb_buffer_cluster_level_t]:
   val HB_BUFFER_CLUSTER_LEVEL_CHARACTERS = define(2)
   val HB_BUFFER_CLUSTER_LEVEL_DEFAULT = define(0)
   inline def getName(inline value: hb_buffer_cluster_level_t): Option[String] =
-    value match
+    inline value match
       case HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES => Some("HB_BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES")
       case HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS => Some("HB_BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS")
       case HB_BUFFER_CLUSTER_LEVEL_CHARACTERS => Some("HB_BUFFER_CLUSTER_LEVEL_CHARACTERS")
@@ -9693,6 +11407,11 @@ object hb_buffer_cluster_level_t extends CEnumU[hb_buffer_cluster_level_t]:
     inline def |(b: hb_buffer_cluster_level_t): hb_buffer_cluster_level_t = a | b
     inline def is(b: hb_buffer_cluster_level_t): Boolean = (a & b) == b
 
+/**
+ * hb_buffer_content_type_t: _BUFFER_CONTENT_TYPE_INVALID: Initial value for new buffer. _BUFFER_CONTENT_TYPE_UNICODE: The buffer contains input characters (before shaping). _BUFFER_CONTENT_TYPE_GLYPHS: The buffer contains output glyphs (after shaping).
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_buffer_content_type_t = CUnsignedInt
 object hb_buffer_content_type_t extends CEnumU[hb_buffer_content_type_t]:
   given _tag: Tag[hb_buffer_content_type_t] = Tag.UInt
@@ -9701,7 +11420,7 @@ object hb_buffer_content_type_t extends CEnumU[hb_buffer_content_type_t]:
   val HB_BUFFER_CONTENT_TYPE_UNICODE = define(1)
   val HB_BUFFER_CONTENT_TYPE_GLYPHS = define(2)
   inline def getName(inline value: hb_buffer_content_type_t): Option[String] =
-    value match
+    inline value match
       case HB_BUFFER_CONTENT_TYPE_INVALID => Some("HB_BUFFER_CONTENT_TYPE_INVALID")
       case HB_BUFFER_CONTENT_TYPE_UNICODE => Some("HB_BUFFER_CONTENT_TYPE_UNICODE")
       case HB_BUFFER_CONTENT_TYPE_GLYPHS => Some("HB_BUFFER_CONTENT_TYPE_GLYPHS")
@@ -9711,6 +11430,9 @@ object hb_buffer_content_type_t extends CEnumU[hb_buffer_content_type_t]:
     inline def |(b: hb_buffer_content_type_t): hb_buffer_content_type_t = a | b
     inline def is(b: hb_buffer_content_type_t): Boolean = (a & b) == b
 
+/**
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_buffer_diff_flags_t = CUnsignedInt
 object hb_buffer_diff_flags_t extends CEnumU[hb_buffer_diff_flags_t]:
   given _tag: Tag[hb_buffer_diff_flags_t] = Tag.UInt
@@ -9725,7 +11447,7 @@ object hb_buffer_diff_flags_t extends CEnumU[hb_buffer_diff_flags_t]:
   val HB_BUFFER_DIFF_FLAG_GLYPH_FLAGS_MISMATCH = define(64)
   val HB_BUFFER_DIFF_FLAG_POSITION_MISMATCH = define(128)
   inline def getName(inline value: hb_buffer_diff_flags_t): Option[String] =
-    value match
+    inline value match
       case HB_BUFFER_DIFF_FLAG_EQUAL => Some("HB_BUFFER_DIFF_FLAG_EQUAL")
       case HB_BUFFER_DIFF_FLAG_CONTENT_TYPE_MISMATCH => Some("HB_BUFFER_DIFF_FLAG_CONTENT_TYPE_MISMATCH")
       case HB_BUFFER_DIFF_FLAG_LENGTH_MISMATCH => Some("HB_BUFFER_DIFF_FLAG_LENGTH_MISMATCH")
@@ -9741,6 +11463,11 @@ object hb_buffer_diff_flags_t extends CEnumU[hb_buffer_diff_flags_t]:
     inline def |(b: hb_buffer_diff_flags_t): hb_buffer_diff_flags_t = a | b
     inline def is(b: hb_buffer_diff_flags_t): Boolean = (a & b) == b
 
+/**
+ * hb_buffer_flags_t: _BUFFER_FLAG_DEFAULT: the default buffer flag. _BUFFER_FLAG_BOT: flag indicating that special handling of the beginning of text paragraph can be applied to this buffer. Should usually be set, unless you are passing to the buffer only part of the text without the full context. _BUFFER_FLAG_EOT: flag indicating that special handling of the end of text paragraph can be applied to this buffer, similar to _BUFFER_FLAG_BOT. _BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES: flag indication that character with Default_Ignorable Unicode property should use the corresponding glyph from the font, instead of hiding them (done by replacing them with the space glyph and zeroing the advance width.) This flag takes precedence over _BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES. _BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES: flag indication that character with Default_Ignorable Unicode property should be removed from glyph string instead of hiding them (done by replacing them with the space glyph and zeroing the advance width.) _BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES takes precedence over this flag. Since: 1.8.0 _BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE: flag indicating that a dotted circle should not be inserted in the rendering of incorrect character sequences (such at <0905 093E>). Since: 2.4
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_buffer_flags_t = CUnsignedInt
 object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
   given _tag: Tag[hb_buffer_flags_t] = Tag.UInt
@@ -9752,7 +11479,7 @@ object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
   val HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES = define(8)
   val HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE = define(16)
   inline def getName(inline value: hb_buffer_flags_t): Option[String] =
-    value match
+    inline value match
       case HB_BUFFER_FLAG_DEFAULT => Some("HB_BUFFER_FLAG_DEFAULT")
       case HB_BUFFER_FLAG_BOT => Some("HB_BUFFER_FLAG_BOT")
       case HB_BUFFER_FLAG_EOT => Some("HB_BUFFER_FLAG_EOT")
@@ -9765,6 +11492,11 @@ object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
     inline def |(b: hb_buffer_flags_t): hb_buffer_flags_t = a | b
     inline def is(b: hb_buffer_flags_t): Boolean = (a & b) == b
 
+/**
+ * hb_buffer_serialize_flags_t: _BUFFER_SERIALIZE_FLAG_DEFAULT: serialize glyph names, clusters and positions. _BUFFER_SERIALIZE_FLAG_NO_CLUSTERS: do not serialize glyph cluster. _BUFFER_SERIALIZE_FLAG_NO_POSITIONS: do not serialize glyph position information. _BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES: do no serialize glyph name. _BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS: serialize glyph extents. _BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS: serialize glyph flags. Since: 1.5.0 _BUFFER_SERIALIZE_FLAG_NO_ADVANCES: do not serialize glyph advances, glyph offsets will reflect absolute glyph positions. Since: 1.8.0
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_buffer_serialize_flags_t = CUnsignedInt
 object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
   given _tag: Tag[hb_buffer_serialize_flags_t] = Tag.UInt
@@ -9777,7 +11509,7 @@ object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
   val HB_BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS = define(16)
   val HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES = define(32)
   inline def getName(inline value: hb_buffer_serialize_flags_t): Option[String] =
-    value match
+    inline value match
       case HB_BUFFER_SERIALIZE_FLAG_DEFAULT => Some("HB_BUFFER_SERIALIZE_FLAG_DEFAULT")
       case HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS => Some("HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS")
       case HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS => Some("HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS")
@@ -9791,6 +11523,11 @@ object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
     inline def |(b: hb_buffer_serialize_flags_t): hb_buffer_serialize_flags_t = a | b
     inline def is(b: hb_buffer_serialize_flags_t): Boolean = (a & b) == b
 
+/**
+ * hb_buffer_serialize_format_t: _BUFFER_SERIALIZE_FORMAT_TEXT: a human-readable, plain text format. _BUFFER_SERIALIZE_FORMAT_JSON: a machine-readable JSON format. _BUFFER_SERIALIZE_FORMAT_INVALID: invalid format.
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_buffer_serialize_format_t = CUnsignedInt
 object hb_buffer_serialize_format_t extends CEnumU[hb_buffer_serialize_format_t]:
   given _tag: Tag[hb_buffer_serialize_format_t] = Tag.UInt
@@ -9799,7 +11536,7 @@ object hb_buffer_serialize_format_t extends CEnumU[hb_buffer_serialize_format_t]
   val HB_BUFFER_SERIALIZE_FORMAT_JSON = define(1246973774)
   val HB_BUFFER_SERIALIZE_FORMAT_INVALID = define(0)
   inline def getName(inline value: hb_buffer_serialize_format_t): Option[String] =
-    value match
+    inline value match
       case HB_BUFFER_SERIALIZE_FORMAT_TEXT => Some("HB_BUFFER_SERIALIZE_FORMAT_TEXT")
       case HB_BUFFER_SERIALIZE_FORMAT_JSON => Some("HB_BUFFER_SERIALIZE_FORMAT_JSON")
       case HB_BUFFER_SERIALIZE_FORMAT_INVALID => Some("HB_BUFFER_SERIALIZE_FORMAT_INVALID")
@@ -9809,6 +11546,11 @@ object hb_buffer_serialize_format_t extends CEnumU[hb_buffer_serialize_format_t]
     inline def |(b: hb_buffer_serialize_format_t): hb_buffer_serialize_format_t = a | b
     inline def is(b: hb_buffer_serialize_format_t): Boolean = (a & b) == b
 
+/**
+ * hb_direction_t: _DIRECTION_INVALID: Initial, unset direction. _DIRECTION_LTR: Text is set horizontally from left to right. _DIRECTION_RTL: Text is set horizontally from right to left. _DIRECTION_TTB: Text is set vertically from top to bottom. _DIRECTION_BTT: Text is set vertically from bottom to top.
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+*/
 opaque type hb_direction_t = CUnsignedInt
 object hb_direction_t extends CEnumU[hb_direction_t]:
   given _tag: Tag[hb_direction_t] = Tag.UInt
@@ -9819,7 +11561,7 @@ object hb_direction_t extends CEnumU[hb_direction_t]:
   val HB_DIRECTION_TTB = define(6)
   val HB_DIRECTION_BTT = define(7)
   inline def getName(inline value: hb_direction_t): Option[String] =
-    value match
+    inline value match
       case HB_DIRECTION_INVALID => Some("HB_DIRECTION_INVALID")
       case HB_DIRECTION_LTR => Some("HB_DIRECTION_LTR")
       case HB_DIRECTION_RTL => Some("HB_DIRECTION_RTL")
@@ -9831,6 +11573,11 @@ object hb_direction_t extends CEnumU[hb_direction_t]:
     inline def |(b: hb_direction_t): hb_direction_t = a | b
     inline def is(b: hb_direction_t): Boolean = (a & b) == b
 
+/**
+ * hb_glyph_flags_t: _GLYPH_FLAG_UNSAFE_TO_BREAK: Indicates that if input text is broken at the beginning of the cluster this glyph is part of, then both sides need to be re-shaped, as the result might be different. On the flip side, it means that when this flag is not present, then it's safe to break the glyph-run at the beginning of this cluster, and the two sides represent the exact same result one would get if breaking input text at the beginning of this cluster and shaping the two sides separately. This can be used to optimize paragraph layout, by avoiding re-shaping of each line after line-breaking, or limiting the reshaping to a small piece around the breaking point only. _GLYPH_FLAG_DEFINED: All the currently defined flags.
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+*/
 opaque type hb_glyph_flags_t = CUnsignedInt
 object hb_glyph_flags_t extends CEnumU[hb_glyph_flags_t]:
   given _tag: Tag[hb_glyph_flags_t] = Tag.UInt
@@ -9838,7 +11585,7 @@ object hb_glyph_flags_t extends CEnumU[hb_glyph_flags_t]:
   val HB_GLYPH_FLAG_UNSAFE_TO_BREAK = define(1)
   val HB_GLYPH_FLAG_DEFINED = define(1)
   inline def getName(inline value: hb_glyph_flags_t): Option[String] =
-    value match
+    inline value match
       case HB_GLYPH_FLAG_UNSAFE_TO_BREAK => Some("HB_GLYPH_FLAG_UNSAFE_TO_BREAK")
       case HB_GLYPH_FLAG_DEFINED => Some("HB_GLYPH_FLAG_DEFINED")
       case _ => None
@@ -9847,6 +11594,11 @@ object hb_glyph_flags_t extends CEnumU[hb_glyph_flags_t]:
     inline def |(b: hb_glyph_flags_t): hb_glyph_flags_t = a | b
     inline def is(b: hb_glyph_flags_t): Boolean = (a & b) == b
 
+/**
+ * hb_memory_mode_t: _MEMORY_MODE_DUPLICATE _MEMORY_MODE_READONLY _MEMORY_MODE_WRITABLE _MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-blob.h
+*/
 opaque type hb_memory_mode_t = CUnsignedInt
 object hb_memory_mode_t extends CEnumU[hb_memory_mode_t]:
   given _tag: Tag[hb_memory_mode_t] = Tag.UInt
@@ -9856,7 +11608,7 @@ object hb_memory_mode_t extends CEnumU[hb_memory_mode_t]:
   val HB_MEMORY_MODE_WRITABLE = define(2)
   val HB_MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE = define(3)
   inline def getName(inline value: hb_memory_mode_t): Option[String] =
-    value match
+    inline value match
       case HB_MEMORY_MODE_DUPLICATE => Some("HB_MEMORY_MODE_DUPLICATE")
       case HB_MEMORY_MODE_READONLY => Some("HB_MEMORY_MODE_READONLY")
       case HB_MEMORY_MODE_WRITABLE => Some("HB_MEMORY_MODE_WRITABLE")
@@ -9867,6 +11619,11 @@ object hb_memory_mode_t extends CEnumU[hb_memory_mode_t]:
     inline def |(b: hb_memory_mode_t): hb_memory_mode_t = a | b
     inline def is(b: hb_memory_mode_t): Boolean = (a & b) == b
 
+/**
+ * hb_script_t: _SCRIPT_COMMON: HB_TAG ('Z','y','y','y') _SCRIPT_INHERITED: HB_TAG ('Z','i','n','h') _SCRIPT_UNKNOWN: HB_TAG ('Z','z','z','z') _SCRIPT_ARABIC _SCRIPT_ARMENIAN _SCRIPT_BENGALI _SCRIPT_CYRILLIC _SCRIPT_DEVANAGARI _SCRIPT_GEORGIAN _SCRIPT_GREEK _SCRIPT_GUJARATI _SCRIPT_GURMUKHI _SCRIPT_HANGUL _SCRIPT_HAN _SCRIPT_HEBREW _SCRIPT_HIRAGANA _SCRIPT_KANNADA _SCRIPT_KATAKANA _SCRIPT_LAO _SCRIPT_LATIN _SCRIPT_MALAYALAM _SCRIPT_ORIYA _SCRIPT_TAMIL _SCRIPT_TELUGU _SCRIPT_THAI _SCRIPT_TIBETAN _SCRIPT_BOPOMOFO _SCRIPT_BRAILLE _SCRIPT_CANADIAN_SYLLABICS _SCRIPT_CHEROKEE _SCRIPT_ETHIOPIC _SCRIPT_KHMER _SCRIPT_MONGOLIAN _SCRIPT_MYANMAR _SCRIPT_OGHAM _SCRIPT_RUNIC _SCRIPT_SINHALA _SCRIPT_SYRIAC _SCRIPT_THAANA _SCRIPT_YI _SCRIPT_DESERET _SCRIPT_GOTHIC _SCRIPT_OLD_ITALIC _SCRIPT_BUHID _SCRIPT_HANUNOO _SCRIPT_TAGALOG _SCRIPT_TAGBANWA _SCRIPT_CYPRIOT _SCRIPT_LIMBU _SCRIPT_LINEAR_B _SCRIPT_OSMANYA _SCRIPT_SHAVIAN _SCRIPT_TAI_LE _SCRIPT_UGARITIC _SCRIPT_BUGINESE _SCRIPT_COPTIC _SCRIPT_GLAGOLITIC _SCRIPT_KHAROSHTHI _SCRIPT_NEW_TAI_LUE _SCRIPT_OLD_PERSIAN _SCRIPT_SYLOTI_NAGRI _SCRIPT_TIFINAGH _SCRIPT_BALINESE _SCRIPT_CUNEIFORM _SCRIPT_NKO _SCRIPT_PHAGS_PA _SCRIPT_PHOENICIAN _SCRIPT_CARIAN _SCRIPT_CHAM _SCRIPT_KAYAH_LI _SCRIPT_LEPCHA _SCRIPT_LYCIAN _SCRIPT_LYDIAN _SCRIPT_OL_CHIKI _SCRIPT_REJANG _SCRIPT_SAURASHTRA _SCRIPT_SUNDANESE _SCRIPT_VAI _SCRIPT_AVESTAN _SCRIPT_BAMUM _SCRIPT_EGYPTIAN_HIEROGLYPHS _SCRIPT_IMPERIAL_ARAMAIC _SCRIPT_INSCRIPTIONAL_PAHLAVI _SCRIPT_INSCRIPTIONAL_PARTHIAN _SCRIPT_JAVANESE _SCRIPT_KAITHI _SCRIPT_LISU _SCRIPT_MEETEI_MAYEK _SCRIPT_OLD_SOUTH_ARABIAN _SCRIPT_OLD_TURKIC _SCRIPT_SAMARITAN _SCRIPT_TAI_THAM _SCRIPT_TAI_VIET _SCRIPT_BATAK _SCRIPT_BRAHMI _SCRIPT_MANDAIC _SCRIPT_CHAKMA _SCRIPT_MEROITIC_CURSIVE _SCRIPT_MEROITIC_HIEROGLYPHS _SCRIPT_MIAO _SCRIPT_SHARADA _SCRIPT_SORA_SOMPENG _SCRIPT_TAKRI _SCRIPT_BASSA_VAH _SCRIPT_CAUCASIAN_ALBANIAN _SCRIPT_DUPLOYAN _SCRIPT_ELBASAN _SCRIPT_GRANTHA _SCRIPT_KHOJKI _SCRIPT_KHUDAWADI _SCRIPT_LINEAR_A _SCRIPT_MAHAJANI _SCRIPT_MANICHAEAN _SCRIPT_MENDE_KIKAKUI _SCRIPT_MODI _SCRIPT_MRO _SCRIPT_NABATAEAN _SCRIPT_OLD_NORTH_ARABIAN _SCRIPT_OLD_PERMIC _SCRIPT_PAHAWH_HMONG _SCRIPT_PALMYRENE _SCRIPT_PAU_CIN_HAU _SCRIPT_PSALTER_PAHLAVI _SCRIPT_SIDDHAM _SCRIPT_TIRHUTA _SCRIPT_WARANG_CITI _SCRIPT_AHOM _SCRIPT_ANATOLIAN_HIEROGLYPHS _SCRIPT_HATRAN _SCRIPT_MULTANI _SCRIPT_OLD_HUNGARIAN _SCRIPT_SIGNWRITING _SCRIPT_ADLAM _SCRIPT_BHAIKSUKI _SCRIPT_MARCHEN _SCRIPT_OSAGE _SCRIPT_TANGUT _SCRIPT_NEWA _SCRIPT_MASARAM_GONDI _SCRIPT_NUSHU _SCRIPT_SOYOMBO _SCRIPT_ZANABAZAR_SQUARE _SCRIPT_DOGRA _SCRIPT_GUNJALA_GONDI _SCRIPT_HANIFI_ROHINGYA _SCRIPT_MAKASAR _SCRIPT_MEDEFAIDRIN _SCRIPT_OLD_SOGDIAN _SCRIPT_SOGDIAN _SCRIPT_ELYMAIC _SCRIPT_NANDINAGARI _SCRIPT_NYIAKENG_PUACHUE_HMONG _SCRIPT_WANCHO _SCRIPT_INVALID: #HB_TAG_NONE
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+*/
 opaque type hb_script_t = CUnsignedInt
 object hb_script_t extends CEnumU[hb_script_t]:
   given _tag: Tag[hb_script_t] = Tag.UInt
@@ -10032,7 +11789,7 @@ object hb_script_t extends CEnumU[hb_script_t]:
   val _HB_SCRIPT_MAX_VALUE = define(2147483647)
   val _HB_SCRIPT_MAX_VALUE_SIGNED = define(2147483647)
   inline def getName(inline value: hb_script_t): Option[String] =
-    value match
+    inline value match
       case HB_SCRIPT_COMMON => Some("HB_SCRIPT_COMMON")
       case HB_SCRIPT_INHERITED => Some("HB_SCRIPT_INHERITED")
       case HB_SCRIPT_UNKNOWN => Some("HB_SCRIPT_UNKNOWN")
@@ -10199,6 +11956,11 @@ object hb_script_t extends CEnumU[hb_script_t]:
     inline def |(b: hb_script_t): hb_script_t = a | b
     inline def is(b: hb_script_t): Boolean = (a & b) == b
 
+/**
+ * hb_unicode_combining_class_t: _UNICODE_COMBINING_CLASS_NOT_REORDERED: Spacing and enclosing marks; also many vowel and consonant signs, even if nonspacing _UNICODE_COMBINING_CLASS_OVERLAY: Marks which overlay a base letter or symbol _UNICODE_COMBINING_CLASS_NUKTA: Diacritic nukta marks in Brahmi-derived scripts _UNICODE_COMBINING_CLASS_KANA_VOICING: Hiragana/Katakana voicing marks _UNICODE_COMBINING_CLASS_VIRAMA: Viramas _UNICODE_COMBINING_CLASS_CCC10: [Hebrew] _UNICODE_COMBINING_CLASS_CCC11: [Hebrew] _UNICODE_COMBINING_CLASS_CCC12: [Hebrew] _UNICODE_COMBINING_CLASS_CCC13: [Hebrew] _UNICODE_COMBINING_CLASS_CCC14: [Hebrew] _UNICODE_COMBINING_CLASS_CCC15: [Hebrew] _UNICODE_COMBINING_CLASS_CCC16: [Hebrew] _UNICODE_COMBINING_CLASS_CCC17: [Hebrew] _UNICODE_COMBINING_CLASS_CCC18: [Hebrew] _UNICODE_COMBINING_CLASS_CCC19: [Hebrew] _UNICODE_COMBINING_CLASS_CCC20: [Hebrew] _UNICODE_COMBINING_CLASS_CCC21: [Hebrew] _UNICODE_COMBINING_CLASS_CCC22: [Hebrew] _UNICODE_COMBINING_CLASS_CCC23: [Hebrew] _UNICODE_COMBINING_CLASS_CCC24: [Hebrew] _UNICODE_COMBINING_CLASS_CCC25: [Hebrew] _UNICODE_COMBINING_CLASS_CCC26: [Hebrew] _UNICODE_COMBINING_CLASS_CCC27: [Arabic] _UNICODE_COMBINING_CLASS_CCC28: [Arabic] _UNICODE_COMBINING_CLASS_CCC29: [Arabic] _UNICODE_COMBINING_CLASS_CCC30: [Arabic] _UNICODE_COMBINING_CLASS_CCC31: [Arabic] _UNICODE_COMBINING_CLASS_CCC32: [Arabic] _UNICODE_COMBINING_CLASS_CCC33: [Arabic] _UNICODE_COMBINING_CLASS_CCC34: [Arabic] _UNICODE_COMBINING_CLASS_CCC35: [Arabic] _UNICODE_COMBINING_CLASS_CCC36: [Syriac] _UNICODE_COMBINING_CLASS_CCC84: [Telugu] _UNICODE_COMBINING_CLASS_CCC91: [Telugu] _UNICODE_COMBINING_CLASS_CCC103: [Thai] _UNICODE_COMBINING_CLASS_CCC107: [Thai] _UNICODE_COMBINING_CLASS_CCC118: [Lao] _UNICODE_COMBINING_CLASS_CCC122: [Lao] _UNICODE_COMBINING_CLASS_CCC129: [Tibetan] _UNICODE_COMBINING_CLASS_CCC130: [Tibetan] _UNICODE_COMBINING_CLASS_CCC133: [Tibetan] _UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT: Marks attached at the bottom left _UNICODE_COMBINING_CLASS_ATTACHED_BELOW: Marks attached directly below _UNICODE_COMBINING_CLASS_ATTACHED_ABOVE: Marks attached directly above _UNICODE_COMBINING_CLASS_ATTACHED_ABOVE_RIGHT: Marks attached at the top right _UNICODE_COMBINING_CLASS_BELOW_LEFT: Distinct marks at the bottom left _UNICODE_COMBINING_CLASS_BELOW: Distinct marks directly below _UNICODE_COMBINING_CLASS_BELOW_RIGHT: Distinct marks at the bottom right _UNICODE_COMBINING_CLASS_LEFT: Distinct marks to the left _UNICODE_COMBINING_CLASS_RIGHT: Distinct marks to the right _UNICODE_COMBINING_CLASS_ABOVE_LEFT: Distinct marks at the top left _UNICODE_COMBINING_CLASS_ABOVE: Distinct marks directly above _UNICODE_COMBINING_CLASS_ABOVE_RIGHT: Distinct marks at the top right _UNICODE_COMBINING_CLASS_DOUBLE_BELOW: Distinct marks subtending two bases _UNICODE_COMBINING_CLASS_DOUBLE_ABOVE: Distinct marks extending above two bases _UNICODE_COMBINING_CLASS_IOTA_SUBSCRIPT: Greek iota subscript only _UNICODE_COMBINING_CLASS_INVALID: Invalid combining class
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-unicode.h
+*/
 opaque type hb_unicode_combining_class_t = CUnsignedInt
 object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]:
   given _tag: Tag[hb_unicode_combining_class_t] = Tag.UInt
@@ -10261,7 +12023,7 @@ object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]
   val HB_UNICODE_COMBINING_CLASS_IOTA_SUBSCRIPT = define(240)
   val HB_UNICODE_COMBINING_CLASS_INVALID = define(255)
   inline def getName(inline value: hb_unicode_combining_class_t): Option[String] =
-    value match
+    inline value match
       case HB_UNICODE_COMBINING_CLASS_NOT_REORDERED => Some("HB_UNICODE_COMBINING_CLASS_NOT_REORDERED")
       case HB_UNICODE_COMBINING_CLASS_OVERLAY => Some("HB_UNICODE_COMBINING_CLASS_OVERLAY")
       case HB_UNICODE_COMBINING_CLASS_NUKTA => Some("HB_UNICODE_COMBINING_CLASS_NUKTA")
@@ -10325,6 +12087,11 @@ object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]
     inline def |(b: hb_unicode_combining_class_t): hb_unicode_combining_class_t = a | b
     inline def is(b: hb_unicode_combining_class_t): Boolean = (a & b) == b
 
+/**
+ * hb_unicode_general_category_t: _UNICODE_GENERAL_CATEGORY_CONTROL: [Cc] _UNICODE_GENERAL_CATEGORY_FORMAT: [Cf] _UNICODE_GENERAL_CATEGORY_UNASSIGNED: [Cn] _UNICODE_GENERAL_CATEGORY_PRIVATE_USE: [Co] _UNICODE_GENERAL_CATEGORY_SURROGATE: [Cs] _UNICODE_GENERAL_CATEGORY_LOWERCASE_LETTER: [Ll] _UNICODE_GENERAL_CATEGORY_MODIFIER_LETTER: [Lm] _UNICODE_GENERAL_CATEGORY_OTHER_LETTER: [Lo] _UNICODE_GENERAL_CATEGORY_TITLECASE_LETTER: [Lt] _UNICODE_GENERAL_CATEGORY_UPPERCASE_LETTER: [Lu] _UNICODE_GENERAL_CATEGORY_SPACING_MARK: [Mc] _UNICODE_GENERAL_CATEGORY_ENCLOSING_MARK: [Me] _UNICODE_GENERAL_CATEGORY_NON_SPACING_MARK: [Mn] _UNICODE_GENERAL_CATEGORY_DECIMAL_NUMBER: [Nd] _UNICODE_GENERAL_CATEGORY_LETTER_NUMBER: [Nl] _UNICODE_GENERAL_CATEGORY_OTHER_NUMBER: [No] _UNICODE_GENERAL_CATEGORY_CONNECT_PUNCTUATION: [Pc] _UNICODE_GENERAL_CATEGORY_DASH_PUNCTUATION: [Pd] _UNICODE_GENERAL_CATEGORY_CLOSE_PUNCTUATION: [Pe] _UNICODE_GENERAL_CATEGORY_FINAL_PUNCTUATION: [Pf] _UNICODE_GENERAL_CATEGORY_INITIAL_PUNCTUATION: [Pi] _UNICODE_GENERAL_CATEGORY_OTHER_PUNCTUATION: [Po] _UNICODE_GENERAL_CATEGORY_OPEN_PUNCTUATION: [Ps] _UNICODE_GENERAL_CATEGORY_CURRENCY_SYMBOL: [Sc] _UNICODE_GENERAL_CATEGORY_MODIFIER_SYMBOL: [Sk] _UNICODE_GENERAL_CATEGORY_MATH_SYMBOL: [Sm] _UNICODE_GENERAL_CATEGORY_OTHER_SYMBOL: [So] _UNICODE_GENERAL_CATEGORY_LINE_SEPARATOR: [Zl] _UNICODE_GENERAL_CATEGORY_PARAGRAPH_SEPARATOR: [Zp] _UNICODE_GENERAL_CATEGORY_SPACE_SEPARATOR: [Zs]
+
+ * [bindgen] header: /usr/include/harfbuzz/hb-unicode.h
+*/
 opaque type hb_unicode_general_category_t = CUnsignedInt
 object hb_unicode_general_category_t extends CEnumU[hb_unicode_general_category_t]:
   given _tag: Tag[hb_unicode_general_category_t] = Tag.UInt
@@ -10360,7 +12127,7 @@ object hb_unicode_general_category_t extends CEnumU[hb_unicode_general_category_
   val HB_UNICODE_GENERAL_CATEGORY_PARAGRAPH_SEPARATOR = define(28)
   val HB_UNICODE_GENERAL_CATEGORY_SPACE_SEPARATOR = define(29)
   inline def getName(inline value: hb_unicode_general_category_t): Option[String] =
-    value match
+    inline value match
       case HB_UNICODE_GENERAL_CATEGORY_CONTROL => Some("HB_UNICODE_GENERAL_CATEGORY_CONTROL")
       case HB_UNICODE_GENERAL_CATEGORY_FORMAT => Some("HB_UNICODE_GENERAL_CATEGORY_FORMAT")
       case HB_UNICODE_GENERAL_CATEGORY_UNASSIGNED => Some("HB_UNICODE_GENERAL_CATEGORY_UNASSIGNED")

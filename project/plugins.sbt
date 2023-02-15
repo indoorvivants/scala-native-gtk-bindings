@@ -12,14 +12,14 @@ addSbtPlugin(
   "com.indoorvivants" % "subatomic-plugin" % "0.0.7"
 )
 
+val BindgenVersion = sys.env.getOrElse("SN_BINDGEN_VERSION",  "0.0.15+8-e0506710-SNAPSHOT")
+
 addSbtPlugin(
-  "com.indoorvivants" % "bindgen-sbt-plugin" % "0.0.15+4-f0f5a3db-SNAPSHOT"
+  "com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion
 )
 
 addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.11.0")
 
 addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.7")
-
-addSbtPlugin("com.github.reibitto" % "sbt-welcome" % "0.3.1")
 
 libraryDependencies += "com.indoorvivants.detective" %% "platform" % "0.0.2"
