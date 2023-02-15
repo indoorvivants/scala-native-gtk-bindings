@@ -1,0 +1,31 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+    tags: ["v*"]
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  build:
+    name: CI
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: coursier/cache-action@v6      
+
+      - name: Install GTK
+        run: sudo apt-get install libgtk-4-dev
+
+      - name: Build binary
+        run: sbt nativeLink
+
+  mergify-build-checkpoint:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: I only exist to please Mergify :(
+        run: echo "It's a sad existence but necessary"
