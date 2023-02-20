@@ -17,7 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - uses: coursier/cache-action@v6      
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' 
+          java-version: '17'
+          cache: sbt
 
       - name: SBT remote cache
         id: remote-cache
@@ -35,6 +42,9 @@ jobs:
       - name: Build binary
         run: sbt --client examples/nativeLink
 
+      - name: Publish locally
+        run: sbt --client publishLocal
+
       - name: Push cache 
         run: sbt --client pushRemoteCache
 
@@ -44,3 +54,29 @@ jobs:
     steps:
       - name: I only exist to please Mergify :(
         run: echo "It's a sad existence but necessary"
+
+  release:
+    name: Release
+    needs: [build]
+    if: github.event_name != 'pull_request' && (startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main')
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' 
+          java-version: '17'
+          cache: sbt
+
+      - name: Publish ${{ github.ref }}
+        run: sbt ci-release
+        env:
+          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+          PGP_SECRET: ${{ secrets.PGP_SECRET }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}

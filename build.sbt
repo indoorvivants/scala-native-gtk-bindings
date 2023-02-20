@@ -1,10 +1,61 @@
 import bindgen.interface.Binding
 import bindgen.plugin.BindgenMode
 
+inThisBuild(
+  List(
+    organization := "com.indoorvivants.gnome",
+    organizationName := "Anton Sviridov",
+    sonatypeCredentialHost := "s01.oss.sonatype.org",
+    homepage := Some(
+      url("https://github.com/indoorvivants/scala-native-gtk-bindings")
+    ),
+    startYear := Some(2023),
+    licenses := List(
+      "Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")
+    ),
+    developers := List(
+      Developer(
+        "keynmol",
+        "Anton Sviridov",
+        "keynmol@gmail.com",
+        url("https://blog.indoorvivants.com")
+      )
+    )
+  )
+)
+
+organization := "com.indoorvivants.gnome"
+sonatypeProfileName := "com.indoorvivants"
+
+lazy val root = project
+  .in(file("."))
+  .aggregate(
+    gio,
+    glib,
+    gobject,
+    cairo,
+    gdkpixbuf,
+    graphene,
+    gtk4,
+    harfbuzz,
+    pango
+  )
+  .settings(
+    publish / skip := true,
+    publishLocal / skip := true,
+    pushRemoteCacheTo := Some(
+      MavenCache(
+        "local-cache",
+        (ThisBuild / baseDirectory).value / "target" / "remote-cache"
+      )
+    )
+  )
+
 lazy val examples = project
   .in(file("examples"))
   .dependsOn(gtk4)
   .configure(pkgConfigured("gtk4"))
+  .settings(publish / skip := true, publishLocal / skip := true)
 
 lazy val gio = project
   .in(file("gio"))
@@ -135,9 +186,10 @@ lazy val graphene =
           .builder(findHeader("graphene-1.0", _ / "graphene.h"), "libgraphene")
           .withClangFlags(pkgConfig("graphene-1.0", "cflags"))
           .addCImport("graphene.h")
-          .addClangFlag(List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false"))
+          .addClangFlag(
+            List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false")
+          )
           .addExternalName("graphene_simd4f_get", "<nopackage>")
-
           .withMultiFile(true)
           .build
     )
@@ -183,6 +235,7 @@ def pkgConfigured(name: String): Project => Project = { proj =>
   proj
     .enablePlugins(ScalaNativePlugin, BindgenPlugin)
     .settings(
+      Compile / doc / sources := Seq.empty,
       pushRemoteCacheTo := Some(
         MavenCache(
           "local-cache",
