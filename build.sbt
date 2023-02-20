@@ -27,7 +27,8 @@ sonatypeProfileName := "com.indoorvivants"
 
 val publishing = Seq(
   organization := "com.indoorvivants.gnome",
-  sonatypeProfileName := "com.indoorvivants"
+  sonatypeProfileName := "com.indoorvivants",
+  sonatypeCredentialHost := "s01.oss.sonatype.org"
 )
 
 lazy val root = project
