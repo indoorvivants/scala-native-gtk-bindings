@@ -176,17 +176,16 @@ def findHeader(pkgName: String, file: java.io.File => java.io.File) = {
     )
 }
 
-pushRemoteCacheTo := Some(
-  MavenCache(
-    "local-cache",
-    (ThisBuild / baseDirectory).value / "target" / "remote-cache"
-  )
-)
-
 def pkgConfigured(name: String): Project => Project = { proj =>
   proj
     .enablePlugins(ScalaNativePlugin, BindgenPlugin)
     .settings(
+      pushRemoteCacheTo := Some(
+        MavenCache(
+          "local-cache",
+          (ThisBuild / baseDirectory).value / "target" / "remote-cache"
+        )
+      ),
       resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
       scalaVersion := "3.2.2",
       nativeCompileOptions ++= {
@@ -231,4 +230,12 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
 
   bb.addExternalPaths(externals).build
 }
+
 Global / onChangedBuildSource := ReloadOnSourceChanges
+
+pushRemoteCacheTo := Some(
+  MavenCache(
+    "local-cache",
+    (ThisBuild / baseDirectory).value / "target" / "remote-cache"
+  )
+)
