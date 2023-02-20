@@ -50,7 +50,7 @@ lazy val root = project
     pushRemoteCacheTo := Some(
       MavenCache(
         "local-cache",
-        (ThisBuild / baseDirectory).value / "target" / "remote-cache"
+        (ThisBuild / baseDirectory).value / ".remote-cache"
       )
     )
   )
@@ -244,7 +244,7 @@ def pkgConfigured(name: String): Project => Project = { proj =>
       pushRemoteCacheTo := Some(
         MavenCache(
           "local-cache",
-          (ThisBuild / baseDirectory).value / "target" / "remote-cache"
+          (ThisBuild / baseDirectory).value / ".remote-cache"
         )
       ),
       resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
