@@ -15,12 +15,13 @@ inThisBuild(
     ),
     developers := List(
       Developer(
-        "keynmol",
+        "indoorvivants",
         "Anton Sviridov",
-        "keynmol@gmail.com",
+        "contact@indoorvivants.com",
         url("https://blog.indoorvivants.com")
       )
-    )
+    ),
+    crossScalaVersions := Nil
   )
 )
 
