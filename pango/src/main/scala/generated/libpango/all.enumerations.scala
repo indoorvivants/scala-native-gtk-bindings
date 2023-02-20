@@ -1,0 +1,35 @@
+package libpango
+package all
+
+import _root_.scala.scalanative.unsafe.*
+import _root_.scala.scalanative.unsigned.*
+import _root_.scala.scalanative.libc.*
+import _root_.scala.scalanative.*
+
+export _root_.libpango.enumerations.PangoAlignment
+export _root_.libpango.enumerations.PangoAttrType
+export _root_.libpango.enumerations.PangoBaselineShift
+export _root_.libpango.enumerations.PangoBidiType
+export _root_.libpango.enumerations.PangoCoverageLevel
+export _root_.libpango.enumerations.PangoDirection
+export _root_.libpango.enumerations.PangoEllipsizeMode
+export _root_.libpango.enumerations.PangoFontMask
+export _root_.libpango.enumerations.PangoFontScale
+export _root_.libpango.enumerations.PangoGravity
+export _root_.libpango.enumerations.PangoGravityHint
+export _root_.libpango.enumerations.PangoLayoutDeserializeError
+export _root_.libpango.enumerations.PangoLayoutDeserializeFlags
+export _root_.libpango.enumerations.PangoLayoutSerializeFlags
+export _root_.libpango.enumerations.PangoOverline
+export _root_.libpango.enumerations.PangoRenderPart
+export _root_.libpango.enumerations.PangoScript
+export _root_.libpango.enumerations.PangoShapeFlags
+export _root_.libpango.enumerations.PangoShowFlags
+export _root_.libpango.enumerations.PangoStretch
+export _root_.libpango.enumerations.PangoStyle
+export _root_.libpango.enumerations.PangoTabAlign
+export _root_.libpango.enumerations.PangoTextTransform
+export _root_.libpango.enumerations.PangoUnderline
+export _root_.libpango.enumerations.PangoVariant
+export _root_.libpango.enumerations.PangoWeight
+export _root_.libpango.enumerations.PangoWrapMode
