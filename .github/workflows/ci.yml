@@ -14,10 +14,17 @@ jobs:
     name: CI
     strategy:
       fail-fast: false
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+
       - uses: coursier/cache-action@v6      
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' 
+          java-version: '17'
+          cache: sbt
 
       - name: SBT remote cache
         id: remote-cache
@@ -63,7 +70,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin' 
-          java-version: '11'
+          java-version: '17'
           cache: sbt
 
       - name: Publish ${{ github.ref }}
