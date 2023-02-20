@@ -33,7 +33,7 @@ jobs:
         run: sudo apt-get install libgtk-4-dev
 
       - name: Build binary
-        run: sbt --client nativeLink
+        run: sbt --client examples/nativeLink
 
       - name: Push cache 
         run: sbt --client pushRemoteCache
