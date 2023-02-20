@@ -27,6 +27,11 @@ inThisBuild(
 organization := "com.indoorvivants.gnome"
 sonatypeProfileName := "com.indoorvivants"
 
+val publishing = Seq(
+  organization := "com.indoorvivants.gnome",
+  sonatypeProfileName := "com.indoorvivants"
+)
+
 lazy val root = project
   .in(file("."))
   .aggregate(
@@ -234,6 +239,7 @@ def findHeader(pkgName: String, file: java.io.File => java.io.File) = {
 def pkgConfigured(name: String): Project => Project = { proj =>
   proj
     .enablePlugins(ScalaNativePlugin, BindgenPlugin)
+    .settings(publishing)
     .settings(
       Compile / doc / sources := Seq.empty,
       pushRemoteCacheTo := Some(
