@@ -3,9 +3,6 @@ import bindgen.plugin.BindgenMode
 
 inThisBuild(
   List(
-    organization := "com.indoorvivants.gnome",
-    organizationName := "Anton Sviridov",
-    sonatypeCredentialHost := "s01.oss.sonatype.org",
     homepage := Some(
       url("https://github.com/indoorvivants/scala-native-gtk-bindings")
     ),
