@@ -3,7 +3,7 @@ import bindgen.plugin.BindgenMode
 
 lazy val examples = project
   .in(file("examples"))
-  .dependsOn(gtk)
+  .dependsOn(gtk4)
   .configure(pkgConfigured("gtk4"))
 
 lazy val gio = project
@@ -35,8 +35,8 @@ lazy val glib = project
         .build
   )
 
-lazy val gtk = project
-  .in(file("gtk"))
+lazy val gtk4 = project
+  .in(file("gtk4"))
   .dependsOn(glib, gio, gobject, cairo, harfbuzz, graphene, pango, gdkpixbuf)
   .configure(pkgConfigured("gtk4"))
   .settings(
@@ -135,6 +135,9 @@ lazy val graphene =
           .builder(findHeader("graphene-1.0", _ / "graphene.h"), "libgraphene")
           .withClangFlags(pkgConfig("graphene-1.0", "cflags"))
           .addCImport("graphene.h")
+          .addClangFlag(List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false"))
+          .addExternalName("graphene_simd4f_get", "<nopackage>")
+
           .withMultiFile(true)
           .build
     )

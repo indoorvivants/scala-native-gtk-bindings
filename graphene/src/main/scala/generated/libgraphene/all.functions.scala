@@ -436,7 +436,6 @@ export _root_.libgraphene.functions.graphene_simd4f_dup_3f
 export _root_.libgraphene.functions.graphene_simd4f_dup_4f
 export _root_.libgraphene.functions.graphene_simd4f_flip_sign_0101
 export _root_.libgraphene.functions.graphene_simd4f_flip_sign_1010
-export _root_.libgraphene.functions.graphene_simd4f_get
 export _root_.libgraphene.functions.graphene_simd4f_get_w
 export _root_.libgraphene.functions.graphene_simd4f_get_x
 export _root_.libgraphene.functions.graphene_simd4f_get_y
