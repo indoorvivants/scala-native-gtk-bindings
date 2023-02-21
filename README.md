@@ -21,7 +21,7 @@ com.indoorvivants.gnome::gtk4::<version> // Scala CLI/Mill format
 This repository contains a very small app you can run.
 
 ```bash
-$ pkg-config --cflags gtk4 | xargs -n1 > clangFlags
+$ pkg-config --cflags gtk4 | xargs -n1 > compilationFlags
 $ pkg-config --libs gtk4 | xargs -n1 > linkingFlags
 
 $ scala-cli run ./examples/src/main/scala/example.scala --native --native-compile @$PWD/compilationFlags --native-linking @$PWD/linkingFlags --dep com.indoorvivants.gnome::gtk4::0.0.4 # or change the version to latest
