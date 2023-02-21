@@ -1,16 +1,8 @@
-package sample
-
+import gio.all.*
+import glib.all.*
 import gtk.all.*
-import scala.scalanative.unsafe.CFuncPtr2
-import gobject.aliases.GCallback
-import gtk.structs.GtkApplication
-import scala.scalanative.unsafe.*
-import glib.aliases.gpointer
 import gtk.fluent.*
-import glib.functions.g_print
-import gio.enumerations.GApplicationFlags
-import gio.structs.GApplication
-import gio.functions.g_application_run
+import scala.scalanative.unsafe.*
 
 @main def example =
   gtk_init()
