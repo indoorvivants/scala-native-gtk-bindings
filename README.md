@@ -1,8 +1,31 @@
-Run a Scala 3 Native Gtk application on linux.
+# Gtk4 bindings for Scala 3 Native
 
-Make sure you have `gtk4` *and* `libgtk-4-dev` installed. To check, run `pkg-config --cflags gtk4` - if it works, you're ready to rock'n'roll.
+## Installation
 
-`sbt run` is all you need.
+Make sure you have Gtk4 installed:
+
+1. On MacOS, do `brew install gtk4`
+2. On Debian-based Linux systems, you can do `sudo apt install libgtk-4-dev`
+
+You can check the installation by running `pkg-config --cflags gtk4` - it should succeed.
+
+The bindings are published to Maven central, with gtk4 specifically being available at the following coordinates:
+
+```
+com.indoorvivants.gnome::gtk4::<version> // Scala CLI/Mill format
+"com.indoorvivants.gnome" %%% "gtk4" % "<version>" // SBT format
+```
+
+## Usage
+
+This repository contains a very small app you can run.
+
+```bash
+$ pkg-config --cflags gtk4 | xargs -n1 > clangFlags
+$ pkg-config --libs gtk4 | xargs -n1 > linkingFlags
+
+$ scala-cli run ./examples/src/main/scala/example.scala --native --native-compile @$PWD/compilationFlags --native-linking @$PWD/linkingFlags --dep com.indoorvivants.gnome::gtk4::0.0.4 # or change the version to latest
+```
 
 Bindings generated using [sn-bindgen](https://sn-bindgen.indoorvivants.com/)
 
