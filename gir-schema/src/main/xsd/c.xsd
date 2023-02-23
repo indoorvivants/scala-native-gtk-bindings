@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.gtk.org/introspection/c/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:core="http://www.gtk.org/introspection/core/1.0">
+  <xs:import namespace="http://www.gtk.org/introspection/core/1.0" schemaLocation="gir.xsd"/>
+  <xs:import namespace="http://www.gtk.org/introspection/glib/1.0" schemaLocation="glib.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:attribute name="identifier-prefixes" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>prefixes to filter out from C identifiers for data structures and types. For example, GtkWindow will be Window. If c:symbol-prefixes is not used, then this element is used for both</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="symbol-prefixes" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>prefixes to filter out from C functions. For example, gtk_window_new will lose gtk_</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="prefix" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Deprecated: the same as c:identifier-prefixes. Only used for backward compatibility </xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:element name="include">
+    <xs:annotation>
+      <xs:documentation>Dependant C header file which should be included in C programs</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="name" use="required" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>File name of the C header file. The path can be relative.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="type">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>the corresponding C type's name</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attribute name="symbol-prefix" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>prefix to filter out from C functions. For example, gtk_window_new will lose gtk_</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attributeGroup name="type1">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Corresponding C type</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type2">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>C type of the class</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type3">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Corresponding C type of the record</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type4">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>corresponding C type of the constant in C</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="identifier">
+    <xs:attribute name="identifier" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>corresponding C identifier in the source code</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type5">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>the C type returned by the callback closure (i.e. function)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type6">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>the C representation of the type</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type7">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>the C representation of the array type</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="identifier1">
+    <xs:attribute name="identifier" use="required" form="qualified" type="xs:string"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type8">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>C type defining the union</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type9">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>corresponding C type of the bit field type</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type10">
+    <xs:attribute name="type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>corresponding C type of the enumeration type</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="identifier2">
+    <xs:attribute name="identifier" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>corresponding C type of the member</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+</xs:schema>
