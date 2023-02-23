@@ -27,7 +27,7 @@ sonatypeProfileName := "com.indoorvivants"
 
 val publishing = Seq(
   organization := "com.indoorvivants.gnome",
-  sonatypeProfileName := "com.indoorvivants",
+  sonatypeProfileName := "com.indoorvivants"
   /* sonatypeCredentialHost := "s01.oss.sonatype.org" */
 )
 
@@ -42,7 +42,8 @@ lazy val root = project
     graphene,
     gtk4,
     harfbuzz,
-    pango
+    pango,
+    `gir-schema`
   )
   .settings(
     publish / skip := true,
@@ -212,6 +213,67 @@ lazy val harfbuzz =
           .withMultiFile(true)
           .build
     )
+
+def generateXsd(
+    fileName: String,
+    sourceDirectoryValue: File,
+    targetDirectoryValue: File
+): Unit = {
+  import com.thaiopensource.relaxng.input.parse.compact.CompactParseInputFormat
+  import com.thaiopensource.relaxng.output.LocalOutputDirectory
+  import com.thaiopensource.relaxng.output.xsd.XsdOutputFormat
+  import com.thaiopensource.util.UriOrFile
+  import com.thaiopensource.xml.sax.ErrorHandlerImpl
+
+  val inputFormat = new CompactParseInputFormat()
+  val outputFormat = new XsdOutputFormat()
+  val inputFile = sourceDirectoryValue / "relaxng" / s"$fileName.rnc"
+  val eh = new ErrorHandlerImpl()
+  val params = Array[String]()
+  val sc = inputFormat.load(
+    UriOrFile.toUri(inputFile.toString),
+    params,
+    "xsd",
+    eh,
+    null
+  )
+  val resultDir = targetDirectoryValue / "xsd"
+  resultDir.mkdirs()
+  val result = resultDir / s"$fileName.xsd"
+  val od = new LocalOutputDirectory(
+    sc.getMainUri,
+    result,
+    ".xsd",
+    "UTF-8",
+    72,
+    2
+  )
+  outputFormat.output(sc, od, params, "rnc", eh)
+}
+
+lazy val generateXsd = TaskKey[Unit]("generateXsd")
+
+lazy val `gir-schema` = project
+  .in(file("gir-schema"))
+  .configure(pkgConfigured("gir-schema"))
+  .enablePlugins(ScalaxbPlugin)
+  .settings(
+    Compile / generateXsd := {
+      generateXsd(
+        "gir",
+        (Compile / sourceDirectory).value,
+        (Compile / sourceDirectory).value
+      )
+    },
+//    Compile / scalaxb / scalaxbXsdSource := (Compile / managedSourceDirectories).value.head / "xsd",
+    Compile / scalaxb / scalaxbPackageName := "com.indoorvivants.gnome.gir_schema",
+    libraryDependencies ++= List(
+      "org.relaxng" % "trang" % "20220510",
+      "javax.xml.bind" % "jaxb-api" % "2.3.1",
+      "org.scala-lang.modules" %% "scala-parser-combinators" % "2.2.0",
+      "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
+    )
+  )
 
 def pkgConfig(pkg: String, arg: String) = {
   import sys.process.*

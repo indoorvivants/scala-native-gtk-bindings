@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.gtk.org/introspection/glib/1.0" xmlns:glib="http://www.gtk.org/introspection/glib/1.0" xmlns:c="http://www.gtk.org/introspection/c/1.0" xmlns:core="http://www.gtk.org/introspection/core/1.0">
+  <xs:import namespace="http://www.gtk.org/introspection/c/1.0" schemaLocation="c.xsd"/>
+  <xs:import namespace="http://www.gtk.org/introspection/core/1.0" schemaLocation="gir.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:attributeGroup name="type-name">
+    <xs:attribute name="type-name" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Type name compatible with the GObject type system</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="get-type">
+    <xs:attribute name="get-type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Function to get the GObject compatible type of the interface </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type-struct">
+    <xs:attribute name="type-struct" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>GObject compatible C structure defining the Interface</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type-name1">
+    <xs:attribute name="type-name" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>GObject compatible type name of the class</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="get-type1">
+    <xs:attribute name="get-type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Function to get the GObject compatible type of the class</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="type-struct1">
+    <xs:attribute name="type-struct" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>GObject compatible C structure defining the class</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attribute name="ref-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>GObject compatible function to reference or increase the reference count of the class</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="unref-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>GObject compatible function to unreference or decrease the reference count of the class</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="set-value-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>GObject compatible function to set a value of a property of the class</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="get-value-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>GObject compatible function to get a value of a property of the class</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="fundamental">
+    <xs:annotation>
+      <xs:documentation>Binary attribute to declare the class fundamental or not (top-level class which do not derives from any other type)</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="0"/>
+        <xs:enumeration value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:element name="boxed">
+    <xs:annotation>
+      <xs:documentation>Boxed type (wrapper to opaque C structures registered by the type system)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="core:Info.elements"/>
+        <xs:element ref="core:function"/>
+      </xs:choice>
+      <xs:attributeGroup ref="core:Info.attrs"/>
+      <xs:attribute name="name" use="required" form="qualified" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>GObject compatible type name of the boxed type</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute ref="c:symbol-prefix"/>
+      <xs:attribute name="type-name" form="qualified" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>GObject compatible type name of the boxed type</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="get-type" form="qualified" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Function to get the GObject compatible type of the boxed type</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="type-name2">
+    <xs:attribute name="type-name" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>GObject compatible C type of the record</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="get-type2">
+    <xs:attribute name="get-type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Function to get the GObject compatible type of the record</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attribute name="is-gtype-struct-for" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Name of the GObject compatible gtype this record represents. If empty, this record will be hidden from generated public APIs.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:element name="signal">
+    <xs:annotation>
+      <xs:documentation>A signal as defined in the GObject system (https://docs.gtk.org/gobject/concepts.html#signals)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="core:Info.elements"/>
+        <xs:element ref="core:parameters"/>
+        <xs:element ref="core:return-value"/>
+      </xs:choice>
+      <xs:attributeGroup ref="core:Info.attrs"/>
+      <xs:attribute name="name" use="required" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>name of the signal</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="detailed">
+        <xs:annotation>
+          <xs:documentation>Binary attribute, true if the signal has a detailed parameter (https://docs.gtk.org/gobject/concepts.html#the-detail-argument and https://docs.gtk.org/gobject/flags.SignalFlags.html)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="when">
+        <xs:annotation>
+          <xs:documentation>When to run the signal during the 5 steps of signal emission (https://docs.gtk.org/gobject/concepts.html#signal-emission and https://docs.gtk.org/gobject/flags.SignalFlags.html)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="first"/>
+            <xs:enumeration value="last"/>
+            <xs:enumeration value="cleanup"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="action">
+        <xs:annotation>
+          <xs:documentation>Binary attribute, true if the signal can be freely emitted on alive objects from user code (https://docs.gtk.org/gobject/flags.SignalFlags.html)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="no-hooks">
+        <xs:annotation>
+          <xs:documentation>Binary attribute, true if no emission hooks are supported for this signal (https://docs.gtk.org/gobject/flags.SignalFlags.html) </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="no-recurse">
+        <xs:annotation>
+          <xs:documentation>Binary attribute, true if signals emitted for an object while currently being in emission for this very object will not be emitted recursively, but instead cause the first emission to be restarted (https://docs.gtk.org/gobject/flags.SignalFlags.html)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="emitter" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The emitter method for the signal</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attribute name="set-property" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The GObject property that is set by this method</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="get-property" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The GObject property that is retrieved by this method</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attributeGroup name="type-name3">
+    <xs:attribute name="type-name" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>GObject compatible type name</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="get-type3">
+    <xs:attribute name="get-type" use="required" form="qualified" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>function to retrieve the GObject compatible type of the element</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attribute name="error-domain" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Error domain of this enumeration in a stringified form</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="nick" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>short nickname of the member (from GEnumValue/GFlagsValue)</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="name" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>name of the member (from GEnumValue/GFlagsValue)</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+</xs:schema>
