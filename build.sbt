@@ -268,7 +268,6 @@ lazy val `gir-schema` = project
 //    Compile / scalaxb / scalaxbXsdSource := (Compile / managedSourceDirectories).value.head / "xsd",
     Compile / scalaxb / scalaxbPackageName := "com.indoorvivants.gnome.gir_schema",
     libraryDependencies ++= List(
-      "org.relaxng" % "trang" % "20220510",
       "javax.xml.bind" % "jaxb-api" % "2.3.1",
       "org.scala-lang.modules" %% "scala-parser-combinators" % "2.2.0",
       "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
