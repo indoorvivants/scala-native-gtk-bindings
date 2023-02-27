@@ -202,7 +202,7 @@ lazy val graphene =
 lazy val girepository =
   project
     .in(file("girepository"))
-    .dependsOn(glib)
+    .dependsOn(gobject)
     .configure(pkgConfigured("gobject-introspection-1.0"))
     .settings(
       bindgenBindings +=
