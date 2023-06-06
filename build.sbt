@@ -43,7 +43,8 @@ lazy val root = project
     gtk4,
     harfbuzz,
     pango,
-    `gir-schema`
+    `gir-schema`,
+    girepository
   )
   .settings(
     publish / skip := true,
@@ -197,6 +198,25 @@ lazy val graphene =
           .addExternalName("graphene_simd4f_get", "<nopackage>")
           .withMultiFile(true)
           .build
+    )
+
+lazy val girepository =
+  project
+    .in(file("girepository"))
+    .dependsOn(gobject)
+    .configure(pkgConfigured("gobject-introspection-1.0"))
+    .settings(
+      bindgenBindings +=
+        buildWithDependencies("glib", "gobject") {
+          Binding
+            .builder(
+              findHeader("gobject-introspection-1.0", _ / "girepository.h"),
+              "girepository"
+            )
+            .withClangFlags(pkgConfig("gobject-introspection-1.0", "cflags"))
+            .addCImport("girepository.h")
+            .withMultiFile(true)
+        }
     )
 
 lazy val harfbuzz =
