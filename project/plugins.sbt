@@ -23,4 +23,9 @@ addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.11.0")
 
 addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.7")
 
-libraryDependencies += "com.indoorvivants.detective" %% "platform" % "0.0.2"
+addSbtPlugin("org.scalaxb" % "sbt-scalaxb" % "1.10.0")
+
+libraryDependencies ++= List(
+  "com.indoorvivants.detective" %% "platform" % "0.0.2",
+  "org.relaxng" % "trang" % "20220510"
+)
