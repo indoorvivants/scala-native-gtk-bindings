@@ -293,6 +293,14 @@ lazy val `gir-schema` = project
     )
   )
 
+lazy val `fluent-generator` = project
+  .in(file("fluent-generator"))
+  .dependsOn(`gir-schema`)
+  .settings(scalaVersion := "3.3.1")
+  .settings(
+    libraryDependencies += "com.outr" %%% "scribe" % "3.13.0"
+  )
+
 def pkgConfig(pkg: String, arg: String) = {
   import sys.process.*
   s"pkg-config --$arg $pkg".!!.trim.split(" ").toList
@@ -328,7 +336,7 @@ def pkgConfigured(name: String): Project => Project = { proj =>
         )
       ),
       resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
-      scalaVersion := "3.2.2",
+      scalaVersion := "3.3.1",
       nativeCompileOptions ++= {
         pkgConfig(name, "cflags")
       },
