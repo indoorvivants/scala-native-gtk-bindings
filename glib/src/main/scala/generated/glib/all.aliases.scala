@@ -58,6 +58,7 @@ export _root_.glib.aliases.GDir_queueautoptr
 export _root_.glib.aliases.GDir_slistautoptr
 export _root_.glib.aliases.GDuplicateFunc
 export _root_.glib.aliases.GEqualFunc
+export _root_.glib.aliases.GEqualFuncFull
 export _root_.glib.aliases.GErrorClearFunc
 export _root_.glib.aliases.GErrorCopyFunc
 export _root_.glib.aliases.GErrorInitFunc
@@ -148,6 +149,10 @@ export _root_.glib.aliases.GOptionGroup_listautoptr
 export _root_.glib.aliases.GOptionGroup_queueautoptr
 export _root_.glib.aliases.GOptionGroup_slistautoptr
 export _root_.glib.aliases.GOptionParseFunc
+export _root_.glib.aliases.GPathBuf_autoptr
+export _root_.glib.aliases.GPathBuf_listautoptr
+export _root_.glib.aliases.GPathBuf_queueautoptr
+export _root_.glib.aliases.GPathBuf_slistautoptr
 export _root_.glib.aliases.GPatternSpec_autoptr
 export _root_.glib.aliases.GPatternSpec_listautoptr
 export _root_.glib.aliases.GPatternSpec_queueautoptr
@@ -210,6 +215,7 @@ export _root_.glib.aliases.GSequence_slistautoptr
 export _root_.glib.aliases.GSourceDisposeFunc
 export _root_.glib.aliases.GSourceDummyMarshal
 export _root_.glib.aliases.GSourceFunc
+export _root_.glib.aliases.GSourceOnceFunc
 export _root_.glib.aliases.GSource_autoptr
 export _root_.glib.aliases.GSource_listautoptr
 export _root_.glib.aliases.GSource_queueautoptr
@@ -311,6 +317,7 @@ export _root_.glib.aliases.gunichar2
 export _root_.glib.aliases.gushort
 export _root_.glib.aliases.pthread_mutex_t
 export _root_.glib.aliases.pthread_t
+export _root_.glib.aliases.size_t
 export _root_.glib.aliases.time_t
 export _root_.glib.aliases.tm
 export _root_.glib.aliases.va_list

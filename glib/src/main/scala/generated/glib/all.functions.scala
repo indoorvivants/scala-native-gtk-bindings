@@ -10,6 +10,7 @@ export _root_.glib.functions._g_log_fallback_handler
 export _root_.glib.functions.g_aligned_alloc
 export _root_.glib.functions.g_aligned_alloc0
 export _root_.glib.functions.g_aligned_free
+export _root_.glib.functions.g_aligned_free_sized
 export _root_.glib.functions.g_allocator_free
 export _root_.glib.functions.g_allocator_new
 export _root_.glib.functions.g_array_append_vals
@@ -19,6 +20,8 @@ export _root_.glib.functions.g_array_free
 export _root_.glib.functions.g_array_get_element_size
 export _root_.glib.functions.g_array_insert_vals
 export _root_.glib.functions.g_array_new
+export _root_.glib.functions.g_array_new_take
+export _root_.glib.functions.g_array_new_take_zero_terminated
 export _root_.glib.functions.g_array_prepend_vals
 export _root_.glib.functions.g_array_ref
 export _root_.glib.functions.g_array_remove_index
@@ -48,6 +51,7 @@ export _root_.glib.functions.g_ascii_toupper
 export _root_.glib.functions.g_ascii_xdigit_value
 export _root_.glib.functions.g_assert_warning
 export _root_.glib.functions.g_assertion_message
+export _root_.glib.functions.g_assertion_message_cmpint
 export _root_.glib.functions.g_assertion_message_cmpnum
 export _root_.glib.functions.g_assertion_message_cmpstr
 export _root_.glib.functions.g_assertion_message_cmpstrv
@@ -85,7 +89,9 @@ export _root_.glib.functions.g_atexit
 export _root_.glib.functions.g_atomic_int_add
 export _root_.glib.functions.g_atomic_int_and
 export _root_.glib.functions.g_atomic_int_compare_and_exchange
+export _root_.glib.functions.g_atomic_int_compare_and_exchange_full
 export _root_.glib.functions.g_atomic_int_dec_and_test
+export _root_.glib.functions.g_atomic_int_exchange
 export _root_.glib.functions.g_atomic_int_exchange_and_add
 export _root_.glib.functions.g_atomic_int_get
 export _root_.glib.functions.g_atomic_int_inc
@@ -95,6 +101,8 @@ export _root_.glib.functions.g_atomic_int_xor
 export _root_.glib.functions.g_atomic_pointer_add
 export _root_.glib.functions.g_atomic_pointer_and
 export _root_.glib.functions.g_atomic_pointer_compare_and_exchange
+export _root_.glib.functions.g_atomic_pointer_compare_and_exchange_full
+export _root_.glib.functions.g_atomic_pointer_exchange
 export _root_.glib.functions.g_atomic_pointer_get
 export _root_.glib.functions.g_atomic_pointer_or
 export _root_.glib.functions.g_atomic_pointer_set
@@ -131,6 +139,7 @@ export _root_.glib.functions.g_bit_unlock
 export _root_.glib.functions.g_blow_chunks
 export _root_.glib.functions.g_bookmark_file_add_application
 export _root_.glib.functions.g_bookmark_file_add_group
+export _root_.glib.functions.g_bookmark_file_copy
 export _root_.glib.functions.g_bookmark_file_error_quark
 export _root_.glib.functions.g_bookmark_file_free
 export _root_.glib.functions.g_bookmark_file_get_added
@@ -269,6 +278,7 @@ export _root_.glib.functions.g_datalist_get_data
 export _root_.glib.functions.g_datalist_get_flags
 export _root_.glib.functions.g_datalist_id_dup_data
 export _root_.glib.functions.g_datalist_id_get_data
+export _root_.glib.functions.g_datalist_id_remove_multiple
 export _root_.glib.functions.g_datalist_id_remove_no_notify
 export _root_.glib.functions.g_datalist_id_replace_data
 export _root_.glib.functions.g_datalist_id_set_data_full
@@ -423,6 +433,7 @@ export _root_.glib.functions.g_format_size
 export _root_.glib.functions.g_format_size_for_display
 export _root_.glib.functions.g_format_size_full
 export _root_.glib.functions.g_free
+export _root_.glib.functions.g_free_sized
 export _root_.glib.functions.g_get_application_name
 export _root_.glib.functions.g_get_charset
 export _root_.glib.functions.g_get_codeset
@@ -462,7 +473,9 @@ export _root_.glib.functions.g_hash_table_foreach_remove
 export _root_.glib.functions.g_hash_table_foreach_steal
 export _root_.glib.functions.g_hash_table_get_keys
 export _root_.glib.functions.g_hash_table_get_keys_as_array
+export _root_.glib.functions.g_hash_table_get_keys_as_ptr_array
 export _root_.glib.functions.g_hash_table_get_values
+export _root_.glib.functions.g_hash_table_get_values_as_ptr_array
 export _root_.glib.functions.g_hash_table_insert
 export _root_.glib.functions.g_hash_table_iter_get_hash_table
 export _root_.glib.functions.g_hash_table_iter_init
@@ -482,6 +495,8 @@ export _root_.glib.functions.g_hash_table_replace
 export _root_.glib.functions.g_hash_table_size
 export _root_.glib.functions.g_hash_table_steal
 export _root_.glib.functions.g_hash_table_steal_all
+export _root_.glib.functions.g_hash_table_steal_all_keys
+export _root_.glib.functions.g_hash_table_steal_all_values
 export _root_.glib.functions.g_hash_table_steal_extended
 export _root_.glib.functions.g_hash_table_unref
 export _root_.glib.functions.g_hmac_copy
@@ -524,6 +539,7 @@ export _root_.glib.functions.g_iconv_close
 export _root_.glib.functions.g_iconv_open
 export _root_.glib.functions.g_idle_add
 export _root_.glib.functions.g_idle_add_full
+export _root_.glib.functions.g_idle_add_once
 export _root_.glib.functions.g_idle_remove_by_data
 export _root_.glib.functions.g_idle_source_new
 export _root_.glib.functions.g_int64_equal
@@ -861,6 +877,21 @@ export _root_.glib.functions.g_option_group_set_translate_func
 export _root_.glib.functions.g_option_group_set_translation_domain
 export _root_.glib.functions.g_option_group_unref
 export _root_.glib.functions.g_parse_debug_string
+export _root_.glib.functions.g_path_buf_clear
+export _root_.glib.functions.g_path_buf_clear_to_path
+export _root_.glib.functions.g_path_buf_copy
+export _root_.glib.functions.g_path_buf_equal
+export _root_.glib.functions.g_path_buf_free
+export _root_.glib.functions.g_path_buf_free_to_path
+export _root_.glib.functions.g_path_buf_init
+export _root_.glib.functions.g_path_buf_init_from_path
+export _root_.glib.functions.g_path_buf_new
+export _root_.glib.functions.g_path_buf_new_from_path
+export _root_.glib.functions.g_path_buf_pop
+export _root_.glib.functions.g_path_buf_push
+export _root_.glib.functions.g_path_buf_set_extension
+export _root_.glib.functions.g_path_buf_set_filename
+export _root_.glib.functions.g_path_buf_to_path
 export _root_.glib.functions.g_path_get_basename
 export _root_.glib.functions.g_path_get_dirname
 export _root_.glib.functions.g_path_is_absolute
@@ -898,8 +929,14 @@ export _root_.glib.functions.g_ptr_array_find_with_equal_func
 export _root_.glib.functions.g_ptr_array_foreach
 export _root_.glib.functions.g_ptr_array_free
 export _root_.glib.functions.g_ptr_array_insert
+export _root_.glib.functions.g_ptr_array_is_null_terminated
 export _root_.glib.functions.g_ptr_array_new
+export _root_.glib.functions.g_ptr_array_new_from_array
+export _root_.glib.functions.g_ptr_array_new_from_null_terminated_array
 export _root_.glib.functions.g_ptr_array_new_full
+export _root_.glib.functions.g_ptr_array_new_null_terminated
+export _root_.glib.functions.g_ptr_array_new_take
+export _root_.glib.functions.g_ptr_array_new_take_null_terminated
 export _root_.glib.functions.g_ptr_array_new_with_free_func
 export _root_.glib.functions.g_ptr_array_ref
 export _root_.glib.functions.g_ptr_array_remove
@@ -911,6 +948,8 @@ export _root_.glib.functions.g_ptr_array_set_free_func
 export _root_.glib.functions.g_ptr_array_set_size
 export _root_.glib.functions.g_ptr_array_sized_new
 export _root_.glib.functions.g_ptr_array_sort
+export _root_.glib.functions.g_ptr_array_sort_values
+export _root_.glib.functions.g_ptr_array_sort_values_with_data
 export _root_.glib.functions.g_ptr_array_sort_with_data
 export _root_.glib.functions.g_ptr_array_steal
 export _root_.glib.functions.g_ptr_array_steal_index
@@ -1120,6 +1159,7 @@ export _root_.glib.functions.g_set_error_literal
 export _root_.glib.functions.g_set_prgname
 export _root_.glib.functions.g_set_print_handler
 export _root_.glib.functions.g_set_printerr_handler
+export _root_.glib.functions.g_set_str
 export _root_.glib.functions.g_setenv
 export _root_.glib.functions.g_shell_error_quark
 export _root_.glib.functions.g_shell_parse_argv
@@ -1256,6 +1296,7 @@ export _root_.glib.functions.g_strconcat
 export _root_.glib.functions.g_strdelimit
 export _root_.glib.functions.g_strdown
 export _root_.glib.functions.g_strdup
+export _root_.glib.functions.g_strdup_inline
 export _root_.glib.functions.g_strdup_printf
 export _root_.glib.functions.g_strdup_vprintf
 export _root_.glib.functions.g_strdupv
@@ -1266,6 +1307,7 @@ export _root_.glib.functions.g_string_append
 export _root_.glib.functions.g_string_append_c
 export _root_.glib.functions.g_string_append_c_inline
 export _root_.glib.functions.g_string_append_len
+export _root_.glib.functions.g_string_append_len_inline
 export _root_.glib.functions.g_string_append_printf
 export _root_.glib.functions.g_string_append_unichar
 export _root_.glib.functions.g_string_append_uri_escaped
@@ -1283,6 +1325,7 @@ export _root_.glib.functions.g_string_down
 export _root_.glib.functions.g_string_equal
 export _root_.glib.functions.g_string_erase
 export _root_.glib.functions.g_string_free
+export _root_.glib.functions.g_string_free_and_steal
 export _root_.glib.functions.g_string_free_to_bytes
 export _root_.glib.functions.g_string_hash
 export _root_.glib.functions.g_string_insert
@@ -1291,6 +1334,7 @@ export _root_.glib.functions.g_string_insert_len
 export _root_.glib.functions.g_string_insert_unichar
 export _root_.glib.functions.g_string_new
 export _root_.glib.functions.g_string_new_len
+export _root_.glib.functions.g_string_new_take
 export _root_.glib.functions.g_string_overwrite
 export _root_.glib.functions.g_string_overwrite_len
 export _root_.glib.functions.g_string_prepend
@@ -1302,6 +1346,7 @@ export _root_.glib.functions.g_string_replace
 export _root_.glib.functions.g_string_set_size
 export _root_.glib.functions.g_string_sized_new
 export _root_.glib.functions.g_string_truncate
+export _root_.glib.functions.g_string_truncate_inline
 export _root_.glib.functions.g_string_up
 export _root_.glib.functions.g_string_vprintf
 export _root_.glib.functions.g_strip_context
@@ -1342,6 +1387,7 @@ export _root_.glib.functions.g_test_build_filename
 export _root_.glib.functions.g_test_case_free
 export _root_.glib.functions.g_test_create_case
 export _root_.glib.functions.g_test_create_suite
+export _root_.glib.functions.g_test_disable_crash_reporting
 export _root_.glib.functions.g_test_expect_message
 export _root_.glib.functions.g_test_fail
 export _root_.glib.functions.g_test_fail_printf
@@ -1437,8 +1483,10 @@ export _root_.glib.functions.g_time_zone_ref
 export _root_.glib.functions.g_time_zone_unref
 export _root_.glib.functions.g_timeout_add
 export _root_.glib.functions.g_timeout_add_full
+export _root_.glib.functions.g_timeout_add_once
 export _root_.glib.functions.g_timeout_add_seconds
 export _root_.glib.functions.g_timeout_add_seconds_full
+export _root_.glib.functions.g_timeout_add_seconds_once
 export _root_.glib.functions.g_timeout_source_new
 export _root_.glib.functions.g_timeout_source_new_seconds
 export _root_.glib.functions.g_timer_continue
@@ -1596,6 +1644,7 @@ export _root_.glib.functions.g_utf8_substring
 export _root_.glib.functions.g_utf8_to_ucs4
 export _root_.glib.functions.g_utf8_to_ucs4_fast
 export _root_.glib.functions.g_utf8_to_utf16
+export _root_.glib.functions.g_utf8_truncate_middle
 export _root_.glib.functions.g_utf8_validate
 export _root_.glib.functions.g_utf8_validate_len
 export _root_.glib.functions.g_uuid_string_is_valid
@@ -1756,6 +1805,7 @@ export _root_.glib.functions.g_vsnprintf
 export _root_.glib.functions.g_warn_message
 export _root_.glib.functions.glib_auto_cleanup_GCond
 export _root_.glib.functions.glib_auto_cleanup_GMutex
+export _root_.glib.functions.glib_auto_cleanup_GPathBuf
 export _root_.glib.functions.glib_auto_cleanup_GQueue
 export _root_.glib.functions.glib_auto_cleanup_GStrv
 export _root_.glib.functions.glib_auto_cleanup_GVariantBuilder
@@ -1785,6 +1835,7 @@ export _root_.glib.functions.glib_autoptr_cleanup_GMutexLocker
 export _root_.glib.functions.glib_autoptr_cleanup_GNode
 export _root_.glib.functions.glib_autoptr_cleanup_GOptionContext
 export _root_.glib.functions.glib_autoptr_cleanup_GOptionGroup
+export _root_.glib.functions.glib_autoptr_cleanup_GPathBuf
 export _root_.glib.functions.glib_autoptr_cleanup_GPatternSpec
 export _root_.glib.functions.glib_autoptr_cleanup_GPtrArray
 export _root_.glib.functions.glib_autoptr_cleanup_GQueue
@@ -1836,6 +1887,7 @@ export _root_.glib.functions.glib_autoptr_clear_GMutexLocker
 export _root_.glib.functions.glib_autoptr_clear_GNode
 export _root_.glib.functions.glib_autoptr_clear_GOptionContext
 export _root_.glib.functions.glib_autoptr_clear_GOptionGroup
+export _root_.glib.functions.glib_autoptr_clear_GPathBuf
 export _root_.glib.functions.glib_autoptr_clear_GPatternSpec
 export _root_.glib.functions.glib_autoptr_clear_GPtrArray
 export _root_.glib.functions.glib_autoptr_clear_GQueue
@@ -1888,6 +1940,7 @@ export _root_.glib.functions.glib_listautoptr_cleanup_GMutexLocker
 export _root_.glib.functions.glib_listautoptr_cleanup_GNode
 export _root_.glib.functions.glib_listautoptr_cleanup_GOptionContext
 export _root_.glib.functions.glib_listautoptr_cleanup_GOptionGroup
+export _root_.glib.functions.glib_listautoptr_cleanup_GPathBuf
 export _root_.glib.functions.glib_listautoptr_cleanup_GPatternSpec
 export _root_.glib.functions.glib_listautoptr_cleanup_GPtrArray
 export _root_.glib.functions.glib_listautoptr_cleanup_GQueue
@@ -1939,6 +1992,7 @@ export _root_.glib.functions.glib_queueautoptr_cleanup_GMutexLocker
 export _root_.glib.functions.glib_queueautoptr_cleanup_GNode
 export _root_.glib.functions.glib_queueautoptr_cleanup_GOptionContext
 export _root_.glib.functions.glib_queueautoptr_cleanup_GOptionGroup
+export _root_.glib.functions.glib_queueautoptr_cleanup_GPathBuf
 export _root_.glib.functions.glib_queueautoptr_cleanup_GPatternSpec
 export _root_.glib.functions.glib_queueautoptr_cleanup_GPtrArray
 export _root_.glib.functions.glib_queueautoptr_cleanup_GQueue
@@ -1990,6 +2044,7 @@ export _root_.glib.functions.glib_slistautoptr_cleanup_GMutexLocker
 export _root_.glib.functions.glib_slistautoptr_cleanup_GNode
 export _root_.glib.functions.glib_slistautoptr_cleanup_GOptionContext
 export _root_.glib.functions.glib_slistautoptr_cleanup_GOptionGroup
+export _root_.glib.functions.glib_slistautoptr_cleanup_GPathBuf
 export _root_.glib.functions.glib_slistautoptr_cleanup_GPatternSpec
 export _root_.glib.functions.glib_slistautoptr_cleanup_GPtrArray
 export _root_.glib.functions.glib_slistautoptr_cleanup_GQueue

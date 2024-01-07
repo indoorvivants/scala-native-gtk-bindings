@@ -66,6 +66,7 @@ export _root_.libpango.aliases.int32_t
 export _root_.libpango.aliases.int8_t
 export _root_.libpango.aliases.pthread_mutex_t
 export _root_.libpango.aliases.pthread_t
+export _root_.libpango.aliases.size_t
 export _root_.libpango.aliases.time_t
 export _root_.libpango.aliases.tm
 export _root_.libpango.aliases.uint16_t

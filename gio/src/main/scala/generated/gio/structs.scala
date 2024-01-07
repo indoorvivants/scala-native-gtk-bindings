@@ -9,16 +9,15 @@ import _root_.scala.scalanative.*
 import _root_.gio.enumerations.*
 import _root_.gio.aliases.*
 import _root_.gio.structs.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GAction = CStruct0
 object GAction:
   given _tag: Tag[GAction] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gactionmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gactionmap.h
 */
 opaque type GActionEntry = CArray[CChar, Nat.Digit2[Nat._6, Nat._4]]
 object GActionEntry:
@@ -48,14 +47,14 @@ object GActionEntry:
     def padding_=(value: CArray[_root_.glib.all.gsize, Nat._3]): Unit = !struct.at(40).asInstanceOf[Ptr[CArray[_root_.glib.all.gsize, Nat._3]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GActionGroup = CStruct0
 object GActionGroup:
   given _tag: Tag[GActionGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gactiongroup.h
 */
 opaque type GActionGroupInterface = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
 object GActionGroupInterface:
@@ -112,7 +111,7 @@ object GActionGroupInterface:
     def query_action_=(value: CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gboolean], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariant]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]): Unit = !struct.at(120).asInstanceOf[Ptr[CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gboolean], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariant]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gaction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gaction.h
 */
 opaque type GActionInterface = CArray[CChar, Nat.Digit2[Nat._8, Nat._0]]
 object GActionInterface:
@@ -151,14 +150,14 @@ object GActionInterface:
     def activate_=(value: CFuncPtr2[Ptr[GAction], Ptr[_root_.glib.all.GVariant], Unit]): Unit = !struct.at(72).asInstanceOf[Ptr[CFuncPtr2[Ptr[GAction], Ptr[_root_.glib.all.GVariant], Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GActionMap = CStruct0
 object GActionMap:
   given _tag: Tag[GActionMap] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gactionmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gactionmap.h
 */
 opaque type GActionMapInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GActionMapInterface:
@@ -182,14 +181,14 @@ object GActionMapInterface:
     def remove_action_=(value: CFuncPtr2[Ptr[GActionMap], Ptr[_root_.glib.all.gchar], Unit]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GActionMap], Ptr[_root_.glib.all.gchar], Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GAppInfo = CStruct0
 object GAppInfo:
   given _tag: Tag[GAppInfo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type GAppInfoIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GAppInfoIface:
@@ -279,7 +278,7 @@ object GAppInfoIface:
     def launch_uris_finish_=(value: CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type GAppInfoMonitor = CStruct0
 object GAppInfoMonitor:
@@ -288,7 +287,7 @@ object GAppInfoMonitor:
 /**
  * GAppLaunchContext:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type GAppLaunchContext = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GAppLaunchContext:
@@ -306,7 +305,7 @@ object GAppLaunchContext:
     def priv_=(value: Ptr[GAppLaunchContextPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GAppLaunchContextPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type GAppLaunchContextClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._0]]
 object GAppLaunchContextClass:
@@ -345,14 +344,14 @@ object GAppLaunchContextClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type GAppLaunchContextPrivate = CStruct0
 object GAppLaunchContextPrivate:
   given _tag: Tag[GAppLaunchContextPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplication.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplication.h
 */
 opaque type GApplication = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GApplication:
@@ -370,7 +369,7 @@ object GApplication:
     def priv_=(value: Ptr[GApplicationPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GApplicationPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplication.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplication.h
 */
 opaque type GApplicationClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]]
 object GApplicationClass:
@@ -433,7 +432,7 @@ object GApplicationClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._7]): Unit = !struct.at(256).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._7]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplicationcommandline.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplicationcommandline.h
 */
 opaque type GApplicationCommandLine = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GApplicationCommandLine:
@@ -451,7 +450,7 @@ object GApplicationCommandLine:
     def priv_=(value: Ptr[GApplicationCommandLinePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GApplicationCommandLinePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplicationcommandline.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplicationcommandline.h
 */
 opaque type GApplicationCommandLineClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]]
 object GApplicationCommandLineClass:
@@ -478,21 +477,21 @@ object GApplicationCommandLineClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._1]]): Unit = !struct.at(160).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._1]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplicationcommandline.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplicationcommandline.h
 */
 opaque type GApplicationCommandLinePrivate = CStruct0
 object GApplicationCommandLinePrivate:
   given _tag: Tag[GApplicationCommandLinePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplication.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplication.h
 */
 opaque type GApplicationPrivate = CStruct0
 object GApplicationPrivate:
   given _tag: Tag[GApplicationPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GAsyncInitable = CStruct0
 object GAsyncInitable:
@@ -501,7 +500,7 @@ object GAsyncInitable:
 /**
  * GAsyncInitableIface: _iface: The parent interface. _async: Starts initialization of the object. _finish: Finishes initialization of the object.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gasyncinitable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gasyncinitable.h
 */
 opaque type GAsyncInitableIface = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GAsyncInitableIface:
@@ -522,7 +521,7 @@ object GAsyncInitableIface:
     def init_finish_=(value: CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GAsyncResult = CStruct0
 object GAsyncResult:
@@ -531,7 +530,7 @@ object GAsyncResult:
 /**
  * GAsyncResultIface: _iface: The parent interface. _user_data: Gets the user data passed to the callback. _source_object: Gets the source object that issued the asynchronous operation.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gasyncresult.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gasyncresult.h
 */
 opaque type GAsyncResultIface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GAsyncResultIface:
@@ -555,7 +554,7 @@ object GAsyncResultIface:
     def is_tagged_=(value: CFuncPtr2[Ptr[GAsyncResult], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GAsyncResult], _root_.glib.all.gpointer, _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedinputstream.h
 */
 opaque type GBufferedInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GBufferedInputStream:
@@ -573,7 +572,7 @@ object GBufferedInputStream:
     def priv_=(value: Ptr[GBufferedInputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GBufferedInputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedinputstream.h
 */
 opaque type GBufferedInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GBufferedInputStreamClass:
@@ -612,14 +611,14 @@ object GBufferedInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedinputstream.h
 */
 opaque type GBufferedInputStreamPrivate = CStruct0
 object GBufferedInputStreamPrivate:
   given _tag: Tag[GBufferedInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedoutputstream.h
 */
 opaque type GBufferedOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GBufferedOutputStream:
@@ -637,7 +636,7 @@ object GBufferedOutputStream:
     def priv_=(value: Ptr[GBufferedOutputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GBufferedOutputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedoutputstream.h
 */
 opaque type GBufferedOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GBufferedOutputStreamClass:
@@ -658,21 +657,21 @@ object GBufferedOutputStreamClass:
     def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedoutputstream.h
 */
 opaque type GBufferedOutputStreamPrivate = CStruct0
 object GBufferedOutputStreamPrivate:
   given _tag: Tag[GBufferedOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GBytesIcon = CStruct0
 object GBytesIcon:
   given _tag: Tag[GBytesIcon] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcancellable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcancellable.h
 */
 opaque type GCancellable = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GCancellable:
@@ -690,7 +689,7 @@ object GCancellable:
     def priv_=(value: Ptr[GCancellablePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GCancellablePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcancellable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcancellable.h
 */
 opaque type GCancellableClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._8, Nat._4]]
 object GCancellableClass:
@@ -723,21 +722,21 @@ object GCancellableClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcancellable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcancellable.h
 */
 opaque type GCancellablePrivate = CStruct0
 object GCancellablePrivate:
   given _tag: Tag[GCancellablePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GCharsetConverter = CStruct0
 object GCharsetConverter:
   given _tag: Tag[GCharsetConverter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcharsetconverter.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcharsetconverter.h
 */
 opaque type GCharsetConverterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GCharsetConverterClass:
@@ -752,7 +751,7 @@ object GCharsetConverterClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GConverter = CStruct0
 object GConverter:
@@ -761,7 +760,7 @@ object GConverter:
 /**
  * GConverterIface: _iface: The parent interface. : Converts data. : Reverts the internal state of the converter to its initial state.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverter.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverter.h
 */
 opaque type GConverterIface = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GConverterIface:
@@ -782,7 +781,7 @@ object GConverterIface:
     def reset_=(value: CFuncPtr1[Ptr[GConverter], Unit]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr1[Ptr[GConverter], Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverterinputstream.h
 */
 opaque type GConverterInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GConverterInputStream:
@@ -800,7 +799,7 @@ object GConverterInputStream:
     def priv_=(value: Ptr[GConverterInputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GConverterInputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverterinputstream.h
 */
 opaque type GConverterInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]]
 object GConverterInputStreamClass:
@@ -830,14 +829,14 @@ object GConverterInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverterinputstream.h
 */
 opaque type GConverterInputStreamPrivate = CStruct0
 object GConverterInputStreamPrivate:
   given _tag: Tag[GConverterInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverteroutputstream.h
 */
 opaque type GConverterOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GConverterOutputStream:
@@ -855,7 +854,7 @@ object GConverterOutputStream:
     def priv_=(value: Ptr[GConverterOutputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GConverterOutputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverteroutputstream.h
 */
 opaque type GConverterOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._0]]
 object GConverterOutputStreamClass:
@@ -885,28 +884,28 @@ object GConverterOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(352).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverteroutputstream.h
 */
 opaque type GConverterOutputStreamPrivate = CStruct0
 object GConverterOutputStreamPrivate:
   given _tag: Tag[GConverterOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GCredentials = CStruct0
 object GCredentials:
   given _tag: Tag[GCredentials] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcredentials.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcredentials.h
 */
 opaque type GCredentialsClass = CStruct0
 object GCredentialsClass:
   given _tag: Tag[GCredentialsClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusActionGroup = CStruct0
 object GDBusActionGroup:
@@ -915,7 +914,7 @@ object GDBusActionGroup:
 /**
  * GDBusAnnotationInfo: _count: The reference count or -1 if statically allocated. : The name of the annotation, e.g. "org.freedesktop.DBus.Deprecated". : The value of the annotation. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusAnnotationInfo = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusAnnotationInfo:
@@ -941,7 +940,7 @@ object GDBusAnnotationInfo:
 /**
  * GDBusArgInfo: _count: The reference count or -1 if statically allocated. : D-Bus signature of the argument (a single complete type). : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusArgInfo = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusArgInfo:
@@ -965,14 +964,14 @@ object GDBusArgInfo:
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusAuthObserver = CStruct0
 object GDBusAuthObserver:
   given _tag: Tag[GDBusAuthObserver] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusConnection = CStruct0
 object GDBusConnection:
@@ -981,7 +980,7 @@ object GDBusConnection:
 /**
  * GDBusErrorEntry: _code: An error code. _error_name: The D-Bus error name to associate with _code.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbuserror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbuserror.h
 */
 opaque type GDBusErrorEntry = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GDBusErrorEntry:
@@ -999,7 +998,7 @@ object GDBusErrorEntry:
     def dbus_error_name_=(value: Ptr[_root_.glib.all.gchar]): Unit = !struct.at(8).asInstanceOf[Ptr[Ptr[_root_.glib.all.gchar]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusInterface = CStruct0
 object GDBusInterface:
@@ -1008,7 +1007,7 @@ object GDBusInterface:
 /**
  * GDBusInterfaceIface: _iface: The parent interface. _info: Returns a #GDBusInterfaceInfo. See g_dbus_interface_get_info(). _object: Gets the enclosing #GDBusObject. See g_dbus_interface_get_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterface.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterface.h
 */
 opaque type GDBusInterfaceIface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GDBusInterfaceIface:
@@ -1037,7 +1036,7 @@ object GDBusInterfaceIface:
 /**
  * GDBusInterfaceInfo: _count: The reference count or -1 if statically allocated. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusSignalInfo structures or %NULL if there are no signals. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusPropertyInfo structures or %NULL if there are no properties. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusInterfaceInfo = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GDBusInterfaceInfo:
@@ -1069,7 +1068,7 @@ object GDBusInterfaceInfo:
 /**
  * GDBusInterfaceSkeleton:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 */
 opaque type GDBusInterfaceSkeleton = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusInterfaceSkeleton:
@@ -1089,7 +1088,7 @@ object GDBusInterfaceSkeleton:
 /**
  * GDBusInterfaceSkeletonClass: _class: The parent class. _info: Returns a #GDBusInterfaceInfo. See g_dbus_interface_skeleton_get_info() for details. _vtable: Returns a #GDBusInterfaceVTable. See g_dbus_interface_skeleton_get_vtable() for details. _properties: Returns a #GVariant with all properties. See g_dbus_interface_skeleton_get_properties(). : Emits outstanding changes, if any. See g_dbus_interface_skeleton_flush(). _authorize_method: Signal class handler for the #GDBusInterfaceSkeleton::g-authorize-method signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 */
 opaque type GDBusInterfaceSkeletonClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GDBusInterfaceSkeletonClass:
@@ -1125,7 +1124,7 @@ object GDBusInterfaceSkeletonClass:
     def signal_padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(240).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 */
 opaque type GDBusInterfaceSkeletonPrivate = CStruct0
 object GDBusInterfaceSkeletonPrivate:
@@ -1134,7 +1133,7 @@ object GDBusInterfaceSkeletonPrivate:
 /**
  * GDBusInterfaceVTable: _property: Function for getting a property.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusInterfaceVTable = CArray[CChar, Nat.Digit2[Nat._8, Nat._8]]
 object GDBusInterfaceVTable:
@@ -1158,14 +1157,14 @@ object GDBusInterfaceVTable:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(24).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusmenumodel.h
 */
 opaque type GDBusMenuModel = CStruct0
 object GDBusMenuModel:
   given _tag: Tag[GDBusMenuModel] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusMessage = CStruct0
 object GDBusMessage:
@@ -1174,7 +1173,7 @@ object GDBusMessage:
 /**
  * GDBusMethodInfo: _count: The reference count or -1 if statically allocated. _args: (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusArgInfo structures or %NULL if there are no in arguments. _args: (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusArgInfo structures or %NULL if there are no out arguments. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusMethodInfo = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GDBusMethodInfo:
@@ -1201,7 +1200,7 @@ object GDBusMethodInfo:
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusMethodInvocation = CStruct0
 object GDBusMethodInvocation:
@@ -1210,7 +1209,7 @@ object GDBusMethodInvocation:
 /**
  * GDBusNodeInfo: _count: The reference count or -1 if statically allocated. : The path of the node or %NULL if omitted. Note that this may be a relative path. See the D-Bus specification for more details. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusNodeInfo structures or %NULL if there are no nodes. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusNodeInfo = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GDBusNodeInfo:
@@ -1237,7 +1236,7 @@ object GDBusNodeInfo:
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusObject = CStruct0
 object GDBusObject:
@@ -1246,7 +1245,7 @@ object GDBusObject:
 /**
  * GDBusObjectIface: _iface: The parent interface. _object_path: Returns the object path. See g_dbus_object_get_object_path(). _interfaces: Returns all interfaces. See g_dbus_object_get_interfaces(). _interface: Returns an interface by name. See g_dbus_object_get_interface().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobject.h
 */
 opaque type GDBusObjectIface = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GDBusObjectIface:
@@ -1276,7 +1275,7 @@ object GDBusObjectIface:
     def interface_removed_=(value: CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusObjectManager = CStruct0
 object GDBusObjectManager:
@@ -1285,7 +1284,7 @@ object GDBusObjectManager:
 /**
  * GDBusObjectManagerClient:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 */
 opaque type GDBusObjectManagerClient = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectManagerClient:
@@ -1305,7 +1304,7 @@ object GDBusObjectManagerClient:
 /**
  * GDBusObjectManagerClientClass: _class: The parent class.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 */
 opaque type GDBusObjectManagerClientClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GDBusObjectManagerClientClass:
@@ -1329,7 +1328,7 @@ object GDBusObjectManagerClientClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(152).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 */
 opaque type GDBusObjectManagerClientPrivate = CStruct0
 object GDBusObjectManagerClientPrivate:
@@ -1338,7 +1337,7 @@ object GDBusObjectManagerClientPrivate:
 /**
  * GDBusObjectManagerIface: _iface: The parent interface. _object_path: Virtual function for g_dbus_object_manager_get_object_path(). _objects: Virtual function for g_dbus_object_manager_get_objects(). _object: Virtual function for g_dbus_object_manager_get_object(). _interface: Virtual function for g_dbus_object_manager_get_interface(). _added: Signal handler for the #GDBusObjectManager::object-added signal. _removed: Signal handler for the #GDBusObjectManager::object-removed signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanager.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanager.h
 */
 opaque type GDBusObjectManagerIface = CArray[CChar, Nat.Digit2[Nat._8, Nat._0]]
 object GDBusObjectManagerIface:
@@ -1379,7 +1378,7 @@ object GDBusObjectManagerIface:
 /**
  * GDBusObjectManagerServer:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 */
 opaque type GDBusObjectManagerServer = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectManagerServer:
@@ -1399,7 +1398,7 @@ object GDBusObjectManagerServer:
 /**
  * GDBusObjectManagerServerClass: _class: The parent class.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 */
 opaque type GDBusObjectManagerServerClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._0]]
 object GDBusObjectManagerServerClass:
@@ -1417,7 +1416,7 @@ object GDBusObjectManagerServerClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 */
 opaque type GDBusObjectManagerServerPrivate = CStruct0
 object GDBusObjectManagerServerPrivate:
@@ -1426,7 +1425,7 @@ object GDBusObjectManagerServerPrivate:
 /**
  * GDBusObjectProxy:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectproxy.h
 */
 opaque type GDBusObjectProxy = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectProxy:
@@ -1446,7 +1445,7 @@ object GDBusObjectProxy:
 /**
  * GDBusObjectProxyClass: _class: The parent class.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectproxy.h
 */
 opaque type GDBusObjectProxyClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._0]]
 object GDBusObjectProxyClass:
@@ -1464,7 +1463,7 @@ object GDBusObjectProxyClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectproxy.h
 */
 opaque type GDBusObjectProxyPrivate = CStruct0
 object GDBusObjectProxyPrivate:
@@ -1473,7 +1472,7 @@ object GDBusObjectProxyPrivate:
 /**
  * GDBusObjectSkeleton:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectskeleton.h
 */
 opaque type GDBusObjectSkeleton = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectSkeleton:
@@ -1493,7 +1492,7 @@ object GDBusObjectSkeleton:
 /**
  * GDBusObjectSkeletonClass: _class: The parent class. _method: Signal class handler for the #GDBusObjectSkeleton::authorize-method signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectskeleton.h
 */
 opaque type GDBusObjectSkeletonClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._8]]
 object GDBusObjectSkeletonClass:
@@ -1514,7 +1513,7 @@ object GDBusObjectSkeletonClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(144).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectskeleton.h
 */
 opaque type GDBusObjectSkeletonPrivate = CStruct0
 object GDBusObjectSkeletonPrivate:
@@ -1523,7 +1522,7 @@ object GDBusObjectSkeletonPrivate:
 /**
  * GDBusPropertyInfo: _count: The reference count or -1 if statically allocated. : The D-Bus signature of the property (a single complete type). : Access control flags for the property. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusPropertyInfo = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GDBusPropertyInfo:
@@ -1552,7 +1551,7 @@ object GDBusPropertyInfo:
 /**
  * GDBusProxy:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusproxy.h
 */
 opaque type GDBusProxy = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusProxy:
@@ -1572,7 +1571,7 @@ object GDBusProxy:
 /**
  * GDBusProxyClass: _properties_changed: Signal class handler for the #GDBusProxy::g-properties-changed signal. _signal: Signal class handler for the #GDBusProxy::g-signal signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusproxy.h
 */
 opaque type GDBusProxyClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object GDBusProxyClass:
@@ -1596,14 +1595,14 @@ object GDBusProxyClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._3, Nat._2]]): Unit = !struct.at(152).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._3, Nat._2]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusproxy.h
 */
 opaque type GDBusProxyPrivate = CStruct0
 object GDBusProxyPrivate:
   given _tag: Tag[GDBusProxyPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusServer = CStruct0
 object GDBusServer:
@@ -1612,7 +1611,7 @@ object GDBusServer:
 /**
  * GDBusSignalInfo: _count: The reference count or -1 if statically allocated.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type GDBusSignalInfo = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusSignalInfo:
@@ -1638,7 +1637,7 @@ object GDBusSignalInfo:
 /**
  * GDBusSubtreeVTable: : Function for enumerating child nodes. : Function for introspecting a child node. : Function for dispatching a remote call on a child node.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusSubtreeVTable = CArray[CChar, Nat.Digit2[Nat._8, Nat._8]]
 object GDBusSubtreeVTable:
@@ -1662,7 +1661,7 @@ object GDBusSubtreeVTable:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(24).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatainputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatainputstream.h
 */
 opaque type GDataInputStream = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GDataInputStream:
@@ -1680,7 +1679,7 @@ object GDataInputStream:
     def priv_=(value: Ptr[GDataInputStreamPrivate]): Unit = !struct.at(48).asInstanceOf[Ptr[Ptr[GDataInputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatainputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatainputstream.h
 */
 opaque type GDataInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._7, Nat._6]]
 object GDataInputStreamClass:
@@ -1710,14 +1709,14 @@ object GDataInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(368).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatainputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatainputstream.h
 */
 opaque type GDataInputStreamPrivate = CStruct0
 object GDataInputStreamPrivate:
   given _tag: Tag[GDataInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdataoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdataoutputstream.h
 */
 opaque type GDataOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GDataOutputStream:
@@ -1735,7 +1734,7 @@ object GDataOutputStream:
     def priv_=(value: Ptr[GDataOutputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GDataOutputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdataoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdataoutputstream.h
 */
 opaque type GDataOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._0]]
 object GDataOutputStreamClass:
@@ -1765,14 +1764,14 @@ object GDataOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(352).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdataoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdataoutputstream.h
 */
 opaque type GDataOutputStreamPrivate = CStruct0
 object GDataOutputStreamPrivate:
   given _tag: Tag[GDataOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDatagramBased = CStruct0
 object GDatagramBased:
@@ -1781,7 +1780,7 @@ object GDatagramBased:
 /**
  * GDatagramBasedInterface: _iface: The parent interface. _messages: Virtual method for g_datagram_based_receive_messages(). _messages: Virtual method for g_datagram_based_send_messages(). _source: Virtual method for g_datagram_based_create_source(). _check: Virtual method for g_datagram_based_condition_check(). _wait: Virtual method for g_datagram_based_condition_wait().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatagrambased.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatagrambased.h
 */
 opaque type GDatagramBasedInterface = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GDatagramBasedInterface:
@@ -1811,14 +1810,14 @@ object GDatagramBasedInterface:
     def condition_wait_=(value: CFuncPtr5[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr5[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type GDebugController = CStruct0
 object GDebugController:
   given _tag: Tag[GDebugController] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBus = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GDebugControllerDBus:
@@ -1835,7 +1834,7 @@ object GDebugControllerDBus:
 /**
  * GDebugControllerDBusClass: _class: The parent class. : Default handler for the #GDebugControllerDBus::authorize signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBusClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._0]]
 object GDebugControllerDBusClass:
@@ -1858,7 +1857,7 @@ object GDebugControllerDBusClass:
 /**
  * GDebugControllerInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type GDebugControllerInterface = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GDebugControllerInterface:
@@ -1873,14 +1872,14 @@ object GDebugControllerInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GTypeInterface]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDrive = CStruct0
 object GDrive:
   given _tag: Tag[GDrive] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdrive.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdrive.h
 */
 opaque type GDriveIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object GDriveIface:
@@ -1991,7 +1990,7 @@ object GDriveIface:
     def is_removable_=(value: CFuncPtr1[Ptr[GDrive], _root_.glib.all.gboolean]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr1[Ptr[GDrive], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDtlsClientConnection = CStruct0
 object GDtlsClientConnection:
@@ -2000,7 +1999,7 @@ object GDtlsClientConnection:
 /**
  * GDtlsClientConnectionInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdtlsclientconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdtlsclientconnection.h
 */
 opaque type GDtlsClientConnectionInterface = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GDtlsClientConnectionInterface:
@@ -2015,7 +2014,7 @@ object GDtlsClientConnectionInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GTypeInterface]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDtlsConnection = CStruct0
 object GDtlsConnection:
@@ -2024,7 +2023,7 @@ object GDtlsConnection:
 /**
  * GDtlsConnectionInterface: _iface: The parent interface. _certificate: Check whether to accept a certificate. : Perform a handshake operation. _async: Start an asynchronous handshake operation. _finish: Finish an asynchronous handshake operation. : Shut down one or both directions of the connection. _async: Start an asynchronous shutdown operation. _finish: Finish an asynchronous shutdown operation.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdtlsconnection.h
 */
 opaque type GDtlsConnectionInterface = CArray[CChar, Nat.Digit2[Nat._9, Nat._6]]
 object GDtlsConnectionInterface:
@@ -2069,7 +2068,7 @@ object GDtlsConnectionInterface:
     def get_binding_data_=(value: CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.glib.all.GByteArray], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(88).asInstanceOf[Ptr[CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.glib.all.GByteArray], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDtlsServerConnection = CStruct0
 object GDtlsServerConnection:
@@ -2078,7 +2077,7 @@ object GDtlsServerConnection:
 /**
  * GDtlsServerConnectionInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdtlsserverconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdtlsserverconnection.h
 */
 opaque type GDtlsServerConnectionInterface = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GDtlsServerConnectionInterface:
@@ -2093,21 +2092,21 @@ object GDtlsServerConnectionInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GTypeInterface]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblem.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblem.h
 */
 opaque type GEmblem = CStruct0
 object GEmblem:
   given _tag: Tag[GEmblem] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblem.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblem.h
 */
 opaque type GEmblemClass = CStruct0
 object GEmblemClass:
   given _tag: Tag[GEmblemClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblemedicon.h
 */
 opaque type GEmblemedIcon = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GEmblemedIcon:
@@ -2125,7 +2124,7 @@ object GEmblemedIcon:
     def priv_=(value: Ptr[GEmblemedIconPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GEmblemedIconPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblemedicon.h
 */
 opaque type GEmblemedIconClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GEmblemedIconClass:
@@ -2140,14 +2139,14 @@ object GEmblemedIconClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblemedicon.h
 */
 opaque type GEmblemedIconPrivate = CStruct0
 object GEmblemedIconPrivate:
   given _tag: Tag[GEmblemedIconPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFile = CStruct0
 object GFile:
@@ -2156,7 +2155,7 @@ object GFile:
 /**
  * GFileAttributeInfo: : the #GFileAttributeType type of the attribute. : a set of #GFileAttributeInfoFlags.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileattribute.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileattribute.h
 */
 opaque type GFileAttributeInfo = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GFileAttributeInfo:
@@ -2179,7 +2178,7 @@ object GFileAttributeInfo:
 /**
  * GFileAttributeInfoList: : an array of #GFileAttributeInfos. _infos: the number of values in the array.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileattribute.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileattribute.h
 */
 opaque type GFileAttributeInfoList = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GFileAttributeInfoList:
@@ -2197,21 +2196,21 @@ object GFileAttributeInfoList:
     def n_infos_=(value: CInt): Unit = !struct.at(8).asInstanceOf[Ptr[CInt]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileAttributeMatcher = CStruct0
 object GFileAttributeMatcher:
   given _tag: Tag[GFileAttributeMatcher] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileDescriptorBased = CStruct0
 object GFileDescriptorBased:
   given _tag: Tag[GFileDescriptorBased] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileenumerator.h
 */
 opaque type GFileEnumerator = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GFileEnumerator:
@@ -2229,7 +2228,7 @@ object GFileEnumerator:
     def priv_=(value: Ptr[GFileEnumeratorPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GFileEnumeratorPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileenumerator.h
 */
 opaque type GFileEnumeratorClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._0]]
 object GFileEnumeratorClass:
@@ -2283,14 +2282,14 @@ object GFileEnumeratorClass:
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at(232).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileenumerator.h
 */
 opaque type GFileEnumeratorPrivate = CStruct0
 object GFileEnumeratorPrivate:
   given _tag: Tag[GFileEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileiostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileiostream.h
 */
 opaque type GFileIOStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFileIOStream:
@@ -2308,7 +2307,7 @@ object GFileIOStream:
     def priv_=(value: Ptr[GFileIOStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileIOStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileiostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileiostream.h
 */
 opaque type GFileIOStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._8]]
 object GFileIOStreamClass:
@@ -2365,21 +2364,21 @@ object GFileIOStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(360).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileiostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileiostream.h
 */
 opaque type GFileIOStreamPrivate = CStruct0
 object GFileIOStreamPrivate:
   given _tag: Tag[GFileIOStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileIcon = CStruct0
 object GFileIcon:
   given _tag: Tag[GFileIcon] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileicon.h
 */
 opaque type GFileIconClass = CStruct0
 object GFileIconClass:
@@ -2388,13 +2387,13 @@ object GFileIconClass:
 /**
  * GFileIface: _iface: The parent interface. : Duplicates a #GFile. : Creates a hash of a #GFile. : Checks equality of two given #GFiles. _uri_scheme: Checks to see if a #GFile has a given URI scheme. _uri_scheme: Gets the URI scheme for a #GFile. _basename: Gets the basename for a given #GFile. _path: Gets the current path within a #GFile. _uri: Gets a URI for the path within a #GFile. _parse_name: Gets the parsed name for the #GFile. _parent: Gets the parent directory for the #GFile. _matches: Checks whether a #GFile contains a specified file. _relative_path: Gets the path for a #GFile relative to a given path. _relative_path: Resolves a relative path for a #GFile to an absolute path. _child_for_display_name: Gets the child #GFile for a given display name. _children: Gets a #GFileEnumerator with the children of a #GFile. _children_async: Asynchronously gets a #GFileEnumerator with the children of a #GFile. _children_finish: Finishes asynchronously enumerating the children. _info: Gets the #GFileInfo for a #GFile. _info_async: Asynchronously gets the #GFileInfo for a #GFile. _info_finish: Finishes an asynchronous query info operation. _filesystem_info: Gets a #GFileInfo for the file system #GFile is on. _filesystem_info_async: Asynchronously gets a #GFileInfo for the file system #GFile is on. _filesystem_info_finish: Finishes asynchronously getting the file system info. _enclosing_mount: Gets a #GMount for the #GFile. _enclosing_mount_async: Asynchronously gets the #GMount for a #GFile. _enclosing_mount_finish: Finishes asynchronously getting the volume.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfile.h
 */
 opaque type GFileIface = CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]]
 object GFileIface:
   given _tag: Tag[GFileIface] = Tag.CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._8, Nat._4, Nat._0](Tag.Nat8, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[GFileIface] = scala.scalanative.unsafe.alloc[GFileIface](1)
-  def apply(g_iface : _root_.gobject.all.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.glib.all.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.glib.all.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.glib.all.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.glib.all.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], _make_symbolic_link_async : CFuncPtr0[Unit], _make_symbolic_link_finish : CFuncPtr0[Unit], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], supports_thread_contexts : _root_.glib.all.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.glib.all.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean])(using Zone): Ptr[GFileIface] = 
+  def apply(g_iface : _root_.gobject.all.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.glib.all.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.glib.all.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.glib.all.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.glib.all.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_symbolic_link_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], make_symbolic_link_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], supports_thread_contexts : _root_.glib.all.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.glib.all.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean])(using Zone): Ptr[GFileIface] = 
     val ____ptr = apply()
     (!____ptr).g_iface = g_iface
     (!____ptr).dup = dup
@@ -2459,8 +2458,8 @@ object GFileIface:
     (!____ptr).make_directory_async = make_directory_async
     (!____ptr).make_directory_finish = make_directory_finish
     (!____ptr).make_symbolic_link = make_symbolic_link
-    (!____ptr)._make_symbolic_link_async = _make_symbolic_link_async
-    (!____ptr)._make_symbolic_link_finish = _make_symbolic_link_finish
+    (!____ptr).make_symbolic_link_async = make_symbolic_link_async
+    (!____ptr).make_symbolic_link_finish = make_symbolic_link_finish
     (!____ptr).copy = copy
     (!____ptr).copy_async = copy_async
     (!____ptr).copy_finish = copy_finish
@@ -2628,10 +2627,10 @@ object GFileIface:
     def make_directory_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(496).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
     def make_symbolic_link: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean] = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]]
     def make_symbolic_link_=(value: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
-    def _make_symbolic_link_async: CFuncPtr0[Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_async_=(value: CFuncPtr0[Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _make_symbolic_link_finish: CFuncPtr0[Unit] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_finish_=(value: CFuncPtr0[Unit]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def make_symbolic_link_async: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]]]
+    def make_symbolic_link_async_=(value: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]]] = value
+    def make_symbolic_link_finish: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]]
+    def make_symbolic_link_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
     def copy: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean] = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]]
     def copy_=(value: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
     def copy_async: CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit] = !struct.at(536).asInstanceOf[Ptr[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]]]
@@ -2712,21 +2711,21 @@ object GFileIface:
     def measure_disk_usage_finish_=(value: CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(832).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileInfo = CStruct0
 object GFileInfo:
   given _tag: Tag[GFileInfo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinfo.h
 */
 opaque type GFileInfoClass = CStruct0
 object GFileInfoClass:
   given _tag: Tag[GFileInfoClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinputstream.h
 */
 opaque type GFileInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFileInputStream:
@@ -2744,7 +2743,7 @@ object GFileInputStream:
     def priv_=(value: Ptr[GFileInputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileInputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinputstream.h
 */
 opaque type GFileInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GFileInputStreamClass:
@@ -2792,7 +2791,7 @@ object GFileInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinputstream.h
 */
 opaque type GFileInputStreamPrivate = CStruct0
 object GFileInputStreamPrivate:
@@ -2801,7 +2800,7 @@ object GFileInputStreamPrivate:
 /**
  * GFileMonitor:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilemonitor.h
 */
 opaque type GFileMonitor = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GFileMonitor:
@@ -2819,7 +2818,7 @@ object GFileMonitor:
     def priv_=(value: Ptr[GFileMonitorPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GFileMonitorPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilemonitor.h
 */
 opaque type GFileMonitorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._9, Nat._2]]
 object GFileMonitorClass:
@@ -2855,14 +2854,14 @@ object GFileMonitorClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilemonitor.h
 */
 opaque type GFileMonitorPrivate = CStruct0
 object GFileMonitorPrivate:
   given _tag: Tag[GFileMonitorPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileoutputstream.h
 */
 opaque type GFileOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFileOutputStream:
@@ -2880,7 +2879,7 @@ object GFileOutputStream:
     def priv_=(value: Ptr[GFileOutputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileOutputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileoutputstream.h
 */
 opaque type GFileOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object GFileOutputStreamClass:
@@ -2937,21 +2936,21 @@ object GFileOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(400).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileoutputstream.h
 */
 opaque type GFileOutputStreamPrivate = CStruct0
 object GFileOutputStreamPrivate:
   given _tag: Tag[GFileOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFilenameCompleter = CStruct0
 object GFilenameCompleter:
   given _tag: Tag[GFilenameCompleter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilenamecompleter.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilenamecompleter.h
 */
 opaque type GFilenameCompleterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._8]]
 object GFilenameCompleterClass:
@@ -2978,7 +2977,7 @@ object GFilenameCompleterClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilterinputstream.h
 */
 opaque type GFilterInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFilterInputStream:
@@ -2996,7 +2995,7 @@ object GFilterInputStream:
     def base_stream_=(value: Ptr[GInputStream]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GInputStream]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilterinputstream.h
 */
 opaque type GFilterInputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object GFilterInputStreamClass:
@@ -3020,7 +3019,7 @@ object GFilterInputStreamClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilteroutputstream.h
 */
 opaque type GFilterOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFilterOutputStream:
@@ -3038,7 +3037,7 @@ object GFilterOutputStream:
     def base_stream_=(value: Ptr[GOutputStream]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GOutputStream]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilteroutputstream.h
 */
 opaque type GFilterOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]]
 object GFilterOutputStreamClass:
@@ -3062,42 +3061,42 @@ object GFilterOutputStreamClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIOExtension = CStruct0
 object GIOExtension:
   given _tag: Tag[GIOExtension] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIOExtensionPoint = CStruct0
 object GIOExtensionPoint:
   given _tag: Tag[GIOExtensionPoint] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIOModule = CStruct0
 object GIOModule:
   given _tag: Tag[GIOModule] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giomodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giomodule.h
 */
 opaque type GIOModuleClass = CStruct0
 object GIOModuleClass:
   given _tag: Tag[GIOModuleClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giomodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giomodule.h
 */
 opaque type GIOModuleScope = CStruct0
 object GIOModuleScope:
   given _tag: Tag[GIOModuleScope] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIOSchedulerJob = CStruct0
 object GIOSchedulerJob:
@@ -3106,7 +3105,7 @@ object GIOSchedulerJob:
 /**
  * GIOStream:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giostream.h
 */
 opaque type GIOStream = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GIOStream:
@@ -3124,14 +3123,14 @@ object GIOStream:
     def priv_=(value: Ptr[GIOStreamPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GIOStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIOStreamAdapter = CStruct0
 object GIOStreamAdapter:
   given _tag: Tag[GIOStreamAdapter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giostream.h
 */
 opaque type GIOStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._5, Nat._6]]
 object GIOStreamClass:
@@ -3191,14 +3190,14 @@ object GIOStreamClass:
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giostream.h
 */
 opaque type GIOStreamPrivate = CStruct0
 object GIOStreamPrivate:
   given _tag: Tag[GIOStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIcon = CStruct0
 object GIcon:
@@ -3207,7 +3206,7 @@ object GIcon:
 /**
  * GIconIface: _iface: The parent interface. : A hash for a given #GIcon. : Checks if two #GIcons are equal. _tokens: Serializes a #GIcon into tokens. The tokens must not contain any whitespace. Don't implement if the #GIcon can't be serialized (Since 2.20). _tokens: Constructs a #GIcon from tokens. Set the #GError if the tokens are malformed. Don't implement if the #GIcon can't be serialized (Since 2.20). : Serializes a #GIcon into a #GVariant. Since: 2.38
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gicon.h
 */
 opaque type GIconIface = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GIconIface:
@@ -3237,7 +3236,7 @@ object GIconIface:
     def serialize_=(value: CFuncPtr1[Ptr[GIcon], Ptr[_root_.glib.all.GVariant]]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr1[Ptr[GIcon], Ptr[_root_.glib.all.GVariant]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddress.h
 */
 opaque type GInetAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInetAddress:
@@ -3255,7 +3254,7 @@ object GInetAddress:
     def priv_=(value: Ptr[GInetAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetAddressPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddress.h
 */
 opaque type GInetAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._5, Nat._2]]
 object GInetAddressClass:
@@ -3276,7 +3275,7 @@ object GInetAddressClass:
     def to_bytes_=(value: CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.glib.all.guint8]]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.glib.all.guint8]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddressmask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddressmask.h
 */
 opaque type GInetAddressMask = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInetAddressMask:
@@ -3294,7 +3293,7 @@ object GInetAddressMask:
     def priv_=(value: Ptr[GInetAddressMaskPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetAddressMaskPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddressmask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddressmask.h
 */
 opaque type GInetAddressMaskClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GInetAddressMaskClass:
@@ -3309,21 +3308,21 @@ object GInetAddressMaskClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddressmask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddressmask.h
 */
 opaque type GInetAddressMaskPrivate = CStruct0
 object GInetAddressMaskPrivate:
   given _tag: Tag[GInetAddressMaskPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddress.h
 */
 opaque type GInetAddressPrivate = CStruct0
 object GInetAddressPrivate:
   given _tag: Tag[GInetAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetsocketaddress.h
 */
 opaque type GInetSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInetSocketAddress:
@@ -3341,7 +3340,7 @@ object GInetSocketAddress:
     def priv_=(value: Ptr[GInetSocketAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetSocketAddressPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetsocketaddress.h
 */
 opaque type GInetSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GInetSocketAddressClass:
@@ -3356,14 +3355,14 @@ object GInetSocketAddressClass:
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetsocketaddress.h
 */
 opaque type GInetSocketAddressPrivate = CStruct0
 object GInetSocketAddressPrivate:
   given _tag: Tag[GInetSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GInitable = CStruct0
 object GInitable:
@@ -3372,7 +3371,7 @@ object GInitable:
 /**
  * GInitableIface: _iface: The parent interface. : Initializes the object.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/ginitable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginitable.h
 */
 opaque type GInitableIface = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GInitableIface:
@@ -3390,7 +3389,7 @@ object GInitableIface:
     def init_=(value: CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GInputMessage = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GInputMessage:
@@ -3423,7 +3422,7 @@ object GInputMessage:
     def num_control_messages_=(value: Ptr[_root_.glib.all.guint]): Unit = !struct.at(48).asInstanceOf[Ptr[Ptr[_root_.glib.all.guint]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginputstream.h
 */
 opaque type GInputStream = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInputStream:
@@ -3441,7 +3440,7 @@ object GInputStream:
     def priv_=(value: Ptr[GInputStreamPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginputstream.h
 */
 opaque type GInputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]]
 object GInputStreamClass:
@@ -3498,14 +3497,14 @@ object GInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginputstream.h
 */
 opaque type GInputStreamPrivate = CStruct0
 object GInputStreamPrivate:
   given _tag: Tag[GInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GInputVector = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GInputVector:
@@ -3523,14 +3522,14 @@ object GInputVector:
     def size_=(value: _root_.glib.all.gsize): Unit = !struct.at(8).asInstanceOf[Ptr[_root_.glib.all.gsize]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type GListModel = CStruct0
 object GListModel:
   given _tag: Tag[GListModel] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type GListModelInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GListModelInterface:
@@ -3554,14 +3553,14 @@ object GListModelInterface:
     def get_item_=(value: CFuncPtr2[Ptr[GListModel], _root_.glib.all.guint, _root_.glib.all.gpointer]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GListModel], _root_.glib.all.guint, _root_.glib.all.gpointer]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStore = CStruct0
 object GListStore:
   given _tag: Tag[GListStore] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStoreClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GListStoreClass:
@@ -3576,7 +3575,7 @@ object GListStoreClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GLoadableIcon = CStruct0
 object GLoadableIcon:
@@ -3585,7 +3584,7 @@ object GLoadableIcon:
 /**
  * GLoadableIconIface: _iface: The parent interface. : Loads an icon. _async: Loads an icon asynchronously. _finish: Finishes an asynchronous icon load.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gloadableicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gloadableicon.h
 */
 opaque type GLoadableIconIface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GLoadableIconIface:
@@ -3609,7 +3608,7 @@ object GLoadableIconIface:
     def load_finish_=(value: CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GInputStream]]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GInputStream]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryinputstream.h
 */
 opaque type GMemoryInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GMemoryInputStream:
@@ -3627,7 +3626,7 @@ object GMemoryInputStream:
     def priv_=(value: Ptr[GMemoryInputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GMemoryInputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryinputstream.h
 */
 opaque type GMemoryInputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._8, Nat._8]]
 object GMemoryInputStreamClass:
@@ -3657,21 +3656,21 @@ object GMemoryInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryinputstream.h
 */
 opaque type GMemoryInputStreamPrivate = CStruct0
 object GMemoryInputStreamPrivate:
   given _tag: Tag[GMemoryInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type GMemoryMonitor = CStruct0
 object GMemoryMonitor:
   given _tag: Tag[GMemoryMonitor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type GMemoryMonitorInterface = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GMemoryMonitorInterface:
@@ -3689,7 +3688,7 @@ object GMemoryMonitorInterface:
     def low_memory_warning_=(value: CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type GMemoryOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GMemoryOutputStream:
@@ -3707,7 +3706,7 @@ object GMemoryOutputStream:
     def priv_=(value: Ptr[GMemoryOutputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GMemoryOutputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type GMemoryOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GMemoryOutputStreamClass:
@@ -3737,21 +3736,21 @@ object GMemoryOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type GMemoryOutputStreamPrivate = CStruct0
 object GMemoryOutputStreamPrivate:
   given _tag: Tag[GMemoryOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenu.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenu.h
 */
 opaque type GMenu = CStruct0
 object GMenu:
   given _tag: Tag[GMenu] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuAttributeIter = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMenuAttributeIter:
@@ -3769,7 +3768,7 @@ object GMenuAttributeIter:
     def priv_=(value: Ptr[GMenuAttributeIterPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GMenuAttributeIterPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuAttributeIterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._4, Nat._4]]
 object GMenuAttributeIterClass:
@@ -3787,21 +3786,21 @@ object GMenuAttributeIterClass:
     def get_next_=(value: CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuAttributeIterPrivate = CStruct0
 object GMenuAttributeIterPrivate:
   given _tag: Tag[GMenuAttributeIterPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenu.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenu.h
 */
 opaque type GMenuItem = CStruct0
 object GMenuItem:
   given _tag: Tag[GMenuItem] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuLinkIter = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMenuLinkIter:
@@ -3819,7 +3818,7 @@ object GMenuLinkIter:
     def priv_=(value: Ptr[GMenuLinkIterPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GMenuLinkIterPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuLinkIterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._4, Nat._4]]
 object GMenuLinkIterClass:
@@ -3837,14 +3836,14 @@ object GMenuLinkIterClass:
     def get_next_=(value: CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[GMenuModel]], _root_.glib.all.gboolean]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[GMenuModel]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuLinkIterPrivate = CStruct0
 object GMenuLinkIterPrivate:
   given _tag: Tag[GMenuLinkIterPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuModel = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMenuModel:
@@ -3864,7 +3863,7 @@ object GMenuModel:
 /**
  * GMenuModelClass::get_item_attributes: : the #GMenuModel to query _index: The #GMenuItem to query : (out) (element-type utf8 GLib.Variant): Attributes on the item
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuModelClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._0]]
 object GMenuModelClass:
@@ -3903,14 +3902,14 @@ object GMenuModelClass:
     def get_item_link_=(value: CFuncPtr3[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[GMenuModel]]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[GMenuModel]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type GMenuModelPrivate = CStruct0
 object GMenuModelPrivate:
   given _tag: Tag[GMenuModelPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GMount = CStruct0
 object GMount:
@@ -3919,7 +3918,7 @@ object GMount:
 /**
  * GMountIface: _iface: The parent interface. : Changed signal that is emitted when the mount's state has changed. : The unmounted signal that is emitted when the #GMount have been unmounted. If the recipient is holding references to the object they should release them so the object can be finalized.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gmount.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmount.h
 */
 opaque type GMountIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
 object GMountIface:
@@ -4015,7 +4014,7 @@ object GMountIface:
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GMount], Ptr[GIcon]]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GMount], Ptr[GIcon]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmountoperation.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmountoperation.h
 */
 opaque type GMountOperation = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMountOperation:
@@ -4033,7 +4032,7 @@ object GMountOperation:
     def priv_=(value: Ptr[GMountOperationPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GMountOperationPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmountoperation.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmountoperation.h
 */
 opaque type GMountOperationClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._5, Nat._6]]
 object GMountOperationClass:
@@ -4093,14 +4092,14 @@ object GMountOperationClass:
     def _g_reserved9_=(value: CFuncPtr0[Unit]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmountoperation.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmountoperation.h
 */
 opaque type GMountOperationPrivate = CStruct0
 object GMountOperationPrivate:
   given _tag: Tag[GMountOperationPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativesocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativesocketaddress.h
 */
 opaque type GNativeSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNativeSocketAddress:
@@ -4118,7 +4117,7 @@ object GNativeSocketAddress:
     def priv_=(value: Ptr[GNativeSocketAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GNativeSocketAddressPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativesocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativesocketaddress.h
 */
 opaque type GNativeSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GNativeSocketAddressClass:
@@ -4133,14 +4132,14 @@ object GNativeSocketAddressClass:
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativesocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativesocketaddress.h
 */
 opaque type GNativeSocketAddressPrivate = CStruct0
 object GNativeSocketAddressPrivate:
   given _tag: Tag[GNativeSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativevolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativevolumemonitor.h
 */
 opaque type GNativeVolumeMonitor = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNativeVolumeMonitor:
@@ -4155,7 +4154,7 @@ object GNativeVolumeMonitor:
     def parent_instance_=(value: GVolumeMonitor): Unit = !struct.at(0).asInstanceOf[Ptr[GVolumeMonitor]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativevolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativevolumemonitor.h
 */
 opaque type GNativeVolumeMonitorClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._4, Nat._4]]
 object GNativeVolumeMonitorClass:
@@ -4173,7 +4172,7 @@ object GNativeVolumeMonitorClass:
     def get_mount_for_mount_path_=(value: CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]): Unit = !struct.at(336).asInstanceOf[Ptr[CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkaddress.h
 */
 opaque type GNetworkAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNetworkAddress:
@@ -4191,7 +4190,7 @@ object GNetworkAddress:
     def priv_=(value: Ptr[GNetworkAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GNetworkAddressPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkaddress.h
 */
 opaque type GNetworkAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GNetworkAddressClass:
@@ -4206,21 +4205,21 @@ object GNetworkAddressClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkaddress.h
 */
 opaque type GNetworkAddressPrivate = CStruct0
 object GNetworkAddressPrivate:
   given _tag: Tag[GNetworkAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GNetworkMonitor = CStruct0
 object GNetworkMonitor:
   given _tag: Tag[GNetworkMonitor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkmonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkmonitor.h
 */
 opaque type GNetworkMonitorInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GNetworkMonitorInterface:
@@ -4247,7 +4246,7 @@ object GNetworkMonitorInterface:
     def can_reach_finish_=(value: CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkservice.h
 */
 opaque type GNetworkService = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNetworkService:
@@ -4265,7 +4264,7 @@ object GNetworkService:
     def priv_=(value: Ptr[GNetworkServicePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GNetworkServicePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkservice.h
 */
 opaque type GNetworkServiceClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GNetworkServiceClass:
@@ -4280,21 +4279,21 @@ object GNetworkServiceClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkservice.h
 */
 opaque type GNetworkServicePrivate = CStruct0
 object GNetworkServicePrivate:
   given _tag: Tag[GNetworkServicePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GNotification = CStruct0
 object GNotification:
   given _tag: Tag[GNotification] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GOutputMessage = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GOutputMessage:
@@ -4324,7 +4323,7 @@ object GOutputMessage:
     def num_control_messages_=(value: _root_.glib.all.guint): Unit = !struct.at(32).asInstanceOf[Ptr[_root_.glib.all.guint]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/goutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/goutputstream.h
 */
 opaque type GOutputStream = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GOutputStream:
@@ -4342,7 +4341,7 @@ object GOutputStream:
     def priv_=(value: Ptr[GOutputStreamPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GOutputStreamPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/goutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/goutputstream.h
 */
 opaque type GOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._9, Nat._6]]
 object GOutputStreamClass:
@@ -4417,14 +4416,14 @@ object GOutputStreamClass:
     def _g_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/goutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/goutputstream.h
 */
 opaque type GOutputStreamPrivate = CStruct0
 object GOutputStreamPrivate:
   given _tag: Tag[GOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GOutputVector = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GOutputVector:
@@ -4442,7 +4441,7 @@ object GOutputVector:
     def size_=(value: _root_.glib.all.gsize): Unit = !struct.at(8).asInstanceOf[Ptr[_root_.glib.all.gsize]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpermission.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpermission.h
 */
 opaque type GPermission = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GPermission:
@@ -4460,7 +4459,7 @@ object GPermission:
     def priv_=(value: Ptr[GPermissionPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GPermissionPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpermission.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpermission.h
 */
 opaque type GPermissionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]]
 object GPermissionClass:
@@ -4496,14 +4495,14 @@ object GPermissionClass:
     def reserved_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(184).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpermission.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpermission.h
 */
 opaque type GPermissionPrivate = CStruct0
 object GPermissionPrivate:
   given _tag: Tag[GPermissionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GPollableInputStream = CStruct0
 object GPollableInputStream:
@@ -4512,7 +4511,7 @@ object GPollableInputStream:
 /**
  * GPollableInputStreamInterface: _iface: The parent interface. _poll: Checks if the #GPollableInputStream instance is actually pollable _source: Creates a #GSource to poll the stream _nonblocking: Does a non-blocking read or returns %G_IO_ERROR_WOULD_BLOCK
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gpollableinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpollableinputstream.h
 */
 opaque type GPollableInputStreamInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GPollableInputStreamInterface:
@@ -4539,7 +4538,7 @@ object GPollableInputStreamInterface:
     def read_nonblocking_=(value: CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GPollableOutputStream = CStruct0
 object GPollableOutputStream:
@@ -4548,7 +4547,7 @@ object GPollableOutputStream:
 /**
  * GPollableOutputStreamInterface: _iface: The parent interface. _poll: Checks if the #GPollableOutputStream instance is actually pollable _source: Creates a #GSource to poll the stream _nonblocking: Does a non-blocking write or returns %G_IO_ERROR_WOULD_BLOCK _nonblocking: Does a vectored non-blocking write, or returns %G_POLLABLE_RETURN_WOULD_BLOCK
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gpollableoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpollableoutputstream.h
 */
 opaque type GPollableOutputStreamInterface = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GPollableOutputStreamInterface:
@@ -4578,14 +4577,14 @@ object GPollableOutputStreamInterface:
     def writev_nonblocking_=(value: CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.glib.all.gsize, Ptr[_root_.glib.all.gsize], Ptr[Ptr[_root_.glib.all.GError]], GPollableReturn]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.glib.all.gsize, Ptr[_root_.glib.all.gsize], Ptr[Ptr[_root_.glib.all.GError]], GPollableReturn]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type GPowerProfileMonitor = CStruct0
 object GPowerProfileMonitor:
   given _tag: Tag[GPowerProfileMonitor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type GPowerProfileMonitorInterface = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GPowerProfileMonitorInterface:
@@ -4600,21 +4599,21 @@ object GPowerProfileMonitorInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GTypeInterface]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GPropertyAction = CStruct0
 object GPropertyAction:
   given _tag: Tag[GPropertyAction] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GProxy = CStruct0
 object GProxy:
   given _tag: Tag[GProxy] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddress.h
 */
 opaque type GProxyAddress = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GProxyAddress:
@@ -4632,7 +4631,7 @@ object GProxyAddress:
     def priv_=(value: Ptr[GProxyAddressPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GProxyAddressPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddress.h
 */
 opaque type GProxyAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GProxyAddressClass:
@@ -4647,7 +4646,7 @@ object GProxyAddressClass:
     def parent_class_=(value: GInetSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GInetSocketAddressClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddressenumerator.h
 */
 opaque type GProxyAddressEnumerator = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GProxyAddressEnumerator:
@@ -4667,7 +4666,7 @@ object GProxyAddressEnumerator:
 /**
  * GProxyAddressEnumeratorClass:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddressenumerator.h
 */
 opaque type GProxyAddressEnumeratorClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GProxyAddressEnumeratorClass:
@@ -4703,14 +4702,14 @@ object GProxyAddressEnumeratorClass:
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddressenumerator.h
 */
 opaque type GProxyAddressEnumeratorPrivate = CStruct0
 object GProxyAddressEnumeratorPrivate:
   given _tag: Tag[GProxyAddressEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddress.h
 */
 opaque type GProxyAddressPrivate = CStruct0
 object GProxyAddressPrivate:
@@ -4719,7 +4718,7 @@ object GProxyAddressPrivate:
 /**
  * GProxyInterface: _iface: The parent interface. : Connect to proxy server and wrap (if required) the #connection to handle payload. _async: Same as connect() but asynchronous. _finish: Returns the result of connect_async() _hostname: Returns whether the proxy supports hostname lookups.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxy.h
 */
 opaque type GProxyInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GProxyInterface:
@@ -4746,14 +4745,14 @@ object GProxyInterface:
     def supports_hostname_=(value: CFuncPtr1[Ptr[GProxy], _root_.glib.all.gboolean]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[GProxy], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GProxyResolver = CStruct0
 object GProxyResolver:
   given _tag: Tag[GProxyResolver] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyresolver.h
 */
 opaque type GProxyResolverInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GProxyResolverInterface:
@@ -4780,14 +4779,14 @@ object GProxyResolverInterface:
     def lookup_finish_=(value: CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Ptr[_root_.glib.all.gchar]]]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Ptr[_root_.glib.all.gchar]]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GRemoteActionGroup = CStruct0
 object GRemoteActionGroup:
   given _tag: Tag[GRemoteActionGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gremoteactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gremoteactiongroup.h
 */
 opaque type GRemoteActionGroupInterface = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GRemoteActionGroupInterface:
@@ -4808,7 +4807,7 @@ object GRemoteActionGroupInterface:
     def change_action_state_full_=(value: CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.GVariant], Unit]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.GVariant], Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresolver.h
 */
 opaque type GResolver = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GResolver:
@@ -4826,7 +4825,7 @@ object GResolver:
     def priv_=(value: Ptr[GResolverPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GResolverPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresolver.h
 */
 opaque type GResolverClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._6, Nat._4]]
 object GResolverClass:
@@ -4889,21 +4888,21 @@ object GResolverClass:
     def lookup_by_name_with_flags_=(value: CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[_root_.glib.all.GList]]): Unit = !struct.at(256).asInstanceOf[Ptr[CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[_root_.glib.all.GList]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresolver.h
 */
 opaque type GResolverPrivate = CStruct0
 object GResolverPrivate:
   given _tag: Tag[GResolverPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GResource = CStruct0
 object GResource:
   given _tag: Tag[GResource] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSeekable = CStruct0
 object GSeekable:
@@ -4912,7 +4911,7 @@ object GSeekable:
 /**
  * GSeekableIface: _iface: The parent interface. : Tells the current location within a stream. _seek: Checks if seeking is supported by the stream.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gseekable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gseekable.h
 */
 opaque type GSeekableIface = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GSeekableIface:
@@ -4942,7 +4941,7 @@ object GSeekableIface:
     def truncate_fn_=(value: CFuncPtr4[Ptr[GSeekable], _root_.glib.all.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[GSeekable], _root_.glib.all.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type GSettings = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSettings:
@@ -4960,14 +4959,14 @@ object GSettings:
     def priv_=(value: Ptr[GSettingsPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSettingsPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSettingsBackend = CStruct0
 object GSettingsBackend:
   given _tag: Tag[GSettingsBackend] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type GSettingsClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._8]]
 object GSettingsClass:
@@ -4997,35 +4996,35 @@ object GSettingsClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._0]]): Unit = !struct.at(168).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._0]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type GSettingsPrivate = CStruct0
 object GSettingsPrivate:
   given _tag: Tag[GSettingsPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettingsschema.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettingsschema.h
 */
 opaque type GSettingsSchema = CStruct0
 object GSettingsSchema:
   given _tag: Tag[GSettingsSchema] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettingsschema.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettingsschema.h
 */
 opaque type GSettingsSchemaKey = CStruct0
 object GSettingsSchemaKey:
   given _tag: Tag[GSettingsSchemaKey] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettingsschema.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettingsschema.h
 */
 opaque type GSettingsSchemaSource = CStruct0
 object GSettingsSchemaSource:
   given _tag: Tag[GSettingsSchemaSource] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSimpleAction = CStruct0
 object GSimpleAction:
@@ -5034,7 +5033,7 @@ object GSimpleAction:
 /**
  * GSimpleActionGroup:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleactiongroup.h
 */
 opaque type GSimpleActionGroup = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSimpleActionGroup:
@@ -5052,7 +5051,7 @@ object GSimpleActionGroup:
     def priv_=(value: Ptr[GSimpleActionGroupPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSimpleActionGroupPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleactiongroup.h
 */
 opaque type GSimpleActionGroupClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
 object GSimpleActionGroupClass:
@@ -5070,42 +5069,42 @@ object GSimpleActionGroupClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._2]]): Unit = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._2]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleactiongroup.h
 */
 opaque type GSimpleActionGroupPrivate = CStruct0
 object GSimpleActionGroupPrivate:
   given _tag: Tag[GSimpleActionGroupPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSimpleAsyncResult = CStruct0
 object GSimpleAsyncResult:
   given _tag: Tag[GSimpleAsyncResult] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleasyncresult.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleasyncresult.h
 */
 opaque type GSimpleAsyncResultClass = CStruct0
 object GSimpleAsyncResultClass:
   given _tag: Tag[GSimpleAsyncResultClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSimpleIOStream = CStruct0
 object GSimpleIOStream:
   given _tag: Tag[GSimpleIOStream] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSimplePermission = CStruct0
 object GSimplePermission:
   given _tag: Tag[GSimplePermission] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleproxyresolver.h
 */
 opaque type GSimpleProxyResolver = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSimpleProxyResolver:
@@ -5123,7 +5122,7 @@ object GSimpleProxyResolver:
     def priv_=(value: Ptr[GSimpleProxyResolverPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSimpleProxyResolverPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleproxyresolver.h
 */
 opaque type GSimpleProxyResolverClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
 object GSimpleProxyResolverClass:
@@ -5153,14 +5152,14 @@ object GSimpleProxyResolverClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleproxyresolver.h
 */
 opaque type GSimpleProxyResolverPrivate = CStruct0
 object GSimpleProxyResolverPrivate:
   given _tag: Tag[GSimpleProxyResolverPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocket.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocket.h
 */
 opaque type GSocket = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocket:
@@ -5178,7 +5177,7 @@ object GSocket:
     def priv_=(value: Ptr[GSocketPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSocketPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddress.h
 */
 opaque type GSocketAddress = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GSocketAddress:
@@ -5193,7 +5192,7 @@ object GSocketAddress:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObject]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddress.h
 */
 opaque type GSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GSocketAddressClass:
@@ -5217,7 +5216,7 @@ object GSocketAddressClass:
     def to_native_=(value: CFuncPtr4[Ptr[GSocketAddress], _root_.glib.all.gpointer, _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr4[Ptr[GSocketAddress], _root_.glib.all.gpointer, _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddressenumerator.h
 */
 opaque type GSocketAddressEnumerator = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GSocketAddressEnumerator:
@@ -5234,7 +5233,7 @@ object GSocketAddressEnumerator:
 /**
  * GSocketAddressEnumeratorClass: : Virtual method for g_socket_address_enumerator_next(). _async: Virtual method for g_socket_address_enumerator_next_async(). _finish: Virtual method for g_socket_address_enumerator_next_finish().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddressenumerator.h
 */
 opaque type GSocketAddressEnumeratorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GSocketAddressEnumeratorClass:
@@ -5258,7 +5257,7 @@ object GSocketAddressEnumeratorClass:
     def next_finish_=(value: CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GSocketAddress]]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GSocketAddress]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocket.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocket.h
 */
 opaque type GSocketClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GSocketClass:
@@ -5303,7 +5302,7 @@ object GSocketClass:
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketclient.h
 */
 opaque type GSocketClient = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocketClient:
@@ -5321,7 +5320,7 @@ object GSocketClient:
     def priv_=(value: Ptr[GSocketClientPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSocketClientPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketclient.h
 */
 opaque type GSocketClientClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
 object GSocketClientClass:
@@ -5351,14 +5350,14 @@ object GSocketClientClass:
     def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketclient.h
 */
 opaque type GSocketClientPrivate = CStruct0
 object GSocketClientPrivate:
   given _tag: Tag[GSocketClientPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSocketConnectable = CStruct0
 object GSocketConnectable:
@@ -5367,7 +5366,7 @@ object GSocketConnectable:
 /**
  * GSocketConnectableIface: _iface: The parent interface. : Creates a #GSocketAddressEnumerator _enumerate: Creates a #GProxyAddressEnumerator _string: Format the connectable’s address as a string for debugging. Implementing this is optional. (Since: 2.48)
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnectable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnectable.h
 */
 opaque type GSocketConnectableIface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GSocketConnectableIface:
@@ -5391,7 +5390,7 @@ object GSocketConnectableIface:
     def to_string_=(value: CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.glib.all.gchar]]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.glib.all.gchar]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnection.h
 */
 opaque type GSocketConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GSocketConnection:
@@ -5409,7 +5408,7 @@ object GSocketConnection:
     def priv_=(value: Ptr[GSocketConnectionPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GSocketConnectionPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnection.h
 */
 opaque type GSocketConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GSocketConnectionClass:
@@ -5442,14 +5441,14 @@ object GSocketConnectionClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnection.h
 */
 opaque type GSocketConnectionPrivate = CStruct0
 object GSocketConnectionPrivate:
   given _tag: Tag[GSocketConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketcontrolmessage.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketcontrolmessage.h
 */
 opaque type GSocketControlMessage = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocketControlMessage:
@@ -5469,7 +5468,7 @@ object GSocketControlMessage:
 /**
  * GSocketControlMessageClass: _size: gets the size of the message. _level: gets the protocol of the message. _type: gets the protocol specific type of the message. : Writes out the message data. : Tries to deserialize a message.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketcontrolmessage.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketcontrolmessage.h
 */
 opaque type GSocketControlMessageClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GSocketControlMessageClass:
@@ -5514,14 +5513,14 @@ object GSocketControlMessageClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketcontrolmessage.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketcontrolmessage.h
 */
 opaque type GSocketControlMessagePrivate = CStruct0
 object GSocketControlMessagePrivate:
   given _tag: Tag[GSocketControlMessagePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketlistener.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketlistener.h
 */
 opaque type GSocketListener = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocketListener:
@@ -5541,7 +5540,7 @@ object GSocketListener:
 /**
  * GSocketListenerClass: : virtual method called when the set of socket listened to changes
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketlistener.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketlistener.h
 */
 opaque type GSocketListenerClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._9, Nat._2]]
 object GSocketListenerClass:
@@ -5577,21 +5576,21 @@ object GSocketListenerClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketlistener.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketlistener.h
 */
 opaque type GSocketListenerPrivate = CStruct0
 object GSocketListenerPrivate:
   given _tag: Tag[GSocketListenerPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocket.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocket.h
 */
 opaque type GSocketPrivate = CStruct0
 object GSocketPrivate:
   given _tag: Tag[GSocketPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketservice.h
 */
 opaque type GSocketService = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GSocketService:
@@ -5611,7 +5610,7 @@ object GSocketService:
 /**
  * GSocketServiceClass: : signal emitted when new connections are accepted
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketservice.h
 */
 opaque type GSocketServiceClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]]
 object GSocketServiceClass:
@@ -5647,21 +5646,21 @@ object GSocketServiceClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketservice.h
 */
 opaque type GSocketServicePrivate = CStruct0
 object GSocketServicePrivate:
   given _tag: Tag[GSocketServicePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSrvTarget = CStruct0
 object GSrvTarget:
   given _tag: Tag[GSrvTarget] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresource.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresource.h
 */
 opaque type GStaticResource = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GStaticResource:
@@ -5688,35 +5687,35 @@ object GStaticResource:
     def padding_=(value: _root_.glib.all.gpointer): Unit = !struct.at(32).asInstanceOf[Ptr[_root_.glib.all.gpointer]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSubprocess = CStruct0
 object GSubprocess:
   given _tag: Tag[GSubprocess] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSubprocessLauncher = CStruct0
 object GSubprocessLauncher:
   given _tag: Tag[GSubprocessLauncher] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GTask = CStruct0
 object GTask:
   given _tag: Tag[GTask] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtask.h
 */
 opaque type GTaskClass = CStruct0
 object GTaskClass:
   given _tag: Tag[GTaskClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpconnection.h
 */
 opaque type GTcpConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GTcpConnection:
@@ -5734,7 +5733,7 @@ object GTcpConnection:
     def priv_=(value: Ptr[GTcpConnectionPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GTcpConnectionPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpconnection.h
 */
 opaque type GTcpConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GTcpConnectionClass:
@@ -5749,14 +5748,14 @@ object GTcpConnectionClass:
     def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpconnection.h
 */
 opaque type GTcpConnectionPrivate = CStruct0
 object GTcpConnectionPrivate:
   given _tag: Tag[GTcpConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpwrapperconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpwrapperconnection.h
 */
 opaque type GTcpWrapperConnection = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GTcpWrapperConnection:
@@ -5774,7 +5773,7 @@ object GTcpWrapperConnection:
     def priv_=(value: Ptr[GTcpWrapperConnectionPrivate]): Unit = !struct.at(48).asInstanceOf[Ptr[Ptr[GTcpWrapperConnectionPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpwrapperconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpwrapperconnection.h
 */
 opaque type GTcpWrapperConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GTcpWrapperConnectionClass:
@@ -5789,35 +5788,35 @@ object GTcpWrapperConnectionClass:
     def parent_class_=(value: GTcpConnectionClass): Unit = !struct.at(0).asInstanceOf[Ptr[GTcpConnectionClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpwrapperconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpwrapperconnection.h
 */
 opaque type GTcpWrapperConnectionPrivate = CStruct0
 object GTcpWrapperConnectionPrivate:
   given _tag: Tag[GTcpWrapperConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GTestDBus = CStruct0
 object GTestDBus:
   given _tag: Tag[GTestDBus] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GThemedIcon = CStruct0
 object GThemedIcon:
   given _tag: Tag[GThemedIcon] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthemedicon.h
 */
 opaque type GThemedIconClass = CStruct0
 object GThemedIconClass:
   given _tag: Tag[GThemedIconClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthreadedsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthreadedsocketservice.h
 */
 opaque type GThreadedSocketService = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GThreadedSocketService:
@@ -5835,7 +5834,7 @@ object GThreadedSocketService:
     def priv_=(value: Ptr[GThreadedSocketServicePrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GThreadedSocketServicePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthreadedsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthreadedsocketservice.h
 */
 opaque type GThreadedSocketServiceClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._9, Nat._6]]
 object GThreadedSocketServiceClass:
@@ -5868,14 +5867,14 @@ object GThreadedSocketServiceClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthreadedsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthreadedsocketservice.h
 */
 opaque type GThreadedSocketServicePrivate = CStruct0
 object GThreadedSocketServicePrivate:
   given _tag: Tag[GThreadedSocketServicePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsbackend.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsbackend.h
 */
 opaque type GTlsBackend = CStruct0
 object GTlsBackend:
@@ -5884,7 +5883,7 @@ object GTlsBackend:
 /**
  * GTlsBackendInterface: _iface: The parent interface. _tls: returns whether the backend supports TLS. _dtls: returns whether the backend supports DTLS _default_database: returns a default #GTlsDatabase instance. _certificate_type: returns the #GTlsCertificate implementation type _client_connection_type: returns the #GTlsClientConnection implementation type _server_connection_type: returns the #GTlsServerConnection implementation type _file_database_type: returns the #GTlsFileDatabase implementation type. _dtls_client_connection_type: returns the #GDtlsClientConnection implementation type _dtls_server_connection_type: returns the #GDtlsServerConnection implementation type
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsbackend.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsbackend.h
 */
 opaque type GTlsBackendInterface = CArray[CChar, Nat.Digit2[Nat._8, Nat._8]]
 object GTlsBackendInterface:
@@ -5926,7 +5925,7 @@ object GTlsBackendInterface:
     def get_dtls_server_connection_type_=(value: CFuncPtr0[_root_.gobject.all.GType]): Unit = !struct.at(80).asInstanceOf[Ptr[CFuncPtr0[_root_.gobject.all.GType]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlscertificate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlscertificate.h
 */
 opaque type GTlsCertificate = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsCertificate:
@@ -5944,7 +5943,7 @@ object GTlsCertificate:
     def priv_=(value: Ptr[GTlsCertificatePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsCertificatePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlscertificate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlscertificate.h
 */
 opaque type GTlsCertificateClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._8]]
 object GTlsCertificateClass:
@@ -5965,14 +5964,14 @@ object GTlsCertificateClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(144).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlscertificate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlscertificate.h
 */
 opaque type GTlsCertificatePrivate = CStruct0
 object GTlsCertificatePrivate:
   given _tag: Tag[GTlsCertificatePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GTlsClientConnection = CStruct0
 object GTlsClientConnection:
@@ -5981,7 +5980,7 @@ object GTlsClientConnection:
 /**
  * GTlsClientConnectionInterface: _iface: The parent interface. _session_state: Copies session state from one #GTlsClientConnection to another.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsclientconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsclientconnection.h
 */
 opaque type GTlsClientConnectionInterface = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GTlsClientConnectionInterface:
@@ -5999,7 +5998,7 @@ object GTlsClientConnectionInterface:
     def copy_session_state_=(value: CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsconnection.h
 */
 opaque type GTlsConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GTlsConnection:
@@ -6019,7 +6018,7 @@ object GTlsConnection:
 /**
  * GTlsConnectionClass: _class: The parent class. _certificate: Check whether to accept a certificate. : Perform a handshake operation. _async: Start an asynchronous handshake operation. _finish: Finish an asynchronous handshake operation. _binding_data: Retrieve TLS channel binding data (Since: 2.66) _negotiated_protocol: Get ALPN-negotiated protocol (Since: 2.70)
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsconnection.h
 */
 opaque type GTlsConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._5, Nat._2]]
 object GTlsConnectionClass:
@@ -6055,14 +6054,14 @@ object GTlsConnectionClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._6]): Unit = !struct.at(304).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._6]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsconnection.h
 */
 opaque type GTlsConnectionPrivate = CStruct0
 object GTlsConnectionPrivate:
   given _tag: Tag[GTlsConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsdatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsdatabase.h
 */
 opaque type GTlsDatabase = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsDatabase:
@@ -6080,7 +6079,7 @@ object GTlsDatabase:
     def priv_=(value: Ptr[GTlsDatabasePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsDatabasePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsdatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsdatabase.h
 */
 opaque type GTlsDatabaseClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._8]]
 object GTlsDatabaseClass:
@@ -6137,14 +6136,14 @@ object GTlsDatabaseClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(240).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsdatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsdatabase.h
 */
 opaque type GTlsDatabasePrivate = CStruct0
 object GTlsDatabasePrivate:
   given _tag: Tag[GTlsDatabasePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GTlsFileDatabase = CStruct0
 object GTlsFileDatabase:
@@ -6153,7 +6152,7 @@ object GTlsFileDatabase:
 /**
  * GTlsFileDatabaseInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsfiledatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsfiledatabase.h
 */
 opaque type GTlsFileDatabaseInterface = CArray[CChar, Nat.Digit2[Nat._8, Nat._0]]
 object GTlsFileDatabaseInterface:
@@ -6171,7 +6170,7 @@ object GTlsFileDatabaseInterface:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at(16).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._8]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsinteraction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsinteraction.h
 */
 opaque type GTlsInteraction = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsInteraction:
@@ -6189,7 +6188,7 @@ object GTlsInteraction:
     def priv_=(value: Ptr[GTlsInteractionPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsInteractionPrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsinteraction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsinteraction.h
 */
 opaque type GTlsInteractionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._5, Nat._2]]
 object GTlsInteractionClass:
@@ -6225,14 +6224,14 @@ object GTlsInteractionClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._1]]): Unit = !struct.at(184).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._1]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsinteraction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsinteraction.h
 */
 opaque type GTlsInteractionPrivate = CStruct0
 object GTlsInteractionPrivate:
   given _tag: Tag[GTlsInteractionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlspassword.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlspassword.h
 */
 opaque type GTlsPassword = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsPassword:
@@ -6252,7 +6251,7 @@ object GTlsPassword:
 /**
  * GTlsPasswordClass: _value: virtual method for g_tls_password_get_value()
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlspassword.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlspassword.h
 */
 opaque type GTlsPasswordClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._9, Nat._2]]
 object GTlsPasswordClass:
@@ -6279,14 +6278,14 @@ object GTlsPasswordClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._4]): Unit = !struct.at(160).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._4]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlspassword.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlspassword.h
 */
 opaque type GTlsPasswordPrivate = CStruct0
 object GTlsPasswordPrivate:
   given _tag: Tag[GTlsPasswordPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GTlsServerConnection = CStruct0
 object GTlsServerConnection:
@@ -6295,7 +6294,7 @@ object GTlsServerConnection:
 /**
  * GTlsServerConnectionInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsserverconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsserverconnection.h
 */
 opaque type GTlsServerConnectionInterface = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GTlsServerConnectionInterface:
@@ -6310,21 +6309,192 @@ object GTlsServerConnectionInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GTypeInterface]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
 */
-opaque type GUnixCredentialsMessage = CStruct0
+opaque type GUnixConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
+object GUnixConnection:
+  given _tag: Tag[GUnixConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
+  def apply()(using Zone): Ptr[GUnixConnection] = scala.scalanative.unsafe.alloc[GUnixConnection](1)
+  def apply(parent_instance : GSocketConnection, priv : Ptr[GUnixConnectionPrivate])(using Zone): Ptr[GUnixConnection] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixConnection)
+    def parent_instance: GSocketConnection = !struct.at(0).asInstanceOf[Ptr[GSocketConnection]]
+    def parent_instance_=(value: GSocketConnection): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketConnection]] = value
+    def priv: Ptr[GUnixConnectionPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GUnixConnectionPrivate]]]
+    def priv_=(value: Ptr[GUnixConnectionPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GUnixConnectionPrivate]]] = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type GUnixConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
+object GUnixConnectionClass:
+  given _tag: Tag[GUnixConnectionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._0, Nat._4](Tag.Nat3, Tag.Nat0, Tag.Nat4))
+  def apply()(using Zone): Ptr[GUnixConnectionClass] = scala.scalanative.unsafe.alloc[GUnixConnectionClass](1)
+  def apply(parent_class : GSocketConnectionClass)(using Zone): Ptr[GUnixConnectionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GUnixConnectionClass)
+    def parent_class: GSocketConnectionClass = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]]
+    def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]] = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type GUnixConnectionPrivate = CStruct0
+object GUnixConnectionPrivate:
+  given _tag: Tag[GUnixConnectionPrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * GUnixCredentialsMessage:
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type GUnixCredentialsMessage = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GUnixCredentialsMessage:
-  given _tag: Tag[GUnixCredentialsMessage] = Tag.materializeCStruct0Tag
+  given _tag: Tag[GUnixCredentialsMessage] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
+  def apply()(using Zone): Ptr[GUnixCredentialsMessage] = scala.scalanative.unsafe.alloc[GUnixCredentialsMessage](1)
+  def apply(parent_instance : GSocketControlMessage, priv : Ptr[GUnixCredentialsMessagePrivate])(using Zone): Ptr[GUnixCredentialsMessage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixCredentialsMessage)
+    def parent_instance: GSocketControlMessage = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessage]]
+    def parent_instance_=(value: GSocketControlMessage): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessage]] = value
+    def priv: Ptr[GUnixCredentialsMessagePrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GUnixCredentialsMessagePrivate]]]
+    def priv_=(value: Ptr[GUnixCredentialsMessagePrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GUnixCredentialsMessagePrivate]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * GUnixCredentialsMessageClass:
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
 */
-opaque type GUnixFDList = CStruct0
-object GUnixFDList:
-  given _tag: Tag[GUnixFDList] = Tag.materializeCStruct0Tag
+opaque type GUnixCredentialsMessageClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
+object GUnixCredentialsMessageClass:
+  given _tag: Tag[GUnixCredentialsMessageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._3, Nat._2](Tag.Nat2, Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixCredentialsMessageClass] = scala.scalanative.unsafe.alloc[GUnixCredentialsMessageClass](1)
+  def apply(parent_class : GSocketControlMessageClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[GUnixCredentialsMessageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    ____ptr
+  extension (struct: GUnixCredentialsMessageClass)
+    def parent_class: GSocketControlMessageClass = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessageClass]]
+    def parent_class_=(value: GSocketControlMessageClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessageClass]] = value
+    def _g_reserved1: CFuncPtr0[Unit] = !struct.at(216).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(216).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved2: CFuncPtr0[Unit] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvfs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type GUnixCredentialsMessagePrivate = CStruct0
+object GUnixCredentialsMessagePrivate:
+  given _tag: Tag[GUnixCredentialsMessagePrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDList = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
+object GUnixFDList:
+  given _tag: Tag[GUnixFDList] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixFDList] = scala.scalanative.unsafe.alloc[GUnixFDList](1)
+  def apply(parent_instance : _root_.gobject.all.GObject, priv : Ptr[GUnixFDListPrivate])(using Zone): Ptr[GUnixFDList] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixFDList)
+    def parent_instance: _root_.gobject.all.GObject = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObject]]
+    def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObject]] = value
+    def priv: Ptr[GUnixFDListPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixFDListPrivate]]]
+    def priv_=(value: Ptr[GUnixFDListPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixFDListPrivate]]] = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDListClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
+object GUnixFDListClass:
+  given _tag: Tag[GUnixFDListClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._7, Nat._6](Tag.Nat1, Tag.Nat7, Tag.Nat6))
+  def apply()(using Zone): Ptr[GUnixFDListClass] = scala.scalanative.unsafe.alloc[GUnixFDListClass](1)
+  def apply(parent_class : _root_.gobject.all.GObjectClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit], _g_reserved3 : CFuncPtr0[Unit], _g_reserved4 : CFuncPtr0[Unit], _g_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[GUnixFDListClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    (!____ptr)._g_reserved3 = _g_reserved3
+    (!____ptr)._g_reserved4 = _g_reserved4
+    (!____ptr)._g_reserved5 = _g_reserved5
+    ____ptr
+  extension (struct: GUnixFDListClass)
+    def parent_class: _root_.gobject.all.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]]
+    def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
+    def _g_reserved1: CFuncPtr0[Unit] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved2: CFuncPtr0[Unit] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved3: CFuncPtr0[Unit] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved4: CFuncPtr0[Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved5: CFuncPtr0[Unit] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDListPrivate = CStruct0
+object GUnixFDListPrivate:
+  given _tag: Tag[GUnixFDListPrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
+object GUnixSocketAddress:
+  given _tag: Tag[GUnixSocketAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixSocketAddress] = scala.scalanative.unsafe.alloc[GUnixSocketAddress](1)
+  def apply(parent_instance : GSocketAddress, priv : Ptr[GUnixSocketAddressPrivate])(using Zone): Ptr[GUnixSocketAddress] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixSocketAddress)
+    def parent_instance: GSocketAddress = !struct.at(0).asInstanceOf[Ptr[GSocketAddress]]
+    def parent_instance_=(value: GSocketAddress): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddress]] = value
+    def priv: Ptr[GUnixSocketAddressPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixSocketAddressPrivate]]]
+    def priv_=(value: Ptr[GUnixSocketAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixSocketAddressPrivate]]] = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
+object GUnixSocketAddressClass:
+  given _tag: Tag[GUnixSocketAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
+  def apply()(using Zone): Ptr[GUnixSocketAddressClass] = scala.scalanative.unsafe.alloc[GUnixSocketAddressClass](1)
+  def apply(parent_class : GSocketAddressClass)(using Zone): Ptr[GUnixSocketAddressClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GUnixSocketAddressClass)
+    def parent_class: GSocketAddressClass = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]]
+    def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]] = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddressPrivate = CStruct0
+object GUnixSocketAddressPrivate:
+  given _tag: Tag[GUnixSocketAddressPrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvfs.h
 */
 opaque type GVfs = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GVfs:
@@ -6339,7 +6509,7 @@ object GVfs:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObject]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvfs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvfs.h
 */
 opaque type GVfsClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object GVfsClass:
@@ -6405,14 +6575,14 @@ object GVfsClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GVolume = CStruct0
 object GVolume:
   given _tag: Tag[GVolume] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvolume.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvolume.h
 */
 opaque type GVolumeIface = CArray[CChar, Nat.Digit3[Nat._1, Nat._8, Nat._4]]
 object GVolumeIface:
@@ -6490,7 +6660,7 @@ object GVolumeIface:
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvolumemonitor.h
 */
 opaque type GVolumeMonitor = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GVolumeMonitor:
@@ -6508,7 +6678,7 @@ object GVolumeMonitor:
     def priv_=(value: _root_.glib.all.gpointer): Unit = !struct.at(24).asInstanceOf[Ptr[_root_.glib.all.gpointer]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvolumemonitor.h
 */
 opaque type GVolumeMonitorClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GVolumeMonitorClass:
@@ -6598,14 +6768,14 @@ object GVolumeMonitorClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GZlibCompressor = CStruct0
 object GZlibCompressor:
   given _tag: Tag[GZlibCompressor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gzlibcompressor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gzlibcompressor.h
 */
 opaque type GZlibCompressorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GZlibCompressorClass:
@@ -6620,14 +6790,14 @@ object GZlibCompressorClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GZlibDecompressor = CStruct0
 object GZlibDecompressor:
   given _tag: Tag[GZlibDecompressor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gzlibdecompressor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gzlibdecompressor.h
 */
 opaque type GZlibDecompressorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GZlibDecompressorClass:
@@ -6642,14 +6812,14 @@ object GZlibDecompressorClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gobject.all.GObjectClass]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GAction = CStruct0
 object _GAction:
   given _tag: Tag[_GAction] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gactionmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gactionmap.h
 */
 opaque type _GActionEntry = CStruct6[Ptr[_root_.glib.all.gchar], CFuncPtr3[Ptr[GSimpleAction], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], CFuncPtr3[Ptr[GSimpleAction], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit], CArray[_root_.glib.all.gsize, Nat._3]]
 object _GActionEntry:
@@ -6679,14 +6849,14 @@ object _GActionEntry:
     def padding_=(value: CArray[_root_.glib.all.gsize, Nat._3]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GActionGroup = CStruct0
 object _GActionGroup:
   given _tag: Tag[_GActionGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gactiongroup.h
 */
 opaque type _GActionGroupInterface = CStruct15[_root_.gobject.all.GTypeInterface, CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GActionGroup], Ptr[Ptr[_root_.glib.all.gchar]]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariantType]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariantType]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant]], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], _root_.glib.all.gboolean, Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gboolean], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariant]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]]
 object _GActionGroupInterface:
@@ -6743,7 +6913,7 @@ object _GActionGroupInterface:
     def query_action_=(value: CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gboolean], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariantType]], Ptr[Ptr[_root_.glib.all.GVariant]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gaction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gaction.h
 */
 opaque type _GActionInterface = CStruct9[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GAction], Ptr[_root_.glib.all.gchar]], CFuncPtr1[Ptr[GAction], Ptr[_root_.glib.all.GVariantType]], CFuncPtr1[Ptr[GAction], Ptr[_root_.glib.all.GVariantType]], CFuncPtr1[Ptr[GAction], Ptr[_root_.glib.all.GVariant]], CFuncPtr1[Ptr[GAction], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GAction], Ptr[_root_.glib.all.GVariant]], CFuncPtr2[Ptr[GAction], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr2[Ptr[GAction], Ptr[_root_.glib.all.GVariant], Unit]]
 object _GActionInterface:
@@ -6782,14 +6952,14 @@ object _GActionInterface:
     def activate_=(value: CFuncPtr2[Ptr[GAction], Ptr[_root_.glib.all.GVariant], Unit]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GActionMap = CStruct0
 object _GActionMap:
   given _tag: Tag[_GActionMap] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gactionmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gactionmap.h
 */
 opaque type _GActionMapInterface = CStruct4[_root_.gobject.all.GTypeInterface, CFuncPtr2[Ptr[GActionMap], Ptr[_root_.glib.all.gchar], Ptr[GAction]], CFuncPtr2[Ptr[GActionMap], Ptr[GAction], Unit], CFuncPtr2[Ptr[GActionMap], Ptr[_root_.glib.all.gchar], Unit]]
 object _GActionMapInterface:
@@ -6813,14 +6983,14 @@ object _GActionMapInterface:
     def remove_action_=(value: CFuncPtr2[Ptr[GActionMap], Ptr[_root_.glib.all.gchar], Unit]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GAppInfo = CStruct0
 object _GAppInfo:
   given _tag: Tag[_GAppInfo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type _GAppInfoIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object _GAppInfoIface:
@@ -6910,7 +7080,7 @@ object _GAppInfoIface:
     def launch_uris_finish_=(value: CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type _GAppInfoMonitor = CStruct0
 object _GAppInfoMonitor:
@@ -6919,7 +7089,7 @@ object _GAppInfoMonitor:
 /**
  * GAppLaunchContext:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type _GAppLaunchContext = CStruct2[_root_.gobject.all.GObject, Ptr[GAppLaunchContextPrivate]]
 object _GAppLaunchContext:
@@ -6937,7 +7107,7 @@ object _GAppLaunchContext:
     def priv_=(value: Ptr[GAppLaunchContextPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type _GAppLaunchContextClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[Byte], CString], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[Byte], CString], CFuncPtr2[Ptr[GAppLaunchContext], CString, Unit], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GAppLaunchContextClass:
@@ -6976,14 +7146,14 @@ object _GAppLaunchContextClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gappinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gappinfo.h
 */
 opaque type _GAppLaunchContextPrivate = CStruct0
 object _GAppLaunchContextPrivate:
   given _tag: Tag[_GAppLaunchContextPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplication.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplication.h
 */
 opaque type _GApplication = CStruct2[_root_.gobject.all.GObject, Ptr[GApplicationPrivate]]
 object _GApplication:
@@ -7001,7 +7171,7 @@ object _GApplication:
     def priv_=(value: Ptr[GApplicationPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplication.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplication.h
 */
 opaque type _GApplicationClass = CStruct17[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr4[Ptr[GApplication], Ptr[Ptr[GFile]], _root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Unit], CFuncPtr2[Ptr[GApplication], Ptr[GApplicationCommandLine], CInt], CFuncPtr3[Ptr[GApplication], Ptr[Ptr[Ptr[_root_.glib.all.gchar]]], Ptr[CInt], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GApplication], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.glib.all.GVariantBuilder], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr4[Ptr[GApplication], Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GApplication], Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.glib.all.GVariantDict], _root_.glib.all.gint], CFuncPtr1[Ptr[GApplication], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._7]]
 object _GApplicationClass:
@@ -7064,7 +7234,7 @@ object _GApplicationClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._7]): Unit = !struct.at17 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplicationcommandline.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplicationcommandline.h
 */
 opaque type _GApplicationCommandLine = CStruct2[_root_.gobject.all.GObject, Ptr[GApplicationCommandLinePrivate]]
 object _GApplicationCommandLine:
@@ -7082,7 +7252,7 @@ object _GApplicationCommandLine:
     def priv_=(value: Ptr[GApplicationCommandLinePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplicationcommandline.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplicationcommandline.h
 */
 opaque type _GApplicationCommandLineClass = CStruct5[_root_.gobject.all.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._1]]]
 object _GApplicationCommandLineClass:
@@ -7109,21 +7279,21 @@ object _GApplicationCommandLineClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._1]]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplicationcommandline.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplicationcommandline.h
 */
 opaque type _GApplicationCommandLinePrivate = CStruct0
 object _GApplicationCommandLinePrivate:
   given _tag: Tag[_GApplicationCommandLinePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gapplication.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gapplication.h
 */
 opaque type _GApplicationPrivate = CStruct0
 object _GApplicationPrivate:
   given _tag: Tag[_GApplicationPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GAsyncInitable = CStruct0
 object _GAsyncInitable:
@@ -7132,7 +7302,7 @@ object _GAsyncInitable:
 /**
  * GAsyncInitableIface: _iface: The parent interface. _async: Starts initialization of the object. _finish: Finishes initialization of the object.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gasyncinitable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gasyncinitable.h
 */
 opaque type _GAsyncInitableIface = CStruct3[_root_.gobject.all.GTypeInterface, CFuncPtr5[Ptr[GAsyncInitable], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GAsyncInitableIface:
@@ -7153,7 +7323,7 @@ object _GAsyncInitableIface:
     def init_finish_=(value: CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GAsyncResult = CStruct0
 object _GAsyncResult:
@@ -7162,7 +7332,7 @@ object _GAsyncResult:
 /**
  * GAsyncResultIface: _iface: The parent interface. _user_data: Gets the user data passed to the callback. _source_object: Gets the source object that issued the asynchronous operation.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gasyncresult.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gasyncresult.h
 */
 opaque type _GAsyncResultIface = CStruct4[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GAsyncResult], _root_.glib.all.gpointer], CFuncPtr1[Ptr[GAsyncResult], Ptr[_root_.gobject.all.GObject]], CFuncPtr2[Ptr[GAsyncResult], _root_.glib.all.gpointer, _root_.glib.all.gboolean]]
 object _GAsyncResultIface:
@@ -7186,7 +7356,7 @@ object _GAsyncResultIface:
     def is_tagged_=(value: CFuncPtr2[Ptr[GAsyncResult], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedinputstream.h
 */
 opaque type _GBufferedInputStream = CStruct2[GFilterInputStream, Ptr[GBufferedInputStreamPrivate]]
 object _GBufferedInputStream:
@@ -7204,7 +7374,7 @@ object _GBufferedInputStream:
     def priv_=(value: Ptr[GBufferedInputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedinputstream.h
 */
 opaque type _GBufferedInputStreamClass = CStruct9[GFilterInputStreamClass, CFuncPtr4[Ptr[GBufferedInputStream], _root_.glib.all.gssize, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr6[Ptr[GBufferedInputStream], _root_.glib.all.gssize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GBufferedInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GBufferedInputStreamClass:
@@ -7243,14 +7413,14 @@ object _GBufferedInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedinputstream.h
 */
 opaque type _GBufferedInputStreamPrivate = CStruct0
 object _GBufferedInputStreamPrivate:
   given _tag: Tag[_GBufferedInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedoutputstream.h
 */
 opaque type _GBufferedOutputStream = CStruct2[GFilterOutputStream, Ptr[GBufferedOutputStreamPrivate]]
 object _GBufferedOutputStream:
@@ -7268,7 +7438,7 @@ object _GBufferedOutputStream:
     def priv_=(value: Ptr[GBufferedOutputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedoutputstream.h
 */
 opaque type _GBufferedOutputStreamClass = CStruct3[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GBufferedOutputStreamClass:
@@ -7289,21 +7459,21 @@ object _GBufferedOutputStreamClass:
     def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gbufferedoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gbufferedoutputstream.h
 */
 opaque type _GBufferedOutputStreamPrivate = CStruct0
 object _GBufferedOutputStreamPrivate:
   given _tag: Tag[_GBufferedOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GBytesIcon = CStruct0
 object _GBytesIcon:
   given _tag: Tag[_GBytesIcon] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcancellable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcancellable.h
 */
 opaque type _GCancellable = CStruct2[_root_.gobject.all.GObject, Ptr[GCancellablePrivate]]
 object _GCancellable:
@@ -7321,7 +7491,7 @@ object _GCancellable:
     def priv_=(value: Ptr[GCancellablePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcancellable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcancellable.h
 */
 opaque type _GCancellableClass = CStruct7[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GCancellable], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GCancellableClass:
@@ -7354,21 +7524,21 @@ object _GCancellableClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcancellable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcancellable.h
 */
 opaque type _GCancellablePrivate = CStruct0
 object _GCancellablePrivate:
   given _tag: Tag[_GCancellablePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GCharsetConverter = CStruct0
 object _GCharsetConverter:
   given _tag: Tag[_GCharsetConverter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcharsetconverter.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcharsetconverter.h
 */
 opaque type _GCharsetConverterClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GCharsetConverterClass:
@@ -7383,7 +7553,7 @@ object _GCharsetConverterClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GConverter = CStruct0
 object _GConverter:
@@ -7392,7 +7562,7 @@ object _GConverter:
 /**
  * GConverterIface: _iface: The parent interface. : Converts data. : Reverts the internal state of the converter to its initial state.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverter.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverter.h
 */
 opaque type _GConverterIface = CStruct3[_root_.gobject.all.GTypeInterface, CFuncPtr9[Ptr[GConverter], Ptr[Byte], _root_.glib.all.gsize, Ptr[Byte], _root_.glib.all.gsize, GConverterFlags, Ptr[_root_.glib.all.gsize], Ptr[_root_.glib.all.gsize], Ptr[Ptr[_root_.glib.all.GError]], GConverterResult], CFuncPtr1[Ptr[GConverter], Unit]]
 object _GConverterIface:
@@ -7413,7 +7583,7 @@ object _GConverterIface:
     def reset_=(value: CFuncPtr1[Ptr[GConverter], Unit]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverterinputstream.h
 */
 opaque type _GConverterInputStream = CStruct2[GFilterInputStream, Ptr[GConverterInputStreamPrivate]]
 object _GConverterInputStream:
@@ -7431,7 +7601,7 @@ object _GConverterInputStream:
     def priv_=(value: Ptr[GConverterInputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverterinputstream.h
 */
 opaque type _GConverterInputStreamClass = CStruct6[GFilterInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GConverterInputStreamClass:
@@ -7461,14 +7631,14 @@ object _GConverterInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverterinputstream.h
 */
 opaque type _GConverterInputStreamPrivate = CStruct0
 object _GConverterInputStreamPrivate:
   given _tag: Tag[_GConverterInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverteroutputstream.h
 */
 opaque type _GConverterOutputStream = CStruct2[GFilterOutputStream, Ptr[GConverterOutputStreamPrivate]]
 object _GConverterOutputStream:
@@ -7486,7 +7656,7 @@ object _GConverterOutputStream:
     def priv_=(value: Ptr[GConverterOutputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverteroutputstream.h
 */
 opaque type _GConverterOutputStreamClass = CStruct6[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GConverterOutputStreamClass:
@@ -7516,28 +7686,28 @@ object _GConverterOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gconverteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gconverteroutputstream.h
 */
 opaque type _GConverterOutputStreamPrivate = CStruct0
 object _GConverterOutputStreamPrivate:
   given _tag: Tag[_GConverterOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GCredentials = CStruct0
 object _GCredentials:
   given _tag: Tag[_GCredentials] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gcredentials.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gcredentials.h
 */
 opaque type _GCredentialsClass = CStruct0
 object _GCredentialsClass:
   given _tag: Tag[_GCredentialsClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusActionGroup = CStruct0
 object _GDBusActionGroup:
@@ -7546,7 +7716,7 @@ object _GDBusActionGroup:
 /**
  * GDBusAnnotationInfo: _count: The reference count or -1 if statically allocated. : The name of the annotation, e.g. "org.freedesktop.DBus.Deprecated". : The value of the annotation. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusAnnotationInfo = CStruct4[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Byte]]
 object _GDBusAnnotationInfo:
@@ -7572,7 +7742,7 @@ object _GDBusAnnotationInfo:
 /**
  * GDBusArgInfo: _count: The reference count or -1 if statically allocated. : D-Bus signature of the argument (a single complete type). : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusArgInfo = CStruct4[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Byte]]
 object _GDBusArgInfo:
@@ -7596,14 +7766,14 @@ object _GDBusArgInfo:
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at4 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusAuthObserver = CStruct0
 object _GDBusAuthObserver:
   given _tag: Tag[_GDBusAuthObserver] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusConnection = CStruct0
 object _GDBusConnection:
@@ -7612,7 +7782,7 @@ object _GDBusConnection:
 /**
  * GDBusErrorEntry: _code: An error code. _error_name: The D-Bus error name to associate with _code.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbuserror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbuserror.h
 */
 opaque type _GDBusErrorEntry = CStruct2[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar]]
 object _GDBusErrorEntry:
@@ -7630,7 +7800,7 @@ object _GDBusErrorEntry:
     def dbus_error_name_=(value: Ptr[_root_.glib.all.gchar]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusInterface = CStruct0
 object _GDBusInterface:
@@ -7639,7 +7809,7 @@ object _GDBusInterface:
 /**
  * GDBusInterfaceIface: _iface: The parent interface. _info: Returns a #GDBusInterfaceInfo. See g_dbus_interface_get_info(). _object: Gets the enclosing #GDBusObject. See g_dbus_interface_get_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterface.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterface.h
 */
 opaque type _GDBusInterfaceIface = CStruct5[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GDBusInterface], Ptr[Byte]], CFuncPtr1[Ptr[GDBusInterface], Ptr[GDBusObject]], CFuncPtr2[Ptr[GDBusInterface], Ptr[GDBusObject], Unit], CFuncPtr1[Ptr[GDBusInterface], Ptr[GDBusObject]]]
 object _GDBusInterfaceIface:
@@ -7668,7 +7838,7 @@ object _GDBusInterfaceIface:
 /**
  * GDBusInterfaceInfo: _count: The reference count or -1 if statically allocated. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusSignalInfo structures or %NULL if there are no signals. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusPropertyInfo structures or %NULL if there are no properties. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusInterfaceInfo = CStruct6[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object _GDBusInterfaceInfo:
@@ -7700,7 +7870,7 @@ object _GDBusInterfaceInfo:
 /**
  * GDBusInterfaceSkeleton:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 */
 opaque type _GDBusInterfaceSkeleton = CStruct2[_root_.gobject.all.GObject, Ptr[GDBusInterfaceSkeletonPrivate]]
 object _GDBusInterfaceSkeleton:
@@ -7720,7 +7890,7 @@ object _GDBusInterfaceSkeleton:
 /**
  * GDBusInterfaceSkeletonClass: _class: The parent class. _info: Returns a #GDBusInterfaceInfo. See g_dbus_interface_skeleton_get_info() for details. _vtable: Returns a #GDBusInterfaceVTable. See g_dbus_interface_skeleton_get_vtable() for details. _properties: Returns a #GVariant with all properties. See g_dbus_interface_skeleton_get_properties(). : Emits outstanding changes, if any. See g_dbus_interface_skeleton_flush(). _authorize_method: Signal class handler for the #GDBusInterfaceSkeleton::g-authorize-method signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 */
 opaque type _GDBusInterfaceSkeletonClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GDBusInterfaceSkeleton], Ptr[Byte]], CFuncPtr1[Ptr[GDBusInterfaceSkeleton], Ptr[GDBusInterfaceVTable]], CFuncPtr1[Ptr[GDBusInterfaceSkeleton], Ptr[_root_.glib.all.GVariant]], CFuncPtr1[Ptr[GDBusInterfaceSkeleton], Unit], CArray[_root_.glib.all.gpointer, Nat._8], CFuncPtr2[Ptr[GDBusInterfaceSkeleton], Ptr[GDBusMethodInvocation], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusInterfaceSkeletonClass:
@@ -7756,7 +7926,7 @@ object _GDBusInterfaceSkeletonClass:
     def signal_padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusinterfaceskeleton.h
 */
 opaque type _GDBusInterfaceSkeletonPrivate = CStruct0
 object _GDBusInterfaceSkeletonPrivate:
@@ -7765,7 +7935,7 @@ object _GDBusInterfaceSkeletonPrivate:
 /**
  * GDBusInterfaceVTable: _property: Function for getting a property.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type _GDBusInterfaceVTable = CStruct4[GDBusInterfaceMethodCallFunc, GDBusInterfaceGetPropertyFunc, GDBusInterfaceSetPropertyFunc, CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusInterfaceVTable:
@@ -7789,14 +7959,14 @@ object _GDBusInterfaceVTable:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusmenumodel.h
 */
 opaque type _GDBusMenuModel = CStruct0
 object _GDBusMenuModel:
   given _tag: Tag[_GDBusMenuModel] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusMessage = CStruct0
 object _GDBusMessage:
@@ -7805,7 +7975,7 @@ object _GDBusMessage:
 /**
  * GDBusMethodInfo: _count: The reference count or -1 if statically allocated. _args: (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusArgInfo structures or %NULL if there are no in arguments. _args: (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusArgInfo structures or %NULL if there are no out arguments. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusMethodInfo = CStruct5[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object _GDBusMethodInfo:
@@ -7832,7 +8002,7 @@ object _GDBusMethodInfo:
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusMethodInvocation = CStruct0
 object _GDBusMethodInvocation:
@@ -7841,7 +8011,7 @@ object _GDBusMethodInvocation:
 /**
  * GDBusNodeInfo: _count: The reference count or -1 if statically allocated. : The path of the node or %NULL if omitted. Note that this may be a relative path. See the D-Bus specification for more details. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusNodeInfo structures or %NULL if there are no nodes. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusNodeInfo = CStruct5[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object _GDBusNodeInfo:
@@ -7868,7 +8038,7 @@ object _GDBusNodeInfo:
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusObject = CStruct0
 object _GDBusObject:
@@ -7877,7 +8047,7 @@ object _GDBusObject:
 /**
  * GDBusObjectIface: _iface: The parent interface. _object_path: Returns the object path. See g_dbus_object_get_object_path(). _interfaces: Returns all interfaces. See g_dbus_object_get_interfaces(). _interface: Returns an interface by name. See g_dbus_object_get_interface().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobject.h
 */
 opaque type _GDBusObjectIface = CStruct6[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GDBusObject], Ptr[_root_.glib.all.gchar]], CFuncPtr1[Ptr[GDBusObject], Ptr[Byte]], CFuncPtr2[Ptr[GDBusObject], Ptr[_root_.glib.all.gchar], Ptr[GDBusInterface]], CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit], CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]]
 object _GDBusObjectIface:
@@ -7907,7 +8077,7 @@ object _GDBusObjectIface:
     def interface_removed_=(value: CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusObjectManager = CStruct0
 object _GDBusObjectManager:
@@ -7916,7 +8086,7 @@ object _GDBusObjectManager:
 /**
  * GDBusObjectManagerClient:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 */
 opaque type _GDBusObjectManagerClient = CStruct2[_root_.gobject.all.GObject, Ptr[GDBusObjectManagerClientPrivate]]
 object _GDBusObjectManagerClient:
@@ -7936,7 +8106,7 @@ object _GDBusObjectManagerClient:
 /**
  * GDBusObjectManagerClientClass: _class: The parent class.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 */
 opaque type _GDBusObjectManagerClientClass = CStruct4[_root_.gobject.all.GObjectClass, CFuncPtr6[Ptr[GDBusObjectManagerClient], Ptr[GDBusObjectProxy], Ptr[GDBusProxy], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr5[Ptr[GDBusObjectManagerClient], Ptr[GDBusObjectProxy], Ptr[GDBusProxy], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.gchar]], Unit], CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusObjectManagerClientClass:
@@ -7960,7 +8130,7 @@ object _GDBusObjectManagerClientClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerclient.h
 */
 opaque type _GDBusObjectManagerClientPrivate = CStruct0
 object _GDBusObjectManagerClientPrivate:
@@ -7969,7 +8139,7 @@ object _GDBusObjectManagerClientPrivate:
 /**
  * GDBusObjectManagerIface: _iface: The parent interface. _object_path: Virtual function for g_dbus_object_manager_get_object_path(). _objects: Virtual function for g_dbus_object_manager_get_objects(). _object: Virtual function for g_dbus_object_manager_get_object(). _interface: Virtual function for g_dbus_object_manager_get_interface(). _added: Signal handler for the #GDBusObjectManager::object-added signal. _removed: Signal handler for the #GDBusObjectManager::object-removed signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanager.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanager.h
 */
 opaque type _GDBusObjectManagerIface = CStruct9[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GDBusObjectManager], Ptr[_root_.glib.all.gchar]], CFuncPtr1[Ptr[GDBusObjectManager], Ptr[Byte]], CFuncPtr2[Ptr[GDBusObjectManager], Ptr[_root_.glib.all.gchar], Ptr[GDBusObject]], CFuncPtr3[Ptr[GDBusObjectManager], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[GDBusInterface]], CFuncPtr2[Ptr[GDBusObjectManager], Ptr[GDBusObject], Unit], CFuncPtr2[Ptr[GDBusObjectManager], Ptr[GDBusObject], Unit], CFuncPtr3[Ptr[GDBusObjectManager], Ptr[GDBusObject], Ptr[GDBusInterface], Unit], CFuncPtr3[Ptr[GDBusObjectManager], Ptr[GDBusObject], Ptr[GDBusInterface], Unit]]
 object _GDBusObjectManagerIface:
@@ -8010,7 +8180,7 @@ object _GDBusObjectManagerIface:
 /**
  * GDBusObjectManagerServer:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 */
 opaque type _GDBusObjectManagerServer = CStruct2[_root_.gobject.all.GObject, Ptr[GDBusObjectManagerServerPrivate]]
 object _GDBusObjectManagerServer:
@@ -8030,7 +8200,7 @@ object _GDBusObjectManagerServer:
 /**
  * GDBusObjectManagerServerClass: _class: The parent class.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 */
 opaque type _GDBusObjectManagerServerClass = CStruct2[_root_.gobject.all.GObjectClass, CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusObjectManagerServerClass:
@@ -8048,7 +8218,7 @@ object _GDBusObjectManagerServerClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectmanagerserver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectmanagerserver.h
 */
 opaque type _GDBusObjectManagerServerPrivate = CStruct0
 object _GDBusObjectManagerServerPrivate:
@@ -8057,7 +8227,7 @@ object _GDBusObjectManagerServerPrivate:
 /**
  * GDBusObjectProxy:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectproxy.h
 */
 opaque type _GDBusObjectProxy = CStruct2[_root_.gobject.all.GObject, Ptr[GDBusObjectProxyPrivate]]
 object _GDBusObjectProxy:
@@ -8077,7 +8247,7 @@ object _GDBusObjectProxy:
 /**
  * GDBusObjectProxyClass: _class: The parent class.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectproxy.h
 */
 opaque type _GDBusObjectProxyClass = CStruct2[_root_.gobject.all.GObjectClass, CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusObjectProxyClass:
@@ -8095,7 +8265,7 @@ object _GDBusObjectProxyClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectproxy.h
 */
 opaque type _GDBusObjectProxyPrivate = CStruct0
 object _GDBusObjectProxyPrivate:
@@ -8104,7 +8274,7 @@ object _GDBusObjectProxyPrivate:
 /**
  * GDBusObjectSkeleton:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectskeleton.h
 */
 opaque type _GDBusObjectSkeleton = CStruct2[_root_.gobject.all.GObject, Ptr[GDBusObjectSkeletonPrivate]]
 object _GDBusObjectSkeleton:
@@ -8124,7 +8294,7 @@ object _GDBusObjectSkeleton:
 /**
  * GDBusObjectSkeletonClass: _class: The parent class. _method: Signal class handler for the #GDBusObjectSkeleton::authorize-method signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectskeleton.h
 */
 opaque type _GDBusObjectSkeletonClass = CStruct3[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GDBusObjectSkeleton], Ptr[GDBusInterfaceSkeleton], Ptr[GDBusMethodInvocation], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusObjectSkeletonClass:
@@ -8145,7 +8315,7 @@ object _GDBusObjectSkeletonClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusobjectskeleton.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusobjectskeleton.h
 */
 opaque type _GDBusObjectSkeletonPrivate = CStruct0
 object _GDBusObjectSkeletonPrivate:
@@ -8154,7 +8324,7 @@ object _GDBusObjectSkeletonPrivate:
 /**
  * GDBusPropertyInfo: _count: The reference count or -1 if statically allocated. : The D-Bus signature of the property (a single complete type). : Access control flags for the property. : (array zero-terminated=1): A pointer to a %NULL-terminated array of pointers to #GDBusAnnotationInfo structures or %NULL if there are no annotations.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusPropertyInfo = CStruct5[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], GDBusPropertyInfoFlags, Ptr[Byte]]
 object _GDBusPropertyInfo:
@@ -8183,7 +8353,7 @@ object _GDBusPropertyInfo:
 /**
  * GDBusProxy:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusproxy.h
 */
 opaque type _GDBusProxy = CStruct2[_root_.gobject.all.GObject, Ptr[GDBusProxyPrivate]]
 object _GDBusProxy:
@@ -8203,7 +8373,7 @@ object _GDBusProxy:
 /**
  * GDBusProxyClass: _properties_changed: Signal class handler for the #GDBusProxy::g-properties-changed signal. _signal: Signal class handler for the #GDBusProxy::g-signal signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusproxy.h
 */
 opaque type _GDBusProxyClass = CStruct4[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GDBusProxy], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.gchar]], Unit], CFuncPtr4[Ptr[GDBusProxy], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Unit], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._3, Nat._2]]]
 object _GDBusProxyClass:
@@ -8227,14 +8397,14 @@ object _GDBusProxyClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._3, Nat._2]]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusproxy.h
 */
 opaque type _GDBusProxyPrivate = CStruct0
 object _GDBusProxyPrivate:
   given _tag: Tag[_GDBusProxyPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDBusServer = CStruct0
 object _GDBusServer:
@@ -8243,7 +8413,7 @@ object _GDBusServer:
 /**
  * GDBusSignalInfo: _count: The reference count or -1 if statically allocated.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusintrospection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusintrospection.h
 */
 opaque type _GDBusSignalInfo = CStruct4[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[Byte], Ptr[Byte]]
 object _GDBusSignalInfo:
@@ -8269,7 +8439,7 @@ object _GDBusSignalInfo:
 /**
  * GDBusSubtreeVTable: : Function for enumerating child nodes. : Function for introspecting a child node. : Function for dispatching a remote call on a child node.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type _GDBusSubtreeVTable = CStruct4[GDBusSubtreeEnumerateFunc, Ptr[Byte], GDBusSubtreeDispatchFunc, CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GDBusSubtreeVTable:
@@ -8293,7 +8463,7 @@ object _GDBusSubtreeVTable:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatainputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatainputstream.h
 */
 opaque type _GDataInputStream = CStruct2[GBufferedInputStream, Ptr[GDataInputStreamPrivate]]
 object _GDataInputStream:
@@ -8311,7 +8481,7 @@ object _GDataInputStream:
     def priv_=(value: Ptr[GDataInputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatainputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatainputstream.h
 */
 opaque type _GDataInputStreamClass = CStruct6[GBufferedInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GDataInputStreamClass:
@@ -8341,14 +8511,14 @@ object _GDataInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatainputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatainputstream.h
 */
 opaque type _GDataInputStreamPrivate = CStruct0
 object _GDataInputStreamPrivate:
   given _tag: Tag[_GDataInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdataoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdataoutputstream.h
 */
 opaque type _GDataOutputStream = CStruct2[GFilterOutputStream, Ptr[GDataOutputStreamPrivate]]
 object _GDataOutputStream:
@@ -8366,7 +8536,7 @@ object _GDataOutputStream:
     def priv_=(value: Ptr[GDataOutputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdataoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdataoutputstream.h
 */
 opaque type _GDataOutputStreamClass = CStruct6[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GDataOutputStreamClass:
@@ -8396,14 +8566,14 @@ object _GDataOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdataoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdataoutputstream.h
 */
 opaque type _GDataOutputStreamPrivate = CStruct0
 object _GDataOutputStreamPrivate:
   given _tag: Tag[_GDataOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDatagramBased = CStruct0
 object _GDatagramBased:
@@ -8412,7 +8582,7 @@ object _GDatagramBased:
 /**
  * GDatagramBasedInterface: _iface: The parent interface. _messages: Virtual method for g_datagram_based_receive_messages(). _messages: Virtual method for g_datagram_based_send_messages(). _source: Virtual method for g_datagram_based_create_source(). _check: Virtual method for g_datagram_based_condition_check(). _wait: Virtual method for g_datagram_based_condition_wait().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdatagrambased.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdatagrambased.h
 */
 opaque type _GDatagramBasedInterface = CStruct6[_root_.gobject.all.GTypeInterface, CFuncPtr7[Ptr[GDatagramBased], Ptr[GInputMessage], _root_.glib.all.guint, _root_.glib.all.gint, _root_.glib.all.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gint], CFuncPtr7[Ptr[GDatagramBased], Ptr[GOutputMessage], _root_.glib.all.guint, _root_.glib.all.gint, _root_.glib.all.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gint], CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, Ptr[GCancellable], Ptr[Byte]], CFuncPtr2[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.GIOCondition], CFuncPtr5[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GDatagramBasedInterface:
@@ -8442,14 +8612,14 @@ object _GDatagramBasedInterface:
     def condition_wait_=(value: CFuncPtr5[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type _GDebugController = CStruct0
 object _GDebugController:
   given _tag: Tag[_GDebugController] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type _GDebugControllerDBus = CStruct1[_root_.gobject.all.GObject]
 object _GDebugControllerDBus:
@@ -8466,7 +8636,7 @@ object _GDebugControllerDBus:
 /**
  * GDebugControllerDBusClass: _class: The parent class. : Default handler for the #GDebugControllerDBus::authorize signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type _GDebugControllerDBusClass = CStruct3[_root_.gobject.all.GObjectClass, CFuncPtr2[Ptr[GDebugControllerDBus], Ptr[GDBusMethodInvocation], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
 object _GDebugControllerDBusClass:
@@ -8489,7 +8659,7 @@ object _GDebugControllerDBusClass:
 /**
  * GDebugControllerInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type _GDebugControllerInterface = CStruct1[_root_.gobject.all.GTypeInterface]
 object _GDebugControllerInterface:
@@ -8504,14 +8674,14 @@ object _GDebugControllerInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDrive = CStruct0
 object _GDrive:
   given _tag: Tag[_GDrive] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdrive.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdrive.h
 */
 opaque type _GDriveIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object _GDriveIface:
@@ -8622,7 +8792,7 @@ object _GDriveIface:
     def is_removable_=(value: CFuncPtr1[Ptr[GDrive], _root_.glib.all.gboolean]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr1[Ptr[GDrive], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDtlsClientConnection = CStruct0
 object _GDtlsClientConnection:
@@ -8631,7 +8801,7 @@ object _GDtlsClientConnection:
 /**
  * GDtlsClientConnectionInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdtlsclientconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdtlsclientconnection.h
 */
 opaque type _GDtlsClientConnectionInterface = CStruct1[_root_.gobject.all.GTypeInterface]
 object _GDtlsClientConnectionInterface:
@@ -8646,7 +8816,7 @@ object _GDtlsClientConnectionInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDtlsConnection = CStruct0
 object _GDtlsConnection:
@@ -8655,7 +8825,7 @@ object _GDtlsConnection:
 /**
  * GDtlsConnectionInterface: _iface: The parent interface. _certificate: Check whether to accept a certificate. : Perform a handshake operation. _async: Start an asynchronous handshake operation. _finish: Finish an asynchronous handshake operation. : Shut down one or both directions of the connection. _async: Start an asynchronous shutdown operation. _finish: Finish an asynchronous shutdown operation.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdtlsconnection.h
 */
 opaque type _GDtlsConnectionInterface = CStruct11[_root_.gobject.all.GTypeInterface, CFuncPtr3[Ptr[GDtlsConnection], Ptr[GTlsCertificate], GTlsCertificateFlags, _root_.glib.all.gboolean], CFuncPtr3[Ptr[GDtlsConnection], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GDtlsConnection], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GDtlsConnection], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GDtlsConnection], _root_.glib.all.gboolean, _root_.glib.all.gboolean, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr7[Ptr[GDtlsConnection], _root_.glib.all.gboolean, _root_.glib.all.gboolean, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GDtlsConnection], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GDtlsConnection], Ptr[Ptr[_root_.glib.all.gchar]], Unit], CFuncPtr1[Ptr[GDtlsConnection], Ptr[_root_.glib.all.gchar]], CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.glib.all.GByteArray], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GDtlsConnectionInterface:
@@ -8700,7 +8870,7 @@ object _GDtlsConnectionInterface:
     def get_binding_data_=(value: CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.glib.all.GByteArray], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at11 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GDtlsServerConnection = CStruct0
 object _GDtlsServerConnection:
@@ -8709,7 +8879,7 @@ object _GDtlsServerConnection:
 /**
  * GDtlsServerConnectionInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdtlsserverconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdtlsserverconnection.h
 */
 opaque type _GDtlsServerConnectionInterface = CStruct1[_root_.gobject.all.GTypeInterface]
 object _GDtlsServerConnectionInterface:
@@ -8724,21 +8894,21 @@ object _GDtlsServerConnectionInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblem.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblem.h
 */
 opaque type _GEmblem = CStruct0
 object _GEmblem:
   given _tag: Tag[_GEmblem] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblem.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblem.h
 */
 opaque type _GEmblemClass = CStruct0
 object _GEmblemClass:
   given _tag: Tag[_GEmblemClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblemedicon.h
 */
 opaque type _GEmblemedIcon = CStruct2[_root_.gobject.all.GObject, Ptr[GEmblemedIconPrivate]]
 object _GEmblemedIcon:
@@ -8756,7 +8926,7 @@ object _GEmblemedIcon:
     def priv_=(value: Ptr[GEmblemedIconPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblemedicon.h
 */
 opaque type _GEmblemedIconClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GEmblemedIconClass:
@@ -8771,14 +8941,14 @@ object _GEmblemedIconClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gemblemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gemblemedicon.h
 */
 opaque type _GEmblemedIconPrivate = CStruct0
 object _GEmblemedIconPrivate:
   given _tag: Tag[_GEmblemedIconPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GFile = CStruct0
 object _GFile:
@@ -8787,7 +8957,7 @@ object _GFile:
 /**
  * GFileAttributeInfo: : the #GFileAttributeType type of the attribute. : a set of #GFileAttributeInfoFlags.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileattribute.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileattribute.h
 */
 opaque type _GFileAttributeInfo = CStruct3[CString, GFileAttributeType, GFileAttributeInfoFlags]
 object _GFileAttributeInfo:
@@ -8810,7 +8980,7 @@ object _GFileAttributeInfo:
 /**
  * GFileAttributeInfoList: : an array of #GFileAttributeInfos. _infos: the number of values in the array.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileattribute.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileattribute.h
 */
 opaque type _GFileAttributeInfoList = CStruct2[Ptr[GFileAttributeInfo], CInt]
 object _GFileAttributeInfoList:
@@ -8828,21 +8998,21 @@ object _GFileAttributeInfoList:
     def n_infos_=(value: CInt): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GFileAttributeMatcher = CStruct0
 object _GFileAttributeMatcher:
   given _tag: Tag[_GFileAttributeMatcher] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GFileDescriptorBased = CStruct0
 object _GFileDescriptorBased:
   given _tag: Tag[_GFileDescriptorBased] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileenumerator.h
 */
 opaque type _GFileEnumerator = CStruct2[_root_.gobject.all.GObject, Ptr[GFileEnumeratorPrivate]]
 object _GFileEnumerator:
@@ -8860,7 +9030,7 @@ object _GFileEnumerator:
     def priv_=(value: Ptr[GFileEnumeratorPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileenumerator.h
 */
 opaque type _GFileEnumeratorClass = CStruct14[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GFileEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr6[Ptr[GFileEnumerator], CInt, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GFileEnumerator], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileEnumeratorClass:
@@ -8914,14 +9084,14 @@ object _GFileEnumeratorClass:
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at14 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileenumerator.h
 */
 opaque type _GFileEnumeratorPrivate = CStruct0
 object _GFileEnumeratorPrivate:
   given _tag: Tag[_GFileEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileiostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileiostream.h
 */
 opaque type _GFileIOStream = CStruct2[GIOStream, Ptr[GFileIOStreamPrivate]]
 object _GFileIOStream:
@@ -8939,7 +9109,7 @@ object _GFileIOStream:
     def priv_=(value: Ptr[GFileIOStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileiostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileiostream.h
 */
 opaque type _GFileIOStreamClass = CStruct15[GIOStreamClass, CFuncPtr1[Ptr[GFileIOStream], _root_.glib.all.goffset], CFuncPtr1[Ptr[GFileIOStream], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GFileIOStream], _root_.glib.all.goffset, _root_.glib.all.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GFileIOStream], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GFileIOStream], _root_.glib.all.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GFileIOStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileIOStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GFileIOStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr1[Ptr[GFileIOStream], CString], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileIOStreamClass:
@@ -8996,21 +9166,21 @@ object _GFileIOStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileiostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileiostream.h
 */
 opaque type _GFileIOStreamPrivate = CStruct0
 object _GFileIOStreamPrivate:
   given _tag: Tag[_GFileIOStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GFileIcon = CStruct0
 object _GFileIcon:
   given _tag: Tag[_GFileIcon] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileicon.h
 */
 opaque type _GFileIconClass = CStruct0
 object _GFileIconClass:
@@ -9019,13 +9189,13 @@ object _GFileIconClass:
 /**
  * GFileIface: _iface: The parent interface. : Duplicates a #GFile. : Creates a hash of a #GFile. : Checks equality of two given #GFiles. _uri_scheme: Checks to see if a #GFile has a given URI scheme. _uri_scheme: Gets the URI scheme for a #GFile. _basename: Gets the basename for a given #GFile. _path: Gets the current path within a #GFile. _uri: Gets a URI for the path within a #GFile. _parse_name: Gets the parsed name for the #GFile. _parent: Gets the parent directory for the #GFile. _matches: Checks whether a #GFile contains a specified file. _relative_path: Gets the path for a #GFile relative to a given path. _relative_path: Resolves a relative path for a #GFile to an absolute path. _child_for_display_name: Gets the child #GFile for a given display name. _children: Gets a #GFileEnumerator with the children of a #GFile. _children_async: Asynchronously gets a #GFileEnumerator with the children of a #GFile. _children_finish: Finishes asynchronously enumerating the children. _info: Gets the #GFileInfo for a #GFile. _info_async: Asynchronously gets the #GFileInfo for a #GFile. _info_finish: Finishes an asynchronous query info operation. _filesystem_info: Gets a #GFileInfo for the file system #GFile is on. _filesystem_info_async: Asynchronously gets a #GFileInfo for the file system #GFile is on. _filesystem_info_finish: Finishes asynchronously getting the file system info. _enclosing_mount: Gets a #GMount for the #GFile. _enclosing_mount_async: Asynchronously gets the #GMount for a #GFile. _enclosing_mount_finish: Finishes asynchronously getting the volume.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfile.h
 */
 opaque type _GFileIface = CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]]
 object _GFileIface:
   given _tag: Tag[_GFileIface] = Tag.CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._8, Nat._4, Nat._0](Tag.Nat8, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[_GFileIface] = scala.scalanative.unsafe.alloc[_GFileIface](1)
-  def apply(g_iface : _root_.gobject.all.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.glib.all.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.glib.all.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.glib.all.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.glib.all.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], _make_symbolic_link_async : CFuncPtr0[Unit], _make_symbolic_link_finish : CFuncPtr0[Unit], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], supports_thread_contexts : _root_.glib.all.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.glib.all.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean])(using Zone): Ptr[_GFileIface] = 
+  def apply(g_iface : _root_.gobject.all.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.glib.all.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.glib.all.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.glib.all.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.glib.all.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.glib.all.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], make_symbolic_link_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], make_symbolic_link_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.glib.all.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], supports_thread_contexts : _root_.glib.all.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.glib.all.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean])(using Zone): Ptr[_GFileIface] = 
     val ____ptr = apply()
     (!____ptr).g_iface = g_iface
     (!____ptr).dup = dup
@@ -9090,8 +9260,8 @@ object _GFileIface:
     (!____ptr).make_directory_async = make_directory_async
     (!____ptr).make_directory_finish = make_directory_finish
     (!____ptr).make_symbolic_link = make_symbolic_link
-    (!____ptr)._make_symbolic_link_async = _make_symbolic_link_async
-    (!____ptr)._make_symbolic_link_finish = _make_symbolic_link_finish
+    (!____ptr).make_symbolic_link_async = make_symbolic_link_async
+    (!____ptr).make_symbolic_link_finish = make_symbolic_link_finish
     (!____ptr).copy = copy
     (!____ptr).copy_async = copy_async
     (!____ptr).copy_finish = copy_finish
@@ -9259,10 +9429,10 @@ object _GFileIface:
     def make_directory_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(496).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
     def make_symbolic_link: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean] = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]]
     def make_symbolic_link_=(value: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
-    def _make_symbolic_link_async: CFuncPtr0[Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_async_=(value: CFuncPtr0[Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _make_symbolic_link_finish: CFuncPtr0[Unit] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_finish_=(value: CFuncPtr0[Unit]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def make_symbolic_link_async: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]]]
+    def make_symbolic_link_async_=(value: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]]] = value
+    def make_symbolic_link_finish: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]]
+    def make_symbolic_link_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
     def copy: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean] = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]]
     def copy_=(value: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
     def copy_async: CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit] = !struct.at(536).asInstanceOf[Ptr[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.glib.all.gpointer, GAsyncReadyCallback, _root_.glib.all.gpointer, Unit]]]
@@ -9343,21 +9513,21 @@ object _GFileIface:
     def measure_disk_usage_finish_=(value: CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at(832).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[_root_.glib.all.guint64], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GFileInfo = CStruct0
 object _GFileInfo:
   given _tag: Tag[_GFileInfo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinfo.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinfo.h
 */
 opaque type _GFileInfoClass = CStruct0
 object _GFileInfoClass:
   given _tag: Tag[_GFileInfoClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinputstream.h
 */
 opaque type _GFileInputStream = CStruct2[GInputStream, Ptr[GFileInputStreamPrivate]]
 object _GFileInputStream:
@@ -9375,7 +9545,7 @@ object _GFileInputStream:
     def priv_=(value: Ptr[GFileInputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinputstream.h
 */
 opaque type _GFileInputStreamClass = CStruct12[GInputStreamClass, CFuncPtr1[Ptr[GFileInputStream], _root_.glib.all.goffset], CFuncPtr1[Ptr[GFileInputStream], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GFileInputStream], _root_.glib.all.goffset, _root_.glib.all.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GFileInputStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileInputStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GFileInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileInputStreamClass:
@@ -9423,7 +9593,7 @@ object _GFileInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at12 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileinputstream.h
 */
 opaque type _GFileInputStreamPrivate = CStruct0
 object _GFileInputStreamPrivate:
@@ -9432,7 +9602,7 @@ object _GFileInputStreamPrivate:
 /**
  * GFileMonitor:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilemonitor.h
 */
 opaque type _GFileMonitor = CStruct2[_root_.gobject.all.GObject, Ptr[GFileMonitorPrivate]]
 object _GFileMonitor:
@@ -9450,7 +9620,7 @@ object _GFileMonitor:
     def priv_=(value: Ptr[GFileMonitorPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilemonitor.h
 */
 opaque type _GFileMonitorClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr4[Ptr[GFileMonitor], Ptr[GFile], Ptr[GFile], GFileMonitorEvent, Unit], CFuncPtr1[Ptr[GFileMonitor], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileMonitorClass:
@@ -9486,14 +9656,14 @@ object _GFileMonitorClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilemonitor.h
 */
 opaque type _GFileMonitorPrivate = CStruct0
 object _GFileMonitorPrivate:
   given _tag: Tag[_GFileMonitorPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileoutputstream.h
 */
 opaque type _GFileOutputStream = CStruct2[GOutputStream, Ptr[GFileOutputStreamPrivate]]
 object _GFileOutputStream:
@@ -9511,7 +9681,7 @@ object _GFileOutputStream:
     def priv_=(value: Ptr[GFileOutputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileoutputstream.h
 */
 opaque type _GFileOutputStreamClass = CStruct15[GOutputStreamClass, CFuncPtr1[Ptr[GFileOutputStream], _root_.glib.all.goffset], CFuncPtr1[Ptr[GFileOutputStream], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GFileOutputStream], _root_.glib.all.goffset, _root_.glib.all.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GFileOutputStream], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GFileOutputStream], _root_.glib.all.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GFileOutputStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileOutputStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GFileOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GFileInfo]], CFuncPtr1[Ptr[GFileOutputStream], CString], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileOutputStreamClass:
@@ -9568,21 +9738,21 @@ object _GFileOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfileoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfileoutputstream.h
 */
 opaque type _GFileOutputStreamPrivate = CStruct0
 object _GFileOutputStreamPrivate:
   given _tag: Tag[_GFileOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GFilenameCompleter = CStruct0
 object _GFilenameCompleter:
   given _tag: Tag[_GFilenameCompleter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilenamecompleter.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilenamecompleter.h
 */
 opaque type _GFilenameCompleterClass = CStruct5[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GFilenameCompleter], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFilenameCompleterClass:
@@ -9609,7 +9779,7 @@ object _GFilenameCompleterClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilterinputstream.h
 */
 opaque type _GFilterInputStream = CStruct2[GInputStream, Ptr[GInputStream]]
 object _GFilterInputStream:
@@ -9627,7 +9797,7 @@ object _GFilterInputStream:
     def base_stream_=(value: Ptr[GInputStream]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilterinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilterinputstream.h
 */
 opaque type _GFilterInputStreamClass = CStruct4[GInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFilterInputStreamClass:
@@ -9651,7 +9821,7 @@ object _GFilterInputStreamClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilteroutputstream.h
 */
 opaque type _GFilterOutputStream = CStruct2[GOutputStream, Ptr[GOutputStream]]
 object _GFilterOutputStream:
@@ -9669,7 +9839,7 @@ object _GFilterOutputStream:
     def base_stream_=(value: Ptr[GOutputStream]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gfilteroutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gfilteroutputstream.h
 */
 opaque type _GFilterOutputStreamClass = CStruct4[GOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFilterOutputStreamClass:
@@ -9693,42 +9863,42 @@ object _GFilterOutputStreamClass:
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GIOExtension = CStruct0
 object _GIOExtension:
   given _tag: Tag[_GIOExtension] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GIOExtensionPoint = CStruct0
 object _GIOExtensionPoint:
   given _tag: Tag[_GIOExtensionPoint] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GIOModule = CStruct0
 object _GIOModule:
   given _tag: Tag[_GIOModule] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giomodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giomodule.h
 */
 opaque type _GIOModuleClass = CStruct0
 object _GIOModuleClass:
   given _tag: Tag[_GIOModuleClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giomodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giomodule.h
 */
 opaque type _GIOModuleScope = CStruct0
 object _GIOModuleScope:
   given _tag: Tag[_GIOModuleScope] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GIOSchedulerJob = CStruct0
 object _GIOSchedulerJob:
@@ -9737,7 +9907,7 @@ object _GIOSchedulerJob:
 /**
  * GIOStream:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giostream.h
 */
 opaque type _GIOStream = CStruct2[_root_.gobject.all.GObject, Ptr[GIOStreamPrivate]]
 object _GIOStream:
@@ -9755,14 +9925,14 @@ object _GIOStream:
     def priv_=(value: Ptr[GIOStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GIOStreamAdapter = CStruct0
 object _GIOStreamAdapter:
   given _tag: Tag[_GIOStreamAdapter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giostream.h
 */
 opaque type _GIOStreamClass = CStruct16[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GIOStream], Ptr[GInputStream]], CFuncPtr1[Ptr[GIOStream], Ptr[GOutputStream]], CFuncPtr3[Ptr[GIOStream], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GIOStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GIOStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GIOStreamClass:
@@ -9822,14 +9992,14 @@ object _GIOStreamClass:
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at16 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giostream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giostream.h
 */
 opaque type _GIOStreamPrivate = CStruct0
 object _GIOStreamPrivate:
   given _tag: Tag[_GIOStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GIcon = CStruct0
 object _GIcon:
@@ -9838,7 +10008,7 @@ object _GIcon:
 /**
  * GIconIface: _iface: The parent interface. : A hash for a given #GIcon. : Checks if two #GIcons are equal. _tokens: Serializes a #GIcon into tokens. The tokens must not contain any whitespace. Don't implement if the #GIcon can't be serialized (Since 2.20). _tokens: Constructs a #GIcon from tokens. Set the #GError if the tokens are malformed. Don't implement if the #GIcon can't be serialized (Since 2.20). : Serializes a #GIcon into a #GVariant. Since: 2.38
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gicon.h
 */
 opaque type _GIconIface = CStruct6[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GIcon], _root_.glib.all.guint], CFuncPtr2[Ptr[GIcon], Ptr[GIcon], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GIcon], Ptr[_root_.glib.all.GPtrArray], Ptr[_root_.glib.all.gint], _root_.glib.all.gboolean], CFuncPtr4[Ptr[Ptr[_root_.glib.all.gchar]], _root_.glib.all.gint, _root_.glib.all.gint, Ptr[Ptr[_root_.glib.all.GError]], Ptr[GIcon]], CFuncPtr1[Ptr[GIcon], Ptr[_root_.glib.all.GVariant]]]
 object _GIconIface:
@@ -9868,7 +10038,7 @@ object _GIconIface:
     def serialize_=(value: CFuncPtr1[Ptr[GIcon], Ptr[_root_.glib.all.GVariant]]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddress.h
 */
 opaque type _GInetAddress = CStruct2[_root_.gobject.all.GObject, Ptr[GInetAddressPrivate]]
 object _GInetAddress:
@@ -9886,7 +10056,7 @@ object _GInetAddress:
     def priv_=(value: Ptr[GInetAddressPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddress.h
 */
 opaque type _GInetAddressClass = CStruct3[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.glib.all.gchar]], CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.glib.all.guint8]]]
 object _GInetAddressClass:
@@ -9907,7 +10077,7 @@ object _GInetAddressClass:
     def to_bytes_=(value: CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.glib.all.guint8]]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddressmask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddressmask.h
 */
 opaque type _GInetAddressMask = CStruct2[_root_.gobject.all.GObject, Ptr[GInetAddressMaskPrivate]]
 object _GInetAddressMask:
@@ -9925,7 +10095,7 @@ object _GInetAddressMask:
     def priv_=(value: Ptr[GInetAddressMaskPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddressmask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddressmask.h
 */
 opaque type _GInetAddressMaskClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GInetAddressMaskClass:
@@ -9940,21 +10110,21 @@ object _GInetAddressMaskClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddressmask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddressmask.h
 */
 opaque type _GInetAddressMaskPrivate = CStruct0
 object _GInetAddressMaskPrivate:
   given _tag: Tag[_GInetAddressMaskPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetaddress.h
 */
 opaque type _GInetAddressPrivate = CStruct0
 object _GInetAddressPrivate:
   given _tag: Tag[_GInetAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetsocketaddress.h
 */
 opaque type _GInetSocketAddress = CStruct2[GSocketAddress, Ptr[GInetSocketAddressPrivate]]
 object _GInetSocketAddress:
@@ -9972,7 +10142,7 @@ object _GInetSocketAddress:
     def priv_=(value: Ptr[GInetSocketAddressPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetsocketaddress.h
 */
 opaque type _GInetSocketAddressClass = CStruct1[GSocketAddressClass]
 object _GInetSocketAddressClass:
@@ -9987,14 +10157,14 @@ object _GInetSocketAddressClass:
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginetsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginetsocketaddress.h
 */
 opaque type _GInetSocketAddressPrivate = CStruct0
 object _GInetSocketAddressPrivate:
   given _tag: Tag[_GInetSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GInitable = CStruct0
 object _GInitable:
@@ -10003,7 +10173,7 @@ object _GInitable:
 /**
  * GInitableIface: _iface: The parent interface. : Initializes the object.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/ginitable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginitable.h
 */
 opaque type _GInitableIface = CStruct2[_root_.gobject.all.GTypeInterface, CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GInitableIface:
@@ -10021,7 +10191,7 @@ object _GInitableIface:
     def init_=(value: CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GInputMessage = CStruct7[Ptr[Ptr[GSocketAddress]], Ptr[GInputVector], _root_.glib.all.guint, _root_.glib.all.gsize, _root_.glib.all.gint, Ptr[Ptr[Ptr[GSocketControlMessage]]], Ptr[_root_.glib.all.guint]]
 object _GInputMessage:
@@ -10054,7 +10224,7 @@ object _GInputMessage:
     def num_control_messages_=(value: Ptr[_root_.glib.all.guint]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginputstream.h
 */
 opaque type _GInputStream = CStruct2[_root_.gobject.all.GObject, Ptr[GInputStreamPrivate]]
 object _GInputStream:
@@ -10072,7 +10242,7 @@ object _GInputStream:
     def priv_=(value: Ptr[GInputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginputstream.h
 */
 opaque type _GInputStreamClass = CStruct15[_root_.gobject.all.GObjectClass, CFuncPtr5[Ptr[GInputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr4[Ptr[GInputStream], _root_.glib.all.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr3[Ptr[GInputStream], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr7[Ptr[GInputStream], Ptr[Byte], _root_.glib.all.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr6[Ptr[GInputStream], _root_.glib.all.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr5[Ptr[GInputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GInputStreamClass:
@@ -10129,14 +10299,14 @@ object _GInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/ginputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/ginputstream.h
 */
 opaque type _GInputStreamPrivate = CStruct0
 object _GInputStreamPrivate:
   given _tag: Tag[_GInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GInputVector = CStruct2[_root_.glib.all.gpointer, _root_.glib.all.gsize]
 object _GInputVector:
@@ -10154,14 +10324,14 @@ object _GInputVector:
     def size_=(value: _root_.glib.all.gsize): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type _GListModel = CStruct0
 object _GListModel:
   given _tag: Tag[_GListModel] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type _GListModelInterface = CStruct4[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GListModel], _root_.gobject.all.GType], CFuncPtr1[Ptr[GListModel], _root_.glib.all.guint], CFuncPtr2[Ptr[GListModel], _root_.glib.all.guint, _root_.glib.all.gpointer]]
 object _GListModelInterface:
@@ -10185,14 +10355,14 @@ object _GListModelInterface:
     def get_item_=(value: CFuncPtr2[Ptr[GListModel], _root_.glib.all.guint, _root_.glib.all.gpointer]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type _GListStore = CStruct0
 object _GListStore:
   given _tag: Tag[_GListStore] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GLoadableIcon = CStruct0
 object _GLoadableIcon:
@@ -10201,7 +10371,7 @@ object _GLoadableIcon:
 /**
  * GLoadableIconIface: _iface: The parent interface. : Loads an icon. _async: Loads an icon asynchronously. _finish: Finishes an asynchronous icon load.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gloadableicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gloadableicon.h
 */
 opaque type _GLoadableIconIface = CStruct4[_root_.gobject.all.GTypeInterface, CFuncPtr5[Ptr[GLoadableIcon], CInt, Ptr[CString], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GInputStream]], CFuncPtr5[Ptr[GLoadableIcon], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GInputStream]]]
 object _GLoadableIconIface:
@@ -10225,7 +10395,7 @@ object _GLoadableIconIface:
     def load_finish_=(value: CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GInputStream]]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryinputstream.h
 */
 opaque type _GMemoryInputStream = CStruct2[GInputStream, Ptr[GMemoryInputStreamPrivate]]
 object _GMemoryInputStream:
@@ -10243,7 +10413,7 @@ object _GMemoryInputStream:
     def priv_=(value: Ptr[GMemoryInputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryinputstream.h
 */
 opaque type _GMemoryInputStreamClass = CStruct6[GInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GMemoryInputStreamClass:
@@ -10273,21 +10443,21 @@ object _GMemoryInputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryinputstream.h
 */
 opaque type _GMemoryInputStreamPrivate = CStruct0
 object _GMemoryInputStreamPrivate:
   given _tag: Tag[_GMemoryInputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type _GMemoryMonitor = CStruct0
 object _GMemoryMonitor:
   given _tag: Tag[_GMemoryMonitor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type _GMemoryMonitorInterface = CStruct2[_root_.gobject.all.GTypeInterface, CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]]
 object _GMemoryMonitorInterface:
@@ -10305,7 +10475,7 @@ object _GMemoryMonitorInterface:
     def low_memory_warning_=(value: CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type _GMemoryOutputStream = CStruct2[GOutputStream, Ptr[GMemoryOutputStreamPrivate]]
 object _GMemoryOutputStream:
@@ -10323,7 +10493,7 @@ object _GMemoryOutputStream:
     def priv_=(value: Ptr[GMemoryOutputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type _GMemoryOutputStreamClass = CStruct6[GOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GMemoryOutputStreamClass:
@@ -10353,21 +10523,21 @@ object _GMemoryOutputStreamClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type _GMemoryOutputStreamPrivate = CStruct0
 object _GMemoryOutputStreamPrivate:
   given _tag: Tag[_GMemoryOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenu.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenu.h
 */
 opaque type _GMenu = CStruct0
 object _GMenu:
   given _tag: Tag[_GMenu] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuAttributeIter = CStruct2[_root_.gobject.all.GObject, Ptr[GMenuAttributeIterPrivate]]
 object _GMenuAttributeIter:
@@ -10385,7 +10555,7 @@ object _GMenuAttributeIter:
     def priv_=(value: Ptr[GMenuAttributeIterPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuAttributeIterClass = CStruct2[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]]
 object _GMenuAttributeIterClass:
@@ -10403,21 +10573,21 @@ object _GMenuAttributeIterClass:
     def get_next_=(value: CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[_root_.glib.all.GVariant]], _root_.glib.all.gboolean]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuAttributeIterPrivate = CStruct0
 object _GMenuAttributeIterPrivate:
   given _tag: Tag[_GMenuAttributeIterPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenu.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenu.h
 */
 opaque type _GMenuItem = CStruct0
 object _GMenuItem:
   given _tag: Tag[_GMenuItem] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuLinkIter = CStruct2[_root_.gobject.all.GObject, Ptr[GMenuLinkIterPrivate]]
 object _GMenuLinkIter:
@@ -10435,7 +10605,7 @@ object _GMenuLinkIter:
     def priv_=(value: Ptr[GMenuLinkIterPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuLinkIterClass = CStruct2[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[GMenuModel]], _root_.glib.all.gboolean]]
 object _GMenuLinkIterClass:
@@ -10453,14 +10623,14 @@ object _GMenuLinkIterClass:
     def get_next_=(value: CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.glib.all.gchar]], Ptr[Ptr[GMenuModel]], _root_.glib.all.gboolean]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuLinkIterPrivate = CStruct0
 object _GMenuLinkIterPrivate:
   given _tag: Tag[_GMenuLinkIterPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuModel = CStruct2[_root_.gobject.all.GObject, Ptr[GMenuModelPrivate]]
 object _GMenuModel:
@@ -10480,7 +10650,7 @@ object _GMenuModel:
 /**
  * GMenuModelClass::get_item_attributes: : the #GMenuModel to query _index: The #GMenuItem to query : (out) (element-type utf8 GLib.Variant): Attributes on the item
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuModelClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GMenuModel], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GMenuModel], _root_.glib.all.gint], CFuncPtr3[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[Ptr[_root_.glib.all.GHashTable]], Unit], CFuncPtr2[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[GMenuAttributeIter]], CFuncPtr4[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariantType], Ptr[_root_.glib.all.GVariant]], CFuncPtr3[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[Ptr[_root_.glib.all.GHashTable]], Unit], CFuncPtr2[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[GMenuLinkIter]], CFuncPtr3[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[GMenuModel]]]
 object _GMenuModelClass:
@@ -10519,14 +10689,14 @@ object _GMenuModelClass:
     def get_item_link_=(value: CFuncPtr3[Ptr[GMenuModel], _root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[GMenuModel]]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmenumodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmenumodel.h
 */
 opaque type _GMenuModelPrivate = CStruct0
 object _GMenuModelPrivate:
   given _tag: Tag[_GMenuModelPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GMount = CStruct0
 object _GMount:
@@ -10535,7 +10705,7 @@ object _GMount:
 /**
  * GMountIface: _iface: The parent interface. : Changed signal that is emitted when the mount's state has changed. : The unmounted signal that is emitted when the #GMount have been unmounted. If the recipient is holding references to the object they should release them so the object can be finalized.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gmount.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmount.h
 */
 opaque type _GMountIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
 object _GMountIface:
@@ -10631,7 +10801,7 @@ object _GMountIface:
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GMount], Ptr[GIcon]]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GMount], Ptr[GIcon]]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmountoperation.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmountoperation.h
 */
 opaque type _GMountOperation = CStruct2[_root_.gobject.all.GObject, Ptr[GMountOperationPrivate]]
 object _GMountOperation:
@@ -10649,7 +10819,7 @@ object _GMountOperation:
     def priv_=(value: Ptr[GMountOperationPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmountoperation.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmountoperation.h
 */
 opaque type _GMountOperationClass = CStruct16[_root_.gobject.all.GObjectClass, CFuncPtr5[Ptr[GMountOperation], CString, CString, CString, GAskPasswordFlags, Unit], CFuncPtr3[Ptr[GMountOperation], CString, Ptr[CString], Unit], CFuncPtr2[Ptr[GMountOperation], GMountOperationResult, Unit], CFuncPtr1[Ptr[GMountOperation], Unit], CFuncPtr4[Ptr[GMountOperation], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GArray], Ptr[Ptr[_root_.glib.all.gchar]], Unit], CFuncPtr4[Ptr[GMountOperation], Ptr[_root_.glib.all.gchar], _root_.glib.all.gint64, _root_.glib.all.gint64, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GMountOperationClass:
@@ -10709,14 +10879,14 @@ object _GMountOperationClass:
     def _g_reserved9_=(value: CFuncPtr0[Unit]): Unit = !struct.at16 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmountoperation.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmountoperation.h
 */
 opaque type _GMountOperationPrivate = CStruct0
 object _GMountOperationPrivate:
   given _tag: Tag[_GMountOperationPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativesocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativesocketaddress.h
 */
 opaque type _GNativeSocketAddress = CStruct2[GSocketAddress, Ptr[GNativeSocketAddressPrivate]]
 object _GNativeSocketAddress:
@@ -10734,7 +10904,7 @@ object _GNativeSocketAddress:
     def priv_=(value: Ptr[GNativeSocketAddressPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativesocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativesocketaddress.h
 */
 opaque type _GNativeSocketAddressClass = CStruct1[GSocketAddressClass]
 object _GNativeSocketAddressClass:
@@ -10749,14 +10919,14 @@ object _GNativeSocketAddressClass:
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativesocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativesocketaddress.h
 */
 opaque type _GNativeSocketAddressPrivate = CStruct0
 object _GNativeSocketAddressPrivate:
   given _tag: Tag[_GNativeSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativevolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativevolumemonitor.h
 */
 opaque type _GNativeVolumeMonitor = CStruct1[GVolumeMonitor]
 object _GNativeVolumeMonitor:
@@ -10771,7 +10941,7 @@ object _GNativeVolumeMonitor:
     def parent_instance_=(value: GVolumeMonitor): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnativevolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnativevolumemonitor.h
 */
 opaque type _GNativeVolumeMonitorClass = CStruct2[GVolumeMonitorClass, CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]]
 object _GNativeVolumeMonitorClass:
@@ -10789,7 +10959,7 @@ object _GNativeVolumeMonitorClass:
     def get_mount_for_mount_path_=(value: CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkaddress.h
 */
 opaque type _GNetworkAddress = CStruct2[_root_.gobject.all.GObject, Ptr[GNetworkAddressPrivate]]
 object _GNetworkAddress:
@@ -10807,7 +10977,7 @@ object _GNetworkAddress:
     def priv_=(value: Ptr[GNetworkAddressPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkaddress.h
 */
 opaque type _GNetworkAddressClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GNetworkAddressClass:
@@ -10822,21 +10992,21 @@ object _GNetworkAddressClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkaddress.h
 */
 opaque type _GNetworkAddressPrivate = CStruct0
 object _GNetworkAddressPrivate:
   given _tag: Tag[_GNetworkAddressPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GNetworkMonitor = CStruct0
 object _GNetworkMonitor:
   given _tag: Tag[_GNetworkMonitor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkmonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkmonitor.h
 */
 opaque type _GNetworkMonitorInterface = CStruct5[_root_.gobject.all.GTypeInterface, CFuncPtr2[Ptr[GNetworkMonitor], _root_.glib.all.gboolean, Unit], CFuncPtr4[Ptr[GNetworkMonitor], Ptr[GSocketConnectable], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GNetworkMonitor], Ptr[GSocketConnectable], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GNetworkMonitorInterface:
@@ -10863,7 +11033,7 @@ object _GNetworkMonitorInterface:
     def can_reach_finish_=(value: CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkservice.h
 */
 opaque type _GNetworkService = CStruct2[_root_.gobject.all.GObject, Ptr[GNetworkServicePrivate]]
 object _GNetworkService:
@@ -10881,7 +11051,7 @@ object _GNetworkService:
     def priv_=(value: Ptr[GNetworkServicePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkservice.h
 */
 opaque type _GNetworkServiceClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GNetworkServiceClass:
@@ -10896,21 +11066,21 @@ object _GNetworkServiceClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gnetworkservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gnetworkservice.h
 */
 opaque type _GNetworkServicePrivate = CStruct0
 object _GNetworkServicePrivate:
   given _tag: Tag[_GNetworkServicePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GNotification = CStruct0
 object _GNotification:
   given _tag: Tag[_GNotification] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GOutputMessage = CStruct6[Ptr[GSocketAddress], Ptr[GOutputVector], _root_.glib.all.guint, _root_.glib.all.guint, Ptr[Ptr[GSocketControlMessage]], _root_.glib.all.guint]
 object _GOutputMessage:
@@ -10940,7 +11110,7 @@ object _GOutputMessage:
     def num_control_messages_=(value: _root_.glib.all.guint): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/goutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/goutputstream.h
 */
 opaque type _GOutputStream = CStruct2[_root_.gobject.all.GObject, Ptr[GOutputStreamPrivate]]
 object _GOutputStream:
@@ -10958,7 +11128,7 @@ object _GOutputStream:
     def priv_=(value: Ptr[GOutputStreamPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/goutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/goutputstream.h
 */
 opaque type _GOutputStreamClass = CStruct21[_root_.gobject.all.GObjectClass, CFuncPtr5[Ptr[GOutputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr5[Ptr[GOutputStream], Ptr[GInputStream], GOutputStreamSpliceFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr3[Ptr[GOutputStream], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GOutputStream], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr7[Ptr[GOutputStream], Ptr[Byte], _root_.glib.all.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr7[Ptr[GOutputStream], Ptr[GInputStream], GOutputStreamSpliceFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr5[Ptr[GOutputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GOutputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr6[Ptr[GOutputStream], Ptr[GOutputVector], _root_.glib.all.gsize, Ptr[_root_.glib.all.gsize], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr7[Ptr[GOutputStream], Ptr[GOutputVector], _root_.glib.all.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr4[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[_root_.glib.all.gsize], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GOutputStreamClass:
@@ -11033,14 +11203,14 @@ object _GOutputStreamClass:
     def _g_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at21 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/goutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/goutputstream.h
 */
 opaque type _GOutputStreamPrivate = CStruct0
 object _GOutputStreamPrivate:
   given _tag: Tag[_GOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GOutputVector = CStruct2[_root_.glib.all.gconstpointer, _root_.glib.all.gsize]
 object _GOutputVector:
@@ -11058,7 +11228,7 @@ object _GOutputVector:
     def size_=(value: _root_.glib.all.gsize): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpermission.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpermission.h
 */
 opaque type _GPermission = CStruct2[_root_.gobject.all.GObject, Ptr[GPermissionPrivate]]
 object _GPermission:
@@ -11076,7 +11246,7 @@ object _GPermission:
     def priv_=(value: Ptr[GPermissionPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpermission.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpermission.h
 */
 opaque type _GPermissionClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GPermission], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GPermission], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GPermission], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GPermission], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GPermission], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GPermission], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
 object _GPermissionClass:
@@ -11112,14 +11282,14 @@ object _GPermissionClass:
     def reserved_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpermission.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpermission.h
 */
 opaque type _GPermissionPrivate = CStruct0
 object _GPermissionPrivate:
   given _tag: Tag[_GPermissionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GPollableInputStream = CStruct0
 object _GPollableInputStream:
@@ -11128,7 +11298,7 @@ object _GPollableInputStream:
 /**
  * GPollableInputStreamInterface: _iface: The parent interface. _poll: Checks if the #GPollableInputStream instance is actually pollable _source: Creates a #GSource to poll the stream _nonblocking: Does a non-blocking read or returns %G_IO_ERROR_WOULD_BLOCK
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gpollableinputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpollableinputstream.h
 */
 opaque type _GPollableInputStreamInterface = CStruct5[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GPollableInputStream], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GPollableInputStream], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GPollableInputStream], Ptr[GCancellable], Ptr[Byte]], CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize]]
 object _GPollableInputStreamInterface:
@@ -11155,7 +11325,7 @@ object _GPollableInputStreamInterface:
     def read_nonblocking_=(value: CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GPollableOutputStream = CStruct0
 object _GPollableOutputStream:
@@ -11164,7 +11334,7 @@ object _GPollableOutputStream:
 /**
  * GPollableOutputStreamInterface: _iface: The parent interface. _poll: Checks if the #GPollableOutputStream instance is actually pollable _source: Creates a #GSource to poll the stream _nonblocking: Does a non-blocking write or returns %G_IO_ERROR_WOULD_BLOCK _nonblocking: Does a vectored non-blocking write, or returns %G_POLLABLE_RETURN_WOULD_BLOCK
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gpollableoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpollableoutputstream.h
 */
 opaque type _GPollableOutputStreamInterface = CStruct6[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GPollableOutputStream], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GPollableOutputStream], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GPollableOutputStream], Ptr[GCancellable], Ptr[Byte]], CFuncPtr4[Ptr[GPollableOutputStream], Ptr[Byte], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gssize], CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.glib.all.gsize, Ptr[_root_.glib.all.gsize], Ptr[Ptr[_root_.glib.all.GError]], GPollableReturn]]
 object _GPollableOutputStreamInterface:
@@ -11194,14 +11364,14 @@ object _GPollableOutputStreamInterface:
     def writev_nonblocking_=(value: CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.glib.all.gsize, Ptr[_root_.glib.all.gsize], Ptr[Ptr[_root_.glib.all.GError]], GPollableReturn]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type _GPowerProfileMonitor = CStruct0
 object _GPowerProfileMonitor:
   given _tag: Tag[_GPowerProfileMonitor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type _GPowerProfileMonitorInterface = CStruct1[_root_.gobject.all.GTypeInterface]
 object _GPowerProfileMonitorInterface:
@@ -11216,21 +11386,21 @@ object _GPowerProfileMonitorInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GPropertyAction = CStruct0
 object _GPropertyAction:
   given _tag: Tag[_GPropertyAction] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GProxy = CStruct0
 object _GProxy:
   given _tag: Tag[_GProxy] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddress.h
 */
 opaque type _GProxyAddress = CStruct2[GInetSocketAddress, Ptr[GProxyAddressPrivate]]
 object _GProxyAddress:
@@ -11248,7 +11418,7 @@ object _GProxyAddress:
     def priv_=(value: Ptr[GProxyAddressPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddress.h
 */
 opaque type _GProxyAddressClass = CStruct1[GInetSocketAddressClass]
 object _GProxyAddressClass:
@@ -11263,7 +11433,7 @@ object _GProxyAddressClass:
     def parent_class_=(value: GInetSocketAddressClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddressenumerator.h
 */
 opaque type _GProxyAddressEnumerator = CStruct2[GSocketAddressEnumerator, Ptr[GProxyAddressEnumeratorPrivate]]
 object _GProxyAddressEnumerator:
@@ -11283,7 +11453,7 @@ object _GProxyAddressEnumerator:
 /**
  * GProxyAddressEnumeratorClass:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddressenumerator.h
 */
 opaque type _GProxyAddressEnumeratorClass = CStruct8[GSocketAddressEnumeratorClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GProxyAddressEnumeratorClass:
@@ -11319,14 +11489,14 @@ object _GProxyAddressEnumeratorClass:
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddressenumerator.h
 */
 opaque type _GProxyAddressEnumeratorPrivate = CStruct0
 object _GProxyAddressEnumeratorPrivate:
   given _tag: Tag[_GProxyAddressEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyaddress.h
 */
 opaque type _GProxyAddressPrivate = CStruct0
 object _GProxyAddressPrivate:
@@ -11335,7 +11505,7 @@ object _GProxyAddressPrivate:
 /**
  * GProxyInterface: _iface: The parent interface. : Connect to proxy server and wrap (if required) the #connection to handle payload. _async: Same as connect() but asynchronous. _finish: Returns the result of connect_async() _hostname: Returns whether the proxy supports hostname lookups.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxy.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxy.h
 */
 opaque type _GProxyInterface = CStruct5[_root_.gobject.all.GTypeInterface, CFuncPtr5[Ptr[GProxy], Ptr[GIOStream], Ptr[GProxyAddress], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GIOStream]], CFuncPtr6[Ptr[GProxy], Ptr[GIOStream], Ptr[GProxyAddress], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GProxy], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GIOStream]], CFuncPtr1[Ptr[GProxy], _root_.glib.all.gboolean]]
 object _GProxyInterface:
@@ -11362,14 +11532,14 @@ object _GProxyInterface:
     def supports_hostname_=(value: CFuncPtr1[Ptr[GProxy], _root_.glib.all.gboolean]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GProxyResolver = CStruct0
 object _GProxyResolver:
   given _tag: Tag[_GProxyResolver] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gproxyresolver.h
 */
 opaque type _GProxyResolverInterface = CStruct5[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GProxyResolver], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GProxyResolver], Ptr[_root_.glib.all.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Ptr[_root_.glib.all.gchar]]], CFuncPtr5[Ptr[GProxyResolver], Ptr[_root_.glib.all.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Ptr[_root_.glib.all.gchar]]]]
 object _GProxyResolverInterface:
@@ -11396,14 +11566,14 @@ object _GProxyResolverInterface:
     def lookup_finish_=(value: CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Ptr[_root_.glib.all.gchar]]]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GRemoteActionGroup = CStruct0
 object _GRemoteActionGroup:
   given _tag: Tag[_GRemoteActionGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gremoteactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gremoteactiongroup.h
 */
 opaque type _GRemoteActionGroupInterface = CStruct3[_root_.gobject.all.GTypeInterface, CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.GVariant], Unit], CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.GVariant], Unit]]
 object _GRemoteActionGroupInterface:
@@ -11424,7 +11594,7 @@ object _GRemoteActionGroupInterface:
     def change_action_state_full_=(value: CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.GVariant], Unit]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresolver.h
 */
 opaque type _GResolver = CStruct2[_root_.gobject.all.GObject, Ptr[GResolverPrivate]]
 object _GResolver:
@@ -11442,7 +11612,7 @@ object _GResolver:
     def priv_=(value: Ptr[GResolverPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresolver.h
 */
 opaque type _GResolverClass = CStruct17[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GResolver], Unit], CFuncPtr4[Ptr[GResolver], Ptr[_root_.glib.all.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr4[Ptr[GResolver], Ptr[GInetAddress], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[_root_.glib.all.gchar]], CFuncPtr5[Ptr[GResolver], Ptr[GInetAddress], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[_root_.glib.all.gchar]], CFuncPtr4[Ptr[GResolver], Ptr[_root_.glib.all.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverRecordType, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr6[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverRecordType, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr6[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverNameLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]]]
 object _GResolverClass:
@@ -11505,21 +11675,21 @@ object _GResolverClass:
     def lookup_by_name_with_flags_=(value: CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[_root_.glib.all.GList]]): Unit = !struct.at17 = value.asInstanceOf[CFuncPtr5[Ptr[GResolver], Ptr[_root_.glib.all.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresolver.h
 */
 opaque type _GResolverPrivate = CStruct0
 object _GResolverPrivate:
   given _tag: Tag[_GResolverPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GResource = CStruct0
 object _GResource:
   given _tag: Tag[_GResource] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSeekable = CStruct0
 object _GSeekable:
@@ -11528,7 +11698,7 @@ object _GSeekable:
 /**
  * GSeekableIface: _iface: The parent interface. : Tells the current location within a stream. _seek: Checks if seeking is supported by the stream.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gseekable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gseekable.h
 */
 opaque type _GSeekableIface = CStruct6[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GSeekable], _root_.glib.all.goffset], CFuncPtr1[Ptr[GSeekable], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GSeekable], _root_.glib.all.goffset, _root_.glib.all.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GSeekable], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GSeekable], _root_.glib.all.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GSeekableIface:
@@ -11558,7 +11728,7 @@ object _GSeekableIface:
     def truncate_fn_=(value: CFuncPtr4[Ptr[GSeekable], _root_.glib.all.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type _GSettings = CStruct2[_root_.gobject.all.GObject, Ptr[GSettingsPrivate]]
 object _GSettings:
@@ -11576,14 +11746,14 @@ object _GSettings:
     def priv_=(value: Ptr[GSettingsPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSettingsBackend = CStruct0
 object _GSettingsBackend:
   given _tag: Tag[_GSettingsBackend] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type _GSettingsClass = CStruct6[_root_.gobject.all.GObjectClass, CFuncPtr2[Ptr[GSettings], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr2[Ptr[GSettings], Ptr[_root_.glib.all.gchar], Unit], CFuncPtr2[Ptr[GSettings], _root_.glib.all.GQuark, _root_.glib.all.gboolean], CFuncPtr3[Ptr[GSettings], Ptr[_root_.glib.all.GQuark], _root_.glib.all.gint, _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._0]]]
 object _GSettingsClass:
@@ -11613,35 +11783,35 @@ object _GSettingsClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._0]]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type _GSettingsPrivate = CStruct0
 object _GSettingsPrivate:
   given _tag: Tag[_GSettingsPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettingsschema.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettingsschema.h
 */
 opaque type _GSettingsSchema = CStruct0
 object _GSettingsSchema:
   given _tag: Tag[_GSettingsSchema] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettingsschema.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettingsschema.h
 */
 opaque type _GSettingsSchemaKey = CStruct0
 object _GSettingsSchemaKey:
   given _tag: Tag[_GSettingsSchemaKey] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettingsschema.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettingsschema.h
 */
 opaque type _GSettingsSchemaSource = CStruct0
 object _GSettingsSchemaSource:
   given _tag: Tag[_GSettingsSchemaSource] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSimpleAction = CStruct0
 object _GSimpleAction:
@@ -11650,7 +11820,7 @@ object _GSimpleAction:
 /**
  * GSimpleActionGroup:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleactiongroup.h
 */
 opaque type _GSimpleActionGroup = CStruct2[_root_.gobject.all.GObject, Ptr[GSimpleActionGroupPrivate]]
 object _GSimpleActionGroup:
@@ -11668,7 +11838,7 @@ object _GSimpleActionGroup:
     def priv_=(value: Ptr[GSimpleActionGroupPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleactiongroup.h
 */
 opaque type _GSimpleActionGroupClass = CStruct2[_root_.gobject.all.GObjectClass, CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
 object _GSimpleActionGroupClass:
@@ -11686,42 +11856,42 @@ object _GSimpleActionGroupClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._2]]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleactiongroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleactiongroup.h
 */
 opaque type _GSimpleActionGroupPrivate = CStruct0
 object _GSimpleActionGroupPrivate:
   given _tag: Tag[_GSimpleActionGroupPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSimpleAsyncResult = CStruct0
 object _GSimpleAsyncResult:
   given _tag: Tag[_GSimpleAsyncResult] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleasyncresult.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleasyncresult.h
 */
 opaque type _GSimpleAsyncResultClass = CStruct0
 object _GSimpleAsyncResultClass:
   given _tag: Tag[_GSimpleAsyncResultClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSimpleIOStream = CStruct0
 object _GSimpleIOStream:
   given _tag: Tag[_GSimpleIOStream] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSimplePermission = CStruct0
 object _GSimplePermission:
   given _tag: Tag[_GSimplePermission] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleproxyresolver.h
 */
 opaque type _GSimpleProxyResolver = CStruct2[_root_.gobject.all.GObject, Ptr[GSimpleProxyResolverPrivate]]
 object _GSimpleProxyResolver:
@@ -11739,7 +11909,7 @@ object _GSimpleProxyResolver:
     def priv_=(value: Ptr[GSimpleProxyResolverPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleproxyresolver.h
 */
 opaque type _GSimpleProxyResolverClass = CStruct6[_root_.gobject.all.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSimpleProxyResolverClass:
@@ -11769,14 +11939,14 @@ object _GSimpleProxyResolverClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsimpleproxyresolver.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsimpleproxyresolver.h
 */
 opaque type _GSimpleProxyResolverPrivate = CStruct0
 object _GSimpleProxyResolverPrivate:
   given _tag: Tag[_GSimpleProxyResolverPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocket.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocket.h
 */
 opaque type _GSocket = CStruct2[_root_.gobject.all.GObject, Ptr[GSocketPrivate]]
 object _GSocket:
@@ -11794,7 +11964,7 @@ object _GSocket:
     def priv_=(value: Ptr[GSocketPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddress.h
 */
 opaque type _GSocketAddress = CStruct1[_root_.gobject.all.GObject]
 object _GSocketAddress:
@@ -11809,7 +11979,7 @@ object _GSocketAddress:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddress.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddress.h
 */
 opaque type _GSocketAddressClass = CStruct4[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GSocketAddress], GSocketFamily], CFuncPtr1[Ptr[GSocketAddress], _root_.glib.all.gssize], CFuncPtr4[Ptr[GSocketAddress], _root_.glib.all.gpointer, _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]]
 object _GSocketAddressClass:
@@ -11833,7 +12003,7 @@ object _GSocketAddressClass:
     def to_native_=(value: CFuncPtr4[Ptr[GSocketAddress], _root_.glib.all.gpointer, _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddressenumerator.h
 */
 opaque type _GSocketAddressEnumerator = CStruct1[_root_.gobject.all.GObject]
 object _GSocketAddressEnumerator:
@@ -11850,7 +12020,7 @@ object _GSocketAddressEnumerator:
 /**
  * GSocketAddressEnumeratorClass: : Virtual method for g_socket_address_enumerator_next(). _async: Virtual method for g_socket_address_enumerator_next_async(). _finish: Virtual method for g_socket_address_enumerator_next_finish().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketaddressenumerator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketaddressenumerator.h
 */
 opaque type _GSocketAddressEnumeratorClass = CStruct4[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GSocketAddress]], CFuncPtr4[Ptr[GSocketAddressEnumerator], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GSocketAddress]]]
 object _GSocketAddressEnumeratorClass:
@@ -11874,7 +12044,7 @@ object _GSocketAddressEnumeratorClass:
     def next_finish_=(value: CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GSocketAddress]]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocket.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocket.h
 */
 opaque type _GSocketClass = CStruct11[_root_.gobject.all.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketClass:
@@ -11919,7 +12089,7 @@ object _GSocketClass:
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketclient.h
 */
 opaque type _GSocketClient = CStruct2[_root_.gobject.all.GObject, Ptr[GSocketClientPrivate]]
 object _GSocketClient:
@@ -11937,7 +12107,7 @@ object _GSocketClient:
     def priv_=(value: Ptr[GSocketClientPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketclient.h
 */
 opaque type _GSocketClientClass = CStruct6[_root_.gobject.all.GObjectClass, CFuncPtr4[Ptr[GSocketClient], GSocketClientEvent, Ptr[GSocketConnectable], Ptr[GIOStream], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketClientClass:
@@ -11967,14 +12137,14 @@ object _GSocketClientClass:
     def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketclient.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketclient.h
 */
 opaque type _GSocketClientPrivate = CStruct0
 object _GSocketClientPrivate:
   given _tag: Tag[_GSocketClientPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSocketConnectable = CStruct0
 object _GSocketConnectable:
@@ -11983,7 +12153,7 @@ object _GSocketConnectable:
 /**
  * GSocketConnectableIface: _iface: The parent interface. : Creates a #GSocketAddressEnumerator _enumerate: Creates a #GProxyAddressEnumerator _string: Format the connectable’s address as a string for debugging. Implementing this is optional. (Since: 2.48)
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnectable.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnectable.h
 */
 opaque type _GSocketConnectableIface = CStruct4[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GSocketConnectable], Ptr[GSocketAddressEnumerator]], CFuncPtr1[Ptr[GSocketConnectable], Ptr[GSocketAddressEnumerator]], CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.glib.all.gchar]]]
 object _GSocketConnectableIface:
@@ -12007,7 +12177,7 @@ object _GSocketConnectableIface:
     def to_string_=(value: CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.glib.all.gchar]]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnection.h
 */
 opaque type _GSocketConnection = CStruct2[GIOStream, Ptr[GSocketConnectionPrivate]]
 object _GSocketConnection:
@@ -12025,7 +12195,7 @@ object _GSocketConnection:
     def priv_=(value: Ptr[GSocketConnectionPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnection.h
 */
 opaque type _GSocketConnectionClass = CStruct7[GIOStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketConnectionClass:
@@ -12058,14 +12228,14 @@ object _GSocketConnectionClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketconnection.h
 */
 opaque type _GSocketConnectionPrivate = CStruct0
 object _GSocketConnectionPrivate:
   given _tag: Tag[_GSocketConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketcontrolmessage.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketcontrolmessage.h
 */
 opaque type _GSocketControlMessage = CStruct2[_root_.gobject.all.GObject, Ptr[GSocketControlMessagePrivate]]
 object _GSocketControlMessage:
@@ -12085,7 +12255,7 @@ object _GSocketControlMessage:
 /**
  * GSocketControlMessageClass: _size: gets the size of the message. _level: gets the protocol of the message. _type: gets the protocol specific type of the message. : Writes out the message data. : Tries to deserialize a message.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketcontrolmessage.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketcontrolmessage.h
 */
 opaque type _GSocketControlMessageClass = CStruct11[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GSocketControlMessage], _root_.glib.all.gsize], CFuncPtr1[Ptr[GSocketControlMessage], CInt], CFuncPtr1[Ptr[GSocketControlMessage], CInt], CFuncPtr2[Ptr[GSocketControlMessage], _root_.glib.all.gpointer, Unit], CFuncPtr4[CInt, CInt, _root_.glib.all.gsize, _root_.glib.all.gpointer, Ptr[GSocketControlMessage]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketControlMessageClass:
@@ -12130,14 +12300,14 @@ object _GSocketControlMessageClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketcontrolmessage.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketcontrolmessage.h
 */
 opaque type _GSocketControlMessagePrivate = CStruct0
 object _GSocketControlMessagePrivate:
   given _tag: Tag[_GSocketControlMessagePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketlistener.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketlistener.h
 */
 opaque type _GSocketListener = CStruct2[_root_.gobject.all.GObject, Ptr[GSocketListenerPrivate]]
 object _GSocketListener:
@@ -12157,7 +12327,7 @@ object _GSocketListener:
 /**
  * GSocketListenerClass: : virtual method called when the set of socket listened to changes
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketlistener.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketlistener.h
 */
 opaque type _GSocketListenerClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GSocketListener], Unit], CFuncPtr3[Ptr[GSocketListener], GSocketListenerEvent, Ptr[GSocket], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketListenerClass:
@@ -12193,21 +12363,21 @@ object _GSocketListenerClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketlistener.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketlistener.h
 */
 opaque type _GSocketListenerPrivate = CStruct0
 object _GSocketListenerPrivate:
   given _tag: Tag[_GSocketListenerPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocket.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocket.h
 */
 opaque type _GSocketPrivate = CStruct0
 object _GSocketPrivate:
   given _tag: Tag[_GSocketPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketservice.h
 */
 opaque type _GSocketService = CStruct2[GSocketListener, Ptr[GSocketServicePrivate]]
 object _GSocketService:
@@ -12227,7 +12397,7 @@ object _GSocketService:
 /**
  * GSocketServiceClass: : signal emitted when new connections are accepted
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketservice.h
 */
 opaque type _GSocketServiceClass = CStruct8[GSocketListenerClass, CFuncPtr3[Ptr[GSocketService], Ptr[GSocketConnection], Ptr[_root_.gobject.all.GObject], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketServiceClass:
@@ -12263,21 +12433,21 @@ object _GSocketServiceClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsocketservice.h
 */
 opaque type _GSocketServicePrivate = CStruct0
 object _GSocketServicePrivate:
   given _tag: Tag[_GSocketServicePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSrvTarget = CStruct0
 object _GSrvTarget:
   given _tag: Tag[_GSrvTarget] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gresource.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gresource.h
 */
 opaque type _GStaticResource = CStruct5[Ptr[_root_.glib.all.guint8], _root_.glib.all.gsize, Ptr[GResource], Ptr[Byte], _root_.glib.all.gpointer]
 object _GStaticResource:
@@ -12304,35 +12474,35 @@ object _GStaticResource:
     def padding_=(value: _root_.glib.all.gpointer): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSubprocess = CStruct0
 object _GSubprocess:
   given _tag: Tag[_GSubprocess] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GSubprocessLauncher = CStruct0
 object _GSubprocessLauncher:
   given _tag: Tag[_GSubprocessLauncher] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GTask = CStruct0
 object _GTask:
   given _tag: Tag[_GTask] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtask.h
 */
 opaque type _GTaskClass = CStruct0
 object _GTaskClass:
   given _tag: Tag[_GTaskClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpconnection.h
 */
 opaque type _GTcpConnection = CStruct2[GSocketConnection, Ptr[GTcpConnectionPrivate]]
 object _GTcpConnection:
@@ -12350,7 +12520,7 @@ object _GTcpConnection:
     def priv_=(value: Ptr[GTcpConnectionPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpconnection.h
 */
 opaque type _GTcpConnectionClass = CStruct1[GSocketConnectionClass]
 object _GTcpConnectionClass:
@@ -12365,14 +12535,14 @@ object _GTcpConnectionClass:
     def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpconnection.h
 */
 opaque type _GTcpConnectionPrivate = CStruct0
 object _GTcpConnectionPrivate:
   given _tag: Tag[_GTcpConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpwrapperconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpwrapperconnection.h
 */
 opaque type _GTcpWrapperConnection = CStruct2[GTcpConnection, Ptr[GTcpWrapperConnectionPrivate]]
 object _GTcpWrapperConnection:
@@ -12390,7 +12560,7 @@ object _GTcpWrapperConnection:
     def priv_=(value: Ptr[GTcpWrapperConnectionPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpwrapperconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpwrapperconnection.h
 */
 opaque type _GTcpWrapperConnectionClass = CStruct1[GTcpConnectionClass]
 object _GTcpWrapperConnectionClass:
@@ -12405,35 +12575,35 @@ object _GTcpWrapperConnectionClass:
     def parent_class_=(value: GTcpConnectionClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtcpwrapperconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtcpwrapperconnection.h
 */
 opaque type _GTcpWrapperConnectionPrivate = CStruct0
 object _GTcpWrapperConnectionPrivate:
   given _tag: Tag[_GTcpWrapperConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GTestDBus = CStruct0
 object _GTestDBus:
   given _tag: Tag[_GTestDBus] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GThemedIcon = CStruct0
 object _GThemedIcon:
   given _tag: Tag[_GThemedIcon] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthemedicon.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthemedicon.h
 */
 opaque type _GThemedIconClass = CStruct0
 object _GThemedIconClass:
   given _tag: Tag[_GThemedIconClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthreadedsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthreadedsocketservice.h
 */
 opaque type _GThreadedSocketService = CStruct2[GSocketService, Ptr[GThreadedSocketServicePrivate]]
 object _GThreadedSocketService:
@@ -12451,7 +12621,7 @@ object _GThreadedSocketService:
     def priv_=(value: Ptr[GThreadedSocketServicePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthreadedsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthreadedsocketservice.h
 */
 opaque type _GThreadedSocketServiceClass = CStruct7[GSocketServiceClass, CFuncPtr3[Ptr[GThreadedSocketService], Ptr[GSocketConnection], Ptr[_root_.gobject.all.GObject], _root_.glib.all.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GThreadedSocketServiceClass:
@@ -12484,14 +12654,14 @@ object _GThreadedSocketServiceClass:
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gthreadedsocketservice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gthreadedsocketservice.h
 */
 opaque type _GThreadedSocketServicePrivate = CStruct0
 object _GThreadedSocketServicePrivate:
   given _tag: Tag[_GThreadedSocketServicePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsbackend.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsbackend.h
 */
 opaque type _GTlsBackend = CStruct0
 object _GTlsBackend:
@@ -12500,7 +12670,7 @@ object _GTlsBackend:
 /**
  * GTlsBackendInterface: _iface: The parent interface. _tls: returns whether the backend supports TLS. _dtls: returns whether the backend supports DTLS _default_database: returns a default #GTlsDatabase instance. _certificate_type: returns the #GTlsCertificate implementation type _client_connection_type: returns the #GTlsClientConnection implementation type _server_connection_type: returns the #GTlsServerConnection implementation type _file_database_type: returns the #GTlsFileDatabase implementation type. _dtls_client_connection_type: returns the #GDtlsClientConnection implementation type _dtls_server_connection_type: returns the #GDtlsServerConnection implementation type
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsbackend.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsbackend.h
 */
 opaque type _GTlsBackendInterface = CStruct10[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GTlsBackend], _root_.glib.all.gboolean], CFuncPtr0[_root_.gobject.all.GType], CFuncPtr0[_root_.gobject.all.GType], CFuncPtr0[_root_.gobject.all.GType], CFuncPtr0[_root_.gobject.all.GType], CFuncPtr1[Ptr[GTlsBackend], Ptr[GTlsDatabase]], CFuncPtr1[Ptr[GTlsBackend], _root_.glib.all.gboolean], CFuncPtr0[_root_.gobject.all.GType], CFuncPtr0[_root_.gobject.all.GType]]
 object _GTlsBackendInterface:
@@ -12542,7 +12712,7 @@ object _GTlsBackendInterface:
     def get_dtls_server_connection_type_=(value: CFuncPtr0[_root_.gobject.all.GType]): Unit = !struct.at10 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlscertificate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlscertificate.h
 */
 opaque type _GTlsCertificate = CStruct2[_root_.gobject.all.GObject, Ptr[GTlsCertificatePrivate]]
 object _GTlsCertificate:
@@ -12560,7 +12730,7 @@ object _GTlsCertificate:
     def priv_=(value: Ptr[GTlsCertificatePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlscertificate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlscertificate.h
 */
 opaque type _GTlsCertificateClass = CStruct3[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GTlsCertificate], Ptr[GSocketConnectable], Ptr[GTlsCertificate], GTlsCertificateFlags], CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GTlsCertificateClass:
@@ -12581,14 +12751,14 @@ object _GTlsCertificateClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlscertificate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlscertificate.h
 */
 opaque type _GTlsCertificatePrivate = CStruct0
 object _GTlsCertificatePrivate:
   given _tag: Tag[_GTlsCertificatePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GTlsClientConnection = CStruct0
 object _GTlsClientConnection:
@@ -12597,7 +12767,7 @@ object _GTlsClientConnection:
 /**
  * GTlsClientConnectionInterface: _iface: The parent interface. _session_state: Copies session state from one #GTlsClientConnection to another.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsclientconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsclientconnection.h
 */
 opaque type _GTlsClientConnectionInterface = CStruct2[_root_.gobject.all.GTypeInterface, CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]]
 object _GTlsClientConnectionInterface:
@@ -12615,7 +12785,7 @@ object _GTlsClientConnectionInterface:
     def copy_session_state_=(value: CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsconnection.h
 */
 opaque type _GTlsConnection = CStruct2[GIOStream, Ptr[GTlsConnectionPrivate]]
 object _GTlsConnection:
@@ -12635,7 +12805,7 @@ object _GTlsConnection:
 /**
  * GTlsConnectionClass: _class: The parent class. _certificate: Check whether to accept a certificate. : Perform a handshake operation. _async: Start an asynchronous handshake operation. _finish: Finish an asynchronous handshake operation. _binding_data: Retrieve TLS channel binding data (Since: 2.66) _negotiated_protocol: Get ALPN-negotiated protocol (Since: 2.70)
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsconnection.h
 */
 opaque type _GTlsConnectionClass = CStruct8[GIOStreamClass, CFuncPtr3[Ptr[GTlsConnection], Ptr[GTlsCertificate], GTlsCertificateFlags, _root_.glib.all.gboolean], CFuncPtr3[Ptr[GTlsConnection], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GTlsConnection], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsConnection], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr4[Ptr[GTlsConnection], GTlsChannelBindingType, Ptr[_root_.glib.all.GByteArray], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GTlsConnection], Ptr[_root_.glib.all.gchar]], CArray[_root_.glib.all.gpointer, Nat._6]]
 object _GTlsConnectionClass:
@@ -12671,14 +12841,14 @@ object _GTlsConnectionClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._6]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsconnection.h
 */
 opaque type _GTlsConnectionPrivate = CStruct0
 object _GTlsConnectionPrivate:
   given _tag: Tag[_GTlsConnectionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsdatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsdatabase.h
 */
 opaque type _GTlsDatabase = CStruct2[_root_.gobject.all.GObject, Ptr[GTlsDatabasePrivate]]
 object _GTlsDatabase:
@@ -12696,7 +12866,7 @@ object _GTlsDatabase:
     def priv_=(value: Ptr[GTlsDatabasePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsdatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsdatabase.h
 */
 opaque type _GTlsDatabaseClass = CStruct15[_root_.gobject.all.GObjectClass, CFuncPtr8[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.glib.all.gchar], Ptr[GSocketConnectable], Ptr[GTlsInteraction], GTlsDatabaseVerifyFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], GTlsCertificateFlags], CFuncPtr9[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.glib.all.gchar], Ptr[GSocketConnectable], Ptr[GTlsInteraction], GTlsDatabaseVerifyFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], GTlsCertificateFlags], CFuncPtr2[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.glib.all.gchar]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[_root_.glib.all.gchar], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GTlsCertificate]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[_root_.glib.all.gchar], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GTlsCertificate]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GTlsCertificate]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[GTlsCertificate]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[_root_.glib.all.GByteArray], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[_root_.glib.all.GByteArray], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], Ptr[Byte]], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
 object _GTlsDatabaseClass:
@@ -12753,14 +12923,14 @@ object _GTlsDatabaseClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsdatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsdatabase.h
 */
 opaque type _GTlsDatabasePrivate = CStruct0
 object _GTlsDatabasePrivate:
   given _tag: Tag[_GTlsDatabasePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GTlsFileDatabase = CStruct0
 object _GTlsFileDatabase:
@@ -12769,7 +12939,7 @@ object _GTlsFileDatabase:
 /**
  * GTlsFileDatabaseInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsfiledatabase.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsfiledatabase.h
 */
 opaque type _GTlsFileDatabaseInterface = CStruct2[_root_.gobject.all.GTypeInterface, CArray[_root_.glib.all.gpointer, Nat._8]]
 object _GTlsFileDatabaseInterface:
@@ -12787,7 +12957,7 @@ object _GTlsFileDatabaseInterface:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._8]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsinteraction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsinteraction.h
 */
 opaque type _GTlsInteraction = CStruct2[_root_.gobject.all.GObject, Ptr[GTlsInteractionPrivate]]
 object _GTlsInteraction:
@@ -12805,7 +12975,7 @@ object _GTlsInteraction:
     def priv_=(value: Ptr[GTlsInteractionPrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsinteraction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsinteraction.h
 */
 opaque type _GTlsInteractionClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr4[Ptr[GTlsInteraction], Ptr[GTlsPassword], Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], GTlsInteractionResult], CFuncPtr5[Ptr[GTlsInteraction], Ptr[GTlsPassword], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsInteraction], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], GTlsInteractionResult], CFuncPtr5[Ptr[GTlsInteraction], Ptr[GTlsConnection], GTlsCertificateRequestFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], GTlsInteractionResult], CFuncPtr6[Ptr[GTlsInteraction], Ptr[GTlsConnection], GTlsCertificateRequestFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GTlsInteraction], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], GTlsInteractionResult], CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._1]]]
 object _GTlsInteractionClass:
@@ -12841,14 +13011,14 @@ object _GTlsInteractionClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat.Digit2[Nat._2, Nat._1]]): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsinteraction.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsinteraction.h
 */
 opaque type _GTlsInteractionPrivate = CStruct0
 object _GTlsInteractionPrivate:
   given _tag: Tag[_GTlsInteractionPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlspassword.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlspassword.h
 */
 opaque type _GTlsPassword = CStruct2[_root_.gobject.all.GObject, Ptr[GTlsPasswordPrivate]]
 object _GTlsPassword:
@@ -12868,7 +13038,7 @@ object _GTlsPassword:
 /**
  * GTlsPasswordClass: _value: virtual method for g_tls_password_get_value()
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlspassword.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlspassword.h
 */
 opaque type _GTlsPasswordClass = CStruct5[_root_.gobject.all.GObjectClass, CFuncPtr2[Ptr[GTlsPassword], Ptr[_root_.glib.all.gsize], Ptr[_root_.glib.all.guchar]], CFuncPtr4[Ptr[GTlsPassword], Ptr[_root_.glib.all.guchar], _root_.glib.all.gssize, _root_.glib.all.GDestroyNotify, Unit], CFuncPtr1[Ptr[GTlsPassword], Ptr[_root_.glib.all.gchar]], CArray[_root_.glib.all.gpointer, Nat._4]]
 object _GTlsPasswordClass:
@@ -12895,14 +13065,14 @@ object _GTlsPasswordClass:
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._4]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlspassword.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlspassword.h
 */
 opaque type _GTlsPasswordPrivate = CStruct0
 object _GTlsPasswordPrivate:
   given _tag: Tag[_GTlsPasswordPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GTlsServerConnection = CStruct0
 object _GTlsServerConnection:
@@ -12911,7 +13081,7 @@ object _GTlsServerConnection:
 /**
  * GTlsServerConnectionInterface: _iface: The parent interface.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gtlsserverconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtlsserverconnection.h
 */
 opaque type _GTlsServerConnectionInterface = CStruct1[_root_.gobject.all.GTypeInterface]
 object _GTlsServerConnectionInterface:
@@ -12926,21 +13096,192 @@ object _GTlsServerConnectionInterface:
     def g_iface_=(value: _root_.gobject.all.GTypeInterface): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
 */
-opaque type _GUnixCredentialsMessage = CStruct0
+opaque type _GUnixConnection = CStruct2[GSocketConnection, Ptr[GUnixConnectionPrivate]]
+object _GUnixConnection:
+  given _tag: Tag[_GUnixConnection] = Tag.materializeCStruct2Tag[GSocketConnection, Ptr[GUnixConnectionPrivate]]
+  def apply()(using Zone): Ptr[_GUnixConnection] = scala.scalanative.unsafe.alloc[_GUnixConnection](1)
+  def apply(parent_instance : GSocketConnection, priv : Ptr[GUnixConnectionPrivate])(using Zone): Ptr[_GUnixConnection] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixConnection)
+    def parent_instance : GSocketConnection = struct._1
+    def parent_instance_=(value: GSocketConnection): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixConnectionPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixConnectionPrivate]): Unit = !struct.at2 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type _GUnixConnectionClass = CStruct1[GSocketConnectionClass]
+object _GUnixConnectionClass:
+  given _tag: Tag[_GUnixConnectionClass] = Tag.materializeCStruct1Tag[GSocketConnectionClass]
+  def apply()(using Zone): Ptr[_GUnixConnectionClass] = scala.scalanative.unsafe.alloc[_GUnixConnectionClass](1)
+  def apply(parent_class : GSocketConnectionClass)(using Zone): Ptr[_GUnixConnectionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _GUnixConnectionClass)
+    def parent_class : GSocketConnectionClass = struct._1
+    def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type _GUnixConnectionPrivate = CStruct0
+object _GUnixConnectionPrivate:
+  given _tag: Tag[_GUnixConnectionPrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * GUnixCredentialsMessage:
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type _GUnixCredentialsMessage = CStruct2[GSocketControlMessage, Ptr[GUnixCredentialsMessagePrivate]]
 object _GUnixCredentialsMessage:
-  given _tag: Tag[_GUnixCredentialsMessage] = Tag.materializeCStruct0Tag
+  given _tag: Tag[_GUnixCredentialsMessage] = Tag.materializeCStruct2Tag[GSocketControlMessage, Ptr[GUnixCredentialsMessagePrivate]]
+  def apply()(using Zone): Ptr[_GUnixCredentialsMessage] = scala.scalanative.unsafe.alloc[_GUnixCredentialsMessage](1)
+  def apply(parent_instance : GSocketControlMessage, priv : Ptr[GUnixCredentialsMessagePrivate])(using Zone): Ptr[_GUnixCredentialsMessage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixCredentialsMessage)
+    def parent_instance : GSocketControlMessage = struct._1
+    def parent_instance_=(value: GSocketControlMessage): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixCredentialsMessagePrivate] = struct._2
+    def priv_=(value: Ptr[GUnixCredentialsMessagePrivate]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * GUnixCredentialsMessageClass:
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
 */
-opaque type _GUnixFDList = CStruct0
-object _GUnixFDList:
-  given _tag: Tag[_GUnixFDList] = Tag.materializeCStruct0Tag
+opaque type _GUnixCredentialsMessageClass = CStruct3[GSocketControlMessageClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
+object _GUnixCredentialsMessageClass:
+  given _tag: Tag[_GUnixCredentialsMessageClass] = Tag.materializeCStruct3Tag[GSocketControlMessageClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  def apply()(using Zone): Ptr[_GUnixCredentialsMessageClass] = scala.scalanative.unsafe.alloc[_GUnixCredentialsMessageClass](1)
+  def apply(parent_class : GSocketControlMessageClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[_GUnixCredentialsMessageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    ____ptr
+  extension (struct: _GUnixCredentialsMessageClass)
+    def parent_class : GSocketControlMessageClass = struct._1
+    def parent_class_=(value: GSocketControlMessageClass): Unit = !struct.at1 = value
+    def _g_reserved1 : CFuncPtr0[Unit] = struct._2
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at2 = value
+    def _g_reserved2 : CFuncPtr0[Unit] = struct._3
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvfs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type _GUnixCredentialsMessagePrivate = CStruct0
+object _GUnixCredentialsMessagePrivate:
+  given _tag: Tag[_GUnixCredentialsMessagePrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type _GUnixFDList = CStruct2[_root_.gobject.all.GObject, Ptr[GUnixFDListPrivate]]
+object _GUnixFDList:
+  given _tag: Tag[_GUnixFDList] = Tag.materializeCStruct2Tag[_root_.gobject.all.GObject, Ptr[GUnixFDListPrivate]]
+  def apply()(using Zone): Ptr[_GUnixFDList] = scala.scalanative.unsafe.alloc[_GUnixFDList](1)
+  def apply(parent_instance : _root_.gobject.all.GObject, priv : Ptr[GUnixFDListPrivate])(using Zone): Ptr[_GUnixFDList] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixFDList)
+    def parent_instance : _root_.gobject.all.GObject = struct._1
+    def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixFDListPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixFDListPrivate]): Unit = !struct.at2 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type _GUnixFDListClass = CStruct6[_root_.gobject.all.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+object _GUnixFDListClass:
+  given _tag: Tag[_GUnixFDListClass] = Tag.materializeCStruct6Tag[_root_.gobject.all.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  def apply()(using Zone): Ptr[_GUnixFDListClass] = scala.scalanative.unsafe.alloc[_GUnixFDListClass](1)
+  def apply(parent_class : _root_.gobject.all.GObjectClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit], _g_reserved3 : CFuncPtr0[Unit], _g_reserved4 : CFuncPtr0[Unit], _g_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[_GUnixFDListClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    (!____ptr)._g_reserved3 = _g_reserved3
+    (!____ptr)._g_reserved4 = _g_reserved4
+    (!____ptr)._g_reserved5 = _g_reserved5
+    ____ptr
+  extension (struct: _GUnixFDListClass)
+    def parent_class : _root_.gobject.all.GObjectClass = struct._1
+    def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
+    def _g_reserved1 : CFuncPtr0[Unit] = struct._2
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at2 = value
+    def _g_reserved2 : CFuncPtr0[Unit] = struct._3
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
+    def _g_reserved3 : CFuncPtr0[Unit] = struct._4
+    def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
+    def _g_reserved4 : CFuncPtr0[Unit] = struct._5
+    def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
+    def _g_reserved5 : CFuncPtr0[Unit] = struct._6
+    def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type _GUnixFDListPrivate = CStruct0
+object _GUnixFDListPrivate:
+  given _tag: Tag[_GUnixFDListPrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type _GUnixSocketAddress = CStruct2[GSocketAddress, Ptr[GUnixSocketAddressPrivate]]
+object _GUnixSocketAddress:
+  given _tag: Tag[_GUnixSocketAddress] = Tag.materializeCStruct2Tag[GSocketAddress, Ptr[GUnixSocketAddressPrivate]]
+  def apply()(using Zone): Ptr[_GUnixSocketAddress] = scala.scalanative.unsafe.alloc[_GUnixSocketAddress](1)
+  def apply(parent_instance : GSocketAddress, priv : Ptr[GUnixSocketAddressPrivate])(using Zone): Ptr[_GUnixSocketAddress] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixSocketAddress)
+    def parent_instance : GSocketAddress = struct._1
+    def parent_instance_=(value: GSocketAddress): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixSocketAddressPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixSocketAddressPrivate]): Unit = !struct.at2 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type _GUnixSocketAddressClass = CStruct1[GSocketAddressClass]
+object _GUnixSocketAddressClass:
+  given _tag: Tag[_GUnixSocketAddressClass] = Tag.materializeCStruct1Tag[GSocketAddressClass]
+  def apply()(using Zone): Ptr[_GUnixSocketAddressClass] = scala.scalanative.unsafe.alloc[_GUnixSocketAddressClass](1)
+  def apply(parent_class : GSocketAddressClass)(using Zone): Ptr[_GUnixSocketAddressClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _GUnixSocketAddressClass)
+    def parent_class : GSocketAddressClass = struct._1
+    def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type _GUnixSocketAddressPrivate = CStruct0
+object _GUnixSocketAddressPrivate:
+  given _tag: Tag[_GUnixSocketAddressPrivate] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvfs.h
 */
 opaque type _GVfs = CStruct1[_root_.gobject.all.GObject]
 object _GVfs:
@@ -12955,7 +13296,7 @@ object _GVfs:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvfs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvfs.h
 */
 opaque type _GVfsClass = CStruct18[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[GVfs], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr1[Ptr[GVfs], Ptr[Ptr[_root_.glib.all.gchar]]], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr8[Ptr[GVfs], CString, _root_.glib.all.guint64, Ptr[GFileAttributeMatcher], Ptr[GFileInfo], Ptr[GCancellable], Ptr[_root_.glib.all.gpointer], Ptr[_root_.glib.all.GDestroyNotify], Unit], CFuncPtr2[Ptr[GVfs], Ptr[GFileAttributeInfoList], Unit], CFuncPtr6[Ptr[GVfs], CString, Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GVfs], CString, Unit], CFuncPtr3[Ptr[GVfs], CString, CString, Unit], CFuncPtr2[Ptr[GVfs], Ptr[_root_.glib.all.GVariant], Ptr[GIcon]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GVfsClass:
@@ -13021,14 +13362,14 @@ object _GVfsClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at18 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GVolume = CStruct0
 object _GVolume:
   given _tag: Tag[_GVolume] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvolume.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvolume.h
 */
 opaque type _GVolumeIface = CStruct22[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[GVolume], Unit], CFuncPtr1[Ptr[GVolume], Unit], CFuncPtr1[Ptr[GVolume], CString], CFuncPtr1[Ptr[GVolume], Ptr[GIcon]], CFuncPtr1[Ptr[GVolume], CString], CFuncPtr1[Ptr[GVolume], Ptr[GDrive]], CFuncPtr1[Ptr[GVolume], Ptr[GMount]], CFuncPtr1[Ptr[GVolume], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GVolume], _root_.glib.all.gboolean], CFuncPtr6[Ptr[GVolume], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr5[Ptr[GVolume], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr2[Ptr[GVolume], CString, CString], CFuncPtr1[Ptr[GVolume], Ptr[CString]], CFuncPtr1[Ptr[GVolume], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GVolume], Ptr[GFile]], CFuncPtr6[Ptr[GVolume], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.glib.all.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gboolean], CFuncPtr1[Ptr[GVolume], Ptr[_root_.glib.all.gchar]], CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]]
 object _GVolumeIface:
@@ -13106,7 +13447,7 @@ object _GVolumeIface:
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]): Unit = !struct.at22 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvolumemonitor.h
 */
 opaque type _GVolumeMonitor = CStruct2[_root_.gobject.all.GObject, _root_.glib.all.gpointer]
 object _GVolumeMonitor:
@@ -13124,7 +13465,7 @@ object _GVolumeMonitor:
     def priv_=(value: _root_.glib.all.gpointer): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gvolumemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvolumemonitor.h
 */
 opaque type _GVolumeMonitorClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object _GVolumeMonitorClass:
@@ -13214,14 +13555,14 @@ object _GVolumeMonitorClass:
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GZlibCompressor = CStruct0
 object _GZlibCompressor:
   given _tag: Tag[_GZlibCompressor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gzlibcompressor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gzlibcompressor.h
 */
 opaque type _GZlibCompressorClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GZlibCompressorClass:
@@ -13236,14 +13577,14 @@ object _GZlibCompressorClass:
     def parent_class_=(value: _root_.gobject.all.GObjectClass): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type _GZlibDecompressor = CStruct0
 object _GZlibDecompressor:
   given _tag: Tag[_GZlibDecompressor] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gzlibdecompressor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gzlibdecompressor.h
 */
 opaque type _GZlibDecompressorClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _GZlibDecompressorClass:

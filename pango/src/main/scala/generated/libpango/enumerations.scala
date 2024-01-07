@@ -20,7 +20,7 @@ private[libpango] trait CEnumU[T](using eq: T =:= UInt):
 /**
  * PangoAlignment: _ALIGN_LEFT: Put all available space on the right _ALIGN_CENTER: Center the line within the available space _ALIGN_RIGHT: Put all available space on the left
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoAlignment = CUnsignedInt
 object PangoAlignment extends CEnumU[PangoAlignment]:
@@ -43,7 +43,7 @@ object PangoAlignment extends CEnumU[PangoAlignment]:
 /**
  * PangoAttrType: _ATTR_INVALID: does not happen _ATTR_LANGUAGE: language ([struct.AttrLanguage]) _ATTR_FAMILY: font family name list ([struct.AttrString]) _ATTR_STYLE: font slant style ([struct.AttrInt]) _ATTR_WEIGHT: font weight ([struct.AttrInt]) _ATTR_VARIANT: font variant (normal or small caps) ([struct.AttrInt]) _ATTR_STRETCH: font stretch ([struct.AttrInt]) _ATTR_SIZE: font size in points scaled by %PANGO_SCALE ([struct.AttrInt]) _ATTR_FONT_DESC: font description ([struct.AttrFontDesc]) _ATTR_FOREGROUND: foreground color ([struct.AttrColor]) _ATTR_BACKGROUND: background color ([struct.AttrColor]) _ATTR_UNDERLINE: whether the text has an underline ([struct.AttrInt]) _ATTR_STRIKETHROUGH: whether the text is struck-through ([struct.AttrInt]) _ATTR_RISE: baseline displacement ([struct.AttrInt]) _ATTR_SHAPE: shape ([struct.AttrShape]) _ATTR_SCALE: font size scale factor ([struct.AttrFloat]) _ATTR_FALLBACK: whether fallback is enabled ([struct.AttrInt]) _ATTR_LETTER_SPACING: letter spacing ([struct]) _ATTR_UNDERLINE_COLOR: underline color ([struct.AttrColor]) _ATTR_STRIKETHROUGH_COLOR: strikethrough color ([struct.AttrColor]) _ATTR_ABSOLUTE_SIZE: font size in pixels scaled by %PANGO_SCALE ([struct.AttrInt]) _ATTR_GRAVITY: base text gravity ([struct.AttrInt]) _ATTR_GRAVITY_HINT: gravity hint ([struct.AttrInt]) _ATTR_FONT_FEATURES: OpenType font features ([struct.AttrFontFeatures]). Since 1.38 _ATTR_FOREGROUND_ALPHA: foreground alpha ([struct.AttrInt]). Since 1.38 _ATTR_BACKGROUND_ALPHA: background alpha ([struct.AttrInt]). Since 1.38 _ATTR_ALLOW_BREAKS: whether breaks are allowed ([struct.AttrInt]). Since 1.44 _ATTR_SHOW: how to render invisible characters ([struct.AttrInt]). Since 1.44 _ATTR_INSERT_HYPHENS: whether to insert hyphens at intra-word line breaks ([struct.AttrInt]). Since 1.44 _ATTR_OVERLINE: whether the text has an overline ([struct.AttrInt]). Since 1.46 _ATTR_OVERLINE_COLOR: overline color ([struct.AttrColor]). Since 1.46 _ATTR_LINE_HEIGHT: line height factor ([struct.AttrFloat]). Since: 1.50 _ATTR_ABSOLUTE_LINE_HEIGHT: line height ([struct.AttrInt]). Since: 1.50 _ATTR_WORD: override segmentation to classify the range of the attribute as a single word ([struct.AttrInt]). Since 1.50 _ATTR_SENTENCE: override segmentation to classify the range of the attribute as a single sentence ([struct.AttrInt]). Since 1.50 _ATTR_BASELINE_SHIFT: baseline displacement ([struct.AttrInt]). Since 1.50 _ATTR_FONT_SCALE: font-relative size change ([struct.AttrInt]). Since 1.50
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrType = CUnsignedInt
 object PangoAttrType extends CEnumU[PangoAttrType]:
@@ -136,7 +136,7 @@ object PangoAttrType extends CEnumU[PangoAttrType]:
 /**
  * PangoBaselineShift: _BASELINE_SHIFT_NONE: Leave the baseline unchanged _BASELINE_SHIFT_SUPERSCRIPT: Shift the baseline to the superscript position, relative to the previous run _BASELINE_SHIFT_SUBSCRIPT: Shift the baseline to the subscript position, relative to the previous run
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoBaselineShift = CUnsignedInt
 object PangoBaselineShift extends CEnumU[PangoBaselineShift]:
@@ -159,7 +159,7 @@ object PangoBaselineShift extends CEnumU[PangoBaselineShift]:
 /**
  * PangoBidiType: _BIDI_TYPE_L: Left-to-Right _BIDI_TYPE_LRE: Left-to-Right Embedding _BIDI_TYPE_LRO: Left-to-Right Override _BIDI_TYPE_R: Right-to-Left _BIDI_TYPE_AL: Right-to-Left Arabic _BIDI_TYPE_RLE: Right-to-Left Embedding _BIDI_TYPE_RLO: Right-to-Left Override _BIDI_TYPE_PDF: Pop Directional Format _BIDI_TYPE_EN: European Number _BIDI_TYPE_ES: European Number Separator _BIDI_TYPE_ET: European Number Terminator _BIDI_TYPE_AN: Arabic Number _BIDI_TYPE_CS: Common Number Separator _BIDI_TYPE_NSM: Nonspacing Mark _BIDI_TYPE_BN: Boundary Neutral _BIDI_TYPE_B: Paragraph Separator _BIDI_TYPE_S: Segment Separator _BIDI_TYPE_WS: Whitespace _BIDI_TYPE_ON: Other Neutrals _BIDI_TYPE_LRI: Left-to-Right isolate. Since 1.48.6 _BIDI_TYPE_RLI: Right-to-Left isolate. Since 1.48.6 _BIDI_TYPE_FSI: First strong isolate. Since 1.48.6 _BIDI_TYPE_PDI: Pop directional isolate. Since 1.48.6
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-bidi-type.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-bidi-type.h
 */
 opaque type PangoBidiType = CUnsignedInt
 object PangoBidiType extends CEnumU[PangoBidiType]:
@@ -222,7 +222,7 @@ object PangoBidiType extends CEnumU[PangoBidiType]:
 /**
  * PangoCoverageLevel: _COVERAGE_NONE: The character is not representable with the font. _COVERAGE_FALLBACK: The character is represented in a way that may be comprehensible but is not the correct graphical form. For instance, a Hangul character represented as a a sequence of Jamos, or a Latin transliteration of a Cyrillic word. _COVERAGE_APPROXIMATE: The character is represented as basically the correct graphical form, but with a stylistic variant inappropriate for the current script. _COVERAGE_EXACT: The character is represented as the correct graphical form.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type PangoCoverageLevel = CUnsignedInt
 object PangoCoverageLevel extends CEnumU[PangoCoverageLevel]:
@@ -247,7 +247,7 @@ object PangoCoverageLevel extends CEnumU[PangoCoverageLevel]:
 /**
  * PangoDirection: _DIRECTION_LTR: A strong left-to-right direction _DIRECTION_RTL: A strong right-to-left direction _DIRECTION_TTB_LTR: Deprecated value; treated the same as `PANGO_DIRECTION_RTL`. _DIRECTION_TTB_RTL: Deprecated value; treated the same as `PANGO_DIRECTION_LTR` _DIRECTION_WEAK_LTR: A weak left-to-right direction _DIRECTION_WEAK_RTL: A weak right-to-left direction _DIRECTION_NEUTRAL: No direction specified
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-direction.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-direction.h
 */
 opaque type PangoDirection = CUnsignedInt
 object PangoDirection extends CEnumU[PangoDirection]:
@@ -278,7 +278,7 @@ object PangoDirection extends CEnumU[PangoDirection]:
 /**
  * PangoEllipsizeMode: _ELLIPSIZE_NONE: No ellipsization _ELLIPSIZE_START: Omit characters at the start of the text _ELLIPSIZE_MIDDLE: Omit characters in the middle of the text _ELLIPSIZE_END: Omit characters at the end of the text
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoEllipsizeMode = CUnsignedInt
 object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
@@ -303,7 +303,7 @@ object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
 /**
  * PangoFontMask: _FONT_MASK_FAMILY: the font family is specified. _FONT_MASK_STYLE: the font style is specified. _FONT_MASK_VARIANT: the font variant is specified. _FONT_MASK_WEIGHT: the font weight is specified. _FONT_MASK_STRETCH: the font stretch is specified. _FONT_MASK_SIZE: the font size is specified. _FONT_MASK_GRAVITY: the font gravity is specified (Since: 1.16.) _FONT_MASK_VARIATIONS: OpenType font variations are specified (Since: 1.42)
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontMask = CUnsignedInt
 object PangoFontMask extends CEnumU[PangoFontMask]:
@@ -336,7 +336,7 @@ object PangoFontMask extends CEnumU[PangoFontMask]:
 /**
  * PangoFontScale: _FONT_SCALE_NONE: Leave the font size unchanged _FONT_SCALE_SUPERSCRIPT: Change the font to a size suitable for superscripts _FONT_SCALE_SUBSCRIPT: Change the font to a size suitable for subscripts _FONT_SCALE_SMALL_CAPS: Change the font to a size suitable for Small Caps
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoFontScale = CUnsignedInt
 object PangoFontScale extends CEnumU[PangoFontScale]:
@@ -361,7 +361,7 @@ object PangoFontScale extends CEnumU[PangoFontScale]:
 /**
  * PangoGravity: _GRAVITY_SOUTH: Glyphs stand upright (default) _GRAVITY_EAST: Glyphs are rotated 90 degrees counter-clockwise. _GRAVITY_NORTH: Glyphs are upside-down. _GRAVITY_WEST: Glyphs are rotated 90 degrees clockwise. _GRAVITY_AUTO: Gravity is resolved from the context matrix
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-gravity.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-gravity.h
 */
 opaque type PangoGravity = CUnsignedInt
 object PangoGravity extends CEnumU[PangoGravity]:
@@ -388,7 +388,7 @@ object PangoGravity extends CEnumU[PangoGravity]:
 /**
  * PangoGravityHint: _GRAVITY_HINT_NATURAL: scripts will take their natural gravity based on the base gravity and the script. This is the default. _GRAVITY_HINT_STRONG: always use the base gravity set, regardless of the script. _GRAVITY_HINT_LINE: for scripts not in their natural direction (eg. Latin in East gravity), choose per-script gravity such that every script respects the line progression. This means, Latin and Arabic will take opposite gravities and both flow top-to-bottom for example.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-gravity.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-gravity.h
 */
 opaque type PangoGravityHint = CUnsignedInt
 object PangoGravityHint extends CEnumU[PangoGravityHint]:
@@ -411,7 +411,7 @@ object PangoGravityHint extends CEnumU[PangoGravityHint]:
 /**
  * PangoLayoutDeserializeError: _LAYOUT_DESERIALIZE_INVALID: Unspecified error _LAYOUT_DESERIALIZE_INVALID_VALUE: A JSon value could not be interpreted _LAYOUT_DESERIALIZE_MISSING_VALUE: A required JSon member was not found
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutDeserializeError = CUnsignedInt
 object PangoLayoutDeserializeError extends CEnumU[PangoLayoutDeserializeError]:
@@ -434,7 +434,7 @@ object PangoLayoutDeserializeError extends CEnumU[PangoLayoutDeserializeError]:
 /**
  * PangoLayoutDeserializeFlags: _LAYOUT_DESERIALIZE_DEFAULT: Default behavior _LAYOUT_DESERIALIZE_CONTEXT: Apply context information from the serialization to the `PangoContext`
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutDeserializeFlags = CUnsignedInt
 object PangoLayoutDeserializeFlags extends CEnumU[PangoLayoutDeserializeFlags]:
@@ -455,7 +455,7 @@ object PangoLayoutDeserializeFlags extends CEnumU[PangoLayoutDeserializeFlags]:
 /**
  * PangoLayoutSerializeFlags: _LAYOUT_SERIALIZE_DEFAULT: Default behavior _LAYOUT_SERIALIZE_CONTEXT: Include context information _LAYOUT_SERIALIZE_OUTPUT: Include information about the formatted output
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutSerializeFlags = CUnsignedInt
 object PangoLayoutSerializeFlags extends CEnumU[PangoLayoutSerializeFlags]:
@@ -478,7 +478,7 @@ object PangoLayoutSerializeFlags extends CEnumU[PangoLayoutSerializeFlags]:
 /**
  * PangoOverline: _OVERLINE_NONE: no overline should be drawn _OVERLINE_SINGLE: Draw a single line above the ink extents of the text being underlined.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoOverline = CUnsignedInt
 object PangoOverline extends CEnumU[PangoOverline]:
@@ -497,7 +497,7 @@ object PangoOverline extends CEnumU[PangoOverline]:
     inline def is(b: PangoOverline): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type PangoRenderPart = CUnsignedInt
 object PangoRenderPart extends CEnumU[PangoRenderPart]:
@@ -524,7 +524,7 @@ object PangoRenderPart extends CEnumU[PangoRenderPart]:
 /**
  * PangoScript: _SCRIPT_INVALID_CODE: a value never returned from pango_script_for_unichar() _SCRIPT_COMMON: a character used by multiple different scripts _SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _SCRIPT_ARABIC: Arabic _SCRIPT_ARMENIAN: Armenian _SCRIPT_BENGALI: Bengali _SCRIPT_BOPOMOFO: Bopomofo _SCRIPT_CHEROKEE: Cherokee _SCRIPT_COPTIC: Coptic _SCRIPT_CYRILLIC: Cyrillic _SCRIPT_DESERET: Deseret _SCRIPT_DEVANAGARI: Devanagari _SCRIPT_ETHIOPIC: Ethiopic _SCRIPT_GEORGIAN: Georgian _SCRIPT_GOTHIC: Gothic _SCRIPT_GREEK: Greek _SCRIPT_GUJARATI: Gujarati _SCRIPT_GURMUKHI: Gurmukhi _SCRIPT_HAN: Han _SCRIPT_HANGUL: Hangul _SCRIPT_HEBREW: Hebrew _SCRIPT_HIRAGANA: Hiragana _SCRIPT_KANNADA: Kannada _SCRIPT_KATAKANA: Katakana _SCRIPT_KHMER: Khmer _SCRIPT_LAO: Lao _SCRIPT_LATIN: Latin _SCRIPT_MALAYALAM: Malayalam _SCRIPT_MONGOLIAN: Mongolian _SCRIPT_MYANMAR: Myanmar _SCRIPT_OGHAM: Ogham _SCRIPT_OLD_ITALIC: Old Italic _SCRIPT_ORIYA: Oriya _SCRIPT_RUNIC: Runic _SCRIPT_SINHALA: Sinhala _SCRIPT_SYRIAC: Syriac _SCRIPT_TAMIL: Tamil _SCRIPT_TELUGU: Telugu _SCRIPT_THAANA: Thaana _SCRIPT_THAI: Thai _SCRIPT_TIBETAN: Tibetan _SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _SCRIPT_YI: Yi _SCRIPT_TAGALOG: Tagalog _SCRIPT_HANUNOO: Hanunoo _SCRIPT_BUHID: Buhid _SCRIPT_TAGBANWA: Tagbanwa _SCRIPT_BRAILLE: Braille _SCRIPT_CYPRIOT: Cypriot _SCRIPT_LIMBU: Limbu _SCRIPT_OSMANYA: Osmanya _SCRIPT_SHAVIAN: Shavian _SCRIPT_LINEAR_B: Linear B _SCRIPT_TAI_LE: Tai Le _SCRIPT_UGARITIC: Ugaritic _SCRIPT_NEW_TAI_LUE: New Tai Lue. Since 1.10 _SCRIPT_BUGINESE: Buginese. Since 1.10 _SCRIPT_GLAGOLITIC: Glagolitic. Since 1.10 _SCRIPT_TIFINAGH: Tifinagh. Since 1.10 _SCRIPT_SYLOTI_NAGRI: Syloti Nagri. Since 1.10 _SCRIPT_OLD_PERSIAN: Old Persian. Since 1.10 _SCRIPT_KHAROSHTHI: Kharoshthi. Since 1.10 _SCRIPT_UNKNOWN: an unassigned code point. Since 1.14 _SCRIPT_BALINESE: Balinese. Since 1.14 _SCRIPT_CUNEIFORM: Cuneiform. Since 1.14 _SCRIPT_PHOENICIAN: Phoenician. Since 1.14 _SCRIPT_PHAGS_PA: Phags-pa. Since 1.14 _SCRIPT_NKO: N'Ko. Since 1.14 _SCRIPT_KAYAH_LI: Kayah Li. Since 1.20.1 _SCRIPT_LEPCHA: Lepcha. Since 1.20.1 _SCRIPT_REJANG: Rejang. Since 1.20.1 _SCRIPT_SUNDANESE: Sundanese. Since 1.20.1 _SCRIPT_SAURASHTRA: Saurashtra. Since 1.20.1 _SCRIPT_CHAM: Cham. Since 1.20.1 _SCRIPT_OL_CHIKI: Ol Chiki. Since 1.20.1 _SCRIPT_VAI: Vai. Since 1.20.1 _SCRIPT_CARIAN: Carian. Since 1.20.1 _SCRIPT_LYCIAN: Lycian. Since 1.20.1 _SCRIPT_LYDIAN: Lydian. Since 1.20.1 _SCRIPT_BATAK: Batak. Since 1.32 _SCRIPT_BRAHMI: Brahmi. Since 1.32 _SCRIPT_MANDAIC: Mandaic. Since 1.32 _SCRIPT_CHAKMA: Chakma. Since: 1.32 _SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 1.32 _SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 1.32 _SCRIPT_MIAO: Miao. Since: 1.32 _SCRIPT_SHARADA: Sharada. Since: 1.32 _SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 1.32 _SCRIPT_TAKRI: Takri. Since: 1.32 _SCRIPT_BASSA_VAH: Bassa. Since: 1.40 _SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 1.40 _SCRIPT_DUPLOYAN: Duployan. Since: 1.40 _SCRIPT_ELBASAN: Elbasan. Since: 1.40 _SCRIPT_GRANTHA: Grantha. Since: 1.40 _SCRIPT_KHOJKI: Kjohki. Since: 1.40 _SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 1.40 _SCRIPT_LINEAR_A: Linear A. Since: 1.40 _SCRIPT_MAHAJANI: Mahajani. Since: 1.40 _SCRIPT_MANICHAEAN: Manichaean. Since: 1.40 _SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 1.40 _SCRIPT_MODI: Modi. Since: 1.40 _SCRIPT_MRO: Mro. Since: 1.40 _SCRIPT_NABATAEAN: Nabataean. Since: 1.40 _SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 1.40 _SCRIPT_OLD_PERMIC: Old Permic. Since: 1.40 _SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 1.40 _SCRIPT_PALMYRENE: Palmyrene. Since: 1.40 _SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 1.40 _SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 1.40 _SCRIPT_SIDDHAM: Siddham. Since: 1.40 _SCRIPT_TIRHUTA: Tirhuta. Since: 1.40 _SCRIPT_WARANG_CITI: Warang Citi. Since: 1.40 _SCRIPT_AHOM: Ahom. Since: 1.40 _SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 1.40 _SCRIPT_HATRAN: Hatran. Since: 1.40 _SCRIPT_MULTANI: Multani. Since: 1.40 _SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 1.40 _SCRIPT_SIGNWRITING: Signwriting. Since: 1.40
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-script.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-script.h
 */
 opaque type PangoScript = CInt
 object PangoScript extends CEnum[PangoScript]:
@@ -777,7 +777,7 @@ object PangoScript extends CEnum[PangoScript]:
 /**
  * PangoShapeFlags: _SHAPE_NONE: Default value _SHAPE_ROUND_POSITIONS: Round glyph positions and widths to whole device units This option should be set if the target renderer can't do subpixel positioning of glyphs
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type PangoShapeFlags = CUnsignedInt
 object PangoShapeFlags extends CEnumU[PangoShapeFlags]:
@@ -798,7 +798,7 @@ object PangoShapeFlags extends CEnumU[PangoShapeFlags]:
 /**
  * PangoShowFlags: _SHOW_NONE: No special treatment for invisible characters _SHOW_SPACES: Render spaces, tabs and newlines visibly _SHOW_LINE_BREAKS: Render line breaks visibly _SHOW_IGNORABLES: Render default-ignorable Unicode characters visibly
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoShowFlags = CUnsignedInt
 object PangoShowFlags extends CEnumU[PangoShowFlags]:
@@ -823,7 +823,7 @@ object PangoShowFlags extends CEnumU[PangoShowFlags]:
 /**
  * PangoStretch: _STRETCH_ULTRA_CONDENSED: ultra condensed width _STRETCH_EXTRA_CONDENSED: extra condensed width _STRETCH_CONDENSED: condensed width _STRETCH_SEMI_CONDENSED: semi condensed width _STRETCH_NORMAL: the normal width _STRETCH_SEMI_EXPANDED: semi expanded width _STRETCH_EXPANDED: expanded width _STRETCH_EXTRA_EXPANDED: extra expanded width _STRETCH_ULTRA_EXPANDED: ultra expanded width
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoStretch = CUnsignedInt
 object PangoStretch extends CEnumU[PangoStretch]:
@@ -858,7 +858,7 @@ object PangoStretch extends CEnumU[PangoStretch]:
 /**
  * PangoStyle: _STYLE_NORMAL: the font is upright. _STYLE_OBLIQUE: the font is slanted, but in a roman style. _STYLE_ITALIC: the font is slanted in an italic style.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoStyle = CUnsignedInt
 object PangoStyle extends CEnumU[PangoStyle]:
@@ -881,7 +881,7 @@ object PangoStyle extends CEnumU[PangoStyle]:
 /**
  * PangoTabAlign: _TAB_LEFT: the text appears to the right of the tab stop position _TAB_RIGHT: the text appears to the left of the tab stop position until the available space is filled. Since: 1.50 _TAB_CENTER: the text is centered at the tab stop position until the available space is filled. Since: 1.50 _TAB_DECIMAL: text before the first occurrence of the decimal point character appears to the left of the tab stop position (until the available space is filled), the rest to the right. Since: 1.50
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type PangoTabAlign = CUnsignedInt
 object PangoTabAlign extends CEnumU[PangoTabAlign]:
@@ -906,7 +906,7 @@ object PangoTabAlign extends CEnumU[PangoTabAlign]:
 /**
  * PangoTextTransform: _TEXT_TRANSFORM_NONE: Leave text unchanged _TEXT_TRANSFORM_LOWERCASE: Display letters and numbers as lowercase _TEXT_TRANSFORM_UPPERCASE: Display letters and numbers as uppercase _TEXT_TRANSFORM_CAPITALIZE: Display the first character of a word in titlecase
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoTextTransform = CUnsignedInt
 object PangoTextTransform extends CEnumU[PangoTextTransform]:
@@ -931,7 +931,7 @@ object PangoTextTransform extends CEnumU[PangoTextTransform]:
 /**
  * PangoUnderline: _UNDERLINE_NONE: no underline should be drawn _UNDERLINE_SINGLE: a single underline should be drawn _UNDERLINE_DOUBLE: a double underline should be drawn _UNDERLINE_LOW: a single underline should be drawn at a position beneath the ink extents of the text being underlined. This should be used only for underlining single characters, such as for keyboard accelerators. %PANGO_UNDERLINE_SINGLE should be used for extended portions of text. _UNDERLINE_ERROR: an underline indicating an error should be drawn below. The exact style of rendering is up to the `PangoRenderer` in use, but typical styles include wavy or dotted lines. This underline is typically used to indicate an error such as a possible mispelling; in some cases a contrasting color may automatically be used. This type of underlining is available since Pango 1.4. _UNDERLINE_SINGLE_LINE: Like _UNDERLINE_SINGLE, but drawn continuously across multiple runs. This type of underlining is available since Pango 1.46. _UNDERLINE_DOUBLE_LINE: Like _UNDERLINE_DOUBLE, but drawn continuously across multiple runs. This type of underlining is available since Pango 1.46. _UNDERLINE_ERROR_LINE: Like _UNDERLINE_ERROR, but drawn continuously across multiple runs. This type of underlining is available since Pango 1.46.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoUnderline = CUnsignedInt
 object PangoUnderline extends CEnumU[PangoUnderline]:
@@ -964,7 +964,7 @@ object PangoUnderline extends CEnumU[PangoUnderline]:
 /**
  * PangoVariant: _VARIANT_NORMAL: A normal font. _VARIANT_SMALL_CAPS: A font with the lower case characters replaced by smaller variants of the capital characters. _VARIANT_ALL_SMALL_CAPS: A font with all characters replaced by smaller variants of the capital characters. Since: 1.50 _VARIANT_PETITE_CAPS: A font with the lower case characters replaced by smaller variants of the capital characters. Petite Caps can be even smaller than Small Caps. Since: 1.50 _VARIANT_ALL_PETITE_CAPS: A font with all characters replaced by smaller variants of the capital characters. Petite Caps can be even smaller than Small Caps. Since: 1.50 _VARIANT_UNICASE: A font with the upper case characters replaced by smaller variants of the capital letters. Since: 1.50 _VARIANT_TITLE_CAPS: A font with capital letters that are more suitable for all-uppercase titles. Since: 1.50
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoVariant = CUnsignedInt
 object PangoVariant extends CEnumU[PangoVariant]:
@@ -993,9 +993,9 @@ object PangoVariant extends CEnumU[PangoVariant]:
     inline def is(b: PangoVariant): Boolean = (a & b) == b
 
 /**
- * PangoWeight: _WEIGHT_THIN: the thin weight (= 100) Since: 1.24 _WEIGHT_ULTRALIGHT: the ultralight weight (= 200) _WEIGHT_LIGHT: the light weight (= 300) _WEIGHT_SEMILIGHT: the semilight weight (= 350) Since: 1.36.7 _WEIGHT_BOOK: the book weight (= 380) Since: 1.24) _WEIGHT_NORMAL: the default weight (= 400) _WEIGHT_MEDIUM: the normal weight (= 500) Since: 1.24 _WEIGHT_SEMIBOLD: the semibold weight (= 600) _WEIGHT_BOLD: the bold weight (= 700) _WEIGHT_ULTRABOLD: the ultrabold weight (= 800) _WEIGHT_HEAVY: the heavy weight (= 900) _WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000) Since: 1.24
+ * PangoWeight: _WEIGHT_THIN: the thin weight (= 100) Since: 1.24 _WEIGHT_ULTRALIGHT: the ultralight weight (= 200) _WEIGHT_LIGHT: the light weight (= 300) _WEIGHT_SEMILIGHT: the semilight weight (= 350) Since: 1.36.7 _WEIGHT_BOOK: the book weight (= 380) Since: 1.24) _WEIGHT_NORMAL: the default weight (= 400) _WEIGHT_MEDIUM: the medium weight (= 500) Since: 1.24 _WEIGHT_SEMIBOLD: the semibold weight (= 600) _WEIGHT_BOLD: the bold weight (= 700) _WEIGHT_ULTRABOLD: the ultrabold weight (= 800) _WEIGHT_HEAVY: the heavy weight (= 900) _WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000) Since: 1.24
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoWeight = CUnsignedInt
 object PangoWeight extends CEnumU[PangoWeight]:
@@ -1036,7 +1036,7 @@ object PangoWeight extends CEnumU[PangoWeight]:
 /**
  * PangoWrapMode: _WRAP_WORD: wrap lines at word boundaries. _WRAP_CHAR: wrap lines at character boundaries. _WRAP_WORD_CHAR: wrap lines at word boundaries, but fall back to character boundaries if there is not enough space for a full word.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoWrapMode = CUnsignedInt
 object PangoWrapMode extends CEnumU[PangoWrapMode]:

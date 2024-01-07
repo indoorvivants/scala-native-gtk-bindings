@@ -15,6 +15,9 @@ export _root_.libharfbuzz.enumerations.hb_buffer_serialize_format_t
 export _root_.libharfbuzz.enumerations.hb_direction_t
 export _root_.libharfbuzz.enumerations.hb_glyph_flags_t
 export _root_.libharfbuzz.enumerations.hb_memory_mode_t
+export _root_.libharfbuzz.enumerations.hb_paint_composite_mode_t
+export _root_.libharfbuzz.enumerations.hb_paint_extend_t
 export _root_.libharfbuzz.enumerations.hb_script_t
+export _root_.libharfbuzz.enumerations.hb_style_tag_t
 export _root_.libharfbuzz.enumerations.hb_unicode_combining_class_t
 export _root_.libharfbuzz.enumerations.hb_unicode_general_category_t

@@ -10,16 +10,15 @@ import _root_.gobject.enumerations.*
 import _root_.gobject.aliases.*
 import _root_.gobject.structs.*
 import _root_.gobject.unions.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeCValue = CArray[Byte, Nat._1]
 object GTypeCValue:
   given _tag: Tag[GTypeCValue] = Tag.CArray[CChar, Nat._1](Tag.Byte, Tag.Nat1)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeCValue = CArray[Byte, Nat._1]
 object _GTypeCValue:

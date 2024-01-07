@@ -15,7 +15,7 @@ private[libgdkpixbuf] trait CEnumU[T](using eq: T =:= UInt):
 /**
  * GdkColorspace: _COLORSPACE_RGB: Indicates a red/green/blue additive color space.
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type GdkColorspace = CUnsignedInt
 object GdkColorspace extends CEnumU[GdkColorspace]:
@@ -34,7 +34,7 @@ object GdkColorspace extends CEnumU[GdkColorspace]:
 /**
  * GdkInterpType: _INTERP_NEAREST: Nearest neighbor sampling; this is the fastest and lowest quality mode. Quality is normally unacceptable when scaling down, but may be OK when scaling up. _INTERP_TILES: This is an accurate simulation of the PostScript image operator without any interpolation enabled. Each pixel is rendered as a tiny parallelogram of solid color, the edges of which are implemented with antialiasing. It resembles nearest neighbor for enlargement, and bilinear for reduction. _INTERP_BILINEAR: Best quality/speed balance; use this mode by default. Bilinear interpolation. For enlargement, it is equivalent to point-sampling the ideal bilinear-interpolated image. For reduction, it is equivalent to laying down small tiles and integrating over the coverage area. _INTERP_HYPER: This is the slowest and highest quality reconstruction function. It is derived from the hyperbolic filters in Wolberg's "Digital Image Warping", and is formally defined as the hyperbolic-filter sampling the ideal hyperbolic-filter interpolated image (the filter is designed to be idempotent for 1:1 pixel mapping). **Deprecated**: this interpolation filter is deprecated, as in reality it has a lower quality than the _INTERP_BILINEAR filter (Since: 2.38)
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
 */
 opaque type GdkInterpType = CUnsignedInt
 object GdkInterpType extends CEnumU[GdkInterpType]:
@@ -59,7 +59,7 @@ object GdkInterpType extends CEnumU[GdkInterpType]:
 /**
  * GdkPixbufAlphaMode: _PIXBUF_ALPHA_BILEVEL: A bilevel clipping mask (black and white) will be created and used to draw the image. Pixels below 0.5 opacity will be considered fully transparent, and all others will be considered fully opaque. _PIXBUF_ALPHA_FULL: For now falls back to #GDK_PIXBUF_ALPHA_BILEVEL. In the future it will do full alpha compositing.
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type GdkPixbufAlphaMode = CUnsignedInt
 object GdkPixbufAlphaMode extends CEnumU[GdkPixbufAlphaMode]:
@@ -80,7 +80,7 @@ object GdkPixbufAlphaMode extends CEnumU[GdkPixbufAlphaMode]:
 /**
  * GdkPixbufError: _PIXBUF_ERROR_CORRUPT_IMAGE: An image file was broken somehow. _PIXBUF_ERROR_INSUFFICIENT_MEMORY: Not enough memory. _PIXBUF_ERROR_BAD_OPTION: A bad option was passed to a pixbuf save module. _PIXBUF_ERROR_UNKNOWN_TYPE: Unknown image type. _PIXBUF_ERROR_UNSUPPORTED_OPERATION: Don't know how to perform the given operation on the type of image at hand. _PIXBUF_ERROR_FAILED: Generic failure code, something went wrong. _PIXBUF_ERROR_INCOMPLETE_ANIMATION: Only part of the animation was loaded.
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type GdkPixbufError = CUnsignedInt
 object GdkPixbufError extends CEnumU[GdkPixbufError]:
@@ -111,7 +111,7 @@ object GdkPixbufError extends CEnumU[GdkPixbufError]:
 /**
  * GdkPixbufRotation: _PIXBUF_ROTATE_NONE: No rotation. _PIXBUF_ROTATE_COUNTERCLOCKWISE: Rotate by 90 degrees. _PIXBUF_ROTATE_UPSIDEDOWN: Rotate by 180 degrees. _PIXBUF_ROTATE_CLOCKWISE: Rotate by 270 degrees.
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
 */
 opaque type GdkPixbufRotation = CUnsignedInt
 object GdkPixbufRotation extends CEnumU[GdkPixbufRotation]:

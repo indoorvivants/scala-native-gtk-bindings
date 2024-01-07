@@ -57,6 +57,9 @@ export _root_.libcairo.functions.cairo_font_options_create
 export _root_.libcairo.functions.cairo_font_options_destroy
 export _root_.libcairo.functions.cairo_font_options_equal
 export _root_.libcairo.functions.cairo_font_options_get_antialias
+export _root_.libcairo.functions.cairo_font_options_get_color_mode
+export _root_.libcairo.functions.cairo_font_options_get_color_palette
+export _root_.libcairo.functions.cairo_font_options_get_custom_palette_color
 export _root_.libcairo.functions.cairo_font_options_get_hint_metrics
 export _root_.libcairo.functions.cairo_font_options_get_hint_style
 export _root_.libcairo.functions.cairo_font_options_get_subpixel_order
@@ -64,6 +67,9 @@ export _root_.libcairo.functions.cairo_font_options_get_variations
 export _root_.libcairo.functions.cairo_font_options_hash
 export _root_.libcairo.functions.cairo_font_options_merge
 export _root_.libcairo.functions.cairo_font_options_set_antialias
+export _root_.libcairo.functions.cairo_font_options_set_color_mode
+export _root_.libcairo.functions.cairo_font_options_set_color_palette
+export _root_.libcairo.functions.cairo_font_options_set_custom_palette_color
 export _root_.libcairo.functions.cairo_font_options_set_hint_metrics
 export _root_.libcairo.functions.cairo_font_options_set_hint_style
 export _root_.libcairo.functions.cairo_font_options_set_subpixel_order
@@ -79,6 +85,7 @@ export _root_.libcairo.functions.cairo_get_font_face
 export _root_.libcairo.functions.cairo_get_font_matrix
 export _root_.libcairo.functions.cairo_get_font_options
 export _root_.libcairo.functions.cairo_get_group_target
+export _root_.libcairo.functions.cairo_get_hairline
 export _root_.libcairo.functions.cairo_get_line_cap
 export _root_.libcairo.functions.cairo_get_line_join
 export _root_.libcairo.functions.cairo_get_line_width
@@ -155,6 +162,7 @@ export _root_.libcairo.functions.cairo_pattern_create_rgba
 export _root_.libcairo.functions.cairo_pattern_destroy
 export _root_.libcairo.functions.cairo_pattern_get_color_stop_count
 export _root_.libcairo.functions.cairo_pattern_get_color_stop_rgba
+export _root_.libcairo.functions.cairo_pattern_get_dither
 export _root_.libcairo.functions.cairo_pattern_get_extend
 export _root_.libcairo.functions.cairo_pattern_get_filter
 export _root_.libcairo.functions.cairo_pattern_get_linear_points
@@ -166,6 +174,7 @@ export _root_.libcairo.functions.cairo_pattern_get_surface
 export _root_.libcairo.functions.cairo_pattern_get_type
 export _root_.libcairo.functions.cairo_pattern_get_user_data
 export _root_.libcairo.functions.cairo_pattern_reference
+export _root_.libcairo.functions.cairo_pattern_set_dither
 export _root_.libcairo.functions.cairo_pattern_set_extend
 export _root_.libcairo.functions.cairo_pattern_set_filter
 export _root_.libcairo.functions.cairo_pattern_set_matrix
@@ -247,6 +256,7 @@ export _root_.libcairo.functions.cairo_set_font_face
 export _root_.libcairo.functions.cairo_set_font_matrix
 export _root_.libcairo.functions.cairo_set_font_options
 export _root_.libcairo.functions.cairo_set_font_size
+export _root_.libcairo.functions.cairo_set_hairline
 export _root_.libcairo.functions.cairo_set_line_cap
 export _root_.libcairo.functions.cairo_set_line_join
 export _root_.libcairo.functions.cairo_set_line_width
@@ -326,13 +336,17 @@ export _root_.libcairo.functions.cairo_transform
 export _root_.libcairo.functions.cairo_translate
 export _root_.libcairo.functions.cairo_user_font_face_create
 export _root_.libcairo.functions.cairo_user_font_face_get_init_func
+export _root_.libcairo.functions.cairo_user_font_face_get_render_color_glyph_func
 export _root_.libcairo.functions.cairo_user_font_face_get_render_glyph_func
 export _root_.libcairo.functions.cairo_user_font_face_get_text_to_glyphs_func
 export _root_.libcairo.functions.cairo_user_font_face_get_unicode_to_glyph_func
 export _root_.libcairo.functions.cairo_user_font_face_set_init_func
+export _root_.libcairo.functions.cairo_user_font_face_set_render_color_glyph_func
 export _root_.libcairo.functions.cairo_user_font_face_set_render_glyph_func
 export _root_.libcairo.functions.cairo_user_font_face_set_text_to_glyphs_func
 export _root_.libcairo.functions.cairo_user_font_face_set_unicode_to_glyph_func
+export _root_.libcairo.functions.cairo_user_scaled_font_get_foreground_marker
+export _root_.libcairo.functions.cairo_user_scaled_font_get_foreground_source
 export _root_.libcairo.functions.cairo_user_to_device
 export _root_.libcairo.functions.cairo_user_to_device_distance
 export _root_.libcairo.functions.cairo_version

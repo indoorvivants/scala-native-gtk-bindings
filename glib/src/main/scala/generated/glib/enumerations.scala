@@ -18,7 +18,7 @@ private[glib] trait CEnumU[T](using eq: T =:= UInt):
    inline def uint: CUnsignedInt = eq.apply(t)
    inline def value: CUnsignedInt = eq.apply(t)
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstrfuncs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstrfuncs.h
 */
 opaque type GAsciiType = CUnsignedInt
 object GAsciiType extends CEnumU[GAsciiType]:
@@ -57,7 +57,7 @@ object GAsciiType extends CEnumU[GAsciiType]:
 /**
  * GBookmarkFileError: _BOOKMARK_FILE_ERROR_INVALID_URI: URI was ill-formed _BOOKMARK_FILE_ERROR_INVALID_VALUE: a requested field was not found _BOOKMARK_FILE_ERROR_APP_NOT_REGISTERED: a requested application did not register a bookmark _BOOKMARK_FILE_ERROR_URI_NOT_FOUND: a requested URI was not found _BOOKMARK_FILE_ERROR_READ: document was ill formed _BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING: the text being parsed was in an unknown encoding _BOOKMARK_FILE_ERROR_WRITE: an error occurred while writing _BOOKMARK_FILE_ERROR_FILE_NOT_FOUND: requested file was not found
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gbookmarkfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gbookmarkfile.h
 */
 opaque type GBookmarkFileError = CUnsignedInt
 object GBookmarkFileError extends CEnumU[GBookmarkFileError]:
@@ -90,7 +90,7 @@ object GBookmarkFileError extends CEnumU[GBookmarkFileError]:
 /**
  * GChecksumType: _CHECKSUM_MD5: Use the MD5 hashing algorithm _CHECKSUM_SHA1: Use the SHA-1 hashing algorithm _CHECKSUM_SHA256: Use the SHA-256 hashing algorithm _CHECKSUM_SHA384: Use the SHA-384 hashing algorithm (Since: 2.51) _CHECKSUM_SHA512: Use the SHA-512 hashing algorithm (Since: 2.36)
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gchecksum.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gchecksum.h
 */
 opaque type GChecksumType = CUnsignedInt
 object GChecksumType extends CEnumU[GChecksumType]:
@@ -117,7 +117,7 @@ object GChecksumType extends CEnumU[GChecksumType]:
 /**
  * GConvertError: _CONVERT_ERROR_NO_CONVERSION: Conversion between the requested character sets is not supported. _CONVERT_ERROR_ILLEGAL_SEQUENCE: Invalid byte sequence in conversion input; or the character sequence could not be represented in the target character set. _CONVERT_ERROR_FAILED: Conversion failed for some reason. _CONVERT_ERROR_PARTIAL_INPUT: Partial character sequence at end of input. _CONVERT_ERROR_BAD_URI: URI is invalid. _CONVERT_ERROR_NOT_ABSOLUTE_PATH: Pathname is not an absolute path. _CONVERT_ERROR_NO_MEMORY: No memory available. Since: 2.40 _CONVERT_ERROR_EMBEDDED_NUL: An embedded NUL character is present in conversion output where a NUL-terminated string is expected. Since: 2.56
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gconvert.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gconvert.h
 */
 opaque type GConvertError = CUnsignedInt
 object GConvertError extends CEnumU[GConvertError]:
@@ -148,7 +148,7 @@ object GConvertError extends CEnumU[GConvertError]:
     inline def is(b: GConvertError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 opaque type GDateDMY = CUnsignedInt
 object GDateDMY extends CEnumU[GDateDMY]:
@@ -169,7 +169,7 @@ object GDateDMY extends CEnumU[GDateDMY]:
     inline def is(b: GDateDMY): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 opaque type GDateMonth = CUnsignedInt
 object GDateMonth extends CEnumU[GDateMonth]:
@@ -210,7 +210,7 @@ object GDateMonth extends CEnumU[GDateMonth]:
     inline def is(b: GDateMonth): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 opaque type GDateWeekday = CUnsignedInt
 object GDateWeekday extends CEnumU[GDateWeekday]:
@@ -241,7 +241,7 @@ object GDateWeekday extends CEnumU[GDateWeekday]:
     inline def is(b: GDateWeekday): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type GErrorType = CUnsignedInt
 object GErrorType extends CEnumU[GErrorType]:
@@ -272,7 +272,7 @@ object GErrorType extends CEnumU[GErrorType]:
     inline def is(b: GErrorType): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gfileutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gfileutils.h
 */
 opaque type GFileError = CUnsignedInt
 object GFileError extends CEnumU[GFileError]:
@@ -339,7 +339,7 @@ object GFileError extends CEnumU[GFileError]:
 /**
  * GFileSetContentsFlags: _FILE_SET_CONTENTS_NONE: No guarantees about file consistency or durability. The most dangerous setting, which is slightly faster than other settings. _FILE_SET_CONTENTS_CONSISTENT: Guarantee file consistency: after a crash, either the old version of the file or the new version of the file will be available, but not a mixture. On Unix systems this equates to an `fsync()` on the file and use of an atomic `rename()` of the new version of the file over the old. _FILE_SET_CONTENTS_DURABLE: Guarantee file durability: after a crash, the new version of the file will be available. On Unix systems this equates to an `fsync()` on the file (if %G_FILE_SET_CONTENTS_CONSISTENT is unset), or the effects of %G_FILE_SET_CONTENTS_CONSISTENT plus an `fsync()` on the directory containing the file after calling `rename()`. _FILE_SET_CONTENTS_ONLY_EXISTING: Only apply consistency and durability guarantees if the file already exists. This may speed up file operations if the file doesn’t currently exist, but may result in a corrupted version of the new file if the system crashes while writing it.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gfileutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gfileutils.h
 */
 opaque type GFileSetContentsFlags = CUnsignedInt
 object GFileSetContentsFlags extends CEnumU[GFileSetContentsFlags]:
@@ -362,7 +362,7 @@ object GFileSetContentsFlags extends CEnumU[GFileSetContentsFlags]:
     inline def is(b: GFileSetContentsFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gfileutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gfileutils.h
 */
 opaque type GFileTest = CUnsignedInt
 object GFileTest extends CEnumU[GFileTest]:
@@ -387,7 +387,7 @@ object GFileTest extends CEnumU[GFileTest]:
     inline def is(b: GFileTest): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gutils.h
 */
 opaque type GFormatSizeFlags = CUnsignedInt
 object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
@@ -397,12 +397,16 @@ object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
   val G_FORMAT_SIZE_LONG_FORMAT = define(1)
   val G_FORMAT_SIZE_IEC_UNITS = define(2)
   val G_FORMAT_SIZE_BITS = define(4)
+  val G_FORMAT_SIZE_ONLY_VALUE = define(8)
+  val G_FORMAT_SIZE_ONLY_UNIT = define(16)
   inline def getName(inline value: GFormatSizeFlags): Option[String] =
     inline value match
       case G_FORMAT_SIZE_DEFAULT => Some("G_FORMAT_SIZE_DEFAULT")
       case G_FORMAT_SIZE_LONG_FORMAT => Some("G_FORMAT_SIZE_LONG_FORMAT")
       case G_FORMAT_SIZE_IEC_UNITS => Some("G_FORMAT_SIZE_IEC_UNITS")
       case G_FORMAT_SIZE_BITS => Some("G_FORMAT_SIZE_BITS")
+      case G_FORMAT_SIZE_ONLY_VALUE => Some("G_FORMAT_SIZE_ONLY_VALUE")
+      case G_FORMAT_SIZE_ONLY_UNIT => Some("G_FORMAT_SIZE_ONLY_UNIT")
       case _ => None
   extension (a: GFormatSizeFlags)
     inline def &(b: GFormatSizeFlags): GFormatSizeFlags = a & b
@@ -410,7 +414,7 @@ object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
     inline def is(b: GFormatSizeFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookFlagMask = CUnsignedInt
 object GHookFlagMask extends CEnumU[GHookFlagMask]:
@@ -431,7 +435,7 @@ object GHookFlagMask extends CEnumU[GHookFlagMask]:
     inline def is(b: GHookFlagMask): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOChannelError = CUnsignedInt
 object GIOChannelError extends CEnumU[GIOChannelError]:
@@ -464,7 +468,7 @@ object GIOChannelError extends CEnumU[GIOChannelError]:
     inline def is(b: GIOChannelError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GIOCondition = CUnsignedInt
 object GIOCondition extends CEnumU[GIOCondition]:
@@ -491,7 +495,7 @@ object GIOCondition extends CEnumU[GIOCondition]:
     inline def is(b: GIOCondition): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOError = CUnsignedInt
 object GIOError extends CEnumU[GIOError]:
@@ -514,12 +518,13 @@ object GIOError extends CEnumU[GIOError]:
     inline def is(b: GIOError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOFlags = CUnsignedInt
 object GIOFlags extends CEnumU[GIOFlags]:
   given _tag: Tag[GIOFlags] = Tag.UInt
   inline def define(inline a: Long): GIOFlags = a.toUInt
+  val G_IO_FLAG_NONE = define(0)
   val G_IO_FLAG_APPEND = define(1)
   val G_IO_FLAG_NONBLOCK = define(2)
   val G_IO_FLAG_IS_READABLE = define(4)
@@ -531,6 +536,7 @@ object GIOFlags extends CEnumU[GIOFlags]:
   val G_IO_FLAG_SET_MASK = define(3)
   inline def getName(inline value: GIOFlags): Option[String] =
     inline value match
+      case G_IO_FLAG_NONE => Some("G_IO_FLAG_NONE")
       case G_IO_FLAG_APPEND => Some("G_IO_FLAG_APPEND")
       case G_IO_FLAG_NONBLOCK => Some("G_IO_FLAG_NONBLOCK")
       case G_IO_FLAG_IS_READABLE => Some("G_IO_FLAG_IS_READABLE")
@@ -547,7 +553,7 @@ object GIOFlags extends CEnumU[GIOFlags]:
     inline def is(b: GIOFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOStatus = CUnsignedInt
 object GIOStatus extends CEnumU[GIOStatus]:
@@ -570,7 +576,7 @@ object GIOStatus extends CEnumU[GIOStatus]:
     inline def is(b: GIOStatus): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gkeyfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gkeyfile.h
 */
 opaque type GKeyFileError = CUnsignedInt
 object GKeyFileError extends CEnumU[GKeyFileError]:
@@ -597,7 +603,7 @@ object GKeyFileError extends CEnumU[GKeyFileError]:
     inline def is(b: GKeyFileError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gkeyfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gkeyfile.h
 */
 opaque type GKeyFileFlags = CUnsignedInt
 object GKeyFileFlags extends CEnumU[GKeyFileFlags]:
@@ -618,7 +624,7 @@ object GKeyFileFlags extends CEnumU[GKeyFileFlags]:
     inline def is(b: GKeyFileFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type GLogLevelFlags = CInt
 object GLogLevelFlags extends CEnum[GLogLevelFlags]:
@@ -653,7 +659,7 @@ object GLogLevelFlags extends CEnum[GLogLevelFlags]:
 /**
  * GLogWriterOutput: _LOG_WRITER_HANDLED: Log writer has handled the log entry. _LOG_WRITER_UNHANDLED: Log writer could not handle the log entry.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type GLogWriterOutput = CUnsignedInt
 object GLogWriterOutput extends CEnumU[GLogWriterOutput]:
@@ -674,7 +680,7 @@ object GLogWriterOutput extends CEnumU[GLogWriterOutput]:
 /**
  * GMainContextFlags: _MAIN_CONTEXT_FLAGS_NONE: Default behaviour. _MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING: Assume that polling for events will free the thread to process other jobs. That's useful if you're using `g_main_context_{prepare,query,check,dispatch}` to integrate GMainContext in other event loops.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GMainContextFlags = CUnsignedInt
 object GMainContextFlags extends CEnumU[GMainContextFlags]:
@@ -693,7 +699,7 @@ object GMainContextFlags extends CEnumU[GMainContextFlags]:
     inline def is(b: GMainContextFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type GMarkupCollectType = CUnsignedInt
 object GMarkupCollectType extends CEnumU[GMarkupCollectType]:
@@ -722,7 +728,7 @@ object GMarkupCollectType extends CEnumU[GMarkupCollectType]:
 /**
  * GMarkupError: _MARKUP_ERROR_BAD_UTF8: text being parsed was not valid UTF-8 _MARKUP_ERROR_EMPTY: document contained nothing, or only whitespace _MARKUP_ERROR_PARSE: document was ill-formed _MARKUP_ERROR_UNKNOWN_ELEMENT: error should be set by #GMarkupParser functions; element wasn't known _MARKUP_ERROR_UNKNOWN_ATTRIBUTE: error should be set by #GMarkupParser functions; attribute wasn't known _MARKUP_ERROR_INVALID_CONTENT: error should be set by #GMarkupParser functions; content was invalid _MARKUP_ERROR_MISSING_ATTRIBUTE: error should be set by #GMarkupParser functions; a required attribute was missing
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type GMarkupError = CUnsignedInt
 object GMarkupError extends CEnumU[GMarkupError]:
@@ -751,20 +757,22 @@ object GMarkupError extends CEnumU[GMarkupError]:
     inline def is(b: GMarkupError): Boolean = (a & b) == b
 
 /**
- * GMarkupParseFlags: _MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG: flag you should not use _MARKUP_TREAT_CDATA_AS_TEXT: When this flag is set, CDATA marked sections are not passed literally to the function of the parser. Instead, the content of the section (without the `<![CDATA[` and `]]>`) is passed to the
+ * GMarkupParseFlags: _MARKUP_DEFAULT_FLAGS: No special behaviour. Since: 2.74 _MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG: flag you should not use _MARKUP_TREAT_CDATA_AS_TEXT: When this flag is set, CDATA marked sections are not passed literally to the function of the parser. Instead, the content of the section (without the `<![CDATA[` and `]]>`) is passed to the
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type GMarkupParseFlags = CUnsignedInt
 object GMarkupParseFlags extends CEnumU[GMarkupParseFlags]:
   given _tag: Tag[GMarkupParseFlags] = Tag.UInt
   inline def define(inline a: Long): GMarkupParseFlags = a.toUInt
+  val G_MARKUP_DEFAULT_FLAGS = define(0)
   val G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG = define(1)
   val G_MARKUP_TREAT_CDATA_AS_TEXT = define(2)
   val G_MARKUP_PREFIX_ERROR_POSITION = define(4)
   val G_MARKUP_IGNORE_QUALIFIED = define(8)
   inline def getName(inline value: GMarkupParseFlags): Option[String] =
     inline value match
+      case G_MARKUP_DEFAULT_FLAGS => Some("G_MARKUP_DEFAULT_FLAGS")
       case G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG => Some("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG")
       case G_MARKUP_TREAT_CDATA_AS_TEXT => Some("G_MARKUP_TREAT_CDATA_AS_TEXT")
       case G_MARKUP_PREFIX_ERROR_POSITION => Some("G_MARKUP_PREFIX_ERROR_POSITION")
@@ -778,7 +786,7 @@ object GMarkupParseFlags extends CEnumU[GMarkupParseFlags]:
 /**
  * GNormalizeMode: _NORMALIZE_DEFAULT: standardize differences that do not affect the text content, such as the above-mentioned accent representation _NORMALIZE_NFD: another name for %G_NORMALIZE_DEFAULT _NORMALIZE_DEFAULT_COMPOSE: like %G_NORMALIZE_DEFAULT, but with composed forms rather than a maximally decomposed form _NORMALIZE_NFC: another name for %G_NORMALIZE_DEFAULT_COMPOSE _NORMALIZE_ALL: beyond %G_NORMALIZE_DEFAULT also standardize the "compatibility" characters in Unicode, such as SUPERSCRIPT THREE to the standard forms (in this case DIGIT THREE). Formatting information may be lost but for most text operations such characters should be considered the same _NORMALIZE_NFKD: another name for %G_NORMALIZE_ALL _NORMALIZE_ALL_COMPOSE: like %G_NORMALIZE_ALL, but with composed forms rather than a maximally decomposed form _NORMALIZE_NFKC: another name for %G_NORMALIZE_ALL_COMPOSE
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gunicode.h
 */
 opaque type GNormalizeMode = CUnsignedInt
 object GNormalizeMode extends CEnumU[GNormalizeMode]:
@@ -811,7 +819,7 @@ object GNormalizeMode extends CEnumU[GNormalizeMode]:
 /**
  * GNumberParserError: _NUMBER_PARSER_ERROR_INVALID: String was not a valid number. _NUMBER_PARSER_ERROR_OUT_OF_BOUNDS: String was a number, but out of bounds.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gstrfuncs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstrfuncs.h
 */
 opaque type GNumberParserError = CUnsignedInt
 object GNumberParserError extends CEnumU[GNumberParserError]:
@@ -830,7 +838,7 @@ object GNumberParserError extends CEnumU[GNumberParserError]:
     inline def is(b: GNumberParserError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GOnceStatus = CUnsignedInt
 object GOnceStatus extends CEnumU[GOnceStatus]:
@@ -851,9 +859,9 @@ object GOnceStatus extends CEnumU[GOnceStatus]:
     inline def is(b: GOnceStatus): Boolean = (a & b) == b
 
 /**
- * GOptionArg: _OPTION_ARG_NONE: No extra argument. This is useful for simple flags. _OPTION_ARG_STRING: The option takes a UTF-8 string argument. _OPTION_ARG_INT: The option takes an integer argument. _OPTION_ARG_CALLBACK: The option provides a callback (of type #GOptionArgFunc) to parse the extra argument. _OPTION_ARG_FILENAME: The option takes a filename as argument, which will be in the GLib filename encoding rather than UTF-8. _OPTION_ARG_STRING_ARRAY: The option takes a string argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_FILENAME_ARRAY: The option takes a filename as argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_DOUBLE: The option takes a double argument. The argument can be formatted either for the user's locale or for the "C" locale. Since 2.12 _OPTION_ARG_INT64: The option takes a 64-bit integer. Like %G_OPTION_ARG_INT but for larger numbers. The number can be in decimal base, or in hexadecimal (when prefixed with `0x`, for example, `0xffffffff`). Since 2.12
+ * GOptionArg: _OPTION_ARG_NONE: No extra argument. This is useful for simple flags or booleans. _OPTION_ARG_STRING: The option takes a UTF-8 string argument. _OPTION_ARG_INT: The option takes an integer argument. _OPTION_ARG_CALLBACK: The option provides a callback (of type #GOptionArgFunc) to parse the extra argument. _OPTION_ARG_FILENAME: The option takes a filename as argument, which will be in the GLib filename encoding rather than UTF-8. _OPTION_ARG_STRING_ARRAY: The option takes a string argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_FILENAME_ARRAY: The option takes a filename as argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_DOUBLE: The option takes a double argument. The argument can be formatted either for the user's locale or for the "C" locale. Since 2.12 _OPTION_ARG_INT64: The option takes a 64-bit integer. Like %G_OPTION_ARG_INT but for larger numbers. The number can be in decimal base, or in hexadecimal (when prefixed with `0x`, for example, `0xffffffff`). Since 2.12
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionArg = CUnsignedInt
 object GOptionArg extends CEnumU[GOptionArg]:
@@ -888,7 +896,7 @@ object GOptionArg extends CEnumU[GOptionArg]:
 /**
  * GOptionError: _OPTION_ERROR_UNKNOWN_OPTION: An option was not known to the parser. This error will only be reported, if the parser hasn't been instructed to ignore unknown options, see g_option_context_set_ignore_unknown_options(). _OPTION_ERROR_BAD_VALUE: A value couldn't be parsed. _OPTION_ERROR_FAILED: A #GOptionArgFunc callback failed.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionError = CUnsignedInt
 object GOptionError extends CEnumU[GOptionError]:
@@ -909,9 +917,9 @@ object GOptionError extends CEnumU[GOptionError]:
     inline def is(b: GOptionError): Boolean = (a & b) == b
 
 /**
- * GOptionFlags: _OPTION_FLAG_NONE: No flags. Since: 2.42. _OPTION_FLAG_HIDDEN: The option doesn't appear in `--help` output. _OPTION_FLAG_IN_MAIN: The option appears in the main section of the `--help` output, even if it is defined in a group. _OPTION_FLAG_REVERSE: For options of the %G_OPTION_ARG_NONE kind, this flag indicates that the sense of the option is reversed. _OPTION_FLAG_NO_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the callback does not take any argument (like a %G_OPTION_ARG_NONE option). Since 2.8 _OPTION_FLAG_FILENAME: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument should be passed to the callback in the GLib filename encoding rather than UTF-8. Since 2.8 _OPTION_FLAG_OPTIONAL_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument supply is optional. If no argument is given then data of %GOptionParseFunc will be set to NULL. Since 2.8 _OPTION_FLAG_NOALIAS: This flag turns off the automatic conflict resolution which prefixes long option names with `groupname-` if there is a conflict. This option should only be used in situations where aliasing is necessary to model some legacy commandline interface. It is not safe to use this option, unless all option groups are under your direct control. Since 2.8.
+ * GOptionFlags: _OPTION_FLAG_NONE: No flags. Since: 2.42. _OPTION_FLAG_HIDDEN: The option doesn't appear in `--help` output. _OPTION_FLAG_IN_MAIN: The option appears in the main section of the `--help` output, even if it is defined in a group. _OPTION_FLAG_REVERSE: For options of the %G_OPTION_ARG_NONE kind, this flag indicates that the sense of the option is reversed. i.e. %FALSE will be stored into the argument rather than %TRUE. _OPTION_FLAG_NO_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the callback does not take any argument (like a %G_OPTION_ARG_NONE option). Since 2.8 _OPTION_FLAG_FILENAME: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument should be passed to the callback in the GLib filename encoding rather than UTF-8. Since 2.8 _OPTION_FLAG_OPTIONAL_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument supply is optional. If no argument is given then data of %GOptionParseFunc will be set to NULL. Since 2.8 _OPTION_FLAG_NOALIAS: This flag turns off the automatic conflict resolution which prefixes long option names with `groupname-` if there is a conflict. This option should only be used in situations where aliasing is necessary to model some legacy commandline interface. It is not safe to use this option, unless all option groups are under your direct control. Since 2.8.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionFlags = CUnsignedInt
 object GOptionFlags extends CEnumU[GOptionFlags]:
@@ -942,14 +950,15 @@ object GOptionFlags extends CEnumU[GOptionFlags]:
     inline def is(b: GOptionFlags): Boolean = (a & b) == b
 
 /**
- * GRegexCompileFlags: _REGEX_CASELESS: Letters in the pattern match both upper- and lowercase letters. This option can be changed within a pattern by a "(?i)" option setting. _REGEX_MULTILINE: By default, GRegex treats the strings as consisting of a single line of characters (even if it actually contains newlines). The "start of line" metacharacter ("^") matches only at the start of the string, while the "end of line" metacharacter ("$") matches only at the end of the string, or before a terminating newline (unless %G_REGEX_DOLLAR_ENDONLY is set). When %G_REGEX_MULTILINE is set, the "start of line" and "end of line" constructs match immediately following or immediately before any newline in the string, respectively, as well as at the very start and end. This can be changed within a pattern by a "(?m)" option setting. _REGEX_DOTALL: A dot metacharacter (".") in the pattern matches all characters, including newlines. Without it, newlines are excluded. This option can be changed within a pattern by a ("?s") option setting. _REGEX_EXTENDED: Whitespace data characters in the pattern are totally ignored except when escaped or inside a character class. Whitespace does not include the VT character (code 11). In addition, characters between an unescaped "#" outside a character class and the next newline character, inclusive, are also ignored. This can be changed within a pattern by a "(?x)" option setting. _REGEX_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_DOLLAR_ENDONLY: A dollar metacharacter ("$") in the pattern matches only at the end of the string. Without this option, a dollar also matches immediately before the final character if it is a newline (but not before any other newlines). This option is ignored if %G_REGEX_MULTILINE is set. _REGEX_UNGREEDY: Inverts the "greediness" of the quantifiers so that they are not greedy by default, but become greedy if followed by "?". It can also be set by a "(?U)" option setting within the pattern. _REGEX_RAW: Usually strings must be valid UTF-8 strings, using this flag they are considered as a raw sequence of bytes. _REGEX_NO_AUTO_CAPTURE: Disables the use of numbered capturing parentheses in the pattern. Any opening parenthesis that is not followed by "?" behaves as if it were followed by "?:" but named parentheses can still be used for capturing (and they acquire numbers in the usual way). _REGEX_OPTIMIZE: Optimize the regular expression. If the pattern will be used many times, then it may be worth the effort to optimize it to improve the speed of matches. _REGEX_FIRSTLINE: Limits an unanchored pattern to match before (or at) the first newline. Since: 2.34 _REGEX_DUPNAMES: Names used to identify capturing subpatterns need not be unique. This can be helpful for certain types of pattern when it is known that only one instance of the named subpattern can ever be matched. _REGEX_NEWLINE_CR: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_LF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_CRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequence is ''. _REGEX_NEWLINE_ANYCRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequences are '', '', and ''. Since: 2.34 _REGEX_BSR_ANYCRLF: Usually any newline character or character sequence is recognised. If this option is set, then "\R" only recognizes the newline characters '', '' and ''. Since: 2.34 _REGEX_JAVASCRIPT_COMPAT: Changes behaviour so that it is compatible with JavaScript rather than PCRE. Since: 2.34
+ * GRegexCompileFlags: _REGEX_DEFAULT: No special options set. Since: 2.74 _REGEX_CASELESS: Letters in the pattern match both upper- and lowercase letters. This option can be changed within a pattern by a "(?i)" option setting. _REGEX_MULTILINE: By default, GRegex treats the strings as consisting of a single line of characters (even if it actually contains newlines). The "start of line" metacharacter ("^") matches only at the start of the string, while the "end of line" metacharacter ("$") matches only at the end of the string, or before a terminating newline (unless %G_REGEX_DOLLAR_ENDONLY is set). When %G_REGEX_MULTILINE is set, the "start of line" and "end of line" constructs match immediately following or immediately before any newline in the string, respectively, as well as at the very start and end. This can be changed within a pattern by a "(?m)" option setting. _REGEX_DOTALL: A dot metacharacter (".") in the pattern matches all characters, including newlines. Without it, newlines are excluded. This option can be changed within a pattern by a ("?s") option setting. _REGEX_EXTENDED: Whitespace data characters in the pattern are totally ignored except when escaped or inside a character class. Whitespace does not include the VT character (code 11). In addition, characters between an unescaped "#" outside a character class and the next newline character, inclusive, are also ignored. This can be changed within a pattern by a "(?x)" option setting. _REGEX_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_DOLLAR_ENDONLY: A dollar metacharacter ("$") in the pattern matches only at the end of the string. Without this option, a dollar also matches immediately before the final character if it is a newline (but not before any other newlines). This option is ignored if %G_REGEX_MULTILINE is set. _REGEX_UNGREEDY: Inverts the "greediness" of the quantifiers so that they are not greedy by default, but become greedy if followed by "?". It can also be set by a "(?U)" option setting within the pattern. _REGEX_RAW: Usually strings must be valid UTF-8 strings, using this flag they are considered as a raw sequence of bytes. _REGEX_NO_AUTO_CAPTURE: Disables the use of numbered capturing parentheses in the pattern. Any opening parenthesis that is not followed by "?" behaves as if it were followed by "?:" but named parentheses can still be used for capturing (and they acquire numbers in the usual way). _REGEX_OPTIMIZE: Since 2.74 and the port to pcre2, requests JIT compilation, which, if the just-in-time compiler is available, further processes a compiled pattern into machine code that executes much faster. However, it comes at the cost of extra processing before the match is performed, so it is most beneficial to use this when the same compiled pattern is used for matching many times. Before 2.74 this option used the built-in non-JIT optimizations in pcre1. _REGEX_FIRSTLINE: Limits an unanchored pattern to match before (or at) the first newline. Since: 2.34 _REGEX_DUPNAMES: Names used to identify capturing subpatterns need not be unique. This can be helpful for certain types of pattern when it is known that only one instance of the named subpattern can ever be matched. _REGEX_NEWLINE_CR: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_LF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_CRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequence is ''. _REGEX_NEWLINE_ANYCRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequences are '', '', and ''. Since: 2.34 _REGEX_BSR_ANYCRLF: Usually any newline character or character sequence is recognised. If this option is set, then "\R" only recognizes the newline characters '', '' and ''. Since: 2.34 _REGEX_JAVASCRIPT_COMPAT: Changes behaviour so that it is compatible with JavaScript rather than PCRE. Since GLib 2.74 this is no longer supported, as libpcre2 does not support it. Since: 2.34 Deprecated: 2.74
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type GRegexCompileFlags = CUnsignedInt
 object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
   given _tag: Tag[GRegexCompileFlags] = Tag.UInt
   inline def define(inline a: Long): GRegexCompileFlags = a.toUInt
+  val G_REGEX_DEFAULT = define(0)
   val G_REGEX_CASELESS = define(1)
   val G_REGEX_MULTILINE = define(2)
   val G_REGEX_DOTALL = define(4)
@@ -970,6 +979,7 @@ object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
   val G_REGEX_JAVASCRIPT_COMPAT = define(33554432)
   inline def getName(inline value: GRegexCompileFlags): Option[String] =
     inline value match
+      case G_REGEX_DEFAULT => Some("G_REGEX_DEFAULT")
       case G_REGEX_CASELESS => Some("G_REGEX_CASELESS")
       case G_REGEX_MULTILINE => Some("G_REGEX_MULTILINE")
       case G_REGEX_DOTALL => Some("G_REGEX_DOTALL")
@@ -997,7 +1007,7 @@ object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
 /**
  * GRegexError: _REGEX_ERROR_COMPILE: Compilation of the regular expression failed. _REGEX_ERROR_OPTIMIZE: Optimization of the regular expression failed. _REGEX_ERROR_REPLACE: Replacement failed due to an ill-formed replacement string. _REGEX_ERROR_MATCH: The match process failed. _REGEX_ERROR_INTERNAL: Internal error of the regular expression engine. Since 2.16 _REGEX_ERROR_STRAY_BACKSLASH: "\\" at end of pattern. Since 2.16 _REGEX_ERROR_MISSING_CONTROL_CHAR: "\\c" at end of pattern. Since 2.16 _REGEX_ERROR_UNRECOGNIZED_ESCAPE: Unrecognized character follows "\\". Since 2.16 _REGEX_ERROR_QUANTIFIERS_OUT_OF_ORDER: Numbers out of order in "{}" quantifier. Since 2.16 _REGEX_ERROR_QUANTIFIER_TOO_BIG: Number too big in "{}" quantifier. Since 2.16 _REGEX_ERROR_UNTERMINATED_CHARACTER_CLASS: Missing terminating "]" for character class. Since 2.16 _REGEX_ERROR_INVALID_ESCAPE_IN_CHARACTER_CLASS: Invalid escape sequence in character class. Since 2.16 _REGEX_ERROR_RANGE_OUT_OF_ORDER: Range out of order in character class. Since 2.16 _REGEX_ERROR_NOTHING_TO_REPEAT: Nothing to repeat. Since 2.16 _REGEX_ERROR_UNRECOGNIZED_CHARACTER: Unrecognized character after "(?", "(?<" or "(?P". Since 2.16 _REGEX_ERROR_POSIX_NAMED_CLASS_OUTSIDE_CLASS: POSIX named classes are supported only within a class. Since 2.16 _REGEX_ERROR_UNMATCHED_PARENTHESIS: Missing terminating ")" or ")" without opening "(". Since 2.16 _REGEX_ERROR_INEXISTENT_SUBPATTERN_REFERENCE: Reference to non-existent subpattern. Since 2.16 _REGEX_ERROR_UNTERMINATED_COMMENT: Missing terminating ")" after comment. Since 2.16 _REGEX_ERROR_EXPRESSION_TOO_LARGE: Regular expression too large. Since 2.16 _REGEX_ERROR_MEMORY_ERROR: Failed to get memory. Since 2.16 _REGEX_ERROR_VARIABLE_LENGTH_LOOKBEHIND: Lookbehind assertion is not fixed length. Since 2.16 _REGEX_ERROR_MALFORMED_CONDITION: Malformed number or name after "(?(". Since 2.16 _REGEX_ERROR_TOO_MANY_CONDITIONAL_BRANCHES: Conditional group contains more than two branches. Since 2.16 _REGEX_ERROR_ASSERTION_EXPECTED: Assertion expected after "(?(". Since 2.16 _REGEX_ERROR_UNKNOWN_POSIX_CLASS_NAME: Unknown POSIX class name. Since 2.16 _REGEX_ERROR_POSIX_COLLATING_ELEMENTS_NOT_SUPPORTED: POSIX collating elements are not supported. Since 2.16 _REGEX_ERROR_HEX_CODE_TOO_LARGE: Character value in "\\x{...}" sequence is too large. Since 2.16 _REGEX_ERROR_INVALID_CONDITION: Invalid condition "(?(0)". Since 2.16 _REGEX_ERROR_SINGLE_BYTE_MATCH_IN_LOOKBEHIND: \C not allowed in lookbehind assertion. Since 2.16 _REGEX_ERROR_INFINITE_LOOP: Recursive call could loop indefinitely. Since 2.16 _REGEX_ERROR_MISSING_SUBPATTERN_NAME_TERMINATOR: Missing terminator in subpattern name. Since 2.16 _REGEX_ERROR_DUPLICATE_SUBPATTERN_NAME: Two named subpatterns have the same name. Since 2.16 _REGEX_ERROR_MALFORMED_PROPERTY: Malformed "\\P" or "\\p" sequence. Since 2.16 _REGEX_ERROR_UNKNOWN_PROPERTY: Unknown property name after "\\P" or "\\p". Since 2.16 _REGEX_ERROR_SUBPATTERN_NAME_TOO_LONG: Subpattern name is too long (maximum 32 characters). Since 2.16 _REGEX_ERROR_TOO_MANY_SUBPATTERNS: Too many named subpatterns (maximum 10,000). Since 2.16 _REGEX_ERROR_INVALID_OCTAL_VALUE: Octal value is greater than "\\377". Since 2.16 _REGEX_ERROR_TOO_MANY_BRANCHES_IN_DEFINE: "DEFINE" group contains more than one branch. Since 2.16 _REGEX_ERROR_DEFINE_REPETION: Repeating a "DEFINE" group is not allowed. This error is never raised. Since: 2.16 Deprecated: 2.34 _REGEX_ERROR_INCONSISTENT_NEWLINE_OPTIONS: Inconsistent newline options. Since 2.16 _REGEX_ERROR_MISSING_BACK_REFERENCE: "\\g" is not followed by a braced, angle-bracketed, or quoted name or number, or by a plain number. Since: 2.16 _REGEX_ERROR_INVALID_RELATIVE_REFERENCE: relative reference must not be zero. Since: 2.34 _REGEX_ERROR_BACKTRACKING_CONTROL_VERB_ARGUMENT_FORBIDDEN: the backtracing control verb used does not allow an argument. Since: 2.34 _REGEX_ERROR_UNKNOWN_BACKTRACKING_CONTROL_VERB: unknown backtracing control verb. Since: 2.34 _REGEX_ERROR_NUMBER_TOO_BIG: number is too big in escape sequence. Since: 2.34 _REGEX_ERROR_MISSING_SUBPATTERN_NAME: Missing subpattern name. Since: 2.34 _REGEX_ERROR_MISSING_DIGIT: Missing digit. Since 2.34 _REGEX_ERROR_INVALID_DATA_CHARACTER: In JavaScript compatibility mode, "[" is an invalid data character. Since: 2.34 _REGEX_ERROR_EXTRA_SUBPATTERN_NAME: different names for subpatterns of the same number are not allowed. Since: 2.34 _REGEX_ERROR_BACKTRACKING_CONTROL_VERB_ARGUMENT_REQUIRED: the backtracing control verb requires an argument. Since: 2.34 _REGEX_ERROR_INVALID_CONTROL_CHAR: "\\c" must be followed by an ASCII character. Since: 2.34 _REGEX_ERROR_MISSING_NAME: "\\k" is not followed by a braced, angle-bracketed, or quoted name. Since: 2.34 _REGEX_ERROR_NOT_SUPPORTED_IN_CLASS: "\\N" is not supported in a class. Since: 2.34 _REGEX_ERROR_TOO_MANY_FORWARD_REFERENCES: too many forward references. Since: 2.34 _REGEX_ERROR_NAME_TOO_LONG: the name is too long in "(*MARK)", "(*PRUNE)", "(*SKIP)", or "(*THEN)". Since: 2.34 _REGEX_ERROR_CHARACTER_VALUE_TOO_LARGE: the character value in the \u sequence is too large. Since: 2.34
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type GRegexError = CUnsignedInt
 object GRegexError extends CEnumU[GRegexError]:
@@ -1126,14 +1136,15 @@ object GRegexError extends CEnumU[GRegexError]:
     inline def is(b: GRegexError): Boolean = (a & b) == b
 
 /**
- * GRegexMatchFlags: _REGEX_MATCH_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_MATCH_NOTBOL: Specifies that first character of the string is not the beginning of a line, so the circumflex metacharacter should not match before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes circumflex never to match. This option affects only the behaviour of the circumflex metacharacter, it does not affect "\A". _REGEX_MATCH_NOTEOL: Specifies that the end of the subject string is not the end of a line, so the dollar metacharacter should not match it nor (except in multiline mode) a newline immediately before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes dollar never to match. This option affects only the behaviour of the dollar metacharacter, it does not affect "\Z" or "\z". _REGEX_MATCH_NOTEMPTY: An empty string is not considered to be a valid match if this option is set. If there are alternatives in the pattern, they are tried. If all the alternatives match the empty string, the entire match fails. For example, if the pattern "a?b?" is applied to a string not beginning with "a" or "b", it matches the empty string at the start of the string. With this flag set, this match is not valid, so GRegex searches further into the string for occurrences of "a" or "b". _REGEX_MATCH_PARTIAL: Turns on the partial matching feature, for more documentation on partial matching see g_match_info_is_partial_match(). _REGEX_MATCH_NEWLINE_CR: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_LF: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_CRLF: Overrides the newline definition set when creating a new #GRegex, setting the '' characters sequence as line terminator. _REGEX_MATCH_NEWLINE_ANY: Overrides the newline definition set when creating a new #GRegex, any Unicode newline sequence is recognised as a newline. These are '', '' and ' single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. _REGEX_MATCH_NEWLINE_ANYCRLF: Overrides the newline definition set when creating a new #GRegex; any '', '', or '' character sequence is recognized as a newline. Since: 2.34 _REGEX_MATCH_BSR_ANYCRLF: Overrides the newline definition for "\R" set when creating a new #GRegex; only '', '', or '' character sequences are recognized as a newline by "\R". Since: 2.34 _REGEX_MATCH_BSR_ANY: Overrides the newline definition for "\R" set when creating a new #GRegex; any Unicode newline character or character sequence are recognized as a newline by "\R". These are '', '' and ' single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. Since: 2.34 _REGEX_MATCH_PARTIAL_SOFT: An alias for %G_REGEX_MATCH_PARTIAL. Since: 2.34 _REGEX_MATCH_PARTIAL_HARD: Turns on the partial matching feature. In contrast to to %G_REGEX_MATCH_PARTIAL_SOFT, this stops matching as soon as a partial match is found, without continuing to search for a possible complete match. See g_match_info_is_partial_match() for more information. Since: 2.34 _REGEX_MATCH_NOTEMPTY_ATSTART: Like %G_REGEX_MATCH_NOTEMPTY, but only applied to the start of the matched string. For anchored patterns this can only happen for pattern containing "\K". Since: 2.34
+ * GRegexMatchFlags: _REGEX_MATCH_DEFAULT: No special options set. Since: 2.74 _REGEX_MATCH_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_MATCH_NOTBOL: Specifies that first character of the string is not the beginning of a line, so the circumflex metacharacter should not match before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes circumflex never to match. This option affects only the behaviour of the circumflex metacharacter, it does not affect "\A". _REGEX_MATCH_NOTEOL: Specifies that the end of the subject string is not the end of a line, so the dollar metacharacter should not match it nor (except in multiline mode) a newline immediately before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes dollar never to match. This option affects only the behaviour of the dollar metacharacter, it does not affect "\Z" or "\z". _REGEX_MATCH_NOTEMPTY: An empty string is not considered to be a valid match if this option is set. If there are alternatives in the pattern, they are tried. If all the alternatives match the empty string, the entire match fails. For example, if the pattern "a?b?" is applied to a string not beginning with "a" or "b", it matches the empty string at the start of the string. With this flag set, this match is not valid, so GRegex searches further into the string for occurrences of "a" or "b". _REGEX_MATCH_PARTIAL: Turns on the partial matching feature, for more documentation on partial matching see g_match_info_is_partial_match(). _REGEX_MATCH_NEWLINE_CR: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_LF: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_CRLF: Overrides the newline definition set when creating a new #GRegex, setting the '' characters sequence as line terminator. _REGEX_MATCH_NEWLINE_ANY: Overrides the newline definition set when creating a new #GRegex, any Unicode newline sequence is recognised as a newline. These are '', '' and ' single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. _REGEX_MATCH_NEWLINE_ANYCRLF: Overrides the newline definition set when creating a new #GRegex; any '', '', or '' character sequence is recognized as a newline. Since: 2.34 _REGEX_MATCH_BSR_ANYCRLF: Overrides the newline definition for "\R" set when creating a new #GRegex; only '', '', or '' character sequences are recognized as a newline by "\R". Since: 2.34 _REGEX_MATCH_BSR_ANY: Overrides the newline definition for "\R" set when creating a new #GRegex; any Unicode newline character or character sequence are recognized as a newline by "\R". These are '', '' and ' single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. Since: 2.34 _REGEX_MATCH_PARTIAL_SOFT: An alias for %G_REGEX_MATCH_PARTIAL. Since: 2.34 _REGEX_MATCH_PARTIAL_HARD: Turns on the partial matching feature. In contrast to to %G_REGEX_MATCH_PARTIAL_SOFT, this stops matching as soon as a partial match is found, without continuing to search for a possible complete match. See g_match_info_is_partial_match() for more information. Since: 2.34 _REGEX_MATCH_NOTEMPTY_ATSTART: Like %G_REGEX_MATCH_NOTEMPTY, but only applied to the start of the matched string. For anchored patterns this can only happen for pattern containing "\K". Since: 2.34
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type GRegexMatchFlags = CUnsignedInt
 object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
   given _tag: Tag[GRegexMatchFlags] = Tag.UInt
   inline def define(inline a: Long): GRegexMatchFlags = a.toUInt
+  val G_REGEX_MATCH_DEFAULT = define(0)
   val G_REGEX_MATCH_ANCHORED = define(16)
   val G_REGEX_MATCH_NOTBOL = define(128)
   val G_REGEX_MATCH_NOTEOL = define(256)
@@ -1151,6 +1162,7 @@ object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
   val G_REGEX_MATCH_NOTEMPTY_ATSTART = define(268435456)
   inline def getName(inline value: GRegexMatchFlags): Option[String] =
     inline value match
+      case G_REGEX_MATCH_DEFAULT => Some("G_REGEX_MATCH_DEFAULT")
       case G_REGEX_MATCH_ANCHORED => Some("G_REGEX_MATCH_ANCHORED")
       case G_REGEX_MATCH_NOTBOL => Some("G_REGEX_MATCH_NOTBOL")
       case G_REGEX_MATCH_NOTEOL => Some("G_REGEX_MATCH_NOTEOL")
@@ -1173,7 +1185,7 @@ object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
     inline def is(b: GRegexMatchFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GSeekType = CUnsignedInt
 object GSeekType extends CEnumU[GSeekType]:
@@ -1194,7 +1206,7 @@ object GSeekType extends CEnumU[GSeekType]:
     inline def is(b: GSeekType): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gshell.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gshell.h
 */
 opaque type GShellError = CUnsignedInt
 object GShellError extends CEnumU[GShellError]:
@@ -1215,7 +1227,7 @@ object GShellError extends CEnumU[GShellError]:
     inline def is(b: GShellError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gslice.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gslice.h
 */
 opaque type GSliceConfig = CUnsignedInt
 object GSliceConfig extends CEnumU[GSliceConfig]:
@@ -1244,7 +1256,7 @@ object GSliceConfig extends CEnumU[GSliceConfig]:
 /**
  * GSpawnError: _SPAWN_ERROR_FORK: Fork failed due to lack of memory. _SPAWN_ERROR_READ: Read or select on pipes failed. _SPAWN_ERROR_CHDIR: Changing to working directory failed. _SPAWN_ERROR_ACCES: execv() returned `EACCES` _SPAWN_ERROR_PERM: execv() returned `EPERM` _SPAWN_ERROR_TOO_BIG: execv() returned `E2BIG` _SPAWN_ERROR_2BIG: deprecated alias for %G_SPAWN_ERROR_TOO_BIG (deprecated since GLib 2.32) _SPAWN_ERROR_NOEXEC: execv() returned `ENOEXEC` _SPAWN_ERROR_NAMETOOLONG: execv() returned `ENAMETOOLONG` _SPAWN_ERROR_NOENT: execv() returned `ENOENT` _SPAWN_ERROR_NOMEM: execv() returned `ENOMEM` _SPAWN_ERROR_NOTDIR: execv() returned `ENOTDIR` _SPAWN_ERROR_LOOP: execv() returned `ELOOP` _SPAWN_ERROR_TXTBUSY: execv() returned `ETXTBUSY` _SPAWN_ERROR_IO: execv() returned `EIO` _SPAWN_ERROR_NFILE: execv() returned `ENFILE` _SPAWN_ERROR_MFILE: execv() returned `EMFILE` _SPAWN_ERROR_INVAL: execv() returned `EINVAL` _SPAWN_ERROR_ISDIR: execv() returned `EISDIR` _SPAWN_ERROR_LIBBAD: execv() returned `ELIBBAD` _SPAWN_ERROR_FAILED: Some other fatal failure, `error->message` should explain.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gspawn.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gspawn.h
 */
 opaque type GSpawnError = CUnsignedInt
 object GSpawnError extends CEnumU[GSpawnError]:
@@ -1301,9 +1313,9 @@ object GSpawnError extends CEnumU[GSpawnError]:
     inline def is(b: GSpawnError): Boolean = (a & b) == b
 
 /**
- * GSpawnFlags: _SPAWN_DEFAULT: no flags, default behaviour _SPAWN_LEAVE_DESCRIPTORS_OPEN: the parent's open file descriptors will be inherited by the child; otherwise all descriptors except stdin, stdout and stderr will be closed before calling exec() in the child. _SPAWN_DO_NOT_REAP_CHILD: the child will not be automatically reaped; you must use g_child_watch_add() yourself (or call waitpid() or handle `SIGCHLD` yourself), or the child will become a zombie. _SPAWN_SEARCH_PATH: `argv[0]` need not be an absolute path, it will be looked for in the user's `PATH`. _SPAWN_STDOUT_TO_DEV_NULL: the child's standard output will be discarded, instead of going to the same location as the parent's standard output. _SPAWN_STDERR_TO_DEV_NULL: the child's standard error will be discarded. _SPAWN_CHILD_INHERITS_STDIN: the child will inherit the parent's standard input (by default, the child's standard input is attached to `/dev/null`). _SPAWN_FILE_AND_ARGV_ZERO: the first element of `argv` is the file to execute, while the remaining elements are the actual argument vector to pass to the file. Normally g_spawn_async_with_pipes() uses `argv[0]` as the file to execute, and passes all of `argv` to the child. _SPAWN_SEARCH_PATH_FROM_ENVP: if `argv[0]` is not an absolute path, it will be looked for in the `PATH` from the passed child environment. Since: 2.34 _SPAWN_CLOEXEC_PIPES: create all pipes with the `O_CLOEXEC` flag set. Since: 2.40
+ * GSpawnFlags: _SPAWN_DEFAULT: no flags, default behaviour _SPAWN_LEAVE_DESCRIPTORS_OPEN: the parent's open file descriptors will be inherited by the child; otherwise all descriptors except stdin, stdout and stderr will be closed before calling exec() in the child. _SPAWN_DO_NOT_REAP_CHILD: the child will not be automatically reaped; you must use g_child_watch_add() yourself (or call waitpid() or handle `SIGCHLD` yourself), or the child will become a zombie. _SPAWN_SEARCH_PATH: `argv[0]` need not be an absolute path, it will be looked for in the user's `PATH`. _SPAWN_STDOUT_TO_DEV_NULL: the child's standard output will be discarded, instead of going to the same location as the parent's standard output. _SPAWN_STDERR_TO_DEV_NULL: the child's standard error will be discarded. _SPAWN_CHILD_INHERITS_STDIN: the child will inherit the parent's standard input (by default, the child's standard input is attached to `/dev/null`). _SPAWN_FILE_AND_ARGV_ZERO: the first element of `argv` is the file to execute, while the remaining elements are the actual argument vector to pass to the file. Normally g_spawn_async_with_pipes() uses `argv[0]` as the file to execute, and passes all of `argv` to the child. _SPAWN_SEARCH_PATH_FROM_ENVP: if `argv[0]` is not an absolute path, it will be looked for in the `PATH` from the passed child environment. Since: 2.34 _SPAWN_CLOEXEC_PIPES: create all pipes with the `O_CLOEXEC` flag set. Since: 2.40 _SPAWN_CHILD_INHERITS_STDOUT: the child will inherit the parent's standard output. Since: 2.74 _SPAWN_CHILD_INHERITS_STDERR: the child will inherit the parent's standard error. Since: 2.74 _SPAWN_STDIN_FROM_DEV_NULL: the child's standard input is attached to `/dev/null`. Since: 2.74
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gspawn.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gspawn.h
 */
 opaque type GSpawnFlags = CUnsignedInt
 object GSpawnFlags extends CEnumU[GSpawnFlags]:
@@ -1319,6 +1331,9 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
   val G_SPAWN_FILE_AND_ARGV_ZERO = define(64)
   val G_SPAWN_SEARCH_PATH_FROM_ENVP = define(128)
   val G_SPAWN_CLOEXEC_PIPES = define(256)
+  val G_SPAWN_CHILD_INHERITS_STDOUT = define(512)
+  val G_SPAWN_CHILD_INHERITS_STDERR = define(1024)
+  val G_SPAWN_STDIN_FROM_DEV_NULL = define(2048)
   inline def getName(inline value: GSpawnFlags): Option[String] =
     inline value match
       case G_SPAWN_DEFAULT => Some("G_SPAWN_DEFAULT")
@@ -1331,6 +1346,9 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
       case G_SPAWN_FILE_AND_ARGV_ZERO => Some("G_SPAWN_FILE_AND_ARGV_ZERO")
       case G_SPAWN_SEARCH_PATH_FROM_ENVP => Some("G_SPAWN_SEARCH_PATH_FROM_ENVP")
       case G_SPAWN_CLOEXEC_PIPES => Some("G_SPAWN_CLOEXEC_PIPES")
+      case G_SPAWN_CHILD_INHERITS_STDOUT => Some("G_SPAWN_CHILD_INHERITS_STDOUT")
+      case G_SPAWN_CHILD_INHERITS_STDERR => Some("G_SPAWN_CHILD_INHERITS_STDERR")
+      case G_SPAWN_STDIN_FROM_DEV_NULL => Some("G_SPAWN_STDIN_FROM_DEV_NULL")
       case _ => None
   extension (a: GSpawnFlags)
     inline def &(b: GSpawnFlags): GSpawnFlags = a & b
@@ -1338,7 +1356,7 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
     inline def is(b: GSpawnFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestFileType = CUnsignedInt
 object GTestFileType extends CEnumU[GTestFileType]:
@@ -1357,7 +1375,7 @@ object GTestFileType extends CEnumU[GTestFileType]:
     inline def is(b: GTestFileType): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestLogType = CUnsignedInt
 object GTestLogType extends CEnumU[GTestLogType]:
@@ -1396,7 +1414,7 @@ object GTestLogType extends CEnumU[GTestLogType]:
     inline def is(b: GTestLogType): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestResult = CUnsignedInt
 object GTestResult extends CEnumU[GTestResult]:
@@ -1419,17 +1437,19 @@ object GTestResult extends CEnumU[GTestResult]:
     inline def is(b: GTestResult): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestSubprocessFlags = CUnsignedInt
 object GTestSubprocessFlags extends CEnumU[GTestSubprocessFlags]:
   given _tag: Tag[GTestSubprocessFlags] = Tag.UInt
   inline def define(inline a: Long): GTestSubprocessFlags = a.toUInt
+  val G_TEST_SUBPROCESS_DEFAULT = define(0)
   val G_TEST_SUBPROCESS_INHERIT_STDIN = define(1)
   val G_TEST_SUBPROCESS_INHERIT_STDOUT = define(2)
   val G_TEST_SUBPROCESS_INHERIT_STDERR = define(4)
   inline def getName(inline value: GTestSubprocessFlags): Option[String] =
     inline value match
+      case G_TEST_SUBPROCESS_DEFAULT => Some("G_TEST_SUBPROCESS_DEFAULT")
       case G_TEST_SUBPROCESS_INHERIT_STDIN => Some("G_TEST_SUBPROCESS_INHERIT_STDIN")
       case G_TEST_SUBPROCESS_INHERIT_STDOUT => Some("G_TEST_SUBPROCESS_INHERIT_STDOUT")
       case G_TEST_SUBPROCESS_INHERIT_STDERR => Some("G_TEST_SUBPROCESS_INHERIT_STDERR")
@@ -1440,19 +1460,21 @@ object GTestSubprocessFlags extends CEnumU[GTestSubprocessFlags]:
     inline def is(b: GTestSubprocessFlags): Boolean = (a & b) == b
 
 /**
- * GTestTrapFlags: _TEST_TRAP_SILENCE_STDOUT: Redirect stdout of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stdout(). _TEST_TRAP_SILENCE_STDERR: Redirect stderr of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stderr(). _TEST_TRAP_INHERIT_STDIN: If this flag is given, stdin of the child process is shared with stdin of its parent process. It is redirected to `/dev/null` otherwise.
+ * GTestTrapFlags: _TEST_TRAP_DEFAULT: Default behaviour. Since: 2.74 _TEST_TRAP_SILENCE_STDOUT: Redirect stdout of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stdout(). _TEST_TRAP_SILENCE_STDERR: Redirect stderr of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stderr(). _TEST_TRAP_INHERIT_STDIN: If this flag is given, stdin of the child process is shared with stdin of its parent process. It is redirected to `/dev/null` otherwise.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestTrapFlags = CUnsignedInt
 object GTestTrapFlags extends CEnumU[GTestTrapFlags]:
   given _tag: Tag[GTestTrapFlags] = Tag.UInt
   inline def define(inline a: Long): GTestTrapFlags = a.toUInt
+  val G_TEST_TRAP_DEFAULT = define(0)
   val G_TEST_TRAP_SILENCE_STDOUT = define(128)
   val G_TEST_TRAP_SILENCE_STDERR = define(256)
   val G_TEST_TRAP_INHERIT_STDIN = define(512)
   inline def getName(inline value: GTestTrapFlags): Option[String] =
     inline value match
+      case G_TEST_TRAP_DEFAULT => Some("G_TEST_TRAP_DEFAULT")
       case G_TEST_TRAP_SILENCE_STDOUT => Some("G_TEST_TRAP_SILENCE_STDOUT")
       case G_TEST_TRAP_SILENCE_STDERR => Some("G_TEST_TRAP_SILENCE_STDERR")
       case G_TEST_TRAP_INHERIT_STDIN => Some("G_TEST_TRAP_INHERIT_STDIN")
@@ -1463,7 +1485,7 @@ object GTestTrapFlags extends CEnumU[GTestTrapFlags]:
     inline def is(b: GTestTrapFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GThreadError = CUnsignedInt
 object GThreadError extends CEnumU[GThreadError]:
@@ -1480,7 +1502,7 @@ object GThreadError extends CEnumU[GThreadError]:
     inline def is(b: GThreadError): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GThreadPriority = CUnsignedInt
 object GThreadPriority extends CEnumU[GThreadPriority]:
@@ -1505,7 +1527,7 @@ object GThreadPriority extends CEnumU[GThreadPriority]:
 /**
  * GTimeType: _TIME_TYPE_STANDARD: the time is in local standard time _TIME_TYPE_DAYLIGHT: the time is in local daylight time _TIME_TYPE_UNIVERSAL: the time is in UTC
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtimezone.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtimezone.h
 */
 opaque type GTimeType = CUnsignedInt
 object GTimeType extends CEnumU[GTimeType]:
@@ -1526,7 +1548,7 @@ object GTimeType extends CEnumU[GTimeType]:
     inline def is(b: GTimeType): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type GTokenType = CUnsignedInt
 object GTokenType extends CEnumU[GTokenType]:
@@ -1589,7 +1611,7 @@ object GTokenType extends CEnumU[GTokenType]:
     inline def is(b: GTokenType): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gnode.h
 */
 opaque type GTraverseFlags = CUnsignedInt
 object GTraverseFlags extends CEnumU[GTraverseFlags]:
@@ -1616,7 +1638,7 @@ object GTraverseFlags extends CEnumU[GTraverseFlags]:
     inline def is(b: GTraverseFlags): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gnode.h
 */
 opaque type GTraverseType = CUnsignedInt
 object GTraverseType extends CEnumU[GTraverseType]:
@@ -1641,7 +1663,7 @@ object GTraverseType extends CEnumU[GTraverseType]:
 /**
  * GUnicodeBreakType: _UNICODE_BREAK_MANDATORY: Mandatory Break (BK) _UNICODE_BREAK_CARRIAGE_RETURN: Carriage Return (CR) _UNICODE_BREAK_LINE_FEED: Line Feed (LF) _UNICODE_BREAK_COMBINING_MARK: Attached Characters and Combining Marks (CM) _UNICODE_BREAK_SURROGATE: Surrogates (SG) _UNICODE_BREAK_ZERO_WIDTH_SPACE: Zero Width Space (ZW) _UNICODE_BREAK_INSEPARABLE: Inseparable (IN) _UNICODE_BREAK_NON_BREAKING_GLUE: Non-breaking ("Glue") (GL) _UNICODE_BREAK_CONTINGENT: Contingent Break Opportunity (CB) _UNICODE_BREAK_SPACE: Space (SP) _UNICODE_BREAK_AFTER: Break Opportunity After (BA) _UNICODE_BREAK_BEFORE: Break Opportunity Before (BB) _UNICODE_BREAK_BEFORE_AND_AFTER: Break Opportunity Before and After (B2) _UNICODE_BREAK_HYPHEN: Hyphen (HY) _UNICODE_BREAK_NON_STARTER: Nonstarter (NS) _UNICODE_BREAK_OPEN_PUNCTUATION: Opening Punctuation (OP) _UNICODE_BREAK_CLOSE_PUNCTUATION: Closing Punctuation (CL) _UNICODE_BREAK_QUOTATION: Ambiguous Quotation (QU) _UNICODE_BREAK_EXCLAMATION: Exclamation/Interrogation (EX) _UNICODE_BREAK_IDEOGRAPHIC: Ideographic (ID) _UNICODE_BREAK_NUMERIC: Numeric (NU) _UNICODE_BREAK_INFIX_SEPARATOR: Infix Separator (Numeric) (IS) _UNICODE_BREAK_SYMBOL: Symbols Allowing Break After (SY) _UNICODE_BREAK_ALPHABETIC: Ordinary Alphabetic and Symbol Characters (AL) _UNICODE_BREAK_PREFIX: Prefix (Numeric) (PR) _UNICODE_BREAK_POSTFIX: Postfix (Numeric) (PO) _UNICODE_BREAK_COMPLEX_CONTEXT: Complex Content Dependent (South East Asian) (SA) _UNICODE_BREAK_AMBIGUOUS: Ambiguous (Alphabetic or Ideographic) (AI) _UNICODE_BREAK_UNKNOWN: Unknown (XX) _UNICODE_BREAK_NEXT_LINE: Next Line (NL) _UNICODE_BREAK_WORD_JOINER: Word Joiner (WJ) _UNICODE_BREAK_HANGUL_L_JAMO: Hangul L Jamo (JL) _UNICODE_BREAK_HANGUL_V_JAMO: Hangul V Jamo (JV) _UNICODE_BREAK_HANGUL_T_JAMO: Hangul T Jamo (JT) _UNICODE_BREAK_HANGUL_LV_SYLLABLE: Hangul LV Syllable (H2) _UNICODE_BREAK_HANGUL_LVT_SYLLABLE: Hangul LVT Syllable (H3) _UNICODE_BREAK_CLOSE_PARANTHESIS: Closing Parenthesis (CP). Since 2.28. Deprecated: 2.70: Use %G_UNICODE_BREAK_CLOSE_PARENTHESIS instead. _UNICODE_BREAK_CLOSE_PARENTHESIS: Closing Parenthesis (CP). Since 2.70 _UNICODE_BREAK_CONDITIONAL_JAPANESE_STARTER: Conditional Japanese Starter (CJ). Since: 2.32 _UNICODE_BREAK_HEBREW_LETTER: Hebrew Letter (HL). Since: 2.32 _UNICODE_BREAK_REGIONAL_INDICATOR: Regional Indicator (RI). Since: 2.36 _UNICODE_BREAK_EMOJI_BASE: Emoji Base (EB). Since: 2.50 _UNICODE_BREAK_EMOJI_MODIFIER: Emoji Modifier (EM). Since: 2.50 _UNICODE_BREAK_ZERO_WIDTH_JOINER: Zero Width Joiner (ZWJ). Since: 2.50
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gunicode.h
 */
 opaque type GUnicodeBreakType = CUnsignedInt
 object GUnicodeBreakType extends CEnumU[GUnicodeBreakType]:
@@ -1744,9 +1766,9 @@ object GUnicodeBreakType extends CEnumU[GUnicodeBreakType]:
     inline def is(b: GUnicodeBreakType): Boolean = (a & b) == b
 
 /**
- * GUnicodeScript: _UNICODE_SCRIPT_INVALID_CODE: a value never returned from g_unichar_get_script() _UNICODE_SCRIPT_COMMON: a character used by multiple different scripts _UNICODE_SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _UNICODE_SCRIPT_ARABIC: Arabic _UNICODE_SCRIPT_ARMENIAN: Armenian _UNICODE_SCRIPT_BENGALI: Bengali _UNICODE_SCRIPT_BOPOMOFO: Bopomofo _UNICODE_SCRIPT_CHEROKEE: Cherokee _UNICODE_SCRIPT_COPTIC: Coptic _UNICODE_SCRIPT_CYRILLIC: Cyrillic _UNICODE_SCRIPT_DESERET: Deseret _UNICODE_SCRIPT_DEVANAGARI: Devanagari _UNICODE_SCRIPT_ETHIOPIC: Ethiopic _UNICODE_SCRIPT_GEORGIAN: Georgian _UNICODE_SCRIPT_GOTHIC: Gothic _UNICODE_SCRIPT_GREEK: Greek _UNICODE_SCRIPT_GUJARATI: Gujarati _UNICODE_SCRIPT_GURMUKHI: Gurmukhi _UNICODE_SCRIPT_HAN: Han _UNICODE_SCRIPT_HANGUL: Hangul _UNICODE_SCRIPT_HEBREW: Hebrew _UNICODE_SCRIPT_HIRAGANA: Hiragana _UNICODE_SCRIPT_KANNADA: Kannada _UNICODE_SCRIPT_KATAKANA: Katakana _UNICODE_SCRIPT_KHMER: Khmer _UNICODE_SCRIPT_LAO: Lao _UNICODE_SCRIPT_LATIN: Latin _UNICODE_SCRIPT_MALAYALAM: Malayalam _UNICODE_SCRIPT_MONGOLIAN: Mongolian _UNICODE_SCRIPT_MYANMAR: Myanmar _UNICODE_SCRIPT_OGHAM: Ogham _UNICODE_SCRIPT_OLD_ITALIC: Old Italic _UNICODE_SCRIPT_ORIYA: Oriya _UNICODE_SCRIPT_RUNIC: Runic _UNICODE_SCRIPT_SINHALA: Sinhala _UNICODE_SCRIPT_SYRIAC: Syriac _UNICODE_SCRIPT_TAMIL: Tamil _UNICODE_SCRIPT_TELUGU: Telugu _UNICODE_SCRIPT_THAANA: Thaana _UNICODE_SCRIPT_THAI: Thai _UNICODE_SCRIPT_TIBETAN: Tibetan _UNICODE_SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _UNICODE_SCRIPT_YI: Yi _UNICODE_SCRIPT_TAGALOG: Tagalog _UNICODE_SCRIPT_HANUNOO: Hanunoo _UNICODE_SCRIPT_BUHID: Buhid _UNICODE_SCRIPT_TAGBANWA: Tagbanwa _UNICODE_SCRIPT_BRAILLE: Braille _UNICODE_SCRIPT_CYPRIOT: Cypriot _UNICODE_SCRIPT_LIMBU: Limbu _UNICODE_SCRIPT_OSMANYA: Osmanya _UNICODE_SCRIPT_SHAVIAN: Shavian _UNICODE_SCRIPT_LINEAR_B: Linear B _UNICODE_SCRIPT_TAI_LE: Tai Le _UNICODE_SCRIPT_UGARITIC: Ugaritic _UNICODE_SCRIPT_NEW_TAI_LUE: New Tai Lue _UNICODE_SCRIPT_BUGINESE: Buginese _UNICODE_SCRIPT_GLAGOLITIC: Glagolitic _UNICODE_SCRIPT_TIFINAGH: Tifinagh _UNICODE_SCRIPT_SYLOTI_NAGRI: Syloti Nagri _UNICODE_SCRIPT_OLD_PERSIAN: Old Persian _UNICODE_SCRIPT_KHAROSHTHI: Kharoshthi _UNICODE_SCRIPT_UNKNOWN: an unassigned code point _UNICODE_SCRIPT_BALINESE: Balinese _UNICODE_SCRIPT_CUNEIFORM: Cuneiform _UNICODE_SCRIPT_PHOENICIAN: Phoenician _UNICODE_SCRIPT_PHAGS_PA: Phags-pa _UNICODE_SCRIPT_NKO: N'Ko _UNICODE_SCRIPT_KAYAH_LI: Kayah Li. Since 2.16.3 _UNICODE_SCRIPT_LEPCHA: Lepcha. Since 2.16.3 _UNICODE_SCRIPT_REJANG: Rejang. Since 2.16.3 _UNICODE_SCRIPT_SUNDANESE: Sundanese. Since 2.16.3 _UNICODE_SCRIPT_SAURASHTRA: Saurashtra. Since 2.16.3 _UNICODE_SCRIPT_CHAM: Cham. Since 2.16.3 _UNICODE_SCRIPT_OL_CHIKI: Ol Chiki. Since 2.16.3 _UNICODE_SCRIPT_VAI: Vai. Since 2.16.3 _UNICODE_SCRIPT_CARIAN: Carian. Since 2.16.3 _UNICODE_SCRIPT_LYCIAN: Lycian. Since 2.16.3 _UNICODE_SCRIPT_LYDIAN: Lydian. Since 2.16.3 _UNICODE_SCRIPT_AVESTAN: Avestan. Since 2.26 _UNICODE_SCRIPT_BAMUM: Bamum. Since 2.26 _UNICODE_SCRIPT_EGYPTIAN_HIEROGLYPHS: Egyptian Hieroglpyhs. Since 2.26 _UNICODE_SCRIPT_IMPERIAL_ARAMAIC: Imperial Aramaic. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PAHLAVI: Inscriptional Pahlavi. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PARTHIAN: Inscriptional Parthian. Since 2.26 _UNICODE_SCRIPT_JAVANESE: Javanese. Since 2.26 _UNICODE_SCRIPT_KAITHI: Kaithi. Since 2.26 _UNICODE_SCRIPT_LISU: Lisu. Since 2.26 _UNICODE_SCRIPT_MEETEI_MAYEK: Meetei Mayek. Since 2.26 _UNICODE_SCRIPT_OLD_SOUTH_ARABIAN: Old South Arabian. Since 2.26 _UNICODE_SCRIPT_OLD_TURKIC: Old Turkic. Since 2.28 _UNICODE_SCRIPT_SAMARITAN: Samaritan. Since 2.26 _UNICODE_SCRIPT_TAI_THAM: Tai Tham. Since 2.26 _UNICODE_SCRIPT_TAI_VIET: Tai Viet. Since 2.26 _UNICODE_SCRIPT_BATAK: Batak. Since 2.28 _UNICODE_SCRIPT_BRAHMI: Brahmi. Since 2.28 _UNICODE_SCRIPT_MANDAIC: Mandaic. Since 2.28 _UNICODE_SCRIPT_CHAKMA: Chakma. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 2.32 _UNICODE_SCRIPT_MIAO: Miao. Since: 2.32 _UNICODE_SCRIPT_SHARADA: Sharada. Since: 2.32 _UNICODE_SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 2.32 _UNICODE_SCRIPT_TAKRI: Takri. Since: 2.32 _UNICODE_SCRIPT_BASSA_VAH: Bassa. Since: 2.42 _UNICODE_SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 2.42 _UNICODE_SCRIPT_DUPLOYAN: Duployan. Since: 2.42 _UNICODE_SCRIPT_ELBASAN: Elbasan. Since: 2.42 _UNICODE_SCRIPT_GRANTHA: Grantha. Since: 2.42 _UNICODE_SCRIPT_KHOJKI: Kjohki. Since: 2.42 _UNICODE_SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 2.42 _UNICODE_SCRIPT_LINEAR_A: Linear A. Since: 2.42 _UNICODE_SCRIPT_MAHAJANI: Mahajani. Since: 2.42 _UNICODE_SCRIPT_MANICHAEAN: Manichaean. Since: 2.42 _UNICODE_SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 2.42 _UNICODE_SCRIPT_MODI: Modi. Since: 2.42 _UNICODE_SCRIPT_MRO: Mro. Since: 2.42 _UNICODE_SCRIPT_NABATAEAN: Nabataean. Since: 2.42 _UNICODE_SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 2.42 _UNICODE_SCRIPT_OLD_PERMIC: Old Permic. Since: 2.42 _UNICODE_SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 2.42 _UNICODE_SCRIPT_PALMYRENE: Palmyrene. Since: 2.42 _UNICODE_SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 2.42 _UNICODE_SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 2.42 _UNICODE_SCRIPT_SIDDHAM: Siddham. Since: 2.42 _UNICODE_SCRIPT_TIRHUTA: Tirhuta. Since: 2.42 _UNICODE_SCRIPT_WARANG_CITI: Warang Citi. Since: 2.42 _UNICODE_SCRIPT_AHOM: Ahom. Since: 2.48 _UNICODE_SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 2.48 _UNICODE_SCRIPT_HATRAN: Hatran. Since: 2.48 _UNICODE_SCRIPT_MULTANI: Multani. Since: 2.48 _UNICODE_SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 2.48 _UNICODE_SCRIPT_SIGNWRITING: Signwriting. Since: 2.48 _UNICODE_SCRIPT_ADLAM: Adlam. Since: 2.50 _UNICODE_SCRIPT_BHAIKSUKI: Bhaiksuki. Since: 2.50 _UNICODE_SCRIPT_MARCHEN: Marchen. Since: 2.50 _UNICODE_SCRIPT_NEWA: Newa. Since: 2.50 _UNICODE_SCRIPT_OSAGE: Osage. Since: 2.50 _UNICODE_SCRIPT_TANGUT: Tangut. Since: 2.50 _UNICODE_SCRIPT_MASARAM_GONDI: Masaram Gondi. Since: 2.54 _UNICODE_SCRIPT_NUSHU: Nushu. Since: 2.54 _UNICODE_SCRIPT_SOYOMBO: Soyombo. Since: 2.54 _UNICODE_SCRIPT_ZANABAZAR_SQUARE: Zanabazar Square. Since: 2.54 _UNICODE_SCRIPT_DOGRA: Dogra. Since: 2.58 _UNICODE_SCRIPT_GUNJALA_GONDI: Gunjala Gondi. Since: 2.58 _UNICODE_SCRIPT_HANIFI_ROHINGYA: Hanifi Rohingya. Since: 2.58 _UNICODE_SCRIPT_MAKASAR: Makasar. Since: 2.58 _UNICODE_SCRIPT_MEDEFAIDRIN: Medefaidrin. Since: 2.58 _UNICODE_SCRIPT_OLD_SOGDIAN: Old Sogdian. Since: 2.58 _UNICODE_SCRIPT_SOGDIAN: Sogdian. Since: 2.58 _UNICODE_SCRIPT_ELYMAIC: Elym. Since: 2.62 _UNICODE_SCRIPT_NANDINAGARI: Nand. Since: 2.62 _UNICODE_SCRIPT_NYIAKENG_PUACHUE_HMONG: Rohg. Since: 2.62 _UNICODE_SCRIPT_WANCHO: Wcho. Since: 2.62 _UNICODE_SCRIPT_CHORASMIAN: Chorasmian. Since: 2.66 _UNICODE_SCRIPT_DIVES_AKURU: Dives Akuru. Since: 2.66 _UNICODE_SCRIPT_KHITAN_SMALL_SCRIPT: Khitan small script. Since: 2.66 _UNICODE_SCRIPT_YEZIDI: Yezidi. Since: 2.66 _UNICODE_SCRIPT_CYPRO_MINOAN: Cypro-Minoan. Since: 2.72 _UNICODE_SCRIPT_OLD_UYGHUR: Old Uyghur. Since: 2.72 _UNICODE_SCRIPT_TANGSA: Tangsa. Since: 2.72 _UNICODE_SCRIPT_TOTO: Toto. Since: 2.72 _UNICODE_SCRIPT_VITHKUQI: Vithkuqi. Since: 2.72 _UNICODE_SCRIPT_MATH: Mathematical notation. Since: 2.72
+ * GUnicodeScript: _UNICODE_SCRIPT_INVALID_CODE: a value never returned from g_unichar_get_script() _UNICODE_SCRIPT_COMMON: a character used by multiple different scripts _UNICODE_SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _UNICODE_SCRIPT_ARABIC: Arabic _UNICODE_SCRIPT_ARMENIAN: Armenian _UNICODE_SCRIPT_BENGALI: Bengali _UNICODE_SCRIPT_BOPOMOFO: Bopomofo _UNICODE_SCRIPT_CHEROKEE: Cherokee _UNICODE_SCRIPT_COPTIC: Coptic _UNICODE_SCRIPT_CYRILLIC: Cyrillic _UNICODE_SCRIPT_DESERET: Deseret _UNICODE_SCRIPT_DEVANAGARI: Devanagari _UNICODE_SCRIPT_ETHIOPIC: Ethiopic _UNICODE_SCRIPT_GEORGIAN: Georgian _UNICODE_SCRIPT_GOTHIC: Gothic _UNICODE_SCRIPT_GREEK: Greek _UNICODE_SCRIPT_GUJARATI: Gujarati _UNICODE_SCRIPT_GURMUKHI: Gurmukhi _UNICODE_SCRIPT_HAN: Han _UNICODE_SCRIPT_HANGUL: Hangul _UNICODE_SCRIPT_HEBREW: Hebrew _UNICODE_SCRIPT_HIRAGANA: Hiragana _UNICODE_SCRIPT_KANNADA: Kannada _UNICODE_SCRIPT_KATAKANA: Katakana _UNICODE_SCRIPT_KHMER: Khmer _UNICODE_SCRIPT_LAO: Lao _UNICODE_SCRIPT_LATIN: Latin _UNICODE_SCRIPT_MALAYALAM: Malayalam _UNICODE_SCRIPT_MONGOLIAN: Mongolian _UNICODE_SCRIPT_MYANMAR: Myanmar _UNICODE_SCRIPT_OGHAM: Ogham _UNICODE_SCRIPT_OLD_ITALIC: Old Italic _UNICODE_SCRIPT_ORIYA: Oriya _UNICODE_SCRIPT_RUNIC: Runic _UNICODE_SCRIPT_SINHALA: Sinhala _UNICODE_SCRIPT_SYRIAC: Syriac _UNICODE_SCRIPT_TAMIL: Tamil _UNICODE_SCRIPT_TELUGU: Telugu _UNICODE_SCRIPT_THAANA: Thaana _UNICODE_SCRIPT_THAI: Thai _UNICODE_SCRIPT_TIBETAN: Tibetan _UNICODE_SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _UNICODE_SCRIPT_YI: Yi _UNICODE_SCRIPT_TAGALOG: Tagalog _UNICODE_SCRIPT_HANUNOO: Hanunoo _UNICODE_SCRIPT_BUHID: Buhid _UNICODE_SCRIPT_TAGBANWA: Tagbanwa _UNICODE_SCRIPT_BRAILLE: Braille _UNICODE_SCRIPT_CYPRIOT: Cypriot _UNICODE_SCRIPT_LIMBU: Limbu _UNICODE_SCRIPT_OSMANYA: Osmanya _UNICODE_SCRIPT_SHAVIAN: Shavian _UNICODE_SCRIPT_LINEAR_B: Linear B _UNICODE_SCRIPT_TAI_LE: Tai Le _UNICODE_SCRIPT_UGARITIC: Ugaritic _UNICODE_SCRIPT_NEW_TAI_LUE: New Tai Lue _UNICODE_SCRIPT_BUGINESE: Buginese _UNICODE_SCRIPT_GLAGOLITIC: Glagolitic _UNICODE_SCRIPT_TIFINAGH: Tifinagh _UNICODE_SCRIPT_SYLOTI_NAGRI: Syloti Nagri _UNICODE_SCRIPT_OLD_PERSIAN: Old Persian _UNICODE_SCRIPT_KHAROSHTHI: Kharoshthi _UNICODE_SCRIPT_UNKNOWN: an unassigned code point _UNICODE_SCRIPT_BALINESE: Balinese _UNICODE_SCRIPT_CUNEIFORM: Cuneiform _UNICODE_SCRIPT_PHOENICIAN: Phoenician _UNICODE_SCRIPT_PHAGS_PA: Phags-pa _UNICODE_SCRIPT_NKO: N'Ko _UNICODE_SCRIPT_KAYAH_LI: Kayah Li. Since 2.16.3 _UNICODE_SCRIPT_LEPCHA: Lepcha. Since 2.16.3 _UNICODE_SCRIPT_REJANG: Rejang. Since 2.16.3 _UNICODE_SCRIPT_SUNDANESE: Sundanese. Since 2.16.3 _UNICODE_SCRIPT_SAURASHTRA: Saurashtra. Since 2.16.3 _UNICODE_SCRIPT_CHAM: Cham. Since 2.16.3 _UNICODE_SCRIPT_OL_CHIKI: Ol Chiki. Since 2.16.3 _UNICODE_SCRIPT_VAI: Vai. Since 2.16.3 _UNICODE_SCRIPT_CARIAN: Carian. Since 2.16.3 _UNICODE_SCRIPT_LYCIAN: Lycian. Since 2.16.3 _UNICODE_SCRIPT_LYDIAN: Lydian. Since 2.16.3 _UNICODE_SCRIPT_AVESTAN: Avestan. Since 2.26 _UNICODE_SCRIPT_BAMUM: Bamum. Since 2.26 _UNICODE_SCRIPT_EGYPTIAN_HIEROGLYPHS: Egyptian Hieroglpyhs. Since 2.26 _UNICODE_SCRIPT_IMPERIAL_ARAMAIC: Imperial Aramaic. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PAHLAVI: Inscriptional Pahlavi. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PARTHIAN: Inscriptional Parthian. Since 2.26 _UNICODE_SCRIPT_JAVANESE: Javanese. Since 2.26 _UNICODE_SCRIPT_KAITHI: Kaithi. Since 2.26 _UNICODE_SCRIPT_LISU: Lisu. Since 2.26 _UNICODE_SCRIPT_MEETEI_MAYEK: Meetei Mayek. Since 2.26 _UNICODE_SCRIPT_OLD_SOUTH_ARABIAN: Old South Arabian. Since 2.26 _UNICODE_SCRIPT_OLD_TURKIC: Old Turkic. Since 2.28 _UNICODE_SCRIPT_SAMARITAN: Samaritan. Since 2.26 _UNICODE_SCRIPT_TAI_THAM: Tai Tham. Since 2.26 _UNICODE_SCRIPT_TAI_VIET: Tai Viet. Since 2.26 _UNICODE_SCRIPT_BATAK: Batak. Since 2.28 _UNICODE_SCRIPT_BRAHMI: Brahmi. Since 2.28 _UNICODE_SCRIPT_MANDAIC: Mandaic. Since 2.28 _UNICODE_SCRIPT_CHAKMA: Chakma. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 2.32 _UNICODE_SCRIPT_MIAO: Miao. Since: 2.32 _UNICODE_SCRIPT_SHARADA: Sharada. Since: 2.32 _UNICODE_SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 2.32 _UNICODE_SCRIPT_TAKRI: Takri. Since: 2.32 _UNICODE_SCRIPT_BASSA_VAH: Bassa. Since: 2.42 _UNICODE_SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 2.42 _UNICODE_SCRIPT_DUPLOYAN: Duployan. Since: 2.42 _UNICODE_SCRIPT_ELBASAN: Elbasan. Since: 2.42 _UNICODE_SCRIPT_GRANTHA: Grantha. Since: 2.42 _UNICODE_SCRIPT_KHOJKI: Kjohki. Since: 2.42 _UNICODE_SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 2.42 _UNICODE_SCRIPT_LINEAR_A: Linear A. Since: 2.42 _UNICODE_SCRIPT_MAHAJANI: Mahajani. Since: 2.42 _UNICODE_SCRIPT_MANICHAEAN: Manichaean. Since: 2.42 _UNICODE_SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 2.42 _UNICODE_SCRIPT_MODI: Modi. Since: 2.42 _UNICODE_SCRIPT_MRO: Mro. Since: 2.42 _UNICODE_SCRIPT_NABATAEAN: Nabataean. Since: 2.42 _UNICODE_SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 2.42 _UNICODE_SCRIPT_OLD_PERMIC: Old Permic. Since: 2.42 _UNICODE_SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 2.42 _UNICODE_SCRIPT_PALMYRENE: Palmyrene. Since: 2.42 _UNICODE_SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 2.42 _UNICODE_SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 2.42 _UNICODE_SCRIPT_SIDDHAM: Siddham. Since: 2.42 _UNICODE_SCRIPT_TIRHUTA: Tirhuta. Since: 2.42 _UNICODE_SCRIPT_WARANG_CITI: Warang Citi. Since: 2.42 _UNICODE_SCRIPT_AHOM: Ahom. Since: 2.48 _UNICODE_SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 2.48 _UNICODE_SCRIPT_HATRAN: Hatran. Since: 2.48 _UNICODE_SCRIPT_MULTANI: Multani. Since: 2.48 _UNICODE_SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 2.48 _UNICODE_SCRIPT_SIGNWRITING: Signwriting. Since: 2.48 _UNICODE_SCRIPT_ADLAM: Adlam. Since: 2.50 _UNICODE_SCRIPT_BHAIKSUKI: Bhaiksuki. Since: 2.50 _UNICODE_SCRIPT_MARCHEN: Marchen. Since: 2.50 _UNICODE_SCRIPT_NEWA: Newa. Since: 2.50 _UNICODE_SCRIPT_OSAGE: Osage. Since: 2.50 _UNICODE_SCRIPT_TANGUT: Tangut. Since: 2.50 _UNICODE_SCRIPT_MASARAM_GONDI: Masaram Gondi. Since: 2.54 _UNICODE_SCRIPT_NUSHU: Nushu. Since: 2.54 _UNICODE_SCRIPT_SOYOMBO: Soyombo. Since: 2.54 _UNICODE_SCRIPT_ZANABAZAR_SQUARE: Zanabazar Square. Since: 2.54 _UNICODE_SCRIPT_DOGRA: Dogra. Since: 2.58 _UNICODE_SCRIPT_GUNJALA_GONDI: Gunjala Gondi. Since: 2.58 _UNICODE_SCRIPT_HANIFI_ROHINGYA: Hanifi Rohingya. Since: 2.58 _UNICODE_SCRIPT_MAKASAR: Makasar. Since: 2.58 _UNICODE_SCRIPT_MEDEFAIDRIN: Medefaidrin. Since: 2.58 _UNICODE_SCRIPT_OLD_SOGDIAN: Old Sogdian. Since: 2.58 _UNICODE_SCRIPT_SOGDIAN: Sogdian. Since: 2.58 _UNICODE_SCRIPT_ELYMAIC: Elym. Since: 2.62 _UNICODE_SCRIPT_NANDINAGARI: Nand. Since: 2.62 _UNICODE_SCRIPT_NYIAKENG_PUACHUE_HMONG: Rohg. Since: 2.62 _UNICODE_SCRIPT_WANCHO: Wcho. Since: 2.62 _UNICODE_SCRIPT_CHORASMIAN: Chorasmian. Since: 2.66 _UNICODE_SCRIPT_DIVES_AKURU: Dives Akuru. Since: 2.66 _UNICODE_SCRIPT_KHITAN_SMALL_SCRIPT: Khitan small script. Since: 2.66 _UNICODE_SCRIPT_YEZIDI: Yezidi. Since: 2.66 _UNICODE_SCRIPT_CYPRO_MINOAN: Cypro-Minoan. Since: 2.72 _UNICODE_SCRIPT_OLD_UYGHUR: Old Uyghur. Since: 2.72 _UNICODE_SCRIPT_TANGSA: Tangsa. Since: 2.72 _UNICODE_SCRIPT_TOTO: Toto. Since: 2.72 _UNICODE_SCRIPT_VITHKUQI: Vithkuqi. Since: 2.72 _UNICODE_SCRIPT_MATH: Mathematical notation. Since: 2.72 _UNICODE_SCRIPT_KAWI: Kawi. Since 2.74 _UNICODE_SCRIPT_NAG_MUNDARI: Nag Mundari. Since 2.74
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gunicode.h
 */
 opaque type GUnicodeScript = CInt
 object GUnicodeScript extends CEnum[GUnicodeScript]:
@@ -1916,6 +1938,8 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
   val G_UNICODE_SCRIPT_TOTO = define(160)
   val G_UNICODE_SCRIPT_VITHKUQI = define(161)
   val G_UNICODE_SCRIPT_MATH = define(162)
+  val G_UNICODE_SCRIPT_KAWI = define(163)
+  val G_UNICODE_SCRIPT_NAG_MUNDARI = define(164)
   inline def getName(inline value: GUnicodeScript): Option[String] =
     inline value match
       case G_UNICODE_SCRIPT_INVALID_CODE => Some("G_UNICODE_SCRIPT_INVALID_CODE")
@@ -2082,6 +2106,8 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
       case G_UNICODE_SCRIPT_TOTO => Some("G_UNICODE_SCRIPT_TOTO")
       case G_UNICODE_SCRIPT_VITHKUQI => Some("G_UNICODE_SCRIPT_VITHKUQI")
       case G_UNICODE_SCRIPT_MATH => Some("G_UNICODE_SCRIPT_MATH")
+      case G_UNICODE_SCRIPT_KAWI => Some("G_UNICODE_SCRIPT_KAWI")
+      case G_UNICODE_SCRIPT_NAG_MUNDARI => Some("G_UNICODE_SCRIPT_NAG_MUNDARI")
       case _ => None
   extension (a: GUnicodeScript)
     inline def &(b: GUnicodeScript): GUnicodeScript = a & b
@@ -2091,7 +2117,7 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
 /**
  * GUnicodeType: _UNICODE_CONTROL: General category "Other, Control" (Cc) _UNICODE_FORMAT: General category "Other, Format" (Cf) _UNICODE_UNASSIGNED: General category "Other, Not Assigned" (Cn) _UNICODE_PRIVATE_USE: General category "Other, Private Use" (Co) _UNICODE_SURROGATE: General category "Other, Surrogate" (Cs) _UNICODE_LOWERCASE_LETTER: General category "Letter, Lowercase" (Ll) _UNICODE_MODIFIER_LETTER: General category "Letter, Modifier" (Lm) _UNICODE_OTHER_LETTER: General category "Letter, Other" (Lo) _UNICODE_TITLECASE_LETTER: General category "Letter, Titlecase" (Lt) _UNICODE_UPPERCASE_LETTER: General category "Letter, Uppercase" (Lu) _UNICODE_SPACING_MARK: General category "Mark, Spacing" (Mc) _UNICODE_ENCLOSING_MARK: General category "Mark, Enclosing" (Me) _UNICODE_NON_SPACING_MARK: General category "Mark, Nonspacing" (Mn) _UNICODE_DECIMAL_NUMBER: General category "Number, Decimal Digit" (Nd) _UNICODE_LETTER_NUMBER: General category "Number, Letter" (Nl) _UNICODE_OTHER_NUMBER: General category "Number, Other" (No) _UNICODE_CONNECT_PUNCTUATION: General category "Punctuation, Connector" (Pc) _UNICODE_DASH_PUNCTUATION: General category "Punctuation, Dash" (Pd) _UNICODE_CLOSE_PUNCTUATION: General category "Punctuation, Close" (Pe) _UNICODE_FINAL_PUNCTUATION: General category "Punctuation, Final quote" (Pf) _UNICODE_INITIAL_PUNCTUATION: General category "Punctuation, Initial quote" (Pi) _UNICODE_OTHER_PUNCTUATION: General category "Punctuation, Other" (Po) _UNICODE_OPEN_PUNCTUATION: General category "Punctuation, Open" (Ps) _UNICODE_CURRENCY_SYMBOL: General category "Symbol, Currency" (Sc) _UNICODE_MODIFIER_SYMBOL: General category "Symbol, Modifier" (Sk) _UNICODE_MATH_SYMBOL: General category "Symbol, Math" (Sm) _UNICODE_OTHER_SYMBOL: General category "Symbol, Other" (So) _UNICODE_LINE_SEPARATOR: General category "Separator, Line" (Zl) _UNICODE_PARAGRAPH_SEPARATOR: General category "Separator, Paragraph" (Zp) _UNICODE_SPACE_SEPARATOR: General category "Separator, Space" (Zs)
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gunicode.h
 */
 opaque type GUnicodeType = CUnsignedInt
 object GUnicodeType extends CEnumU[GUnicodeType]:
@@ -2168,7 +2194,7 @@ object GUnicodeType extends CEnumU[GUnicodeType]:
 /**
  * GUriError: _URI_ERROR_FAILED: Generic error if no more specific error is available. See the error message for details. _URI_ERROR_BAD_SCHEME: The scheme of a URI could not be parsed. _URI_ERROR_BAD_USER: The user/userinfo of a URI could not be parsed. _URI_ERROR_BAD_PASSWORD: The password of a URI could not be parsed. _URI_ERROR_BAD_AUTH_PARAMS: The authentication parameters of a URI could not be parsed. _URI_ERROR_BAD_HOST: The host of a URI could not be parsed. _URI_ERROR_BAD_PORT: The port of a URI could not be parsed. _URI_ERROR_BAD_PATH: The path of a URI could not be parsed. _URI_ERROR_BAD_QUERY: The query of a URI could not be parsed. _URI_ERROR_BAD_FRAGMENT: The fragment of a URI could not be parsed.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type GUriError = CUnsignedInt
 object GUriError extends CEnumU[GUriError]:
@@ -2205,7 +2231,7 @@ object GUriError extends CEnumU[GUriError]:
 /**
  * GUriFlags: _URI_FLAGS_NONE: No flags set. _URI_FLAGS_PARSE_RELAXED: Parse the URI more relaxedly than the [RFC 3986](https://tools.ietf.org/html/rfc3986) grammar specifies, fixing up or ignoring common mistakes in URIs coming from external sources. This is also needed for some obscure URI schemes where `;` separates the host from the path. Don’t use this flag unless you need to. _URI_FLAGS_HAS_PASSWORD: The userinfo field may contain a password, which will be separated from the username by `:`. _URI_FLAGS_HAS_AUTH_PARAMS: The userinfo may contain additional authentication-related parameters, which will be separated from the username and/or password by `;`. _URI_FLAGS_NON_DNS: The host component should not be assumed to be a DNS hostname or IP address (for example, for `smb` URIs with NetBIOS hostnames). _URI_FLAGS_ENCODED: When parsing a URI, this indicates that `%`-encoded characters in the userinfo, path, query, and fragment fields should not be decoded. (And likewise the host field if %G_URI_FLAGS_NON_DNS is also set.) When building a URI, it indicates that you have already `%`-encoded the components, and so #GUri should not do any encoding itself. _URI_FLAGS_ENCODED_QUERY: Same as %G_URI_FLAGS_ENCODED, for the query field only. _URI_FLAGS_ENCODED_PATH: Same as %G_URI_FLAGS_ENCODED, for the path only. _URI_FLAGS_ENCODED_FRAGMENT: Same as %G_URI_FLAGS_ENCODED, for the fragment only. _URI_FLAGS_SCHEME_NORMALIZE: A scheme-based normalization will be applied. For example, when parsing an HTTP URI changing omitted path to `/` and omitted port to `80`; and when building a URI, changing empty path to `/` and default port `80`). This only supports a subset of known schemes. (Since: 2.68)
 
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type GUriFlags = CUnsignedInt
 object GUriFlags extends CEnumU[GUriFlags]:
@@ -2242,7 +2268,7 @@ object GUriFlags extends CEnumU[GUriFlags]:
 /**
  * GUriHideFlags: _URI_HIDE_NONE: No flags set. _URI_HIDE_USERINFO: Hide the userinfo. _URI_HIDE_PASSWORD: Hide the password. _URI_HIDE_AUTH_PARAMS: Hide the auth_params. _URI_HIDE_QUERY: Hide the query. _URI_HIDE_FRAGMENT: Hide the fragment.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type GUriHideFlags = CUnsignedInt
 object GUriHideFlags extends CEnumU[GUriHideFlags]:
@@ -2271,7 +2297,7 @@ object GUriHideFlags extends CEnumU[GUriHideFlags]:
 /**
  * GUriParamsFlags: _URI_PARAMS_NONE: No flags set. _URI_PARAMS_CASE_INSENSITIVE: Parameter names are case insensitive. _URI_PARAMS_WWW_FORM: Replace `+` with space character. Only useful for URLs on the web, using the `https` or `http` schemas. _URI_PARAMS_PARSE_RELAXED: See %G_URI_FLAGS_PARSE_RELAXED.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type GUriParamsFlags = CUnsignedInt
 object GUriParamsFlags extends CEnumU[GUriParamsFlags]:
@@ -2296,7 +2322,7 @@ object GUriParamsFlags extends CEnumU[GUriParamsFlags]:
 /**
  * GUserDirectory: _USER_DIRECTORY_DESKTOP: the user's Desktop directory _USER_DIRECTORY_DOCUMENTS: the user's Documents directory _USER_DIRECTORY_DOWNLOAD: the user's Downloads directory _USER_DIRECTORY_MUSIC: the user's Music directory _USER_DIRECTORY_PICTURES: the user's Pictures directory _USER_DIRECTORY_PUBLIC_SHARE: the user's shared directory _USER_DIRECTORY_TEMPLATES: the user's Templates directory _USER_DIRECTORY_VIDEOS: the user's Movies directory _USER_N_DIRECTORIES: the number of enum values
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gutils.h
 */
 opaque type GUserDirectory = CUnsignedInt
 object GUserDirectory extends CEnumU[GUserDirectory]:
@@ -2329,7 +2355,7 @@ object GUserDirectory extends CEnumU[GUserDirectory]:
     inline def is(b: GUserDirectory): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type GVariantClass = CUnsignedInt
 object GVariantClass extends CEnumU[GVariantClass]:
@@ -2380,7 +2406,7 @@ object GVariantClass extends CEnumU[GVariantClass]:
     inline def is(b: GVariantClass): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type GVariantParseError = CUnsignedInt
 object GVariantParseError extends CEnumU[GVariantParseError]:

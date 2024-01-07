@@ -10,16 +10,15 @@ import _root_.glib.enumerations.*
 import _root_.glib.aliases.*
 import _root_.glib.structs.*
 import _root_.glib.unions.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gallocator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gallocator.h
 */
 opaque type GAllocator = CStruct0
 object GAllocator:
   given _tag: Tag[GAllocator] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type GArray = CStruct2[Ptr[gchar], guint]
 object GArray:
@@ -37,21 +36,21 @@ object GArray:
     def len_=(value: guint): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gasyncqueue.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gasyncqueue.h
 */
 opaque type GAsyncQueue = CStruct0
 object GAsyncQueue:
   given _tag: Tag[GAsyncQueue] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gbookmarkfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gbookmarkfile.h
 */
 opaque type GBookmarkFile = CStruct0
 object GBookmarkFile:
   given _tag: Tag[GBookmarkFile] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type GByteArray = CStruct2[Ptr[guint8], guint]
 object GByteArray:
@@ -69,28 +68,28 @@ object GByteArray:
     def len_=(value: guint): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type GBytes = CStruct0
 object GBytes:
   given _tag: Tag[GBytes] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcache.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcache.h
 */
 opaque type GCache = CStruct0
 object GCache:
   given _tag: Tag[GCache] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gchecksum.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gchecksum.h
 */
 opaque type GChecksum = CStruct0
 object GChecksum:
   given _tag: Tag[GChecksum] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcompletion.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcompletion.h
 */
 opaque type GCompletion = CStruct5[Ptr[Byte], GCompletionFunc, Ptr[gchar], Ptr[Byte], GCompletionStrncmpFunc]
 object GCompletion:
@@ -117,7 +116,7 @@ object GCompletion:
     def strncmp_func_=(value: GCompletionStrncmpFunc): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GCond = CStruct2[gpointer, CArray[guint, Nat._2]]
 object GCond:
@@ -135,14 +134,14 @@ object GCond:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdataset.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdataset.h
 */
 opaque type GData = CStruct0
 object GData:
   given _tag: Tag[GData] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 opaque type GDate = CStruct6[guint, guint, guint, guint, guint, guint]
 object GDate:
@@ -172,14 +171,14 @@ object GDate:
     def year_=(value: guint): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdatetime.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdatetime.h
 */
 opaque type GDateTime = CStruct0
 object GDateTime:
   given _tag: Tag[GDateTime] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gutils.h
 */
 opaque type GDebugKey = CStruct2[Ptr[gchar], guint]
 object GDebugKey:
@@ -197,14 +196,14 @@ object GDebugKey:
     def value_=(value: guint): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdir.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdir.h
 */
 opaque type GDir = CStruct0
 object GDir:
   given _tag: Tag[GDir] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gerror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gerror.h
 */
 opaque type GError = CStruct3[GQuark, gint, Ptr[gchar]]
 object GError:
@@ -225,14 +224,14 @@ object GError:
     def message_=(value: Ptr[gchar]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghash.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghash.h
 */
 opaque type GHashTable = CStruct0
 object GHashTable:
   given _tag: Tag[GHashTable] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghash.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghash.h
 */
 opaque type GHashTableIter = CStruct6[gpointer, gpointer, gpointer, CInt, gboolean, gpointer]
 object GHashTableIter:
@@ -262,14 +261,14 @@ object GHashTableIter:
     def dummy6_=(value: gpointer): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghmac.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghmac.h
 */
 opaque type GHmac = CStruct0
 object GHmac:
   given _tag: Tag[GHmac] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHook = CStruct8[gpointer, Ptr[Byte], Ptr[Byte], guint, gulong, guint, gpointer, GDestroyNotify]
 object GHook:
@@ -305,7 +304,7 @@ object GHook:
     def destroy_=(value: GDestroyNotify): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookList = CStruct7[gulong, guint, guint, Ptr[Byte], gpointer, Ptr[Byte], CArray[gpointer, Nat._2]]
 object GHookList:
@@ -338,7 +337,7 @@ object GHookList:
     def dummy_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOChannel = CStruct20[gint, Ptr[Byte], Ptr[gchar], GIConv, GIConv, Ptr[gchar], guint, gsize, Ptr[GString], Ptr[GString], Ptr[GString], CArray[gchar, Nat._6], guint, guint, guint, guint, guint, guint, gpointer, gpointer]
 object GIOChannel:
@@ -410,7 +409,7 @@ object GIOChannel:
     def reserved2_=(value: gpointer): Unit = !struct.at20 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOFuncs = CStruct8[CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr4[Ptr[Byte], gint64, GSeekType, Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], GIOCondition, Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr3[Ptr[Byte], GIOFlags, Ptr[Ptr[GError]], GIOStatus], CFuncPtr1[Ptr[Byte], GIOFlags]]
 object GIOFuncs:
@@ -446,14 +445,14 @@ object GIOFuncs:
     def io_get_flags_=(value: CFuncPtr1[Ptr[GIOChannel], GIOFlags]): Unit = !struct.at8 = value.asInstanceOf[CFuncPtr1[Ptr[Byte], GIOFlags]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gkeyfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gkeyfile.h
 */
 opaque type GKeyFile = CStruct0
 object GKeyFile:
   given _tag: Tag[GKeyFile] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glist.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glist.h
 */
 opaque type GList = CStruct3[gpointer, Ptr[Byte], Ptr[Byte]]
 object GList:
@@ -474,7 +473,7 @@ object GList:
     def prev_=(value: Ptr[GList]): Unit = !struct.at3 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type GLogField = CStruct3[Ptr[gchar], gconstpointer, gssize]
 object GLogField:
@@ -495,28 +494,28 @@ object GLogField:
     def length_=(value: gssize): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GMainContext = CStruct0
 object GMainContext:
   given _tag: Tag[GMainContext] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GMainLoop = CStruct0
 object GMainLoop:
   given _tag: Tag[GMainLoop] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmappedfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmappedfile.h
 */
 opaque type GMappedFile = CStruct0
 object GMappedFile:
   given _tag: Tag[GMappedFile] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type GMarkupParseContext = CStruct0
 object GMarkupParseContext:
@@ -525,7 +524,7 @@ object GMarkupParseContext:
 /**
  * GMarkupParser: _element: Callback to invoke when the opening tag of an element is seen. The callback's _names and _values parameters are %NULL-terminated. _element: Callback to invoke when the closing tag of an element is seen. Note that this is also called for empty tags like `<empty/>`.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type GMarkupParser = CStruct5[CFuncPtr6[Ptr[GMarkupParseContext], Ptr[gchar], Ptr[Ptr[gchar]], Ptr[Ptr[gchar]], gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr4[Ptr[GMarkupParseContext], Ptr[gchar], gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr5[Ptr[GMarkupParseContext], Ptr[gchar], gsize, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr5[Ptr[GMarkupParseContext], Ptr[gchar], gsize, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit]]
 object GMarkupParser:
@@ -552,21 +551,21 @@ object GMarkupParser:
     def error_=(value: CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type GMatchInfo = CStruct0
 object GMatchInfo:
   given _tag: Tag[GMatchInfo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gallocator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gallocator.h
 */
 opaque type GMemChunk = CStruct0
 object GMemChunk:
   given _tag: Tag[GMemChunk] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmem.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmem.h
 */
 opaque type GMemVTable = CStruct6[CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer], CFuncPtr1[gpointer, Unit], CFuncPtr2[gsize, gsize, gpointer], CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer]]
 object GMemVTable:
@@ -596,7 +595,7 @@ object GMemVTable:
     def try_realloc_=(value: CFuncPtr2[gpointer, gsize, gpointer]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gnode.h
 */
 opaque type GNode = CStruct5[gpointer, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object GNode:
@@ -623,7 +622,7 @@ object GNode:
     def children_=(value: Ptr[GNode]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GOnce = CStruct2[GOnceStatus, gpointer]
 object GOnce:
@@ -641,7 +640,7 @@ object GOnce:
     def retval_=(value: gpointer): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionContext = CStruct0
 object GOptionContext:
@@ -650,7 +649,7 @@ object GOptionContext:
 /**
  * _name must be a printable ASCII character different from '-', or zero if the option has no short name. : Flags from #GOptionFlags
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionEntry = CStruct7[Ptr[gchar], gchar, gint, GOptionArg, gpointer, Ptr[gchar], Ptr[gchar]]
 object GOptionEntry:
@@ -683,14 +682,31 @@ object GOptionEntry:
     def arg_description_=(value: Ptr[gchar]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionGroup = CStruct0
 object GOptionGroup:
   given _tag: Tag[GOptionGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gpattern.h
+ * GPathBuf: (copy-func g_path_buf_copy) (free-func g_path_buf_free)
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpathbuf.h
+*/
+opaque type GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
+object GPathBuf:
+  given _tag: Tag[GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[GPathBuf] = scala.scalanative.unsafe.alloc[GPathBuf](1)
+  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[GPathBuf] = 
+    val ____ptr = apply()
+    (!____ptr).dummy = dummy
+    ____ptr
+  extension (struct: GPathBuf)
+    def dummy : CArray[gpointer, Nat._8] = struct._1
+    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpattern.h
 */
 opaque type GPatternSpec = CStruct0
 object GPatternSpec:
@@ -699,7 +715,7 @@ object GPatternSpec:
 /**
  * GPollFD: : the file descriptor to poll (or a HANDLE on Win32) : a bitwise combination from #GIOCondition, specifying which events should be polled for. Typically for reading from a file descriptor you would use %G_IO_IN | %G_IO_HUP | %G_IO_ERR, and for writing you would use %G_IO_OUT | %G_IO_ERR. : a bitwise combination of flags from #GIOCondition, returned from the poll() function to indicate which events occurred.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gpoll.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpoll.h
 */
 opaque type GPollFD = CStruct3[gint, gushort, gushort]
 object GPollFD:
@@ -720,7 +736,7 @@ object GPollFD:
     def revents_=(value: gushort): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GPrivate = CStruct3[gpointer, GDestroyNotify, CArray[gpointer, Nat._2]]
 object GPrivate:
@@ -741,7 +757,7 @@ object GPrivate:
     def future_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type GPtrArray = CStruct2[Ptr[gpointer], guint]
 object GPtrArray:
@@ -761,7 +777,7 @@ object GPtrArray:
 /**
  * GQueue: : a pointer to the first element of the queue : a pointer to the last element of the queue : the number of elements in the queue
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gqueue.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gqueue.h
 */
 opaque type GQueue = CStruct3[Ptr[Byte], Ptr[Byte], guint]
 object GQueue:
@@ -782,7 +798,7 @@ object GQueue:
     def length_=(value: guint): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GRWLock = CStruct2[gpointer, CArray[guint, Nat._2]]
 object GRWLock:
@@ -800,14 +816,14 @@ object GRWLock:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/grand.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/grand.h
 */
 opaque type GRand = CStruct0
 object GRand:
   given _tag: Tag[GRand] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GRecMutex = CStruct2[gpointer, CArray[guint, Nat._2]]
 object GRecMutex:
@@ -825,21 +841,21 @@ object GRecMutex:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type GRegex = CStruct0
 object GRegex:
   given _tag: Tag[GRegex] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/grel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/grel.h
 */
 opaque type GRelation = CStruct0
 object GRelation:
   given _tag: Tag[GRelation] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gslist.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gslist.h
 */
 opaque type GSList = CStruct2[gpointer, Ptr[Byte]]
 object GSList:
@@ -857,7 +873,7 @@ object GSList:
     def next_=(value: Ptr[GSList]): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type GScanner = CStruct21[gpointer, guint, guint, Ptr[gchar], Ptr[GData], Ptr[GScannerConfig], GTokenType, GTokenValue, guint, guint, GTokenType, GTokenValue, guint, guint, Ptr[GHashTable], gint, Ptr[gchar], Ptr[gchar], Ptr[gchar], guint, Ptr[Byte]]
 object GScanner:
@@ -932,7 +948,7 @@ object GScanner:
     def msg_handler_=(value: GScannerMsgFunc): Unit = !struct.at21 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type GScannerConfig = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
 object GScannerConfig:
@@ -1025,21 +1041,21 @@ object GScannerConfig:
     def padding_dummy_=(value: guint): Unit = !struct.at(120).asInstanceOf[Ptr[guint]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gsequence.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gsequence.h
 */
 opaque type GSequence = CStruct0
 object GSequence:
   given _tag: Tag[GSequence] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gsequence.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gsequence.h
 */
 opaque type GSequenceIter = CStruct0
 object GSequenceIter:
   given _tag: Tag[GSequenceIter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
 object GSource:
@@ -1090,7 +1106,7 @@ object GSource:
     def priv_=(value: Ptr[GSourcePrivate]): Unit = !struct.at13 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSourceCallbackFuncs = CStruct3[CFuncPtr1[gpointer, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 object GSourceCallbackFuncs:
@@ -1111,7 +1127,7 @@ object GSourceCallbackFuncs:
     def get_=(value: CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit]): Unit = !struct.at3 = value.asInstanceOf[CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSourceFuncs = CStruct6[CFuncPtr2[Ptr[Byte], Ptr[gint], gboolean], CFuncPtr1[Ptr[Byte], gboolean], CFuncPtr3[Ptr[Byte], GSourceFunc, gpointer, gboolean], CFuncPtr1[Ptr[Byte], Unit], GSourceFunc, GSourceDummyMarshal]
 object GSourceFuncs:
@@ -1141,14 +1157,14 @@ object GSourceFuncs:
     def closure_marshal_=(value: GSourceDummyMarshal): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSourcePrivate = CStruct0
 object GSourcePrivate:
   given _tag: Tag[GSourcePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GStaticMutex = CStruct2[Ptr[GMutex], pthread_mutex_t]
 object GStaticMutex:
@@ -1166,7 +1182,7 @@ object GStaticMutex:
     def unused_=(value: pthread_mutex_t): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GStaticPrivate = CStruct1[guint]
 object GStaticPrivate:
@@ -1181,7 +1197,7 @@ object GStaticPrivate:
     def index_=(value: guint): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GStaticRWLock = CStruct7[GStaticMutex, Ptr[GCond], Ptr[GCond], guint, gboolean, guint, guint]
 object GStaticRWLock:
@@ -1214,12 +1230,12 @@ object GStaticRWLock:
     def want_to_write_=(value: guint): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GStaticRecMutex = CStruct3[GStaticMutex, guint, GStaticRecMutex.Union0]
 object GStaticRecMutex:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
   */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
@@ -1261,7 +1277,7 @@ object GStaticRecMutex:
     def unused_=(value: GStaticRecMutex.Union0): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstring.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstring.h
 */
 opaque type GString = CStruct3[Ptr[gchar], gsize, gsize]
 object GString:
@@ -1282,28 +1298,28 @@ object GString:
     def allocated_len_=(value: gsize): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstringchunk.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstringchunk.h
 */
 opaque type GStringChunk = CStruct0
 object GStringChunk:
   given _tag: Tag[GStringChunk] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstrvbuilder.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstrvbuilder.h
 */
 opaque type GStrvBuilder = CStruct0
 object GStrvBuilder:
   given _tag: Tag[GStrvBuilder] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestCase = CStruct0
 object GTestCase:
   given _tag: Tag[GTestCase] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestConfig = CStruct6[gboolean, gboolean, gboolean, gboolean, gboolean, gboolean]
 object GTestConfig:
@@ -1333,7 +1349,7 @@ object GTestConfig:
     def test_undefined_=(value: gboolean): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestLogBuffer = CStruct2[Ptr[GString], Ptr[Byte]]
 object GTestLogBuffer:
@@ -1351,7 +1367,7 @@ object GTestLogBuffer:
     def msgs_=(value: Ptr[GSList]): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestLogMsg = CStruct5[GTestLogType, guint, Ptr[Ptr[gchar]], guint, Ptr[Double]]
 object GTestLogMsg:
@@ -1378,14 +1394,14 @@ object GTestLogMsg:
     def nums_=(value: Ptr[Double]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestSuite = CStruct0
 object GTestSuite:
   given _tag: Tag[GTestSuite] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GThread = CStruct4[GThreadFunc, gpointer, gboolean, GThreadPriority]
 object GThread:
@@ -1409,7 +1425,7 @@ object GThread:
     def priority_=(value: GThreadPriority): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type GThreadFunctions = CStruct21[CFuncPtr0[Ptr[GMutex]], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], gboolean], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr0[Ptr[GCond]], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr2[Ptr[GCond], Ptr[GMutex], Unit], CFuncPtr3[Ptr[GCond], Ptr[GMutex], Ptr[GTimeVal], gboolean], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[GDestroyNotify, Ptr[GPrivate]], CFuncPtr1[Ptr[GPrivate], gpointer], CFuncPtr2[Ptr[GPrivate], gpointer, Unit], CFuncPtr8[GThreadFunc, gpointer, gulong, gboolean, gboolean, GThreadPriority, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr0[Unit], CFuncPtr1[gpointer, Unit], CFuncPtr0[Unit], CFuncPtr2[gpointer, GThreadPriority, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr2[gpointer, gpointer, gboolean]]
 object GThreadFunctions:
@@ -1484,7 +1500,7 @@ object GThreadFunctions:
     def thread_equal_=(value: CFuncPtr2[gpointer, gpointer, gboolean]): Unit = !struct.at21 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthreadpool.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthreadpool.h
 */
 opaque type GThreadPool = CStruct3[GFunc, gpointer, gboolean]
 object GThreadPool:
@@ -1505,7 +1521,7 @@ object GThreadPool:
     def exclusive_=(value: gboolean): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GTimeVal = CStruct2[glong, glong]
 object GTimeVal:
@@ -1523,21 +1539,21 @@ object GTimeVal:
     def tv_usec_=(value: glong): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtimezone.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtimezone.h
 */
 opaque type GTimeZone = CStruct0
 object GTimeZone:
   given _tag: Tag[GTimeZone] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtimer.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtimer.h
 */
 opaque type GTimer = CStruct0
 object GTimer:
   given _tag: Tag[GTimer] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtrashstack.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtrashstack.h
 */
 opaque type GTrashStack = CStruct1[Ptr[Byte]]
 object GTrashStack:
@@ -1552,21 +1568,21 @@ object GTrashStack:
     def next_=(value: Ptr[GTrashStack]): Unit = !struct.at1 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtree.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtree.h
 */
 opaque type GTree = CStruct0
 object GTree:
   given _tag: Tag[GTree] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtree.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtree.h
 */
 opaque type GTreeNode = CStruct0
 object GTreeNode:
   given _tag: Tag[GTreeNode] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/grel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/grel.h
 */
 opaque type GTuples = CStruct1[guint]
 object GTuples:
@@ -1581,14 +1597,14 @@ object GTuples:
     def len_=(value: guint): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type GUri = CStruct0
 object GUri:
   given _tag: Tag[GUri] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type GUriParamsIter = CStruct4[gint, gpointer, gpointer, CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]]
 object GUriParamsIter:
@@ -1612,30 +1628,30 @@ object GUriParamsIter:
     def dummy3_=(value: CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type GVariant = CStruct0
 object GVariant:
   given _tag: Tag[GVariant] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type GVariantBuilder = CStruct1[GVariantBuilder.Union0]
 object GVariantBuilder:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
   */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
     /**
-     * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+     * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
     */
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -1646,8 +1662,8 @@ object GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1659,16 +1675,16 @@ object GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]]
       def s_=(value: GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantBuilder] = Tag.materializeCStruct1Tag[GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[GVariantBuilder] = scala.scalanative.unsafe.alloc[GVariantBuilder](1)
   def apply(u : GVariantBuilder.Union0)(using Zone): Ptr[GVariantBuilder] = 
@@ -1680,23 +1696,23 @@ object GVariantBuilder:
     def u_=(value: GVariantBuilder.Union0): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type GVariantDict = CStruct1[GVariantDict.Union0]
 object GVariantDict:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
   */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
     /**
-     * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+     * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
     */
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -1707,8 +1723,8 @@ object GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1720,16 +1736,16 @@ object GVariantDict:
       un.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]]
       def s_=(value: GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantDict] = Tag.materializeCStruct1Tag[GVariantDict.Union0]
   def apply()(using Zone): Ptr[GVariantDict] = scala.scalanative.unsafe.alloc[GVariantDict](1)
   def apply(u : GVariantDict.Union0)(using Zone): Ptr[GVariantDict] = 
@@ -1741,36 +1757,36 @@ object GVariantDict:
     def u_=(value: GVariantDict.Union0): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
-opaque type GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
 object GVariantIter:
-  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[GVariantIter] = scala.scalanative.unsafe.alloc[GVariantIter](1)
-  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
+  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: GVariantIter)
-    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvarianttype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvarianttype.h
 */
 opaque type GVariantType = CStruct0
 object GVariantType:
   given _tag: Tag[GVariantType] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gallocator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gallocator.h
 */
 opaque type _GAllocator = CStruct0
 object _GAllocator:
   given _tag: Tag[_GAllocator] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type _GArray = CStruct2[Ptr[gchar], guint]
 object _GArray:
@@ -1788,21 +1804,21 @@ object _GArray:
     def len_=(value: guint): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gasyncqueue.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gasyncqueue.h
 */
 opaque type _GAsyncQueue = CStruct0
 object _GAsyncQueue:
   given _tag: Tag[_GAsyncQueue] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gbookmarkfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gbookmarkfile.h
 */
 opaque type _GBookmarkFile = CStruct0
 object _GBookmarkFile:
   given _tag: Tag[_GBookmarkFile] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type _GByteArray = CStruct2[Ptr[guint8], guint]
 object _GByteArray:
@@ -1820,28 +1836,28 @@ object _GByteArray:
     def len_=(value: guint): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type _GBytes = CStruct0
 object _GBytes:
   given _tag: Tag[_GBytes] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcache.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcache.h
 */
 opaque type _GCache = CStruct0
 object _GCache:
   given _tag: Tag[_GCache] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gchecksum.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gchecksum.h
 */
 opaque type _GChecksum = CStruct0
 object _GChecksum:
   given _tag: Tag[_GChecksum] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcompletion.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcompletion.h
 */
 opaque type _GCompletion = CStruct5[Ptr[Byte], GCompletionFunc, Ptr[gchar], Ptr[Byte], GCompletionStrncmpFunc]
 object _GCompletion:
@@ -1868,7 +1884,7 @@ object _GCompletion:
     def strncmp_func_=(value: GCompletionStrncmpFunc): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type _GCond = CStruct2[gpointer, CArray[guint, Nat._2]]
 object _GCond:
@@ -1886,14 +1902,14 @@ object _GCond:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdataset.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdataset.h
 */
 opaque type _GData = CStruct0
 object _GData:
   given _tag: Tag[_GData] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 opaque type _GDate = CStruct6[guint, guint, guint, guint, guint, guint]
 object _GDate:
@@ -1923,14 +1939,14 @@ object _GDate:
     def year_=(value: guint): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdatetime.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdatetime.h
 */
 opaque type _GDateTime = CStruct0
 object _GDateTime:
   given _tag: Tag[_GDateTime] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gutils.h
 */
 opaque type _GDebugKey = CStruct2[Ptr[gchar], guint]
 object _GDebugKey:
@@ -1948,14 +1964,14 @@ object _GDebugKey:
     def value_=(value: guint): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdir.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdir.h
 */
 opaque type _GDir = CStruct0
 object _GDir:
   given _tag: Tag[_GDir] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gerror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gerror.h
 */
 opaque type _GError = CStruct3[GQuark, gint, Ptr[gchar]]
 object _GError:
@@ -1976,14 +1992,14 @@ object _GError:
     def message_=(value: Ptr[gchar]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghash.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghash.h
 */
 opaque type _GHashTable = CStruct0
 object _GHashTable:
   given _tag: Tag[_GHashTable] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghash.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghash.h
 */
 opaque type _GHashTableIter = CStruct6[gpointer, gpointer, gpointer, CInt, gboolean, gpointer]
 object _GHashTableIter:
@@ -2013,14 +2029,14 @@ object _GHashTableIter:
     def dummy6_=(value: gpointer): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghmac.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghmac.h
 */
 opaque type _GHmac = CStruct0
 object _GHmac:
   given _tag: Tag[_GHmac] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type _GHook = CStruct8[gpointer, Ptr[Byte], Ptr[Byte], guint, gulong, guint, gpointer, GDestroyNotify]
 object _GHook:
@@ -2056,7 +2072,7 @@ object _GHook:
     def destroy_=(value: GDestroyNotify): Unit = !struct.at8 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type _GHookList = CStruct7[gulong, guint, guint, Ptr[Byte], gpointer, Ptr[Byte], CArray[gpointer, Nat._2]]
 object _GHookList:
@@ -2089,14 +2105,14 @@ object _GHookList:
     def dummy_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gconvert.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gconvert.h
 */
 opaque type _GIConv = CStruct0
 object _GIConv:
   given _tag: Tag[_GIConv] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type _GIOChannel = CStruct20[gint, Ptr[Byte], Ptr[gchar], GIConv, GIConv, Ptr[gchar], guint, gsize, Ptr[GString], Ptr[GString], Ptr[GString], CArray[gchar, Nat._6], guint, guint, guint, guint, guint, guint, gpointer, gpointer]
 object _GIOChannel:
@@ -2168,7 +2184,7 @@ object _GIOChannel:
     def reserved2_=(value: gpointer): Unit = !struct.at20 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type _GIOFuncs = CStruct8[CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr4[Ptr[Byte], gint64, GSeekType, Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], GIOCondition, Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr3[Ptr[Byte], GIOFlags, Ptr[Ptr[GError]], GIOStatus], CFuncPtr1[Ptr[Byte], GIOFlags]]
 object _GIOFuncs:
@@ -2204,14 +2220,14 @@ object _GIOFuncs:
     def io_get_flags_=(value: CFuncPtr1[Ptr[GIOChannel], GIOFlags]): Unit = !struct.at8 = value.asInstanceOf[CFuncPtr1[Ptr[Byte], GIOFlags]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gkeyfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gkeyfile.h
 */
 opaque type _GKeyFile = CStruct0
 object _GKeyFile:
   given _tag: Tag[_GKeyFile] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glist.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glist.h
 */
 opaque type _GList = CStruct3[gpointer, Ptr[Byte], Ptr[Byte]]
 object _GList:
@@ -2232,7 +2248,7 @@ object _GList:
     def prev_=(value: Ptr[GList]): Unit = !struct.at3 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type _GLogField = CStruct3[Ptr[gchar], gconstpointer, gssize]
 object _GLogField:
@@ -2253,28 +2269,28 @@ object _GLogField:
     def length_=(value: gssize): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type _GMainContext = CStruct0
 object _GMainContext:
   given _tag: Tag[_GMainContext] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type _GMainLoop = CStruct0
 object _GMainLoop:
   given _tag: Tag[_GMainLoop] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmappedfile.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmappedfile.h
 */
 opaque type _GMappedFile = CStruct0
 object _GMappedFile:
   given _tag: Tag[_GMappedFile] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type _GMarkupParseContext = CStruct0
 object _GMarkupParseContext:
@@ -2283,7 +2299,7 @@ object _GMarkupParseContext:
 /**
  * GMarkupParser: _element: Callback to invoke when the opening tag of an element is seen. The callback's _names and _values parameters are %NULL-terminated. _element: Callback to invoke when the closing tag of an element is seen. Note that this is also called for empty tags like `<empty/>`.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmarkup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmarkup.h
 */
 opaque type _GMarkupParser = CStruct5[CFuncPtr6[Ptr[GMarkupParseContext], Ptr[gchar], Ptr[Ptr[gchar]], Ptr[Ptr[gchar]], gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr4[Ptr[GMarkupParseContext], Ptr[gchar], gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr5[Ptr[GMarkupParseContext], Ptr[gchar], gsize, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr5[Ptr[GMarkupParseContext], Ptr[gchar], gsize, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit]]
 object _GMarkupParser:
@@ -2310,21 +2326,21 @@ object _GMarkupParser:
     def error_=(value: CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type _GMatchInfo = CStruct0
 object _GMatchInfo:
   given _tag: Tag[_GMatchInfo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gallocator.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gallocator.h
 */
 opaque type _GMemChunk = CStruct0
 object _GMemChunk:
   given _tag: Tag[_GMemChunk] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmem.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmem.h
 */
 opaque type _GMemVTable = CStruct6[CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer], CFuncPtr1[gpointer, Unit], CFuncPtr2[gsize, gsize, gpointer], CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer]]
 object _GMemVTable:
@@ -2354,7 +2370,7 @@ object _GMemVTable:
     def try_realloc_=(value: CFuncPtr2[gpointer, gsize, gpointer]): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gnode.h
 */
 opaque type _GNode = CStruct5[gpointer, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object _GNode:
@@ -2381,7 +2397,7 @@ object _GNode:
     def children_=(value: Ptr[GNode]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type _GOnce = CStruct2[GOnceStatus, gpointer]
 object _GOnce:
@@ -2399,7 +2415,7 @@ object _GOnce:
     def retval_=(value: gpointer): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type _GOptionContext = CStruct0
 object _GOptionContext:
@@ -2408,7 +2424,7 @@ object _GOptionContext:
 /**
  * _name must be a printable ASCII character different from '-', or zero if the option has no short name. : Flags from #GOptionFlags
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type _GOptionEntry = CStruct7[Ptr[gchar], gchar, gint, GOptionArg, gpointer, Ptr[gchar], Ptr[gchar]]
 object _GOptionEntry:
@@ -2441,14 +2457,31 @@ object _GOptionEntry:
     def arg_description_=(value: Ptr[gchar]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type _GOptionGroup = CStruct0
 object _GOptionGroup:
   given _tag: Tag[_GOptionGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gpattern.h
+ * GPathBuf: (copy-func g_path_buf_copy) (free-func g_path_buf_free)
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpathbuf.h
+*/
+opaque type _GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
+object _GPathBuf:
+  given _tag: Tag[_GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[_GPathBuf] = scala.scalanative.unsafe.alloc[_GPathBuf](1)
+  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[_GPathBuf] = 
+    val ____ptr = apply()
+    (!____ptr).dummy = dummy
+    ____ptr
+  extension (struct: _GPathBuf)
+    def dummy : CArray[gpointer, Nat._8] = struct._1
+    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpattern.h
 */
 opaque type _GPatternSpec = CStruct0
 object _GPatternSpec:
@@ -2457,7 +2490,7 @@ object _GPatternSpec:
 /**
  * GPollFD: : the file descriptor to poll (or a HANDLE on Win32) : a bitwise combination from #GIOCondition, specifying which events should be polled for. Typically for reading from a file descriptor you would use %G_IO_IN | %G_IO_HUP | %G_IO_ERR, and for writing you would use %G_IO_OUT | %G_IO_ERR. : a bitwise combination of flags from #GIOCondition, returned from the poll() function to indicate which events occurred.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gpoll.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpoll.h
 */
 opaque type _GPollFD = CStruct3[gint, gushort, gushort]
 object _GPollFD:
@@ -2478,7 +2511,7 @@ object _GPollFD:
     def revents_=(value: gushort): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type _GPrivate = CStruct3[gpointer, GDestroyNotify, CArray[gpointer, Nat._2]]
 object _GPrivate:
@@ -2499,7 +2532,7 @@ object _GPrivate:
     def future_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/garray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/garray.h
 */
 opaque type _GPtrArray = CStruct2[Ptr[gpointer], guint]
 object _GPtrArray:
@@ -2519,7 +2552,7 @@ object _GPtrArray:
 /**
  * GQueue: : a pointer to the first element of the queue : a pointer to the last element of the queue : the number of elements in the queue
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gqueue.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gqueue.h
 */
 opaque type _GQueue = CStruct3[Ptr[Byte], Ptr[Byte], guint]
 object _GQueue:
@@ -2540,7 +2573,7 @@ object _GQueue:
     def length_=(value: guint): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type _GRWLock = CStruct2[gpointer, CArray[guint, Nat._2]]
 object _GRWLock:
@@ -2558,14 +2591,14 @@ object _GRWLock:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/grand.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/grand.h
 */
 opaque type _GRand = CStruct0
 object _GRand:
   given _tag: Tag[_GRand] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type _GRecMutex = CStruct2[gpointer, CArray[guint, Nat._2]]
 object _GRecMutex:
@@ -2583,21 +2616,21 @@ object _GRecMutex:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type _GRegex = CStruct0
 object _GRegex:
   given _tag: Tag[_GRegex] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/grel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/grel.h
 */
 opaque type _GRelation = CStruct0
 object _GRelation:
   given _tag: Tag[_GRelation] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gslist.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gslist.h
 */
 opaque type _GSList = CStruct2[gpointer, Ptr[Byte]]
 object _GSList:
@@ -2615,7 +2648,7 @@ object _GSList:
     def next_=(value: Ptr[GSList]): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type _GScanner = CStruct21[gpointer, guint, guint, Ptr[gchar], Ptr[GData], Ptr[GScannerConfig], GTokenType, GTokenValue, guint, guint, GTokenType, GTokenValue, guint, guint, Ptr[GHashTable], gint, Ptr[gchar], Ptr[gchar], Ptr[gchar], guint, Ptr[Byte]]
 object _GScanner:
@@ -2690,7 +2723,7 @@ object _GScanner:
     def msg_handler_=(value: GScannerMsgFunc): Unit = !struct.at21 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type _GScannerConfig = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
 object _GScannerConfig:
@@ -2783,21 +2816,21 @@ object _GScannerConfig:
     def padding_dummy_=(value: guint): Unit = !struct.at(120).asInstanceOf[Ptr[guint]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gsequence.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gsequence.h
 */
 opaque type _GSequence = CStruct0
 object _GSequence:
   given _tag: Tag[_GSequence] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gsequence.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gsequence.h
 */
 opaque type _GSequenceNode = CStruct0
 object _GSequenceNode:
   given _tag: Tag[_GSequenceNode] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type _GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
 object _GSource:
@@ -2848,7 +2881,7 @@ object _GSource:
     def priv_=(value: Ptr[GSourcePrivate]): Unit = !struct.at13 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type _GSourceCallbackFuncs = CStruct3[CFuncPtr1[gpointer, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 object _GSourceCallbackFuncs:
@@ -2869,7 +2902,7 @@ object _GSourceCallbackFuncs:
     def get_=(value: CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit]): Unit = !struct.at3 = value.asInstanceOf[CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type _GSourceFuncs = CStruct6[CFuncPtr2[Ptr[Byte], Ptr[gint], gboolean], CFuncPtr1[Ptr[Byte], gboolean], CFuncPtr3[Ptr[Byte], GSourceFunc, gpointer, gboolean], CFuncPtr1[Ptr[Byte], Unit], GSourceFunc, GSourceDummyMarshal]
 object _GSourceFuncs:
@@ -2899,14 +2932,14 @@ object _GSourceFuncs:
     def closure_marshal_=(value: GSourceDummyMarshal): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type _GSourcePrivate = CStruct0
 object _GSourcePrivate:
   given _tag: Tag[_GSourcePrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type _GStaticPrivate = CStruct1[guint]
 object _GStaticPrivate:
@@ -2921,7 +2954,7 @@ object _GStaticPrivate:
     def index_=(value: guint): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type _GStaticRWLock = CStruct7[GStaticMutex, Ptr[GCond], Ptr[GCond], guint, gboolean, guint, guint]
 object _GStaticRWLock:
@@ -2954,12 +2987,12 @@ object _GStaticRWLock:
     def want_to_write_=(value: guint): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type _GStaticRecMutex = CStruct3[GStaticMutex, guint, _GStaticRecMutex.Union0]
 object _GStaticRecMutex:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
   */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
@@ -3001,7 +3034,7 @@ object _GStaticRecMutex:
     def unused_=(value: _GStaticRecMutex.Union0): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstring.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstring.h
 */
 opaque type _GString = CStruct3[Ptr[gchar], gsize, gsize]
 object _GString:
@@ -3022,21 +3055,21 @@ object _GString:
     def allocated_len_=(value: gsize): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstringchunk.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstringchunk.h
 */
 opaque type _GStringChunk = CStruct0
 object _GStringChunk:
   given _tag: Tag[_GStringChunk] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstrvbuilder.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstrvbuilder.h
 */
 opaque type _GStrvBuilder = CStruct0
 object _GStrvBuilder:
   given _tag: Tag[_GStrvBuilder] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type _GThread = CStruct4[GThreadFunc, gpointer, gboolean, GThreadPriority]
 object _GThread:
@@ -3060,7 +3093,7 @@ object _GThread:
     def priority_=(value: GThreadPriority): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gthread.h
 */
 opaque type _GThreadFunctions = CStruct21[CFuncPtr0[Ptr[GMutex]], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], gboolean], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr0[Ptr[GCond]], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr2[Ptr[GCond], Ptr[GMutex], Unit], CFuncPtr3[Ptr[GCond], Ptr[GMutex], Ptr[GTimeVal], gboolean], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[GDestroyNotify, Ptr[GPrivate]], CFuncPtr1[Ptr[GPrivate], gpointer], CFuncPtr2[Ptr[GPrivate], gpointer, Unit], CFuncPtr8[GThreadFunc, gpointer, gulong, gboolean, gboolean, GThreadPriority, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr0[Unit], CFuncPtr1[gpointer, Unit], CFuncPtr0[Unit], CFuncPtr2[gpointer, GThreadPriority, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr2[gpointer, gpointer, gboolean]]
 object _GThreadFunctions:
@@ -3135,7 +3168,7 @@ object _GThreadFunctions:
     def thread_equal_=(value: CFuncPtr2[gpointer, gpointer, gboolean]): Unit = !struct.at21 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthreadpool.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthreadpool.h
 */
 opaque type _GThreadPool = CStruct3[GFunc, gpointer, gboolean]
 object _GThreadPool:
@@ -3156,7 +3189,7 @@ object _GThreadPool:
     def exclusive_=(value: gboolean): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type _GTimeVal = CStruct2[glong, glong]
 object _GTimeVal:
@@ -3174,21 +3207,21 @@ object _GTimeVal:
     def tv_usec_=(value: glong): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtimezone.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtimezone.h
 */
 opaque type _GTimeZone = CStruct0
 object _GTimeZone:
   given _tag: Tag[_GTimeZone] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtimer.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtimer.h
 */
 opaque type _GTimer = CStruct0
 object _GTimer:
   given _tag: Tag[_GTimer] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtrashstack.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtrashstack.h
 */
 opaque type _GTrashStack = CStruct1[Ptr[Byte]]
 object _GTrashStack:
@@ -3203,21 +3236,21 @@ object _GTrashStack:
     def next_=(value: Ptr[GTrashStack]): Unit = !struct.at1 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtree.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtree.h
 */
 opaque type _GTree = CStruct0
 object _GTree:
   given _tag: Tag[_GTree] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtree.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtree.h
 */
 opaque type _GTreeNode = CStruct0
 object _GTreeNode:
   given _tag: Tag[_GTreeNode] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/grel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/grel.h
 */
 opaque type _GTuples = CStruct1[guint]
 object _GTuples:
@@ -3232,14 +3265,14 @@ object _GTuples:
     def len_=(value: guint): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type _GUri = CStruct0
 object _GUri:
   given _tag: Tag[_GUri] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/guri.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/guri.h
 */
 opaque type _GUriParamsIter = CStruct4[gint, gpointer, gpointer, CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]]
 object _GUriParamsIter:
@@ -3263,30 +3296,30 @@ object _GUriParamsIter:
     def dummy3_=(value: CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type _GVariant = CStruct0
 object _GVariant:
   given _tag: Tag[_GVariant] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type _GVariantBuilder = CStruct1[_GVariantBuilder.Union0]
 object _GVariantBuilder:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
   */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
     /**
-     * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+     * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
     */
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -3297,8 +3330,8 @@ object _GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -3310,16 +3343,16 @@ object _GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]]
       def s_=(value: _GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantBuilder] = Tag.materializeCStruct1Tag[_GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[_GVariantBuilder] = scala.scalanative.unsafe.alloc[_GVariantBuilder](1)
   def apply(u : _GVariantBuilder.Union0)(using Zone): Ptr[_GVariantBuilder] = 
@@ -3331,23 +3364,23 @@ object _GVariantBuilder:
     def u_=(value: _GVariantBuilder.Union0): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
 opaque type _GVariantDict = CStruct1[_GVariantDict.Union0]
 object _GVariantDict:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
   */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
     /**
-     * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+     * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
     */
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -3358,8 +3391,8 @@ object _GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -3371,16 +3404,16 @@ object _GVariantDict:
       un.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]]
       def s_=(value: _GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantDict] = Tag.materializeCStruct1Tag[_GVariantDict.Union0]
   def apply()(using Zone): Ptr[_GVariantDict] = scala.scalanative.unsafe.alloc[_GVariantDict](1)
   def apply(u : _GVariantDict.Union0)(using Zone): Ptr[_GVariantDict] = 
@@ -3392,22 +3425,22 @@ object _GVariantDict:
     def u_=(value: _GVariantDict.Union0): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvariant.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvariant.h
 */
-opaque type _GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type _GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
 object _GVariantIter:
-  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[_GVariantIter] = scala.scalanative.unsafe.alloc[_GVariantIter](1)
-  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
+  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: _GVariantIter)
-    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gvarianttype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gvarianttype.h
 */
 opaque type _GVariantType = CStruct0
 object _GVariantType:

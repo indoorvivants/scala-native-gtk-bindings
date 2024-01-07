@@ -9,9 +9,8 @@ import _root_.scala.scalanative.*
 import _root_.libgdkpixbuf.enumerations.*
 import _root_.libgdkpixbuf.aliases.*
 import _root_.libgdkpixbuf.structs.*
-
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimationIter_autoptr = Ptr[GdkPixbufAnimationIter]
 object GdkPixbufAnimationIter_autoptr: 
@@ -21,7 +20,7 @@ object GdkPixbufAnimationIter_autoptr:
     inline def value: Ptr[GdkPixbufAnimationIter] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimationIter_listautoptr = Ptr[_root_.glib.all.GList]
 object GdkPixbufAnimationIter_listautoptr: 
@@ -31,7 +30,7 @@ object GdkPixbufAnimationIter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimationIter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GdkPixbufAnimationIter_queueautoptr: 
@@ -41,7 +40,7 @@ object GdkPixbufAnimationIter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimationIter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GdkPixbufAnimationIter_slistautoptr: 
@@ -51,7 +50,7 @@ object GdkPixbufAnimationIter_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimation_autoptr = Ptr[GdkPixbufAnimation]
 object GdkPixbufAnimation_autoptr: 
@@ -61,7 +60,7 @@ object GdkPixbufAnimation_autoptr:
     inline def value: Ptr[GdkPixbufAnimation] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimation_listautoptr = Ptr[_root_.glib.all.GList]
 object GdkPixbufAnimation_listautoptr: 
@@ -71,7 +70,7 @@ object GdkPixbufAnimation_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimation_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GdkPixbufAnimation_queueautoptr: 
@@ -81,7 +80,7 @@ object GdkPixbufAnimation_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufAnimation_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GdkPixbufAnimation_slistautoptr: 
@@ -93,17 +92,19 @@ object GdkPixbufAnimation_slistautoptr:
 /**
  * GdkPixbufDestroyNotify: : (array) (element-type guint8): The pixel array of the pixbuf that is being finalized.
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type GdkPixbufDestroyNotify = CFuncPtr2[Ptr[_root_.glib.all.guchar], _root_.glib.all.gpointer, Unit]
 object GdkPixbufDestroyNotify: 
   given _tag: Tag[GdkPixbufDestroyNotify] = Tag.materializeCFuncPtr2[Ptr[_root_.glib.all.guchar], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GdkPixbufDestroyNotify = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[_root_.glib.all.guchar], _root_.glib.all.gpointer, Unit]): GdkPixbufDestroyNotify = o
   extension (v: GdkPixbufDestroyNotify)
     inline def value: CFuncPtr2[Ptr[_root_.glib.all.guchar], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufLoader_autoptr = Ptr[GdkPixbufLoader]
 object GdkPixbufLoader_autoptr: 
@@ -113,7 +114,7 @@ object GdkPixbufLoader_autoptr:
     inline def value: Ptr[GdkPixbufLoader] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufLoader_listautoptr = Ptr[_root_.glib.all.GList]
 object GdkPixbufLoader_listautoptr: 
@@ -123,7 +124,7 @@ object GdkPixbufLoader_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufLoader_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GdkPixbufLoader_queueautoptr: 
@@ -133,7 +134,7 @@ object GdkPixbufLoader_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufLoader_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GdkPixbufLoader_slistautoptr: 
@@ -145,17 +146,19 @@ object GdkPixbufLoader_slistautoptr:
 /**
  * GdkPixbufSaveFunc:
 
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type GdkPixbufSaveFunc = CFuncPtr4[Ptr[_root_.glib.all.gchar], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GdkPixbufSaveFunc: 
   given _tag: Tag[GdkPixbufSaveFunc] = Tag.materializeCFuncPtr4[Ptr[_root_.glib.all.gchar], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GdkPixbufSaveFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[_root_.glib.all.gchar], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GdkPixbufSaveFunc = o
   extension (v: GdkPixbufSaveFunc)
     inline def value: CFuncPtr4[Ptr[_root_.glib.all.gchar], _root_.glib.all.gsize, Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufSimpleAnim_autoptr = Ptr[GdkPixbufSimpleAnim]
 object GdkPixbufSimpleAnim_autoptr: 
@@ -165,7 +168,7 @@ object GdkPixbufSimpleAnim_autoptr:
     inline def value: Ptr[GdkPixbufSimpleAnim] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufSimpleAnim_listautoptr = Ptr[_root_.glib.all.GList]
 object GdkPixbufSimpleAnim_listautoptr: 
@@ -175,7 +178,7 @@ object GdkPixbufSimpleAnim_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufSimpleAnim_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GdkPixbufSimpleAnim_queueautoptr: 
@@ -185,7 +188,7 @@ object GdkPixbufSimpleAnim_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbufSimpleAnim_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GdkPixbufSimpleAnim_slistautoptr: 
@@ -195,7 +198,7 @@ object GdkPixbufSimpleAnim_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbuf_autoptr = Ptr[GdkPixbuf]
 object GdkPixbuf_autoptr: 
@@ -205,7 +208,7 @@ object GdkPixbuf_autoptr:
     inline def value: Ptr[GdkPixbuf] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbuf_listautoptr = Ptr[_root_.glib.all.GList]
 object GdkPixbuf_listautoptr: 
@@ -215,7 +218,7 @@ object GdkPixbuf_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbuf_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GdkPixbuf_queueautoptr: 
@@ -225,7 +228,7 @@ object GdkPixbuf_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 */
 opaque type GdkPixbuf_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GdkPixbuf_slistautoptr: 
@@ -254,6 +257,13 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

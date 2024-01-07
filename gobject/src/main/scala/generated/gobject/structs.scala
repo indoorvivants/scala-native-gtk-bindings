@@ -10,23 +10,22 @@ import _root_.gobject.enumerations.*
 import _root_.gobject.aliases.*
 import _root_.gobject.structs.*
 import _root_.gobject.unions.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gbinding.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gbinding.h
 */
 opaque type GBinding = CStruct0
 object GBinding:
   given _tag: Tag[GBinding] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gbindinggroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gbindinggroup.h
 */
 opaque type GBindingGroup = CStruct0
 object GBindingGroup:
   given _tag: Tag[GBindingGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gclosure.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gclosure.h
 */
 opaque type GCClosure = CStruct2[GClosure, _root_.glib.all.gpointer]
 object GCClosure:
@@ -46,7 +45,7 @@ object GCClosure:
 /**
  * GClosure: _marshal: Indicates whether the closure is currently being invoked with g_closure_invoke() g_closure_invalidate()
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gclosure.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gclosure.h
 */
 opaque type GClosure = CStruct13[_root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, CFuncPtr6[Ptr[Byte], Ptr[GValue], _root_.glib.all.guint, Ptr[GValue], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Unit], _root_.glib.all.gpointer, Ptr[Byte]]
 object GClosure:
@@ -97,7 +96,7 @@ object GClosure:
     def notifiers_=(value: Ptr[GClosureNotifyData]): Unit = !struct.at13 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gclosure.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gclosure.h
 */
 opaque type GClosureNotifyData = CStruct2[_root_.glib.all.gpointer, Ptr[Byte]]
 object GClosureNotifyData:
@@ -117,7 +116,7 @@ object GClosureNotifyData:
 /**
  * GEnumClass: _type_class: the parent class : the smallest possible value. : the largest possible value. _values: the number of possible values. : an array of #GEnumValue structs describing the individual values.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type GEnumClass = CStruct5[GTypeClass, _root_.glib.all.gint, _root_.glib.all.gint, _root_.glib.all.guint, Ptr[GEnumValue]]
 object GEnumClass:
@@ -146,7 +145,7 @@ object GEnumClass:
 /**
  * GEnumValue: : the enum value _name: the name of the value _nick: the nickname of the value
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type GEnumValue = CStruct3[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar]]
 object GEnumValue:
@@ -169,7 +168,7 @@ object GEnumValue:
 /**
  * GFlagsClass: _type_class: the parent class : a mask covering all possible values. _values: the number of possible values. : an array of #GFlagsValue structs describing the individual values.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type GFlagsClass = CStruct4[GTypeClass, _root_.glib.all.guint, _root_.glib.all.guint, Ptr[GFlagsValue]]
 object GFlagsClass:
@@ -195,7 +194,7 @@ object GFlagsClass:
 /**
  * GFlagsValue: : the flags value _name: the name of the value _nick: the nickname of the value
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type GFlagsValue = CStruct3[_root_.glib.all.guint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar]]
 object GFlagsValue:
@@ -218,7 +217,7 @@ object GFlagsValue:
 /**
  * GObject:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
 opaque type GInitiallyUnowned = CStruct3[GTypeInstance, _root_.glib.all.guint, Ptr[_root_.glib.all.GData]]
 object GInitiallyUnowned:
@@ -241,13 +240,13 @@ object GInitiallyUnowned:
 /**
  * GObjectClass: _type_class: the parent class : the function is called by g_object_new () to complete the object initialization after all the construction properties are set. The first thing a implementation must do is chain up to the of the parent class. Overriding should be rarely needed, e.g. to handle construct properties, or to implement singletons.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
-opaque type GInitiallyUnownedClass = CStruct12[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._6]]
+opaque type GInitiallyUnownedClass = CStruct15[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, _root_.glib.all.gsize, _root_.glib.all.gpointer, _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._3]]
 object GInitiallyUnownedClass:
-  given _tag: Tag[GInitiallyUnownedClass] = Tag.materializeCStruct12Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._6]]
+  given _tag: Tag[GInitiallyUnownedClass] = Tag.materializeCStruct15Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, _root_.glib.all.gsize, _root_.glib.all.gpointer, _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._3]]
   def apply()(using Zone): Ptr[GInitiallyUnownedClass] = scala.scalanative.unsafe.alloc[GInitiallyUnownedClass](1)
-  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.glib.all.GSList], constructor : CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.glib.all.gsize, pdummy : CArray[_root_.glib.all.gpointer, Nat._6])(using Zone): Ptr[GInitiallyUnownedClass] = 
+  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.glib.all.GSList], constructor : CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.glib.all.gsize, n_construct_properties : _root_.glib.all.gsize, pspecs : _root_.glib.all.gpointer, n_pspecs : _root_.glib.all.gsize, pdummy : CArray[_root_.glib.all.gpointer, Nat._3])(using Zone): Ptr[GInitiallyUnownedClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).construct_properties = construct_properties
@@ -260,6 +259,9 @@ object GInitiallyUnownedClass:
     (!____ptr)._notify = _notify
     (!____ptr).constructed = constructed
     (!____ptr).flags = flags
+    (!____ptr).n_construct_properties = n_construct_properties
+    (!____ptr).pspecs = pspecs
+    (!____ptr).n_pspecs = n_pspecs
     (!____ptr).pdummy = pdummy
     ____ptr
   extension (struct: GInitiallyUnownedClass)
@@ -285,13 +287,19 @@ object GInitiallyUnownedClass:
     def constructed_=(value: CFuncPtr1[Ptr[GObject], Unit]): Unit = !struct.at10 = value
     def flags : _root_.glib.all.gsize = struct._11
     def flags_=(value: _root_.glib.all.gsize): Unit = !struct.at11 = value
-    def pdummy : CArray[_root_.glib.all.gpointer, Nat._6] = struct._12
-    def pdummy_=(value: CArray[_root_.glib.all.gpointer, Nat._6]): Unit = !struct.at12 = value
+    def n_construct_properties : _root_.glib.all.gsize = struct._12
+    def n_construct_properties_=(value: _root_.glib.all.gsize): Unit = !struct.at12 = value
+    def pspecs : _root_.glib.all.gpointer = struct._13
+    def pspecs_=(value: _root_.glib.all.gpointer): Unit = !struct.at13 = value
+    def n_pspecs : _root_.glib.all.gsize = struct._14
+    def n_pspecs_=(value: _root_.glib.all.gsize): Unit = !struct.at14 = value
+    def pdummy : CArray[_root_.glib.all.gpointer, Nat._3] = struct._15
+    def pdummy_=(value: CArray[_root_.glib.all.gpointer, Nat._3]): Unit = !struct.at15 = value
 
 /**
  * GInterfaceInfo:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GInterfaceInfo = CStruct3[GInterfaceInitFunc, GInterfaceFinalizeFunc, _root_.glib.all.gpointer]
 object GInterfaceInfo:
@@ -314,7 +322,7 @@ object GInterfaceInfo:
 /**
  * GObject:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
 opaque type GObject = CStruct3[GTypeInstance, _root_.glib.all.guint, Ptr[_root_.glib.all.GData]]
 object GObject:
@@ -337,13 +345,13 @@ object GObject:
 /**
  * GObjectClass: _type_class: the parent class : the function is called by g_object_new () to complete the object initialization after all the construction properties are set. The first thing a implementation must do is chain up to the of the parent class. Overriding should be rarely needed, e.g. to handle construct properties, or to implement singletons.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
-opaque type GObjectClass = CStruct12[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._6]]
+opaque type GObjectClass = CStruct15[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, _root_.glib.all.gsize, _root_.glib.all.gpointer, _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._3]]
 object GObjectClass:
-  given _tag: Tag[GObjectClass] = Tag.materializeCStruct12Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._6]]
+  given _tag: Tag[GObjectClass] = Tag.materializeCStruct15Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, _root_.glib.all.gsize, _root_.glib.all.gpointer, _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._3]]
   def apply()(using Zone): Ptr[GObjectClass] = scala.scalanative.unsafe.alloc[GObjectClass](1)
-  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.glib.all.GSList], constructor : CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.glib.all.gsize, pdummy : CArray[_root_.glib.all.gpointer, Nat._6])(using Zone): Ptr[GObjectClass] = 
+  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.glib.all.GSList], constructor : CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.glib.all.gsize, n_construct_properties : _root_.glib.all.gsize, pspecs : _root_.glib.all.gpointer, n_pspecs : _root_.glib.all.gsize, pdummy : CArray[_root_.glib.all.gpointer, Nat._3])(using Zone): Ptr[GObjectClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).construct_properties = construct_properties
@@ -356,6 +364,9 @@ object GObjectClass:
     (!____ptr)._notify = _notify
     (!____ptr).constructed = constructed
     (!____ptr).flags = flags
+    (!____ptr).n_construct_properties = n_construct_properties
+    (!____ptr).pspecs = pspecs
+    (!____ptr).n_pspecs = n_pspecs
     (!____ptr).pdummy = pdummy
     ____ptr
   extension (struct: GObjectClass)
@@ -381,13 +392,19 @@ object GObjectClass:
     def constructed_=(value: CFuncPtr1[Ptr[GObject], Unit]): Unit = !struct.at10 = value
     def flags : _root_.glib.all.gsize = struct._11
     def flags_=(value: _root_.glib.all.gsize): Unit = !struct.at11 = value
-    def pdummy : CArray[_root_.glib.all.gpointer, Nat._6] = struct._12
-    def pdummy_=(value: CArray[_root_.glib.all.gpointer, Nat._6]): Unit = !struct.at12 = value
+    def n_construct_properties : _root_.glib.all.gsize = struct._12
+    def n_construct_properties_=(value: _root_.glib.all.gsize): Unit = !struct.at12 = value
+    def pspecs : _root_.glib.all.gpointer = struct._13
+    def pspecs_=(value: _root_.glib.all.gpointer): Unit = !struct.at13 = value
+    def n_pspecs : _root_.glib.all.gsize = struct._14
+    def n_pspecs_=(value: _root_.glib.all.gsize): Unit = !struct.at14 = value
+    def pdummy : CArray[_root_.glib.all.gpointer, Nat._3] = struct._15
+    def pdummy_=(value: CArray[_root_.glib.all.gpointer, Nat._3]): Unit = !struct.at15 = value
 
 /**
  * GObjectConstructParam: : the #GParamSpec of the construct parameter : the value to set the parameter to
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
 opaque type GObjectConstructParam = CStruct2[Ptr[GParamSpec], Ptr[GValue]]
 object GObjectConstructParam:
@@ -407,7 +424,7 @@ object GObjectConstructParam:
 /**
  * GParamSpec: (ref-func g_param_spec_ref_sink) (unref-func g_param_spec_unref) (set-value-func g_value_set_param) (get-value-func g_value_get_param) _type_instance: private #GTypeInstance portion : #GParamFlags flags for this parameter _type: the #GValue type for this parameter _type: #GType type that uses (introduces) this parameter
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type GParamSpec = CStruct10[GTypeInstance, Ptr[_root_.glib.all.gchar], GParamFlags, GType, GType, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GData], _root_.glib.all.guint, _root_.glib.all.guint]
 object GParamSpec:
@@ -451,7 +468,7 @@ object GParamSpec:
 /**
  * GParamSpecBoolean: _instance: private #GParamSpec portion _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecBoolean = CStruct2[GParamSpec, _root_.glib.all.gboolean]
 object GParamSpecBoolean:
@@ -471,7 +488,7 @@ object GParamSpecBoolean:
 /**
  * GParamSpecBoxed: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecBoxed = CStruct1[GParamSpec]
 object GParamSpecBoxed:
@@ -488,7 +505,7 @@ object GParamSpecBoxed:
 /**
  * GParamSpecChar: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecChar = CStruct4[GParamSpec, _root_.glib.all.gint8, _root_.glib.all.gint8, _root_.glib.all.gint8]
 object GParamSpecChar:
@@ -512,15 +529,15 @@ object GParamSpecChar:
     def default_value_=(value: _root_.glib.all.gint8): Unit = !struct.at4 = value
 
 /**
- * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp().
+ * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp(). _is_valid: Checks if contents of comply with the specifications set out by this type, without modifying the value. This vfunc is optional. If it isn't set, GObject will use _validate. Since 2.74
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
-opaque type GParamSpecClass = CStruct7[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CArray[_root_.glib.all.gpointer, Nat._4]]
+opaque type GParamSpecClass = CStruct8[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._3]]
 object GParamSpecClass:
-  given _tag: Tag[GParamSpecClass] = Tag.materializeCStruct7Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CArray[_root_.glib.all.gpointer, Nat._4]]
+  given _tag: Tag[GParamSpecClass] = Tag.materializeCStruct8Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._3]]
   def apply()(using Zone): Ptr[GParamSpecClass] = scala.scalanative.unsafe.alloc[GParamSpecClass](1)
-  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], dummy : CArray[_root_.glib.all.gpointer, Nat._4])(using Zone): Ptr[GParamSpecClass] = 
+  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], dummy : CArray[_root_.glib.all.gpointer, Nat._3])(using Zone): Ptr[GParamSpecClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).value_type = value_type
@@ -528,6 +545,7 @@ object GParamSpecClass:
     (!____ptr).value_set_default = value_set_default
     (!____ptr).value_validate = value_validate
     (!____ptr).values_cmp = values_cmp
+    (!____ptr).value_is_valid = value_is_valid
     (!____ptr).dummy = dummy
     ____ptr
   extension (struct: GParamSpecClass)
@@ -543,13 +561,15 @@ object GParamSpecClass:
     def value_validate_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean]): Unit = !struct.at5 = value
     def values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint] = struct._6
     def values_cmp_=(value: CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint]): Unit = !struct.at6 = value
-    def dummy : CArray[_root_.glib.all.gpointer, Nat._4] = struct._7
-    def dummy_=(value: CArray[_root_.glib.all.gpointer, Nat._4]): Unit = !struct.at7 = value
+    def value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean] = struct._7
+    def value_is_valid_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean]): Unit = !struct.at7 = value
+    def dummy : CArray[_root_.glib.all.gpointer, Nat._3] = struct._8
+    def dummy_=(value: CArray[_root_.glib.all.gpointer, Nat._3]): Unit = !struct.at8 = value
 
 /**
  * GParamSpecDouble: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified : values closer than will be considered identical by g_param_values_cmp(); the default value is 1e-90.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecDouble = CStruct5[GParamSpec, _root_.glib.all.gdouble, _root_.glib.all.gdouble, _root_.glib.all.gdouble, _root_.glib.all.gdouble]
 object GParamSpecDouble:
@@ -578,7 +598,7 @@ object GParamSpecDouble:
 /**
  * GParamSpecEnum: _instance: private #GParamSpec portion _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecEnum = CStruct3[GParamSpec, Ptr[GEnumClass], _root_.glib.all.gint]
 object GParamSpecEnum:
@@ -601,7 +621,7 @@ object GParamSpecEnum:
 /**
  * GParamSpecFlags: _instance: private #GParamSpec portion _class: the #GFlagsClass for the flags _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecFlags = CStruct3[GParamSpec, Ptr[GFlagsClass], _root_.glib.all.guint]
 object GParamSpecFlags:
@@ -624,7 +644,7 @@ object GParamSpecFlags:
 /**
  * GParamSpecFloat: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified : values closer than will be considered identical by g_param_values_cmp(); the default value is 1e-30.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecFloat = CStruct5[GParamSpec, _root_.glib.all.gfloat, _root_.glib.all.gfloat, _root_.glib.all.gfloat, _root_.glib.all.gfloat]
 object GParamSpecFloat:
@@ -653,7 +673,7 @@ object GParamSpecFloat:
 /**
  * GParamSpecGType: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecGType = CStruct2[GParamSpec, GType]
 object GParamSpecGType:
@@ -673,7 +693,7 @@ object GParamSpecGType:
 /**
  * GParamSpecInt: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecInt = CStruct4[GParamSpec, _root_.glib.all.gint, _root_.glib.all.gint, _root_.glib.all.gint]
 object GParamSpecInt:
@@ -699,7 +719,7 @@ object GParamSpecInt:
 /**
  * GParamSpecInt64: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecInt64 = CStruct4[GParamSpec, _root_.glib.all.gint64, _root_.glib.all.gint64, _root_.glib.all.gint64]
 object GParamSpecInt64:
@@ -725,7 +745,7 @@ object GParamSpecInt64:
 /**
  * GParamSpecLong: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecLong = CStruct4[GParamSpec, _root_.glib.all.glong, _root_.glib.all.glong, _root_.glib.all.glong]
 object GParamSpecLong:
@@ -751,7 +771,7 @@ object GParamSpecLong:
 /**
  * GParamSpecObject: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecObject = CStruct1[GParamSpec]
 object GParamSpecObject:
@@ -768,7 +788,7 @@ object GParamSpecObject:
 /**
  * GParamSpecOverride:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecOverride = CStruct2[GParamSpec, Ptr[GParamSpec]]
 object GParamSpecOverride:
@@ -788,7 +808,7 @@ object GParamSpecOverride:
 /**
  * GParamSpecParam: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecParam = CStruct1[GParamSpec]
 object GParamSpecParam:
@@ -805,7 +825,7 @@ object GParamSpecParam:
 /**
  * GParamSpecPointer: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecPointer = CStruct1[GParamSpec]
 object GParamSpecPointer:
@@ -820,7 +840,7 @@ object GParamSpecPointer:
     def parent_instance_=(value: GParamSpec): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type GParamSpecPool = CStruct0
 object GParamSpecPool:
@@ -829,7 +849,7 @@ object GParamSpecPool:
 /**
  * GParamSpecString: _instance: private #GParamSpec portion _value: default value for the property specified _first: a string containing the allowed values for the first byte _nth: a string containing the allowed values for the subsequent bytes : the replacement byte for bytes which don't match _first or _nth. _fold_if_empty: replace empty string by %NULL _non_null: replace %NULL strings by an empty string
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecString = CStruct7[GParamSpec, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gchar, _root_.glib.all.guint, _root_.glib.all.guint]
 object GParamSpecString:
@@ -864,7 +884,7 @@ object GParamSpecString:
 /**
  * GParamSpecTypeInfo: _size: Size of the instance (object) structure. _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10, it is ignored, since instances are allocated with the [slice allocator][glib-Memory-Slices] now. _init: Location of the instance initialization function (optional). _type: The #GType of values conforming to this #GParamSpec : The instance finalization function (optional). _set_default: Resets a to the default value for (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by (optional), see g_param_value_validate(). _cmp: Compares with according to (recommended, the default is memcmp()), see g_param_values_cmp().
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type GParamSpecTypeInfo = CStruct8[_root_.glib.all.guint16, _root_.glib.all.guint16, CFuncPtr1[Ptr[GParamSpec], Unit], GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint]]
 object GParamSpecTypeInfo:
@@ -902,7 +922,7 @@ object GParamSpecTypeInfo:
 /**
  * GParamSpecUChar: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecUChar = CStruct4[GParamSpec, _root_.glib.all.guint8, _root_.glib.all.guint8, _root_.glib.all.guint8]
 object GParamSpecUChar:
@@ -928,7 +948,7 @@ object GParamSpecUChar:
 /**
  * GParamSpecUInt: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecUInt = CStruct4[GParamSpec, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint]
 object GParamSpecUInt:
@@ -954,7 +974,7 @@ object GParamSpecUInt:
 /**
  * GParamSpecUInt64: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecUInt64 = CStruct4[GParamSpec, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64]
 object GParamSpecUInt64:
@@ -980,7 +1000,7 @@ object GParamSpecUInt64:
 /**
  * GParamSpecULong: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecULong = CStruct4[GParamSpec, _root_.glib.all.gulong, _root_.glib.all.gulong, _root_.glib.all.gulong]
 object GParamSpecULong:
@@ -1006,7 +1026,7 @@ object GParamSpecULong:
 /**
  * GParamSpecUnichar: _instance: private #GParamSpec portion _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecUnichar = CStruct2[GParamSpec, _root_.glib.all.gunichar]
 object GParamSpecUnichar:
@@ -1026,7 +1046,7 @@ object GParamSpecUnichar:
 /**
  * GParamSpecValueArray: _instance: private #GParamSpec portion _spec: a #GParamSpec describing the elements contained in arrays of this property, may be %NULL _n_elements: if greater than 0, arrays of this property will always have this many elements
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecValueArray = CStruct3[GParamSpec, Ptr[GParamSpec], _root_.glib.all.guint]
 object GParamSpecValueArray:
@@ -1049,7 +1069,7 @@ object GParamSpecValueArray:
 /**
  * GParamSpecVariant: _instance: private #GParamSpec portion : a #GVariantType, or %NULL _value: a #GVariant, or %NULL
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type GParamSpecVariant = CStruct4[GParamSpec, Ptr[_root_.glib.all.GVariantType], Ptr[_root_.glib.all.GVariant], CArray[_root_.glib.all.gpointer, Nat._4]]
 object GParamSpecVariant:
@@ -1075,7 +1095,7 @@ object GParamSpecVariant:
 /**
  * GParameter: : the parameter value
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type GParameter = CStruct2[Ptr[_root_.glib.all.gchar], GValue]
 object GParameter:
@@ -1093,7 +1113,7 @@ object GParameter:
     def value_=(value: GValue): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignalgroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignalgroup.h
 */
 opaque type GSignalGroup = CStruct0
 object GSignalGroup:
@@ -1102,7 +1122,7 @@ object GSignalGroup:
 /**
  * GSignalInvocationHint: _id: The signal id of the signal invoking the callback
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type GSignalInvocationHint = CStruct3[_root_.glib.all.guint, _root_.glib.all.GQuark, GSignalFlags]
 object GSignalInvocationHint:
@@ -1125,7 +1145,7 @@ object GSignalInvocationHint:
 /**
  * GSignalQuery: _id: The signal id of the signal being queried, or 0 if the signal to be queried was unknown. _name: The signal name. : The interface/instance type that this signal can be emitted for. _flags: The signal flags as passed in to g_signal_new().
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type GSignalQuery = CStruct7[_root_.glib.all.guint, Ptr[_root_.glib.all.gchar], GType, GSignalFlags, GType, _root_.glib.all.guint, Ptr[GType]]
 object GSignalQuery:
@@ -1160,7 +1180,7 @@ object GSignalQuery:
 /**
  * GTypeClass:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeClass = CStruct1[GType]
 object GTypeClass:
@@ -1177,7 +1197,7 @@ object GTypeClass:
 /**
  * GTypeFundamentalInfo: _flags: #GTypeFundamentalFlags describing the characteristics of the fundamental type
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeFundamentalInfo = CStruct1[GTypeFundamentalFlags]
 object GTypeFundamentalInfo:
@@ -1192,9 +1212,9 @@ object GTypeFundamentalInfo:
     def type_flags_=(value: GTypeFundamentalFlags): Unit = !struct.at1 = value
 
 /**
- * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10, it is ignored, since instances are allocated with the [slice allocator][glib-Memory-Slices] now. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
+ * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10 this field is ignored. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeInfo = CStruct10[_root_.glib.all.guint16, GBaseInitFunc, GBaseFinalizeFunc, GClassInitFunc, GClassFinalizeFunc, _root_.glib.all.gconstpointer, _root_.glib.all.guint16, _root_.glib.all.guint16, GInstanceInitFunc, Ptr[GTypeValueTable]]
 object GTypeInfo:
@@ -1238,7 +1258,7 @@ object GTypeInfo:
 /**
  * GTypeInstance:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeInstance = CStruct1[Ptr[GTypeClass]]
 object GTypeInstance:
@@ -1255,7 +1275,7 @@ object GTypeInstance:
 /**
  * GTypeInterface:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeInterface = CStruct2[GType, GType]
 object GTypeInterface:
@@ -1275,7 +1295,7 @@ object GTypeInterface:
 /**
  * GTypeModule:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtypemodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtypemodule.h
 */
 opaque type GTypeModule = CStruct5[GObject, _root_.glib.all.guint, Ptr[Byte], Ptr[Byte], Ptr[_root_.glib.all.gchar]]
 object GTypeModule:
@@ -1304,7 +1324,7 @@ object GTypeModule:
 /**
  * GTypeModuleClass: _class: the parent class : loads the module and registers one or more types using g_type_module_register_type(). : unloads the module
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtypemodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtypemodule.h
 */
 opaque type GTypeModuleClass = CStruct7[GObjectClass, CFuncPtr1[Ptr[Byte], _root_.glib.all.gboolean], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GTypeModuleClass:
@@ -1337,7 +1357,7 @@ object GTypeModuleClass:
     def reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypePlugin = CStruct0
 object GTypePlugin:
@@ -1346,7 +1366,7 @@ object GTypePlugin:
 /**
  * GTypePlugin:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtypeplugin.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtypeplugin.h
 */
 opaque type GTypePluginClass = CStruct5[GTypeInterface, GTypePluginUse, GTypePluginUnuse, GTypePluginCompleteTypeInfo, GTypePluginCompleteInterfaceInfo]
 object GTypePluginClass:
@@ -1375,7 +1395,7 @@ object GTypePluginClass:
 /**
  * GTypeQuery: : the #GType value of the type _name: the name of the type _size: the size of the instance structure
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeQuery = CStruct4[GType, Ptr[_root_.glib.all.gchar], _root_.glib.all.guint, _root_.glib.all.guint]
 object GTypeQuery:
@@ -1399,15 +1419,15 @@ object GTypeQuery:
     def instance_size_=(value: _root_.glib.all.guint): Unit = !struct.at4 = value
 
 /**
- * GTypeValueTable: _init: Default initialize contents by poking values directly into the value->data array. The data array of the #GValue passed into this function was zero-filled with `memset()`, so no care has to be taken to free any old contents. E.g. for the implementation of a string value that may never be %NULL, the implementation might look like: |[<!-- language="C" --> value->data[0].v_pointer = g_strdup (""); ]| _free: Free any old contents that might be left in the data array of the passed in . No resources may remain allocated through the #GValue contents after this function returns. E.g. for our above string type: |[<!-- language="C" --> // only free strings without a specific flag for static storage if (!(value->data[1].v_uint & G_VALUE_NOCOPY_CONTENTS)) g_free (value->data[0].v_pointer); ]| _copy:
+ * GTypeValueTable: _init: Function to initialize a GValue _free: Function to free a GValue _copy: Function to copy a GValue _peek_pointer: Function to peek the contents of a GValue if they fit into a pointer _format: A string format describing how to collect the contents of this value bit-by-bit. Each character in the format represents an argument to be collected, and the characters themselves indicate the type of the argument. Currently supported arguments are: - `'i'`: Integers, passed as `collect_values[].v_int` - `'l'`: Longs, passed as `collect_values[].v_long` - `'d'`: Doubles, passed as `collect_values[].v_double` - `'p'`: Pointers, passed as `collect_values[].v_pointer` It should be noted that for variable argument list construction, ANSI C promotes every type smaller than an integer to an int, and floats to doubles. So for collection of short int or char, `'i'` needs to be used, and for collection of floats `'d'`. _value: Function to initialize a GValue from the values collected from variadic arguments _format: Format description of the arguments to collect for _value, analogous to _format. Usually, _format string consists only of `'p'`s to provide lcopy_value() with pointers to storage locations. _value: Function to store the contents of a value into the locations collected from variadic arguments
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
-opaque type GTypeValueTable = CStruct8[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]]
+opaque type GTypeValueTable = CStruct8[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.glib.all.gchar], GTypeValueCollectFunc, Ptr[_root_.glib.all.gchar], GTypeValueLCopyFunc]
 object GTypeValueTable:
-  given _tag: Tag[GTypeValueTable] = Tag.materializeCStruct8Tag[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]]
+  given _tag: Tag[GTypeValueTable] = Tag.materializeCStruct8Tag[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.glib.all.gchar], GTypeValueCollectFunc, Ptr[_root_.glib.all.gchar], GTypeValueLCopyFunc]
   def apply()(using Zone): Ptr[GTypeValueTable] = scala.scalanative.unsafe.alloc[GTypeValueTable](1)
-  def apply(value_init : CFuncPtr1[Ptr[GValue], Unit], value_free : CFuncPtr1[Ptr[GValue], Unit], value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer], collect_format : Ptr[_root_.glib.all.gchar], collect_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]], lcopy_format : Ptr[_root_.glib.all.gchar], lcopy_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]])(using Zone): Ptr[GTypeValueTable] = 
+  def apply(value_init : GTypeValueInitFunc, value_free : GTypeValueFreeFunc, value_copy : GTypeValueCopyFunc, value_peek_pointer : GTypeValuePeekPointerFunc, collect_format : Ptr[_root_.glib.all.gchar], collect_value : GTypeValueCollectFunc, lcopy_format : Ptr[_root_.glib.all.gchar], lcopy_value : GTypeValueLCopyFunc)(using Zone): Ptr[GTypeValueTable] = 
     val ____ptr = apply()
     (!____ptr).value_init = value_init
     (!____ptr).value_free = value_free
@@ -1419,32 +1439,32 @@ object GTypeValueTable:
     (!____ptr).lcopy_value = lcopy_value
     ____ptr
   extension (struct: GTypeValueTable)
-    def value_init : CFuncPtr1[Ptr[GValue], Unit] = struct._1
-    def value_init_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at1 = value
-    def value_free : CFuncPtr1[Ptr[GValue], Unit] = struct._2
-    def value_free_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at2 = value
-    def value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = struct._3
-    def value_copy_=(value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): Unit = !struct.at3 = value
-    def value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer] = struct._4
-    def value_peek_pointer_=(value: CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer]): Unit = !struct.at4 = value
+    def value_init : GTypeValueInitFunc = struct._1
+    def value_init_=(value: GTypeValueInitFunc): Unit = !struct.at1 = value
+    def value_free : GTypeValueFreeFunc = struct._2
+    def value_free_=(value: GTypeValueFreeFunc): Unit = !struct.at2 = value
+    def value_copy : GTypeValueCopyFunc = struct._3
+    def value_copy_=(value: GTypeValueCopyFunc): Unit = !struct.at3 = value
+    def value_peek_pointer : GTypeValuePeekPointerFunc = struct._4
+    def value_peek_pointer_=(value: GTypeValuePeekPointerFunc): Unit = !struct.at4 = value
     def collect_format : Ptr[_root_.glib.all.gchar] = struct._5
     def collect_format_=(value: Ptr[_root_.glib.all.gchar]): Unit = !struct.at5 = value
-    def collect_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]] = struct._6
-    def collect_value_=(value: CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]): Unit = !struct.at6 = value
+    def collect_value : GTypeValueCollectFunc = struct._6
+    def collect_value_=(value: GTypeValueCollectFunc): Unit = !struct.at6 = value
     def lcopy_format : Ptr[_root_.glib.all.gchar] = struct._7
     def lcopy_format_=(value: Ptr[_root_.glib.all.gchar]): Unit = !struct.at7 = value
-    def lcopy_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]] = struct._8
-    def lcopy_value_=(value: CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]): Unit = !struct.at8 = value
+    def lcopy_value : GTypeValueLCopyFunc = struct._8
+    def lcopy_value_=(value: GTypeValueLCopyFunc): Unit = !struct.at8 = value
 
 /**
  * GValue:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gvalue.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gvalue.h
 */
 opaque type GValue = CStruct2[GType, CArray[GValue.Union0, Nat._2]]
 object GValue:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/gobject/gvalue.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gvalue.h
   */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
@@ -1541,7 +1561,7 @@ object GValue:
 /**
  * GValueArray: _values: number of values contained in the array : array of values
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gvaluearray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gvaluearray.h
 */
 opaque type GValueArray = CStruct3[_root_.glib.all.guint, Ptr[GValue], _root_.glib.all.guint]
 object GValueArray:
@@ -1562,12 +1582,12 @@ object GValueArray:
     def n_prealloced_=(value: _root_.glib.all.guint): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
 opaque type GWeakRef = CStruct1[GWeakRef.Union0]
 object GWeakRef:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
   */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
@@ -1595,21 +1615,21 @@ object GWeakRef:
     def priv_=(value: GWeakRef.Union0): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gbinding.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gbinding.h
 */
 opaque type _GBinding = CStruct0
 object _GBinding:
   given _tag: Tag[_GBinding] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gbindinggroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gbindinggroup.h
 */
 opaque type _GBindingGroup = CStruct0
 object _GBindingGroup:
   given _tag: Tag[_GBindingGroup] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gclosure.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gclosure.h
 */
 opaque type _GCClosure = CStruct2[GClosure, _root_.glib.all.gpointer]
 object _GCClosure:
@@ -1629,7 +1649,7 @@ object _GCClosure:
 /**
  * GClosure: _marshal: Indicates whether the closure is currently being invoked with g_closure_invoke() g_closure_invalidate()
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gclosure.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gclosure.h
 */
 opaque type _GClosure = CStruct13[_root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, CFuncPtr6[Ptr[Byte], Ptr[GValue], _root_.glib.all.guint, Ptr[GValue], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Unit], _root_.glib.all.gpointer, Ptr[Byte]]
 object _GClosure:
@@ -1680,7 +1700,7 @@ object _GClosure:
     def notifiers_=(value: Ptr[GClosureNotifyData]): Unit = !struct.at13 = value.asInstanceOf[Ptr[Byte]]
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gclosure.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gclosure.h
 */
 opaque type _GClosureNotifyData = CStruct2[_root_.glib.all.gpointer, Ptr[Byte]]
 object _GClosureNotifyData:
@@ -1700,7 +1720,7 @@ object _GClosureNotifyData:
 /**
  * GEnumClass: _type_class: the parent class : the smallest possible value. : the largest possible value. _values: the number of possible values. : an array of #GEnumValue structs describing the individual values.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type _GEnumClass = CStruct5[GTypeClass, _root_.glib.all.gint, _root_.glib.all.gint, _root_.glib.all.guint, Ptr[GEnumValue]]
 object _GEnumClass:
@@ -1729,7 +1749,7 @@ object _GEnumClass:
 /**
  * GEnumValue: : the enum value _name: the name of the value _nick: the nickname of the value
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type _GEnumValue = CStruct3[_root_.glib.all.gint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar]]
 object _GEnumValue:
@@ -1752,7 +1772,7 @@ object _GEnumValue:
 /**
  * GFlagsClass: _type_class: the parent class : a mask covering all possible values. _values: the number of possible values. : an array of #GFlagsValue structs describing the individual values.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type _GFlagsClass = CStruct4[GTypeClass, _root_.glib.all.guint, _root_.glib.all.guint, Ptr[GFlagsValue]]
 object _GFlagsClass:
@@ -1778,7 +1798,7 @@ object _GFlagsClass:
 /**
  * GFlagsValue: : the flags value _name: the name of the value _nick: the nickname of the value
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/genums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/genums.h
 */
 opaque type _GFlagsValue = CStruct3[_root_.glib.all.guint, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar]]
 object _GFlagsValue:
@@ -1801,7 +1821,7 @@ object _GFlagsValue:
 /**
  * GInterfaceInfo:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GInterfaceInfo = CStruct3[GInterfaceInitFunc, GInterfaceFinalizeFunc, _root_.glib.all.gpointer]
 object _GInterfaceInfo:
@@ -1824,7 +1844,7 @@ object _GInterfaceInfo:
 /**
  * GObject:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
 opaque type _GObject = CStruct3[GTypeInstance, _root_.glib.all.guint, Ptr[_root_.glib.all.GData]]
 object _GObject:
@@ -1847,13 +1867,13 @@ object _GObject:
 /**
  * GObjectClass: _type_class: the parent class : the function is called by g_object_new () to complete the object initialization after all the construction properties are set. The first thing a implementation must do is chain up to the of the parent class. Overriding should be rarely needed, e.g. to handle construct properties, or to implement singletons.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
-opaque type _GObjectClass = CStruct12[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._6]]
+opaque type _GObjectClass = CStruct15[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, _root_.glib.all.gsize, _root_.glib.all.gpointer, _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._3]]
 object _GObjectClass:
-  given _tag: Tag[_GObjectClass] = Tag.materializeCStruct12Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._6]]
+  given _tag: Tag[_GObjectClass] = Tag.materializeCStruct15Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.glib.all.gsize, _root_.glib.all.gsize, _root_.glib.all.gpointer, _root_.glib.all.gsize, CArray[_root_.glib.all.gpointer, Nat._3]]
   def apply()(using Zone): Ptr[_GObjectClass] = scala.scalanative.unsafe.alloc[_GObjectClass](1)
-  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.glib.all.GSList], constructor : CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.glib.all.gsize, pdummy : CArray[_root_.glib.all.gpointer, Nat._6])(using Zone): Ptr[_GObjectClass] = 
+  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.glib.all.GSList], constructor : CFuncPtr3[GType, _root_.glib.all.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.glib.all.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.glib.all.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.glib.all.gsize, n_construct_properties : _root_.glib.all.gsize, pspecs : _root_.glib.all.gpointer, n_pspecs : _root_.glib.all.gsize, pdummy : CArray[_root_.glib.all.gpointer, Nat._3])(using Zone): Ptr[_GObjectClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).construct_properties = construct_properties
@@ -1866,6 +1886,9 @@ object _GObjectClass:
     (!____ptr)._notify = _notify
     (!____ptr).constructed = constructed
     (!____ptr).flags = flags
+    (!____ptr).n_construct_properties = n_construct_properties
+    (!____ptr).pspecs = pspecs
+    (!____ptr).n_pspecs = n_pspecs
     (!____ptr).pdummy = pdummy
     ____ptr
   extension (struct: _GObjectClass)
@@ -1891,13 +1914,19 @@ object _GObjectClass:
     def constructed_=(value: CFuncPtr1[Ptr[GObject], Unit]): Unit = !struct.at10 = value
     def flags : _root_.glib.all.gsize = struct._11
     def flags_=(value: _root_.glib.all.gsize): Unit = !struct.at11 = value
-    def pdummy : CArray[_root_.glib.all.gpointer, Nat._6] = struct._12
-    def pdummy_=(value: CArray[_root_.glib.all.gpointer, Nat._6]): Unit = !struct.at12 = value
+    def n_construct_properties : _root_.glib.all.gsize = struct._12
+    def n_construct_properties_=(value: _root_.glib.all.gsize): Unit = !struct.at12 = value
+    def pspecs : _root_.glib.all.gpointer = struct._13
+    def pspecs_=(value: _root_.glib.all.gpointer): Unit = !struct.at13 = value
+    def n_pspecs : _root_.glib.all.gsize = struct._14
+    def n_pspecs_=(value: _root_.glib.all.gsize): Unit = !struct.at14 = value
+    def pdummy : CArray[_root_.glib.all.gpointer, Nat._3] = struct._15
+    def pdummy_=(value: CArray[_root_.glib.all.gpointer, Nat._3]): Unit = !struct.at15 = value
 
 /**
  * GObjectConstructParam: : the #GParamSpec of the construct parameter : the value to set the parameter to
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gobject.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gobject.h
 */
 opaque type _GObjectConstructParam = CStruct2[Ptr[GParamSpec], Ptr[GValue]]
 object _GObjectConstructParam:
@@ -1917,7 +1946,7 @@ object _GObjectConstructParam:
 /**
  * GParamSpec: (ref-func g_param_spec_ref_sink) (unref-func g_param_spec_unref) (set-value-func g_value_set_param) (get-value-func g_value_get_param) _type_instance: private #GTypeInstance portion : #GParamFlags flags for this parameter _type: the #GValue type for this parameter _type: #GType type that uses (introduces) this parameter
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type _GParamSpec = CStruct10[GTypeInstance, Ptr[_root_.glib.all.gchar], GParamFlags, GType, GType, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GData], _root_.glib.all.guint, _root_.glib.all.guint]
 object _GParamSpec:
@@ -1961,7 +1990,7 @@ object _GParamSpec:
 /**
  * GParamSpecBoolean: _instance: private #GParamSpec portion _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecBoolean = CStruct2[GParamSpec, _root_.glib.all.gboolean]
 object _GParamSpecBoolean:
@@ -1981,7 +2010,7 @@ object _GParamSpecBoolean:
 /**
  * GParamSpecBoxed: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecBoxed = CStruct1[GParamSpec]
 object _GParamSpecBoxed:
@@ -1998,7 +2027,7 @@ object _GParamSpecBoxed:
 /**
  * GParamSpecChar: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecChar = CStruct4[GParamSpec, _root_.glib.all.gint8, _root_.glib.all.gint8, _root_.glib.all.gint8]
 object _GParamSpecChar:
@@ -2022,15 +2051,15 @@ object _GParamSpecChar:
     def default_value_=(value: _root_.glib.all.gint8): Unit = !struct.at4 = value
 
 /**
- * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp().
+ * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp(). _is_valid: Checks if contents of comply with the specifications set out by this type, without modifying the value. This vfunc is optional. If it isn't set, GObject will use _validate. Since 2.74
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
-opaque type _GParamSpecClass = CStruct7[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CArray[_root_.glib.all.gpointer, Nat._4]]
+opaque type _GParamSpecClass = CStruct8[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._3]]
 object _GParamSpecClass:
-  given _tag: Tag[_GParamSpecClass] = Tag.materializeCStruct7Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CArray[_root_.glib.all.gpointer, Nat._4]]
+  given _tag: Tag[_GParamSpecClass] = Tag.materializeCStruct8Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CArray[_root_.glib.all.gpointer, Nat._3]]
   def apply()(using Zone): Ptr[_GParamSpecClass] = scala.scalanative.unsafe.alloc[_GParamSpecClass](1)
-  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], dummy : CArray[_root_.glib.all.gpointer, Nat._4])(using Zone): Ptr[_GParamSpecClass] = 
+  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint], value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], dummy : CArray[_root_.glib.all.gpointer, Nat._3])(using Zone): Ptr[_GParamSpecClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).value_type = value_type
@@ -2038,6 +2067,7 @@ object _GParamSpecClass:
     (!____ptr).value_set_default = value_set_default
     (!____ptr).value_validate = value_validate
     (!____ptr).values_cmp = values_cmp
+    (!____ptr).value_is_valid = value_is_valid
     (!____ptr).dummy = dummy
     ____ptr
   extension (struct: _GParamSpecClass)
@@ -2053,13 +2083,15 @@ object _GParamSpecClass:
     def value_validate_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean]): Unit = !struct.at5 = value
     def values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint] = struct._6
     def values_cmp_=(value: CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint]): Unit = !struct.at6 = value
-    def dummy : CArray[_root_.glib.all.gpointer, Nat._4] = struct._7
-    def dummy_=(value: CArray[_root_.glib.all.gpointer, Nat._4]): Unit = !struct.at7 = value
+    def value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean] = struct._7
+    def value_is_valid_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean]): Unit = !struct.at7 = value
+    def dummy : CArray[_root_.glib.all.gpointer, Nat._3] = struct._8
+    def dummy_=(value: CArray[_root_.glib.all.gpointer, Nat._3]): Unit = !struct.at8 = value
 
 /**
  * GParamSpecDouble: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified : values closer than will be considered identical by g_param_values_cmp(); the default value is 1e-90.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecDouble = CStruct5[GParamSpec, _root_.glib.all.gdouble, _root_.glib.all.gdouble, _root_.glib.all.gdouble, _root_.glib.all.gdouble]
 object _GParamSpecDouble:
@@ -2088,7 +2120,7 @@ object _GParamSpecDouble:
 /**
  * GParamSpecEnum: _instance: private #GParamSpec portion _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecEnum = CStruct3[GParamSpec, Ptr[GEnumClass], _root_.glib.all.gint]
 object _GParamSpecEnum:
@@ -2111,7 +2143,7 @@ object _GParamSpecEnum:
 /**
  * GParamSpecFlags: _instance: private #GParamSpec portion _class: the #GFlagsClass for the flags _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecFlags = CStruct3[GParamSpec, Ptr[GFlagsClass], _root_.glib.all.guint]
 object _GParamSpecFlags:
@@ -2134,7 +2166,7 @@ object _GParamSpecFlags:
 /**
  * GParamSpecFloat: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified : values closer than will be considered identical by g_param_values_cmp(); the default value is 1e-30.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecFloat = CStruct5[GParamSpec, _root_.glib.all.gfloat, _root_.glib.all.gfloat, _root_.glib.all.gfloat, _root_.glib.all.gfloat]
 object _GParamSpecFloat:
@@ -2163,7 +2195,7 @@ object _GParamSpecFloat:
 /**
  * GParamSpecGType: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecGType = CStruct2[GParamSpec, GType]
 object _GParamSpecGType:
@@ -2183,7 +2215,7 @@ object _GParamSpecGType:
 /**
  * GParamSpecInt: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecInt = CStruct4[GParamSpec, _root_.glib.all.gint, _root_.glib.all.gint, _root_.glib.all.gint]
 object _GParamSpecInt:
@@ -2209,7 +2241,7 @@ object _GParamSpecInt:
 /**
  * GParamSpecInt64: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecInt64 = CStruct4[GParamSpec, _root_.glib.all.gint64, _root_.glib.all.gint64, _root_.glib.all.gint64]
 object _GParamSpecInt64:
@@ -2235,7 +2267,7 @@ object _GParamSpecInt64:
 /**
  * GParamSpecLong: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecLong = CStruct4[GParamSpec, _root_.glib.all.glong, _root_.glib.all.glong, _root_.glib.all.glong]
 object _GParamSpecLong:
@@ -2261,7 +2293,7 @@ object _GParamSpecLong:
 /**
  * GParamSpecObject: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecObject = CStruct1[GParamSpec]
 object _GParamSpecObject:
@@ -2278,7 +2310,7 @@ object _GParamSpecObject:
 /**
  * GParamSpecOverride:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecOverride = CStruct2[GParamSpec, Ptr[GParamSpec]]
 object _GParamSpecOverride:
@@ -2298,7 +2330,7 @@ object _GParamSpecOverride:
 /**
  * GParamSpecParam: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecParam = CStruct1[GParamSpec]
 object _GParamSpecParam:
@@ -2315,7 +2347,7 @@ object _GParamSpecParam:
 /**
  * GParamSpecPointer: _instance: private #GParamSpec portion
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecPointer = CStruct1[GParamSpec]
 object _GParamSpecPointer:
@@ -2330,7 +2362,7 @@ object _GParamSpecPointer:
     def parent_instance_=(value: GParamSpec): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type _GParamSpecPool = CStruct0
 object _GParamSpecPool:
@@ -2339,7 +2371,7 @@ object _GParamSpecPool:
 /**
  * GParamSpecString: _instance: private #GParamSpec portion _value: default value for the property specified _first: a string containing the allowed values for the first byte _nth: a string containing the allowed values for the subsequent bytes : the replacement byte for bytes which don't match _first or _nth. _fold_if_empty: replace empty string by %NULL _non_null: replace %NULL strings by an empty string
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecString = CStruct7[GParamSpec, Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gchar, _root_.glib.all.guint, _root_.glib.all.guint]
 object _GParamSpecString:
@@ -2374,7 +2406,7 @@ object _GParamSpecString:
 /**
  * GParamSpecTypeInfo: _size: Size of the instance (object) structure. _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10, it is ignored, since instances are allocated with the [slice allocator][glib-Memory-Slices] now. _init: Location of the instance initialization function (optional). _type: The #GType of values conforming to this #GParamSpec : The instance finalization function (optional). _set_default: Resets a to the default value for (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by (optional), see g_param_value_validate(). _cmp: Compares with according to (recommended, the default is memcmp()), see g_param_values_cmp().
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type _GParamSpecTypeInfo = CStruct8[_root_.glib.all.guint16, _root_.glib.all.guint16, CFuncPtr1[Ptr[GParamSpec], Unit], GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.glib.all.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.glib.all.gint]]
 object _GParamSpecTypeInfo:
@@ -2412,7 +2444,7 @@ object _GParamSpecTypeInfo:
 /**
  * GParamSpecUChar: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecUChar = CStruct4[GParamSpec, _root_.glib.all.guint8, _root_.glib.all.guint8, _root_.glib.all.guint8]
 object _GParamSpecUChar:
@@ -2438,7 +2470,7 @@ object _GParamSpecUChar:
 /**
  * GParamSpecUInt: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecUInt = CStruct4[GParamSpec, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint]
 object _GParamSpecUInt:
@@ -2464,7 +2496,7 @@ object _GParamSpecUInt:
 /**
  * GParamSpecUInt64: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecUInt64 = CStruct4[GParamSpec, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64]
 object _GParamSpecUInt64:
@@ -2490,7 +2522,7 @@ object _GParamSpecUInt64:
 /**
  * GParamSpecULong: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecULong = CStruct4[GParamSpec, _root_.glib.all.gulong, _root_.glib.all.gulong, _root_.glib.all.gulong]
 object _GParamSpecULong:
@@ -2516,7 +2548,7 @@ object _GParamSpecULong:
 /**
  * GParamSpecUnichar: _instance: private #GParamSpec portion _value: default value for the property specified
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecUnichar = CStruct2[GParamSpec, _root_.glib.all.gunichar]
 object _GParamSpecUnichar:
@@ -2536,7 +2568,7 @@ object _GParamSpecUnichar:
 /**
  * GParamSpecValueArray: _instance: private #GParamSpec portion _spec: a #GParamSpec describing the elements contained in arrays of this property, may be %NULL _n_elements: if greater than 0, arrays of this property will always have this many elements
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecValueArray = CStruct3[GParamSpec, Ptr[GParamSpec], _root_.glib.all.guint]
 object _GParamSpecValueArray:
@@ -2559,7 +2591,7 @@ object _GParamSpecValueArray:
 /**
  * GParamSpecVariant: _instance: private #GParamSpec portion : a #GVariantType, or %NULL _value: a #GVariant, or %NULL
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparamspecs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparamspecs.h
 */
 opaque type _GParamSpecVariant = CStruct4[GParamSpec, Ptr[_root_.glib.all.GVariantType], Ptr[_root_.glib.all.GVariant], CArray[_root_.glib.all.gpointer, Nat._4]]
 object _GParamSpecVariant:
@@ -2585,7 +2617,7 @@ object _GParamSpecVariant:
 /**
  * GParameter: : the parameter value
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type _GParameter = CStruct2[Ptr[_root_.glib.all.gchar], GValue]
 object _GParameter:
@@ -2603,7 +2635,7 @@ object _GParameter:
     def value_=(value: GValue): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignalgroup.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignalgroup.h
 */
 opaque type _GSignalGroup = CStruct0
 object _GSignalGroup:
@@ -2612,7 +2644,7 @@ object _GSignalGroup:
 /**
  * GSignalInvocationHint: _id: The signal id of the signal invoking the callback
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type _GSignalInvocationHint = CStruct3[_root_.glib.all.guint, _root_.glib.all.GQuark, GSignalFlags]
 object _GSignalInvocationHint:
@@ -2635,7 +2667,7 @@ object _GSignalInvocationHint:
 /**
  * GSignalQuery: _id: The signal id of the signal being queried, or 0 if the signal to be queried was unknown. _name: The signal name. : The interface/instance type that this signal can be emitted for. _flags: The signal flags as passed in to g_signal_new().
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type _GSignalQuery = CStruct7[_root_.glib.all.guint, Ptr[_root_.glib.all.gchar], GType, GSignalFlags, GType, _root_.glib.all.guint, Ptr[GType]]
 object _GSignalQuery:
@@ -2670,7 +2702,7 @@ object _GSignalQuery:
 /**
  * GTypeClass:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeClass = CStruct1[GType]
 object _GTypeClass:
@@ -2687,7 +2719,7 @@ object _GTypeClass:
 /**
  * GTypeFundamentalInfo: _flags: #GTypeFundamentalFlags describing the characteristics of the fundamental type
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeFundamentalInfo = CStruct1[GTypeFundamentalFlags]
 object _GTypeFundamentalInfo:
@@ -2702,9 +2734,9 @@ object _GTypeFundamentalInfo:
     def type_flags_=(value: GTypeFundamentalFlags): Unit = !struct.at1 = value
 
 /**
- * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10, it is ignored, since instances are allocated with the [slice allocator][glib-Memory-Slices] now. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
+ * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10 this field is ignored. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeInfo = CStruct10[_root_.glib.all.guint16, GBaseInitFunc, GBaseFinalizeFunc, GClassInitFunc, GClassFinalizeFunc, _root_.glib.all.gconstpointer, _root_.glib.all.guint16, _root_.glib.all.guint16, GInstanceInitFunc, Ptr[GTypeValueTable]]
 object _GTypeInfo:
@@ -2748,7 +2780,7 @@ object _GTypeInfo:
 /**
  * GTypeInstance:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeInstance = CStruct1[Ptr[GTypeClass]]
 object _GTypeInstance:
@@ -2765,7 +2797,7 @@ object _GTypeInstance:
 /**
  * GTypeInterface:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeInterface = CStruct2[GType, GType]
 object _GTypeInterface:
@@ -2785,7 +2817,7 @@ object _GTypeInterface:
 /**
  * GTypeModule:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtypemodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtypemodule.h
 */
 opaque type _GTypeModule = CStruct5[GObject, _root_.glib.all.guint, Ptr[Byte], Ptr[Byte], Ptr[_root_.glib.all.gchar]]
 object _GTypeModule:
@@ -2814,7 +2846,7 @@ object _GTypeModule:
 /**
  * GTypeModuleClass: _class: the parent class : loads the module and registers one or more types using g_type_module_register_type(). : unloads the module
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtypemodule.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtypemodule.h
 */
 opaque type _GTypeModuleClass = CStruct7[GObjectClass, CFuncPtr1[Ptr[Byte], _root_.glib.all.gboolean], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GTypeModuleClass:
@@ -2847,7 +2879,7 @@ object _GTypeModuleClass:
     def reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypePlugin = CStruct0
 object _GTypePlugin:
@@ -2856,7 +2888,7 @@ object _GTypePlugin:
 /**
  * GTypePlugin:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtypeplugin.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtypeplugin.h
 */
 opaque type _GTypePluginClass = CStruct5[GTypeInterface, GTypePluginUse, GTypePluginUnuse, GTypePluginCompleteTypeInfo, GTypePluginCompleteInterfaceInfo]
 object _GTypePluginClass:
@@ -2885,7 +2917,7 @@ object _GTypePluginClass:
 /**
  * GTypeQuery: : the #GType value of the type _name: the name of the type _size: the size of the instance structure
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type _GTypeQuery = CStruct4[GType, Ptr[_root_.glib.all.gchar], _root_.glib.all.guint, _root_.glib.all.guint]
 object _GTypeQuery:
@@ -2909,15 +2941,15 @@ object _GTypeQuery:
     def instance_size_=(value: _root_.glib.all.guint): Unit = !struct.at4 = value
 
 /**
- * GTypeValueTable: _init: Default initialize contents by poking values directly into the value->data array. The data array of the #GValue passed into this function was zero-filled with `memset()`, so no care has to be taken to free any old contents. E.g. for the implementation of a string value that may never be %NULL, the implementation might look like: |[<!-- language="C" --> value->data[0].v_pointer = g_strdup (""); ]| _free: Free any old contents that might be left in the data array of the passed in . No resources may remain allocated through the #GValue contents after this function returns. E.g. for our above string type: |[<!-- language="C" --> // only free strings without a specific flag for static storage if (!(value->data[1].v_uint & G_VALUE_NOCOPY_CONTENTS)) g_free (value->data[0].v_pointer); ]| _copy:
+ * GTypeValueTable: _init: Function to initialize a GValue _free: Function to free a GValue _copy: Function to copy a GValue _peek_pointer: Function to peek the contents of a GValue if they fit into a pointer _format: A string format describing how to collect the contents of this value bit-by-bit. Each character in the format represents an argument to be collected, and the characters themselves indicate the type of the argument. Currently supported arguments are: - `'i'`: Integers, passed as `collect_values[].v_int` - `'l'`: Longs, passed as `collect_values[].v_long` - `'d'`: Doubles, passed as `collect_values[].v_double` - `'p'`: Pointers, passed as `collect_values[].v_pointer` It should be noted that for variable argument list construction, ANSI C promotes every type smaller than an integer to an int, and floats to doubles. So for collection of short int or char, `'i'` needs to be used, and for collection of floats `'d'`. _value: Function to initialize a GValue from the values collected from variadic arguments _format: Format description of the arguments to collect for _value, analogous to _format. Usually, _format string consists only of `'p'`s to provide lcopy_value() with pointers to storage locations. _value: Function to store the contents of a value into the locations collected from variadic arguments
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
-opaque type _GTypeValueTable = CStruct8[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]]
+opaque type _GTypeValueTable = CStruct8[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.glib.all.gchar], GTypeValueCollectFunc, Ptr[_root_.glib.all.gchar], GTypeValueLCopyFunc]
 object _GTypeValueTable:
-  given _tag: Tag[_GTypeValueTable] = Tag.materializeCStruct8Tag[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]], Ptr[_root_.glib.all.gchar], CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]]
+  given _tag: Tag[_GTypeValueTable] = Tag.materializeCStruct8Tag[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.glib.all.gchar], GTypeValueCollectFunc, Ptr[_root_.glib.all.gchar], GTypeValueLCopyFunc]
   def apply()(using Zone): Ptr[_GTypeValueTable] = scala.scalanative.unsafe.alloc[_GTypeValueTable](1)
-  def apply(value_init : CFuncPtr1[Ptr[GValue], Unit], value_free : CFuncPtr1[Ptr[GValue], Unit], value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer], collect_format : Ptr[_root_.glib.all.gchar], collect_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]], lcopy_format : Ptr[_root_.glib.all.gchar], lcopy_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]])(using Zone): Ptr[_GTypeValueTable] = 
+  def apply(value_init : GTypeValueInitFunc, value_free : GTypeValueFreeFunc, value_copy : GTypeValueCopyFunc, value_peek_pointer : GTypeValuePeekPointerFunc, collect_format : Ptr[_root_.glib.all.gchar], collect_value : GTypeValueCollectFunc, lcopy_format : Ptr[_root_.glib.all.gchar], lcopy_value : GTypeValueLCopyFunc)(using Zone): Ptr[_GTypeValueTable] = 
     val ____ptr = apply()
     (!____ptr).value_init = value_init
     (!____ptr).value_free = value_free
@@ -2929,32 +2961,32 @@ object _GTypeValueTable:
     (!____ptr).lcopy_value = lcopy_value
     ____ptr
   extension (struct: _GTypeValueTable)
-    def value_init : CFuncPtr1[Ptr[GValue], Unit] = struct._1
-    def value_init_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at1 = value
-    def value_free : CFuncPtr1[Ptr[GValue], Unit] = struct._2
-    def value_free_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at2 = value
-    def value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = struct._3
-    def value_copy_=(value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): Unit = !struct.at3 = value
-    def value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer] = struct._4
-    def value_peek_pointer_=(value: CFuncPtr1[Ptr[GValue], _root_.glib.all.gpointer]): Unit = !struct.at4 = value
+    def value_init : GTypeValueInitFunc = struct._1
+    def value_init_=(value: GTypeValueInitFunc): Unit = !struct.at1 = value
+    def value_free : GTypeValueFreeFunc = struct._2
+    def value_free_=(value: GTypeValueFreeFunc): Unit = !struct.at2 = value
+    def value_copy : GTypeValueCopyFunc = struct._3
+    def value_copy_=(value: GTypeValueCopyFunc): Unit = !struct.at3 = value
+    def value_peek_pointer : GTypeValuePeekPointerFunc = struct._4
+    def value_peek_pointer_=(value: GTypeValuePeekPointerFunc): Unit = !struct.at4 = value
     def collect_format : Ptr[_root_.glib.all.gchar] = struct._5
     def collect_format_=(value: Ptr[_root_.glib.all.gchar]): Unit = !struct.at5 = value
-    def collect_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]] = struct._6
-    def collect_value_=(value: CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]): Unit = !struct.at6 = value
+    def collect_value : GTypeValueCollectFunc = struct._6
+    def collect_value_=(value: GTypeValueCollectFunc): Unit = !struct.at6 = value
     def lcopy_format : Ptr[_root_.glib.all.gchar] = struct._7
     def lcopy_format_=(value: Ptr[_root_.glib.all.gchar]): Unit = !struct.at7 = value
-    def lcopy_value : CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]] = struct._8
-    def lcopy_value_=(value: CFuncPtr4[Ptr[GValue], _root_.glib.all.guint, Ptr[GTypeCValue], _root_.glib.all.guint, Ptr[_root_.glib.all.gchar]]): Unit = !struct.at8 = value
+    def lcopy_value : GTypeValueLCopyFunc = struct._8
+    def lcopy_value_=(value: GTypeValueLCopyFunc): Unit = !struct.at8 = value
 
 /**
  * GValue:
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gvalue.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gvalue.h
 */
 opaque type _GValue = CStruct2[GType, CArray[_GValue.Union0, Nat._2]]
 object _GValue:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/gobject/gvalue.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gvalue.h
   */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
@@ -3051,7 +3083,7 @@ object _GValue:
 /**
  * GValueArray: _values: number of values contained in the array : array of values
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gvaluearray.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gvaluearray.h
 */
 opaque type _GValueArray = CStruct3[_root_.glib.all.guint, Ptr[GValue], _root_.glib.all.guint]
 object _GValueArray:

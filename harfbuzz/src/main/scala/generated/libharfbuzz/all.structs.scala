@@ -8,6 +8,10 @@ import _root_.scala.scalanative.*
 
 export _root_.libharfbuzz.structs.hb_blob_t
 export _root_.libharfbuzz.structs.hb_buffer_t
+export _root_.libharfbuzz.structs.hb_color_line_t
+export _root_.libharfbuzz.structs.hb_color_stop_t
+export _root_.libharfbuzz.structs.hb_draw_funcs_t
+export _root_.libharfbuzz.structs.hb_draw_state_t
 export _root_.libharfbuzz.structs.hb_face_t
 export _root_.libharfbuzz.structs.hb_feature_t
 export _root_.libharfbuzz.structs.hb_font_extents_t
@@ -18,6 +22,7 @@ export _root_.libharfbuzz.structs.hb_glyph_info_t
 export _root_.libharfbuzz.structs.hb_glyph_position_t
 export _root_.libharfbuzz.structs.hb_language_impl_t
 export _root_.libharfbuzz.structs.hb_map_t
+export _root_.libharfbuzz.structs.hb_paint_funcs_t
 export _root_.libharfbuzz.structs.hb_segment_properties_t
 export _root_.libharfbuzz.structs.hb_set_t
 export _root_.libharfbuzz.structs.hb_shape_plan_t

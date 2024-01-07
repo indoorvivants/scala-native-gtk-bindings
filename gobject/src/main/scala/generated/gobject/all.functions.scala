@@ -27,6 +27,7 @@ export _root_.gobject.functions.g_binding_group_get_type
 export _root_.gobject.functions.g_binding_group_new
 export _root_.gobject.functions.g_binding_group_set_source
 export _root_.gobject.functions.g_binding_unbind
+export _root_.gobject.functions.g_bookmark_file_get_type
 export _root_.gobject.functions.g_boxed_copy
 export _root_.gobject.functions.g_boxed_free
 export _root_.gobject.functions.g_boxed_type_register_static
@@ -235,6 +236,7 @@ export _root_.gobject.functions.g_param_spec_variant
 export _root_.gobject.functions.g_param_type_register_static
 export _root_.gobject.functions.g_param_value_convert
 export _root_.gobject.functions.g_param_value_defaults
+export _root_.gobject.functions.g_param_value_is_valid
 export _root_.gobject.functions.g_param_value_set_default
 export _root_.gobject.functions.g_param_value_validate
 export _root_.gobject.functions.g_param_values_cmp
@@ -262,6 +264,7 @@ export _root_.gobject.functions.g_signal_get_invocation_hint
 export _root_.gobject.functions.g_signal_group_block
 export _root_.gobject.functions.g_signal_group_connect
 export _root_.gobject.functions.g_signal_group_connect_after
+export _root_.gobject.functions.g_signal_group_connect_closure
 export _root_.gobject.functions.g_signal_group_connect_data
 export _root_.gobject.functions.g_signal_group_connect_object
 export _root_.gobject.functions.g_signal_group_connect_swapped

@@ -45,6 +45,7 @@ export _root_.glib.structs.GOnce
 export _root_.glib.structs.GOptionContext
 export _root_.glib.structs.GOptionEntry
 export _root_.glib.structs.GOptionGroup
+export _root_.glib.structs.GPathBuf
 export _root_.glib.structs.GPatternSpec
 export _root_.glib.structs.GPollFD
 export _root_.glib.structs.GPrivate
@@ -133,6 +134,7 @@ export _root_.glib.structs._GOnce
 export _root_.glib.structs._GOptionContext
 export _root_.glib.structs._GOptionEntry
 export _root_.glib.structs._GOptionGroup
+export _root_.glib.structs._GPathBuf
 export _root_.glib.structs._GPatternSpec
 export _root_.glib.structs._GPollFD
 export _root_.glib.structs._GPrivate

@@ -10,30 +10,29 @@ import _root_.libcairo.enumerations.*
 import _root_.libcairo.aliases.*
 import _root_.libcairo.structs.*
 import _root_.libcairo.unions.*
-
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo = CStruct0
 object _cairo:
   given _tag: Tag[_cairo] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_device = CStruct0
 object _cairo_device:
   given _tag: Tag[_cairo_device] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_font_face = CStruct0
 object _cairo_font_face:
   given _tag: Tag[_cairo_font_face] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_font_options = CStruct0
 object _cairo_font_options:
@@ -42,7 +41,7 @@ object _cairo_font_options:
 /**
  * cairo_matrix_t: : xx component of the affine transformation : yx component of the affine transformation : xy component of the affine transformation : yy component of the affine transformation : X translation component of the affine transformation : Y translation component of the affine transformation
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_matrix = CStruct6[Double, Double, Double, Double, Double, Double]
 object _cairo_matrix:
@@ -72,16 +71,16 @@ object _cairo_matrix:
     def y0_=(value: Double): Unit = !struct.at6 = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_pattern = CStruct0
 object _cairo_pattern:
   given _tag: Tag[_cairo_pattern] = Tag.materializeCStruct0Tag
 
 /**
- * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_rectangle = CStruct4[Double, Double, Double, Double]
 object _cairo_rectangle:
@@ -105,9 +104,9 @@ object _cairo_rectangle:
     def height_=(value: Double): Unit = !struct.at4 = value
 
 /**
- * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_rectangle_int = CStruct4[CInt, CInt, CInt, CInt]
 object _cairo_rectangle_int:
@@ -133,7 +132,7 @@ object _cairo_rectangle_int:
 /**
  * cairo_rectangle_list_t: : Error status of the rectangle list : Array containing the rectangles
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_rectangle_list = CStruct3[cairo_status_t, Ptr[cairo_rectangle_t], CInt]
 object _cairo_rectangle_list:
@@ -154,21 +153,21 @@ object _cairo_rectangle_list:
     def num_rectangles_=(value: CInt): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_region = CStruct0
 object _cairo_region:
   given _tag: Tag[_cairo_region] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_scaled_font = CStruct0
 object _cairo_scaled_font:
   given _tag: Tag[_cairo_scaled_font] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_surface = CStruct0
 object _cairo_surface:
@@ -177,7 +176,7 @@ object _cairo_surface:
 /**
  * cairo_user_data_key_t: : not used; ignore.
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type _cairo_user_data_key = CStruct1[CInt]
 object _cairo_user_data_key:
@@ -192,7 +191,7 @@ object _cairo_user_data_key:
     def unused_=(value: CInt): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_device_t = CStruct0
 object cairo_device_t:
@@ -201,7 +200,7 @@ object cairo_device_t:
 /**
  * cairo_font_extents_t: : the distance that the font extends above the baseline. Note that this is not always exactly equal to the maximum of the extents of all the glyphs in the font, but rather is picked to express the font designer's intent as to how the font should align with elements above it. : the distance that the font extends below the baseline. This value is positive for typical fonts that include portions below the baseline. Note that this is not always exactly equal to the maximum of the extents of all the glyphs in the font, but rather is picked to express the font designer's intent as to how the font should align with elements below it. : the recommended vertical distance between baselines when setting consecutive lines of text with the font. This is greater than + by a quantity known as the <firstterm>line spacing</firstterm> or <firstterm>external leading</firstterm>. When space is at a premium, most fonts can be set with only a distance of + between lines. _x_advance: the maximum distance in the X direction that the origin is advanced for any glyph in the font. _y_advance: the maximum distance in the Y direction that the origin is advanced for any glyph in the font. This will be zero for normal fonts used for horizontal writing. (The scripts of East Asia are sometimes written vertically.)
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_font_extents_t = CStruct5[Double, Double, Double, Double, Double]
 object cairo_font_extents_t:
@@ -228,14 +227,14 @@ object cairo_font_extents_t:
     def max_y_advance_=(value: Double): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_font_face_t = CStruct0
 object cairo_font_face_t:
   given _tag: Tag[cairo_font_face_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_font_options_t = CStruct0
 object cairo_font_options_t:
@@ -244,7 +243,7 @@ object cairo_font_options_t:
 /**
  * cairo_glyph_t: : glyph index in the font. The exact interpretation of the glyph index depends on the font technology being used. : the offset in the X direction between the origin used for drawing or measuring the string and the origin of this glyph. : the offset in the Y direction between the origin used for drawing or measuring the string and the origin of this glyph.
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_glyph_t = CStruct3[CUnsignedLongInt, Double, Double]
 object cairo_glyph_t:
@@ -267,7 +266,7 @@ object cairo_glyph_t:
 /**
  * cairo_matrix_t: : xx component of the affine transformation : yx component of the affine transformation : xy component of the affine transformation : yy component of the affine transformation : X translation component of the affine transformation : Y translation component of the affine transformation
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_matrix_t = CStruct6[Double, Double, Double, Double, Double, Double]
 object cairo_matrix_t:
@@ -299,7 +298,7 @@ object cairo_matrix_t:
 /**
  * cairo_path_t: : the current error status
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_path = CStruct3[cairo_status_t, Ptr[cairo_path_data_t], CInt]
 object cairo_path:
@@ -322,7 +321,7 @@ object cairo_path:
 /**
  * cairo_path_t: : the current error status
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_path_t = CStruct3[cairo_status_t, Ptr[cairo_path_data_t], CInt]
 object cairo_path_t:
@@ -343,16 +342,16 @@ object cairo_path_t:
     def num_data_=(value: CInt): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_pattern_t = CStruct0
 object cairo_pattern_t:
   given _tag: Tag[cairo_pattern_t] = Tag.materializeCStruct0Tag
 
 /**
- * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_rectangle_int_t = CStruct4[CInt, CInt, CInt, CInt]
 object cairo_rectangle_int_t:
@@ -378,7 +377,7 @@ object cairo_rectangle_int_t:
 /**
  * cairo_rectangle_list_t: : Error status of the rectangle list : Array containing the rectangles
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_rectangle_list_t = CStruct3[cairo_status_t, Ptr[cairo_rectangle_t], CInt]
 object cairo_rectangle_list_t:
@@ -399,9 +398,9 @@ object cairo_rectangle_list_t:
     def num_rectangles_=(value: CInt): Unit = !struct.at3 = value
 
 /**
- * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_rectangle_t = CStruct4[Double, Double, Double, Double]
 object cairo_rectangle_t:
@@ -425,28 +424,28 @@ object cairo_rectangle_t:
     def height_=(value: Double): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_region_t = CStruct0
 object cairo_region_t:
   given _tag: Tag[cairo_region_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_scaled_font_t = CStruct0
 object cairo_scaled_font_t:
   given _tag: Tag[cairo_scaled_font_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_surface_t = CStruct0
 object cairo_surface_t:
   given _tag: Tag[cairo_surface_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_t = CStruct0
 object cairo_t:
@@ -455,7 +454,7 @@ object cairo_t:
 /**
  * cairo_text_cluster_t:
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_text_cluster_t = CStruct2[CInt, CInt]
 object cairo_text_cluster_t:
@@ -475,7 +474,7 @@ object cairo_text_cluster_t:
 /**
  * cairo_text_extents_t: _bearing: the horizontal distance from the origin to the leftmost part of the glyphs as drawn. Positive if the glyphs lie entirely to the right of the origin. _bearing: the vertical distance from the origin to the topmost part of the glyphs as drawn. Positive only if the glyphs lie completely below the origin; will usually be negative. : width of the glyphs as drawn : height of the glyphs as drawn _advance:distance to advance in the X direction after drawing these glyphs _advance: distance to advance in the Y direction after drawing these glyphs. Will typically be zero except for vertical text layout as found in East-Asian languages.
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_text_extents_t = CStruct6[Double, Double, Double, Double, Double, Double]
 object cairo_text_extents_t:
@@ -507,7 +506,7 @@ object cairo_text_extents_t:
 /**
  * cairo_user_data_key_t: : not used; ignore.
 
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.0/include/cairo/cairo.h
 */
 opaque type cairo_user_data_key_t = CStruct1[CInt]
 object cairo_user_data_key_t:

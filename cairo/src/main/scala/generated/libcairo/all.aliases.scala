@@ -8,9 +8,11 @@ import _root_.scala.scalanative.*
 
 export _root_.libcairo.aliases.cairo_antialias_t
 export _root_.libcairo.aliases.cairo_bool_t
+export _root_.libcairo.aliases.cairo_color_mode_t
 export _root_.libcairo.aliases.cairo_content_t
 export _root_.libcairo.aliases.cairo_destroy_func_t
 export _root_.libcairo.aliases.cairo_device_type_t
+export _root_.libcairo.aliases.cairo_dither_t
 export _root_.libcairo.aliases.cairo_extend_t
 export _root_.libcairo.aliases.cairo_fill_rule_t
 export _root_.libcairo.aliases.cairo_filter_t

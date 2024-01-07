@@ -31,6 +31,7 @@ export _root_.libgdkpixbuf.aliases.GdkPixbuf_slistautoptr
 export _root_.libgdkpixbuf.aliases.pid_t
 export _root_.libgdkpixbuf.aliases.pthread_mutex_t
 export _root_.libgdkpixbuf.aliases.pthread_t
+export _root_.libgdkpixbuf.aliases.size_t
 export _root_.libgdkpixbuf.aliases.time_t
 export _root_.libgdkpixbuf.aliases.tm
 export _root_.libgdkpixbuf.aliases.uid_t

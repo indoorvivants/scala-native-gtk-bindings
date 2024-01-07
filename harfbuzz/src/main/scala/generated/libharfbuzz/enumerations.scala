@@ -15,7 +15,7 @@ private[libharfbuzz] trait CEnumU[T](using eq: T =:= UInt):
 /**
  * hb_buffer_cluster_level_t: _BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES: Return cluster values grouped by graphemes into monotone order. _BUFFER_CLUSTER_LEVEL_MONOTONE_CHARACTERS: Return cluster values grouped into monotone order. _BUFFER_CLUSTER_LEVEL_CHARACTERS: Don't group cluster values. _BUFFER_CLUSTER_LEVEL_DEFAULT: Default cluster level, equal to _BUFFER_CLUSTER_LEVEL_MONOTONE_GRAPHEMES.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_cluster_level_t = CUnsignedInt
 object hb_buffer_cluster_level_t extends CEnumU[hb_buffer_cluster_level_t]:
@@ -40,7 +40,7 @@ object hb_buffer_cluster_level_t extends CEnumU[hb_buffer_cluster_level_t]:
 /**
  * hb_buffer_content_type_t: _BUFFER_CONTENT_TYPE_INVALID: Initial value for new buffer. _BUFFER_CONTENT_TYPE_UNICODE: The buffer contains input characters (before shaping). _BUFFER_CONTENT_TYPE_GLYPHS: The buffer contains output glyphs (after shaping).
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_content_type_t = CUnsignedInt
 object hb_buffer_content_type_t extends CEnumU[hb_buffer_content_type_t]:
@@ -61,7 +61,9 @@ object hb_buffer_content_type_t extends CEnumU[hb_buffer_content_type_t]:
     inline def is(b: hb_buffer_content_type_t): Boolean = (a & b) == b
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * hb_buffer_diff_flags_t: _BUFFER_DIFF_FLAG_EQUAL: equal buffers. _BUFFER_DIFF_FLAG_CONTENT_TYPE_MISMATCH: buffers with different #hb_buffer_content_type_t. _BUFFER_DIFF_FLAG_LENGTH_MISMATCH: buffers with differing length. _BUFFER_DIFF_FLAG_NOTDEF_PRESENT: `.notdef` glyph is present in the reference buffer. _BUFFER_DIFF_FLAG_DOTTED_CIRCLE_PRESENT: dotted circle glyph is present in the reference buffer. _BUFFER_DIFF_FLAG_CODEPOINT_MISMATCH: difference in #hb_glyph_info_t.codepoint _BUFFER_DIFF_FLAG_CLUSTER_MISMATCH: difference in #hb_glyph_info_t.cluster _BUFFER_DIFF_FLAG_GLYPH_FLAGS_MISMATCH: difference in #hb_glyph_flags_t. _BUFFER_DIFF_FLAG_POSITION_MISMATCH: difference in #hb_glyph_position_t.
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_diff_flags_t = CUnsignedInt
 object hb_buffer_diff_flags_t extends CEnumU[hb_buffer_diff_flags_t]:
@@ -94,9 +96,9 @@ object hb_buffer_diff_flags_t extends CEnumU[hb_buffer_diff_flags_t]:
     inline def is(b: hb_buffer_diff_flags_t): Boolean = (a & b) == b
 
 /**
- * hb_buffer_flags_t: _BUFFER_FLAG_DEFAULT: the default buffer flag. _BUFFER_FLAG_BOT: flag indicating that special handling of the beginning of text paragraph can be applied to this buffer. Should usually be set, unless you are passing to the buffer only part of the text without the full context. _BUFFER_FLAG_EOT: flag indicating that special handling of the end of text paragraph can be applied to this buffer, similar to _BUFFER_FLAG_BOT. _BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES: flag indication that character with Default_Ignorable Unicode property should use the corresponding glyph from the font, instead of hiding them (done by replacing them with the space glyph and zeroing the advance width.) This flag takes precedence over _BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES. _BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES: flag indication that character with Default_Ignorable Unicode property should be removed from glyph string instead of hiding them (done by replacing them with the space glyph and zeroing the advance width.) _BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES takes precedence over this flag. Since: 1.8.0 _BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE: flag indicating that a dotted circle should not be inserted in the rendering of incorrect character sequences (such at <0905 093E>). Since: 2.4
+ * hb_buffer_flags_t: _BUFFER_FLAG_DEFAULT: the default buffer flag. _BUFFER_FLAG_BOT: flag indicating that special handling of the beginning of text paragraph can be applied to this buffer. Should usually be set, unless you are passing to the buffer only part of the text without the full context. _BUFFER_FLAG_EOT: flag indicating that special handling of the end of text paragraph can be applied to this buffer, similar to _BUFFER_FLAG_BOT. _BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES: flag indication that character with Default_Ignorable Unicode property should use the corresponding glyph from the font, instead of hiding them (done by replacing them with the space glyph and zeroing the advance width.) This flag takes precedence over _BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES. _BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES: flag indication that character with Default_Ignorable Unicode property should be removed from glyph string instead of hiding them (done by replacing them with the space glyph and zeroing the advance width.) _BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES takes precedence over this flag. Since: 1.8.0 _BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE: flag indicating that a dotted circle should not be inserted in the rendering of incorrect character sequences (such at <0905 093E>). Since: 2.4.0 _BUFFER_FLAG_VERIFY: flag indicating that the hb_shape() call and its variants should perform various verification processes on the results of the shaping operation on the buffer. If the verification fails, then either a buffer message is sent, if a message handler is installed on the buffer, or a message is written to standard error. In either case, the shaping result might be modified to show the failed output. Since: 3.4.0 _BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT: flag indicating that the _GLYPH_FLAG_UNSAFE_TO_CONCAT glyph-flag should be produced by the shaper. By default it will not be produced since it incurs a cost. Since: 4.0.0 _BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL: flag indicating that the _GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL glyph-flag should be produced by the shaper. By default it will not be produced. Since: 5.1.0 _BUFFER_FLAG_DEFINED: All currently defined flags: Since: 4.4.0
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_flags_t = CUnsignedInt
 object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
@@ -108,6 +110,10 @@ object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
   val HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES = define(4)
   val HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES = define(8)
   val HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE = define(16)
+  val HB_BUFFER_FLAG_VERIFY = define(32)
+  val HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT = define(64)
+  val HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL = define(128)
+  val HB_BUFFER_FLAG_DEFINED = define(255)
   inline def getName(inline value: hb_buffer_flags_t): Option[String] =
     inline value match
       case HB_BUFFER_FLAG_DEFAULT => Some("HB_BUFFER_FLAG_DEFAULT")
@@ -116,6 +122,10 @@ object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
       case HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES => Some("HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES")
       case HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES => Some("HB_BUFFER_FLAG_REMOVE_DEFAULT_IGNORABLES")
       case HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE => Some("HB_BUFFER_FLAG_DO_NOT_INSERT_DOTTED_CIRCLE")
+      case HB_BUFFER_FLAG_VERIFY => Some("HB_BUFFER_FLAG_VERIFY")
+      case HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT => Some("HB_BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT")
+      case HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL => Some("HB_BUFFER_FLAG_PRODUCE_SAFE_TO_INSERT_TATWEEL")
+      case HB_BUFFER_FLAG_DEFINED => Some("HB_BUFFER_FLAG_DEFINED")
       case _ => None
   extension (a: hb_buffer_flags_t)
     inline def &(b: hb_buffer_flags_t): hb_buffer_flags_t = a & b
@@ -123,9 +133,9 @@ object hb_buffer_flags_t extends CEnumU[hb_buffer_flags_t]:
     inline def is(b: hb_buffer_flags_t): Boolean = (a & b) == b
 
 /**
- * hb_buffer_serialize_flags_t: _BUFFER_SERIALIZE_FLAG_DEFAULT: serialize glyph names, clusters and positions. _BUFFER_SERIALIZE_FLAG_NO_CLUSTERS: do not serialize glyph cluster. _BUFFER_SERIALIZE_FLAG_NO_POSITIONS: do not serialize glyph position information. _BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES: do no serialize glyph name. _BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS: serialize glyph extents. _BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS: serialize glyph flags. Since: 1.5.0 _BUFFER_SERIALIZE_FLAG_NO_ADVANCES: do not serialize glyph advances, glyph offsets will reflect absolute glyph positions. Since: 1.8.0
+ * hb_buffer_serialize_flags_t: _BUFFER_SERIALIZE_FLAG_DEFAULT: serialize glyph names, clusters and positions. _BUFFER_SERIALIZE_FLAG_NO_CLUSTERS: do not serialize glyph cluster. _BUFFER_SERIALIZE_FLAG_NO_POSITIONS: do not serialize glyph position information. _BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES: do no serialize glyph name. _BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS: serialize glyph extents. _BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS: serialize glyph flags. Since: 1.5.0 _BUFFER_SERIALIZE_FLAG_NO_ADVANCES: do not serialize glyph advances, glyph offsets will reflect absolute glyph positions. Since: 1.8.0 _BUFFER_SERIALIZE_FLAG_DEFINED: All currently defined flags. Since: 4.4.0
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_serialize_flags_t = CUnsignedInt
 object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
@@ -138,6 +148,7 @@ object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
   val HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS = define(8)
   val HB_BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS = define(16)
   val HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES = define(32)
+  val HB_BUFFER_SERIALIZE_FLAG_DEFINED = define(63)
   inline def getName(inline value: hb_buffer_serialize_flags_t): Option[String] =
     inline value match
       case HB_BUFFER_SERIALIZE_FLAG_DEFAULT => Some("HB_BUFFER_SERIALIZE_FLAG_DEFAULT")
@@ -147,6 +158,7 @@ object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
       case HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS => Some("HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS")
       case HB_BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS => Some("HB_BUFFER_SERIALIZE_FLAG_GLYPH_FLAGS")
       case HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES => Some("HB_BUFFER_SERIALIZE_FLAG_NO_ADVANCES")
+      case HB_BUFFER_SERIALIZE_FLAG_DEFINED => Some("HB_BUFFER_SERIALIZE_FLAG_DEFINED")
       case _ => None
   extension (a: hb_buffer_serialize_flags_t)
     inline def &(b: hb_buffer_serialize_flags_t): hb_buffer_serialize_flags_t = a & b
@@ -156,7 +168,7 @@ object hb_buffer_serialize_flags_t extends CEnumU[hb_buffer_serialize_flags_t]:
 /**
  * hb_buffer_serialize_format_t: _BUFFER_SERIALIZE_FORMAT_TEXT: a human-readable, plain text format. _BUFFER_SERIALIZE_FORMAT_JSON: a machine-readable JSON format. _BUFFER_SERIALIZE_FORMAT_INVALID: invalid format.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_serialize_format_t = CUnsignedInt
 object hb_buffer_serialize_format_t extends CEnumU[hb_buffer_serialize_format_t]:
@@ -179,7 +191,7 @@ object hb_buffer_serialize_format_t extends CEnumU[hb_buffer_serialize_format_t]
 /**
  * hb_direction_t: _DIRECTION_INVALID: Initial, unset direction. _DIRECTION_LTR: Text is set horizontally from left to right. _DIRECTION_RTL: Text is set horizontally from right to left. _DIRECTION_TTB: Text is set vertically from top to bottom. _DIRECTION_BTT: Text is set vertically from bottom to top.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_direction_t = CUnsignedInt
 object hb_direction_t extends CEnumU[hb_direction_t]:
@@ -204,19 +216,23 @@ object hb_direction_t extends CEnumU[hb_direction_t]:
     inline def is(b: hb_direction_t): Boolean = (a & b) == b
 
 /**
- * hb_glyph_flags_t: _GLYPH_FLAG_UNSAFE_TO_BREAK: Indicates that if input text is broken at the beginning of the cluster this glyph is part of, then both sides need to be re-shaped, as the result might be different. On the flip side, it means that when this flag is not present, then it's safe to break the glyph-run at the beginning of this cluster, and the two sides represent the exact same result one would get if breaking input text at the beginning of this cluster and shaping the two sides separately. This can be used to optimize paragraph layout, by avoiding re-shaping of each line after line-breaking, or limiting the reshaping to a small piece around the breaking point only. _GLYPH_FLAG_DEFINED: All the currently defined flags.
+ * hb_glyph_flags_t: _GLYPH_FLAG_UNSAFE_TO_BREAK: Indicates that if input text is broken at the beginning of the cluster this glyph is part of, then both sides need to be re-shaped, as the result might be different. On the flip side, it means that when this flag is not present, then it is safe to break the glyph-run at the beginning of this cluster, and the two sides will represent the exact same result one would get if breaking input text at the beginning of this cluster and shaping the two sides separately. This can be used to optimize paragraph layout, by avoiding re-shaping of each line after line-breaking. _GLYPH_FLAG_UNSAFE_TO_CONCAT: Indicates that if input text is changed on one side of the beginning of the cluster this glyph is part of, then the shaping results for the other side might change. Note that the absence of this flag will NOT by itself mean that it IS safe to concat text. Only two pieces of text both of which clear of this flag can be concatenated safely. This can be used to optimize paragraph layout, by avoiding re-shaping of each line after line-breaking, by limiting the reshaping to a small piece around the breaking position only, even if the breaking position carries the #HB_GLYPH_FLAG_UNSAFE_TO_BREAK or when hyphenation or other text transformation happens at line-break position, in the following way: 1. Iterate back from the line-break position until the first cluster start position that is NOT unsafe-to-concat, 2. shape the segment from there till the end of line, 3. check whether the resulting glyph-run also is clear of the unsafe-to-concat at its start-of-text position; if it is, just splice it into place and the line is shaped; If not, move on to a position further back that is clear of unsafe-to-concat and retry from there, and repeat. At the start of next line a similar algorithm can be implemented. That is: 1. Iterate forward from the line-break position until the first cluster start position that is NOT unsafe-to-concat, 2. shape the segment from beginning of the line to that position, 3. check whether the resulting glyph-run also is clear of the unsafe-to-concat at its end-of-text position; if it is, just splice it into place and the beginning is shaped; If not, move on to a position further forward that is clear of unsafe-to-concat and retry up to there, and repeat. A slight complication will arise in the implementation of the algorithm above, because while our buffer API has a way to return flags for position corresponding to start-of-text, there is currently no position corresponding to end-of-text. This limitation can be alleviated by shaping more text than needed and looking for unsafe-to-concat flag within text clusters. The #HB_GLYPH_FLAG_UNSAFE_TO_BREAK flag will always imply this flag. To use this flag, you must enable the buffer flag _BUFFER_FLAG_PRODUCE_UNSAFE_TO_CONCAT during shaping, otherwise the buffer flag will not be reliably produced. Since: 4.0.0 _GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL: In scripts that use elongation (Arabic, Mongolian, Syriac, etc.), this flag signifies that it is safe to insert a U+0640 TATWEEL character before this cluster for elongation. This flag does not determine the script-specific elongation places, but only when it is safe to do the elongation without interrupting text shaping. Since: 5.1.0 _GLYPH_FLAG_DEFINED: All the currently defined flags.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_glyph_flags_t = CUnsignedInt
 object hb_glyph_flags_t extends CEnumU[hb_glyph_flags_t]:
   given _tag: Tag[hb_glyph_flags_t] = Tag.UInt
   inline def define(inline a: Long): hb_glyph_flags_t = a.toUInt
   val HB_GLYPH_FLAG_UNSAFE_TO_BREAK = define(1)
-  val HB_GLYPH_FLAG_DEFINED = define(1)
+  val HB_GLYPH_FLAG_UNSAFE_TO_CONCAT = define(2)
+  val HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL = define(4)
+  val HB_GLYPH_FLAG_DEFINED = define(7)
   inline def getName(inline value: hb_glyph_flags_t): Option[String] =
     inline value match
       case HB_GLYPH_FLAG_UNSAFE_TO_BREAK => Some("HB_GLYPH_FLAG_UNSAFE_TO_BREAK")
+      case HB_GLYPH_FLAG_UNSAFE_TO_CONCAT => Some("HB_GLYPH_FLAG_UNSAFE_TO_CONCAT")
+      case HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL => Some("HB_GLYPH_FLAG_SAFE_TO_INSERT_TATWEEL")
       case HB_GLYPH_FLAG_DEFINED => Some("HB_GLYPH_FLAG_DEFINED")
       case _ => None
   extension (a: hb_glyph_flags_t)
@@ -225,9 +241,9 @@ object hb_glyph_flags_t extends CEnumU[hb_glyph_flags_t]:
     inline def is(b: hb_glyph_flags_t): Boolean = (a & b) == b
 
 /**
- * hb_memory_mode_t: _MEMORY_MODE_DUPLICATE _MEMORY_MODE_READONLY _MEMORY_MODE_WRITABLE _MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE
+ * hb_memory_mode_t: _MEMORY_MODE_DUPLICATE: HarfBuzz immediately makes a copy of the data. _MEMORY_MODE_READONLY: HarfBuzz client will never modify the data, and HarfBuzz will never modify the data. _MEMORY_MODE_WRITABLE: HarfBuzz client made a copy of the data solely for HarfBuzz, so HarfBuzz may modify the data. _MEMORY_MODE_READONLY_MAY_MAKE_WRITABLE: See above
 
- * [bindgen] header: /usr/include/harfbuzz/hb-blob.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-blob.h
 */
 opaque type hb_memory_mode_t = CUnsignedInt
 object hb_memory_mode_t extends CEnumU[hb_memory_mode_t]:
@@ -250,9 +266,105 @@ object hb_memory_mode_t extends CEnumU[hb_memory_mode_t]:
     inline def is(b: hb_memory_mode_t): Boolean = (a & b) == b
 
 /**
- * hb_script_t: _SCRIPT_COMMON: HB_TAG ('Z','y','y','y') _SCRIPT_INHERITED: HB_TAG ('Z','i','n','h') _SCRIPT_UNKNOWN: HB_TAG ('Z','z','z','z') _SCRIPT_ARABIC _SCRIPT_ARMENIAN _SCRIPT_BENGALI _SCRIPT_CYRILLIC _SCRIPT_DEVANAGARI _SCRIPT_GEORGIAN _SCRIPT_GREEK _SCRIPT_GUJARATI _SCRIPT_GURMUKHI _SCRIPT_HANGUL _SCRIPT_HAN _SCRIPT_HEBREW _SCRIPT_HIRAGANA _SCRIPT_KANNADA _SCRIPT_KATAKANA _SCRIPT_LAO _SCRIPT_LATIN _SCRIPT_MALAYALAM _SCRIPT_ORIYA _SCRIPT_TAMIL _SCRIPT_TELUGU _SCRIPT_THAI _SCRIPT_TIBETAN _SCRIPT_BOPOMOFO _SCRIPT_BRAILLE _SCRIPT_CANADIAN_SYLLABICS _SCRIPT_CHEROKEE _SCRIPT_ETHIOPIC _SCRIPT_KHMER _SCRIPT_MONGOLIAN _SCRIPT_MYANMAR _SCRIPT_OGHAM _SCRIPT_RUNIC _SCRIPT_SINHALA _SCRIPT_SYRIAC _SCRIPT_THAANA _SCRIPT_YI _SCRIPT_DESERET _SCRIPT_GOTHIC _SCRIPT_OLD_ITALIC _SCRIPT_BUHID _SCRIPT_HANUNOO _SCRIPT_TAGALOG _SCRIPT_TAGBANWA _SCRIPT_CYPRIOT _SCRIPT_LIMBU _SCRIPT_LINEAR_B _SCRIPT_OSMANYA _SCRIPT_SHAVIAN _SCRIPT_TAI_LE _SCRIPT_UGARITIC _SCRIPT_BUGINESE _SCRIPT_COPTIC _SCRIPT_GLAGOLITIC _SCRIPT_KHAROSHTHI _SCRIPT_NEW_TAI_LUE _SCRIPT_OLD_PERSIAN _SCRIPT_SYLOTI_NAGRI _SCRIPT_TIFINAGH _SCRIPT_BALINESE _SCRIPT_CUNEIFORM _SCRIPT_NKO _SCRIPT_PHAGS_PA _SCRIPT_PHOENICIAN _SCRIPT_CARIAN _SCRIPT_CHAM _SCRIPT_KAYAH_LI _SCRIPT_LEPCHA _SCRIPT_LYCIAN _SCRIPT_LYDIAN _SCRIPT_OL_CHIKI _SCRIPT_REJANG _SCRIPT_SAURASHTRA _SCRIPT_SUNDANESE _SCRIPT_VAI _SCRIPT_AVESTAN _SCRIPT_BAMUM _SCRIPT_EGYPTIAN_HIEROGLYPHS _SCRIPT_IMPERIAL_ARAMAIC _SCRIPT_INSCRIPTIONAL_PAHLAVI _SCRIPT_INSCRIPTIONAL_PARTHIAN _SCRIPT_JAVANESE _SCRIPT_KAITHI _SCRIPT_LISU _SCRIPT_MEETEI_MAYEK _SCRIPT_OLD_SOUTH_ARABIAN _SCRIPT_OLD_TURKIC _SCRIPT_SAMARITAN _SCRIPT_TAI_THAM _SCRIPT_TAI_VIET _SCRIPT_BATAK _SCRIPT_BRAHMI _SCRIPT_MANDAIC _SCRIPT_CHAKMA _SCRIPT_MEROITIC_CURSIVE _SCRIPT_MEROITIC_HIEROGLYPHS _SCRIPT_MIAO _SCRIPT_SHARADA _SCRIPT_SORA_SOMPENG _SCRIPT_TAKRI _SCRIPT_BASSA_VAH _SCRIPT_CAUCASIAN_ALBANIAN _SCRIPT_DUPLOYAN _SCRIPT_ELBASAN _SCRIPT_GRANTHA _SCRIPT_KHOJKI _SCRIPT_KHUDAWADI _SCRIPT_LINEAR_A _SCRIPT_MAHAJANI _SCRIPT_MANICHAEAN _SCRIPT_MENDE_KIKAKUI _SCRIPT_MODI _SCRIPT_MRO _SCRIPT_NABATAEAN _SCRIPT_OLD_NORTH_ARABIAN _SCRIPT_OLD_PERMIC _SCRIPT_PAHAWH_HMONG _SCRIPT_PALMYRENE _SCRIPT_PAU_CIN_HAU _SCRIPT_PSALTER_PAHLAVI _SCRIPT_SIDDHAM _SCRIPT_TIRHUTA _SCRIPT_WARANG_CITI _SCRIPT_AHOM _SCRIPT_ANATOLIAN_HIEROGLYPHS _SCRIPT_HATRAN _SCRIPT_MULTANI _SCRIPT_OLD_HUNGARIAN _SCRIPT_SIGNWRITING _SCRIPT_ADLAM _SCRIPT_BHAIKSUKI _SCRIPT_MARCHEN _SCRIPT_OSAGE _SCRIPT_TANGUT _SCRIPT_NEWA _SCRIPT_MASARAM_GONDI _SCRIPT_NUSHU _SCRIPT_SOYOMBO _SCRIPT_ZANABAZAR_SQUARE _SCRIPT_DOGRA _SCRIPT_GUNJALA_GONDI _SCRIPT_HANIFI_ROHINGYA _SCRIPT_MAKASAR _SCRIPT_MEDEFAIDRIN _SCRIPT_OLD_SOGDIAN _SCRIPT_SOGDIAN _SCRIPT_ELYMAIC _SCRIPT_NANDINAGARI _SCRIPT_NYIAKENG_PUACHUE_HMONG _SCRIPT_WANCHO _SCRIPT_INVALID: #HB_TAG_NONE
+ * hb_paint_composite_mode_t: _PAINT_COMPOSITE_MODE_CLEAR: clear destination layer (bounded) _PAINT_COMPOSITE_MODE_SRC: replace destination layer (bounded) _PAINT_COMPOSITE_MODE_SRC_OVER: draw source layer on top of destination layer (bounded) _PAINT_COMPOSITE_MODE_SRC_IN: draw source where there was destination content (unbounded) _PAINT_COMPOSITE_MODE_SRC_OUT: draw source where there was no destination content (unbounded) _PAINT_COMPOSITE_MODE_SRC_ATOP: draw source on top of destination content and only there _PAINT_COMPOSITE_MODE_DEST: ignore the source _PAINT_COMPOSITE_MODE_DEST_OVER: draw destination on top of source _PAINT_COMPOSITE_MODE_DEST_IN: leave destination only where there was source content (unbounded) _PAINT_COMPOSITE_MODE_DEST_OUT: leave destination only where there was no source content _PAINT_COMPOSITE_MODE_DEST_ATOP: leave destination on top of source content and only there (unbounded) _PAINT_COMPOSITE_MODE_XOR: source and destination are shown where there is only one of them _PAINT_COMPOSITE_MODE_PLUS: source and destination layers are accumulated _PAINT_COMPOSITE_MODE_MULTIPLY: source and destination layers are multiplied. This causes the result to be at least as dark as the darker inputs. _PAINT_COMPOSITE_MODE_SCREEN: source and destination are complemented and multiplied. This causes the result to be at least as light as the lighter inputs. _PAINT_COMPOSITE_MODE_OVERLAY: multiplies or screens, depending on the lightness of the destination color. _PAINT_COMPOSITE_MODE_DARKEN: replaces the destination with the source if it is darker, otherwise keeps the source. _PAINT_COMPOSITE_MODE_LIGHTEN: replaces the destination with the source if it is lighter, otherwise keeps the source. _PAINT_COMPOSITE_MODE_COLOR_DODGE: brightens the destination color to reflect the source color. _PAINT_COMPOSITE_MODE_COLOR_BURN: darkens the destination color to reflect the source color. _PAINT_COMPOSITE_MODE_HARD_LIGHT: Multiplies or screens, dependent on source color. _PAINT_COMPOSITE_MODE_SOFT_LIGHT: Darkens or lightens, dependent on source color. _PAINT_COMPOSITE_MODE_DIFFERENCE: Takes the difference of the source and destination color. _PAINT_COMPOSITE_MODE_EXCLUSION: Produces an effect similar to difference, but with lower contrast. _PAINT_COMPOSITE_MODE_HSL_HUE: Creates a color with the hue of the source and the saturation and luminosity of the target. _PAINT_COMPOSITE_MODE_HSL_SATURATION: Creates a color with the saturation of the source and the hue and luminosity of the target. Painting with this mode onto a gray area produces no change. _PAINT_COMPOSITE_MODE_HSL_COLOR: Creates a color with the hue and saturation of the source and the luminosity of the target. This preserves the gray levels of the target and is useful for coloring monochrome images or tinting color images. _PAINT_COMPOSITE_MODE_HSL_LUMINOSITY: Creates a color with the luminosity of the source and the hue and saturation of the target. This produces an inverse effect to _PAINT_COMPOSITE_MODE_HSL_COLOR.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-paint.h
+*/
+opaque type hb_paint_composite_mode_t = CUnsignedInt
+object hb_paint_composite_mode_t extends CEnumU[hb_paint_composite_mode_t]:
+  given _tag: Tag[hb_paint_composite_mode_t] = Tag.UInt
+  inline def define(inline a: Long): hb_paint_composite_mode_t = a.toUInt
+  val HB_PAINT_COMPOSITE_MODE_CLEAR = define(0)
+  val HB_PAINT_COMPOSITE_MODE_SRC = define(1)
+  val HB_PAINT_COMPOSITE_MODE_DEST = define(2)
+  val HB_PAINT_COMPOSITE_MODE_SRC_OVER = define(3)
+  val HB_PAINT_COMPOSITE_MODE_DEST_OVER = define(4)
+  val HB_PAINT_COMPOSITE_MODE_SRC_IN = define(5)
+  val HB_PAINT_COMPOSITE_MODE_DEST_IN = define(6)
+  val HB_PAINT_COMPOSITE_MODE_SRC_OUT = define(7)
+  val HB_PAINT_COMPOSITE_MODE_DEST_OUT = define(8)
+  val HB_PAINT_COMPOSITE_MODE_SRC_ATOP = define(9)
+  val HB_PAINT_COMPOSITE_MODE_DEST_ATOP = define(10)
+  val HB_PAINT_COMPOSITE_MODE_XOR = define(11)
+  val HB_PAINT_COMPOSITE_MODE_PLUS = define(12)
+  val HB_PAINT_COMPOSITE_MODE_SCREEN = define(13)
+  val HB_PAINT_COMPOSITE_MODE_OVERLAY = define(14)
+  val HB_PAINT_COMPOSITE_MODE_DARKEN = define(15)
+  val HB_PAINT_COMPOSITE_MODE_LIGHTEN = define(16)
+  val HB_PAINT_COMPOSITE_MODE_COLOR_DODGE = define(17)
+  val HB_PAINT_COMPOSITE_MODE_COLOR_BURN = define(18)
+  val HB_PAINT_COMPOSITE_MODE_HARD_LIGHT = define(19)
+  val HB_PAINT_COMPOSITE_MODE_SOFT_LIGHT = define(20)
+  val HB_PAINT_COMPOSITE_MODE_DIFFERENCE = define(21)
+  val HB_PAINT_COMPOSITE_MODE_EXCLUSION = define(22)
+  val HB_PAINT_COMPOSITE_MODE_MULTIPLY = define(23)
+  val HB_PAINT_COMPOSITE_MODE_HSL_HUE = define(24)
+  val HB_PAINT_COMPOSITE_MODE_HSL_SATURATION = define(25)
+  val HB_PAINT_COMPOSITE_MODE_HSL_COLOR = define(26)
+  val HB_PAINT_COMPOSITE_MODE_HSL_LUMINOSITY = define(27)
+  inline def getName(inline value: hb_paint_composite_mode_t): Option[String] =
+    inline value match
+      case HB_PAINT_COMPOSITE_MODE_CLEAR => Some("HB_PAINT_COMPOSITE_MODE_CLEAR")
+      case HB_PAINT_COMPOSITE_MODE_SRC => Some("HB_PAINT_COMPOSITE_MODE_SRC")
+      case HB_PAINT_COMPOSITE_MODE_DEST => Some("HB_PAINT_COMPOSITE_MODE_DEST")
+      case HB_PAINT_COMPOSITE_MODE_SRC_OVER => Some("HB_PAINT_COMPOSITE_MODE_SRC_OVER")
+      case HB_PAINT_COMPOSITE_MODE_DEST_OVER => Some("HB_PAINT_COMPOSITE_MODE_DEST_OVER")
+      case HB_PAINT_COMPOSITE_MODE_SRC_IN => Some("HB_PAINT_COMPOSITE_MODE_SRC_IN")
+      case HB_PAINT_COMPOSITE_MODE_DEST_IN => Some("HB_PAINT_COMPOSITE_MODE_DEST_IN")
+      case HB_PAINT_COMPOSITE_MODE_SRC_OUT => Some("HB_PAINT_COMPOSITE_MODE_SRC_OUT")
+      case HB_PAINT_COMPOSITE_MODE_DEST_OUT => Some("HB_PAINT_COMPOSITE_MODE_DEST_OUT")
+      case HB_PAINT_COMPOSITE_MODE_SRC_ATOP => Some("HB_PAINT_COMPOSITE_MODE_SRC_ATOP")
+      case HB_PAINT_COMPOSITE_MODE_DEST_ATOP => Some("HB_PAINT_COMPOSITE_MODE_DEST_ATOP")
+      case HB_PAINT_COMPOSITE_MODE_XOR => Some("HB_PAINT_COMPOSITE_MODE_XOR")
+      case HB_PAINT_COMPOSITE_MODE_PLUS => Some("HB_PAINT_COMPOSITE_MODE_PLUS")
+      case HB_PAINT_COMPOSITE_MODE_SCREEN => Some("HB_PAINT_COMPOSITE_MODE_SCREEN")
+      case HB_PAINT_COMPOSITE_MODE_OVERLAY => Some("HB_PAINT_COMPOSITE_MODE_OVERLAY")
+      case HB_PAINT_COMPOSITE_MODE_DARKEN => Some("HB_PAINT_COMPOSITE_MODE_DARKEN")
+      case HB_PAINT_COMPOSITE_MODE_LIGHTEN => Some("HB_PAINT_COMPOSITE_MODE_LIGHTEN")
+      case HB_PAINT_COMPOSITE_MODE_COLOR_DODGE => Some("HB_PAINT_COMPOSITE_MODE_COLOR_DODGE")
+      case HB_PAINT_COMPOSITE_MODE_COLOR_BURN => Some("HB_PAINT_COMPOSITE_MODE_COLOR_BURN")
+      case HB_PAINT_COMPOSITE_MODE_HARD_LIGHT => Some("HB_PAINT_COMPOSITE_MODE_HARD_LIGHT")
+      case HB_PAINT_COMPOSITE_MODE_SOFT_LIGHT => Some("HB_PAINT_COMPOSITE_MODE_SOFT_LIGHT")
+      case HB_PAINT_COMPOSITE_MODE_DIFFERENCE => Some("HB_PAINT_COMPOSITE_MODE_DIFFERENCE")
+      case HB_PAINT_COMPOSITE_MODE_EXCLUSION => Some("HB_PAINT_COMPOSITE_MODE_EXCLUSION")
+      case HB_PAINT_COMPOSITE_MODE_MULTIPLY => Some("HB_PAINT_COMPOSITE_MODE_MULTIPLY")
+      case HB_PAINT_COMPOSITE_MODE_HSL_HUE => Some("HB_PAINT_COMPOSITE_MODE_HSL_HUE")
+      case HB_PAINT_COMPOSITE_MODE_HSL_SATURATION => Some("HB_PAINT_COMPOSITE_MODE_HSL_SATURATION")
+      case HB_PAINT_COMPOSITE_MODE_HSL_COLOR => Some("HB_PAINT_COMPOSITE_MODE_HSL_COLOR")
+      case HB_PAINT_COMPOSITE_MODE_HSL_LUMINOSITY => Some("HB_PAINT_COMPOSITE_MODE_HSL_LUMINOSITY")
+      case _ => None
+  extension (a: hb_paint_composite_mode_t)
+    inline def &(b: hb_paint_composite_mode_t): hb_paint_composite_mode_t = a & b
+    inline def |(b: hb_paint_composite_mode_t): hb_paint_composite_mode_t = a | b
+    inline def is(b: hb_paint_composite_mode_t): Boolean = (a & b) == b
+
+/**
+ * hb_paint_extend_t: _PAINT_EXTEND_PAD: Outside the defined interval, the color of the closest color stop is used. _PAINT_EXTEND_REPEAT: The color line is repeated over repeated multiples of the defined interval _PAINT_EXTEND_REFLECT: The color line is repeated over repeated intervals, as for the repeat mode. However, in each repeated interval, the ordering of color stops is the reverse of the adjacent interval.
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-paint.h
+*/
+opaque type hb_paint_extend_t = CUnsignedInt
+object hb_paint_extend_t extends CEnumU[hb_paint_extend_t]:
+  given _tag: Tag[hb_paint_extend_t] = Tag.UInt
+  inline def define(inline a: Long): hb_paint_extend_t = a.toUInt
+  val HB_PAINT_EXTEND_PAD = define(0)
+  val HB_PAINT_EXTEND_REPEAT = define(1)
+  val HB_PAINT_EXTEND_REFLECT = define(2)
+  inline def getName(inline value: hb_paint_extend_t): Option[String] =
+    inline value match
+      case HB_PAINT_EXTEND_PAD => Some("HB_PAINT_EXTEND_PAD")
+      case HB_PAINT_EXTEND_REPEAT => Some("HB_PAINT_EXTEND_REPEAT")
+      case HB_PAINT_EXTEND_REFLECT => Some("HB_PAINT_EXTEND_REFLECT")
+      case _ => None
+  extension (a: hb_paint_extend_t)
+    inline def &(b: hb_paint_extend_t): hb_paint_extend_t = a & b
+    inline def |(b: hb_paint_extend_t): hb_paint_extend_t = a | b
+    inline def is(b: hb_paint_extend_t): Boolean = (a & b) == b
+
+/**
+ * hb_script_t: _SCRIPT_COMMON: `Zyyy` _SCRIPT_INHERITED: `Zinh` _SCRIPT_UNKNOWN: `Zzzz` _SCRIPT_ARABIC: `Arab` _SCRIPT_ARMENIAN: `Armn` _SCRIPT_BENGALI: `Beng` _SCRIPT_CYRILLIC: `Cyrl` _SCRIPT_DEVANAGARI: `Deva` _SCRIPT_GEORGIAN: `Geor` _SCRIPT_GREEK: `Grek` _SCRIPT_GUJARATI: `Gujr` _SCRIPT_GURMUKHI: `Guru` _SCRIPT_HANGUL: `Hang` _SCRIPT_HAN: `Hani` _SCRIPT_HEBREW: `Hebr` _SCRIPT_HIRAGANA: `Hira` _SCRIPT_KANNADA: `Knda` _SCRIPT_KATAKANA: `Kana` _SCRIPT_LAO: `Laoo` _SCRIPT_LATIN: `Latn` _SCRIPT_MALAYALAM: `Mlym` _SCRIPT_ORIYA: `Orya` _SCRIPT_TAMIL: `Taml` _SCRIPT_TELUGU: `Telu` _SCRIPT_THAI: `Thai` _SCRIPT_TIBETAN: `Tibt` _SCRIPT_BOPOMOFO: `Bopo` _SCRIPT_BRAILLE: `Brai` _SCRIPT_CANADIAN_SYLLABICS: `Cans` _SCRIPT_CHEROKEE: `Cher` _SCRIPT_ETHIOPIC: `Ethi` _SCRIPT_KHMER: `Khmr` _SCRIPT_MONGOLIAN: `Mong` _SCRIPT_MYANMAR: `Mymr` _SCRIPT_OGHAM: `Ogam` _SCRIPT_RUNIC: `Runr` _SCRIPT_SINHALA: `Sinh` _SCRIPT_SYRIAC: `Syrc` _SCRIPT_THAANA: `Thaa` _SCRIPT_YI: `Yiii` _SCRIPT_DESERET: `Dsrt` _SCRIPT_GOTHIC: `Goth` _SCRIPT_OLD_ITALIC: `Ital` _SCRIPT_BUHID: `Buhd` _SCRIPT_HANUNOO: `Hano` _SCRIPT_TAGALOG: `Tglg` _SCRIPT_TAGBANWA: `Tagb` _SCRIPT_CYPRIOT: `Cprt` _SCRIPT_LIMBU: `Limb` _SCRIPT_LINEAR_B: `Linb` _SCRIPT_OSMANYA: `Osma` _SCRIPT_SHAVIAN: `Shaw` _SCRIPT_TAI_LE: `Tale` _SCRIPT_UGARITIC: `Ugar` _SCRIPT_BUGINESE: `Bugi` _SCRIPT_COPTIC: `Copt` _SCRIPT_GLAGOLITIC: `Glag` _SCRIPT_KHAROSHTHI: `Khar` _SCRIPT_NEW_TAI_LUE: `Talu` _SCRIPT_OLD_PERSIAN: `Xpeo` _SCRIPT_SYLOTI_NAGRI: `Sylo` _SCRIPT_TIFINAGH: `Tfng` _SCRIPT_BALINESE: `Bali` _SCRIPT_CUNEIFORM: `Xsux` _SCRIPT_NKO: `Nkoo` _SCRIPT_PHAGS_PA: `Phag` _SCRIPT_PHOENICIAN: `Phnx` _SCRIPT_CARIAN: `Cari` _SCRIPT_CHAM: `Cham` _SCRIPT_KAYAH_LI: `Kali` _SCRIPT_LEPCHA: `Lepc` _SCRIPT_LYCIAN: `Lyci` _SCRIPT_LYDIAN: `Lydi` _SCRIPT_OL_CHIKI: `Olck` _SCRIPT_REJANG: `Rjng` _SCRIPT_SAURASHTRA: `Saur` _SCRIPT_SUNDANESE: `Sund` _SCRIPT_VAI: `Vaii` _SCRIPT_AVESTAN: `Avst` _SCRIPT_BAMUM: `Bamu` _SCRIPT_EGYPTIAN_HIEROGLYPHS: `Egyp` _SCRIPT_IMPERIAL_ARAMAIC: `Armi` _SCRIPT_INSCRIPTIONAL_PAHLAVI: `Phli` _SCRIPT_INSCRIPTIONAL_PARTHIAN: `Prti` _SCRIPT_JAVANESE: `Java` _SCRIPT_KAITHI: `Kthi` _SCRIPT_LISU: `Lisu` _SCRIPT_MEETEI_MAYEK: `Mtei` _SCRIPT_OLD_SOUTH_ARABIAN: `Sarb` _SCRIPT_OLD_TURKIC: `Orkh` _SCRIPT_SAMARITAN: `Samr` _SCRIPT_TAI_THAM: `Lana` _SCRIPT_TAI_VIET: `Tavt` _SCRIPT_BATAK: `Batk` _SCRIPT_BRAHMI: `Brah` _SCRIPT_MANDAIC: `Mand` _SCRIPT_CHAKMA: `Cakm` _SCRIPT_MEROITIC_CURSIVE: `Merc` _SCRIPT_MEROITIC_HIEROGLYPHS: `Mero` _SCRIPT_MIAO: `Plrd` _SCRIPT_SHARADA: `Shrd` _SCRIPT_SORA_SOMPENG: `Sora` _SCRIPT_TAKRI: `Takr` _SCRIPT_BASSA_VAH: `Bass`, Since: 0.9.30 _SCRIPT_CAUCASIAN_ALBANIAN: `Aghb`, Since: 0.9.30 _SCRIPT_DUPLOYAN: `Dupl`, Since: 0.9.30 _SCRIPT_ELBASAN: `Elba`, Since: 0.9.30 _SCRIPT_GRANTHA: `Gran`, Since: 0.9.30 _SCRIPT_KHOJKI: `Khoj`, Since: 0.9.30 _SCRIPT_KHUDAWADI: `Sind`, Since: 0.9.30 _SCRIPT_LINEAR_A: `Lina`, Since: 0.9.30 _SCRIPT_MAHAJANI: `Mahj`, Since: 0.9.30 _SCRIPT_MANICHAEAN: `Mani`, Since: 0.9.30 _SCRIPT_MENDE_KIKAKUI: `Mend`, Since: 0.9.30 _SCRIPT_MODI: `Modi`, Since: 0.9.30 _SCRIPT_MRO: `Mroo`, Since: 0.9.30 _SCRIPT_NABATAEAN: `Nbat`, Since: 0.9.30 _SCRIPT_OLD_NORTH_ARABIAN: `Narb`, Since: 0.9.30 _SCRIPT_OLD_PERMIC: `Perm`, Since: 0.9.30 _SCRIPT_PAHAWH_HMONG: `Hmng`, Since: 0.9.30 _SCRIPT_PALMYRENE: `Palm`, Since: 0.9.30 _SCRIPT_PAU_CIN_HAU: `Pauc`, Since: 0.9.30 _SCRIPT_PSALTER_PAHLAVI: `Phlp`, Since: 0.9.30 _SCRIPT_SIDDHAM: `Sidd`, Since: 0.9.30 _SCRIPT_TIRHUTA: `Tirh`, Since: 0.9.30 _SCRIPT_WARANG_CITI: `Wara`, Since: 0.9.30 _SCRIPT_AHOM: `Ahom`, Since: 0.9.30 _SCRIPT_ANATOLIAN_HIEROGLYPHS: `Hluw`, Since: 0.9.30 _SCRIPT_HATRAN: `Hatr`, Since: 0.9.30 _SCRIPT_MULTANI: `Mult`, Since: 0.9.30 _SCRIPT_OLD_HUNGARIAN: `Hung`, Since: 0.9.30 _SCRIPT_SIGNWRITING: `Sgnw`, Since: 0.9.30 _SCRIPT_ADLAM: `Adlm`, Since: 1.3.0 _SCRIPT_BHAIKSUKI: `Bhks`, Since: 1.3.0 _SCRIPT_MARCHEN: `Marc`, Since: 1.3.0 _SCRIPT_OSAGE: `Osge`, Since: 1.3.0 _SCRIPT_TANGUT: `Tang`, Since: 1.3.0 _SCRIPT_NEWA: `Newa`, Since: 1.3.0 _SCRIPT_MASARAM_GONDI: `Gonm`, Since: 1.6.0 _SCRIPT_NUSHU: `Nshu`, Since: 1.6.0 _SCRIPT_SOYOMBO: `Soyo`, Since: 1.6.0 _SCRIPT_ZANABAZAR_SQUARE: `Zanb`, Since: 1.6.0 _SCRIPT_DOGRA: `Dogr`, Since: 1.8.0 _SCRIPT_GUNJALA_GONDI: `Gong`, Since: 1.8.0 _SCRIPT_HANIFI_ROHINGYA: `Rohg`, Since: 1.8.0 _SCRIPT_MAKASAR: `Maka`, Since: 1.8.0 _SCRIPT_MEDEFAIDRIN: `Medf`, Since: 1.8.0 _SCRIPT_OLD_SOGDIAN: `Sogo`, Since: 1.8.0 _SCRIPT_SOGDIAN: `Sogd`, Since: 1.8.0 _SCRIPT_ELYMAIC: `Elym`, Since: 2.4.0 _SCRIPT_NANDINAGARI: `Nand`, Since: 2.4.0 _SCRIPT_NYIAKENG_PUACHUE_HMONG: `Hmnp`, Since: 2.4.0 _SCRIPT_WANCHO: `Wcho`, Since: 2.4.0 _SCRIPT_CHORASMIAN: `Chrs`, Since: 2.6.7 _SCRIPT_DIVES_AKURU: `Diak`, Since: 2.6.7 _SCRIPT_KHITAN_SMALL_SCRIPT: `Kits`, Since: 2.6.7 _SCRIPT_YEZIDI: `Yezi`, Since: 2.6.7 _SCRIPT_CYPRO_MINOAN: `Cpmn`, Since: 3.0.0 _SCRIPT_OLD_UYGHUR: `Ougr`, Since: 3.0.0 _SCRIPT_TANGSA: `Tnsa`, Since: 3.0.0 _SCRIPT_TOTO: `Toto`, Since: 3.0.0 _SCRIPT_VITHKUQI: `Vith`, Since: 3.0.0 _SCRIPT_MATH: `Zmth`, Since: 3.4.0 _SCRIPT_KAWI: `Kawi`, Since: 5.2.0 _SCRIPT_NAG_MUNDARI: `Nagm`, Since: 5.2.0 _SCRIPT_INVALID: No script set
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_script_t = CUnsignedInt
 object hb_script_t extends CEnumU[hb_script_t]:
@@ -415,6 +527,14 @@ object hb_script_t extends CEnumU[hb_script_t]:
   val HB_SCRIPT_DIVES_AKURU = define(1147756907)
   val HB_SCRIPT_KHITAN_SMALL_SCRIPT = define(1265202291)
   val HB_SCRIPT_YEZIDI = define(1499822697)
+  val HB_SCRIPT_CYPRO_MINOAN = define(1131441518)
+  val HB_SCRIPT_OLD_UYGHUR = define(1333094258)
+  val HB_SCRIPT_TANGSA = define(1416524641)
+  val HB_SCRIPT_TOTO = define(1416590447)
+  val HB_SCRIPT_VITHKUQI = define(1449751656)
+  val HB_SCRIPT_MATH = define(1517122664)
+  val HB_SCRIPT_KAWI = define(1264678761)
+  val HB_SCRIPT_NAG_MUNDARI = define(1315006317)
   val HB_SCRIPT_INVALID = define(0)
   val _HB_SCRIPT_MAX_VALUE = define(2147483647)
   val _HB_SCRIPT_MAX_VALUE_SIGNED = define(2147483647)
@@ -577,6 +697,14 @@ object hb_script_t extends CEnumU[hb_script_t]:
       case HB_SCRIPT_DIVES_AKURU => Some("HB_SCRIPT_DIVES_AKURU")
       case HB_SCRIPT_KHITAN_SMALL_SCRIPT => Some("HB_SCRIPT_KHITAN_SMALL_SCRIPT")
       case HB_SCRIPT_YEZIDI => Some("HB_SCRIPT_YEZIDI")
+      case HB_SCRIPT_CYPRO_MINOAN => Some("HB_SCRIPT_CYPRO_MINOAN")
+      case HB_SCRIPT_OLD_UYGHUR => Some("HB_SCRIPT_OLD_UYGHUR")
+      case HB_SCRIPT_TANGSA => Some("HB_SCRIPT_TANGSA")
+      case HB_SCRIPT_TOTO => Some("HB_SCRIPT_TOTO")
+      case HB_SCRIPT_VITHKUQI => Some("HB_SCRIPT_VITHKUQI")
+      case HB_SCRIPT_MATH => Some("HB_SCRIPT_MATH")
+      case HB_SCRIPT_KAWI => Some("HB_SCRIPT_KAWI")
+      case HB_SCRIPT_NAG_MUNDARI => Some("HB_SCRIPT_NAG_MUNDARI")
       case HB_SCRIPT_INVALID => Some("HB_SCRIPT_INVALID")
       case _HB_SCRIPT_MAX_VALUE => Some("_HB_SCRIPT_MAX_VALUE")
       case _HB_SCRIPT_MAX_VALUE_SIGNED => Some("_HB_SCRIPT_MAX_VALUE_SIGNED")
@@ -587,9 +715,40 @@ object hb_script_t extends CEnumU[hb_script_t]:
     inline def is(b: hb_script_t): Boolean = (a & b) == b
 
 /**
- * hb_unicode_combining_class_t: _UNICODE_COMBINING_CLASS_NOT_REORDERED: Spacing and enclosing marks; also many vowel and consonant signs, even if nonspacing _UNICODE_COMBINING_CLASS_OVERLAY: Marks which overlay a base letter or symbol _UNICODE_COMBINING_CLASS_NUKTA: Diacritic nukta marks in Brahmi-derived scripts _UNICODE_COMBINING_CLASS_KANA_VOICING: Hiragana/Katakana voicing marks _UNICODE_COMBINING_CLASS_VIRAMA: Viramas _UNICODE_COMBINING_CLASS_CCC10: [Hebrew] _UNICODE_COMBINING_CLASS_CCC11: [Hebrew] _UNICODE_COMBINING_CLASS_CCC12: [Hebrew] _UNICODE_COMBINING_CLASS_CCC13: [Hebrew] _UNICODE_COMBINING_CLASS_CCC14: [Hebrew] _UNICODE_COMBINING_CLASS_CCC15: [Hebrew] _UNICODE_COMBINING_CLASS_CCC16: [Hebrew] _UNICODE_COMBINING_CLASS_CCC17: [Hebrew] _UNICODE_COMBINING_CLASS_CCC18: [Hebrew] _UNICODE_COMBINING_CLASS_CCC19: [Hebrew] _UNICODE_COMBINING_CLASS_CCC20: [Hebrew] _UNICODE_COMBINING_CLASS_CCC21: [Hebrew] _UNICODE_COMBINING_CLASS_CCC22: [Hebrew] _UNICODE_COMBINING_CLASS_CCC23: [Hebrew] _UNICODE_COMBINING_CLASS_CCC24: [Hebrew] _UNICODE_COMBINING_CLASS_CCC25: [Hebrew] _UNICODE_COMBINING_CLASS_CCC26: [Hebrew] _UNICODE_COMBINING_CLASS_CCC27: [Arabic] _UNICODE_COMBINING_CLASS_CCC28: [Arabic] _UNICODE_COMBINING_CLASS_CCC29: [Arabic] _UNICODE_COMBINING_CLASS_CCC30: [Arabic] _UNICODE_COMBINING_CLASS_CCC31: [Arabic] _UNICODE_COMBINING_CLASS_CCC32: [Arabic] _UNICODE_COMBINING_CLASS_CCC33: [Arabic] _UNICODE_COMBINING_CLASS_CCC34: [Arabic] _UNICODE_COMBINING_CLASS_CCC35: [Arabic] _UNICODE_COMBINING_CLASS_CCC36: [Syriac] _UNICODE_COMBINING_CLASS_CCC84: [Telugu] _UNICODE_COMBINING_CLASS_CCC91: [Telugu] _UNICODE_COMBINING_CLASS_CCC103: [Thai] _UNICODE_COMBINING_CLASS_CCC107: [Thai] _UNICODE_COMBINING_CLASS_CCC118: [Lao] _UNICODE_COMBINING_CLASS_CCC122: [Lao] _UNICODE_COMBINING_CLASS_CCC129: [Tibetan] _UNICODE_COMBINING_CLASS_CCC130: [Tibetan] _UNICODE_COMBINING_CLASS_CCC133: [Tibetan] _UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT: Marks attached at the bottom left _UNICODE_COMBINING_CLASS_ATTACHED_BELOW: Marks attached directly below _UNICODE_COMBINING_CLASS_ATTACHED_ABOVE: Marks attached directly above _UNICODE_COMBINING_CLASS_ATTACHED_ABOVE_RIGHT: Marks attached at the top right _UNICODE_COMBINING_CLASS_BELOW_LEFT: Distinct marks at the bottom left _UNICODE_COMBINING_CLASS_BELOW: Distinct marks directly below _UNICODE_COMBINING_CLASS_BELOW_RIGHT: Distinct marks at the bottom right _UNICODE_COMBINING_CLASS_LEFT: Distinct marks to the left _UNICODE_COMBINING_CLASS_RIGHT: Distinct marks to the right _UNICODE_COMBINING_CLASS_ABOVE_LEFT: Distinct marks at the top left _UNICODE_COMBINING_CLASS_ABOVE: Distinct marks directly above _UNICODE_COMBINING_CLASS_ABOVE_RIGHT: Distinct marks at the top right _UNICODE_COMBINING_CLASS_DOUBLE_BELOW: Distinct marks subtending two bases _UNICODE_COMBINING_CLASS_DOUBLE_ABOVE: Distinct marks extending above two bases _UNICODE_COMBINING_CLASS_IOTA_SUBSCRIPT: Greek iota subscript only _UNICODE_COMBINING_CLASS_INVALID: Invalid combining class
+ * hb_style_tag_t: _STYLE_TAG_ITALIC: Used to vary between non-italic and italic. A value of 0 can be interpreted as "Roman" (non-italic); a value of 1 can be interpreted as (fully) italic. _STYLE_TAG_OPTICAL_SIZE: Used to vary design to suit different text sizes. Non-zero. Values can be interpreted as text size, in points. _STYLE_TAG_SLANT_ANGLE: Used to vary between upright and slanted text. Values must be greater than -90 and less than +90. Values can be interpreted as the angle, in counter-clockwise degrees, of oblique slant from whatever the designer considers to be upright for that font design. Typical right-leaning Italic fonts have a negative slant angle (typically around -12) _STYLE_TAG_SLANT_RATIO: same as _STYLE_TAG_SLANT_ANGLE expression as ratio. Typical right-leaning Italic fonts have a positive slant ratio (typically around 0.2) _STYLE_TAG_WIDTH: Used to vary width of text from narrower to wider. Non-zero. Values can be interpreted as a percentage of whatever the font designer considers “normal width” for that font design. _STYLE_TAG_WEIGHT: Used to vary stroke thicknesses or other design details to give variation from lighter to blacker. Values can be interpreted in direct comparison to values for usWeightClass in the OS/2 table, or the CSS font-weight property.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-unicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-style.h
+*/
+opaque type hb_style_tag_t = CUnsignedInt
+object hb_style_tag_t extends CEnumU[hb_style_tag_t]:
+  given _tag: Tag[hb_style_tag_t] = Tag.UInt
+  inline def define(inline a: Long): hb_style_tag_t = a.toUInt
+  val HB_STYLE_TAG_ITALIC = define(1769234796)
+  val HB_STYLE_TAG_OPTICAL_SIZE = define(1869640570)
+  val HB_STYLE_TAG_SLANT_ANGLE = define(1936486004)
+  val HB_STYLE_TAG_SLANT_RATIO = define(1399615092)
+  val HB_STYLE_TAG_WIDTH = define(2003072104)
+  val HB_STYLE_TAG_WEIGHT = define(2003265652)
+  val _HB_STYLE_TAG_MAX_VALUE = define(2147483647)
+  inline def getName(inline value: hb_style_tag_t): Option[String] =
+    inline value match
+      case HB_STYLE_TAG_ITALIC => Some("HB_STYLE_TAG_ITALIC")
+      case HB_STYLE_TAG_OPTICAL_SIZE => Some("HB_STYLE_TAG_OPTICAL_SIZE")
+      case HB_STYLE_TAG_SLANT_ANGLE => Some("HB_STYLE_TAG_SLANT_ANGLE")
+      case HB_STYLE_TAG_SLANT_RATIO => Some("HB_STYLE_TAG_SLANT_RATIO")
+      case HB_STYLE_TAG_WIDTH => Some("HB_STYLE_TAG_WIDTH")
+      case HB_STYLE_TAG_WEIGHT => Some("HB_STYLE_TAG_WEIGHT")
+      case _HB_STYLE_TAG_MAX_VALUE => Some("_HB_STYLE_TAG_MAX_VALUE")
+      case _ => None
+  extension (a: hb_style_tag_t)
+    inline def &(b: hb_style_tag_t): hb_style_tag_t = a & b
+    inline def |(b: hb_style_tag_t): hb_style_tag_t = a | b
+    inline def is(b: hb_style_tag_t): Boolean = (a & b) == b
+
+/**
+ * hb_unicode_combining_class_t: _UNICODE_COMBINING_CLASS_NOT_REORDERED: Spacing and enclosing marks; also many vowel and consonant signs, even if nonspacing _UNICODE_COMBINING_CLASS_OVERLAY: Marks which overlay a base letter or symbol _UNICODE_COMBINING_CLASS_NUKTA: Diacritic nukta marks in Brahmi-derived scripts _UNICODE_COMBINING_CLASS_KANA_VOICING: Hiragana/Katakana voicing marks _UNICODE_COMBINING_CLASS_VIRAMA: Viramas _UNICODE_COMBINING_CLASS_CCC10: [Hebrew] _UNICODE_COMBINING_CLASS_CCC11: [Hebrew] _UNICODE_COMBINING_CLASS_CCC12: [Hebrew] _UNICODE_COMBINING_CLASS_CCC13: [Hebrew] _UNICODE_COMBINING_CLASS_CCC14: [Hebrew] _UNICODE_COMBINING_CLASS_CCC15: [Hebrew] _UNICODE_COMBINING_CLASS_CCC16: [Hebrew] _UNICODE_COMBINING_CLASS_CCC17: [Hebrew] _UNICODE_COMBINING_CLASS_CCC18: [Hebrew] _UNICODE_COMBINING_CLASS_CCC19: [Hebrew] _UNICODE_COMBINING_CLASS_CCC20: [Hebrew] _UNICODE_COMBINING_CLASS_CCC21: [Hebrew] _UNICODE_COMBINING_CLASS_CCC22: [Hebrew] _UNICODE_COMBINING_CLASS_CCC23: [Hebrew] _UNICODE_COMBINING_CLASS_CCC24: [Hebrew] _UNICODE_COMBINING_CLASS_CCC25: [Hebrew] _UNICODE_COMBINING_CLASS_CCC26: [Hebrew] _UNICODE_COMBINING_CLASS_CCC27: [Arabic] _UNICODE_COMBINING_CLASS_CCC28: [Arabic] _UNICODE_COMBINING_CLASS_CCC29: [Arabic] _UNICODE_COMBINING_CLASS_CCC30: [Arabic] _UNICODE_COMBINING_CLASS_CCC31: [Arabic] _UNICODE_COMBINING_CLASS_CCC32: [Arabic] _UNICODE_COMBINING_CLASS_CCC33: [Arabic] _UNICODE_COMBINING_CLASS_CCC34: [Arabic] _UNICODE_COMBINING_CLASS_CCC35: [Arabic] _UNICODE_COMBINING_CLASS_CCC36: [Syriac] _UNICODE_COMBINING_CLASS_CCC84: [Telugu] _UNICODE_COMBINING_CLASS_CCC91: [Telugu] _UNICODE_COMBINING_CLASS_CCC103: [Thai] _UNICODE_COMBINING_CLASS_CCC107: [Thai] _UNICODE_COMBINING_CLASS_CCC118: [Lao] _UNICODE_COMBINING_CLASS_CCC122: [Lao] _UNICODE_COMBINING_CLASS_CCC129: [Tibetan] _UNICODE_COMBINING_CLASS_CCC130: [Tibetan] _UNICODE_COMBINING_CLASS_CCC132: [Tibetan] Since: 7.2.0 _UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT: Marks attached at the bottom left _UNICODE_COMBINING_CLASS_ATTACHED_BELOW: Marks attached directly below _UNICODE_COMBINING_CLASS_ATTACHED_ABOVE: Marks attached directly above _UNICODE_COMBINING_CLASS_ATTACHED_ABOVE_RIGHT: Marks attached at the top right _UNICODE_COMBINING_CLASS_BELOW_LEFT: Distinct marks at the bottom left _UNICODE_COMBINING_CLASS_BELOW: Distinct marks directly below _UNICODE_COMBINING_CLASS_BELOW_RIGHT: Distinct marks at the bottom right _UNICODE_COMBINING_CLASS_LEFT: Distinct marks to the left _UNICODE_COMBINING_CLASS_RIGHT: Distinct marks to the right _UNICODE_COMBINING_CLASS_ABOVE_LEFT: Distinct marks at the top left _UNICODE_COMBINING_CLASS_ABOVE: Distinct marks directly above _UNICODE_COMBINING_CLASS_ABOVE_RIGHT: Distinct marks at the top right _UNICODE_COMBINING_CLASS_DOUBLE_BELOW: Distinct marks subtending two bases _UNICODE_COMBINING_CLASS_DOUBLE_ABOVE: Distinct marks extending above two bases _UNICODE_COMBINING_CLASS_IOTA_SUBSCRIPT: Greek iota subscript only _UNICODE_COMBINING_CLASS_INVALID: Invalid combining class
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-unicode.h
 */
 opaque type hb_unicode_combining_class_t = CUnsignedInt
 object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]:
@@ -635,7 +794,7 @@ object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]
   val HB_UNICODE_COMBINING_CLASS_CCC122 = define(122)
   val HB_UNICODE_COMBINING_CLASS_CCC129 = define(129)
   val HB_UNICODE_COMBINING_CLASS_CCC130 = define(130)
-  val HB_UNICODE_COMBINING_CLASS_CCC133 = define(132)
+  val HB_UNICODE_COMBINING_CLASS_CCC132 = define(132)
   val HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT = define(200)
   val HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW = define(202)
   val HB_UNICODE_COMBINING_CLASS_ATTACHED_ABOVE = define(214)
@@ -694,7 +853,7 @@ object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]
       case HB_UNICODE_COMBINING_CLASS_CCC122 => Some("HB_UNICODE_COMBINING_CLASS_CCC122")
       case HB_UNICODE_COMBINING_CLASS_CCC129 => Some("HB_UNICODE_COMBINING_CLASS_CCC129")
       case HB_UNICODE_COMBINING_CLASS_CCC130 => Some("HB_UNICODE_COMBINING_CLASS_CCC130")
-      case HB_UNICODE_COMBINING_CLASS_CCC133 => Some("HB_UNICODE_COMBINING_CLASS_CCC133")
+      case HB_UNICODE_COMBINING_CLASS_CCC132 => Some("HB_UNICODE_COMBINING_CLASS_CCC132")
       case HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT => Some("HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW_LEFT")
       case HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW => Some("HB_UNICODE_COMBINING_CLASS_ATTACHED_BELOW")
       case HB_UNICODE_COMBINING_CLASS_ATTACHED_ABOVE => Some("HB_UNICODE_COMBINING_CLASS_ATTACHED_ABOVE")
@@ -720,7 +879,7 @@ object hb_unicode_combining_class_t extends CEnumU[hb_unicode_combining_class_t]
 /**
  * hb_unicode_general_category_t: _UNICODE_GENERAL_CATEGORY_CONTROL: [Cc] _UNICODE_GENERAL_CATEGORY_FORMAT: [Cf] _UNICODE_GENERAL_CATEGORY_UNASSIGNED: [Cn] _UNICODE_GENERAL_CATEGORY_PRIVATE_USE: [Co] _UNICODE_GENERAL_CATEGORY_SURROGATE: [Cs] _UNICODE_GENERAL_CATEGORY_LOWERCASE_LETTER: [Ll] _UNICODE_GENERAL_CATEGORY_MODIFIER_LETTER: [Lm] _UNICODE_GENERAL_CATEGORY_OTHER_LETTER: [Lo] _UNICODE_GENERAL_CATEGORY_TITLECASE_LETTER: [Lt] _UNICODE_GENERAL_CATEGORY_UPPERCASE_LETTER: [Lu] _UNICODE_GENERAL_CATEGORY_SPACING_MARK: [Mc] _UNICODE_GENERAL_CATEGORY_ENCLOSING_MARK: [Me] _UNICODE_GENERAL_CATEGORY_NON_SPACING_MARK: [Mn] _UNICODE_GENERAL_CATEGORY_DECIMAL_NUMBER: [Nd] _UNICODE_GENERAL_CATEGORY_LETTER_NUMBER: [Nl] _UNICODE_GENERAL_CATEGORY_OTHER_NUMBER: [No] _UNICODE_GENERAL_CATEGORY_CONNECT_PUNCTUATION: [Pc] _UNICODE_GENERAL_CATEGORY_DASH_PUNCTUATION: [Pd] _UNICODE_GENERAL_CATEGORY_CLOSE_PUNCTUATION: [Pe] _UNICODE_GENERAL_CATEGORY_FINAL_PUNCTUATION: [Pf] _UNICODE_GENERAL_CATEGORY_INITIAL_PUNCTUATION: [Pi] _UNICODE_GENERAL_CATEGORY_OTHER_PUNCTUATION: [Po] _UNICODE_GENERAL_CATEGORY_OPEN_PUNCTUATION: [Ps] _UNICODE_GENERAL_CATEGORY_CURRENCY_SYMBOL: [Sc] _UNICODE_GENERAL_CATEGORY_MODIFIER_SYMBOL: [Sk] _UNICODE_GENERAL_CATEGORY_MATH_SYMBOL: [Sm] _UNICODE_GENERAL_CATEGORY_OTHER_SYMBOL: [So] _UNICODE_GENERAL_CATEGORY_LINE_SEPARATOR: [Zl] _UNICODE_GENERAL_CATEGORY_PARAGRAPH_SEPARATOR: [Zp] _UNICODE_GENERAL_CATEGORY_SPACE_SEPARATOR: [Zs]
 
- * [bindgen] header: /usr/include/harfbuzz/hb-unicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-unicode.h
 */
 opaque type hb_unicode_general_category_t = CUnsignedInt
 object hb_unicode_general_category_t extends CEnumU[hb_unicode_general_category_t]:

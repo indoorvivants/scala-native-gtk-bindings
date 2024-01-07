@@ -9,9 +9,8 @@ import _root_.scala.scalanative.*
 import _root_.gio.enumerations.*
 import _root_.gio.aliases.*
 import _root_.gio.structs.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GActionMap_autoptr = Ptr[GActionMap]
 object GActionMap_autoptr: 
@@ -21,7 +20,7 @@ object GActionMap_autoptr:
     inline def value: Ptr[GActionMap] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GActionMap_listautoptr = Ptr[_root_.glib.all.GList]
 object GActionMap_listautoptr: 
@@ -31,7 +30,7 @@ object GActionMap_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GActionMap_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GActionMap_queueautoptr: 
@@ -41,7 +40,7 @@ object GActionMap_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GActionMap_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GActionMap_slistautoptr: 
@@ -51,7 +50,7 @@ object GActionMap_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAction_autoptr = Ptr[GAction]
 object GAction_autoptr: 
@@ -61,7 +60,7 @@ object GAction_autoptr:
     inline def value: Ptr[GAction] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAction_listautoptr = Ptr[_root_.glib.all.GList]
 object GAction_listautoptr: 
@@ -71,7 +70,7 @@ object GAction_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAction_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GAction_queueautoptr: 
@@ -81,7 +80,7 @@ object GAction_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAction_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GAction_slistautoptr: 
@@ -91,7 +90,7 @@ object GAction_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfoMonitor_autoptr = Ptr[GAppInfoMonitor]
 object GAppInfoMonitor_autoptr: 
@@ -101,7 +100,7 @@ object GAppInfoMonitor_autoptr:
     inline def value: Ptr[GAppInfoMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfoMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GAppInfoMonitor_listautoptr: 
@@ -111,7 +110,7 @@ object GAppInfoMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfoMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GAppInfoMonitor_queueautoptr: 
@@ -121,7 +120,7 @@ object GAppInfoMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfoMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GAppInfoMonitor_slistautoptr: 
@@ -131,7 +130,7 @@ object GAppInfoMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfo_autoptr = Ptr[GAppInfo]
 object GAppInfo_autoptr: 
@@ -141,7 +140,7 @@ object GAppInfo_autoptr:
     inline def value: Ptr[GAppInfo] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfo_listautoptr = Ptr[_root_.glib.all.GList]
 object GAppInfo_listautoptr: 
@@ -151,7 +150,7 @@ object GAppInfo_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfo_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GAppInfo_queueautoptr: 
@@ -161,7 +160,7 @@ object GAppInfo_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppInfo_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GAppInfo_slistautoptr: 
@@ -171,7 +170,7 @@ object GAppInfo_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppLaunchContext_autoptr = Ptr[GAppLaunchContext]
 object GAppLaunchContext_autoptr: 
@@ -181,7 +180,7 @@ object GAppLaunchContext_autoptr:
     inline def value: Ptr[GAppLaunchContext] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppLaunchContext_listautoptr = Ptr[_root_.glib.all.GList]
 object GAppLaunchContext_listautoptr: 
@@ -191,7 +190,7 @@ object GAppLaunchContext_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppLaunchContext_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GAppLaunchContext_queueautoptr: 
@@ -201,7 +200,7 @@ object GAppLaunchContext_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAppLaunchContext_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GAppLaunchContext_slistautoptr: 
@@ -211,7 +210,7 @@ object GAppLaunchContext_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplicationCommandLine_autoptr = Ptr[GApplicationCommandLine]
 object GApplicationCommandLine_autoptr: 
@@ -221,7 +220,7 @@ object GApplicationCommandLine_autoptr:
     inline def value: Ptr[GApplicationCommandLine] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplicationCommandLine_listautoptr = Ptr[_root_.glib.all.GList]
 object GApplicationCommandLine_listautoptr: 
@@ -231,7 +230,7 @@ object GApplicationCommandLine_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplicationCommandLine_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GApplicationCommandLine_queueautoptr: 
@@ -241,7 +240,7 @@ object GApplicationCommandLine_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplicationCommandLine_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GApplicationCommandLine_slistautoptr: 
@@ -251,7 +250,7 @@ object GApplicationCommandLine_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplication_autoptr = Ptr[GApplication]
 object GApplication_autoptr: 
@@ -261,7 +260,7 @@ object GApplication_autoptr:
     inline def value: Ptr[GApplication] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplication_listautoptr = Ptr[_root_.glib.all.GList]
 object GApplication_listautoptr: 
@@ -271,7 +270,7 @@ object GApplication_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplication_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GApplication_queueautoptr: 
@@ -281,7 +280,7 @@ object GApplication_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GApplication_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GApplication_slistautoptr: 
@@ -291,7 +290,7 @@ object GApplication_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncInitable_autoptr = Ptr[GAsyncInitable]
 object GAsyncInitable_autoptr: 
@@ -301,7 +300,7 @@ object GAsyncInitable_autoptr:
     inline def value: Ptr[GAsyncInitable] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncInitable_listautoptr = Ptr[_root_.glib.all.GList]
 object GAsyncInitable_listautoptr: 
@@ -311,7 +310,7 @@ object GAsyncInitable_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncInitable_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GAsyncInitable_queueautoptr: 
@@ -321,7 +320,7 @@ object GAsyncInitable_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncInitable_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GAsyncInitable_slistautoptr: 
@@ -331,19 +330,21 @@ object GAsyncInitable_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GAsyncReadyCallback: _object: (nullable): the object the asynchronous operation was started with. : a #GAsyncResult. _data: user data passed to the callback.
+ * GAsyncReadyCallback: _object: (nullable): the object the asynchronous operation was started with. : a #GAsyncResult.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GAsyncReadyCallback = CFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit]
 object GAsyncReadyCallback: 
   given _tag: Tag[GAsyncReadyCallback] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GAsyncReadyCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit]): GAsyncReadyCallback = o
   extension (v: GAsyncReadyCallback)
     inline def value: CFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncResult_autoptr = Ptr[GAsyncResult]
 object GAsyncResult_autoptr: 
@@ -353,7 +354,7 @@ object GAsyncResult_autoptr:
     inline def value: Ptr[GAsyncResult] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncResult_listautoptr = Ptr[_root_.glib.all.GList]
 object GAsyncResult_listautoptr: 
@@ -363,7 +364,7 @@ object GAsyncResult_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncResult_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GAsyncResult_queueautoptr: 
@@ -373,7 +374,7 @@ object GAsyncResult_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GAsyncResult_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GAsyncResult_slistautoptr: 
@@ -383,7 +384,7 @@ object GAsyncResult_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedInputStream_autoptr = Ptr[GBufferedInputStream]
 object GBufferedInputStream_autoptr: 
@@ -393,7 +394,7 @@ object GBufferedInputStream_autoptr:
     inline def value: Ptr[GBufferedInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GBufferedInputStream_listautoptr: 
@@ -403,7 +404,7 @@ object GBufferedInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GBufferedInputStream_queueautoptr: 
@@ -413,7 +414,7 @@ object GBufferedInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GBufferedInputStream_slistautoptr: 
@@ -423,7 +424,7 @@ object GBufferedInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedOutputStream_autoptr = Ptr[GBufferedOutputStream]
 object GBufferedOutputStream_autoptr: 
@@ -433,7 +434,7 @@ object GBufferedOutputStream_autoptr:
     inline def value: Ptr[GBufferedOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GBufferedOutputStream_listautoptr: 
@@ -443,7 +444,7 @@ object GBufferedOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GBufferedOutputStream_queueautoptr: 
@@ -453,7 +454,7 @@ object GBufferedOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBufferedOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GBufferedOutputStream_slistautoptr: 
@@ -465,65 +466,75 @@ object GBufferedOutputStream_slistautoptr:
 /**
  * GBusAcquiredCallback: : The #GDBusConnection to a message bus. _data: User data passed to g_bus_own_name().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnameowning.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusnameowning.h
 */
 opaque type GBusAcquiredCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
 object GBusAcquiredCallback: 
   given _tag: Tag[GBusAcquiredCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GBusAcquiredCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusAcquiredCallback = o
   extension (v: GBusAcquiredCallback)
     inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameAcquiredCallback: : The #GDBusConnection on which to acquired the name. _data: User data passed to g_bus_own_name() or g_bus_own_name_on_connection().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnameowning.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusnameowning.h
 */
 opaque type GBusNameAcquiredCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
 object GBusNameAcquiredCallback: 
   given _tag: Tag[GBusNameAcquiredCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GBusNameAcquiredCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameAcquiredCallback = o
   extension (v: GBusNameAcquiredCallback)
     inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameAppearedCallback: : The #GDBusConnection the name is being watched on. _data: User data passed to g_bus_watch_name().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnamewatching.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusnamewatching.h
 */
 opaque type GBusNameAppearedCallback = CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
 object GBusNameAppearedCallback: 
   given _tag: Tag[GBusNameAppearedCallback] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GBusNameAppearedCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameAppearedCallback = o
   extension (v: GBusNameAppearedCallback)
     inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameLostCallback: : The #GDBusConnection on which to acquire the name or %NULL if the connection was disconnected. _data: User data passed to g_bus_own_name() or g_bus_own_name_on_connection().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnameowning.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusnameowning.h
 */
 opaque type GBusNameLostCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
 object GBusNameLostCallback: 
   given _tag: Tag[GBusNameLostCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GBusNameLostCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameLostCallback = o
   extension (v: GBusNameLostCallback)
     inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameVanishedCallback: : The #GDBusConnection the name is being watched on, or %NULL. _data: User data passed to g_bus_watch_name().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnamewatching.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusnamewatching.h
 */
 opaque type GBusNameVanishedCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
 object GBusNameVanishedCallback: 
   given _tag: Tag[GBusNameVanishedCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GBusNameVanishedCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameVanishedCallback = o
   extension (v: GBusNameVanishedCallback)
     inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBytesIcon_autoptr = Ptr[GBytesIcon]
 object GBytesIcon_autoptr: 
@@ -533,7 +544,7 @@ object GBytesIcon_autoptr:
     inline def value: Ptr[GBytesIcon] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBytesIcon_listautoptr = Ptr[_root_.glib.all.GList]
 object GBytesIcon_listautoptr: 
@@ -543,7 +554,7 @@ object GBytesIcon_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBytesIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GBytesIcon_queueautoptr: 
@@ -553,7 +564,7 @@ object GBytesIcon_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GBytesIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GBytesIcon_slistautoptr: 
@@ -563,19 +574,21 @@ object GBytesIcon_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GCancellableSourceFunc: : the #GCancellable _data: data passed in by the user.
+ * GCancellableSourceFunc: : the #GCancellable
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GCancellableSourceFunc = CFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GCancellableSourceFunc: 
   given _tag: Tag[GCancellableSourceFunc] = Tag.materializeCFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GCancellableSourceFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GCancellableSourceFunc = o
   extension (v: GCancellableSourceFunc)
     inline def value: CFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCancellable_autoptr = Ptr[GCancellable]
 object GCancellable_autoptr: 
@@ -585,7 +598,7 @@ object GCancellable_autoptr:
     inline def value: Ptr[GCancellable] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCancellable_listautoptr = Ptr[_root_.glib.all.GList]
 object GCancellable_listautoptr: 
@@ -595,7 +608,7 @@ object GCancellable_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCancellable_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GCancellable_queueautoptr: 
@@ -605,7 +618,7 @@ object GCancellable_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCancellable_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GCancellable_slistautoptr: 
@@ -615,7 +628,7 @@ object GCancellable_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCharsetConverter_autoptr = Ptr[GCharsetConverter]
 object GCharsetConverter_autoptr: 
@@ -625,7 +638,7 @@ object GCharsetConverter_autoptr:
     inline def value: Ptr[GCharsetConverter] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCharsetConverter_listautoptr = Ptr[_root_.glib.all.GList]
 object GCharsetConverter_listautoptr: 
@@ -635,7 +648,7 @@ object GCharsetConverter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCharsetConverter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GCharsetConverter_queueautoptr: 
@@ -645,7 +658,7 @@ object GCharsetConverter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCharsetConverter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GCharsetConverter_slistautoptr: 
@@ -655,7 +668,7 @@ object GCharsetConverter_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterInputStream_autoptr = Ptr[GConverterInputStream]
 object GConverterInputStream_autoptr: 
@@ -665,7 +678,7 @@ object GConverterInputStream_autoptr:
     inline def value: Ptr[GConverterInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GConverterInputStream_listautoptr: 
@@ -675,7 +688,7 @@ object GConverterInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GConverterInputStream_queueautoptr: 
@@ -685,7 +698,7 @@ object GConverterInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GConverterInputStream_slistautoptr: 
@@ -695,7 +708,7 @@ object GConverterInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterOutputStream_autoptr = Ptr[GConverterOutputStream]
 object GConverterOutputStream_autoptr: 
@@ -705,7 +718,7 @@ object GConverterOutputStream_autoptr:
     inline def value: Ptr[GConverterOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GConverterOutputStream_listautoptr: 
@@ -715,7 +728,7 @@ object GConverterOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GConverterOutputStream_queueautoptr: 
@@ -725,7 +738,7 @@ object GConverterOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverterOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GConverterOutputStream_slistautoptr: 
@@ -735,7 +748,7 @@ object GConverterOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverter_autoptr = Ptr[GConverter]
 object GConverter_autoptr: 
@@ -745,7 +758,7 @@ object GConverter_autoptr:
     inline def value: Ptr[GConverter] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverter_listautoptr = Ptr[_root_.glib.all.GList]
 object GConverter_listautoptr: 
@@ -755,7 +768,7 @@ object GConverter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GConverter_queueautoptr: 
@@ -765,7 +778,7 @@ object GConverter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GConverter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GConverter_slistautoptr: 
@@ -775,7 +788,7 @@ object GConverter_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCredentials_autoptr = Ptr[GCredentials]
 object GCredentials_autoptr: 
@@ -785,7 +798,7 @@ object GCredentials_autoptr:
     inline def value: Ptr[GCredentials] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCredentials_listautoptr = Ptr[_root_.glib.all.GList]
 object GCredentials_listautoptr: 
@@ -795,7 +808,7 @@ object GCredentials_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCredentials_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GCredentials_queueautoptr: 
@@ -805,7 +818,7 @@ object GCredentials_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GCredentials_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GCredentials_slistautoptr: 
@@ -815,7 +828,7 @@ object GCredentials_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusActionGroup_autoptr = Ptr[GDBusActionGroup]
 object GDBusActionGroup_autoptr: 
@@ -825,7 +838,7 @@ object GDBusActionGroup_autoptr:
     inline def value: Ptr[GDBusActionGroup] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusActionGroup_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusActionGroup_listautoptr: 
@@ -835,7 +848,7 @@ object GDBusActionGroup_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusActionGroup_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusActionGroup_queueautoptr: 
@@ -845,7 +858,7 @@ object GDBusActionGroup_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusActionGroup_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusActionGroup_slistautoptr: 
@@ -855,7 +868,7 @@ object GDBusActionGroup_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusAuthObserver_autoptr = Ptr[GDBusAuthObserver]
 object GDBusAuthObserver_autoptr: 
@@ -865,7 +878,7 @@ object GDBusAuthObserver_autoptr:
     inline def value: Ptr[GDBusAuthObserver] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusAuthObserver_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusAuthObserver_listautoptr: 
@@ -875,7 +888,7 @@ object GDBusAuthObserver_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusAuthObserver_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusAuthObserver_queueautoptr: 
@@ -885,7 +898,7 @@ object GDBusAuthObserver_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusAuthObserver_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusAuthObserver_slistautoptr: 
@@ -895,7 +908,7 @@ object GDBusAuthObserver_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusConnection_autoptr = Ptr[GDBusConnection]
 object GDBusConnection_autoptr: 
@@ -905,7 +918,7 @@ object GDBusConnection_autoptr:
     inline def value: Ptr[GDBusConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusConnection_listautoptr: 
@@ -915,7 +928,7 @@ object GDBusConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusConnection_queueautoptr: 
@@ -925,7 +938,7 @@ object GDBusConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusConnection_slistautoptr: 
@@ -937,41 +950,47 @@ object GDBusConnection_slistautoptr:
 /**
  * GDBusInterfaceGetPropertyFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that the method was invoked on. : Return location for error. _data: The _data #gpointer passed to g_dbus_connection_register_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusInterfaceGetPropertyFunc = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
 object GDBusInterfaceGetPropertyFunc: 
   given _tag: Tag[GDBusInterfaceGetPropertyFunc] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusInterfaceGetPropertyFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]): GDBusInterfaceGetPropertyFunc = o
   extension (v: GDBusInterfaceGetPropertyFunc)
     inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GDBusInterfaceMethodCallFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that the method was invoked on. : A #GVariant tuple with parameters. : (transfer full): A #GDBusMethodInvocation object that must be used to return a value or error. _data: The _data #gpointer passed to g_dbus_connection_register_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusInterfaceMethodCallFunc = CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit]
 object GDBusInterfaceMethodCallFunc: 
   given _tag: Tag[GDBusInterfaceMethodCallFunc] = Tag.materializeCFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusInterfaceMethodCallFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit]): GDBusInterfaceMethodCallFunc = o
   extension (v: GDBusInterfaceMethodCallFunc)
     inline def value: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GDBusInterfaceSetPropertyFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that the method was invoked on. : The value to set the property to. : Return location for error. _data: The _data #gpointer passed to g_dbus_connection_register_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusInterfaceSetPropertyFunc = CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GDBusInterfaceSetPropertyFunc: 
   given _tag: Tag[GDBusInterfaceSetPropertyFunc] = Tag.materializeCFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusInterfaceSetPropertyFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GDBusInterfaceSetPropertyFunc = o
   extension (v: GDBusInterfaceSetPropertyFunc)
     inline def value: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterfaceSkeleton_autoptr = Ptr[GDBusInterfaceSkeleton]
 object GDBusInterfaceSkeleton_autoptr: 
@@ -981,7 +1000,7 @@ object GDBusInterfaceSkeleton_autoptr:
     inline def value: Ptr[GDBusInterfaceSkeleton] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterfaceSkeleton_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusInterfaceSkeleton_listautoptr: 
@@ -991,7 +1010,7 @@ object GDBusInterfaceSkeleton_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterfaceSkeleton_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusInterfaceSkeleton_queueautoptr: 
@@ -1001,7 +1020,7 @@ object GDBusInterfaceSkeleton_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterfaceSkeleton_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusInterfaceSkeleton_slistautoptr: 
@@ -1011,7 +1030,7 @@ object GDBusInterfaceSkeleton_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterface_autoptr = Ptr[GDBusInterface]
 object GDBusInterface_autoptr: 
@@ -1021,7 +1040,7 @@ object GDBusInterface_autoptr:
     inline def value: Ptr[GDBusInterface] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterface_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusInterface_listautoptr: 
@@ -1031,7 +1050,7 @@ object GDBusInterface_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterface_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusInterface_queueautoptr: 
@@ -1041,7 +1060,7 @@ object GDBusInterface_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusInterface_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusInterface_slistautoptr: 
@@ -1051,7 +1070,7 @@ object GDBusInterface_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMenuModel_autoptr = Ptr[GDBusMenuModel]
 object GDBusMenuModel_autoptr: 
@@ -1061,7 +1080,7 @@ object GDBusMenuModel_autoptr:
     inline def value: Ptr[GDBusMenuModel] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMenuModel_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusMenuModel_listautoptr: 
@@ -1071,7 +1090,7 @@ object GDBusMenuModel_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMenuModel_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusMenuModel_queueautoptr: 
@@ -1081,7 +1100,7 @@ object GDBusMenuModel_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMenuModel_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusMenuModel_slistautoptr: 
@@ -1093,17 +1112,19 @@ object GDBusMenuModel_slistautoptr:
 /**
  * GDBusMessageFilterFunction: : (transfer none): A #GDBusConnection. : (transfer full): A locked #GDBusMessage that the filter function takes ownership of. : %TRUE if it is a message received from the other peer, %FALSE if it is a message to be sent to the other peer. _data: User data passed when adding the filter.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusMessageFilterFunction = CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]]
 object GDBusMessageFilterFunction: 
   given _tag: Tag[GDBusMessageFilterFunction] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusMessageFilterFunction = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]]): GDBusMessageFilterFunction = o
   extension (v: GDBusMessageFilterFunction)
     inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMessage_autoptr = Ptr[GDBusMessage]
 object GDBusMessage_autoptr: 
@@ -1113,7 +1134,7 @@ object GDBusMessage_autoptr:
     inline def value: Ptr[GDBusMessage] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMessage_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusMessage_listautoptr: 
@@ -1123,7 +1144,7 @@ object GDBusMessage_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMessage_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusMessage_queueautoptr: 
@@ -1133,7 +1154,7 @@ object GDBusMessage_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMessage_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusMessage_slistautoptr: 
@@ -1143,7 +1164,7 @@ object GDBusMessage_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMethodInvocation_autoptr = Ptr[GDBusMethodInvocation]
 object GDBusMethodInvocation_autoptr: 
@@ -1153,7 +1174,7 @@ object GDBusMethodInvocation_autoptr:
     inline def value: Ptr[GDBusMethodInvocation] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMethodInvocation_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusMethodInvocation_listautoptr: 
@@ -1163,7 +1184,7 @@ object GDBusMethodInvocation_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMethodInvocation_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusMethodInvocation_queueautoptr: 
@@ -1173,7 +1194,7 @@ object GDBusMethodInvocation_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusMethodInvocation_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusMethodInvocation_slistautoptr: 
@@ -1183,7 +1204,7 @@ object GDBusMethodInvocation_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusNodeInfo_autoptr = Ptr[GDBusNodeInfo]
 object GDBusNodeInfo_autoptr: 
@@ -1193,7 +1214,7 @@ object GDBusNodeInfo_autoptr:
     inline def value: Ptr[GDBusNodeInfo] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusNodeInfo_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusNodeInfo_listautoptr: 
@@ -1203,7 +1224,7 @@ object GDBusNodeInfo_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusNodeInfo_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusNodeInfo_queueautoptr: 
@@ -1213,7 +1234,7 @@ object GDBusNodeInfo_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusNodeInfo_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusNodeInfo_slistautoptr: 
@@ -1223,7 +1244,7 @@ object GDBusNodeInfo_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerClient_autoptr = Ptr[GDBusObjectManagerClient]
 object GDBusObjectManagerClient_autoptr: 
@@ -1233,7 +1254,7 @@ object GDBusObjectManagerClient_autoptr:
     inline def value: Ptr[GDBusObjectManagerClient] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerClient_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusObjectManagerClient_listautoptr: 
@@ -1243,7 +1264,7 @@ object GDBusObjectManagerClient_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerClient_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusObjectManagerClient_queueautoptr: 
@@ -1253,7 +1274,7 @@ object GDBusObjectManagerClient_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerClient_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusObjectManagerClient_slistautoptr: 
@@ -1263,7 +1284,7 @@ object GDBusObjectManagerClient_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerServer_autoptr = Ptr[GDBusObjectManagerServer]
 object GDBusObjectManagerServer_autoptr: 
@@ -1273,7 +1294,7 @@ object GDBusObjectManagerServer_autoptr:
     inline def value: Ptr[GDBusObjectManagerServer] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerServer_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusObjectManagerServer_listautoptr: 
@@ -1283,7 +1304,7 @@ object GDBusObjectManagerServer_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerServer_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusObjectManagerServer_queueautoptr: 
@@ -1293,7 +1314,7 @@ object GDBusObjectManagerServer_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManagerServer_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusObjectManagerServer_slistautoptr: 
@@ -1303,7 +1324,7 @@ object GDBusObjectManagerServer_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManager_autoptr = Ptr[GDBusObjectManager]
 object GDBusObjectManager_autoptr: 
@@ -1313,7 +1334,7 @@ object GDBusObjectManager_autoptr:
     inline def value: Ptr[GDBusObjectManager] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManager_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusObjectManager_listautoptr: 
@@ -1323,7 +1344,7 @@ object GDBusObjectManager_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManager_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusObjectManager_queueautoptr: 
@@ -1333,7 +1354,7 @@ object GDBusObjectManager_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectManager_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusObjectManager_slistautoptr: 
@@ -1343,7 +1364,7 @@ object GDBusObjectManager_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectProxy_autoptr = Ptr[GDBusObjectProxy]
 object GDBusObjectProxy_autoptr: 
@@ -1353,7 +1374,7 @@ object GDBusObjectProxy_autoptr:
     inline def value: Ptr[GDBusObjectProxy] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectProxy_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusObjectProxy_listautoptr: 
@@ -1363,7 +1384,7 @@ object GDBusObjectProxy_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectProxy_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusObjectProxy_queueautoptr: 
@@ -1373,7 +1394,7 @@ object GDBusObjectProxy_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectProxy_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusObjectProxy_slistautoptr: 
@@ -1383,7 +1404,7 @@ object GDBusObjectProxy_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectSkeleton_autoptr = Ptr[GDBusObjectSkeleton]
 object GDBusObjectSkeleton_autoptr: 
@@ -1393,7 +1414,7 @@ object GDBusObjectSkeleton_autoptr:
     inline def value: Ptr[GDBusObjectSkeleton] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectSkeleton_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusObjectSkeleton_listautoptr: 
@@ -1403,7 +1424,7 @@ object GDBusObjectSkeleton_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectSkeleton_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusObjectSkeleton_queueautoptr: 
@@ -1413,7 +1434,7 @@ object GDBusObjectSkeleton_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObjectSkeleton_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusObjectSkeleton_slistautoptr: 
@@ -1423,7 +1444,7 @@ object GDBusObjectSkeleton_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObject_autoptr = Ptr[GDBusObject]
 object GDBusObject_autoptr: 
@@ -1433,7 +1454,7 @@ object GDBusObject_autoptr:
     inline def value: Ptr[GDBusObject] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObject_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusObject_listautoptr: 
@@ -1443,7 +1464,7 @@ object GDBusObject_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObject_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusObject_queueautoptr: 
@@ -1453,7 +1474,7 @@ object GDBusObject_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusObject_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusObject_slistautoptr: 
@@ -1463,19 +1484,21 @@ object GDBusObject_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GDBusProxyTypeFunc: : A #GDBusObjectManagerClient. _path: The object path of the remote object. _data: User data.
+ * GDBusProxyTypeFunc: : A #GDBusObjectManagerClient. _path: The object path of the remote object.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDBusProxyTypeFunc = CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType]
 object GDBusProxyTypeFunc: 
   given _tag: Tag[GDBusProxyTypeFunc] = Tag.materializeCFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusProxyTypeFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType]): GDBusProxyTypeFunc = o
   extension (v: GDBusProxyTypeFunc)
     inline def value: CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusProxy_autoptr = Ptr[GDBusProxy]
 object GDBusProxy_autoptr: 
@@ -1485,7 +1508,7 @@ object GDBusProxy_autoptr:
     inline def value: Ptr[GDBusProxy] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusProxy_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusProxy_listautoptr: 
@@ -1495,7 +1518,7 @@ object GDBusProxy_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusProxy_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusProxy_queueautoptr: 
@@ -1505,7 +1528,7 @@ object GDBusProxy_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusProxy_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusProxy_slistautoptr: 
@@ -1515,7 +1538,7 @@ object GDBusProxy_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusServer_autoptr = Ptr[GDBusServer]
 object GDBusServer_autoptr: 
@@ -1525,7 +1548,7 @@ object GDBusServer_autoptr:
     inline def value: Ptr[GDBusServer] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusServer_listautoptr = Ptr[_root_.glib.all.GList]
 object GDBusServer_listautoptr: 
@@ -1535,7 +1558,7 @@ object GDBusServer_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusServer_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDBusServer_queueautoptr: 
@@ -1545,7 +1568,7 @@ object GDBusServer_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDBusServer_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDBusServer_slistautoptr: 
@@ -1557,53 +1580,61 @@ object GDBusServer_slistautoptr:
 /**
  * GDBusSignalCallback: : A #GDBusConnection. _name: (nullable): The unique bus name of the sender of the signal, or %NULL on a peer-to-peer D-Bus connection. _path: The object path that the signal was emitted on. _name: The name of the signal. : A #GVariant tuple with parameters for the signal. _data: User data passed when subscribing to the signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusSignalCallback = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit]
 object GDBusSignalCallback: 
   given _tag: Tag[GDBusSignalCallback] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusSignalCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit]): GDBusSignalCallback = o
   extension (v: GDBusSignalCallback)
     inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GDBusSubtreeDispatchFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that was registered with g_dbus_connection_register_subtree(). : A node that is a child of _path (relative to _path) or %NULL for the root of the subtree. _user_data: (nullable) (not optional): Return location for user data to pass to functions in the returned #GDBusInterfaceVTable. _data: The _data #gpointer passed to g_dbus_connection_register_subtree().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusSubtreeDispatchFunc = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]]
 object GDBusSubtreeDispatchFunc: 
   given _tag: Tag[GDBusSubtreeDispatchFunc] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusSubtreeDispatchFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]]): GDBusSubtreeDispatchFunc = o
   extension (v: GDBusSubtreeDispatchFunc)
     inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GDBusSubtreeEnumerateFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that was registered with g_dbus_connection_register_subtree(). _data: The _data #gpointer passed to g_dbus_connection_register_subtree().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusSubtreeEnumerateFunc = CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]]
 object GDBusSubtreeEnumerateFunc: 
   given _tag: Tag[GDBusSubtreeEnumerateFunc] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusSubtreeEnumerateFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]]): GDBusSubtreeEnumerateFunc = o
   extension (v: GDBusSubtreeEnumerateFunc)
     inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GDBusSubtreeIntrospectFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that was registered with g_dbus_connection_register_subtree(). : A node that is a child of _path (relative to _path) or %NULL for the root of the subtree. _data: The _data #gpointer passed to g_dbus_connection_register_subtree().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdbusconnection.h
 */
 opaque type GDBusSubtreeIntrospectFunc = CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]
 object GDBusSubtreeIntrospectFunc: 
   given _tag: Tag[GDBusSubtreeIntrospectFunc] = Tag.materializeCFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]
+  inline def fromPtr(ptr: Ptr[Byte]): GDBusSubtreeIntrospectFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]): GDBusSubtreeIntrospectFunc = o
   extension (v: GDBusSubtreeIntrospectFunc)
     inline def value: CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataInputStream_autoptr = Ptr[GDataInputStream]
 object GDataInputStream_autoptr: 
@@ -1613,7 +1644,7 @@ object GDataInputStream_autoptr:
     inline def value: Ptr[GDataInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GDataInputStream_listautoptr: 
@@ -1623,7 +1654,7 @@ object GDataInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDataInputStream_queueautoptr: 
@@ -1633,7 +1664,7 @@ object GDataInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDataInputStream_slistautoptr: 
@@ -1643,7 +1674,7 @@ object GDataInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataOutputStream_autoptr = Ptr[GDataOutputStream]
 object GDataOutputStream_autoptr: 
@@ -1653,7 +1684,7 @@ object GDataOutputStream_autoptr:
     inline def value: Ptr[GDataOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GDataOutputStream_listautoptr: 
@@ -1663,7 +1694,7 @@ object GDataOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDataOutputStream_queueautoptr: 
@@ -1673,7 +1704,7 @@ object GDataOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDataOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDataOutputStream_slistautoptr: 
@@ -1683,19 +1714,21 @@ object GDataOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GDatagramBasedSourceFunc: _based: the #GDatagramBased : the current condition at the source fired _data: data passed in by the user
+ * GDatagramBasedSourceFunc: _based: the #GDatagramBased : the current condition at the source fired
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GDatagramBasedSourceFunc = CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GDatagramBasedSourceFunc: 
   given _tag: Tag[GDatagramBasedSourceFunc] = Tag.materializeCFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GDatagramBasedSourceFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GDatagramBasedSourceFunc = o
   extension (v: GDatagramBasedSourceFunc)
     inline def value: CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDatagramBased_autoptr = Ptr[GDatagramBased]
 object GDatagramBased_autoptr: 
@@ -1705,7 +1738,7 @@ object GDatagramBased_autoptr:
     inline def value: Ptr[GDatagramBased] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDatagramBased_listautoptr = Ptr[_root_.glib.all.GList]
 object GDatagramBased_listautoptr: 
@@ -1715,7 +1748,7 @@ object GDatagramBased_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDatagramBased_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDatagramBased_queueautoptr: 
@@ -1725,7 +1758,7 @@ object GDatagramBased_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDatagramBased_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDatagramBased_slistautoptr: 
@@ -1735,7 +1768,7 @@ object GDatagramBased_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBusClass_autoptr = Ptr[GDebugControllerDBusClass]
 object GDebugControllerDBusClass_autoptr: 
@@ -1745,7 +1778,7 @@ object GDebugControllerDBusClass_autoptr:
     inline def value: Ptr[GDebugControllerDBusClass] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBusClass_listautoptr = Ptr[_root_.glib.all.GList]
 object GDebugControllerDBusClass_listautoptr: 
@@ -1755,7 +1788,7 @@ object GDebugControllerDBusClass_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBusClass_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDebugControllerDBusClass_queueautoptr: 
@@ -1765,7 +1798,7 @@ object GDebugControllerDBusClass_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBusClass_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDebugControllerDBusClass_slistautoptr: 
@@ -1775,7 +1808,7 @@ object GDebugControllerDBusClass_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBus_autoptr = Ptr[GDebugControllerDBus]
 object GDebugControllerDBus_autoptr: 
@@ -1785,7 +1818,7 @@ object GDebugControllerDBus_autoptr:
     inline def value: Ptr[GDebugControllerDBus] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBus_listautoptr = Ptr[_root_.glib.all.GList]
 object GDebugControllerDBus_listautoptr: 
@@ -1795,7 +1828,7 @@ object GDebugControllerDBus_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBus_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDebugControllerDBus_queueautoptr: 
@@ -1805,7 +1838,7 @@ object GDebugControllerDBus_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontrollerdbus.h
 */
 opaque type GDebugControllerDBus_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDebugControllerDBus_slistautoptr: 
@@ -1815,7 +1848,7 @@ object GDebugControllerDBus_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type GDebugController_autoptr = Ptr[GDebugController]
 object GDebugController_autoptr: 
@@ -1825,7 +1858,7 @@ object GDebugController_autoptr:
     inline def value: Ptr[GDebugController] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type GDebugController_listautoptr = Ptr[_root_.glib.all.GList]
 object GDebugController_listautoptr: 
@@ -1835,7 +1868,7 @@ object GDebugController_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type GDebugController_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDebugController_queueautoptr: 
@@ -1845,7 +1878,7 @@ object GDebugController_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gdebugcontroller.h
 */
 opaque type GDebugController_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDebugController_slistautoptr: 
@@ -1855,7 +1888,7 @@ object GDebugController_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDrive_autoptr = Ptr[GDrive]
 object GDrive_autoptr: 
@@ -1865,7 +1898,7 @@ object GDrive_autoptr:
     inline def value: Ptr[GDrive] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDrive_listautoptr = Ptr[_root_.glib.all.GList]
 object GDrive_listautoptr: 
@@ -1875,7 +1908,7 @@ object GDrive_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDrive_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GDrive_queueautoptr: 
@@ -1885,7 +1918,7 @@ object GDrive_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GDrive_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GDrive_slistautoptr: 
@@ -1895,7 +1928,7 @@ object GDrive_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblem_autoptr = Ptr[GEmblem]
 object GEmblem_autoptr: 
@@ -1905,7 +1938,7 @@ object GEmblem_autoptr:
     inline def value: Ptr[GEmblem] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblem_listautoptr = Ptr[_root_.glib.all.GList]
 object GEmblem_listautoptr: 
@@ -1915,7 +1948,7 @@ object GEmblem_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblem_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GEmblem_queueautoptr: 
@@ -1925,7 +1958,7 @@ object GEmblem_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblem_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GEmblem_slistautoptr: 
@@ -1935,7 +1968,7 @@ object GEmblem_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblemedIcon_autoptr = Ptr[GEmblemedIcon]
 object GEmblemedIcon_autoptr: 
@@ -1945,7 +1978,7 @@ object GEmblemedIcon_autoptr:
     inline def value: Ptr[GEmblemedIcon] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblemedIcon_listautoptr = Ptr[_root_.glib.all.GList]
 object GEmblemedIcon_listautoptr: 
@@ -1955,7 +1988,7 @@ object GEmblemedIcon_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblemedIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GEmblemedIcon_queueautoptr: 
@@ -1965,7 +1998,7 @@ object GEmblemedIcon_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GEmblemedIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GEmblemedIcon_slistautoptr: 
@@ -1975,7 +2008,7 @@ object GEmblemedIcon_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileAttributeInfoList_autoptr = Ptr[GFileAttributeInfoList]
 object GFileAttributeInfoList_autoptr: 
@@ -1985,7 +2018,7 @@ object GFileAttributeInfoList_autoptr:
     inline def value: Ptr[GFileAttributeInfoList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileAttributeInfoList_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileAttributeInfoList_listautoptr: 
@@ -1995,7 +2028,7 @@ object GFileAttributeInfoList_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileAttributeInfoList_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileAttributeInfoList_queueautoptr: 
@@ -2005,7 +2038,7 @@ object GFileAttributeInfoList_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileAttributeInfoList_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileAttributeInfoList_slistautoptr: 
@@ -2015,7 +2048,7 @@ object GFileAttributeInfoList_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileEnumerator_autoptr = Ptr[GFileEnumerator]
 object GFileEnumerator_autoptr: 
@@ -2025,7 +2058,7 @@ object GFileEnumerator_autoptr:
     inline def value: Ptr[GFileEnumerator] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileEnumerator_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileEnumerator_listautoptr: 
@@ -2035,7 +2068,7 @@ object GFileEnumerator_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileEnumerator_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileEnumerator_queueautoptr: 
@@ -2045,7 +2078,7 @@ object GFileEnumerator_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileEnumerator_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileEnumerator_slistautoptr: 
@@ -2055,7 +2088,7 @@ object GFileEnumerator_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIOStream_autoptr = Ptr[GFileIOStream]
 object GFileIOStream_autoptr: 
@@ -2065,7 +2098,7 @@ object GFileIOStream_autoptr:
     inline def value: Ptr[GFileIOStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIOStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileIOStream_listautoptr: 
@@ -2075,7 +2108,7 @@ object GFileIOStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIOStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileIOStream_queueautoptr: 
@@ -2085,7 +2118,7 @@ object GFileIOStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIOStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileIOStream_slistautoptr: 
@@ -2095,7 +2128,7 @@ object GFileIOStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIcon_autoptr = Ptr[GFileIcon]
 object GFileIcon_autoptr: 
@@ -2105,7 +2138,7 @@ object GFileIcon_autoptr:
     inline def value: Ptr[GFileIcon] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIcon_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileIcon_listautoptr: 
@@ -2115,7 +2148,7 @@ object GFileIcon_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileIcon_queueautoptr: 
@@ -2125,7 +2158,7 @@ object GFileIcon_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileIcon_slistautoptr: 
@@ -2135,7 +2168,7 @@ object GFileIcon_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInfo_autoptr = Ptr[GFileInfo]
 object GFileInfo_autoptr: 
@@ -2145,7 +2178,7 @@ object GFileInfo_autoptr:
     inline def value: Ptr[GFileInfo] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInfo_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileInfo_listautoptr: 
@@ -2155,7 +2188,7 @@ object GFileInfo_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInfo_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileInfo_queueautoptr: 
@@ -2165,7 +2198,7 @@ object GFileInfo_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInfo_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileInfo_slistautoptr: 
@@ -2175,7 +2208,7 @@ object GFileInfo_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInputStream_autoptr = Ptr[GFileInputStream]
 object GFileInputStream_autoptr: 
@@ -2185,7 +2218,7 @@ object GFileInputStream_autoptr:
     inline def value: Ptr[GFileInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileInputStream_listautoptr: 
@@ -2195,7 +2228,7 @@ object GFileInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileInputStream_queueautoptr: 
@@ -2205,7 +2238,7 @@ object GFileInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileInputStream_slistautoptr: 
@@ -2215,19 +2248,21 @@ object GFileInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GFileMeasureProgressCallback: : %TRUE if more reports will come _size: the current cumulative size measurement _data: the data passed to the original request for this callback
+ * GFileMeasureProgressCallback: : %TRUE if more reports will come _size: the current cumulative size measurement
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileMeasureProgressCallback = CFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit]
 object GFileMeasureProgressCallback: 
   given _tag: Tag[GFileMeasureProgressCallback] = Tag.materializeCFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GFileMeasureProgressCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit]): GFileMeasureProgressCallback = o
   extension (v: GFileMeasureProgressCallback)
     inline def value: CFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileMonitor_autoptr = Ptr[GFileMonitor]
 object GFileMonitor_autoptr: 
@@ -2237,7 +2272,7 @@ object GFileMonitor_autoptr:
     inline def value: Ptr[GFileMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileMonitor_listautoptr: 
@@ -2247,7 +2282,7 @@ object GFileMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileMonitor_queueautoptr: 
@@ -2257,7 +2292,7 @@ object GFileMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileMonitor_slistautoptr: 
@@ -2267,7 +2302,7 @@ object GFileMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileOutputStream_autoptr = Ptr[GFileOutputStream]
 object GFileOutputStream_autoptr: 
@@ -2277,7 +2312,7 @@ object GFileOutputStream_autoptr:
     inline def value: Ptr[GFileOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GFileOutputStream_listautoptr: 
@@ -2287,7 +2322,7 @@ object GFileOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFileOutputStream_queueautoptr: 
@@ -2297,7 +2332,7 @@ object GFileOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFileOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFileOutputStream_slistautoptr: 
@@ -2307,31 +2342,35 @@ object GFileOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GFileProgressCallback: _num_bytes: the current number of bytes in the operation. _num_bytes: the total number of bytes in the operation. _data: user data passed to the callback.
+ * GFileProgressCallback: _num_bytes: the current number of bytes in the operation. _num_bytes: the total number of bytes in the operation.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileProgressCallback = CFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit]
 object GFileProgressCallback: 
   given _tag: Tag[GFileProgressCallback] = Tag.materializeCFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GFileProgressCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit]): GFileProgressCallback = o
   extension (v: GFileProgressCallback)
     inline def value: CFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GFileReadMoreCallback:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GFileReadMoreCallback = CFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GFileReadMoreCallback: 
   given _tag: Tag[GFileReadMoreCallback] = Tag.materializeCFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GFileReadMoreCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GFileReadMoreCallback = o
   extension (v: GFileReadMoreCallback)
     inline def value: CFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFile_autoptr = Ptr[GFile]
 object GFile_autoptr: 
@@ -2341,7 +2380,7 @@ object GFile_autoptr:
     inline def value: Ptr[GFile] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFile_listautoptr = Ptr[_root_.glib.all.GList]
 object GFile_listautoptr: 
@@ -2351,7 +2390,7 @@ object GFile_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFile_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFile_queueautoptr: 
@@ -2361,7 +2400,7 @@ object GFile_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFile_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFile_slistautoptr: 
@@ -2371,7 +2410,7 @@ object GFile_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilenameCompleter_autoptr = Ptr[GFilenameCompleter]
 object GFilenameCompleter_autoptr: 
@@ -2381,7 +2420,7 @@ object GFilenameCompleter_autoptr:
     inline def value: Ptr[GFilenameCompleter] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilenameCompleter_listautoptr = Ptr[_root_.glib.all.GList]
 object GFilenameCompleter_listautoptr: 
@@ -2391,7 +2430,7 @@ object GFilenameCompleter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilenameCompleter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFilenameCompleter_queueautoptr: 
@@ -2401,7 +2440,7 @@ object GFilenameCompleter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilenameCompleter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFilenameCompleter_slistautoptr: 
@@ -2411,7 +2450,7 @@ object GFilenameCompleter_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterInputStream_autoptr = Ptr[GFilterInputStream]
 object GFilterInputStream_autoptr: 
@@ -2421,7 +2460,7 @@ object GFilterInputStream_autoptr:
     inline def value: Ptr[GFilterInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GFilterInputStream_listautoptr: 
@@ -2431,7 +2470,7 @@ object GFilterInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFilterInputStream_queueautoptr: 
@@ -2441,7 +2480,7 @@ object GFilterInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFilterInputStream_slistautoptr: 
@@ -2451,7 +2490,7 @@ object GFilterInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterOutputStream_autoptr = Ptr[GFilterOutputStream]
 object GFilterOutputStream_autoptr: 
@@ -2461,7 +2500,7 @@ object GFilterOutputStream_autoptr:
     inline def value: Ptr[GFilterOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GFilterOutputStream_listautoptr: 
@@ -2471,7 +2510,7 @@ object GFilterOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GFilterOutputStream_queueautoptr: 
@@ -2481,7 +2520,7 @@ object GFilterOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GFilterOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GFilterOutputStream_slistautoptr: 
@@ -2491,7 +2530,7 @@ object GFilterOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOModule_autoptr = Ptr[GIOModule]
 object GIOModule_autoptr: 
@@ -2501,7 +2540,7 @@ object GIOModule_autoptr:
     inline def value: Ptr[GIOModule] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOModule_listautoptr = Ptr[_root_.glib.all.GList]
 object GIOModule_listautoptr: 
@@ -2511,7 +2550,7 @@ object GIOModule_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOModule_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GIOModule_queueautoptr: 
@@ -2521,7 +2560,7 @@ object GIOModule_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOModule_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GIOModule_slistautoptr: 
@@ -2531,19 +2570,21 @@ object GIOModule_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GIOSchedulerJobFunc: : a #GIOSchedulerJob. : optional #GCancellable object, %NULL to ignore. _data: the data to pass to callback function
+ * GIOSchedulerJobFunc: : a #GIOSchedulerJob. : optional #GCancellable object, %NULL to ignore.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GIOSchedulerJobFunc = CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GIOSchedulerJobFunc: 
   given _tag: Tag[GIOSchedulerJobFunc] = Tag.materializeCFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GIOSchedulerJobFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GIOSchedulerJobFunc = o
   extension (v: GIOSchedulerJobFunc)
     inline def value: CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOStream_autoptr = Ptr[GIOStream]
 object GIOStream_autoptr: 
@@ -2553,7 +2594,7 @@ object GIOStream_autoptr:
     inline def value: Ptr[GIOStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GIOStream_listautoptr: 
@@ -2563,7 +2604,7 @@ object GIOStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GIOStream_queueautoptr: 
@@ -2573,7 +2614,7 @@ object GIOStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIOStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GIOStream_slistautoptr: 
@@ -2583,7 +2624,7 @@ object GIOStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIcon_autoptr = Ptr[GIcon]
 object GIcon_autoptr: 
@@ -2593,7 +2634,7 @@ object GIcon_autoptr:
     inline def value: Ptr[GIcon] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIcon_listautoptr = Ptr[_root_.glib.all.GList]
 object GIcon_listautoptr: 
@@ -2603,7 +2644,7 @@ object GIcon_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GIcon_queueautoptr: 
@@ -2613,7 +2654,7 @@ object GIcon_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GIcon_slistautoptr: 
@@ -2623,7 +2664,7 @@ object GIcon_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddressMask_autoptr = Ptr[GInetAddressMask]
 object GInetAddressMask_autoptr: 
@@ -2633,7 +2674,7 @@ object GInetAddressMask_autoptr:
     inline def value: Ptr[GInetAddressMask] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddressMask_listautoptr = Ptr[_root_.glib.all.GList]
 object GInetAddressMask_listautoptr: 
@@ -2643,7 +2684,7 @@ object GInetAddressMask_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddressMask_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GInetAddressMask_queueautoptr: 
@@ -2653,7 +2694,7 @@ object GInetAddressMask_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddressMask_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GInetAddressMask_slistautoptr: 
@@ -2663,7 +2704,7 @@ object GInetAddressMask_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddress_autoptr = Ptr[GInetAddress]
 object GInetAddress_autoptr: 
@@ -2673,7 +2714,7 @@ object GInetAddress_autoptr:
     inline def value: Ptr[GInetAddress] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddress_listautoptr = Ptr[_root_.glib.all.GList]
 object GInetAddress_listautoptr: 
@@ -2683,7 +2724,7 @@ object GInetAddress_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GInetAddress_queueautoptr: 
@@ -2693,7 +2734,7 @@ object GInetAddress_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GInetAddress_slistautoptr: 
@@ -2703,7 +2744,7 @@ object GInetAddress_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetSocketAddress_autoptr = Ptr[GInetSocketAddress]
 object GInetSocketAddress_autoptr: 
@@ -2713,7 +2754,7 @@ object GInetSocketAddress_autoptr:
     inline def value: Ptr[GInetSocketAddress] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetSocketAddress_listautoptr = Ptr[_root_.glib.all.GList]
 object GInetSocketAddress_listautoptr: 
@@ -2723,7 +2764,7 @@ object GInetSocketAddress_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetSocketAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GInetSocketAddress_queueautoptr: 
@@ -2733,7 +2774,7 @@ object GInetSocketAddress_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInetSocketAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GInetSocketAddress_slistautoptr: 
@@ -2743,7 +2784,7 @@ object GInetSocketAddress_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInitable_autoptr = Ptr[GInitable]
 object GInitable_autoptr: 
@@ -2753,7 +2794,7 @@ object GInitable_autoptr:
     inline def value: Ptr[GInitable] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInitable_listautoptr = Ptr[_root_.glib.all.GList]
 object GInitable_listautoptr: 
@@ -2763,7 +2804,7 @@ object GInitable_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInitable_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GInitable_queueautoptr: 
@@ -2773,7 +2814,7 @@ object GInitable_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInitable_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GInitable_slistautoptr: 
@@ -2783,7 +2824,7 @@ object GInitable_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInputStream_autoptr = Ptr[GInputStream]
 object GInputStream_autoptr: 
@@ -2793,7 +2834,7 @@ object GInputStream_autoptr:
     inline def value: Ptr[GInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GInputStream_listautoptr: 
@@ -2803,7 +2844,7 @@ object GInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GInputStream_queueautoptr: 
@@ -2813,7 +2854,7 @@ object GInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GInputStream_slistautoptr: 
@@ -2823,7 +2864,7 @@ object GInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type GListModel_autoptr = Ptr[GListModel]
 object GListModel_autoptr: 
@@ -2833,7 +2874,7 @@ object GListModel_autoptr:
     inline def value: Ptr[GListModel] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type GListModel_listautoptr = Ptr[_root_.glib.all.GList]
 object GListModel_listautoptr: 
@@ -2843,7 +2884,7 @@ object GListModel_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type GListModel_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GListModel_queueautoptr: 
@@ -2853,7 +2894,7 @@ object GListModel_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/glistmodel.h
 */
 opaque type GListModel_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GListModel_slistautoptr: 
@@ -2863,7 +2904,7 @@ object GListModel_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStoreClass_autoptr = Ptr[GListStoreClass]
 object GListStoreClass_autoptr: 
@@ -2873,7 +2914,7 @@ object GListStoreClass_autoptr:
     inline def value: Ptr[GListStoreClass] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStoreClass_listautoptr = Ptr[_root_.glib.all.GList]
 object GListStoreClass_listautoptr: 
@@ -2883,7 +2924,7 @@ object GListStoreClass_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStoreClass_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GListStoreClass_queueautoptr: 
@@ -2893,7 +2934,7 @@ object GListStoreClass_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStoreClass_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GListStoreClass_slistautoptr: 
@@ -2903,7 +2944,7 @@ object GListStoreClass_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStore_autoptr = Ptr[GListStore]
 object GListStore_autoptr: 
@@ -2913,7 +2954,7 @@ object GListStore_autoptr:
     inline def value: Ptr[GListStore] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStore_listautoptr = Ptr[_root_.glib.all.GList]
 object GListStore_listautoptr: 
@@ -2923,7 +2964,7 @@ object GListStore_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStore_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GListStore_queueautoptr: 
@@ -2933,7 +2974,7 @@ object GListStore_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gliststore.h
 */
 opaque type GListStore_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GListStore_slistautoptr: 
@@ -2943,7 +2984,7 @@ object GListStore_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GLoadableIcon_autoptr = Ptr[GLoadableIcon]
 object GLoadableIcon_autoptr: 
@@ -2953,7 +2994,7 @@ object GLoadableIcon_autoptr:
     inline def value: Ptr[GLoadableIcon] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GLoadableIcon_listautoptr = Ptr[_root_.glib.all.GList]
 object GLoadableIcon_listautoptr: 
@@ -2963,7 +3004,7 @@ object GLoadableIcon_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GLoadableIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GLoadableIcon_queueautoptr: 
@@ -2973,7 +3014,7 @@ object GLoadableIcon_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GLoadableIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GLoadableIcon_slistautoptr: 
@@ -2983,7 +3024,7 @@ object GLoadableIcon_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryInputStream_autoptr = Ptr[GMemoryInputStream]
 object GMemoryInputStream_autoptr: 
@@ -2993,7 +3034,7 @@ object GMemoryInputStream_autoptr:
     inline def value: Ptr[GMemoryInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GMemoryInputStream_listautoptr: 
@@ -3003,7 +3044,7 @@ object GMemoryInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMemoryInputStream_queueautoptr: 
@@ -3013,7 +3054,7 @@ object GMemoryInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMemoryInputStream_slistautoptr: 
@@ -3023,7 +3064,7 @@ object GMemoryInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type GMemoryMonitor_autoptr = Ptr[GMemoryMonitor]
 object GMemoryMonitor_autoptr: 
@@ -3033,7 +3074,7 @@ object GMemoryMonitor_autoptr:
     inline def value: Ptr[GMemoryMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type GMemoryMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GMemoryMonitor_listautoptr: 
@@ -3043,7 +3084,7 @@ object GMemoryMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type GMemoryMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMemoryMonitor_queueautoptr: 
@@ -3053,7 +3094,7 @@ object GMemoryMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemorymonitor.h
 */
 opaque type GMemoryMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMemoryMonitor_slistautoptr: 
@@ -3063,7 +3104,7 @@ object GMemoryMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryOutputStream_autoptr = Ptr[GMemoryOutputStream]
 object GMemoryOutputStream_autoptr: 
@@ -3073,7 +3114,7 @@ object GMemoryOutputStream_autoptr:
     inline def value: Ptr[GMemoryOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GMemoryOutputStream_listautoptr: 
@@ -3083,7 +3124,7 @@ object GMemoryOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMemoryOutputStream_queueautoptr: 
@@ -3093,7 +3134,7 @@ object GMemoryOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMemoryOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMemoryOutputStream_slistautoptr: 
@@ -3103,7 +3144,7 @@ object GMemoryOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuAttributeIter_autoptr = Ptr[GMenuAttributeIter]
 object GMenuAttributeIter_autoptr: 
@@ -3113,7 +3154,7 @@ object GMenuAttributeIter_autoptr:
     inline def value: Ptr[GMenuAttributeIter] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuAttributeIter_listautoptr = Ptr[_root_.glib.all.GList]
 object GMenuAttributeIter_listautoptr: 
@@ -3123,7 +3164,7 @@ object GMenuAttributeIter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuAttributeIter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMenuAttributeIter_queueautoptr: 
@@ -3133,7 +3174,7 @@ object GMenuAttributeIter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuAttributeIter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMenuAttributeIter_slistautoptr: 
@@ -3143,7 +3184,7 @@ object GMenuAttributeIter_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuItem_autoptr = Ptr[GMenuItem]
 object GMenuItem_autoptr: 
@@ -3153,7 +3194,7 @@ object GMenuItem_autoptr:
     inline def value: Ptr[GMenuItem] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuItem_listautoptr = Ptr[_root_.glib.all.GList]
 object GMenuItem_listautoptr: 
@@ -3163,7 +3204,7 @@ object GMenuItem_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuItem_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMenuItem_queueautoptr: 
@@ -3173,7 +3214,7 @@ object GMenuItem_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuItem_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMenuItem_slistautoptr: 
@@ -3183,7 +3224,7 @@ object GMenuItem_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuLinkIter_autoptr = Ptr[GMenuLinkIter]
 object GMenuLinkIter_autoptr: 
@@ -3193,7 +3234,7 @@ object GMenuLinkIter_autoptr:
     inline def value: Ptr[GMenuLinkIter] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuLinkIter_listautoptr = Ptr[_root_.glib.all.GList]
 object GMenuLinkIter_listautoptr: 
@@ -3203,7 +3244,7 @@ object GMenuLinkIter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuLinkIter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMenuLinkIter_queueautoptr: 
@@ -3213,7 +3254,7 @@ object GMenuLinkIter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuLinkIter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMenuLinkIter_slistautoptr: 
@@ -3223,7 +3264,7 @@ object GMenuLinkIter_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuModel_autoptr = Ptr[GMenuModel]
 object GMenuModel_autoptr: 
@@ -3233,7 +3274,7 @@ object GMenuModel_autoptr:
     inline def value: Ptr[GMenuModel] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuModel_listautoptr = Ptr[_root_.glib.all.GList]
 object GMenuModel_listautoptr: 
@@ -3243,7 +3284,7 @@ object GMenuModel_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuModel_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMenuModel_queueautoptr: 
@@ -3253,7 +3294,7 @@ object GMenuModel_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenuModel_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMenuModel_slistautoptr: 
@@ -3263,7 +3304,7 @@ object GMenuModel_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenu_autoptr = Ptr[GMenu]
 object GMenu_autoptr: 
@@ -3273,7 +3314,7 @@ object GMenu_autoptr:
     inline def value: Ptr[GMenu] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenu_listautoptr = Ptr[_root_.glib.all.GList]
 object GMenu_listautoptr: 
@@ -3283,7 +3324,7 @@ object GMenu_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenu_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMenu_queueautoptr: 
@@ -3293,7 +3334,7 @@ object GMenu_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMenu_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMenu_slistautoptr: 
@@ -3303,7 +3344,7 @@ object GMenu_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMountOperation_autoptr = Ptr[GMountOperation]
 object GMountOperation_autoptr: 
@@ -3313,7 +3354,7 @@ object GMountOperation_autoptr:
     inline def value: Ptr[GMountOperation] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMountOperation_listautoptr = Ptr[_root_.glib.all.GList]
 object GMountOperation_listautoptr: 
@@ -3323,7 +3364,7 @@ object GMountOperation_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMountOperation_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMountOperation_queueautoptr: 
@@ -3333,7 +3374,7 @@ object GMountOperation_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMountOperation_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMountOperation_slistautoptr: 
@@ -3343,7 +3384,7 @@ object GMountOperation_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMount_autoptr = Ptr[GMount]
 object GMount_autoptr: 
@@ -3353,7 +3394,7 @@ object GMount_autoptr:
     inline def value: Ptr[GMount] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMount_listautoptr = Ptr[_root_.glib.all.GList]
 object GMount_listautoptr: 
@@ -3363,7 +3404,7 @@ object GMount_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMount_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GMount_queueautoptr: 
@@ -3373,7 +3414,7 @@ object GMount_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GMount_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GMount_slistautoptr: 
@@ -3383,7 +3424,7 @@ object GMount_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNativeVolumeMonitor_autoptr = Ptr[GNativeVolumeMonitor]
 object GNativeVolumeMonitor_autoptr: 
@@ -3393,7 +3434,7 @@ object GNativeVolumeMonitor_autoptr:
     inline def value: Ptr[GNativeVolumeMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNativeVolumeMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GNativeVolumeMonitor_listautoptr: 
@@ -3403,7 +3444,7 @@ object GNativeVolumeMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNativeVolumeMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GNativeVolumeMonitor_queueautoptr: 
@@ -3413,7 +3454,7 @@ object GNativeVolumeMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNativeVolumeMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GNativeVolumeMonitor_slistautoptr: 
@@ -3423,7 +3464,7 @@ object GNativeVolumeMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkAddress_autoptr = Ptr[GNetworkAddress]
 object GNetworkAddress_autoptr: 
@@ -3433,7 +3474,7 @@ object GNetworkAddress_autoptr:
     inline def value: Ptr[GNetworkAddress] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkAddress_listautoptr = Ptr[_root_.glib.all.GList]
 object GNetworkAddress_listautoptr: 
@@ -3443,7 +3484,7 @@ object GNetworkAddress_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GNetworkAddress_queueautoptr: 
@@ -3453,7 +3494,7 @@ object GNetworkAddress_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GNetworkAddress_slistautoptr: 
@@ -3463,7 +3504,7 @@ object GNetworkAddress_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkMonitor_autoptr = Ptr[GNetworkMonitor]
 object GNetworkMonitor_autoptr: 
@@ -3473,7 +3514,7 @@ object GNetworkMonitor_autoptr:
     inline def value: Ptr[GNetworkMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GNetworkMonitor_listautoptr: 
@@ -3483,7 +3524,7 @@ object GNetworkMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GNetworkMonitor_queueautoptr: 
@@ -3493,7 +3534,7 @@ object GNetworkMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GNetworkMonitor_slistautoptr: 
@@ -3503,7 +3544,7 @@ object GNetworkMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkService_autoptr = Ptr[GNetworkService]
 object GNetworkService_autoptr: 
@@ -3513,7 +3554,7 @@ object GNetworkService_autoptr:
     inline def value: Ptr[GNetworkService] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkService_listautoptr = Ptr[_root_.glib.all.GList]
 object GNetworkService_listautoptr: 
@@ -3523,7 +3564,7 @@ object GNetworkService_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkService_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GNetworkService_queueautoptr: 
@@ -3533,7 +3574,7 @@ object GNetworkService_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNetworkService_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GNetworkService_slistautoptr: 
@@ -3543,7 +3584,7 @@ object GNetworkService_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNotification_autoptr = Ptr[GNotification]
 object GNotification_autoptr: 
@@ -3553,7 +3594,7 @@ object GNotification_autoptr:
     inline def value: Ptr[GNotification] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNotification_listautoptr = Ptr[_root_.glib.all.GList]
 object GNotification_listautoptr: 
@@ -3563,7 +3604,7 @@ object GNotification_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNotification_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GNotification_queueautoptr: 
@@ -3573,7 +3614,7 @@ object GNotification_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GNotification_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GNotification_slistautoptr: 
@@ -3583,7 +3624,7 @@ object GNotification_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GOutputStream_autoptr = Ptr[GOutputStream]
 object GOutputStream_autoptr: 
@@ -3593,7 +3634,7 @@ object GOutputStream_autoptr:
     inline def value: Ptr[GOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GOutputStream_listautoptr: 
@@ -3603,7 +3644,7 @@ object GOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GOutputStream_queueautoptr: 
@@ -3613,7 +3654,7 @@ object GOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GOutputStream_slistautoptr: 
@@ -3623,7 +3664,7 @@ object GOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPermission_autoptr = Ptr[GPermission]
 object GPermission_autoptr: 
@@ -3633,7 +3674,7 @@ object GPermission_autoptr:
     inline def value: Ptr[GPermission] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPermission_listautoptr = Ptr[_root_.glib.all.GList]
 object GPermission_listautoptr: 
@@ -3643,7 +3684,7 @@ object GPermission_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPermission_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GPermission_queueautoptr: 
@@ -3653,7 +3694,7 @@ object GPermission_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPermission_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GPermission_slistautoptr: 
@@ -3663,7 +3704,7 @@ object GPermission_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableInputStream_autoptr = Ptr[GPollableInputStream]
 object GPollableInputStream_autoptr: 
@@ -3673,7 +3714,7 @@ object GPollableInputStream_autoptr:
     inline def value: Ptr[GPollableInputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableInputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GPollableInputStream_listautoptr: 
@@ -3683,7 +3724,7 @@ object GPollableInputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GPollableInputStream_queueautoptr: 
@@ -3693,7 +3734,7 @@ object GPollableInputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GPollableInputStream_slistautoptr: 
@@ -3703,7 +3744,7 @@ object GPollableInputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableOutputStream_autoptr = Ptr[GPollableOutputStream]
 object GPollableOutputStream_autoptr: 
@@ -3713,7 +3754,7 @@ object GPollableOutputStream_autoptr:
     inline def value: Ptr[GPollableOutputStream] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
 object GPollableOutputStream_listautoptr: 
@@ -3723,7 +3764,7 @@ object GPollableOutputStream_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GPollableOutputStream_queueautoptr: 
@@ -3733,7 +3774,7 @@ object GPollableOutputStream_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPollableOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GPollableOutputStream_slistautoptr: 
@@ -3743,19 +3784,21 @@ object GPollableOutputStream_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GPollableSourceFunc: _stream: the #GPollableInputStream or #GPollableOutputStream _data: data passed in by the user.
+ * GPollableSourceFunc: _stream: the #GPollableInputStream or #GPollableOutputStream
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GPollableSourceFunc = CFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GPollableSourceFunc: 
   given _tag: Tag[GPollableSourceFunc] = Tag.materializeCFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GPollableSourceFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GPollableSourceFunc = o
   extension (v: GPollableSourceFunc)
     inline def value: CFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type GPowerProfileMonitor_autoptr = Ptr[GPowerProfileMonitor]
 object GPowerProfileMonitor_autoptr: 
@@ -3765,7 +3808,7 @@ object GPowerProfileMonitor_autoptr:
     inline def value: Ptr[GPowerProfileMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type GPowerProfileMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GPowerProfileMonitor_listautoptr: 
@@ -3775,7 +3818,7 @@ object GPowerProfileMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type GPowerProfileMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GPowerProfileMonitor_queueautoptr: 
@@ -3785,7 +3828,7 @@ object GPowerProfileMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gpowerprofilemonitor.h
 */
 opaque type GPowerProfileMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GPowerProfileMonitor_slistautoptr: 
@@ -3795,7 +3838,7 @@ object GPowerProfileMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPropertyAction_autoptr = Ptr[GPropertyAction]
 object GPropertyAction_autoptr: 
@@ -3805,7 +3848,7 @@ object GPropertyAction_autoptr:
     inline def value: Ptr[GPropertyAction] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPropertyAction_listautoptr = Ptr[_root_.glib.all.GList]
 object GPropertyAction_listautoptr: 
@@ -3815,7 +3858,7 @@ object GPropertyAction_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPropertyAction_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GPropertyAction_queueautoptr: 
@@ -3825,7 +3868,7 @@ object GPropertyAction_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GPropertyAction_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GPropertyAction_slistautoptr: 
@@ -3835,7 +3878,7 @@ object GPropertyAction_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddressEnumerator_autoptr = Ptr[GProxyAddressEnumerator]
 object GProxyAddressEnumerator_autoptr: 
@@ -3845,7 +3888,7 @@ object GProxyAddressEnumerator_autoptr:
     inline def value: Ptr[GProxyAddressEnumerator] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddressEnumerator_listautoptr = Ptr[_root_.glib.all.GList]
 object GProxyAddressEnumerator_listautoptr: 
@@ -3855,7 +3898,7 @@ object GProxyAddressEnumerator_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddressEnumerator_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GProxyAddressEnumerator_queueautoptr: 
@@ -3865,7 +3908,7 @@ object GProxyAddressEnumerator_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddressEnumerator_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GProxyAddressEnumerator_slistautoptr: 
@@ -3875,7 +3918,7 @@ object GProxyAddressEnumerator_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddress_autoptr = Ptr[GProxyAddress]
 object GProxyAddress_autoptr: 
@@ -3885,7 +3928,7 @@ object GProxyAddress_autoptr:
     inline def value: Ptr[GProxyAddress] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddress_listautoptr = Ptr[_root_.glib.all.GList]
 object GProxyAddress_listautoptr: 
@@ -3895,7 +3938,7 @@ object GProxyAddress_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GProxyAddress_queueautoptr: 
@@ -3905,7 +3948,7 @@ object GProxyAddress_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GProxyAddress_slistautoptr: 
@@ -3915,7 +3958,7 @@ object GProxyAddress_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyResolver_autoptr = Ptr[GProxyResolver]
 object GProxyResolver_autoptr: 
@@ -3925,7 +3968,7 @@ object GProxyResolver_autoptr:
     inline def value: Ptr[GProxyResolver] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyResolver_listautoptr = Ptr[_root_.glib.all.GList]
 object GProxyResolver_listautoptr: 
@@ -3935,7 +3978,7 @@ object GProxyResolver_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyResolver_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GProxyResolver_queueautoptr: 
@@ -3945,7 +3988,7 @@ object GProxyResolver_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxyResolver_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GProxyResolver_slistautoptr: 
@@ -3955,7 +3998,7 @@ object GProxyResolver_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxy_autoptr = Ptr[GProxy]
 object GProxy_autoptr: 
@@ -3965,7 +4008,7 @@ object GProxy_autoptr:
     inline def value: Ptr[GProxy] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxy_listautoptr = Ptr[_root_.glib.all.GList]
 object GProxy_listautoptr: 
@@ -3975,7 +4018,7 @@ object GProxy_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxy_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GProxy_queueautoptr: 
@@ -3985,7 +4028,7 @@ object GProxy_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GProxy_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GProxy_slistautoptr: 
@@ -3997,17 +4040,19 @@ object GProxy_slistautoptr:
 /**
  * GReallocFunc:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gmemoryoutputstream.h
 */
 opaque type GReallocFunc = CFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer]
 object GReallocFunc: 
   given _tag: Tag[GReallocFunc] = Tag.materializeCFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): GReallocFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer]): GReallocFunc = o
   extension (v: GReallocFunc)
     inline def value: CFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GRemoteActionGroup_autoptr = Ptr[GRemoteActionGroup]
 object GRemoteActionGroup_autoptr: 
@@ -4017,7 +4062,7 @@ object GRemoteActionGroup_autoptr:
     inline def value: Ptr[GRemoteActionGroup] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GRemoteActionGroup_listautoptr = Ptr[_root_.glib.all.GList]
 object GRemoteActionGroup_listautoptr: 
@@ -4027,7 +4072,7 @@ object GRemoteActionGroup_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GRemoteActionGroup_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GRemoteActionGroup_queueautoptr: 
@@ -4037,7 +4082,7 @@ object GRemoteActionGroup_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GRemoteActionGroup_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GRemoteActionGroup_slistautoptr: 
@@ -4047,7 +4092,7 @@ object GRemoteActionGroup_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResolver_autoptr = Ptr[GResolver]
 object GResolver_autoptr: 
@@ -4057,7 +4102,7 @@ object GResolver_autoptr:
     inline def value: Ptr[GResolver] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResolver_listautoptr = Ptr[_root_.glib.all.GList]
 object GResolver_listautoptr: 
@@ -4067,7 +4112,7 @@ object GResolver_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResolver_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GResolver_queueautoptr: 
@@ -4077,7 +4122,7 @@ object GResolver_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResolver_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GResolver_slistautoptr: 
@@ -4087,7 +4132,7 @@ object GResolver_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResource_autoptr = Ptr[GResource]
 object GResource_autoptr: 
@@ -4097,7 +4142,7 @@ object GResource_autoptr:
     inline def value: Ptr[GResource] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResource_listautoptr = Ptr[_root_.glib.all.GList]
 object GResource_listautoptr: 
@@ -4107,7 +4152,7 @@ object GResource_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResource_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GResource_queueautoptr: 
@@ -4117,7 +4162,7 @@ object GResource_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GResource_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GResource_slistautoptr: 
@@ -4127,7 +4172,7 @@ object GResource_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSeekable_autoptr = Ptr[GSeekable]
 object GSeekable_autoptr: 
@@ -4137,7 +4182,7 @@ object GSeekable_autoptr:
     inline def value: Ptr[GSeekable] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSeekable_listautoptr = Ptr[_root_.glib.all.GList]
 object GSeekable_listautoptr: 
@@ -4147,7 +4192,7 @@ object GSeekable_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSeekable_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSeekable_queueautoptr: 
@@ -4157,7 +4202,7 @@ object GSeekable_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSeekable_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSeekable_slistautoptr: 
@@ -4167,7 +4212,7 @@ object GSeekable_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsBackend_autoptr = Ptr[GSettingsBackend]
 object GSettingsBackend_autoptr: 
@@ -4177,7 +4222,7 @@ object GSettingsBackend_autoptr:
     inline def value: Ptr[GSettingsBackend] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsBackend_listautoptr = Ptr[_root_.glib.all.GList]
 object GSettingsBackend_listautoptr: 
@@ -4187,7 +4232,7 @@ object GSettingsBackend_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsBackend_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSettingsBackend_queueautoptr: 
@@ -4197,7 +4242,7 @@ object GSettingsBackend_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsBackend_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSettingsBackend_slistautoptr: 
@@ -4209,41 +4254,47 @@ object GSettingsBackend_slistautoptr:
 /**
  * GSettingsBindGetMapping: : return location for the property value : the #GVariant _data: user data that was specified when the binding was created
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type GSettingsBindGetMapping = CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GSettingsBindGetMapping: 
   given _tag: Tag[GSettingsBindGetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GSettingsBindGetMapping = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GSettingsBindGetMapping = o
   extension (v: GSettingsBindGetMapping)
     inline def value: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GSettingsBindSetMapping: : a #GValue containing the property value to map _type: the #GVariantType to create _data: user data that was specified when the binding was created
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type GSettingsBindSetMapping = CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
 object GSettingsBindSetMapping: 
   given _tag: Tag[GSettingsBindSetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
+  inline def fromPtr(ptr: Ptr[Byte]): GSettingsBindSetMapping = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]): GSettingsBindSetMapping = o
   extension (v: GSettingsBindSetMapping)
     inline def value: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GSettingsGetMapping: : the #GVariant to map, or %NULL
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gsettings.h
 */
 opaque type GSettingsGetMapping = CFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GSettingsGetMapping: 
   given _tag: Tag[GSettingsGetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GSettingsGetMapping = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GSettingsGetMapping = o
   extension (v: GSettingsGetMapping)
     inline def value: CFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaKey_autoptr = Ptr[GSettingsSchemaKey]
 object GSettingsSchemaKey_autoptr: 
@@ -4253,7 +4304,7 @@ object GSettingsSchemaKey_autoptr:
     inline def value: Ptr[GSettingsSchemaKey] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaKey_listautoptr = Ptr[_root_.glib.all.GList]
 object GSettingsSchemaKey_listautoptr: 
@@ -4263,7 +4314,7 @@ object GSettingsSchemaKey_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaKey_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSettingsSchemaKey_queueautoptr: 
@@ -4273,7 +4324,7 @@ object GSettingsSchemaKey_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaKey_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSettingsSchemaKey_slistautoptr: 
@@ -4283,7 +4334,7 @@ object GSettingsSchemaKey_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaSource_autoptr = Ptr[GSettingsSchemaSource]
 object GSettingsSchemaSource_autoptr: 
@@ -4293,7 +4344,7 @@ object GSettingsSchemaSource_autoptr:
     inline def value: Ptr[GSettingsSchemaSource] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaSource_listautoptr = Ptr[_root_.glib.all.GList]
 object GSettingsSchemaSource_listautoptr: 
@@ -4303,7 +4354,7 @@ object GSettingsSchemaSource_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaSource_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSettingsSchemaSource_queueautoptr: 
@@ -4313,7 +4364,7 @@ object GSettingsSchemaSource_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchemaSource_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSettingsSchemaSource_slistautoptr: 
@@ -4323,7 +4374,7 @@ object GSettingsSchemaSource_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchema_autoptr = Ptr[GSettingsSchema]
 object GSettingsSchema_autoptr: 
@@ -4333,7 +4384,7 @@ object GSettingsSchema_autoptr:
     inline def value: Ptr[GSettingsSchema] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchema_listautoptr = Ptr[_root_.glib.all.GList]
 object GSettingsSchema_listautoptr: 
@@ -4343,7 +4394,7 @@ object GSettingsSchema_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchema_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSettingsSchema_queueautoptr: 
@@ -4353,7 +4404,7 @@ object GSettingsSchema_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettingsSchema_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSettingsSchema_slistautoptr: 
@@ -4363,7 +4414,7 @@ object GSettingsSchema_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettings_autoptr = Ptr[GSettings]
 object GSettings_autoptr: 
@@ -4373,7 +4424,7 @@ object GSettings_autoptr:
     inline def value: Ptr[GSettings] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettings_listautoptr = Ptr[_root_.glib.all.GList]
 object GSettings_listautoptr: 
@@ -4383,7 +4434,7 @@ object GSettings_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettings_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSettings_queueautoptr: 
@@ -4393,7 +4444,7 @@ object GSettings_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSettings_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSettings_slistautoptr: 
@@ -4403,7 +4454,7 @@ object GSettings_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleActionGroup_autoptr = Ptr[GSimpleActionGroup]
 object GSimpleActionGroup_autoptr: 
@@ -4413,7 +4464,7 @@ object GSimpleActionGroup_autoptr:
     inline def value: Ptr[GSimpleActionGroup] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleActionGroup_listautoptr = Ptr[_root_.glib.all.GList]
 object GSimpleActionGroup_listautoptr: 
@@ -4423,7 +4474,7 @@ object GSimpleActionGroup_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleActionGroup_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSimpleActionGroup_queueautoptr: 
@@ -4433,7 +4484,7 @@ object GSimpleActionGroup_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleActionGroup_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSimpleActionGroup_slistautoptr: 
@@ -4443,7 +4494,7 @@ object GSimpleActionGroup_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAction_autoptr = Ptr[GSimpleAction]
 object GSimpleAction_autoptr: 
@@ -4453,7 +4504,7 @@ object GSimpleAction_autoptr:
     inline def value: Ptr[GSimpleAction] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAction_listautoptr = Ptr[_root_.glib.all.GList]
 object GSimpleAction_listautoptr: 
@@ -4463,7 +4514,7 @@ object GSimpleAction_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAction_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSimpleAction_queueautoptr: 
@@ -4473,7 +4524,7 @@ object GSimpleAction_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAction_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSimpleAction_slistautoptr: 
@@ -4483,7 +4534,7 @@ object GSimpleAction_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAsyncResult_autoptr = Ptr[GSimpleAsyncResult]
 object GSimpleAsyncResult_autoptr: 
@@ -4493,7 +4544,7 @@ object GSimpleAsyncResult_autoptr:
     inline def value: Ptr[GSimpleAsyncResult] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAsyncResult_listautoptr = Ptr[_root_.glib.all.GList]
 object GSimpleAsyncResult_listautoptr: 
@@ -4503,7 +4554,7 @@ object GSimpleAsyncResult_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAsyncResult_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSimpleAsyncResult_queueautoptr: 
@@ -4513,7 +4564,7 @@ object GSimpleAsyncResult_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleAsyncResult_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSimpleAsyncResult_slistautoptr: 
@@ -4525,17 +4576,19 @@ object GSimpleAsyncResult_slistautoptr:
 /**
  * GSimpleAsyncThreadFunc: : a #GSimpleAsyncResult. : a #GObject. : optional #GCancellable object, %NULL to ignore.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSimpleAsyncThreadFunc = CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit]
 object GSimpleAsyncThreadFunc: 
   given _tag: Tag[GSimpleAsyncThreadFunc] = Tag.materializeCFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GSimpleAsyncThreadFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit]): GSimpleAsyncThreadFunc = o
   extension (v: GSimpleAsyncThreadFunc)
     inline def value: CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimplePermission_autoptr = Ptr[GSimplePermission]
 object GSimplePermission_autoptr: 
@@ -4545,7 +4598,7 @@ object GSimplePermission_autoptr:
     inline def value: Ptr[GSimplePermission] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimplePermission_listautoptr = Ptr[_root_.glib.all.GList]
 object GSimplePermission_listautoptr: 
@@ -4555,7 +4608,7 @@ object GSimplePermission_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimplePermission_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSimplePermission_queueautoptr: 
@@ -4565,7 +4618,7 @@ object GSimplePermission_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimplePermission_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSimplePermission_slistautoptr: 
@@ -4575,7 +4628,7 @@ object GSimplePermission_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleProxyResolver_autoptr = Ptr[GSimpleProxyResolver]
 object GSimpleProxyResolver_autoptr: 
@@ -4585,7 +4638,7 @@ object GSimpleProxyResolver_autoptr:
     inline def value: Ptr[GSimpleProxyResolver] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleProxyResolver_listautoptr = Ptr[_root_.glib.all.GList]
 object GSimpleProxyResolver_listautoptr: 
@@ -4595,7 +4648,7 @@ object GSimpleProxyResolver_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleProxyResolver_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSimpleProxyResolver_queueautoptr: 
@@ -4605,7 +4658,7 @@ object GSimpleProxyResolver_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSimpleProxyResolver_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSimpleProxyResolver_slistautoptr: 
@@ -4615,7 +4668,7 @@ object GSimpleProxyResolver_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddressEnumerator_autoptr = Ptr[GSocketAddressEnumerator]
 object GSocketAddressEnumerator_autoptr: 
@@ -4625,7 +4678,7 @@ object GSocketAddressEnumerator_autoptr:
     inline def value: Ptr[GSocketAddressEnumerator] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddressEnumerator_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketAddressEnumerator_listautoptr: 
@@ -4635,7 +4688,7 @@ object GSocketAddressEnumerator_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddressEnumerator_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketAddressEnumerator_queueautoptr: 
@@ -4645,7 +4698,7 @@ object GSocketAddressEnumerator_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddressEnumerator_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketAddressEnumerator_slistautoptr: 
@@ -4655,7 +4708,7 @@ object GSocketAddressEnumerator_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddress_autoptr = Ptr[GSocketAddress]
 object GSocketAddress_autoptr: 
@@ -4665,7 +4718,7 @@ object GSocketAddress_autoptr:
     inline def value: Ptr[GSocketAddress] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddress_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketAddress_listautoptr: 
@@ -4675,7 +4728,7 @@ object GSocketAddress_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketAddress_queueautoptr: 
@@ -4685,7 +4738,7 @@ object GSocketAddress_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketAddress_slistautoptr: 
@@ -4695,7 +4748,7 @@ object GSocketAddress_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketClient_autoptr = Ptr[GSocketClient]
 object GSocketClient_autoptr: 
@@ -4705,7 +4758,7 @@ object GSocketClient_autoptr:
     inline def value: Ptr[GSocketClient] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketClient_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketClient_listautoptr: 
@@ -4715,7 +4768,7 @@ object GSocketClient_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketClient_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketClient_queueautoptr: 
@@ -4725,7 +4778,7 @@ object GSocketClient_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketClient_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketClient_slistautoptr: 
@@ -4735,7 +4788,7 @@ object GSocketClient_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnectable_autoptr = Ptr[GSocketConnectable]
 object GSocketConnectable_autoptr: 
@@ -4745,7 +4798,7 @@ object GSocketConnectable_autoptr:
     inline def value: Ptr[GSocketConnectable] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnectable_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketConnectable_listautoptr: 
@@ -4755,7 +4808,7 @@ object GSocketConnectable_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnectable_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketConnectable_queueautoptr: 
@@ -4765,7 +4818,7 @@ object GSocketConnectable_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnectable_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketConnectable_slistautoptr: 
@@ -4775,7 +4828,7 @@ object GSocketConnectable_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnection_autoptr = Ptr[GSocketConnection]
 object GSocketConnection_autoptr: 
@@ -4785,7 +4838,7 @@ object GSocketConnection_autoptr:
     inline def value: Ptr[GSocketConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketConnection_listautoptr: 
@@ -4795,7 +4848,7 @@ object GSocketConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketConnection_queueautoptr: 
@@ -4805,7 +4858,7 @@ object GSocketConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketConnection_slistautoptr: 
@@ -4815,7 +4868,7 @@ object GSocketConnection_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketControlMessage_autoptr = Ptr[GSocketControlMessage]
 object GSocketControlMessage_autoptr: 
@@ -4825,7 +4878,7 @@ object GSocketControlMessage_autoptr:
     inline def value: Ptr[GSocketControlMessage] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketControlMessage_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketControlMessage_listautoptr: 
@@ -4835,7 +4888,7 @@ object GSocketControlMessage_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketControlMessage_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketControlMessage_queueautoptr: 
@@ -4845,7 +4898,7 @@ object GSocketControlMessage_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketControlMessage_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketControlMessage_slistautoptr: 
@@ -4855,7 +4908,7 @@ object GSocketControlMessage_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketListener_autoptr = Ptr[GSocketListener]
 object GSocketListener_autoptr: 
@@ -4865,7 +4918,7 @@ object GSocketListener_autoptr:
     inline def value: Ptr[GSocketListener] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketListener_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketListener_listautoptr: 
@@ -4875,7 +4928,7 @@ object GSocketListener_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketListener_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketListener_queueautoptr: 
@@ -4885,7 +4938,7 @@ object GSocketListener_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketListener_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketListener_slistautoptr: 
@@ -4895,7 +4948,7 @@ object GSocketListener_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketService_autoptr = Ptr[GSocketService]
 object GSocketService_autoptr: 
@@ -4905,7 +4958,7 @@ object GSocketService_autoptr:
     inline def value: Ptr[GSocketService] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketService_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocketService_listautoptr: 
@@ -4915,7 +4968,7 @@ object GSocketService_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketService_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocketService_queueautoptr: 
@@ -4925,7 +4978,7 @@ object GSocketService_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocketService_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocketService_slistautoptr: 
@@ -4935,19 +4988,21 @@ object GSocketService_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * GSocketSourceFunc: : the #GSocket : the current condition at the source fired. _data: data passed in by the user.
+ * GSocketSourceFunc: : the #GSocket : the current condition at the source fired.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/giotypes.h
 */
 opaque type GSocketSourceFunc = CFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object GSocketSourceFunc: 
   given _tag: Tag[GSocketSourceFunc] = Tag.materializeCFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GSocketSourceFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GSocketSourceFunc = o
   extension (v: GSocketSourceFunc)
     inline def value: CFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocket_autoptr = Ptr[GSocket]
 object GSocket_autoptr: 
@@ -4957,7 +5012,7 @@ object GSocket_autoptr:
     inline def value: Ptr[GSocket] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocket_listautoptr = Ptr[_root_.glib.all.GList]
 object GSocket_listautoptr: 
@@ -4967,7 +5022,7 @@ object GSocket_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocket_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSocket_queueautoptr: 
@@ -4977,7 +5032,7 @@ object GSocket_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSocket_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSocket_slistautoptr: 
@@ -4987,7 +5042,7 @@ object GSocket_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocessLauncher_autoptr = Ptr[GSubprocessLauncher]
 object GSubprocessLauncher_autoptr: 
@@ -4997,7 +5052,7 @@ object GSubprocessLauncher_autoptr:
     inline def value: Ptr[GSubprocessLauncher] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocessLauncher_listautoptr = Ptr[_root_.glib.all.GList]
 object GSubprocessLauncher_listautoptr: 
@@ -5007,7 +5062,7 @@ object GSubprocessLauncher_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocessLauncher_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSubprocessLauncher_queueautoptr: 
@@ -5017,7 +5072,7 @@ object GSubprocessLauncher_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocessLauncher_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSubprocessLauncher_slistautoptr: 
@@ -5027,7 +5082,7 @@ object GSubprocessLauncher_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocess_autoptr = Ptr[GSubprocess]
 object GSubprocess_autoptr: 
@@ -5037,7 +5092,7 @@ object GSubprocess_autoptr:
     inline def value: Ptr[GSubprocess] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocess_listautoptr = Ptr[_root_.glib.all.GList]
 object GSubprocess_listautoptr: 
@@ -5047,7 +5102,7 @@ object GSubprocess_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocess_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GSubprocess_queueautoptr: 
@@ -5057,7 +5112,7 @@ object GSubprocess_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GSubprocess_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GSubprocess_slistautoptr: 
@@ -5067,17 +5122,19 @@ object GSubprocess_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gtask.h
 */
 opaque type GTaskThreadFunc = CFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit]
 object GTaskThreadFunc: 
   given _tag: Tag[GTaskThreadFunc] = Tag.materializeCFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GTaskThreadFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit]): GTaskThreadFunc = o
   extension (v: GTaskThreadFunc)
     inline def value: CFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTask_autoptr = Ptr[GTask]
 object GTask_autoptr: 
@@ -5087,7 +5144,7 @@ object GTask_autoptr:
     inline def value: Ptr[GTask] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTask_listautoptr = Ptr[_root_.glib.all.GList]
 object GTask_listautoptr: 
@@ -5097,7 +5154,7 @@ object GTask_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTask_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTask_queueautoptr: 
@@ -5107,7 +5164,7 @@ object GTask_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTask_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTask_slistautoptr: 
@@ -5117,7 +5174,7 @@ object GTask_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpConnection_autoptr = Ptr[GTcpConnection]
 object GTcpConnection_autoptr: 
@@ -5127,7 +5184,7 @@ object GTcpConnection_autoptr:
     inline def value: Ptr[GTcpConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GTcpConnection_listautoptr: 
@@ -5137,7 +5194,7 @@ object GTcpConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTcpConnection_queueautoptr: 
@@ -5147,7 +5204,7 @@ object GTcpConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTcpConnection_slistautoptr: 
@@ -5157,7 +5214,7 @@ object GTcpConnection_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpWrapperConnection_autoptr = Ptr[GTcpWrapperConnection]
 object GTcpWrapperConnection_autoptr: 
@@ -5167,7 +5224,7 @@ object GTcpWrapperConnection_autoptr:
     inline def value: Ptr[GTcpWrapperConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpWrapperConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GTcpWrapperConnection_listautoptr: 
@@ -5177,7 +5234,7 @@ object GTcpWrapperConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpWrapperConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTcpWrapperConnection_queueautoptr: 
@@ -5187,7 +5244,7 @@ object GTcpWrapperConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTcpWrapperConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTcpWrapperConnection_slistautoptr: 
@@ -5197,7 +5254,7 @@ object GTcpWrapperConnection_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTestDBus_autoptr = Ptr[GTestDBus]
 object GTestDBus_autoptr: 
@@ -5207,7 +5264,7 @@ object GTestDBus_autoptr:
     inline def value: Ptr[GTestDBus] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTestDBus_listautoptr = Ptr[_root_.glib.all.GList]
 object GTestDBus_listautoptr: 
@@ -5217,7 +5274,7 @@ object GTestDBus_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTestDBus_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTestDBus_queueautoptr: 
@@ -5227,7 +5284,7 @@ object GTestDBus_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTestDBus_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTestDBus_slistautoptr: 
@@ -5237,7 +5294,7 @@ object GTestDBus_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThemedIcon_autoptr = Ptr[GThemedIcon]
 object GThemedIcon_autoptr: 
@@ -5247,7 +5304,7 @@ object GThemedIcon_autoptr:
     inline def value: Ptr[GThemedIcon] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThemedIcon_listautoptr = Ptr[_root_.glib.all.GList]
 object GThemedIcon_listautoptr: 
@@ -5257,7 +5314,7 @@ object GThemedIcon_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThemedIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GThemedIcon_queueautoptr: 
@@ -5267,7 +5324,7 @@ object GThemedIcon_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThemedIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GThemedIcon_slistautoptr: 
@@ -5277,7 +5334,7 @@ object GThemedIcon_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThreadedSocketService_autoptr = Ptr[GThreadedSocketService]
 object GThreadedSocketService_autoptr: 
@@ -5287,7 +5344,7 @@ object GThreadedSocketService_autoptr:
     inline def value: Ptr[GThreadedSocketService] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThreadedSocketService_listautoptr = Ptr[_root_.glib.all.GList]
 object GThreadedSocketService_listautoptr: 
@@ -5297,7 +5354,7 @@ object GThreadedSocketService_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThreadedSocketService_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GThreadedSocketService_queueautoptr: 
@@ -5307,7 +5364,7 @@ object GThreadedSocketService_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GThreadedSocketService_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GThreadedSocketService_slistautoptr: 
@@ -5317,7 +5374,7 @@ object GThreadedSocketService_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsBackend_autoptr = Ptr[GTlsBackend]
 object GTlsBackend_autoptr: 
@@ -5327,7 +5384,7 @@ object GTlsBackend_autoptr:
     inline def value: Ptr[GTlsBackend] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsBackend_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsBackend_listautoptr: 
@@ -5337,7 +5394,7 @@ object GTlsBackend_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsBackend_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsBackend_queueautoptr: 
@@ -5347,7 +5404,7 @@ object GTlsBackend_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsBackend_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsBackend_slistautoptr: 
@@ -5357,7 +5414,7 @@ object GTlsBackend_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsCertificate_autoptr = Ptr[GTlsCertificate]
 object GTlsCertificate_autoptr: 
@@ -5367,7 +5424,7 @@ object GTlsCertificate_autoptr:
     inline def value: Ptr[GTlsCertificate] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsCertificate_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsCertificate_listautoptr: 
@@ -5377,7 +5434,7 @@ object GTlsCertificate_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsCertificate_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsCertificate_queueautoptr: 
@@ -5387,7 +5444,7 @@ object GTlsCertificate_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsCertificate_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsCertificate_slistautoptr: 
@@ -5397,7 +5454,7 @@ object GTlsCertificate_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsClientConnection_autoptr = Ptr[GTlsClientConnection]
 object GTlsClientConnection_autoptr: 
@@ -5407,7 +5464,7 @@ object GTlsClientConnection_autoptr:
     inline def value: Ptr[GTlsClientConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsClientConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsClientConnection_listautoptr: 
@@ -5417,7 +5474,7 @@ object GTlsClientConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsClientConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsClientConnection_queueautoptr: 
@@ -5427,7 +5484,7 @@ object GTlsClientConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsClientConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsClientConnection_slistautoptr: 
@@ -5437,7 +5494,7 @@ object GTlsClientConnection_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsConnection_autoptr = Ptr[GTlsConnection]
 object GTlsConnection_autoptr: 
@@ -5447,7 +5504,7 @@ object GTlsConnection_autoptr:
     inline def value: Ptr[GTlsConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsConnection_listautoptr: 
@@ -5457,7 +5514,7 @@ object GTlsConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsConnection_queueautoptr: 
@@ -5467,7 +5524,7 @@ object GTlsConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsConnection_slistautoptr: 
@@ -5477,7 +5534,7 @@ object GTlsConnection_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsDatabase_autoptr = Ptr[GTlsDatabase]
 object GTlsDatabase_autoptr: 
@@ -5487,7 +5544,7 @@ object GTlsDatabase_autoptr:
     inline def value: Ptr[GTlsDatabase] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsDatabase_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsDatabase_listautoptr: 
@@ -5497,7 +5554,7 @@ object GTlsDatabase_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsDatabase_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsDatabase_queueautoptr: 
@@ -5507,7 +5564,7 @@ object GTlsDatabase_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsDatabase_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsDatabase_slistautoptr: 
@@ -5517,7 +5574,7 @@ object GTlsDatabase_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsFileDatabase_autoptr = Ptr[GTlsFileDatabase]
 object GTlsFileDatabase_autoptr: 
@@ -5527,7 +5584,7 @@ object GTlsFileDatabase_autoptr:
     inline def value: Ptr[GTlsFileDatabase] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsFileDatabase_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsFileDatabase_listautoptr: 
@@ -5537,7 +5594,7 @@ object GTlsFileDatabase_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsFileDatabase_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsFileDatabase_queueautoptr: 
@@ -5547,7 +5604,7 @@ object GTlsFileDatabase_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsFileDatabase_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsFileDatabase_slistautoptr: 
@@ -5557,7 +5614,7 @@ object GTlsFileDatabase_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsInteraction_autoptr = Ptr[GTlsInteraction]
 object GTlsInteraction_autoptr: 
@@ -5567,7 +5624,7 @@ object GTlsInteraction_autoptr:
     inline def value: Ptr[GTlsInteraction] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsInteraction_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsInteraction_listautoptr: 
@@ -5577,7 +5634,7 @@ object GTlsInteraction_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsInteraction_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsInteraction_queueautoptr: 
@@ -5587,7 +5644,7 @@ object GTlsInteraction_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsInteraction_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsInteraction_slistautoptr: 
@@ -5599,7 +5656,7 @@ object GTlsInteraction_slistautoptr:
 /**
  * GTlsPasswordFlags: _TLS_PASSWORD_NONE: No flags _TLS_PASSWORD_RETRY: The password was wrong, and the user should retry. _TLS_PASSWORD_MANY_TRIES: Hint to the user that the password has been wrong many times, and the user may not have many chances left. _TLS_PASSWORD_FINAL_TRY: Hint to the user that this is the last try to get this password right. _TLS_PASSWORD_PKCS11_USER: For PKCS #11, the user PIN is required. Since: 2.70. _TLS_PASSWORD_PKCS11_SECURITY_OFFICER: For PKCS #11, the security officer PIN is required. Since: 2.70. _TLS_PASSWORD_PKCS11_CONTEXT_SPECIFIC: For PKCS #11, the context-specific PIN is required. Since: 2.70.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gioenums.h
 */
 type GTlsPasswordFlags = _GTlsPasswordFlags
 object GTlsPasswordFlags: 
@@ -5609,7 +5666,7 @@ object GTlsPasswordFlags:
     inline def value: _GTlsPasswordFlags = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsPassword_autoptr = Ptr[GTlsPassword]
 object GTlsPassword_autoptr: 
@@ -5619,7 +5676,7 @@ object GTlsPassword_autoptr:
     inline def value: Ptr[GTlsPassword] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsPassword_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsPassword_listautoptr: 
@@ -5629,7 +5686,7 @@ object GTlsPassword_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsPassword_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsPassword_queueautoptr: 
@@ -5639,7 +5696,7 @@ object GTlsPassword_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsPassword_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsPassword_slistautoptr: 
@@ -5649,7 +5706,7 @@ object GTlsPassword_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsServerConnection_autoptr = Ptr[GTlsServerConnection]
 object GTlsServerConnection_autoptr: 
@@ -5659,7 +5716,7 @@ object GTlsServerConnection_autoptr:
     inline def value: Ptr[GTlsServerConnection] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsServerConnection_listautoptr = Ptr[_root_.glib.all.GList]
 object GTlsServerConnection_listautoptr: 
@@ -5669,7 +5726,7 @@ object GTlsServerConnection_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsServerConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GTlsServerConnection_queueautoptr: 
@@ -5679,7 +5736,7 @@ object GTlsServerConnection_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GTlsServerConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GTlsServerConnection_slistautoptr: 
@@ -5689,19 +5746,181 @@ object GTlsServerConnection_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type GUnixConnection_autoptr = Ptr[GUnixConnection]
+object GUnixConnection_autoptr: 
+  given _tag: Tag[GUnixConnection_autoptr] = Tag.Ptr[GUnixConnection](GUnixConnection._tag)
+  inline def apply(inline o: Ptr[GUnixConnection]): GUnixConnection_autoptr = o
+  extension (v: GUnixConnection_autoptr)
+    inline def value: Ptr[GUnixConnection] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type GUnixConnection_listautoptr = Ptr[_root_.glib.all.GList]
+object GUnixConnection_listautoptr: 
+  given _tag: Tag[GUnixConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GUnixConnection_listautoptr = o
+  extension (v: GUnixConnection_listautoptr)
+    inline def value: Ptr[_root_.glib.all.GList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type GUnixConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+object GUnixConnection_queueautoptr: 
+  given _tag: Tag[GUnixConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GUnixConnection_queueautoptr = o
+  extension (v: GUnixConnection_queueautoptr)
+    inline def value: Ptr[_root_.glib.all.GQueue] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixconnection.h
+*/
+opaque type GUnixConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+object GUnixConnection_slistautoptr: 
+  given _tag: Tag[GUnixConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GUnixConnection_slistautoptr = o
+  extension (v: GUnixConnection_slistautoptr)
+    inline def value: Ptr[_root_.glib.all.GSList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type GUnixCredentialsMessage_autoptr = Ptr[GUnixCredentialsMessage]
+object GUnixCredentialsMessage_autoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_autoptr] = Tag.Ptr[GUnixCredentialsMessage](GUnixCredentialsMessage._tag)
+  inline def apply(inline o: Ptr[GUnixCredentialsMessage]): GUnixCredentialsMessage_autoptr = o
+  extension (v: GUnixCredentialsMessage_autoptr)
+    inline def value: Ptr[GUnixCredentialsMessage] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type GUnixCredentialsMessage_listautoptr = Ptr[_root_.glib.all.GList]
+object GUnixCredentialsMessage_listautoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GUnixCredentialsMessage_listautoptr = o
+  extension (v: GUnixCredentialsMessage_listautoptr)
+    inline def value: Ptr[_root_.glib.all.GList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type GUnixCredentialsMessage_queueautoptr = Ptr[_root_.glib.all.GQueue]
+object GUnixCredentialsMessage_queueautoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GUnixCredentialsMessage_queueautoptr = o
+  extension (v: GUnixCredentialsMessage_queueautoptr)
+    inline def value: Ptr[_root_.glib.all.GQueue] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixcredentialsmessage.h
+*/
+opaque type GUnixCredentialsMessage_slistautoptr = Ptr[_root_.glib.all.GSList]
+object GUnixCredentialsMessage_slistautoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GUnixCredentialsMessage_slistautoptr = o
+  extension (v: GUnixCredentialsMessage_slistautoptr)
+    inline def value: Ptr[_root_.glib.all.GSList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDList_autoptr = Ptr[GUnixFDList]
+object GUnixFDList_autoptr: 
+  given _tag: Tag[GUnixFDList_autoptr] = Tag.Ptr[GUnixFDList](GUnixFDList._tag)
+  inline def apply(inline o: Ptr[GUnixFDList]): GUnixFDList_autoptr = o
+  extension (v: GUnixFDList_autoptr)
+    inline def value: Ptr[GUnixFDList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDList_listautoptr = Ptr[_root_.glib.all.GList]
+object GUnixFDList_listautoptr: 
+  given _tag: Tag[GUnixFDList_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GUnixFDList_listautoptr = o
+  extension (v: GUnixFDList_listautoptr)
+    inline def value: Ptr[_root_.glib.all.GList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDList_queueautoptr = Ptr[_root_.glib.all.GQueue]
+object GUnixFDList_queueautoptr: 
+  given _tag: Tag[GUnixFDList_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GUnixFDList_queueautoptr = o
+  extension (v: GUnixFDList_queueautoptr)
+    inline def value: Ptr[_root_.glib.all.GQueue] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixfdlist.h
+*/
+opaque type GUnixFDList_slistautoptr = Ptr[_root_.glib.all.GSList]
+object GUnixFDList_slistautoptr: 
+  given _tag: Tag[GUnixFDList_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GUnixFDList_slistautoptr = o
+  extension (v: GUnixFDList_slistautoptr)
+    inline def value: Ptr[_root_.glib.all.GSList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddress_autoptr = Ptr[GUnixSocketAddress]
+object GUnixSocketAddress_autoptr: 
+  given _tag: Tag[GUnixSocketAddress_autoptr] = Tag.Ptr[GUnixSocketAddress](GUnixSocketAddress._tag)
+  inline def apply(inline o: Ptr[GUnixSocketAddress]): GUnixSocketAddress_autoptr = o
+  extension (v: GUnixSocketAddress_autoptr)
+    inline def value: Ptr[GUnixSocketAddress] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddress_listautoptr = Ptr[_root_.glib.all.GList]
+object GUnixSocketAddress_listautoptr: 
+  given _tag: Tag[GUnixSocketAddress_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GUnixSocketAddress_listautoptr = o
+  extension (v: GUnixSocketAddress_listautoptr)
+    inline def value: Ptr[_root_.glib.all.GList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
+object GUnixSocketAddress_queueautoptr: 
+  given _tag: Tag[GUnixSocketAddress_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GUnixSocketAddress_queueautoptr = o
+  extension (v: GUnixSocketAddress_queueautoptr)
+    inline def value: Ptr[_root_.glib.all.GQueue] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gunixsocketaddress.h
+*/
+opaque type GUnixSocketAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
+object GUnixSocketAddress_slistautoptr: 
+  given _tag: Tag[GUnixSocketAddress_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GUnixSocketAddress_slistautoptr = o
+  extension (v: GUnixSocketAddress_slistautoptr)
+    inline def value: Ptr[_root_.glib.all.GSList] = v
+
+/**
  * GVfsFileLookupFunc: : a #GVfs : the identifier to look up a #GFile for. This can either be an URI or a parse name as returned by g_file_get_parse_name() _data: user data passed to the function
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gvfs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gvfs.h
 */
 opaque type GVfsFileLookupFunc = CFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]]
 object GVfsFileLookupFunc: 
   given _tag: Tag[GVfsFileLookupFunc] = Tag.materializeCFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]]
+  inline def fromPtr(ptr: Ptr[Byte]): GVfsFileLookupFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]]): GVfsFileLookupFunc = o
   extension (v: GVfsFileLookupFunc)
     inline def value: CFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVfs_autoptr = Ptr[GVfs]
 object GVfs_autoptr: 
@@ -5711,7 +5930,7 @@ object GVfs_autoptr:
     inline def value: Ptr[GVfs] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVfs_listautoptr = Ptr[_root_.glib.all.GList]
 object GVfs_listautoptr: 
@@ -5721,7 +5940,7 @@ object GVfs_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVfs_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GVfs_queueautoptr: 
@@ -5731,7 +5950,7 @@ object GVfs_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVfs_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GVfs_slistautoptr: 
@@ -5741,7 +5960,7 @@ object GVfs_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolumeMonitor_autoptr = Ptr[GVolumeMonitor]
 object GVolumeMonitor_autoptr: 
@@ -5751,7 +5970,7 @@ object GVolumeMonitor_autoptr:
     inline def value: Ptr[GVolumeMonitor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolumeMonitor_listautoptr = Ptr[_root_.glib.all.GList]
 object GVolumeMonitor_listautoptr: 
@@ -5761,7 +5980,7 @@ object GVolumeMonitor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolumeMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GVolumeMonitor_queueautoptr: 
@@ -5771,7 +5990,7 @@ object GVolumeMonitor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolumeMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GVolumeMonitor_slistautoptr: 
@@ -5781,7 +6000,7 @@ object GVolumeMonitor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolume_autoptr = Ptr[GVolume]
 object GVolume_autoptr: 
@@ -5791,7 +6010,7 @@ object GVolume_autoptr:
     inline def value: Ptr[GVolume] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolume_listautoptr = Ptr[_root_.glib.all.GList]
 object GVolume_listautoptr: 
@@ -5801,7 +6020,7 @@ object GVolume_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolume_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GVolume_queueautoptr: 
@@ -5811,7 +6030,7 @@ object GVolume_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GVolume_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GVolume_slistautoptr: 
@@ -5821,7 +6040,7 @@ object GVolume_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibCompressor_autoptr = Ptr[GZlibCompressor]
 object GZlibCompressor_autoptr: 
@@ -5831,7 +6050,7 @@ object GZlibCompressor_autoptr:
     inline def value: Ptr[GZlibCompressor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibCompressor_listautoptr = Ptr[_root_.glib.all.GList]
 object GZlibCompressor_listautoptr: 
@@ -5841,7 +6060,7 @@ object GZlibCompressor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibCompressor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GZlibCompressor_queueautoptr: 
@@ -5851,7 +6070,7 @@ object GZlibCompressor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibCompressor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GZlibCompressor_slistautoptr: 
@@ -5861,7 +6080,7 @@ object GZlibCompressor_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibDecompressor_autoptr = Ptr[GZlibDecompressor]
 object GZlibDecompressor_autoptr: 
@@ -5871,7 +6090,7 @@ object GZlibDecompressor_autoptr:
     inline def value: Ptr[GZlibDecompressor] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibDecompressor_listautoptr = Ptr[_root_.glib.all.GList]
 object GZlibDecompressor_listautoptr: 
@@ -5881,7 +6100,7 @@ object GZlibDecompressor_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibDecompressor_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object GZlibDecompressor_queueautoptr: 
@@ -5891,7 +6110,7 @@ object GZlibDecompressor_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gio/gio-autocleanups.h
 */
 opaque type GZlibDecompressor_slistautoptr = Ptr[_root_.glib.all.GSList]
 object GZlibDecompressor_slistautoptr: 
@@ -5920,6 +6139,13 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

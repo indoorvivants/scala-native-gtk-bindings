@@ -9,37 +9,36 @@ import _root_.scala.scalanative.*
 import _root_.libgdkpixbuf.enumerations.*
 import _root_.libgdkpixbuf.aliases.*
 import _root_.libgdkpixbuf.structs.*
-
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type GdkPixbuf = CStruct0
 object GdkPixbuf:
   given _tag: Tag[GdkPixbuf] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 */
 opaque type GdkPixbufAnimation = CStruct0
 object GdkPixbufAnimation:
   given _tag: Tag[GdkPixbufAnimation] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 */
 opaque type GdkPixbufAnimationIter = CStruct0
 object GdkPixbufAnimationIter:
   given _tag: Tag[GdkPixbufAnimationIter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h
 */
 opaque type GdkPixbufFormat = CStruct0
 object GdkPixbufFormat:
   given _tag: Tag[GdkPixbufFormat] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 */
 opaque type GdkPixbufLoader = CStruct2[_root_.gobject.all.GObject, _root_.glib.all.gpointer]
 object GdkPixbufLoader:
@@ -57,7 +56,7 @@ object GdkPixbufLoader:
     def priv_=(value: _root_.glib.all.gpointer): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 */
 opaque type GdkPixbufLoaderClass = CStruct5[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GdkPixbufLoader], CInt, CInt, Unit], CFuncPtr1[Ptr[GdkPixbufLoader], Unit], CFuncPtr5[Ptr[GdkPixbufLoader], CInt, CInt, CInt, CInt, Unit], CFuncPtr1[Ptr[GdkPixbufLoader], Unit]]
 object GdkPixbufLoaderClass:
@@ -84,49 +83,49 @@ object GdkPixbufLoaderClass:
     def closed_=(value: CFuncPtr1[Ptr[GdkPixbufLoader], Unit]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
 */
 opaque type GdkPixbufSimpleAnim = CStruct0
 object GdkPixbufSimpleAnim:
   given _tag: Tag[GdkPixbufSimpleAnim] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
 */
 opaque type GdkPixbufSimpleAnimClass = CStruct0
 object GdkPixbufSimpleAnimClass:
   given _tag: Tag[GdkPixbufSimpleAnimClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 */
 opaque type _GdkPixbuf = CStruct0
 object _GdkPixbuf:
   given _tag: Tag[_GdkPixbuf] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 */
 opaque type _GdkPixbufAnimation = CStruct0
 object _GdkPixbufAnimation:
   given _tag: Tag[_GdkPixbufAnimation] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 */
 opaque type _GdkPixbufAnimationIter = CStruct0
 object _GdkPixbufAnimationIter:
   given _tag: Tag[_GdkPixbufAnimationIter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h
 */
 opaque type _GdkPixbufFormat = CStruct0
 object _GdkPixbufFormat:
   given _tag: Tag[_GdkPixbufFormat] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 */
 opaque type _GdkPixbufLoader = CStruct2[_root_.gobject.all.GObject, _root_.glib.all.gpointer]
 object _GdkPixbufLoader:
@@ -144,7 +143,7 @@ object _GdkPixbufLoader:
     def priv_=(value: _root_.glib.all.gpointer): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 */
 opaque type _GdkPixbufLoaderClass = CStruct5[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[GdkPixbufLoader], CInt, CInt, Unit], CFuncPtr1[Ptr[GdkPixbufLoader], Unit], CFuncPtr5[Ptr[GdkPixbufLoader], CInt, CInt, CInt, CInt, Unit], CFuncPtr1[Ptr[GdkPixbufLoader], Unit]]
 object _GdkPixbufLoaderClass:
@@ -171,14 +170,14 @@ object _GdkPixbufLoaderClass:
     def closed_=(value: CFuncPtr1[Ptr[GdkPixbufLoader], Unit]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
 */
 opaque type _GdkPixbufSimpleAnim = CStruct0
 object _GdkPixbufSimpleAnim:
   given _tag: Tag[_GdkPixbufSimpleAnim] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
+ * [bindgen] header: /opt/homebrew/Cellar/gdk-pixbuf/2.42.10_1/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-simple-anim.h
 */
 opaque type _GdkPixbufSimpleAnimClass = CStruct0
 object _GdkPixbufSimpleAnimClass:

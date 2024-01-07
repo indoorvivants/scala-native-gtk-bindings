@@ -20,7 +20,7 @@ private[gobject] trait CEnumU[T](using eq: T =:= UInt):
 /**
  * GBindingFlags: _BINDING_DEFAULT: The default binding; if the source property changes, the target property is updated with its value. _BINDING_BIDIRECTIONAL: Bidirectional binding; if either the property of the source or the property of the target changes, the other is updated. _BINDING_SYNC_CREATE: Synchronize the values of the source and target properties when creating the binding; the direction of the synchronization is always from the source to the target. _BINDING_INVERT_BOOLEAN: If the two properties being bound are booleans, setting one to %TRUE will result in the other being set to %FALSE and vice versa. This flag will only work for boolean properties, and cannot be used when passing custom transformation functions to g_object_bind_property_full().
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gbinding.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gbinding.h
 */
 opaque type GBindingFlags = CUnsignedInt
 object GBindingFlags extends CEnumU[GBindingFlags]:
@@ -43,18 +43,20 @@ object GBindingFlags extends CEnumU[GBindingFlags]:
     inline def is(b: GBindingFlags): Boolean = (a & b) == b
 
 /**
- * GConnectFlags: _CONNECT_AFTER: whether the handler should be called before or after the default handler of the signal. _CONNECT_SWAPPED: whether the instance and data should be swapped when calling the handler; see g_signal_connect_swapped() for an example.
+ * GConnectFlags: _CONNECT_DEFAULT: Default behaviour (no special flags). Since: 2.74 _CONNECT_AFTER: If set, the handler should be called after the default handler of the signal. Normally, the handler is called before the default handler. _CONNECT_SWAPPED: If set, the instance and data should be swapped when calling the handler; see g_signal_connect_swapped() for an example.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type GConnectFlags = CUnsignedInt
 object GConnectFlags extends CEnumU[GConnectFlags]:
   given _tag: Tag[GConnectFlags] = Tag.UInt
   inline def define(inline a: Long): GConnectFlags = a.toUInt
+  val G_CONNECT_DEFAULT = define(0)
   val G_CONNECT_AFTER = define(1)
   val G_CONNECT_SWAPPED = define(2)
   inline def getName(inline value: GConnectFlags): Option[String] =
     inline value match
+      case G_CONNECT_DEFAULT => Some("G_CONNECT_DEFAULT")
       case G_CONNECT_AFTER => Some("G_CONNECT_AFTER")
       case G_CONNECT_SWAPPED => Some("G_CONNECT_SWAPPED")
       case _ => None
@@ -66,7 +68,7 @@ object GConnectFlags extends CEnumU[GConnectFlags]:
 /**
  * GParamFlags: _PARAM_READABLE: the parameter is readable _PARAM_WRITABLE: the parameter is writable _PARAM_READWRITE: alias for %G_PARAM_READABLE | %G_PARAM_WRITABLE _PARAM_CONSTRUCT: the parameter will be set upon object construction _PARAM_CONSTRUCT_ONLY: the parameter can only be set upon object construction _PARAM_LAX_VALIDATION: upon parameter conversion (see g_param_value_convert()) strict validation is not required _PARAM_STATIC_NAME: the string used as name when constructing the parameter is guaranteed to remain valid and unmodified for the lifetime of the parameter. Since 2.8 _PARAM_STATIC_NICK: the string used as nick when constructing the parameter is guaranteed to remain valid and unmmodified for the lifetime of the parameter. Since 2.8 _PARAM_STATIC_BLURB: the string used as blurb when constructing the parameter is guaranteed to remain valid and unmodified for the lifetime of the parameter. Since 2.8 _PARAM_EXPLICIT_NOTIFY: calls to g_object_set_property() for this property will not automatically result in a "notify" signal being emitted: the implementation must call g_object_notify() themselves in case the property actually changes. Since: 2.42. _PARAM_PRIVATE: internal _PARAM_DEPRECATED: the parameter is deprecated and will be removed in a future version. A warning will be generated if it is used while running with G_ENABLE_DIAGNOSTIC=1. Since 2.26
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gparam.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gparam.h
 */
 opaque type GParamFlags = CInt
 object GParamFlags extends CEnum[GParamFlags]:
@@ -107,7 +109,7 @@ object GParamFlags extends CEnum[GParamFlags]:
 /**
  * GSignalFlags: _SIGNAL_RUN_FIRST: Invoke the object method handler in the first emission stage. _SIGNAL_RUN_LAST: Invoke the object method handler in the third emission stage. _SIGNAL_RUN_CLEANUP: Invoke the object method handler in the last emission stage. _SIGNAL_NO_RECURSE: Signals being emitted for an object while currently being in emission for this very object will not be emitted recursively, but instead cause the first emission to be restarted. _SIGNAL_DETAILED: This signal supports "::detail" appendices to the signal name upon handler connections and emissions. _SIGNAL_ACTION: Action signals are signals that may freely be emitted on alive objects from user code via g_signal_emit() and friends, without the need of being embedded into extra code that performs pre or post emission adjustments on the object. They can also be thought of as object methods which can be called generically by third-party code. _SIGNAL_NO_HOOKS: No emissions hooks are supported for this signal. _SIGNAL_MUST_COLLECT: Varargs signal emission will always collect the arguments, even if there are no signal handlers connected. Since 2.30. _SIGNAL_DEPRECATED: The signal is deprecated and will be removed in a future version. A warning will be generated if it is connected while running with G_ENABLE_DIAGNOSTIC=1. Since 2.32. _SIGNAL_ACCUMULATOR_FIRST_RUN: Only used in #GSignalAccumulator accumulator functions for the #GSignalInvocationHint::run_type field to mark the first call to the accumulator function for a signal emission. Since 2.68.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type GSignalFlags = CUnsignedInt
 object GSignalFlags extends CEnumU[GSignalFlags]:
@@ -144,7 +146,7 @@ object GSignalFlags extends CEnumU[GSignalFlags]:
 /**
  * GSignalMatchType: _SIGNAL_MATCH_ID: The signal id must be equal. _SIGNAL_MATCH_DETAIL: The signal detail must be equal. _SIGNAL_MATCH_CLOSURE: The closure must be the same. _SIGNAL_MATCH_FUNC: The C closure callback must be the same. _SIGNAL_MATCH_DATA: The closure data must be the same. _SIGNAL_MATCH_UNBLOCKED: Only unblocked signals may be matched.
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gsignal.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gsignal.h
 */
 opaque type GSignalMatchType = CUnsignedInt
 object GSignalMatchType extends CEnumU[GSignalMatchType]:
@@ -173,7 +175,7 @@ object GSignalMatchType extends CEnumU[GSignalMatchType]:
 /**
  * GTypeDebugFlags: _TYPE_DEBUG_NONE: Print no messages _TYPE_DEBUG_OBJECTS: Print messages about object bookkeeping _TYPE_DEBUG_SIGNALS: Print messages about signal emissions _TYPE_DEBUG_MASK: Mask covering all debug flags _TYPE_DEBUG_INSTANCE_COUNT: Keep a count of instances of each type
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeDebugFlags = CUnsignedInt
 object GTypeDebugFlags extends CEnumU[GTypeDebugFlags]:
@@ -198,22 +200,26 @@ object GTypeDebugFlags extends CEnumU[GTypeDebugFlags]:
     inline def is(b: GTypeDebugFlags): Boolean = (a & b) == b
 
 /**
- * GTypeFlags: _TYPE_FLAG_ABSTRACT: Indicates an abstract type. No instances can be created for an abstract type _TYPE_FLAG_VALUE_ABSTRACT: Indicates an abstract value type, i.e. a type that introduces a value table, but can't be used for g_value_init() _TYPE_FLAG_FINAL: Indicates a final type. A final type is a non-derivable leaf node in a deep derivable type hierarchy tree. Since: 2.70
+ * GTypeFlags: _TYPE_FLAG_NONE: No special flags. Since: 2.74 _TYPE_FLAG_ABSTRACT: Indicates an abstract type. No instances can be created for an abstract type _TYPE_FLAG_VALUE_ABSTRACT: Indicates an abstract value type, i.e. a type that introduces a value table, but can't be used for g_value_init() _TYPE_FLAG_FINAL: Indicates a final type. A final type is a non-derivable leaf node in a deep derivable type hierarchy tree. Since: 2.70 _TYPE_FLAG_DEPRECATED: The type is deprecated and may be removed in a future version. A warning will be emitted if it is instantiated while running with `G_ENABLE_DIAGNOSTIC=1`. Since 2.76
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeFlags = CUnsignedInt
 object GTypeFlags extends CEnumU[GTypeFlags]:
   given _tag: Tag[GTypeFlags] = Tag.UInt
   inline def define(inline a: Long): GTypeFlags = a.toUInt
+  val G_TYPE_FLAG_NONE = define(0)
   val G_TYPE_FLAG_ABSTRACT = define(16)
   val G_TYPE_FLAG_VALUE_ABSTRACT = define(32)
   val G_TYPE_FLAG_FINAL = define(64)
+  val G_TYPE_FLAG_DEPRECATED = define(128)
   inline def getName(inline value: GTypeFlags): Option[String] =
     inline value match
+      case G_TYPE_FLAG_NONE => Some("G_TYPE_FLAG_NONE")
       case G_TYPE_FLAG_ABSTRACT => Some("G_TYPE_FLAG_ABSTRACT")
       case G_TYPE_FLAG_VALUE_ABSTRACT => Some("G_TYPE_FLAG_VALUE_ABSTRACT")
       case G_TYPE_FLAG_FINAL => Some("G_TYPE_FLAG_FINAL")
+      case G_TYPE_FLAG_DEPRECATED => Some("G_TYPE_FLAG_DEPRECATED")
       case _ => None
   extension (a: GTypeFlags)
     inline def &(b: GTypeFlags): GTypeFlags = a & b
@@ -223,7 +229,7 @@ object GTypeFlags extends CEnumU[GTypeFlags]:
 /**
  * GTypeFundamentalFlags: _TYPE_FLAG_CLASSED: Indicates a classed type _TYPE_FLAG_INSTANTIATABLE: Indicates an instantiatable type (implies classed) _TYPE_FLAG_DERIVABLE: Indicates a flat derivable type _TYPE_FLAG_DEEP_DERIVABLE: Indicates a deep derivable type (implies derivable)
 
- * [bindgen] header: /usr/include/glib-2.0/gobject/gtype.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/gobject/gtype.h
 */
 opaque type GTypeFundamentalFlags = CUnsignedInt
 object GTypeFundamentalFlags extends CEnumU[GTypeFundamentalFlags]:

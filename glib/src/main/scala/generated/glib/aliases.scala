@@ -10,9 +10,8 @@ import _root_.glib.enumerations.*
 import _root_.glib.aliases.*
 import _root_.glib.structs.*
 import _root_.glib.unions.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GArray_autoptr = Ptr[GArray]
 object GArray_autoptr: 
@@ -22,7 +21,7 @@ object GArray_autoptr:
     inline def value: Ptr[GArray] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GArray_listautoptr = Ptr[GList]
 object GArray_listautoptr: 
@@ -32,7 +31,7 @@ object GArray_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GArray_queueautoptr = Ptr[GQueue]
 object GArray_queueautoptr: 
@@ -42,7 +41,7 @@ object GArray_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GArray_slistautoptr = Ptr[GSList]
 object GArray_slistautoptr: 
@@ -52,7 +51,7 @@ object GArray_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GAsyncQueue_autoptr = Ptr[GAsyncQueue]
 object GAsyncQueue_autoptr: 
@@ -62,7 +61,7 @@ object GAsyncQueue_autoptr:
     inline def value: Ptr[GAsyncQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GAsyncQueue_listautoptr = Ptr[GList]
 object GAsyncQueue_listautoptr: 
@@ -72,7 +71,7 @@ object GAsyncQueue_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GAsyncQueue_queueautoptr = Ptr[GQueue]
 object GAsyncQueue_queueautoptr: 
@@ -82,7 +81,7 @@ object GAsyncQueue_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GAsyncQueue_slistautoptr = Ptr[GSList]
 object GAsyncQueue_slistautoptr: 
@@ -92,7 +91,7 @@ object GAsyncQueue_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBookmarkFile_autoptr = Ptr[GBookmarkFile]
 object GBookmarkFile_autoptr: 
@@ -102,7 +101,7 @@ object GBookmarkFile_autoptr:
     inline def value: Ptr[GBookmarkFile] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBookmarkFile_listautoptr = Ptr[GList]
 object GBookmarkFile_listautoptr: 
@@ -112,7 +111,7 @@ object GBookmarkFile_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBookmarkFile_queueautoptr = Ptr[GQueue]
 object GBookmarkFile_queueautoptr: 
@@ -122,7 +121,7 @@ object GBookmarkFile_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBookmarkFile_slistautoptr = Ptr[GSList]
 object GBookmarkFile_slistautoptr: 
@@ -132,7 +131,7 @@ object GBookmarkFile_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GByteArray_autoptr = Ptr[GByteArray]
 object GByteArray_autoptr: 
@@ -142,7 +141,7 @@ object GByteArray_autoptr:
     inline def value: Ptr[GByteArray] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GByteArray_listautoptr = Ptr[GList]
 object GByteArray_listautoptr: 
@@ -152,7 +151,7 @@ object GByteArray_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GByteArray_queueautoptr = Ptr[GQueue]
 object GByteArray_queueautoptr: 
@@ -162,7 +161,7 @@ object GByteArray_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GByteArray_slistautoptr = Ptr[GSList]
 object GByteArray_slistautoptr: 
@@ -172,7 +171,7 @@ object GByteArray_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBytes_autoptr = Ptr[GBytes]
 object GBytes_autoptr: 
@@ -182,7 +181,7 @@ object GBytes_autoptr:
     inline def value: Ptr[GBytes] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBytes_listautoptr = Ptr[GList]
 object GBytes_listautoptr: 
@@ -192,7 +191,7 @@ object GBytes_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBytes_queueautoptr = Ptr[GQueue]
 object GBytes_queueautoptr: 
@@ -202,7 +201,7 @@ object GBytes_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GBytes_slistautoptr = Ptr[GSList]
 object GBytes_slistautoptr: 
@@ -212,37 +211,43 @@ object GBytes_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcache.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcache.h
 */
 opaque type GCacheDestroyFunc = CFuncPtr1[gpointer, Unit]
 object GCacheDestroyFunc: 
   given _tag: Tag[GCacheDestroyFunc] = Tag.materializeCFuncPtr1[gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GCacheDestroyFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GCacheDestroyFunc = o
   extension (v: GCacheDestroyFunc)
     inline def value: CFuncPtr1[gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcache.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcache.h
 */
 opaque type GCacheDupFunc = CFuncPtr1[gpointer, gpointer]
 object GCacheDupFunc: 
   given _tag: Tag[GCacheDupFunc] = Tag.materializeCFuncPtr1[gpointer, gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): GCacheDupFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, gpointer]): GCacheDupFunc = o
   extension (v: GCacheDupFunc)
     inline def value: CFuncPtr1[gpointer, gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcache.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcache.h
 */
 opaque type GCacheNewFunc = CFuncPtr1[gpointer, gpointer]
 object GCacheNewFunc: 
   given _tag: Tag[GCacheNewFunc] = Tag.materializeCFuncPtr1[gpointer, gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): GCacheNewFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, gpointer]): GCacheNewFunc = o
   extension (v: GCacheNewFunc)
     inline def value: CFuncPtr1[gpointer, gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GChecksum_autoptr = Ptr[GChecksum]
 object GChecksum_autoptr: 
@@ -252,7 +257,7 @@ object GChecksum_autoptr:
     inline def value: Ptr[GChecksum] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GChecksum_listautoptr = Ptr[GList]
 object GChecksum_listautoptr: 
@@ -262,7 +267,7 @@ object GChecksum_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GChecksum_queueautoptr = Ptr[GQueue]
 object GChecksum_queueautoptr: 
@@ -272,7 +277,7 @@ object GChecksum_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GChecksum_slistautoptr = Ptr[GSList]
 object GChecksum_slistautoptr: 
@@ -284,91 +289,107 @@ object GChecksum_slistautoptr:
 /**
  * GChildWatchFunc: : the process id of the child process _status: Status information about the child process, encoded in a platform-specific manner _data: user data passed to g_child_watch_add()
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GChildWatchFunc = CFuncPtr3[GPid, gint, gpointer, Unit]
 object GChildWatchFunc: 
   given _tag: Tag[GChildWatchFunc] = Tag.materializeCFuncPtr3[GPid, gint, gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GChildWatchFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[GPid, gint, gpointer, Unit]): GChildWatchFunc = o
   extension (v: GChildWatchFunc)
     inline def value: CFuncPtr3[GPid, gint, gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GClearHandleFunc: _id: the handle ID to clear
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GClearHandleFunc = CFuncPtr1[guint, Unit]
 object GClearHandleFunc: 
   given _tag: Tag[GClearHandleFunc] = Tag.materializeCFuncPtr1[guint, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GClearHandleFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[guint, Unit]): GClearHandleFunc = o
   extension (v: GClearHandleFunc)
     inline def value: CFuncPtr1[guint, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GCompareDataFunc = CFuncPtr3[gconstpointer, gconstpointer, gpointer, gint]
 object GCompareDataFunc: 
   given _tag: Tag[GCompareDataFunc] = Tag.materializeCFuncPtr3[gconstpointer, gconstpointer, gpointer, gint]
+  inline def fromPtr(ptr: Ptr[Byte]): GCompareDataFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[gconstpointer, gconstpointer, gpointer, gint]): GCompareDataFunc = o
   extension (v: GCompareDataFunc)
     inline def value: CFuncPtr3[gconstpointer, gconstpointer, gpointer, gint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GCompareFunc = CFuncPtr2[gconstpointer, gconstpointer, gint]
 object GCompareFunc: 
   given _tag: Tag[GCompareFunc] = Tag.materializeCFuncPtr2[gconstpointer, gconstpointer, gint]
+  inline def fromPtr(ptr: Ptr[Byte]): GCompareFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[gconstpointer, gconstpointer, gint]): GCompareFunc = o
   extension (v: GCompareFunc)
     inline def value: CFuncPtr2[gconstpointer, gconstpointer, gint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcompletion.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcompletion.h
 */
 opaque type GCompletionFunc = CFuncPtr1[gpointer, Ptr[gchar]]
 object GCompletionFunc: 
   given _tag: Tag[GCompletionFunc] = Tag.materializeCFuncPtr1[gpointer, Ptr[gchar]]
+  inline def fromPtr(ptr: Ptr[Byte]): GCompletionFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, Ptr[gchar]]): GCompletionFunc = o
   extension (v: GCompletionFunc)
     inline def value: CFuncPtr1[gpointer, Ptr[gchar]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/deprecated/gcompletion.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/deprecated/gcompletion.h
 */
 opaque type GCompletionStrncmpFunc = CFuncPtr3[Ptr[gchar], Ptr[gchar], gsize, gint]
 object GCompletionStrncmpFunc: 
   given _tag: Tag[GCompletionStrncmpFunc] = Tag.materializeCFuncPtr3[Ptr[gchar], Ptr[gchar], gsize, gint]
+  inline def fromPtr(ptr: Ptr[Byte]): GCompletionStrncmpFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[gchar], Ptr[gchar], gsize, gint]): GCompletionStrncmpFunc = o
   extension (v: GCompletionStrncmpFunc)
     inline def value: CFuncPtr3[Ptr[gchar], Ptr[gchar], gsize, gint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GCopyFunc: : (not nullable): A pointer to the data which should be copied
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GCopyFunc = CFuncPtr2[gconstpointer, gpointer, gpointer]
 object GCopyFunc: 
   given _tag: Tag[GCopyFunc] = Tag.materializeCFuncPtr2[gconstpointer, gpointer, gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): GCopyFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[gconstpointer, gpointer, gpointer]): GCopyFunc = o
   extension (v: GCopyFunc)
     inline def value: CFuncPtr2[gconstpointer, gpointer, gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdataset.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdataset.h
 */
 opaque type GDataForeachFunc = CFuncPtr3[GQuark, gpointer, gpointer, Unit]
 object GDataForeachFunc: 
   given _tag: Tag[GDataForeachFunc] = Tag.materializeCFuncPtr3[GQuark, gpointer, gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GDataForeachFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[GQuark, gpointer, gpointer, Unit]): GDataForeachFunc = o
   extension (v: GDataForeachFunc)
     inline def value: CFuncPtr3[GQuark, gpointer, gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 type GDateDay = guint8
 object GDateDay: 
@@ -378,7 +399,7 @@ object GDateDay:
     inline def value: guint8 = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDateTime_autoptr = Ptr[GDateTime]
 object GDateTime_autoptr: 
@@ -388,7 +409,7 @@ object GDateTime_autoptr:
     inline def value: Ptr[GDateTime] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDateTime_listautoptr = Ptr[GList]
 object GDateTime_listautoptr: 
@@ -398,7 +419,7 @@ object GDateTime_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDateTime_queueautoptr = Ptr[GQueue]
 object GDateTime_queueautoptr: 
@@ -408,7 +429,7 @@ object GDateTime_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDateTime_slistautoptr = Ptr[GSList]
 object GDateTime_slistautoptr: 
@@ -418,7 +439,7 @@ object GDateTime_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 type GDateYear = guint16
 object GDateYear: 
@@ -428,7 +449,7 @@ object GDateYear:
     inline def value: guint16 = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDate_autoptr = Ptr[GDate]
 object GDate_autoptr: 
@@ -438,7 +459,7 @@ object GDate_autoptr:
     inline def value: Ptr[GDate] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDate_listautoptr = Ptr[GList]
 object GDate_listautoptr: 
@@ -448,7 +469,7 @@ object GDate_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDate_queueautoptr = Ptr[GQueue]
 object GDate_queueautoptr: 
@@ -458,7 +479,7 @@ object GDate_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDate_slistautoptr = Ptr[GSList]
 object GDate_slistautoptr: 
@@ -468,17 +489,19 @@ object GDate_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GDestroyNotify = CFuncPtr1[gpointer, Unit]
 object GDestroyNotify: 
   given _tag: Tag[GDestroyNotify] = Tag.materializeCFuncPtr1[gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GDestroyNotify = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GDestroyNotify = o
   extension (v: GDestroyNotify)
     inline def value: CFuncPtr1[gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDir_autoptr = Ptr[GDir]
 object GDir_autoptr: 
@@ -488,7 +511,7 @@ object GDir_autoptr:
     inline def value: Ptr[GDir] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDir_listautoptr = Ptr[GList]
 object GDir_listautoptr: 
@@ -498,7 +521,7 @@ object GDir_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDir_queueautoptr = Ptr[GQueue]
 object GDir_queueautoptr: 
@@ -508,7 +531,7 @@ object GDir_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GDir_slistautoptr = Ptr[GSList]
 object GDir_slistautoptr: 
@@ -518,63 +541,87 @@ object GDir_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdataset.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdataset.h
 */
 opaque type GDuplicateFunc = CFuncPtr2[gpointer, gpointer, gpointer]
 object GDuplicateFunc: 
   given _tag: Tag[GDuplicateFunc] = Tag.materializeCFuncPtr2[gpointer, gpointer, gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): GDuplicateFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[gpointer, gpointer, gpointer]): GDuplicateFunc = o
   extension (v: GDuplicateFunc)
     inline def value: CFuncPtr2[gpointer, gpointer, gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GEqualFunc = CFuncPtr2[gconstpointer, gconstpointer, gboolean]
 object GEqualFunc: 
   given _tag: Tag[GEqualFunc] = Tag.materializeCFuncPtr2[gconstpointer, gconstpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GEqualFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[gconstpointer, gconstpointer, gboolean]): GEqualFunc = o
   extension (v: GEqualFunc)
     inline def value: CFuncPtr2[gconstpointer, gconstpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+
+/**
+ * GEqualFuncFull: : a value : a value to compare with _data: user data provided by the caller
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
+*/
+opaque type GEqualFuncFull = CFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean]
+object GEqualFuncFull: 
+  given _tag: Tag[GEqualFuncFull] = Tag.materializeCFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GEqualFuncFull = CFuncPtr.fromPtr(ptr)
+  inline def apply(inline o: CFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean]): GEqualFuncFull = o
+  extension (v: GEqualFuncFull)
+    inline def value: CFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GErrorClearFunc: : extended error to clear
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gerror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gerror.h
 */
 opaque type GErrorClearFunc = CFuncPtr1[Ptr[GError], Unit]
 object GErrorClearFunc: 
   given _tag: Tag[GErrorClearFunc] = Tag.materializeCFuncPtr1[Ptr[GError], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GErrorClearFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[Ptr[GError], Unit]): GErrorClearFunc = o
   extension (v: GErrorClearFunc)
     inline def value: CFuncPtr1[Ptr[GError], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GErrorCopyFunc: _error: source extended error
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gerror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gerror.h
 */
 opaque type GErrorCopyFunc = CFuncPtr2[Ptr[GError], Ptr[GError], Unit]
 object GErrorCopyFunc: 
   given _tag: Tag[GErrorCopyFunc] = Tag.materializeCFuncPtr2[Ptr[GError], Ptr[GError], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GErrorCopyFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GError], Ptr[GError], Unit]): GErrorCopyFunc = o
   extension (v: GErrorCopyFunc)
     inline def value: CFuncPtr2[Ptr[GError], Ptr[GError], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GErrorInitFunc: : extended error
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gerror.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gerror.h
 */
 opaque type GErrorInitFunc = CFuncPtr1[Ptr[GError], Unit]
 object GErrorInitFunc: 
   given _tag: Tag[GErrorInitFunc] = Tag.materializeCFuncPtr1[Ptr[GError], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GErrorInitFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[Ptr[GError], Unit]): GErrorInitFunc = o
   extension (v: GErrorInitFunc)
     inline def value: CFuncPtr1[Ptr[GError], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GError_autoptr = Ptr[GError]
 object GError_autoptr: 
@@ -584,7 +631,7 @@ object GError_autoptr:
     inline def value: Ptr[GError] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GError_listautoptr = Ptr[GList]
 object GError_listautoptr: 
@@ -594,7 +641,7 @@ object GError_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GError_queueautoptr = Ptr[GQueue]
 object GError_queueautoptr: 
@@ -604,7 +651,7 @@ object GError_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GError_slistautoptr = Ptr[GSList]
 object GError_slistautoptr: 
@@ -616,57 +663,67 @@ object GError_slistautoptr:
 /**
  * GFreeFunc:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GFreeFunc = CFuncPtr1[gpointer, Unit]
 object GFreeFunc: 
   given _tag: Tag[GFreeFunc] = Tag.materializeCFuncPtr1[gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GFreeFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GFreeFunc = o
   extension (v: GFreeFunc)
     inline def value: CFuncPtr1[gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GFunc = CFuncPtr2[gpointer, gpointer, Unit]
 object GFunc: 
   given _tag: Tag[GFunc] = Tag.materializeCFuncPtr2[gpointer, gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[gpointer, gpointer, Unit]): GFunc = o
   extension (v: GFunc)
     inline def value: CFuncPtr2[gpointer, gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GHFunc = CFuncPtr3[gpointer, gpointer, gpointer, Unit]
 object GHFunc: 
   given _tag: Tag[GHFunc] = Tag.materializeCFuncPtr3[gpointer, gpointer, gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GHFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[gpointer, gpointer, gpointer, Unit]): GHFunc = o
   extension (v: GHFunc)
     inline def value: CFuncPtr3[gpointer, gpointer, gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghash.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghash.h
 */
 opaque type GHRFunc = CFuncPtr3[gpointer, gpointer, gpointer, gboolean]
 object GHRFunc: 
   given _tag: Tag[GHRFunc] = Tag.materializeCFuncPtr3[gpointer, gpointer, gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GHRFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[gpointer, gpointer, gpointer, gboolean]): GHRFunc = o
   extension (v: GHRFunc)
     inline def value: CFuncPtr3[gpointer, gpointer, gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GHashFunc = CFuncPtr1[gconstpointer, guint]
 object GHashFunc: 
   given _tag: Tag[GHashFunc] = Tag.materializeCFuncPtr1[gconstpointer, guint]
+  inline def fromPtr(ptr: Ptr[Byte]): GHashFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gconstpointer, guint]): GHashFunc = o
   extension (v: GHashFunc)
     inline def value: CFuncPtr1[gconstpointer, guint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHashTable_autoptr = Ptr[GHashTable]
 object GHashTable_autoptr: 
@@ -676,7 +733,7 @@ object GHashTable_autoptr:
     inline def value: Ptr[GHashTable] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHashTable_listautoptr = Ptr[GList]
 object GHashTable_listautoptr: 
@@ -686,7 +743,7 @@ object GHashTable_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHashTable_queueautoptr = Ptr[GQueue]
 object GHashTable_queueautoptr: 
@@ -696,7 +753,7 @@ object GHashTable_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHashTable_slistautoptr = Ptr[GSList]
 object GHashTable_slistautoptr: 
@@ -706,7 +763,7 @@ object GHashTable_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHmac_autoptr = Ptr[GHmac]
 object GHmac_autoptr: 
@@ -716,7 +773,7 @@ object GHmac_autoptr:
     inline def value: Ptr[GHmac] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHmac_listautoptr = Ptr[GList]
 object GHmac_listautoptr: 
@@ -726,7 +783,7 @@ object GHmac_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHmac_queueautoptr = Ptr[GQueue]
 object GHmac_queueautoptr: 
@@ -736,7 +793,7 @@ object GHmac_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GHmac_slistautoptr = Ptr[GSList]
 object GHmac_slistautoptr: 
@@ -746,79 +803,93 @@ object GHmac_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookCheckFunc = CFuncPtr1[gpointer, gboolean]
 object GHookCheckFunc: 
   given _tag: Tag[GHookCheckFunc] = Tag.materializeCFuncPtr1[gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookCheckFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, gboolean]): GHookCheckFunc = o
   extension (v: GHookCheckFunc)
     inline def value: CFuncPtr1[gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookCheckMarshaller = CFuncPtr2[Ptr[GHook], gpointer, gboolean]
 object GHookCheckMarshaller: 
   given _tag: Tag[GHookCheckMarshaller] = Tag.materializeCFuncPtr2[Ptr[GHook], gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookCheckMarshaller = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GHook], gpointer, gboolean]): GHookCheckMarshaller = o
   extension (v: GHookCheckMarshaller)
     inline def value: CFuncPtr2[Ptr[GHook], gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookCompareFunc = CFuncPtr2[Ptr[GHook], Ptr[GHook], gint]
 object GHookCompareFunc: 
   given _tag: Tag[GHookCompareFunc] = Tag.materializeCFuncPtr2[Ptr[GHook], Ptr[GHook], gint]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookCompareFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GHook], Ptr[GHook], gint]): GHookCompareFunc = o
   extension (v: GHookCompareFunc)
     inline def value: CFuncPtr2[Ptr[GHook], Ptr[GHook], gint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookFinalizeFunc = CFuncPtr2[Ptr[GHookList], Ptr[GHook], Unit]
 object GHookFinalizeFunc: 
   given _tag: Tag[GHookFinalizeFunc] = Tag.materializeCFuncPtr2[Ptr[GHookList], Ptr[GHook], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookFinalizeFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GHookList], Ptr[GHook], Unit]): GHookFinalizeFunc = o
   extension (v: GHookFinalizeFunc)
     inline def value: CFuncPtr2[Ptr[GHookList], Ptr[GHook], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookFindFunc = CFuncPtr2[Ptr[GHook], gpointer, gboolean]
 object GHookFindFunc: 
   given _tag: Tag[GHookFindFunc] = Tag.materializeCFuncPtr2[Ptr[GHook], gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookFindFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GHook], gpointer, gboolean]): GHookFindFunc = o
   extension (v: GHookFindFunc)
     inline def value: CFuncPtr2[Ptr[GHook], gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookFunc = CFuncPtr1[gpointer, Unit]
 object GHookFunc: 
   given _tag: Tag[GHookFunc] = Tag.materializeCFuncPtr1[gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GHookFunc = o
   extension (v: GHookFunc)
     inline def value: CFuncPtr1[gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/ghook.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/ghook.h
 */
 opaque type GHookMarshaller = CFuncPtr2[Ptr[GHook], gpointer, Unit]
 object GHookMarshaller: 
   given _tag: Tag[GHookMarshaller] = Tag.materializeCFuncPtr2[Ptr[GHook], gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GHookMarshaller = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GHook], gpointer, Unit]): GHookMarshaller = o
   extension (v: GHookMarshaller)
     inline def value: CFuncPtr2[Ptr[GHook], gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GIConv: (skip)
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gconvert.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gconvert.h
 */
 opaque type GIConv = Ptr[_GIConv]
 object GIConv: 
@@ -828,7 +899,7 @@ object GIConv:
     inline def value: Ptr[_GIConv] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GIOChannel_autoptr = Ptr[GIOChannel]
 object GIOChannel_autoptr: 
@@ -838,7 +909,7 @@ object GIOChannel_autoptr:
     inline def value: Ptr[GIOChannel] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GIOChannel_listautoptr = Ptr[GList]
 object GIOChannel_listautoptr: 
@@ -848,7 +919,7 @@ object GIOChannel_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GIOChannel_queueautoptr = Ptr[GQueue]
 object GIOChannel_queueautoptr: 
@@ -858,7 +929,7 @@ object GIOChannel_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GIOChannel_slistautoptr = Ptr[GSList]
 object GIOChannel_slistautoptr: 
@@ -868,17 +939,19 @@ object GIOChannel_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/giochannel.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/giochannel.h
 */
 opaque type GIOFunc = CFuncPtr3[Ptr[GIOChannel], GIOCondition, gpointer, gboolean]
 object GIOFunc: 
   given _tag: Tag[GIOFunc] = Tag.materializeCFuncPtr3[Ptr[GIOChannel], GIOCondition, gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GIOFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GIOChannel], GIOCondition, gpointer, gboolean]): GIOFunc = o
   extension (v: GIOFunc)
     inline def value: CFuncPtr3[Ptr[GIOChannel], GIOCondition, gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GKeyFile_autoptr = Ptr[GKeyFile]
 object GKeyFile_autoptr: 
@@ -888,7 +961,7 @@ object GKeyFile_autoptr:
     inline def value: Ptr[GKeyFile] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GKeyFile_listautoptr = Ptr[GList]
 object GKeyFile_listautoptr: 
@@ -898,7 +971,7 @@ object GKeyFile_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GKeyFile_queueautoptr = Ptr[GQueue]
 object GKeyFile_queueautoptr: 
@@ -908,7 +981,7 @@ object GKeyFile_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GKeyFile_slistautoptr = Ptr[GSList]
 object GKeyFile_slistautoptr: 
@@ -918,7 +991,7 @@ object GKeyFile_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GList_autoptr = Ptr[GList]
 object GList_autoptr: 
@@ -928,7 +1001,7 @@ object GList_autoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GList_listautoptr = Ptr[GList]
 object GList_listautoptr: 
@@ -938,7 +1011,7 @@ object GList_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GList_queueautoptr = Ptr[GQueue]
 object GList_queueautoptr: 
@@ -948,7 +1021,7 @@ object GList_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GList_slistautoptr = Ptr[GSList]
 object GList_slistautoptr: 
@@ -958,31 +1031,35 @@ object GList_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type GLogFunc = CFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, Unit]
 object GLogFunc: 
   given _tag: Tag[GLogFunc] = Tag.materializeCFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GLogFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, Unit]): GLogFunc = o
   extension (v: GLogFunc)
     inline def value: CFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GLogWriterFunc: _level: log level of the message : (array length=n_fields): fields forming the message _fields: number of _data: user data passed to g_log_set_writer_func()
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type GLogWriterFunc = CFuncPtr4[GLogLevelFlags, Ptr[GLogField], gsize, gpointer, GLogWriterOutput]
 object GLogWriterFunc: 
   given _tag: Tag[GLogWriterFunc] = Tag.materializeCFuncPtr4[GLogLevelFlags, Ptr[GLogField], gsize, gpointer, GLogWriterOutput]
+  inline def fromPtr(ptr: Ptr[Byte]): GLogWriterFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[GLogLevelFlags, Ptr[GLogField], gsize, gpointer, GLogWriterOutput]): GLogWriterFunc = o
   extension (v: GLogWriterFunc)
     inline def value: CFuncPtr4[GLogLevelFlags, Ptr[GLogField], gsize, gpointer, GLogWriterOutput] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GMainContextPusher:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 type GMainContextPusher = Unit
 object GMainContextPusher: 
@@ -992,7 +1069,7 @@ object GMainContextPusher:
     inline def value: Unit = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContextPusher_autoptr = Ptr[GMainContextPusher]
 object GMainContextPusher_autoptr: 
@@ -1002,7 +1079,7 @@ object GMainContextPusher_autoptr:
     inline def value: Ptr[GMainContextPusher] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContextPusher_listautoptr = Ptr[GList]
 object GMainContextPusher_listautoptr: 
@@ -1012,7 +1089,7 @@ object GMainContextPusher_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContextPusher_queueautoptr = Ptr[GQueue]
 object GMainContextPusher_queueautoptr: 
@@ -1022,7 +1099,7 @@ object GMainContextPusher_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContextPusher_slistautoptr = Ptr[GSList]
 object GMainContextPusher_slistautoptr: 
@@ -1032,7 +1109,7 @@ object GMainContextPusher_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContext_autoptr = Ptr[GMainContext]
 object GMainContext_autoptr: 
@@ -1042,7 +1119,7 @@ object GMainContext_autoptr:
     inline def value: Ptr[GMainContext] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContext_listautoptr = Ptr[GList]
 object GMainContext_listautoptr: 
@@ -1052,7 +1129,7 @@ object GMainContext_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContext_queueautoptr = Ptr[GQueue]
 object GMainContext_queueautoptr: 
@@ -1062,7 +1139,7 @@ object GMainContext_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainContext_slistautoptr = Ptr[GSList]
 object GMainContext_slistautoptr: 
@@ -1072,7 +1149,7 @@ object GMainContext_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainLoop_autoptr = Ptr[GMainLoop]
 object GMainLoop_autoptr: 
@@ -1082,7 +1159,7 @@ object GMainLoop_autoptr:
     inline def value: Ptr[GMainLoop] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainLoop_listautoptr = Ptr[GList]
 object GMainLoop_listautoptr: 
@@ -1092,7 +1169,7 @@ object GMainLoop_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainLoop_queueautoptr = Ptr[GQueue]
 object GMainLoop_queueautoptr: 
@@ -1102,7 +1179,7 @@ object GMainLoop_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMainLoop_slistautoptr = Ptr[GSList]
 object GMainLoop_slistautoptr: 
@@ -1112,7 +1189,7 @@ object GMainLoop_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMappedFile_autoptr = Ptr[GMappedFile]
 object GMappedFile_autoptr: 
@@ -1122,7 +1199,7 @@ object GMappedFile_autoptr:
     inline def value: Ptr[GMappedFile] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMappedFile_listautoptr = Ptr[GList]
 object GMappedFile_listautoptr: 
@@ -1132,7 +1209,7 @@ object GMappedFile_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMappedFile_queueautoptr = Ptr[GQueue]
 object GMappedFile_queueautoptr: 
@@ -1142,7 +1219,7 @@ object GMappedFile_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMappedFile_slistautoptr = Ptr[GSList]
 object GMappedFile_slistautoptr: 
@@ -1152,7 +1229,7 @@ object GMappedFile_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMarkupParseContext_autoptr = Ptr[GMarkupParseContext]
 object GMarkupParseContext_autoptr: 
@@ -1162,7 +1239,7 @@ object GMarkupParseContext_autoptr:
     inline def value: Ptr[GMarkupParseContext] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMarkupParseContext_listautoptr = Ptr[GList]
 object GMarkupParseContext_listautoptr: 
@@ -1172,7 +1249,7 @@ object GMarkupParseContext_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMarkupParseContext_queueautoptr = Ptr[GQueue]
 object GMarkupParseContext_queueautoptr: 
@@ -1182,7 +1259,7 @@ object GMarkupParseContext_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMarkupParseContext_slistautoptr = Ptr[GSList]
 object GMarkupParseContext_slistautoptr: 
@@ -1192,7 +1269,7 @@ object GMarkupParseContext_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMatchInfo_autoptr = Ptr[GMatchInfo]
 object GMatchInfo_autoptr: 
@@ -1202,7 +1279,7 @@ object GMatchInfo_autoptr:
     inline def value: Ptr[GMatchInfo] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMatchInfo_listautoptr = Ptr[GList]
 object GMatchInfo_listautoptr: 
@@ -1212,7 +1289,7 @@ object GMatchInfo_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMatchInfo_queueautoptr = Ptr[GQueue]
 object GMatchInfo_queueautoptr: 
@@ -1222,7 +1299,7 @@ object GMatchInfo_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMatchInfo_slistautoptr = Ptr[GSList]
 object GMatchInfo_slistautoptr: 
@@ -1234,7 +1311,7 @@ object GMatchInfo_slistautoptr:
 /**
  * GMutexLocker:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 type GMutexLocker = Unit
 object GMutexLocker: 
@@ -1244,7 +1321,7 @@ object GMutexLocker:
     inline def value: Unit = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMutexLocker_autoptr = Ptr[GMutexLocker]
 object GMutexLocker_autoptr: 
@@ -1254,7 +1331,7 @@ object GMutexLocker_autoptr:
     inline def value: Ptr[GMutexLocker] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMutexLocker_listautoptr = Ptr[GList]
 object GMutexLocker_listautoptr: 
@@ -1264,7 +1341,7 @@ object GMutexLocker_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMutexLocker_queueautoptr = Ptr[GQueue]
 object GMutexLocker_queueautoptr: 
@@ -1274,7 +1351,7 @@ object GMutexLocker_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GMutexLocker_slistautoptr = Ptr[GSList]
 object GMutexLocker_slistautoptr: 
@@ -1284,27 +1361,31 @@ object GMutexLocker_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gnode.h
 */
 opaque type GNodeForeachFunc = CFuncPtr2[Ptr[GNode], gpointer, Unit]
 object GNodeForeachFunc: 
   given _tag: Tag[GNodeForeachFunc] = Tag.materializeCFuncPtr2[Ptr[GNode], gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GNodeForeachFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GNode], gpointer, Unit]): GNodeForeachFunc = o
   extension (v: GNodeForeachFunc)
     inline def value: CFuncPtr2[Ptr[GNode], gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gnode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gnode.h
 */
 opaque type GNodeTraverseFunc = CFuncPtr2[Ptr[GNode], gpointer, gboolean]
 object GNodeTraverseFunc: 
   given _tag: Tag[GNodeTraverseFunc] = Tag.materializeCFuncPtr2[Ptr[GNode], gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GNodeTraverseFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GNode], gpointer, gboolean]): GNodeTraverseFunc = o
   extension (v: GNodeTraverseFunc)
     inline def value: CFuncPtr2[Ptr[GNode], gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GNode_autoptr = Ptr[GNode]
 object GNode_autoptr: 
@@ -1314,7 +1395,7 @@ object GNode_autoptr:
     inline def value: Ptr[GNode] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GNode_listautoptr = Ptr[GList]
 object GNode_listautoptr: 
@@ -1324,7 +1405,7 @@ object GNode_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GNode_queueautoptr = Ptr[GQueue]
 object GNode_queueautoptr: 
@@ -1334,7 +1415,7 @@ object GNode_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GNode_slistautoptr = Ptr[GSList]
 object GNode_slistautoptr: 
@@ -1346,17 +1427,19 @@ object GNode_slistautoptr:
 /**
  * GOptionArgFunc: _name: The name of the option being parsed. This will be either a single dash followed by a single letter (for a short name) or two dashes followed by a long option name. : The value to be parsed.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionArgFunc = CFuncPtr4[Ptr[gchar], Ptr[gchar], gpointer, Ptr[Ptr[GError]], gboolean]
 object GOptionArgFunc: 
   given _tag: Tag[GOptionArgFunc] = Tag.materializeCFuncPtr4[Ptr[gchar], Ptr[gchar], gpointer, Ptr[Ptr[GError]], gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GOptionArgFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[gchar], Ptr[gchar], gpointer, Ptr[Ptr[GError]], gboolean]): GOptionArgFunc = o
   extension (v: GOptionArgFunc)
     inline def value: CFuncPtr4[Ptr[gchar], Ptr[gchar], gpointer, Ptr[Ptr[GError]], gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionContext_autoptr = Ptr[GOptionContext]
 object GOptionContext_autoptr: 
@@ -1366,7 +1449,7 @@ object GOptionContext_autoptr:
     inline def value: Ptr[GOptionContext] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionContext_listautoptr = Ptr[GList]
 object GOptionContext_listautoptr: 
@@ -1376,7 +1459,7 @@ object GOptionContext_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionContext_queueautoptr = Ptr[GQueue]
 object GOptionContext_queueautoptr: 
@@ -1386,7 +1469,7 @@ object GOptionContext_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionContext_slistautoptr = Ptr[GSList]
 object GOptionContext_slistautoptr: 
@@ -1398,17 +1481,19 @@ object GOptionContext_slistautoptr:
 /**
  * GOptionErrorFunc: : The active #GOptionContext : The group to which the function belongs
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionErrorFunc = CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], Unit]
 object GOptionErrorFunc: 
   given _tag: Tag[GOptionErrorFunc] = Tag.materializeCFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GOptionErrorFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], Unit]): GOptionErrorFunc = o
   extension (v: GOptionErrorFunc)
     inline def value: CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionGroup_autoptr = Ptr[GOptionGroup]
 object GOptionGroup_autoptr: 
@@ -1418,7 +1503,7 @@ object GOptionGroup_autoptr:
     inline def value: Ptr[GOptionGroup] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionGroup_listautoptr = Ptr[GList]
 object GOptionGroup_listautoptr: 
@@ -1428,7 +1513,7 @@ object GOptionGroup_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionGroup_queueautoptr = Ptr[GQueue]
 object GOptionGroup_queueautoptr: 
@@ -1438,7 +1523,7 @@ object GOptionGroup_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GOptionGroup_slistautoptr = Ptr[GSList]
 object GOptionGroup_slistautoptr: 
@@ -1450,17 +1535,59 @@ object GOptionGroup_slistautoptr:
 /**
  * GOptionParseFunc: : The active #GOptionContext : The group to which the function belongs
 
- * [bindgen] header: /usr/include/glib-2.0/glib/goption.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/goption.h
 */
 opaque type GOptionParseFunc = CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], gboolean]
 object GOptionParseFunc: 
   given _tag: Tag[GOptionParseFunc] = Tag.materializeCFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GOptionParseFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], gboolean]): GOptionParseFunc = o
   extension (v: GOptionParseFunc)
     inline def value: CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
+*/
+opaque type GPathBuf_autoptr = Ptr[GPathBuf]
+object GPathBuf_autoptr: 
+  given _tag: Tag[GPathBuf_autoptr] = Tag.Ptr[GPathBuf](GPathBuf._tag)
+  inline def apply(inline o: Ptr[GPathBuf]): GPathBuf_autoptr = o
+  extension (v: GPathBuf_autoptr)
+    inline def value: Ptr[GPathBuf] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
+*/
+opaque type GPathBuf_listautoptr = Ptr[GList]
+object GPathBuf_listautoptr: 
+  given _tag: Tag[GPathBuf_listautoptr] = Tag.Ptr[GList](GList._tag)
+  inline def apply(inline o: Ptr[GList]): GPathBuf_listautoptr = o
+  extension (v: GPathBuf_listautoptr)
+    inline def value: Ptr[GList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
+*/
+opaque type GPathBuf_queueautoptr = Ptr[GQueue]
+object GPathBuf_queueautoptr: 
+  given _tag: Tag[GPathBuf_queueautoptr] = Tag.Ptr[GQueue](GQueue._tag)
+  inline def apply(inline o: Ptr[GQueue]): GPathBuf_queueautoptr = o
+  extension (v: GPathBuf_queueautoptr)
+    inline def value: Ptr[GQueue] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
+*/
+opaque type GPathBuf_slistautoptr = Ptr[GSList]
+object GPathBuf_slistautoptr: 
+  given _tag: Tag[GPathBuf_slistautoptr] = Tag.Ptr[GSList](GSList._tag)
+  inline def apply(inline o: Ptr[GSList]): GPathBuf_slistautoptr = o
+  extension (v: GPathBuf_slistautoptr)
+    inline def value: Ptr[GSList] = v
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPatternSpec_autoptr = Ptr[GPatternSpec]
 object GPatternSpec_autoptr: 
@@ -1470,7 +1597,7 @@ object GPatternSpec_autoptr:
     inline def value: Ptr[GPatternSpec] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPatternSpec_listautoptr = Ptr[GList]
 object GPatternSpec_listautoptr: 
@@ -1480,7 +1607,7 @@ object GPatternSpec_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPatternSpec_queueautoptr = Ptr[GQueue]
 object GPatternSpec_queueautoptr: 
@@ -1490,7 +1617,7 @@ object GPatternSpec_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPatternSpec_slistautoptr = Ptr[GSList]
 object GPatternSpec_slistautoptr: 
@@ -1500,7 +1627,7 @@ object GPatternSpec_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type GPid = CInt
 object GPid: 
@@ -1512,29 +1639,33 @@ object GPid:
 /**
  * GPollFunc: : an array of #GPollFD elements : the number of elements in _: the maximum time to wait for an event of the file descriptors. A negative value indicates an infinite timeout.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gpoll.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gpoll.h
 */
 opaque type GPollFunc = CFuncPtr3[Ptr[GPollFD], guint, gint, gint]
 object GPollFunc: 
   given _tag: Tag[GPollFunc] = Tag.materializeCFuncPtr3[Ptr[GPollFD], guint, gint, gint]
+  inline def fromPtr(ptr: Ptr[Byte]): GPollFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GPollFD], guint, gint, gint]): GPollFunc = o
   extension (v: GPollFunc)
     inline def value: CFuncPtr3[Ptr[GPollFD], guint, gint, gint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GPrintFunc: : the message to output
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmessages.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmessages.h
 */
 opaque type GPrintFunc = CFuncPtr1[Ptr[gchar], Unit]
 object GPrintFunc: 
   given _tag: Tag[GPrintFunc] = Tag.materializeCFuncPtr1[Ptr[gchar], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GPrintFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[Ptr[gchar], Unit]): GPrintFunc = o
   extension (v: GPrintFunc)
     inline def value: CFuncPtr1[Ptr[gchar], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPtrArray_autoptr = Ptr[GPtrArray]
 object GPtrArray_autoptr: 
@@ -1544,7 +1675,7 @@ object GPtrArray_autoptr:
     inline def value: Ptr[GPtrArray] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPtrArray_listautoptr = Ptr[GList]
 object GPtrArray_listautoptr: 
@@ -1554,7 +1685,7 @@ object GPtrArray_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPtrArray_queueautoptr = Ptr[GQueue]
 object GPtrArray_queueautoptr: 
@@ -1564,7 +1695,7 @@ object GPtrArray_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GPtrArray_slistautoptr = Ptr[GSList]
 object GPtrArray_slistautoptr: 
@@ -1574,7 +1705,7 @@ object GPtrArray_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gquark.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gquark.h
 */
 type GQuark = guint32
 object GQuark: 
@@ -1584,7 +1715,7 @@ object GQuark:
     inline def value: guint32 = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GQueue_autoptr = Ptr[GQueue]
 object GQueue_autoptr: 
@@ -1594,7 +1725,7 @@ object GQueue_autoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GQueue_listautoptr = Ptr[GList]
 object GQueue_listautoptr: 
@@ -1604,7 +1735,7 @@ object GQueue_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GQueue_queueautoptr = Ptr[GQueue]
 object GQueue_queueautoptr: 
@@ -1614,7 +1745,7 @@ object GQueue_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GQueue_slistautoptr = Ptr[GSList]
 object GQueue_slistautoptr: 
@@ -1626,7 +1757,7 @@ object GQueue_slistautoptr:
 /**
  * GRWLockReaderLocker:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 type GRWLockReaderLocker = Unit
 object GRWLockReaderLocker: 
@@ -1636,7 +1767,7 @@ object GRWLockReaderLocker:
     inline def value: Unit = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockReaderLocker_autoptr = Ptr[GRWLockReaderLocker]
 object GRWLockReaderLocker_autoptr: 
@@ -1646,7 +1777,7 @@ object GRWLockReaderLocker_autoptr:
     inline def value: Ptr[GRWLockReaderLocker] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockReaderLocker_listautoptr = Ptr[GList]
 object GRWLockReaderLocker_listautoptr: 
@@ -1656,7 +1787,7 @@ object GRWLockReaderLocker_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockReaderLocker_queueautoptr = Ptr[GQueue]
 object GRWLockReaderLocker_queueautoptr: 
@@ -1666,7 +1797,7 @@ object GRWLockReaderLocker_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockReaderLocker_slistautoptr = Ptr[GSList]
 object GRWLockReaderLocker_slistautoptr: 
@@ -1678,7 +1809,7 @@ object GRWLockReaderLocker_slistautoptr:
 /**
  * GRWLockWriterLocker:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 type GRWLockWriterLocker = Unit
 object GRWLockWriterLocker: 
@@ -1688,7 +1819,7 @@ object GRWLockWriterLocker:
     inline def value: Unit = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockWriterLocker_autoptr = Ptr[GRWLockWriterLocker]
 object GRWLockWriterLocker_autoptr: 
@@ -1698,7 +1829,7 @@ object GRWLockWriterLocker_autoptr:
     inline def value: Ptr[GRWLockWriterLocker] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockWriterLocker_listautoptr = Ptr[GList]
 object GRWLockWriterLocker_listautoptr: 
@@ -1708,7 +1839,7 @@ object GRWLockWriterLocker_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockWriterLocker_queueautoptr = Ptr[GQueue]
 object GRWLockWriterLocker_queueautoptr: 
@@ -1718,7 +1849,7 @@ object GRWLockWriterLocker_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRWLockWriterLocker_slistautoptr = Ptr[GSList]
 object GRWLockWriterLocker_slistautoptr: 
@@ -1728,7 +1859,7 @@ object GRWLockWriterLocker_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRand_autoptr = Ptr[GRand]
 object GRand_autoptr: 
@@ -1738,7 +1869,7 @@ object GRand_autoptr:
     inline def value: Ptr[GRand] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRand_listautoptr = Ptr[GList]
 object GRand_listautoptr: 
@@ -1748,7 +1879,7 @@ object GRand_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRand_queueautoptr = Ptr[GQueue]
 object GRand_queueautoptr: 
@@ -1758,7 +1889,7 @@ object GRand_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRand_slistautoptr = Ptr[GSList]
 object GRand_slistautoptr: 
@@ -1770,7 +1901,7 @@ object GRand_slistautoptr:
 /**
  * GRecMutexLocker:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 type GRecMutexLocker = Unit
 object GRecMutexLocker: 
@@ -1780,7 +1911,7 @@ object GRecMutexLocker:
     inline def value: Unit = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRecMutexLocker_autoptr = Ptr[GRecMutexLocker]
 object GRecMutexLocker_autoptr: 
@@ -1790,7 +1921,7 @@ object GRecMutexLocker_autoptr:
     inline def value: Ptr[GRecMutexLocker] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRecMutexLocker_listautoptr = Ptr[GList]
 object GRecMutexLocker_listautoptr: 
@@ -1800,7 +1931,7 @@ object GRecMutexLocker_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRecMutexLocker_queueautoptr = Ptr[GQueue]
 object GRecMutexLocker_queueautoptr: 
@@ -1810,7 +1941,7 @@ object GRecMutexLocker_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRecMutexLocker_slistautoptr = Ptr[GSList]
 object GRecMutexLocker_slistautoptr: 
@@ -1822,7 +1953,7 @@ object GRecMutexLocker_slistautoptr:
 /**
  * GRefString:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/grefstring.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/grefstring.h
 */
 opaque type GRefString = CChar
 object GRefString: 
@@ -1832,7 +1963,7 @@ object GRefString:
     inline def value: CChar = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRefString_autoptr = Ptr[GRefString]
 object GRefString_autoptr: 
@@ -1842,7 +1973,7 @@ object GRefString_autoptr:
     inline def value: Ptr[GRefString] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRefString_listautoptr = Ptr[GList]
 object GRefString_listautoptr: 
@@ -1852,7 +1983,7 @@ object GRefString_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRefString_queueautoptr = Ptr[GQueue]
 object GRefString_queueautoptr: 
@@ -1862,7 +1993,7 @@ object GRefString_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRefString_slistautoptr = Ptr[GSList]
 object GRefString_slistautoptr: 
@@ -1874,17 +2005,19 @@ object GRefString_slistautoptr:
 /**
  * GRegexEvalCallback: _info: the #GMatchInfo generated by the match. Use g_match_info_get_regex() and g_match_info_get_string() if you need the #GRegex or the matched string.
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gregex.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gregex.h
 */
 opaque type GRegexEvalCallback = CFuncPtr3[Ptr[GMatchInfo], Ptr[GString], gpointer, gboolean]
 object GRegexEvalCallback: 
   given _tag: Tag[GRegexEvalCallback] = Tag.materializeCFuncPtr3[Ptr[GMatchInfo], Ptr[GString], gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GRegexEvalCallback = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GMatchInfo], Ptr[GString], gpointer, gboolean]): GRegexEvalCallback = o
   extension (v: GRegexEvalCallback)
     inline def value: CFuncPtr3[Ptr[GMatchInfo], Ptr[GString], gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRegex_autoptr = Ptr[GRegex]
 object GRegex_autoptr: 
@@ -1894,7 +2027,7 @@ object GRegex_autoptr:
     inline def value: Ptr[GRegex] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRegex_listautoptr = Ptr[GList]
 object GRegex_listautoptr: 
@@ -1904,7 +2037,7 @@ object GRegex_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRegex_queueautoptr = Ptr[GQueue]
 object GRegex_queueautoptr: 
@@ -1914,7 +2047,7 @@ object GRegex_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GRegex_slistautoptr = Ptr[GSList]
 object GRegex_slistautoptr: 
@@ -1924,7 +2057,7 @@ object GRegex_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSList_autoptr = Ptr[GSList]
 object GSList_autoptr: 
@@ -1934,7 +2067,7 @@ object GSList_autoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSList_listautoptr = Ptr[GList]
 object GSList_listautoptr: 
@@ -1944,7 +2077,7 @@ object GSList_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSList_queueautoptr = Ptr[GQueue]
 object GSList_queueautoptr: 
@@ -1954,7 +2087,7 @@ object GSList_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSList_slistautoptr = Ptr[GSList]
 object GSList_slistautoptr: 
@@ -1964,17 +2097,19 @@ object GSList_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type GScannerMsgFunc = CFuncPtr3[Ptr[GScanner], Ptr[gchar], gboolean, Unit]
 object GScannerMsgFunc: 
   given _tag: Tag[GScannerMsgFunc] = Tag.materializeCFuncPtr3[Ptr[GScanner], Ptr[gchar], gboolean, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GScannerMsgFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GScanner], Ptr[gchar], gboolean, Unit]): GScannerMsgFunc = o
   extension (v: GScannerMsgFunc)
     inline def value: CFuncPtr3[Ptr[GScanner], Ptr[gchar], gboolean, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GScanner_autoptr = Ptr[GScanner]
 object GScanner_autoptr: 
@@ -1984,7 +2119,7 @@ object GScanner_autoptr:
     inline def value: Ptr[GScanner] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GScanner_listautoptr = Ptr[GList]
 object GScanner_listautoptr: 
@@ -1994,7 +2129,7 @@ object GScanner_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GScanner_queueautoptr = Ptr[GQueue]
 object GScanner_queueautoptr: 
@@ -2004,7 +2139,7 @@ object GScanner_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GScanner_slistautoptr = Ptr[GSList]
 object GScanner_slistautoptr: 
@@ -2014,17 +2149,19 @@ object GScanner_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gsequence.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gsequence.h
 */
 opaque type GSequenceIterCompareFunc = CFuncPtr3[Ptr[GSequenceIter], Ptr[GSequenceIter], gpointer, gint]
 object GSequenceIterCompareFunc: 
   given _tag: Tag[GSequenceIterCompareFunc] = Tag.materializeCFuncPtr3[Ptr[GSequenceIter], Ptr[GSequenceIter], gpointer, gint]
+  inline def fromPtr(ptr: Ptr[Byte]): GSequenceIterCompareFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[GSequenceIter], Ptr[GSequenceIter], gpointer, gint]): GSequenceIterCompareFunc = o
   extension (v: GSequenceIterCompareFunc)
     inline def value: CFuncPtr3[Ptr[GSequenceIter], Ptr[GSequenceIter], gpointer, gint] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSequence_autoptr = Ptr[GSequence]
 object GSequence_autoptr: 
@@ -2034,7 +2171,7 @@ object GSequence_autoptr:
     inline def value: Ptr[GSequence] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSequence_listautoptr = Ptr[GList]
 object GSequence_listautoptr: 
@@ -2044,7 +2181,7 @@ object GSequence_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSequence_queueautoptr = Ptr[GQueue]
 object GSequence_queueautoptr: 
@@ -2054,7 +2191,7 @@ object GSequence_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSequence_slistautoptr = Ptr[GSList]
 object GSequence_slistautoptr: 
@@ -2066,41 +2203,61 @@ object GSequence_slistautoptr:
 /**
  * GSourceDisposeFunc: : #GSource that is currently being disposed
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSourceDisposeFunc = CFuncPtr1[Ptr[GSource], Unit]
 object GSourceDisposeFunc: 
   given _tag: Tag[GSourceDisposeFunc] = Tag.materializeCFuncPtr1[Ptr[GSource], Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GSourceDisposeFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[Ptr[GSource], Unit]): GSourceDisposeFunc = o
   extension (v: GSourceDisposeFunc)
     inline def value: CFuncPtr1[Ptr[GSource], Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GSourceDummyMarshal:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSourceDummyMarshal = CFuncPtr0[Unit]
 object GSourceDummyMarshal: 
   given _tag: Tag[GSourceDummyMarshal] = Tag.materializeCFuncPtr0[Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GSourceDummyMarshal = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr0[Unit]): GSourceDummyMarshal = o
   extension (v: GSourceDummyMarshal)
     inline def value: CFuncPtr0[Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GSourceFunc: _data: data passed to the function, set when the source was created with one of the above functions
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gmain.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
 */
 opaque type GSourceFunc = CFuncPtr1[gpointer, gboolean]
 object GSourceFunc: 
   given _tag: Tag[GSourceFunc] = Tag.materializeCFuncPtr1[gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GSourceFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, gboolean]): GSourceFunc = o
   extension (v: GSourceFunc)
     inline def value: CFuncPtr1[gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * GSourceOnceFunc: _data: data passed to the function, set when the source was created
+
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gmain.h
+*/
+opaque type GSourceOnceFunc = CFuncPtr1[gpointer, Unit]
+object GSourceOnceFunc: 
+  given _tag: Tag[GSourceOnceFunc] = Tag.materializeCFuncPtr1[gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GSourceOnceFunc = CFuncPtr.fromPtr(ptr)
+  inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GSourceOnceFunc = o
+  extension (v: GSourceOnceFunc)
+    inline def value: CFuncPtr1[gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSource_autoptr = Ptr[GSource]
 object GSource_autoptr: 
@@ -2110,7 +2267,7 @@ object GSource_autoptr:
     inline def value: Ptr[GSource] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSource_listautoptr = Ptr[GList]
 object GSource_listautoptr: 
@@ -2120,7 +2277,7 @@ object GSource_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSource_queueautoptr = Ptr[GQueue]
 object GSource_queueautoptr: 
@@ -2130,7 +2287,7 @@ object GSource_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GSource_slistautoptr = Ptr[GSList]
 object GSource_slistautoptr: 
@@ -2140,19 +2297,21 @@ object GSource_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * GSpawnChildSetupFunc: _data: (closure): user data to pass to the function.
+ * GSpawnChildSetupFunc:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gspawn.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gspawn.h
 */
 opaque type GSpawnChildSetupFunc = CFuncPtr1[gpointer, Unit]
 object GSpawnChildSetupFunc: 
   given _tag: Tag[GSpawnChildSetupFunc] = Tag.materializeCFuncPtr1[gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GSpawnChildSetupFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GSpawnChildSetupFunc = o
   extension (v: GSpawnChildSetupFunc)
     inline def value: CFuncPtr1[gpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStringChunk_autoptr = Ptr[GStringChunk]
 object GStringChunk_autoptr: 
@@ -2162,7 +2321,7 @@ object GStringChunk_autoptr:
     inline def value: Ptr[GStringChunk] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStringChunk_listautoptr = Ptr[GList]
 object GStringChunk_listautoptr: 
@@ -2172,7 +2331,7 @@ object GStringChunk_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStringChunk_queueautoptr = Ptr[GQueue]
 object GStringChunk_queueautoptr: 
@@ -2182,7 +2341,7 @@ object GStringChunk_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStringChunk_slistautoptr = Ptr[GSList]
 object GStringChunk_slistautoptr: 
@@ -2192,7 +2351,7 @@ object GStringChunk_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GString_autoptr = Ptr[GString]
 object GString_autoptr: 
@@ -2202,7 +2361,7 @@ object GString_autoptr:
     inline def value: Ptr[GString] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GString_listautoptr = Ptr[GList]
 object GString_listautoptr: 
@@ -2212,7 +2371,7 @@ object GString_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GString_queueautoptr = Ptr[GQueue]
 object GString_queueautoptr: 
@@ -2222,7 +2381,7 @@ object GString_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GString_slistautoptr = Ptr[GSList]
 object GString_slistautoptr: 
@@ -2232,7 +2391,7 @@ object GString_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gstrfuncs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gstrfuncs.h
 */
 opaque type GStrv = Ptr[Ptr[gchar]]
 object GStrv: 
@@ -2242,7 +2401,7 @@ object GStrv:
     inline def value: Ptr[Ptr[gchar]] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStrvBuilder_autoptr = Ptr[GStrvBuilder]
 object GStrvBuilder_autoptr: 
@@ -2252,7 +2411,7 @@ object GStrvBuilder_autoptr:
     inline def value: Ptr[GStrvBuilder] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStrvBuilder_listautoptr = Ptr[GList]
 object GStrvBuilder_listautoptr: 
@@ -2262,7 +2421,7 @@ object GStrvBuilder_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStrvBuilder_queueautoptr = Ptr[GQueue]
 object GStrvBuilder_queueautoptr: 
@@ -2272,7 +2431,7 @@ object GStrvBuilder_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GStrvBuilder_slistautoptr = Ptr[GSList]
 object GStrvBuilder_slistautoptr: 
@@ -2282,59 +2441,69 @@ object GStrvBuilder_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestDataFunc = CFuncPtr1[gconstpointer, Unit]
 object GTestDataFunc: 
   given _tag: Tag[GTestDataFunc] = Tag.materializeCFuncPtr1[gconstpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GTestDataFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gconstpointer, Unit]): GTestDataFunc = o
   extension (v: GTestDataFunc)
     inline def value: CFuncPtr1[gconstpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestFixtureFunc = CFuncPtr2[gpointer, gconstpointer, Unit]
 object GTestFixtureFunc: 
   given _tag: Tag[GTestFixtureFunc] = Tag.materializeCFuncPtr2[gpointer, gconstpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GTestFixtureFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[gpointer, gconstpointer, Unit]): GTestFixtureFunc = o
   extension (v: GTestFixtureFunc)
     inline def value: CFuncPtr2[gpointer, gconstpointer, Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestFunc = CFuncPtr0[Unit]
 object GTestFunc: 
   given _tag: Tag[GTestFunc] = Tag.materializeCFuncPtr0[Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GTestFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr0[Unit]): GTestFunc = o
   extension (v: GTestFunc)
     inline def value: CFuncPtr0[Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GTestLogFatalFunc: _domain: the log domain of the message _level: the log level of the message (including the fatal and recursion flags) : the message to process _data: user data, set in g_test_log_set_fatal_handler()
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtestutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtestutils.h
 */
 opaque type GTestLogFatalFunc = CFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, gboolean]
 object GTestLogFatalFunc: 
   given _tag: Tag[GTestLogFatalFunc] = Tag.materializeCFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GTestLogFatalFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, gboolean]): GTestLogFatalFunc = o
   extension (v: GTestLogFatalFunc)
     inline def value: CFuncPtr4[Ptr[gchar], GLogLevelFlags, Ptr[gchar], gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GThreadFunc = CFuncPtr1[gpointer, gpointer]
 object GThreadFunc: 
   given _tag: Tag[GThreadFunc] = Tag.materializeCFuncPtr1[gpointer, gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): GThreadFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[gpointer, gpointer]): GThreadFunc = o
   extension (v: GThreadFunc)
     inline def value: CFuncPtr1[gpointer, gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GThread_autoptr = Ptr[GThread]
 object GThread_autoptr: 
@@ -2344,7 +2513,7 @@ object GThread_autoptr:
     inline def value: Ptr[GThread] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GThread_listautoptr = Ptr[GList]
 object GThread_listautoptr: 
@@ -2354,7 +2523,7 @@ object GThread_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GThread_queueautoptr = Ptr[GQueue]
 object GThread_queueautoptr: 
@@ -2364,7 +2533,7 @@ object GThread_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GThread_slistautoptr = Ptr[GSList]
 object GThread_slistautoptr: 
@@ -2374,7 +2543,7 @@ object GThread_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gdate.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdate.h
 */
 type GTime = gint32
 object GTime: 
@@ -2386,7 +2555,7 @@ object GTime:
 /**
  * GTimeSpan:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gdatetime.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gdatetime.h
 */
 type GTimeSpan = gint64
 object GTimeSpan: 
@@ -2396,7 +2565,7 @@ object GTimeSpan:
     inline def value: gint64 = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimeZone_autoptr = Ptr[GTimeZone]
 object GTimeZone_autoptr: 
@@ -2406,7 +2575,7 @@ object GTimeZone_autoptr:
     inline def value: Ptr[GTimeZone] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimeZone_listautoptr = Ptr[GList]
 object GTimeZone_listautoptr: 
@@ -2416,7 +2585,7 @@ object GTimeZone_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimeZone_queueautoptr = Ptr[GQueue]
 object GTimeZone_queueautoptr: 
@@ -2426,7 +2595,7 @@ object GTimeZone_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimeZone_slistautoptr = Ptr[GSList]
 object GTimeZone_slistautoptr: 
@@ -2436,7 +2605,7 @@ object GTimeZone_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimer_autoptr = Ptr[GTimer]
 object GTimer_autoptr: 
@@ -2446,7 +2615,7 @@ object GTimer_autoptr:
     inline def value: Ptr[GTimer] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimer_listautoptr = Ptr[GList]
 object GTimer_listautoptr: 
@@ -2456,7 +2625,7 @@ object GTimer_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimer_queueautoptr = Ptr[GQueue]
 object GTimer_queueautoptr: 
@@ -2466,7 +2635,7 @@ object GTimer_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTimer_slistautoptr = Ptr[GSList]
 object GTimer_slistautoptr: 
@@ -2478,39 +2647,45 @@ object GTimer_slistautoptr:
 /**
  * GTranslateFunc: : the untranslated string
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GTranslateFunc = CFuncPtr2[Ptr[gchar], gpointer, Ptr[gchar]]
 object GTranslateFunc: 
   given _tag: Tag[GTranslateFunc] = Tag.materializeCFuncPtr2[Ptr[gchar], gpointer, Ptr[gchar]]
+  inline def fromPtr(ptr: Ptr[Byte]): GTranslateFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[gchar], gpointer, Ptr[gchar]]): GTranslateFunc = o
   extension (v: GTranslateFunc)
     inline def value: CFuncPtr2[Ptr[gchar], gpointer, Ptr[gchar]] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtree.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtree.h
 */
 opaque type GTraverseFunc = CFuncPtr3[gpointer, gpointer, gpointer, gboolean]
 object GTraverseFunc: 
   given _tag: Tag[GTraverseFunc] = Tag.materializeCFuncPtr3[gpointer, gpointer, gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GTraverseFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[gpointer, gpointer, gpointer, gboolean]): GTraverseFunc = o
   extension (v: GTraverseFunc)
     inline def value: CFuncPtr3[gpointer, gpointer, gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * GTraverseNodeFunc: : a #GTreeNode
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gtree.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtree.h
 */
 opaque type GTraverseNodeFunc = CFuncPtr2[Ptr[GTreeNode], gpointer, gboolean]
 object GTraverseNodeFunc: 
   given _tag: Tag[GTraverseNodeFunc] = Tag.materializeCFuncPtr2[Ptr[GTreeNode], gpointer, gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): GTraverseNodeFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[GTreeNode], gpointer, gboolean]): GTraverseNodeFunc = o
   extension (v: GTraverseNodeFunc)
     inline def value: CFuncPtr2[Ptr[GTreeNode], gpointer, gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTree_autoptr = Ptr[GTree]
 object GTree_autoptr: 
@@ -2520,7 +2695,7 @@ object GTree_autoptr:
     inline def value: Ptr[GTree] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTree_listautoptr = Ptr[GList]
 object GTree_listautoptr: 
@@ -2530,7 +2705,7 @@ object GTree_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTree_queueautoptr = Ptr[GQueue]
 object GTree_queueautoptr: 
@@ -2540,7 +2715,7 @@ object GTree_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GTree_slistautoptr = Ptr[GSList]
 object GTree_slistautoptr: 
@@ -2550,7 +2725,7 @@ object GTree_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GUri_autoptr = Ptr[GUri]
 object GUri_autoptr: 
@@ -2560,7 +2735,7 @@ object GUri_autoptr:
     inline def value: Ptr[GUri] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GUri_listautoptr = Ptr[GList]
 object GUri_listautoptr: 
@@ -2570,7 +2745,7 @@ object GUri_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GUri_queueautoptr = Ptr[GQueue]
 object GUri_queueautoptr: 
@@ -2580,7 +2755,7 @@ object GUri_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GUri_slistautoptr = Ptr[GSList]
 object GUri_slistautoptr: 
@@ -2590,7 +2765,7 @@ object GUri_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantBuilder_autoptr = Ptr[GVariantBuilder]
 object GVariantBuilder_autoptr: 
@@ -2600,7 +2775,7 @@ object GVariantBuilder_autoptr:
     inline def value: Ptr[GVariantBuilder] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantBuilder_listautoptr = Ptr[GList]
 object GVariantBuilder_listautoptr: 
@@ -2610,7 +2785,7 @@ object GVariantBuilder_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantBuilder_queueautoptr = Ptr[GQueue]
 object GVariantBuilder_queueautoptr: 
@@ -2620,7 +2795,7 @@ object GVariantBuilder_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantBuilder_slistautoptr = Ptr[GSList]
 object GVariantBuilder_slistautoptr: 
@@ -2630,7 +2805,7 @@ object GVariantBuilder_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantDict_autoptr = Ptr[GVariantDict]
 object GVariantDict_autoptr: 
@@ -2640,7 +2815,7 @@ object GVariantDict_autoptr:
     inline def value: Ptr[GVariantDict] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantDict_listautoptr = Ptr[GList]
 object GVariantDict_listautoptr: 
@@ -2650,7 +2825,7 @@ object GVariantDict_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantDict_queueautoptr = Ptr[GQueue]
 object GVariantDict_queueautoptr: 
@@ -2660,7 +2835,7 @@ object GVariantDict_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantDict_slistautoptr = Ptr[GSList]
 object GVariantDict_slistautoptr: 
@@ -2670,7 +2845,7 @@ object GVariantDict_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantIter_autoptr = Ptr[GVariantIter]
 object GVariantIter_autoptr: 
@@ -2680,7 +2855,7 @@ object GVariantIter_autoptr:
     inline def value: Ptr[GVariantIter] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantIter_listautoptr = Ptr[GList]
 object GVariantIter_listautoptr: 
@@ -2690,7 +2865,7 @@ object GVariantIter_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantIter_queueautoptr = Ptr[GQueue]
 object GVariantIter_queueautoptr: 
@@ -2700,7 +2875,7 @@ object GVariantIter_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantIter_slistautoptr = Ptr[GSList]
 object GVariantIter_slistautoptr: 
@@ -2710,7 +2885,7 @@ object GVariantIter_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantType_autoptr = Ptr[GVariantType]
 object GVariantType_autoptr: 
@@ -2720,7 +2895,7 @@ object GVariantType_autoptr:
     inline def value: Ptr[GVariantType] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantType_listautoptr = Ptr[GList]
 object GVariantType_listautoptr: 
@@ -2730,7 +2905,7 @@ object GVariantType_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantType_queueautoptr = Ptr[GQueue]
 object GVariantType_queueautoptr: 
@@ -2740,7 +2915,7 @@ object GVariantType_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariantType_slistautoptr = Ptr[GSList]
 object GVariantType_slistautoptr: 
@@ -2750,7 +2925,7 @@ object GVariantType_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariant_autoptr = Ptr[GVariant]
 object GVariant_autoptr: 
@@ -2760,7 +2935,7 @@ object GVariant_autoptr:
     inline def value: Ptr[GVariant] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariant_listautoptr = Ptr[GList]
 object GVariant_listautoptr: 
@@ -2770,7 +2945,7 @@ object GVariant_listautoptr:
     inline def value: Ptr[GList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariant_queueautoptr = Ptr[GQueue]
 object GVariant_queueautoptr: 
@@ -2780,7 +2955,7 @@ object GVariant_queueautoptr:
     inline def value: Ptr[GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/glib-autocleanups.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/glib-autocleanups.h
 */
 opaque type GVariant_slistautoptr = Ptr[GSList]
 object GVariant_slistautoptr: 
@@ -2792,17 +2967,19 @@ object GVariant_slistautoptr:
 /**
  * GVoidFunc:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gutils.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gutils.h
 */
 opaque type GVoidFunc = CFuncPtr0[Unit]
 object GVoidFunc: 
   given _tag: Tag[GVoidFunc] = Tag.materializeCFuncPtr0[Unit]
+  inline def fromPtr(ptr: Ptr[Byte]): GVoidFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr0[Unit]): GVoidFunc = o
   extension (v: GVoidFunc)
     inline def value: CFuncPtr0[Unit] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 type gatomicrefcount = gint
 object gatomicrefcount: 
@@ -2812,7 +2989,7 @@ object gatomicrefcount:
     inline def value: gint = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 type gboolean = gint
 object gboolean: 
@@ -2822,7 +2999,7 @@ object gboolean:
     inline def value: gint = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gchar = CChar
 object gchar: 
@@ -2832,7 +3009,7 @@ object gchar:
     inline def value: CChar = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gconstpointer = Ptr[Byte]
 object gconstpointer: 
@@ -2842,7 +3019,7 @@ object gconstpointer:
     inline def value: Ptr[Byte] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gdouble = Double
 object gdouble: 
@@ -2852,7 +3029,7 @@ object gdouble:
     inline def value: Double = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gfloat = Float
 object gfloat: 
@@ -2862,7 +3039,7 @@ object gfloat:
     inline def value: Float = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gint = CInt
 object gint: 
@@ -2872,7 +3049,7 @@ object gint:
     inline def value: CInt = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type gint16 = CShort
 object gint16: 
@@ -2882,7 +3059,7 @@ object gint16:
     inline def value: CShort = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type gint32 = CInt
 object gint32: 
@@ -2892,17 +3069,17 @@ object gint32:
     inline def value: CInt = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
-opaque type gint64 = CLongInt
+opaque type gint64 = CLongLong
 object gint64: 
   given _tag: Tag[gint64] = Tag.Long
-  inline def apply(inline o: CLongInt): gint64 = o
+  inline def apply(inline o: CLongLong): gint64 = o
   extension (v: gint64)
-    inline def value: CLongInt = v
+    inline def value: CLongLong = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type gint8 = CChar
 object gint8: 
@@ -2912,7 +3089,7 @@ object gint8:
     inline def value: CChar = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type gintptr = CLongInt
 object gintptr: 
@@ -2922,7 +3099,7 @@ object gintptr:
     inline def value: CLongInt = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type glong = CLongInt
 object glong: 
@@ -2932,7 +3109,7 @@ object glong:
     inline def value: CLongInt = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 type goffset = gint64
 object goffset: 
@@ -2942,7 +3119,7 @@ object goffset:
     inline def value: gint64 = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gpointer = Ptr[Byte]
 object gpointer: 
@@ -2952,7 +3129,7 @@ object gpointer:
     inline def value: Ptr[Byte] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 type grefcount = gint
 object grefcount: 
@@ -2962,7 +3139,7 @@ object grefcount:
     inline def value: gint = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gshort = CShort
 object gshort: 
@@ -2972,7 +3149,7 @@ object gshort:
     inline def value: CShort = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type gsize = CUnsignedLongInt
 object gsize: 
@@ -2982,7 +3159,7 @@ object gsize:
     inline def value: CUnsignedLongInt = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type gssize = CLongInt
 object gssize: 
@@ -2992,7 +3169,7 @@ object gssize:
     inline def value: CLongInt = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type guchar = CUnsignedChar
 object guchar: 
@@ -3002,7 +3179,7 @@ object guchar:
     inline def value: CUnsignedChar = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type guint = CUnsignedInt
 object guint: 
@@ -3012,7 +3189,7 @@ object guint:
     inline def value: CUnsignedInt = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type guint16 = CUnsignedShort
 object guint16: 
@@ -3022,7 +3199,7 @@ object guint16:
     inline def value: CUnsignedShort = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type guint32 = CUnsignedInt
 object guint32: 
@@ -3032,17 +3209,17 @@ object guint32:
     inline def value: CUnsignedInt = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
-opaque type guint64 = CUnsignedLongInt
+opaque type guint64 = CUnsignedLongLong
 object guint64: 
   given _tag: Tag[guint64] = Tag.ULong
-  inline def apply(inline o: CUnsignedLongInt): guint64 = o
+  inline def apply(inline o: CUnsignedLongLong): guint64 = o
   extension (v: guint64)
-    inline def value: CUnsignedLongInt = v
+    inline def value: CUnsignedLongLong = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type guint8 = CUnsignedChar
 object guint8: 
@@ -3052,7 +3229,7 @@ object guint8:
     inline def value: CUnsignedChar = v
 
 /**
- * [bindgen] header: /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/lib/glib-2.0/include/glibconfig.h
 */
 opaque type guintptr = CUnsignedLongInt
 object guintptr: 
@@ -3062,7 +3239,7 @@ object guintptr:
     inline def value: CUnsignedLongInt = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gulong = CUnsignedLongInt
 object gulong: 
@@ -3074,7 +3251,7 @@ object gulong:
 /**
  * gunichar:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gunicode.h
 */
 type gunichar = guint32
 object gunichar: 
@@ -3086,7 +3263,7 @@ object gunichar:
 /**
  * gunichar2:
 
- * [bindgen] header: /usr/include/glib-2.0/glib/gunicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gunicode.h
 */
 type gunichar2 = guint16
 object gunichar2: 
@@ -3096,7 +3273,7 @@ object gunichar2:
     inline def value: guint16 = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type gushort = CUnsignedShort
 object gushort: 
@@ -3118,6 +3295,13 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

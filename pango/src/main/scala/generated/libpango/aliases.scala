@@ -9,7 +9,6 @@ import _root_.scala.scalanative.*
 import _root_.libpango.enumerations.*
 import _root_.libpango.aliases.*
 import _root_.libpango.structs.*
-
 type FILE = libc.stdio.FILE
 object FILE: 
   val _tag: Tag[FILE] = summon[Tag[libc.stdio.FILE]]
@@ -20,29 +19,33 @@ object FILE:
 /**
  * PangoAttrDataCopyFunc: _data: user data to copy
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrDataCopyFunc = CFuncPtr1[_root_.glib.all.gconstpointer, _root_.glib.all.gpointer]
 object PangoAttrDataCopyFunc: 
   given _tag: Tag[PangoAttrDataCopyFunc] = Tag.materializeCFuncPtr1[_root_.glib.all.gconstpointer, _root_.glib.all.gpointer]
+  inline def fromPtr(ptr: Ptr[Byte]): PangoAttrDataCopyFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr1[_root_.glib.all.gconstpointer, _root_.glib.all.gpointer]): PangoAttrDataCopyFunc = o
   extension (v: PangoAttrDataCopyFunc)
     inline def value: CFuncPtr1[_root_.glib.all.gconstpointer, _root_.glib.all.gpointer] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * PangoAttrFilterFunc: : a Pango attribute _data: user data passed to the function
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrFilterFunc = CFuncPtr2[Ptr[PangoAttribute], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object PangoAttrFilterFunc: 
   given _tag: Tag[PangoAttrFilterFunc] = Tag.materializeCFuncPtr2[Ptr[PangoAttribute], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): PangoAttrFilterFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr2[Ptr[PangoAttribute], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): PangoAttrFilterFunc = o
   extension (v: PangoAttrFilterFunc)
     inline def value: CFuncPtr2[Ptr[PangoAttribute], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrIterator_autoptr = Ptr[PangoAttrIterator]
 object PangoAttrIterator_autoptr: 
@@ -52,7 +55,7 @@ object PangoAttrIterator_autoptr:
     inline def value: Ptr[PangoAttrIterator] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrIterator_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoAttrIterator_listautoptr: 
@@ -62,7 +65,7 @@ object PangoAttrIterator_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrIterator_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoAttrIterator_queueautoptr: 
@@ -72,7 +75,7 @@ object PangoAttrIterator_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrIterator_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoAttrIterator_slistautoptr: 
@@ -82,7 +85,7 @@ object PangoAttrIterator_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrList_autoptr = Ptr[PangoAttrList]
 object PangoAttrList_autoptr: 
@@ -92,7 +95,7 @@ object PangoAttrList_autoptr:
     inline def value: Ptr[PangoAttrList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrList_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoAttrList_listautoptr: 
@@ -102,7 +105,7 @@ object PangoAttrList_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrList_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoAttrList_queueautoptr: 
@@ -112,7 +115,7 @@ object PangoAttrList_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrList_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoAttrList_slistautoptr: 
@@ -122,7 +125,7 @@ object PangoAttrList_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttribute_autoptr = Ptr[PangoAttribute]
 object PangoAttribute_autoptr: 
@@ -132,7 +135,7 @@ object PangoAttribute_autoptr:
     inline def value: Ptr[PangoAttribute] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttribute_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoAttribute_listautoptr: 
@@ -142,7 +145,7 @@ object PangoAttribute_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttribute_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoAttribute_queueautoptr: 
@@ -152,7 +155,7 @@ object PangoAttribute_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttribute_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoAttribute_slistautoptr: 
@@ -162,7 +165,7 @@ object PangoAttribute_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type PangoCoverage_autoptr = Ptr[PangoCoverage]
 object PangoCoverage_autoptr: 
@@ -172,7 +175,7 @@ object PangoCoverage_autoptr:
     inline def value: Ptr[PangoCoverage] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type PangoCoverage_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoCoverage_listautoptr: 
@@ -182,7 +185,7 @@ object PangoCoverage_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type PangoCoverage_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoCoverage_queueautoptr: 
@@ -192,7 +195,7 @@ object PangoCoverage_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type PangoCoverage_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoCoverage_slistautoptr: 
@@ -202,7 +205,7 @@ object PangoCoverage_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontDescription_autoptr = Ptr[PangoFontDescription]
 object PangoFontDescription_autoptr: 
@@ -212,7 +215,7 @@ object PangoFontDescription_autoptr:
     inline def value: Ptr[PangoFontDescription] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontDescription_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoFontDescription_listautoptr: 
@@ -222,7 +225,7 @@ object PangoFontDescription_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontDescription_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoFontDescription_queueautoptr: 
@@ -232,7 +235,7 @@ object PangoFontDescription_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontDescription_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoFontDescription_slistautoptr: 
@@ -242,7 +245,7 @@ object PangoFontDescription_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFace_autoptr = Ptr[PangoFontFace]
 object PangoFontFace_autoptr: 
@@ -252,7 +255,7 @@ object PangoFontFace_autoptr:
     inline def value: Ptr[PangoFontFace] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFace_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoFontFace_listautoptr: 
@@ -262,7 +265,7 @@ object PangoFontFace_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFace_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoFontFace_queueautoptr: 
@@ -272,7 +275,7 @@ object PangoFontFace_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFace_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoFontFace_slistautoptr: 
@@ -282,7 +285,7 @@ object PangoFontFace_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFamily_autoptr = Ptr[PangoFontFamily]
 object PangoFontFamily_autoptr: 
@@ -292,7 +295,7 @@ object PangoFontFamily_autoptr:
     inline def value: Ptr[PangoFontFamily] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFamily_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoFontFamily_listautoptr: 
@@ -302,7 +305,7 @@ object PangoFontFamily_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFamily_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoFontFamily_queueautoptr: 
@@ -312,7 +315,7 @@ object PangoFontFamily_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFamily_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoFontFamily_slistautoptr: 
@@ -322,7 +325,7 @@ object PangoFontFamily_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type PangoFontMap_autoptr = Ptr[PangoFontMap]
 object PangoFontMap_autoptr: 
@@ -332,7 +335,7 @@ object PangoFontMap_autoptr:
     inline def value: Ptr[PangoFontMap] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type PangoFontMap_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoFontMap_listautoptr: 
@@ -342,7 +345,7 @@ object PangoFontMap_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type PangoFontMap_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoFontMap_queueautoptr: 
@@ -352,7 +355,7 @@ object PangoFontMap_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type PangoFontMap_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoFontMap_slistautoptr: 
@@ -362,7 +365,7 @@ object PangoFontMap_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFont_autoptr = Ptr[PangoFont]
 object PangoFont_autoptr: 
@@ -372,7 +375,7 @@ object PangoFont_autoptr:
     inline def value: Ptr[PangoFont] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFont_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoFont_listautoptr: 
@@ -382,7 +385,7 @@ object PangoFont_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFont_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoFont_queueautoptr: 
@@ -392,7 +395,7 @@ object PangoFont_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFont_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoFont_slistautoptr: 
@@ -404,19 +407,21 @@ object PangoFont_slistautoptr:
 /**
  * PangoFontsetForeachFunc: : a `PangoFontset` : a font from _data: callback data
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset.h
 */
 opaque type PangoFontsetForeachFunc = CFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
 object PangoFontsetForeachFunc: 
   given _tag: Tag[PangoFontsetForeachFunc] = Tag.materializeCFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte]): PangoFontsetForeachFunc = CFuncPtr.fromPtr(ptr)
   inline def apply(inline o: CFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): PangoFontsetForeachFunc = o
   extension (v: PangoFontsetForeachFunc)
     inline def value: CFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
 
 /**
  * PangoGlyph:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 type PangoGlyph = _root_.glib.all.guint32
 object PangoGlyph: 
@@ -428,7 +433,7 @@ object PangoGlyph:
 /**
  * PangoGlyphUnit:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 type PangoGlyphUnit = _root_.glib.all.gint32
 object PangoGlyphUnit: 
@@ -438,7 +443,7 @@ object PangoGlyphUnit:
     inline def value: _root_.glib.all.gint32 = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutIter_autoptr = Ptr[PangoLayoutIter]
 object PangoLayoutIter_autoptr: 
@@ -448,7 +453,7 @@ object PangoLayoutIter_autoptr:
     inline def value: Ptr[PangoLayoutIter] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutIter_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoLayoutIter_listautoptr: 
@@ -458,7 +463,7 @@ object PangoLayoutIter_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutIter_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoLayoutIter_queueautoptr: 
@@ -468,7 +473,7 @@ object PangoLayoutIter_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutIter_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoLayoutIter_slistautoptr: 
@@ -480,7 +485,7 @@ object PangoLayoutIter_slistautoptr:
 /**
  * PangoLayoutRun:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 type PangoLayoutRun = PangoGlyphItem
 object PangoLayoutRun: 
@@ -490,7 +495,7 @@ object PangoLayoutRun:
     inline def value: PangoGlyphItem = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayout_autoptr = Ptr[PangoLayout]
 object PangoLayout_autoptr: 
@@ -500,7 +505,7 @@ object PangoLayout_autoptr:
     inline def value: Ptr[PangoLayout] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayout_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoLayout_listautoptr: 
@@ -510,7 +515,7 @@ object PangoLayout_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayout_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoLayout_queueautoptr: 
@@ -520,7 +525,7 @@ object PangoLayout_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayout_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoLayout_slistautoptr: 
@@ -530,7 +535,7 @@ object PangoLayout_slistautoptr:
     inline def value: Ptr[_root_.glib.all.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type PangoTabArray_autoptr = Ptr[PangoTabArray]
 object PangoTabArray_autoptr: 
@@ -540,7 +545,7 @@ object PangoTabArray_autoptr:
     inline def value: Ptr[PangoTabArray] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type PangoTabArray_listautoptr = Ptr[_root_.glib.all.GList]
 object PangoTabArray_listautoptr: 
@@ -550,7 +555,7 @@ object PangoTabArray_listautoptr:
     inline def value: Ptr[_root_.glib.all.GList] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type PangoTabArray_queueautoptr = Ptr[_root_.glib.all.GQueue]
 object PangoTabArray_queueautoptr: 
@@ -560,7 +565,7 @@ object PangoTabArray_queueautoptr:
     inline def value: Ptr[_root_.glib.all.GQueue] = v
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type PangoTabArray_slistautoptr = Ptr[_root_.glib.all.GSList]
 object PangoTabArray_slistautoptr: 
@@ -603,6 +608,13 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

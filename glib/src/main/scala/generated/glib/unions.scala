@@ -10,14 +10,13 @@ import _root_.glib.enumerations.*
 import _root_.glib.aliases.*
 import _root_.glib.structs.*
 import _root_.glib.unions.*
-
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object GDoubleIEEE754:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
   */
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
@@ -62,12 +61,12 @@ object GDoubleIEEE754:
     def mpn_=(value: GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
 object GFloatIEEE754:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
   */
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
@@ -109,7 +108,7 @@ object GFloatIEEE754:
     def mpn_=(value: GFloatIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GFloatIEEE754.Struct0]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type GMutex = CArray[Byte, Nat._8]
 object GMutex:
@@ -136,7 +135,7 @@ object GMutex:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type GTokenValue = CArray[Byte, Nat._8]
 object GTokenValue:
@@ -243,12 +242,12 @@ object GTokenValue:
     def v_error_=(value: guint): Unit = !struct.at(0).asInstanceOf[Ptr[guint]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type _GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object _GDoubleIEEE754:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
   */
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
@@ -293,12 +292,12 @@ object _GDoubleIEEE754:
     def mpn_=(value: _GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
 */
 opaque type _GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
 object _GFloatIEEE754:
   /**
-   * [bindgen] header: /usr/include/glib-2.0/glib/gtypes.h
+   * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gtypes.h
   */
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
@@ -340,7 +339,7 @@ object _GFloatIEEE754:
     def mpn_=(value: _GFloatIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GFloatIEEE754.Struct0]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gthread.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gthread.h
 */
 opaque type _GMutex = CArray[Byte, Nat._8]
 object _GMutex:
@@ -367,7 +366,7 @@ object _GMutex:
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]] = value
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/glib/gscanner.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.78.3/include/glib-2.0/glib/gscanner.h
 */
 opaque type _GTokenValue = CArray[Byte, Nat._8]
 object _GTokenValue:

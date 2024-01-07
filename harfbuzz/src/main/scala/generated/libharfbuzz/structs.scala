@@ -10,23 +10,155 @@ import _root_.libharfbuzz.enumerations.*
 import _root_.libharfbuzz.aliases.*
 import _root_.libharfbuzz.structs.*
 import _root_.libharfbuzz.unions.*
-
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-blob.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-blob.h
 */
 opaque type hb_blob_t = CStruct0
 object hb_blob_t:
   given _tag: Tag[hb_blob_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_buffer_t = CStruct0
 object hb_buffer_t:
   given _tag: Tag[hb_buffer_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-face.h
+ * hb_color_line_t:
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-paint.h
+*/
+opaque type hb_color_line_t = CStruct13[Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
+object hb_color_line_t:
+  given _tag: Tag[hb_color_line_t] = Tag.materializeCStruct13Tag[Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
+  def apply()(using Zone): Ptr[hb_color_line_t] = scala.scalanative.unsafe.alloc[hb_color_line_t](1)
+  def apply(data : Ptr[Byte], get_color_stops : hb_color_line_get_color_stops_func_t, get_color_stops_user_data : Ptr[Byte], get_extend : hb_color_line_get_extend_func_t, get_extend_user_data : Ptr[Byte], reserved0 : Ptr[Byte], reserved1 : Ptr[Byte], reserved2 : Ptr[Byte], reserved3 : Ptr[Byte], reserved5 : Ptr[Byte], reserved6 : Ptr[Byte], reserved7 : Ptr[Byte], reserved8 : Ptr[Byte])(using Zone): Ptr[hb_color_line_t] = 
+    val ____ptr = apply()
+    (!____ptr).data = data
+    (!____ptr).get_color_stops = get_color_stops
+    (!____ptr).get_color_stops_user_data = get_color_stops_user_data
+    (!____ptr).get_extend = get_extend
+    (!____ptr).get_extend_user_data = get_extend_user_data
+    (!____ptr).reserved0 = reserved0
+    (!____ptr).reserved1 = reserved1
+    (!____ptr).reserved2 = reserved2
+    (!____ptr).reserved3 = reserved3
+    (!____ptr).reserved5 = reserved5
+    (!____ptr).reserved6 = reserved6
+    (!____ptr).reserved7 = reserved7
+    (!____ptr).reserved8 = reserved8
+    ____ptr
+  extension (struct: hb_color_line_t)
+    def data : Ptr[Byte] = struct._1
+    def data_=(value: Ptr[Byte]): Unit = !struct.at1 = value
+    def get_color_stops : hb_color_line_get_color_stops_func_t = struct._2.asInstanceOf[hb_color_line_get_color_stops_func_t]
+    def get_color_stops_=(value: hb_color_line_get_color_stops_func_t): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
+    def get_color_stops_user_data : Ptr[Byte] = struct._3
+    def get_color_stops_user_data_=(value: Ptr[Byte]): Unit = !struct.at3 = value
+    def get_extend : hb_color_line_get_extend_func_t = struct._4.asInstanceOf[hb_color_line_get_extend_func_t]
+    def get_extend_=(value: hb_color_line_get_extend_func_t): Unit = !struct.at4 = value.asInstanceOf[Ptr[Byte]]
+    def get_extend_user_data : Ptr[Byte] = struct._5
+    def get_extend_user_data_=(value: Ptr[Byte]): Unit = !struct.at5 = value
+    def reserved0 : Ptr[Byte] = struct._6
+    def reserved0_=(value: Ptr[Byte]): Unit = !struct.at6 = value
+    def reserved1 : Ptr[Byte] = struct._7
+    def reserved1_=(value: Ptr[Byte]): Unit = !struct.at7 = value
+    def reserved2 : Ptr[Byte] = struct._8
+    def reserved2_=(value: Ptr[Byte]): Unit = !struct.at8 = value
+    def reserved3 : Ptr[Byte] = struct._9
+    def reserved3_=(value: Ptr[Byte]): Unit = !struct.at9 = value
+    def reserved5 : Ptr[Byte] = struct._10
+    def reserved5_=(value: Ptr[Byte]): Unit = !struct.at10 = value
+    def reserved6 : Ptr[Byte] = struct._11
+    def reserved6_=(value: Ptr[Byte]): Unit = !struct.at11 = value
+    def reserved7 : Ptr[Byte] = struct._12
+    def reserved7_=(value: Ptr[Byte]): Unit = !struct.at12 = value
+    def reserved8 : Ptr[Byte] = struct._13
+    def reserved8_=(value: Ptr[Byte]): Unit = !struct.at13 = value
+
+/**
+ * hb_color_stop_t: : the offset of the color stop : the color, unpremultiplied
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-paint.h
+*/
+opaque type hb_color_stop_t = CStruct3[Float, hb_bool_t, hb_color_t]
+object hb_color_stop_t:
+  given _tag: Tag[hb_color_stop_t] = Tag.materializeCStruct3Tag[Float, hb_bool_t, hb_color_t]
+  def apply()(using Zone): Ptr[hb_color_stop_t] = scala.scalanative.unsafe.alloc[hb_color_stop_t](1)
+  def apply(offset : Float, is_foreground : hb_bool_t, color : hb_color_t)(using Zone): Ptr[hb_color_stop_t] = 
+    val ____ptr = apply()
+    (!____ptr).offset = offset
+    (!____ptr).is_foreground = is_foreground
+    (!____ptr).color = color
+    ____ptr
+  extension (struct: hb_color_stop_t)
+    def offset : Float = struct._1
+    def offset_=(value: Float): Unit = !struct.at1 = value
+    def is_foreground : hb_bool_t = struct._2
+    def is_foreground_=(value: hb_bool_t): Unit = !struct.at2 = value
+    def color : hb_color_t = struct._3
+    def color_=(value: hb_color_t): Unit = !struct.at3 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-draw.h
+*/
+opaque type hb_draw_funcs_t = CStruct0
+object hb_draw_funcs_t:
+  given _tag: Tag[hb_draw_funcs_t] = Tag.materializeCStruct0Tag
+
+/**
+ * hb_draw_state_t _open: Whether there is an open path _start_x: X component of the start of current path _start_y: Y component of the start of current path _x: X component of current point _y: Y component of current point
+
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-draw.h
+*/
+opaque type hb_draw_state_t = CStruct12[hb_bool_t, Float, Float, Float, Float, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t]
+object hb_draw_state_t:
+  given _tag: Tag[hb_draw_state_t] = Tag.materializeCStruct12Tag[hb_bool_t, Float, Float, Float, Float, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t, hb_var_num_t]
+  def apply()(using Zone): Ptr[hb_draw_state_t] = scala.scalanative.unsafe.alloc[hb_draw_state_t](1)
+  def apply(path_open : hb_bool_t, path_start_x : Float, path_start_y : Float, current_x : Float, current_y : Float, reserved1 : hb_var_num_t, reserved2 : hb_var_num_t, reserved3 : hb_var_num_t, reserved4 : hb_var_num_t, reserved5 : hb_var_num_t, reserved6 : hb_var_num_t, reserved7 : hb_var_num_t)(using Zone): Ptr[hb_draw_state_t] = 
+    val ____ptr = apply()
+    (!____ptr).path_open = path_open
+    (!____ptr).path_start_x = path_start_x
+    (!____ptr).path_start_y = path_start_y
+    (!____ptr).current_x = current_x
+    (!____ptr).current_y = current_y
+    (!____ptr).reserved1 = reserved1
+    (!____ptr).reserved2 = reserved2
+    (!____ptr).reserved3 = reserved3
+    (!____ptr).reserved4 = reserved4
+    (!____ptr).reserved5 = reserved5
+    (!____ptr).reserved6 = reserved6
+    (!____ptr).reserved7 = reserved7
+    ____ptr
+  extension (struct: hb_draw_state_t)
+    def path_open : hb_bool_t = struct._1
+    def path_open_=(value: hb_bool_t): Unit = !struct.at1 = value
+    def path_start_x : Float = struct._2
+    def path_start_x_=(value: Float): Unit = !struct.at2 = value
+    def path_start_y : Float = struct._3
+    def path_start_y_=(value: Float): Unit = !struct.at3 = value
+    def current_x : Float = struct._4
+    def current_x_=(value: Float): Unit = !struct.at4 = value
+    def current_y : Float = struct._5
+    def current_y_=(value: Float): Unit = !struct.at5 = value
+    def reserved1 : hb_var_num_t = struct._6
+    def reserved1_=(value: hb_var_num_t): Unit = !struct.at6 = value
+    def reserved2 : hb_var_num_t = struct._7
+    def reserved2_=(value: hb_var_num_t): Unit = !struct.at7 = value
+    def reserved3 : hb_var_num_t = struct._8
+    def reserved3_=(value: hb_var_num_t): Unit = !struct.at8 = value
+    def reserved4 : hb_var_num_t = struct._9
+    def reserved4_=(value: hb_var_num_t): Unit = !struct.at9 = value
+    def reserved5 : hb_var_num_t = struct._10
+    def reserved5_=(value: hb_var_num_t): Unit = !struct.at10 = value
+    def reserved6 : hb_var_num_t = struct._11
+    def reserved6_=(value: hb_var_num_t): Unit = !struct.at11 = value
+    def reserved7 : hb_var_num_t = struct._12
+    def reserved7_=(value: hb_var_num_t): Unit = !struct.at12 = value
+
+/**
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-face.h
 */
 opaque type hb_face_t = CStruct0
 object hb_face_t:
@@ -35,7 +167,7 @@ object hb_face_t:
 /**
  * hb_feature_t: : The #hb_tag_t tag of the feature : The value of the feature. 0 disables the feature, non-zero (usually 1) enables the feature. For features implemented as lookup type 3 (like 'salt') the is a one based index into the alternates. : the cluster to start applying this feature setting (inclusive). : the cluster to end applying this feature setting (exclusive).
 
- * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_feature_t = CStruct4[hb_tag_t, uint32_t, CUnsignedInt, CUnsignedInt]
 object hb_feature_t:
@@ -61,7 +193,7 @@ object hb_feature_t:
 /**
  * hb_font_extents_t: : The height of typographic ascenders. : The depth of typographic descenders.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-font.h
 */
 opaque type hb_font_extents_t = CStruct12[hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_position_t]
 object hb_font_extents_t:
@@ -109,14 +241,14 @@ object hb_font_extents_t:
     def reserved1_=(value: hb_position_t): Unit = !struct.at12 = value
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-font.h
 */
 opaque type hb_font_funcs_t = CStruct0
 object hb_font_funcs_t:
   given _tag: Tag[hb_font_funcs_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_font_t = CStruct0
 object hb_font_t:
@@ -125,7 +257,7 @@ object hb_font_t:
 /**
  * hb_glyph_extents_t: _bearing: Distance from the x-origin to the left extremum of the glyph. _bearing: Distance from the top extremum of the glyph to the y-origin. : Distance from the left extremum of the glyph to the right extremum. : Distance from the top extremum of the glyph to the bottom extremum.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_glyph_extents_t = CStruct4[hb_position_t, hb_position_t, hb_position_t, hb_position_t]
 object hb_glyph_extents_t:
@@ -151,7 +283,7 @@ object hb_glyph_extents_t:
 /**
  * hb_glyph_info_t: : either a Unicode code point (before shaping) or a glyph index (after shaping). : the index of the character in the original text that corresponds to this #hb_glyph_info_t, or whatever the client passes to hb_buffer_add(). More than one #hb_glyph_info_t can have the same value, if they resulted from the same character (e.g. one to many glyph substitution), and when more than one character gets merged in the same glyph (e.g. many to one glyph substitution) the #hb_glyph_info_t will have the smallest cluster value of them. By default some characters are merged into the same cluster (e.g. combining marks have the same cluster as their bases) even if they are separate glyphs, hb_buffer_set_cluster_level() allow selecting more fine-grained cluster handling.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_glyph_info_t = CStruct5[hb_codepoint_t, hb_mask_t, uint32_t, hb_var_int_t, hb_var_int_t]
 object hb_glyph_info_t:
@@ -180,7 +312,7 @@ object hb_glyph_info_t:
 /**
  * hb_glyph_position_t: _advance: how much the line advances after drawing this glyph when setting text in horizontal direction. _advance: how much the line advances after drawing this glyph when setting text in vertical direction. _offset: how much the glyph moves on the X-axis before drawing it, this should not affect how much the line advances. _offset: how much the glyph moves on the Y-axis before drawing it, this should not affect how much the line advances.
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_glyph_position_t = CStruct5[hb_position_t, hb_position_t, hb_position_t, hb_position_t, hb_var_int_t]
 object hb_glyph_position_t:
@@ -207,23 +339,30 @@ object hb_glyph_position_t:
     def var_=(value: hb_var_int_t): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_language_impl_t = CStruct0
 object hb_language_impl_t:
   given _tag: Tag[hb_language_impl_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-map.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-map.h
 */
 opaque type hb_map_t = CStruct0
 object hb_map_t:
   given _tag: Tag[hb_map_t] = Tag.materializeCStruct0Tag
 
 /**
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-paint.h
+*/
+opaque type hb_paint_funcs_t = CStruct0
+object hb_paint_funcs_t:
+  given _tag: Tag[hb_paint_funcs_t] = Tag.materializeCStruct0Tag
+
+/**
  * hb_segment_properties_t: : the #hb_direction_t of the buffer, see hb_buffer_set_direction(). : the #hb_script_t of the buffer, see hb_buffer_set_script(). : the #hb_language_t of the buffer, see hb_buffer_set_language().
 
- * [bindgen] header: /usr/include/harfbuzz/hb-buffer.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-buffer.h
 */
 opaque type hb_segment_properties_t = CStruct5[hb_direction_t, hb_script_t, hb_language_t, Ptr[Byte], Ptr[Byte]]
 object hb_segment_properties_t:
@@ -250,21 +389,21 @@ object hb_segment_properties_t:
     def reserved2_=(value: Ptr[Byte]): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-set.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-set.h
 */
 opaque type hb_set_t = CStruct0
 object hb_set_t:
   given _tag: Tag[hb_set_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-shape-plan.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-shape-plan.h
 */
 opaque type hb_shape_plan_t = CStruct0
 object hb_shape_plan_t:
   given _tag: Tag[hb_shape_plan_t] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/harfbuzz/hb-unicode.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-unicode.h
 */
 opaque type hb_unicode_funcs_t = CStruct0
 object hb_unicode_funcs_t:
@@ -273,7 +412,7 @@ object hb_unicode_funcs_t:
 /**
  * hb_user_data_key_t:
 
- * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_user_data_key_t = CStruct1[CChar]
 object hb_user_data_key_t:
@@ -290,7 +429,7 @@ object hb_user_data_key_t:
 /**
  * hb_variation_t: : The #hb_tag_t tag of the variation-axis name : The value of the variation axis
 
- * [bindgen] header: /usr/include/harfbuzz/hb-common.h
+ * [bindgen] header: /opt/homebrew/Cellar/harfbuzz/8.3.0/include/harfbuzz/hb-common.h
 */
 opaque type hb_variation_t = CStruct2[hb_tag_t, Float]
 object hb_variation_t:

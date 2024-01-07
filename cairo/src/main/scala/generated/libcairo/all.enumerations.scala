@@ -7,8 +7,10 @@ import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
 export _root_.libcairo.enumerations._cairo_antialias
+export _root_.libcairo.enumerations._cairo_color_mode
 export _root_.libcairo.enumerations._cairo_content
 export _root_.libcairo.enumerations._cairo_device_type
+export _root_.libcairo.enumerations._cairo_dither
 export _root_.libcairo.enumerations._cairo_extend
 export _root_.libcairo.enumerations._cairo_fill_rule
 export _root_.libcairo.enumerations._cairo_filter

@@ -9,11 +9,10 @@ import _root_.scala.scalanative.*
 import _root_.libpango.enumerations.*
 import _root_.libpango.aliases.*
 import _root_.libpango.structs.*
-
 /**
  * PangoAnalysis: _engine: unused, reserved _engine: unused, reserved : the font for this segment. : the bidirectional level for this segment. : the glyph orientation for this segment (A `PangoGravity`). : boolean flags for this segment (Since: 1.16). : the detected script for this segment (A `PangoScript`) (Since: 1.18). : the detected language for this segment. _attrs: extra attributes for this segment.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-item.h
 */
 opaque type PangoAnalysis = CStruct9[Ptr[PangoEngineShape], Ptr[PangoEngineLang], Ptr[PangoFont], _root_.glib.all.guint8, _root_.glib.all.guint8, _root_.glib.all.guint8, _root_.glib.all.guint8, Ptr[PangoLanguage], Ptr[Byte]]
 object PangoAnalysis:
@@ -54,7 +53,7 @@ object PangoAnalysis:
 /**
  * PangoAttrClass: : the type ID for this attribute : function to duplicate an attribute of this type (see [method.Attribute.copy]) : function to free an attribute of this type (see [method.Attribute.destroy]) : function to check two attributes of this type for equality (see [method.Attribute.equal])
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrClass = CStruct4[PangoAttrType, CFuncPtr1[Ptr[Byte], Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr2[Ptr[Byte], Ptr[Byte], _root_.glib.all.gboolean]]
 object PangoAttrClass:
@@ -80,7 +79,7 @@ object PangoAttrClass:
 /**
  * PangoAttrColor: : the common portion of the attribute : the `PangoColor` which is the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrColor = CStruct2[PangoAttribute, PangoColor]
 object PangoAttrColor:
@@ -100,7 +99,7 @@ object PangoAttrColor:
 /**
  * PangoAttrFloat: : the common portion of the attribute : the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrFloat = CStruct2[PangoAttribute, Double]
 object PangoAttrFloat:
@@ -120,7 +119,7 @@ object PangoAttrFloat:
 /**
  * PangoAttrFontDesc: : the common portion of the attribute : the font description which is the value of this attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrFontDesc = CStruct2[PangoAttribute, Ptr[PangoFontDescription]]
 object PangoAttrFontDesc:
@@ -140,7 +139,7 @@ object PangoAttrFontDesc:
 /**
  * PangoAttrFontFeatures: : the common portion of the attribute : the features, as a string in CSS syntax
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrFontFeatures = CStruct2[PangoAttribute, Ptr[_root_.glib.all.gchar]]
 object PangoAttrFontFeatures:
@@ -160,7 +159,7 @@ object PangoAttrFontFeatures:
 /**
  * PangoAttrInt: : the common portion of the attribute : the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrInt = CStruct2[PangoAttribute, CInt]
 object PangoAttrInt:
@@ -178,7 +177,7 @@ object PangoAttrInt:
     def value_=(value: CInt): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrIterator = CStruct0
 object PangoAttrIterator:
@@ -187,7 +186,7 @@ object PangoAttrIterator:
 /**
  * PangoAttrLanguage: : the common portion of the attribute : the `PangoLanguage` which is the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrLanguage = CStruct2[PangoAttribute, Ptr[PangoLanguage]]
 object PangoAttrLanguage:
@@ -205,7 +204,7 @@ object PangoAttrLanguage:
     def value_=(value: Ptr[PangoLanguage]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrList = CStruct0
 object PangoAttrList:
@@ -214,7 +213,7 @@ object PangoAttrList:
 /**
  * PangoAttrShape: : the common portion of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrShape = CStruct6[PangoAttribute, PangoRectangle, PangoRectangle, _root_.glib.all.gpointer, PangoAttrDataCopyFunc, _root_.glib.all.GDestroyNotify]
 object PangoAttrShape:
@@ -246,7 +245,7 @@ object PangoAttrShape:
 /**
  * PangoAttrSize: : the common portion of the attribute : size of font, in units of 1/%PANGO_SCALE of a point (for %PANGO_ATTR_SIZE) or of a device unit (for %PANGO_ATTR_ABSOLUTE_SIZE) : whether the font size is in device units or points. This field is only present for compatibility with Pango-1.8.0 (%PANGO_ATTR_ABSOLUTE_SIZE was added in 1.8.1); and always will be %FALSE for %PANGO_ATTR_SIZE and %TRUE for %PANGO_ATTR_ABSOLUTE_SIZE.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrSize = CStruct3[PangoAttribute, CInt, _root_.glib.all.guint]
 object PangoAttrSize:
@@ -269,7 +268,7 @@ object PangoAttrSize:
 /**
  * PangoAttrString: : the common portion of the attribute : the string which is the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttrString = CStruct2[PangoAttribute, CString]
 object PangoAttrString:
@@ -289,7 +288,7 @@ object PangoAttrString:
 /**
  * PangoAttribute: _index: the start index of the range (in bytes). _index: end index of the range (in bytes). The character at this index is not included in the range.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type PangoAttribute = CStruct3[Ptr[Byte], _root_.glib.all.guint, _root_.glib.all.guint]
 object PangoAttribute:
@@ -312,7 +311,7 @@ object PangoAttribute:
 /**
  * PangoColor: : value of red component : value of green component : value of blue component
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-color.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-color.h
 */
 opaque type PangoColor = CStruct3[_root_.glib.all.guint16, _root_.glib.all.guint16, _root_.glib.all.guint16]
 object PangoColor:
@@ -333,21 +332,21 @@ object PangoColor:
     def blue_=(value: _root_.glib.all.guint16): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 opaque type PangoContext = CStruct0
 object PangoContext:
   given _tag: Tag[PangoContext] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-context.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-context.h
 */
 opaque type PangoContextClass = CStruct0
 object PangoContextClass:
   given _tag: Tag[PangoContextClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type PangoCoverage = CStruct0
 object PangoCoverage:
@@ -356,7 +355,7 @@ object PangoCoverage:
 /**
  * PangoEngine:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngine = CStruct1[_root_.gobject.all.GObject]
 object PangoEngine:
@@ -373,7 +372,7 @@ object PangoEngine:
 /**
  * PangoEngineClass:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineClass = CStruct1[_root_.gobject.all.GObjectClass]
 object PangoEngineClass:
@@ -390,7 +389,7 @@ object PangoEngineClass:
 /**
  * PangoEngineInfo: _type: a string identifying the engine type. _type: a string identifying the render type. : array of scripts this engine supports. _scripts: number of items in .
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineInfo = CStruct5[Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[PangoEngineScriptInfo], _root_.glib.all.gint]
 object PangoEngineInfo:
@@ -419,7 +418,7 @@ object PangoEngineInfo:
 /**
  * PangoEngineLang:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineLang = CStruct1[PangoEngine]
 object PangoEngineLang:
@@ -436,7 +435,7 @@ object PangoEngineLang:
 /**
  * PangoEngineLangClass: _break: (nullable): Provides a custom implementation of pango_break(). If %NULL, pango_default_break() is used instead. If not %NULL, for Pango versions before 1.16 (module interface version before 1.6.0), this was called instead of pango_default_break(), but in newer versions, pango_default_break() is always called and this is called after that to allow tailoring the breaking results.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineLangClass = CStruct2[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
 object PangoEngineLangClass:
@@ -456,7 +455,7 @@ object PangoEngineLangClass:
 /**
  * PangoEngineScriptInfo: : a `PangoScript`. The value %PANGO_SCRIPT_COMMON has the special meaning here of "all scripts" : a semicolon separated list of languages that this engine handles for this script. This may be empty, in which case the engine is saying that it is a fallback choice for all languages for this range, but should not be used if another engine indicates that it is specific for the language for a given code point. An entry in this list of "*" indicates that this engine is specific to all languages for this range.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineScriptInfo = CStruct2[PangoScript, Ptr[_root_.glib.all.gchar]]
 object PangoEngineScriptInfo:
@@ -476,7 +475,7 @@ object PangoEngineScriptInfo:
 /**
  * PangoEngineShape:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineShape = CStruct1[PangoEngine]
 object PangoEngineShape:
@@ -493,7 +492,7 @@ object PangoEngineShape:
 /**
  * PangoEngineShapeClass: _shape: Given a font, a piece of text, and a `PangoAnalysis` structure, converts characters to glyphs and positions the resulting glyphs. The results are stored in the `PangoGlyphString` that is passed in. (The implementation should resize it appropriately using pango_glyph_string_set_size()). All fields of the _clusters and array must be filled in, with the exception that Pango will automatically generate `glyphs->glyphs[i].attr.is_cluster_start` using the _clusters array. Each input character must occur in one of the output logical clusters; if no rendering is desired for a character, this may involve inserting glyphs with the `PangoGlyph` ID %PANGO_GLYPH_EMPTY, which is guaranteed never to render. If the shaping fails for any reason, the shaper should return with an empty (zero-size) glyph string. If the shaper has not set the size on the glyph string yet, simply returning signals the failure too. : Returns the characters that this engine can cover with a given font for a given language. If not overridden, the default implementation simply returns the coverage information for the font itself unmodified.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type PangoEngineShapeClass = CStruct3[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.glib.all.gunichar, PangoCoverageLevel]]
 object PangoEngineShapeClass:
@@ -516,7 +515,7 @@ object PangoEngineShapeClass:
 /**
  * PangoFont:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFont = CStruct1[_root_.gobject.all.GObject]
 object PangoFont:
@@ -531,7 +530,7 @@ object PangoFont:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoCoverage]], CFuncPtr4[Ptr[PangoFont], PangoGlyph, Ptr[PangoRectangle], Ptr[PangoRectangle], Unit], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontMap]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr4[Ptr[PangoFont], Ptr[_root_.libharfbuzz.all.hb_feature_t], _root_.glib.all.guint, Ptr[_root_.glib.all.guint], Unit], CFuncPtr1[Ptr[PangoFont], Ptr[_root_.libharfbuzz.all.hb_font_t]]]
 object PangoFontClass:
@@ -570,7 +569,7 @@ object PangoFontClass:
     def create_hb_font_=(value: CFuncPtr1[Ptr[PangoFont], Ptr[_root_.libharfbuzz.all.hb_font_t]]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontDescription = CStruct0
 object PangoFontDescription:
@@ -579,7 +578,7 @@ object PangoFontDescription:
 /**
  * PangoFontFace:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFace = CStruct1[_root_.gobject.all.GObject]
 object PangoFontFace:
@@ -594,7 +593,7 @@ object PangoFontFace:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFaceClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.glib.all.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object PangoFontFaceClass:
@@ -632,7 +631,7 @@ object PangoFontFaceClass:
 /**
  * PangoFontFamily:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFamily = CStruct1[_root_.gobject.all.GObject]
 object PangoFontFamily:
@@ -647,7 +646,7 @@ object PangoFontFamily:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontFamilyClass = CStruct7[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.glib.all.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.glib.all.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
 object PangoFontFamilyClass:
@@ -682,7 +681,7 @@ object PangoFontFamilyClass:
 /**
  * PangoFontMap:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type PangoFontMap = CStruct1[_root_.gobject.all.GObject]
 object PangoFontMap:
@@ -699,7 +698,7 @@ object PangoFontMap:
 /**
  * PangoFontMapClass: _class: parent `GObjectClass` _font: a function to load a font with a given description. See pango_font_map_load_font(). _families: A function to list available font families. See pango_font_map_list_families(). _fontset: a function to load a fontset with a given given description suitable for a particular language. See pango_font_map_load_fontset(). _engine_type: the type of rendering-system-dependent engines that can handle fonts of this fonts loaded with this fontmap. _serial: a function to get the serial number of the fontmap. See pango_font_map_get_serial(). : See pango_font_map_changed()
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type PangoFontMapClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], CString, CFuncPtr1[Ptr[PangoFontMap], _root_.glib.all.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
 object PangoFontMapClass:
@@ -738,7 +737,7 @@ object PangoFontMapClass:
     def get_face_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type PangoFontMetrics = CStruct10[_root_.glib.all.guint, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt]
 object PangoFontMetrics:
@@ -782,7 +781,7 @@ object PangoFontMetrics:
 /**
  * PangoFontset:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset.h
 */
 opaque type PangoFontset = CStruct1[_root_.gobject.all.GObject]
 object PangoFontset:
@@ -799,7 +798,7 @@ object PangoFontset:
 /**
  * PangoFontsetClass: _class: parent `GObjectClass` _font: a function to get the font in the fontset that contains the best glyph for the given Unicode character; see [method.Fontset.get_font] _metrics: a function to get overall metric information for the fonts in the fontset; see [method.Fontset.get_metrics] _language: a function to get the language of the fontset. : a function to loop over the fonts in the fontset. See [method.Fontset.foreach]
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset.h
 */
 opaque type PangoFontsetClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr2[Ptr[PangoFontset], _root_.glib.all.guint, Ptr[PangoFont]], CFuncPtr1[Ptr[PangoFontset], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFontset], Ptr[PangoLanguage]], CFuncPtr3[Ptr[PangoFontset], PangoFontsetForeachFunc, _root_.glib.all.gpointer, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object PangoFontsetClass:
@@ -838,14 +837,14 @@ object PangoFontsetClass:
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset-simple.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset-simple.h
 */
 opaque type PangoFontsetSimple = CStruct0
 object PangoFontsetSimple:
   given _tag: Tag[PangoFontsetSimple] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset-simple.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset-simple.h
 */
 opaque type PangoFontsetSimpleClass = CStruct0
 object PangoFontsetSimpleClass:
@@ -854,7 +853,7 @@ object PangoFontsetSimpleClass:
 /**
  * PangoGlyphGeometry: : the logical width to use for the the character. _offset: horizontal offset from nominal character position. _offset: vertical offset from nominal character position.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type PangoGlyphGeometry = CStruct3[PangoGlyphUnit, PangoGlyphUnit, PangoGlyphUnit]
 object PangoGlyphGeometry:
@@ -877,7 +876,7 @@ object PangoGlyphGeometry:
 /**
  * PangoGlyphInfo: : the glyph itself. : the positional information about the glyph. : the visual attributes of the glyph.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type PangoGlyphInfo = CStruct3[PangoGlyph, PangoGlyphGeometry, PangoGlyphVisAttr]
 object PangoGlyphInfo:
@@ -898,7 +897,7 @@ object PangoGlyphInfo:
     def attr_=(value: PangoGlyphVisAttr): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph-item.h
 */
 opaque type PangoGlyphItem = CStruct5[Ptr[Byte], Ptr[PangoGlyphString], CInt, CInt, CInt]
 object PangoGlyphItem:
@@ -925,7 +924,7 @@ object PangoGlyphItem:
     def end_x_offset_=(value: CInt): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph-item.h
 */
 opaque type PangoGlyphItemIter = CStruct8[Ptr[Byte], Ptr[_root_.glib.all.gchar], CInt, CInt, CInt, CInt, CInt, CInt]
 object PangoGlyphItemIter:
@@ -963,7 +962,7 @@ object PangoGlyphItemIter:
 /**
  * PangoGlyphString: : (array length=num_glyphs): array of glyph information _clusters: logical cluster info, indexed by the byte index within the text corresponding to the glyph string
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type PangoGlyphString = CStruct4[CInt, Ptr[PangoGlyphInfo], Ptr[CInt], CInt]
 object PangoGlyphString:
@@ -989,7 +988,7 @@ object PangoGlyphString:
 /**
  * PangoGlyphVisAttr:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type PangoGlyphVisAttr = CStruct2[_root_.glib.all.guint, _root_.glib.all.guint]
 object PangoGlyphVisAttr:
@@ -1009,7 +1008,7 @@ object PangoGlyphVisAttr:
 /**
  * PangoItem: : byte offset of the start of this item in text. : length of this item in bytes. _offset: character offset of the start of this item in text. Since 1.50 : analysis results for the item.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-item.h
 */
 opaque type PangoItem = CStruct4[CInt, CInt, CInt, PangoAnalysis]
 object PangoItem:
@@ -1033,28 +1032,28 @@ object PangoItem:
     def analysis_=(value: PangoAnalysis): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 opaque type PangoLanguage = CStruct0
 object PangoLanguage:
   given _tag: Tag[PangoLanguage] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayout = CStruct0
 object PangoLayout:
   given _tag: Tag[PangoLayout] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutClass = CStruct0
 object PangoLayoutClass:
   given _tag: Tag[PangoLayoutClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutIter = CStruct0
 object PangoLayoutIter:
@@ -1063,7 +1062,7 @@ object PangoLayoutIter:
 /**
  * PangoLayoutLine: : (nullable): the layout this line belongs to, might be %NULL _index: start of line as byte index into layout->text : length of line in bytes : (nullable) (element-type Pango.LayoutRun): list of runs in the line, from left to right _dir: #Resolved PangoDirection of line
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type PangoLayoutLine = CStruct6[Ptr[PangoLayout], _root_.glib.all.gint, _root_.glib.all.gint, Ptr[Byte], _root_.glib.all.guint, _root_.glib.all.guint]
 object PangoLayoutLine:
@@ -1095,7 +1094,7 @@ object PangoLayoutLine:
 /**
  * PangoLogAttr: i.e. this is a grapheme boundary, or the first character in the text. This flag implements Unicode's [Grapheme Cluster Boundaries](http://www.unicode.org/reports/tr29/) semantics. Note that in degenerate cases, you could have both and There are two ways to divide sentences. The first assigns all inter-sentence whitespace/control/format chars to some sentence, so all chars are in some sentence; the boundaries there. The second way doesn't assign between-sentence spaces, etc. to any sentence, so Note that in degenerate cases, you could have both and period, so the next sentence starts right away) _deletes_character: if set, backspace deletes one character rather than the entire grapheme cluster. This field is only meaningful on grapheme boundaries (where the full grapheme (e.g. letter + diacritics) is considered a unit, while in others, each decomposed character in the grapheme is a unit. In the default implementation of [func], this bit is set on all grapheme boundaries except those following Latin, Cyrillic or Greek base characters. expanded for justification purposes. (Since: 1.18) More specifically, means that this is not a position in the middle of a word. For example, both sides of a punctuation mark are considered word boundaries. This flag is particularly useful when selecting text word-by-word. This flag implements Unicode's [Word Boundaries](http://www.unicode.org/reports/tr29/) semantics. (Since: 1.22) _inserts_hyphen: when breaking lines before this char, insert a hyphen. Since: 1.50 _removes_preceding: when breaking lines before this char, remove the preceding char. Since 1.50
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-break.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-break.h
 */
 opaque type PangoLogAttr = CStruct16[_root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint]
 object PangoLogAttr:
@@ -1157,7 +1156,7 @@ object PangoLogAttr:
 /**
  * PangoMatrix: : 1st component of the transformation matrix : 2nd component of the transformation matrix : 3rd component of the transformation matrix : 4th component of the transformation matrix : x translation : y translation
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-matrix.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-matrix.h
 */
 opaque type PangoMatrix = CStruct6[Double, Double, Double, Double, Double, Double]
 object PangoMatrix:
@@ -1189,7 +1188,7 @@ object PangoMatrix:
 /**
  * PangoRectangle: : X coordinate of the left side of the rectangle. : Y coordinate of the the top side of the rectangle. : width of the rectangle. : height of the rectangle.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 opaque type PangoRectangle = CStruct4[CInt, CInt, CInt, CInt]
 object PangoRectangle:
@@ -1215,7 +1214,7 @@ object PangoRectangle:
 /**
  * PangoRenderer: : (nullable): the current transformation matrix for the Renderer; may be %NULL, which should be treated the same as the identity matrix.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type PangoRenderer = CStruct6[_root_.gobject.all.GObject, PangoUnderline, _root_.glib.all.gboolean, CInt, Ptr[PangoMatrix], Ptr[PangoRendererPrivate]]
 object PangoRenderer:
@@ -1247,7 +1246,7 @@ object PangoRenderer:
 /**
  * PangoRendererClass: _glyphs: draws a `PangoGlyphString` _rectangle: draws a rectangle _error_underline: draws a squiggly line that approximately covers the given rectangle in the style of an underline used to indicate a spelling error. _shape: draw content for a glyph shaped with `PangoAttrShape` , are the coordinates of the left edge of the baseline, in user coordinates. _trapezoid: draws a trapezoidal filled area _glyph: draws a single glyph
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type PangoRendererClass = CStruct15[_root_.gobject.all.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object PangoRendererClass:
@@ -1304,21 +1303,21 @@ object PangoRendererClass:
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type PangoRendererPrivate = CStruct0
 object PangoRendererPrivate:
   given _tag: Tag[PangoRendererPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-script.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-script.h
 */
 opaque type PangoScriptIter = CStruct0
 object PangoScriptIter:
   given _tag: Tag[PangoScriptIter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type PangoTabArray = CStruct0
 object PangoTabArray:
@@ -1327,7 +1326,7 @@ object PangoTabArray:
 /**
  * PangoAnalysis: _engine: unused, reserved _engine: unused, reserved : the font for this segment. : the bidirectional level for this segment. : the glyph orientation for this segment (A `PangoGravity`). : boolean flags for this segment (Since: 1.16). : the detected script for this segment (A `PangoScript`) (Since: 1.18). : the detected language for this segment. _attrs: extra attributes for this segment.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-item.h
 */
 opaque type _PangoAnalysis = CStruct9[Ptr[PangoEngineShape], Ptr[PangoEngineLang], Ptr[PangoFont], _root_.glib.all.guint8, _root_.glib.all.guint8, _root_.glib.all.guint8, _root_.glib.all.guint8, Ptr[PangoLanguage], Ptr[Byte]]
 object _PangoAnalysis:
@@ -1368,7 +1367,7 @@ object _PangoAnalysis:
 /**
  * PangoAttrClass: : the type ID for this attribute : function to duplicate an attribute of this type (see [method.Attribute.copy]) : function to free an attribute of this type (see [method.Attribute.destroy]) : function to check two attributes of this type for equality (see [method.Attribute.equal])
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrClass = CStruct4[PangoAttrType, CFuncPtr1[Ptr[Byte], Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr2[Ptr[Byte], Ptr[Byte], _root_.glib.all.gboolean]]
 object _PangoAttrClass:
@@ -1394,7 +1393,7 @@ object _PangoAttrClass:
 /**
  * PangoAttrColor: : the common portion of the attribute : the `PangoColor` which is the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrColor = CStruct2[PangoAttribute, PangoColor]
 object _PangoAttrColor:
@@ -1414,7 +1413,7 @@ object _PangoAttrColor:
 /**
  * PangoAttrFloat: : the common portion of the attribute : the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrFloat = CStruct2[PangoAttribute, Double]
 object _PangoAttrFloat:
@@ -1434,7 +1433,7 @@ object _PangoAttrFloat:
 /**
  * PangoAttrFontDesc: : the common portion of the attribute : the font description which is the value of this attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrFontDesc = CStruct2[PangoAttribute, Ptr[PangoFontDescription]]
 object _PangoAttrFontDesc:
@@ -1454,7 +1453,7 @@ object _PangoAttrFontDesc:
 /**
  * PangoAttrFontFeatures: : the common portion of the attribute : the features, as a string in CSS syntax
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrFontFeatures = CStruct2[PangoAttribute, Ptr[_root_.glib.all.gchar]]
 object _PangoAttrFontFeatures:
@@ -1474,7 +1473,7 @@ object _PangoAttrFontFeatures:
 /**
  * PangoAttrInt: : the common portion of the attribute : the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrInt = CStruct2[PangoAttribute, CInt]
 object _PangoAttrInt:
@@ -1492,7 +1491,7 @@ object _PangoAttrInt:
     def value_=(value: CInt): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrIterator = CStruct0
 object _PangoAttrIterator:
@@ -1501,7 +1500,7 @@ object _PangoAttrIterator:
 /**
  * PangoAttrLanguage: : the common portion of the attribute : the `PangoLanguage` which is the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrLanguage = CStruct2[PangoAttribute, Ptr[PangoLanguage]]
 object _PangoAttrLanguage:
@@ -1519,7 +1518,7 @@ object _PangoAttrLanguage:
     def value_=(value: Ptr[PangoLanguage]): Unit = !struct.at2 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrList = CStruct0
 object _PangoAttrList:
@@ -1528,7 +1527,7 @@ object _PangoAttrList:
 /**
  * PangoAttrShape: : the common portion of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrShape = CStruct6[PangoAttribute, PangoRectangle, PangoRectangle, _root_.glib.all.gpointer, PangoAttrDataCopyFunc, _root_.glib.all.GDestroyNotify]
 object _PangoAttrShape:
@@ -1560,7 +1559,7 @@ object _PangoAttrShape:
 /**
  * PangoAttrSize: : the common portion of the attribute : size of font, in units of 1/%PANGO_SCALE of a point (for %PANGO_ATTR_SIZE) or of a device unit (for %PANGO_ATTR_ABSOLUTE_SIZE) : whether the font size is in device units or points. This field is only present for compatibility with Pango-1.8.0 (%PANGO_ATTR_ABSOLUTE_SIZE was added in 1.8.1); and always will be %FALSE for %PANGO_ATTR_SIZE and %TRUE for %PANGO_ATTR_ABSOLUTE_SIZE.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrSize = CStruct3[PangoAttribute, CInt, _root_.glib.all.guint]
 object _PangoAttrSize:
@@ -1583,7 +1582,7 @@ object _PangoAttrSize:
 /**
  * PangoAttrString: : the common portion of the attribute : the string which is the value of the attribute
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttrString = CStruct2[PangoAttribute, CString]
 object _PangoAttrString:
@@ -1603,7 +1602,7 @@ object _PangoAttrString:
 /**
  * PangoAttribute: _index: the start index of the range (in bytes). _index: end index of the range (in bytes). The character at this index is not included in the range.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-attributes.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-attributes.h
 */
 opaque type _PangoAttribute = CStruct3[Ptr[Byte], _root_.glib.all.guint, _root_.glib.all.guint]
 object _PangoAttribute:
@@ -1626,7 +1625,7 @@ object _PangoAttribute:
 /**
  * PangoColor: : value of red component : value of green component : value of blue component
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-color.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-color.h
 */
 opaque type _PangoColor = CStruct3[_root_.glib.all.guint16, _root_.glib.all.guint16, _root_.glib.all.guint16]
 object _PangoColor:
@@ -1647,21 +1646,21 @@ object _PangoColor:
     def blue_=(value: _root_.glib.all.guint16): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 opaque type _PangoContext = CStruct0
 object _PangoContext:
   given _tag: Tag[_PangoContext] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-context.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-context.h
 */
 opaque type _PangoContextClass = CStruct0
 object _PangoContextClass:
   given _tag: Tag[_PangoContextClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-coverage.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-coverage.h
 */
 opaque type _PangoCoverage = CStruct0
 object _PangoCoverage:
@@ -1670,7 +1669,7 @@ object _PangoCoverage:
 /**
  * PangoEngine:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngine = CStruct1[_root_.gobject.all.GObject]
 object _PangoEngine:
@@ -1687,7 +1686,7 @@ object _PangoEngine:
 /**
  * PangoEngineClass:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineClass = CStruct1[_root_.gobject.all.GObjectClass]
 object _PangoEngineClass:
@@ -1704,7 +1703,7 @@ object _PangoEngineClass:
 /**
  * PangoEngineInfo: _type: a string identifying the engine type. _type: a string identifying the render type. : array of scripts this engine supports. _scripts: number of items in .
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineInfo = CStruct5[Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[PangoEngineScriptInfo], _root_.glib.all.gint]
 object _PangoEngineInfo:
@@ -1733,7 +1732,7 @@ object _PangoEngineInfo:
 /**
  * PangoEngineLang:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineLang = CStruct1[PangoEngine]
 object _PangoEngineLang:
@@ -1750,7 +1749,7 @@ object _PangoEngineLang:
 /**
  * PangoEngineLangClass: _break: (nullable): Provides a custom implementation of pango_break(). If %NULL, pango_default_break() is used instead. If not %NULL, for Pango versions before 1.16 (module interface version before 1.6.0), this was called instead of pango_default_break(), but in newer versions, pango_default_break() is always called and this is called after that to allow tailoring the breaking results.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineLangClass = CStruct2[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
 object _PangoEngineLangClass:
@@ -1770,7 +1769,7 @@ object _PangoEngineLangClass:
 /**
  * PangoEngineScriptInfo: : a `PangoScript`. The value %PANGO_SCRIPT_COMMON has the special meaning here of "all scripts" : a semicolon separated list of languages that this engine handles for this script. This may be empty, in which case the engine is saying that it is a fallback choice for all languages for this range, but should not be used if another engine indicates that it is specific for the language for a given code point. An entry in this list of "*" indicates that this engine is specific to all languages for this range.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineScriptInfo = CStruct2[PangoScript, Ptr[_root_.glib.all.gchar]]
 object _PangoEngineScriptInfo:
@@ -1790,7 +1789,7 @@ object _PangoEngineScriptInfo:
 /**
  * PangoEngineShape:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineShape = CStruct1[PangoEngine]
 object _PangoEngineShape:
@@ -1807,7 +1806,7 @@ object _PangoEngineShape:
 /**
  * PangoEngineShapeClass: _shape: Given a font, a piece of text, and a `PangoAnalysis` structure, converts characters to glyphs and positions the resulting glyphs. The results are stored in the `PangoGlyphString` that is passed in. (The implementation should resize it appropriately using pango_glyph_string_set_size()). All fields of the _clusters and array must be filled in, with the exception that Pango will automatically generate `glyphs->glyphs[i].attr.is_cluster_start` using the _clusters array. Each input character must occur in one of the output logical clusters; if no rendering is desired for a character, this may involve inserting glyphs with the `PangoGlyph` ID %PANGO_GLYPH_EMPTY, which is guaranteed never to render. If the shaping fails for any reason, the shaper should return with an empty (zero-size) glyph string. If the shaper has not set the size on the glyph string yet, simply returning signals the failure too. : Returns the characters that this engine can cover with a given font for a given language. If not overridden, the default implementation simply returns the coverage information for the font itself unmodified.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-engine.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-engine.h
 */
 opaque type _PangoEngineShapeClass = CStruct3[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.glib.all.gunichar, PangoCoverageLevel]]
 object _PangoEngineShapeClass:
@@ -1830,7 +1829,7 @@ object _PangoEngineShapeClass:
 /**
  * PangoFont:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFont = CStruct1[_root_.gobject.all.GObject]
 object _PangoFont:
@@ -1845,7 +1844,7 @@ object _PangoFont:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoCoverage]], CFuncPtr4[Ptr[PangoFont], PangoGlyph, Ptr[PangoRectangle], Ptr[PangoRectangle], Unit], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontMap]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr4[Ptr[PangoFont], Ptr[_root_.libharfbuzz.all.hb_feature_t], _root_.glib.all.guint, Ptr[_root_.glib.all.guint], Unit], CFuncPtr1[Ptr[PangoFont], Ptr[_root_.libharfbuzz.all.hb_font_t]]]
 object _PangoFontClass:
@@ -1884,7 +1883,7 @@ object _PangoFontClass:
     def create_hb_font_=(value: CFuncPtr1[Ptr[PangoFont], Ptr[_root_.libharfbuzz.all.hb_font_t]]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontDescription = CStruct0
 object _PangoFontDescription:
@@ -1893,7 +1892,7 @@ object _PangoFontDescription:
 /**
  * PangoFontFace:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontFace = CStruct1[_root_.gobject.all.GObject]
 object _PangoFontFace:
@@ -1908,7 +1907,7 @@ object _PangoFontFace:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontFaceClass = CStruct8[_root_.gobject.all.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.glib.all.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _PangoFontFaceClass:
@@ -1946,7 +1945,7 @@ object _PangoFontFaceClass:
 /**
  * PangoFontFamily:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontFamily = CStruct1[_root_.gobject.all.GObject]
 object _PangoFontFamily:
@@ -1961,7 +1960,7 @@ object _PangoFontFamily:
     def parent_instance_=(value: _root_.gobject.all.GObject): Unit = !struct.at1 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontFamilyClass = CStruct7[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.glib.all.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.glib.all.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
 object _PangoFontFamilyClass:
@@ -1996,7 +1995,7 @@ object _PangoFontFamilyClass:
 /**
  * PangoFontMap:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type _PangoFontMap = CStruct1[_root_.gobject.all.GObject]
 object _PangoFontMap:
@@ -2013,7 +2012,7 @@ object _PangoFontMap:
 /**
  * PangoFontMapClass: _class: parent `GObjectClass` _font: a function to load a font with a given description. See pango_font_map_load_font(). _families: A function to list available font families. See pango_font_map_list_families(). _fontset: a function to load a fontset with a given given description suitable for a particular language. See pango_font_map_load_fontset(). _engine_type: the type of rendering-system-dependent engines that can handle fonts of this fonts loaded with this fontmap. _serial: a function to get the serial number of the fontmap. See pango_font_map_get_serial(). : See pango_font_map_changed()
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontmap.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontmap.h
 */
 opaque type _PangoFontMapClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], CString, CFuncPtr1[Ptr[PangoFontMap], _root_.glib.all.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
 object _PangoFontMapClass:
@@ -2052,7 +2051,7 @@ object _PangoFontMapClass:
     def get_face_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-font.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-font.h
 */
 opaque type _PangoFontMetrics = CStruct10[_root_.glib.all.guint, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt]
 object _PangoFontMetrics:
@@ -2096,7 +2095,7 @@ object _PangoFontMetrics:
 /**
  * PangoFontset:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset.h
 */
 opaque type _PangoFontset = CStruct1[_root_.gobject.all.GObject]
 object _PangoFontset:
@@ -2113,7 +2112,7 @@ object _PangoFontset:
 /**
  * PangoFontsetClass: _class: parent `GObjectClass` _font: a function to get the font in the fontset that contains the best glyph for the given Unicode character; see [method.Fontset.get_font] _metrics: a function to get overall metric information for the fonts in the fontset; see [method.Fontset.get_metrics] _language: a function to get the language of the fontset. : a function to loop over the fonts in the fontset. See [method.Fontset.foreach]
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset.h
 */
 opaque type _PangoFontsetClass = CStruct9[_root_.gobject.all.GObjectClass, CFuncPtr2[Ptr[PangoFontset], _root_.glib.all.guint, Ptr[PangoFont]], CFuncPtr1[Ptr[PangoFontset], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFontset], Ptr[PangoLanguage]], CFuncPtr3[Ptr[PangoFontset], PangoFontsetForeachFunc, _root_.glib.all.gpointer, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _PangoFontsetClass:
@@ -2152,14 +2151,14 @@ object _PangoFontsetClass:
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset-simple.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset-simple.h
 */
 opaque type _PangoFontsetSimple = CStruct0
 object _PangoFontsetSimple:
   given _tag: Tag[_PangoFontsetSimple] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-fontset-simple.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-fontset-simple.h
 */
 opaque type _PangoFontsetSimpleClass = CStruct0
 object _PangoFontsetSimpleClass:
@@ -2168,7 +2167,7 @@ object _PangoFontsetSimpleClass:
 /**
  * PangoGlyphGeometry: : the logical width to use for the the character. _offset: horizontal offset from nominal character position. _offset: vertical offset from nominal character position.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type _PangoGlyphGeometry = CStruct3[PangoGlyphUnit, PangoGlyphUnit, PangoGlyphUnit]
 object _PangoGlyphGeometry:
@@ -2191,7 +2190,7 @@ object _PangoGlyphGeometry:
 /**
  * PangoGlyphInfo: : the glyph itself. : the positional information about the glyph. : the visual attributes of the glyph.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type _PangoGlyphInfo = CStruct3[PangoGlyph, PangoGlyphGeometry, PangoGlyphVisAttr]
 object _PangoGlyphInfo:
@@ -2212,7 +2211,7 @@ object _PangoGlyphInfo:
     def attr_=(value: PangoGlyphVisAttr): Unit = !struct.at3 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph-item.h
 */
 opaque type _PangoGlyphItem = CStruct5[Ptr[Byte], Ptr[PangoGlyphString], CInt, CInt, CInt]
 object _PangoGlyphItem:
@@ -2239,7 +2238,7 @@ object _PangoGlyphItem:
     def end_x_offset_=(value: CInt): Unit = !struct.at5 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph-item.h
 */
 opaque type _PangoGlyphItemIter = CStruct8[Ptr[Byte], Ptr[_root_.glib.all.gchar], CInt, CInt, CInt, CInt, CInt, CInt]
 object _PangoGlyphItemIter:
@@ -2277,7 +2276,7 @@ object _PangoGlyphItemIter:
 /**
  * PangoGlyphString: : (array length=num_glyphs): array of glyph information _clusters: logical cluster info, indexed by the byte index within the text corresponding to the glyph string
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type _PangoGlyphString = CStruct4[CInt, Ptr[PangoGlyphInfo], Ptr[CInt], CInt]
 object _PangoGlyphString:
@@ -2303,7 +2302,7 @@ object _PangoGlyphString:
 /**
  * PangoGlyphVisAttr:
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-glyph.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-glyph.h
 */
 opaque type _PangoGlyphVisAttr = CStruct2[_root_.glib.all.guint, _root_.glib.all.guint]
 object _PangoGlyphVisAttr:
@@ -2323,7 +2322,7 @@ object _PangoGlyphVisAttr:
 /**
  * PangoItem: : byte offset of the start of this item in text. : length of this item in bytes. _offset: character offset of the start of this item in text. Since 1.50 : analysis results for the item.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-item.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-item.h
 */
 opaque type _PangoItem = CStruct4[CInt, CInt, CInt, PangoAnalysis]
 object _PangoItem:
@@ -2347,28 +2346,28 @@ object _PangoItem:
     def analysis_=(value: PangoAnalysis): Unit = !struct.at4 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 opaque type _PangoLanguage = CStruct0
 object _PangoLanguage:
   given _tag: Tag[_PangoLanguage] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type _PangoLayout = CStruct0
 object _PangoLayout:
   given _tag: Tag[_PangoLayout] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type _PangoLayoutClass = CStruct0
 object _PangoLayoutClass:
   given _tag: Tag[_PangoLayoutClass] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type _PangoLayoutIter = CStruct0
 object _PangoLayoutIter:
@@ -2377,7 +2376,7 @@ object _PangoLayoutIter:
 /**
  * PangoLayoutLine: : (nullable): the layout this line belongs to, might be %NULL _index: start of line as byte index into layout->text : length of line in bytes : (nullable) (element-type Pango.LayoutRun): list of runs in the line, from left to right _dir: #Resolved PangoDirection of line
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-layout.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-layout.h
 */
 opaque type _PangoLayoutLine = CStruct6[Ptr[PangoLayout], _root_.glib.all.gint, _root_.glib.all.gint, Ptr[Byte], _root_.glib.all.guint, _root_.glib.all.guint]
 object _PangoLayoutLine:
@@ -2409,7 +2408,7 @@ object _PangoLayoutLine:
 /**
  * PangoLogAttr: i.e. this is a grapheme boundary, or the first character in the text. This flag implements Unicode's [Grapheme Cluster Boundaries](http://www.unicode.org/reports/tr29/) semantics. Note that in degenerate cases, you could have both and There are two ways to divide sentences. The first assigns all inter-sentence whitespace/control/format chars to some sentence, so all chars are in some sentence; the boundaries there. The second way doesn't assign between-sentence spaces, etc. to any sentence, so Note that in degenerate cases, you could have both and period, so the next sentence starts right away) _deletes_character: if set, backspace deletes one character rather than the entire grapheme cluster. This field is only meaningful on grapheme boundaries (where the full grapheme (e.g. letter + diacritics) is considered a unit, while in others, each decomposed character in the grapheme is a unit. In the default implementation of [func], this bit is set on all grapheme boundaries except those following Latin, Cyrillic or Greek base characters. expanded for justification purposes. (Since: 1.18) More specifically, means that this is not a position in the middle of a word. For example, both sides of a punctuation mark are considered word boundaries. This flag is particularly useful when selecting text word-by-word. This flag implements Unicode's [Word Boundaries](http://www.unicode.org/reports/tr29/) semantics. (Since: 1.22) _inserts_hyphen: when breaking lines before this char, insert a hyphen. Since: 1.50 _removes_preceding: when breaking lines before this char, remove the preceding char. Since 1.50
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-break.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-break.h
 */
 opaque type _PangoLogAttr = CStruct16[_root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint, _root_.glib.all.guint]
 object _PangoLogAttr:
@@ -2471,7 +2470,7 @@ object _PangoLogAttr:
 /**
  * PangoMatrix: : 1st component of the transformation matrix : 2nd component of the transformation matrix : 3rd component of the transformation matrix : 4th component of the transformation matrix : x translation : y translation
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-matrix.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-matrix.h
 */
 opaque type _PangoMatrix = CStruct6[Double, Double, Double, Double, Double, Double]
 object _PangoMatrix:
@@ -2503,7 +2502,7 @@ object _PangoMatrix:
 /**
  * PangoRectangle: : X coordinate of the left side of the rectangle. : Y coordinate of the the top side of the rectangle. : width of the rectangle. : height of the rectangle.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-types.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-types.h
 */
 opaque type _PangoRectangle = CStruct4[CInt, CInt, CInt, CInt]
 object _PangoRectangle:
@@ -2529,7 +2528,7 @@ object _PangoRectangle:
 /**
  * PangoRenderer: : (nullable): the current transformation matrix for the Renderer; may be %NULL, which should be treated the same as the identity matrix.
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type _PangoRenderer = CStruct6[_root_.gobject.all.GObject, PangoUnderline, _root_.glib.all.gboolean, CInt, Ptr[PangoMatrix], Ptr[PangoRendererPrivate]]
 object _PangoRenderer:
@@ -2561,7 +2560,7 @@ object _PangoRenderer:
 /**
  * PangoRendererClass: _glyphs: draws a `PangoGlyphString` _rectangle: draws a rectangle _error_underline: draws a squiggly line that approximately covers the given rectangle in the style of an underline used to indicate a spelling error. _shape: draw content for a glyph shaped with `PangoAttrShape` , are the coordinates of the left edge of the baseline, in user coordinates. _trapezoid: draws a trapezoidal filled area _glyph: draws a single glyph
 
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type _PangoRendererClass = CStruct15[_root_.gobject.all.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _PangoRendererClass:
@@ -2618,21 +2617,21 @@ object _PangoRendererClass:
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-renderer.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-renderer.h
 */
 opaque type _PangoRendererPrivate = CStruct0
 object _PangoRendererPrivate:
   given _tag: Tag[_PangoRendererPrivate] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-script.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-script.h
 */
 opaque type _PangoScriptIter = CStruct0
 object _PangoScriptIter:
   given _tag: Tag[_PangoScriptIter] = Tag.materializeCStruct0Tag
 
 /**
- * [bindgen] header: /usr/include/pango-1.0/pango/pango-tabs.h
+ * [bindgen] header: /opt/homebrew/Cellar/pango/1.50.14/include/pango-1.0/pango/pango-tabs.h
 */
 opaque type _PangoTabArray = CStruct0
 object _PangoTabArray:
