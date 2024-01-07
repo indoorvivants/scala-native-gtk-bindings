@@ -50,6 +50,21 @@ case class AugmentedClass(n: Class) extends ClassLike:
 
 end AugmentedClass
 
-extension (c: Constructor)
-  def parameters = c.constructoroption.collect:
-    case d if d.value.isInstanceOf[Parameter] => d.as[Parameter]
+private def extractParams(c: Seq[DataRecord[Any]]) =
+  c
+    .collect:
+      case d if d.value.isInstanceOf[Parameters] =>
+        d.as[Parameters]
+          .parametersoption
+          .collect:
+            case d if d.value.isInstanceOf[Parameter] => d.as[Parameter]
+    .flatten
+
+extension (c: Constructor) def parameters = extractParams(c.constructoroption)
+
+extension (c: Method) def parameters = extractParams(c.methodoption)
+
+extension (c: Parameter)
+  def tpe: Option[Type | ArrayType] = c.parameteroption.collectFirst:
+    case d if d.value.isInstanceOf[Type]      => d.as[Type]
+    case d if d.value.isInstanceOf[ArrayType] => d.as[ArrayType]

@@ -48,10 +48,21 @@ def renderNamespace(r: Rendering, ns: AugmentedNamespace) =
             s"end ${cls.name}"
           ):
             cls.methods.foreach: meth =>
-              val camelName = camelify(meth.name)
-              val cMethod = meth.identifier
-              if meth.name == "get_height" then println(meth.methodoption)
-              line(s"def $camelName = ??? /*$cMethod*/")
+              boundary:
+                val camelName = camelify(meth.name)
+                val cMethod = meth.identifier
+                val params =
+                  meth.parameters
+                    .map: param =>
+                      param.name.get + " : " + renderType(
+                        param.tpe.getOrElse(
+                          break(
+                            s"method ${meth.name}, param: ${param.name}: type is empty"
+                          )
+                        )
+                      )
+                    .mkString(", ")
+                line(s"def $camelName($params) = ??? /*$cMethod*/")
 
           block(s"object ${cls.name}", s"end ${cls.name}"):
             cls.constructors.foreach: constructor =>
@@ -60,7 +71,20 @@ def renderNamespace(r: Rendering, ns: AugmentedNamespace) =
                 case "new" => "apply"
                 case s"new_$rest" =>
                   camelify(rest)
-              line(s"def $sanitisedName(): ${cls.name} = ??? /*$cConstructor*/")
+              val params =
+                constructor.parameters
+                  .map: param =>
+                    param.name.get + " : " + renderType(
+                      param.tpe.getOrElse(
+                        break(
+                          s"constructor ${constructor.name}, param: ${param.name}: type is empty"
+                        )
+                      )
+                    )
+                  .mkString(", ")
+              line(
+                s"def $sanitisedName($params): ${cls.name} = ??? /*$cConstructor*/"
+              )
 
       skippedBecause match
         case msg: String =>
@@ -73,3 +97,10 @@ def camelify(name: String) =
   els.mkString
 
 def qualifyCType(name: String) = s"???.$name"
+
+def renderType(tpe: Type | ArrayType) =
+  tpe match
+    case tpe: Type =>
+      tpe.name.getOrElse(tpe.typeValue)
+    case ar: ArrayType =>
+      "Array[Byte]"
