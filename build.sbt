@@ -298,7 +298,8 @@ lazy val `fluent-generator` = project
   .dependsOn(`gir-schema`)
   .settings(scalaVersion := "3.3.1")
   .settings(
-    libraryDependencies += "com.outr" %%% "scribe" % "3.13.0"
+    libraryDependencies += "com.outr" %%% "scribe" % "3.13.0",
+    libraryDependencies += "com.indoorvivants" %% "rendition" % "0.0.3"
   )
 
 def pkgConfig(pkg: String, arg: String) = {

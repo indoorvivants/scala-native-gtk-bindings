@@ -17,9 +17,9 @@ case class AugmentedRepository(r: Repository):
           i.name + "-" + i.version.get
       .map(_.toLowerCase())
 
-  lazy val namespace: Option[Namespace] =
+  lazy val namespace: Option[AugmentedNamespace] =
     r.repositoryoption
       .map(_.value)
       .collectFirst:
-        case i: Namespace => i
+        case i: Namespace => AugmentedNamespace(i)
 end AugmentedRepository
