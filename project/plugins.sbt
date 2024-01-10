@@ -1,6 +1,6 @@
 resolvers ++= Resolver.sonatypeOssRepos("snapshots")
 
-addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.4.10")
+addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.4.16")
 
 addSbtPlugin("com.indoorvivants" % "sbt-commandmatrix" % "0.0.5")
 
@@ -13,7 +13,7 @@ addSbtPlugin(
 )
 
 val BindgenVersion =
-  sys.env.getOrElse("SN_BINDGEN_VERSION", "0.0.16+1-f12b1354-SNAPSHOT")
+  sys.env.getOrElse("SN_BINDGEN_VERSION", "0.0.23+10-059beab2-SNAPSHOT")
 
 addSbtPlugin(
   "com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion
@@ -23,7 +23,7 @@ addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.11.0")
 
 addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.7")
 
-addSbtPlugin("org.scalaxb" % "sbt-scalaxb" % "1.10.0")
+addSbtPlugin("org.scalaxb" % "sbt-scalaxb" % "1.12.0")
 
 libraryDependencies ++= List(
   "com.indoorvivants.detective" %% "platform" % "0.0.2",
