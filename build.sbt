@@ -81,7 +81,9 @@ lazy val gio = project
           .withNoLocation(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())
           .withMultiFile(true)
-      }
+      },
+    girModuleName := "gio-2.0",
+    withFluentBindings
   )
 
 lazy val glib = project
@@ -115,9 +117,7 @@ lazy val gtk4 = project
         "gobject",
         "cairo",
         "harfbuzz",
-        "gdkpixbuf",
-        "pango",
-        "graphene"
+        "gdkpixbuf"
       ) {
         val headerPath = findHeader("gtk4", _ / "gtk" / "gtk.h")
         Binding
@@ -174,7 +174,9 @@ lazy val pango =
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
-        }
+        },
+      girModuleName := "pango-1.0",
+      withFluentBindings
     )
 
 lazy val gdkpixbuf =
@@ -238,7 +240,7 @@ lazy val graphene =
           .addClangFlag(
             List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false")
           )
-          //.addExternalName("graphene_simd4f_get", "<nopackage>")
+          // .addExternalName("graphene_simd4f_get", "<nopackage>")
           .withNoLocation(true)
           .withMultiFile(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())

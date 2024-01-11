@@ -7,10 +7,9 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
 import scala.jdk.CollectionConverters.*
-import scala.util.boundary
+import scala.util.boundary, boundary.*
 import scala.xml.XML
 
-import boundary.break
 import scala.annotation.tailrec
 import scribe.LogFeature
 import scribe.LogRecord
@@ -87,25 +86,36 @@ def renderNamespace(
     global: GlobalKnowledge,
     policy: NamingPolicy
 ) =
-  def extensions(parent: Option[String], impl: Seq[Implements]) =
-    val ext = parent.toSeq ++ impl.map(_.name)
+  def extensions(parent: Option[String], impl: Seq[Implements])(using
+      Label[String]
+  ) =
+    val ext = (parent.toSeq ++ impl.map(_.name))
+      .map(name =>
+        global.names
+          .get(name)
+          .getOrElse(break("Could not find a global name for extension $name"))
+      )
+      .map(_._1)
+
     if ext.nonEmpty then " extends " + ext.mkString(", ")
     else ""
+  end extensions
 
   val fluentPackageName = policy.namespaceToFluentPackage(ns.name.get)
   val internalPackageName = policy.namespaceToInternalPackage(ns.name.get)
 
   ns.interfaces.map: iface =>
     r.in(iface.name + ".scala"): rend =>
-      import rend.*
-      rend.use:
-        line(s"package $fluentPackageName")
-        emptyLine()
-        line(s"import $internalPackageName.all.*")
-        emptyLine()
+      boundary:
+        import rend.*
+        rend.use:
+          line(s"package $fluentPackageName")
+          emptyLine()
+          line(s"import $internalPackageName.*")
+          emptyLine()
 
-        emptyLine()
-        line(s"trait ${iface.name}${extensions(None, iface.implements)}")
+          emptyLine()
+          line(s"trait ${iface.name}${extensions(None, iface.implements)}")
 
   given GlobalKnowledge = global
 
@@ -144,7 +154,9 @@ def renderNamespace(
       rend.use:
         line(s"package $fluentPackageName")
         emptyLine()
-        line(s"import $internalPackageName.all.*")
+        line(s"import _root_.$internalPackageName.*")
+        emptyLine()
+        line(s"import _root_.scala.scalanative.unsafe.*")
         emptyLine()
 
         val skippedBecause =
@@ -153,51 +165,66 @@ def renderNamespace(
             val cType =
               cTypeName.getOrElse(break("c:type missing"))
             val data = s"(private[fluent] val raw: Ptr[$cType])"
-            block(
-              s"class ${cls.name}$data${extensions(cls.parent, cls.implements)}:",
-              s"end ${cls.name}"
-            ):
-              cls.methods.foreach: meth =>
-                boundary:
-                  val camelName = camelify(meth.name)
-                  val cMethod = meth.identifier
-                  val (params, arguments) =
-                    renderParameters(meth.parameters, s"method: ${meth.name}")
-                  val returnType = renderType(
-                    meth.returnType.getOrElse(
-                      break(s"method: ${meth.name}, return type missing")
-                    )
-                  )
-                  val serialisedParams = params.flatten
-                    .mkString(", ")
-                  val serialisedArguments = arguments.mkString(", ")
 
-                  line(
-                    s"def $camelName(${serialisedParams}): ${returnType.scalaRepr} = $cMethod(${serialisedArguments})"
-                  )
-                  emptyLine()
+            val classHeader =
+              s"class ${cls.name}$data${extensions(cls.parent, cls.implements)}"
+            val classHasAnyMembers =
+              cls.methods.nonEmpty
+
+            if !classHasAnyMembers then line(classHeader)
+            else
+              block(
+                classHeader + ":",
+                s"end ${cls.name}"
+              ):
+                cls.methods.foreach: meth =>
+                  boundary:
+                    val camelName = camelify(meth.name)
+                    val cMethod = meth.identifier
+                    val (params, arguments) =
+                      renderParameters(meth.parameters, s"method: ${meth.name}")
+                    val returnType = renderType(
+                      meth.returnType.getOrElse(
+                        break(s"method: ${meth.name}, return type missing")
+                      )
+                    )
+                    val serialisedParams = params.flatten
+                      .mkString(", ")
+                    val serialisedArguments = arguments.mkString(", ")
+
+                    line(
+                      s"def $camelName(${serialisedParams}): ${returnType.scalaRepr} = $cMethod(${serialisedArguments})"
+                    )
+                    emptyLine()
+            end if
 
             emptyLine()
 
-            block(s"object ${cls.name}:", s"end ${cls.name}"):
-              cls.constructors.foreach: constructor =>
-                val cConstructor = constructor.identifier
-                val sanitisedName = constructor.name match
-                  case "new" => "apply"
-                  case s"new_$rest" =>
-                    camelify(rest)
-                val (params, arguments) =
-                  renderParameters(
-                    constructor.parameters,
-                    s"constructor: ${constructor.name}"
+            val objectHeader = s"object ${cls.name}"
+            val objectHasAnyMembers =
+              cls.constructors.nonEmpty
+
+            if objectHasAnyMembers then
+              block(objectHeader + ":", s"end ${cls.name}"):
+                cls.constructors.foreach: constructor =>
+                  val cConstructor = constructor.identifier
+                  val sanitisedName = constructor.name match
+                    case "new" => "apply"
+                    case s"new_$rest" =>
+                      camelify(rest)
+                  val (params, arguments) =
+                    renderParameters(
+                      constructor.parameters,
+                      s"constructor: ${constructor.name}"
+                    )
+                  val serialisedParams = params.flatten
+                    .mkString(", ")
+                  val serialisedArguments = arguments.mkString(", ")
+                  line(
+                    s"def $sanitisedName($serialisedParams): ${cls.name} = ${cls.name}(${cConstructor}($serialisedArguments))"
                   )
-                val serialisedParams = params.flatten
-                  .mkString(", ")
-                val serialisedArguments = arguments.mkString(", ")
-                line(
-                  s"def $sanitisedName($serialisedParams): ${cls.name} = ${cls.name}(${cConstructor}($serialisedArguments))"
-                )
-                emptyLine()
+                  emptyLine()
+            end if
 
         skippedBecause match
           case msg: String =>

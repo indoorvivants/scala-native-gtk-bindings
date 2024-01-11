@@ -22,6 +22,10 @@ case class AugmentedNamespace(n: Namespace):
   lazy val enumerations: Seq[Enumeration] =
     collect[Enumeration]
 
+  lazy val bitfields: Seq[Bitfield] =
+    collect[Bitfield]
+
+
   lazy val classes: Seq[AugmentedClass] =
     collect[Class].map(AugmentedClass(_))
 end AugmentedNamespace
