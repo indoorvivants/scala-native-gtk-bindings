@@ -69,15 +69,17 @@ lazy val gio = project
   .settings(
     bindgenBindings +=
       buildWithDependencies("glib", "gobject") {
+        val headerPath = findHeader("gio-2.0", _ / "gio" / "gio.h")
         Binding
           .builder(
-            findHeader("gio-2.0", _ / "gio" / "gio.h"),
+            headerPath,
             bindingPackage("gio")
           )
           .withClangFlags(pkgConfig("gio-2.0", "cflags"))
           .addCImport("gio.h")
           .withOpaqueStructs(Set("G*"))
           .withNoLocation(true)
+          .addExcludedSystemPath(headerPath.toPath.getParent())
           .withMultiFile(true)
       }
   )
@@ -86,14 +88,17 @@ lazy val glib = project
   .in(file("glib"))
   .configure(pkgConfigured("glib-2.0"))
   .settings(
-    bindgenBindings +=
+    bindgenBindings += {
+      val headerPath = findHeader("glib-2.0", _ / "glib.h")
       Binding
-        .builder(findHeader("glib-2.0", _ / "glib.h"), bindingPackage("glib"))
+        .builder(headerPath, bindingPackage("glib"))
         .withClangFlags(pkgConfig("glib-2.0", "cflags"))
         .addCImport("glib.h")
         .withNoLocation(true)
         .withMultiFile(true)
-        .build,
+        .addExcludedSystemPath(headerPath.toPath().getParent())
+        .build
+    },
     girModuleName := "glib-2.0",
     withFluentBindings
   )
@@ -108,21 +113,23 @@ lazy val gtk4 = project
         "gio",
         "glib",
         "gobject",
-        "libcairo",
-        "libharfbuzz"
+        "cairo",
+        "harfbuzz",
+        "gdkpixbuf",
+        "pango",
+        "graphene"
       ) {
+        val headerPath = findHeader("gtk4", _ / "gtk" / "gtk.h")
         Binding
           .builder(
-            findHeader("gtk4", _ / "gtk" / "gtk.h"),
+            headerPath,
             bindingPackage("gtk4")
           )
           .withClangFlags(pkgConfig("gtk4", "cflags"))
           .addCImport("graphene.h")
           .withNoLocation(true)
           .withMultiFile(true)
-          .addExternalPath("*/graphene-1.0/*", bindingPackage("graphene"))
-          .addExternalPath("*/pango-1.0/*", bindingPackage("pango"))
-          .addExternalPath("*/gdk-pixbuf-2.0/*", bindingPackage("gdkpixbuf"))
+          .addExcludedSystemPath(headerPath.toPath.getParent())
       }
   )
 
@@ -134,15 +141,17 @@ lazy val gobject =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "gio") {
+          val headerPath = findHeader("gobject-2.0", _ / "glib-object.h")
           Binding
             .builder(
-              findHeader("gobject-2.0", _ / "glib-object.h"),
+              headerPath,
               bindingPackage("gobject")
             )
             .withClangFlags(pkgConfig("gobject-2.0", "cflags"))
             .addCImport("glib-object.h")
             .withNoLocation(true)
             .withMultiFile(true)
+            .addExcludedSystemPath(headerPath.toPath.getParent())
         }
     )
 
@@ -153,16 +162,18 @@ lazy val pango =
     .configure(pkgConfigured("pango"))
     .settings(
       bindgenBindings +=
-        buildWithDependencies("glib", "libcairo", "gobject", "libharfbuzz") {
+        buildWithDependencies("glib", "cairo", "gobject", "harfbuzz") {
+          val headerPath = findHeader("pango", _ / "pango" / "pango.h")
           Binding
             .builder(
-              findHeader("pango", _ / "pango" / "pango.h"),
+              headerPath,
               bindingPackage("pango")
             )
             .withClangFlags(pkgConfig("pango", "cflags"))
             .addCImport("pango.h")
             .withNoLocation(true)
             .withMultiFile(true)
+            .addExcludedSystemPath(headerPath.toPath.getParent())
         }
     )
 
@@ -173,18 +184,21 @@ lazy val gdkpixbuf =
     .configure(pkgConfigured("gdk-pixbuf-2.0"))
     .settings(
       bindgenBindings +=
-        buildWithDependencies("glib", "gobject", "gio", "libcairo") {
+        buildWithDependencies("glib", "gobject", "gio", "cairo") {
+          val headerPath =
+            findHeader("gdk-pixbuf-2.0", _ / "gdk-pixbuf" / "gdk-pixbuf.h")
           Binding
             .builder(
-              findHeader("gdk-pixbuf-2.0", _ / "gdk-pixbuf" / "gdk-pixbuf.h"),
+              headerPath,
               bindingPackage("gdkpixbuf")
             )
             .withClangFlags(pkgConfig("gdk-pixbuf-2.0", "cflags"))
             .withNoLocation(true)
             .withMultiFile(true)
+            .addExcludedSystemPath(headerPath.toPath.getParent())
         },
-        girModuleName := "gdkpixbuf-2.0",
-        withFluentBindings
+      girModuleName := "gdkpixbuf-2.0",
+      withFluentBindings
     )
 
 lazy val cairo =
@@ -193,14 +207,17 @@ lazy val cairo =
     .dependsOn(glib)
     .configure(pkgConfigured("cairo"))
     .settings(
-      bindgenBindings +=
+      bindgenBindings += {
+        val headerPath = findHeader("cairo", _ / "cairo.h")
         Binding
-          .builder(findHeader("cairo", _ / "cairo.h"), bindingPackage("cairo"))
+          .builder(headerPath, bindingPackage("cairo"))
           .withClangFlags(pkgConfig("cairo", "cflags"))
           .addCImport("cairo.h")
           .withNoLocation(true)
           .withMultiFile(true)
+          .addExcludedSystemPath(headerPath.toPath.getParent())
           .build
+      }
     )
 
 lazy val graphene =
@@ -209,10 +226,11 @@ lazy val graphene =
     .dependsOn(glib)
     .configure(pkgConfigured("graphene-1.0"))
     .settings(
-      bindgenBindings +=
+      bindgenBindings += {
+        val headerPath = findHeader("graphene-1.0", _ / "graphene.h")
         Binding
           .builder(
-            findHeader("graphene-1.0", _ / "graphene.h"),
+            headerPath,
             bindingPackage("graphene")
           )
           .withClangFlags(pkgConfig("graphene-1.0", "cflags"))
@@ -220,10 +238,12 @@ lazy val graphene =
           .addClangFlag(
             List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false")
           )
-          .addExternalName("graphene_simd4f_get", "<nopackage>")
+          //.addExternalName("graphene_simd4f_get", "<nopackage>")
           .withNoLocation(true)
           .withMultiFile(true)
+          .addExcludedSystemPath(headerPath.toPath.getParent())
           .build
+      }
     )
 
 lazy val girepository =
@@ -252,17 +272,20 @@ lazy val harfbuzz =
     .dependsOn(glib)
     .configure(pkgConfigured("harfbuzz"))
     .settings(
-      bindgenBindings +=
+      bindgenBindings += {
+        val headerPath = findHeader("harfbuzz", _ / "hb.h")
         Binding
           .builder(
-            findHeader("harfbuzz", _ / "hb.h"),
+            headerPath,
             bindingPackage("harfbuzz")
           )
           .withClangFlags(pkgConfig("harfbuzz", "cflags"))
           .addCImport("hb.h")
           .withNoLocation(true)
           .withMultiFile(true)
+          .addExcludedSystemPath(headerPath.toPath.getParent())
           .build
+      }
     )
 
 def generateXsd(
@@ -345,7 +368,8 @@ val withFluentBindings = Seq(
   generateFluentBindings := Def.inputTaskDyn {
     val girModule = girModuleName.value
     val girFiles = (ThisBuild / baseDirectory).value / "gir-files"
-    val out = (Compile / sourceDirectory).value / "scala" / "generated" / "fluent"
+    val out =
+      (Compile / sourceDirectory).value / "scala" / "generated" / "fluent"
     Def.taskDyn {
       (`fluent-generator` / Compile / run)
         .toTask(s" --module $girModule --gir-files $girFiles --out $out")
@@ -422,13 +446,21 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
         "*/glib-2.0/gobject/*",
         "*/glib-2.0/gobject.h"
       )
-    case "libcairo" =>
+    case "cairo" =>
       List("*/cairo/*")
-    case "libharfbuzz" => List("*/harfbuzz/*")
+    case "gdkpixbuf" =>
+      List("*/gdk-pixbuf-2.0/*")
+    case "pango" =>
+      List("*/pango-1.0/*")
+    case "graphene" =>
+      List("*/graphene-1.0/*")
+    case "harfbuzz" => List("*/harfbuzz/*")
   }
 
   val externals =
-    deps.flatMap { dep => extPaths(dep).map(_ -> dep).toMap }.toMap
+    deps.flatMap { dep =>
+      extPaths(dep).map(_ -> bindingPackage(dep)).toMap
+    }.toMap
 
   bb.addExternalPaths(externals).build
 }
