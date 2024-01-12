@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MountOperation(private[fluent] val raw: Ptr[GMountOperation]) extends GObject.Object:
+class MountOperation(private[fluent] val raw: Ptr[GMountOperation]) extends sn.gnome.gobject.fluent.Object:
   def getAnonymous(): Boolean = g_mount_operation_get_anonymous(this.raw)
 
   def getChoice(): Int = g_mount_operation_get_choice(this.raw)

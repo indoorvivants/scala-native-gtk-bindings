@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ZlibCompressor(private[fluent] val raw: Ptr[GZlibCompressor]) extends GObject.Object, Converter:
+class ZlibCompressor(private[fluent] val raw: Ptr[GZlibCompressor]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Converter:
   def getFileInfo(): sn.gnome.gio.fluent.FileInfo = g_zlib_compressor_get_file_info(this.raw)
 
   def setFileInfo(file_info : sn.gnome.gio.fluent.FileInfo): Unit = g_zlib_compressor_set_file_info(this.raw, file_info.raw)

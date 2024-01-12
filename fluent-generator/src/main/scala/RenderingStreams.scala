@@ -16,8 +16,8 @@ case class RenderingStreams():
   def get(name: String) =
     streams.getOrElseUpdate(name, LineBuilder())
 
-  def in(name: String)(f: Rendering => Unit) =
-    f(get(name).rendering())
+  def in(name: String)(f: RenderingContext ?=> Unit) =
+    get(name).use(f)
 
   def renderMapping() =
     streams.toMap.map((k, v) => k -> v.result)

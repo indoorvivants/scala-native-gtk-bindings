@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketService(private[fluent] val raw: Ptr[GSocketService]) extends SocketListener:
+class SocketService(private[fluent] val raw: Ptr[GSocketService]) extends sn.gnome.gio.fluent.SocketListener:
   def isActive(): Boolean = g_socket_service_is_active(this.raw)
 
   def start(): Unit = g_socket_service_start(this.raw)

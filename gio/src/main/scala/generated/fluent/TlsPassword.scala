@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsPassword(private[fluent] val raw: Ptr[GTlsPassword]) extends GObject.Object:
+class TlsPassword(private[fluent] val raw: Ptr[GTlsPassword]) extends sn.gnome.gobject.fluent.Object:
   def getDescription(): String = g_tls_password_get_description(this.raw)
 
   def getFlags(): Any /* Some(TlsPasswordFlags): GTlsPasswordFlags*/ = g_tls_password_get_flags(this.raw)

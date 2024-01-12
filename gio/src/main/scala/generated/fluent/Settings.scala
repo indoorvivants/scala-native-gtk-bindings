@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Settings(private[fluent] val raw: Ptr[GSettings]) extends GObject.Object:
+class Settings(private[fluent] val raw: Ptr[GSettings]) extends sn.gnome.gobject.fluent.Object:
   def apply(): Unit = g_settings_apply(this.raw)
 
   def bind(key : String, `object` : sn.gnome.gobject.fluent.Object, property : String, flags : Any /* Some(SettingsBindFlags): GSettingsBindFlags*/): Unit = g_settings_bind(this.raw, key, `object`.raw, property, flags)

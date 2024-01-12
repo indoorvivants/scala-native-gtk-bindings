@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MenuAttributeIter(private[fluent] val raw: Ptr[GMenuAttributeIter]) extends GObject.Object:
+class MenuAttributeIter(private[fluent] val raw: Ptr[GMenuAttributeIter]) extends sn.gnome.gobject.fluent.Object:
   def getName(): String = g_menu_attribute_iter_get_name(this.raw)
 
   def getNext(out_name : Any /* Some(utf8): const gchar***/, value : Any /* Some(GLib.Variant): GVariant***/): Boolean = g_menu_attribute_iter_get_next(this.raw, out_name, value)

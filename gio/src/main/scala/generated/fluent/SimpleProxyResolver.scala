@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SimpleProxyResolver(private[fluent] val raw: Ptr[GSimpleProxyResolver]) extends GObject.Object, ProxyResolver:
+class SimpleProxyResolver(private[fluent] val raw: Ptr[GSimpleProxyResolver]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ProxyResolver:
   def setDefaultProxy(default_proxy : String): Unit = g_simple_proxy_resolver_set_default_proxy(this.raw, default_proxy)
 
   def setIgnoreHosts(ignore_hosts : Array[Byte]): Unit = g_simple_proxy_resolver_set_ignore_hosts(this.raw, ignore_hosts)

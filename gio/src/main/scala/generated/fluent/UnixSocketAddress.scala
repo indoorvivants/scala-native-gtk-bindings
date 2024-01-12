@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixSocketAddress(private[fluent] val raw: Ptr[GUnixSocketAddress]) extends SocketAddress, SocketConnectable:
+class UnixSocketAddress(private[fluent] val raw: Ptr[GUnixSocketAddress]) extends sn.gnome.gio.fluent.SocketAddress, sn.gnome.gio.fluent.SocketConnectable:
   def getAddressType(): GUnixSocketAddressType = g_unix_socket_address_get_address_type(this.raw)
 
   def getIsAbstract(): Boolean = g_unix_socket_address_get_is_abstract(this.raw)

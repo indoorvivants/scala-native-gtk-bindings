@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixCredentialsMessage(private[fluent] val raw: Ptr[GUnixCredentialsMessage]) extends SocketControlMessage:
+class UnixCredentialsMessage(private[fluent] val raw: Ptr[GUnixCredentialsMessage]) extends sn.gnome.gio.fluent.SocketControlMessage:
   def getCredentials(): sn.gnome.gio.fluent.Credentials = g_unix_credentials_message_get_credentials(this.raw)
 
 end UnixCredentialsMessage

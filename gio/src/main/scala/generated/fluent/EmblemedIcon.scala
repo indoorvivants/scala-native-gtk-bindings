@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class EmblemedIcon(private[fluent] val raw: Ptr[GEmblemedIcon]) extends GObject.Object, Icon:
+class EmblemedIcon(private[fluent] val raw: Ptr[GEmblemedIcon]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Icon:
   def addEmblem(emblem : sn.gnome.gio.fluent.Emblem): Unit = g_emblemed_icon_add_emblem(this.raw, emblem.raw)
 
   def clearEmblems(): Unit = g_emblemed_icon_clear_emblems(this.raw)

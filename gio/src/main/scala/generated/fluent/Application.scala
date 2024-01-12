@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Application(private[fluent] val raw: Ptr[GApplication]) extends GObject.Object, ActionGroup, ActionMap:
+class Application(private[fluent] val raw: Ptr[GApplication]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ActionGroup, sn.gnome.gio.fluent.ActionMap:
   def activate(): Unit = g_application_activate(this.raw)
 
   def addMainOption(long_name : String, short_name : Any /* Some(gchar): char*/, flags : Any /* Some(GLib.OptionFlags): GOptionFlags*/, arg : GOptionArg, description : String, arg_description : String): Unit = g_application_add_main_option(this.raw, long_name, short_name, flags, arg, description, arg_description)

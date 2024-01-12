@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Task(private[fluent] val raw: Ptr[GTask]) extends GObject.Object, AsyncResult:
+class Task(private[fluent] val raw: Ptr[GTask]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncResult:
   def attachSource(source : Any /* Some(GLib.Source): GSource**/, callback : Any /* Some(GLib.SourceFunc): GSourceFunc*/): Unit = g_task_attach_source(this.raw, source, callback)
 
   def getCancellable(): sn.gnome.gio.fluent.Cancellable = g_task_get_cancellable(this.raw)

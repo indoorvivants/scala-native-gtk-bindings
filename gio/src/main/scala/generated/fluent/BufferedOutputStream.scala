@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class BufferedOutputStream(private[fluent] val raw: Ptr[GBufferedOutputStream]) extends FilterOutputStream, Seekable:
+class BufferedOutputStream(private[fluent] val raw: Ptr[GBufferedOutputStream]) extends sn.gnome.gio.fluent.FilterOutputStream, sn.gnome.gio.fluent.Seekable:
   def getAutoGrow(): Boolean = g_buffered_output_stream_get_auto_grow(this.raw)
 
   def getBufferSize(): Any /* Some(gsize): gsize*/ = g_buffered_output_stream_get_buffer_size(this.raw)

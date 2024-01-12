@@ -25,6 +25,14 @@ case class AugmentedNamespace(n: Namespace):
   lazy val bitfields: Seq[Bitfield] =
     collect[Bitfield]
 
+  lazy val aliases: Seq[Alias] =
+    collect[Alias]
+
+  lazy val callbacks: Seq[Callback] =
+    collect[Callback]
+
+  lazy val records: Seq[Record] =
+    collect[Record]
 
   lazy val classes: Seq[AugmentedClass] =
     collect[Class].map(AugmentedClass(_))
@@ -95,6 +103,11 @@ extension [T](c: Seq[DataRecord[T]])
   def doc =
     c.collectFirst:
       case d if d.value.isInstanceOf[Doc] => d.as[Doc]
+
+extension (c: Seq[DataRecord[Any]])
+  def tpe =
+    c.collectFirst:
+      case d if d.value.isInstanceOf[Type] => d.as[Type]
 
 extension (c: Parameter | Instanceu45parameter)
   def tpe: Option[Type | ArrayType] =

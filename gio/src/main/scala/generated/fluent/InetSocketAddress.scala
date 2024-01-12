@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class InetSocketAddress(private[fluent] val raw: Ptr[GInetSocketAddress]) extends SocketAddress, SocketConnectable:
+class InetSocketAddress(private[fluent] val raw: Ptr[GInetSocketAddress]) extends sn.gnome.gio.fluent.SocketAddress, sn.gnome.gio.fluent.SocketConnectable:
   def getAddress(): sn.gnome.gio.fluent.InetAddress = g_inet_socket_address_get_address(this.raw)
 
   def getFlowinfo(): UInt = g_inet_socket_address_get_flowinfo(this.raw)

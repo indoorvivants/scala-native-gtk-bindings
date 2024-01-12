@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Credentials(private[fluent] val raw: Ptr[GCredentials]) extends GObject.Object:
+class Credentials(private[fluent] val raw: Ptr[GCredentials]) extends sn.gnome.gobject.fluent.Object:
   def getNative(native_type : GCredentialsType): Ptr[Byte] = g_credentials_get_native(this.raw, native_type)
 
   def getUnixPid(): Any /* Some(gint): pid_t*/ = g_credentials_get_unix_pid(this.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SimpleAction(private[fluent] val raw: Ptr[GSimpleAction]) extends GObject.Object, Action:
+class SimpleAction(private[fluent] val raw: Ptr[GSimpleAction]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Action:
   def setEnabled(enabled : Boolean): Unit = g_simple_action_set_enabled(this.raw, enabled)
 
   def setState(value : Any /* Some(GLib.Variant): GVariant**/): Unit = g_simple_action_set_state(this.raw, value)

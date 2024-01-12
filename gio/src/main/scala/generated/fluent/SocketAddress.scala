@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketAddress(private[fluent] val raw: Ptr[GSocketAddress]) extends GObject.Object, SocketConnectable:
+class SocketAddress(private[fluent] val raw: Ptr[GSocketAddress]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.SocketConnectable:
   def getFamily(): GSocketFamily = g_socket_address_get_family(this.raw)
 
   def getNativeSize(): Any /* Some(gssize): gssize*/ = g_socket_address_get_native_size(this.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ThemedIcon(private[fluent] val raw: Ptr[GThemedIcon]) extends GObject.Object, Icon:
+class ThemedIcon(private[fluent] val raw: Ptr[GThemedIcon]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Icon:
   def appendName(iconname : String): Unit = g_themed_icon_append_name(this.raw, iconname)
 
   def getNames(): Array[Byte] = g_themed_icon_get_names(this.raw)

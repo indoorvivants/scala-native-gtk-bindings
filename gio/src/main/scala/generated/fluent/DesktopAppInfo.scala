@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DesktopAppInfo(private[fluent] val raw: Ptr[GDesktopAppInfo]) extends GObject.Object, AppInfo:
+class DesktopAppInfo(private[fluent] val raw: Ptr[GDesktopAppInfo]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AppInfo:
   def getActionName(action_name : String): Any /* Some(utf8): gchar**/ = g_desktop_app_info_get_action_name(this.raw, action_name)
 
   def getBoolean(key : String): Boolean = g_desktop_app_info_get_boolean(this.raw, key)

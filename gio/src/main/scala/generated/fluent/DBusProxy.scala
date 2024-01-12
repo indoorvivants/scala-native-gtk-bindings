@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusProxy(private[fluent] val raw: Ptr[GDBusProxy]) extends GObject.Object, AsyncInitable, DBusInterface, Initable:
+class DBusProxy(private[fluent] val raw: Ptr[GDBusProxy]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncInitable, sn.gnome.gio.fluent.DBusInterface, sn.gnome.gio.fluent.Initable:
   def call(method_name : String, parameters : Any /* Some(GLib.Variant): GVariant**/, flags : Any /* Some(DBusCallFlags): GDBusCallFlags*/, timeout_msec : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_dbus_proxy_call(this.raw, method_name, parameters, flags, timeout_msec, cancellable.raw, callback, user_data)
 
   def callFinish(res : sn.gnome.gio.fluent.AsyncResult): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_proxy_call_finish(this.raw, res.raw)

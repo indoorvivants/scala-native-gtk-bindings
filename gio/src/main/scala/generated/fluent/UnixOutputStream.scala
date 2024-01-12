@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixOutputStream(private[fluent] val raw: Ptr[GUnixOutputStream]) extends OutputStream, FileDescriptorBased, PollableOutputStream:
+class UnixOutputStream(private[fluent] val raw: Ptr[GUnixOutputStream]) extends sn.gnome.gio.fluent.OutputStream, sn.gnome.gio.fluent.FileDescriptorBased, sn.gnome.gio.fluent.PollableOutputStream:
   def getCloseFd(): Boolean = g_unix_output_stream_get_close_fd(this.raw)
 
   def getFd(): Int = g_unix_output_stream_get_fd(this.raw)

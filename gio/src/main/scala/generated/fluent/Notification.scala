@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Notification(private[fluent] val raw: Ptr[GNotification]) extends GObject.Object:
+class Notification(private[fluent] val raw: Ptr[GNotification]) extends sn.gnome.gobject.fluent.Object:
   def addButton(label : String, detailed_action : String): Unit = g_notification_add_button(this.raw, label, detailed_action)
 
   def addButtonWithTargetValue(label : String, action : String, target : Any /* Some(GLib.Variant): GVariant**/): Unit = g_notification_add_button_with_target_value(this.raw, label, action, target)

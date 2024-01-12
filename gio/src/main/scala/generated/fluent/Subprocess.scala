@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Subprocess(private[fluent] val raw: Ptr[GSubprocess]) extends GObject.Object, Initable:
+class Subprocess(private[fluent] val raw: Ptr[GSubprocess]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Initable:
   def communicate(stdin_buf : Any /* Some(GLib.Bytes): GBytes**/, cancellable : sn.gnome.gio.fluent.Cancellable, stdout_buf : Any /* Some(GLib.Bytes): GBytes***/, stderr_buf : Any /* Some(GLib.Bytes): GBytes***/): Boolean = g_subprocess_communicate(this.raw, stdin_buf, cancellable.raw, stdout_buf, stderr_buf)
 
   def communicateAsync(stdin_buf : Any /* Some(GLib.Bytes): GBytes**/, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_subprocess_communicate_async(this.raw, stdin_buf, cancellable.raw, callback, user_data)

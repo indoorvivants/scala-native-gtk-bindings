@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ConverterInputStream(private[fluent] val raw: Ptr[GConverterInputStream]) extends FilterInputStream, PollableInputStream:
+class ConverterInputStream(private[fluent] val raw: Ptr[GConverterInputStream]) extends sn.gnome.gio.fluent.FilterInputStream, sn.gnome.gio.fluent.PollableInputStream:
   def getConverter(): sn.gnome.gio.fluent.Converter = g_converter_input_stream_get_converter(this.raw)
 
 end ConverterInputStream

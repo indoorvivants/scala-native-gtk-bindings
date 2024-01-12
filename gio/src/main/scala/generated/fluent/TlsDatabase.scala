@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsDatabase(private[fluent] val raw: Ptr[GTlsDatabase]) extends GObject.Object:
+class TlsDatabase(private[fluent] val raw: Ptr[GTlsDatabase]) extends sn.gnome.gobject.fluent.Object:
   def createCertificateHandle(certificate : sn.gnome.gio.fluent.TlsCertificate): Any /* Some(utf8): gchar**/ = g_tls_database_create_certificate_handle(this.raw, certificate.raw)
 
   def lookupCertificateForHandle(handle : String, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.TlsCertificate = g_tls_database_lookup_certificate_for_handle(this.raw, handle, interaction.raw, flags, cancellable.raw)

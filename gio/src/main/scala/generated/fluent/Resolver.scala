@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Resolver(private[fluent] val raw: Ptr[GResolver]) extends GObject.Object:
+class Resolver(private[fluent] val raw: Ptr[GResolver]) extends sn.gnome.gobject.fluent.Object:
   def getTimeout(): Any /* Some(guint): unsigned*/ = g_resolver_get_timeout(this.raw)
 
   def lookupByAddress(address : sn.gnome.gio.fluent.InetAddress, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(utf8): gchar**/ = g_resolver_lookup_by_address(this.raw, address.raw, cancellable.raw)

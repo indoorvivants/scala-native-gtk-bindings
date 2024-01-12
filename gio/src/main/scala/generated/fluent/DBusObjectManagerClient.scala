@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusObjectManagerClient(private[fluent] val raw: Ptr[GDBusObjectManagerClient]) extends GObject.Object, AsyncInitable, DBusObjectManager, Initable:
+class DBusObjectManagerClient(private[fluent] val raw: Ptr[GDBusObjectManagerClient]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncInitable, sn.gnome.gio.fluent.DBusObjectManager, sn.gnome.gio.fluent.Initable:
   def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_object_manager_client_get_connection(this.raw)
 
   def getFlags(): Any /* Some(DBusObjectManagerClientFlags): GDBusObjectManagerClientFlags*/ = g_dbus_object_manager_client_get_flags(this.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsCertificate(private[fluent] val raw: Ptr[GTlsCertificate]) extends GObject.Object:
+class TlsCertificate(private[fluent] val raw: Ptr[GTlsCertificate]) extends sn.gnome.gobject.fluent.Object:
   def getDnsNames(): Array[Byte] = g_tls_certificate_get_dns_names(this.raw)
 
   def getIpAddresses(): Array[Byte] = g_tls_certificate_get_ip_addresses(this.raw)

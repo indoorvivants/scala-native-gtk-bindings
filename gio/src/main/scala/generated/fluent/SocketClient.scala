@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketClient(private[fluent] val raw: Ptr[GSocketClient]) extends GObject.Object:
+class SocketClient(private[fluent] val raw: Ptr[GSocketClient]) extends sn.gnome.gobject.fluent.Object:
   def addApplicationProxy(protocol : String): Unit = g_socket_client_add_application_proxy(this.raw, protocol)
 
   def connect(connectable : sn.gnome.gio.fluent.SocketConnectable, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.SocketConnection = g_socket_client_connect(this.raw, connectable.raw, cancellable.raw)

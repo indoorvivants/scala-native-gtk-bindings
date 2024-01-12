@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SubprocessLauncher(private[fluent] val raw: Ptr[GSubprocessLauncher]) extends GObject.Object:
+class SubprocessLauncher(private[fluent] val raw: Ptr[GSubprocessLauncher]) extends sn.gnome.gobject.fluent.Object:
   def close(): Unit = g_subprocess_launcher_close(this.raw)
 
   def getenv(variable : Any /* Some(filename): const gchar**/): Any /* Some(filename): const gchar**/ = g_subprocess_launcher_getenv(this.raw, variable)

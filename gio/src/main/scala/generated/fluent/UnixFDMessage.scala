@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixFDMessage(private[fluent] val raw: Ptr[GUnixFDMessage]) extends SocketControlMessage:
+class UnixFDMessage(private[fluent] val raw: Ptr[GUnixFDMessage]) extends sn.gnome.gio.fluent.SocketControlMessage:
   def appendFd(fd : Int): Boolean = g_unix_fd_message_append_fd(this.raw, fd)
 
   def getFdList(): sn.gnome.gio.fluent.UnixFDList = g_unix_fd_message_get_fd_list(this.raw)

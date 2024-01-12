@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FileInfo(private[fluent] val raw: Ptr[GFileInfo]) extends GObject.Object:
+class FileInfo(private[fluent] val raw: Ptr[GFileInfo]) extends sn.gnome.gobject.fluent.Object:
   def clearStatus(): Unit = g_file_info_clear_status(this.raw)
 
   def copyInto(dest_info : sn.gnome.gio.fluent.FileInfo): Unit = g_file_info_copy_into(this.raw, dest_info.raw)

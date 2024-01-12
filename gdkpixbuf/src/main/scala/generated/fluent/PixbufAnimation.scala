@@ -1,8 +1,10 @@
 package sn.gnome.gdkpixbuf.fluent
 
-import sn.gnome.gdkpixbuf.internal.*
+import _root_.sn.gnome.gdkpixbuf.internal.*
 
-class PixbufAnimation(private[fluent] val raw: Ptr[GdkPixbufAnimation]) extends GObject.Object:
+import _root_.scala.scalanative.unsafe.*
+
+class PixbufAnimation(private[fluent] val raw: Ptr[GdkPixbufAnimation]) extends sn.gnome.gobject.fluent.Object:
   def getHeight(): Int = gdk_pixbuf_animation_get_height(this.raw)
 
   def getIter(start_time : Any /* Some(GLib.TimeVal): const GTimeVal**/): sn.gnome.gdkpixbuf.fluent.PixbufAnimationIter = gdk_pixbuf_animation_get_iter(this.raw, start_time)

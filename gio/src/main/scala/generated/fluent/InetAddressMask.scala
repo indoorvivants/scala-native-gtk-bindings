@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class InetAddressMask(private[fluent] val raw: Ptr[GInetAddressMask]) extends GObject.Object, Initable:
+class InetAddressMask(private[fluent] val raw: Ptr[GInetAddressMask]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Initable:
   def equal(mask2 : sn.gnome.gio.fluent.InetAddressMask): Boolean = g_inet_address_mask_equal(this.raw, mask2.raw)
 
   def getAddress(): sn.gnome.gio.fluent.InetAddress = g_inet_address_mask_get_address(this.raw)

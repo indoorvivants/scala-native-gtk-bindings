@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Socket(private[fluent] val raw: Ptr[GSocket]) extends GObject.Object, DatagramBased, Initable:
+class Socket(private[fluent] val raw: Ptr[GSocket]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.DatagramBased, sn.gnome.gio.fluent.Initable:
   def accept(cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.Socket = g_socket_accept(this.raw, cancellable.raw)
 
   def bind(address : sn.gnome.gio.fluent.SocketAddress, allow_reuse : Boolean): Boolean = g_socket_bind(this.raw, address.raw, allow_reuse)

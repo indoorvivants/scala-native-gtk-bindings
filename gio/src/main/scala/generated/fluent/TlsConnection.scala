@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsConnection(private[fluent] val raw: Ptr[GTlsConnection]) extends IOStream:
+class TlsConnection(private[fluent] val raw: Ptr[GTlsConnection]) extends sn.gnome.gio.fluent.IOStream:
   def emitAcceptCertificate(peer_cert : sn.gnome.gio.fluent.TlsCertificate, errors : Any /* Some(TlsCertificateFlags): GTlsCertificateFlags*/): Boolean = g_tls_connection_emit_accept_certificate(this.raw, peer_cert.raw, errors)
 
   def getCertificate(): sn.gnome.gio.fluent.TlsCertificate = g_tls_connection_get_certificate(this.raw)

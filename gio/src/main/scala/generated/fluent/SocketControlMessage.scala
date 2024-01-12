@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketControlMessage(private[fluent] val raw: Ptr[GSocketControlMessage]) extends GObject.Object:
+class SocketControlMessage(private[fluent] val raw: Ptr[GSocketControlMessage]) extends sn.gnome.gobject.fluent.Object:
   def getLevel(): Int = g_socket_control_message_get_level(this.raw)
 
   def getMsgType(): Int = g_socket_control_message_get_msg_type(this.raw)

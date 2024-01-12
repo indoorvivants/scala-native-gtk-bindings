@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TestDBus(private[fluent] val raw: Ptr[GTestDBus]) extends GObject.Object:
+class TestDBus(private[fluent] val raw: Ptr[GTestDBus]) extends sn.gnome.gobject.fluent.Object:
   def addServiceDir(path : String): Unit = g_test_dbus_add_service_dir(this.raw, path)
 
   def down(): Unit = g_test_dbus_down(this.raw)

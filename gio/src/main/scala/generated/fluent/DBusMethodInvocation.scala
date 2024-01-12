@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusMethodInvocation(private[fluent] val raw: Ptr[GDBusMethodInvocation]) extends GObject.Object:
+class DBusMethodInvocation(private[fluent] val raw: Ptr[GDBusMethodInvocation]) extends sn.gnome.gobject.fluent.Object:
   def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_method_invocation_get_connection(this.raw)
 
   def getInterfaceName(): String = g_dbus_method_invocation_get_interface_name(this.raw)

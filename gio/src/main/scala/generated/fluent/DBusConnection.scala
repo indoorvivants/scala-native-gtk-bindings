@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusConnection(private[fluent] val raw: Ptr[GDBusConnection]) extends GObject.Object, AsyncInitable, Initable:
+class DBusConnection(private[fluent] val raw: Ptr[GDBusConnection]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncInitable, sn.gnome.gio.fluent.Initable:
   def addFilter(filter_function : Any /* Some(DBusMessageFilterFunction): GDBusMessageFilterFunction*/, user_data : Ptr[Byte], user_data_free_func : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Any /* Some(guint): guint*/ = g_dbus_connection_add_filter(this.raw, filter_function, user_data, user_data_free_func)
 
   def call(bus_name : String, object_path : String, interface_name : String, method_name : String, parameters : Any /* Some(GLib.Variant): GVariant**/, reply_type : Any /* Some(GLib.VariantType): const GVariantType**/, flags : Any /* Some(DBusCallFlags): GDBusCallFlags*/, timeout_msec : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_dbus_connection_call(this.raw, bus_name, object_path, interface_name, method_name, parameters, reply_type, flags, timeout_msec, cancellable.raw, callback, user_data)

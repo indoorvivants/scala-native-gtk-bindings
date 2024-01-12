@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixFDList(private[fluent] val raw: Ptr[GUnixFDList]) extends GObject.Object:
+class UnixFDList(private[fluent] val raw: Ptr[GUnixFDList]) extends sn.gnome.gobject.fluent.Object:
   def append(fd : Int): Int = g_unix_fd_list_append(this.raw, fd)
 
   def get(`index_` : Int): Int = g_unix_fd_list_get(this.raw, `index_`)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ListStore(private[fluent] val raw: Ptr[GListStore]) extends GObject.Object, ListModel:
+class ListStore(private[fluent] val raw: Ptr[GListStore]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ListModel:
   def append(item : sn.gnome.gobject.fluent.Object): Unit = g_list_store_append(this.raw, item.raw)
 
   def find(item : sn.gnome.gobject.fluent.Object, position : Any /* Some(guint): guint**/): Boolean = g_list_store_find(this.raw, item.raw, position)

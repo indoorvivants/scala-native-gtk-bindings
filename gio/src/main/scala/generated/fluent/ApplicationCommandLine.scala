@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ApplicationCommandLine(private[fluent] val raw: Ptr[GApplicationCommandLine]) extends GObject.Object:
+class ApplicationCommandLine(private[fluent] val raw: Ptr[GApplicationCommandLine]) extends sn.gnome.gobject.fluent.Object:
   def createFileForArg(arg : Any /* Some(filename): const gchar**/): sn.gnome.gio.fluent.File = g_application_command_line_create_file_for_arg(this.raw, arg)
 
   def getArguments(argc : Any /* Some(gint): int**/): Array[Byte] = g_application_command_line_get_arguments(this.raw, argc)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketConnection(private[fluent] val raw: Ptr[GSocketConnection]) extends IOStream:
+class SocketConnection(private[fluent] val raw: Ptr[GSocketConnection]) extends sn.gnome.gio.fluent.IOStream:
   def connect(address : sn.gnome.gio.fluent.SocketAddress, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_socket_connection_connect(this.raw, address.raw, cancellable.raw)
 
   def connectAsync(address : sn.gnome.gio.fluent.SocketAddress, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_socket_connection_connect_async(this.raw, address.raw, cancellable.raw, callback, user_data)

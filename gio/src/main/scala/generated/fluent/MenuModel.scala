@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MenuModel(private[fluent] val raw: Ptr[GMenuModel]) extends GObject.Object:
+class MenuModel(private[fluent] val raw: Ptr[GMenuModel]) extends sn.gnome.gobject.fluent.Object:
   def getItemAttributeValue(item_index : Int, attribute : String, expected_type : Any /* Some(GLib.VariantType): const GVariantType**/): Any /* Some(GLib.Variant): GVariant**/ = g_menu_model_get_item_attribute_value(this.raw, item_index, attribute, expected_type)
 
   def getItemLink(item_index : Int, link : String): sn.gnome.gio.fluent.MenuModel = g_menu_model_get_item_link(this.raw, item_index, link)

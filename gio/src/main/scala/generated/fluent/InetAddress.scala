@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class InetAddress(private[fluent] val raw: Ptr[GInetAddress]) extends GObject.Object:
+class InetAddress(private[fluent] val raw: Ptr[GInetAddress]) extends sn.gnome.gobject.fluent.Object:
   def equal(other_address : sn.gnome.gio.fluent.InetAddress): Boolean = g_inet_address_equal(this.raw, other_address.raw)
 
   def getFamily(): GSocketFamily = g_inet_address_get_family(this.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DataOutputStream(private[fluent] val raw: Ptr[GDataOutputStream]) extends FilterOutputStream, Seekable:
+class DataOutputStream(private[fluent] val raw: Ptr[GDataOutputStream]) extends sn.gnome.gio.fluent.FilterOutputStream, sn.gnome.gio.fluent.Seekable:
   def getByteOrder(): GDataStreamByteOrder = g_data_output_stream_get_byte_order(this.raw)
 
   def putByte(data : UByte, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_data_output_stream_put_byte(this.raw, data, cancellable.raw)

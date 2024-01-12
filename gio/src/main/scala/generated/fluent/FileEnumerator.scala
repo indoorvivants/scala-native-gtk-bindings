@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FileEnumerator(private[fluent] val raw: Ptr[GFileEnumerator]) extends GObject.Object:
+class FileEnumerator(private[fluent] val raw: Ptr[GFileEnumerator]) extends sn.gnome.gobject.fluent.Object:
   def close(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_file_enumerator_close(this.raw, cancellable.raw)
 
   def closeAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_file_enumerator_close_async(this.raw, io_priority, cancellable.raw, callback, user_data)

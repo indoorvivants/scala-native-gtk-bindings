@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FileIOStream(private[fluent] val raw: Ptr[GFileIOStream]) extends IOStream, Seekable:
+class FileIOStream(private[fluent] val raw: Ptr[GFileIOStream]) extends sn.gnome.gio.fluent.IOStream, sn.gnome.gio.fluent.Seekable:
   def getEtag(): Any /* Some(utf8): char**/ = g_file_io_stream_get_etag(this.raw)
 
   def queryInfo(attributes : String, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.FileInfo = g_file_io_stream_query_info(this.raw, attributes, cancellable.raw)

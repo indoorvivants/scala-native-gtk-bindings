@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsInteraction(private[fluent] val raw: Ptr[GTlsInteraction]) extends GObject.Object:
+class TlsInteraction(private[fluent] val raw: Ptr[GTlsInteraction]) extends sn.gnome.gobject.fluent.Object:
   def askPassword(password : sn.gnome.gio.fluent.TlsPassword, cancellable : sn.gnome.gio.fluent.Cancellable): GTlsInteractionResult = g_tls_interaction_ask_password(this.raw, password.raw, cancellable.raw)
 
   def askPasswordAsync(password : sn.gnome.gio.fluent.TlsPassword, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_tls_interaction_ask_password_async(this.raw, password.raw, cancellable.raw, callback, user_data)

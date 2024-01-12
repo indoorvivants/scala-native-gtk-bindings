@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class IOModule(private[fluent] val raw: Ptr[GIOModule]) extends GObject.TypeModule, GObject.TypePlugin:
+class IOModule(private[fluent] val raw: Ptr[GIOModule]) extends sn.gnome.gobject.fluent.TypeModule, sn.gnome.gobject.fluent.TypePlugin:
   def load(): Unit = g_io_module_load(this.raw)
 
   def unload(): Unit = g_io_module_unload(this.raw)

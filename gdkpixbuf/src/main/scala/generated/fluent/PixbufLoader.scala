@@ -1,8 +1,10 @@
 package sn.gnome.gdkpixbuf.fluent
 
-import sn.gnome.gdkpixbuf.internal.*
+import _root_.sn.gnome.gdkpixbuf.internal.*
 
-class PixbufLoader(private[fluent] val raw: Ptr[GdkPixbufLoader]) extends GObject.Object:
+import _root_.scala.scalanative.unsafe.*
+
+class PixbufLoader(private[fluent] val raw: Ptr[GdkPixbufLoader]) extends sn.gnome.gobject.fluent.Object:
   def close(): Boolean = gdk_pixbuf_loader_close(this.raw)
 
   def getAnimation(): sn.gnome.gdkpixbuf.fluent.PixbufAnimation = gdk_pixbuf_loader_get_animation(this.raw)

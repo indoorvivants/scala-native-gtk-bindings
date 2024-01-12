@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Permission(private[fluent] val raw: Ptr[GPermission]) extends GObject.Object:
+class Permission(private[fluent] val raw: Ptr[GPermission]) extends sn.gnome.gobject.fluent.Object:
   def acquire(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_permission_acquire(this.raw, cancellable.raw)
 
   def acquireAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_permission_acquire_async(this.raw, cancellable.raw, callback, user_data)

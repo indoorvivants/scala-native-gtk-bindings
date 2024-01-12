@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusObjectProxy(private[fluent] val raw: Ptr[GDBusObjectProxy]) extends GObject.Object, DBusObject:
+class DBusObjectProxy(private[fluent] val raw: Ptr[GDBusObjectProxy]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.DBusObject:
   def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_object_proxy_get_connection(this.raw)
 
 end DBusObjectProxy

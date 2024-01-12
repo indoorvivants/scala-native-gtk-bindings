@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FilterOutputStream(private[fluent] val raw: Ptr[GFilterOutputStream]) extends OutputStream:
+class FilterOutputStream(private[fluent] val raw: Ptr[GFilterOutputStream]) extends sn.gnome.gio.fluent.OutputStream:
   def getBaseStream(): sn.gnome.gio.fluent.OutputStream = g_filter_output_stream_get_base_stream(this.raw)
 
   def getCloseBaseStream(): Boolean = g_filter_output_stream_get_close_base_stream(this.raw)

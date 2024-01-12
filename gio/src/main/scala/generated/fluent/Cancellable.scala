@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Cancellable(private[fluent] val raw: Ptr[GCancellable]) extends GObject.Object:
+class Cancellable(private[fluent] val raw: Ptr[GCancellable]) extends sn.gnome.gobject.fluent.Object:
   def cancel(): Unit = g_cancellable_cancel(this.raw)
 
   def connect(callback : Any /* Some(GObject.Callback): GCallback*/, data : Ptr[Byte], data_destroy_func : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): ULong = g_cancellable_connect(this.raw, callback, data, data_destroy_func)

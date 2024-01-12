@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusInterfaceSkeleton(private[fluent] val raw: Ptr[GDBusInterfaceSkeleton]) extends GObject.Object, DBusInterface:
+class DBusInterfaceSkeleton(private[fluent] val raw: Ptr[GDBusInterfaceSkeleton]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.DBusInterface:
   def export(connection : sn.gnome.gio.fluent.DBusConnection, object_path : String): Boolean = g_dbus_interface_skeleton_export(this.raw, connection.raw, object_path)
 
   def flush(): Unit = g_dbus_interface_skeleton_flush(this.raw)

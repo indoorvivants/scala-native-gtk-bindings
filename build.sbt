@@ -151,8 +151,10 @@ lazy val gobject =
             .addCImport("glib-object.h")
             .withNoLocation(true)
             .withMultiFile(true)
-            .addExcludedSystemPath(headerPath.toPath.getParent())
-        }
+            .addExcludedSystemPath(headerPath.toPath.getParent()),
+        },
+      girModuleName := "gobject-2.0",
+      withFluentBindings
     )
 
 lazy val pango =
@@ -355,7 +357,7 @@ lazy val `fluent-generator` = project
   .settings(scalaVersion := "3.3.1")
   .settings(
     libraryDependencies += "com.outr" %%% "scribe" % "3.13.0",
-    libraryDependencies += "com.indoorvivants" %%% "rendition" % "0.0.3",
+    libraryDependencies += "com.indoorvivants" %%% "rendition" % "0.0.3+3-8492a718-SNAPSHOT",
     libraryDependencies += "com.monovore" %%% "decline" % "2.4.1",
     libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.9.1",
     fork := true,

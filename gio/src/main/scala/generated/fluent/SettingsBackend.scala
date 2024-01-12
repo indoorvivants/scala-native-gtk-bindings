@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SettingsBackend(private[fluent] val raw: Ptr[GSettingsBackend]) extends GObject.Object:
+class SettingsBackend(private[fluent] val raw: Ptr[GSettingsBackend]) extends sn.gnome.gobject.fluent.Object:
   def changed(key : String, origin_tag : Ptr[Byte]): Unit = g_settings_backend_changed(this.raw, key, origin_tag)
 
   def changedTree(tree : Any /* Some(GLib.Tree): GTree**/, origin_tag : Ptr[Byte]): Unit = g_settings_backend_changed_tree(this.raw, tree, origin_tag)

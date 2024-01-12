@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TcpWrapperConnection(private[fluent] val raw: Ptr[GTcpWrapperConnection]) extends TcpConnection:
+class TcpWrapperConnection(private[fluent] val raw: Ptr[GTcpWrapperConnection]) extends sn.gnome.gio.fluent.TcpConnection:
   def getBaseIoStream(): sn.gnome.gio.fluent.IOStream = g_tcp_wrapper_connection_get_base_io_stream(this.raw)
 
 end TcpWrapperConnection

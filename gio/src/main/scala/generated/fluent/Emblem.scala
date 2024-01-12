@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Emblem(private[fluent] val raw: Ptr[GEmblem]) extends GObject.Object, Icon:
+class Emblem(private[fluent] val raw: Ptr[GEmblem]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Icon:
   def getIcon(): sn.gnome.gio.fluent.Icon = g_emblem_get_icon(this.raw)
 
   def getOrigin(): GEmblemOrigin = g_emblem_get_origin(this.raw)

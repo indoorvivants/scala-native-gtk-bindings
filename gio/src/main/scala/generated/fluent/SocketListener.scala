@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketListener(private[fluent] val raw: Ptr[GSocketListener]) extends GObject.Object:
+class SocketListener(private[fluent] val raw: Ptr[GSocketListener]) extends sn.gnome.gobject.fluent.Object:
   def accept(source_object : sn.gnome.gobject.fluent.Object, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.SocketConnection = g_socket_listener_accept(this.raw, source_object.raw, cancellable.raw)
 
   def acceptAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_socket_listener_accept_async(this.raw, cancellable.raw, callback, user_data)

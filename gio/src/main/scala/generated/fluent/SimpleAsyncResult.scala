@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SimpleAsyncResult(private[fluent] val raw: Ptr[GSimpleAsyncResult]) extends GObject.Object, AsyncResult:
+class SimpleAsyncResult(private[fluent] val raw: Ptr[GSimpleAsyncResult]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncResult:
   def complete(): Unit = g_simple_async_result_complete(this.raw)
 
   def completeInIdle(): Unit = g_simple_async_result_complete_in_idle(this.raw)

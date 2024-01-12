@@ -1,8 +1,10 @@
 package sn.gnome.gdkpixbuf.fluent
 
-import sn.gnome.gdkpixbuf.internal.*
+import _root_.sn.gnome.gdkpixbuf.internal.*
 
-class Pixbuf(private[fluent] val raw: Ptr[GdkPixbuf]) extends GObject.Object, Gio.Icon, Gio.LoadableIcon:
+import _root_.scala.scalanative.unsafe.*
+
+class Pixbuf(private[fluent] val raw: Ptr[GdkPixbuf]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Icon, sn.gnome.gio.fluent.LoadableIcon:
   def addAlpha(substitute_color : Boolean, r : UByte, g : UByte, b : UByte): sn.gnome.gdkpixbuf.fluent.Pixbuf = gdk_pixbuf_add_alpha(this.raw, substitute_color, r, g, b)
 
   def applyEmbeddedOrientation(): sn.gnome.gdkpixbuf.fluent.Pixbuf = gdk_pixbuf_apply_embedded_orientation(this.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class NetworkAddress(private[fluent] val raw: Ptr[GNetworkAddress]) extends GObject.Object, SocketConnectable:
+class NetworkAddress(private[fluent] val raw: Ptr[GNetworkAddress]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.SocketConnectable:
   def getHostname(): String = g_network_address_get_hostname(this.raw)
 
   def getPort(): UShort = g_network_address_get_port(this.raw)

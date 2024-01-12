@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class BufferedInputStream(private[fluent] val raw: Ptr[GBufferedInputStream]) extends FilterInputStream, Seekable:
+class BufferedInputStream(private[fluent] val raw: Ptr[GBufferedInputStream]) extends sn.gnome.gio.fluent.FilterInputStream, sn.gnome.gio.fluent.Seekable:
   def fill(count : Any /* Some(gssize): gssize*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_buffered_input_stream_fill(this.raw, count, cancellable.raw)
 
   def fillAsync(count : Any /* Some(gssize): gssize*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_buffered_input_stream_fill_async(this.raw, count, io_priority, cancellable.raw, callback, user_data)

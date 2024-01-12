@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DataInputStream(private[fluent] val raw: Ptr[GDataInputStream]) extends BufferedInputStream, Seekable:
+class DataInputStream(private[fluent] val raw: Ptr[GDataInputStream]) extends sn.gnome.gio.fluent.BufferedInputStream, sn.gnome.gio.fluent.Seekable:
   def getByteOrder(): GDataStreamByteOrder = g_data_input_stream_get_byte_order(this.raw)
 
   def getNewlineType(): GDataStreamNewlineType = g_data_input_stream_get_newline_type(this.raw)

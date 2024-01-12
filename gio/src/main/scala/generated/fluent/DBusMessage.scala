@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusMessage(private[fluent] val raw: Ptr[GDBusMessage]) extends GObject.Object:
+class DBusMessage(private[fluent] val raw: Ptr[GDBusMessage]) extends sn.gnome.gobject.fluent.Object:
   def copy(): sn.gnome.gio.fluent.DBusMessage = g_dbus_message_copy(this.raw)
 
   def getArg0(): String = g_dbus_message_get_arg0(this.raw)

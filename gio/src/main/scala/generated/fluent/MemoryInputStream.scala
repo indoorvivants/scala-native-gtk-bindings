@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MemoryInputStream(private[fluent] val raw: Ptr[GMemoryInputStream]) extends InputStream, PollableInputStream, Seekable:
+class MemoryInputStream(private[fluent] val raw: Ptr[GMemoryInputStream]) extends sn.gnome.gio.fluent.InputStream, sn.gnome.gio.fluent.PollableInputStream, sn.gnome.gio.fluent.Seekable:
   def addBytes(bytes : Any /* Some(GLib.Bytes): GBytes**/): Unit = g_memory_input_stream_add_bytes(this.raw, bytes)
 
   def addData(data : Array[Byte], len : Any /* Some(gssize): gssize*/, destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Unit = g_memory_input_stream_add_data(this.raw, data, len, destroy)

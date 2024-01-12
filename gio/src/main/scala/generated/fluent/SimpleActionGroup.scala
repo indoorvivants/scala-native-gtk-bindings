@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SimpleActionGroup(private[fluent] val raw: Ptr[GSimpleActionGroup]) extends GObject.Object, ActionGroup, ActionMap:
+class SimpleActionGroup(private[fluent] val raw: Ptr[GSimpleActionGroup]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ActionGroup, sn.gnome.gio.fluent.ActionMap:
   def addEntries(entries : Array[Byte], n_entries : Int, user_data : Ptr[Byte]): Unit = g_simple_action_group_add_entries(this.raw, entries, n_entries, user_data)
 
   def insert(action : sn.gnome.gio.fluent.Action): Unit = g_simple_action_group_insert(this.raw, action.raw)

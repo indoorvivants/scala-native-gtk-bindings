@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusServer(private[fluent] val raw: Ptr[GDBusServer]) extends GObject.Object, Initable:
+class DBusServer(private[fluent] val raw: Ptr[GDBusServer]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Initable:
   def getClientAddress(): String = g_dbus_server_get_client_address(this.raw)
 
   def getFlags(): Any /* Some(DBusServerFlags): GDBusServerFlags*/ = g_dbus_server_get_flags(this.raw)

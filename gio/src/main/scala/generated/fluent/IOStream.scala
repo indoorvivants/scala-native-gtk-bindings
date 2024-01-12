@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class IOStream(private[fluent] val raw: Ptr[GIOStream]) extends GObject.Object:
+class IOStream(private[fluent] val raw: Ptr[GIOStream]) extends sn.gnome.gobject.fluent.Object:
   def clearPending(): Unit = g_io_stream_clear_pending(this.raw)
 
   def close(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_io_stream_close(this.raw, cancellable.raw)

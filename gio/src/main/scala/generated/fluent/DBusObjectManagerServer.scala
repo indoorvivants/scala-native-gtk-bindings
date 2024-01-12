@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusObjectManagerServer(private[fluent] val raw: Ptr[GDBusObjectManagerServer]) extends GObject.Object, DBusObjectManager:
+class DBusObjectManagerServer(private[fluent] val raw: Ptr[GDBusObjectManagerServer]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.DBusObjectManager:
   def export(`object` : sn.gnome.gio.fluent.DBusObjectSkeleton): Unit = g_dbus_object_manager_server_export(this.raw, `object`.raw)
 
   def exportUniquely(`object` : sn.gnome.gio.fluent.DBusObjectSkeleton): Unit = g_dbus_object_manager_server_export_uniquely(this.raw, `object`.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusAuthObserver(private[fluent] val raw: Ptr[GDBusAuthObserver]) extends GObject.Object:
+class DBusAuthObserver(private[fluent] val raw: Ptr[GDBusAuthObserver]) extends sn.gnome.gobject.fluent.Object:
   def allowMechanism(mechanism : String): Boolean = g_dbus_auth_observer_allow_mechanism(this.raw, mechanism)
 
   def authorizeAuthenticatedPeer(stream : sn.gnome.gio.fluent.IOStream, credentials : sn.gnome.gio.fluent.Credentials): Boolean = g_dbus_auth_observer_authorize_authenticated_peer(this.raw, stream.raw, credentials.raw)

@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixConnection(private[fluent] val raw: Ptr[GUnixConnection]) extends SocketConnection:
+class UnixConnection(private[fluent] val raw: Ptr[GUnixConnection]) extends sn.gnome.gio.fluent.SocketConnection:
   def receiveCredentials(cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.Credentials = g_unix_connection_receive_credentials(this.raw, cancellable.raw)
 
   def receiveCredentialsAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_unix_connection_receive_credentials_async(this.raw, cancellable.raw, callback, user_data)

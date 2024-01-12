@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ProxyAddress(private[fluent] val raw: Ptr[GProxyAddress]) extends InetSocketAddress, SocketConnectable:
+class ProxyAddress(private[fluent] val raw: Ptr[GProxyAddress]) extends sn.gnome.gio.fluent.InetSocketAddress, sn.gnome.gio.fluent.SocketConnectable:
   def getDestinationHostname(): String = g_proxy_address_get_destination_hostname(this.raw)
 
   def getDestinationPort(): UShort = g_proxy_address_get_destination_port(this.raw)

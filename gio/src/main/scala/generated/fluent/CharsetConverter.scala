@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class CharsetConverter(private[fluent] val raw: Ptr[GCharsetConverter]) extends GObject.Object, Converter, Initable:
+class CharsetConverter(private[fluent] val raw: Ptr[GCharsetConverter]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Converter, sn.gnome.gio.fluent.Initable:
   def getNumFallbacks(): Any /* Some(guint): guint*/ = g_charset_converter_get_num_fallbacks(this.raw)
 
   def getUseFallback(): Boolean = g_charset_converter_get_use_fallback(this.raw)

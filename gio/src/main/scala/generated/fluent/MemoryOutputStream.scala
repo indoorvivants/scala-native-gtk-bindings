@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MemoryOutputStream(private[fluent] val raw: Ptr[GMemoryOutputStream]) extends OutputStream, PollableOutputStream, Seekable:
+class MemoryOutputStream(private[fluent] val raw: Ptr[GMemoryOutputStream]) extends sn.gnome.gio.fluent.OutputStream, sn.gnome.gio.fluent.PollableOutputStream, sn.gnome.gio.fluent.Seekable:
   def getData(): Ptr[Byte] = g_memory_output_stream_get_data(this.raw)
 
   def getDataSize(): Any /* Some(gsize): gsize*/ = g_memory_output_stream_get_data_size(this.raw)

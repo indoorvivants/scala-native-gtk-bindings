@@ -4,7 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Menu(private[fluent] val raw: Ptr[GMenu]) extends MenuModel:
+class Menu(private[fluent] val raw: Ptr[GMenu]) extends sn.gnome.gio.fluent.MenuModel:
   def append(label : String, detailed_action : String): Unit = g_menu_append(this.raw, label, detailed_action)
 
   def appendItem(item : sn.gnome.gio.fluent.MenuItem): Unit = g_menu_append_item(this.raw, item.raw)
