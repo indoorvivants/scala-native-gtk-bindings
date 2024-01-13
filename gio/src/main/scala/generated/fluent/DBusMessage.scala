@@ -4,102 +4,128 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusMessage(private[fluent] val raw: Ptr[GDBusMessage]) extends sn.gnome.gobject.fluent.Object:
-  def copy(): sn.gnome.gio.fluent.DBusMessage = g_dbus_message_copy(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.DBusMessage
+import sn.gnome.gio.fluent.UnixFDList
+import sn.gnome.gio.internal.GDBusCapabilityFlags
+import sn.gnome.gio.internal.GDBusMessageByteOrder
+import sn.gnome.gio.internal.GDBusMessageFlags
+import sn.gnome.gio.internal.GDBusMessageHeaderField
+import sn.gnome.gio.internal.GDBusMessageType
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.guchar
+import sn.gnome.glib.internal.guint
+import sn.gnome.glib.internal.guint32
+import sn.gnome.gobject.fluent.Object
 
-  def getArg0(): String = g_dbus_message_get_arg0(this.raw)
+class DBusMessage(raw: Ptr[GDBusMessage]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getBody(): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_message_get_body(this.raw)
+  def copy(): DBusMessage = new DBusMessage(g_dbus_message_copy(this.raw.asInstanceOf).asInstanceOf)
 
-  def getByteOrder(): GDBusMessageByteOrder = g_dbus_message_get_byte_order(this.raw)
+  def getArg0()(using Zone): String = fromCString(g_dbus_message_get_arg0(this.raw.asInstanceOf).asInstanceOf)
 
-  def getDestination(): String = g_dbus_message_get_destination(this.raw)
+  def getBody(): Ptr[GVariant] = g_dbus_message_get_body(this.raw.asInstanceOf)
 
-  def getErrorName(): String = g_dbus_message_get_error_name(this.raw)
+  def getByteOrder(): GDBusMessageByteOrder = g_dbus_message_get_byte_order(this.raw.asInstanceOf)
 
-  def getFlags(): Any /* Some(DBusMessageFlags): GDBusMessageFlags*/ = g_dbus_message_get_flags(this.raw)
+  def getDestination()(using Zone): String = fromCString(g_dbus_message_get_destination(this.raw.asInstanceOf).asInstanceOf)
 
-  def getHeader(header_field : GDBusMessageHeaderField): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_message_get_header(this.raw, header_field)
+  def getErrorName()(using Zone): String = fromCString(g_dbus_message_get_error_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getHeaderFields(): Array[Byte] = g_dbus_message_get_header_fields(this.raw)
+  def getFlags(): GDBusMessageFlags = g_dbus_message_get_flags(this.raw.asInstanceOf)
 
-  def getInterface(): String = g_dbus_message_get_interface(this.raw)
+  def getHeader(header_field : GDBusMessageHeaderField): Ptr[GVariant] = g_dbus_message_get_header(this.raw.asInstanceOf, header_field)
 
-  def getLocked(): Boolean = g_dbus_message_get_locked(this.raw)
+  def getHeaderFields(): Ptr[UByte] = g_dbus_message_get_header_fields(this.raw.asInstanceOf)
 
-  def getMember(): String = g_dbus_message_get_member(this.raw)
+  def getInterface()(using Zone): String = fromCString(g_dbus_message_get_interface(this.raw.asInstanceOf).asInstanceOf)
 
-  def getMessageType(): GDBusMessageType = g_dbus_message_get_message_type(this.raw)
+  def getLocked(): Boolean = g_dbus_message_get_locked(this.raw.asInstanceOf).value.!=(0)
 
-  def getNumUnixFds(): UInt = g_dbus_message_get_num_unix_fds(this.raw)
+  def getMember()(using Zone): String = fromCString(g_dbus_message_get_member(this.raw.asInstanceOf).asInstanceOf)
 
-  def getPath(): String = g_dbus_message_get_path(this.raw)
+  def getMessageType(): GDBusMessageType = g_dbus_message_get_message_type(this.raw.asInstanceOf)
 
-  def getReplySerial(): UInt = g_dbus_message_get_reply_serial(this.raw)
+  def getNumUnixFds(): UInt = g_dbus_message_get_num_unix_fds(this.raw.asInstanceOf).value
 
-  def getSender(): String = g_dbus_message_get_sender(this.raw)
+  def getPath()(using Zone): String = fromCString(g_dbus_message_get_path(this.raw.asInstanceOf).asInstanceOf)
 
-  def getSerial(): UInt = g_dbus_message_get_serial(this.raw)
+  def getReplySerial(): UInt = g_dbus_message_get_reply_serial(this.raw.asInstanceOf).value
 
-  def getSignature(): String = g_dbus_message_get_signature(this.raw)
+  def getSender()(using Zone): String = fromCString(g_dbus_message_get_sender(this.raw.asInstanceOf).asInstanceOf)
 
-  def getUnixFdList(): sn.gnome.gio.fluent.UnixFDList = g_dbus_message_get_unix_fd_list(this.raw)
+  def getSerial(): UInt = g_dbus_message_get_serial(this.raw.asInstanceOf).value
 
-  def lock(): Unit = g_dbus_message_lock(this.raw)
+  def getSignature()(using Zone): String = fromCString(g_dbus_message_get_signature(this.raw.asInstanceOf).asInstanceOf)
 
-  def newMethodErrorLiteral(error_name : String, error_message : String): sn.gnome.gio.fluent.DBusMessage = g_dbus_message_new_method_error_literal(this.raw, error_name, error_message)
+  def getUnixFdList(): UnixFDList = new UnixFDList(g_dbus_message_get_unix_fd_list(this.raw.asInstanceOf).asInstanceOf)
 
-  def newMethodErrorValist(error_name : String, error_message_format : String, var_args : Any /* Some(va_list): va_list*/): sn.gnome.gio.fluent.DBusMessage = g_dbus_message_new_method_error_valist(this.raw, error_name, error_message_format, var_args)
+  def lock(): Unit = g_dbus_message_lock(this.raw.asInstanceOf)
 
-  def newMethodReply(): sn.gnome.gio.fluent.DBusMessage = g_dbus_message_new_method_reply(this.raw)
+  def newMethodErrorLiteral(error_name : String | CString, error_message : String | CString)(using Zone): DBusMessage = new DBusMessage(g_dbus_message_new_method_error_literal(this.raw.asInstanceOf, __sn_extract_string(error_name).asInstanceOf[Ptr[gchar]], __sn_extract_string(error_message).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def print(indent : Any /* Some(guint): guint*/): Any /* Some(utf8): gchar**/ = g_dbus_message_print(this.raw, indent)
+  def newMethodErrorValist(error_name : String | CString, error_message_format : String | CString, var_args : CVarArgList)(using Zone): DBusMessage = new DBusMessage(g_dbus_message_new_method_error_valist(this.raw.asInstanceOf, __sn_extract_string(error_name).asInstanceOf[Ptr[gchar]], __sn_extract_string(error_message_format).asInstanceOf[Ptr[gchar]], var_args).asInstanceOf)
 
-  def setBody(body : Any /* Some(GLib.Variant): GVariant**/): Unit = g_dbus_message_set_body(this.raw, body)
+  def newMethodReply(): DBusMessage = new DBusMessage(g_dbus_message_new_method_reply(this.raw.asInstanceOf).asInstanceOf)
 
-  def setByteOrder(byte_order : GDBusMessageByteOrder): Unit = g_dbus_message_set_byte_order(this.raw, byte_order)
+  def print(indent : UInt)(using Zone): String = fromCString(g_dbus_message_print(this.raw.asInstanceOf, guint(indent)).asInstanceOf)
 
-  def setDestination(value : String): Unit = g_dbus_message_set_destination(this.raw, value)
+  def setBody(body : Ptr[GVariant]): Unit = g_dbus_message_set_body(this.raw.asInstanceOf, body)
 
-  def setErrorName(value : String): Unit = g_dbus_message_set_error_name(this.raw, value)
+  def setByteOrder(byte_order : GDBusMessageByteOrder): Unit = g_dbus_message_set_byte_order(this.raw.asInstanceOf, byte_order)
 
-  def setFlags(flags : Any /* Some(DBusMessageFlags): GDBusMessageFlags*/): Unit = g_dbus_message_set_flags(this.raw, flags)
+  def setDestination(value : String | CString)(using Zone): Unit = g_dbus_message_set_destination(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def setHeader(header_field : GDBusMessageHeaderField, value : Any /* Some(GLib.Variant): GVariant**/): Unit = g_dbus_message_set_header(this.raw, header_field, value)
+  def setErrorName(value : String | CString)(using Zone): Unit = g_dbus_message_set_error_name(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def setInterface(value : String): Unit = g_dbus_message_set_interface(this.raw, value)
+  def setFlags(flags : GDBusMessageFlags): Unit = g_dbus_message_set_flags(this.raw.asInstanceOf, flags)
 
-  def setMember(value : String): Unit = g_dbus_message_set_member(this.raw, value)
+  def setHeader(header_field : GDBusMessageHeaderField, value : Ptr[GVariant]): Unit = g_dbus_message_set_header(this.raw.asInstanceOf, header_field, value)
 
-  def setMessageType(`type` : GDBusMessageType): Unit = g_dbus_message_set_message_type(this.raw, `type`)
+  def setInterface(value : String | CString)(using Zone): Unit = g_dbus_message_set_interface(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def setNumUnixFds(value : UInt): Unit = g_dbus_message_set_num_unix_fds(this.raw, value)
+  def setMember(value : String | CString)(using Zone): Unit = g_dbus_message_set_member(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def setPath(value : String): Unit = g_dbus_message_set_path(this.raw, value)
+  def setMessageType(`type` : GDBusMessageType): Unit = g_dbus_message_set_message_type(this.raw.asInstanceOf, `type`)
 
-  def setReplySerial(value : UInt): Unit = g_dbus_message_set_reply_serial(this.raw, value)
+  def setNumUnixFds(value : UInt): Unit = g_dbus_message_set_num_unix_fds(this.raw.asInstanceOf, guint32(value))
 
-  def setSender(value : String): Unit = g_dbus_message_set_sender(this.raw, value)
+  def setPath(value : String | CString)(using Zone): Unit = g_dbus_message_set_path(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def setSerial(serial : UInt): Unit = g_dbus_message_set_serial(this.raw, serial)
+  def setReplySerial(value : UInt): Unit = g_dbus_message_set_reply_serial(this.raw.asInstanceOf, guint32(value))
 
-  def setSignature(value : String): Unit = g_dbus_message_set_signature(this.raw, value)
+  def setSender(value : String | CString)(using Zone): Unit = g_dbus_message_set_sender(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def setUnixFdList(fd_list : sn.gnome.gio.fluent.UnixFDList): Unit = g_dbus_message_set_unix_fd_list(this.raw, fd_list.raw)
+  def setSerial(serial : UInt): Unit = g_dbus_message_set_serial(this.raw.asInstanceOf, guint32(serial))
 
-  def toBlob(out_size : Any /* Some(gsize): gsize**/, capabilities : Any /* Some(DBusCapabilityFlags): GDBusCapabilityFlags*/): Array[Byte] = g_dbus_message_to_blob(this.raw, out_size, capabilities)
+  def setSignature(value : String | CString)(using Zone): Unit = g_dbus_message_set_signature(this.raw.asInstanceOf, __sn_extract_string(value).asInstanceOf[Ptr[gchar]])
 
-  def toGerror(): Boolean = g_dbus_message_to_gerror(this.raw)
+  def setUnixFdList(fd_list : UnixFDList): Unit = g_dbus_message_set_unix_fd_list(this.raw.asInstanceOf, fd_list.getUnsafeRawPointer().asInstanceOf)
 
+  def toBlob(out_size : Any /* Some(gsize): `gsize*` */, capabilities : GDBusCapabilityFlags): Ptr[UByte] = g_dbus_message_to_blob(this.raw.asInstanceOf, out_size, capabilities)
+
+  def toGerror(): Boolean = g_dbus_message_to_gerror(this.raw.asInstanceOf).value.!=(0)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusMessage
 
 object DBusMessage:
-  def apply(): DBusMessage = DBusMessage(g_dbus_message_new())
+  def apply(): DBusMessage = new DBusMessage(g_dbus_message_new().asInstanceOf)
+  def methodCall(name : String | CString, path : String | CString, `interface_` : String | CString, method : String | CString)(using Zone): DBusMessage = new DBusMessage(g_dbus_message_new_method_call(__sn_extract_string(name).asInstanceOf[Ptr[gchar]], __sn_extract_string(path).asInstanceOf[Ptr[gchar]], __sn_extract_string(`interface_`).asInstanceOf[Ptr[gchar]], __sn_extract_string(method).asInstanceOf[Ptr[gchar]]).asInstanceOf)
+  def signal(path : String | CString, `interface_` : String | CString, signal : String | CString)(using Zone): DBusMessage = new DBusMessage(g_dbus_message_new_signal(__sn_extract_string(path).asInstanceOf[Ptr[gchar]], __sn_extract_string(`interface_`).asInstanceOf[Ptr[gchar]], __sn_extract_string(signal).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def fromBlob(blob : Array[Byte], blob_len : Any /* Some(gsize): gsize*/, capabilities : Any /* Some(DBusCapabilityFlags): GDBusCapabilityFlags*/): DBusMessage = DBusMessage(g_dbus_message_new_from_blob(blob, blob_len, capabilities))
-
-  def methodCall(name : String, path : String, `interface_` : String, method : String): DBusMessage = DBusMessage(g_dbus_message_new_method_call(name, path, `interface_`, method))
-
-  def signal(path : String, `interface_` : String, signal : String): DBusMessage = DBusMessage(g_dbus_message_new_signal(path, `interface_`, signal))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusMessage

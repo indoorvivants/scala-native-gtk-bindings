@@ -4,14 +4,20 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FileMonitor(private[fluent] val raw: Ptr[GFileMonitor]) extends sn.gnome.gobject.fluent.Object:
-  def cancel(): Boolean = g_file_monitor_cancel(this.raw)
+import sn.gnome.gio.fluent.File
+import sn.gnome.gio.internal.GFileMonitorEvent
+import sn.gnome.glib.internal.gint
+import sn.gnome.gobject.fluent.Object
 
-  def emitEvent(child : sn.gnome.gio.fluent.File, other_file : sn.gnome.gio.fluent.File, event_type : GFileMonitorEvent): Unit = g_file_monitor_emit_event(this.raw, child.raw, other_file.raw, event_type)
+class FileMonitor(raw: Ptr[GFileMonitor]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def isCancelled(): Boolean = g_file_monitor_is_cancelled(this.raw)
+  def cancel(): Boolean = g_file_monitor_cancel(this.raw.asInstanceOf).value.!=(0)
 
-  def setRateLimit(limit_msecs : Int): Unit = g_file_monitor_set_rate_limit(this.raw, limit_msecs)
+  def emitEvent(child : File, other_file : File, event_type : GFileMonitorEvent): Unit = g_file_monitor_emit_event(this.raw.asInstanceOf, child.getUnsafeRawPointer().asInstanceOf, other_file.getUnsafeRawPointer().asInstanceOf, event_type)
+
+  def isCancelled(): Boolean = g_file_monitor_is_cancelled(this.raw.asInstanceOf).value.!=(0)
+
+  def setRateLimit(limit_msecs : Int): Unit = g_file_monitor_set_rate_limit(this.raw.asInstanceOf, gint(limit_msecs))
 
 end FileMonitor
-

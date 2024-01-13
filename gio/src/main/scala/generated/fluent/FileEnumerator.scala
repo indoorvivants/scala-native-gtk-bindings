@@ -4,30 +4,40 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FileEnumerator(private[fluent] val raw: Ptr[GFileEnumerator]) extends sn.gnome.gobject.fluent.Object:
-  def close(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_file_enumerator_close(this.raw, cancellable.raw)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.File
+import sn.gnome.gio.fluent.FileInfo
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.glib.internal.GList
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def closeAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_file_enumerator_close_async(this.raw, io_priority, cancellable.raw, callback, user_data)
+class FileEnumerator(raw: Ptr[GFileEnumerator]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def closeFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_file_enumerator_close_finish(this.raw, result.raw)
+  def close(cancellable : Cancellable): Boolean = g_file_enumerator_close(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def getChild(info : sn.gnome.gio.fluent.FileInfo): sn.gnome.gio.fluent.File = g_file_enumerator_get_child(this.raw, info.raw)
+  def closeAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_file_enumerator_close_async(this.raw.asInstanceOf, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def getContainer(): sn.gnome.gio.fluent.File = g_file_enumerator_get_container(this.raw)
+  def closeFinish(result : AsyncResult): Boolean = g_file_enumerator_close_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def hasPending(): Boolean = g_file_enumerator_has_pending(this.raw)
+  def getChild(info : FileInfo): File = g_file_enumerator_get_child(this.raw.asInstanceOf, info.getUnsafeRawPointer().asInstanceOf)
 
-  def isClosed(): Boolean = g_file_enumerator_is_closed(this.raw)
+  def getContainer(): File = g_file_enumerator_get_container(this.raw.asInstanceOf)
 
-  def iterate(out_info : sn.gnome.gio.fluent.FileInfo, out_child : sn.gnome.gio.fluent.File, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_file_enumerator_iterate(this.raw, out_info.raw, out_child.raw, cancellable.raw)
+  def hasPending(): Boolean = g_file_enumerator_has_pending(this.raw.asInstanceOf).value.!=(0)
 
-  def nextFile(cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.FileInfo = g_file_enumerator_next_file(this.raw, cancellable.raw)
+  def isClosed(): Boolean = g_file_enumerator_is_closed(this.raw.asInstanceOf).value.!=(0)
 
-  def nextFilesAsync(num_files : Int, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_file_enumerator_next_files_async(this.raw, num_files, io_priority, cancellable.raw, callback, user_data)
+  def iterate(out_info : FileInfo, out_child : File, cancellable : Cancellable): Boolean = g_file_enumerator_iterate(this.raw.asInstanceOf, out_info.getUnsafeRawPointer().asInstanceOf, out_child.getUnsafeRawPointer().asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def nextFilesFinish(result : sn.gnome.gio.fluent.AsyncResult): Any /* Some(GLib.List): GList**/ = g_file_enumerator_next_files_finish(this.raw, result.raw)
+  def nextFile(cancellable : Cancellable): FileInfo = new FileInfo(g_file_enumerator_next_file(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def setPending(pending : Boolean): Unit = g_file_enumerator_set_pending(this.raw, pending)
+  def nextFilesAsync(num_files : Int, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_file_enumerator_next_files_async(this.raw.asInstanceOf, num_files, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+
+  def nextFilesFinish(result : AsyncResult): Ptr[GList] = g_file_enumerator_next_files_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf)
+
+  def setPending(pending : Boolean): Unit = g_file_enumerator_set_pending(this.raw.asInstanceOf, pending)
 
 end FileEnumerator
-

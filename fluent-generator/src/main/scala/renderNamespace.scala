@@ -7,37 +7,21 @@ def renderNamespace(
     policy: NamingPolicy
 ) =
 
+  given GlobalKnowledge = global
+  given NamingPolicy = policy
+
   val fluentPackageName = policy.namespaceToFluentPackage(ns.name.get)
   val internalPackageName = policy.namespaceToInternalPackage(ns.name.get)
 
   ns.interfaces.map: iface =>
     r.in(iface.name + ".scala"):
-      val outcome =
-        transact[String]:
-          line(s"package $fluentPackageName")
-          emptyLine()
-          line(s"import $internalPackageName.*")
-          emptyLine()
-
-          emptyLine()
-          line(
-            s"trait ${iface.name}${renderClassExtensions(None, iface.implements)}"
-          )
-          Outcome.Ok
-
-  given GlobalKnowledge = global
-  given NamingPolicy = policy
-
-  ns.classes.map: cls =>
-    r.in(cls.name + ".scala"):
       val newLB = LineBuilder()
-      val effects = List.newBuilder[Effect]
       var error = Option.empty[String]
 
-      newLB.use:
-        error = transact[String]:
-          effects ++= renderClass(ns, cls)
-          Outcome.Ok
+      val effects = WithEffects.collect: coll =>
+        newLB.use:
+          error = transact[String]:
+            coll.addAll(renderTrait(ns, iface).getEffects)
 
       error match
         case None =>
@@ -48,7 +32,36 @@ def renderNamespace(
           line(s"import _root_.scala.scalanative.unsafe.*")
           emptyLine()
 
-          renderEffects(effects.result())
+          renderEffects(effects.getEffects)
+
+          emptyLine()
+
+          append(newLB)
+
+        case Some(msg) =>
+          scribe.warn(s"Failed to render class ${iface.name}: `$msg`")
+      end match
+
+  ns.classes.map: cls =>
+    r.in(cls.name + ".scala"):
+      val newLB = LineBuilder()
+      var error = Option.empty[String]
+
+      val effects = WithEffects.collect: coll =>
+        newLB.use:
+          error = transact[String]:
+            coll.addAll(renderClass(ns, cls).getEffects)
+
+      error match
+        case None =>
+          line(s"package $fluentPackageName")
+          emptyLine()
+          line(s"import _root_.$internalPackageName.*")
+          emptyLine()
+          line(s"import _root_.scala.scalanative.unsafe.*")
+          emptyLine()
+
+          renderEffects(effects.getEffects)
 
           emptyLine()
 

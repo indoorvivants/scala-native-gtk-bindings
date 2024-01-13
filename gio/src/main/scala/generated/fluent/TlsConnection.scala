@@ -4,52 +4,76 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsConnection(private[fluent] val raw: Ptr[GTlsConnection]) extends sn.gnome.gio.fluent.IOStream:
-  def emitAcceptCertificate(peer_cert : sn.gnome.gio.fluent.TlsCertificate, errors : Any /* Some(TlsCertificateFlags): GTlsCertificateFlags*/): Boolean = g_tls_connection_emit_accept_certificate(this.raw, peer_cert.raw, errors)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.IOStream
+import sn.gnome.gio.fluent.TlsCertificate
+import sn.gnome.gio.fluent.TlsDatabase
+import sn.gnome.gio.fluent.TlsInteraction
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GTlsCertificateFlags
+import sn.gnome.gio.internal.GTlsChannelBindingType
+import sn.gnome.gio.internal.GTlsProtocolVersion
+import sn.gnome.gio.internal.GTlsRehandshakeMode
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.guint8
 
-  def getCertificate(): sn.gnome.gio.fluent.TlsCertificate = g_tls_connection_get_certificate(this.raw)
+class TlsConnection(raw: Ptr[GTlsConnection]) extends IOStream(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getChannelBindingData(`type` : GTlsChannelBindingType, data : Array[Byte]): Boolean = g_tls_connection_get_channel_binding_data(this.raw, `type`, data)
+  def emitAcceptCertificate(peer_cert : TlsCertificate, errors : GTlsCertificateFlags): Boolean = g_tls_connection_emit_accept_certificate(this.raw.asInstanceOf, peer_cert.getUnsafeRawPointer().asInstanceOf, errors).value.!=(0)
 
-  def getCiphersuiteName(): Any /* Some(utf8): gchar**/ = g_tls_connection_get_ciphersuite_name(this.raw)
+  def getCertificate(): TlsCertificate = new TlsCertificate(g_tls_connection_get_certificate(this.raw.asInstanceOf).asInstanceOf)
 
-  def getDatabase(): sn.gnome.gio.fluent.TlsDatabase = g_tls_connection_get_database(this.raw)
+  def getChannelBindingData(`type` : GTlsChannelBindingType, data : Ptr[UByte]): Boolean = g_tls_connection_get_channel_binding_data(this.raw.asInstanceOf, `type`, data).value.!=(0)
 
-  def getInteraction(): sn.gnome.gio.fluent.TlsInteraction = g_tls_connection_get_interaction(this.raw)
+  def getCiphersuiteName()(using Zone): String = fromCString(g_tls_connection_get_ciphersuite_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getNegotiatedProtocol(): String = g_tls_connection_get_negotiated_protocol(this.raw)
+  def getDatabase(): TlsDatabase = new TlsDatabase(g_tls_connection_get_database(this.raw.asInstanceOf).asInstanceOf)
 
-  def getPeerCertificate(): sn.gnome.gio.fluent.TlsCertificate = g_tls_connection_get_peer_certificate(this.raw)
+  def getInteraction(): TlsInteraction = new TlsInteraction(g_tls_connection_get_interaction(this.raw.asInstanceOf).asInstanceOf)
 
-  def getPeerCertificateErrors(): Any /* Some(TlsCertificateFlags): GTlsCertificateFlags*/ = g_tls_connection_get_peer_certificate_errors(this.raw)
+  def getNegotiatedProtocol()(using Zone): String = fromCString(g_tls_connection_get_negotiated_protocol(this.raw.asInstanceOf).asInstanceOf)
 
-  def getProtocolVersion(): GTlsProtocolVersion = g_tls_connection_get_protocol_version(this.raw)
+  def getPeerCertificate(): TlsCertificate = new TlsCertificate(g_tls_connection_get_peer_certificate(this.raw.asInstanceOf).asInstanceOf)
 
-  def getRehandshakeMode(): GTlsRehandshakeMode = g_tls_connection_get_rehandshake_mode(this.raw)
+  def getPeerCertificateErrors(): GTlsCertificateFlags = g_tls_connection_get_peer_certificate_errors(this.raw.asInstanceOf)
 
-  def getRequireCloseNotify(): Boolean = g_tls_connection_get_require_close_notify(this.raw)
+  def getProtocolVersion(): GTlsProtocolVersion = g_tls_connection_get_protocol_version(this.raw.asInstanceOf)
 
-  def getUseSystemCertdb(): Boolean = g_tls_connection_get_use_system_certdb(this.raw)
+  def getRehandshakeMode(): GTlsRehandshakeMode = g_tls_connection_get_rehandshake_mode(this.raw.asInstanceOf)
 
-  def handshake(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_tls_connection_handshake(this.raw, cancellable.raw)
+  def getRequireCloseNotify(): Boolean = g_tls_connection_get_require_close_notify(this.raw.asInstanceOf).value.!=(0)
 
-  def handshakeAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_tls_connection_handshake_async(this.raw, io_priority, cancellable.raw, callback, user_data)
+  def getUseSystemCertdb(): Boolean = g_tls_connection_get_use_system_certdb(this.raw.asInstanceOf).value.!=(0)
 
-  def handshakeFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_tls_connection_handshake_finish(this.raw, result.raw)
+  def handshake(cancellable : Cancellable): Boolean = g_tls_connection_handshake(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def setAdvertisedProtocols(protocols : Array[Byte]): Unit = g_tls_connection_set_advertised_protocols(this.raw, protocols)
+  def handshakeAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_tls_connection_handshake_async(this.raw.asInstanceOf, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def setCertificate(certificate : sn.gnome.gio.fluent.TlsCertificate): Unit = g_tls_connection_set_certificate(this.raw, certificate.raw)
+  def handshakeFinish(result : AsyncResult): Boolean = g_tls_connection_handshake_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def setDatabase(database : sn.gnome.gio.fluent.TlsDatabase): Unit = g_tls_connection_set_database(this.raw, database.raw)
+  def setAdvertisedProtocols(protocols : Ptr[CString])(using Zone): Unit = g_tls_connection_set_advertised_protocols(this.raw.asInstanceOf, protocols.asInstanceOf)
 
-  def setInteraction(interaction : sn.gnome.gio.fluent.TlsInteraction): Unit = g_tls_connection_set_interaction(this.raw, interaction.raw)
+  def setCertificate(certificate : TlsCertificate): Unit = g_tls_connection_set_certificate(this.raw.asInstanceOf, certificate.getUnsafeRawPointer().asInstanceOf)
 
-  def setRehandshakeMode(mode : GTlsRehandshakeMode): Unit = g_tls_connection_set_rehandshake_mode(this.raw, mode)
+  def setDatabase(database : TlsDatabase): Unit = g_tls_connection_set_database(this.raw.asInstanceOf, database.getUnsafeRawPointer().asInstanceOf)
 
-  def setRequireCloseNotify(require_close_notify : Boolean): Unit = g_tls_connection_set_require_close_notify(this.raw, require_close_notify)
+  def setInteraction(interaction : TlsInteraction): Unit = g_tls_connection_set_interaction(this.raw.asInstanceOf, interaction.getUnsafeRawPointer().asInstanceOf)
 
-  def setUseSystemCertdb(use_system_certdb : Boolean): Unit = g_tls_connection_set_use_system_certdb(this.raw, use_system_certdb)
+  def setRehandshakeMode(mode : GTlsRehandshakeMode): Unit = g_tls_connection_set_rehandshake_mode(this.raw.asInstanceOf, mode)
 
+  def setRequireCloseNotify(require_close_notify : Boolean): Unit = g_tls_connection_set_require_close_notify(this.raw.asInstanceOf, require_close_notify)
+
+  def setUseSystemCertdb(use_system_certdb : Boolean): Unit = g_tls_connection_set_use_system_certdb(this.raw.asInstanceOf, use_system_certdb)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end TlsConnection
-

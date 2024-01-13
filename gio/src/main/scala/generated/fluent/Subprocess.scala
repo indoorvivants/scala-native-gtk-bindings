@@ -4,55 +4,77 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Subprocess(private[fluent] val raw: Ptr[GSubprocess]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Initable:
-  def communicate(stdin_buf : Any /* Some(GLib.Bytes): GBytes**/, cancellable : sn.gnome.gio.fluent.Cancellable, stdout_buf : Any /* Some(GLib.Bytes): GBytes***/, stderr_buf : Any /* Some(GLib.Bytes): GBytes***/): Boolean = g_subprocess_communicate(this.raw, stdin_buf, cancellable.raw, stdout_buf, stderr_buf)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.Initable
+import sn.gnome.gio.fluent.InputStream
+import sn.gnome.gio.fluent.OutputStream
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.glib.internal.GBytes
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def communicateAsync(stdin_buf : Any /* Some(GLib.Bytes): GBytes**/, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_subprocess_communicate_async(this.raw, stdin_buf, cancellable.raw, callback, user_data)
+class Subprocess(raw: Ptr[GSubprocess]) extends Object(raw.asInstanceOf), Initable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def communicateFinish(result : sn.gnome.gio.fluent.AsyncResult, stdout_buf : Any /* Some(GLib.Bytes): GBytes***/, stderr_buf : Any /* Some(GLib.Bytes): GBytes***/): Boolean = g_subprocess_communicate_finish(this.raw, result.raw, stdout_buf, stderr_buf)
+  def communicate(stdin_buf : Ptr[GBytes], cancellable : Cancellable, stdout_buf : Ptr[Ptr[GBytes]], stderr_buf : Ptr[Ptr[GBytes]]): Boolean = g_subprocess_communicate(this.raw.asInstanceOf, stdin_buf, cancellable.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
 
-  def communicateUtf8(stdin_buf : String, cancellable : sn.gnome.gio.fluent.Cancellable, stdout_buf : Any /* Some(utf8): char***/, stderr_buf : Any /* Some(utf8): char***/): Boolean = g_subprocess_communicate_utf8(this.raw, stdin_buf, cancellable.raw, stdout_buf, stderr_buf)
+  def communicateAsync(stdin_buf : Ptr[GBytes], cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_subprocess_communicate_async(this.raw.asInstanceOf, stdin_buf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def communicateUtf8Async(stdin_buf : String, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_subprocess_communicate_utf8_async(this.raw, stdin_buf, cancellable.raw, callback, user_data)
+  def communicateFinish(result : AsyncResult, stdout_buf : Ptr[Ptr[GBytes]], stderr_buf : Ptr[Ptr[GBytes]]): Boolean = g_subprocess_communicate_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
 
-  def communicateUtf8Finish(result : sn.gnome.gio.fluent.AsyncResult, stdout_buf : Any /* Some(utf8): char***/, stderr_buf : Any /* Some(utf8): char***/): Boolean = g_subprocess_communicate_utf8_finish(this.raw, result.raw, stdout_buf, stderr_buf)
+  def communicateUtf8(stdin_buf : String | CString, cancellable : Cancellable, stdout_buf : Any /* Some(utf8): `char**` */, stderr_buf : Any /* Some(utf8): `char**` */)(using Zone): Boolean = g_subprocess_communicate_utf8(this.raw.asInstanceOf, __sn_extract_string(stdin_buf), cancellable.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
 
-  def forceExit(): Unit = g_subprocess_force_exit(this.raw)
+  def communicateUtf8Async(stdin_buf : String | CString, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_subprocess_communicate_utf8_async(this.raw.asInstanceOf, __sn_extract_string(stdin_buf), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def getExitStatus(): Int = g_subprocess_get_exit_status(this.raw)
+  def communicateUtf8Finish(result : AsyncResult, stdout_buf : Any /* Some(utf8): `char**` */, stderr_buf : Any /* Some(utf8): `char**` */): Boolean = g_subprocess_communicate_utf8_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
 
-  def getIdentifier(): String = g_subprocess_get_identifier(this.raw)
+  def forceExit(): Unit = g_subprocess_force_exit(this.raw.asInstanceOf)
 
-  def getIfExited(): Boolean = g_subprocess_get_if_exited(this.raw)
+  def getExitStatus(): Int = g_subprocess_get_exit_status(this.raw.asInstanceOf).value
 
-  def getIfSignaled(): Boolean = g_subprocess_get_if_signaled(this.raw)
+  def getIdentifier()(using Zone): String = fromCString(g_subprocess_get_identifier(this.raw.asInstanceOf).asInstanceOf)
 
-  def getStatus(): Int = g_subprocess_get_status(this.raw)
+  def getIfExited(): Boolean = g_subprocess_get_if_exited(this.raw.asInstanceOf).value.!=(0)
 
-  def getStderrPipe(): sn.gnome.gio.fluent.InputStream = g_subprocess_get_stderr_pipe(this.raw)
+  def getIfSignaled(): Boolean = g_subprocess_get_if_signaled(this.raw.asInstanceOf).value.!=(0)
 
-  def getStdinPipe(): sn.gnome.gio.fluent.OutputStream = g_subprocess_get_stdin_pipe(this.raw)
+  def getStatus(): Int = g_subprocess_get_status(this.raw.asInstanceOf).value
 
-  def getStdoutPipe(): sn.gnome.gio.fluent.InputStream = g_subprocess_get_stdout_pipe(this.raw)
+  def getStderrPipe(): InputStream = new InputStream(g_subprocess_get_stderr_pipe(this.raw.asInstanceOf).asInstanceOf)
 
-  def getSuccessful(): Boolean = g_subprocess_get_successful(this.raw)
+  def getStdinPipe(): OutputStream = new OutputStream(g_subprocess_get_stdin_pipe(this.raw.asInstanceOf).asInstanceOf)
 
-  def getTermSig(): Int = g_subprocess_get_term_sig(this.raw)
+  def getStdoutPipe(): InputStream = new InputStream(g_subprocess_get_stdout_pipe(this.raw.asInstanceOf).asInstanceOf)
 
-  def sendSignal(signal_num : Int): Unit = g_subprocess_send_signal(this.raw, signal_num)
+  def getSuccessful(): Boolean = g_subprocess_get_successful(this.raw.asInstanceOf).value.!=(0)
 
-  def wait(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_subprocess_wait(this.raw, cancellable.raw)
+  def getTermSig(): Int = g_subprocess_get_term_sig(this.raw.asInstanceOf).value
 
-  def waitAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_subprocess_wait_async(this.raw, cancellable.raw, callback, user_data)
+  def sendSignal(signal_num : Int): Unit = g_subprocess_send_signal(this.raw.asInstanceOf, gint(signal_num))
 
-  def waitCheck(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_subprocess_wait_check(this.raw, cancellable.raw)
+  def wait(cancellable : Cancellable): Boolean = g_subprocess_wait(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def waitCheckAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_subprocess_wait_check_async(this.raw, cancellable.raw, callback, user_data)
+  def waitAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_subprocess_wait_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def waitCheckFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_subprocess_wait_check_finish(this.raw, result.raw)
+  def waitCheck(cancellable : Cancellable): Boolean = g_subprocess_wait_check(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def waitFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_subprocess_wait_finish(this.raw, result.raw)
+  def waitCheckAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_subprocess_wait_check_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
+  def waitCheckFinish(result : AsyncResult): Boolean = g_subprocess_wait_check_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+
+  def waitFinish(result : AsyncResult): Boolean = g_subprocess_wait_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Subprocess
 
 object Subprocess:
+end Subprocess

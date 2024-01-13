@@ -4,5 +4,11 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusActionGroup(private[fluent] val raw: Ptr[GDBusActionGroup]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ActionGroup, sn.gnome.gio.fluent.RemoteActionGroup
+import sn.gnome.gio.fluent.ActionGroup
+import sn.gnome.gio.fluent.RemoteActionGroup
+import sn.gnome.gobject.fluent.Object
 
+class DBusActionGroup(raw: Ptr[GDBusActionGroup]) extends Object(raw.asInstanceOf), ActionGroup, RemoteActionGroup:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+end DBusActionGroup

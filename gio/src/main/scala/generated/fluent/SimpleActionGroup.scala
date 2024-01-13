@@ -4,18 +4,35 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SimpleActionGroup(private[fluent] val raw: Ptr[GSimpleActionGroup]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ActionGroup, sn.gnome.gio.fluent.ActionMap:
-  def addEntries(entries : Array[Byte], n_entries : Int, user_data : Ptr[Byte]): Unit = g_simple_action_group_add_entries(this.raw, entries, n_entries, user_data)
+import sn.gnome.gio.fluent.Action
+import sn.gnome.gio.fluent.ActionGroup
+import sn.gnome.gio.fluent.ActionMap
+import sn.gnome.gio.internal.GActionEntry
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def insert(action : sn.gnome.gio.fluent.Action): Unit = g_simple_action_group_insert(this.raw, action.raw)
+class SimpleActionGroup(raw: Ptr[GSimpleActionGroup]) extends Object(raw.asInstanceOf), ActionGroup, ActionMap:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def lookup(action_name : String): sn.gnome.gio.fluent.Action = g_simple_action_group_lookup(this.raw, action_name)
+  def addEntries(entries : Ptr[GActionEntry], n_entries : Int, user_data : Ptr[Byte]): Unit = g_simple_action_group_add_entries(this.raw.asInstanceOf, entries, gint(n_entries), gpointer(user_data))
 
-  def remove(action_name : String): Unit = g_simple_action_group_remove(this.raw, action_name)
+  def insert(action : Action): Unit = g_simple_action_group_insert(this.raw.asInstanceOf, action.getUnsafeRawPointer().asInstanceOf)
 
+  def lookup(action_name : String | CString)(using Zone): Action = g_simple_action_group_lookup(this.raw.asInstanceOf, __sn_extract_string(action_name).asInstanceOf[Ptr[gchar]])
+
+  def remove(action_name : String | CString)(using Zone): Unit = g_simple_action_group_remove(this.raw.asInstanceOf, __sn_extract_string(action_name).asInstanceOf[Ptr[gchar]])
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end SimpleActionGroup
 
 object SimpleActionGroup:
-  def apply(): SimpleActionGroup = SimpleActionGroup(g_simple_action_group_new())
-
+  def apply(): SimpleActionGroup = new SimpleActionGroup(g_simple_action_group_new().asInstanceOf)
 end SimpleActionGroup

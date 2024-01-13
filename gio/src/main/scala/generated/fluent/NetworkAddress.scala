@@ -4,18 +4,31 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class NetworkAddress(private[fluent] val raw: Ptr[GNetworkAddress]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.SocketConnectable:
-  def getHostname(): String = g_network_address_get_hostname(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.SocketConnectable
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.guint16
+import sn.gnome.gobject.fluent.Object
 
-  def getPort(): UShort = g_network_address_get_port(this.raw)
+class NetworkAddress(raw: Ptr[GNetworkAddress]) extends Object(raw.asInstanceOf), SocketConnectable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getScheme(): String = g_network_address_get_scheme(this.raw)
+  def getHostname()(using Zone): String = fromCString(g_network_address_get_hostname(this.raw.asInstanceOf).asInstanceOf)
+
+  def getPort(): UShort = g_network_address_get_port(this.raw.asInstanceOf).value
+
+  def getScheme()(using Zone): String = fromCString(g_network_address_get_scheme(this.raw.asInstanceOf).asInstanceOf)
 
 end NetworkAddress
 
 object NetworkAddress:
-  def apply(hostname : String, port : UShort): NetworkAddress = NetworkAddress(g_network_address_new(hostname, port))
+  def apply(hostname : String | CString, port : UShort)(using Zone): NetworkAddress = new NetworkAddress(g_network_address_new(__sn_extract_string(hostname).asInstanceOf[Ptr[gchar]], guint16(port)).asInstanceOf)
+  def loopback(port : UShort): NetworkAddress = new NetworkAddress(g_network_address_new_loopback(guint16(port)).asInstanceOf)
 
-  def loopback(port : UShort): NetworkAddress = NetworkAddress(g_network_address_new_loopback(port))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end NetworkAddress

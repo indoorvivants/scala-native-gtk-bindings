@@ -4,16 +4,22 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixOutputStream(private[fluent] val raw: Ptr[GUnixOutputStream]) extends sn.gnome.gio.fluent.OutputStream, sn.gnome.gio.fluent.FileDescriptorBased, sn.gnome.gio.fluent.PollableOutputStream:
-  def getCloseFd(): Boolean = g_unix_output_stream_get_close_fd(this.raw)
+import sn.gnome.gio.fluent.FileDescriptorBased
+import sn.gnome.gio.fluent.OutputStream
+import sn.gnome.gio.fluent.PollableOutputStream
+import sn.gnome.glib.internal.gint
 
-  def getFd(): Int = g_unix_output_stream_get_fd(this.raw)
+class UnixOutputStream(raw: Ptr[GUnixOutputStream]) extends OutputStream(raw.asInstanceOf), FileDescriptorBased, PollableOutputStream:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def setCloseFd(close_fd : Boolean): Unit = g_unix_output_stream_set_close_fd(this.raw, close_fd)
+  def getCloseFd(): Boolean = g_unix_output_stream_get_close_fd(this.raw.asInstanceOf).value.!=(0)
+
+  def getFd(): Int = g_unix_output_stream_get_fd(this.raw.asInstanceOf).value
+
+  def setCloseFd(close_fd : Boolean): Unit = g_unix_output_stream_set_close_fd(this.raw.asInstanceOf, close_fd)
 
 end UnixOutputStream
 
 object UnixOutputStream:
-  def apply(fd : Int, close_fd : Boolean): UnixOutputStream = UnixOutputStream(g_unix_output_stream_new(fd, close_fd))
-
+  def apply(fd : Int, close_fd : Boolean): UnixOutputStream = new UnixOutputStream(g_unix_output_stream_new(gint(fd), close_fd).asInstanceOf)
 end UnixOutputStream

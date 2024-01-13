@@ -4,12 +4,15 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixMountMonitor(private[fluent] val raw: Ptr[GUnixMountMonitor]) extends sn.gnome.gobject.fluent.Object:
-  def setRateLimit(limit_msec : Int): Unit = g_unix_mount_monitor_set_rate_limit(this.raw, limit_msec)
+import sn.gnome.gobject.fluent.Object
+
+class UnixMountMonitor(raw: Ptr[GUnixMountMonitor]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+  def setRateLimit(limit_msec : Int): Unit = g_unix_mount_monitor_set_rate_limit(this.raw.asInstanceOf, limit_msec)
 
 end UnixMountMonitor
 
 object UnixMountMonitor:
-  def apply(): UnixMountMonitor = UnixMountMonitor(g_unix_mount_monitor_new())
-
+  def apply(): UnixMountMonitor = new UnixMountMonitor(g_unix_mount_monitor_new().asInstanceOf)
 end UnixMountMonitor

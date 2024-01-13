@@ -4,26 +4,37 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class IOStream(private[fluent] val raw: Ptr[GIOStream]) extends sn.gnome.gobject.fluent.Object:
-  def clearPending(): Unit = g_io_stream_clear_pending(this.raw)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.IOStream
+import sn.gnome.gio.fluent.InputStream
+import sn.gnome.gio.fluent.OutputStream
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GIOStreamSpliceFlags
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def close(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_io_stream_close(this.raw, cancellable.raw)
+class IOStream(raw: Ptr[GIOStream]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def closeAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_io_stream_close_async(this.raw, io_priority, cancellable.raw, callback, user_data)
+  def clearPending(): Unit = g_io_stream_clear_pending(this.raw.asInstanceOf)
 
-  def closeFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_io_stream_close_finish(this.raw, result.raw)
+  def close(cancellable : Cancellable): Boolean = g_io_stream_close(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def getInputStream(): sn.gnome.gio.fluent.InputStream = g_io_stream_get_input_stream(this.raw)
+  def closeAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_io_stream_close_async(this.raw.asInstanceOf, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def getOutputStream(): sn.gnome.gio.fluent.OutputStream = g_io_stream_get_output_stream(this.raw)
+  def closeFinish(result : AsyncResult): Boolean = g_io_stream_close_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def hasPending(): Boolean = g_io_stream_has_pending(this.raw)
+  def getInputStream(): InputStream = new InputStream(g_io_stream_get_input_stream(this.raw.asInstanceOf).asInstanceOf)
 
-  def isClosed(): Boolean = g_io_stream_is_closed(this.raw)
+  def getOutputStream(): OutputStream = new OutputStream(g_io_stream_get_output_stream(this.raw.asInstanceOf).asInstanceOf)
 
-  def setPending(): Boolean = g_io_stream_set_pending(this.raw)
+  def hasPending(): Boolean = g_io_stream_has_pending(this.raw.asInstanceOf).value.!=(0)
 
-  def spliceAsync(stream2 : sn.gnome.gio.fluent.IOStream, flags : Any /* Some(IOStreamSpliceFlags): GIOStreamSpliceFlags*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_io_stream_splice_async(this.raw, stream2.raw, flags, io_priority, cancellable.raw, callback, user_data)
+  def isClosed(): Boolean = g_io_stream_is_closed(this.raw.asInstanceOf).value.!=(0)
+
+  def setPending(): Boolean = g_io_stream_set_pending(this.raw.asInstanceOf).value.!=(0)
+
+  def spliceAsync(stream2 : IOStream, flags : GIOStreamSpliceFlags, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_io_stream_splice_async(this.raw.asInstanceOf, stream2.getUnsafeRawPointer().asInstanceOf, flags, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
 end IOStream
-

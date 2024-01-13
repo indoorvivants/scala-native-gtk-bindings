@@ -4,14 +4,19 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MenuLinkIter(private[fluent] val raw: Ptr[GMenuLinkIter]) extends sn.gnome.gobject.fluent.Object:
-  def getName(): String = g_menu_link_iter_get_name(this.raw)
+import sn.gnome.gio.fluent.MenuModel
+import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
 
-  def getNext(out_link : Any /* Some(utf8): const gchar***/, value : sn.gnome.gio.fluent.MenuModel): Boolean = g_menu_link_iter_get_next(this.raw, out_link, value.raw)
+class MenuLinkIter(raw: Ptr[GMenuLinkIter]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getValue(): sn.gnome.gio.fluent.MenuModel = g_menu_link_iter_get_value(this.raw)
+  def getName()(using Zone): String = fromCString(g_menu_link_iter_get_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def next(): Boolean = g_menu_link_iter_next(this.raw)
+  def getNext(out_link : Any /* Some(utf8): `const gchar**` */, value : MenuModel): Boolean = g_menu_link_iter_get_next(this.raw.asInstanceOf, out_link, value.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+
+  def getValue(): MenuModel = new MenuModel(g_menu_link_iter_get_value(this.raw.asInstanceOf).asInstanceOf)
+
+  def next(): Boolean = g_menu_link_iter_next(this.raw.asInstanceOf).value.!=(0)
 
 end MenuLinkIter
-

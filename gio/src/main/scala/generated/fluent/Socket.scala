@@ -4,124 +4,144 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Socket(private[fluent] val raw: Ptr[GSocket]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.DatagramBased, sn.gnome.gio.fluent.Initable:
-  def accept(cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.Socket = g_socket_accept(this.raw, cancellable.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.Credentials
+import sn.gnome.gio.fluent.DatagramBased
+import sn.gnome.gio.fluent.InetAddress
+import sn.gnome.gio.fluent.Initable
+import sn.gnome.gio.fluent.Socket
+import sn.gnome.gio.fluent.SocketAddress
+import sn.gnome.gio.fluent.SocketConnection
+import sn.gnome.gio.fluent.SocketControlMessage
+import sn.gnome.gio.internal.GInputMessage
+import sn.gnome.gio.internal.GInputVector
+import sn.gnome.gio.internal.GOutputMessage
+import sn.gnome.gio.internal.GOutputVector
+import sn.gnome.gio.internal.GPollableReturn
+import sn.gnome.gio.internal.GSocketFamily
+import sn.gnome.gio.internal.GSocketProtocol
+import sn.gnome.gio.internal.GSocketType
+import sn.gnome.glib.internal.GIOCondition
+import sn.gnome.glib.internal.GSource
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.guint
+import sn.gnome.gobject.fluent.Object
 
-  def bind(address : sn.gnome.gio.fluent.SocketAddress, allow_reuse : Boolean): Boolean = g_socket_bind(this.raw, address.raw, allow_reuse)
+class Socket(raw: Ptr[GSocket]) extends Object(raw.asInstanceOf), DatagramBased, Initable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def checkConnectResult(): Boolean = g_socket_check_connect_result(this.raw)
+  def accept(cancellable : Cancellable): Socket = new Socket(g_socket_accept(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def close(): Boolean = g_socket_close(this.raw)
+  def bind(address : SocketAddress, allow_reuse : Boolean): Boolean = g_socket_bind(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, allow_reuse).value.!=(0)
 
-  def conditionCheck(condition : Any /* Some(GLib.IOCondition): GIOCondition*/): Any /* Some(GLib.IOCondition): GIOCondition*/ = g_socket_condition_check(this.raw, condition)
+  def checkConnectResult(): Boolean = g_socket_check_connect_result(this.raw.asInstanceOf).value.!=(0)
 
-  def conditionTimedWait(condition : Any /* Some(GLib.IOCondition): GIOCondition*/, timeout_us : Any /* Some(gint64): gint64*/, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_socket_condition_timed_wait(this.raw, condition, timeout_us, cancellable.raw)
+  def close(): Boolean = g_socket_close(this.raw.asInstanceOf).value.!=(0)
 
-  def conditionWait(condition : Any /* Some(GLib.IOCondition): GIOCondition*/, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_socket_condition_wait(this.raw, condition, cancellable.raw)
+  def conditionCheck(condition : GIOCondition): GIOCondition = g_socket_condition_check(this.raw.asInstanceOf, condition)
 
-  def connect(address : sn.gnome.gio.fluent.SocketAddress, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_socket_connect(this.raw, address.raw, cancellable.raw)
+  def conditionTimedWait(condition : GIOCondition, timeout_us : Any /* Some(gint64): `gint64` */, cancellable : Cancellable): Boolean = g_socket_condition_timed_wait(this.raw.asInstanceOf, condition, timeout_us, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def connectionFactoryCreateConnection(): sn.gnome.gio.fluent.SocketConnection = g_socket_connection_factory_create_connection(this.raw)
+  def conditionWait(condition : GIOCondition, cancellable : Cancellable): Boolean = g_socket_condition_wait(this.raw.asInstanceOf, condition, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def createSource(condition : Any /* Some(GLib.IOCondition): GIOCondition*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(GLib.Source): GSource**/ = g_socket_create_source(this.raw, condition, cancellable.raw)
+  def connect(address : SocketAddress, cancellable : Cancellable): Boolean = g_socket_connect(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def getAvailableBytes(): Any /* Some(gssize): gssize*/ = g_socket_get_available_bytes(this.raw)
+  def connectionFactoryCreateConnection(): SocketConnection = new SocketConnection(g_socket_connection_factory_create_connection(this.raw.asInstanceOf).asInstanceOf)
 
-  def getBlocking(): Boolean = g_socket_get_blocking(this.raw)
+  def createSource(condition : GIOCondition, cancellable : Cancellable): Ptr[GSource] = g_socket_create_source(this.raw.asInstanceOf, condition, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def getBroadcast(): Boolean = g_socket_get_broadcast(this.raw)
+  def getAvailableBytes(): Any /* Some(gssize): `gssize` */ = g_socket_get_available_bytes(this.raw.asInstanceOf)
 
-  def getCredentials(): sn.gnome.gio.fluent.Credentials = g_socket_get_credentials(this.raw)
+  def getBlocking(): Boolean = g_socket_get_blocking(this.raw.asInstanceOf).value.!=(0)
 
-  def getFamily(): GSocketFamily = g_socket_get_family(this.raw)
+  def getBroadcast(): Boolean = g_socket_get_broadcast(this.raw.asInstanceOf).value.!=(0)
 
-  def getFd(): Int = g_socket_get_fd(this.raw)
+  def getCredentials(): Credentials = new Credentials(g_socket_get_credentials(this.raw.asInstanceOf).asInstanceOf)
 
-  def getKeepalive(): Boolean = g_socket_get_keepalive(this.raw)
+  def getFamily(): GSocketFamily = g_socket_get_family(this.raw.asInstanceOf)
 
-  def getListenBacklog(): Int = g_socket_get_listen_backlog(this.raw)
+  def getFd(): Int = g_socket_get_fd(this.raw.asInstanceOf)
 
-  def getLocalAddress(): sn.gnome.gio.fluent.SocketAddress = g_socket_get_local_address(this.raw)
+  def getKeepalive(): Boolean = g_socket_get_keepalive(this.raw.asInstanceOf).value.!=(0)
 
-  def getMulticastLoopback(): Boolean = g_socket_get_multicast_loopback(this.raw)
+  def getListenBacklog(): Int = g_socket_get_listen_backlog(this.raw.asInstanceOf).value
 
-  def getMulticastTtl(): Any /* Some(guint): guint*/ = g_socket_get_multicast_ttl(this.raw)
+  def getLocalAddress(): SocketAddress = new SocketAddress(g_socket_get_local_address(this.raw.asInstanceOf).asInstanceOf)
 
-  def getOption(level : Int, optname : Int, value : Any /* Some(gint): gint**/): Boolean = g_socket_get_option(this.raw, level, optname, value)
+  def getMulticastLoopback(): Boolean = g_socket_get_multicast_loopback(this.raw.asInstanceOf).value.!=(0)
 
-  def getProtocol(): GSocketProtocol = g_socket_get_protocol(this.raw)
+  def getMulticastTtl(): UInt = g_socket_get_multicast_ttl(this.raw.asInstanceOf).value
 
-  def getRemoteAddress(): sn.gnome.gio.fluent.SocketAddress = g_socket_get_remote_address(this.raw)
+  def getOption(level : Int, optname : Int, value : Any /* Some(gint): `gint*` */): Boolean = g_socket_get_option(this.raw.asInstanceOf, gint(level), gint(optname), value).value.!=(0)
 
-  def getSocketType(): GSocketType = g_socket_get_socket_type(this.raw)
+  def getProtocol(): GSocketProtocol = g_socket_get_protocol(this.raw.asInstanceOf)
 
-  def getTimeout(): Any /* Some(guint): guint*/ = g_socket_get_timeout(this.raw)
+  def getRemoteAddress(): SocketAddress = new SocketAddress(g_socket_get_remote_address(this.raw.asInstanceOf).asInstanceOf)
 
-  def getTtl(): Any /* Some(guint): guint*/ = g_socket_get_ttl(this.raw)
+  def getSocketType(): GSocketType = g_socket_get_socket_type(this.raw.asInstanceOf)
 
-  def isClosed(): Boolean = g_socket_is_closed(this.raw)
+  def getTimeout(): UInt = g_socket_get_timeout(this.raw.asInstanceOf).value
 
-  def isConnected(): Boolean = g_socket_is_connected(this.raw)
+  def getTtl(): UInt = g_socket_get_ttl(this.raw.asInstanceOf).value
 
-  def joinMulticastGroup(group : sn.gnome.gio.fluent.InetAddress, source_specific : Boolean, iface : String): Boolean = g_socket_join_multicast_group(this.raw, group.raw, source_specific, iface)
+  def isClosed(): Boolean = g_socket_is_closed(this.raw.asInstanceOf).value.!=(0)
 
-  def joinMulticastGroupSsm(group : sn.gnome.gio.fluent.InetAddress, source_specific : sn.gnome.gio.fluent.InetAddress, iface : String): Boolean = g_socket_join_multicast_group_ssm(this.raw, group.raw, source_specific.raw, iface)
+  def isConnected(): Boolean = g_socket_is_connected(this.raw.asInstanceOf).value.!=(0)
 
-  def leaveMulticastGroup(group : sn.gnome.gio.fluent.InetAddress, source_specific : Boolean, iface : String): Boolean = g_socket_leave_multicast_group(this.raw, group.raw, source_specific, iface)
+  def joinMulticastGroup(group : InetAddress, source_specific : Boolean, iface : String | CString)(using Zone): Boolean = g_socket_join_multicast_group(this.raw.asInstanceOf, group.getUnsafeRawPointer().asInstanceOf, source_specific, __sn_extract_string(iface).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def leaveMulticastGroupSsm(group : sn.gnome.gio.fluent.InetAddress, source_specific : sn.gnome.gio.fluent.InetAddress, iface : String): Boolean = g_socket_leave_multicast_group_ssm(this.raw, group.raw, source_specific.raw, iface)
+  def joinMulticastGroupSsm(group : InetAddress, source_specific : InetAddress, iface : String | CString)(using Zone): Boolean = g_socket_join_multicast_group_ssm(this.raw.asInstanceOf, group.getUnsafeRawPointer().asInstanceOf, source_specific.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(iface).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def listen(): Boolean = g_socket_listen(this.raw)
+  def leaveMulticastGroup(group : InetAddress, source_specific : Boolean, iface : String | CString)(using Zone): Boolean = g_socket_leave_multicast_group(this.raw.asInstanceOf, group.getUnsafeRawPointer().asInstanceOf, source_specific, __sn_extract_string(iface).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def receive(buffer : Array[Byte], size : Any /* Some(gsize): gsize*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_receive(this.raw, buffer, size, cancellable.raw)
+  def leaveMulticastGroupSsm(group : InetAddress, source_specific : InetAddress, iface : String | CString)(using Zone): Boolean = g_socket_leave_multicast_group_ssm(this.raw.asInstanceOf, group.getUnsafeRawPointer().asInstanceOf, source_specific.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(iface).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def receiveFrom(address : sn.gnome.gio.fluent.SocketAddress, buffer : Array[Byte], size : Any /* Some(gsize): gsize*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_receive_from(this.raw, address.raw, buffer, size, cancellable.raw)
+  def listen(): Boolean = g_socket_listen(this.raw.asInstanceOf).value.!=(0)
 
-  def receiveMessage(address : sn.gnome.gio.fluent.SocketAddress, vectors : Array[Byte], num_vectors : Int, messages : Array[Byte], num_messages : Any /* Some(gint): gint**/, flags : Any /* Some(gint): gint**/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_receive_message(this.raw, address.raw, vectors, num_vectors, messages, num_messages, flags, cancellable.raw)
+  def receiveMessage(address : SocketAddress, vectors : Ptr[GInputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Any /* Some(gint): `gint*` */, flags : Any /* Some(gint): `gint*` */, cancellable : Cancellable): Any /* Some(gssize): `gssize` */ = g_socket_receive_message(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, num_messages, flags, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def receiveMessages(messages : Array[Byte], num_messages : Any /* Some(guint): guint*/, flags : Int, cancellable : sn.gnome.gio.fluent.Cancellable): Int = g_socket_receive_messages(this.raw, messages, num_messages, flags, cancellable.raw)
+  def receiveMessages(messages : Ptr[GInputMessage], num_messages : UInt, flags : Int, cancellable : Cancellable): Int = g_socket_receive_messages(this.raw.asInstanceOf, messages, guint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def receiveWithBlocking(buffer : Array[Byte], size : Any /* Some(gsize): gsize*/, blocking : Boolean, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_receive_with_blocking(this.raw, buffer, size, blocking, cancellable.raw)
+  def sendMessage(address : SocketAddress, vectors : Ptr[GOutputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Int, flags : Int, cancellable : Cancellable): Any /* Some(gssize): `gssize` */ = g_socket_send_message(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, gint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def send(buffer : Array[Byte], size : Any /* Some(gsize): gsize*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_send(this.raw, buffer, size, cancellable.raw)
+  def sendMessageWithTimeout(address : SocketAddress, vectors : Ptr[GOutputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Int, flags : Int, timeout_us : Any /* Some(gint64): `gint64` */, bytes_written : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable): GPollableReturn = g_socket_send_message_with_timeout(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, gint(num_messages), gint(flags), timeout_us, bytes_written, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def sendMessage(address : sn.gnome.gio.fluent.SocketAddress, vectors : Array[Byte], num_vectors : Int, messages : Array[Byte], num_messages : Int, flags : Int, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_send_message(this.raw, address.raw, vectors, num_vectors, messages, num_messages, flags, cancellable.raw)
+  def sendMessages(messages : Ptr[GOutputMessage], num_messages : UInt, flags : Int, cancellable : Cancellable): Int = g_socket_send_messages(this.raw.asInstanceOf, messages, guint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def sendMessageWithTimeout(address : sn.gnome.gio.fluent.SocketAddress, vectors : Array[Byte], num_vectors : Int, messages : Array[Byte], num_messages : Int, flags : Int, timeout_us : Any /* Some(gint64): gint64*/, bytes_written : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): GPollableReturn = g_socket_send_message_with_timeout(this.raw, address.raw, vectors, num_vectors, messages, num_messages, flags, timeout_us, bytes_written, cancellable.raw)
+  def setBlocking(blocking : Boolean): Unit = g_socket_set_blocking(this.raw.asInstanceOf, blocking)
 
-  def sendMessages(messages : Array[Byte], num_messages : Any /* Some(guint): guint*/, flags : Int, cancellable : sn.gnome.gio.fluent.Cancellable): Int = g_socket_send_messages(this.raw, messages, num_messages, flags, cancellable.raw)
+  def setBroadcast(broadcast : Boolean): Unit = g_socket_set_broadcast(this.raw.asInstanceOf, broadcast)
 
-  def sendTo(address : sn.gnome.gio.fluent.SocketAddress, buffer : Array[Byte], size : Any /* Some(gsize): gsize*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_send_to(this.raw, address.raw, buffer, size, cancellable.raw)
+  def setKeepalive(keepalive : Boolean): Unit = g_socket_set_keepalive(this.raw.asInstanceOf, keepalive)
 
-  def sendWithBlocking(buffer : Array[Byte], size : Any /* Some(gsize): gsize*/, blocking : Boolean, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_socket_send_with_blocking(this.raw, buffer, size, blocking, cancellable.raw)
+  def setListenBacklog(backlog : Int): Unit = g_socket_set_listen_backlog(this.raw.asInstanceOf, gint(backlog))
 
-  def setBlocking(blocking : Boolean): Unit = g_socket_set_blocking(this.raw, blocking)
+  def setMulticastLoopback(loopback : Boolean): Unit = g_socket_set_multicast_loopback(this.raw.asInstanceOf, loopback)
 
-  def setBroadcast(broadcast : Boolean): Unit = g_socket_set_broadcast(this.raw, broadcast)
+  def setMulticastTtl(ttl : UInt): Unit = g_socket_set_multicast_ttl(this.raw.asInstanceOf, guint(ttl))
 
-  def setKeepalive(keepalive : Boolean): Unit = g_socket_set_keepalive(this.raw, keepalive)
+  def setOption(level : Int, optname : Int, value : Int): Boolean = g_socket_set_option(this.raw.asInstanceOf, gint(level), gint(optname), gint(value)).value.!=(0)
 
-  def setListenBacklog(backlog : Int): Unit = g_socket_set_listen_backlog(this.raw, backlog)
+  def setTimeout(timeout : UInt): Unit = g_socket_set_timeout(this.raw.asInstanceOf, guint(timeout))
 
-  def setMulticastLoopback(loopback : Boolean): Unit = g_socket_set_multicast_loopback(this.raw, loopback)
+  def setTtl(ttl : UInt): Unit = g_socket_set_ttl(this.raw.asInstanceOf, guint(ttl))
 
-  def setMulticastTtl(ttl : Any /* Some(guint): guint*/): Unit = g_socket_set_multicast_ttl(this.raw, ttl)
+  def shutdown(shutdown_read : Boolean, shutdown_write : Boolean): Boolean = g_socket_shutdown(this.raw.asInstanceOf, shutdown_read, shutdown_write).value.!=(0)
 
-  def setOption(level : Int, optname : Int, value : Int): Boolean = g_socket_set_option(this.raw, level, optname, value)
+  def speaksIpv4(): Boolean = g_socket_speaks_ipv4(this.raw.asInstanceOf).value.!=(0)
 
-  def setTimeout(timeout : Any /* Some(guint): guint*/): Unit = g_socket_set_timeout(this.raw, timeout)
 
-  def setTtl(ttl : Any /* Some(guint): guint*/): Unit = g_socket_set_ttl(this.raw, ttl)
-
-  def shutdown(shutdown_read : Boolean, shutdown_write : Boolean): Boolean = g_socket_shutdown(this.raw, shutdown_read, shutdown_write)
-
-  def speaksIpv4(): Boolean = g_socket_speaks_ipv4(this.raw)
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Socket
 
 object Socket:
-  def apply(family : GSocketFamily, `type` : GSocketType, protocol : GSocketProtocol): Socket = Socket(g_socket_new(family, `type`, protocol))
-
-  def fromFd(fd : Int): Socket = Socket(g_socket_new_from_fd(fd))
-
+  def apply(family : GSocketFamily, `type` : GSocketType, protocol : GSocketProtocol): Socket = new Socket(g_socket_new(family, `type`, protocol).asInstanceOf)
+  def fromFd(fd : Int): Socket = new Socket(g_socket_new_from_fd(gint(fd)).asInstanceOf)
 end Socket

@@ -4,12 +4,17 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ZlibDecompressor(private[fluent] val raw: Ptr[GZlibDecompressor]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Converter:
-  def getFileInfo(): sn.gnome.gio.fluent.FileInfo = g_zlib_decompressor_get_file_info(this.raw)
+import sn.gnome.gio.fluent.Converter
+import sn.gnome.gio.fluent.FileInfo
+import sn.gnome.gobject.fluent.Object
+
+class ZlibDecompressor(raw: Ptr[GZlibDecompressor]) extends Object(raw.asInstanceOf), Converter:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+  def getFileInfo(): FileInfo = new FileInfo(g_zlib_decompressor_get_file_info(this.raw.asInstanceOf).asInstanceOf)
 
 end ZlibDecompressor
 
 object ZlibDecompressor:
-  def apply(format : GZlibCompressorFormat): ZlibDecompressor = ZlibDecompressor(g_zlib_decompressor_new(format))
-
+  def apply(format : GZlibCompressorFormat): ZlibDecompressor = new ZlibDecompressor(g_zlib_decompressor_new(format).asInstanceOf)
 end ZlibDecompressor

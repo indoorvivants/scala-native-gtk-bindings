@@ -4,22 +4,34 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TestDBus(private[fluent] val raw: Ptr[GTestDBus]) extends sn.gnome.gobject.fluent.Object:
-  def addServiceDir(path : String): Unit = g_test_dbus_add_service_dir(this.raw, path)
+import sn.gnome.gio.internal.GTestDBusFlags
+import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
 
-  def down(): Unit = g_test_dbus_down(this.raw)
+class TestDBus(raw: Ptr[GTestDBus]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getBusAddress(): String = g_test_dbus_get_bus_address(this.raw)
+  def addServiceDir(path : String | CString)(using Zone): Unit = g_test_dbus_add_service_dir(this.raw.asInstanceOf, __sn_extract_string(path).asInstanceOf[Ptr[gchar]])
 
-  def getFlags(): Any /* Some(TestDBusFlags): GTestDBusFlags*/ = g_test_dbus_get_flags(this.raw)
+  def down(): Unit = g_test_dbus_down(this.raw.asInstanceOf)
 
-  def stop(): Unit = g_test_dbus_stop(this.raw)
+  def getBusAddress()(using Zone): String = fromCString(g_test_dbus_get_bus_address(this.raw.asInstanceOf).asInstanceOf)
 
-  def up(): Unit = g_test_dbus_up(this.raw)
+  def getFlags(): GTestDBusFlags = g_test_dbus_get_flags(this.raw.asInstanceOf)
 
+  def stop(): Unit = g_test_dbus_stop(this.raw.asInstanceOf)
+
+  def up(): Unit = g_test_dbus_up(this.raw.asInstanceOf)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end TestDBus
 
 object TestDBus:
-  def apply(flags : Any /* Some(TestDBusFlags): GTestDBusFlags*/): TestDBus = TestDBus(g_test_dbus_new(flags))
-
+  def apply(flags : GTestDBusFlags): TestDBus = new TestDBus(g_test_dbus_new(flags).asInstanceOf)
 end TestDBus

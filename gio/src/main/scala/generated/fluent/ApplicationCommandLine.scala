@@ -4,28 +4,39 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ApplicationCommandLine(private[fluent] val raw: Ptr[GApplicationCommandLine]) extends sn.gnome.gobject.fluent.Object:
-  def createFileForArg(arg : Any /* Some(filename): const gchar**/): sn.gnome.gio.fluent.File = g_application_command_line_create_file_for_arg(this.raw, arg)
+import sn.gnome.gio.fluent.File
+import sn.gnome.gio.fluent.InputStream
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.GVariantDict
+import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
 
-  def getArguments(argc : Any /* Some(gint): int**/): Array[Byte] = g_application_command_line_get_arguments(this.raw, argc)
+class ApplicationCommandLine(raw: Ptr[GApplicationCommandLine]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getCwd(): Any /* Some(filename): const gchar**/ = g_application_command_line_get_cwd(this.raw)
+  def createFileForArg(arg : String | CString)(using Zone): File = g_application_command_line_create_file_for_arg(this.raw.asInstanceOf, __sn_extract_string(arg).asInstanceOf[Ptr[gchar]])
 
-  def getEnviron(): Array[Byte] = g_application_command_line_get_environ(this.raw)
+  def getCwd()(using Zone): String = fromCString(g_application_command_line_get_cwd(this.raw.asInstanceOf).asInstanceOf)
 
-  def getExitStatus(): Int = g_application_command_line_get_exit_status(this.raw)
+  def getExitStatus(): Int = g_application_command_line_get_exit_status(this.raw.asInstanceOf)
 
-  def getIsRemote(): Boolean = g_application_command_line_get_is_remote(this.raw)
+  def getIsRemote(): Boolean = g_application_command_line_get_is_remote(this.raw.asInstanceOf).value.!=(0)
 
-  def getOptionsDict(): Any /* Some(GLib.VariantDict): GVariantDict**/ = g_application_command_line_get_options_dict(this.raw)
+  def getOptionsDict(): Ptr[GVariantDict] = g_application_command_line_get_options_dict(this.raw.asInstanceOf)
 
-  def getPlatformData(): Any /* Some(GLib.Variant): GVariant**/ = g_application_command_line_get_platform_data(this.raw)
+  def getPlatformData(): Ptr[GVariant] = g_application_command_line_get_platform_data(this.raw.asInstanceOf)
 
-  def getStdin(): sn.gnome.gio.fluent.InputStream = g_application_command_line_get_stdin(this.raw)
+  def getStdin(): InputStream = new InputStream(g_application_command_line_get_stdin(this.raw.asInstanceOf).asInstanceOf)
 
-  def getenv(name : Any /* Some(filename): const gchar**/): String = g_application_command_line_getenv(this.raw, name)
+  def getenv(name : String | CString)(using Zone): String = fromCString(g_application_command_line_getenv(this.raw.asInstanceOf, __sn_extract_string(name).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def setExitStatus(exit_status : Int): Unit = g_application_command_line_set_exit_status(this.raw, exit_status)
+  def setExitStatus(exit_status : Int): Unit = g_application_command_line_set_exit_status(this.raw.asInstanceOf, exit_status)
 
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end ApplicationCommandLine
-

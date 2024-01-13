@@ -4,28 +4,50 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsPassword(private[fluent] val raw: Ptr[GTlsPassword]) extends sn.gnome.gobject.fluent.Object:
-  def getDescription(): String = g_tls_password_get_description(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.internal.GTlsPasswordFlags
+import sn.gnome.glib.internal.GDestroyNotify
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.guchar
+import sn.gnome.gobject.fluent.Object
 
-  def getFlags(): Any /* Some(TlsPasswordFlags): GTlsPasswordFlags*/ = g_tls_password_get_flags(this.raw)
+class TlsPassword(raw: Ptr[GTlsPassword]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getValue(length : Any /* Some(gsize): gsize**/): Array[Byte] = g_tls_password_get_value(this.raw, length)
+  def getDescription()(using Zone): String = fromCString(g_tls_password_get_description(this.raw.asInstanceOf).asInstanceOf)
 
-  def getWarning(): String = g_tls_password_get_warning(this.raw)
+  def getFlags(): GTlsPasswordFlags = g_tls_password_get_flags(this.raw.asInstanceOf)
 
-  def setDescription(description : String): Unit = g_tls_password_set_description(this.raw, description)
+  def getValue(length : Any /* Some(gsize): `gsize*` */): Ptr[UByte] = g_tls_password_get_value(this.raw.asInstanceOf, length)
 
-  def setFlags(flags : Any /* Some(TlsPasswordFlags): GTlsPasswordFlags*/): Unit = g_tls_password_set_flags(this.raw, flags)
+  def getWarning()(using Zone): String = fromCString(g_tls_password_get_warning(this.raw.asInstanceOf).asInstanceOf)
 
-  def setValue(value : Array[Byte], length : Any /* Some(gssize): gssize*/): Unit = g_tls_password_set_value(this.raw, value, length)
+  def setDescription(description : String | CString)(using Zone): Unit = g_tls_password_set_description(this.raw.asInstanceOf, __sn_extract_string(description).asInstanceOf[Ptr[gchar]])
 
-  def setValueFull(value : Array[Byte], length : Any /* Some(gssize): gssize*/, destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Unit = g_tls_password_set_value_full(this.raw, value, length, destroy)
+  def setFlags(flags : GTlsPasswordFlags): Unit = g_tls_password_set_flags(this.raw.asInstanceOf, flags)
 
-  def setWarning(warning : String): Unit = g_tls_password_set_warning(this.raw, warning)
+  def setValue(value : Ptr[UByte], length : Any /* Some(gssize): `gssize` */): Unit = g_tls_password_set_value(this.raw.asInstanceOf, value, length)
 
+  def setValueFull(value : Ptr[UByte], length : Any /* Some(gssize): `gssize` */, destroy : GDestroyNotify): Unit = g_tls_password_set_value_full(this.raw.asInstanceOf, value, length, destroy)
+
+  def setWarning(warning : String | CString)(using Zone): Unit = g_tls_password_set_warning(this.raw.asInstanceOf, __sn_extract_string(warning).asInstanceOf[Ptr[gchar]])
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end TlsPassword
 
 object TlsPassword:
-  def apply(flags : Any /* Some(TlsPasswordFlags): GTlsPasswordFlags*/, description : String): TlsPassword = TlsPassword(g_tls_password_new(flags, description))
+  def apply(flags : GTlsPasswordFlags, description : String | CString)(using Zone): TlsPassword = new TlsPassword(g_tls_password_new(flags, __sn_extract_string(description).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end TlsPassword

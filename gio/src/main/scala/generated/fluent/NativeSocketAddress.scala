@@ -4,9 +4,14 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class NativeSocketAddress(private[fluent] val raw: Ptr[GNativeSocketAddress]) extends sn.gnome.gio.fluent.SocketAddress, sn.gnome.gio.fluent.SocketConnectable
+import sn.gnome.gio.fluent.SocketAddress
+import sn.gnome.gio.fluent.SocketConnectable
+
+class NativeSocketAddress(raw: Ptr[GNativeSocketAddress]) extends SocketAddress(raw.asInstanceOf), SocketConnectable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+end NativeSocketAddress
 
 object NativeSocketAddress:
-  def apply(native : Ptr[Byte], len : Any /* Some(gsize): gsize*/): NativeSocketAddress = NativeSocketAddress(g_native_socket_address_new(native, len))
-
+  def apply(native : Ptr[Byte], len : Any /* Some(gsize): `gsize` */): NativeSocketAddress = new NativeSocketAddress(g_native_socket_address_new(gpointer(native), len).asInstanceOf)
 end NativeSocketAddress

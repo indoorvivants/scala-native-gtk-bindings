@@ -4,24 +4,38 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ProxyAddress(private[fluent] val raw: Ptr[GProxyAddress]) extends sn.gnome.gio.fluent.InetSocketAddress, sn.gnome.gio.fluent.SocketConnectable:
-  def getDestinationHostname(): String = g_proxy_address_get_destination_hostname(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.InetSocketAddress
+import sn.gnome.gio.fluent.SocketConnectable
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.guint16
 
-  def getDestinationPort(): UShort = g_proxy_address_get_destination_port(this.raw)
+class ProxyAddress(raw: Ptr[GProxyAddress]) extends InetSocketAddress(raw.asInstanceOf), SocketConnectable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getDestinationProtocol(): String = g_proxy_address_get_destination_protocol(this.raw)
+  def getDestinationHostname()(using Zone): String = fromCString(g_proxy_address_get_destination_hostname(this.raw.asInstanceOf).asInstanceOf)
 
-  def getPassword(): String = g_proxy_address_get_password(this.raw)
+  def getDestinationPort(): UShort = g_proxy_address_get_destination_port(this.raw.asInstanceOf).value
 
-  def getProtocol(): String = g_proxy_address_get_protocol(this.raw)
+  def getDestinationProtocol()(using Zone): String = fromCString(g_proxy_address_get_destination_protocol(this.raw.asInstanceOf).asInstanceOf)
 
-  def getUri(): String = g_proxy_address_get_uri(this.raw)
+  def getPassword()(using Zone): String = fromCString(g_proxy_address_get_password(this.raw.asInstanceOf).asInstanceOf)
 
-  def getUsername(): String = g_proxy_address_get_username(this.raw)
+  def getProtocol()(using Zone): String = fromCString(g_proxy_address_get_protocol(this.raw.asInstanceOf).asInstanceOf)
+
+  def getUri()(using Zone): String = fromCString(g_proxy_address_get_uri(this.raw.asInstanceOf).asInstanceOf)
+
+  def getUsername()(using Zone): String = fromCString(g_proxy_address_get_username(this.raw.asInstanceOf).asInstanceOf)
 
 end ProxyAddress
 
 object ProxyAddress:
-  def apply(inetaddr : sn.gnome.gio.fluent.InetAddress, port : UShort, protocol : String, dest_hostname : String, dest_port : UShort, username : String, password : String): ProxyAddress = ProxyAddress(g_proxy_address_new(inetaddr.raw, port, protocol, dest_hostname, dest_port, username, password))
+  def apply(inetaddr : InetAddress, port : UShort, protocol : String | CString, dest_hostname : String | CString, dest_port : UShort, username : String | CString, password : String | CString)(using Zone): ProxyAddress = new ProxyAddress(g_proxy_address_new(inetaddr.getUnsafeRawPointer().asInstanceOf, guint16(port), __sn_extract_string(protocol).asInstanceOf[Ptr[gchar]], __sn_extract_string(dest_hostname).asInstanceOf[Ptr[gchar]], guint16(dest_port), __sn_extract_string(username).asInstanceOf[Ptr[gchar]], __sn_extract_string(password).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end ProxyAddress

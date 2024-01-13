@@ -4,50 +4,68 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DesktopAppInfo(private[fluent] val raw: Ptr[GDesktopAppInfo]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AppInfo:
-  def getActionName(action_name : String): Any /* Some(utf8): gchar**/ = g_desktop_app_info_get_action_name(this.raw, action_name)
+import sn.gnome.gio.fluent.AppInfo
+import sn.gnome.gio.fluent.AppLaunchContext
+import sn.gnome.gio.internal.GDesktopAppLaunchCallback
+import sn.gnome.glib.internal.GList
+import sn.gnome.glib.internal.GSpawnChildSetupFunc
+import sn.gnome.glib.internal.GSpawnFlags
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def getBoolean(key : String): Boolean = g_desktop_app_info_get_boolean(this.raw, key)
+class DesktopAppInfo(raw: Ptr[GDesktopAppInfo]) extends Object(raw.asInstanceOf), AppInfo:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getCategories(): String = g_desktop_app_info_get_categories(this.raw)
+  def getActionName(action_name : String | CString)(using Zone): String = fromCString(g_desktop_app_info_get_action_name(this.raw.asInstanceOf, __sn_extract_string(action_name).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def getFilename(): String = g_desktop_app_info_get_filename(this.raw)
+  def getBoolean(key : String | CString)(using Zone): Boolean = g_desktop_app_info_get_boolean(this.raw.asInstanceOf, __sn_extract_string(key)).value.!=(0)
 
-  def getGenericName(): String = g_desktop_app_info_get_generic_name(this.raw)
+  def getCategories()(using Zone): String = g_desktop_app_info_get_categories(this.raw.asInstanceOf)
 
-  def getIsHidden(): Boolean = g_desktop_app_info_get_is_hidden(this.raw)
+  def getFilename()(using Zone): String = g_desktop_app_info_get_filename(this.raw.asInstanceOf)
 
-  def getKeywords(): Array[Byte] = g_desktop_app_info_get_keywords(this.raw)
+  def getGenericName()(using Zone): String = g_desktop_app_info_get_generic_name(this.raw.asInstanceOf)
 
-  def getLocaleString(key : String): Any /* Some(utf8): char**/ = g_desktop_app_info_get_locale_string(this.raw, key)
+  def getIsHidden(): Boolean = g_desktop_app_info_get_is_hidden(this.raw.asInstanceOf).value.!=(0)
 
-  def getNodisplay(): Boolean = g_desktop_app_info_get_nodisplay(this.raw)
+  def getLocaleString(key : String | CString)(using Zone): String = fromCString(g_desktop_app_info_get_locale_string(this.raw.asInstanceOf, __sn_extract_string(key)).asInstanceOf)
 
-  def getShowIn(desktop_env : String): Boolean = g_desktop_app_info_get_show_in(this.raw, desktop_env)
+  def getNodisplay(): Boolean = g_desktop_app_info_get_nodisplay(this.raw.asInstanceOf).value.!=(0)
 
-  def getStartupWmClass(): String = g_desktop_app_info_get_startup_wm_class(this.raw)
+  def getShowIn(desktop_env : String | CString)(using Zone): Boolean = g_desktop_app_info_get_show_in(this.raw.asInstanceOf, __sn_extract_string(desktop_env).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def getString(key : String): Any /* Some(utf8): char**/ = g_desktop_app_info_get_string(this.raw, key)
+  def getStartupWmClass()(using Zone): String = g_desktop_app_info_get_startup_wm_class(this.raw.asInstanceOf)
 
-  def getStringList(key : String, length : Any /* Some(gsize): gsize**/): Array[Byte] = g_desktop_app_info_get_string_list(this.raw, key, length)
+  def getString(key : String | CString)(using Zone): String = fromCString(g_desktop_app_info_get_string(this.raw.asInstanceOf, __sn_extract_string(key)).asInstanceOf)
 
-  def hasKey(key : String): Boolean = g_desktop_app_info_has_key(this.raw, key)
+  def hasKey(key : String | CString)(using Zone): Boolean = g_desktop_app_info_has_key(this.raw.asInstanceOf, __sn_extract_string(key)).value.!=(0)
 
-  def launchAction(action_name : String, launch_context : sn.gnome.gio.fluent.AppLaunchContext): Unit = g_desktop_app_info_launch_action(this.raw, action_name, launch_context.raw)
+  def launchAction(action_name : String | CString, launch_context : AppLaunchContext)(using Zone): Unit = g_desktop_app_info_launch_action(this.raw.asInstanceOf, __sn_extract_string(action_name).asInstanceOf[Ptr[gchar]], launch_context.getUnsafeRawPointer().asInstanceOf)
 
-  def launchUrisAsManager(uris : Any /* Some(GLib.List): GList**/, launch_context : sn.gnome.gio.fluent.AppLaunchContext, spawn_flags : Any /* Some(GLib.SpawnFlags): GSpawnFlags*/, user_setup : Any /* Some(GLib.SpawnChildSetupFunc): GSpawnChildSetupFunc*/, user_setup_data : Ptr[Byte], pid_callback : Any /* Some(DesktopAppLaunchCallback): GDesktopAppLaunchCallback*/, pid_callback_data : Ptr[Byte]): Boolean = g_desktop_app_info_launch_uris_as_manager(this.raw, uris, launch_context.raw, spawn_flags, user_setup, user_setup_data, pid_callback, pid_callback_data)
+  def launchUrisAsManager(uris : Ptr[GList], launch_context : AppLaunchContext, spawn_flags : GSpawnFlags, user_setup : GSpawnChildSetupFunc, user_setup_data : Ptr[Byte], pid_callback : GDesktopAppLaunchCallback, pid_callback_data : Ptr[Byte]): Boolean = g_desktop_app_info_launch_uris_as_manager(this.raw.asInstanceOf, uris, launch_context.getUnsafeRawPointer().asInstanceOf, spawn_flags, user_setup, gpointer(user_setup_data), pid_callback, gpointer(pid_callback_data)).value.!=(0)
 
-  def launchUrisAsManagerWithFds(uris : Any /* Some(GLib.List): GList**/, launch_context : sn.gnome.gio.fluent.AppLaunchContext, spawn_flags : Any /* Some(GLib.SpawnFlags): GSpawnFlags*/, user_setup : Any /* Some(GLib.SpawnChildSetupFunc): GSpawnChildSetupFunc*/, user_setup_data : Ptr[Byte], pid_callback : Any /* Some(DesktopAppLaunchCallback): GDesktopAppLaunchCallback*/, pid_callback_data : Ptr[Byte], stdin_fd : Int, stdout_fd : Int, stderr_fd : Int): Boolean = g_desktop_app_info_launch_uris_as_manager_with_fds(this.raw, uris, launch_context.raw, spawn_flags, user_setup, user_setup_data, pid_callback, pid_callback_data, stdin_fd, stdout_fd, stderr_fd)
+  def launchUrisAsManagerWithFds(uris : Ptr[GList], launch_context : AppLaunchContext, spawn_flags : GSpawnFlags, user_setup : GSpawnChildSetupFunc, user_setup_data : Ptr[Byte], pid_callback : GDesktopAppLaunchCallback, pid_callback_data : Ptr[Byte], stdin_fd : Int, stdout_fd : Int, stderr_fd : Int): Boolean = g_desktop_app_info_launch_uris_as_manager_with_fds(this.raw.asInstanceOf, uris, launch_context.getUnsafeRawPointer().asInstanceOf, spawn_flags, user_setup, gpointer(user_setup_data), pid_callback, gpointer(pid_callback_data), gint(stdin_fd), gint(stdout_fd), gint(stderr_fd)).value.!=(0)
 
-  def listActions(): Array[Byte] = g_desktop_app_info_list_actions(this.raw)
 
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DesktopAppInfo
 
 object DesktopAppInfo:
-  def apply(desktop_id : String): DesktopAppInfo = DesktopAppInfo(g_desktop_app_info_new(desktop_id))
+  def apply(desktop_id : String | CString)(using Zone): DesktopAppInfo = new DesktopAppInfo(g_desktop_app_info_new(__sn_extract_string(desktop_id)).asInstanceOf)
+  def fromFilename(filename : String | CString)(using Zone): DesktopAppInfo = new DesktopAppInfo(g_desktop_app_info_new_from_filename(__sn_extract_string(filename)).asInstanceOf)
+  def fromKeyfile(key_file : Ptr[GKeyFile]): DesktopAppInfo = new DesktopAppInfo(g_desktop_app_info_new_from_keyfile(key_file).asInstanceOf)
 
-  def fromFilename(filename : String): DesktopAppInfo = DesktopAppInfo(g_desktop_app_info_new_from_filename(filename))
-
-  def fromKeyfile(key_file : Any /* Some(GLib.KeyFile): GKeyFile**/): DesktopAppInfo = DesktopAppInfo(g_desktop_app_info_new_from_keyfile(key_file))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DesktopAppInfo

@@ -4,5 +4,9 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class NativeVolumeMonitor(private[fluent] val raw: Ptr[GNativeVolumeMonitor]) extends sn.gnome.gio.fluent.VolumeMonitor
+import sn.gnome.gio.fluent.VolumeMonitor
 
+class NativeVolumeMonitor(raw: Ptr[GNativeVolumeMonitor]) extends VolumeMonitor(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+end NativeVolumeMonitor

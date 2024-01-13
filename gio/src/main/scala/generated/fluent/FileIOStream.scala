@@ -4,14 +4,30 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FileIOStream(private[fluent] val raw: Ptr[GFileIOStream]) extends sn.gnome.gio.fluent.IOStream, sn.gnome.gio.fluent.Seekable:
-  def getEtag(): Any /* Some(utf8): char**/ = g_file_io_stream_get_etag(this.raw)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.FileInfo
+import sn.gnome.gio.fluent.IOStream
+import sn.gnome.gio.fluent.Seekable
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.glib.internal.gpointer
 
-  def queryInfo(attributes : String, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.FileInfo = g_file_io_stream_query_info(this.raw, attributes, cancellable.raw)
+class FileIOStream(raw: Ptr[GFileIOStream]) extends IOStream(raw.asInstanceOf), Seekable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def queryInfoAsync(attributes : String, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_file_io_stream_query_info_async(this.raw, attributes, io_priority, cancellable.raw, callback, user_data)
+  def getEtag()(using Zone): String = fromCString(g_file_io_stream_get_etag(this.raw.asInstanceOf).asInstanceOf)
 
-  def queryInfoFinish(result : sn.gnome.gio.fluent.AsyncResult): sn.gnome.gio.fluent.FileInfo = g_file_io_stream_query_info_finish(this.raw, result.raw)
+  def queryInfo(attributes : String | CString, cancellable : Cancellable)(using Zone): FileInfo = new FileInfo(g_file_io_stream_query_info(this.raw.asInstanceOf, __sn_extract_string(attributes), cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
+  def queryInfoAsync(attributes : String | CString, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_file_io_stream_query_info_async(this.raw.asInstanceOf, __sn_extract_string(attributes), io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+
+  def queryInfoFinish(result : AsyncResult): FileInfo = new FileInfo(g_file_io_stream_query_info_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end FileIOStream
-

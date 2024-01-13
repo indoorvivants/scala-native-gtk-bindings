@@ -4,78 +4,217 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Application(private[fluent] val raw: Ptr[GApplication]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.ActionGroup, sn.gnome.gio.fluent.ActionMap:
-  def activate(): Unit = g_application_activate(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.ActionGroup
+import sn.gnome.gio.fluent.ActionMap
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.DBusConnection
+import sn.gnome.gio.fluent.File
+import sn.gnome.gio.fluent.Notification
+import sn.gnome.gio.internal.GApplicationFlags
+import sn.gnome.glib.internal.GOptionArg
+import sn.gnome.glib.internal.GOptionFlags
+import sn.gnome.glib.internal.GOptionGroup
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.guint
+import sn.gnome.gobject.fluent.Object
 
-  def addMainOption(long_name : String, short_name : Any /* Some(gchar): char*/, flags : Any /* Some(GLib.OptionFlags): GOptionFlags*/, arg : GOptionArg, description : String, arg_description : String): Unit = g_application_add_main_option(this.raw, long_name, short_name, flags, arg, description, arg_description)
+class Application(raw: Ptr[GApplication])
+    extends Object(raw.asInstanceOf),
+      ActionGroup,
+      ActionMap:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def addMainOptionEntries(entries : Array[Byte]): Unit = g_application_add_main_option_entries(this.raw, entries)
+  def activate(): Unit = g_application_activate(this.raw.asInstanceOf)
 
-  def addOptionGroup(group : Any /* Some(GLib.OptionGroup): GOptionGroup**/): Unit = g_application_add_option_group(this.raw, group)
+  def addMainOption(
+      long_name: String | CString,
+      short_name: Byte,
+      flags: GOptionFlags,
+      arg: GOptionArg,
+      description: String | CString,
+      arg_description: String | CString
+  )(using Zone): Unit = g_application_add_main_option(
+    this.raw.asInstanceOf,
+    __sn_extract_string(long_name),
+    gchar(short_name),
+    flags,
+    arg,
+    __sn_extract_string(description),
+    __sn_extract_string(arg_description)
+  )
 
-  def bindBusyProperty(`object` : sn.gnome.gobject.fluent.Object, property : String): Unit = g_application_bind_busy_property(this.raw, `object`.raw, property)
+  def addOptionGroup(group: Ptr[GOptionGroup]): Unit =
+    g_application_add_option_group(this.raw.asInstanceOf, group)
 
-  def getApplicationId(): String = g_application_get_application_id(this.raw)
+  def bindBusyProperty(`object`: Object, property: String | CString)(using
+      Zone
+  ): Unit = g_application_bind_busy_property(
+    this.raw.asInstanceOf,
+    gpointer(
+      `object`.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]
+    ),
+    __sn_extract_string(property).asInstanceOf[Ptr[gchar]]
+  )
 
-  def getDbusConnection(): sn.gnome.gio.fluent.DBusConnection = g_application_get_dbus_connection(this.raw)
+  def getApplicationId()(using Zone): String = fromCString(
+    g_application_get_application_id(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getDbusObjectPath(): String = g_application_get_dbus_object_path(this.raw)
+  def getDbusConnection(): DBusConnection = new DBusConnection(
+    g_application_get_dbus_connection(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getFlags(): Any /* Some(ApplicationFlags): GApplicationFlags*/ = g_application_get_flags(this.raw)
+  def getDbusObjectPath()(using Zone): String = fromCString(
+    g_application_get_dbus_object_path(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getInactivityTimeout(): Any /* Some(guint): guint*/ = g_application_get_inactivity_timeout(this.raw)
+  def getFlags(): GApplicationFlags = g_application_get_flags(
+    this.raw.asInstanceOf
+  )
 
-  def getIsBusy(): Boolean = g_application_get_is_busy(this.raw)
+  def getInactivityTimeout(): UInt = g_application_get_inactivity_timeout(
+    this.raw.asInstanceOf
+  ).value
 
-  def getIsRegistered(): Boolean = g_application_get_is_registered(this.raw)
+  def getIsBusy(): Boolean =
+    g_application_get_is_busy(this.raw.asInstanceOf).value.!=(0)
 
-  def getIsRemote(): Boolean = g_application_get_is_remote(this.raw)
+  def getIsRegistered(): Boolean =
+    g_application_get_is_registered(this.raw.asInstanceOf).value.!=(0)
 
-  def getResourceBasePath(): String = g_application_get_resource_base_path(this.raw)
+  def getIsRemote(): Boolean =
+    g_application_get_is_remote(this.raw.asInstanceOf).value.!=(0)
 
-  def hold(): Unit = g_application_hold(this.raw)
+  def getResourceBasePath()(using Zone): String = fromCString(
+    g_application_get_resource_base_path(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def markBusy(): Unit = g_application_mark_busy(this.raw)
+  def hold(): Unit = g_application_hold(this.raw.asInstanceOf)
 
-  def open(files : Array[Byte], n_files : Int, hint : String): Unit = g_application_open(this.raw, files, n_files, hint)
+  def markBusy(): Unit = g_application_mark_busy(this.raw.asInstanceOf)
 
-  def quit(): Unit = g_application_quit(this.raw)
+  def open(files: Ptr[File], n_files: Int, hint: String | CString)(using
+      Zone
+  ): Unit = g_application_open(
+    this.raw.asInstanceOf,
+    files,
+    gint(n_files),
+    __sn_extract_string(hint).asInstanceOf[Ptr[gchar]]
+  )
 
-  def register(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_application_register(this.raw, cancellable.raw)
+  def quit(): Unit = g_application_quit(this.raw.asInstanceOf)
 
-  def release(): Unit = g_application_release(this.raw)
+  def register(cancellable: Cancellable): Boolean = g_application_register(
+    this.raw.asInstanceOf,
+    cancellable.getUnsafeRawPointer().asInstanceOf
+  ).value.!=(0)
 
-  def run(argc : Int, argv : Array[Byte]): Int = g_application_run(this.raw, argc, argv)
+  def release(): Unit = g_application_release(this.raw.asInstanceOf)
 
-  def sendNotification(id : String, notification : sn.gnome.gio.fluent.Notification): Unit = g_application_send_notification(this.raw, id, notification.raw)
+  def sendNotification(id: String | CString, notification: Notification)(using
+      Zone
+  ): Unit = g_application_send_notification(
+    this.raw.asInstanceOf,
+    __sn_extract_string(id).asInstanceOf[Ptr[gchar]],
+    notification.getUnsafeRawPointer().asInstanceOf
+  )
 
-  def setActionGroup(action_group : sn.gnome.gio.fluent.ActionGroup): Unit = g_application_set_action_group(this.raw, action_group.raw)
+  def setActionGroup(action_group: ActionGroup): Unit =
+    g_application_set_action_group(
+      this.raw.asInstanceOf,
+      action_group.getUnsafeRawPointer().asInstanceOf
+    )
 
-  def setApplicationId(application_id : String): Unit = g_application_set_application_id(this.raw, application_id)
+  def setApplicationId(application_id: String | CString)(using Zone): Unit =
+    g_application_set_application_id(
+      this.raw.asInstanceOf,
+      __sn_extract_string(application_id).asInstanceOf[Ptr[gchar]]
+    )
 
-  def setDefault(): Unit = g_application_set_default(this.raw)
+  def setDefault(): Unit = g_application_set_default(this.raw.asInstanceOf)
 
-  def setFlags(flags : Any /* Some(ApplicationFlags): GApplicationFlags*/): Unit = g_application_set_flags(this.raw, flags)
+  def setFlags(flags: GApplicationFlags): Unit =
+    g_application_set_flags(this.raw.asInstanceOf, flags)
 
-  def setInactivityTimeout(inactivity_timeout : Any /* Some(guint): guint*/): Unit = g_application_set_inactivity_timeout(this.raw, inactivity_timeout)
+  def setInactivityTimeout(inactivity_timeout: UInt): Unit =
+    g_application_set_inactivity_timeout(
+      this.raw.asInstanceOf,
+      guint(inactivity_timeout)
+    )
 
-  def setOptionContextDescription(description : String): Unit = g_application_set_option_context_description(this.raw, description)
+  def setOptionContextDescription(
+      description: String | CString
+  )(using Zone): Unit = g_application_set_option_context_description(
+    this.raw.asInstanceOf,
+    __sn_extract_string(description).asInstanceOf[Ptr[gchar]]
+  )
 
-  def setOptionContextParameterString(parameter_string : String): Unit = g_application_set_option_context_parameter_string(this.raw, parameter_string)
+  def setOptionContextParameterString(
+      parameter_string: String | CString
+  )(using Zone): Unit = g_application_set_option_context_parameter_string(
+    this.raw.asInstanceOf,
+    __sn_extract_string(parameter_string).asInstanceOf[Ptr[gchar]]
+  )
 
-  def setOptionContextSummary(summary : String): Unit = g_application_set_option_context_summary(this.raw, summary)
+  def setOptionContextSummary(summary: String | CString)(using Zone): Unit =
+    g_application_set_option_context_summary(
+      this.raw.asInstanceOf,
+      __sn_extract_string(summary).asInstanceOf[Ptr[gchar]]
+    )
 
-  def setResourceBasePath(resource_path : String): Unit = g_application_set_resource_base_path(this.raw, resource_path)
+  def setResourceBasePath(resource_path: String | CString)(using Zone): Unit =
+    g_application_set_resource_base_path(
+      this.raw.asInstanceOf,
+      __sn_extract_string(resource_path).asInstanceOf[Ptr[gchar]]
+    )
 
-  def unbindBusyProperty(`object` : sn.gnome.gobject.fluent.Object, property : String): Unit = g_application_unbind_busy_property(this.raw, `object`.raw, property)
+  def unbindBusyProperty(`object`: Object, property: String | CString)(using
+      Zone
+  ): Unit = g_application_unbind_busy_property(
+    this.raw.asInstanceOf,
+    gpointer(
+      `object`.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]
+    ),
+    __sn_extract_string(property).asInstanceOf[Ptr[gchar]]
+  )
 
-  def unmarkBusy(): Unit = g_application_unmark_busy(this.raw)
+  def unmarkBusy(): Unit = g_application_unmark_busy(this.raw.asInstanceOf)
 
-  def withdrawNotification(id : String): Unit = g_application_withdraw_notification(this.raw, id)
+  def withdrawNotification(id: String | CString)(using Zone): Unit =
+    g_application_withdraw_notification(
+      this.raw.asInstanceOf,
+      __sn_extract_string(id).asInstanceOf[Ptr[gchar]]
+    )
 
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
+    str match
+      case s: String  => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Application
 
 object Application:
-  def apply(application_id : String, flags : Any /* Some(ApplicationFlags): GApplicationFlags*/): Application = Application(g_application_new(application_id, flags))
+  def apply(application_id: String | CString, flags: GApplicationFlags)(using
+      Zone
+  ): Application = new Application(
+    g_application_new(
+      __sn_extract_string(application_id).asInstanceOf[Ptr[gchar]],
+      flags
+    ).asInstanceOf
+  )
 
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
+    str match
+      case s: String  => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Application

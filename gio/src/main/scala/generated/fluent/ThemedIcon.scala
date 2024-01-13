@@ -4,20 +4,34 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ThemedIcon(private[fluent] val raw: Ptr[GThemedIcon]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Icon:
-  def appendName(iconname : String): Unit = g_themed_icon_append_name(this.raw, iconname)
+import sn.gnome.gio.fluent.Icon
+import sn.gnome.gobject.fluent.Object
 
-  def getNames(): Array[Byte] = g_themed_icon_get_names(this.raw)
+class ThemedIcon(raw: Ptr[GThemedIcon]) extends Object(raw.asInstanceOf), Icon:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def prependName(iconname : String): Unit = g_themed_icon_prepend_name(this.raw, iconname)
+  def appendName(iconname : String | CString)(using Zone): Unit = g_themed_icon_append_name(this.raw.asInstanceOf, __sn_extract_string(iconname))
 
+  def prependName(iconname : String | CString)(using Zone): Unit = g_themed_icon_prepend_name(this.raw.asInstanceOf, __sn_extract_string(iconname))
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end ThemedIcon
 
 object ThemedIcon:
-  def apply(iconname : String): ThemedIcon = ThemedIcon(g_themed_icon_new(iconname))
+  def apply(iconname : String | CString)(using Zone): ThemedIcon = new ThemedIcon(g_themed_icon_new(__sn_extract_string(iconname)).asInstanceOf)
+  def fromNames(iconnames : Ptr[CString], len : Int)(using Zone): ThemedIcon = new ThemedIcon(g_themed_icon_new_from_names(iconnames, len).asInstanceOf)
+  def withDefaultFallbacks(iconname : String | CString)(using Zone): ThemedIcon = new ThemedIcon(g_themed_icon_new_with_default_fallbacks(__sn_extract_string(iconname)).asInstanceOf)
 
-  def fromNames(iconnames : Array[Byte], len : Int): ThemedIcon = ThemedIcon(g_themed_icon_new_from_names(iconnames, len))
-
-  def withDefaultFallbacks(iconname : String): ThemedIcon = ThemedIcon(g_themed_icon_new_with_default_fallbacks(iconname))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end ThemedIcon

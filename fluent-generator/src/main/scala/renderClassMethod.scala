@@ -7,7 +7,7 @@ def renderClassMethod(cls: AugmentedClass, meth: Method)(using
     RenderingContext,
     GlobalKnowledge,
     NamingPolicy,
-    Label[Outcome[String]]
+    Label[String]
 ) =
   val effects = List.newBuilder[Effect]
   val camelName = camelify(meth.name)
@@ -18,9 +18,11 @@ def renderClassMethod(cls: AugmentedClass, meth: Method)(using
 
   effects ++= paramEffects
 
+  scribe.info(s"Class: ${cls.name} method ${meth.name}")
+
   val returnType = renderType(
     meth.returnType.getOrElse(
-      break(Outcome.Fail(s"return type missing"))
+      break(s"return type missing")
     ),
     position = TypePosition.ReturnType
   )

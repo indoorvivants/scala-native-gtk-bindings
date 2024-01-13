@@ -4,32 +4,56 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class TlsDatabase(private[fluent] val raw: Ptr[GTlsDatabase]) extends sn.gnome.gobject.fluent.Object:
-  def createCertificateHandle(certificate : sn.gnome.gio.fluent.TlsCertificate): Any /* Some(utf8): gchar**/ = g_tls_database_create_certificate_handle(this.raw, certificate.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.SocketConnectable
+import sn.gnome.gio.fluent.TlsCertificate
+import sn.gnome.gio.fluent.TlsInteraction
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GTlsCertificateFlags
+import sn.gnome.gio.internal.GTlsDatabaseLookupFlags
+import sn.gnome.gio.internal.GTlsDatabaseVerifyFlags
+import sn.gnome.glib.internal.GList
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.guint8
+import sn.gnome.gobject.fluent.Object
 
-  def lookupCertificateForHandle(handle : String, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.TlsCertificate = g_tls_database_lookup_certificate_for_handle(this.raw, handle, interaction.raw, flags, cancellable.raw)
+class TlsDatabase(raw: Ptr[GTlsDatabase]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def lookupCertificateForHandleAsync(handle : String, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_tls_database_lookup_certificate_for_handle_async(this.raw, handle, interaction.raw, flags, cancellable.raw, callback, user_data)
+  def createCertificateHandle(certificate : TlsCertificate)(using Zone): String = fromCString(g_tls_database_create_certificate_handle(this.raw.asInstanceOf, certificate.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def lookupCertificateForHandleFinish(result : sn.gnome.gio.fluent.AsyncResult): sn.gnome.gio.fluent.TlsCertificate = g_tls_database_lookup_certificate_for_handle_finish(this.raw, result.raw)
+  def lookupCertificateForHandle(handle : String | CString, interaction : TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : Cancellable)(using Zone): TlsCertificate = new TlsCertificate(g_tls_database_lookup_certificate_for_handle(this.raw.asInstanceOf, __sn_extract_string(handle).asInstanceOf[Ptr[gchar]], interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def lookupCertificateIssuer(certificate : sn.gnome.gio.fluent.TlsCertificate, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.TlsCertificate = g_tls_database_lookup_certificate_issuer(this.raw, certificate.raw, interaction.raw, flags, cancellable.raw)
+  def lookupCertificateForHandleAsync(handle : String | CString, interaction : TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_tls_database_lookup_certificate_for_handle_async(this.raw.asInstanceOf, __sn_extract_string(handle).asInstanceOf[Ptr[gchar]], interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def lookupCertificateIssuerAsync(certificate : sn.gnome.gio.fluent.TlsCertificate, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_tls_database_lookup_certificate_issuer_async(this.raw, certificate.raw, interaction.raw, flags, cancellable.raw, callback, user_data)
+  def lookupCertificateForHandleFinish(result : AsyncResult): TlsCertificate = new TlsCertificate(g_tls_database_lookup_certificate_for_handle_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def lookupCertificateIssuerFinish(result : sn.gnome.gio.fluent.AsyncResult): sn.gnome.gio.fluent.TlsCertificate = g_tls_database_lookup_certificate_issuer_finish(this.raw, result.raw)
+  def lookupCertificateIssuer(certificate : TlsCertificate, interaction : TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : Cancellable): TlsCertificate = new TlsCertificate(g_tls_database_lookup_certificate_issuer(this.raw.asInstanceOf, certificate.getUnsafeRawPointer().asInstanceOf, interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def lookupCertificatesIssuedBy(issuer_raw_dn : Array[Byte], interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(GLib.List): GList**/ = g_tls_database_lookup_certificates_issued_by(this.raw, issuer_raw_dn, interaction.raw, flags, cancellable.raw)
+  def lookupCertificateIssuerAsync(certificate : TlsCertificate, interaction : TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_tls_database_lookup_certificate_issuer_async(this.raw.asInstanceOf, certificate.getUnsafeRawPointer().asInstanceOf, interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def lookupCertificatesIssuedByAsync(issuer_raw_dn : Array[Byte], interaction : sn.gnome.gio.fluent.TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_tls_database_lookup_certificates_issued_by_async(this.raw, issuer_raw_dn, interaction.raw, flags, cancellable.raw, callback, user_data)
+  def lookupCertificateIssuerFinish(result : AsyncResult): TlsCertificate = new TlsCertificate(g_tls_database_lookup_certificate_issuer_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def lookupCertificatesIssuedByFinish(result : sn.gnome.gio.fluent.AsyncResult): Any /* Some(GLib.List): GList**/ = g_tls_database_lookup_certificates_issued_by_finish(this.raw, result.raw)
+  def lookupCertificatesIssuedBy(issuer_raw_dn : Ptr[UByte], interaction : TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : Cancellable): Ptr[GList] = g_tls_database_lookup_certificates_issued_by(this.raw.asInstanceOf, issuer_raw_dn, interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def verifyChain(chain : sn.gnome.gio.fluent.TlsCertificate, purpose : String, identity : sn.gnome.gio.fluent.SocketConnectable, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : Any /* Some(TlsDatabaseVerifyFlags): GTlsDatabaseVerifyFlags*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(TlsCertificateFlags): GTlsCertificateFlags*/ = g_tls_database_verify_chain(this.raw, chain.raw, purpose, identity.raw, interaction.raw, flags, cancellable.raw)
+  def lookupCertificatesIssuedByAsync(issuer_raw_dn : Ptr[UByte], interaction : TlsInteraction, flags : GTlsDatabaseLookupFlags, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_tls_database_lookup_certificates_issued_by_async(this.raw.asInstanceOf, issuer_raw_dn, interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def verifyChainAsync(chain : sn.gnome.gio.fluent.TlsCertificate, purpose : String, identity : sn.gnome.gio.fluent.SocketConnectable, interaction : sn.gnome.gio.fluent.TlsInteraction, flags : Any /* Some(TlsDatabaseVerifyFlags): GTlsDatabaseVerifyFlags*/, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_tls_database_verify_chain_async(this.raw, chain.raw, purpose, identity.raw, interaction.raw, flags, cancellable.raw, callback, user_data)
+  def lookupCertificatesIssuedByFinish(result : AsyncResult): Ptr[GList] = g_tls_database_lookup_certificates_issued_by_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf)
 
-  def verifyChainFinish(result : sn.gnome.gio.fluent.AsyncResult): Any /* Some(TlsCertificateFlags): GTlsCertificateFlags*/ = g_tls_database_verify_chain_finish(this.raw, result.raw)
+  def verifyChain(chain : TlsCertificate, purpose : String | CString, identity : SocketConnectable, interaction : TlsInteraction, flags : GTlsDatabaseVerifyFlags, cancellable : Cancellable)(using Zone): GTlsCertificateFlags = g_tls_database_verify_chain(this.raw.asInstanceOf, chain.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(purpose).asInstanceOf[Ptr[gchar]], identity.getUnsafeRawPointer().asInstanceOf, interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf)
 
+  def verifyChainAsync(chain : TlsCertificate, purpose : String | CString, identity : SocketConnectable, interaction : TlsInteraction, flags : GTlsDatabaseVerifyFlags, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_tls_database_verify_chain_async(this.raw.asInstanceOf, chain.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(purpose).asInstanceOf[Ptr[gchar]], identity.getUnsafeRawPointer().asInstanceOf, interaction.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+
+  def verifyChainFinish(result : AsyncResult): GTlsCertificateFlags = g_tls_database_verify_chain_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end TlsDatabase
-

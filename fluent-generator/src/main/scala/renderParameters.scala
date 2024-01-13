@@ -6,7 +6,7 @@ def renderParameters(
     params: Seq[Parameter | Instanceu45parameter],
     methodLabel: String
 )(using
-    Label[Outcome[String]],
+    Label[String],
     GlobalKnowledge,
     NamingPolicy
 ) =
@@ -18,9 +18,7 @@ def renderParameters(
         val paramType = renderType(
           param.tpe.getOrElse(
             break(
-              Outcome.Fail(
-                s"$methodLabel, param: ${param.name}: type is empty"
-              )
+              s"$methodLabel, param: ${param.name}: type is empty"
             )
           )
         )

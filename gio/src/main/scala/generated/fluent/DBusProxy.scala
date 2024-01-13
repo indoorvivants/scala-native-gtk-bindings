@@ -4,54 +4,81 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusProxy(private[fluent] val raw: Ptr[GDBusProxy]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncInitable, sn.gnome.gio.fluent.DBusInterface, sn.gnome.gio.fluent.Initable:
-  def call(method_name : String, parameters : Any /* Some(GLib.Variant): GVariant**/, flags : Any /* Some(DBusCallFlags): GDBusCallFlags*/, timeout_msec : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_dbus_proxy_call(this.raw, method_name, parameters, flags, timeout_msec, cancellable.raw, callback, user_data)
+import sn.gnome.gio.fluent.AsyncInitable
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.DBusConnection
+import sn.gnome.gio.fluent.DBusInterface
+import sn.gnome.gio.fluent.Initable
+import sn.gnome.gio.fluent.UnixFDList
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GDBusCallFlags
+import sn.gnome.gio.internal.GDBusInterfaceInfo
+import sn.gnome.gio.internal.GDBusProxyFlags
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def callFinish(res : sn.gnome.gio.fluent.AsyncResult): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_proxy_call_finish(this.raw, res.raw)
+class DBusProxy(raw: Ptr[GDBusProxy]) extends Object(raw.asInstanceOf), AsyncInitable, DBusInterface, Initable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def callSync(method_name : String, parameters : Any /* Some(GLib.Variant): GVariant**/, flags : Any /* Some(DBusCallFlags): GDBusCallFlags*/, timeout_msec : Int, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_proxy_call_sync(this.raw, method_name, parameters, flags, timeout_msec, cancellable.raw)
+  def call(method_name : String | CString, parameters : Ptr[GVariant], flags : GDBusCallFlags, timeout_msec : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_dbus_proxy_call(this.raw.asInstanceOf, __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]], parameters, flags, gint(timeout_msec), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def callWithUnixFdList(method_name : String, parameters : Any /* Some(GLib.Variant): GVariant**/, flags : Any /* Some(DBusCallFlags): GDBusCallFlags*/, timeout_msec : Int, fd_list : sn.gnome.gio.fluent.UnixFDList, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_dbus_proxy_call_with_unix_fd_list(this.raw, method_name, parameters, flags, timeout_msec, fd_list.raw, cancellable.raw, callback, user_data)
+  def callFinish(res : AsyncResult): Ptr[GVariant] = g_dbus_proxy_call_finish(this.raw.asInstanceOf, res.getUnsafeRawPointer().asInstanceOf)
 
-  def callWithUnixFdListFinish(out_fd_list : sn.gnome.gio.fluent.UnixFDList, res : sn.gnome.gio.fluent.AsyncResult): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_proxy_call_with_unix_fd_list_finish(this.raw, out_fd_list.raw, res.raw)
+  def callSync(method_name : String | CString, parameters : Ptr[GVariant], flags : GDBusCallFlags, timeout_msec : Int, cancellable : Cancellable)(using Zone): Ptr[GVariant] = g_dbus_proxy_call_sync(this.raw.asInstanceOf, __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]], parameters, flags, gint(timeout_msec), cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def callWithUnixFdListSync(method_name : String, parameters : Any /* Some(GLib.Variant): GVariant**/, flags : Any /* Some(DBusCallFlags): GDBusCallFlags*/, timeout_msec : Int, fd_list : sn.gnome.gio.fluent.UnixFDList, out_fd_list : sn.gnome.gio.fluent.UnixFDList, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_proxy_call_with_unix_fd_list_sync(this.raw, method_name, parameters, flags, timeout_msec, fd_list.raw, out_fd_list.raw, cancellable.raw)
+  def callWithUnixFdList(method_name : String | CString, parameters : Ptr[GVariant], flags : GDBusCallFlags, timeout_msec : Int, fd_list : UnixFDList, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_dbus_proxy_call_with_unix_fd_list(this.raw.asInstanceOf, __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]], parameters, flags, gint(timeout_msec), fd_list.getUnsafeRawPointer().asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def getCachedProperty(property_name : String): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_proxy_get_cached_property(this.raw, property_name)
+  def callWithUnixFdListFinish(out_fd_list : UnixFDList, res : AsyncResult): Ptr[GVariant] = g_dbus_proxy_call_with_unix_fd_list_finish(this.raw.asInstanceOf, out_fd_list.getUnsafeRawPointer().asInstanceOf, res.getUnsafeRawPointer().asInstanceOf)
 
-  def getCachedPropertyNames(): Array[Byte] = g_dbus_proxy_get_cached_property_names(this.raw)
+  def callWithUnixFdListSync(method_name : String | CString, parameters : Ptr[GVariant], flags : GDBusCallFlags, timeout_msec : Int, fd_list : UnixFDList, out_fd_list : UnixFDList, cancellable : Cancellable)(using Zone): Ptr[GVariant] = g_dbus_proxy_call_with_unix_fd_list_sync(this.raw.asInstanceOf, __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]], parameters, flags, gint(timeout_msec), fd_list.getUnsafeRawPointer().asInstanceOf, out_fd_list.getUnsafeRawPointer().asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_proxy_get_connection(this.raw)
+  def getCachedProperty(property_name : String | CString)(using Zone): Ptr[GVariant] = g_dbus_proxy_get_cached_property(this.raw.asInstanceOf, __sn_extract_string(property_name).asInstanceOf[Ptr[gchar]])
 
-  def getDefaultTimeout(): Int = g_dbus_proxy_get_default_timeout(this.raw)
+  def getConnection(): DBusConnection = new DBusConnection(g_dbus_proxy_get_connection(this.raw.asInstanceOf).asInstanceOf)
 
-  def getFlags(): Any /* Some(DBusProxyFlags): GDBusProxyFlags*/ = g_dbus_proxy_get_flags(this.raw)
+  def getDefaultTimeout(): Int = g_dbus_proxy_get_default_timeout(this.raw.asInstanceOf).value
 
-  def getInterfaceInfo(): Any /* Some(DBusInterfaceInfo): GDBusInterfaceInfo**/ = g_dbus_proxy_get_interface_info(this.raw)
+  def getFlags(): GDBusProxyFlags = g_dbus_proxy_get_flags(this.raw.asInstanceOf)
 
-  def getInterfaceName(): String = g_dbus_proxy_get_interface_name(this.raw)
+  def getInterfaceInfo(): Ptr[GDBusInterfaceInfo] = g_dbus_proxy_get_interface_info(this.raw.asInstanceOf)
 
-  def getName(): String = g_dbus_proxy_get_name(this.raw)
+  def getInterfaceName()(using Zone): String = fromCString(g_dbus_proxy_get_interface_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getNameOwner(): Any /* Some(utf8): gchar**/ = g_dbus_proxy_get_name_owner(this.raw)
+  def getName()(using Zone): String = fromCString(g_dbus_proxy_get_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getObjectPath(): String = g_dbus_proxy_get_object_path(this.raw)
+  def getNameOwner()(using Zone): String = fromCString(g_dbus_proxy_get_name_owner(this.raw.asInstanceOf).asInstanceOf)
 
-  def setCachedProperty(property_name : String, value : Any /* Some(GLib.Variant): GVariant**/): Unit = g_dbus_proxy_set_cached_property(this.raw, property_name, value)
+  def getObjectPath()(using Zone): String = fromCString(g_dbus_proxy_get_object_path(this.raw.asInstanceOf).asInstanceOf)
 
-  def setDefaultTimeout(timeout_msec : Int): Unit = g_dbus_proxy_set_default_timeout(this.raw, timeout_msec)
+  def setCachedProperty(property_name : String | CString, value : Ptr[GVariant])(using Zone): Unit = g_dbus_proxy_set_cached_property(this.raw.asInstanceOf, __sn_extract_string(property_name).asInstanceOf[Ptr[gchar]], value)
 
-  def setInterfaceInfo(info : Any /* Some(DBusInterfaceInfo): GDBusInterfaceInfo**/): Unit = g_dbus_proxy_set_interface_info(this.raw, info)
+  def setDefaultTimeout(timeout_msec : Int): Unit = g_dbus_proxy_set_default_timeout(this.raw.asInstanceOf, gint(timeout_msec))
 
+  def setInterfaceInfo(info : Ptr[GDBusInterfaceInfo]): Unit = g_dbus_proxy_set_interface_info(this.raw.asInstanceOf, info)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusProxy
 
 object DBusProxy:
-  def finish(res : sn.gnome.gio.fluent.AsyncResult): DBusProxy = DBusProxy(g_dbus_proxy_new_finish(res.raw))
+  def finish(res : AsyncResult): DBusProxy = new DBusProxy(g_dbus_proxy_new_finish(res.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def forBusFinish(res : AsyncResult): DBusProxy = new DBusProxy(g_dbus_proxy_new_for_bus_finish(res.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def forBusSync(bus_type : GBusType, flags : GDBusProxyFlags, info : Ptr[GDBusInterfaceInfo], name : String | CString, object_path : String | CString, interface_name : String | CString, cancellable : Cancellable)(using Zone): DBusProxy = new DBusProxy(g_dbus_proxy_new_for_bus_sync(bus_type, flags, info, __sn_extract_string(name).asInstanceOf[Ptr[gchar]], __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]], __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]], cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def sync(connection : DBusConnection, flags : GDBusProxyFlags, info : Ptr[GDBusInterfaceInfo], name : String | CString, object_path : String | CString, interface_name : String | CString, cancellable : Cancellable)(using Zone): DBusProxy = new DBusProxy(g_dbus_proxy_new_sync(connection.getUnsafeRawPointer().asInstanceOf, flags, info, __sn_extract_string(name).asInstanceOf[Ptr[gchar]], __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]], __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]], cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def forBusFinish(res : sn.gnome.gio.fluent.AsyncResult): DBusProxy = DBusProxy(g_dbus_proxy_new_for_bus_finish(res.raw))
-
-  def forBusSync(bus_type : GBusType, flags : Any /* Some(DBusProxyFlags): GDBusProxyFlags*/, info : Any /* Some(DBusInterfaceInfo): GDBusInterfaceInfo**/, name : String, object_path : String, interface_name : String, cancellable : sn.gnome.gio.fluent.Cancellable): DBusProxy = DBusProxy(g_dbus_proxy_new_for_bus_sync(bus_type, flags, info, name, object_path, interface_name, cancellable.raw))
-
-  def sync(connection : sn.gnome.gio.fluent.DBusConnection, flags : Any /* Some(DBusProxyFlags): GDBusProxyFlags*/, info : Any /* Some(DBusInterfaceInfo): GDBusInterfaceInfo**/, name : String, object_path : String, interface_name : String, cancellable : sn.gnome.gio.fluent.Cancellable): DBusProxy = DBusProxy(g_dbus_proxy_new_sync(connection.raw, flags, info, name, object_path, interface_name, cancellable.raw))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusProxy

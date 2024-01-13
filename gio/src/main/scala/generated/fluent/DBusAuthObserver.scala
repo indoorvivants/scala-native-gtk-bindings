@@ -4,14 +4,27 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusAuthObserver(private[fluent] val raw: Ptr[GDBusAuthObserver]) extends sn.gnome.gobject.fluent.Object:
-  def allowMechanism(mechanism : String): Boolean = g_dbus_auth_observer_allow_mechanism(this.raw, mechanism)
+import sn.gnome.gio.fluent.Credentials
+import sn.gnome.gio.fluent.IOStream
+import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
 
-  def authorizeAuthenticatedPeer(stream : sn.gnome.gio.fluent.IOStream, credentials : sn.gnome.gio.fluent.Credentials): Boolean = g_dbus_auth_observer_authorize_authenticated_peer(this.raw, stream.raw, credentials.raw)
+class DBusAuthObserver(raw: Ptr[GDBusAuthObserver]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
+  def allowMechanism(mechanism : String | CString)(using Zone): Boolean = g_dbus_auth_observer_allow_mechanism(this.raw.asInstanceOf, __sn_extract_string(mechanism).asInstanceOf[Ptr[gchar]]).value.!=(0)
+
+  def authorizeAuthenticatedPeer(stream : IOStream, credentials : Credentials): Boolean = g_dbus_auth_observer_authorize_authenticated_peer(this.raw.asInstanceOf, stream.getUnsafeRawPointer().asInstanceOf, credentials.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusAuthObserver
 
 object DBusAuthObserver:
-  def apply(): DBusAuthObserver = DBusAuthObserver(g_dbus_auth_observer_new())
-
+  def apply(): DBusAuthObserver = new DBusAuthObserver(g_dbus_auth_observer_new().asInstanceOf)
 end DBusAuthObserver

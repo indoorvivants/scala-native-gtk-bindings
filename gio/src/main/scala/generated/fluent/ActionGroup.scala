@@ -1,6 +1,10 @@
 package sn.gnome.gio.fluent
 
-import sn.gnome.gio.internal.*
+import _root_.sn.gnome.gio.internal.*
+
+import _root_.scala.scalanative.unsafe.*
 
 
-trait ActionGroup
+trait ActionGroup:
+  def getUnsafeRawPointer(): Ptr[Byte]
+end ActionGroup

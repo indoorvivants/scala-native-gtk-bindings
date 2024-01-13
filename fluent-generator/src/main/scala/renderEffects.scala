@@ -1,7 +1,7 @@
 import rendition.*
 
 def renderEffects(effects: List[Effect])(using RenderingContext) =
-  effects
+  effects.distinct
     .collect:
       case a @ Effect.RequiresImport(namespace, what) =>
         a

@@ -4,22 +4,28 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class MemoryOutputStream(private[fluent] val raw: Ptr[GMemoryOutputStream]) extends sn.gnome.gio.fluent.OutputStream, sn.gnome.gio.fluent.PollableOutputStream, sn.gnome.gio.fluent.Seekable:
-  def getData(): Ptr[Byte] = g_memory_output_stream_get_data(this.raw)
+import sn.gnome.gio.fluent.OutputStream
+import sn.gnome.gio.fluent.PollableOutputStream
+import sn.gnome.gio.fluent.Seekable
+import sn.gnome.glib.internal.GBytes
+import sn.gnome.glib.internal.gpointer
 
-  def getDataSize(): Any /* Some(gsize): gsize*/ = g_memory_output_stream_get_data_size(this.raw)
+class MemoryOutputStream(raw: Ptr[GMemoryOutputStream]) extends OutputStream(raw.asInstanceOf), PollableOutputStream, Seekable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getSize(): Any /* Some(gsize): gsize*/ = g_memory_output_stream_get_size(this.raw)
+  def getData(): Ptr[Byte] = g_memory_output_stream_get_data(this.raw.asInstanceOf).value
 
-  def stealAsBytes(): Any /* Some(GLib.Bytes): GBytes**/ = g_memory_output_stream_steal_as_bytes(this.raw)
+  def getDataSize(): Any /* Some(gsize): `gsize` */ = g_memory_output_stream_get_data_size(this.raw.asInstanceOf)
 
-  def stealData(): Ptr[Byte] = g_memory_output_stream_steal_data(this.raw)
+  def getSize(): Any /* Some(gsize): `gsize` */ = g_memory_output_stream_get_size(this.raw.asInstanceOf)
+
+  def stealAsBytes(): Ptr[GBytes] = g_memory_output_stream_steal_as_bytes(this.raw.asInstanceOf)
+
+  def stealData(): Ptr[Byte] = g_memory_output_stream_steal_data(this.raw.asInstanceOf).value
 
 end MemoryOutputStream
 
 object MemoryOutputStream:
-  def apply(data : Ptr[Byte], size : Any /* Some(gsize): gsize*/, realloc_function : Any /* Some(ReallocFunc): GReallocFunc*/, destroy_function : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): MemoryOutputStream = MemoryOutputStream(g_memory_output_stream_new(data, size, realloc_function, destroy_function))
-
-  def resizable(): MemoryOutputStream = MemoryOutputStream(g_memory_output_stream_new_resizable())
-
+  def apply(data : Ptr[Byte], size : Any /* Some(gsize): `gsize` */, realloc_function : GReallocFunc, destroy_function : GDestroyNotify): MemoryOutputStream = new MemoryOutputStream(g_memory_output_stream_new(gpointer(data), size, realloc_function, destroy_function).asInstanceOf)
+  def resizable(): MemoryOutputStream = new MemoryOutputStream(g_memory_output_stream_new_resizable().asInstanceOf)
 end MemoryOutputStream

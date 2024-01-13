@@ -4,20 +4,32 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Vfs(private[fluent] val raw: Ptr[GVfs]) extends sn.gnome.gobject.fluent.Object:
-  def getFileForPath(path : String): sn.gnome.gio.fluent.File = g_vfs_get_file_for_path(this.raw, path)
+import sn.gnome.gio.fluent.File
+import sn.gnome.gio.internal.GVfsFileLookupFunc
+import sn.gnome.glib.internal.GDestroyNotify
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def getFileForUri(uri : String): sn.gnome.gio.fluent.File = g_vfs_get_file_for_uri(this.raw, uri)
+class Vfs(raw: Ptr[GVfs]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getSupportedUriSchemes(): Array[Byte] = g_vfs_get_supported_uri_schemes(this.raw)
+  def getFileForPath(path : String | CString)(using Zone): File = g_vfs_get_file_for_path(this.raw.asInstanceOf, __sn_extract_string(path))
 
-  def isActive(): Boolean = g_vfs_is_active(this.raw)
+  def getFileForUri(uri : String | CString)(using Zone): File = g_vfs_get_file_for_uri(this.raw.asInstanceOf, __sn_extract_string(uri))
 
-  def parseName(parse_name : String): sn.gnome.gio.fluent.File = g_vfs_parse_name(this.raw, parse_name)
+  def isActive(): Boolean = g_vfs_is_active(this.raw.asInstanceOf).value.!=(0)
 
-  def registerUriScheme(scheme : String, uri_func : Any /* Some(VfsFileLookupFunc): GVfsFileLookupFunc*/, uri_data : Ptr[Byte], uri_destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/, parse_name_func : Any /* Some(VfsFileLookupFunc): GVfsFileLookupFunc*/, parse_name_data : Ptr[Byte], parse_name_destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Boolean = g_vfs_register_uri_scheme(this.raw, scheme, uri_func, uri_data, uri_destroy, parse_name_func, parse_name_data, parse_name_destroy)
+  def parseName(parse_name : String | CString)(using Zone): File = g_vfs_parse_name(this.raw.asInstanceOf, __sn_extract_string(parse_name))
 
-  def unregisterUriScheme(scheme : String): Boolean = g_vfs_unregister_uri_scheme(this.raw, scheme)
+  def registerUriScheme(scheme : String | CString, uri_func : GVfsFileLookupFunc, uri_data : Ptr[Byte], uri_destroy : GDestroyNotify, parse_name_func : GVfsFileLookupFunc, parse_name_data : Ptr[Byte], parse_name_destroy : GDestroyNotify)(using Zone): Boolean = g_vfs_register_uri_scheme(this.raw.asInstanceOf, __sn_extract_string(scheme), uri_func, gpointer(uri_data), uri_destroy, parse_name_func, gpointer(parse_name_data), parse_name_destroy).value.!=(0)
 
+  def unregisterUriScheme(scheme : String | CString)(using Zone): Boolean = g_vfs_unregister_uri_scheme(this.raw.asInstanceOf, __sn_extract_string(scheme)).value.!=(0)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Vfs
-

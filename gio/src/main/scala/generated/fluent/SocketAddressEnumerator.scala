@@ -4,12 +4,20 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SocketAddressEnumerator(private[fluent] val raw: Ptr[GSocketAddressEnumerator]) extends sn.gnome.gobject.fluent.Object:
-  def next(cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.SocketAddress = g_socket_address_enumerator_next(this.raw, cancellable.raw)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.SocketAddress
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def nextAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_socket_address_enumerator_next_async(this.raw, cancellable.raw, callback, user_data)
+class SocketAddressEnumerator(raw: Ptr[GSocketAddressEnumerator]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def nextFinish(result : sn.gnome.gio.fluent.AsyncResult): sn.gnome.gio.fluent.SocketAddress = g_socket_address_enumerator_next_finish(this.raw, result.raw)
+  def next(cancellable : Cancellable): SocketAddress = new SocketAddress(g_socket_address_enumerator_next(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+
+  def nextAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_socket_address_enumerator_next_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+
+  def nextFinish(result : AsyncResult): SocketAddress = new SocketAddress(g_socket_address_enumerator_next_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
 end SocketAddressEnumerator
-

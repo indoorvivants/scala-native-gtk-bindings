@@ -1,6 +1,10 @@
 package sn.gnome.gio.fluent
 
-import sn.gnome.gio.internal.*
+import _root_.sn.gnome.gio.internal.*
+
+import _root_.scala.scalanative.unsafe.*
 
 
-trait ProxyResolver
+trait ProxyResolver:
+  def getUnsafeRawPointer(): Ptr[Byte]
+end ProxyResolver

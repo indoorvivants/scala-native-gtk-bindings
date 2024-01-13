@@ -4,72 +4,94 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Task(private[fluent] val raw: Ptr[GTask]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncResult:
-  def attachSource(source : Any /* Some(GLib.Source): GSource**/, callback : Any /* Some(GLib.SourceFunc): GSourceFunc*/): Unit = g_task_attach_source(this.raw, source, callback)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.internal.GTaskThreadFunc
+import sn.gnome.glib.internal.GDestroyNotify
+import sn.gnome.glib.internal.GError
+import sn.gnome.glib.internal.GMainContext
+import sn.gnome.glib.internal.GSource
+import sn.gnome.glib.internal.GSourceFunc
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
+import sn.gnome.gobject.internal.GValue
 
-  def getCancellable(): sn.gnome.gio.fluent.Cancellable = g_task_get_cancellable(this.raw)
+class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getCheckCancellable(): Boolean = g_task_get_check_cancellable(this.raw)
+  def attachSource(source : Ptr[GSource], callback : GSourceFunc): Unit = g_task_attach_source(this.raw.asInstanceOf, source, callback)
 
-  def getCompleted(): Boolean = g_task_get_completed(this.raw)
+  def getCancellable(): Cancellable = new Cancellable(g_task_get_cancellable(this.raw.asInstanceOf).asInstanceOf)
 
-  def getContext(): Any /* Some(GLib.MainContext): GMainContext**/ = g_task_get_context(this.raw)
+  def getCheckCancellable(): Boolean = g_task_get_check_cancellable(this.raw.asInstanceOf).value.!=(0)
 
-  def getName(): String = g_task_get_name(this.raw)
+  def getCompleted(): Boolean = g_task_get_completed(this.raw.asInstanceOf).value.!=(0)
 
-  def getPriority(): Int = g_task_get_priority(this.raw)
+  def getContext(): Ptr[GMainContext] = g_task_get_context(this.raw.asInstanceOf)
 
-  def getReturnOnCancel(): Boolean = g_task_get_return_on_cancel(this.raw)
+  def getName()(using Zone): String = fromCString(g_task_get_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getSourceObject(): sn.gnome.gobject.fluent.Object = g_task_get_source_object(this.raw)
+  def getPriority(): Int = g_task_get_priority(this.raw.asInstanceOf).value
 
-  def getSourceTag(): Ptr[Byte] = g_task_get_source_tag(this.raw)
+  def getReturnOnCancel(): Boolean = g_task_get_return_on_cancel(this.raw.asInstanceOf).value.!=(0)
 
-  def getTaskData(): Ptr[Byte] = g_task_get_task_data(this.raw)
+  def getSourceObject(): Object = new Object(g_task_get_source_object(this.raw.asInstanceOf).asInstanceOf)
 
-  def hadError(): Boolean = g_task_had_error(this.raw)
+  def getSourceTag(): Ptr[Byte] = g_task_get_source_tag(this.raw.asInstanceOf).value
 
-  def propagateBoolean(): Boolean = g_task_propagate_boolean(this.raw)
+  def getTaskData(): Ptr[Byte] = g_task_get_task_data(this.raw.asInstanceOf).value
 
-  def propagateInt(): Any /* Some(gssize): gssize*/ = g_task_propagate_int(this.raw)
+  def hadError(): Boolean = g_task_had_error(this.raw.asInstanceOf).value.!=(0)
 
-  def propagatePointer(): Ptr[Byte] = g_task_propagate_pointer(this.raw)
+  def propagateBoolean(): Boolean = g_task_propagate_boolean(this.raw.asInstanceOf).value.!=(0)
 
-  def propagateValue(value : Any /* Some(GObject.Value): GValue**/): Boolean = g_task_propagate_value(this.raw, value)
+  def propagateInt(): Any /* Some(gssize): `gssize` */ = g_task_propagate_int(this.raw.asInstanceOf)
 
-  def returnBoolean(result : Boolean): Unit = g_task_return_boolean(this.raw, result)
+  def propagatePointer(): Ptr[Byte] = g_task_propagate_pointer(this.raw.asInstanceOf).value
 
-  def returnError(error : Any /* Some(GLib.Error): GError**/): Unit = g_task_return_error(this.raw, error)
+  def propagateValue(value : Ptr[GValue]): Boolean = g_task_propagate_value(this.raw.asInstanceOf, value).value.!=(0)
 
-  def returnErrorIfCancelled(): Boolean = g_task_return_error_if_cancelled(this.raw)
+  def returnBoolean(result : Boolean): Unit = g_task_return_boolean(this.raw.asInstanceOf, result)
 
-  def returnInt(result : Any /* Some(gssize): gssize*/): Unit = g_task_return_int(this.raw, result)
+  def returnError(error : Ptr[GError]): Unit = g_task_return_error(this.raw.asInstanceOf, error)
 
-  def returnPointer(result : Ptr[Byte], result_destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Unit = g_task_return_pointer(this.raw, result, result_destroy)
+  def returnErrorIfCancelled(): Boolean = g_task_return_error_if_cancelled(this.raw.asInstanceOf).value.!=(0)
 
-  def returnValue(result : Any /* Some(GObject.Value): GValue**/): Unit = g_task_return_value(this.raw, result)
+  def returnInt(result : Any /* Some(gssize): `gssize` */): Unit = g_task_return_int(this.raw.asInstanceOf, result)
 
-  def runInThread(task_func : Any /* Some(TaskThreadFunc): GTaskThreadFunc*/): Unit = g_task_run_in_thread(this.raw, task_func)
+  def returnPointer(result : Ptr[Byte], result_destroy : GDestroyNotify): Unit = g_task_return_pointer(this.raw.asInstanceOf, gpointer(result), result_destroy)
 
-  def runInThreadSync(task_func : Any /* Some(TaskThreadFunc): GTaskThreadFunc*/): Unit = g_task_run_in_thread_sync(this.raw, task_func)
+  def returnValue(result : Ptr[GValue]): Unit = g_task_return_value(this.raw.asInstanceOf, result)
 
-  def setCheckCancellable(check_cancellable : Boolean): Unit = g_task_set_check_cancellable(this.raw, check_cancellable)
+  def runInThread(task_func : GTaskThreadFunc): Unit = g_task_run_in_thread(this.raw.asInstanceOf, task_func)
 
-  def setName(name : String): Unit = g_task_set_name(this.raw, name)
+  def runInThreadSync(task_func : GTaskThreadFunc): Unit = g_task_run_in_thread_sync(this.raw.asInstanceOf, task_func)
 
-  def setPriority(priority : Int): Unit = g_task_set_priority(this.raw, priority)
+  def setCheckCancellable(check_cancellable : Boolean): Unit = g_task_set_check_cancellable(this.raw.asInstanceOf, check_cancellable)
 
-  def setReturnOnCancel(return_on_cancel : Boolean): Boolean = g_task_set_return_on_cancel(this.raw, return_on_cancel)
+  def setName(name : String | CString)(using Zone): Unit = g_task_set_name(this.raw.asInstanceOf, __sn_extract_string(name).asInstanceOf[Ptr[gchar]])
 
-  def setSourceTag(source_tag : Ptr[Byte]): Unit = g_task_set_source_tag(this.raw, source_tag)
+  def setPriority(priority : Int): Unit = g_task_set_priority(this.raw.asInstanceOf, gint(priority))
 
-  def setStaticName(name : String): Unit = g_task_set_static_name(this.raw, name)
+  def setReturnOnCancel(return_on_cancel : Boolean): Boolean = g_task_set_return_on_cancel(this.raw.asInstanceOf, return_on_cancel).value.!=(0)
 
-  def setTaskData(task_data : Ptr[Byte], task_data_destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Unit = g_task_set_task_data(this.raw, task_data, task_data_destroy)
+  def setSourceTag(source_tag : Ptr[Byte]): Unit = g_task_set_source_tag(this.raw.asInstanceOf, gpointer(source_tag))
 
+  def setStaticName(name : String | CString)(using Zone): Unit = g_task_set_static_name(this.raw.asInstanceOf, __sn_extract_string(name).asInstanceOf[Ptr[gchar]])
+
+  def setTaskData(task_data : Ptr[Byte], task_data_destroy : GDestroyNotify): Unit = g_task_set_task_data(this.raw.asInstanceOf, gpointer(task_data), task_data_destroy)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Task
 
 object Task:
-  def apply(source_object : sn.gnome.gobject.fluent.Object, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, callback_data : Ptr[Byte]): Task = Task(g_task_new(source_object.raw, cancellable.raw, callback, callback_data))
-
+  def apply(source_object : Object, cancellable : Cancellable, callback : GAsyncReadyCallback, callback_data : Ptr[Byte]): Task = new Task(g_task_new(gpointer(source_object.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(callback_data)).asInstanceOf)
 end Task

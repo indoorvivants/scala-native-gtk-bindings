@@ -17,7 +17,6 @@ def filterDefinitions(
     constructor.exists(_.name.equalsIgnoreCase(name))
 
   def all(b: Boolean*) =
-    scribe.info(s"Method: ${method.map(_.name)}: $b")
     b.forall(identity)
 
   if all(

@@ -4,22 +4,31 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixConnection(private[fluent] val raw: Ptr[GUnixConnection]) extends sn.gnome.gio.fluent.SocketConnection:
-  def receiveCredentials(cancellable : sn.gnome.gio.fluent.Cancellable): sn.gnome.gio.fluent.Credentials = g_unix_connection_receive_credentials(this.raw, cancellable.raw)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.Credentials
+import sn.gnome.gio.fluent.SocketConnection
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
 
-  def receiveCredentialsAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_unix_connection_receive_credentials_async(this.raw, cancellable.raw, callback, user_data)
+class UnixConnection(raw: Ptr[GUnixConnection]) extends SocketConnection(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def receiveCredentialsFinish(result : sn.gnome.gio.fluent.AsyncResult): sn.gnome.gio.fluent.Credentials = g_unix_connection_receive_credentials_finish(this.raw, result.raw)
+  def receiveCredentials(cancellable : Cancellable): Credentials = new Credentials(g_unix_connection_receive_credentials(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def receiveFd(cancellable : sn.gnome.gio.fluent.Cancellable): Int = g_unix_connection_receive_fd(this.raw, cancellable.raw)
+  def receiveCredentialsAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_unix_connection_receive_credentials_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def sendCredentials(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_unix_connection_send_credentials(this.raw, cancellable.raw)
+  def receiveCredentialsFinish(result : AsyncResult): Credentials = new Credentials(g_unix_connection_receive_credentials_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def sendCredentialsAsync(cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_unix_connection_send_credentials_async(this.raw, cancellable.raw, callback, user_data)
+  def receiveFd(cancellable : Cancellable): Int = g_unix_connection_receive_fd(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def sendCredentialsFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_unix_connection_send_credentials_finish(this.raw, result.raw)
+  def sendCredentials(cancellable : Cancellable): Boolean = g_unix_connection_send_credentials(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def sendFd(fd : Int, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_unix_connection_send_fd(this.raw, fd, cancellable.raw)
+  def sendCredentialsAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_unix_connection_send_credentials_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+
+  def sendCredentialsFinish(result : AsyncResult): Boolean = g_unix_connection_send_credentials_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+
+  def sendFd(fd : Int, cancellable : Cancellable): Boolean = g_unix_connection_send_fd(this.raw.asInstanceOf, gint(fd), cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
 end UnixConnection
-

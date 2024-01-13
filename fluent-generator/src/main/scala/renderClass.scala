@@ -10,92 +10,60 @@ def renderClass(
     RenderingContext,
     GlobalKnowledge,
     NamingPolicy,
-    Label[Outcome[String]]
-): List[Effect] =
-  val effects = List.newBuilder[Effect]
+    Label[String]
+): WithEffects[Nothing] =
+  WithEffects.collect: coll =>
+    val cTypeName = cls.attributes.get("@type").map(_.as[String])
+    val cType =
+      cTypeName.getOrElse(break("c:type missing"))
+    val data = s"(raw: Ptr[$cType])"
 
-  val cTypeName = cls.attributes.get("@type").map(_.as[String])
-  val cType =
-    cTypeName.getOrElse(break(Outcome.Fail("c:type missing")))
-  val data = s"(raw: Ptr[$cType])"
+    val extensions =
+      renderClassExtensions(cls.parent, cls.implements)
 
-  val classHeader =
-    s"class ${cls.name}$data${renderClassExtensions(cls.parent, cls.implements)}"
-  val classHasAnyMembers =
-    cls.methods.nonEmpty
+    coll.addAll(extensions.getEffects)
 
-  block(
-    classHeader + ":",
-    s"end ${cls.name}"
-  ):
-    val overrides = if cls.parent.nonEmpty then "override " else ""
-    line(
-      s"${overrides}def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf"
-    )
-    emptyLine()
-    cls.methods.foreach: meth =>
-      filterDefinitions(
-        namespace = Some(ns),
-        cls = Some(cls),
-        method = Some(meth)
-      ) match
-        case None =>
-          val result =
-            transact[String]:
-              effects ++= renderClassMethod(cls, meth)
-              Outcome.Ok
-          result.foreach: msg =>
-            scribe.warn(s"Failed to render method ${meth.name}: `$msg`")
-        case Some(value) =>
-          line("// " + value)
+    val classHeader =
+      s"class ${cls.name}$data${extensions.getValue.getOrElse("")}"
 
-    effects
-      .result()
-      .distinct
-      .collect:
-        case Effect.RequiresDefinition(df) =>
-          emptyLine()
-          df()
+    val classHasAnyMembers =
+      cls.methods.nonEmpty
 
-  renderClassCompanionObject(cls)
+    block(
+      classHeader + ":",
+      s"end ${cls.name}"
+    ):
+      val overrides = if cls.parent.nonEmpty then "override " else ""
+      line(
+        s"${overrides}def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf"
+      )
+      emptyLine()
+      cls.methods.foreach: meth =>
+        filterDefinitions(
+          namespace = Some(ns),
+          cls = Some(cls),
+          method = Some(meth)
+        ) match
+          case None =>
+            val result =
+              transact[String]:
+                try coll.addAll(renderClassMethod(cls, meth))
+                catch
+                  case exc =>
+                    break(exc.toString())
 
-  effects.result.distinct
-end renderClass
+            result.foreach: msg =>
+              scribe.warn(s"Failed to render method ${meth.name}: `$msg`")
+          case Some(value) =>
+            line("// " + value)
 
-def renderClassCompanionObject(
-    cls: AugmentedClass
-)(using
-    RenderingContext,
-    GlobalKnowledge,
-    NamingPolicy,
-    Label[Outcome[String]]
-): List[Effect] =
-  val effects = List.newBuilder[Effect]
-
-  val objectHeader = s"object ${cls.name}"
-  val objectHasAnyMembers = cls.constructors.nonEmpty
-
-  if objectHasAnyMembers then
-    emptyLine()
-    block(objectHeader + ":", s"end ${cls.name}"):
-      cls.constructors.foreach: constructor =>
-        val result =
-          transact[String]:
-            effects ++= renderClassConstructor(cls, constructor)
-            Outcome.Ok
-        result.foreach: msg =>
-          scribe.warn(
-            s"Failed to render constructor for class ${cls.name}, ${constructor.name}: `$msg`"
-          )
-      effects
-        .result()
+      coll
+        .effectsSoFar()
         .distinct
         .collect:
           case Effect.RequiresDefinition(df) =>
             emptyLine()
             df()
 
-  end if
-
-  effects.result().distinct
-end renderClassCompanionObject
+    renderClassCompanionObject(cls)
+end renderClass

@@ -4,98 +4,119 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Settings(private[fluent] val raw: Ptr[GSettings]) extends sn.gnome.gobject.fluent.Object:
-  def apply(): Unit = g_settings_apply(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.Action
+import sn.gnome.gio.fluent.Settings
+import sn.gnome.gio.internal.GSettingsBindFlags
+import sn.gnome.gio.internal.GSettingsBindGetMapping
+import sn.gnome.gio.internal.GSettingsBindSetMapping
+import sn.gnome.gio.internal.GSettingsGetMapping
+import sn.gnome.glib.internal.GDestroyNotify
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.guint
+import sn.gnome.glib.internal.guint64
+import sn.gnome.gobject.fluent.Object
 
-  def bind(key : String, `object` : sn.gnome.gobject.fluent.Object, property : String, flags : Any /* Some(SettingsBindFlags): GSettingsBindFlags*/): Unit = g_settings_bind(this.raw, key, `object`.raw, property, flags)
+class Settings(raw: Ptr[GSettings]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def bindWithMapping(key : String, `object` : sn.gnome.gobject.fluent.Object, property : String, flags : Any /* Some(SettingsBindFlags): GSettingsBindFlags*/, get_mapping : Any /* Some(SettingsBindGetMapping): GSettingsBindGetMapping*/, set_mapping : Any /* Some(SettingsBindSetMapping): GSettingsBindSetMapping*/, user_data : Ptr[Byte], destroy : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/): Unit = g_settings_bind_with_mapping(this.raw, key, `object`.raw, property, flags, get_mapping, set_mapping, user_data, destroy)
+  def apply(): Unit = g_settings_apply(this.raw.asInstanceOf)
 
-  def bindWritable(key : String, `object` : sn.gnome.gobject.fluent.Object, property : String, inverted : Boolean): Unit = g_settings_bind_writable(this.raw, key, `object`.raw, property, inverted)
+  def bind(key : String | CString, `object` : Object, property : String | CString, flags : GSettingsBindFlags)(using Zone): Unit = g_settings_bind(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], gpointer(`object`.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]), __sn_extract_string(property).asInstanceOf[Ptr[gchar]], flags)
 
-  def createAction(key : String): sn.gnome.gio.fluent.Action = g_settings_create_action(this.raw, key)
+  def bindWithMapping(key : String | CString, `object` : Object, property : String | CString, flags : GSettingsBindFlags, get_mapping : GSettingsBindGetMapping, set_mapping : GSettingsBindSetMapping, user_data : Ptr[Byte], destroy : GDestroyNotify)(using Zone): Unit = g_settings_bind_with_mapping(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], gpointer(`object`.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]), __sn_extract_string(property).asInstanceOf[Ptr[gchar]], flags, get_mapping, set_mapping, gpointer(user_data), destroy)
 
-  def delay(): Unit = g_settings_delay(this.raw)
+  def bindWritable(key : String | CString, `object` : Object, property : String | CString, inverted : Boolean)(using Zone): Unit = g_settings_bind_writable(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], gpointer(`object`.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]), __sn_extract_string(property).asInstanceOf[Ptr[gchar]], inverted)
 
-  def getBoolean(key : String): Boolean = g_settings_get_boolean(this.raw, key)
+  def createAction(key : String | CString)(using Zone): Action = g_settings_create_action(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def getChild(name : String): sn.gnome.gio.fluent.Settings = g_settings_get_child(this.raw, name)
+  def delay(): Unit = g_settings_delay(this.raw.asInstanceOf)
 
-  def getDefaultValue(key : String): Any /* Some(GLib.Variant): GVariant**/ = g_settings_get_default_value(this.raw, key)
+  def getBoolean(key : String | CString)(using Zone): Boolean = g_settings_get_boolean(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def getDouble(key : String): Any /* Some(gdouble): gdouble*/ = g_settings_get_double(this.raw, key)
+  def getChild(name : String | CString)(using Zone): Settings = new Settings(g_settings_get_child(this.raw.asInstanceOf, __sn_extract_string(name).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def getEnum(key : String): Int = g_settings_get_enum(this.raw, key)
+  def getDefaultValue(key : String | CString)(using Zone): Ptr[GVariant] = g_settings_get_default_value(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def getFlags(key : String): Any /* Some(guint): guint*/ = g_settings_get_flags(this.raw, key)
+  def getDouble(key : String | CString)(using Zone): Any /* Some(gdouble): `gdouble` */ = g_settings_get_double(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def getHasUnapplied(): Boolean = g_settings_get_has_unapplied(this.raw)
+  def getEnum(key : String | CString)(using Zone): Int = g_settings_get_enum(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).value
 
-  def getInt(key : String): Int = g_settings_get_int(this.raw, key)
+  def getFlags(key : String | CString)(using Zone): UInt = g_settings_get_flags(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).value
 
-  def getInt64(key : String): Any /* Some(gint64): gint64*/ = g_settings_get_int64(this.raw, key)
+  def getHasUnapplied(): Boolean = g_settings_get_has_unapplied(this.raw.asInstanceOf).value.!=(0)
 
-  def getMapped(key : String, mapping : Any /* Some(SettingsGetMapping): GSettingsGetMapping*/, user_data : Ptr[Byte]): Ptr[Byte] = g_settings_get_mapped(this.raw, key, mapping, user_data)
+  def getInt(key : String | CString)(using Zone): Int = g_settings_get_int(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).value
 
-  def getRange(key : String): Any /* Some(GLib.Variant): GVariant**/ = g_settings_get_range(this.raw, key)
+  def getInt64(key : String | CString)(using Zone): Any /* Some(gint64): `gint64` */ = g_settings_get_int64(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def getString(key : String): Any /* Some(utf8): gchar**/ = g_settings_get_string(this.raw, key)
+  def getMapped(key : String | CString, mapping : GSettingsGetMapping, user_data : Ptr[Byte])(using Zone): Ptr[Byte] = g_settings_get_mapped(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], mapping, gpointer(user_data)).value
 
-  def getStrv(key : String): Array[Byte] = g_settings_get_strv(this.raw, key)
+  def getRange(key : String | CString)(using Zone): Ptr[GVariant] = g_settings_get_range(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def getUint(key : String): Any /* Some(guint): guint*/ = g_settings_get_uint(this.raw, key)
+  def getString(key : String | CString)(using Zone): String = fromCString(g_settings_get_string(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def getUint64(key : String): ULong = g_settings_get_uint64(this.raw, key)
+  def getUint(key : String | CString)(using Zone): UInt = g_settings_get_uint(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).value
 
-  def getUserValue(key : String): Any /* Some(GLib.Variant): GVariant**/ = g_settings_get_user_value(this.raw, key)
+  def getUint64(key : String | CString)(using Zone): ULong = g_settings_get_uint64(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]]).value
 
-  def getValue(key : String): Any /* Some(GLib.Variant): GVariant**/ = g_settings_get_value(this.raw, key)
+  def getUserValue(key : String | CString)(using Zone): Ptr[GVariant] = g_settings_get_user_value(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def isWritable(name : String): Boolean = g_settings_is_writable(this.raw, name)
+  def getValue(key : String | CString)(using Zone): Ptr[GVariant] = g_settings_get_value(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def listChildren(): Array[Byte] = g_settings_list_children(this.raw)
+  def isWritable(name : String | CString)(using Zone): Boolean = g_settings_is_writable(this.raw.asInstanceOf, __sn_extract_string(name).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def listKeys(): Array[Byte] = g_settings_list_keys(this.raw)
+  def rangeCheck(key : String | CString, value : Ptr[GVariant])(using Zone): Boolean = g_settings_range_check(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], value).value.!=(0)
 
-  def rangeCheck(key : String, value : Any /* Some(GLib.Variant): GVariant**/): Boolean = g_settings_range_check(this.raw, key, value)
+  def reset(key : String | CString)(using Zone): Unit = g_settings_reset(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]])
 
-  def reset(key : String): Unit = g_settings_reset(this.raw, key)
+  def revert(): Unit = g_settings_revert(this.raw.asInstanceOf)
 
-  def revert(): Unit = g_settings_revert(this.raw)
+  def setBoolean(key : String | CString, value : Boolean)(using Zone): Boolean = g_settings_set_boolean(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], value).value.!=(0)
 
-  def setBoolean(key : String, value : Boolean): Boolean = g_settings_set_boolean(this.raw, key, value)
+  def setDouble(key : String | CString, value : Any /* Some(gdouble): `gdouble` */)(using Zone): Boolean = g_settings_set_double(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], value).value.!=(0)
 
-  def setDouble(key : String, value : Any /* Some(gdouble): gdouble*/): Boolean = g_settings_set_double(this.raw, key, value)
+  def setEnum(key : String | CString, value : Int)(using Zone): Boolean = g_settings_set_enum(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], gint(value)).value.!=(0)
 
-  def setEnum(key : String, value : Int): Boolean = g_settings_set_enum(this.raw, key, value)
+  def setFlags(key : String | CString, value : UInt)(using Zone): Boolean = g_settings_set_flags(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], guint(value)).value.!=(0)
 
-  def setFlags(key : String, value : Any /* Some(guint): guint*/): Boolean = g_settings_set_flags(this.raw, key, value)
+  def setInt(key : String | CString, value : Int)(using Zone): Boolean = g_settings_set_int(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], gint(value)).value.!=(0)
 
-  def setInt(key : String, value : Int): Boolean = g_settings_set_int(this.raw, key, value)
+  def setInt64(key : String | CString, value : Any /* Some(gint64): `gint64` */)(using Zone): Boolean = g_settings_set_int64(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], value).value.!=(0)
 
-  def setInt64(key : String, value : Any /* Some(gint64): gint64*/): Boolean = g_settings_set_int64(this.raw, key, value)
+  def setString(key : String | CString, value : String | CString)(using Zone): Boolean = g_settings_set_string(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], __sn_extract_string(value).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def setString(key : String, value : String): Boolean = g_settings_set_string(this.raw, key, value)
+  def setStrv(key : String | CString, value : Ptr[CString])(using Zone): Boolean = g_settings_set_strv(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], value.asInstanceOf).value.!=(0)
 
-  def setStrv(key : String, value : Array[Byte]): Boolean = g_settings_set_strv(this.raw, key, value)
+  def setUint(key : String | CString, value : UInt)(using Zone): Boolean = g_settings_set_uint(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], guint(value)).value.!=(0)
 
-  def setUint(key : String, value : Any /* Some(guint): guint*/): Boolean = g_settings_set_uint(this.raw, key, value)
+  def setUint64(key : String | CString, value : ULong)(using Zone): Boolean = g_settings_set_uint64(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], guint64(value)).value.!=(0)
 
-  def setUint64(key : String, value : ULong): Boolean = g_settings_set_uint64(this.raw, key, value)
+  def setValue(key : String | CString, value : Ptr[GVariant])(using Zone): Boolean = g_settings_set_value(this.raw.asInstanceOf, __sn_extract_string(key).asInstanceOf[Ptr[gchar]], value).value.!=(0)
 
-  def setValue(key : String, value : Any /* Some(GLib.Variant): GVariant**/): Boolean = g_settings_set_value(this.raw, key, value)
 
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Settings
 
 object Settings:
-  def apply(schema_id : String): Settings = Settings(g_settings_new(schema_id))
+  def apply(schema_id : String | CString)(using Zone): Settings = new Settings(g_settings_new(__sn_extract_string(schema_id).asInstanceOf[Ptr[gchar]]).asInstanceOf)
+  def full(schema : Ptr[GSettingsSchema], backend : SettingsBackend, path : String | CString)(using Zone): Settings = new Settings(g_settings_new_full(schema, backend.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(path).asInstanceOf[Ptr[gchar]]).asInstanceOf)
+  def withBackend(schema_id : String | CString, backend : SettingsBackend)(using Zone): Settings = new Settings(g_settings_new_with_backend(__sn_extract_string(schema_id).asInstanceOf[Ptr[gchar]], backend.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def withBackendAndPath(schema_id : String | CString, backend : SettingsBackend, path : String | CString)(using Zone): Settings = new Settings(g_settings_new_with_backend_and_path(__sn_extract_string(schema_id).asInstanceOf[Ptr[gchar]], backend.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(path).asInstanceOf[Ptr[gchar]]).asInstanceOf)
+  def withPath(schema_id : String | CString, path : String | CString)(using Zone): Settings = new Settings(g_settings_new_with_path(__sn_extract_string(schema_id).asInstanceOf[Ptr[gchar]], __sn_extract_string(path).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def full(schema : Any /* Some(SettingsSchema): GSettingsSchema**/, backend : sn.gnome.gio.fluent.SettingsBackend, path : String): Settings = Settings(g_settings_new_full(schema, backend.raw, path))
-
-  def withBackend(schema_id : String, backend : sn.gnome.gio.fluent.SettingsBackend): Settings = Settings(g_settings_new_with_backend(schema_id, backend.raw))
-
-  def withBackendAndPath(schema_id : String, backend : sn.gnome.gio.fluent.SettingsBackend, path : String): Settings = Settings(g_settings_new_with_backend_and_path(schema_id, backend.raw, path))
-
-  def withPath(schema_id : String, path : String): Settings = Settings(g_settings_new_with_path(schema_id, path))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Settings

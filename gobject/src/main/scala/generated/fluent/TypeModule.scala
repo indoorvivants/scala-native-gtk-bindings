@@ -5,6 +5,8 @@ import _root_.sn.gnome.gobject.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
+import sn.gnome.gobject.fluent.TypePlugin
 import sn.gnome.gobject.internal.GEnumValue
 import sn.gnome.gobject.internal.GFlagsValue
 import sn.gnome.gobject.internal.GInterfaceInfo

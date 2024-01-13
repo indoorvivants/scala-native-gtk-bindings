@@ -4,20 +4,34 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class InetSocketAddress(private[fluent] val raw: Ptr[GInetSocketAddress]) extends sn.gnome.gio.fluent.SocketAddress, sn.gnome.gio.fluent.SocketConnectable:
-  def getAddress(): sn.gnome.gio.fluent.InetAddress = g_inet_socket_address_get_address(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.InetAddress
+import sn.gnome.gio.fluent.SocketAddress
+import sn.gnome.gio.fluent.SocketConnectable
+import sn.gnome.glib.internal.guint16
+import sn.gnome.glib.internal.guint32
 
-  def getFlowinfo(): UInt = g_inet_socket_address_get_flowinfo(this.raw)
+class InetSocketAddress(raw: Ptr[GInetSocketAddress]) extends SocketAddress(raw.asInstanceOf), SocketConnectable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getPort(): UShort = g_inet_socket_address_get_port(this.raw)
+  def getAddress(): InetAddress = new InetAddress(g_inet_socket_address_get_address(this.raw.asInstanceOf).asInstanceOf)
 
-  def getScopeId(): UInt = g_inet_socket_address_get_scope_id(this.raw)
+  def getFlowinfo(): UInt = g_inet_socket_address_get_flowinfo(this.raw.asInstanceOf).value
+
+  def getPort(): UShort = g_inet_socket_address_get_port(this.raw.asInstanceOf).value
+
+  def getScopeId(): UInt = g_inet_socket_address_get_scope_id(this.raw.asInstanceOf).value
 
 end InetSocketAddress
 
 object InetSocketAddress:
-  def apply(address : sn.gnome.gio.fluent.InetAddress, port : UShort): InetSocketAddress = InetSocketAddress(g_inet_socket_address_new(address.raw, port))
+  def apply(address : InetAddress, port : UShort): InetSocketAddress = new InetSocketAddress(g_inet_socket_address_new(address.getUnsafeRawPointer().asInstanceOf, guint16(port)).asInstanceOf)
+  def fromString(address : String | CString, port : UInt)(using Zone): InetSocketAddress = new InetSocketAddress(g_inet_socket_address_new_from_string(__sn_extract_string(address), guint(port)).asInstanceOf)
 
-  def fromString(address : String, port : Any /* Some(guint): guint*/): InetSocketAddress = InetSocketAddress(g_inet_socket_address_new_from_string(address, port))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end InetSocketAddress

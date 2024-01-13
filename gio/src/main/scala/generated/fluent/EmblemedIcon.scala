@@ -4,18 +4,24 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class EmblemedIcon(private[fluent] val raw: Ptr[GEmblemedIcon]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Icon:
-  def addEmblem(emblem : sn.gnome.gio.fluent.Emblem): Unit = g_emblemed_icon_add_emblem(this.raw, emblem.raw)
+import sn.gnome.gio.fluent.Emblem
+import sn.gnome.gio.fluent.Icon
+import sn.gnome.glib.internal.GList
+import sn.gnome.gobject.fluent.Object
 
-  def clearEmblems(): Unit = g_emblemed_icon_clear_emblems(this.raw)
+class EmblemedIcon(raw: Ptr[GEmblemedIcon]) extends Object(raw.asInstanceOf), Icon:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getEmblems(): Any /* Some(GLib.List): GList**/ = g_emblemed_icon_get_emblems(this.raw)
+  def addEmblem(emblem : Emblem): Unit = g_emblemed_icon_add_emblem(this.raw.asInstanceOf, emblem.getUnsafeRawPointer().asInstanceOf)
 
-  def getIcon(): sn.gnome.gio.fluent.Icon = g_emblemed_icon_get_icon(this.raw)
+  def clearEmblems(): Unit = g_emblemed_icon_clear_emblems(this.raw.asInstanceOf)
+
+  def getEmblems(): Ptr[GList] = g_emblemed_icon_get_emblems(this.raw.asInstanceOf)
+
+  def getIcon(): Icon = g_emblemed_icon_get_icon(this.raw.asInstanceOf)
 
 end EmblemedIcon
 
 object EmblemedIcon:
-  def apply(icon : sn.gnome.gio.fluent.Icon, emblem : sn.gnome.gio.fluent.Emblem): EmblemedIcon = EmblemedIcon(g_emblemed_icon_new(icon.raw, emblem.raw))
-
+  def apply(icon : Icon, emblem : Emblem): EmblemedIcon = new EmblemedIcon(g_emblemed_icon_new(icon.getUnsafeRawPointer().asInstanceOf, emblem.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 end EmblemedIcon

@@ -4,40 +4,61 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusMethodInvocation(private[fluent] val raw: Ptr[GDBusMethodInvocation]) extends sn.gnome.gobject.fluent.Object:
-  def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_method_invocation_get_connection(this.raw)
+import sn.gnome.gio.fluent.DBusConnection
+import sn.gnome.gio.fluent.DBusMessage
+import sn.gnome.gio.fluent.UnixFDList
+import sn.gnome.gio.internal.GDBusMethodInfo
+import sn.gnome.gio.internal.GDBusPropertyInfo
+import sn.gnome.glib.internal.GError
+import sn.gnome.glib.internal.GQuark
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def getInterfaceName(): String = g_dbus_method_invocation_get_interface_name(this.raw)
+class DBusMethodInvocation(raw: Ptr[GDBusMethodInvocation]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getMessage(): sn.gnome.gio.fluent.DBusMessage = g_dbus_method_invocation_get_message(this.raw)
+  def getConnection(): DBusConnection = new DBusConnection(g_dbus_method_invocation_get_connection(this.raw.asInstanceOf).asInstanceOf)
 
-  def getMethodInfo(): Any /* Some(DBusMethodInfo): const GDBusMethodInfo**/ = g_dbus_method_invocation_get_method_info(this.raw)
+  def getInterfaceName()(using Zone): String = fromCString(g_dbus_method_invocation_get_interface_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getMethodName(): String = g_dbus_method_invocation_get_method_name(this.raw)
+  def getMessage(): DBusMessage = new DBusMessage(g_dbus_method_invocation_get_message(this.raw.asInstanceOf).asInstanceOf)
 
-  def getObjectPath(): String = g_dbus_method_invocation_get_object_path(this.raw)
+  def getMethodInfo(): Ptr[GDBusMethodInfo] = g_dbus_method_invocation_get_method_info(this.raw.asInstanceOf)
 
-  def getParameters(): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_method_invocation_get_parameters(this.raw)
+  def getMethodName()(using Zone): String = fromCString(g_dbus_method_invocation_get_method_name(this.raw.asInstanceOf).asInstanceOf)
 
-  def getPropertyInfo(): Any /* Some(DBusPropertyInfo): const GDBusPropertyInfo**/ = g_dbus_method_invocation_get_property_info(this.raw)
+  def getObjectPath()(using Zone): String = fromCString(g_dbus_method_invocation_get_object_path(this.raw.asInstanceOf).asInstanceOf)
 
-  def getSender(): String = g_dbus_method_invocation_get_sender(this.raw)
+  def getParameters(): Ptr[GVariant] = g_dbus_method_invocation_get_parameters(this.raw.asInstanceOf)
 
-  def getUserData(): Ptr[Byte] = g_dbus_method_invocation_get_user_data(this.raw)
+  def getPropertyInfo(): Ptr[GDBusPropertyInfo] = g_dbus_method_invocation_get_property_info(this.raw.asInstanceOf)
 
-  def returnDbusError(error_name : String, error_message : String): Unit = g_dbus_method_invocation_return_dbus_error(this.raw, error_name, error_message)
+  def getSender()(using Zone): String = fromCString(g_dbus_method_invocation_get_sender(this.raw.asInstanceOf).asInstanceOf)
 
-  def returnErrorLiteral(domain : Any /* Some(GLib.Quark): GQuark*/, code : Int, message : String): Unit = g_dbus_method_invocation_return_error_literal(this.raw, domain, code, message)
+  def getUserData(): Ptr[Byte] = g_dbus_method_invocation_get_user_data(this.raw.asInstanceOf).value
 
-  def returnErrorValist(domain : Any /* Some(GLib.Quark): GQuark*/, code : Int, format : String, var_args : Any /* Some(va_list): va_list*/): Unit = g_dbus_method_invocation_return_error_valist(this.raw, domain, code, format, var_args)
+  def returnDbusError(error_name : String | CString, error_message : String | CString)(using Zone): Unit = g_dbus_method_invocation_return_dbus_error(this.raw.asInstanceOf, __sn_extract_string(error_name).asInstanceOf[Ptr[gchar]], __sn_extract_string(error_message).asInstanceOf[Ptr[gchar]])
 
-  def returnGerror(error : Any /* Some(GLib.Error): const GError**/): Unit = g_dbus_method_invocation_return_gerror(this.raw, error)
+  def returnErrorLiteral(domain : GQuark, code : Int, message : String | CString)(using Zone): Unit = g_dbus_method_invocation_return_error_literal(this.raw.asInstanceOf, domain, gint(code), __sn_extract_string(message).asInstanceOf[Ptr[gchar]])
 
-  def returnValue(parameters : Any /* Some(GLib.Variant): GVariant**/): Unit = g_dbus_method_invocation_return_value(this.raw, parameters)
+  def returnErrorValist(domain : GQuark, code : Int, format : String | CString, var_args : CVarArgList)(using Zone): Unit = g_dbus_method_invocation_return_error_valist(this.raw.asInstanceOf, domain, gint(code), __sn_extract_string(format).asInstanceOf[Ptr[gchar]], var_args)
 
-  def returnValueWithUnixFdList(parameters : Any /* Some(GLib.Variant): GVariant**/, fd_list : sn.gnome.gio.fluent.UnixFDList): Unit = g_dbus_method_invocation_return_value_with_unix_fd_list(this.raw, parameters, fd_list.raw)
+  def returnGerror(error : Ptr[GError]): Unit = g_dbus_method_invocation_return_gerror(this.raw.asInstanceOf, error)
 
-  def takeError(error : Any /* Some(GLib.Error): GError**/): Unit = g_dbus_method_invocation_take_error(this.raw, error)
+  def returnValue(parameters : Ptr[GVariant]): Unit = g_dbus_method_invocation_return_value(this.raw.asInstanceOf, parameters)
 
+  def returnValueWithUnixFdList(parameters : Ptr[GVariant], fd_list : UnixFDList): Unit = g_dbus_method_invocation_return_value_with_unix_fd_list(this.raw.asInstanceOf, parameters, fd_list.getUnsafeRawPointer().asInstanceOf)
+
+  def takeError(error : Ptr[GError]): Unit = g_dbus_method_invocation_take_error(this.raw.asInstanceOf, error)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusMethodInvocation
-

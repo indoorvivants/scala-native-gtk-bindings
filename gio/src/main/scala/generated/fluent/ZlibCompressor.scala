@@ -4,14 +4,19 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class ZlibCompressor(private[fluent] val raw: Ptr[GZlibCompressor]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Converter:
-  def getFileInfo(): sn.gnome.gio.fluent.FileInfo = g_zlib_compressor_get_file_info(this.raw)
+import sn.gnome.gio.fluent.Converter
+import sn.gnome.gio.fluent.FileInfo
+import sn.gnome.gobject.fluent.Object
 
-  def setFileInfo(file_info : sn.gnome.gio.fluent.FileInfo): Unit = g_zlib_compressor_set_file_info(this.raw, file_info.raw)
+class ZlibCompressor(raw: Ptr[GZlibCompressor]) extends Object(raw.asInstanceOf), Converter:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+  def getFileInfo(): FileInfo = new FileInfo(g_zlib_compressor_get_file_info(this.raw.asInstanceOf).asInstanceOf)
+
+  def setFileInfo(file_info : FileInfo): Unit = g_zlib_compressor_set_file_info(this.raw.asInstanceOf, file_info.getUnsafeRawPointer().asInstanceOf)
 
 end ZlibCompressor
 
 object ZlibCompressor:
-  def apply(format : GZlibCompressorFormat, level : Int): ZlibCompressor = ZlibCompressor(g_zlib_compressor_new(format, level))
-
+  def apply(format : GZlibCompressorFormat, level : Int): ZlibCompressor = new ZlibCompressor(g_zlib_compressor_new(format, level).asInstanceOf)
 end ZlibCompressor

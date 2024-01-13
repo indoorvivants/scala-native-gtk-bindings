@@ -1,6 +1,10 @@
 package sn.gnome.gio.fluent
 
-import sn.gnome.gio.internal.*
+import _root_.sn.gnome.gio.internal.*
+
+import _root_.scala.scalanative.unsafe.*
 
 
-trait Seekable
+trait Seekable:
+  def getUnsafeRawPointer(): Ptr[Byte]
+end Seekable

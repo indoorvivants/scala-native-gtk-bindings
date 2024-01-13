@@ -4,24 +4,37 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusObjectManagerClient(private[fluent] val raw: Ptr[GDBusObjectManagerClient]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.AsyncInitable, sn.gnome.gio.fluent.DBusObjectManager, sn.gnome.gio.fluent.Initable:
-  def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_object_manager_client_get_connection(this.raw)
+import sn.gnome.gio.fluent.AsyncInitable
+import sn.gnome.gio.fluent.DBusConnection
+import sn.gnome.gio.fluent.DBusObjectManager
+import sn.gnome.gio.fluent.Initable
+import sn.gnome.gio.internal.GDBusObjectManagerClientFlags
+import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
 
-  def getFlags(): Any /* Some(DBusObjectManagerClientFlags): GDBusObjectManagerClientFlags*/ = g_dbus_object_manager_client_get_flags(this.raw)
+class DBusObjectManagerClient(raw: Ptr[GDBusObjectManagerClient]) extends Object(raw.asInstanceOf), AsyncInitable, DBusObjectManager, Initable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getName(): String = g_dbus_object_manager_client_get_name(this.raw)
+  def getConnection(): DBusConnection = new DBusConnection(g_dbus_object_manager_client_get_connection(this.raw.asInstanceOf).asInstanceOf)
 
-  def getNameOwner(): Any /* Some(utf8): gchar**/ = g_dbus_object_manager_client_get_name_owner(this.raw)
+  def getFlags(): GDBusObjectManagerClientFlags = g_dbus_object_manager_client_get_flags(this.raw.asInstanceOf)
+
+  def getName()(using Zone): String = fromCString(g_dbus_object_manager_client_get_name(this.raw.asInstanceOf).asInstanceOf)
+
+  def getNameOwner()(using Zone): String = fromCString(g_dbus_object_manager_client_get_name_owner(this.raw.asInstanceOf).asInstanceOf)
 
 end DBusObjectManagerClient
 
 object DBusObjectManagerClient:
-  def finish(res : sn.gnome.gio.fluent.AsyncResult): DBusObjectManagerClient = DBusObjectManagerClient(g_dbus_object_manager_client_new_finish(res.raw))
+  def finish(res : AsyncResult): DBusObjectManagerClient = new DBusObjectManagerClient(g_dbus_object_manager_client_new_finish(res.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def forBusFinish(res : AsyncResult): DBusObjectManagerClient = new DBusObjectManagerClient(g_dbus_object_manager_client_new_for_bus_finish(res.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def forBusSync(bus_type : GBusType, flags : GDBusObjectManagerClientFlags, name : String | CString, object_path : String | CString, get_proxy_type_func : GDBusProxyTypeFunc, get_proxy_type_user_data : Ptr[Byte], get_proxy_type_destroy_notify : GDestroyNotify, cancellable : Cancellable)(using Zone): DBusObjectManagerClient = new DBusObjectManagerClient(g_dbus_object_manager_client_new_for_bus_sync(bus_type, flags, __sn_extract_string(name).asInstanceOf[Ptr[gchar]], __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]], get_proxy_type_func, gpointer(get_proxy_type_user_data), get_proxy_type_destroy_notify, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def sync(connection : DBusConnection, flags : GDBusObjectManagerClientFlags, name : String | CString, object_path : String | CString, get_proxy_type_func : GDBusProxyTypeFunc, get_proxy_type_user_data : Ptr[Byte], get_proxy_type_destroy_notify : GDestroyNotify, cancellable : Cancellable)(using Zone): DBusObjectManagerClient = new DBusObjectManagerClient(g_dbus_object_manager_client_new_sync(connection.getUnsafeRawPointer().asInstanceOf, flags, __sn_extract_string(name).asInstanceOf[Ptr[gchar]], __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]], get_proxy_type_func, gpointer(get_proxy_type_user_data), get_proxy_type_destroy_notify, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def forBusFinish(res : sn.gnome.gio.fluent.AsyncResult): DBusObjectManagerClient = DBusObjectManagerClient(g_dbus_object_manager_client_new_for_bus_finish(res.raw))
-
-  def forBusSync(bus_type : GBusType, flags : Any /* Some(DBusObjectManagerClientFlags): GDBusObjectManagerClientFlags*/, name : String, object_path : String, get_proxy_type_func : Any /* Some(DBusProxyTypeFunc): GDBusProxyTypeFunc*/, get_proxy_type_user_data : Ptr[Byte], get_proxy_type_destroy_notify : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/, cancellable : sn.gnome.gio.fluent.Cancellable): DBusObjectManagerClient = DBusObjectManagerClient(g_dbus_object_manager_client_new_for_bus_sync(bus_type, flags, name, object_path, get_proxy_type_func, get_proxy_type_user_data, get_proxy_type_destroy_notify, cancellable.raw))
-
-  def sync(connection : sn.gnome.gio.fluent.DBusConnection, flags : Any /* Some(DBusObjectManagerClientFlags): GDBusObjectManagerClientFlags*/, name : String, object_path : String, get_proxy_type_func : Any /* Some(DBusProxyTypeFunc): GDBusProxyTypeFunc*/, get_proxy_type_user_data : Ptr[Byte], get_proxy_type_destroy_notify : Any /* Some(GLib.DestroyNotify): GDestroyNotify*/, cancellable : sn.gnome.gio.fluent.Cancellable): DBusObjectManagerClient = DBusObjectManagerClient(g_dbus_object_manager_client_new_sync(connection.raw, flags, name, object_path, get_proxy_type_func, get_proxy_type_user_data, get_proxy_type_destroy_notify, cancellable.raw))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusObjectManagerClient

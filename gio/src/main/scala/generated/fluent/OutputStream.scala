@@ -4,66 +4,78 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class OutputStream(private[fluent] val raw: Ptr[GOutputStream]) extends sn.gnome.gobject.fluent.Object:
-  def clearPending(): Unit = g_output_stream_clear_pending(this.raw)
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.InputStream
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GOutputStreamSpliceFlags
+import sn.gnome.gio.internal.GOutputVector
+import sn.gnome.glib.internal.GBytes
+import sn.gnome.glib.internal.GError
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.gobject.fluent.Object
 
-  def close(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_output_stream_close(this.raw, cancellable.raw)
+class OutputStream(raw: Ptr[GOutputStream]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def closeAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_close_async(this.raw, io_priority, cancellable.raw, callback, user_data)
+  def clearPending(): Unit = g_output_stream_clear_pending(this.raw.asInstanceOf)
 
-  def closeFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_output_stream_close_finish(this.raw, result.raw)
+  def close(cancellable : Cancellable): Boolean = g_output_stream_close(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def flush(cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_output_stream_flush(this.raw, cancellable.raw)
+  def closeAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_output_stream_close_async(this.raw.asInstanceOf, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def flushAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_flush_async(this.raw, io_priority, cancellable.raw, callback, user_data)
+  def closeFinish(result : AsyncResult): Boolean = g_output_stream_close_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def flushFinish(result : sn.gnome.gio.fluent.AsyncResult): Boolean = g_output_stream_flush_finish(this.raw, result.raw)
+  def flush(cancellable : Cancellable): Boolean = g_output_stream_flush(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def hasPending(): Boolean = g_output_stream_has_pending(this.raw)
+  def flushAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_output_stream_flush_async(this.raw.asInstanceOf, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def isClosed(): Boolean = g_output_stream_is_closed(this.raw)
+  def flushFinish(result : AsyncResult): Boolean = g_output_stream_flush_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def isClosing(): Boolean = g_output_stream_is_closing(this.raw)
+  def hasPending(): Boolean = g_output_stream_has_pending(this.raw.asInstanceOf).value.!=(0)
 
-  def setPending(): Boolean = g_output_stream_set_pending(this.raw)
+  def isClosed(): Boolean = g_output_stream_is_closed(this.raw.asInstanceOf).value.!=(0)
 
-  def splice(source : sn.gnome.gio.fluent.InputStream, flags : Any /* Some(OutputStreamSpliceFlags): GOutputStreamSpliceFlags*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_output_stream_splice(this.raw, source.raw, flags, cancellable.raw)
+  def isClosing(): Boolean = g_output_stream_is_closing(this.raw.asInstanceOf).value.!=(0)
 
-  def spliceAsync(source : sn.gnome.gio.fluent.InputStream, flags : Any /* Some(OutputStreamSpliceFlags): GOutputStreamSpliceFlags*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_splice_async(this.raw, source.raw, flags, io_priority, cancellable.raw, callback, user_data)
+  def setPending(): Boolean = g_output_stream_set_pending(this.raw.asInstanceOf).value.!=(0)
 
-  def spliceFinish(result : sn.gnome.gio.fluent.AsyncResult): Any /* Some(gssize): gssize*/ = g_output_stream_splice_finish(this.raw, result.raw)
+  def splice(source : InputStream, flags : GOutputStreamSpliceFlags, cancellable : Cancellable): Any /* Some(gssize): `gssize` */ = g_output_stream_splice(this.raw.asInstanceOf, source.getUnsafeRawPointer().asInstanceOf, flags, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def vprintf(bytes_written : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable, error : Any /* Some(GLib.Error): GError***/, format : String, args : Any /* Some(va_list): va_list*/): Boolean = g_output_stream_vprintf(this.raw, bytes_written, cancellable.raw, error, format, args)
+  def spliceAsync(source : InputStream, flags : GOutputStreamSpliceFlags, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_output_stream_splice_async(this.raw.asInstanceOf, source.getUnsafeRawPointer().asInstanceOf, flags, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def write(buffer : Array[Byte], count : Any /* Some(gsize): gsize*/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_output_stream_write(this.raw, buffer, count, cancellable.raw)
+  def spliceFinish(result : AsyncResult): Any /* Some(gssize): `gssize` */ = g_output_stream_splice_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf)
 
-  def writeAll(buffer : Array[Byte], count : Any /* Some(gsize): gsize*/, bytes_written : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_output_stream_write_all(this.raw, buffer, count, bytes_written, cancellable.raw)
+  def vprintf(bytes_written : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable, error : Ptr[Ptr[GError]], format : String | CString, args : CVarArgList)(using Zone): Boolean = g_output_stream_vprintf(this.raw.asInstanceOf, bytes_written, cancellable.getUnsafeRawPointer().asInstanceOf, error, __sn_extract_string(format).asInstanceOf[Ptr[gchar]], args).value.!=(0)
 
-  def writeAllAsync(buffer : Array[Byte], count : Any /* Some(gsize): gsize*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_write_all_async(this.raw, buffer, count, io_priority, cancellable.raw, callback, user_data)
+  def writeAllFinish(result : AsyncResult, bytes_written : Any /* Some(gsize): `gsize*` */): Boolean = g_output_stream_write_all_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, bytes_written).value.!=(0)
 
-  def writeAllFinish(result : sn.gnome.gio.fluent.AsyncResult, bytes_written : Any /* Some(gsize): gsize**/): Boolean = g_output_stream_write_all_finish(this.raw, result.raw, bytes_written)
+  def writeBytes(bytes : Ptr[GBytes], cancellable : Cancellable): Any /* Some(gssize): `gssize` */ = g_output_stream_write_bytes(this.raw.asInstanceOf, bytes, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def writeAsync(buffer : Array[Byte], count : Any /* Some(gsize): gsize*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_write_async(this.raw, buffer, count, io_priority, cancellable.raw, callback, user_data)
+  def writeBytesAsync(bytes : Ptr[GBytes], io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_output_stream_write_bytes_async(this.raw.asInstanceOf, bytes, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def writeBytes(bytes : Any /* Some(GLib.Bytes): GBytes**/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gssize): gssize*/ = g_output_stream_write_bytes(this.raw, bytes, cancellable.raw)
+  def writeBytesFinish(result : AsyncResult): Any /* Some(gssize): `gssize` */ = g_output_stream_write_bytes_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf)
 
-  def writeBytesAsync(bytes : Any /* Some(GLib.Bytes): GBytes**/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_write_bytes_async(this.raw, bytes, io_priority, cancellable.raw, callback, user_data)
+  def writeFinish(result : AsyncResult): Any /* Some(gssize): `gssize` */ = g_output_stream_write_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf)
 
-  def writeBytesFinish(result : sn.gnome.gio.fluent.AsyncResult): Any /* Some(gssize): gssize*/ = g_output_stream_write_bytes_finish(this.raw, result.raw)
+  def writev(vectors : Ptr[GOutputVector], n_vectors : Any /* Some(gsize): `gsize` */, bytes_written : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable): Boolean = g_output_stream_writev(this.raw.asInstanceOf, vectors, n_vectors, bytes_written, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def writeFinish(result : sn.gnome.gio.fluent.AsyncResult): Any /* Some(gssize): gssize*/ = g_output_stream_write_finish(this.raw, result.raw)
+  def writevAll(vectors : Ptr[GOutputVector], n_vectors : Any /* Some(gsize): `gsize` */, bytes_written : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable): Boolean = g_output_stream_writev_all(this.raw.asInstanceOf, vectors, n_vectors, bytes_written, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def writev(vectors : Array[Byte], n_vectors : Any /* Some(gsize): gsize*/, bytes_written : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_output_stream_writev(this.raw, vectors, n_vectors, bytes_written, cancellable.raw)
+  def writevAllAsync(vectors : Ptr[GOutputVector], n_vectors : Any /* Some(gsize): `gsize` */, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_output_stream_writev_all_async(this.raw.asInstanceOf, vectors, n_vectors, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def writevAll(vectors : Array[Byte], n_vectors : Any /* Some(gsize): gsize*/, bytes_written : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Boolean = g_output_stream_writev_all(this.raw, vectors, n_vectors, bytes_written, cancellable.raw)
+  def writevAllFinish(result : AsyncResult, bytes_written : Any /* Some(gsize): `gsize*` */): Boolean = g_output_stream_writev_all_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, bytes_written).value.!=(0)
 
-  def writevAllAsync(vectors : Array[Byte], n_vectors : Any /* Some(gsize): gsize*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_writev_all_async(this.raw, vectors, n_vectors, io_priority, cancellable.raw, callback, user_data)
+  def writevAsync(vectors : Ptr[GOutputVector], n_vectors : Any /* Some(gsize): `gsize` */, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_output_stream_writev_async(this.raw.asInstanceOf, vectors, n_vectors, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def writevAllFinish(result : sn.gnome.gio.fluent.AsyncResult, bytes_written : Any /* Some(gsize): gsize**/): Boolean = g_output_stream_writev_all_finish(this.raw, result.raw, bytes_written)
+  def writevFinish(result : AsyncResult, bytes_written : Any /* Some(gsize): `gsize*` */): Boolean = g_output_stream_writev_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, bytes_written).value.!=(0)
 
-  def writevAsync(vectors : Array[Byte], n_vectors : Any /* Some(gsize): gsize*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_output_stream_writev_async(this.raw, vectors, n_vectors, io_priority, cancellable.raw, callback, user_data)
 
-  def writevFinish(result : sn.gnome.gio.fluent.AsyncResult, bytes_written : Any /* Some(gsize): gsize**/): Boolean = g_output_stream_writev_finish(this.raw, result.raw, bytes_written)
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end OutputStream
-

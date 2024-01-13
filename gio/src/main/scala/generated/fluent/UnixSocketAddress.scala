@@ -4,22 +4,37 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class UnixSocketAddress(private[fluent] val raw: Ptr[GUnixSocketAddress]) extends sn.gnome.gio.fluent.SocketAddress, sn.gnome.gio.fluent.SocketConnectable:
-  def getAddressType(): GUnixSocketAddressType = g_unix_socket_address_get_address_type(this.raw)
+import sn.gnome.gio.fluent.SocketAddress
+import sn.gnome.gio.fluent.SocketConnectable
+import sn.gnome.gio.internal.GUnixSocketAddressType
 
-  def getIsAbstract(): Boolean = g_unix_socket_address_get_is_abstract(this.raw)
+class UnixSocketAddress(raw: Ptr[GUnixSocketAddress]) extends SocketAddress(raw.asInstanceOf), SocketConnectable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getPath(): String = g_unix_socket_address_get_path(this.raw)
+  def getAddressType(): GUnixSocketAddressType = g_unix_socket_address_get_address_type(this.raw.asInstanceOf)
 
-  def getPathLen(): Any /* Some(gsize): gsize*/ = g_unix_socket_address_get_path_len(this.raw)
+  def getIsAbstract(): Boolean = g_unix_socket_address_get_is_abstract(this.raw.asInstanceOf).value.!=(0)
 
+  def getPath()(using Zone): String = g_unix_socket_address_get_path(this.raw.asInstanceOf)
+
+  def getPathLen(): Any /* Some(gsize): `gsize` */ = g_unix_socket_address_get_path_len(this.raw.asInstanceOf)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end UnixSocketAddress
 
 object UnixSocketAddress:
-  def apply(path : String): UnixSocketAddress = UnixSocketAddress(g_unix_socket_address_new(path))
+  def apply(path : String | CString)(using Zone): UnixSocketAddress = new UnixSocketAddress(g_unix_socket_address_new(__sn_extract_string(path).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
-  def abstract(path : Array[Byte], path_len : Int): UnixSocketAddress = UnixSocketAddress(g_unix_socket_address_new_abstract(path, path_len))
-
-  def withType(path : Array[Byte], path_len : Int, `type` : GUnixSocketAddressType): UnixSocketAddress = UnixSocketAddress(g_unix_socket_address_new_with_type(path, path_len, `type`))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end UnixSocketAddress

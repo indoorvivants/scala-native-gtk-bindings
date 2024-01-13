@@ -4,32 +4,50 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DBusInterfaceSkeleton(private[fluent] val raw: Ptr[GDBusInterfaceSkeleton]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.DBusInterface:
-  def export(connection : sn.gnome.gio.fluent.DBusConnection, object_path : String): Boolean = g_dbus_interface_skeleton_export(this.raw, connection.raw, object_path)
+import sn.gnome.gio.fluent.DBusConnection
+import sn.gnome.gio.fluent.DBusInterface
+import sn.gnome.gio.internal.GDBusInterfaceInfo
+import sn.gnome.gio.internal.GDBusInterfaceSkeletonFlags
+import sn.gnome.gio.internal.GDBusInterfaceVTable
+import sn.gnome.glib.internal.GList
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gchar
+import sn.gnome.gobject.fluent.Object
 
-  def flush(): Unit = g_dbus_interface_skeleton_flush(this.raw)
+class DBusInterfaceSkeleton(raw: Ptr[GDBusInterfaceSkeleton]) extends Object(raw.asInstanceOf), DBusInterface:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getConnection(): sn.gnome.gio.fluent.DBusConnection = g_dbus_interface_skeleton_get_connection(this.raw)
+  def export(connection : DBusConnection, object_path : String | CString)(using Zone): Boolean = g_dbus_interface_skeleton_export(this.raw.asInstanceOf, connection.getUnsafeRawPointer().asInstanceOf, __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]]).value.!=(0)
 
-  def getConnections(): Any /* Some(GLib.List): GList**/ = g_dbus_interface_skeleton_get_connections(this.raw)
+  def flush(): Unit = g_dbus_interface_skeleton_flush(this.raw.asInstanceOf)
 
-  def getFlags(): Any /* Some(DBusInterfaceSkeletonFlags): GDBusInterfaceSkeletonFlags*/ = g_dbus_interface_skeleton_get_flags(this.raw)
+  def getConnection(): DBusConnection = new DBusConnection(g_dbus_interface_skeleton_get_connection(this.raw.asInstanceOf).asInstanceOf)
 
-  def getInfo(): Any /* Some(DBusInterfaceInfo): GDBusInterfaceInfo**/ = g_dbus_interface_skeleton_get_info(this.raw)
+  def getConnections(): Ptr[GList] = g_dbus_interface_skeleton_get_connections(this.raw.asInstanceOf)
 
-  def getObjectPath(): String = g_dbus_interface_skeleton_get_object_path(this.raw)
+  def getFlags(): GDBusInterfaceSkeletonFlags = g_dbus_interface_skeleton_get_flags(this.raw.asInstanceOf)
 
-  def getProperties(): Any /* Some(GLib.Variant): GVariant**/ = g_dbus_interface_skeleton_get_properties(this.raw)
+  def getInfo(): Ptr[GDBusInterfaceInfo] = g_dbus_interface_skeleton_get_info(this.raw.asInstanceOf)
 
-  def getVtable(): Any /* Some(DBusInterfaceVTable): GDBusInterfaceVTable**/ = g_dbus_interface_skeleton_get_vtable(this.raw)
+  def getObjectPath()(using Zone): String = fromCString(g_dbus_interface_skeleton_get_object_path(this.raw.asInstanceOf).asInstanceOf)
 
-  def hasConnection(connection : sn.gnome.gio.fluent.DBusConnection): Boolean = g_dbus_interface_skeleton_has_connection(this.raw, connection.raw)
+  def getProperties(): Ptr[GVariant] = g_dbus_interface_skeleton_get_properties(this.raw.asInstanceOf)
 
-  def setFlags(flags : Any /* Some(DBusInterfaceSkeletonFlags): GDBusInterfaceSkeletonFlags*/): Unit = g_dbus_interface_skeleton_set_flags(this.raw, flags)
+  def getVtable(): Ptr[GDBusInterfaceVTable] = g_dbus_interface_skeleton_get_vtable(this.raw.asInstanceOf)
 
-  def unexport(): Unit = g_dbus_interface_skeleton_unexport(this.raw)
+  def hasConnection(connection : DBusConnection): Boolean = g_dbus_interface_skeleton_has_connection(this.raw.asInstanceOf, connection.getUnsafeRawPointer().asInstanceOf).value.!=(0)
 
-  def unexportFromConnection(connection : sn.gnome.gio.fluent.DBusConnection): Unit = g_dbus_interface_skeleton_unexport_from_connection(this.raw, connection.raw)
+  def setFlags(flags : GDBusInterfaceSkeletonFlags): Unit = g_dbus_interface_skeleton_set_flags(this.raw.asInstanceOf, flags)
 
+  def unexport(): Unit = g_dbus_interface_skeleton_unexport(this.raw.asInstanceOf)
+
+  def unexportFromConnection(connection : DBusConnection): Unit = g_dbus_interface_skeleton_unexport_from_connection(this.raw.asInstanceOf, connection.getUnsafeRawPointer().asInstanceOf)
+
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DBusInterfaceSkeleton
-

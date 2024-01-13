@@ -4,18 +4,29 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class SimpleAction(private[fluent] val raw: Ptr[GSimpleAction]) extends sn.gnome.gobject.fluent.Object, sn.gnome.gio.fluent.Action:
-  def setEnabled(enabled : Boolean): Unit = g_simple_action_set_enabled(this.raw, enabled)
+import sn.gnome.gio.fluent.Action
+import sn.gnome.glib.internal.GVariant
+import sn.gnome.gobject.fluent.Object
 
-  def setState(value : Any /* Some(GLib.Variant): GVariant**/): Unit = g_simple_action_set_state(this.raw, value)
+class SimpleAction(raw: Ptr[GSimpleAction]) extends Object(raw.asInstanceOf), Action:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def setStateHint(state_hint : Any /* Some(GLib.Variant): GVariant**/): Unit = g_simple_action_set_state_hint(this.raw, state_hint)
+  def setEnabled(enabled : Boolean): Unit = g_simple_action_set_enabled(this.raw.asInstanceOf, enabled)
+
+  def setState(value : Ptr[GVariant]): Unit = g_simple_action_set_state(this.raw.asInstanceOf, value)
+
+  def setStateHint(state_hint : Ptr[GVariant]): Unit = g_simple_action_set_state_hint(this.raw.asInstanceOf, state_hint)
 
 end SimpleAction
 
 object SimpleAction:
-  def apply(name : String, parameter_type : Any /* Some(GLib.VariantType): const GVariantType**/): SimpleAction = SimpleAction(g_simple_action_new(name, parameter_type))
+  def apply(name : String | CString, parameter_type : Ptr[GVariantType])(using Zone): SimpleAction = new SimpleAction(g_simple_action_new(__sn_extract_string(name).asInstanceOf[Ptr[gchar]], parameter_type).asInstanceOf)
+  def stateful(name : String | CString, parameter_type : Ptr[GVariantType], state : Ptr[GVariant])(using Zone): SimpleAction = new SimpleAction(g_simple_action_new_stateful(__sn_extract_string(name).asInstanceOf[Ptr[gchar]], parameter_type, state).asInstanceOf)
 
-  def stateful(name : String, parameter_type : Any /* Some(GLib.VariantType): const GVariantType**/, state : Any /* Some(GLib.Variant): GVariant**/): SimpleAction = SimpleAction(g_simple_action_new_stateful(name, parameter_type, state))
-
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end SimpleAction

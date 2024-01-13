@@ -7,7 +7,7 @@ def renderClassConstructor(cls: AugmentedClass, constructor: Constructor)(using
     GlobalKnowledge,
     NamingPolicy,
     RenderingContext,
-    Label[Outcome[String]]
+    Label[String]
 ): List[Effect] =
   val effects = List.newBuilder[Effect]
   val cConstructor = constructor.identifier

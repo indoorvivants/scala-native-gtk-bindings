@@ -4,54 +4,74 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class DataInputStream(private[fluent] val raw: Ptr[GDataInputStream]) extends sn.gnome.gio.fluent.BufferedInputStream, sn.gnome.gio.fluent.Seekable:
-  def getByteOrder(): GDataStreamByteOrder = g_data_input_stream_get_byte_order(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.fluent.AsyncResult
+import sn.gnome.gio.fluent.BufferedInputStream
+import sn.gnome.gio.fluent.Cancellable
+import sn.gnome.gio.fluent.Seekable
+import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GDataStreamByteOrder
+import sn.gnome.gio.internal.GDataStreamNewlineType
+import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.guchar
+import sn.gnome.glib.internal.guint16
+import sn.gnome.glib.internal.guint32
+import sn.gnome.glib.internal.guint64
 
-  def getNewlineType(): GDataStreamNewlineType = g_data_input_stream_get_newline_type(this.raw)
+class DataInputStream(raw: Ptr[GDataInputStream]) extends BufferedInputStream(raw.asInstanceOf), Seekable:
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def readByte(cancellable : sn.gnome.gio.fluent.Cancellable): UByte = g_data_input_stream_read_byte(this.raw, cancellable.raw)
+  def getByteOrder(): GDataStreamByteOrder = g_data_input_stream_get_byte_order(this.raw.asInstanceOf)
 
-  def readInt16(cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gint16): gint16*/ = g_data_input_stream_read_int16(this.raw, cancellable.raw)
+  def getNewlineType(): GDataStreamNewlineType = g_data_input_stream_get_newline_type(this.raw.asInstanceOf)
 
-  def readInt32(cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gint32): gint32*/ = g_data_input_stream_read_int32(this.raw, cancellable.raw)
+  def readByte(cancellable : Cancellable): UByte = g_data_input_stream_read_byte(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def readInt64(cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(gint64): gint64*/ = g_data_input_stream_read_int64(this.raw, cancellable.raw)
+  def readInt16(cancellable : Cancellable): Any /* Some(gint16): `gint16` */ = g_data_input_stream_read_int16(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def readLine(length : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Array[Byte] = g_data_input_stream_read_line(this.raw, length, cancellable.raw)
+  def readInt32(cancellable : Cancellable): Any /* Some(gint32): `gint32` */ = g_data_input_stream_read_int32(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def readLineAsync(io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_data_input_stream_read_line_async(this.raw, io_priority, cancellable.raw, callback, user_data)
+  def readInt64(cancellable : Cancellable): Any /* Some(gint64): `gint64` */ = g_data_input_stream_read_int64(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def readLineFinish(result : sn.gnome.gio.fluent.AsyncResult, length : Any /* Some(gsize): gsize**/): Array[Byte] = g_data_input_stream_read_line_finish(this.raw, result.raw, length)
+  def readLineAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_data_input_stream_read_line_async(this.raw.asInstanceOf, gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def readLineFinishUtf8(result : sn.gnome.gio.fluent.AsyncResult, length : Any /* Some(gsize): gsize**/): Any /* Some(utf8): char**/ = g_data_input_stream_read_line_finish_utf8(this.raw, result.raw, length)
+  def readLineFinishUtf8(result : AsyncResult, length : Any /* Some(gsize): `gsize*` */)(using Zone): String = fromCString(g_data_input_stream_read_line_finish_utf8(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length).asInstanceOf)
 
-  def readLineUtf8(length : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(utf8): char**/ = g_data_input_stream_read_line_utf8(this.raw, length, cancellable.raw)
+  def readLineUtf8(length : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_line_utf8(this.raw.asInstanceOf, length, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def readUint16(cancellable : sn.gnome.gio.fluent.Cancellable): UShort = g_data_input_stream_read_uint16(this.raw, cancellable.raw)
+  def readUint16(cancellable : Cancellable): UShort = g_data_input_stream_read_uint16(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def readUint32(cancellable : sn.gnome.gio.fluent.Cancellable): UInt = g_data_input_stream_read_uint32(this.raw, cancellable.raw)
+  def readUint32(cancellable : Cancellable): UInt = g_data_input_stream_read_uint32(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def readUint64(cancellable : sn.gnome.gio.fluent.Cancellable): ULong = g_data_input_stream_read_uint64(this.raw, cancellable.raw)
+  def readUint64(cancellable : Cancellable): ULong = g_data_input_stream_read_uint64(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def readUntil(stop_chars : String, length : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(utf8): char**/ = g_data_input_stream_read_until(this.raw, stop_chars, length, cancellable.raw)
+  def readUntil(stop_chars : String | CString, length : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_until(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], length, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def readUntilAsync(stop_chars : String, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_data_input_stream_read_until_async(this.raw, stop_chars, io_priority, cancellable.raw, callback, user_data)
+  def readUntilAsync(stop_chars : String | CString, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_data_input_stream_read_until_async(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def readUntilFinish(result : sn.gnome.gio.fluent.AsyncResult, length : Any /* Some(gsize): gsize**/): Any /* Some(utf8): char**/ = g_data_input_stream_read_until_finish(this.raw, result.raw, length)
+  def readUntilFinish(result : AsyncResult, length : Any /* Some(gsize): `gsize*` */)(using Zone): String = fromCString(g_data_input_stream_read_until_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length).asInstanceOf)
 
-  def readUpto(stop_chars : String, stop_chars_len : Any /* Some(gssize): gssize*/, length : Any /* Some(gsize): gsize**/, cancellable : sn.gnome.gio.fluent.Cancellable): Any /* Some(utf8): char**/ = g_data_input_stream_read_upto(this.raw, stop_chars, stop_chars_len, length, cancellable.raw)
+  def readUpto(stop_chars : String | CString, stop_chars_len : Any /* Some(gssize): `gssize` */, length : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_upto(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], stop_chars_len, length, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def readUptoAsync(stop_chars : String, stop_chars_len : Any /* Some(gssize): gssize*/, io_priority : Int, cancellable : sn.gnome.gio.fluent.Cancellable, callback : Any /* Some(AsyncReadyCallback): GAsyncReadyCallback*/, user_data : Ptr[Byte]): Unit = g_data_input_stream_read_upto_async(this.raw, stop_chars, stop_chars_len, io_priority, cancellable.raw, callback, user_data)
+  def readUptoAsync(stop_chars : String | CString, stop_chars_len : Any /* Some(gssize): `gssize` */, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_data_input_stream_read_upto_async(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], stop_chars_len, gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def readUptoFinish(result : sn.gnome.gio.fluent.AsyncResult, length : Any /* Some(gsize): gsize**/): Any /* Some(utf8): char**/ = g_data_input_stream_read_upto_finish(this.raw, result.raw, length)
+  def readUptoFinish(result : AsyncResult, length : Any /* Some(gsize): `gsize*` */)(using Zone): String = fromCString(g_data_input_stream_read_upto_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length).asInstanceOf)
 
-  def setByteOrder(order : GDataStreamByteOrder): Unit = g_data_input_stream_set_byte_order(this.raw, order)
+  def setByteOrder(order : GDataStreamByteOrder): Unit = g_data_input_stream_set_byte_order(this.raw.asInstanceOf, order)
 
-  def setNewlineType(`type` : GDataStreamNewlineType): Unit = g_data_input_stream_set_newline_type(this.raw, `type`)
+  def setNewlineType(`type` : GDataStreamNewlineType): Unit = g_data_input_stream_set_newline_type(this.raw.asInstanceOf, `type`)
 
+
+  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+    str match
+      case s: String => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end DataInputStream
 
 object DataInputStream:
-  def apply(base_stream : sn.gnome.gio.fluent.InputStream): DataInputStream = DataInputStream(g_data_input_stream_new(base_stream.raw))
-
+  def apply(base_stream : InputStream): DataInputStream = new DataInputStream(g_data_input_stream_new(base_stream.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 end DataInputStream

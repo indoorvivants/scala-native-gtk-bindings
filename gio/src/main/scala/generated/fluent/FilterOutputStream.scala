@@ -4,12 +4,15 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FilterOutputStream(private[fluent] val raw: Ptr[GFilterOutputStream]) extends sn.gnome.gio.fluent.OutputStream:
-  def getBaseStream(): sn.gnome.gio.fluent.OutputStream = g_filter_output_stream_get_base_stream(this.raw)
+import sn.gnome.gio.fluent.OutputStream
 
-  def getCloseBaseStream(): Boolean = g_filter_output_stream_get_close_base_stream(this.raw)
+class FilterOutputStream(raw: Ptr[GFilterOutputStream]) extends OutputStream(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def setCloseBaseStream(close_base : Boolean): Unit = g_filter_output_stream_set_close_base_stream(this.raw, close_base)
+  def getBaseStream(): OutputStream = new OutputStream(g_filter_output_stream_get_base_stream(this.raw.asInstanceOf).asInstanceOf)
+
+  def getCloseBaseStream(): Boolean = g_filter_output_stream_get_close_base_stream(this.raw.asInstanceOf).value.!=(0)
+
+  def setCloseBaseStream(close_base : Boolean): Unit = g_filter_output_stream_set_close_base_stream(this.raw.asInstanceOf, close_base)
 
 end FilterOutputStream
-
