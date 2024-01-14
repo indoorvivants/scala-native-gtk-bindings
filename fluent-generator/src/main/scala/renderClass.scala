@@ -11,7 +11,7 @@ def renderClass(
     GlobalKnowledge,
     NamingPolicy,
     Label[String]
-): WithEffects[Nothing] =
+): WithEffects[Unit] =
   WithEffects.collect: coll =>
     val cTypeName = cls.attributes.get("@type").map(_.as[String])
     val cType =
@@ -19,12 +19,10 @@ def renderClass(
     val data = s"(raw: Ptr[$cType])"
 
     val extensions =
-      renderClassExtensions(cls.parent, cls.implements)
-
-    coll.addAll(extensions.getEffects)
+      coll.observe(renderClassExtensions(cls.parent, cls.implements))
 
     val classHeader =
-      s"class ${cls.name}$data${extensions.getValue.getOrElse("")}"
+      s"class ${cls.name}$data${extensions}"
 
     val classHasAnyMembers =
       cls.methods.nonEmpty
@@ -47,7 +45,7 @@ def renderClass(
           case None =>
             val result =
               transact[String]:
-                try coll.addAll(renderClassMethod(cls, meth))
+                try coll.observe(renderClassMethod(cls, meth))
                 catch
                   case exc =>
                     break(exc.toString())
@@ -65,5 +63,5 @@ def renderClass(
             emptyLine()
             df()
 
-    renderClassCompanionObject(cls)
+    coll.observe(renderClassCompanionObject(cls))
 end renderClass

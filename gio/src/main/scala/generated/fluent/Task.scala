@@ -4,6 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
+import _root_.scala.scalanative.unsigned.*
 import sn.gnome.gio.fluent.AsyncResult
 import sn.gnome.gio.fluent.Cancellable
 import sn.gnome.gio.internal.GTaskThreadFunc
@@ -15,6 +16,7 @@ import sn.gnome.glib.internal.GSourceFunc
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.gssize
 import sn.gnome.gobject.fluent.Object
 import sn.gnome.gobject.internal.GValue
 
@@ -47,7 +49,7 @@ class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
 
   def propagateBoolean(): Boolean = g_task_propagate_boolean(this.raw.asInstanceOf).value.!=(0)
 
-  def propagateInt(): Any /* Some(gssize): `gssize` */ = g_task_propagate_int(this.raw.asInstanceOf)
+  def propagateInt(): ULong = g_task_propagate_int(this.raw.asInstanceOf).value
 
   def propagatePointer(): Ptr[Byte] = g_task_propagate_pointer(this.raw.asInstanceOf).value
 
@@ -59,7 +61,7 @@ class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
 
   def returnErrorIfCancelled(): Boolean = g_task_return_error_if_cancelled(this.raw.asInstanceOf).value.!=(0)
 
-  def returnInt(result : Any /* Some(gssize): `gssize` */): Unit = g_task_return_int(this.raw.asInstanceOf, result)
+  def returnInt(result : ULong): Unit = g_task_return_int(this.raw.asInstanceOf, gssize(result))
 
   def returnPointer(result : Ptr[Byte], result_destroy : GDestroyNotify): Unit = g_task_return_pointer(this.raw.asInstanceOf, gpointer(result), result_destroy)
 

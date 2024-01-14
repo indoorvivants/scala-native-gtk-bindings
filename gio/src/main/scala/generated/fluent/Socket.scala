@@ -26,6 +26,8 @@ import sn.gnome.glib.internal.GIOCondition
 import sn.gnome.glib.internal.GSource
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gsize
+import sn.gnome.glib.internal.gssize
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object
 
@@ -52,7 +54,7 @@ class Socket(raw: Ptr[GSocket]) extends Object(raw.asInstanceOf), DatagramBased,
 
   def createSource(condition : GIOCondition, cancellable : Cancellable): Ptr[GSource] = g_socket_create_source(this.raw.asInstanceOf, condition, cancellable.getUnsafeRawPointer().asInstanceOf)
 
-  def getAvailableBytes(): Any /* Some(gssize): `gssize` */ = g_socket_get_available_bytes(this.raw.asInstanceOf)
+  def getAvailableBytes(): ULong = g_socket_get_available_bytes(this.raw.asInstanceOf).value
 
   def getBlocking(): Boolean = g_socket_get_blocking(this.raw.asInstanceOf).value.!=(0)
 
@@ -100,13 +102,13 @@ class Socket(raw: Ptr[GSocket]) extends Object(raw.asInstanceOf), DatagramBased,
 
   def listen(): Boolean = g_socket_listen(this.raw.asInstanceOf).value.!=(0)
 
-  def receiveMessage(address : SocketAddress, vectors : Ptr[GInputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Any /* Some(gint): `gint*` */, flags : Any /* Some(gint): `gint*` */, cancellable : Cancellable): Any /* Some(gssize): `gssize` */ = g_socket_receive_message(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, num_messages, flags, cancellable.getUnsafeRawPointer().asInstanceOf)
+  def receiveMessage(address : SocketAddress, vectors : Ptr[GInputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Any /* Some(gint): `gint*` */, flags : Any /* Some(gint): `gint*` */, cancellable : Cancellable): ULong = g_socket_receive_message(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, num_messages, flags, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
   def receiveMessages(messages : Ptr[GInputMessage], num_messages : UInt, flags : Int, cancellable : Cancellable): Int = g_socket_receive_messages(this.raw.asInstanceOf, messages, guint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def sendMessage(address : SocketAddress, vectors : Ptr[GOutputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Int, flags : Int, cancellable : Cancellable): Any /* Some(gssize): `gssize` */ = g_socket_send_message(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, gint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf)
+  def sendMessage(address : SocketAddress, vectors : Ptr[GOutputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Int, flags : Int, cancellable : Cancellable): ULong = g_socket_send_message(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, gint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def sendMessageWithTimeout(address : SocketAddress, vectors : Ptr[GOutputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Int, flags : Int, timeout_us : Any /* Some(gint64): `gint64` */, bytes_written : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable): GPollableReturn = g_socket_send_message_with_timeout(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, gint(num_messages), gint(flags), timeout_us, bytes_written, cancellable.getUnsafeRawPointer().asInstanceOf)
+  def sendMessageWithTimeout(address : SocketAddress, vectors : Ptr[GOutputVector], num_vectors : Int, messages : Ptr[SocketControlMessage], num_messages : Int, flags : Int, timeout_us : Any /* Some(gint64): `gint64` */, bytes_written : Ptr[ULong], cancellable : Cancellable): GPollableReturn = g_socket_send_message_with_timeout(this.raw.asInstanceOf, address.getUnsafeRawPointer().asInstanceOf, vectors, gint(num_vectors), messages, gint(num_messages), gint(flags), timeout_us, bytes_written.asInstanceOf[Ptr[gsize]], cancellable.getUnsafeRawPointer().asInstanceOf)
 
   def sendMessages(messages : Ptr[GOutputMessage], num_messages : UInt, flags : Int, cancellable : Cancellable): Int = g_socket_send_messages(this.raw.asInstanceOf, messages, guint(num_messages), gint(flags), cancellable.getUnsafeRawPointer().asInstanceOf).value
 

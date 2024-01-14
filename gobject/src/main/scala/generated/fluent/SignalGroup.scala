@@ -10,6 +10,7 @@ import sn.gnome.gobject.fluent.Object
 import sn.gnome.gobject.internal.GCallback
 import sn.gnome.gobject.internal.GClosureNotify
 import sn.gnome.gobject.internal.GConnectFlags
+import sn.gnome.gobject.internal.GType
 
 class SignalGroup(raw: Ptr[GSignalGroup]) extends Object(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf

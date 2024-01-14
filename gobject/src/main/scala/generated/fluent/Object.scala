@@ -17,7 +17,9 @@ import sn.gnome.gobject.fluent.ParamSpec
 import sn.gnome.gobject.internal.GBindingFlags
 import sn.gnome.gobject.internal.GBindingTransformFunc
 import sn.gnome.gobject.internal.GClosure
+import sn.gnome.gobject.internal.GParameter
 import sn.gnome.gobject.internal.GToggleNotify
+import sn.gnome.gobject.internal.GType
 import sn.gnome.gobject.internal.GValue
 import sn.gnome.gobject.internal.GWeakNotify
 

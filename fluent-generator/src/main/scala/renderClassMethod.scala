@@ -9,45 +9,37 @@ def renderClassMethod(cls: AugmentedClass, meth: Method)(using
     NamingPolicy,
     Label[String]
 ) =
-  val effects = List.newBuilder[Effect]
-  val camelName = camelify(meth.name)
-  val cMethod = meth.identifier
+  WithEffects.collect: coll =>
+    val camelName = camelify(meth.name)
+    val cMethod = meth.identifier
 
-  val ((params, arguments), paramEffects) =
-    renderParameters(meth.parameters, s"method: ${meth.name}")
+    val renderedParameters =
+      coll.observe(renderParameters(meth.parameters, s"method: ${meth.name}"))
 
-  effects ++= paramEffects
+    val returnType = renderType(
+      meth.returnType.getOrElse(
+        break(s"return type missing")
+      ),
+      position = TypePosition.ReturnType
+    )
 
-  scribe.info(s"Class: ${cls.name} method ${meth.name}")
+    coll.addAll(returnType.effects)
 
-  val returnType = renderType(
-    meth.returnType.getOrElse(
-      break(s"return type missing")
-    ),
-    position = TypePosition.ReturnType
-  )
+    val requiresZone = Option
+      .when(coll.effectsSoFar().contains(Effect.RequiresZone))("(using Zone)")
+      .getOrElse("")
 
-  effects ++= returnType.effects
+    val serialisedParams = renderedParameters.paramSpecs
+      .mkString(", ")
+    val serialisedArguments = renderedParameters.arguments.mkString(", ")
 
-  val effectsSoFar = effects.result.distinct
+    val body = s"$cMethod(${serialisedArguments})"
 
-  val requiresZone = Option
-    .when(effectsSoFar.contains(Effect.RequiresZone))("(using Zone)")
-    .getOrElse("")
+    val massagedBody = returnType.fromUnsafeForm(body)
 
-  val serialisedParams = params.flatten
-    .mkString(", ")
-  val serialisedArguments = arguments.mkString(", ")
-
-  val body = s"$cMethod(${serialisedArguments})"
-
-  val massagedBody = returnType.fromUnsafeForm(body)
-
-  line(
-    s"def $camelName(${serialisedParams})$requiresZone: ${returnType.scalaRepr} = $massagedBody"
-  )
-  emptyLine()
-
-  effectsSoFar
+    line(
+      s"def $camelName(${serialisedParams})$requiresZone: ${returnType.scalaRepr} = $massagedBody"
+    )
+    emptyLine()
 
 end renderClassMethod

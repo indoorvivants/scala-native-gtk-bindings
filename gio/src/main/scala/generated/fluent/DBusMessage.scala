@@ -14,6 +14,7 @@ import sn.gnome.gio.internal.GDBusMessageHeaderField
 import sn.gnome.gio.internal.GDBusMessageType
 import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.guchar
 import sn.gnome.glib.internal.guint
 import sn.gnome.glib.internal.guint32
@@ -104,7 +105,7 @@ class DBusMessage(raw: Ptr[GDBusMessage]) extends Object(raw.asInstanceOf):
 
   def setUnixFdList(fd_list : UnixFDList): Unit = g_dbus_message_set_unix_fd_list(this.raw.asInstanceOf, fd_list.getUnsafeRawPointer().asInstanceOf)
 
-  def toBlob(out_size : Any /* Some(gsize): `gsize*` */, capabilities : GDBusCapabilityFlags): Ptr[UByte] = g_dbus_message_to_blob(this.raw.asInstanceOf, out_size, capabilities)
+  def toBlob(out_size : Ptr[ULong], capabilities : GDBusCapabilityFlags): Ptr[UByte] = g_dbus_message_to_blob(this.raw.asInstanceOf, out_size.asInstanceOf[Ptr[gsize]], capabilities)
 
   def toGerror(): Boolean = g_dbus_message_to_gerror(this.raw.asInstanceOf).value.!=(0)
 

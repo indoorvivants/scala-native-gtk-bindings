@@ -15,6 +15,8 @@ import sn.gnome.gio.internal.GDataStreamNewlineType
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.gsize
+import sn.gnome.glib.internal.gssize
 import sn.gnome.glib.internal.guchar
 import sn.gnome.glib.internal.guint16
 import sn.gnome.glib.internal.guint32
@@ -37,9 +39,9 @@ class DataInputStream(raw: Ptr[GDataInputStream]) extends BufferedInputStream(ra
 
   def readLineAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_data_input_stream_read_line_async(this.raw.asInstanceOf, gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def readLineFinishUtf8(result : AsyncResult, length : Any /* Some(gsize): `gsize*` */)(using Zone): String = fromCString(g_data_input_stream_read_line_finish_utf8(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length).asInstanceOf)
+  def readLineFinishUtf8(result : AsyncResult, length : Ptr[ULong])(using Zone): String = fromCString(g_data_input_stream_read_line_finish_utf8(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length.asInstanceOf[Ptr[gsize]]).asInstanceOf)
 
-  def readLineUtf8(length : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_line_utf8(this.raw.asInstanceOf, length, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def readLineUtf8(length : Ptr[ULong], cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_line_utf8(this.raw.asInstanceOf, length.asInstanceOf[Ptr[gsize]], cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
   def readUint16(cancellable : Cancellable): UShort = g_data_input_stream_read_uint16(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
@@ -47,17 +49,17 @@ class DataInputStream(raw: Ptr[GDataInputStream]) extends BufferedInputStream(ra
 
   def readUint64(cancellable : Cancellable): ULong = g_data_input_stream_read_uint64(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value
 
-  def readUntil(stop_chars : String | CString, length : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_until(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], length, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def readUntil(stop_chars : String | CString, length : Ptr[ULong], cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_until(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], length.asInstanceOf[Ptr[gsize]], cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
   def readUntilAsync(stop_chars : String | CString, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_data_input_stream_read_until_async(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def readUntilFinish(result : AsyncResult, length : Any /* Some(gsize): `gsize*` */)(using Zone): String = fromCString(g_data_input_stream_read_until_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length).asInstanceOf)
+  def readUntilFinish(result : AsyncResult, length : Ptr[ULong])(using Zone): String = fromCString(g_data_input_stream_read_until_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length.asInstanceOf[Ptr[gsize]]).asInstanceOf)
 
-  def readUpto(stop_chars : String | CString, stop_chars_len : Any /* Some(gssize): `gssize` */, length : Any /* Some(gsize): `gsize*` */, cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_upto(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], stop_chars_len, length, cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
+  def readUpto(stop_chars : String | CString, stop_chars_len : ULong, length : Ptr[ULong], cancellable : Cancellable)(using Zone): String = fromCString(g_data_input_stream_read_upto(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], gssize(stop_chars_len), length.asInstanceOf[Ptr[gsize]], cancellable.getUnsafeRawPointer().asInstanceOf).asInstanceOf)
 
-  def readUptoAsync(stop_chars : String | CString, stop_chars_len : Any /* Some(gssize): `gssize` */, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_data_input_stream_read_upto_async(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], stop_chars_len, gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+  def readUptoAsync(stop_chars : String | CString, stop_chars_len : ULong, io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_data_input_stream_read_upto_async(this.raw.asInstanceOf, __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]], gssize(stop_chars_len), gint(io_priority), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
 
-  def readUptoFinish(result : AsyncResult, length : Any /* Some(gsize): `gsize*` */)(using Zone): String = fromCString(g_data_input_stream_read_upto_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length).asInstanceOf)
+  def readUptoFinish(result : AsyncResult, length : Ptr[ULong])(using Zone): String = fromCString(g_data_input_stream_read_upto_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, length.asInstanceOf[Ptr[gsize]]).asInstanceOf)
 
   def setByteOrder(order : GDataStreamByteOrder): Unit = g_data_input_stream_set_byte_order(this.raw.asInstanceOf, order)
 

@@ -8,6 +8,7 @@ import _root_.scala.scalanative.unsigned.*
 import sn.gnome.gio.fluent.InetAddress
 import sn.gnome.gio.internal.GSocketFamily
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.guint8
 import sn.gnome.gobject.fluent.Object
 
@@ -38,7 +39,7 @@ class InetAddress(raw: Ptr[GInetAddress]) extends Object(raw.asInstanceOf):
 
   def getIsSiteLocal(): Boolean = g_inet_address_get_is_site_local(this.raw.asInstanceOf).value.!=(0)
 
-  def getNativeSize(): Any /* Some(gsize): `gsize` */ = g_inet_address_get_native_size(this.raw.asInstanceOf)
+  def getNativeSize(): ULong = g_inet_address_get_native_size(this.raw.asInstanceOf).value
 
   def toBytes(): Ptr[UByte] = g_inet_address_to_bytes(this.raw.asInstanceOf)
 

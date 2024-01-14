@@ -35,7 +35,7 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
 
   def getAttributeByteString(attribute : String | CString)(using Zone): String = g_file_info_get_attribute_byte_string(this.raw.asInstanceOf, __sn_extract_string(attribute))
 
-  def getAttributeData(attribute : String | CString, `type` : GFileAttributeType, value_pp : Any /* Some(gpointer): `gpointer*` */, status : GFileAttributeStatus)(using Zone): Boolean = g_file_info_get_attribute_data(this.raw.asInstanceOf, __sn_extract_string(attribute), `type`, value_pp, status).value.!=(0)
+  def getAttributeData(attribute : String | CString, `type` : GFileAttributeType, value_pp : Ptr[Ptr[Byte]], status : GFileAttributeStatus)(using Zone): Boolean = g_file_info_get_attribute_data(this.raw.asInstanceOf, __sn_extract_string(attribute), `type`, value_pp.asInstanceOf[Ptr[gpointer]], status).value.!=(0)
 
   def getAttributeFilePath(attribute : String | CString)(using Zone): String = g_file_info_get_attribute_file_path(this.raw.asInstanceOf, __sn_extract_string(attribute))
 

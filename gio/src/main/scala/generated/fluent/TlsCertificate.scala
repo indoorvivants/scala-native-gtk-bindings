@@ -34,9 +34,9 @@ object TlsCertificate:
   def fromFile(file : String | CString)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_file(__sn_extract_string(file).asInstanceOf[Ptr[gchar]]).asInstanceOf)
   def fromFileWithPassword(file : String | CString, password : String | CString)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_file_with_password(__sn_extract_string(file).asInstanceOf[Ptr[gchar]], __sn_extract_string(password).asInstanceOf[Ptr[gchar]]).asInstanceOf)
   def fromFiles(cert_file : String | CString, key_file : String | CString)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_files(__sn_extract_string(cert_file).asInstanceOf[Ptr[gchar]], __sn_extract_string(key_file).asInstanceOf[Ptr[gchar]]).asInstanceOf)
-  def fromPem(data : String | CString, length : Any /* Some(gssize): `gssize` */)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_pem(__sn_extract_string(data).asInstanceOf[Ptr[gchar]], length).asInstanceOf)
+  def fromPem(data : String | CString, length : ULong)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_pem(__sn_extract_string(data).asInstanceOf[Ptr[gchar]], gssize(length)).asInstanceOf)
   def fromPkcs11Uris(pkcs11_uri : String | CString, private_key_pkcs11_uri : String | CString)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_pkcs11_uris(__sn_extract_string(pkcs11_uri).asInstanceOf[Ptr[gchar]], __sn_extract_string(private_key_pkcs11_uri).asInstanceOf[Ptr[gchar]]).asInstanceOf)
-  def fromPkcs12(data : Ptr[UByte], length : Any /* Some(gsize): `gsize` */, password : String | CString)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_pkcs12(data, length, __sn_extract_string(password).asInstanceOf[Ptr[gchar]]).asInstanceOf)
+  def fromPkcs12(data : Ptr[UByte], length : ULong, password : String | CString)(using Zone): TlsCertificate = new TlsCertificate(g_tls_certificate_new_from_pkcs12(data, gsize(length), __sn_extract_string(password).asInstanceOf[Ptr[gchar]]).asInstanceOf)
 
   private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
     str match

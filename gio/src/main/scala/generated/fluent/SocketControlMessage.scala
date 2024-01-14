@@ -4,7 +4,9 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
+import _root_.scala.scalanative.unsigned.*
 import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.gsize
 import sn.gnome.gobject.fluent.Object
 
 class SocketControlMessage(raw: Ptr[GSocketControlMessage]) extends Object(raw.asInstanceOf):
@@ -14,7 +16,7 @@ class SocketControlMessage(raw: Ptr[GSocketControlMessage]) extends Object(raw.a
 
   def getMsgType(): Int = g_socket_control_message_get_msg_type(this.raw.asInstanceOf)
 
-  def getSize(): Any /* Some(gsize): `gsize` */ = g_socket_control_message_get_size(this.raw.asInstanceOf)
+  def getSize(): ULong = g_socket_control_message_get_size(this.raw.asInstanceOf).value
 
   def serialize(data : Ptr[Byte]): Unit = g_socket_control_message_serialize(this.raw.asInstanceOf, gpointer(data))
 

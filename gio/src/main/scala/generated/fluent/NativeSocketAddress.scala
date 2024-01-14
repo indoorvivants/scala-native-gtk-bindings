@@ -13,5 +13,5 @@ class NativeSocketAddress(raw: Ptr[GNativeSocketAddress]) extends SocketAddress(
 end NativeSocketAddress
 
 object NativeSocketAddress:
-  def apply(native : Ptr[Byte], len : Any /* Some(gsize): `gsize` */): NativeSocketAddress = new NativeSocketAddress(g_native_socket_address_new(gpointer(native), len).asInstanceOf)
+  def apply(native : Ptr[Byte], len : ULong): NativeSocketAddress = new NativeSocketAddress(g_native_socket_address_new(gpointer(native), gsize(len)).asInstanceOf)
 end NativeSocketAddress

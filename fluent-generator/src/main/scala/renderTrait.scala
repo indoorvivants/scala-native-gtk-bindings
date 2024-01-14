@@ -8,10 +8,10 @@ def renderTrait(ns: AugmentedNamespace, iface: AugmentedInterface)(using
     Label[String]
 ) =
   WithEffects.collect: coll =>
-    val extensions = renderClassExtensions(None, iface.implements)
+    val extensions = coll.observe(renderClassExtensions(None, iface.implements))
     transact[String]:
       block(
-        s"trait ${iface.name}${extensions.getValue.getOrElse("")}:",
+        s"trait ${iface.name}${extensions}:",
         s"end ${iface.name}"
       ):
         line("def getUnsafeRawPointer(): Ptr[Byte]")

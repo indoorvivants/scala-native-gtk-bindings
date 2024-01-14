@@ -21,7 +21,7 @@ def renderNamespace(
       val effects = WithEffects.collect: coll =>
         newLB.use:
           error = transact[String]:
-            coll.addAll(renderTrait(ns, iface).getEffects)
+            coll.observe(renderTrait(ns, iface))
 
       error match
         case None =>
@@ -32,7 +32,7 @@ def renderNamespace(
           line(s"import _root_.scala.scalanative.unsafe.*")
           emptyLine()
 
-          renderEffects(effects.getEffects)
+          renderEffects(effects.effects)
 
           emptyLine()
 
@@ -50,7 +50,7 @@ def renderNamespace(
       val effects = WithEffects.collect: coll =>
         newLB.use:
           error = transact[String]:
-            coll.addAll(renderClass(ns, cls).getEffects)
+            coll.observe(renderClass(ns, cls))
 
       error match
         case None =>
@@ -61,7 +61,7 @@ def renderNamespace(
           line(s"import _root_.scala.scalanative.unsafe.*")
           emptyLine()
 
-          renderEffects(effects.getEffects)
+          renderEffects(effects.effects)
 
           emptyLine()
 

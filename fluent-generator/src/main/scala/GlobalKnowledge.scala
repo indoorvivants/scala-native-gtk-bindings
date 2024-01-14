@@ -64,7 +64,7 @@ case class GlobalKnowledge(
       boundary:
         if repos.isEmpty then boundary.break(res)
 
-        scribe.info(s"Traversing ${repos.map(_.id)}")
+        scribe.debug(s"Traversing ${repos.map(_.id)}")
         val names = Map.newBuilder[String, GlobalName]
         val deps = Set.newBuilder[String]
 
@@ -73,7 +73,7 @@ case class GlobalKnowledge(
             val namespace = repo.namespace.get
 
             val namespaceName = namespace.name.get
-            scribe.info(s"Processing $namespaceName")
+            scribe.debug(s"Processing $namespaceName")
             deps.addAll(repo.dependencies)
 
             val fluentPackage =

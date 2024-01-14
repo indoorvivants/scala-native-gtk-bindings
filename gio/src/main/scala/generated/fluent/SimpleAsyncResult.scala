@@ -4,6 +4,7 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
+import _root_.scala.scalanative.unsigned.*
 import sn.gnome.gio.fluent.AsyncResult
 import sn.gnome.gio.fluent.Cancellable
 import sn.gnome.gio.internal.GSimpleAsyncThreadFunc
@@ -12,6 +13,7 @@ import sn.gnome.glib.internal.GError
 import sn.gnome.glib.internal.GQuark
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
+import sn.gnome.glib.internal.gssize
 import sn.gnome.gobject.fluent.Object
 
 class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult]) extends Object(raw.asInstanceOf), AsyncResult:
@@ -25,7 +27,7 @@ class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult]) extends Object(raw.asInsta
 
   def getOpResGpointer(): Ptr[Byte] = g_simple_async_result_get_op_res_gpointer(this.raw.asInstanceOf).value
 
-  def getOpResGssize(): Any /* Some(gssize): `gssize` */ = g_simple_async_result_get_op_res_gssize(this.raw.asInstanceOf)
+  def getOpResGssize(): ULong = g_simple_async_result_get_op_res_gssize(this.raw.asInstanceOf).value
 
   def getSourceTag(): Ptr[Byte] = g_simple_async_result_get_source_tag(this.raw.asInstanceOf).value
 
@@ -45,7 +47,7 @@ class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult]) extends Object(raw.asInsta
 
   def setOpResGpointer(op_res : Ptr[Byte], destroy_op_res : GDestroyNotify): Unit = g_simple_async_result_set_op_res_gpointer(this.raw.asInstanceOf, gpointer(op_res), destroy_op_res)
 
-  def setOpResGssize(op_res : Any /* Some(gssize): `gssize` */): Unit = g_simple_async_result_set_op_res_gssize(this.raw.asInstanceOf, op_res)
+  def setOpResGssize(op_res : ULong): Unit = g_simple_async_result_set_op_res_gssize(this.raw.asInstanceOf, gssize(op_res))
 
   def takeError(error : Ptr[GError]): Unit = g_simple_async_result_take_error(this.raw.asInstanceOf, error)
 

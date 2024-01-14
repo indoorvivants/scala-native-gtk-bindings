@@ -7,7 +7,7 @@ def renderClassExtensions(parent: Option[String], impl: Seq[Implements])(using
     Label[String],
     GlobalKnowledge
 ): WithEffects[String] =
-  WithEffects.collectWithValue: coll =>
+  WithEffects.collect: coll =>
     val parentExt = parent.map: name =>
       summon[GlobalKnowledge].names.get(name) match
         case None => break(s"Could not find a global name for ${name}")
@@ -34,4 +34,3 @@ def renderClassExtensions(parent: Option[String], impl: Seq[Implements])(using
 
     if ext.nonEmpty then " extends " + ext.mkString(", ")
     else ""
-end renderClassExtensions

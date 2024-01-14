@@ -4,9 +4,11 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
+import _root_.scala.scalanative.unsigned.*
 import sn.gnome.gio.fluent.SocketAddress
 import sn.gnome.gio.fluent.SocketConnectable
 import sn.gnome.gio.internal.GUnixSocketAddressType
+import sn.gnome.glib.internal.gsize
 
 class UnixSocketAddress(raw: Ptr[GUnixSocketAddress]) extends SocketAddress(raw.asInstanceOf), SocketConnectable:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
@@ -17,7 +19,7 @@ class UnixSocketAddress(raw: Ptr[GUnixSocketAddress]) extends SocketAddress(raw.
 
   def getPath()(using Zone): String = g_unix_socket_address_get_path(this.raw.asInstanceOf)
 
-  def getPathLen(): Any /* Some(gsize): `gsize` */ = g_unix_socket_address_get_path_len(this.raw.asInstanceOf)
+  def getPathLen(): ULong = g_unix_socket_address_get_path_len(this.raw.asInstanceOf).value
 
 
   private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 

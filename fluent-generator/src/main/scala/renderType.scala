@@ -25,7 +25,6 @@ def renderType(
     global: GlobalKnowledge,
     policy: NamingPolicy
 ): TypeMapping =
-  scribe.info(s"$tpe")
   val importUnsigned =
     Effect.RequiresImport("_root_.scala.scalanative.unsigned", "*")
 
@@ -175,6 +174,11 @@ def renderType(
       whenTypeValue("double")("Double"),
       whenTypeValue("va_list")("CVarArgList"),
       glibAlias("gpointer", "gpointer")("Ptr[Byte]"),
+      whenTypeValue("gpointer")("Ptr[Byte]").map(
+        _.withMassageIntoUnsafe(Massage.Apply("gpointer"))
+          .withMassageFromUnsafe(Massage.Field("value"))
+          .withEffect(importGlib("gpointer"))
+      ),
       unsignedAlias("guint8", "UByte"),
       unsignedAlias("guchar", "UByte"),
       unsignedAlias("guint16", "UShort"),
@@ -182,6 +186,8 @@ def renderType(
       unsignedAlias("guint32", "UInt"),
       unsignedAlias("guint64", "ULong"),
       unsignedAlias("gulong", "ULong"),
+      unsignedAlias("gsize", "ULong"),
+      unsignedAlias("gssize", "ULong"),
       glibAlias("gchar", "char")("Byte"),
       whenTypeValue("void")("Unit")
     ).reduce(_ orElse _)
@@ -230,6 +236,9 @@ def renderType(
     case ar: ArrayType =>
       val elementType = ar.AnyType.as[Type]
       val renderedElementType = renderType(elementType)
+
+      if elementType.name == Some("File") then
+        scribe.info(renderedElementType.toString())
       if elementType.typeValue.endsWith("gchar*") then
         TypeMapping(s"Ptr[CString]", effects = renderedElementType.effects)
           .withMassageIntoUnsafe(Massage.InferredCast)

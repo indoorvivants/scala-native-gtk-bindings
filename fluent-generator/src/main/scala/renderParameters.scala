@@ -2,6 +2,11 @@ import com.indoorvivants.gnome.gir_schema.*
 import scala.util.boundary, boundary.*
 import rendition.*
 
+case class RenderedParameters(
+    paramSpecs: Seq[String],
+    arguments: Seq[String]
+)
+
 def renderParameters(
     params: Seq[Parameter | Instanceu45parameter],
     methodLabel: String
@@ -9,31 +14,32 @@ def renderParameters(
     Label[String],
     GlobalKnowledge,
     NamingPolicy
-) =
-  val effects = List.newBuilder[Effect]
-
-  params
-    .map:
-      case param: Parameter =>
-        val paramType = renderType(
-          param.tpe.getOrElse(
-            break(
-              s"$methodLabel, param: ${param.name}: type is empty"
+): WithEffects[RenderedParameters] =
+  WithEffects.collect: coll =>
+    val (paramSpecs, arguments) = params
+      .map:
+        case param: Parameter =>
+          val paramType = renderType(
+            param.tpe.getOrElse(
+              break(
+                s"$methodLabel, param: ${param.name}: type is empty"
+              )
             )
           )
-        )
 
-        effects ++= paramType.effects
+          coll.addAll(paramType.effects)
 
-        val paramName = escape(param.name.get)
+          val paramName = escape(param.name.get)
 
-        val parameter = paramName + " : " + paramType.scalaRepr
+          val parameter = paramName + " : " + paramType.scalaRepr
 
-        val argument = paramType.intoUnsafeForm(paramName)
+          val argument = paramType.intoUnsafeForm(paramName)
 
-        (Some(parameter), argument)
+          (Some(parameter), argument)
 
-      case param: Instanceu45parameter =>
-        (None, "this.raw.asInstanceOf")
-    .unzip -> effects.result()
+        case param: Instanceu45parameter =>
+          (None, "this.raw.asInstanceOf")
+      .unzip
+
+    RenderedParameters(paramSpecs.flatten, arguments)
 end renderParameters
