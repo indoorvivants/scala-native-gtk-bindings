@@ -374,10 +374,23 @@ val withFluentBindings = Seq(
     val girFiles = (ThisBuild / baseDirectory).value / "gir-files"
     val out =
       (Compile / sourceDirectory).value / "scala" / "generated" / "fluent"
-    Def.taskDyn {
-      (`fluent-generator` / Compile / run)
-        .toTask(s" --module $girModule --gir-files $girFiles --out $out")
-    }
+
+    val generatedFiles =
+      (Compile / target).value / "fluent-generator" / "files.txt"
+
+    Def.sequential(
+      Def
+        .taskDyn {
+          (`fluent-generator` / Compile / run)
+            .toTask(
+              s" --module $girModule --gir-files $girFiles --out $out --dump-files-list $generatedFiles"
+            )
+        },
+      Def.taskDyn {
+        val files = IO.readLines(generatedFiles)
+        (Compile / scalafmtOnly).toTask(s" ${files.mkString(" ")}")
+      }
+    )
 
   }.evaluated
 )

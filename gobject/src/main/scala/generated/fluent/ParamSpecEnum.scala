@@ -6,7 +6,8 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gobject.fluent.ParamSpec
 
-class ParamSpecEnum(raw: Ptr[GParamSpecEnum]) extends ParamSpec(raw.asInstanceOf):
+class ParamSpecEnum(raw: Ptr[GParamSpecEnum])
+    extends ParamSpec(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
 end ParamSpecEnum

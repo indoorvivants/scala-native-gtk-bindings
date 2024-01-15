@@ -17,32 +17,91 @@ class SignalGroup(raw: Ptr[GSignalGroup]) extends Object(raw.asInstanceOf):
 
   def block(): Unit = g_signal_group_block(this.raw.asInstanceOf)
 
-  def connect(detailed_signal : String | CString, c_handler : GCallback, data : Ptr[Byte])(using Zone): Unit = g_signal_group_connect(this.raw.asInstanceOf, __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]], c_handler, gpointer(data))
+  def connect(
+      detailed_signal: String | CString,
+      c_handler: GCallback,
+      data: Ptr[Byte]
+  )(using Zone): Unit = g_signal_group_connect(
+    this.raw.asInstanceOf,
+    __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]],
+    c_handler,
+    gpointer(data)
+  )
 
-  def connectAfter(detailed_signal : String | CString, c_handler : GCallback, data : Ptr[Byte])(using Zone): Unit = g_signal_group_connect_after(this.raw.asInstanceOf, __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]], c_handler, gpointer(data))
+  def connectAfter(
+      detailed_signal: String | CString,
+      c_handler: GCallback,
+      data: Ptr[Byte]
+  )(using Zone): Unit = g_signal_group_connect_after(
+    this.raw.asInstanceOf,
+    __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]],
+    c_handler,
+    gpointer(data)
+  )
 
   // Method connectClosure is not rendered: for some reason g_signal_group_connect_closure is absent from raw bindings
-  def connectData(detailed_signal : String | CString, c_handler : GCallback, data : Ptr[Byte], _notify : GClosureNotify, flags : GConnectFlags)(using Zone): Unit = g_signal_group_connect_data(this.raw.asInstanceOf, __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]], c_handler, gpointer(data), _notify, flags)
+  def connectData(
+      detailed_signal: String | CString,
+      c_handler: GCallback,
+      data: Ptr[Byte],
+      _notify: GClosureNotify,
+      flags: GConnectFlags
+  )(using Zone): Unit = g_signal_group_connect_data(
+    this.raw.asInstanceOf,
+    __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]],
+    c_handler,
+    gpointer(data),
+    _notify,
+    flags
+  )
 
-  def connectObject(detailed_signal : String | CString, c_handler : GCallback, `object` : Ptr[Byte], flags : GConnectFlags)(using Zone): Unit = g_signal_group_connect_object(this.raw.asInstanceOf, __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]], c_handler, gpointer(`object`), flags)
+  def connectObject(
+      detailed_signal: String | CString,
+      c_handler: GCallback,
+      `object`: Ptr[Byte],
+      flags: GConnectFlags
+  )(using Zone): Unit = g_signal_group_connect_object(
+    this.raw.asInstanceOf,
+    __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]],
+    c_handler,
+    gpointer(`object`),
+    flags
+  )
 
-  def connectSwapped(detailed_signal : String | CString, c_handler : GCallback, data : Ptr[Byte])(using Zone): Unit = g_signal_group_connect_swapped(this.raw.asInstanceOf, __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]], c_handler, gpointer(data))
+  def connectSwapped(
+      detailed_signal: String | CString,
+      c_handler: GCallback,
+      data: Ptr[Byte]
+  )(using Zone): Unit = g_signal_group_connect_swapped(
+    this.raw.asInstanceOf,
+    __sn_extract_string(detailed_signal).asInstanceOf[Ptr[gchar]],
+    c_handler,
+    gpointer(data)
+  )
 
-  def dupTarget(): Object = new Object(g_signal_group_dup_target(this.raw.asInstanceOf).asInstanceOf)
+  def dupTarget(): Object = new Object(
+    g_signal_group_dup_target(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def setTarget(target : Object): Unit = g_signal_group_set_target(this.raw.asInstanceOf, gpointer(target.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]))
+  def setTarget(target: Object): Unit = g_signal_group_set_target(
+    this.raw.asInstanceOf,
+    gpointer(target.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]])
+  )
 
   def unblock(): Unit = g_signal_group_unblock(this.raw.asInstanceOf)
 
-
-  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
     str match
-      case s: String => toCString(s)
+      case s: String  => toCString(s)
       case s: CString => s
     end match
   end __sn_extract_string
 end SignalGroup
 
 object SignalGroup:
-  def apply(target_type : GType): SignalGroup = new SignalGroup(g_signal_group_new(target_type).asInstanceOf)
+  def apply(target_type: GType): SignalGroup = new SignalGroup(
+    g_signal_group_new(target_type).asInstanceOf
+  )
 end SignalGroup

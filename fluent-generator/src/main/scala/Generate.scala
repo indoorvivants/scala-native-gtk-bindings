@@ -17,7 +17,8 @@ import scribe.LogRecord
 case class CLI(
     girFiles: Path,
     out: Path,
-    module: String
+    module: String,
+    dumpFileList: Option[Path]
 )
 
 val config =
@@ -26,10 +27,16 @@ val config =
     Opts.option[Path]("gir-files", help = "Location of GIR files")
 
   val out = Opts.option[Path]("out", help = "Where to output generated files")
+  val dumpFileList = Opts
+    .option[Path](
+      "dump-files-list",
+      help = "Dump list of generated files into some location"
+    )
+    .orNone
   val module = Opts
     .option[String]("module", help = "Module to render (e.g. gdkpixbuf-2.0)")
 
-  Command("generate", "?")((userOpt, out, module).mapN(CLI.apply))
+  Command("generate", "?")((userOpt, out, module, dumpFileList).mapN(CLI.apply))
 end config
 
 @main def hello(args: String*) =
@@ -53,15 +60,14 @@ end config
       val streams = RenderingStreams()
       val globalKnowledge = GlobalKnowledge(reader, repository, policy)
 
-      // globalKnowledge.names.toList.sortBy(_._1).foreach: (name, n) =>
-      //   scribe.info(s"$name = $n")
-
       renderNamespace(
         r = streams,
         ns = repository.namespace.get,
         global = globalKnowledge,
         policy = policy
       )
+
+      val nonEmptyFiles = List.newBuilder[os.Path]
 
       streams
         .renderMapping()
@@ -70,7 +76,16 @@ end config
           if contents.trim.nonEmpty then
             scribe.info(s"Rendering ${relative}")
             os.write.over(filePath, contents)
+            nonEmptyFiles += filePath
           else scribe.warn(s"Filepath $filePath was empty, not writing to disk")
+
+      value.dumpFileList.foreach: path =>
+        os.write.over(
+          os.Path(path),
+          nonEmptyFiles.result().map(_.toNIO.toString).mkString(System.lineSeparator()),
+          createFolders = true
+        )
+        scribe.info(s"List of rendered files was dumped into `$path`")
 
 end hello
 
