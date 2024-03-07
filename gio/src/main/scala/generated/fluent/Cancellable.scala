@@ -5,6 +5,7 @@ import _root_.sn.gnome.gio.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.internal.GCancellable
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GPollFD
 import sn.gnome.glib.internal.GSource
@@ -18,15 +19,27 @@ class Cancellable(raw: Ptr[GCancellable]) extends Object(raw.asInstanceOf):
 
   def cancel(): Unit = g_cancellable_cancel(this.raw.asInstanceOf)
 
-  def connect(callback : GCallback, data : Ptr[Byte], data_destroy_func : GDestroyNotify): ULong = g_cancellable_connect(this.raw.asInstanceOf, callback, gpointer(data), data_destroy_func).value
+  def connect(
+      callback: GCallback,
+      data: Ptr[Byte],
+      data_destroy_func: GDestroyNotify
+  ): ULong = g_cancellable_connect(
+    this.raw.asInstanceOf,
+    callback,
+    gpointer(data),
+    data_destroy_func
+  ).value
 
-  def disconnect(handler_id : ULong): Unit = g_cancellable_disconnect(this.raw.asInstanceOf, gulong(handler_id))
+  def disconnect(handler_id: ULong): Unit =
+    g_cancellable_disconnect(this.raw.asInstanceOf, gulong(handler_id))
 
   def getFd(): Int = g_cancellable_get_fd(this.raw.asInstanceOf)
 
-  def isCancelled(): Boolean = g_cancellable_is_cancelled(this.raw.asInstanceOf).value.!=(0)
+  def isCancelled(): Boolean =
+    g_cancellable_is_cancelled(this.raw.asInstanceOf).value.!=(0)
 
-  def makePollfd(pollfd : Ptr[GPollFD]): Boolean = g_cancellable_make_pollfd(this.raw.asInstanceOf, pollfd).value.!=(0)
+  def makePollfd(pollfd: Ptr[GPollFD]): Boolean =
+    g_cancellable_make_pollfd(this.raw.asInstanceOf, pollfd).value.!=(0)
 
   def popCurrent(): Unit = g_cancellable_pop_current(this.raw.asInstanceOf)
 
@@ -36,9 +49,12 @@ class Cancellable(raw: Ptr[GCancellable]) extends Object(raw.asInstanceOf):
 
   def reset(): Unit = g_cancellable_reset(this.raw.asInstanceOf)
 
-  def setErrorIfCancelled(): Boolean = g_cancellable_set_error_if_cancelled(this.raw.asInstanceOf).value.!=(0)
+  def setErrorIfCancelled(): Boolean =
+    g_cancellable_set_error_if_cancelled(this.raw.asInstanceOf).value.!=(0)
 
-  def sourceNew(): Ptr[GSource] = g_cancellable_source_new(this.raw.asInstanceOf)
+  def sourceNew(): Ptr[GSource] = g_cancellable_source_new(
+    this.raw.asInstanceOf
+  )
 
 end Cancellable
 

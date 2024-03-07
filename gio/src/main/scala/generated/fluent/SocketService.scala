@@ -5,11 +5,14 @@ import _root_.sn.gnome.gio.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.fluent.SocketListener
+import sn.gnome.gio.internal.GSocketService
 
-class SocketService(raw: Ptr[GSocketService]) extends SocketListener(raw.asInstanceOf):
+class SocketService(raw: Ptr[GSocketService])
+    extends SocketListener(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def isActive(): Boolean = g_socket_service_is_active(this.raw.asInstanceOf).value.!=(0)
+  def isActive(): Boolean =
+    g_socket_service_is_active(this.raw.asInstanceOf).value.!=(0)
 
   def start(): Unit = g_socket_service_start(this.raw.asInstanceOf)
 
@@ -18,5 +21,7 @@ class SocketService(raw: Ptr[GSocketService]) extends SocketListener(raw.asInsta
 end SocketService
 
 object SocketService:
-  def apply(): SocketService = new SocketService(g_socket_service_new().asInstanceOf)
+  def apply(): SocketService = new SocketService(
+    g_socket_service_new().asInstanceOf
+  )
 end SocketService

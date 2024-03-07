@@ -4,7 +4,6 @@ import _root_.sn.gnome.gio.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-
 trait DtlsClientConnection:
   def getUnsafeRawPointer(): Ptr[Byte]
 end DtlsClientConnection

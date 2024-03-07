@@ -16,6 +16,14 @@ def renderClass(
     val cTypeName = cls.attributes.get("@type").map(_.as[String])
     val cType =
       cTypeName.getOrElse(break("c:type missing"))
+
+    coll.add(
+      Effect.RequiresImport(
+        NamingPolicy().namespaceToInternalPackage(ns.name.get),
+        cType
+      )
+    )
+
     val data = s"(raw: Ptr[$cType])"
 
     val extensions =
@@ -45,10 +53,7 @@ def renderClass(
           case None =>
             val result =
               transact[String]:
-                try coll.observe(renderClassMethod(cls, meth))
-                catch
-                  case exc =>
-                    break(exc.toString())
+                handleExceptions(coll.observe(renderClassMethod(cls, meth)))
 
             result.foreach: msg =>
               scribe.warn(s"Failed to render method ${meth.name}: `$msg`")

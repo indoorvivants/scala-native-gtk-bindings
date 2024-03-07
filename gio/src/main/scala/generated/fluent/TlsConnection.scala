@@ -14,65 +14,141 @@ import sn.gnome.gio.fluent.TlsInteraction
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GTlsCertificateFlags
 import sn.gnome.gio.internal.GTlsChannelBindingType
+import sn.gnome.gio.internal.GTlsConnection
 import sn.gnome.gio.internal.GTlsProtocolVersion
 import sn.gnome.gio.internal.GTlsRehandshakeMode
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint8
 
-class TlsConnection(raw: Ptr[GTlsConnection]) extends IOStream(raw.asInstanceOf):
+class TlsConnection(raw: Ptr[GTlsConnection])
+    extends IOStream(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def emitAcceptCertificate(peer_cert : TlsCertificate, errors : GTlsCertificateFlags): Boolean = g_tls_connection_emit_accept_certificate(this.raw.asInstanceOf, peer_cert.getUnsafeRawPointer().asInstanceOf, errors).value.!=(0)
+  def emitAcceptCertificate(
+      peer_cert: TlsCertificate,
+      errors: GTlsCertificateFlags
+  ): Boolean = g_tls_connection_emit_accept_certificate(
+    this.raw.asInstanceOf,
+    peer_cert.getUnsafeRawPointer().asInstanceOf,
+    errors
+  ).value.!=(0)
 
-  def getCertificate(): TlsCertificate = new TlsCertificate(g_tls_connection_get_certificate(this.raw.asInstanceOf).asInstanceOf)
+  def getCertificate(): TlsCertificate = new TlsCertificate(
+    g_tls_connection_get_certificate(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getChannelBindingData(`type` : GTlsChannelBindingType, data : Ptr[UByte]): Boolean = g_tls_connection_get_channel_binding_data(this.raw.asInstanceOf, `type`, data).value.!=(0)
+  def getChannelBindingData(
+      `type`: GTlsChannelBindingType,
+      data: Ptr[UByte]
+  ): Boolean = g_tls_connection_get_channel_binding_data(
+    this.raw.asInstanceOf,
+    `type`,
+    data
+  ).value.!=(0)
 
-  def getCiphersuiteName()(using Zone): String = fromCString(g_tls_connection_get_ciphersuite_name(this.raw.asInstanceOf).asInstanceOf)
+  def getCiphersuiteName()(using Zone): String = fromCString(
+    g_tls_connection_get_ciphersuite_name(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getDatabase(): TlsDatabase = new TlsDatabase(g_tls_connection_get_database(this.raw.asInstanceOf).asInstanceOf)
+  def getDatabase(): TlsDatabase = new TlsDatabase(
+    g_tls_connection_get_database(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getInteraction(): TlsInteraction = new TlsInteraction(g_tls_connection_get_interaction(this.raw.asInstanceOf).asInstanceOf)
+  def getInteraction(): TlsInteraction = new TlsInteraction(
+    g_tls_connection_get_interaction(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getNegotiatedProtocol()(using Zone): String = fromCString(g_tls_connection_get_negotiated_protocol(this.raw.asInstanceOf).asInstanceOf)
+  def getNegotiatedProtocol()(using Zone): String = fromCString(
+    g_tls_connection_get_negotiated_protocol(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getPeerCertificate(): TlsCertificate = new TlsCertificate(g_tls_connection_get_peer_certificate(this.raw.asInstanceOf).asInstanceOf)
+  def getPeerCertificate(): TlsCertificate = new TlsCertificate(
+    g_tls_connection_get_peer_certificate(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getPeerCertificateErrors(): GTlsCertificateFlags = g_tls_connection_get_peer_certificate_errors(this.raw.asInstanceOf)
+  def getPeerCertificateErrors(): GTlsCertificateFlags =
+    g_tls_connection_get_peer_certificate_errors(this.raw.asInstanceOf)
 
-  def getProtocolVersion(): GTlsProtocolVersion = g_tls_connection_get_protocol_version(this.raw.asInstanceOf)
+  def getProtocolVersion(): GTlsProtocolVersion =
+    g_tls_connection_get_protocol_version(this.raw.asInstanceOf)
 
-  def getRehandshakeMode(): GTlsRehandshakeMode = g_tls_connection_get_rehandshake_mode(this.raw.asInstanceOf)
+  def getRehandshakeMode(): GTlsRehandshakeMode =
+    g_tls_connection_get_rehandshake_mode(this.raw.asInstanceOf)
 
-  def getRequireCloseNotify(): Boolean = g_tls_connection_get_require_close_notify(this.raw.asInstanceOf).value.!=(0)
+  def getRequireCloseNotify(): Boolean =
+    g_tls_connection_get_require_close_notify(this.raw.asInstanceOf).value.!=(0)
 
-  def getUseSystemCertdb(): Boolean = g_tls_connection_get_use_system_certdb(this.raw.asInstanceOf).value.!=(0)
+  def getUseSystemCertdb(): Boolean =
+    g_tls_connection_get_use_system_certdb(this.raw.asInstanceOf).value.!=(0)
 
-  def handshake(cancellable : Cancellable): Boolean = g_tls_connection_handshake(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+  def handshake(cancellable: Cancellable): Boolean = g_tls_connection_handshake(
+    this.raw.asInstanceOf,
+    cancellable.getUnsafeRawPointer().asInstanceOf
+  ).value.!=(0)
 
-  def handshakeAsync(io_priority : Int, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_tls_connection_handshake_async(this.raw.asInstanceOf, io_priority, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+  def handshakeAsync(
+      io_priority: Int,
+      cancellable: Cancellable,
+      callback: GAsyncReadyCallback,
+      user_data: Ptr[Byte]
+  ): Unit = g_tls_connection_handshake_async(
+    this.raw.asInstanceOf,
+    io_priority,
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    callback,
+    gpointer(user_data)
+  )
 
-  def handshakeFinish(result : AsyncResult): Boolean = g_tls_connection_handshake_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+  def handshakeFinish(result: AsyncResult): Boolean =
+    g_tls_connection_handshake_finish(
+      this.raw.asInstanceOf,
+      result.getUnsafeRawPointer().asInstanceOf
+    ).value.!=(0)
 
-  def setAdvertisedProtocols(protocols : Ptr[CString])(using Zone): Unit = g_tls_connection_set_advertised_protocols(this.raw.asInstanceOf, protocols.asInstanceOf)
+  def setAdvertisedProtocols(protocols: Ptr[CString])(using Zone): Unit =
+    g_tls_connection_set_advertised_protocols(
+      this.raw.asInstanceOf,
+      protocols.asInstanceOf
+    )
 
-  def setCertificate(certificate : TlsCertificate): Unit = g_tls_connection_set_certificate(this.raw.asInstanceOf, certificate.getUnsafeRawPointer().asInstanceOf)
+  def setCertificate(certificate: TlsCertificate): Unit =
+    g_tls_connection_set_certificate(
+      this.raw.asInstanceOf,
+      certificate.getUnsafeRawPointer().asInstanceOf
+    )
 
-  def setDatabase(database : TlsDatabase): Unit = g_tls_connection_set_database(this.raw.asInstanceOf, database.getUnsafeRawPointer().asInstanceOf)
+  def setDatabase(database: TlsDatabase): Unit = g_tls_connection_set_database(
+    this.raw.asInstanceOf,
+    database.getUnsafeRawPointer().asInstanceOf
+  )
 
-  def setInteraction(interaction : TlsInteraction): Unit = g_tls_connection_set_interaction(this.raw.asInstanceOf, interaction.getUnsafeRawPointer().asInstanceOf)
+  def setInteraction(interaction: TlsInteraction): Unit =
+    g_tls_connection_set_interaction(
+      this.raw.asInstanceOf,
+      interaction.getUnsafeRawPointer().asInstanceOf
+    )
 
-  def setRehandshakeMode(mode : GTlsRehandshakeMode): Unit = g_tls_connection_set_rehandshake_mode(this.raw.asInstanceOf, mode)
+  def setRehandshakeMode(mode: GTlsRehandshakeMode): Unit =
+    g_tls_connection_set_rehandshake_mode(this.raw.asInstanceOf, mode)
 
-  def setRequireCloseNotify(require_close_notify : Boolean): Unit = g_tls_connection_set_require_close_notify(this.raw.asInstanceOf, require_close_notify)
+  def setRequireCloseNotify(require_close_notify: Boolean): Unit =
+    g_tls_connection_set_require_close_notify(
+      this.raw.asInstanceOf,
+      require_close_notify
+    )
 
-  def setUseSystemCertdb(use_system_certdb : Boolean): Unit = g_tls_connection_set_use_system_certdb(this.raw.asInstanceOf, use_system_certdb)
+  def setUseSystemCertdb(use_system_certdb: Boolean): Unit =
+    g_tls_connection_set_use_system_certdb(
+      this.raw.asInstanceOf,
+      use_system_certdb
+    )
 
-
-  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
     str match
-      case s: String => toCString(s)
+      case s: String  => toCString(s)
       case s: CString => s
     end match
   end __sn_extract_string

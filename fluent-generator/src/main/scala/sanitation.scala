@@ -12,6 +12,7 @@ val scalaKeyWords =
     "def",
     "do",
     "else",
+    "export",
     "extends",
     "false",
     "final",

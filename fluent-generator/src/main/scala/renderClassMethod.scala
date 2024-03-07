@@ -38,7 +38,7 @@ def renderClassMethod(cls: AugmentedClass, meth: Method)(using
     val massagedBody = returnType.fromUnsafeForm(body)
 
     line(
-      s"def $camelName(${serialisedParams})$requiresZone: ${returnType.scalaRepr} = $massagedBody"
+      s"def ${escape(camelName)}(${serialisedParams})$requiresZone: ${returnType.scalaRepr} = $massagedBody"
     )
     emptyLine()
 

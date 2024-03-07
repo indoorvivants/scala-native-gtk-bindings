@@ -378,6 +378,8 @@ val withFluentBindings = Seq(
     val generatedFiles =
       (Compile / target).value / "fluent-generator" / "files.txt"
 
+    val task  = InputKey[Unit]("scalafmtOnly")
+
     Def.sequential(
       Def
         .taskDyn {
@@ -388,7 +390,7 @@ val withFluentBindings = Seq(
         },
       Def.taskDyn {
         val files = IO.readLines(generatedFiles)
-        (Compile / scalafmtOnly).toTask(s" ${files.mkString(" ")}")
+        (Compile / task).toTask(s" ${files.mkString(" ")}")
       }
     )
 

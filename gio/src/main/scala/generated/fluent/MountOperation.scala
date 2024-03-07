@@ -5,61 +5,104 @@ import _root_.sn.gnome.gio.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import _root_.scala.scalanative.unsigned.*
+import sn.gnome.gio.internal.GMountOperation
 import sn.gnome.gio.internal.GMountOperationResult
 import sn.gnome.gio.internal.GPasswordSave
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object
 
-class MountOperation(raw: Ptr[GMountOperation]) extends Object(raw.asInstanceOf):
+class MountOperation(raw: Ptr[GMountOperation])
+    extends Object(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getAnonymous(): Boolean = g_mount_operation_get_anonymous(this.raw.asInstanceOf).value.!=(0)
+  def getAnonymous(): Boolean =
+    g_mount_operation_get_anonymous(this.raw.asInstanceOf).value.!=(0)
 
   def getChoice(): Int = g_mount_operation_get_choice(this.raw.asInstanceOf)
 
-  def getDomain()(using Zone): String = g_mount_operation_get_domain(this.raw.asInstanceOf)
+  def getDomain()(using Zone): String = g_mount_operation_get_domain(
+    this.raw.asInstanceOf
+  )
 
-  def getIsTcryptHiddenVolume(): Boolean = g_mount_operation_get_is_tcrypt_hidden_volume(this.raw.asInstanceOf).value.!=(0)
+  def getIsTcryptHiddenVolume(): Boolean =
+    g_mount_operation_get_is_tcrypt_hidden_volume(this.raw.asInstanceOf).value
+      .!=(0)
 
-  def getIsTcryptSystemVolume(): Boolean = g_mount_operation_get_is_tcrypt_system_volume(this.raw.asInstanceOf).value.!=(0)
+  def getIsTcryptSystemVolume(): Boolean =
+    g_mount_operation_get_is_tcrypt_system_volume(this.raw.asInstanceOf).value
+      .!=(0)
 
-  def getPassword()(using Zone): String = g_mount_operation_get_password(this.raw.asInstanceOf)
+  def getPassword()(using Zone): String = g_mount_operation_get_password(
+    this.raw.asInstanceOf
+  )
 
-  def getPasswordSave(): GPasswordSave = g_mount_operation_get_password_save(this.raw.asInstanceOf)
+  def getPasswordSave(): GPasswordSave = g_mount_operation_get_password_save(
+    this.raw.asInstanceOf
+  )
 
   def getPim(): UInt = g_mount_operation_get_pim(this.raw.asInstanceOf).value
 
-  def getUsername()(using Zone): String = g_mount_operation_get_username(this.raw.asInstanceOf)
+  def getUsername()(using Zone): String = g_mount_operation_get_username(
+    this.raw.asInstanceOf
+  )
 
-  def reply(result : GMountOperationResult): Unit = g_mount_operation_reply(this.raw.asInstanceOf, result)
+  def reply(result: GMountOperationResult): Unit =
+    g_mount_operation_reply(this.raw.asInstanceOf, result)
 
-  def setAnonymous(anonymous : Boolean): Unit = g_mount_operation_set_anonymous(this.raw.asInstanceOf, anonymous)
+  def setAnonymous(anonymous: Boolean): Unit =
+    g_mount_operation_set_anonymous(this.raw.asInstanceOf, anonymous)
 
-  def setChoice(choice : Int): Unit = g_mount_operation_set_choice(this.raw.asInstanceOf, choice)
+  def setChoice(choice: Int): Unit =
+    g_mount_operation_set_choice(this.raw.asInstanceOf, choice)
 
-  def setDomain(domain : String | CString)(using Zone): Unit = g_mount_operation_set_domain(this.raw.asInstanceOf, __sn_extract_string(domain))
+  def setDomain(domain: String | CString)(using Zone): Unit =
+    g_mount_operation_set_domain(
+      this.raw.asInstanceOf,
+      __sn_extract_string(domain)
+    )
 
-  def setIsTcryptHiddenVolume(hidden_volume : Boolean): Unit = g_mount_operation_set_is_tcrypt_hidden_volume(this.raw.asInstanceOf, hidden_volume)
+  def setIsTcryptHiddenVolume(hidden_volume: Boolean): Unit =
+    g_mount_operation_set_is_tcrypt_hidden_volume(
+      this.raw.asInstanceOf,
+      hidden_volume
+    )
 
-  def setIsTcryptSystemVolume(system_volume : Boolean): Unit = g_mount_operation_set_is_tcrypt_system_volume(this.raw.asInstanceOf, system_volume)
+  def setIsTcryptSystemVolume(system_volume: Boolean): Unit =
+    g_mount_operation_set_is_tcrypt_system_volume(
+      this.raw.asInstanceOf,
+      system_volume
+    )
 
-  def setPassword(password : String | CString)(using Zone): Unit = g_mount_operation_set_password(this.raw.asInstanceOf, __sn_extract_string(password))
+  def setPassword(password: String | CString)(using Zone): Unit =
+    g_mount_operation_set_password(
+      this.raw.asInstanceOf,
+      __sn_extract_string(password)
+    )
 
-  def setPasswordSave(save : GPasswordSave): Unit = g_mount_operation_set_password_save(this.raw.asInstanceOf, save)
+  def setPasswordSave(save: GPasswordSave): Unit =
+    g_mount_operation_set_password_save(this.raw.asInstanceOf, save)
 
-  def setPim(pim : UInt): Unit = g_mount_operation_set_pim(this.raw.asInstanceOf, guint(pim))
+  def setPim(pim: UInt): Unit =
+    g_mount_operation_set_pim(this.raw.asInstanceOf, guint(pim))
 
-  def setUsername(username : String | CString)(using Zone): Unit = g_mount_operation_set_username(this.raw.asInstanceOf, __sn_extract_string(username))
+  def setUsername(username: String | CString)(using Zone): Unit =
+    g_mount_operation_set_username(
+      this.raw.asInstanceOf,
+      __sn_extract_string(username)
+    )
 
-
-  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
     str match
-      case s: String => toCString(s)
+      case s: String  => toCString(s)
       case s: CString => s
     end match
   end __sn_extract_string
 end MountOperation
 
 object MountOperation:
-  def apply(): MountOperation = new MountOperation(g_mount_operation_new().asInstanceOf)
+  def apply(): MountOperation = new MountOperation(
+    g_mount_operation_new().asInstanceOf
+  )
 end MountOperation

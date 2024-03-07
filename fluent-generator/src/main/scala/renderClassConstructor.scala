@@ -38,7 +38,7 @@ def renderClassConstructor(cls: AugmentedClass, constructor: Constructor)(using
     val body = s"new ${cls.name}($massagedInstantiation)"
 
     line(
-      s"def $sanitisedName($serialisedParams)$requiresZone: ${cls.name} = $body"
+      s"def ${escape(sanitisedName)}($serialisedParams)$requiresZone: ${cls.name} = $body"
     )
 
 end renderClassConstructor

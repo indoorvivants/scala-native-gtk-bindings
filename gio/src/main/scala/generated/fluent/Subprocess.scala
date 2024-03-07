@@ -10,67 +10,178 @@ import sn.gnome.gio.fluent.Initable
 import sn.gnome.gio.fluent.InputStream
 import sn.gnome.gio.fluent.OutputStream
 import sn.gnome.gio.internal.GAsyncReadyCallback
+import sn.gnome.gio.internal.GSubprocess
 import sn.gnome.glib.internal.GBytes
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.Object
 
-class Subprocess(raw: Ptr[GSubprocess]) extends Object(raw.asInstanceOf), Initable:
+class Subprocess(raw: Ptr[GSubprocess])
+    extends Object(raw.asInstanceOf),
+      Initable:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def communicate(stdin_buf : Ptr[GBytes], cancellable : Cancellable, stdout_buf : Ptr[Ptr[GBytes]], stderr_buf : Ptr[Ptr[GBytes]]): Boolean = g_subprocess_communicate(this.raw.asInstanceOf, stdin_buf, cancellable.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
+  def communicate(
+      stdin_buf: Ptr[GBytes],
+      cancellable: Cancellable,
+      stdout_buf: Ptr[Ptr[GBytes]],
+      stderr_buf: Ptr[Ptr[GBytes]]
+  ): Boolean = g_subprocess_communicate(
+    this.raw.asInstanceOf,
+    stdin_buf,
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    stdout_buf,
+    stderr_buf
+  ).value.!=(0)
 
-  def communicateAsync(stdin_buf : Ptr[GBytes], cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_subprocess_communicate_async(this.raw.asInstanceOf, stdin_buf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+  def communicateAsync(
+      stdin_buf: Ptr[GBytes],
+      cancellable: Cancellable,
+      callback: GAsyncReadyCallback,
+      user_data: Ptr[Byte]
+  ): Unit = g_subprocess_communicate_async(
+    this.raw.asInstanceOf,
+    stdin_buf,
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    callback,
+    gpointer(user_data)
+  )
 
-  def communicateFinish(result : AsyncResult, stdout_buf : Ptr[Ptr[GBytes]], stderr_buf : Ptr[Ptr[GBytes]]): Boolean = g_subprocess_communicate_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
+  def communicateFinish(
+      result: AsyncResult,
+      stdout_buf: Ptr[Ptr[GBytes]],
+      stderr_buf: Ptr[Ptr[GBytes]]
+  ): Boolean = g_subprocess_communicate_finish(
+    this.raw.asInstanceOf,
+    result.getUnsafeRawPointer().asInstanceOf,
+    stdout_buf,
+    stderr_buf
+  ).value.!=(0)
 
-  def communicateUtf8(stdin_buf : String | CString, cancellable : Cancellable, stdout_buf : Any /* Some(utf8): `char**` */, stderr_buf : Any /* Some(utf8): `char**` */)(using Zone): Boolean = g_subprocess_communicate_utf8(this.raw.asInstanceOf, __sn_extract_string(stdin_buf), cancellable.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
+  def communicateUtf8(
+      stdin_buf: String | CString,
+      cancellable: Cancellable,
+      stdout_buf: Any /* Some(utf8): `char**` */,
+      stderr_buf: Any /* Some(utf8): `char**` */
+  )(using Zone): Boolean = g_subprocess_communicate_utf8(
+    this.raw.asInstanceOf,
+    __sn_extract_string(stdin_buf),
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    stdout_buf,
+    stderr_buf
+  ).value.!=(0)
 
-  def communicateUtf8Async(stdin_buf : String | CString, cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte])(using Zone): Unit = g_subprocess_communicate_utf8_async(this.raw.asInstanceOf, __sn_extract_string(stdin_buf), cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+  def communicateUtf8Async(
+      stdin_buf: String | CString,
+      cancellable: Cancellable,
+      callback: GAsyncReadyCallback,
+      user_data: Ptr[Byte]
+  )(using Zone): Unit = g_subprocess_communicate_utf8_async(
+    this.raw.asInstanceOf,
+    __sn_extract_string(stdin_buf),
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    callback,
+    gpointer(user_data)
+  )
 
-  def communicateUtf8Finish(result : AsyncResult, stdout_buf : Any /* Some(utf8): `char**` */, stderr_buf : Any /* Some(utf8): `char**` */): Boolean = g_subprocess_communicate_utf8_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf, stdout_buf, stderr_buf).value.!=(0)
+  def communicateUtf8Finish(
+      result: AsyncResult,
+      stdout_buf: Any /* Some(utf8): `char**` */,
+      stderr_buf: Any /* Some(utf8): `char**` */
+  ): Boolean = g_subprocess_communicate_utf8_finish(
+    this.raw.asInstanceOf,
+    result.getUnsafeRawPointer().asInstanceOf,
+    stdout_buf,
+    stderr_buf
+  ).value.!=(0)
 
   def forceExit(): Unit = g_subprocess_force_exit(this.raw.asInstanceOf)
 
-  def getExitStatus(): Int = g_subprocess_get_exit_status(this.raw.asInstanceOf).value
+  def getExitStatus(): Int = g_subprocess_get_exit_status(
+    this.raw.asInstanceOf
+  ).value
 
-  def getIdentifier()(using Zone): String = fromCString(g_subprocess_get_identifier(this.raw.asInstanceOf).asInstanceOf)
+  def getIdentifier()(using Zone): String = fromCString(
+    g_subprocess_get_identifier(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getIfExited(): Boolean = g_subprocess_get_if_exited(this.raw.asInstanceOf).value.!=(0)
+  def getIfExited(): Boolean =
+    g_subprocess_get_if_exited(this.raw.asInstanceOf).value.!=(0)
 
-  def getIfSignaled(): Boolean = g_subprocess_get_if_signaled(this.raw.asInstanceOf).value.!=(0)
+  def getIfSignaled(): Boolean =
+    g_subprocess_get_if_signaled(this.raw.asInstanceOf).value.!=(0)
 
   def getStatus(): Int = g_subprocess_get_status(this.raw.asInstanceOf).value
 
-  def getStderrPipe(): InputStream = new InputStream(g_subprocess_get_stderr_pipe(this.raw.asInstanceOf).asInstanceOf)
+  def getStderrPipe(): InputStream = new InputStream(
+    g_subprocess_get_stderr_pipe(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getStdinPipe(): OutputStream = new OutputStream(g_subprocess_get_stdin_pipe(this.raw.asInstanceOf).asInstanceOf)
+  def getStdinPipe(): OutputStream = new OutputStream(
+    g_subprocess_get_stdin_pipe(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getStdoutPipe(): InputStream = new InputStream(g_subprocess_get_stdout_pipe(this.raw.asInstanceOf).asInstanceOf)
+  def getStdoutPipe(): InputStream = new InputStream(
+    g_subprocess_get_stdout_pipe(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def getSuccessful(): Boolean = g_subprocess_get_successful(this.raw.asInstanceOf).value.!=(0)
+  def getSuccessful(): Boolean =
+    g_subprocess_get_successful(this.raw.asInstanceOf).value.!=(0)
 
   def getTermSig(): Int = g_subprocess_get_term_sig(this.raw.asInstanceOf).value
 
-  def sendSignal(signal_num : Int): Unit = g_subprocess_send_signal(this.raw.asInstanceOf, gint(signal_num))
+  def sendSignal(signal_num: Int): Unit =
+    g_subprocess_send_signal(this.raw.asInstanceOf, gint(signal_num))
 
-  def wait(cancellable : Cancellable): Boolean = g_subprocess_wait(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+  def _wait(cancellable: Cancellable): Boolean = g_subprocess_wait(
+    this.raw.asInstanceOf,
+    cancellable.getUnsafeRawPointer().asInstanceOf
+  ).value.!=(0)
 
-  def waitAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_subprocess_wait_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+  def waitAsync(
+      cancellable: Cancellable,
+      callback: GAsyncReadyCallback,
+      user_data: Ptr[Byte]
+  ): Unit = g_subprocess_wait_async(
+    this.raw.asInstanceOf,
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    callback,
+    gpointer(user_data)
+  )
 
-  def waitCheck(cancellable : Cancellable): Boolean = g_subprocess_wait_check(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+  def waitCheck(cancellable: Cancellable): Boolean = g_subprocess_wait_check(
+    this.raw.asInstanceOf,
+    cancellable.getUnsafeRawPointer().asInstanceOf
+  ).value.!=(0)
 
-  def waitCheckAsync(cancellable : Cancellable, callback : GAsyncReadyCallback, user_data : Ptr[Byte]): Unit = g_subprocess_wait_check_async(this.raw.asInstanceOf, cancellable.getUnsafeRawPointer().asInstanceOf, callback, gpointer(user_data))
+  def waitCheckAsync(
+      cancellable: Cancellable,
+      callback: GAsyncReadyCallback,
+      user_data: Ptr[Byte]
+  ): Unit = g_subprocess_wait_check_async(
+    this.raw.asInstanceOf,
+    cancellable.getUnsafeRawPointer().asInstanceOf,
+    callback,
+    gpointer(user_data)
+  )
 
-  def waitCheckFinish(result : AsyncResult): Boolean = g_subprocess_wait_check_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+  def waitCheckFinish(result: AsyncResult): Boolean =
+    g_subprocess_wait_check_finish(
+      this.raw.asInstanceOf,
+      result.getUnsafeRawPointer().asInstanceOf
+    ).value.!=(0)
 
-  def waitFinish(result : AsyncResult): Boolean = g_subprocess_wait_finish(this.raw.asInstanceOf, result.getUnsafeRawPointer().asInstanceOf).value.!=(0)
+  def waitFinish(result: AsyncResult): Boolean = g_subprocess_wait_finish(
+    this.raw.asInstanceOf,
+    result.getUnsafeRawPointer().asInstanceOf
+  ).value.!=(0)
 
-
-  private inline def __sn_extract_string(str: String | CString)(using Zone): CString = 
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
     str match
-      case s: String => toCString(s)
+      case s: String  => toCString(s)
       case s: CString => s
     end match
   end __sn_extract_string

@@ -19,3 +19,6 @@ case class NamingPolicy(
     namespaceToPackage(name) + ".fluent"
   def namespaceToInternalPackage(name: String) =
     namespaceToPackage(name) + ".internal"
+
+object NamingPolicy:
+  inline def apply()(using np: NamingPolicy): NamingPolicy = np

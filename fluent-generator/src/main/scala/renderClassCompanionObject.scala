@@ -19,8 +19,7 @@ def renderClassCompanionObject(
         cls.constructors.foreach: constructor =>
           val result =
             transact[String]:
-              try coll.observe(renderClassConstructor(cls, constructor))
-              catch case exc => break(exc.toString)
+              handleExceptions(coll.observe(renderClassConstructor(cls, constructor)))
 
           result.foreach: msg =>
             scribe.warn(

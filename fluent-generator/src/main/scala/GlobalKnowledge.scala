@@ -101,7 +101,7 @@ case class GlobalKnowledge(
                     cls.name,
                     namespaceName,
                     NameType.Class
-                  ) // (fluentPackage + "." + cls.name, NameType.Class)
+                  )
                 )
 
             namespace.interfaces
