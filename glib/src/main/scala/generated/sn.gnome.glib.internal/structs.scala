@@ -5,14 +5,10 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type GAllocator = CStruct0
 object GAllocator:
   given _tag: Tag[GAllocator] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GArray = CStruct2[Ptr[gchar], guint]
 object GArray:
   given _tag: Tag[GArray] = Tag.materializeCStruct2Tag[Ptr[gchar], guint]
@@ -28,20 +24,14 @@ object GArray:
     def len : guint = struct._2
     def len_=(value: guint): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GAsyncQueue = CStruct0
 object GAsyncQueue:
   given _tag: Tag[GAsyncQueue] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GBookmarkFile = CStruct0
 object GBookmarkFile:
   given _tag: Tag[GBookmarkFile] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GByteArray = CStruct2[Ptr[guint8], guint]
 object GByteArray:
   given _tag: Tag[GByteArray] = Tag.materializeCStruct2Tag[Ptr[guint8], guint]
@@ -57,26 +47,18 @@ object GByteArray:
     def len : guint = struct._2
     def len_=(value: guint): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GBytes = CStruct0
 object GBytes:
   given _tag: Tag[GBytes] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCache = CStruct0
 object GCache:
   given _tag: Tag[GCache] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GChecksum = CStruct0
 object GChecksum:
   given _tag: Tag[GChecksum] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCompletion = CStruct5[Ptr[Byte], GCompletionFunc, Ptr[gchar], Ptr[Byte], GCompletionStrncmpFunc]
 object GCompletion:
   given _tag: Tag[GCompletion] = Tag.materializeCStruct5Tag[Ptr[Byte], GCompletionFunc, Ptr[gchar], Ptr[Byte], GCompletionStrncmpFunc]
@@ -101,8 +83,6 @@ object GCompletion:
     def strncmp_func : GCompletionStrncmpFunc = struct._5
     def strncmp_func_=(value: GCompletionStrncmpFunc): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GCond = CStruct2[gpointer, CArray[guint, Nat._2]]
 object GCond:
   given _tag: Tag[GCond] = Tag.materializeCStruct2Tag[gpointer, CArray[guint, Nat._2]]
@@ -118,14 +98,10 @@ object GCond:
     def i : CArray[guint, Nat._2] = struct._2
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GData = CStruct0
 object GData:
   given _tag: Tag[GData] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDate = CStruct6[guint, guint, guint, guint, guint, guint]
 object GDate:
   given _tag: Tag[GDate] = Tag.materializeCStruct6Tag[guint, guint, guint, guint, guint, guint]
@@ -153,14 +129,10 @@ object GDate:
     def year : guint = struct._6
     def year_=(value: guint): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GDateTime = CStruct0
 object GDateTime:
   given _tag: Tag[GDateTime] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDebugKey = CStruct2[Ptr[gchar], guint]
 object GDebugKey:
   given _tag: Tag[GDebugKey] = Tag.materializeCStruct2Tag[Ptr[gchar], guint]
@@ -176,14 +148,10 @@ object GDebugKey:
     def value : guint = struct._2
     def value_=(value: guint): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GDir = CStruct0
 object GDir:
   given _tag: Tag[GDir] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GError = CStruct3[GQuark, gint, Ptr[gchar]]
 object GError:
   given _tag: Tag[GError] = Tag.materializeCStruct3Tag[GQuark, gint, Ptr[gchar]]
@@ -202,14 +170,10 @@ object GError:
     def message : Ptr[gchar] = struct._3
     def message_=(value: Ptr[gchar]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GHashTable = CStruct0
 object GHashTable:
   given _tag: Tag[GHashTable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GHashTableIter = CStruct6[gpointer, gpointer, gpointer, CInt, gboolean, gpointer]
 object GHashTableIter:
   given _tag: Tag[GHashTableIter] = Tag.materializeCStruct6Tag[gpointer, gpointer, gpointer, CInt, gboolean, gpointer]
@@ -237,14 +201,10 @@ object GHashTableIter:
     def dummy6 : gpointer = struct._6
     def dummy6_=(value: gpointer): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GHmac = CStruct0
 object GHmac:
   given _tag: Tag[GHmac] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GHook = CStruct8[gpointer, Ptr[Byte], Ptr[Byte], guint, gulong, guint, gpointer, GDestroyNotify]
 object GHook:
   given _tag: Tag[GHook] = Tag.materializeCStruct8Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, gulong, guint, gpointer, GDestroyNotify]
@@ -278,8 +238,6 @@ object GHook:
     def destroy : GDestroyNotify = struct._8
     def destroy_=(value: GDestroyNotify): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type GHookList = CStruct7[gulong, guint, guint, Ptr[Byte], gpointer, Ptr[Byte], CArray[gpointer, Nat._2]]
 object GHookList:
   given _tag: Tag[GHookList] = Tag.materializeCStruct7Tag[gulong, guint, guint, Ptr[Byte], gpointer, Ptr[Byte], CArray[gpointer, Nat._2]]
@@ -310,8 +268,6 @@ object GHookList:
     def dummy : CArray[gpointer, Nat._2] = struct._7
     def dummy_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GIOChannel = CStruct20[gint, Ptr[Byte], Ptr[gchar], GIConv, GIConv, Ptr[gchar], guint, gsize, Ptr[GString], Ptr[GString], Ptr[GString], CArray[gchar, Nat._6], guint, guint, guint, guint, guint, guint, gpointer, gpointer]
 object GIOChannel:
   given _tag: Tag[GIOChannel] = Tag.materializeCStruct20Tag[gint, Ptr[Byte], Ptr[gchar], GIConv, GIConv, Ptr[gchar], guint, gsize, Ptr[GString], Ptr[GString], Ptr[GString], CArray[gchar, Nat._6], guint, guint, guint, guint, guint, guint, gpointer, gpointer]
@@ -381,8 +337,6 @@ object GIOChannel:
     def reserved2 : gpointer = struct._20
     def reserved2_=(value: gpointer): Unit = !struct.at20 = value
 
-/**
-*/
 opaque type GIOFuncs = CStruct8[CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr4[Ptr[Byte], gint64, GSeekType, Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], GIOCondition, Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr3[Ptr[Byte], GIOFlags, Ptr[Ptr[GError]], GIOStatus], CFuncPtr1[Ptr[Byte], GIOFlags]]
 object GIOFuncs:
   given _tag: Tag[GIOFuncs] = Tag.materializeCStruct8Tag[CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr4[Ptr[Byte], gint64, GSeekType, Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], GIOCondition, Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr3[Ptr[Byte], GIOFlags, Ptr[Ptr[GError]], GIOStatus], CFuncPtr1[Ptr[Byte], GIOFlags]]
@@ -416,14 +370,10 @@ object GIOFuncs:
     def io_get_flags : CFuncPtr1[Ptr[GIOChannel], GIOFlags] = struct._8.asInstanceOf[CFuncPtr1[Ptr[GIOChannel], GIOFlags]]
     def io_get_flags_=(value: CFuncPtr1[Ptr[GIOChannel], GIOFlags]): Unit = !struct.at8 = value.asInstanceOf[CFuncPtr1[Ptr[Byte], GIOFlags]]
 
-/**
-*/
 opaque type GKeyFile = CStruct0
 object GKeyFile:
   given _tag: Tag[GKeyFile] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GList = CStruct3[gpointer, Ptr[Byte], Ptr[Byte]]
 object GList:
   given _tag: Tag[GList] = Tag.materializeCStruct3Tag[gpointer, Ptr[Byte], Ptr[Byte]]
@@ -442,8 +392,6 @@ object GList:
     def prev : Ptr[GList] = struct._3.asInstanceOf[Ptr[GList]]
     def prev_=(value: Ptr[GList]): Unit = !struct.at3 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type GLogField = CStruct3[Ptr[gchar], gconstpointer, gssize]
 object GLogField:
   given _tag: Tag[GLogField] = Tag.materializeCStruct3Tag[Ptr[gchar], gconstpointer, gssize]
@@ -462,26 +410,18 @@ object GLogField:
     def length : gssize = struct._3
     def length_=(value: gssize): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GMainContext = CStruct0
 object GMainContext:
   given _tag: Tag[GMainContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMainLoop = CStruct0
 object GMainLoop:
   given _tag: Tag[GMainLoop] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMappedFile = CStruct0
 object GMappedFile:
   given _tag: Tag[GMappedFile] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMarkupParseContext = CStruct0
 object GMarkupParseContext:
   given _tag: Tag[GMarkupParseContext] = Tag.materializeCStruct0Tag
@@ -513,20 +453,14 @@ object GMarkupParser:
     def error : CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit] = struct._5
     def error_=(value: CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GMatchInfo = CStruct0
 object GMatchInfo:
   given _tag: Tag[GMatchInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMemChunk = CStruct0
 object GMemChunk:
   given _tag: Tag[GMemChunk] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMemVTable = CStruct6[CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer], CFuncPtr1[gpointer, Unit], CFuncPtr2[gsize, gsize, gpointer], CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer]]
 object GMemVTable:
   given _tag: Tag[GMemVTable] = Tag.materializeCStruct6Tag[CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer], CFuncPtr1[gpointer, Unit], CFuncPtr2[gsize, gsize, gpointer], CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer]]
@@ -554,8 +488,6 @@ object GMemVTable:
     def try_realloc : CFuncPtr2[gpointer, gsize, gpointer] = struct._6
     def try_realloc_=(value: CFuncPtr2[gpointer, gsize, gpointer]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GNode = CStruct5[gpointer, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object GNode:
   given _tag: Tag[GNode] = Tag.materializeCStruct5Tag[gpointer, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
@@ -580,8 +512,6 @@ object GNode:
     def children : Ptr[GNode] = struct._5.asInstanceOf[Ptr[GNode]]
     def children_=(value: Ptr[GNode]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type GOnce = CStruct2[GOnceStatus, gpointer]
 object GOnce:
   given _tag: Tag[GOnce] = Tag.materializeCStruct2Tag[GOnceStatus, gpointer]
@@ -597,8 +527,6 @@ object GOnce:
     def retval : gpointer = struct._2
     def retval_=(value: gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GOptionContext = CStruct0
 object GOptionContext:
   given _tag: Tag[GOptionContext] = Tag.materializeCStruct0Tag
@@ -636,14 +564,25 @@ object GOptionEntry:
     def arg_description : Ptr[gchar] = struct._7
     def arg_description_=(value: Ptr[gchar]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GOptionGroup = CStruct0
 object GOptionGroup:
   given _tag: Tag[GOptionGroup] = Tag.materializeCStruct0Tag
 
 /**
+ * GPathBuf: (copy-func g_path_buf_copy) (free-func g_path_buf_free)
 */
+opaque type GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
+object GPathBuf:
+  given _tag: Tag[GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[GPathBuf] = scala.scalanative.unsafe.alloc[GPathBuf](1)
+  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[GPathBuf] = 
+    val ____ptr = apply()
+    (!____ptr).dummy = dummy
+    ____ptr
+  extension (struct: GPathBuf)
+    def dummy : CArray[gpointer, Nat._8] = struct._1
+    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
+
 opaque type GPatternSpec = CStruct0
 object GPatternSpec:
   given _tag: Tag[GPatternSpec] = Tag.materializeCStruct0Tag
@@ -669,8 +608,6 @@ object GPollFD:
     def revents : gushort = struct._3
     def revents_=(value: gushort): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GPrivate = CStruct3[gpointer, GDestroyNotify, CArray[gpointer, Nat._2]]
 object GPrivate:
   given _tag: Tag[GPrivate] = Tag.materializeCStruct3Tag[gpointer, GDestroyNotify, CArray[gpointer, Nat._2]]
@@ -689,8 +626,6 @@ object GPrivate:
     def future : CArray[gpointer, Nat._2] = struct._3
     def future_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GPtrArray = CStruct2[Ptr[gpointer], guint]
 object GPtrArray:
   given _tag: Tag[GPtrArray] = Tag.materializeCStruct2Tag[Ptr[gpointer], guint]
@@ -727,8 +662,6 @@ object GQueue:
     def length : guint = struct._3
     def length_=(value: guint): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GRWLock = CStruct2[gpointer, CArray[guint, Nat._2]]
 object GRWLock:
   given _tag: Tag[GRWLock] = Tag.materializeCStruct2Tag[gpointer, CArray[guint, Nat._2]]
@@ -744,14 +677,10 @@ object GRWLock:
     def i : CArray[guint, Nat._2] = struct._2
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GRand = CStruct0
 object GRand:
   given _tag: Tag[GRand] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GRecMutex = CStruct2[gpointer, CArray[guint, Nat._2]]
 object GRecMutex:
   given _tag: Tag[GRecMutex] = Tag.materializeCStruct2Tag[gpointer, CArray[guint, Nat._2]]
@@ -767,20 +696,14 @@ object GRecMutex:
     def i : CArray[guint, Nat._2] = struct._2
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GRegex = CStruct0
 object GRegex:
   given _tag: Tag[GRegex] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GRelation = CStruct0
 object GRelation:
   given _tag: Tag[GRelation] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSList = CStruct2[gpointer, Ptr[Byte]]
 object GSList:
   given _tag: Tag[GSList] = Tag.materializeCStruct2Tag[gpointer, Ptr[Byte]]
@@ -796,8 +719,6 @@ object GSList:
     def next : Ptr[GSList] = struct._2.asInstanceOf[Ptr[GSList]]
     def next_=(value: Ptr[GSList]): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type GScanner = CStruct21[gpointer, guint, guint, Ptr[gchar], Ptr[GData], Ptr[GScannerConfig], GTokenType, GTokenValue, guint, guint, GTokenType, GTokenValue, guint, guint, Ptr[GHashTable], gint, Ptr[gchar], Ptr[gchar], Ptr[gchar], guint, Ptr[Byte]]
 object GScanner:
   given _tag: Tag[GScanner] = Tag.materializeCStruct21Tag[gpointer, guint, guint, Ptr[gchar], Ptr[GData], Ptr[GScannerConfig], GTokenType, GTokenValue, guint, guint, GTokenType, GTokenValue, guint, guint, Ptr[GHashTable], gint, Ptr[gchar], Ptr[gchar], Ptr[gchar], guint, Ptr[Byte]]
@@ -870,8 +791,6 @@ object GScanner:
     def msg_handler : GScannerMsgFunc = struct._21.asInstanceOf[GScannerMsgFunc]
     def msg_handler_=(value: GScannerMsgFunc): Unit = !struct.at21 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type GScannerConfig = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
 object GScannerConfig:
   given _tag: Tag[GScannerConfig] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
@@ -962,20 +881,14 @@ object GScannerConfig:
     def padding_dummy: guint = !struct.at(120).asInstanceOf[Ptr[guint]]
     def padding_dummy_=(value: guint): Unit = !struct.at(120).asInstanceOf[Ptr[guint]] = value
 
-/**
-*/
 opaque type GSequence = CStruct0
 object GSequence:
   given _tag: Tag[GSequence] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSequenceIter = CStruct0
 object GSequenceIter:
   given _tag: Tag[GSequenceIter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
 object GSource:
   given _tag: Tag[GSource] = Tag.materializeCStruct13Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
@@ -1024,8 +937,6 @@ object GSource:
     def priv : Ptr[GSourcePrivate] = struct._13
     def priv_=(value: Ptr[GSourcePrivate]): Unit = !struct.at13 = value
 
-/**
-*/
 opaque type GSourceCallbackFuncs = CStruct3[CFuncPtr1[gpointer, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 object GSourceCallbackFuncs:
   given _tag: Tag[GSourceCallbackFuncs] = Tag.materializeCStruct3Tag[CFuncPtr1[gpointer, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
@@ -1044,8 +955,6 @@ object GSourceCallbackFuncs:
     def get : CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit] = struct._3.asInstanceOf[CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
     def get_=(value: CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit]): Unit = !struct.at3 = value.asInstanceOf[CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 
-/**
-*/
 opaque type GSourceFuncs = CStruct6[CFuncPtr2[Ptr[Byte], Ptr[gint], gboolean], CFuncPtr1[Ptr[Byte], gboolean], CFuncPtr3[Ptr[Byte], GSourceFunc, gpointer, gboolean], CFuncPtr1[Ptr[Byte], Unit], GSourceFunc, GSourceDummyMarshal]
 object GSourceFuncs:
   given _tag: Tag[GSourceFuncs] = Tag.materializeCStruct6Tag[CFuncPtr2[Ptr[Byte], Ptr[gint], gboolean], CFuncPtr1[Ptr[Byte], gboolean], CFuncPtr3[Ptr[Byte], GSourceFunc, gpointer, gboolean], CFuncPtr1[Ptr[Byte], Unit], GSourceFunc, GSourceDummyMarshal]
@@ -1073,14 +982,10 @@ object GSourceFuncs:
     def closure_marshal : GSourceDummyMarshal = struct._6
     def closure_marshal_=(value: GSourceDummyMarshal): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GSourcePrivate = CStruct0
 object GSourcePrivate:
   given _tag: Tag[GSourcePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GStaticMutex = CStruct2[Ptr[GMutex], pthread_mutex_t]
 object GStaticMutex:
   given _tag: Tag[GStaticMutex] = Tag.materializeCStruct2Tag[Ptr[GMutex], pthread_mutex_t]
@@ -1096,8 +1001,6 @@ object GStaticMutex:
     def unused : pthread_mutex_t = struct._2
     def unused_=(value: pthread_mutex_t): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GStaticPrivate = CStruct1[guint]
 object GStaticPrivate:
   given _tag: Tag[GStaticPrivate] = Tag.materializeCStruct1Tag[guint]
@@ -1110,8 +1013,6 @@ object GStaticPrivate:
     def index : guint = struct._1
     def index_=(value: guint): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GStaticRWLock = CStruct7[GStaticMutex, Ptr[GCond], Ptr[GCond], guint, gboolean, guint, guint]
 object GStaticRWLock:
   given _tag: Tag[GStaticRWLock] = Tag.materializeCStruct7Tag[GStaticMutex, Ptr[GCond], Ptr[GCond], guint, gboolean, guint, guint]
@@ -1142,12 +1043,8 @@ object GStaticRWLock:
     def want_to_write : guint = struct._7
     def want_to_write_=(value: guint): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GStaticRecMutex = CStruct3[GStaticMutex, guint, GStaticRecMutex.Union0]
 object GStaticRecMutex:
-  /**
-  */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -1187,8 +1084,6 @@ object GStaticRecMutex:
     def unused : GStaticRecMutex.Union0 = struct._3
     def unused_=(value: GStaticRecMutex.Union0): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GString = CStruct3[Ptr[gchar], gsize, gsize]
 object GString:
   given _tag: Tag[GString] = Tag.materializeCStruct3Tag[Ptr[gchar], gsize, gsize]
@@ -1207,26 +1102,18 @@ object GString:
     def allocated_len : gsize = struct._3
     def allocated_len_=(value: gsize): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GStringChunk = CStruct0
 object GStringChunk:
   given _tag: Tag[GStringChunk] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GStrvBuilder = CStruct0
 object GStrvBuilder:
   given _tag: Tag[GStrvBuilder] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTestCase = CStruct0
 object GTestCase:
   given _tag: Tag[GTestCase] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTestConfig = CStruct6[gboolean, gboolean, gboolean, gboolean, gboolean, gboolean]
 object GTestConfig:
   given _tag: Tag[GTestConfig] = Tag.materializeCStruct6Tag[gboolean, gboolean, gboolean, gboolean, gboolean, gboolean]
@@ -1254,8 +1141,6 @@ object GTestConfig:
     def test_undefined : gboolean = struct._6
     def test_undefined_=(value: gboolean): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GTestLogBuffer = CStruct2[Ptr[GString], Ptr[Byte]]
 object GTestLogBuffer:
   given _tag: Tag[GTestLogBuffer] = Tag.materializeCStruct2Tag[Ptr[GString], Ptr[Byte]]
@@ -1271,8 +1156,6 @@ object GTestLogBuffer:
     def msgs : Ptr[GSList] = struct._2.asInstanceOf[Ptr[GSList]]
     def msgs_=(value: Ptr[GSList]): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type GTestLogMsg = CStruct5[GTestLogType, guint, Ptr[Ptr[gchar]], guint, Ptr[Double]]
 object GTestLogMsg:
   given _tag: Tag[GTestLogMsg] = Tag.materializeCStruct5Tag[GTestLogType, guint, Ptr[Ptr[gchar]], guint, Ptr[Double]]
@@ -1297,14 +1180,10 @@ object GTestLogMsg:
     def nums : Ptr[Double] = struct._5
     def nums_=(value: Ptr[Double]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GTestSuite = CStruct0
 object GTestSuite:
   given _tag: Tag[GTestSuite] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GThread = CStruct4[GThreadFunc, gpointer, gboolean, GThreadPriority]
 object GThread:
   given _tag: Tag[GThread] = Tag.materializeCStruct4Tag[GThreadFunc, gpointer, gboolean, GThreadPriority]
@@ -1326,8 +1205,6 @@ object GThread:
     def priority : GThreadPriority = struct._4
     def priority_=(value: GThreadPriority): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GThreadFunctions = CStruct21[CFuncPtr0[Ptr[GMutex]], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], gboolean], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr0[Ptr[GCond]], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr2[Ptr[GCond], Ptr[GMutex], Unit], CFuncPtr3[Ptr[GCond], Ptr[GMutex], Ptr[GTimeVal], gboolean], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[GDestroyNotify, Ptr[GPrivate]], CFuncPtr1[Ptr[GPrivate], gpointer], CFuncPtr2[Ptr[GPrivate], gpointer, Unit], CFuncPtr8[GThreadFunc, gpointer, gulong, gboolean, gboolean, GThreadPriority, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr0[Unit], CFuncPtr1[gpointer, Unit], CFuncPtr0[Unit], CFuncPtr2[gpointer, GThreadPriority, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr2[gpointer, gpointer, gboolean]]
 object GThreadFunctions:
   given _tag: Tag[GThreadFunctions] = Tag.materializeCStruct21Tag[CFuncPtr0[Ptr[GMutex]], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], gboolean], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr0[Ptr[GCond]], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr2[Ptr[GCond], Ptr[GMutex], Unit], CFuncPtr3[Ptr[GCond], Ptr[GMutex], Ptr[GTimeVal], gboolean], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[GDestroyNotify, Ptr[GPrivate]], CFuncPtr1[Ptr[GPrivate], gpointer], CFuncPtr2[Ptr[GPrivate], gpointer, Unit], CFuncPtr8[GThreadFunc, gpointer, gulong, gboolean, gboolean, GThreadPriority, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr0[Unit], CFuncPtr1[gpointer, Unit], CFuncPtr0[Unit], CFuncPtr2[gpointer, GThreadPriority, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr2[gpointer, gpointer, gboolean]]
@@ -1400,8 +1277,6 @@ object GThreadFunctions:
     def thread_equal : CFuncPtr2[gpointer, gpointer, gboolean] = struct._21
     def thread_equal_=(value: CFuncPtr2[gpointer, gpointer, gboolean]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type GThreadPool = CStruct3[GFunc, gpointer, gboolean]
 object GThreadPool:
   given _tag: Tag[GThreadPool] = Tag.materializeCStruct3Tag[GFunc, gpointer, gboolean]
@@ -1420,8 +1295,6 @@ object GThreadPool:
     def exclusive : gboolean = struct._3
     def exclusive_=(value: gboolean): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GTimeVal = CStruct2[glong, glong]
 object GTimeVal:
   given _tag: Tag[GTimeVal] = Tag.materializeCStruct2Tag[glong, glong]
@@ -1437,20 +1310,14 @@ object GTimeVal:
     def tv_usec : glong = struct._2
     def tv_usec_=(value: glong): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GTimeZone = CStruct0
 object GTimeZone:
   given _tag: Tag[GTimeZone] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTimer = CStruct0
 object GTimer:
   given _tag: Tag[GTimer] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTrashStack = CStruct1[Ptr[Byte]]
 object GTrashStack:
   given _tag: Tag[GTrashStack] = Tag.materializeCStruct1Tag[Ptr[Byte]]
@@ -1463,20 +1330,14 @@ object GTrashStack:
     def next : Ptr[GTrashStack] = struct._1.asInstanceOf[Ptr[GTrashStack]]
     def next_=(value: Ptr[GTrashStack]): Unit = !struct.at1 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type GTree = CStruct0
 object GTree:
   given _tag: Tag[GTree] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTreeNode = CStruct0
 object GTreeNode:
   given _tag: Tag[GTreeNode] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTuples = CStruct1[guint]
 object GTuples:
   given _tag: Tag[GTuples] = Tag.materializeCStruct1Tag[guint]
@@ -1489,14 +1350,10 @@ object GTuples:
     def len : guint = struct._1
     def len_=(value: guint): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GUri = CStruct0
 object GUri:
   given _tag: Tag[GUri] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GUriParamsIter = CStruct4[gint, gpointer, gpointer, CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]]
 object GUriParamsIter:
   given _tag: Tag[GUriParamsIter] = Tag.materializeCStruct4Tag[gint, gpointer, gpointer, CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]]
@@ -1518,27 +1375,19 @@ object GUriParamsIter:
     def dummy3 : CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]] = struct._4
     def dummy3_=(value: CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GVariant = CStruct0
 object GVariant:
   given _tag: Tag[GVariant] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GVariantBuilder = CStruct1[GVariantBuilder.Union0]
 object GVariantBuilder:
-  /**
-  */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    /**
-    */
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -1549,8 +1398,8 @@ object GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1562,16 +1411,16 @@ object GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]]
       def s_=(value: GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantBuilder] = Tag.materializeCStruct1Tag[GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[GVariantBuilder] = scala.scalanative.unsafe.alloc[GVariantBuilder](1)
   def apply(u : GVariantBuilder.Union0)(using Zone): Ptr[GVariantBuilder] = 
@@ -1582,21 +1431,15 @@ object GVariantBuilder:
     def u : GVariantBuilder.Union0 = struct._1
     def u_=(value: GVariantBuilder.Union0): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GVariantDict = CStruct1[GVariantDict.Union0]
 object GVariantDict:
-  /**
-  */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    /**
-    */
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -1607,8 +1450,8 @@ object GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1620,16 +1463,16 @@ object GVariantDict:
       un.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]]
       def s_=(value: GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantDict] = Tag.materializeCStruct1Tag[GVariantDict.Union0]
   def apply()(using Zone): Ptr[GVariantDict] = scala.scalanative.unsafe.alloc[GVariantDict](1)
   def apply(u : GVariantDict.Union0)(using Zone): Ptr[GVariantDict] = 
@@ -1640,34 +1483,26 @@ object GVariantDict:
     def u : GVariantDict.Union0 = struct._1
     def u_=(value: GVariantDict.Union0): Unit = !struct.at1 = value
 
-/**
-*/
-opaque type GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
 object GVariantIter:
-  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[GVariantIter] = scala.scalanative.unsafe.alloc[GVariantIter](1)
-  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
+  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: GVariantIter)
-    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GVariantType = CStruct0
 object GVariantType:
   given _tag: Tag[GVariantType] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GAllocator = CStruct0
 object _GAllocator:
   given _tag: Tag[_GAllocator] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GArray = CStruct2[Ptr[gchar], guint]
 object _GArray:
   given _tag: Tag[_GArray] = Tag.materializeCStruct2Tag[Ptr[gchar], guint]
@@ -1683,20 +1518,14 @@ object _GArray:
     def len : guint = struct._2
     def len_=(value: guint): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GAsyncQueue = CStruct0
 object _GAsyncQueue:
   given _tag: Tag[_GAsyncQueue] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GBookmarkFile = CStruct0
 object _GBookmarkFile:
   given _tag: Tag[_GBookmarkFile] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GByteArray = CStruct2[Ptr[guint8], guint]
 object _GByteArray:
   given _tag: Tag[_GByteArray] = Tag.materializeCStruct2Tag[Ptr[guint8], guint]
@@ -1712,26 +1541,18 @@ object _GByteArray:
     def len : guint = struct._2
     def len_=(value: guint): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GBytes = CStruct0
 object _GBytes:
   given _tag: Tag[_GBytes] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCache = CStruct0
 object _GCache:
   given _tag: Tag[_GCache] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GChecksum = CStruct0
 object _GChecksum:
   given _tag: Tag[_GChecksum] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCompletion = CStruct5[Ptr[Byte], GCompletionFunc, Ptr[gchar], Ptr[Byte], GCompletionStrncmpFunc]
 object _GCompletion:
   given _tag: Tag[_GCompletion] = Tag.materializeCStruct5Tag[Ptr[Byte], GCompletionFunc, Ptr[gchar], Ptr[Byte], GCompletionStrncmpFunc]
@@ -1756,8 +1577,6 @@ object _GCompletion:
     def strncmp_func : GCompletionStrncmpFunc = struct._5
     def strncmp_func_=(value: GCompletionStrncmpFunc): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GCond = CStruct2[gpointer, CArray[guint, Nat._2]]
 object _GCond:
   given _tag: Tag[_GCond] = Tag.materializeCStruct2Tag[gpointer, CArray[guint, Nat._2]]
@@ -1773,14 +1592,10 @@ object _GCond:
     def i : CArray[guint, Nat._2] = struct._2
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GData = CStruct0
 object _GData:
   given _tag: Tag[_GData] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDate = CStruct6[guint, guint, guint, guint, guint, guint]
 object _GDate:
   given _tag: Tag[_GDate] = Tag.materializeCStruct6Tag[guint, guint, guint, guint, guint, guint]
@@ -1808,14 +1623,10 @@ object _GDate:
     def year : guint = struct._6
     def year_=(value: guint): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GDateTime = CStruct0
 object _GDateTime:
   given _tag: Tag[_GDateTime] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDebugKey = CStruct2[Ptr[gchar], guint]
 object _GDebugKey:
   given _tag: Tag[_GDebugKey] = Tag.materializeCStruct2Tag[Ptr[gchar], guint]
@@ -1831,14 +1642,10 @@ object _GDebugKey:
     def value : guint = struct._2
     def value_=(value: guint): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GDir = CStruct0
 object _GDir:
   given _tag: Tag[_GDir] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GError = CStruct3[GQuark, gint, Ptr[gchar]]
 object _GError:
   given _tag: Tag[_GError] = Tag.materializeCStruct3Tag[GQuark, gint, Ptr[gchar]]
@@ -1857,14 +1664,10 @@ object _GError:
     def message : Ptr[gchar] = struct._3
     def message_=(value: Ptr[gchar]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GHashTable = CStruct0
 object _GHashTable:
   given _tag: Tag[_GHashTable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GHashTableIter = CStruct6[gpointer, gpointer, gpointer, CInt, gboolean, gpointer]
 object _GHashTableIter:
   given _tag: Tag[_GHashTableIter] = Tag.materializeCStruct6Tag[gpointer, gpointer, gpointer, CInt, gboolean, gpointer]
@@ -1892,14 +1695,10 @@ object _GHashTableIter:
     def dummy6 : gpointer = struct._6
     def dummy6_=(value: gpointer): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GHmac = CStruct0
 object _GHmac:
   given _tag: Tag[_GHmac] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GHook = CStruct8[gpointer, Ptr[Byte], Ptr[Byte], guint, gulong, guint, gpointer, GDestroyNotify]
 object _GHook:
   given _tag: Tag[_GHook] = Tag.materializeCStruct8Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, gulong, guint, gpointer, GDestroyNotify]
@@ -1933,8 +1732,6 @@ object _GHook:
     def destroy : GDestroyNotify = struct._8
     def destroy_=(value: GDestroyNotify): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GHookList = CStruct7[gulong, guint, guint, Ptr[Byte], gpointer, Ptr[Byte], CArray[gpointer, Nat._2]]
 object _GHookList:
   given _tag: Tag[_GHookList] = Tag.materializeCStruct7Tag[gulong, guint, guint, Ptr[Byte], gpointer, Ptr[Byte], CArray[gpointer, Nat._2]]
@@ -1965,14 +1762,10 @@ object _GHookList:
     def dummy : CArray[gpointer, Nat._2] = struct._7
     def dummy_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GIConv = CStruct0
 object _GIConv:
   given _tag: Tag[_GIConv] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOChannel = CStruct20[gint, Ptr[Byte], Ptr[gchar], GIConv, GIConv, Ptr[gchar], guint, gsize, Ptr[GString], Ptr[GString], Ptr[GString], CArray[gchar, Nat._6], guint, guint, guint, guint, guint, guint, gpointer, gpointer]
 object _GIOChannel:
   given _tag: Tag[_GIOChannel] = Tag.materializeCStruct20Tag[gint, Ptr[Byte], Ptr[gchar], GIConv, GIConv, Ptr[gchar], guint, gsize, Ptr[GString], Ptr[GString], Ptr[GString], CArray[gchar, Nat._6], guint, guint, guint, guint, guint, guint, gpointer, gpointer]
@@ -2042,8 +1835,6 @@ object _GIOChannel:
     def reserved2 : gpointer = struct._20
     def reserved2_=(value: gpointer): Unit = !struct.at20 = value
 
-/**
-*/
 opaque type _GIOFuncs = CStruct8[CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr4[Ptr[Byte], gint64, GSeekType, Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], GIOCondition, Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr3[Ptr[Byte], GIOFlags, Ptr[Ptr[GError]], GIOStatus], CFuncPtr1[Ptr[Byte], GIOFlags]]
 object _GIOFuncs:
   given _tag: Tag[_GIOFuncs] = Tag.materializeCStruct8Tag[CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr5[Ptr[Byte], Ptr[gchar], gsize, Ptr[gsize], Ptr[Ptr[GError]], GIOStatus], CFuncPtr4[Ptr[Byte], gint64, GSeekType, Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], Ptr[Ptr[GError]], GIOStatus], CFuncPtr2[Ptr[Byte], GIOCondition, Ptr[Byte]], CFuncPtr1[Ptr[Byte], Unit], CFuncPtr3[Ptr[Byte], GIOFlags, Ptr[Ptr[GError]], GIOStatus], CFuncPtr1[Ptr[Byte], GIOFlags]]
@@ -2077,14 +1868,10 @@ object _GIOFuncs:
     def io_get_flags : CFuncPtr1[Ptr[GIOChannel], GIOFlags] = struct._8.asInstanceOf[CFuncPtr1[Ptr[GIOChannel], GIOFlags]]
     def io_get_flags_=(value: CFuncPtr1[Ptr[GIOChannel], GIOFlags]): Unit = !struct.at8 = value.asInstanceOf[CFuncPtr1[Ptr[Byte], GIOFlags]]
 
-/**
-*/
 opaque type _GKeyFile = CStruct0
 object _GKeyFile:
   given _tag: Tag[_GKeyFile] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GList = CStruct3[gpointer, Ptr[Byte], Ptr[Byte]]
 object _GList:
   given _tag: Tag[_GList] = Tag.materializeCStruct3Tag[gpointer, Ptr[Byte], Ptr[Byte]]
@@ -2103,8 +1890,6 @@ object _GList:
     def prev : Ptr[GList] = struct._3.asInstanceOf[Ptr[GList]]
     def prev_=(value: Ptr[GList]): Unit = !struct.at3 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GLogField = CStruct3[Ptr[gchar], gconstpointer, gssize]
 object _GLogField:
   given _tag: Tag[_GLogField] = Tag.materializeCStruct3Tag[Ptr[gchar], gconstpointer, gssize]
@@ -2123,26 +1908,18 @@ object _GLogField:
     def length : gssize = struct._3
     def length_=(value: gssize): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GMainContext = CStruct0
 object _GMainContext:
   given _tag: Tag[_GMainContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMainLoop = CStruct0
 object _GMainLoop:
   given _tag: Tag[_GMainLoop] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMappedFile = CStruct0
 object _GMappedFile:
   given _tag: Tag[_GMappedFile] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMarkupParseContext = CStruct0
 object _GMarkupParseContext:
   given _tag: Tag[_GMarkupParseContext] = Tag.materializeCStruct0Tag
@@ -2174,20 +1951,14 @@ object _GMarkupParser:
     def error : CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit] = struct._5
     def error_=(value: CFuncPtr3[Ptr[GMarkupParseContext], Ptr[GError], gpointer, Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GMatchInfo = CStruct0
 object _GMatchInfo:
   given _tag: Tag[_GMatchInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMemChunk = CStruct0
 object _GMemChunk:
   given _tag: Tag[_GMemChunk] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMemVTable = CStruct6[CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer], CFuncPtr1[gpointer, Unit], CFuncPtr2[gsize, gsize, gpointer], CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer]]
 object _GMemVTable:
   given _tag: Tag[_GMemVTable] = Tag.materializeCStruct6Tag[CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer], CFuncPtr1[gpointer, Unit], CFuncPtr2[gsize, gsize, gpointer], CFuncPtr1[gsize, gpointer], CFuncPtr2[gpointer, gsize, gpointer]]
@@ -2215,8 +1986,6 @@ object _GMemVTable:
     def try_realloc : CFuncPtr2[gpointer, gsize, gpointer] = struct._6
     def try_realloc_=(value: CFuncPtr2[gpointer, gsize, gpointer]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GNode = CStruct5[gpointer, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
 object _GNode:
   given _tag: Tag[_GNode] = Tag.materializeCStruct5Tag[gpointer, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[Byte]]
@@ -2241,8 +2010,6 @@ object _GNode:
     def children : Ptr[GNode] = struct._5.asInstanceOf[Ptr[GNode]]
     def children_=(value: Ptr[GNode]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GOnce = CStruct2[GOnceStatus, gpointer]
 object _GOnce:
   given _tag: Tag[_GOnce] = Tag.materializeCStruct2Tag[GOnceStatus, gpointer]
@@ -2258,8 +2025,6 @@ object _GOnce:
     def retval : gpointer = struct._2
     def retval_=(value: gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GOptionContext = CStruct0
 object _GOptionContext:
   given _tag: Tag[_GOptionContext] = Tag.materializeCStruct0Tag
@@ -2297,14 +2062,25 @@ object _GOptionEntry:
     def arg_description : Ptr[gchar] = struct._7
     def arg_description_=(value: Ptr[gchar]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GOptionGroup = CStruct0
 object _GOptionGroup:
   given _tag: Tag[_GOptionGroup] = Tag.materializeCStruct0Tag
 
 /**
+ * GPathBuf: (copy-func g_path_buf_copy) (free-func g_path_buf_free)
 */
+opaque type _GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
+object _GPathBuf:
+  given _tag: Tag[_GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[_GPathBuf] = scala.scalanative.unsafe.alloc[_GPathBuf](1)
+  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[_GPathBuf] = 
+    val ____ptr = apply()
+    (!____ptr).dummy = dummy
+    ____ptr
+  extension (struct: _GPathBuf)
+    def dummy : CArray[gpointer, Nat._8] = struct._1
+    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
+
 opaque type _GPatternSpec = CStruct0
 object _GPatternSpec:
   given _tag: Tag[_GPatternSpec] = Tag.materializeCStruct0Tag
@@ -2330,8 +2106,6 @@ object _GPollFD:
     def revents : gushort = struct._3
     def revents_=(value: gushort): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GPrivate = CStruct3[gpointer, GDestroyNotify, CArray[gpointer, Nat._2]]
 object _GPrivate:
   given _tag: Tag[_GPrivate] = Tag.materializeCStruct3Tag[gpointer, GDestroyNotify, CArray[gpointer, Nat._2]]
@@ -2350,8 +2124,6 @@ object _GPrivate:
     def future : CArray[gpointer, Nat._2] = struct._3
     def future_=(value: CArray[gpointer, Nat._2]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GPtrArray = CStruct2[Ptr[gpointer], guint]
 object _GPtrArray:
   given _tag: Tag[_GPtrArray] = Tag.materializeCStruct2Tag[Ptr[gpointer], guint]
@@ -2388,8 +2160,6 @@ object _GQueue:
     def length : guint = struct._3
     def length_=(value: guint): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GRWLock = CStruct2[gpointer, CArray[guint, Nat._2]]
 object _GRWLock:
   given _tag: Tag[_GRWLock] = Tag.materializeCStruct2Tag[gpointer, CArray[guint, Nat._2]]
@@ -2405,14 +2175,10 @@ object _GRWLock:
     def i : CArray[guint, Nat._2] = struct._2
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GRand = CStruct0
 object _GRand:
   given _tag: Tag[_GRand] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GRecMutex = CStruct2[gpointer, CArray[guint, Nat._2]]
 object _GRecMutex:
   given _tag: Tag[_GRecMutex] = Tag.materializeCStruct2Tag[gpointer, CArray[guint, Nat._2]]
@@ -2428,20 +2194,14 @@ object _GRecMutex:
     def i : CArray[guint, Nat._2] = struct._2
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GRegex = CStruct0
 object _GRegex:
   given _tag: Tag[_GRegex] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GRelation = CStruct0
 object _GRelation:
   given _tag: Tag[_GRelation] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSList = CStruct2[gpointer, Ptr[Byte]]
 object _GSList:
   given _tag: Tag[_GSList] = Tag.materializeCStruct2Tag[gpointer, Ptr[Byte]]
@@ -2457,8 +2217,6 @@ object _GSList:
     def next : Ptr[GSList] = struct._2.asInstanceOf[Ptr[GSList]]
     def next_=(value: Ptr[GSList]): Unit = !struct.at2 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GScanner = CStruct21[gpointer, guint, guint, Ptr[gchar], Ptr[GData], Ptr[GScannerConfig], GTokenType, GTokenValue, guint, guint, GTokenType, GTokenValue, guint, guint, Ptr[GHashTable], gint, Ptr[gchar], Ptr[gchar], Ptr[gchar], guint, Ptr[Byte]]
 object _GScanner:
   given _tag: Tag[_GScanner] = Tag.materializeCStruct21Tag[gpointer, guint, guint, Ptr[gchar], Ptr[GData], Ptr[GScannerConfig], GTokenType, GTokenValue, guint, guint, GTokenType, GTokenValue, guint, guint, Ptr[GHashTable], gint, Ptr[gchar], Ptr[gchar], Ptr[gchar], guint, Ptr[Byte]]
@@ -2531,8 +2289,6 @@ object _GScanner:
     def msg_handler : GScannerMsgFunc = struct._21.asInstanceOf[GScannerMsgFunc]
     def msg_handler_=(value: GScannerMsgFunc): Unit = !struct.at21 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GScannerConfig = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
 object _GScannerConfig:
   given _tag: Tag[_GScannerConfig] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
@@ -2623,20 +2379,14 @@ object _GScannerConfig:
     def padding_dummy: guint = !struct.at(120).asInstanceOf[Ptr[guint]]
     def padding_dummy_=(value: guint): Unit = !struct.at(120).asInstanceOf[Ptr[guint]] = value
 
-/**
-*/
 opaque type _GSequence = CStruct0
 object _GSequence:
   given _tag: Tag[_GSequence] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSequenceNode = CStruct0
 object _GSequenceNode:
   given _tag: Tag[_GSequenceNode] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
 object _GSource:
   given _tag: Tag[_GSource] = Tag.materializeCStruct13Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
@@ -2685,8 +2435,6 @@ object _GSource:
     def priv : Ptr[GSourcePrivate] = struct._13
     def priv_=(value: Ptr[GSourcePrivate]): Unit = !struct.at13 = value
 
-/**
-*/
 opaque type _GSourceCallbackFuncs = CStruct3[CFuncPtr1[gpointer, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 object _GSourceCallbackFuncs:
   given _tag: Tag[_GSourceCallbackFuncs] = Tag.materializeCStruct3Tag[CFuncPtr1[gpointer, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
@@ -2705,8 +2453,6 @@ object _GSourceCallbackFuncs:
     def get : CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit] = struct._3.asInstanceOf[CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
     def get_=(value: CFuncPtr4[gpointer, Ptr[GSource], Ptr[GSourceFunc], Ptr[gpointer], Unit]): Unit = !struct.at3 = value.asInstanceOf[CFuncPtr4[gpointer, Ptr[Byte], Ptr[GSourceFunc], Ptr[gpointer], Unit]]
 
-/**
-*/
 opaque type _GSourceFuncs = CStruct6[CFuncPtr2[Ptr[Byte], Ptr[gint], gboolean], CFuncPtr1[Ptr[Byte], gboolean], CFuncPtr3[Ptr[Byte], GSourceFunc, gpointer, gboolean], CFuncPtr1[Ptr[Byte], Unit], GSourceFunc, GSourceDummyMarshal]
 object _GSourceFuncs:
   given _tag: Tag[_GSourceFuncs] = Tag.materializeCStruct6Tag[CFuncPtr2[Ptr[Byte], Ptr[gint], gboolean], CFuncPtr1[Ptr[Byte], gboolean], CFuncPtr3[Ptr[Byte], GSourceFunc, gpointer, gboolean], CFuncPtr1[Ptr[Byte], Unit], GSourceFunc, GSourceDummyMarshal]
@@ -2734,14 +2480,10 @@ object _GSourceFuncs:
     def closure_marshal : GSourceDummyMarshal = struct._6
     def closure_marshal_=(value: GSourceDummyMarshal): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GSourcePrivate = CStruct0
 object _GSourcePrivate:
   given _tag: Tag[_GSourcePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GStaticPrivate = CStruct1[guint]
 object _GStaticPrivate:
   given _tag: Tag[_GStaticPrivate] = Tag.materializeCStruct1Tag[guint]
@@ -2754,8 +2496,6 @@ object _GStaticPrivate:
     def index : guint = struct._1
     def index_=(value: guint): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GStaticRWLock = CStruct7[GStaticMutex, Ptr[GCond], Ptr[GCond], guint, gboolean, guint, guint]
 object _GStaticRWLock:
   given _tag: Tag[_GStaticRWLock] = Tag.materializeCStruct7Tag[GStaticMutex, Ptr[GCond], Ptr[GCond], guint, gboolean, guint, guint]
@@ -2786,12 +2526,8 @@ object _GStaticRWLock:
     def want_to_write : guint = struct._7
     def want_to_write_=(value: guint): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GStaticRecMutex = CStruct3[GStaticMutex, guint, _GStaticRecMutex.Union0]
 object _GStaticRecMutex:
-  /**
-  */
   opaque type Union0 = CArray[Byte, Nat._8]
   object Union0:
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -2831,8 +2567,6 @@ object _GStaticRecMutex:
     def unused : _GStaticRecMutex.Union0 = struct._3
     def unused_=(value: _GStaticRecMutex.Union0): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GString = CStruct3[Ptr[gchar], gsize, gsize]
 object _GString:
   given _tag: Tag[_GString] = Tag.materializeCStruct3Tag[Ptr[gchar], gsize, gsize]
@@ -2851,20 +2585,14 @@ object _GString:
     def allocated_len : gsize = struct._3
     def allocated_len_=(value: gsize): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GStringChunk = CStruct0
 object _GStringChunk:
   given _tag: Tag[_GStringChunk] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GStrvBuilder = CStruct0
 object _GStrvBuilder:
   given _tag: Tag[_GStrvBuilder] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GThread = CStruct4[GThreadFunc, gpointer, gboolean, GThreadPriority]
 object _GThread:
   given _tag: Tag[_GThread] = Tag.materializeCStruct4Tag[GThreadFunc, gpointer, gboolean, GThreadPriority]
@@ -2886,8 +2614,6 @@ object _GThread:
     def priority : GThreadPriority = struct._4
     def priority_=(value: GThreadPriority): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GThreadFunctions = CStruct21[CFuncPtr0[Ptr[GMutex]], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], gboolean], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr0[Ptr[GCond]], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr2[Ptr[GCond], Ptr[GMutex], Unit], CFuncPtr3[Ptr[GCond], Ptr[GMutex], Ptr[GTimeVal], gboolean], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[GDestroyNotify, Ptr[GPrivate]], CFuncPtr1[Ptr[GPrivate], gpointer], CFuncPtr2[Ptr[GPrivate], gpointer, Unit], CFuncPtr8[GThreadFunc, gpointer, gulong, gboolean, gboolean, GThreadPriority, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr0[Unit], CFuncPtr1[gpointer, Unit], CFuncPtr0[Unit], CFuncPtr2[gpointer, GThreadPriority, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr2[gpointer, gpointer, gboolean]]
 object _GThreadFunctions:
   given _tag: Tag[_GThreadFunctions] = Tag.materializeCStruct21Tag[CFuncPtr0[Ptr[GMutex]], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], gboolean], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr1[Ptr[GMutex], Unit], CFuncPtr0[Ptr[GCond]], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr2[Ptr[GCond], Ptr[GMutex], Unit], CFuncPtr3[Ptr[GCond], Ptr[GMutex], Ptr[GTimeVal], gboolean], CFuncPtr1[Ptr[GCond], Unit], CFuncPtr1[GDestroyNotify, Ptr[GPrivate]], CFuncPtr1[Ptr[GPrivate], gpointer], CFuncPtr2[Ptr[GPrivate], gpointer, Unit], CFuncPtr8[GThreadFunc, gpointer, gulong, gboolean, gboolean, GThreadPriority, gpointer, Ptr[Ptr[GError]], Unit], CFuncPtr0[Unit], CFuncPtr1[gpointer, Unit], CFuncPtr0[Unit], CFuncPtr2[gpointer, GThreadPriority, Unit], CFuncPtr1[gpointer, Unit], CFuncPtr2[gpointer, gpointer, gboolean]]
@@ -2960,8 +2686,6 @@ object _GThreadFunctions:
     def thread_equal : CFuncPtr2[gpointer, gpointer, gboolean] = struct._21
     def thread_equal_=(value: CFuncPtr2[gpointer, gpointer, gboolean]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type _GThreadPool = CStruct3[GFunc, gpointer, gboolean]
 object _GThreadPool:
   given _tag: Tag[_GThreadPool] = Tag.materializeCStruct3Tag[GFunc, gpointer, gboolean]
@@ -2980,8 +2704,6 @@ object _GThreadPool:
     def exclusive : gboolean = struct._3
     def exclusive_=(value: gboolean): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GTimeVal = CStruct2[glong, glong]
 object _GTimeVal:
   given _tag: Tag[_GTimeVal] = Tag.materializeCStruct2Tag[glong, glong]
@@ -2997,20 +2719,14 @@ object _GTimeVal:
     def tv_usec : glong = struct._2
     def tv_usec_=(value: glong): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTimeZone = CStruct0
 object _GTimeZone:
   given _tag: Tag[_GTimeZone] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTimer = CStruct0
 object _GTimer:
   given _tag: Tag[_GTimer] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTrashStack = CStruct1[Ptr[Byte]]
 object _GTrashStack:
   given _tag: Tag[_GTrashStack] = Tag.materializeCStruct1Tag[Ptr[Byte]]
@@ -3023,20 +2739,14 @@ object _GTrashStack:
     def next : Ptr[GTrashStack] = struct._1.asInstanceOf[Ptr[GTrashStack]]
     def next_=(value: Ptr[GTrashStack]): Unit = !struct.at1 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GTree = CStruct0
 object _GTree:
   given _tag: Tag[_GTree] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTreeNode = CStruct0
 object _GTreeNode:
   given _tag: Tag[_GTreeNode] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTuples = CStruct1[guint]
 object _GTuples:
   given _tag: Tag[_GTuples] = Tag.materializeCStruct1Tag[guint]
@@ -3049,14 +2759,10 @@ object _GTuples:
     def len : guint = struct._1
     def len_=(value: guint): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GUri = CStruct0
 object _GUri:
   given _tag: Tag[_GUri] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GUriParamsIter = CStruct4[gint, gpointer, gpointer, CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]]
 object _GUriParamsIter:
   given _tag: Tag[_GUriParamsIter] = Tag.materializeCStruct4Tag[gint, gpointer, gpointer, CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]]
@@ -3078,27 +2784,19 @@ object _GUriParamsIter:
     def dummy3 : CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]] = struct._4
     def dummy3_=(value: CArray[guint8, Nat.Digit3[Nat._2, Nat._5, Nat._6]]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GVariant = CStruct0
 object _GVariant:
   given _tag: Tag[_GVariant] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GVariantBuilder = CStruct1[_GVariantBuilder.Union0]
 object _GVariantBuilder:
-  /**
-  */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    /**
-    */
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -3109,8 +2807,8 @@ object _GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -3122,16 +2820,16 @@ object _GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]]
       def s_=(value: _GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantBuilder] = Tag.materializeCStruct1Tag[_GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[_GVariantBuilder] = scala.scalanative.unsafe.alloc[_GVariantBuilder](1)
   def apply(u : _GVariantBuilder.Union0)(using Zone): Ptr[_GVariantBuilder] = 
@@ -3142,21 +2840,15 @@ object _GVariantBuilder:
     def u : _GVariantBuilder.Union0 = struct._1
     def u_=(value: _GVariantBuilder.Union0): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GVariantDict = CStruct1[_GVariantDict.Union0]
 object _GVariantDict:
-  /**
-  */
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    /**
-    */
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -3167,8 +2859,8 @@ object _GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -3180,16 +2872,16 @@ object _GVariantDict:
       un.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]]
       def s_=(value: _GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantDict] = Tag.materializeCStruct1Tag[_GVariantDict.Union0]
   def apply()(using Zone): Ptr[_GVariantDict] = scala.scalanative.unsafe.alloc[_GVariantDict](1)
   def apply(u : _GVariantDict.Union0)(using Zone): Ptr[_GVariantDict] = 
@@ -3200,22 +2892,18 @@ object _GVariantDict:
     def u : _GVariantDict.Union0 = struct._1
     def u_=(value: _GVariantDict.Union0): Unit = !struct.at1 = value
 
-/**
-*/
-opaque type _GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type _GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
 object _GVariantIter:
-  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[_GVariantIter] = scala.scalanative.unsafe.alloc[_GVariantIter](1)
-  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
+  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: _GVariantIter)
-    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GVariantType = CStruct0
 object _GVariantType:
   given _tag: Tag[_GVariantType] = Tag.materializeCStruct0Tag

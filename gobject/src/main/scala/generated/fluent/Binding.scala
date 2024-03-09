@@ -6,6 +6,7 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.glib.internal.gchar
 import sn.gnome.gobject.fluent.Object
+import sn.gnome.gobject.internal.GBinding
 import sn.gnome.gobject.internal.GBindingFlags
 
 class Binding(raw: Ptr[GBinding]) extends Object(raw.asInstanceOf):

@@ -5,14 +5,10 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type GAction = CStruct0
 object GAction:
   given _tag: Tag[GAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GActionEntry = CArray[CChar, Nat.Digit2[Nat._6, Nat._4]]
 object GActionEntry:
   given _tag: Tag[GActionEntry] = Tag.CArray[CChar, Nat.Digit2[Nat._6, Nat._4]](Tag.Byte, Tag.Digit2[Nat._6, Nat._4](Tag.Nat6, Tag.Nat4))
@@ -40,14 +36,10 @@ object GActionEntry:
     def padding: CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3] = !struct.at(40).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3]): Unit = !struct.at(40).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3]]] = value
 
-/**
-*/
 opaque type GActionGroup = CStruct0
 object GActionGroup:
   given _tag: Tag[GActionGroup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GActionGroupInterface = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
 object GActionGroupInterface:
   given _tag: Tag[GActionGroupInterface] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
@@ -102,8 +94,6 @@ object GActionGroupInterface:
     def query_action: CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(120).asInstanceOf[Ptr[CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]]
     def query_action_=(value: CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(120).asInstanceOf[Ptr[CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GActionInterface = CArray[CChar, Nat.Digit2[Nat._8, Nat._0]]
 object GActionInterface:
   given _tag: Tag[GActionInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._8, Nat._0]](Tag.Byte, Tag.Digit2[Nat._8, Nat._0](Tag.Nat8, Tag.Nat0))
@@ -140,14 +130,10 @@ object GActionInterface:
     def activate: CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = !struct.at(72).asInstanceOf[Ptr[CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]]
     def activate_=(value: CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): Unit = !struct.at(72).asInstanceOf[Ptr[CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]] = value
 
-/**
-*/
 opaque type GActionMap = CStruct0
 object GActionMap:
   given _tag: Tag[GActionMap] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GActionMapInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GActionMapInterface:
   given _tag: Tag[GActionMapInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -169,14 +155,10 @@ object GActionMapInterface:
     def remove_action: CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit] = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]]]
     def remove_action_=(value: CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]]] = value
 
-/**
-*/
 opaque type GAppInfo = CStruct0
 object GAppInfo:
   given _tag: Tag[GAppInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GAppInfoIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GAppInfoIface:
   given _tag: Tag[GAppInfoIface] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._1, Nat._6](Tag.Nat2, Tag.Nat1, Tag.Nat6))
@@ -264,8 +246,6 @@ object GAppInfoIface:
     def launch_uris_finish: CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def launch_uris_finish_=(value: CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GAppInfoMonitor = CStruct0
 object GAppInfoMonitor:
   given _tag: Tag[GAppInfoMonitor] = Tag.materializeCStruct0Tag
@@ -288,8 +268,6 @@ object GAppLaunchContext:
     def priv: Ptr[GAppLaunchContextPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GAppLaunchContextPrivate]]]
     def priv_=(value: Ptr[GAppLaunchContextPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GAppLaunchContextPrivate]]] = value
 
-/**
-*/
 opaque type GAppLaunchContextClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._0]]
 object GAppLaunchContextClass:
   given _tag: Tag[GAppLaunchContextClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._0]](Tag.Byte, Tag.Digit3[Nat._2, Nat._0, Nat._0](Tag.Nat2, Tag.Nat0, Tag.Nat0))
@@ -326,14 +304,10 @@ object GAppLaunchContextClass:
     def _g_reserved3: CFuncPtr0[Unit] = !struct.at(192).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GAppLaunchContextPrivate = CStruct0
 object GAppLaunchContextPrivate:
   given _tag: Tag[GAppLaunchContextPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GApplication = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GApplication:
   given _tag: Tag[GApplication] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -349,8 +323,6 @@ object GApplication:
     def priv: Ptr[GApplicationPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GApplicationPrivate]]]
     def priv_=(value: Ptr[GApplicationPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GApplicationPrivate]]] = value
 
-/**
-*/
 opaque type GApplicationClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]]
 object GApplicationClass:
   given _tag: Tag[GApplicationClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]](Tag.Byte, Tag.Digit3[Nat._3, Nat._1, Nat._2](Tag.Nat3, Tag.Nat1, Tag.Nat2))
@@ -411,8 +383,6 @@ object GApplicationClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7] = !struct.at(256).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]): Unit = !struct.at(256).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]] = value
 
-/**
-*/
 opaque type GApplicationCommandLine = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GApplicationCommandLine:
   given _tag: Tag[GApplicationCommandLine] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -428,8 +398,6 @@ object GApplicationCommandLine:
     def priv: Ptr[GApplicationCommandLinePrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GApplicationCommandLinePrivate]]]
     def priv_=(value: Ptr[GApplicationCommandLinePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GApplicationCommandLinePrivate]]] = value
 
-/**
-*/
 opaque type GApplicationCommandLineClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]]
 object GApplicationCommandLineClass:
   given _tag: Tag[GApplicationCommandLineClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]](Tag.Byte, Tag.Digit3[Nat._2, Nat._4, Nat._8](Tag.Nat2, Tag.Nat4, Tag.Nat8))
@@ -454,20 +422,14 @@ object GApplicationCommandLineClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]] = !struct.at(160).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]): Unit = !struct.at(160).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]] = value
 
-/**
-*/
 opaque type GApplicationCommandLinePrivate = CStruct0
 object GApplicationCommandLinePrivate:
   given _tag: Tag[GApplicationCommandLinePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GApplicationPrivate = CStruct0
 object GApplicationPrivate:
   given _tag: Tag[GApplicationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GAsyncInitable = CStruct0
 object GAsyncInitable:
   given _tag: Tag[GAsyncInitable] = Tag.materializeCStruct0Tag
@@ -493,8 +455,6 @@ object GAsyncInitableIface:
     def init_finish: CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(24).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def init_finish_=(value: CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GAsyncResult = CStruct0
 object GAsyncResult:
   given _tag: Tag[GAsyncResult] = Tag.materializeCStruct0Tag
@@ -523,8 +483,6 @@ object GAsyncResultIface:
     def is_tagged: CFuncPtr2[Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]]]
     def is_tagged_=(value: CFuncPtr2[Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GBufferedInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GBufferedInputStream:
   given _tag: Tag[GBufferedInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -540,8 +498,6 @@ object GBufferedInputStream:
     def priv: Ptr[GBufferedInputStreamPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GBufferedInputStreamPrivate]]]
     def priv_=(value: Ptr[GBufferedInputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GBufferedInputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GBufferedInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GBufferedInputStreamClass:
   given _tag: Tag[GBufferedInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._3, Nat._6](Tag.Nat3, Tag.Nat3, Tag.Nat6))
@@ -578,14 +534,10 @@ object GBufferedInputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GBufferedInputStreamPrivate = CStruct0
 object GBufferedInputStreamPrivate:
   given _tag: Tag[GBufferedInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GBufferedOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GBufferedOutputStream:
   given _tag: Tag[GBufferedOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -601,8 +553,6 @@ object GBufferedOutputStream:
     def priv: Ptr[GBufferedOutputStreamPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GBufferedOutputStreamPrivate]]]
     def priv_=(value: Ptr[GBufferedOutputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GBufferedOutputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GBufferedOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GBufferedOutputStreamClass:
   given _tag: Tag[GBufferedOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._3, Nat._6](Tag.Nat3, Tag.Nat3, Tag.Nat6))
@@ -621,20 +571,14 @@ object GBufferedOutputStreamClass:
     def _g_reserved2: CFuncPtr0[Unit] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GBufferedOutputStreamPrivate = CStruct0
 object GBufferedOutputStreamPrivate:
   given _tag: Tag[GBufferedOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GBytesIcon = CStruct0
 object GBytesIcon:
   given _tag: Tag[GBytesIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCancellable = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GCancellable:
   given _tag: Tag[GCancellable] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -650,8 +594,6 @@ object GCancellable:
     def priv: Ptr[GCancellablePrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GCancellablePrivate]]]
     def priv_=(value: Ptr[GCancellablePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GCancellablePrivate]]] = value
 
-/**
-*/
 opaque type GCancellableClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._8, Nat._4]]
 object GCancellableClass:
   given _tag: Tag[GCancellableClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._8, Nat._4]](Tag.Byte, Tag.Digit3[Nat._1, Nat._8, Nat._4](Tag.Nat1, Tag.Nat8, Tag.Nat4))
@@ -682,20 +624,14 @@ object GCancellableClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(176).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GCancellablePrivate = CStruct0
 object GCancellablePrivate:
   given _tag: Tag[GCancellablePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCharsetConverter = CStruct0
 object GCharsetConverter:
   given _tag: Tag[GCharsetConverter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCharsetConverterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GCharsetConverterClass:
   given _tag: Tag[GCharsetConverterClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -708,8 +644,6 @@ object GCharsetConverterClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GConverter = CStruct0
 object GConverter:
   given _tag: Tag[GConverter] = Tag.materializeCStruct0Tag
@@ -735,8 +669,6 @@ object GConverterIface:
     def reset: CFuncPtr1[Ptr[GConverter], Unit] = !struct.at(24).asInstanceOf[Ptr[CFuncPtr1[Ptr[GConverter], Unit]]]
     def reset_=(value: CFuncPtr1[Ptr[GConverter], Unit]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr1[Ptr[GConverter], Unit]]] = value
 
-/**
-*/
 opaque type GConverterInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GConverterInputStream:
   given _tag: Tag[GConverterInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -752,8 +684,6 @@ object GConverterInputStream:
     def priv: Ptr[GConverterInputStreamPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GConverterInputStreamPrivate]]]
     def priv_=(value: Ptr[GConverterInputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GConverterInputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GConverterInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]]
 object GConverterInputStreamClass:
   given _tag: Tag[GConverterInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]](Tag.Byte, Tag.Digit3[Nat._3, Nat._1, Nat._2](Tag.Nat3, Tag.Nat1, Tag.Nat2))
@@ -781,14 +711,10 @@ object GConverterInputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GConverterInputStreamPrivate = CStruct0
 object GConverterInputStreamPrivate:
   given _tag: Tag[GConverterInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GConverterOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GConverterOutputStream:
   given _tag: Tag[GConverterOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -804,8 +730,6 @@ object GConverterOutputStream:
     def priv: Ptr[GConverterOutputStreamPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GConverterOutputStreamPrivate]]]
     def priv_=(value: Ptr[GConverterOutputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GConverterOutputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GConverterOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._0]]
 object GConverterOutputStreamClass:
   given _tag: Tag[GConverterOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._6, Nat._0](Tag.Nat3, Tag.Nat6, Tag.Nat0))
@@ -833,26 +757,18 @@ object GConverterOutputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(352).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(352).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GConverterOutputStreamPrivate = CStruct0
 object GConverterOutputStreamPrivate:
   given _tag: Tag[GConverterOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCredentials = CStruct0
 object GCredentials:
   given _tag: Tag[GCredentials] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GCredentialsClass = CStruct0
 object GCredentialsClass:
   given _tag: Tag[GCredentialsClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDBusActionGroup = CStruct0
 object GDBusActionGroup:
   given _tag: Tag[GDBusActionGroup] = Tag.materializeCStruct0Tag
@@ -905,14 +821,10 @@ object GDBusArgInfo:
     def annotations: Ptr[Ptr[GDBusAnnotationInfo]] = !struct.at(24).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]] = value
 
-/**
-*/
 opaque type GDBusAuthObserver = CStruct0
 object GDBusAuthObserver:
   given _tag: Tag[GDBusAuthObserver] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDBusConnection = CStruct0
 object GDBusConnection:
   given _tag: Tag[GDBusConnection] = Tag.materializeCStruct0Tag
@@ -935,8 +847,6 @@ object GDBusErrorEntry:
     def dbus_error_name: Ptr[_root_.sn.gnome.glib.internal.gchar] = !struct.at(8).asInstanceOf[Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]
     def dbus_error_name_=(value: Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = !struct.at(8).asInstanceOf[Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]] = value
 
-/**
-*/
 opaque type GDBusInterface = CStruct0
 object GDBusInterface:
   given _tag: Tag[GDBusInterface] = Tag.materializeCStruct0Tag
@@ -1052,8 +962,6 @@ object GDBusInterfaceSkeletonClass:
     def signal_padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(240).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def signal_padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(240).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDBusInterfaceSkeletonPrivate = CStruct0
 object GDBusInterfaceSkeletonPrivate:
   given _tag: Tag[GDBusInterfaceSkeletonPrivate] = Tag.materializeCStruct0Tag
@@ -1082,14 +990,10 @@ object GDBusInterfaceVTable:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(24).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(24).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDBusMenuModel = CStruct0
 object GDBusMenuModel:
   given _tag: Tag[GDBusMenuModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDBusMessage = CStruct0
 object GDBusMessage:
   given _tag: Tag[GDBusMessage] = Tag.materializeCStruct0Tag
@@ -1121,8 +1025,6 @@ object GDBusMethodInfo:
     def annotations: Ptr[Ptr[GDBusAnnotationInfo]] = !struct.at(32).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]] = value
 
-/**
-*/
 opaque type GDBusMethodInvocation = CStruct0
 object GDBusMethodInvocation:
   given _tag: Tag[GDBusMethodInvocation] = Tag.materializeCStruct0Tag
@@ -1154,8 +1056,6 @@ object GDBusNodeInfo:
     def annotations: Ptr[Ptr[GDBusAnnotationInfo]] = !struct.at(32).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[Ptr[GDBusAnnotationInfo]]]] = value
 
-/**
-*/
 opaque type GDBusObject = CStruct0
 object GDBusObject:
   given _tag: Tag[GDBusObject] = Tag.materializeCStruct0Tag
@@ -1190,8 +1090,6 @@ object GDBusObjectIface:
     def interface_removed: CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]]]
     def interface_removed_=(value: CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]]] = value
 
-/**
-*/
 opaque type GDBusObjectManager = CStruct0
 object GDBusObjectManager:
   given _tag: Tag[GDBusObjectManager] = Tag.materializeCStruct0Tag
@@ -1238,8 +1136,6 @@ object GDBusObjectManagerClientClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(152).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(152).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDBusObjectManagerClientPrivate = CStruct0
 object GDBusObjectManagerClientPrivate:
   given _tag: Tag[GDBusObjectManagerClientPrivate] = Tag.materializeCStruct0Tag
@@ -1319,8 +1215,6 @@ object GDBusObjectManagerServerClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDBusObjectManagerServerPrivate = CStruct0
 object GDBusObjectManagerServerPrivate:
   given _tag: Tag[GDBusObjectManagerServerPrivate] = Tag.materializeCStruct0Tag
@@ -1361,8 +1255,6 @@ object GDBusObjectProxyClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDBusObjectProxyPrivate = CStruct0
 object GDBusObjectProxyPrivate:
   given _tag: Tag[GDBusObjectProxyPrivate] = Tag.materializeCStruct0Tag
@@ -1406,8 +1298,6 @@ object GDBusObjectSkeletonClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(144).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(144).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDBusObjectSkeletonPrivate = CStruct0
 object GDBusObjectSkeletonPrivate:
   given _tag: Tag[GDBusObjectSkeletonPrivate] = Tag.materializeCStruct0Tag
@@ -1481,14 +1371,10 @@ object GDBusProxyClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._3, Nat._2]] = !struct.at(152).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._3, Nat._2]]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._3, Nat._2]]): Unit = !struct.at(152).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._3, Nat._2]]]] = value
 
-/**
-*/
 opaque type GDBusProxyPrivate = CStruct0
 object GDBusProxyPrivate:
   given _tag: Tag[GDBusProxyPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDBusServer = CStruct0
 object GDBusServer:
   given _tag: Tag[GDBusServer] = Tag.materializeCStruct0Tag
@@ -1541,8 +1427,6 @@ object GDBusSubtreeVTable:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(24).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(24).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GDataInputStream = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GDataInputStream:
   given _tag: Tag[GDataInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._5, Nat._6]](Tag.Byte, Tag.Digit2[Nat._5, Nat._6](Tag.Nat5, Tag.Nat6))
@@ -1558,8 +1442,6 @@ object GDataInputStream:
     def priv: Ptr[GDataInputStreamPrivate] = !struct.at(48).asInstanceOf[Ptr[Ptr[GDataInputStreamPrivate]]]
     def priv_=(value: Ptr[GDataInputStreamPrivate]): Unit = !struct.at(48).asInstanceOf[Ptr[Ptr[GDataInputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GDataInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._7, Nat._6]]
 object GDataInputStreamClass:
   given _tag: Tag[GDataInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._7, Nat._6](Tag.Nat3, Tag.Nat7, Tag.Nat6))
@@ -1587,14 +1469,10 @@ object GDataInputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(368).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(368).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GDataInputStreamPrivate = CStruct0
 object GDataInputStreamPrivate:
   given _tag: Tag[GDataInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDataOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GDataOutputStream:
   given _tag: Tag[GDataOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -1610,8 +1488,6 @@ object GDataOutputStream:
     def priv: Ptr[GDataOutputStreamPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GDataOutputStreamPrivate]]]
     def priv_=(value: Ptr[GDataOutputStreamPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GDataOutputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GDataOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._0]]
 object GDataOutputStreamClass:
   given _tag: Tag[GDataOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._6, Nat._0](Tag.Nat3, Tag.Nat6, Tag.Nat0))
@@ -1639,14 +1515,10 @@ object GDataOutputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(352).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(352).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GDataOutputStreamPrivate = CStruct0
 object GDataOutputStreamPrivate:
   given _tag: Tag[GDataOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDatagramBased = CStruct0
 object GDatagramBased:
   given _tag: Tag[GDatagramBased] = Tag.materializeCStruct0Tag
@@ -1681,14 +1553,10 @@ object GDatagramBasedInterface:
     def condition_wait: CFuncPtr5[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr5[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def condition_wait_=(value: CFuncPtr5[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr5[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GDebugController = CStruct0
 object GDebugController:
   given _tag: Tag[GDebugController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDebugControllerDBus = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GDebugControllerDBus:
   given _tag: Tag[GDebugControllerDBus] = Tag.CArray[CChar, Nat.Digit2[Nat._2, Nat._4]](Tag.Byte, Tag.Digit2[Nat._2, Nat._4](Tag.Nat2, Tag.Nat4))
@@ -1737,14 +1605,10 @@ object GDebugControllerInterface:
     def g_iface: _root_.sn.gnome.gobject.internal.GTypeInterface = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]]
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]] = value
 
-/**
-*/
 opaque type GDrive = CStruct0
 object GDrive:
   given _tag: Tag[GDrive] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GDriveIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object GDriveIface:
   given _tag: Tag[GDriveIface] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._7, Nat._2](Tag.Nat2, Tag.Nat7, Tag.Nat2))
@@ -1853,8 +1717,6 @@ object GDriveIface:
     def is_removable: CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean]]]
     def is_removable_=(value: CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GDtlsClientConnection = CStruct0
 object GDtlsClientConnection:
   given _tag: Tag[GDtlsClientConnection] = Tag.materializeCStruct0Tag
@@ -1874,8 +1736,6 @@ object GDtlsClientConnectionInterface:
     def g_iface: _root_.sn.gnome.gobject.internal.GTypeInterface = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]]
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]] = value
 
-/**
-*/
 opaque type GDtlsConnection = CStruct0
 object GDtlsConnection:
   given _tag: Tag[GDtlsConnection] = Tag.materializeCStruct0Tag
@@ -1925,8 +1785,6 @@ object GDtlsConnectionInterface:
     def get_binding_data: CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(88).asInstanceOf[Ptr[CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def get_binding_data_=(value: CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(88).asInstanceOf[Ptr[CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GDtlsServerConnection = CStruct0
 object GDtlsServerConnection:
   given _tag: Tag[GDtlsServerConnection] = Tag.materializeCStruct0Tag
@@ -1946,20 +1804,14 @@ object GDtlsServerConnectionInterface:
     def g_iface: _root_.sn.gnome.gobject.internal.GTypeInterface = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]]
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]] = value
 
-/**
-*/
 opaque type GEmblem = CStruct0
 object GEmblem:
   given _tag: Tag[GEmblem] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GEmblemClass = CStruct0
 object GEmblemClass:
   given _tag: Tag[GEmblemClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GEmblemedIcon = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GEmblemedIcon:
   given _tag: Tag[GEmblemedIcon] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -1975,8 +1827,6 @@ object GEmblemedIcon:
     def priv: Ptr[GEmblemedIconPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GEmblemedIconPrivate]]]
     def priv_=(value: Ptr[GEmblemedIconPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GEmblemedIconPrivate]]] = value
 
-/**
-*/
 opaque type GEmblemedIconClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GEmblemedIconClass:
   given _tag: Tag[GEmblemedIconClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -1989,14 +1839,10 @@ object GEmblemedIconClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GEmblemedIconPrivate = CStruct0
 object GEmblemedIconPrivate:
   given _tag: Tag[GEmblemedIconPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFile = CStruct0
 object GFile:
   given _tag: Tag[GFile] = Tag.materializeCStruct0Tag
@@ -2040,20 +1886,14 @@ object GFileAttributeInfoList:
     def n_infos: CInt = !struct.at(8).asInstanceOf[Ptr[CInt]]
     def n_infos_=(value: CInt): Unit = !struct.at(8).asInstanceOf[Ptr[CInt]] = value
 
-/**
-*/
 opaque type GFileAttributeMatcher = CStruct0
 object GFileAttributeMatcher:
   given _tag: Tag[GFileAttributeMatcher] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileDescriptorBased = CStruct0
 object GFileDescriptorBased:
   given _tag: Tag[GFileDescriptorBased] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileEnumerator = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GFileEnumerator:
   given _tag: Tag[GFileEnumerator] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -2069,8 +1909,6 @@ object GFileEnumerator:
     def priv: Ptr[GFileEnumeratorPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GFileEnumeratorPrivate]]]
     def priv_=(value: Ptr[GFileEnumeratorPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GFileEnumeratorPrivate]]] = value
 
-/**
-*/
 opaque type GFileEnumeratorClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._0]]
 object GFileEnumeratorClass:
   given _tag: Tag[GFileEnumeratorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._2, Nat._4, Nat._0](Tag.Nat2, Tag.Nat4, Tag.Nat0))
@@ -2122,14 +1960,10 @@ object GFileEnumeratorClass:
     def _g_reserved7: CFuncPtr0[Unit] = !struct.at(232).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at(232).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFileEnumeratorPrivate = CStruct0
 object GFileEnumeratorPrivate:
   given _tag: Tag[GFileEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileIOStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFileIOStream:
   given _tag: Tag[GFileIOStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -2145,8 +1979,6 @@ object GFileIOStream:
     def priv: Ptr[GFileIOStreamPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileIOStreamPrivate]]]
     def priv_=(value: Ptr[GFileIOStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileIOStreamPrivate]]] = value
 
-/**
-*/
 opaque type GFileIOStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._8]]
 object GFileIOStreamClass:
   given _tag: Tag[GFileIOStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._8]](Tag.Byte, Tag.Digit3[Nat._3, Nat._6, Nat._8](Tag.Nat3, Tag.Nat6, Tag.Nat8))
@@ -2201,20 +2033,14 @@ object GFileIOStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(360).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(360).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFileIOStreamPrivate = CStruct0
 object GFileIOStreamPrivate:
   given _tag: Tag[GFileIOStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileIcon = CStruct0
 object GFileIcon:
   given _tag: Tag[GFileIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileIconClass = CStruct0
 object GFileIconClass:
   given _tag: Tag[GFileIconClass] = Tag.materializeCStruct0Tag
@@ -2226,7 +2052,7 @@ opaque type GFileIface = CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]]
 object GFileIface:
   given _tag: Tag[GFileIface] = Tag.CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._8, Nat._4, Nat._0](Tag.Nat8, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[GFileIface] = scala.scalanative.unsafe.alloc[GFileIface](1)
-  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], _make_symbolic_link_async : CFuncPtr0[Unit], _make_symbolic_link_finish : CFuncPtr0[Unit], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[GFileIface] = 
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_symbolic_link_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[GFileIface] = 
     val ____ptr = apply()
     (!____ptr).g_iface = g_iface
     (!____ptr).dup = dup
@@ -2291,8 +2117,8 @@ object GFileIface:
     (!____ptr).make_directory_async = make_directory_async
     (!____ptr).make_directory_finish = make_directory_finish
     (!____ptr).make_symbolic_link = make_symbolic_link
-    (!____ptr)._make_symbolic_link_async = _make_symbolic_link_async
-    (!____ptr)._make_symbolic_link_finish = _make_symbolic_link_finish
+    (!____ptr).make_symbolic_link_async = make_symbolic_link_async
+    (!____ptr).make_symbolic_link_finish = make_symbolic_link_finish
     (!____ptr).copy = copy
     (!____ptr).copy_async = copy_async
     (!____ptr).copy_finish = copy_finish
@@ -2460,10 +2286,10 @@ object GFileIface:
     def make_directory_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(496).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def make_symbolic_link: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def make_symbolic_link_=(value: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _make_symbolic_link_async: CFuncPtr0[Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_async_=(value: CFuncPtr0[Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _make_symbolic_link_finish: CFuncPtr0[Unit] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_finish_=(value: CFuncPtr0[Unit]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def make_symbolic_link_async: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
+    def make_symbolic_link_async_=(value: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]] = value
+    def make_symbolic_link_finish: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
+    def make_symbolic_link_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def copy_=(value: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy_async: CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(536).asInstanceOf[Ptr[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
@@ -2543,20 +2369,14 @@ object GFileIface:
     def measure_disk_usage_finish: CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(832).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def measure_disk_usage_finish_=(value: CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(832).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GFileInfo = CStruct0
 object GFileInfo:
   given _tag: Tag[GFileInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileInfoClass = CStruct0
 object GFileInfoClass:
   given _tag: Tag[GFileInfoClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFileInputStream:
   given _tag: Tag[GFileInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -2572,8 +2392,6 @@ object GFileInputStream:
     def priv: Ptr[GFileInputStreamPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileInputStreamPrivate]]]
     def priv_=(value: Ptr[GFileInputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileInputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GFileInputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GFileInputStreamClass:
   given _tag: Tag[GFileInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._3, Nat._6](Tag.Nat3, Tag.Nat3, Tag.Nat6))
@@ -2619,8 +2437,6 @@ object GFileInputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFileInputStreamPrivate = CStruct0
 object GFileInputStreamPrivate:
   given _tag: Tag[GFileInputStreamPrivate] = Tag.materializeCStruct0Tag
@@ -2643,8 +2459,6 @@ object GFileMonitor:
     def priv: Ptr[GFileMonitorPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GFileMonitorPrivate]]]
     def priv_=(value: Ptr[GFileMonitorPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GFileMonitorPrivate]]] = value
 
-/**
-*/
 opaque type GFileMonitorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._9, Nat._2]]
 object GFileMonitorClass:
   given _tag: Tag[GFileMonitorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._9, Nat._2]](Tag.Byte, Tag.Digit3[Nat._1, Nat._9, Nat._2](Tag.Nat1, Tag.Nat9, Tag.Nat2))
@@ -2678,14 +2492,10 @@ object GFileMonitorClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(184).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFileMonitorPrivate = CStruct0
 object GFileMonitorPrivate:
   given _tag: Tag[GFileMonitorPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFileOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFileOutputStream:
   given _tag: Tag[GFileOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -2701,8 +2511,6 @@ object GFileOutputStream:
     def priv: Ptr[GFileOutputStreamPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileOutputStreamPrivate]]]
     def priv_=(value: Ptr[GFileOutputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GFileOutputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GFileOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object GFileOutputStreamClass:
   given _tag: Tag[GFileOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
@@ -2757,20 +2565,14 @@ object GFileOutputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(400).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(400).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFileOutputStreamPrivate = CStruct0
 object GFileOutputStreamPrivate:
   given _tag: Tag[GFileOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFilenameCompleter = CStruct0
 object GFilenameCompleter:
   given _tag: Tag[GFilenameCompleter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GFilenameCompleterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._8]]
 object GFilenameCompleterClass:
   given _tag: Tag[GFilenameCompleterClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._8](Tag.Nat1, Tag.Nat6, Tag.Nat8))
@@ -2795,8 +2597,6 @@ object GFilenameCompleterClass:
     def _g_reserved3: CFuncPtr0[Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFilterInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFilterInputStream:
   given _tag: Tag[GFilterInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -2812,8 +2612,6 @@ object GFilterInputStream:
     def base_stream: Ptr[GInputStream] = !struct.at(32).asInstanceOf[Ptr[Ptr[GInputStream]]]
     def base_stream_=(value: Ptr[GInputStream]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GInputStream]]] = value
 
-/**
-*/
 opaque type GFilterInputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object GFilterInputStreamClass:
   given _tag: Tag[GFilterInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._7, Nat._2](Tag.Nat2, Tag.Nat7, Tag.Nat2))
@@ -2835,8 +2633,6 @@ object GFilterInputStreamClass:
     def _g_reserved3: CFuncPtr0[Unit] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GFilterOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GFilterOutputStream:
   given _tag: Tag[GFilterOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -2852,8 +2648,6 @@ object GFilterOutputStream:
     def base_stream: Ptr[GOutputStream] = !struct.at(32).asInstanceOf[Ptr[Ptr[GOutputStream]]]
     def base_stream_=(value: Ptr[GOutputStream]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GOutputStream]]] = value
 
-/**
-*/
 opaque type GFilterOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]]
 object GFilterOutputStreamClass:
   given _tag: Tag[GFilterOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._0](Tag.Nat3, Tag.Nat2, Tag.Nat0))
@@ -2875,38 +2669,26 @@ object GFilterOutputStreamClass:
     def _g_reserved3: CFuncPtr0[Unit] = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GIOExtension = CStruct0
 object GIOExtension:
   given _tag: Tag[GIOExtension] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIOExtensionPoint = CStruct0
 object GIOExtensionPoint:
   given _tag: Tag[GIOExtensionPoint] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIOModule = CStruct0
 object GIOModule:
   given _tag: Tag[GIOModule] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIOModuleClass = CStruct0
 object GIOModuleClass:
   given _tag: Tag[GIOModuleClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIOModuleScope = CStruct0
 object GIOModuleScope:
   given _tag: Tag[GIOModuleScope] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIOSchedulerJob = CStruct0
 object GIOSchedulerJob:
   given _tag: Tag[GIOSchedulerJob] = Tag.materializeCStruct0Tag
@@ -2929,14 +2711,10 @@ object GIOStream:
     def priv: Ptr[GIOStreamPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GIOStreamPrivate]]]
     def priv_=(value: Ptr[GIOStreamPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GIOStreamPrivate]]] = value
 
-/**
-*/
 opaque type GIOStreamAdapter = CStruct0
 object GIOStreamAdapter:
   given _tag: Tag[GIOStreamAdapter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIOStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._5, Nat._6]]
 object GIOStreamClass:
   given _tag: Tag[GIOStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._5, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._5, Nat._6](Tag.Nat2, Tag.Nat5, Tag.Nat6))
@@ -2994,14 +2772,10 @@ object GIOStreamClass:
     def _g_reserved10: CFuncPtr0[Unit] = !struct.at(248).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GIOStreamPrivate = CStruct0
 object GIOStreamPrivate:
   given _tag: Tag[GIOStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GIcon = CStruct0
 object GIcon:
   given _tag: Tag[GIcon] = Tag.materializeCStruct0Tag
@@ -3036,8 +2810,6 @@ object GIconIface:
     def serialize: CFuncPtr1[Ptr[GIcon], Ptr[_root_.sn.gnome.glib.internal.GVariant]] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr1[Ptr[GIcon], Ptr[_root_.sn.gnome.glib.internal.GVariant]]]]
     def serialize_=(value: CFuncPtr1[Ptr[GIcon], Ptr[_root_.sn.gnome.glib.internal.GVariant]]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr1[Ptr[GIcon], Ptr[_root_.sn.gnome.glib.internal.GVariant]]]] = value
 
-/**
-*/
 opaque type GInetAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInetAddress:
   given _tag: Tag[GInetAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3053,8 +2825,6 @@ object GInetAddress:
     def priv: Ptr[GInetAddressPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetAddressPrivate]]]
     def priv_=(value: Ptr[GInetAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetAddressPrivate]]] = value
 
-/**
-*/
 opaque type GInetAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._5, Nat._2]]
 object GInetAddressClass:
   given _tag: Tag[GInetAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._5, Nat._2]](Tag.Byte, Tag.Digit3[Nat._1, Nat._5, Nat._2](Tag.Nat1, Tag.Nat5, Tag.Nat2))
@@ -3073,8 +2843,6 @@ object GInetAddressClass:
     def to_bytes: CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]]]]
     def to_bytes_=(value: CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]]]] = value
 
-/**
-*/
 opaque type GInetAddressMask = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInetAddressMask:
   given _tag: Tag[GInetAddressMask] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3090,8 +2858,6 @@ object GInetAddressMask:
     def priv: Ptr[GInetAddressMaskPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetAddressMaskPrivate]]]
     def priv_=(value: Ptr[GInetAddressMaskPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetAddressMaskPrivate]]] = value
 
-/**
-*/
 opaque type GInetAddressMaskClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GInetAddressMaskClass:
   given _tag: Tag[GInetAddressMaskClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -3104,20 +2870,14 @@ object GInetAddressMaskClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GInetAddressMaskPrivate = CStruct0
 object GInetAddressMaskPrivate:
   given _tag: Tag[GInetAddressMaskPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GInetAddressPrivate = CStruct0
 object GInetAddressPrivate:
   given _tag: Tag[GInetAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GInetSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInetSocketAddress:
   given _tag: Tag[GInetSocketAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3133,8 +2893,6 @@ object GInetSocketAddress:
     def priv: Ptr[GInetSocketAddressPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetSocketAddressPrivate]]]
     def priv_=(value: Ptr[GInetSocketAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInetSocketAddressPrivate]]] = value
 
-/**
-*/
 opaque type GInetSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GInetSocketAddressClass:
   given _tag: Tag[GInetSocketAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
@@ -3147,14 +2905,10 @@ object GInetSocketAddressClass:
     def parent_class: GSocketAddressClass = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]]
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]] = value
 
-/**
-*/
 opaque type GInetSocketAddressPrivate = CStruct0
 object GInetSocketAddressPrivate:
   given _tag: Tag[GInetSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GInitable = CStruct0
 object GInitable:
   given _tag: Tag[GInitable] = Tag.materializeCStruct0Tag
@@ -3177,8 +2931,6 @@ object GInitableIface:
     def init: CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(16).asInstanceOf[Ptr[CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def init_=(value: CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GInputMessage = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GInputMessage:
   given _tag: Tag[GInputMessage] = Tag.CArray[CChar, Nat.Digit2[Nat._5, Nat._6]](Tag.Byte, Tag.Digit2[Nat._5, Nat._6](Tag.Nat5, Tag.Nat6))
@@ -3209,8 +2961,6 @@ object GInputMessage:
     def num_control_messages: Ptr[_root_.sn.gnome.glib.internal.guint] = !struct.at(48).asInstanceOf[Ptr[Ptr[_root_.sn.gnome.glib.internal.guint]]]
     def num_control_messages_=(value: Ptr[_root_.sn.gnome.glib.internal.guint]): Unit = !struct.at(48).asInstanceOf[Ptr[Ptr[_root_.sn.gnome.glib.internal.guint]]] = value
 
-/**
-*/
 opaque type GInputStream = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GInputStream:
   given _tag: Tag[GInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3226,8 +2976,6 @@ object GInputStream:
     def priv: Ptr[GInputStreamPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GInputStreamPrivate]]]
     def priv_=(value: Ptr[GInputStreamPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GInputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GInputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]]
 object GInputStreamClass:
   given _tag: Tag[GInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]](Tag.Byte, Tag.Digit3[Nat._2, Nat._4, Nat._8](Tag.Nat2, Tag.Nat4, Tag.Nat8))
@@ -3282,14 +3030,10 @@ object GInputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(240).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GInputStreamPrivate = CStruct0
 object GInputStreamPrivate:
   given _tag: Tag[GInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GInputVector = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GInputVector:
   given _tag: Tag[GInputVector] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
@@ -3305,14 +3049,10 @@ object GInputVector:
     def size: _root_.sn.gnome.glib.internal.gsize = !struct.at(8).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gsize]]
     def size_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at(8).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gsize]] = value
 
-/**
-*/
 opaque type GListModel = CStruct0
 object GListModel:
   given _tag: Tag[GListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GListModelInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GListModelInterface:
   given _tag: Tag[GListModelInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -3334,14 +3074,10 @@ object GListModelInterface:
     def get_item: CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer] = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer]]]
     def get_item_=(value: CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer]]] = value
 
-/**
-*/
 opaque type GListStore = CStruct0
 object GListStore:
   given _tag: Tag[GListStore] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GListStoreClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GListStoreClass:
   given _tag: Tag[GListStoreClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -3354,8 +3090,6 @@ object GListStoreClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GLoadableIcon = CStruct0
 object GLoadableIcon:
   given _tag: Tag[GLoadableIcon] = Tag.materializeCStruct0Tag
@@ -3384,8 +3118,6 @@ object GLoadableIconIface:
     def load_finish: CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GInputStream]] = !struct.at(32).asInstanceOf[Ptr[CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GInputStream]]]]
     def load_finish_=(value: CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GInputStream]]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GInputStream]]]] = value
 
-/**
-*/
 opaque type GMemoryInputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GMemoryInputStream:
   given _tag: Tag[GMemoryInputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -3401,8 +3133,6 @@ object GMemoryInputStream:
     def priv: Ptr[GMemoryInputStreamPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GMemoryInputStreamPrivate]]]
     def priv_=(value: Ptr[GMemoryInputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GMemoryInputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GMemoryInputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._8, Nat._8]]
 object GMemoryInputStreamClass:
   given _tag: Tag[GMemoryInputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._8, Nat._8]](Tag.Byte, Tag.Digit3[Nat._2, Nat._8, Nat._8](Tag.Nat2, Tag.Nat8, Tag.Nat8))
@@ -3430,20 +3160,14 @@ object GMemoryInputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GMemoryInputStreamPrivate = CStruct0
 object GMemoryInputStreamPrivate:
   given _tag: Tag[GMemoryInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMemoryMonitor = CStruct0
 object GMemoryMonitor:
   given _tag: Tag[GMemoryMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMemoryMonitorInterface = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GMemoryMonitorInterface:
   given _tag: Tag[GMemoryMonitorInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._2, Nat._4]](Tag.Byte, Tag.Digit2[Nat._2, Nat._4](Tag.Nat2, Tag.Nat4))
@@ -3459,8 +3183,6 @@ object GMemoryMonitorInterface:
     def low_memory_warning: CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit] = !struct.at(16).asInstanceOf[Ptr[CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]]]
     def low_memory_warning_=(value: CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]]] = value
 
-/**
-*/
 opaque type GMemoryOutputStream = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GMemoryOutputStream:
   given _tag: Tag[GMemoryOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -3476,8 +3198,6 @@ object GMemoryOutputStream:
     def priv: Ptr[GMemoryOutputStreamPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GMemoryOutputStreamPrivate]]]
     def priv_=(value: Ptr[GMemoryOutputStreamPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GMemoryOutputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GMemoryOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GMemoryOutputStreamClass:
   given _tag: Tag[GMemoryOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._3, Nat._6](Tag.Nat3, Tag.Nat3, Tag.Nat6))
@@ -3505,20 +3225,14 @@ object GMemoryOutputStreamClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GMemoryOutputStreamPrivate = CStruct0
 object GMemoryOutputStreamPrivate:
   given _tag: Tag[GMemoryOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMenu = CStruct0
 object GMenu:
   given _tag: Tag[GMenu] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMenuAttributeIter = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMenuAttributeIter:
   given _tag: Tag[GMenuAttributeIter] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3534,8 +3248,6 @@ object GMenuAttributeIter:
     def priv: Ptr[GMenuAttributeIterPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GMenuAttributeIterPrivate]]]
     def priv_=(value: Ptr[GMenuAttributeIterPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GMenuAttributeIterPrivate]]] = value
 
-/**
-*/
 opaque type GMenuAttributeIterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._4, Nat._4]]
 object GMenuAttributeIterClass:
   given _tag: Tag[GMenuAttributeIterClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._4, Nat._4]](Tag.Byte, Tag.Digit3[Nat._1, Nat._4, Nat._4](Tag.Nat1, Tag.Nat4, Tag.Nat4))
@@ -3551,20 +3263,14 @@ object GMenuAttributeIterClass:
     def get_next: CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]]
     def get_next_=(value: CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GMenuAttributeIterPrivate = CStruct0
 object GMenuAttributeIterPrivate:
   given _tag: Tag[GMenuAttributeIterPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMenuItem = CStruct0
 object GMenuItem:
   given _tag: Tag[GMenuItem] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMenuLinkIter = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMenuLinkIter:
   given _tag: Tag[GMenuLinkIter] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3580,8 +3286,6 @@ object GMenuLinkIter:
     def priv: Ptr[GMenuLinkIterPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GMenuLinkIterPrivate]]]
     def priv_=(value: Ptr[GMenuLinkIterPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GMenuLinkIterPrivate]]] = value
 
-/**
-*/
 opaque type GMenuLinkIterClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._4, Nat._4]]
 object GMenuLinkIterClass:
   given _tag: Tag[GMenuLinkIterClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._4, Nat._4]](Tag.Byte, Tag.Digit3[Nat._1, Nat._4, Nat._4](Tag.Nat1, Tag.Nat4, Tag.Nat4))
@@ -3597,14 +3301,10 @@ object GMenuLinkIterClass:
     def get_next: CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean]]]
     def get_next_=(value: CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GMenuLinkIterPrivate = CStruct0
 object GMenuLinkIterPrivate:
   given _tag: Tag[GMenuLinkIterPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMenuModel = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMenuModel:
   given _tag: Tag[GMenuModel] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3659,14 +3359,10 @@ object GMenuModelClass:
     def get_item_link: CFuncPtr3[Ptr[GMenuModel], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GMenuModel]] = !struct.at(192).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuModel], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GMenuModel]]]]
     def get_item_link_=(value: CFuncPtr3[Ptr[GMenuModel], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GMenuModel]]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr3[Ptr[GMenuModel], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GMenuModel]]]] = value
 
-/**
-*/
 opaque type GMenuModelPrivate = CStruct0
 object GMenuModelPrivate:
   given _tag: Tag[GMenuModelPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GMount = CStruct0
 object GMount:
   given _tag: Tag[GMount] = Tag.materializeCStruct0Tag
@@ -3767,8 +3463,6 @@ object GMountIface:
     def get_symbolic_icon: CFuncPtr1[Ptr[GMount], Ptr[GIcon]] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GMount], Ptr[GIcon]]]]
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GMount], Ptr[GIcon]]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GMount], Ptr[GIcon]]]] = value
 
-/**
-*/
 opaque type GMountOperation = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GMountOperation:
   given _tag: Tag[GMountOperation] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3784,8 +3478,6 @@ object GMountOperation:
     def priv: Ptr[GMountOperationPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GMountOperationPrivate]]]
     def priv_=(value: Ptr[GMountOperationPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GMountOperationPrivate]]] = value
 
-/**
-*/
 opaque type GMountOperationClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._5, Nat._6]]
 object GMountOperationClass:
   given _tag: Tag[GMountOperationClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._5, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._5, Nat._6](Tag.Nat2, Tag.Nat5, Tag.Nat6))
@@ -3843,14 +3535,10 @@ object GMountOperationClass:
     def _g_reserved9: CFuncPtr0[Unit] = !struct.at(248).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved9_=(value: CFuncPtr0[Unit]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GMountOperationPrivate = CStruct0
 object GMountOperationPrivate:
   given _tag: Tag[GMountOperationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GNativeSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNativeSocketAddress:
   given _tag: Tag[GNativeSocketAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3866,8 +3554,6 @@ object GNativeSocketAddress:
     def priv: Ptr[GNativeSocketAddressPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GNativeSocketAddressPrivate]]]
     def priv_=(value: Ptr[GNativeSocketAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GNativeSocketAddressPrivate]]] = value
 
-/**
-*/
 opaque type GNativeSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GNativeSocketAddressClass:
   given _tag: Tag[GNativeSocketAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
@@ -3880,14 +3566,10 @@ object GNativeSocketAddressClass:
     def parent_class: GSocketAddressClass = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]]
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]] = value
 
-/**
-*/
 opaque type GNativeSocketAddressPrivate = CStruct0
 object GNativeSocketAddressPrivate:
   given _tag: Tag[GNativeSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GNativeVolumeMonitor = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNativeVolumeMonitor:
   given _tag: Tag[GNativeVolumeMonitor] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3900,8 +3582,6 @@ object GNativeVolumeMonitor:
     def parent_instance: GVolumeMonitor = !struct.at(0).asInstanceOf[Ptr[GVolumeMonitor]]
     def parent_instance_=(value: GVolumeMonitor): Unit = !struct.at(0).asInstanceOf[Ptr[GVolumeMonitor]] = value
 
-/**
-*/
 opaque type GNativeVolumeMonitorClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._4, Nat._4]]
 object GNativeVolumeMonitorClass:
   given _tag: Tag[GNativeVolumeMonitorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._4, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._4, Nat._4](Tag.Nat3, Tag.Nat4, Tag.Nat4))
@@ -3917,8 +3597,6 @@ object GNativeVolumeMonitorClass:
     def get_mount_for_mount_path: CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]] = !struct.at(336).asInstanceOf[Ptr[CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]]]
     def get_mount_for_mount_path_=(value: CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]): Unit = !struct.at(336).asInstanceOf[Ptr[CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]]] = value
 
-/**
-*/
 opaque type GNetworkAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNetworkAddress:
   given _tag: Tag[GNetworkAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3934,8 +3612,6 @@ object GNetworkAddress:
     def priv: Ptr[GNetworkAddressPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GNetworkAddressPrivate]]]
     def priv_=(value: Ptr[GNetworkAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GNetworkAddressPrivate]]] = value
 
-/**
-*/
 opaque type GNetworkAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GNetworkAddressClass:
   given _tag: Tag[GNetworkAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -3948,20 +3624,14 @@ object GNetworkAddressClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GNetworkAddressPrivate = CStruct0
 object GNetworkAddressPrivate:
   given _tag: Tag[GNetworkAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GNetworkMonitor = CStruct0
 object GNetworkMonitor:
   given _tag: Tag[GNetworkMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GNetworkMonitorInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GNetworkMonitorInterface:
   given _tag: Tag[GNetworkMonitorInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -3986,8 +3656,6 @@ object GNetworkMonitorInterface:
     def can_reach_finish: CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(40).asInstanceOf[Ptr[CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def can_reach_finish_=(value: CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GNetworkService = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GNetworkService:
   given _tag: Tag[GNetworkService] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4003,8 +3671,6 @@ object GNetworkService:
     def priv: Ptr[GNetworkServicePrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GNetworkServicePrivate]]]
     def priv_=(value: Ptr[GNetworkServicePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GNetworkServicePrivate]]] = value
 
-/**
-*/
 opaque type GNetworkServiceClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GNetworkServiceClass:
   given _tag: Tag[GNetworkServiceClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -4017,20 +3683,14 @@ object GNetworkServiceClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GNetworkServicePrivate = CStruct0
 object GNetworkServicePrivate:
   given _tag: Tag[GNetworkServicePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GNotification = CStruct0
 object GNotification:
   given _tag: Tag[GNotification] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GOutputMessage = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GOutputMessage:
   given _tag: Tag[GOutputMessage] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -4058,8 +3718,6 @@ object GOutputMessage:
     def num_control_messages: _root_.sn.gnome.glib.internal.guint = !struct.at(32).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.guint]]
     def num_control_messages_=(value: _root_.sn.gnome.glib.internal.guint): Unit = !struct.at(32).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.guint]] = value
 
-/**
-*/
 opaque type GOutputStream = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GOutputStream:
   given _tag: Tag[GOutputStream] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4075,8 +3733,6 @@ object GOutputStream:
     def priv: Ptr[GOutputStreamPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GOutputStreamPrivate]]]
     def priv_=(value: Ptr[GOutputStreamPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GOutputStreamPrivate]]] = value
 
-/**
-*/
 opaque type GOutputStreamClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._9, Nat._6]]
 object GOutputStreamClass:
   given _tag: Tag[GOutputStreamClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._9, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._9, Nat._6](Tag.Nat2, Tag.Nat9, Tag.Nat6))
@@ -4149,14 +3805,10 @@ object GOutputStreamClass:
     def _g_reserved8: CFuncPtr0[Unit] = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GOutputStreamPrivate = CStruct0
 object GOutputStreamPrivate:
   given _tag: Tag[GOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GOutputVector = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GOutputVector:
   given _tag: Tag[GOutputVector] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
@@ -4172,8 +3824,6 @@ object GOutputVector:
     def size: _root_.sn.gnome.glib.internal.gsize = !struct.at(8).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gsize]]
     def size_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at(8).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gsize]] = value
 
-/**
-*/
 opaque type GPermission = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GPermission:
   given _tag: Tag[GPermission] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4189,8 +3839,6 @@ object GPermission:
     def priv: Ptr[GPermissionPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GPermissionPrivate]]]
     def priv_=(value: Ptr[GPermissionPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GPermissionPrivate]]] = value
 
-/**
-*/
 opaque type GPermissionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]]
 object GPermissionClass:
   given _tag: Tag[GPermissionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._1, Nat._2]](Tag.Byte, Tag.Digit3[Nat._3, Nat._1, Nat._2](Tag.Nat3, Tag.Nat1, Tag.Nat2))
@@ -4224,14 +3872,10 @@ object GPermissionClass:
     def reserved: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(184).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]]
     def reserved_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(184).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]] = value
 
-/**
-*/
 opaque type GPermissionPrivate = CStruct0
 object GPermissionPrivate:
   given _tag: Tag[GPermissionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GPollableInputStream = CStruct0
 object GPollableInputStream:
   given _tag: Tag[GPollableInputStream] = Tag.materializeCStruct0Tag
@@ -4263,8 +3907,6 @@ object GPollableInputStreamInterface:
     def read_nonblocking: CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize] = !struct.at(40).asInstanceOf[Ptr[CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize]]]
     def read_nonblocking_=(value: CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize]]] = value
 
-/**
-*/
 opaque type GPollableOutputStream = CStruct0
 object GPollableOutputStream:
   given _tag: Tag[GPollableOutputStream] = Tag.materializeCStruct0Tag
@@ -4299,14 +3941,10 @@ object GPollableOutputStreamInterface:
     def writev_nonblocking: CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GPollableReturn] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GPollableReturn]]]
     def writev_nonblocking_=(value: CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GPollableReturn]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GPollableReturn]]] = value
 
-/**
-*/
 opaque type GPowerProfileMonitor = CStruct0
 object GPowerProfileMonitor:
   given _tag: Tag[GPowerProfileMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GPowerProfileMonitorInterface = CArray[CChar, Nat.Digit2[Nat._1, Nat._6]]
 object GPowerProfileMonitorInterface:
   given _tag: Tag[GPowerProfileMonitorInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
@@ -4319,20 +3957,14 @@ object GPowerProfileMonitorInterface:
     def g_iface: _root_.sn.gnome.gobject.internal.GTypeInterface = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]]
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]] = value
 
-/**
-*/
 opaque type GPropertyAction = CStruct0
 object GPropertyAction:
   given _tag: Tag[GPropertyAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GProxy = CStruct0
 object GProxy:
   given _tag: Tag[GProxy] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GProxyAddress = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GProxyAddress:
   given _tag: Tag[GProxyAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -4348,8 +3980,6 @@ object GProxyAddress:
     def priv: Ptr[GProxyAddressPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GProxyAddressPrivate]]]
     def priv_=(value: Ptr[GProxyAddressPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GProxyAddressPrivate]]] = value
 
-/**
-*/
 opaque type GProxyAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GProxyAddressClass:
   given _tag: Tag[GProxyAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
@@ -4362,8 +3992,6 @@ object GProxyAddressClass:
     def parent_class: GInetSocketAddressClass = !struct.at(0).asInstanceOf[Ptr[GInetSocketAddressClass]]
     def parent_class_=(value: GInetSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GInetSocketAddressClass]] = value
 
-/**
-*/
 opaque type GProxyAddressEnumerator = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GProxyAddressEnumerator:
   given _tag: Tag[GProxyAddressEnumerator] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4415,14 +4043,10 @@ object GProxyAddressEnumeratorClass:
     def _g_reserved7: CFuncPtr0[Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GProxyAddressEnumeratorPrivate = CStruct0
 object GProxyAddressEnumeratorPrivate:
   given _tag: Tag[GProxyAddressEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GProxyAddressPrivate = CStruct0
 object GProxyAddressPrivate:
   given _tag: Tag[GProxyAddressPrivate] = Tag.materializeCStruct0Tag
@@ -4454,14 +4078,10 @@ object GProxyInterface:
     def supports_hostname: CFuncPtr1[Ptr[GProxy], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[GProxy], _root_.sn.gnome.glib.internal.gboolean]]]
     def supports_hostname_=(value: CFuncPtr1[Ptr[GProxy], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[GProxy], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GProxyResolver = CStruct0
 object GProxyResolver:
   given _tag: Tag[GProxyResolver] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GProxyResolverInterface = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GProxyResolverInterface:
   given _tag: Tag[GProxyResolverInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -4486,14 +4106,10 @@ object GProxyResolverInterface:
     def lookup_finish: CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]] = !struct.at(40).asInstanceOf[Ptr[CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]]]
     def lookup_finish_=(value: CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]]] = value
 
-/**
-*/
 opaque type GRemoteActionGroup = CStruct0
 object GRemoteActionGroup:
   given _tag: Tag[GRemoteActionGroup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GRemoteActionGroupInterface = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GRemoteActionGroupInterface:
   given _tag: Tag[GRemoteActionGroupInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4512,8 +4128,6 @@ object GRemoteActionGroupInterface:
     def change_action_state_full: CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = !struct.at(24).asInstanceOf[Ptr[CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]]
     def change_action_state_full_=(value: CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]] = value
 
-/**
-*/
 opaque type GResolver = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GResolver:
   given _tag: Tag[GResolver] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4529,8 +4143,6 @@ object GResolver:
     def priv: Ptr[GResolverPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GResolverPrivate]]]
     def priv_=(value: Ptr[GResolverPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GResolverPrivate]]] = value
 
-/**
-*/
 opaque type GResolverClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._6, Nat._4]]
 object GResolverClass:
   given _tag: Tag[GResolverClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._6, Nat._4]](Tag.Byte, Tag.Digit3[Nat._2, Nat._6, Nat._4](Tag.Nat2, Tag.Nat6, Tag.Nat4))
@@ -4591,20 +4203,14 @@ object GResolverClass:
     def lookup_by_name_with_flags: CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]] = !struct.at(256).asInstanceOf[Ptr[CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]]]]
     def lookup_by_name_with_flags_=(value: CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = !struct.at(256).asInstanceOf[Ptr[CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]]]] = value
 
-/**
-*/
 opaque type GResolverPrivate = CStruct0
 object GResolverPrivate:
   given _tag: Tag[GResolverPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GResource = CStruct0
 object GResource:
   given _tag: Tag[GResource] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSeekable = CStruct0
 object GSeekable:
   given _tag: Tag[GSeekable] = Tag.materializeCStruct0Tag
@@ -4639,8 +4245,6 @@ object GSeekableIface:
     def truncate_fn: CFuncPtr4[Ptr[GSeekable], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[GSeekable], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def truncate_fn_=(value: CFuncPtr4[Ptr[GSeekable], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[GSeekable], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GSettings = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSettings:
   given _tag: Tag[GSettings] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4656,14 +4260,10 @@ object GSettings:
     def priv: Ptr[GSettingsPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GSettingsPrivate]]]
     def priv_=(value: Ptr[GSettingsPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSettingsPrivate]]] = value
 
-/**
-*/
 opaque type GSettingsBackend = CStruct0
 object GSettingsBackend:
   given _tag: Tag[GSettingsBackend] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSettingsClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._8]]
 object GSettingsClass:
   given _tag: Tag[GSettingsClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._8](Tag.Nat3, Tag.Nat2, Tag.Nat8))
@@ -4691,32 +4291,22 @@ object GSettingsClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]] = !struct.at(168).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]]): Unit = !struct.at(168).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]]]] = value
 
-/**
-*/
 opaque type GSettingsPrivate = CStruct0
 object GSettingsPrivate:
   given _tag: Tag[GSettingsPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSettingsSchema = CStruct0
 object GSettingsSchema:
   given _tag: Tag[GSettingsSchema] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSettingsSchemaKey = CStruct0
 object GSettingsSchemaKey:
   given _tag: Tag[GSettingsSchemaKey] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSettingsSchemaSource = CStruct0
 object GSettingsSchemaSource:
   given _tag: Tag[GSettingsSchemaSource] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSimpleAction = CStruct0
 object GSimpleAction:
   given _tag: Tag[GSimpleAction] = Tag.materializeCStruct0Tag
@@ -4739,8 +4329,6 @@ object GSimpleActionGroup:
     def priv: Ptr[GSimpleActionGroupPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GSimpleActionGroupPrivate]]]
     def priv_=(value: Ptr[GSimpleActionGroupPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSimpleActionGroupPrivate]]] = value
 
-/**
-*/
 opaque type GSimpleActionGroupClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
 object GSimpleActionGroupClass:
   given _tag: Tag[GSimpleActionGroupClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._3, Nat._2](Tag.Nat2, Tag.Nat3, Tag.Nat2))
@@ -4756,38 +4344,26 @@ object GSimpleActionGroupClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]] = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]): Unit = !struct.at(136).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]] = value
 
-/**
-*/
 opaque type GSimpleActionGroupPrivate = CStruct0
 object GSimpleActionGroupPrivate:
   given _tag: Tag[GSimpleActionGroupPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSimpleAsyncResult = CStruct0
 object GSimpleAsyncResult:
   given _tag: Tag[GSimpleAsyncResult] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSimpleAsyncResultClass = CStruct0
 object GSimpleAsyncResultClass:
   given _tag: Tag[GSimpleAsyncResultClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSimpleIOStream = CStruct0
 object GSimpleIOStream:
   given _tag: Tag[GSimpleIOStream] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSimplePermission = CStruct0
 object GSimplePermission:
   given _tag: Tag[GSimplePermission] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSimpleProxyResolver = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSimpleProxyResolver:
   given _tag: Tag[GSimpleProxyResolver] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4803,8 +4379,6 @@ object GSimpleProxyResolver:
     def priv: Ptr[GSimpleProxyResolverPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GSimpleProxyResolverPrivate]]]
     def priv_=(value: Ptr[GSimpleProxyResolverPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSimpleProxyResolverPrivate]]] = value
 
-/**
-*/
 opaque type GSimpleProxyResolverClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
 object GSimpleProxyResolverClass:
   given _tag: Tag[GSimpleProxyResolverClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._7, Nat._6](Tag.Nat1, Tag.Nat7, Tag.Nat6))
@@ -4832,14 +4406,10 @@ object GSimpleProxyResolverClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSimpleProxyResolverPrivate = CStruct0
 object GSimpleProxyResolverPrivate:
   given _tag: Tag[GSimpleProxyResolverPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSocket = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocket:
   given _tag: Tag[GSocket] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4855,8 +4425,6 @@ object GSocket:
     def priv: Ptr[GSocketPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GSocketPrivate]]]
     def priv_=(value: Ptr[GSocketPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSocketPrivate]]] = value
 
-/**
-*/
 opaque type GSocketAddress = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GSocketAddress:
   given _tag: Tag[GSocketAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._2, Nat._4]](Tag.Byte, Tag.Digit2[Nat._2, Nat._4](Tag.Nat2, Tag.Nat4))
@@ -4869,8 +4437,6 @@ object GSocketAddress:
     def parent_instance: _root_.sn.gnome.gobject.internal.GObject = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]]
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]] = value
 
-/**
-*/
 opaque type GSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
 object GSocketAddressClass:
   given _tag: Tag[GSocketAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
@@ -4892,8 +4458,6 @@ object GSocketAddressClass:
     def to_native: CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def to_native_=(value: CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type GSocketAddressEnumerator = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GSocketAddressEnumerator:
   given _tag: Tag[GSocketAddressEnumerator] = Tag.CArray[CChar, Nat.Digit2[Nat._2, Nat._4]](Tag.Byte, Tag.Digit2[Nat._2, Nat._4](Tag.Nat2, Tag.Nat4))
@@ -4930,8 +4494,6 @@ object GSocketAddressEnumeratorClass:
     def next_finish: CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GSocketAddress]] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GSocketAddress]]]]
     def next_finish_=(value: CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GSocketAddress]]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GSocketAddress]]]] = value
 
-/**
-*/
 opaque type GSocketClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object GSocketClass:
   given _tag: Tag[GSocketClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._1, Nat._6](Tag.Nat2, Tag.Nat1, Tag.Nat6))
@@ -4974,8 +4536,6 @@ object GSocketClass:
     def _g_reserved10: CFuncPtr0[Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSocketClient = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocketClient:
   given _tag: Tag[GSocketClient] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4991,8 +4551,6 @@ object GSocketClient:
     def priv: Ptr[GSocketClientPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GSocketClientPrivate]]]
     def priv_=(value: Ptr[GSocketClientPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GSocketClientPrivate]]] = value
 
-/**
-*/
 opaque type GSocketClientClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
 object GSocketClientClass:
   given _tag: Tag[GSocketClientClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._7, Nat._6](Tag.Nat1, Tag.Nat7, Tag.Nat6))
@@ -5020,14 +4578,10 @@ object GSocketClientClass:
     def _g_reserved4: CFuncPtr0[Unit] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSocketClientPrivate = CStruct0
 object GSocketClientPrivate:
   given _tag: Tag[GSocketClientPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSocketConnectable = CStruct0
 object GSocketConnectable:
   given _tag: Tag[GSocketConnectable] = Tag.materializeCStruct0Tag
@@ -5056,8 +4610,6 @@ object GSocketConnectableIface:
     def to_string: CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.sn.gnome.glib.internal.gchar]] = !struct.at(32).asInstanceOf[Ptr[CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.sn.gnome.glib.internal.gchar]]]]
     def to_string_=(value: CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.sn.gnome.glib.internal.gchar]]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.sn.gnome.glib.internal.gchar]]]] = value
 
-/**
-*/
 opaque type GSocketConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GSocketConnection:
   given _tag: Tag[GSocketConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -5073,8 +4625,6 @@ object GSocketConnection:
     def priv: Ptr[GSocketConnectionPrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GSocketConnectionPrivate]]]
     def priv_=(value: Ptr[GSocketConnectionPrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GSocketConnectionPrivate]]] = value
 
-/**
-*/
 opaque type GSocketConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GSocketConnectionClass:
   given _tag: Tag[GSocketConnectionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._0, Nat._4](Tag.Nat3, Tag.Nat0, Tag.Nat4))
@@ -5105,14 +4655,10 @@ object GSocketConnectionClass:
     def _g_reserved6: CFuncPtr0[Unit] = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSocketConnectionPrivate = CStruct0
 object GSocketConnectionPrivate:
   given _tag: Tag[GSocketConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSocketControlMessage = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocketControlMessage:
   given _tag: Tag[GSocketControlMessage] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -5173,14 +4719,10 @@ object GSocketControlMessageClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSocketControlMessagePrivate = CStruct0
 object GSocketControlMessagePrivate:
   given _tag: Tag[GSocketControlMessagePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSocketListener = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSocketListener:
   given _tag: Tag[GSocketListener] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -5232,20 +4774,14 @@ object GSocketListenerClass:
     def _g_reserved6: CFuncPtr0[Unit] = !struct.at(184).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSocketListenerPrivate = CStruct0
 object GSocketListenerPrivate:
   given _tag: Tag[GSocketListenerPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSocketPrivate = CStruct0
 object GSocketPrivate:
   given _tag: Tag[GSocketPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSocketService = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GSocketService:
   given _tag: Tag[GSocketService] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -5297,20 +4833,14 @@ object GSocketServiceClass:
     def _g_reserved6: CFuncPtr0[Unit] = !struct.at(240).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GSocketServicePrivate = CStruct0
 object GSocketServicePrivate:
   given _tag: Tag[GSocketServicePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSrvTarget = CStruct0
 object GSrvTarget:
   given _tag: Tag[GSrvTarget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GStaticResource = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GStaticResource:
   given _tag: Tag[GStaticResource] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -5335,32 +4865,22 @@ object GStaticResource:
     def padding: _root_.sn.gnome.glib.internal.gpointer = !struct.at(32).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gpointer]]
     def padding_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at(32).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gpointer]] = value
 
-/**
-*/
 opaque type GSubprocess = CStruct0
 object GSubprocess:
   given _tag: Tag[GSubprocess] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GSubprocessLauncher = CStruct0
 object GSubprocessLauncher:
   given _tag: Tag[GSubprocessLauncher] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTask = CStruct0
 object GTask:
   given _tag: Tag[GTask] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTaskClass = CStruct0
 object GTaskClass:
   given _tag: Tag[GTaskClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTcpConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GTcpConnection:
   given _tag: Tag[GTcpConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -5376,8 +4896,6 @@ object GTcpConnection:
     def priv: Ptr[GTcpConnectionPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GTcpConnectionPrivate]]]
     def priv_=(value: Ptr[GTcpConnectionPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GTcpConnectionPrivate]]] = value
 
-/**
-*/
 opaque type GTcpConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GTcpConnectionClass:
   given _tag: Tag[GTcpConnectionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._0, Nat._4](Tag.Nat3, Tag.Nat0, Tag.Nat4))
@@ -5390,14 +4908,10 @@ object GTcpConnectionClass:
     def parent_class: GSocketConnectionClass = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]]
     def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]] = value
 
-/**
-*/
 opaque type GTcpConnectionPrivate = CStruct0
 object GTcpConnectionPrivate:
   given _tag: Tag[GTcpConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTcpWrapperConnection = CArray[CChar, Nat.Digit2[Nat._5, Nat._6]]
 object GTcpWrapperConnection:
   given _tag: Tag[GTcpWrapperConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._5, Nat._6]](Tag.Byte, Tag.Digit2[Nat._5, Nat._6](Tag.Nat5, Tag.Nat6))
@@ -5413,8 +4927,6 @@ object GTcpWrapperConnection:
     def priv: Ptr[GTcpWrapperConnectionPrivate] = !struct.at(48).asInstanceOf[Ptr[Ptr[GTcpWrapperConnectionPrivate]]]
     def priv_=(value: Ptr[GTcpWrapperConnectionPrivate]): Unit = !struct.at(48).asInstanceOf[Ptr[Ptr[GTcpWrapperConnectionPrivate]]] = value
 
-/**
-*/
 opaque type GTcpWrapperConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
 object GTcpWrapperConnectionClass:
   given _tag: Tag[GTcpWrapperConnectionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._0, Nat._4](Tag.Nat3, Tag.Nat0, Tag.Nat4))
@@ -5427,32 +4939,22 @@ object GTcpWrapperConnectionClass:
     def parent_class: GTcpConnectionClass = !struct.at(0).asInstanceOf[Ptr[GTcpConnectionClass]]
     def parent_class_=(value: GTcpConnectionClass): Unit = !struct.at(0).asInstanceOf[Ptr[GTcpConnectionClass]] = value
 
-/**
-*/
 opaque type GTcpWrapperConnectionPrivate = CStruct0
 object GTcpWrapperConnectionPrivate:
   given _tag: Tag[GTcpWrapperConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTestDBus = CStruct0
 object GTestDBus:
   given _tag: Tag[GTestDBus] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GThemedIcon = CStruct0
 object GThemedIcon:
   given _tag: Tag[GThemedIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GThemedIconClass = CStruct0
 object GThemedIconClass:
   given _tag: Tag[GThemedIconClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GThreadedSocketService = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
 object GThreadedSocketService:
   given _tag: Tag[GThreadedSocketService] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
@@ -5468,8 +4970,6 @@ object GThreadedSocketService:
     def priv: Ptr[GThreadedSocketServicePrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GThreadedSocketServicePrivate]]]
     def priv_=(value: Ptr[GThreadedSocketServicePrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GThreadedSocketServicePrivate]]] = value
 
-/**
-*/
 opaque type GThreadedSocketServiceClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._9, Nat._6]]
 object GThreadedSocketServiceClass:
   given _tag: Tag[GThreadedSocketServiceClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._9, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._9, Nat._6](Tag.Nat2, Tag.Nat9, Tag.Nat6))
@@ -5500,14 +5000,10 @@ object GThreadedSocketServiceClass:
     def _g_reserved5: CFuncPtr0[Unit] = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GThreadedSocketServicePrivate = CStruct0
 object GThreadedSocketServicePrivate:
   given _tag: Tag[GThreadedSocketServicePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTlsBackend = CStruct0
 object GTlsBackend:
   given _tag: Tag[GTlsBackend] = Tag.materializeCStruct0Tag
@@ -5554,8 +5050,6 @@ object GTlsBackendInterface:
     def get_dtls_server_connection_type: CFuncPtr0[_root_.sn.gnome.gobject.internal.GType] = !struct.at(80).asInstanceOf[Ptr[CFuncPtr0[_root_.sn.gnome.gobject.internal.GType]]]
     def get_dtls_server_connection_type_=(value: CFuncPtr0[_root_.sn.gnome.gobject.internal.GType]): Unit = !struct.at(80).asInstanceOf[Ptr[CFuncPtr0[_root_.sn.gnome.gobject.internal.GType]]] = value
 
-/**
-*/
 opaque type GTlsCertificate = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsCertificate:
   given _tag: Tag[GTlsCertificate] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -5571,8 +5065,6 @@ object GTlsCertificate:
     def priv: Ptr[GTlsCertificatePrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsCertificatePrivate]]]
     def priv_=(value: Ptr[GTlsCertificatePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsCertificatePrivate]]] = value
 
-/**
-*/
 opaque type GTlsCertificateClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._8]]
 object GTlsCertificateClass:
   given _tag: Tag[GTlsCertificateClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._2, Nat._0, Nat._8](Tag.Nat2, Tag.Nat0, Tag.Nat8))
@@ -5591,14 +5083,10 @@ object GTlsCertificateClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(144).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(144).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GTlsCertificatePrivate = CStruct0
 object GTlsCertificatePrivate:
   given _tag: Tag[GTlsCertificatePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTlsClientConnection = CStruct0
 object GTlsClientConnection:
   given _tag: Tag[GTlsClientConnection] = Tag.materializeCStruct0Tag
@@ -5621,8 +5109,6 @@ object GTlsClientConnectionInterface:
     def copy_session_state: CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit] = !struct.at(16).asInstanceOf[Ptr[CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]]]
     def copy_session_state_=(value: CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]]] = value
 
-/**
-*/
 opaque type GTlsConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GTlsConnection:
   given _tag: Tag[GTlsConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
@@ -5674,14 +5160,10 @@ object GTlsConnectionClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6] = !struct.at(304).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]): Unit = !struct.at(304).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]] = value
 
-/**
-*/
 opaque type GTlsConnectionPrivate = CStruct0
 object GTlsConnectionPrivate:
   given _tag: Tag[GTlsConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTlsDatabase = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsDatabase:
   given _tag: Tag[GTlsDatabase] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -5697,8 +5179,6 @@ object GTlsDatabase:
     def priv: Ptr[GTlsDatabasePrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsDatabasePrivate]]]
     def priv_=(value: Ptr[GTlsDatabasePrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsDatabasePrivate]]] = value
 
-/**
-*/
 opaque type GTlsDatabaseClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._8]]
 object GTlsDatabaseClass:
   given _tag: Tag[GTlsDatabaseClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._6, Nat._8]](Tag.Byte, Tag.Digit3[Nat._3, Nat._6, Nat._8](Tag.Nat3, Tag.Nat6, Tag.Nat8))
@@ -5753,14 +5233,10 @@ object GTlsDatabaseClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(240).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(240).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]] = value
 
-/**
-*/
 opaque type GTlsDatabasePrivate = CStruct0
 object GTlsDatabasePrivate:
   given _tag: Tag[GTlsDatabasePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTlsFileDatabase = CStruct0
 object GTlsFileDatabase:
   given _tag: Tag[GTlsFileDatabase] = Tag.materializeCStruct0Tag
@@ -5783,8 +5259,6 @@ object GTlsFileDatabaseInterface:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(16).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(16).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
 
-/**
-*/
 opaque type GTlsInteraction = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsInteraction:
   given _tag: Tag[GTlsInteraction] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -5800,8 +5274,6 @@ object GTlsInteraction:
     def priv: Ptr[GTlsInteractionPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsInteractionPrivate]]]
     def priv_=(value: Ptr[GTlsInteractionPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GTlsInteractionPrivate]]] = value
 
-/**
-*/
 opaque type GTlsInteractionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._5, Nat._2]]
 object GTlsInteractionClass:
   given _tag: Tag[GTlsInteractionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._5, Nat._2]](Tag.Byte, Tag.Digit3[Nat._3, Nat._5, Nat._2](Tag.Nat3, Tag.Nat5, Tag.Nat2))
@@ -5835,14 +5307,10 @@ object GTlsInteractionClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]] = !struct.at(184).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]]): Unit = !struct.at(184).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]]]] = value
 
-/**
-*/
 opaque type GTlsInteractionPrivate = CStruct0
 object GTlsInteractionPrivate:
   given _tag: Tag[GTlsInteractionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTlsPassword = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GTlsPassword:
   given _tag: Tag[GTlsPassword] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -5885,14 +5353,10 @@ object GTlsPasswordClass:
     def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = !struct.at(160).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]]
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at(160).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]] = value
 
-/**
-*/
 opaque type GTlsPasswordPrivate = CStruct0
 object GTlsPasswordPrivate:
   given _tag: Tag[GTlsPasswordPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GTlsServerConnection = CStruct0
 object GTlsServerConnection:
   given _tag: Tag[GTlsServerConnection] = Tag.materializeCStruct0Tag
@@ -5912,20 +5376,157 @@ object GTlsServerConnectionInterface:
     def g_iface: _root_.sn.gnome.gobject.internal.GTypeInterface = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]]
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GTypeInterface]] = value
 
+opaque type GUnixConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
+object GUnixConnection:
+  given _tag: Tag[GUnixConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
+  def apply()(using Zone): Ptr[GUnixConnection] = scala.scalanative.unsafe.alloc[GUnixConnection](1)
+  def apply(parent_instance : GSocketConnection, priv : Ptr[GUnixConnectionPrivate])(using Zone): Ptr[GUnixConnection] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixConnection)
+    def parent_instance: GSocketConnection = !struct.at(0).asInstanceOf[Ptr[GSocketConnection]]
+    def parent_instance_=(value: GSocketConnection): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketConnection]] = value
+    def priv: Ptr[GUnixConnectionPrivate] = !struct.at(40).asInstanceOf[Ptr[Ptr[GUnixConnectionPrivate]]]
+    def priv_=(value: Ptr[GUnixConnectionPrivate]): Unit = !struct.at(40).asInstanceOf[Ptr[Ptr[GUnixConnectionPrivate]]] = value
+
+opaque type GUnixConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
+object GUnixConnectionClass:
+  given _tag: Tag[GUnixConnectionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._0, Nat._4](Tag.Nat3, Tag.Nat0, Tag.Nat4))
+  def apply()(using Zone): Ptr[GUnixConnectionClass] = scala.scalanative.unsafe.alloc[GUnixConnectionClass](1)
+  def apply(parent_class : GSocketConnectionClass)(using Zone): Ptr[GUnixConnectionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GUnixConnectionClass)
+    def parent_class: GSocketConnectionClass = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]]
+    def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketConnectionClass]] = value
+
+opaque type GUnixConnectionPrivate = CStruct0
+object GUnixConnectionPrivate:
+  given _tag: Tag[GUnixConnectionPrivate] = Tag.materializeCStruct0Tag
+
 /**
+ * GUnixCredentialsMessage:
 */
-opaque type GUnixCredentialsMessage = CStruct0
+opaque type GUnixCredentialsMessage = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GUnixCredentialsMessage:
-  given _tag: Tag[GUnixCredentialsMessage] = Tag.materializeCStruct0Tag
+  given _tag: Tag[GUnixCredentialsMessage] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
+  def apply()(using Zone): Ptr[GUnixCredentialsMessage] = scala.scalanative.unsafe.alloc[GUnixCredentialsMessage](1)
+  def apply(parent_instance : GSocketControlMessage, priv : Ptr[GUnixCredentialsMessagePrivate])(using Zone): Ptr[GUnixCredentialsMessage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixCredentialsMessage)
+    def parent_instance: GSocketControlMessage = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessage]]
+    def parent_instance_=(value: GSocketControlMessage): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessage]] = value
+    def priv: Ptr[GUnixCredentialsMessagePrivate] = !struct.at(32).asInstanceOf[Ptr[Ptr[GUnixCredentialsMessagePrivate]]]
+    def priv_=(value: Ptr[GUnixCredentialsMessagePrivate]): Unit = !struct.at(32).asInstanceOf[Ptr[Ptr[GUnixCredentialsMessagePrivate]]] = value
 
 /**
+ * GUnixCredentialsMessageClass:
 */
-opaque type GUnixFDList = CStruct0
+opaque type GUnixCredentialsMessageClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
+object GUnixCredentialsMessageClass:
+  given _tag: Tag[GUnixCredentialsMessageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._3, Nat._2](Tag.Nat2, Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixCredentialsMessageClass] = scala.scalanative.unsafe.alloc[GUnixCredentialsMessageClass](1)
+  def apply(parent_class : GSocketControlMessageClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[GUnixCredentialsMessageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    ____ptr
+  extension (struct: GUnixCredentialsMessageClass)
+    def parent_class: GSocketControlMessageClass = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessageClass]]
+    def parent_class_=(value: GSocketControlMessageClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketControlMessageClass]] = value
+    def _g_reserved1: CFuncPtr0[Unit] = !struct.at(216).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(216).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved2: CFuncPtr0[Unit] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+
+opaque type GUnixCredentialsMessagePrivate = CStruct0
+object GUnixCredentialsMessagePrivate:
+  given _tag: Tag[GUnixCredentialsMessagePrivate] = Tag.materializeCStruct0Tag
+
+opaque type GUnixFDList = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GUnixFDList:
-  given _tag: Tag[GUnixFDList] = Tag.materializeCStruct0Tag
+  given _tag: Tag[GUnixFDList] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixFDList] = scala.scalanative.unsafe.alloc[GUnixFDList](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject, priv : Ptr[GUnixFDListPrivate])(using Zone): Ptr[GUnixFDList] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixFDList)
+    def parent_instance: _root_.sn.gnome.gobject.internal.GObject = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]]
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]] = value
+    def priv: Ptr[GUnixFDListPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixFDListPrivate]]]
+    def priv_=(value: Ptr[GUnixFDListPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixFDListPrivate]]] = value
 
-/**
-*/
+opaque type GUnixFDListClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
+object GUnixFDListClass:
+  given _tag: Tag[GUnixFDListClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._7, Nat._6](Tag.Nat1, Tag.Nat7, Tag.Nat6))
+  def apply()(using Zone): Ptr[GUnixFDListClass] = scala.scalanative.unsafe.alloc[GUnixFDListClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit], _g_reserved3 : CFuncPtr0[Unit], _g_reserved4 : CFuncPtr0[Unit], _g_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[GUnixFDListClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    (!____ptr)._g_reserved3 = _g_reserved3
+    (!____ptr)._g_reserved4 = _g_reserved4
+    (!____ptr)._g_reserved5 = _g_reserved5
+    ____ptr
+  extension (struct: GUnixFDListClass)
+    def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
+    def _g_reserved1: CFuncPtr0[Unit] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved2: CFuncPtr0[Unit] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved3: CFuncPtr0[Unit] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved4: CFuncPtr0[Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved5: CFuncPtr0[Unit] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+
+opaque type GUnixFDListPrivate = CStruct0
+object GUnixFDListPrivate:
+  given _tag: Tag[GUnixFDListPrivate] = Tag.materializeCStruct0Tag
+
+opaque type GUnixSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
+object GUnixSocketAddress:
+  given _tag: Tag[GUnixSocketAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixSocketAddress] = scala.scalanative.unsafe.alloc[GUnixSocketAddress](1)
+  def apply(parent_instance : GSocketAddress, priv : Ptr[GUnixSocketAddressPrivate])(using Zone): Ptr[GUnixSocketAddress] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixSocketAddress)
+    def parent_instance: GSocketAddress = !struct.at(0).asInstanceOf[Ptr[GSocketAddress]]
+    def parent_instance_=(value: GSocketAddress): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddress]] = value
+    def priv: Ptr[GUnixSocketAddressPrivate] = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixSocketAddressPrivate]]]
+    def priv_=(value: Ptr[GUnixSocketAddressPrivate]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[GUnixSocketAddressPrivate]]] = value
+
+opaque type GUnixSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
+object GUnixSocketAddressClass:
+  given _tag: Tag[GUnixSocketAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
+  def apply()(using Zone): Ptr[GUnixSocketAddressClass] = scala.scalanative.unsafe.alloc[GUnixSocketAddressClass](1)
+  def apply(parent_class : GSocketAddressClass)(using Zone): Ptr[GUnixSocketAddressClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GUnixSocketAddressClass)
+    def parent_class: GSocketAddressClass = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]]
+    def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(0).asInstanceOf[Ptr[GSocketAddressClass]] = value
+
+opaque type GUnixSocketAddressPrivate = CStruct0
+object GUnixSocketAddressPrivate:
+  given _tag: Tag[GUnixSocketAddressPrivate] = Tag.materializeCStruct0Tag
+
 opaque type GVfs = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GVfs:
   given _tag: Tag[GVfs] = Tag.CArray[CChar, Nat.Digit2[Nat._2, Nat._4]](Tag.Byte, Tag.Digit2[Nat._2, Nat._4](Tag.Nat2, Tag.Nat4))
@@ -5938,8 +5539,6 @@ object GVfs:
     def parent_instance: _root_.sn.gnome.gobject.internal.GObject = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]]
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]] = value
 
-/**
-*/
 opaque type GVfsClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object GVfsClass:
   given _tag: Tag[GVfsClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._7, Nat._2](Tag.Nat2, Tag.Nat7, Tag.Nat2))
@@ -6003,14 +5602,10 @@ object GVfsClass:
     def _g_reserved6: CFuncPtr0[Unit] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GVolume = CStruct0
 object GVolume:
   given _tag: Tag[GVolume] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GVolumeIface = CArray[CChar, Nat.Digit3[Nat._1, Nat._8, Nat._4]]
 object GVolumeIface:
   given _tag: Tag[GVolumeIface] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._8, Nat._4]](Tag.Byte, Tag.Digit3[Nat._1, Nat._8, Nat._4](Tag.Nat1, Tag.Nat8, Tag.Nat4))
@@ -6086,8 +5681,6 @@ object GVolumeIface:
     def get_symbolic_icon: CFuncPtr1[Ptr[GVolume], Ptr[GIcon]] = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]]]
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]]] = value
 
-/**
-*/
 opaque type GVolumeMonitor = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GVolumeMonitor:
   given _tag: Tag[GVolumeMonitor] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -6103,8 +5696,6 @@ object GVolumeMonitor:
     def priv: _root_.sn.gnome.glib.internal.gpointer = !struct.at(24).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gpointer]]
     def priv_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at(24).asInstanceOf[Ptr[_root_.sn.gnome.glib.internal.gpointer]] = value
 
-/**
-*/
 opaque type GVolumeMonitorClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object GVolumeMonitorClass:
   given _tag: Tag[GVolumeMonitorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._3, Nat._6](Tag.Nat3, Tag.Nat3, Tag.Nat6))
@@ -6192,14 +5783,10 @@ object GVolumeMonitorClass:
     def _g_reserved6: CFuncPtr0[Unit] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type GZlibCompressor = CStruct0
 object GZlibCompressor:
   given _tag: Tag[GZlibCompressor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GZlibCompressorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GZlibCompressorClass:
   given _tag: Tag[GZlibCompressorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -6212,14 +5799,10 @@ object GZlibCompressorClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type GZlibDecompressor = CStruct0
 object GZlibDecompressor:
   given _tag: Tag[GZlibDecompressor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GZlibDecompressorClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object GZlibDecompressorClass:
   given _tag: Tag[GZlibDecompressorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
@@ -6232,14 +5815,10 @@ object GZlibDecompressorClass:
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
 
-/**
-*/
 opaque type _GAction = CStruct0
 object _GAction:
   given _tag: Tag[_GAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GActionEntry = CStruct6[Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr3[Ptr[GSimpleAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, Unit], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr3[Ptr[GSimpleAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, Unit], CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3]]
 object _GActionEntry:
   given _tag: Tag[_GActionEntry] = Tag.materializeCStruct6Tag[Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr3[Ptr[GSimpleAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, Unit], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr3[Ptr[GSimpleAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, Unit], CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3]]
@@ -6267,14 +5846,10 @@ object _GActionEntry:
     def padding : CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3] = struct._6
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gsize, Nat._3]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GActionGroup = CStruct0
 object _GActionGroup:
   given _tag: Tag[_GActionGroup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GActionGroupInterface = CStruct15[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GActionGroup], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gboolean, Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]
 object _GActionGroupInterface:
   given _tag: Tag[_GActionGroupInterface] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GActionGroup], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gboolean, Unit], CFuncPtr3[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]
@@ -6329,8 +5904,6 @@ object _GActionGroupInterface:
     def query_action : CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean] = struct._15
     def query_action_=(value: CFuncPtr7[Ptr[GActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariantType]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GActionInterface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr1[Ptr[GAction], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
 object _GActionInterface:
   given _tag: Tag[_GActionInterface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariantType]], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr1[Ptr[GAction], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
@@ -6367,14 +5940,10 @@ object _GActionInterface:
     def activate : CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = struct._9
     def activate_=(value: CFuncPtr2[Ptr[GAction], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _GActionMap = CStruct0
 object _GActionMap:
   given _tag: Tag[_GActionMap] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GActionMapInterface = CStruct4[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GAction]], CFuncPtr2[Ptr[GActionMap], Ptr[GAction], Unit], CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]]
 object _GActionMapInterface:
   given _tag: Tag[_GActionMapInterface] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GAction]], CFuncPtr2[Ptr[GActionMap], Ptr[GAction], Unit], CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]]
@@ -6396,14 +5965,10 @@ object _GActionMapInterface:
     def remove_action : CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit] = struct._4
     def remove_action_=(value: CFuncPtr2[Ptr[GActionMap], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GAppInfo = CStruct0
 object _GAppInfo:
   given _tag: Tag[_GAppInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GAppInfoIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]]
 object _GAppInfoIface:
   given _tag: Tag[_GAppInfoIface] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._1, Nat._6]](Tag.Byte, Tag.Digit3[Nat._2, Nat._1, Nat._6](Tag.Nat2, Tag.Nat1, Tag.Nat6))
@@ -6491,8 +6056,6 @@ object _GAppInfoIface:
     def launch_uris_finish: CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def launch_uris_finish_=(value: CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr3[Ptr[GAppInfo], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type _GAppInfoMonitor = CStruct0
 object _GAppInfoMonitor:
   given _tag: Tag[_GAppInfoMonitor] = Tag.materializeCStruct0Tag
@@ -6515,8 +6078,6 @@ object _GAppLaunchContext:
     def priv : Ptr[GAppLaunchContextPrivate] = struct._2
     def priv_=(value: Ptr[GAppLaunchContextPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GAppLaunchContextClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[Byte], CString], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[Byte], CString], CFuncPtr2[Ptr[GAppLaunchContext], CString, Unit], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GAppLaunchContextClass:
   given _tag: Tag[_GAppLaunchContextClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[Byte], CString], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[Byte], CString], CFuncPtr2[Ptr[GAppLaunchContext], CString, Unit], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr3[Ptr[GAppLaunchContext], Ptr[GAppInfo], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -6553,14 +6114,10 @@ object _GAppLaunchContextClass:
     def _g_reserved3 : CFuncPtr0[Unit] = struct._9
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _GAppLaunchContextPrivate = CStruct0
 object _GAppLaunchContextPrivate:
   given _tag: Tag[_GAppLaunchContextPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GApplication = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GApplicationPrivate]]
 object _GApplication:
   given _tag: Tag[_GApplication] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GApplicationPrivate]]
@@ -6576,8 +6133,6 @@ object _GApplication:
     def priv : Ptr[GApplicationPrivate] = struct._2
     def priv_=(value: Ptr[GApplicationPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GApplicationClass = CStruct17[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr4[Ptr[GApplication], Ptr[Ptr[GFile]], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplication], Ptr[GApplicationCommandLine], CInt], CFuncPtr3[Ptr[GApplication], Ptr[Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariantBuilder], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr4[Ptr[GApplication], Ptr[GDBusConnection], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GApplication], Ptr[GDBusConnection], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariantDict], _root_.sn.gnome.glib.internal.gint], CFuncPtr1[Ptr[GApplication], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]
 object _GApplicationClass:
   given _tag: Tag[_GApplicationClass] = Tag.materializeCStruct17Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr4[Ptr[GApplication], Ptr[Ptr[GFile]], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplication], Ptr[GApplicationCommandLine], CInt], CFuncPtr3[Ptr[GApplication], Ptr[Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariantBuilder], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr1[Ptr[GApplication], Unit], CFuncPtr4[Ptr[GApplication], Ptr[GDBusConnection], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GApplication], Ptr[GDBusConnection], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplication], Ptr[_root_.sn.gnome.glib.internal.GVariantDict], _root_.sn.gnome.glib.internal.gint], CFuncPtr1[Ptr[GApplication], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]
@@ -6638,8 +6193,6 @@ object _GApplicationClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7] = struct._17
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]): Unit = !struct.at17 = value
 
-/**
-*/
 opaque type _GApplicationCommandLine = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GApplicationCommandLinePrivate]]
 object _GApplicationCommandLine:
   given _tag: Tag[_GApplicationCommandLine] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GApplicationCommandLinePrivate]]
@@ -6655,8 +6208,6 @@ object _GApplicationCommandLine:
     def priv : Ptr[GApplicationCommandLinePrivate] = struct._2
     def priv_=(value: Ptr[GApplicationCommandLinePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GApplicationCommandLineClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]
 object _GApplicationCommandLineClass:
   given _tag: Tag[_GApplicationCommandLineClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]
@@ -6681,20 +6232,14 @@ object _GApplicationCommandLineClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]] = struct._5
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GApplicationCommandLinePrivate = CStruct0
 object _GApplicationCommandLinePrivate:
   given _tag: Tag[_GApplicationCommandLinePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GApplicationPrivate = CStruct0
 object _GApplicationPrivate:
   given _tag: Tag[_GApplicationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GAsyncInitable = CStruct0
 object _GAsyncInitable:
   given _tag: Tag[_GAsyncInitable] = Tag.materializeCStruct0Tag
@@ -6720,8 +6265,6 @@ object _GAsyncInitableIface:
     def init_finish : CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._3
     def init_finish_=(value: CFuncPtr3[Ptr[GAsyncInitable], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GAsyncResult = CStruct0
 object _GAsyncResult:
   given _tag: Tag[_GAsyncResult] = Tag.materializeCStruct0Tag
@@ -6750,8 +6293,6 @@ object _GAsyncResultIface:
     def is_tagged : CFuncPtr2[Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = struct._4
     def is_tagged_=(value: CFuncPtr2[Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GBufferedInputStream = CStruct2[GFilterInputStream, Ptr[GBufferedInputStreamPrivate]]
 object _GBufferedInputStream:
   given _tag: Tag[_GBufferedInputStream] = Tag.materializeCStruct2Tag[GFilterInputStream, Ptr[GBufferedInputStreamPrivate]]
@@ -6767,8 +6308,6 @@ object _GBufferedInputStream:
     def priv : Ptr[GBufferedInputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GBufferedInputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GBufferedInputStreamClass = CStruct9[GFilterInputStreamClass, CFuncPtr4[Ptr[GBufferedInputStream], _root_.sn.gnome.glib.internal.gssize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr6[Ptr[GBufferedInputStream], _root_.sn.gnome.glib.internal.gssize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GBufferedInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GBufferedInputStreamClass:
   given _tag: Tag[_GBufferedInputStreamClass] = Tag.materializeCStruct9Tag[GFilterInputStreamClass, CFuncPtr4[Ptr[GBufferedInputStream], _root_.sn.gnome.glib.internal.gssize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr6[Ptr[GBufferedInputStream], _root_.sn.gnome.glib.internal.gssize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GBufferedInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -6805,14 +6344,10 @@ object _GBufferedInputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._9
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _GBufferedInputStreamPrivate = CStruct0
 object _GBufferedInputStreamPrivate:
   given _tag: Tag[_GBufferedInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GBufferedOutputStream = CStruct2[GFilterOutputStream, Ptr[GBufferedOutputStreamPrivate]]
 object _GBufferedOutputStream:
   given _tag: Tag[_GBufferedOutputStream] = Tag.materializeCStruct2Tag[GFilterOutputStream, Ptr[GBufferedOutputStreamPrivate]]
@@ -6828,8 +6363,6 @@ object _GBufferedOutputStream:
     def priv : Ptr[GBufferedOutputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GBufferedOutputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GBufferedOutputStreamClass = CStruct3[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GBufferedOutputStreamClass:
   given _tag: Tag[_GBufferedOutputStreamClass] = Tag.materializeCStruct3Tag[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -6848,20 +6381,14 @@ object _GBufferedOutputStreamClass:
     def _g_reserved2 : CFuncPtr0[Unit] = struct._3
     def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GBufferedOutputStreamPrivate = CStruct0
 object _GBufferedOutputStreamPrivate:
   given _tag: Tag[_GBufferedOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GBytesIcon = CStruct0
 object _GBytesIcon:
   given _tag: Tag[_GBytesIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCancellable = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GCancellablePrivate]]
 object _GCancellable:
   given _tag: Tag[_GCancellable] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GCancellablePrivate]]
@@ -6877,8 +6404,6 @@ object _GCancellable:
     def priv : Ptr[GCancellablePrivate] = struct._2
     def priv_=(value: Ptr[GCancellablePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GCancellableClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GCancellable], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GCancellableClass:
   given _tag: Tag[_GCancellableClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GCancellable], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -6909,20 +6434,14 @@ object _GCancellableClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._7
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GCancellablePrivate = CStruct0
 object _GCancellablePrivate:
   given _tag: Tag[_GCancellablePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCharsetConverter = CStruct0
 object _GCharsetConverter:
   given _tag: Tag[_GCharsetConverter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCharsetConverterClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GCharsetConverterClass:
   given _tag: Tag[_GCharsetConverterClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -6935,8 +6454,6 @@ object _GCharsetConverterClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GConverter = CStruct0
 object _GConverter:
   given _tag: Tag[_GConverter] = Tag.materializeCStruct0Tag
@@ -6962,8 +6479,6 @@ object _GConverterIface:
     def reset : CFuncPtr1[Ptr[GConverter], Unit] = struct._3
     def reset_=(value: CFuncPtr1[Ptr[GConverter], Unit]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GConverterInputStream = CStruct2[GFilterInputStream, Ptr[GConverterInputStreamPrivate]]
 object _GConverterInputStream:
   given _tag: Tag[_GConverterInputStream] = Tag.materializeCStruct2Tag[GFilterInputStream, Ptr[GConverterInputStreamPrivate]]
@@ -6979,8 +6494,6 @@ object _GConverterInputStream:
     def priv : Ptr[GConverterInputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GConverterInputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GConverterInputStreamClass = CStruct6[GFilterInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GConverterInputStreamClass:
   given _tag: Tag[_GConverterInputStreamClass] = Tag.materializeCStruct6Tag[GFilterInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -7008,14 +6521,10 @@ object _GConverterInputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GConverterInputStreamPrivate = CStruct0
 object _GConverterInputStreamPrivate:
   given _tag: Tag[_GConverterInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GConverterOutputStream = CStruct2[GFilterOutputStream, Ptr[GConverterOutputStreamPrivate]]
 object _GConverterOutputStream:
   given _tag: Tag[_GConverterOutputStream] = Tag.materializeCStruct2Tag[GFilterOutputStream, Ptr[GConverterOutputStreamPrivate]]
@@ -7031,8 +6540,6 @@ object _GConverterOutputStream:
     def priv : Ptr[GConverterOutputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GConverterOutputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GConverterOutputStreamClass = CStruct6[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GConverterOutputStreamClass:
   given _tag: Tag[_GConverterOutputStreamClass] = Tag.materializeCStruct6Tag[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -7060,26 +6567,18 @@ object _GConverterOutputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GConverterOutputStreamPrivate = CStruct0
 object _GConverterOutputStreamPrivate:
   given _tag: Tag[_GConverterOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCredentials = CStruct0
 object _GCredentials:
   given _tag: Tag[_GCredentials] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GCredentialsClass = CStruct0
 object _GCredentialsClass:
   given _tag: Tag[_GCredentialsClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDBusActionGroup = CStruct0
 object _GDBusActionGroup:
   given _tag: Tag[_GDBusActionGroup] = Tag.materializeCStruct0Tag
@@ -7132,14 +6631,10 @@ object _GDBusArgInfo:
     def annotations : Ptr[Ptr[GDBusAnnotationInfo]] = struct._4.asInstanceOf[Ptr[Ptr[GDBusAnnotationInfo]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at4 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GDBusAuthObserver = CStruct0
 object _GDBusAuthObserver:
   given _tag: Tag[_GDBusAuthObserver] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDBusConnection = CStruct0
 object _GDBusConnection:
   given _tag: Tag[_GDBusConnection] = Tag.materializeCStruct0Tag
@@ -7162,8 +6657,6 @@ object _GDBusErrorEntry:
     def dbus_error_name : Ptr[_root_.sn.gnome.glib.internal.gchar] = struct._2
     def dbus_error_name_=(value: Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GDBusInterface = CStruct0
 object _GDBusInterface:
   given _tag: Tag[_GDBusInterface] = Tag.materializeCStruct0Tag
@@ -7279,8 +6772,6 @@ object _GDBusInterfaceSkeletonClass:
     def signal_padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._8
     def signal_padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GDBusInterfaceSkeletonPrivate = CStruct0
 object _GDBusInterfaceSkeletonPrivate:
   given _tag: Tag[_GDBusInterfaceSkeletonPrivate] = Tag.materializeCStruct0Tag
@@ -7309,14 +6800,10 @@ object _GDBusInterfaceVTable:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GDBusMenuModel = CStruct0
 object _GDBusMenuModel:
   given _tag: Tag[_GDBusMenuModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDBusMessage = CStruct0
 object _GDBusMessage:
   given _tag: Tag[_GDBusMessage] = Tag.materializeCStruct0Tag
@@ -7348,8 +6835,6 @@ object _GDBusMethodInfo:
     def annotations : Ptr[Ptr[GDBusAnnotationInfo]] = struct._5.asInstanceOf[Ptr[Ptr[GDBusAnnotationInfo]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GDBusMethodInvocation = CStruct0
 object _GDBusMethodInvocation:
   given _tag: Tag[_GDBusMethodInvocation] = Tag.materializeCStruct0Tag
@@ -7381,8 +6866,6 @@ object _GDBusNodeInfo:
     def annotations : Ptr[Ptr[GDBusAnnotationInfo]] = struct._5.asInstanceOf[Ptr[Ptr[GDBusAnnotationInfo]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
-/**
-*/
 opaque type _GDBusObject = CStruct0
 object _GDBusObject:
   given _tag: Tag[_GDBusObject] = Tag.materializeCStruct0Tag
@@ -7417,8 +6900,6 @@ object _GDBusObjectIface:
     def interface_removed : CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit] = struct._6
     def interface_removed_=(value: CFuncPtr2[Ptr[GDBusObject], Ptr[GDBusInterface], Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GDBusObjectManager = CStruct0
 object _GDBusObjectManager:
   given _tag: Tag[_GDBusObjectManager] = Tag.materializeCStruct0Tag
@@ -7465,8 +6946,6 @@ object _GDBusObjectManagerClientClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GDBusObjectManagerClientPrivate = CStruct0
 object _GDBusObjectManagerClientPrivate:
   given _tag: Tag[_GDBusObjectManagerClientPrivate] = Tag.materializeCStruct0Tag
@@ -7546,8 +7025,6 @@ object _GDBusObjectManagerServerClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GDBusObjectManagerServerPrivate = CStruct0
 object _GDBusObjectManagerServerPrivate:
   given _tag: Tag[_GDBusObjectManagerServerPrivate] = Tag.materializeCStruct0Tag
@@ -7588,8 +7065,6 @@ object _GDBusObjectProxyClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GDBusObjectProxyPrivate = CStruct0
 object _GDBusObjectProxyPrivate:
   given _tag: Tag[_GDBusObjectProxyPrivate] = Tag.materializeCStruct0Tag
@@ -7633,8 +7108,6 @@ object _GDBusObjectSkeletonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GDBusObjectSkeletonPrivate = CStruct0
 object _GDBusObjectSkeletonPrivate:
   given _tag: Tag[_GDBusObjectSkeletonPrivate] = Tag.materializeCStruct0Tag
@@ -7708,14 +7181,10 @@ object _GDBusProxyClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._3, Nat._2]] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._3, Nat._2]]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GDBusProxyPrivate = CStruct0
 object _GDBusProxyPrivate:
   given _tag: Tag[_GDBusProxyPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDBusServer = CStruct0
 object _GDBusServer:
   given _tag: Tag[_GDBusServer] = Tag.materializeCStruct0Tag
@@ -7768,8 +7237,6 @@ object _GDBusSubtreeVTable:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GDataInputStream = CStruct2[GBufferedInputStream, Ptr[GDataInputStreamPrivate]]
 object _GDataInputStream:
   given _tag: Tag[_GDataInputStream] = Tag.materializeCStruct2Tag[GBufferedInputStream, Ptr[GDataInputStreamPrivate]]
@@ -7785,8 +7252,6 @@ object _GDataInputStream:
     def priv : Ptr[GDataInputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GDataInputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GDataInputStreamClass = CStruct6[GBufferedInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GDataInputStreamClass:
   given _tag: Tag[_GDataInputStreamClass] = Tag.materializeCStruct6Tag[GBufferedInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -7814,14 +7279,10 @@ object _GDataInputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GDataInputStreamPrivate = CStruct0
 object _GDataInputStreamPrivate:
   given _tag: Tag[_GDataInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDataOutputStream = CStruct2[GFilterOutputStream, Ptr[GDataOutputStreamPrivate]]
 object _GDataOutputStream:
   given _tag: Tag[_GDataOutputStream] = Tag.materializeCStruct2Tag[GFilterOutputStream, Ptr[GDataOutputStreamPrivate]]
@@ -7837,8 +7298,6 @@ object _GDataOutputStream:
     def priv : Ptr[GDataOutputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GDataOutputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GDataOutputStreamClass = CStruct6[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GDataOutputStreamClass:
   given _tag: Tag[_GDataOutputStreamClass] = Tag.materializeCStruct6Tag[GFilterOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -7866,14 +7325,10 @@ object _GDataOutputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GDataOutputStreamPrivate = CStruct0
 object _GDataOutputStreamPrivate:
   given _tag: Tag[_GDataOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDatagramBased = CStruct0
 object _GDatagramBased:
   given _tag: Tag[_GDatagramBased] = Tag.materializeCStruct0Tag
@@ -7908,14 +7363,10 @@ object _GDatagramBasedInterface:
     def condition_wait : CFuncPtr5[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._6
     def condition_wait_=(value: CFuncPtr5[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gint64, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GDebugController = CStruct0
 object _GDebugController:
   given _tag: Tag[_GDebugController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDebugControllerDBus = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GDebugControllerDBus:
   given _tag: Tag[_GDebugControllerDBus] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -7964,14 +7415,10 @@ object _GDebugControllerInterface:
     def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GDrive = CStruct0
 object _GDrive:
   given _tag: Tag[_GDrive] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GDriveIface = CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]]
 object _GDriveIface:
   given _tag: Tag[_GDriveIface] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._7, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._7, Nat._2](Tag.Nat2, Tag.Nat7, Tag.Nat2))
@@ -8080,8 +7527,6 @@ object _GDriveIface:
     def is_removable: CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean]]]
     def is_removable_=(value: CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr1[Ptr[GDrive], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type _GDtlsClientConnection = CStruct0
 object _GDtlsClientConnection:
   given _tag: Tag[_GDtlsClientConnection] = Tag.materializeCStruct0Tag
@@ -8101,8 +7546,6 @@ object _GDtlsClientConnectionInterface:
     def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GDtlsConnection = CStruct0
 object _GDtlsConnection:
   given _tag: Tag[_GDtlsConnection] = Tag.materializeCStruct0Tag
@@ -8152,8 +7595,6 @@ object _GDtlsConnectionInterface:
     def get_binding_data : CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._11
     def get_binding_data_=(value: CFuncPtr4[Ptr[GDtlsConnection], GTlsChannelBindingType, Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type _GDtlsServerConnection = CStruct0
 object _GDtlsServerConnection:
   given _tag: Tag[_GDtlsServerConnection] = Tag.materializeCStruct0Tag
@@ -8173,20 +7614,14 @@ object _GDtlsServerConnectionInterface:
     def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GEmblem = CStruct0
 object _GEmblem:
   given _tag: Tag[_GEmblem] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GEmblemClass = CStruct0
 object _GEmblemClass:
   given _tag: Tag[_GEmblemClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GEmblemedIcon = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GEmblemedIconPrivate]]
 object _GEmblemedIcon:
   given _tag: Tag[_GEmblemedIcon] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GEmblemedIconPrivate]]
@@ -8202,8 +7637,6 @@ object _GEmblemedIcon:
     def priv : Ptr[GEmblemedIconPrivate] = struct._2
     def priv_=(value: Ptr[GEmblemedIconPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GEmblemedIconClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GEmblemedIconClass:
   given _tag: Tag[_GEmblemedIconClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -8216,14 +7649,10 @@ object _GEmblemedIconClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GEmblemedIconPrivate = CStruct0
 object _GEmblemedIconPrivate:
   given _tag: Tag[_GEmblemedIconPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFile = CStruct0
 object _GFile:
   given _tag: Tag[_GFile] = Tag.materializeCStruct0Tag
@@ -8267,20 +7696,14 @@ object _GFileAttributeInfoList:
     def n_infos : CInt = struct._2
     def n_infos_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFileAttributeMatcher = CStruct0
 object _GFileAttributeMatcher:
   given _tag: Tag[_GFileAttributeMatcher] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileDescriptorBased = CStruct0
 object _GFileDescriptorBased:
   given _tag: Tag[_GFileDescriptorBased] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileEnumerator = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GFileEnumeratorPrivate]]
 object _GFileEnumerator:
   given _tag: Tag[_GFileEnumerator] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GFileEnumeratorPrivate]]
@@ -8296,8 +7719,6 @@ object _GFileEnumerator:
     def priv : Ptr[GFileEnumeratorPrivate] = struct._2
     def priv_=(value: Ptr[GFileEnumeratorPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFileEnumeratorClass = CStruct14[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GFileEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GFileEnumerator], CInt, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GFileEnumerator], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileEnumeratorClass:
   given _tag: Tag[_GFileEnumeratorClass] = Tag.materializeCStruct14Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GFileEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GFileEnumerator], CInt, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GFileEnumerator], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8349,14 +7770,10 @@ object _GFileEnumeratorClass:
     def _g_reserved7 : CFuncPtr0[Unit] = struct._14
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at14 = value
 
-/**
-*/
 opaque type _GFileEnumeratorPrivate = CStruct0
 object _GFileEnumeratorPrivate:
   given _tag: Tag[_GFileEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileIOStream = CStruct2[GIOStream, Ptr[GFileIOStreamPrivate]]
 object _GFileIOStream:
   given _tag: Tag[_GFileIOStream] = Tag.materializeCStruct2Tag[GIOStream, Ptr[GFileIOStreamPrivate]]
@@ -8372,8 +7789,6 @@ object _GFileIOStream:
     def priv : Ptr[GFileIOStreamPrivate] = struct._2
     def priv_=(value: Ptr[GFileIOStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFileIOStreamClass = CStruct15[GIOStreamClass, CFuncPtr1[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.goffset], CFuncPtr1[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileIOStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileIOStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileIOStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr1[Ptr[GFileIOStream], CString], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileIOStreamClass:
   given _tag: Tag[_GFileIOStreamClass] = Tag.materializeCStruct15Tag[GIOStreamClass, CFuncPtr1[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.goffset], CFuncPtr1[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileIOStream], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileIOStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileIOStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileIOStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr1[Ptr[GFileIOStream], CString], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8428,20 +7843,14 @@ object _GFileIOStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._15
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GFileIOStreamPrivate = CStruct0
 object _GFileIOStreamPrivate:
   given _tag: Tag[_GFileIOStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileIcon = CStruct0
 object _GFileIcon:
   given _tag: Tag[_GFileIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileIconClass = CStruct0
 object _GFileIconClass:
   given _tag: Tag[_GFileIconClass] = Tag.materializeCStruct0Tag
@@ -8453,7 +7862,7 @@ opaque type _GFileIface = CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]]
 object _GFileIface:
   given _tag: Tag[_GFileIface] = Tag.CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._8, Nat._4, Nat._0](Tag.Nat8, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[_GFileIface] = scala.scalanative.unsafe.alloc[_GFileIface](1)
-  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], _make_symbolic_link_async : CFuncPtr0[Unit], _make_symbolic_link_finish : CFuncPtr0[Unit], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[_GFileIface] = 
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_symbolic_link_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[_GFileIface] = 
     val ____ptr = apply()
     (!____ptr).g_iface = g_iface
     (!____ptr).dup = dup
@@ -8518,8 +7927,8 @@ object _GFileIface:
     (!____ptr).make_directory_async = make_directory_async
     (!____ptr).make_directory_finish = make_directory_finish
     (!____ptr).make_symbolic_link = make_symbolic_link
-    (!____ptr)._make_symbolic_link_async = _make_symbolic_link_async
-    (!____ptr)._make_symbolic_link_finish = _make_symbolic_link_finish
+    (!____ptr).make_symbolic_link_async = make_symbolic_link_async
+    (!____ptr).make_symbolic_link_finish = make_symbolic_link_finish
     (!____ptr).copy = copy
     (!____ptr).copy_async = copy_async
     (!____ptr).copy_finish = copy_finish
@@ -8687,10 +8096,10 @@ object _GFileIface:
     def make_directory_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(496).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def make_symbolic_link: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def make_symbolic_link_=(value: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(504).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _make_symbolic_link_async: CFuncPtr0[Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_async_=(value: CFuncPtr0[Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _make_symbolic_link_finish: CFuncPtr0[Unit] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_finish_=(value: CFuncPtr0[Unit]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def make_symbolic_link_async: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
+    def make_symbolic_link_async_=(value: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]] = value
+    def make_symbolic_link_finish: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
+    def make_symbolic_link_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(520).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def copy_=(value: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(528).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy_async: CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(536).asInstanceOf[Ptr[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
@@ -8770,20 +8179,14 @@ object _GFileIface:
     def measure_disk_usage_finish: CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(832).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def measure_disk_usage_finish_=(value: CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(832).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
 
-/**
-*/
 opaque type _GFileInfo = CStruct0
 object _GFileInfo:
   given _tag: Tag[_GFileInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileInfoClass = CStruct0
 object _GFileInfoClass:
   given _tag: Tag[_GFileInfoClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileInputStream = CStruct2[GInputStream, Ptr[GFileInputStreamPrivate]]
 object _GFileInputStream:
   given _tag: Tag[_GFileInputStream] = Tag.materializeCStruct2Tag[GInputStream, Ptr[GFileInputStreamPrivate]]
@@ -8799,8 +8202,6 @@ object _GFileInputStream:
     def priv : Ptr[GFileInputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GFileInputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFileInputStreamClass = CStruct12[GInputStreamClass, CFuncPtr1[Ptr[GFileInputStream], _root_.sn.gnome.glib.internal.goffset], CFuncPtr1[Ptr[GFileInputStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GFileInputStream], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileInputStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileInputStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileInputStreamClass:
   given _tag: Tag[_GFileInputStreamClass] = Tag.materializeCStruct12Tag[GInputStreamClass, CFuncPtr1[Ptr[GFileInputStream], _root_.sn.gnome.glib.internal.goffset], CFuncPtr1[Ptr[GFileInputStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GFileInputStream], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileInputStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileInputStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8846,8 +8247,6 @@ object _GFileInputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._12
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at12 = value
 
-/**
-*/
 opaque type _GFileInputStreamPrivate = CStruct0
 object _GFileInputStreamPrivate:
   given _tag: Tag[_GFileInputStreamPrivate] = Tag.materializeCStruct0Tag
@@ -8870,8 +8269,6 @@ object _GFileMonitor:
     def priv : Ptr[GFileMonitorPrivate] = struct._2
     def priv_=(value: Ptr[GFileMonitorPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFileMonitorClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GFileMonitor], Ptr[GFile], Ptr[GFile], GFileMonitorEvent, Unit], CFuncPtr1[Ptr[GFileMonitor], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileMonitorClass:
   given _tag: Tag[_GFileMonitorClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GFileMonitor], Ptr[GFile], Ptr[GFile], GFileMonitorEvent, Unit], CFuncPtr1[Ptr[GFileMonitor], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8905,14 +8302,10 @@ object _GFileMonitorClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._8
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GFileMonitorPrivate = CStruct0
 object _GFileMonitorPrivate:
   given _tag: Tag[_GFileMonitorPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFileOutputStream = CStruct2[GOutputStream, Ptr[GFileOutputStreamPrivate]]
 object _GFileOutputStream:
   given _tag: Tag[_GFileOutputStream] = Tag.materializeCStruct2Tag[GOutputStream, Ptr[GFileOutputStreamPrivate]]
@@ -8928,8 +8321,6 @@ object _GFileOutputStream:
     def priv : Ptr[GFileOutputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GFileOutputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFileOutputStreamClass = CStruct15[GOutputStreamClass, CFuncPtr1[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.goffset], CFuncPtr1[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileOutputStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileOutputStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr1[Ptr[GFileOutputStream], CString], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFileOutputStreamClass:
   given _tag: Tag[_GFileOutputStreamClass] = Tag.materializeCStruct15Tag[GOutputStreamClass, CFuncPtr1[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.goffset], CFuncPtr1[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.GSeekType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileOutputStream], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GFileOutputStream], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr6[Ptr[GFileOutputStream], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GFileOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], CFuncPtr1[Ptr[GFileOutputStream], CString], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8984,20 +8375,14 @@ object _GFileOutputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._15
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GFileOutputStreamPrivate = CStruct0
 object _GFileOutputStreamPrivate:
   given _tag: Tag[_GFileOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFilenameCompleter = CStruct0
 object _GFilenameCompleter:
   given _tag: Tag[_GFilenameCompleter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GFilenameCompleterClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GFilenameCompleter], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFilenameCompleterClass:
   given _tag: Tag[_GFilenameCompleterClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GFilenameCompleter], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9022,8 +8407,6 @@ object _GFilenameCompleterClass:
     def _g_reserved3 : CFuncPtr0[Unit] = struct._5
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GFilterInputStream = CStruct2[GInputStream, Ptr[GInputStream]]
 object _GFilterInputStream:
   given _tag: Tag[_GFilterInputStream] = Tag.materializeCStruct2Tag[GInputStream, Ptr[GInputStream]]
@@ -9039,8 +8422,6 @@ object _GFilterInputStream:
     def base_stream : Ptr[GInputStream] = struct._2
     def base_stream_=(value: Ptr[GInputStream]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFilterInputStreamClass = CStruct4[GInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFilterInputStreamClass:
   given _tag: Tag[_GFilterInputStreamClass] = Tag.materializeCStruct4Tag[GInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9062,8 +8443,6 @@ object _GFilterInputStreamClass:
     def _g_reserved3 : CFuncPtr0[Unit] = struct._4
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GFilterOutputStream = CStruct2[GOutputStream, Ptr[GOutputStream]]
 object _GFilterOutputStream:
   given _tag: Tag[_GFilterOutputStream] = Tag.materializeCStruct2Tag[GOutputStream, Ptr[GOutputStream]]
@@ -9079,8 +8458,6 @@ object _GFilterOutputStream:
     def base_stream : Ptr[GOutputStream] = struct._2
     def base_stream_=(value: Ptr[GOutputStream]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GFilterOutputStreamClass = CStruct4[GOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GFilterOutputStreamClass:
   given _tag: Tag[_GFilterOutputStreamClass] = Tag.materializeCStruct4Tag[GOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9102,38 +8479,26 @@ object _GFilterOutputStreamClass:
     def _g_reserved3 : CFuncPtr0[Unit] = struct._4
     def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GIOExtension = CStruct0
 object _GIOExtension:
   given _tag: Tag[_GIOExtension] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOExtensionPoint = CStruct0
 object _GIOExtensionPoint:
   given _tag: Tag[_GIOExtensionPoint] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOModule = CStruct0
 object _GIOModule:
   given _tag: Tag[_GIOModule] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOModuleClass = CStruct0
 object _GIOModuleClass:
   given _tag: Tag[_GIOModuleClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOModuleScope = CStruct0
 object _GIOModuleScope:
   given _tag: Tag[_GIOModuleScope] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOSchedulerJob = CStruct0
 object _GIOSchedulerJob:
   given _tag: Tag[_GIOSchedulerJob] = Tag.materializeCStruct0Tag
@@ -9156,14 +8521,10 @@ object _GIOStream:
     def priv : Ptr[GIOStreamPrivate] = struct._2
     def priv_=(value: Ptr[GIOStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GIOStreamAdapter = CStruct0
 object _GIOStreamAdapter:
   given _tag: Tag[_GIOStreamAdapter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIOStreamClass = CStruct16[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GIOStream], Ptr[GInputStream]], CFuncPtr1[Ptr[GIOStream], Ptr[GOutputStream]], CFuncPtr3[Ptr[GIOStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GIOStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GIOStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GIOStreamClass:
   given _tag: Tag[_GIOStreamClass] = Tag.materializeCStruct16Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GIOStream], Ptr[GInputStream]], CFuncPtr1[Ptr[GIOStream], Ptr[GOutputStream]], CFuncPtr3[Ptr[GIOStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GIOStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GIOStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9221,14 +8582,10 @@ object _GIOStreamClass:
     def _g_reserved10 : CFuncPtr0[Unit] = struct._16
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at16 = value
 
-/**
-*/
 opaque type _GIOStreamPrivate = CStruct0
 object _GIOStreamPrivate:
   given _tag: Tag[_GIOStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GIcon = CStruct0
 object _GIcon:
   given _tag: Tag[_GIcon] = Tag.materializeCStruct0Tag
@@ -9263,8 +8620,6 @@ object _GIconIface:
     def serialize : CFuncPtr1[Ptr[GIcon], Ptr[_root_.sn.gnome.glib.internal.GVariant]] = struct._6
     def serialize_=(value: CFuncPtr1[Ptr[GIcon], Ptr[_root_.sn.gnome.glib.internal.GVariant]]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GInetAddress = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GInetAddressPrivate]]
 object _GInetAddress:
   given _tag: Tag[_GInetAddress] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GInetAddressPrivate]]
@@ -9280,8 +8635,6 @@ object _GInetAddress:
     def priv : Ptr[GInetAddressPrivate] = struct._2
     def priv_=(value: Ptr[GInetAddressPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GInetAddressClass = CStruct3[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]]]
 object _GInetAddressClass:
   given _tag: Tag[_GInetAddressClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]]]
@@ -9300,8 +8653,6 @@ object _GInetAddressClass:
     def to_bytes : CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]] = struct._3
     def to_bytes_=(value: CFuncPtr1[Ptr[GInetAddress], Ptr[_root_.sn.gnome.glib.internal.guint8]]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GInetAddressMask = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GInetAddressMaskPrivate]]
 object _GInetAddressMask:
   given _tag: Tag[_GInetAddressMask] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GInetAddressMaskPrivate]]
@@ -9317,8 +8668,6 @@ object _GInetAddressMask:
     def priv : Ptr[GInetAddressMaskPrivate] = struct._2
     def priv_=(value: Ptr[GInetAddressMaskPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GInetAddressMaskClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GInetAddressMaskClass:
   given _tag: Tag[_GInetAddressMaskClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -9331,20 +8680,14 @@ object _GInetAddressMaskClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GInetAddressMaskPrivate = CStruct0
 object _GInetAddressMaskPrivate:
   given _tag: Tag[_GInetAddressMaskPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GInetAddressPrivate = CStruct0
 object _GInetAddressPrivate:
   given _tag: Tag[_GInetAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GInetSocketAddress = CStruct2[GSocketAddress, Ptr[GInetSocketAddressPrivate]]
 object _GInetSocketAddress:
   given _tag: Tag[_GInetSocketAddress] = Tag.materializeCStruct2Tag[GSocketAddress, Ptr[GInetSocketAddressPrivate]]
@@ -9360,8 +8703,6 @@ object _GInetSocketAddress:
     def priv : Ptr[GInetSocketAddressPrivate] = struct._2
     def priv_=(value: Ptr[GInetSocketAddressPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GInetSocketAddressClass = CStruct1[GSocketAddressClass]
 object _GInetSocketAddressClass:
   given _tag: Tag[_GInetSocketAddressClass] = Tag.materializeCStruct1Tag[GSocketAddressClass]
@@ -9374,14 +8715,10 @@ object _GInetSocketAddressClass:
     def parent_class : GSocketAddressClass = struct._1
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GInetSocketAddressPrivate = CStruct0
 object _GInetSocketAddressPrivate:
   given _tag: Tag[_GInetSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GInitable = CStruct0
 object _GInitable:
   given _tag: Tag[_GInitable] = Tag.materializeCStruct0Tag
@@ -9404,8 +8741,6 @@ object _GInitableIface:
     def init : CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._2
     def init_=(value: CFuncPtr3[Ptr[GInitable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GInputMessage = CStruct7[Ptr[Ptr[GSocketAddress]], Ptr[GInputVector], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gint, Ptr[Ptr[Ptr[GSocketControlMessage]]], Ptr[_root_.sn.gnome.glib.internal.guint]]
 object _GInputMessage:
   given _tag: Tag[_GInputMessage] = Tag.materializeCStruct7Tag[Ptr[Ptr[GSocketAddress]], Ptr[GInputVector], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gint, Ptr[Ptr[Ptr[GSocketControlMessage]]], Ptr[_root_.sn.gnome.glib.internal.guint]]
@@ -9436,8 +8771,6 @@ object _GInputMessage:
     def num_control_messages : Ptr[_root_.sn.gnome.glib.internal.guint] = struct._7
     def num_control_messages_=(value: Ptr[_root_.sn.gnome.glib.internal.guint]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GInputStream = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GInputStreamPrivate]]
 object _GInputStream:
   given _tag: Tag[_GInputStream] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GInputStreamPrivate]]
@@ -9453,8 +8786,6 @@ object _GInputStream:
     def priv : Ptr[GInputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GInputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GInputStreamClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[GInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr4[Ptr[GInputStream], _root_.sn.gnome.glib.internal.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr3[Ptr[GInputStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr7[Ptr[GInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr6[Ptr[GInputStream], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr5[Ptr[GInputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GInputStreamClass:
   given _tag: Tag[_GInputStreamClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[GInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr4[Ptr[GInputStream], _root_.sn.gnome.glib.internal.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr3[Ptr[GInputStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr7[Ptr[GInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr6[Ptr[GInputStream], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr5[Ptr[GInputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GInputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9509,14 +8840,10 @@ object _GInputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._15
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GInputStreamPrivate = CStruct0
 object _GInputStreamPrivate:
   given _tag: Tag[_GInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GInputVector = CStruct2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize]
 object _GInputVector:
   given _tag: Tag[_GInputVector] = Tag.materializeCStruct2Tag[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize]
@@ -9532,14 +8859,10 @@ object _GInputVector:
     def size : _root_.sn.gnome.glib.internal.gsize = struct._2
     def size_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GListModel = CStruct0
 object _GListModel:
   given _tag: Tag[_GListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GListModelInterface = CStruct4[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GListModel], _root_.sn.gnome.gobject.internal.GType], CFuncPtr1[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint], CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer]]
 object _GListModelInterface:
   given _tag: Tag[_GListModelInterface] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GListModel], _root_.sn.gnome.gobject.internal.GType], CFuncPtr1[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint], CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer]]
@@ -9561,14 +8884,10 @@ object _GListModelInterface:
     def get_item : CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer] = struct._4
     def get_item_=(value: CFuncPtr2[Ptr[GListModel], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.gpointer]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GListStore = CStruct0
 object _GListStore:
   given _tag: Tag[_GListStore] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GLoadableIcon = CStruct0
 object _GLoadableIcon:
   given _tag: Tag[_GLoadableIcon] = Tag.materializeCStruct0Tag
@@ -9597,8 +8916,6 @@ object _GLoadableIconIface:
     def load_finish : CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GInputStream]] = struct._4
     def load_finish_=(value: CFuncPtr4[Ptr[GLoadableIcon], Ptr[GAsyncResult], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GInputStream]]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GMemoryInputStream = CStruct2[GInputStream, Ptr[GMemoryInputStreamPrivate]]
 object _GMemoryInputStream:
   given _tag: Tag[_GMemoryInputStream] = Tag.materializeCStruct2Tag[GInputStream, Ptr[GMemoryInputStreamPrivate]]
@@ -9614,8 +8931,6 @@ object _GMemoryInputStream:
     def priv : Ptr[GMemoryInputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GMemoryInputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMemoryInputStreamClass = CStruct6[GInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GMemoryInputStreamClass:
   given _tag: Tag[_GMemoryInputStreamClass] = Tag.materializeCStruct6Tag[GInputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9643,20 +8958,14 @@ object _GMemoryInputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GMemoryInputStreamPrivate = CStruct0
 object _GMemoryInputStreamPrivate:
   given _tag: Tag[_GMemoryInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMemoryMonitor = CStruct0
 object _GMemoryMonitor:
   given _tag: Tag[_GMemoryMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMemoryMonitorInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]]
 object _GMemoryMonitorInterface:
   given _tag: Tag[_GMemoryMonitorInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]]
@@ -9672,8 +8981,6 @@ object _GMemoryMonitorInterface:
     def low_memory_warning : CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit] = struct._2
     def low_memory_warning_=(value: CFuncPtr2[Ptr[GMemoryMonitor], GMemoryMonitorWarningLevel, Unit]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMemoryOutputStream = CStruct2[GOutputStream, Ptr[GMemoryOutputStreamPrivate]]
 object _GMemoryOutputStream:
   given _tag: Tag[_GMemoryOutputStream] = Tag.materializeCStruct2Tag[GOutputStream, Ptr[GMemoryOutputStreamPrivate]]
@@ -9689,8 +8996,6 @@ object _GMemoryOutputStream:
     def priv : Ptr[GMemoryOutputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GMemoryOutputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMemoryOutputStreamClass = CStruct6[GOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GMemoryOutputStreamClass:
   given _tag: Tag[_GMemoryOutputStreamClass] = Tag.materializeCStruct6Tag[GOutputStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9718,20 +9023,14 @@ object _GMemoryOutputStreamClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GMemoryOutputStreamPrivate = CStruct0
 object _GMemoryOutputStreamPrivate:
   given _tag: Tag[_GMemoryOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMenu = CStruct0
 object _GMenu:
   given _tag: Tag[_GMenu] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMenuAttributeIter = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMenuAttributeIterPrivate]]
 object _GMenuAttributeIter:
   given _tag: Tag[_GMenuAttributeIter] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMenuAttributeIterPrivate]]
@@ -9747,8 +9046,6 @@ object _GMenuAttributeIter:
     def priv : Ptr[GMenuAttributeIterPrivate] = struct._2
     def priv_=(value: Ptr[GMenuAttributeIterPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMenuAttributeIterClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]
 object _GMenuAttributeIterClass:
   given _tag: Tag[_GMenuAttributeIterClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]]
@@ -9764,20 +9061,14 @@ object _GMenuAttributeIterClass:
     def get_next : CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean] = struct._2
     def get_next_=(value: CFuncPtr3[Ptr[GMenuAttributeIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMenuAttributeIterPrivate = CStruct0
 object _GMenuAttributeIterPrivate:
   given _tag: Tag[_GMenuAttributeIterPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMenuItem = CStruct0
 object _GMenuItem:
   given _tag: Tag[_GMenuItem] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMenuLinkIter = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMenuLinkIterPrivate]]
 object _GMenuLinkIter:
   given _tag: Tag[_GMenuLinkIter] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMenuLinkIterPrivate]]
@@ -9793,8 +9084,6 @@ object _GMenuLinkIter:
     def priv : Ptr[GMenuLinkIterPrivate] = struct._2
     def priv_=(value: Ptr[GMenuLinkIterPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMenuLinkIterClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean]]
 object _GMenuLinkIterClass:
   given _tag: Tag[_GMenuLinkIterClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean]]
@@ -9810,14 +9099,10 @@ object _GMenuLinkIterClass:
     def get_next : CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean] = struct._2
     def get_next_=(value: CFuncPtr3[Ptr[GMenuLinkIter], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[Ptr[GMenuModel]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMenuLinkIterPrivate = CStruct0
 object _GMenuLinkIterPrivate:
   given _tag: Tag[_GMenuLinkIterPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMenuModel = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMenuModelPrivate]]
 object _GMenuModel:
   given _tag: Tag[_GMenuModel] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMenuModelPrivate]]
@@ -9872,14 +9157,10 @@ object _GMenuModelClass:
     def get_item_link : CFuncPtr3[Ptr[GMenuModel], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GMenuModel]] = struct._9
     def get_item_link_=(value: CFuncPtr3[Ptr[GMenuModel], _root_.sn.gnome.glib.internal.gint, Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GMenuModel]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _GMenuModelPrivate = CStruct0
 object _GMenuModelPrivate:
   given _tag: Tag[_GMenuModelPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GMount = CStruct0
 object _GMount:
   given _tag: Tag[_GMount] = Tag.materializeCStruct0Tag
@@ -9980,8 +9261,6 @@ object _GMountIface:
     def get_symbolic_icon: CFuncPtr1[Ptr[GMount], Ptr[GIcon]] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GMount], Ptr[GIcon]]]]
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GMount], Ptr[GIcon]]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GMount], Ptr[GIcon]]]] = value
 
-/**
-*/
 opaque type _GMountOperation = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMountOperationPrivate]]
 object _GMountOperation:
   given _tag: Tag[_GMountOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GMountOperationPrivate]]
@@ -9997,8 +9276,6 @@ object _GMountOperation:
     def priv : Ptr[GMountOperationPrivate] = struct._2
     def priv_=(value: Ptr[GMountOperationPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GMountOperationClass = CStruct16[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[GMountOperation], CString, CString, CString, GAskPasswordFlags, Unit], CFuncPtr3[Ptr[GMountOperation], CString, Ptr[CString], Unit], CFuncPtr2[Ptr[GMountOperation], GMountOperationResult, Unit], CFuncPtr1[Ptr[GMountOperation], Unit], CFuncPtr4[Ptr[GMountOperation], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Unit], CFuncPtr4[Ptr[GMountOperation], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gint64, _root_.sn.gnome.glib.internal.gint64, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GMountOperationClass:
   given _tag: Tag[_GMountOperationClass] = Tag.materializeCStruct16Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[GMountOperation], CString, CString, CString, GAskPasswordFlags, Unit], CFuncPtr3[Ptr[GMountOperation], CString, Ptr[CString], Unit], CFuncPtr2[Ptr[GMountOperation], GMountOperationResult, Unit], CFuncPtr1[Ptr[GMountOperation], Unit], CFuncPtr4[Ptr[GMountOperation], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GArray], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], Unit], CFuncPtr4[Ptr[GMountOperation], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gint64, _root_.sn.gnome.glib.internal.gint64, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -10056,14 +9333,10 @@ object _GMountOperationClass:
     def _g_reserved9 : CFuncPtr0[Unit] = struct._16
     def _g_reserved9_=(value: CFuncPtr0[Unit]): Unit = !struct.at16 = value
 
-/**
-*/
 opaque type _GMountOperationPrivate = CStruct0
 object _GMountOperationPrivate:
   given _tag: Tag[_GMountOperationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GNativeSocketAddress = CStruct2[GSocketAddress, Ptr[GNativeSocketAddressPrivate]]
 object _GNativeSocketAddress:
   given _tag: Tag[_GNativeSocketAddress] = Tag.materializeCStruct2Tag[GSocketAddress, Ptr[GNativeSocketAddressPrivate]]
@@ -10079,8 +9352,6 @@ object _GNativeSocketAddress:
     def priv : Ptr[GNativeSocketAddressPrivate] = struct._2
     def priv_=(value: Ptr[GNativeSocketAddressPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GNativeSocketAddressClass = CStruct1[GSocketAddressClass]
 object _GNativeSocketAddressClass:
   given _tag: Tag[_GNativeSocketAddressClass] = Tag.materializeCStruct1Tag[GSocketAddressClass]
@@ -10093,14 +9364,10 @@ object _GNativeSocketAddressClass:
     def parent_class : GSocketAddressClass = struct._1
     def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GNativeSocketAddressPrivate = CStruct0
 object _GNativeSocketAddressPrivate:
   given _tag: Tag[_GNativeSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GNativeVolumeMonitor = CStruct1[GVolumeMonitor]
 object _GNativeVolumeMonitor:
   given _tag: Tag[_GNativeVolumeMonitor] = Tag.materializeCStruct1Tag[GVolumeMonitor]
@@ -10113,8 +9380,6 @@ object _GNativeVolumeMonitor:
     def parent_instance : GVolumeMonitor = struct._1
     def parent_instance_=(value: GVolumeMonitor): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GNativeVolumeMonitorClass = CStruct2[GVolumeMonitorClass, CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]]
 object _GNativeVolumeMonitorClass:
   given _tag: Tag[_GNativeVolumeMonitorClass] = Tag.materializeCStruct2Tag[GVolumeMonitorClass, CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]]
@@ -10130,8 +9395,6 @@ object _GNativeVolumeMonitorClass:
     def get_mount_for_mount_path : CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]] = struct._2
     def get_mount_for_mount_path_=(value: CFuncPtr2[CString, Ptr[GCancellable], Ptr[GMount]]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GNetworkAddress = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GNetworkAddressPrivate]]
 object _GNetworkAddress:
   given _tag: Tag[_GNetworkAddress] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GNetworkAddressPrivate]]
@@ -10147,8 +9410,6 @@ object _GNetworkAddress:
     def priv : Ptr[GNetworkAddressPrivate] = struct._2
     def priv_=(value: Ptr[GNetworkAddressPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GNetworkAddressClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GNetworkAddressClass:
   given _tag: Tag[_GNetworkAddressClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -10161,20 +9422,14 @@ object _GNetworkAddressClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GNetworkAddressPrivate = CStruct0
 object _GNetworkAddressPrivate:
   given _tag: Tag[_GNetworkAddressPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GNetworkMonitor = CStruct0
 object _GNetworkMonitor:
   given _tag: Tag[_GNetworkMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GNetworkMonitorInterface = CStruct5[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GNetworkMonitor], _root_.sn.gnome.glib.internal.gboolean, Unit], CFuncPtr4[Ptr[GNetworkMonitor], Ptr[GSocketConnectable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GNetworkMonitor], Ptr[GSocketConnectable], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]
 object _GNetworkMonitorInterface:
   given _tag: Tag[_GNetworkMonitorInterface] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GNetworkMonitor], _root_.sn.gnome.glib.internal.gboolean, Unit], CFuncPtr4[Ptr[GNetworkMonitor], Ptr[GSocketConnectable], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GNetworkMonitor], Ptr[GSocketConnectable], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]
@@ -10199,8 +9454,6 @@ object _GNetworkMonitorInterface:
     def can_reach_finish : CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._5
     def can_reach_finish_=(value: CFuncPtr3[Ptr[GNetworkMonitor], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GNetworkService = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GNetworkServicePrivate]]
 object _GNetworkService:
   given _tag: Tag[_GNetworkService] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GNetworkServicePrivate]]
@@ -10216,8 +9469,6 @@ object _GNetworkService:
     def priv : Ptr[GNetworkServicePrivate] = struct._2
     def priv_=(value: Ptr[GNetworkServicePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GNetworkServiceClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GNetworkServiceClass:
   given _tag: Tag[_GNetworkServiceClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -10230,20 +9481,14 @@ object _GNetworkServiceClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GNetworkServicePrivate = CStruct0
 object _GNetworkServicePrivate:
   given _tag: Tag[_GNetworkServicePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GNotification = CStruct0
 object _GNotification:
   given _tag: Tag[_GNotification] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GOutputMessage = CStruct6[Ptr[GSocketAddress], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GSocketControlMessage]], _root_.sn.gnome.glib.internal.guint]
 object _GOutputMessage:
   given _tag: Tag[_GOutputMessage] = Tag.materializeCStruct6Tag[Ptr[GSocketAddress], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GSocketControlMessage]], _root_.sn.gnome.glib.internal.guint]
@@ -10271,8 +9516,6 @@ object _GOutputMessage:
     def num_control_messages : _root_.sn.gnome.glib.internal.guint = struct._6
     def num_control_messages_=(value: _root_.sn.gnome.glib.internal.guint): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GOutputStream = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GOutputStreamPrivate]]
 object _GOutputStream:
   given _tag: Tag[_GOutputStream] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GOutputStreamPrivate]]
@@ -10288,8 +9531,6 @@ object _GOutputStream:
     def priv : Ptr[GOutputStreamPrivate] = struct._2
     def priv_=(value: Ptr[GOutputStreamPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GOutputStreamClass = CStruct21[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[GOutputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr5[Ptr[GOutputStream], Ptr[GInputStream], GOutputStreamSpliceFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr3[Ptr[GOutputStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GOutputStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr7[Ptr[GOutputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr7[Ptr[GOutputStream], Ptr[GInputStream], GOutputStreamSpliceFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr5[Ptr[GOutputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GOutputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr7[Ptr[GOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr4[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GOutputStreamClass:
   given _tag: Tag[_GOutputStreamClass] = Tag.materializeCStruct21Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[GOutputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr5[Ptr[GOutputStream], Ptr[GInputStream], GOutputStreamSpliceFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr3[Ptr[GOutputStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GOutputStream], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr7[Ptr[GOutputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr7[Ptr[GOutputStream], Ptr[GInputStream], GOutputStreamSpliceFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize], CFuncPtr5[Ptr[GOutputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GOutputStream], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr7[Ptr[GOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr4[Ptr[GOutputStream], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -10362,14 +9603,10 @@ object _GOutputStreamClass:
     def _g_reserved8 : CFuncPtr0[Unit] = struct._21
     def _g_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type _GOutputStreamPrivate = CStruct0
 object _GOutputStreamPrivate:
   given _tag: Tag[_GOutputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GOutputVector = CStruct2[_root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.gsize]
 object _GOutputVector:
   given _tag: Tag[_GOutputVector] = Tag.materializeCStruct2Tag[_root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.gsize]
@@ -10385,8 +9622,6 @@ object _GOutputVector:
     def size : _root_.sn.gnome.glib.internal.gsize = struct._2
     def size_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GPermission = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GPermissionPrivate]]
 object _GPermission:
   given _tag: Tag[_GPermission] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GPermissionPrivate]]
@@ -10402,8 +9637,6 @@ object _GPermission:
     def priv : Ptr[GPermissionPrivate] = struct._2
     def priv_=(value: Ptr[GPermissionPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GPermissionClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GPermission], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GPermission], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GPermission], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GPermission], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GPermission], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GPermission], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
 object _GPermissionClass:
   given _tag: Tag[_GPermissionClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GPermission], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GPermission], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GPermission], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GPermission], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GPermission], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GPermission], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
@@ -10437,14 +9670,10 @@ object _GPermissionClass:
     def reserved : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = struct._8
     def reserved_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GPermissionPrivate = CStruct0
 object _GPermissionPrivate:
   given _tag: Tag[_GPermissionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GPollableInputStream = CStruct0
 object _GPollableInputStream:
   given _tag: Tag[_GPollableInputStream] = Tag.materializeCStruct0Tag
@@ -10476,8 +9705,6 @@ object _GPollableInputStreamInterface:
     def read_nonblocking : CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize] = struct._5
     def read_nonblocking_=(value: CFuncPtr4[Ptr[GPollableInputStream], Ptr[Byte], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gssize]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GPollableOutputStream = CStruct0
 object _GPollableOutputStream:
   given _tag: Tag[_GPollableOutputStream] = Tag.materializeCStruct0Tag
@@ -10512,14 +9739,10 @@ object _GPollableOutputStreamInterface:
     def writev_nonblocking : CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GPollableReturn] = struct._6
     def writev_nonblocking_=(value: CFuncPtr5[Ptr[GPollableOutputStream], Ptr[GOutputVector], _root_.sn.gnome.glib.internal.gsize, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GPollableReturn]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GPowerProfileMonitor = CStruct0
 object _GPowerProfileMonitor:
   given _tag: Tag[_GPowerProfileMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GPowerProfileMonitorInterface = CStruct1[_root_.sn.gnome.gobject.internal.GTypeInterface]
 object _GPowerProfileMonitorInterface:
   given _tag: Tag[_GPowerProfileMonitorInterface] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GTypeInterface]
@@ -10532,20 +9755,14 @@ object _GPowerProfileMonitorInterface:
     def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GPropertyAction = CStruct0
 object _GPropertyAction:
   given _tag: Tag[_GPropertyAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GProxy = CStruct0
 object _GProxy:
   given _tag: Tag[_GProxy] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GProxyAddress = CStruct2[GInetSocketAddress, Ptr[GProxyAddressPrivate]]
 object _GProxyAddress:
   given _tag: Tag[_GProxyAddress] = Tag.materializeCStruct2Tag[GInetSocketAddress, Ptr[GProxyAddressPrivate]]
@@ -10561,8 +9778,6 @@ object _GProxyAddress:
     def priv : Ptr[GProxyAddressPrivate] = struct._2
     def priv_=(value: Ptr[GProxyAddressPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GProxyAddressClass = CStruct1[GInetSocketAddressClass]
 object _GProxyAddressClass:
   given _tag: Tag[_GProxyAddressClass] = Tag.materializeCStruct1Tag[GInetSocketAddressClass]
@@ -10575,8 +9790,6 @@ object _GProxyAddressClass:
     def parent_class : GInetSocketAddressClass = struct._1
     def parent_class_=(value: GInetSocketAddressClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GProxyAddressEnumerator = CStruct2[GSocketAddressEnumerator, Ptr[GProxyAddressEnumeratorPrivate]]
 object _GProxyAddressEnumerator:
   given _tag: Tag[_GProxyAddressEnumerator] = Tag.materializeCStruct2Tag[GSocketAddressEnumerator, Ptr[GProxyAddressEnumeratorPrivate]]
@@ -10628,14 +9841,10 @@ object _GProxyAddressEnumeratorClass:
     def _g_reserved7 : CFuncPtr0[Unit] = struct._8
     def _g_reserved7_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GProxyAddressEnumeratorPrivate = CStruct0
 object _GProxyAddressEnumeratorPrivate:
   given _tag: Tag[_GProxyAddressEnumeratorPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GProxyAddressPrivate = CStruct0
 object _GProxyAddressPrivate:
   given _tag: Tag[_GProxyAddressPrivate] = Tag.materializeCStruct0Tag
@@ -10667,14 +9876,10 @@ object _GProxyInterface:
     def supports_hostname : CFuncPtr1[Ptr[GProxy], _root_.sn.gnome.glib.internal.gboolean] = struct._5
     def supports_hostname_=(value: CFuncPtr1[Ptr[GProxy], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GProxyResolver = CStruct0
 object _GProxyResolver:
   given _tag: Tag[_GProxyResolver] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GProxyResolverInterface = CStruct5[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GProxyResolver], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GProxyResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], CFuncPtr5[Ptr[GProxyResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]]
 object _GProxyResolverInterface:
   given _tag: Tag[_GProxyResolverInterface] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GProxyResolver], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GProxyResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], CFuncPtr5[Ptr[GProxyResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]]
@@ -10699,14 +9904,10 @@ object _GProxyResolverInterface:
     def lookup_finish : CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]] = struct._5
     def lookup_finish_=(value: CFuncPtr3[Ptr[GProxyResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GRemoteActionGroup = CStruct0
 object _GRemoteActionGroup:
   given _tag: Tag[_GRemoteActionGroup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GRemoteActionGroupInterface = CStruct3[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
 object _GRemoteActionGroupInterface:
   given _tag: Tag[_GRemoteActionGroupInterface] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit], CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
@@ -10725,8 +9926,6 @@ object _GRemoteActionGroupInterface:
     def change_action_state_full : CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = struct._3
     def change_action_state_full_=(value: CFuncPtr4[Ptr[GRemoteActionGroup], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GResolver = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GResolverPrivate]]
 object _GResolver:
   given _tag: Tag[_GResolver] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GResolverPrivate]]
@@ -10742,8 +9941,6 @@ object _GResolver:
     def priv : Ptr[GResolverPrivate] = struct._2
     def priv_=(value: Ptr[GResolverPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GResolverClass = CStruct17[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GResolver], Unit], CFuncPtr4[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr4[Ptr[GResolver], Ptr[GInetAddress], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr5[Ptr[GResolver], Ptr[GInetAddress], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr4[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverRecordType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr6[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverRecordType, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr6[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
 object _GResolverClass:
   given _tag: Tag[_GResolverClass] = Tag.materializeCStruct17Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GResolver], Unit], CFuncPtr4[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr4[Ptr[GResolver], Ptr[GInetAddress], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr5[Ptr[GResolver], Ptr[GInetAddress], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr4[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverRecordType, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr6[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverRecordType, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr6[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GResolver], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
@@ -10804,20 +10001,14 @@ object _GResolverClass:
     def lookup_by_name_with_flags : CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]] = struct._17.asInstanceOf[CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]]]
     def lookup_by_name_with_flags_=(value: CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = !struct.at17 = value.asInstanceOf[CFuncPtr5[Ptr[GResolver], Ptr[_root_.sn.gnome.glib.internal.gchar], GResolverNameLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
 
-/**
-*/
 opaque type _GResolverPrivate = CStruct0
 object _GResolverPrivate:
   given _tag: Tag[_GResolverPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GResource = CStruct0
 object _GResource:
   given _tag: Tag[_GResource] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSeekable = CStruct0
 object _GSeekable:
   given _tag: Tag[_GSeekable] = Tag.materializeCStruct0Tag
@@ -10852,8 +10043,6 @@ object _GSeekableIface:
     def truncate_fn : CFuncPtr4[Ptr[GSeekable], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._6
     def truncate_fn_=(value: CFuncPtr4[Ptr[GSeekable], _root_.sn.gnome.glib.internal.goffset, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GSettings = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSettingsPrivate]]
 object _GSettings:
   given _tag: Tag[_GSettings] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSettingsPrivate]]
@@ -10869,14 +10058,10 @@ object _GSettings:
     def priv : Ptr[GSettingsPrivate] = struct._2
     def priv_=(value: Ptr[GSettingsPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSettingsBackend = CStruct0
 object _GSettingsBackend:
   given _tag: Tag[_GSettingsBackend] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSettingsClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GSettings], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GSettings], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GSettings], _root_.sn.gnome.glib.internal.GQuark, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GSettings], Ptr[_root_.sn.gnome.glib.internal.GQuark], _root_.sn.gnome.glib.internal.gint, _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]]]
 object _GSettingsClass:
   given _tag: Tag[_GSettingsClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GSettings], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GSettings], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GSettings], _root_.sn.gnome.glib.internal.GQuark, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GSettings], Ptr[_root_.sn.gnome.glib.internal.GQuark], _root_.sn.gnome.glib.internal.gint, _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]]]
@@ -10904,32 +10089,22 @@ object _GSettingsClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]] = struct._6
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._0]]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GSettingsPrivate = CStruct0
 object _GSettingsPrivate:
   given _tag: Tag[_GSettingsPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSettingsSchema = CStruct0
 object _GSettingsSchema:
   given _tag: Tag[_GSettingsSchema] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSettingsSchemaKey = CStruct0
 object _GSettingsSchemaKey:
   given _tag: Tag[_GSettingsSchemaKey] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSettingsSchemaSource = CStruct0
 object _GSettingsSchemaSource:
   given _tag: Tag[_GSettingsSchemaSource] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSimpleAction = CStruct0
 object _GSimpleAction:
   given _tag: Tag[_GSimpleAction] = Tag.materializeCStruct0Tag
@@ -10952,8 +10127,6 @@ object _GSimpleActionGroup:
     def priv : Ptr[GSimpleActionGroupPrivate] = struct._2
     def priv_=(value: Ptr[GSimpleActionGroupPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSimpleActionGroupClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
 object _GSimpleActionGroupClass:
   given _tag: Tag[_GSimpleActionGroupClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
@@ -10969,38 +10142,26 @@ object _GSimpleActionGroupClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSimpleActionGroupPrivate = CStruct0
 object _GSimpleActionGroupPrivate:
   given _tag: Tag[_GSimpleActionGroupPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSimpleAsyncResult = CStruct0
 object _GSimpleAsyncResult:
   given _tag: Tag[_GSimpleAsyncResult] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSimpleAsyncResultClass = CStruct0
 object _GSimpleAsyncResultClass:
   given _tag: Tag[_GSimpleAsyncResultClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSimpleIOStream = CStruct0
 object _GSimpleIOStream:
   given _tag: Tag[_GSimpleIOStream] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSimplePermission = CStruct0
 object _GSimplePermission:
   given _tag: Tag[_GSimplePermission] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSimpleProxyResolver = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSimpleProxyResolverPrivate]]
 object _GSimpleProxyResolver:
   given _tag: Tag[_GSimpleProxyResolver] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSimpleProxyResolverPrivate]]
@@ -11016,8 +10177,6 @@ object _GSimpleProxyResolver:
     def priv : Ptr[GSimpleProxyResolverPrivate] = struct._2
     def priv_=(value: Ptr[GSimpleProxyResolverPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSimpleProxyResolverClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSimpleProxyResolverClass:
   given _tag: Tag[_GSimpleProxyResolverClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -11045,14 +10204,10 @@ object _GSimpleProxyResolverClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._6
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GSimpleProxyResolverPrivate = CStruct0
 object _GSimpleProxyResolverPrivate:
   given _tag: Tag[_GSimpleProxyResolverPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSocket = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketPrivate]]
 object _GSocket:
   given _tag: Tag[_GSocket] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketPrivate]]
@@ -11068,8 +10223,6 @@ object _GSocket:
     def priv : Ptr[GSocketPrivate] = struct._2
     def priv_=(value: Ptr[GSocketPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSocketAddress = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GSocketAddress:
   given _tag: Tag[_GSocketAddress] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -11082,8 +10235,6 @@ object _GSocketAddress:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GSocketAddressClass = CStruct4[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GSocketAddress], GSocketFamily], CFuncPtr1[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gssize], CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]
 object _GSocketAddressClass:
   given _tag: Tag[_GSocketAddressClass] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GSocketAddress], GSocketFamily], CFuncPtr1[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gssize], CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]
@@ -11105,8 +10256,6 @@ object _GSocketAddressClass:
     def to_native : CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = struct._4
     def to_native_=(value: CFuncPtr4[Ptr[GSocketAddress], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GSocketAddressEnumerator = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GSocketAddressEnumerator:
   given _tag: Tag[_GSocketAddressEnumerator] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -11143,8 +10292,6 @@ object _GSocketAddressEnumeratorClass:
     def next_finish : CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GSocketAddress]] = struct._4
     def next_finish_=(value: CFuncPtr3[Ptr[GSocketAddressEnumerator], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GSocketAddress]]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GSocketClass = CStruct11[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketClass:
   given _tag: Tag[_GSocketClass] = Tag.materializeCStruct11Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -11187,8 +10334,6 @@ object _GSocketClass:
     def _g_reserved10 : CFuncPtr0[Unit] = struct._11
     def _g_reserved10_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type _GSocketClient = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketClientPrivate]]
 object _GSocketClient:
   given _tag: Tag[_GSocketClient] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketClientPrivate]]
@@ -11204,8 +10349,6 @@ object _GSocketClient:
     def priv : Ptr[GSocketClientPrivate] = struct._2
     def priv_=(value: Ptr[GSocketClientPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSocketClientClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GSocketClient], GSocketClientEvent, Ptr[GSocketConnectable], Ptr[GIOStream], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketClientClass:
   given _tag: Tag[_GSocketClientClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GSocketClient], GSocketClientEvent, Ptr[GSocketConnectable], Ptr[GIOStream], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -11233,14 +10376,10 @@ object _GSocketClientClass:
     def _g_reserved4 : CFuncPtr0[Unit] = struct._6
     def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GSocketClientPrivate = CStruct0
 object _GSocketClientPrivate:
   given _tag: Tag[_GSocketClientPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSocketConnectable = CStruct0
 object _GSocketConnectable:
   given _tag: Tag[_GSocketConnectable] = Tag.materializeCStruct0Tag
@@ -11269,8 +10408,6 @@ object _GSocketConnectableIface:
     def to_string : CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.sn.gnome.glib.internal.gchar]] = struct._4
     def to_string_=(value: CFuncPtr1[Ptr[GSocketConnectable], Ptr[_root_.sn.gnome.glib.internal.gchar]]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GSocketConnection = CStruct2[GIOStream, Ptr[GSocketConnectionPrivate]]
 object _GSocketConnection:
   given _tag: Tag[_GSocketConnection] = Tag.materializeCStruct2Tag[GIOStream, Ptr[GSocketConnectionPrivate]]
@@ -11286,8 +10423,6 @@ object _GSocketConnection:
     def priv : Ptr[GSocketConnectionPrivate] = struct._2
     def priv_=(value: Ptr[GSocketConnectionPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GSocketConnectionClass = CStruct7[GIOStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GSocketConnectionClass:
   given _tag: Tag[_GSocketConnectionClass] = Tag.materializeCStruct7Tag[GIOStreamClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -11318,14 +10453,10 @@ object _GSocketConnectionClass:
     def _g_reserved6 : CFuncPtr0[Unit] = struct._7
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GSocketConnectionPrivate = CStruct0
 object _GSocketConnectionPrivate:
   given _tag: Tag[_GSocketConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSocketControlMessage = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketControlMessagePrivate]]
 object _GSocketControlMessage:
   given _tag: Tag[_GSocketControlMessage] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketControlMessagePrivate]]
@@ -11386,14 +10517,10 @@ object _GSocketControlMessageClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._11
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type _GSocketControlMessagePrivate = CStruct0
 object _GSocketControlMessagePrivate:
   given _tag: Tag[_GSocketControlMessagePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSocketListener = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketListenerPrivate]]
 object _GSocketListener:
   given _tag: Tag[_GSocketListener] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSocketListenerPrivate]]
@@ -11445,20 +10572,14 @@ object _GSocketListenerClass:
     def _g_reserved6 : CFuncPtr0[Unit] = struct._8
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GSocketListenerPrivate = CStruct0
 object _GSocketListenerPrivate:
   given _tag: Tag[_GSocketListenerPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSocketPrivate = CStruct0
 object _GSocketPrivate:
   given _tag: Tag[_GSocketPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSocketService = CStruct2[GSocketListener, Ptr[GSocketServicePrivate]]
 object _GSocketService:
   given _tag: Tag[_GSocketService] = Tag.materializeCStruct2Tag[GSocketListener, Ptr[GSocketServicePrivate]]
@@ -11510,20 +10631,14 @@ object _GSocketServiceClass:
     def _g_reserved6 : CFuncPtr0[Unit] = struct._8
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GSocketServicePrivate = CStruct0
 object _GSocketServicePrivate:
   given _tag: Tag[_GSocketServicePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSrvTarget = CStruct0
 object _GSrvTarget:
   given _tag: Tag[_GSrvTarget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GStaticResource = CStruct5[Ptr[_root_.sn.gnome.glib.internal.guint8], _root_.sn.gnome.glib.internal.gsize, Ptr[GResource], Ptr[Byte], _root_.sn.gnome.glib.internal.gpointer]
 object _GStaticResource:
   given _tag: Tag[_GStaticResource] = Tag.materializeCStruct5Tag[Ptr[_root_.sn.gnome.glib.internal.guint8], _root_.sn.gnome.glib.internal.gsize, Ptr[GResource], Ptr[Byte], _root_.sn.gnome.glib.internal.gpointer]
@@ -11548,32 +10663,22 @@ object _GStaticResource:
     def padding : _root_.sn.gnome.glib.internal.gpointer = struct._5
     def padding_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GSubprocess = CStruct0
 object _GSubprocess:
   given _tag: Tag[_GSubprocess] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GSubprocessLauncher = CStruct0
 object _GSubprocessLauncher:
   given _tag: Tag[_GSubprocessLauncher] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTask = CStruct0
 object _GTask:
   given _tag: Tag[_GTask] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTaskClass = CStruct0
 object _GTaskClass:
   given _tag: Tag[_GTaskClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTcpConnection = CStruct2[GSocketConnection, Ptr[GTcpConnectionPrivate]]
 object _GTcpConnection:
   given _tag: Tag[_GTcpConnection] = Tag.materializeCStruct2Tag[GSocketConnection, Ptr[GTcpConnectionPrivate]]
@@ -11589,8 +10694,6 @@ object _GTcpConnection:
     def priv : Ptr[GTcpConnectionPrivate] = struct._2
     def priv_=(value: Ptr[GTcpConnectionPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTcpConnectionClass = CStruct1[GSocketConnectionClass]
 object _GTcpConnectionClass:
   given _tag: Tag[_GTcpConnectionClass] = Tag.materializeCStruct1Tag[GSocketConnectionClass]
@@ -11603,14 +10706,10 @@ object _GTcpConnectionClass:
     def parent_class : GSocketConnectionClass = struct._1
     def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GTcpConnectionPrivate = CStruct0
 object _GTcpConnectionPrivate:
   given _tag: Tag[_GTcpConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTcpWrapperConnection = CStruct2[GTcpConnection, Ptr[GTcpWrapperConnectionPrivate]]
 object _GTcpWrapperConnection:
   given _tag: Tag[_GTcpWrapperConnection] = Tag.materializeCStruct2Tag[GTcpConnection, Ptr[GTcpWrapperConnectionPrivate]]
@@ -11626,8 +10725,6 @@ object _GTcpWrapperConnection:
     def priv : Ptr[GTcpWrapperConnectionPrivate] = struct._2
     def priv_=(value: Ptr[GTcpWrapperConnectionPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTcpWrapperConnectionClass = CStruct1[GTcpConnectionClass]
 object _GTcpWrapperConnectionClass:
   given _tag: Tag[_GTcpWrapperConnectionClass] = Tag.materializeCStruct1Tag[GTcpConnectionClass]
@@ -11640,32 +10737,22 @@ object _GTcpWrapperConnectionClass:
     def parent_class : GTcpConnectionClass = struct._1
     def parent_class_=(value: GTcpConnectionClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GTcpWrapperConnectionPrivate = CStruct0
 object _GTcpWrapperConnectionPrivate:
   given _tag: Tag[_GTcpWrapperConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTestDBus = CStruct0
 object _GTestDBus:
   given _tag: Tag[_GTestDBus] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GThemedIcon = CStruct0
 object _GThemedIcon:
   given _tag: Tag[_GThemedIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GThemedIconClass = CStruct0
 object _GThemedIconClass:
   given _tag: Tag[_GThemedIconClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GThreadedSocketService = CStruct2[GSocketService, Ptr[GThreadedSocketServicePrivate]]
 object _GThreadedSocketService:
   given _tag: Tag[_GThreadedSocketService] = Tag.materializeCStruct2Tag[GSocketService, Ptr[GThreadedSocketServicePrivate]]
@@ -11681,8 +10768,6 @@ object _GThreadedSocketService:
     def priv : Ptr[GThreadedSocketServicePrivate] = struct._2
     def priv_=(value: Ptr[GThreadedSocketServicePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GThreadedSocketServiceClass = CStruct7[GSocketServiceClass, CFuncPtr3[Ptr[GThreadedSocketService], Ptr[GSocketConnection], Ptr[_root_.sn.gnome.gobject.internal.GObject], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GThreadedSocketServiceClass:
   given _tag: Tag[_GThreadedSocketServiceClass] = Tag.materializeCStruct7Tag[GSocketServiceClass, CFuncPtr3[Ptr[GThreadedSocketService], Ptr[GSocketConnection], Ptr[_root_.sn.gnome.gobject.internal.GObject], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -11713,14 +10798,10 @@ object _GThreadedSocketServiceClass:
     def _g_reserved5 : CFuncPtr0[Unit] = struct._7
     def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GThreadedSocketServicePrivate = CStruct0
 object _GThreadedSocketServicePrivate:
   given _tag: Tag[_GThreadedSocketServicePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTlsBackend = CStruct0
 object _GTlsBackend:
   given _tag: Tag[_GTlsBackend] = Tag.materializeCStruct0Tag
@@ -11767,8 +10848,6 @@ object _GTlsBackendInterface:
     def get_dtls_server_connection_type : CFuncPtr0[_root_.sn.gnome.gobject.internal.GType] = struct._10
     def get_dtls_server_connection_type_=(value: CFuncPtr0[_root_.sn.gnome.gobject.internal.GType]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type _GTlsCertificate = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsCertificatePrivate]]
 object _GTlsCertificate:
   given _tag: Tag[_GTlsCertificate] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsCertificatePrivate]]
@@ -11784,8 +10863,6 @@ object _GTlsCertificate:
     def priv : Ptr[GTlsCertificatePrivate] = struct._2
     def priv_=(value: Ptr[GTlsCertificatePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTlsCertificateClass = CStruct3[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GTlsCertificate], Ptr[GSocketConnectable], Ptr[GTlsCertificate], GTlsCertificateFlags], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GTlsCertificateClass:
   given _tag: Tag[_GTlsCertificateClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GTlsCertificate], Ptr[GSocketConnectable], Ptr[GTlsCertificate], GTlsCertificateFlags], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -11804,14 +10881,10 @@ object _GTlsCertificateClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GTlsCertificatePrivate = CStruct0
 object _GTlsCertificatePrivate:
   given _tag: Tag[_GTlsCertificatePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTlsClientConnection = CStruct0
 object _GTlsClientConnection:
   given _tag: Tag[_GTlsClientConnection] = Tag.materializeCStruct0Tag
@@ -11834,8 +10907,6 @@ object _GTlsClientConnectionInterface:
     def copy_session_state : CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit] = struct._2
     def copy_session_state_=(value: CFuncPtr2[Ptr[GTlsClientConnection], Ptr[GTlsClientConnection], Unit]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTlsConnection = CStruct2[GIOStream, Ptr[GTlsConnectionPrivate]]
 object _GTlsConnection:
   given _tag: Tag[_GTlsConnection] = Tag.materializeCStruct2Tag[GIOStream, Ptr[GTlsConnectionPrivate]]
@@ -11887,14 +10958,10 @@ object _GTlsConnectionClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6] = struct._8
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GTlsConnectionPrivate = CStruct0
 object _GTlsConnectionPrivate:
   given _tag: Tag[_GTlsConnectionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTlsDatabase = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsDatabasePrivate]]
 object _GTlsDatabase:
   given _tag: Tag[_GTlsDatabase] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsDatabasePrivate]]
@@ -11910,8 +10977,6 @@ object _GTlsDatabase:
     def priv : Ptr[GTlsDatabasePrivate] = struct._2
     def priv_=(value: Ptr[GTlsDatabasePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTlsDatabaseClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr8[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GSocketConnectable], Ptr[GTlsInteraction], GTlsDatabaseVerifyFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsCertificateFlags], CFuncPtr9[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GSocketConnectable], Ptr[GTlsInteraction], GTlsDatabaseVerifyFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsCertificateFlags], CFuncPtr2[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
 object _GTlsDatabaseClass:
   given _tag: Tag[_GTlsDatabaseClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr8[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GSocketConnectable], Ptr[GTlsInteraction], GTlsDatabaseVerifyFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsCertificateFlags], CFuncPtr9[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GSocketConnectable], Ptr[GTlsInteraction], GTlsDatabaseVerifyFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsCertificateFlags], CFuncPtr2[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[GTlsCertificate], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GTlsCertificate]], CFuncPtr6[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CFuncPtr7[Ptr[GTlsDatabase], Ptr[_root_.sn.gnome.glib.internal.GByteArray], Ptr[GTlsInteraction], GTlsDatabaseLookupFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsDatabase], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
@@ -11966,14 +11031,10 @@ object _GTlsDatabaseClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = struct._15
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GTlsDatabasePrivate = CStruct0
 object _GTlsDatabasePrivate:
   given _tag: Tag[_GTlsDatabasePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTlsFileDatabase = CStruct0
 object _GTlsFileDatabase:
   given _tag: Tag[_GTlsFileDatabase] = Tag.materializeCStruct0Tag
@@ -11996,8 +11057,6 @@ object _GTlsFileDatabaseInterface:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTlsInteraction = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsInteractionPrivate]]
 object _GTlsInteraction:
   given _tag: Tag[_GTlsInteraction] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsInteractionPrivate]]
@@ -12013,8 +11072,6 @@ object _GTlsInteraction:
     def priv : Ptr[GTlsInteractionPrivate] = struct._2
     def priv_=(value: Ptr[GTlsInteractionPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GTlsInteractionClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GTlsInteraction], Ptr[GTlsPassword], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CFuncPtr5[Ptr[GTlsInteraction], Ptr[GTlsPassword], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsInteraction], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CFuncPtr5[Ptr[GTlsInteraction], Ptr[GTlsConnection], GTlsCertificateRequestFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CFuncPtr6[Ptr[GTlsInteraction], Ptr[GTlsConnection], GTlsCertificateRequestFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsInteraction], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]]]
 object _GTlsInteractionClass:
   given _tag: Tag[_GTlsInteractionClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GTlsInteraction], Ptr[GTlsPassword], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CFuncPtr5[Ptr[GTlsInteraction], Ptr[GTlsPassword], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsInteraction], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CFuncPtr5[Ptr[GTlsInteraction], Ptr[GTlsConnection], GTlsCertificateRequestFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CFuncPtr6[Ptr[GTlsInteraction], Ptr[GTlsConnection], GTlsCertificateRequestFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GTlsInteraction], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], GTlsInteractionResult], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]]]
@@ -12048,14 +11105,10 @@ object _GTlsInteractionClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]] = struct._8
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._2, Nat._1]]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GTlsInteractionPrivate = CStruct0
 object _GTlsInteractionPrivate:
   given _tag: Tag[_GTlsInteractionPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTlsPassword = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsPasswordPrivate]]
 object _GTlsPassword:
   given _tag: Tag[_GTlsPassword] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GTlsPasswordPrivate]]
@@ -12098,14 +11151,10 @@ object _GTlsPasswordClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._5
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GTlsPasswordPrivate = CStruct0
 object _GTlsPasswordPrivate:
   given _tag: Tag[_GTlsPasswordPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GTlsServerConnection = CStruct0
 object _GTlsServerConnection:
   given _tag: Tag[_GTlsServerConnection] = Tag.materializeCStruct0Tag
@@ -12125,20 +11174,157 @@ object _GTlsServerConnectionInterface:
     def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
+opaque type _GUnixConnection = CStruct2[GSocketConnection, Ptr[GUnixConnectionPrivate]]
+object _GUnixConnection:
+  given _tag: Tag[_GUnixConnection] = Tag.materializeCStruct2Tag[GSocketConnection, Ptr[GUnixConnectionPrivate]]
+  def apply()(using Zone): Ptr[_GUnixConnection] = scala.scalanative.unsafe.alloc[_GUnixConnection](1)
+  def apply(parent_instance : GSocketConnection, priv : Ptr[GUnixConnectionPrivate])(using Zone): Ptr[_GUnixConnection] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixConnection)
+    def parent_instance : GSocketConnection = struct._1
+    def parent_instance_=(value: GSocketConnection): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixConnectionPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixConnectionPrivate]): Unit = !struct.at2 = value
+
+opaque type _GUnixConnectionClass = CStruct1[GSocketConnectionClass]
+object _GUnixConnectionClass:
+  given _tag: Tag[_GUnixConnectionClass] = Tag.materializeCStruct1Tag[GSocketConnectionClass]
+  def apply()(using Zone): Ptr[_GUnixConnectionClass] = scala.scalanative.unsafe.alloc[_GUnixConnectionClass](1)
+  def apply(parent_class : GSocketConnectionClass)(using Zone): Ptr[_GUnixConnectionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _GUnixConnectionClass)
+    def parent_class : GSocketConnectionClass = struct._1
+    def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at1 = value
+
+opaque type _GUnixConnectionPrivate = CStruct0
+object _GUnixConnectionPrivate:
+  given _tag: Tag[_GUnixConnectionPrivate] = Tag.materializeCStruct0Tag
+
 /**
+ * GUnixCredentialsMessage:
 */
-opaque type _GUnixCredentialsMessage = CStruct0
+opaque type _GUnixCredentialsMessage = CStruct2[GSocketControlMessage, Ptr[GUnixCredentialsMessagePrivate]]
 object _GUnixCredentialsMessage:
-  given _tag: Tag[_GUnixCredentialsMessage] = Tag.materializeCStruct0Tag
+  given _tag: Tag[_GUnixCredentialsMessage] = Tag.materializeCStruct2Tag[GSocketControlMessage, Ptr[GUnixCredentialsMessagePrivate]]
+  def apply()(using Zone): Ptr[_GUnixCredentialsMessage] = scala.scalanative.unsafe.alloc[_GUnixCredentialsMessage](1)
+  def apply(parent_instance : GSocketControlMessage, priv : Ptr[GUnixCredentialsMessagePrivate])(using Zone): Ptr[_GUnixCredentialsMessage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixCredentialsMessage)
+    def parent_instance : GSocketControlMessage = struct._1
+    def parent_instance_=(value: GSocketControlMessage): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixCredentialsMessagePrivate] = struct._2
+    def priv_=(value: Ptr[GUnixCredentialsMessagePrivate]): Unit = !struct.at2 = value
 
 /**
+ * GUnixCredentialsMessageClass:
 */
-opaque type _GUnixFDList = CStruct0
+opaque type _GUnixCredentialsMessageClass = CStruct3[GSocketControlMessageClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
+object _GUnixCredentialsMessageClass:
+  given _tag: Tag[_GUnixCredentialsMessageClass] = Tag.materializeCStruct3Tag[GSocketControlMessageClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  def apply()(using Zone): Ptr[_GUnixCredentialsMessageClass] = scala.scalanative.unsafe.alloc[_GUnixCredentialsMessageClass](1)
+  def apply(parent_class : GSocketControlMessageClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[_GUnixCredentialsMessageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    ____ptr
+  extension (struct: _GUnixCredentialsMessageClass)
+    def parent_class : GSocketControlMessageClass = struct._1
+    def parent_class_=(value: GSocketControlMessageClass): Unit = !struct.at1 = value
+    def _g_reserved1 : CFuncPtr0[Unit] = struct._2
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at2 = value
+    def _g_reserved2 : CFuncPtr0[Unit] = struct._3
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
+
+opaque type _GUnixCredentialsMessagePrivate = CStruct0
+object _GUnixCredentialsMessagePrivate:
+  given _tag: Tag[_GUnixCredentialsMessagePrivate] = Tag.materializeCStruct0Tag
+
+opaque type _GUnixFDList = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GUnixFDListPrivate]]
 object _GUnixFDList:
-  given _tag: Tag[_GUnixFDList] = Tag.materializeCStruct0Tag
+  given _tag: Tag[_GUnixFDList] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GUnixFDListPrivate]]
+  def apply()(using Zone): Ptr[_GUnixFDList] = scala.scalanative.unsafe.alloc[_GUnixFDList](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject, priv : Ptr[GUnixFDListPrivate])(using Zone): Ptr[_GUnixFDList] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixFDList)
+    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixFDListPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixFDListPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
+opaque type _GUnixFDListClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+object _GUnixFDListClass:
+  given _tag: Tag[_GUnixFDListClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  def apply()(using Zone): Ptr[_GUnixFDListClass] = scala.scalanative.unsafe.alloc[_GUnixFDListClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit], _g_reserved3 : CFuncPtr0[Unit], _g_reserved4 : CFuncPtr0[Unit], _g_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[_GUnixFDListClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    (!____ptr)._g_reserved3 = _g_reserved3
+    (!____ptr)._g_reserved4 = _g_reserved4
+    (!____ptr)._g_reserved5 = _g_reserved5
+    ____ptr
+  extension (struct: _GUnixFDListClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+    def _g_reserved1 : CFuncPtr0[Unit] = struct._2
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at2 = value
+    def _g_reserved2 : CFuncPtr0[Unit] = struct._3
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
+    def _g_reserved3 : CFuncPtr0[Unit] = struct._4
+    def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
+    def _g_reserved4 : CFuncPtr0[Unit] = struct._5
+    def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
+    def _g_reserved5 : CFuncPtr0[Unit] = struct._6
+    def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
+
+opaque type _GUnixFDListPrivate = CStruct0
+object _GUnixFDListPrivate:
+  given _tag: Tag[_GUnixFDListPrivate] = Tag.materializeCStruct0Tag
+
+opaque type _GUnixSocketAddress = CStruct2[GSocketAddress, Ptr[GUnixSocketAddressPrivate]]
+object _GUnixSocketAddress:
+  given _tag: Tag[_GUnixSocketAddress] = Tag.materializeCStruct2Tag[GSocketAddress, Ptr[GUnixSocketAddressPrivate]]
+  def apply()(using Zone): Ptr[_GUnixSocketAddress] = scala.scalanative.unsafe.alloc[_GUnixSocketAddress](1)
+  def apply(parent_instance : GSocketAddress, priv : Ptr[GUnixSocketAddressPrivate])(using Zone): Ptr[_GUnixSocketAddress] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixSocketAddress)
+    def parent_instance : GSocketAddress = struct._1
+    def parent_instance_=(value: GSocketAddress): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixSocketAddressPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixSocketAddressPrivate]): Unit = !struct.at2 = value
+
+opaque type _GUnixSocketAddressClass = CStruct1[GSocketAddressClass]
+object _GUnixSocketAddressClass:
+  given _tag: Tag[_GUnixSocketAddressClass] = Tag.materializeCStruct1Tag[GSocketAddressClass]
+  def apply()(using Zone): Ptr[_GUnixSocketAddressClass] = scala.scalanative.unsafe.alloc[_GUnixSocketAddressClass](1)
+  def apply(parent_class : GSocketAddressClass)(using Zone): Ptr[_GUnixSocketAddressClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _GUnixSocketAddressClass)
+    def parent_class : GSocketAddressClass = struct._1
+    def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
+
+opaque type _GUnixSocketAddressPrivate = CStruct0
+object _GUnixSocketAddressPrivate:
+  given _tag: Tag[_GUnixSocketAddressPrivate] = Tag.materializeCStruct0Tag
+
 opaque type _GVfs = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GVfs:
   given _tag: Tag[_GVfs] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -12151,8 +11337,6 @@ object _GVfs:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GVfsClass = CStruct18[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GVfs], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr1[Ptr[GVfs], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr8[Ptr[GVfs], CString, _root_.sn.gnome.glib.internal.guint64, Ptr[GFileAttributeMatcher], Ptr[GFileInfo], Ptr[GCancellable], Ptr[_root_.sn.gnome.glib.internal.gpointer], Ptr[_root_.sn.gnome.glib.internal.GDestroyNotify], Unit], CFuncPtr2[Ptr[GVfs], Ptr[GFileAttributeInfoList], Unit], CFuncPtr6[Ptr[GVfs], CString, Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GVfs], CString, Unit], CFuncPtr3[Ptr[GVfs], CString, CString, Unit], CFuncPtr2[Ptr[GVfs], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[GIcon]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GVfsClass:
   given _tag: Tag[_GVfsClass] = Tag.materializeCStruct18Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GVfs], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr1[Ptr[GVfs], Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]], CFuncPtr2[Ptr[GVfs], CString, Ptr[GFile]], CFuncPtr8[Ptr[GVfs], CString, _root_.sn.gnome.glib.internal.guint64, Ptr[GFileAttributeMatcher], Ptr[GFileInfo], Ptr[GCancellable], Ptr[_root_.sn.gnome.glib.internal.gpointer], Ptr[_root_.sn.gnome.glib.internal.GDestroyNotify], Unit], CFuncPtr2[Ptr[GVfs], Ptr[GFileAttributeInfoList], Unit], CFuncPtr6[Ptr[GVfs], CString, Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GVfs], CString, Unit], CFuncPtr3[Ptr[GVfs], CString, CString, Unit], CFuncPtr2[Ptr[GVfs], Ptr[_root_.sn.gnome.glib.internal.GVariant], Ptr[GIcon]], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -12216,14 +11400,10 @@ object _GVfsClass:
     def _g_reserved6 : CFuncPtr0[Unit] = struct._18
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at18 = value
 
-/**
-*/
 opaque type _GVolume = CStruct0
 object _GVolume:
   given _tag: Tag[_GVolume] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GVolumeIface = CStruct22[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GVolume], Unit], CFuncPtr1[Ptr[GVolume], Unit], CFuncPtr1[Ptr[GVolume], CString], CFuncPtr1[Ptr[GVolume], Ptr[GIcon]], CFuncPtr1[Ptr[GVolume], CString], CFuncPtr1[Ptr[GVolume], Ptr[GDrive]], CFuncPtr1[Ptr[GVolume], Ptr[GMount]], CFuncPtr1[Ptr[GVolume], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GVolume], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GVolume], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GVolume], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GVolume], CString, CString], CFuncPtr1[Ptr[GVolume], Ptr[CString]], CFuncPtr1[Ptr[GVolume], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GVolume], Ptr[GFile]], CFuncPtr6[Ptr[GVolume], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GVolume], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]]
 object _GVolumeIface:
   given _tag: Tag[_GVolumeIface] = Tag.materializeCStruct22Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GVolume], Unit], CFuncPtr1[Ptr[GVolume], Unit], CFuncPtr1[Ptr[GVolume], CString], CFuncPtr1[Ptr[GVolume], Ptr[GIcon]], CFuncPtr1[Ptr[GVolume], CString], CFuncPtr1[Ptr[GVolume], Ptr[GDrive]], CFuncPtr1[Ptr[GVolume], Ptr[GMount]], CFuncPtr1[Ptr[GVolume], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GVolume], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GVolume], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GVolume], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GVolume], CString, CString], CFuncPtr1[Ptr[GVolume], Ptr[CString]], CFuncPtr1[Ptr[GVolume], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GVolume], Ptr[GFile]], CFuncPtr6[Ptr[GVolume], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], CFuncPtr3[Ptr[GVolume], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GVolume], Ptr[_root_.sn.gnome.glib.internal.gchar]], CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]]
@@ -12299,8 +11479,6 @@ object _GVolumeIface:
     def get_symbolic_icon : CFuncPtr1[Ptr[GVolume], Ptr[GIcon]] = struct._22
     def get_symbolic_icon_=(value: CFuncPtr1[Ptr[GVolume], Ptr[GIcon]]): Unit = !struct.at22 = value
 
-/**
-*/
 opaque type _GVolumeMonitor = CStruct2[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
 object _GVolumeMonitor:
   given _tag: Tag[_GVolumeMonitor] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
@@ -12316,8 +11494,6 @@ object _GVolumeMonitor:
     def priv : _root_.sn.gnome.glib.internal.gpointer = struct._2
     def priv_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GVolumeMonitorClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]]
 object _GVolumeMonitorClass:
   given _tag: Tag[_GVolumeMonitorClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._3, Nat._3, Nat._6](Tag.Nat3, Tag.Nat3, Tag.Nat6))
@@ -12405,14 +11581,10 @@ object _GVolumeMonitorClass:
     def _g_reserved6: CFuncPtr0[Unit] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
     def _g_reserved6_=(value: CFuncPtr0[Unit]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
 
-/**
-*/
 opaque type _GZlibCompressor = CStruct0
 object _GZlibCompressor:
   given _tag: Tag[_GZlibCompressor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GZlibCompressorClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GZlibCompressorClass:
   given _tag: Tag[_GZlibCompressorClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -12425,14 +11597,10 @@ object _GZlibCompressorClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GZlibDecompressor = CStruct0
 object _GZlibDecompressor:
   given _tag: Tag[_GZlibDecompressor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GZlibDecompressorClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GZlibDecompressorClass:
   given _tag: Tag[_GZlibDecompressorClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]

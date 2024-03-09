@@ -26,6 +26,16 @@ object cairo_bool_t:
     inline def value: CInt = v
 
 /**
+ * cairo_color_mode_t: _COLOR_MODE_DEFAULT: Use the default color mode for font backend and target device, since 1.18. _COLOR_MODE_NO_COLOR: Disable rendering color glyphs. Glyphs are always rendered as outline glyphs, since 1.18. _COLOR_MODE_COLOR: Enable rendering color glyphs. If the font contains a color presentation for a glyph, and when supported by the font backend, the glyph will be rendered in color, since 1.18.
+*/
+type cairo_color_mode_t = _cairo_color_mode
+object cairo_color_mode_t: 
+  given _tag: Tag[cairo_color_mode_t] = _cairo_color_mode._tag
+  inline def apply(inline o: _cairo_color_mode): cairo_color_mode_t = o
+  extension (v: cairo_color_mode_t)
+    inline def value: _cairo_color_mode = v
+
+/**
  * cairo_content_t: _CONTENT_COLOR: The surface will hold color content only. (Since 1.0) _CONTENT_ALPHA: The surface will hold alpha content only. (Since 1.0) _CONTENT_COLOR_ALPHA: The surface will hold color and alpha content. (Since 1.0)
 */
 type cairo_content_t = _cairo_content
@@ -41,11 +51,11 @@ object cairo_content_t:
 opaque type cairo_destroy_func_t = CFuncPtr1[Ptr[Byte], Unit]
 object cairo_destroy_func_t: 
   given _tag: Tag[cairo_destroy_func_t] = Tag.materializeCFuncPtr1[Ptr[Byte], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_destroy_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_destroy_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[Byte], Unit]): cairo_destroy_func_t = o
   extension (v: cairo_destroy_func_t)
     inline def value: CFuncPtr1[Ptr[Byte], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_device_type_t: _DEVICE_TYPE_DRM: The device is of type Direct Render Manager, since 1.10 _DEVICE_TYPE_GL: The device is of type OpenGL, since 1.10 _DEVICE_TYPE_SCRIPT: The device is of type script, since 1.10 _DEVICE_TYPE_XCB: The device is of type xcb, since 1.10 _DEVICE_TYPE_XLIB: The device is of type xlib, since 1.10 _DEVICE_TYPE_XML: The device is of type XML, since 1.10 _DEVICE_TYPE_COGL: The device is of type cogl, since 1.12 _DEVICE_TYPE_WIN32: The device is of type win32, since 1.12 _DEVICE_TYPE_INVALID: The device is invalid, since 1.10
@@ -56,6 +66,16 @@ object cairo_device_type_t:
   inline def apply(inline o: _cairo_device_type): cairo_device_type_t = o
   extension (v: cairo_device_type_t)
     inline def value: _cairo_device_type = v
+
+/**
+ * cairo_dither_t: _DITHER_NONE: No dithering. _DITHER_DEFAULT: Default choice at cairo compile time. Currently NONE. _DITHER_FAST: Fastest dithering algorithm supported by the backend _DITHER_GOOD: An algorithm with smoother dithering than FAST _DITHER_BEST: Best algorithm available in the backend
+*/
+type cairo_dither_t = _cairo_dither
+object cairo_dither_t: 
+  given _tag: Tag[cairo_dither_t] = _cairo_dither._tag
+  inline def apply(inline o: _cairo_dither): cairo_dither_t = o
+  extension (v: cairo_dither_t)
+    inline def value: _cairo_dither = v
 
 /**
  * cairo_extend_t: _EXTEND_NONE: pixels outside of the source pattern are fully transparent (Since 1.0) _EXTEND_REPEAT: the pattern is tiled by repeating (Since 1.0) _EXTEND_REFLECT: the pattern is tiled by reflecting at the edges (Since 1.0; but only implemented for surface patterns since 1.6) _EXTEND_PAD: pixels outside of the pattern copy the closest pixel from the source (Since 1.2; but only implemented for surface patterns since 1.6)
@@ -98,7 +118,7 @@ object cairo_font_slant_t:
     inline def value: _cairo_font_slant = v
 
 /**
- * cairo_font_type_t: _FONT_TYPE_TOY: The font was created using cairo's toy font api (Since: 1.2) _FONT_TYPE_FT: The font is of type FreeType (Since: 1.2) _FONT_TYPE_WIN32: The font is of type Win32 (Since: 1.2) _FONT_TYPE_QUARTZ: The font is of type Quartz (Since: 1.6, in 1.2 and 1.4 it was named CAIRO_FONT_TYPE_ATSUI) _FONT_TYPE_USER: The font was create using cairo's user font api (Since: 1.8)
+ * cairo_font_type_t: _FONT_TYPE_TOY: The font was created using cairo's toy font api (Since: 1.2) _FONT_TYPE_FT: The font is of type FreeType (Since: 1.2) _FONT_TYPE_WIN32: The font is of type Win32 (Since: 1.2) _FONT_TYPE_QUARTZ: The font is of type Quartz (Since: 1.6, in 1.2 and 1.4 it was named CAIRO_FONT_TYPE_ATSUI) _FONT_TYPE_USER: The font was create using cairo's user font api (Since: 1.8) _FONT_TYPE_DWRITE: The font is of type Win32 DWrite (Since: 1.18)
 */
 type cairo_font_type_t = _cairo_font_type
 object cairo_font_type_t: 
@@ -118,7 +138,7 @@ object cairo_font_weight_t:
     inline def value: _cairo_font_weight = v
 
 /**
- * cairo_format_t: _FORMAT_INVALID: no such format exists or is supported. _FORMAT_ARGB32: each pixel is a 32-bit quantity, with alpha in the upper 8 bits, then red, then green, then blue. The 32-bit quantities are stored native-endian. Pre-multiplied alpha is used. (That is, 50% transparent red is 0x80800000, not 0x80ff0000.) (Since 1.0) _FORMAT_RGB24: each pixel is a 32-bit quantity, with the upper 8 bits unused. Red, Green, and Blue are stored in the remaining 24 bits in that order. (Since 1.0) _FORMAT_A8: each pixel is a 8-bit quantity holding an alpha value. (Since 1.0) _FORMAT_A1: each pixel is a 1-bit quantity holding an alpha value. Pixels are packed together into 32-bit quantities. The ordering of the bits matches the endianness of the platform. On a big-endian machine, the first pixel is in the uppermost bit, on a little-endian machine the first pixel is in the least-significant bit. (Since 1.0) _FORMAT_RGB16_565: each pixel is a 16-bit quantity with red in the upper 5 bits, then green in the middle 6 bits, and blue in the lower 5 bits. (Since 1.2) _FORMAT_RGB30: like RGB24 but with 10bpc. (Since 1.12)
+ * cairo_format_t: _FORMAT_INVALID: no such format exists or is supported. _FORMAT_ARGB32: each pixel is a 32-bit quantity, with alpha in the upper 8 bits, then red, then green, then blue. The 32-bit quantities are stored native-endian. Pre-multiplied alpha is used. (That is, 50% transparent red is 0x80800000, not 0x80ff0000.) (Since 1.0) _FORMAT_RGB24: each pixel is a 32-bit quantity, with the upper 8 bits unused. Red, Green, and Blue are stored in the remaining 24 bits in that order. (Since 1.0) _FORMAT_A8: each pixel is a 8-bit quantity holding an alpha value. (Since 1.0) _FORMAT_A1: each pixel is a 1-bit quantity holding an alpha value. Pixels are packed together into 32-bit quantities. The ordering of the bits matches the endianness of the platform. On a big-endian machine, the first pixel is in the uppermost bit, on a little-endian machine the first pixel is in the least-significant bit. (Since 1.0) _FORMAT_RGB16_565: each pixel is a 16-bit quantity with red in the upper 5 bits, then green in the middle 6 bits, and blue in the lower 5 bits. (Since 1.2) _FORMAT_RGB30: like RGB24 but with 10bpc. (Since 1.12) _FORMAT_RGB96F: 3 floats, R, G, B. (Since 1.17.2) _FORMAT_RGBA128F: 4 floats, R, G, B, A. (Since 1.17.2)
 */
 type cairo_format_t = _cairo_format
 object cairo_format_t: 
@@ -203,11 +223,11 @@ object cairo_pattern_type_t:
 opaque type cairo_raster_source_acquire_func_t = CFuncPtr4[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Ptr[cairo_rectangle_int_t], Ptr[cairo_surface_t]]
 object cairo_raster_source_acquire_func_t: 
   given _tag: Tag[cairo_raster_source_acquire_func_t] = Tag.materializeCFuncPtr4[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Ptr[cairo_rectangle_int_t], Ptr[cairo_surface_t]]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_raster_source_acquire_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_raster_source_acquire_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Ptr[cairo_rectangle_int_t], Ptr[cairo_surface_t]]): cairo_raster_source_acquire_func_t = o
   extension (v: cairo_raster_source_acquire_func_t)
     inline def value: CFuncPtr4[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Ptr[cairo_rectangle_int_t], Ptr[cairo_surface_t]] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_raster_source_copy_func_t: : the #cairo_pattern_t that was copied to : the #cairo_pattern_t being used as the source for the copy
@@ -215,11 +235,11 @@ object cairo_raster_source_acquire_func_t:
 opaque type cairo_raster_source_copy_func_t = CFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_pattern_t], cairo_status_t]
 object cairo_raster_source_copy_func_t: 
   given _tag: Tag[cairo_raster_source_copy_func_t] = Tag.materializeCFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_pattern_t], cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_raster_source_copy_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_raster_source_copy_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_pattern_t], cairo_status_t]): cairo_raster_source_copy_func_t = o
   extension (v: cairo_raster_source_copy_func_t)
     inline def value: CFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_pattern_t], cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_raster_source_finish_func_t: : the pattern being rendered from
@@ -227,11 +247,11 @@ object cairo_raster_source_copy_func_t:
 opaque type cairo_raster_source_finish_func_t = CFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], Unit]
 object cairo_raster_source_finish_func_t: 
   given _tag: Tag[cairo_raster_source_finish_func_t] = Tag.materializeCFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_raster_source_finish_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_raster_source_finish_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], Unit]): cairo_raster_source_finish_func_t = o
   extension (v: cairo_raster_source_finish_func_t)
     inline def value: CFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_raster_source_release_func_t: : the pattern being rendered from : the surface created during acquire
@@ -239,11 +259,11 @@ object cairo_raster_source_finish_func_t:
 opaque type cairo_raster_source_release_func_t = CFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Unit]
 object cairo_raster_source_release_func_t: 
   given _tag: Tag[cairo_raster_source_release_func_t] = Tag.materializeCFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_raster_source_release_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_raster_source_release_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Unit]): cairo_raster_source_release_func_t = o
   extension (v: cairo_raster_source_release_func_t)
     inline def value: CFuncPtr3[Ptr[cairo_pattern_t], Ptr[Byte], Ptr[cairo_surface_t], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_raster_source_snapshot_func_t: : the pattern being rendered from
@@ -251,11 +271,11 @@ object cairo_raster_source_release_func_t:
 opaque type cairo_raster_source_snapshot_func_t = CFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], cairo_status_t]
 object cairo_raster_source_snapshot_func_t: 
   given _tag: Tag[cairo_raster_source_snapshot_func_t] = Tag.materializeCFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_raster_source_snapshot_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_raster_source_snapshot_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], cairo_status_t]): cairo_raster_source_snapshot_func_t = o
   extension (v: cairo_raster_source_snapshot_func_t)
     inline def value: CFuncPtr2[Ptr[cairo_pattern_t], Ptr[Byte], cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_read_func_t: : the input closure
@@ -263,11 +283,11 @@ object cairo_raster_source_snapshot_func_t:
 opaque type cairo_read_func_t = CFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t]
 object cairo_read_func_t: 
   given _tag: Tag[cairo_read_func_t] = Tag.materializeCFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_read_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_read_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t]): cairo_read_func_t = o
   extension (v: cairo_read_func_t)
     inline def value: CFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_region_overlap_t: _REGION_OVERLAP_IN: The contents are entirely inside the region. (Since 1.10) _REGION_OVERLAP_OUT: The contents are entirely outside the region. (Since 1.10) _REGION_OVERLAP_PART: The contents are partially inside and partially outside the region. (Since 1.10)
@@ -280,7 +300,7 @@ object cairo_region_overlap_t:
     inline def value: _cairo_region_overlap = v
 
 /**
- * cairo_status_t: _STATUS_SUCCESS: no error has occurred (Since 1.0) _STATUS_NO_MEMORY: out of memory (Since 1.0) _STATUS_INVALID_RESTORE: cairo_restore() called without matching cairo_save() (Since 1.0) _STATUS_INVALID_POP_GROUP: no saved group to pop, i.e. cairo_pop_group() without matching cairo_push_group() (Since 1.0) _STATUS_NO_CURRENT_POINT: no current point defined (Since 1.0) _STATUS_INVALID_MATRIX: invalid matrix (not invertible) (Since 1.0) _STATUS_INVALID_STATUS: invalid value for an input #cairo_status_t (Since 1.0) _STATUS_NULL_POINTER: %NULL pointer (Since 1.0) _STATUS_INVALID_STRING: input string not valid UTF-8 (Since 1.0) _STATUS_INVALID_PATH_DATA: input path data not valid (Since 1.0) _STATUS_READ_ERROR: error while reading from input stream (Since 1.0) _STATUS_WRITE_ERROR: error while writing to output stream (Since 1.0) _STATUS_SURFACE_FINISHED: target surface has been finished (Since 1.0) _STATUS_SURFACE_TYPE_MISMATCH: the surface type is not appropriate for the operation (Since 1.0) _STATUS_PATTERN_TYPE_MISMATCH: the pattern type is not appropriate for the operation (Since 1.0) _STATUS_INVALID_CONTENT: invalid value for an input #cairo_content_t (Since 1.0) _STATUS_INVALID_FORMAT: invalid value for an input #cairo_format_t (Since 1.0) _STATUS_INVALID_VISUAL: invalid value for an input Visual* (Since 1.0) _STATUS_FILE_NOT_FOUND: file not found (Since 1.0) _STATUS_INVALID_DASH: invalid value for a dash setting (Since 1.0) _STATUS_INVALID_DSC_COMMENT: invalid value for a DSC comment (Since 1.2) _STATUS_INVALID_INDEX: invalid index passed to getter (Since 1.4) _STATUS_CLIP_NOT_REPRESENTABLE: clip region not representable in desired format (Since 1.4) _STATUS_TEMP_FILE_ERROR: error creating or writing to a temporary file (Since 1.6) _STATUS_INVALID_STRIDE: invalid value for stride (Since 1.6) _STATUS_FONT_TYPE_MISMATCH: the font type is not appropriate for the operation (Since 1.8) _STATUS_USER_FONT_IMMUTABLE: the user-font is immutable (Since 1.8) _STATUS_USER_FONT_ERROR: error occurred in a user-font callback function (Since 1.8) _STATUS_NEGATIVE_COUNT: negative number used where it is not allowed (Since 1.8) _STATUS_INVALID_CLUSTERS: input clusters do not represent the accompanying text and glyph array (Since 1.8) _STATUS_INVALID_SLANT: invalid value for an input #cairo_font_slant_t (Since 1.8) _STATUS_INVALID_WEIGHT: invalid value for an input #cairo_font_weight_t (Since 1.8) _STATUS_INVALID_SIZE: invalid value (typically too big) for the size of the input (surface, pattern, etc.) (Since 1.10) _STATUS_USER_FONT_NOT_IMPLEMENTED: user-font method not implemented (Since 1.10) _STATUS_DEVICE_TYPE_MISMATCH: the device type is not appropriate for the operation (Since 1.10) _STATUS_DEVICE_ERROR: an operation to the device caused an unspecified error (Since 1.10) _STATUS_INVALID_MESH_CONSTRUCTION: a mesh pattern construction operation was used outside of a cairo_mesh_pattern_begin_patch()/cairo_mesh_pattern_end_patch() pair (Since 1.12) _STATUS_DEVICE_FINISHED: target device has been finished (Since 1.12) _STATUS_JBIG2_GLOBAL_MISSING: %CAIRO_MIME_TYPE_JBIG2_GLOBAL_ID has been used on at least one image but no image provided %CAIRO_MIME_TYPE_JBIG2_GLOBAL (Since 1.14) _STATUS_PNG_ERROR: error occurred in libpng while reading from or writing to a PNG file (Since 1.16) _STATUS_FREETYPE_ERROR: error occurred in libfreetype (Since 1.16) _STATUS_WIN32_GDI_ERROR: error occurred in the Windows Graphics Device Interface (Since 1.16) _STATUS_TAG_ERROR: invalid tag name, attributes, or nesting (Since 1.16) _STATUS_LAST_STATUS: this is a special value indicating the number of status values defined in this enumeration. When using this value, note that the version of cairo at run-time may have additional status values defined than the value of this symbol at compile-time. (Since 1.10)
+ * cairo_status_t: _STATUS_SUCCESS: no error has occurred (Since 1.0) _STATUS_NO_MEMORY: out of memory (Since 1.0) _STATUS_INVALID_RESTORE: cairo_restore() called without matching cairo_save() (Since 1.0) _STATUS_INVALID_POP_GROUP: no saved group to pop, i.e. cairo_pop_group() without matching cairo_push_group() (Since 1.0) _STATUS_NO_CURRENT_POINT: no current point defined (Since 1.0) _STATUS_INVALID_MATRIX: invalid matrix (not invertible) (Since 1.0) _STATUS_INVALID_STATUS: invalid value for an input #cairo_status_t (Since 1.0) _STATUS_NULL_POINTER: %NULL pointer (Since 1.0) _STATUS_INVALID_STRING: input string not valid UTF-8 (Since 1.0) _STATUS_INVALID_PATH_DATA: input path data not valid (Since 1.0) _STATUS_READ_ERROR: error while reading from input stream (Since 1.0) _STATUS_WRITE_ERROR: error while writing to output stream (Since 1.0) _STATUS_SURFACE_FINISHED: target surface has been finished (Since 1.0) _STATUS_SURFACE_TYPE_MISMATCH: the surface type is not appropriate for the operation (Since 1.0) _STATUS_PATTERN_TYPE_MISMATCH: the pattern type is not appropriate for the operation (Since 1.0) _STATUS_INVALID_CONTENT: invalid value for an input #cairo_content_t (Since 1.0) _STATUS_INVALID_FORMAT: invalid value for an input #cairo_format_t (Since 1.0) _STATUS_INVALID_VISUAL: invalid value for an input Visual* (Since 1.0) _STATUS_FILE_NOT_FOUND: file not found (Since 1.0) _STATUS_INVALID_DASH: invalid value for a dash setting (Since 1.0) _STATUS_INVALID_DSC_COMMENT: invalid value for a DSC comment (Since 1.2) _STATUS_INVALID_INDEX: invalid index passed to getter (Since 1.4) _STATUS_CLIP_NOT_REPRESENTABLE: clip region not representable in desired format (Since 1.4) _STATUS_TEMP_FILE_ERROR: error creating or writing to a temporary file (Since 1.6) _STATUS_INVALID_STRIDE: invalid value for stride (Since 1.6) _STATUS_FONT_TYPE_MISMATCH: the font type is not appropriate for the operation (Since 1.8) _STATUS_USER_FONT_IMMUTABLE: the user-font is immutable (Since 1.8) _STATUS_USER_FONT_ERROR: error occurred in a user-font callback function (Since 1.8) _STATUS_NEGATIVE_COUNT: negative number used where it is not allowed (Since 1.8) _STATUS_INVALID_CLUSTERS: input clusters do not represent the accompanying text and glyph array (Since 1.8) _STATUS_INVALID_SLANT: invalid value for an input #cairo_font_slant_t (Since 1.8) _STATUS_INVALID_WEIGHT: invalid value for an input #cairo_font_weight_t (Since 1.8) _STATUS_INVALID_SIZE: invalid value (typically too big) for the size of the input (surface, pattern, etc.) (Since 1.10) _STATUS_USER_FONT_NOT_IMPLEMENTED: user-font method not implemented (Since 1.10) _STATUS_DEVICE_TYPE_MISMATCH: the device type is not appropriate for the operation (Since 1.10) _STATUS_DEVICE_ERROR: an operation to the device caused an unspecified error (Since 1.10) _STATUS_INVALID_MESH_CONSTRUCTION: a mesh pattern construction operation was used outside of a cairo_mesh_pattern_begin_patch()/cairo_mesh_pattern_end_patch() pair (Since 1.12) _STATUS_DEVICE_FINISHED: target device has been finished (Since 1.12) _STATUS_JBIG2_GLOBAL_MISSING: %CAIRO_MIME_TYPE_JBIG2_GLOBAL_ID has been used on at least one image but no image provided %CAIRO_MIME_TYPE_JBIG2_GLOBAL (Since 1.14) _STATUS_PNG_ERROR: error occurred in libpng while reading from or writing to a PNG file (Since 1.16) _STATUS_FREETYPE_ERROR: error occurred in libfreetype (Since 1.16) _STATUS_WIN32_GDI_ERROR: error occurred in the Windows Graphics Device Interface (Since 1.16) _STATUS_TAG_ERROR: invalid tag name, attributes, or nesting (Since 1.16) _STATUS_DWRITE_ERROR: error occurred in the Windows Direct Write API (Since 1.18) _STATUS_SVG_FONT_ERROR: error occurred in OpenType-SVG font rendering (Since 1.18) _STATUS_LAST_STATUS: this is a special value indicating the number of status values defined in this enumeration. When using this value, note that the version of cairo at run-time may have additional status values defined than the value of this symbol at compile-time. (Since 1.10)
 */
 type cairo_status_t = _cairo_status
 object cairo_status_t: 
@@ -300,18 +320,19 @@ object cairo_subpixel_order_t:
     inline def value: _cairo_subpixel_order = v
 
 /**
+ * cairo_surface_observer_callback_t: : the #cairo_surface_observer_t : the observed surface
 */
 opaque type cairo_surface_observer_callback_t = CFuncPtr3[Ptr[cairo_surface_t], Ptr[cairo_surface_t], Ptr[Byte], Unit]
 object cairo_surface_observer_callback_t: 
   given _tag: Tag[cairo_surface_observer_callback_t] = Tag.materializeCFuncPtr3[Ptr[cairo_surface_t], Ptr[cairo_surface_t], Ptr[Byte], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_surface_observer_callback_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_surface_observer_callback_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[cairo_surface_t], Ptr[cairo_surface_t], Ptr[Byte], Unit]): cairo_surface_observer_callback_t = o
   extension (v: cairo_surface_observer_callback_t)
     inline def value: CFuncPtr3[Ptr[cairo_surface_t], Ptr[cairo_surface_t], Ptr[Byte], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
- * cairo_surface_type_t: _SURFACE_TYPE_IMAGE: The surface is of type image, since 1.2 _SURFACE_TYPE_PDF: The surface is of type pdf, since 1.2 _SURFACE_TYPE_PS: The surface is of type ps, since 1.2 _SURFACE_TYPE_XLIB: The surface is of type xlib, since 1.2 _SURFACE_TYPE_XCB: The surface is of type xcb, since 1.2 _SURFACE_TYPE_GLITZ: The surface is of type glitz, since 1.2 _SURFACE_TYPE_QUARTZ: The surface is of type quartz, since 1.2 _SURFACE_TYPE_WIN32: The surface is of type win32, since 1.2 _SURFACE_TYPE_BEOS: The surface is of type beos, since 1.2 _SURFACE_TYPE_DIRECTFB: The surface is of type directfb, since 1.2 _SURFACE_TYPE_SVG: The surface is of type svg, since 1.2 _SURFACE_TYPE_OS2: The surface is of type os2, since 1.4 _SURFACE_TYPE_WIN32_PRINTING: The surface is a win32 printing surface, since 1.6 _SURFACE_TYPE_QUARTZ_IMAGE: The surface is of type quartz_image, since 1.6 _SURFACE_TYPE_SCRIPT: The surface is of type script, since 1.10 _SURFACE_TYPE_QT: The surface is of type Qt, since 1.10 _SURFACE_TYPE_RECORDING: The surface is of type recording, since 1.10 _SURFACE_TYPE_VG: The surface is a OpenVG surface, since 1.10 _SURFACE_TYPE_GL: The surface is of type OpenGL, since 1.10 _SURFACE_TYPE_DRM: The surface is of type Direct Render Manager, since 1.10 _SURFACE_TYPE_TEE: The surface is of type 'tee' (a multiplexing surface), since 1.10 _SURFACE_TYPE_XML: The surface is of type XML (for debugging), since 1.10 _SURFACE_TYPE_SUBSURFACE: The surface is a subsurface created with cairo_surface_create_for_rectangle(), since 1.10 _SURFACE_TYPE_COGL: This surface is of type Cogl, since 1.12
+ * cairo_surface_type_t: _SURFACE_TYPE_IMAGE: The surface is of type image, since 1.2 _SURFACE_TYPE_PDF: The surface is of type pdf, since 1.2 _SURFACE_TYPE_PS: The surface is of type ps, since 1.2 _SURFACE_TYPE_XLIB: The surface is of type xlib, since 1.2 _SURFACE_TYPE_XCB: The surface is of type xcb, since 1.2 _SURFACE_TYPE_GLITZ: The surface is of type glitz, since 1.2, deprecated 1.18 (glitz support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_QUARTZ: The surface is of type quartz, since 1.2 _SURFACE_TYPE_WIN32: The surface is of type win32, since 1.2 _SURFACE_TYPE_BEOS: The surface is of type beos, since 1.2, deprecated 1.18 (beos support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_DIRECTFB: The surface is of type directfb, since 1.2, deprecated 1.18 (directfb support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_SVG: The surface is of type svg, since 1.2 _SURFACE_TYPE_OS2: The surface is of type os2, since 1.4, deprecated 1.18 (os2 support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_WIN32_PRINTING: The surface is a win32 printing surface, since 1.6 _SURFACE_TYPE_QUARTZ_IMAGE: The surface is of type quartz_image, since 1.6 _SURFACE_TYPE_SCRIPT: The surface is of type script, since 1.10 _SURFACE_TYPE_QT: The surface is of type Qt, since 1.10, deprecated 1.18 (Ot support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_RECORDING: The surface is of type recording, since 1.10 _SURFACE_TYPE_VG: The surface is a OpenVG surface, since 1.10, deprecated 1.18 (OpenVG support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_GL: The surface is of type OpenGL, since 1.10, deprecated 1.18 (OpenGL support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_DRM: The surface is of type Direct Render Manager, since 1.10, deprecated 1.18 (DRM support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_TEE: The surface is of type 'tee' (a multiplexing surface), since 1.10 _SURFACE_TYPE_XML: The surface is of type XML (for debugging), since 1.10 _SURFACE_TYPE_SKIA: The surface is of type Skia, since 1.10, deprecated 1.18 (Skia support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_SUBSURFACE: The surface is a subsurface created with cairo_surface_create_for_rectangle(), since 1.10 _SURFACE_TYPE_COGL: This surface is of type Cogl, since 1.12, deprecated 1.18 (Cogl support have been removed, this surface type will never be set by cairo)
 */
 type cairo_surface_type_t = _cairo_surface_type
 object cairo_surface_type_t: 
@@ -336,11 +357,11 @@ object cairo_text_cluster_flags_t:
 opaque type cairo_user_scaled_font_init_func_t = CFuncPtr3[Ptr[cairo_scaled_font_t], Ptr[cairo_t], Ptr[cairo_font_extents_t], cairo_status_t]
 object cairo_user_scaled_font_init_func_t: 
   given _tag: Tag[cairo_user_scaled_font_init_func_t] = Tag.materializeCFuncPtr3[Ptr[cairo_scaled_font_t], Ptr[cairo_t], Ptr[cairo_font_extents_t], cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_user_scaled_font_init_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_user_scaled_font_init_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[cairo_scaled_font_t], Ptr[cairo_t], Ptr[cairo_font_extents_t], cairo_status_t]): cairo_user_scaled_font_init_func_t = o
   extension (v: cairo_user_scaled_font_init_func_t)
     inline def value: CFuncPtr3[Ptr[cairo_scaled_font_t], Ptr[cairo_t], Ptr[cairo_font_extents_t], cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_user_scaled_font_render_glyph_func_t: _font: user scaled-font : glyph code to render : cairo context to draw to, in font space : glyph extents to fill in, in font space
@@ -348,11 +369,11 @@ object cairo_user_scaled_font_init_func_t:
 opaque type cairo_user_scaled_font_render_glyph_func_t = CFuncPtr4[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[cairo_t], Ptr[cairo_text_extents_t], cairo_status_t]
 object cairo_user_scaled_font_render_glyph_func_t: 
   given _tag: Tag[cairo_user_scaled_font_render_glyph_func_t] = Tag.materializeCFuncPtr4[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[cairo_t], Ptr[cairo_text_extents_t], cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_user_scaled_font_render_glyph_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_user_scaled_font_render_glyph_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[cairo_t], Ptr[cairo_text_extents_t], cairo_status_t]): cairo_user_scaled_font_render_glyph_func_t = o
   extension (v: cairo_user_scaled_font_render_glyph_func_t)
     inline def value: CFuncPtr4[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[cairo_t], Ptr[cairo_text_extents_t], cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_user_scaled_font_text_to_glyphs_func_t: _font: the scaled-font being created : a string of text encoded in UTF-8 _len: length of in bytes : pointer to array of glyphs to fill, in font space : pointer to array of cluster mapping information to fill, or %NULL _flags: pointer to location to store cluster flags corresponding to the output
@@ -360,11 +381,11 @@ object cairo_user_scaled_font_render_glyph_func_t:
 opaque type cairo_user_scaled_font_text_to_glyphs_func_t = CFuncPtr8[Ptr[cairo_scaled_font_t], CString, CInt, Ptr[Ptr[cairo_glyph_t]], Ptr[CInt], Ptr[Ptr[cairo_text_cluster_t]], Ptr[CInt], Ptr[cairo_text_cluster_flags_t], cairo_status_t]
 object cairo_user_scaled_font_text_to_glyphs_func_t: 
   given _tag: Tag[cairo_user_scaled_font_text_to_glyphs_func_t] = Tag.materializeCFuncPtr8[Ptr[cairo_scaled_font_t], CString, CInt, Ptr[Ptr[cairo_glyph_t]], Ptr[CInt], Ptr[Ptr[cairo_text_cluster_t]], Ptr[CInt], Ptr[cairo_text_cluster_flags_t], cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_user_scaled_font_text_to_glyphs_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_user_scaled_font_text_to_glyphs_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr8[Ptr[cairo_scaled_font_t], CString, CInt, Ptr[Ptr[cairo_glyph_t]], Ptr[CInt], Ptr[Ptr[cairo_text_cluster_t]], Ptr[CInt], Ptr[cairo_text_cluster_flags_t], cairo_status_t]): cairo_user_scaled_font_text_to_glyphs_func_t = o
   extension (v: cairo_user_scaled_font_text_to_glyphs_func_t)
     inline def value: CFuncPtr8[Ptr[cairo_scaled_font_t], CString, CInt, Ptr[Ptr[cairo_glyph_t]], Ptr[CInt], Ptr[Ptr[cairo_text_cluster_t]], Ptr[CInt], Ptr[cairo_text_cluster_flags_t], cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_user_scaled_font_unicode_to_glyph_func_t: _font: the scaled-font being created : input unicode character code-point _index: output glyph index
@@ -372,11 +393,11 @@ object cairo_user_scaled_font_text_to_glyphs_func_t:
 opaque type cairo_user_scaled_font_unicode_to_glyph_func_t = CFuncPtr3[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[CUnsignedLongInt], cairo_status_t]
 object cairo_user_scaled_font_unicode_to_glyph_func_t: 
   given _tag: Tag[cairo_user_scaled_font_unicode_to_glyph_func_t] = Tag.materializeCFuncPtr3[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[CUnsignedLongInt], cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_user_scaled_font_unicode_to_glyph_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_user_scaled_font_unicode_to_glyph_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[CUnsignedLongInt], cairo_status_t]): cairo_user_scaled_font_unicode_to_glyph_func_t = o
   extension (v: cairo_user_scaled_font_unicode_to_glyph_func_t)
     inline def value: CFuncPtr3[Ptr[cairo_scaled_font_t], CUnsignedLongInt, Ptr[CUnsignedLongInt], cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * cairo_write_func_t: : the output closure
@@ -384,8 +405,8 @@ object cairo_user_scaled_font_unicode_to_glyph_func_t:
 opaque type cairo_write_func_t = CFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t]
 object cairo_write_func_t: 
   given _tag: Tag[cairo_write_func_t] = Tag.materializeCFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t]
-  inline def fromPtr(ptr: Ptr[Byte]): cairo_write_func_t = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): cairo_write_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t]): cairo_write_func_t = o
   extension (v: cairo_write_func_t)
     inline def value: CFuncPtr3[Ptr[Byte], Ptr[CUnsignedChar], CUnsignedInt, cairo_status_t] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)

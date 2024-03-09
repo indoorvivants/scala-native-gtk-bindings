@@ -5,26 +5,18 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type _cairo = CStruct0
 object _cairo:
   given _tag: Tag[_cairo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _cairo_device = CStruct0
 object _cairo_device:
   given _tag: Tag[_cairo_device] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _cairo_font_face = CStruct0
 object _cairo_font_face:
   given _tag: Tag[_cairo_font_face] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _cairo_font_options = CStruct0
 object _cairo_font_options:
   given _tag: Tag[_cairo_font_options] = Tag.materializeCStruct0Tag
@@ -59,14 +51,12 @@ object _cairo_matrix:
     def y0 : Double = struct._6
     def y0_=(value: Double): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _cairo_pattern = CStruct0
 object _cairo_pattern:
   given _tag: Tag[_cairo_pattern] = Tag.materializeCStruct0Tag
 
 /**
- * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type _cairo_rectangle = CStruct4[Double, Double, Double, Double]
 object _cairo_rectangle:
@@ -90,7 +80,7 @@ object _cairo_rectangle:
     def height_=(value: Double): Unit = !struct.at4 = value
 
 /**
- * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type _cairo_rectangle_int = CStruct4[CInt, CInt, CInt, CInt]
 object _cairo_rectangle_int:
@@ -134,20 +124,14 @@ object _cairo_rectangle_list:
     def num_rectangles : CInt = struct._3
     def num_rectangles_=(value: CInt): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _cairo_region = CStruct0
 object _cairo_region:
   given _tag: Tag[_cairo_region] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _cairo_scaled_font = CStruct0
 object _cairo_scaled_font:
   given _tag: Tag[_cairo_scaled_font] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _cairo_surface = CStruct0
 object _cairo_surface:
   given _tag: Tag[_cairo_surface] = Tag.materializeCStruct0Tag
@@ -167,8 +151,6 @@ object _cairo_user_data_key:
     def unused : CInt = struct._1
     def unused_=(value: CInt): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type cairo_device_t = CStruct0
 object cairo_device_t:
   given _tag: Tag[cairo_device_t] = Tag.materializeCStruct0Tag
@@ -200,14 +182,10 @@ object cairo_font_extents_t:
     def max_y_advance : Double = struct._5
     def max_y_advance_=(value: Double): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type cairo_font_face_t = CStruct0
 object cairo_font_face_t:
   given _tag: Tag[cairo_font_face_t] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type cairo_font_options_t = CStruct0
 object cairo_font_options_t:
   given _tag: Tag[cairo_font_options_t] = Tag.materializeCStruct0Tag
@@ -305,14 +283,12 @@ object cairo_path_t:
     def num_data : CInt = struct._3
     def num_data_=(value: CInt): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type cairo_pattern_t = CStruct0
 object cairo_pattern_t:
   given _tag: Tag[cairo_pattern_t] = Tag.materializeCStruct0Tag
 
 /**
- * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type cairo_rectangle_int_t = CStruct4[CInt, CInt, CInt, CInt]
 object cairo_rectangle_int_t:
@@ -357,7 +333,7 @@ object cairo_rectangle_list_t:
     def num_rectangles_=(value: CInt): Unit = !struct.at3 = value
 
 /**
- * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type cairo_rectangle_t = CStruct4[Double, Double, Double, Double]
 object cairo_rectangle_t:
@@ -380,26 +356,18 @@ object cairo_rectangle_t:
     def height : Double = struct._4
     def height_=(value: Double): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type cairo_region_t = CStruct0
 object cairo_region_t:
   given _tag: Tag[cairo_region_t] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type cairo_scaled_font_t = CStruct0
 object cairo_scaled_font_t:
   given _tag: Tag[cairo_scaled_font_t] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type cairo_surface_t = CStruct0
 object cairo_surface_t:
   given _tag: Tag[cairo_surface_t] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type cairo_t = CStruct0
 object cairo_t:
   given _tag: Tag[cairo_t] = Tag.materializeCStruct0Tag

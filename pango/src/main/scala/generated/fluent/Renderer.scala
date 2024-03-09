@@ -4,44 +4,152 @@ import _root_.sn.gnome.pango.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class Renderer(private[fluent] val raw: Ptr[PangoRenderer]) extends sn.gnome.gobject.fluent.Object:
-  def activate(): Unit = pango_renderer_activate(this.raw)
+import _root_.scala.scalanative.unsigned.*
+import sn.gnome.glib.internal.guint16
+import sn.gnome.gobject.fluent.Object
+import sn.gnome.pango.fluent.Font
+import sn.gnome.pango.fluent.Layout
+import sn.gnome.pango.internal.PangoColor
+import sn.gnome.pango.internal.PangoGlyph
+import sn.gnome.pango.internal.PangoGlyphItem
+import sn.gnome.pango.internal.PangoGlyphString
+import sn.gnome.pango.internal.PangoLayoutLine
+import sn.gnome.pango.internal.PangoMatrix
+import sn.gnome.pango.internal.PangoRenderPart
+import sn.gnome.pango.internal.PangoRenderer
 
-  def deactivate(): Unit = pango_renderer_deactivate(this.raw)
+class Renderer(raw: Ptr[PangoRenderer]) extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def drawErrorUnderline(x : Int, y : Int, width : Int, height : Int): Unit = pango_renderer_draw_error_underline(this.raw, x, y, width, height)
+  def activate(): Unit = pango_renderer_activate(this.raw.asInstanceOf)
 
-  def drawGlyph(font : sn.gnome.pango.fluent.Font, glyph : Any /* Some(Glyph): PangoGlyph*/, x : Double, y : Double): Unit = pango_renderer_draw_glyph(this.raw, font.raw, glyph, x, y)
+  def deactivate(): Unit = pango_renderer_deactivate(this.raw.asInstanceOf)
 
-  def drawGlyphItem(text : String, glyph_item : Any /* Some(GlyphItem): PangoGlyphItem**/, x : Int, y : Int): Unit = pango_renderer_draw_glyph_item(this.raw, text, glyph_item, x, y)
+  def drawErrorUnderline(x: Int, y: Int, width: Int, height: Int): Unit =
+    pango_renderer_draw_error_underline(
+      this.raw.asInstanceOf,
+      x,
+      y,
+      width,
+      height
+    )
 
-  def drawGlyphs(font : sn.gnome.pango.fluent.Font, glyphs : Any /* Some(GlyphString): PangoGlyphString**/, x : Int, y : Int): Unit = pango_renderer_draw_glyphs(this.raw, font.raw, glyphs, x, y)
+  def drawGlyph(font: Font, glyph: PangoGlyph, x: Double, y: Double): Unit =
+    pango_renderer_draw_glyph(
+      this.raw.asInstanceOf,
+      font.getUnsafeRawPointer().asInstanceOf,
+      glyph,
+      x,
+      y
+    )
 
-  def drawLayout(layout : sn.gnome.pango.fluent.Layout, x : Int, y : Int): Unit = pango_renderer_draw_layout(this.raw, layout.raw, x, y)
+  def drawGlyphItem(
+      text: String | CString,
+      glyph_item: Ptr[PangoGlyphItem],
+      x: Int,
+      y: Int
+  )(using Zone): Unit = pango_renderer_draw_glyph_item(
+    this.raw.asInstanceOf,
+    __sn_extract_string(text),
+    glyph_item,
+    x,
+    y
+  )
 
-  def drawLayoutLine(line : Any /* Some(LayoutLine): PangoLayoutLine**/, x : Int, y : Int): Unit = pango_renderer_draw_layout_line(this.raw, line, x, y)
+  def drawGlyphs(
+      font: Font,
+      glyphs: Ptr[PangoGlyphString],
+      x: Int,
+      y: Int
+  ): Unit = pango_renderer_draw_glyphs(
+    this.raw.asInstanceOf,
+    font.getUnsafeRawPointer().asInstanceOf,
+    glyphs,
+    x,
+    y
+  )
 
-  def drawRectangle(part : PangoRenderPart, x : Int, y : Int, width : Int, height : Int): Unit = pango_renderer_draw_rectangle(this.raw, part, x, y, width, height)
+  def drawLayout(layout: Layout, x: Int, y: Int): Unit =
+    pango_renderer_draw_layout(
+      this.raw.asInstanceOf,
+      layout.getUnsafeRawPointer().asInstanceOf,
+      x,
+      y
+    )
 
-  def drawTrapezoid(part : PangoRenderPart, `y1_` : Double, x11 : Double, x21 : Double, y2 : Double, x12 : Double, x22 : Double): Unit = pango_renderer_draw_trapezoid(this.raw, part, `y1_`, x11, x21, y2, x12, x22)
+  def drawLayoutLine(line: Ptr[PangoLayoutLine], x: Int, y: Int): Unit =
+    pango_renderer_draw_layout_line(this.raw.asInstanceOf, line, x, y)
 
-  def getAlpha(part : PangoRenderPart): UShort = pango_renderer_get_alpha(this.raw, part)
+  def drawRectangle(
+      part: PangoRenderPart,
+      x: Int,
+      y: Int,
+      width: Int,
+      height: Int
+  ): Unit = pango_renderer_draw_rectangle(
+    this.raw.asInstanceOf,
+    part,
+    x,
+    y,
+    width,
+    height
+  )
 
-  def getColor(part : PangoRenderPart): Any /* Some(Color): PangoColor**/ = pango_renderer_get_color(this.raw, part)
+  def drawTrapezoid(
+      part: PangoRenderPart,
+      `y1_`: Double,
+      x11: Double,
+      x21: Double,
+      y2: Double,
+      x12: Double,
+      x22: Double
+  ): Unit = pango_renderer_draw_trapezoid(
+    this.raw.asInstanceOf,
+    part,
+    `y1_`,
+    x11,
+    x21,
+    y2,
+    x12,
+    x22
+  )
 
-  def getLayout(): sn.gnome.pango.fluent.Layout = pango_renderer_get_layout(this.raw)
+  def getAlpha(part: PangoRenderPart): UShort =
+    pango_renderer_get_alpha(this.raw.asInstanceOf, part).value
 
-  def getLayoutLine(): Any /* Some(LayoutLine): PangoLayoutLine**/ = pango_renderer_get_layout_line(this.raw)
+  def getColor(part: PangoRenderPart): Ptr[PangoColor] =
+    pango_renderer_get_color(this.raw.asInstanceOf, part)
 
-  def getMatrix(): Any /* Some(Matrix): const PangoMatrix**/ = pango_renderer_get_matrix(this.raw)
+  def getLayout(): Layout = new Layout(
+    pango_renderer_get_layout(this.raw.asInstanceOf).asInstanceOf
+  )
 
-  def partChanged(part : PangoRenderPart): Unit = pango_renderer_part_changed(this.raw, part)
+  def getLayoutLine(): Ptr[PangoLayoutLine] = pango_renderer_get_layout_line(
+    this.raw.asInstanceOf
+  )
 
-  def setAlpha(part : PangoRenderPart, alpha : UShort): Unit = pango_renderer_set_alpha(this.raw, part, alpha)
+  def getMatrix(): Ptr[PangoMatrix] = pango_renderer_get_matrix(
+    this.raw.asInstanceOf
+  )
 
-  def setColor(part : PangoRenderPart, color : Any /* Some(Color): const PangoColor**/): Unit = pango_renderer_set_color(this.raw, part, color)
+  def partChanged(part: PangoRenderPart): Unit =
+    pango_renderer_part_changed(this.raw.asInstanceOf, part)
 
-  def setMatrix(matrix : Any /* Some(Matrix): const PangoMatrix**/): Unit = pango_renderer_set_matrix(this.raw, matrix)
+  def setAlpha(part: PangoRenderPart, alpha: UShort): Unit =
+    pango_renderer_set_alpha(this.raw.asInstanceOf, part, guint16(alpha))
 
+  def setColor(part: PangoRenderPart, color: Ptr[PangoColor]): Unit =
+    pango_renderer_set_color(this.raw.asInstanceOf, part, color)
+
+  def setMatrix(matrix: Ptr[PangoMatrix]): Unit =
+    pango_renderer_set_matrix(this.raw.asInstanceOf, matrix)
+
+  private inline def __sn_extract_string(str: String | CString)(using
+      Zone
+  ): CString =
+    str match
+      case s: String  => toCString(s)
+      case s: CString => s
+    end match
+  end __sn_extract_string
 end Renderer
-

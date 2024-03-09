@@ -17,6 +17,7 @@ import sn.gnome.gobject.fluent.ParamSpec
 import sn.gnome.gobject.internal.GBindingFlags
 import sn.gnome.gobject.internal.GBindingTransformFunc
 import sn.gnome.gobject.internal.GClosure
+import sn.gnome.gobject.internal.GObject
 import sn.gnome.gobject.internal.GParameter
 import sn.gnome.gobject.internal.GToggleNotify
 import sn.gnome.gobject.internal.GType
@@ -160,7 +161,7 @@ class Object(raw: Ptr[GObject]):
   def isFloating(): Boolean =
     g_object_is_floating(this.raw.asInstanceOf).value.!=(0)
 
-  def notify(property_name: String | CString)(using Zone): Unit =
+  def _notify(property_name: String | CString)(using Zone): Unit =
     g_object_notify(
       this.raw.asInstanceOf,
       __sn_extract_string(property_name).asInstanceOf[Ptr[gchar]]

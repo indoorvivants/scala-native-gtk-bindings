@@ -158,8 +158,6 @@ object PangoAttrInt:
     def value : CInt = struct._2
     def value_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type PangoAttrIterator = CStruct0
 object PangoAttrIterator:
   given _tag: Tag[PangoAttrIterator] = Tag.materializeCStruct0Tag
@@ -182,8 +180,6 @@ object PangoAttrLanguage:
     def value : Ptr[PangoLanguage] = struct._2
     def value_=(value: Ptr[PangoLanguage]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type PangoAttrList = CStruct0
 object PangoAttrList:
   given _tag: Tag[PangoAttrList] = Tag.materializeCStruct0Tag
@@ -299,20 +295,14 @@ object PangoColor:
     def blue : _root_.sn.gnome.glib.internal.guint16 = struct._3
     def blue_=(value: _root_.sn.gnome.glib.internal.guint16): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type PangoContext = CStruct0
 object PangoContext:
   given _tag: Tag[PangoContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoContextClass = CStruct0
 object PangoContextClass:
   given _tag: Tag[PangoContextClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoCoverage = CStruct0
 object PangoCoverage:
   given _tag: Tag[PangoCoverage] = Tag.materializeCStruct0Tag
@@ -476,8 +466,6 @@ object PangoFont:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type PangoFontClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoCoverage]], CFuncPtr4[Ptr[PangoFont], PangoGlyph, Ptr[PangoRectangle], Ptr[PangoRectangle], Unit], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontMap]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr4[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_feature_t], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Unit], CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]]]
 object PangoFontClass:
   given _tag: Tag[PangoFontClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoCoverage]], CFuncPtr4[Ptr[PangoFont], PangoGlyph, Ptr[PangoRectangle], Ptr[PangoRectangle], Unit], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontMap]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr4[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_feature_t], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Unit], CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]]]
@@ -514,8 +502,6 @@ object PangoFontClass:
     def create_hb_font : CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]] = struct._9
     def create_hb_font_=(value: CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type PangoFontDescription = CStruct0
 object PangoFontDescription:
   given _tag: Tag[PangoFontDescription] = Tag.materializeCStruct0Tag
@@ -535,8 +521,6 @@ object PangoFontFace:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type PangoFontFaceClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object PangoFontFaceClass:
   given _tag: Tag[PangoFontFaceClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -585,8 +569,6 @@ object PangoFontFamily:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type PangoFontFamilyClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
 object PangoFontFamilyClass:
   given _tag: Tag[PangoFontFamilyClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
@@ -671,8 +653,6 @@ object PangoFontMapClass:
     def get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]] = struct._9
     def get_face_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type PangoFontMetrics = CStruct10[_root_.sn.gnome.glib.internal.guint, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt]
 object PangoFontMetrics:
   given _tag: Tag[PangoFontMetrics] = Tag.materializeCStruct10Tag[_root_.sn.gnome.glib.internal.guint, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt]
@@ -766,14 +746,10 @@ object PangoFontsetClass:
     def _pango_reserved4 : CFuncPtr0[Unit] = struct._9
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type PangoFontsetSimple = CStruct0
 object PangoFontsetSimple:
   given _tag: Tag[PangoFontsetSimple] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoFontsetSimpleClass = CStruct0
 object PangoFontsetSimpleClass:
   given _tag: Tag[PangoFontsetSimpleClass] = Tag.materializeCStruct0Tag
@@ -820,8 +796,6 @@ object PangoGlyphInfo:
     def attr : PangoGlyphVisAttr = struct._3
     def attr_=(value: PangoGlyphVisAttr): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type PangoGlyphItem = CStruct5[Ptr[Byte], Ptr[PangoGlyphString], CInt, CInt, CInt]
 object PangoGlyphItem:
   given _tag: Tag[PangoGlyphItem] = Tag.materializeCStruct5Tag[Ptr[Byte], Ptr[PangoGlyphString], CInt, CInt, CInt]
@@ -846,8 +820,6 @@ object PangoGlyphItem:
     def end_x_offset : CInt = struct._5
     def end_x_offset_=(value: CInt): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type PangoGlyphItemIter = CStruct8[Ptr[Byte], Ptr[_root_.sn.gnome.glib.internal.gchar], CInt, CInt, CInt, CInt, CInt, CInt]
 object PangoGlyphItemIter:
   given _tag: Tag[PangoGlyphItemIter] = Tag.materializeCStruct8Tag[Ptr[Byte], Ptr[_root_.sn.gnome.glib.internal.gchar], CInt, CInt, CInt, CInt, CInt, CInt]
@@ -947,26 +919,18 @@ object PangoItem:
     def analysis : PangoAnalysis = struct._4
     def analysis_=(value: PangoAnalysis): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type PangoLanguage = CStruct0
 object PangoLanguage:
   given _tag: Tag[PangoLanguage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoLayout = CStruct0
 object PangoLayout:
   given _tag: Tag[PangoLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoLayoutClass = CStruct0
 object PangoLayoutClass:
   given _tag: Tag[PangoLayoutClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoLayoutIter = CStruct0
 object PangoLayoutIter:
   given _tag: Tag[PangoLayoutIter] = Tag.materializeCStruct0Tag
@@ -1202,20 +1166,14 @@ object PangoRendererClass:
     def _pango_reserved4 : CFuncPtr0[Unit] = struct._15
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type PangoRendererPrivate = CStruct0
 object PangoRendererPrivate:
   given _tag: Tag[PangoRendererPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoScriptIter = CStruct0
 object PangoScriptIter:
   given _tag: Tag[PangoScriptIter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type PangoTabArray = CStruct0
 object PangoTabArray:
   given _tag: Tag[PangoTabArray] = Tag.materializeCStruct0Tag
@@ -1373,8 +1331,6 @@ object _PangoAttrInt:
     def value : CInt = struct._2
     def value_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _PangoAttrIterator = CStruct0
 object _PangoAttrIterator:
   given _tag: Tag[_PangoAttrIterator] = Tag.materializeCStruct0Tag
@@ -1397,8 +1353,6 @@ object _PangoAttrLanguage:
     def value : Ptr[PangoLanguage] = struct._2
     def value_=(value: Ptr[PangoLanguage]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _PangoAttrList = CStruct0
 object _PangoAttrList:
   given _tag: Tag[_PangoAttrList] = Tag.materializeCStruct0Tag
@@ -1514,20 +1468,14 @@ object _PangoColor:
     def blue : _root_.sn.gnome.glib.internal.guint16 = struct._3
     def blue_=(value: _root_.sn.gnome.glib.internal.guint16): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _PangoContext = CStruct0
 object _PangoContext:
   given _tag: Tag[_PangoContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoContextClass = CStruct0
 object _PangoContextClass:
   given _tag: Tag[_PangoContextClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoCoverage = CStruct0
 object _PangoCoverage:
   given _tag: Tag[_PangoCoverage] = Tag.materializeCStruct0Tag
@@ -1691,8 +1639,6 @@ object _PangoFont:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _PangoFontClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoCoverage]], CFuncPtr4[Ptr[PangoFont], PangoGlyph, Ptr[PangoRectangle], Ptr[PangoRectangle], Unit], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontMap]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr4[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_feature_t], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Unit], CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]]]
 object _PangoFontClass:
   given _tag: Tag[_PangoFontClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoCoverage]], CFuncPtr4[Ptr[PangoFont], PangoGlyph, Ptr[PangoRectangle], Ptr[PangoRectangle], Unit], CFuncPtr2[Ptr[PangoFont], Ptr[PangoLanguage], Ptr[PangoFontMetrics]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontMap]], CFuncPtr1[Ptr[PangoFont], Ptr[PangoFontDescription]], CFuncPtr4[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_feature_t], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Unit], CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]]]
@@ -1729,8 +1675,6 @@ object _PangoFontClass:
     def create_hb_font : CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]] = struct._9
     def create_hb_font_=(value: CFuncPtr1[Ptr[PangoFont], Ptr[_root_.sn.gnome.harfbuzz.internal.hb_font_t]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _PangoFontDescription = CStruct0
 object _PangoFontDescription:
   given _tag: Tag[_PangoFontDescription] = Tag.materializeCStruct0Tag
@@ -1750,8 +1694,6 @@ object _PangoFontFace:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _PangoFontFaceClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _PangoFontFaceClass:
   given _tag: Tag[_PangoFontFaceClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -1800,8 +1742,6 @@ object _PangoFontFamily:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _PangoFontFamilyClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
 object _PangoFontFamilyClass:
   given _tag: Tag[_PangoFontFamilyClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
@@ -1886,8 +1826,6 @@ object _PangoFontMapClass:
     def get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]] = struct._9
     def get_face_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _PangoFontMetrics = CStruct10[_root_.sn.gnome.glib.internal.guint, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt]
 object _PangoFontMetrics:
   given _tag: Tag[_PangoFontMetrics] = Tag.materializeCStruct10Tag[_root_.sn.gnome.glib.internal.guint, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt, CInt]
@@ -1981,14 +1919,10 @@ object _PangoFontsetClass:
     def _pango_reserved4 : CFuncPtr0[Unit] = struct._9
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _PangoFontsetSimple = CStruct0
 object _PangoFontsetSimple:
   given _tag: Tag[_PangoFontsetSimple] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoFontsetSimpleClass = CStruct0
 object _PangoFontsetSimpleClass:
   given _tag: Tag[_PangoFontsetSimpleClass] = Tag.materializeCStruct0Tag
@@ -2035,8 +1969,6 @@ object _PangoGlyphInfo:
     def attr : PangoGlyphVisAttr = struct._3
     def attr_=(value: PangoGlyphVisAttr): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _PangoGlyphItem = CStruct5[Ptr[Byte], Ptr[PangoGlyphString], CInt, CInt, CInt]
 object _PangoGlyphItem:
   given _tag: Tag[_PangoGlyphItem] = Tag.materializeCStruct5Tag[Ptr[Byte], Ptr[PangoGlyphString], CInt, CInt, CInt]
@@ -2061,8 +1993,6 @@ object _PangoGlyphItem:
     def end_x_offset : CInt = struct._5
     def end_x_offset_=(value: CInt): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _PangoGlyphItemIter = CStruct8[Ptr[Byte], Ptr[_root_.sn.gnome.glib.internal.gchar], CInt, CInt, CInt, CInt, CInt, CInt]
 object _PangoGlyphItemIter:
   given _tag: Tag[_PangoGlyphItemIter] = Tag.materializeCStruct8Tag[Ptr[Byte], Ptr[_root_.sn.gnome.glib.internal.gchar], CInt, CInt, CInt, CInt, CInt, CInt]
@@ -2162,26 +2092,18 @@ object _PangoItem:
     def analysis : PangoAnalysis = struct._4
     def analysis_=(value: PangoAnalysis): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _PangoLanguage = CStruct0
 object _PangoLanguage:
   given _tag: Tag[_PangoLanguage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoLayout = CStruct0
 object _PangoLayout:
   given _tag: Tag[_PangoLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoLayoutClass = CStruct0
 object _PangoLayoutClass:
   given _tag: Tag[_PangoLayoutClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoLayoutIter = CStruct0
 object _PangoLayoutIter:
   given _tag: Tag[_PangoLayoutIter] = Tag.materializeCStruct0Tag
@@ -2417,20 +2339,14 @@ object _PangoRendererClass:
     def _pango_reserved4 : CFuncPtr0[Unit] = struct._15
     def _pango_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _PangoRendererPrivate = CStruct0
 object _PangoRendererPrivate:
   given _tag: Tag[_PangoRendererPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoScriptIter = CStruct0
 object _PangoScriptIter:
   given _tag: Tag[_PangoScriptIter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _PangoTabArray = CStruct0
 object _PangoTabArray:
   given _tag: Tag[_PangoTabArray] = Tag.materializeCStruct0Tag

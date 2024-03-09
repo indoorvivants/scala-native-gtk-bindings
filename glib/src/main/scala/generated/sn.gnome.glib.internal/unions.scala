@@ -5,12 +5,8 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object GDoubleIEEE754:
-  /**
-  */
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct4Tag[guint, guint, guint, guint]
@@ -53,12 +49,8 @@ object GDoubleIEEE754:
     def mpn : GDoubleIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]]
     def mpn_=(value: GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]] = value
 
-/**
-*/
 opaque type GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
 object GFloatIEEE754:
-  /**
-  */
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[guint, guint, guint]
@@ -98,8 +90,6 @@ object GFloatIEEE754:
     def mpn : GFloatIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[GFloatIEEE754.Struct0]]
     def mpn_=(value: GFloatIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GFloatIEEE754.Struct0]] = value
 
-/**
-*/
 opaque type GMutex = CArray[Byte, Nat._8]
 object GMutex:
   given _tag: Tag[GMutex] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -124,8 +114,6 @@ object GMutex:
     def i : CArray[guint, Nat._2] = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]]
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]] = value
 
-/**
-*/
 opaque type GTokenValue = CArray[Byte, Nat._8]
 object GTokenValue:
   given _tag: Tag[GTokenValue] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -230,12 +218,8 @@ object GTokenValue:
     def v_error : guint = !struct.at(0).asInstanceOf[Ptr[guint]]
     def v_error_=(value: guint): Unit = !struct.at(0).asInstanceOf[Ptr[guint]] = value
 
-/**
-*/
 opaque type _GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object _GDoubleIEEE754:
-  /**
-  */
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct4Tag[guint, guint, guint, guint]
@@ -278,12 +262,8 @@ object _GDoubleIEEE754:
     def mpn : _GDoubleIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]]
     def mpn_=(value: _GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]] = value
 
-/**
-*/
 opaque type _GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
 object _GFloatIEEE754:
-  /**
-  */
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[guint, guint, guint]
@@ -323,8 +303,6 @@ object _GFloatIEEE754:
     def mpn : _GFloatIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GFloatIEEE754.Struct0]]
     def mpn_=(value: _GFloatIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GFloatIEEE754.Struct0]] = value
 
-/**
-*/
 opaque type _GMutex = CArray[Byte, Nat._8]
 object _GMutex:
   given _tag: Tag[_GMutex] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
@@ -349,8 +327,6 @@ object _GMutex:
     def i : CArray[guint, Nat._2] = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]]
     def i_=(value: CArray[guint, Nat._2]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guint, Nat._2]]] = value
 
-/**
-*/
 opaque type _GTokenValue = CArray[Byte, Nat._8]
 object _GTokenValue:
   given _tag: Tag[_GTokenValue] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)

@@ -9,6 +9,7 @@ import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.Object
 import sn.gnome.gobject.internal.GBindingFlags
+import sn.gnome.gobject.internal.GBindingGroup
 import sn.gnome.gobject.internal.GBindingTransformFunc
 import sn.gnome.gobject.internal.GClosure
 

@@ -18,11 +18,11 @@ object FILE:
 opaque type PangoAttrDataCopyFunc = CFuncPtr1[_root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.gpointer]
 object PangoAttrDataCopyFunc: 
   given _tag: Tag[PangoAttrDataCopyFunc] = Tag.materializeCFuncPtr1[_root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.gpointer]
-  inline def fromPtr(ptr: Ptr[Byte]): PangoAttrDataCopyFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): PangoAttrDataCopyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[_root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.gpointer]): PangoAttrDataCopyFunc = o
   extension (v: PangoAttrDataCopyFunc)
     inline def value: CFuncPtr1[_root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.gpointer] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * PangoAttrFilterFunc: : a Pango attribute _data: user data passed to the function
@@ -30,14 +30,12 @@ object PangoAttrDataCopyFunc:
 opaque type PangoAttrFilterFunc = CFuncPtr2[Ptr[PangoAttribute], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object PangoAttrFilterFunc: 
   given _tag: Tag[PangoAttrFilterFunc] = Tag.materializeCFuncPtr2[Ptr[PangoAttribute], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): PangoAttrFilterFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): PangoAttrFilterFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[PangoAttribute], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): PangoAttrFilterFunc = o
   extension (v: PangoAttrFilterFunc)
     inline def value: CFuncPtr2[Ptr[PangoAttribute], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type PangoAttrIterator_autoptr = Ptr[PangoAttrIterator]
 object PangoAttrIterator_autoptr: 
   given _tag: Tag[PangoAttrIterator_autoptr] = Tag.Ptr[PangoAttrIterator](PangoAttrIterator._tag)
@@ -45,8 +43,6 @@ object PangoAttrIterator_autoptr:
   extension (v: PangoAttrIterator_autoptr)
     inline def value: Ptr[PangoAttrIterator] = v
 
-/**
-*/
 opaque type PangoAttrIterator_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoAttrIterator_listautoptr: 
   given _tag: Tag[PangoAttrIterator_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -54,8 +50,6 @@ object PangoAttrIterator_listautoptr:
   extension (v: PangoAttrIterator_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoAttrIterator_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoAttrIterator_queueautoptr: 
   given _tag: Tag[PangoAttrIterator_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -63,8 +57,6 @@ object PangoAttrIterator_queueautoptr:
   extension (v: PangoAttrIterator_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoAttrIterator_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoAttrIterator_slistautoptr: 
   given _tag: Tag[PangoAttrIterator_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -72,8 +64,6 @@ object PangoAttrIterator_slistautoptr:
   extension (v: PangoAttrIterator_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoAttrList_autoptr = Ptr[PangoAttrList]
 object PangoAttrList_autoptr: 
   given _tag: Tag[PangoAttrList_autoptr] = Tag.Ptr[PangoAttrList](PangoAttrList._tag)
@@ -81,8 +71,6 @@ object PangoAttrList_autoptr:
   extension (v: PangoAttrList_autoptr)
     inline def value: Ptr[PangoAttrList] = v
 
-/**
-*/
 opaque type PangoAttrList_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoAttrList_listautoptr: 
   given _tag: Tag[PangoAttrList_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -90,8 +78,6 @@ object PangoAttrList_listautoptr:
   extension (v: PangoAttrList_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoAttrList_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoAttrList_queueautoptr: 
   given _tag: Tag[PangoAttrList_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -99,8 +85,6 @@ object PangoAttrList_queueautoptr:
   extension (v: PangoAttrList_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoAttrList_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoAttrList_slistautoptr: 
   given _tag: Tag[PangoAttrList_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -108,8 +92,6 @@ object PangoAttrList_slistautoptr:
   extension (v: PangoAttrList_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoAttribute_autoptr = Ptr[PangoAttribute]
 object PangoAttribute_autoptr: 
   given _tag: Tag[PangoAttribute_autoptr] = Tag.Ptr[PangoAttribute](PangoAttribute._tag)
@@ -117,8 +99,6 @@ object PangoAttribute_autoptr:
   extension (v: PangoAttribute_autoptr)
     inline def value: Ptr[PangoAttribute] = v
 
-/**
-*/
 opaque type PangoAttribute_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoAttribute_listautoptr: 
   given _tag: Tag[PangoAttribute_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -126,8 +106,6 @@ object PangoAttribute_listautoptr:
   extension (v: PangoAttribute_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoAttribute_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoAttribute_queueautoptr: 
   given _tag: Tag[PangoAttribute_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -135,8 +113,6 @@ object PangoAttribute_queueautoptr:
   extension (v: PangoAttribute_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoAttribute_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoAttribute_slistautoptr: 
   given _tag: Tag[PangoAttribute_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -144,8 +120,6 @@ object PangoAttribute_slistautoptr:
   extension (v: PangoAttribute_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoCoverage_autoptr = Ptr[PangoCoverage]
 object PangoCoverage_autoptr: 
   given _tag: Tag[PangoCoverage_autoptr] = Tag.Ptr[PangoCoverage](PangoCoverage._tag)
@@ -153,8 +127,6 @@ object PangoCoverage_autoptr:
   extension (v: PangoCoverage_autoptr)
     inline def value: Ptr[PangoCoverage] = v
 
-/**
-*/
 opaque type PangoCoverage_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoCoverage_listautoptr: 
   given _tag: Tag[PangoCoverage_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -162,8 +134,6 @@ object PangoCoverage_listautoptr:
   extension (v: PangoCoverage_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoCoverage_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoCoverage_queueautoptr: 
   given _tag: Tag[PangoCoverage_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -171,8 +141,6 @@ object PangoCoverage_queueautoptr:
   extension (v: PangoCoverage_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoCoverage_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoCoverage_slistautoptr: 
   given _tag: Tag[PangoCoverage_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -180,8 +148,6 @@ object PangoCoverage_slistautoptr:
   extension (v: PangoCoverage_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoFontDescription_autoptr = Ptr[PangoFontDescription]
 object PangoFontDescription_autoptr: 
   given _tag: Tag[PangoFontDescription_autoptr] = Tag.Ptr[PangoFontDescription](PangoFontDescription._tag)
@@ -189,8 +155,6 @@ object PangoFontDescription_autoptr:
   extension (v: PangoFontDescription_autoptr)
     inline def value: Ptr[PangoFontDescription] = v
 
-/**
-*/
 opaque type PangoFontDescription_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoFontDescription_listautoptr: 
   given _tag: Tag[PangoFontDescription_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -198,8 +162,6 @@ object PangoFontDescription_listautoptr:
   extension (v: PangoFontDescription_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoFontDescription_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoFontDescription_queueautoptr: 
   given _tag: Tag[PangoFontDescription_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -207,8 +169,6 @@ object PangoFontDescription_queueautoptr:
   extension (v: PangoFontDescription_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoFontDescription_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoFontDescription_slistautoptr: 
   given _tag: Tag[PangoFontDescription_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -216,8 +176,6 @@ object PangoFontDescription_slistautoptr:
   extension (v: PangoFontDescription_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoFontFace_autoptr = Ptr[PangoFontFace]
 object PangoFontFace_autoptr: 
   given _tag: Tag[PangoFontFace_autoptr] = Tag.Ptr[PangoFontFace](PangoFontFace._tag)
@@ -225,8 +183,6 @@ object PangoFontFace_autoptr:
   extension (v: PangoFontFace_autoptr)
     inline def value: Ptr[PangoFontFace] = v
 
-/**
-*/
 opaque type PangoFontFace_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoFontFace_listautoptr: 
   given _tag: Tag[PangoFontFace_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -234,8 +190,6 @@ object PangoFontFace_listautoptr:
   extension (v: PangoFontFace_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoFontFace_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoFontFace_queueautoptr: 
   given _tag: Tag[PangoFontFace_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -243,8 +197,6 @@ object PangoFontFace_queueautoptr:
   extension (v: PangoFontFace_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoFontFace_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoFontFace_slistautoptr: 
   given _tag: Tag[PangoFontFace_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -252,8 +204,6 @@ object PangoFontFace_slistautoptr:
   extension (v: PangoFontFace_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoFontFamily_autoptr = Ptr[PangoFontFamily]
 object PangoFontFamily_autoptr: 
   given _tag: Tag[PangoFontFamily_autoptr] = Tag.Ptr[PangoFontFamily](PangoFontFamily._tag)
@@ -261,8 +211,6 @@ object PangoFontFamily_autoptr:
   extension (v: PangoFontFamily_autoptr)
     inline def value: Ptr[PangoFontFamily] = v
 
-/**
-*/
 opaque type PangoFontFamily_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoFontFamily_listautoptr: 
   given _tag: Tag[PangoFontFamily_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -270,8 +218,6 @@ object PangoFontFamily_listautoptr:
   extension (v: PangoFontFamily_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoFontFamily_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoFontFamily_queueautoptr: 
   given _tag: Tag[PangoFontFamily_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -279,8 +225,6 @@ object PangoFontFamily_queueautoptr:
   extension (v: PangoFontFamily_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoFontFamily_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoFontFamily_slistautoptr: 
   given _tag: Tag[PangoFontFamily_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -288,8 +232,6 @@ object PangoFontFamily_slistautoptr:
   extension (v: PangoFontFamily_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoFontMap_autoptr = Ptr[PangoFontMap]
 object PangoFontMap_autoptr: 
   given _tag: Tag[PangoFontMap_autoptr] = Tag.Ptr[PangoFontMap](PangoFontMap._tag)
@@ -297,8 +239,6 @@ object PangoFontMap_autoptr:
   extension (v: PangoFontMap_autoptr)
     inline def value: Ptr[PangoFontMap] = v
 
-/**
-*/
 opaque type PangoFontMap_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoFontMap_listautoptr: 
   given _tag: Tag[PangoFontMap_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -306,8 +246,6 @@ object PangoFontMap_listautoptr:
   extension (v: PangoFontMap_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoFontMap_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoFontMap_queueautoptr: 
   given _tag: Tag[PangoFontMap_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -315,8 +253,6 @@ object PangoFontMap_queueautoptr:
   extension (v: PangoFontMap_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoFontMap_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoFontMap_slistautoptr: 
   given _tag: Tag[PangoFontMap_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -324,8 +260,6 @@ object PangoFontMap_slistautoptr:
   extension (v: PangoFontMap_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoFont_autoptr = Ptr[PangoFont]
 object PangoFont_autoptr: 
   given _tag: Tag[PangoFont_autoptr] = Tag.Ptr[PangoFont](PangoFont._tag)
@@ -333,8 +267,6 @@ object PangoFont_autoptr:
   extension (v: PangoFont_autoptr)
     inline def value: Ptr[PangoFont] = v
 
-/**
-*/
 opaque type PangoFont_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoFont_listautoptr: 
   given _tag: Tag[PangoFont_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -342,8 +274,6 @@ object PangoFont_listautoptr:
   extension (v: PangoFont_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoFont_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoFont_queueautoptr: 
   given _tag: Tag[PangoFont_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -351,8 +281,6 @@ object PangoFont_queueautoptr:
   extension (v: PangoFont_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoFont_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoFont_slistautoptr: 
   given _tag: Tag[PangoFont_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -366,11 +294,11 @@ object PangoFont_slistautoptr:
 opaque type PangoFontsetForeachFunc = CFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object PangoFontsetForeachFunc: 
   given _tag: Tag[PangoFontsetForeachFunc] = Tag.materializeCFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): PangoFontsetForeachFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): PangoFontsetForeachFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): PangoFontsetForeachFunc = o
   extension (v: PangoFontsetForeachFunc)
     inline def value: CFuncPtr3[Ptr[PangoFontset], Ptr[PangoFont], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * PangoGlyph:
@@ -392,8 +320,6 @@ object PangoGlyphUnit:
   extension (v: PangoGlyphUnit)
     inline def value: _root_.sn.gnome.glib.internal.gint32 = v
 
-/**
-*/
 opaque type PangoLayoutIter_autoptr = Ptr[PangoLayoutIter]
 object PangoLayoutIter_autoptr: 
   given _tag: Tag[PangoLayoutIter_autoptr] = Tag.Ptr[PangoLayoutIter](PangoLayoutIter._tag)
@@ -401,8 +327,6 @@ object PangoLayoutIter_autoptr:
   extension (v: PangoLayoutIter_autoptr)
     inline def value: Ptr[PangoLayoutIter] = v
 
-/**
-*/
 opaque type PangoLayoutIter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoLayoutIter_listautoptr: 
   given _tag: Tag[PangoLayoutIter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -410,8 +334,6 @@ object PangoLayoutIter_listautoptr:
   extension (v: PangoLayoutIter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoLayoutIter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoLayoutIter_queueautoptr: 
   given _tag: Tag[PangoLayoutIter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -419,8 +341,6 @@ object PangoLayoutIter_queueautoptr:
   extension (v: PangoLayoutIter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoLayoutIter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoLayoutIter_slistautoptr: 
   given _tag: Tag[PangoLayoutIter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -438,8 +358,6 @@ object PangoLayoutRun:
   extension (v: PangoLayoutRun)
     inline def value: PangoGlyphItem = v
 
-/**
-*/
 opaque type PangoLayout_autoptr = Ptr[PangoLayout]
 object PangoLayout_autoptr: 
   given _tag: Tag[PangoLayout_autoptr] = Tag.Ptr[PangoLayout](PangoLayout._tag)
@@ -447,8 +365,6 @@ object PangoLayout_autoptr:
   extension (v: PangoLayout_autoptr)
     inline def value: Ptr[PangoLayout] = v
 
-/**
-*/
 opaque type PangoLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoLayout_listautoptr: 
   given _tag: Tag[PangoLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -456,8 +372,6 @@ object PangoLayout_listautoptr:
   extension (v: PangoLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoLayout_queueautoptr: 
   given _tag: Tag[PangoLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -465,8 +379,6 @@ object PangoLayout_queueautoptr:
   extension (v: PangoLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoLayout_slistautoptr: 
   given _tag: Tag[PangoLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -474,8 +386,6 @@ object PangoLayout_slistautoptr:
   extension (v: PangoLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type PangoTabArray_autoptr = Ptr[PangoTabArray]
 object PangoTabArray_autoptr: 
   given _tag: Tag[PangoTabArray_autoptr] = Tag.Ptr[PangoTabArray](PangoTabArray._tag)
@@ -483,8 +393,6 @@ object PangoTabArray_autoptr:
   extension (v: PangoTabArray_autoptr)
     inline def value: Ptr[PangoTabArray] = v
 
-/**
-*/
 opaque type PangoTabArray_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object PangoTabArray_listautoptr: 
   given _tag: Tag[PangoTabArray_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -492,8 +400,6 @@ object PangoTabArray_listautoptr:
   extension (v: PangoTabArray_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type PangoTabArray_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object PangoTabArray_queueautoptr: 
   given _tag: Tag[PangoTabArray_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -501,8 +407,6 @@ object PangoTabArray_queueautoptr:
   extension (v: PangoTabArray_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type PangoTabArray_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object PangoTabArray_slistautoptr: 
   given _tag: Tag[PangoTabArray_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -510,9 +414,86 @@ object PangoTabArray_slistautoptr:
   extension (v: PangoTabArray_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+type int16_t = scala.Short
+object int16_t: 
+  val _tag: Tag[int16_t] = summon[Tag[scala.Short]]
+  inline def apply(inline o: scala.Short): int16_t = o
+  extension (v: int16_t)
+    inline def value: scala.Short = v
+
+type int32_t = scala.scalanative.unsafe.CInt
+object int32_t: 
+  val _tag: Tag[int32_t] = summon[Tag[scala.scalanative.unsafe.CInt]]
+  inline def apply(inline o: scala.scalanative.unsafe.CInt): int32_t = o
+  extension (v: int32_t)
+    inline def value: scala.scalanative.unsafe.CInt = v
+
+type int8_t = scala.scalanative.unsafe.CChar
+object int8_t: 
+  val _tag: Tag[int8_t] = summon[Tag[scala.scalanative.unsafe.CChar]]
+  inline def apply(inline o: scala.scalanative.unsafe.CChar): int8_t = o
+  extension (v: int8_t)
+    inline def value: scala.scalanative.unsafe.CChar = v
+
+type pthread_mutex_t = posix.sys.types.pthread_mutex_t
+object pthread_mutex_t: 
+  val _tag: Tag[pthread_mutex_t] = summon[Tag[posix.sys.types.pthread_mutex_t]]
+  inline def apply(inline o: posix.sys.types.pthread_mutex_t): pthread_mutex_t = o
+  extension (v: pthread_mutex_t)
+    inline def value: posix.sys.types.pthread_mutex_t = v
+
+type pthread_t = posix.sys.types.pthread_t
+object pthread_t: 
+  val _tag: Tag[pthread_t] = summon[Tag[posix.sys.types.pthread_t]]
+  inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
+  extension (v: pthread_t)
+    inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
+
+type time_t = posix.sys.types.time_t
+object time_t: 
+  val _tag: Tag[time_t] = summon[Tag[posix.sys.types.time_t]]
+  inline def apply(inline o: posix.sys.types.time_t): time_t = o
+  extension (v: time_t)
+    inline def value: posix.sys.types.time_t = v
+
+type tm = posix.time.tm
+object tm: 
+  val _tag: Tag[tm] = summon[Tag[posix.time.tm]]
+  inline def apply(inline o: posix.time.tm): tm = o
+  extension (v: tm)
+    inline def value: posix.time.tm = v
+
+type uint16_t = scala.scalanative.unsigned.UShort
+object uint16_t: 
+  val _tag: Tag[uint16_t] = summon[Tag[scala.scalanative.unsigned.UShort]]
+  inline def apply(inline o: scala.scalanative.unsigned.UShort): uint16_t = o
+  extension (v: uint16_t)
+    inline def value: scala.scalanative.unsigned.UShort = v
+
 type uint32_t = scala.scalanative.unsigned.UInt
 object uint32_t: 
   val _tag: Tag[uint32_t] = summon[Tag[scala.scalanative.unsigned.UInt]]
   inline def apply(inline o: scala.scalanative.unsigned.UInt): uint32_t = o
   extension (v: uint32_t)
     inline def value: scala.scalanative.unsigned.UInt = v
+
+type uint8_t = scala.scalanative.unsigned.UByte
+object uint8_t: 
+  val _tag: Tag[uint8_t] = summon[Tag[scala.scalanative.unsigned.UByte]]
+  inline def apply(inline o: scala.scalanative.unsigned.UByte): uint8_t = o
+  extension (v: uint8_t)
+    inline def value: scala.scalanative.unsigned.UByte = v
+
+type va_list = unsafe.CVarArgList
+object va_list: 
+  val _tag: Tag[va_list] = summon[Tag[unsafe.CVarArgList]]
+  inline def apply(inline o: unsafe.CVarArgList): va_list = o
+  extension (v: va_list)
+    inline def value: unsafe.CVarArgList = v

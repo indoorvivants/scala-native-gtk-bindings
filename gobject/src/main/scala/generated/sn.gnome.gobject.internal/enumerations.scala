@@ -40,16 +40,18 @@ object GBindingFlags extends CEnumU[GBindingFlags]:
     inline def is(b: GBindingFlags): Boolean = (a & b) == b
 
 /**
- * GConnectFlags: _CONNECT_AFTER: whether the handler should be called before or after the default handler of the signal. _CONNECT_SWAPPED: whether the instance and data should be swapped when calling the handler; see g_signal_connect_swapped() for an example.
+ * GConnectFlags: _CONNECT_DEFAULT: Default behaviour (no special flags). Since: 2.74 _CONNECT_AFTER: If set, the handler should be called after the default handler of the signal. Normally, the handler is called before the default handler. _CONNECT_SWAPPED: If set, the instance and data should be swapped when calling the handler; see g_signal_connect_swapped() for an example.
 */
 opaque type GConnectFlags = CUnsignedInt
 object GConnectFlags extends CEnumU[GConnectFlags]:
   given _tag: Tag[GConnectFlags] = Tag.UInt
   inline def define(inline a: Long): GConnectFlags = a.toUInt
+  val G_CONNECT_DEFAULT = define(0)
   val G_CONNECT_AFTER = define(1)
   val G_CONNECT_SWAPPED = define(2)
   inline def getName(inline value: GConnectFlags): Option[String] =
     inline value match
+      case G_CONNECT_DEFAULT => Some("G_CONNECT_DEFAULT")
       case G_CONNECT_AFTER => Some("G_CONNECT_AFTER")
       case G_CONNECT_SWAPPED => Some("G_CONNECT_SWAPPED")
       case _ => None
@@ -185,20 +187,24 @@ object GTypeDebugFlags extends CEnumU[GTypeDebugFlags]:
     inline def is(b: GTypeDebugFlags): Boolean = (a & b) == b
 
 /**
- * GTypeFlags: _TYPE_FLAG_ABSTRACT: Indicates an abstract type. No instances can be created for an abstract type _TYPE_FLAG_VALUE_ABSTRACT: Indicates an abstract value type, i.e. a type that introduces a value table, but can't be used for g_value_init() _TYPE_FLAG_FINAL: Indicates a final type. A final type is a non-derivable leaf node in a deep derivable type hierarchy tree. Since: 2.70
+ * GTypeFlags: _TYPE_FLAG_NONE: No special flags. Since: 2.74 _TYPE_FLAG_ABSTRACT: Indicates an abstract type. No instances can be created for an abstract type _TYPE_FLAG_VALUE_ABSTRACT: Indicates an abstract value type, i.e. a type that introduces a value table, but can't be used for g_value_init() _TYPE_FLAG_FINAL: Indicates a final type. A final type is a non-derivable leaf node in a deep derivable type hierarchy tree. Since: 2.70 _TYPE_FLAG_DEPRECATED: The type is deprecated and may be removed in a future version. A warning will be emitted if it is instantiated while running with `G_ENABLE_DIAGNOSTIC=1`. Since 2.76
 */
 opaque type GTypeFlags = CUnsignedInt
 object GTypeFlags extends CEnumU[GTypeFlags]:
   given _tag: Tag[GTypeFlags] = Tag.UInt
   inline def define(inline a: Long): GTypeFlags = a.toUInt
+  val G_TYPE_FLAG_NONE = define(0)
   val G_TYPE_FLAG_ABSTRACT = define(16)
   val G_TYPE_FLAG_VALUE_ABSTRACT = define(32)
   val G_TYPE_FLAG_FINAL = define(64)
+  val G_TYPE_FLAG_DEPRECATED = define(128)
   inline def getName(inline value: GTypeFlags): Option[String] =
     inline value match
+      case G_TYPE_FLAG_NONE => Some("G_TYPE_FLAG_NONE")
       case G_TYPE_FLAG_ABSTRACT => Some("G_TYPE_FLAG_ABSTRACT")
       case G_TYPE_FLAG_VALUE_ABSTRACT => Some("G_TYPE_FLAG_VALUE_ABSTRACT")
       case G_TYPE_FLAG_FINAL => Some("G_TYPE_FLAG_FINAL")
+      case G_TYPE_FLAG_DEPRECATED => Some("G_TYPE_FLAG_DEPRECATED")
       case _ => None
   extension (a: GTypeFlags)
     inline def &(b: GTypeFlags): GTypeFlags = a & b

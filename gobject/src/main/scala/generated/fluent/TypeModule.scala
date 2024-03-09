@@ -13,6 +13,7 @@ import sn.gnome.gobject.internal.GInterfaceInfo
 import sn.gnome.gobject.internal.GType
 import sn.gnome.gobject.internal.GTypeFlags
 import sn.gnome.gobject.internal.GTypeInfo
+import sn.gnome.gobject.internal.GTypeModule
 
 class TypeModule(raw: Ptr[GTypeModule])
     extends Object(raw.asInstanceOf),

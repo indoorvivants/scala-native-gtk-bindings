@@ -9,6 +9,7 @@ import sn.gnome.glib.internal.GQuark
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.ParamSpec
+import sn.gnome.gobject.internal.GParamSpec
 import sn.gnome.gobject.internal.GValue
 
 class ParamSpec(raw: Ptr[GParamSpec]):

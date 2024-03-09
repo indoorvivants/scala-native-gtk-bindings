@@ -11,11 +11,11 @@ import _root_.scala.scalanative.*
 opaque type GBaseFinalizeFunc = CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
 object GBaseFinalizeFunc: 
   given _tag: Tag[GBaseFinalizeFunc] = Tag.materializeCFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GBaseFinalizeFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GBaseFinalizeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]): GBaseFinalizeFunc = o
   extension (v: GBaseFinalizeFunc)
     inline def value: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GBaseInitFunc: _class: (type GObject.TypeClass): The #GTypeClass structure to initialize
@@ -23,11 +23,11 @@ object GBaseFinalizeFunc:
 opaque type GBaseInitFunc = CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
 object GBaseInitFunc: 
   given _tag: Tag[GBaseInitFunc] = Tag.materializeCFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GBaseInitFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GBaseInitFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]): GBaseInitFunc = o
   extension (v: GBaseInitFunc)
     inline def value: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GBindingTransformFunc: : a #GBinding _value: the #GValue containing the value to transform _value: the #GValue in which to store the transformed value _data: data passed to the transform function
@@ -35,11 +35,11 @@ object GBaseInitFunc:
 opaque type GBindingTransformFunc = CFuncPtr4[Ptr[GBinding], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GBindingTransformFunc: 
   given _tag: Tag[GBindingTransformFunc] = Tag.materializeCFuncPtr4[Ptr[GBinding], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GBindingTransformFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GBindingTransformFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GBinding], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GBindingTransformFunc = o
   extension (v: GBindingTransformFunc)
     inline def value: CFuncPtr4[Ptr[GBinding], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GBoxedCopyFunc: : (not nullable): The boxed structure to be copied.
@@ -47,11 +47,11 @@ object GBindingTransformFunc:
 opaque type GBoxedCopyFunc = CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer]
 object GBoxedCopyFunc: 
   given _tag: Tag[GBoxedCopyFunc] = Tag.materializeCFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer]
-  inline def fromPtr(ptr: Ptr[Byte]): GBoxedCopyFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GBoxedCopyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer]): GBoxedCopyFunc = o
   extension (v: GBoxedCopyFunc)
     inline def value: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GBoxedFreeFunc: : (not nullable): The boxed structure to be freed.
@@ -59,11 +59,11 @@ object GBoxedCopyFunc:
 opaque type GBoxedFreeFunc = CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
 object GBoxedFreeFunc: 
   given _tag: Tag[GBoxedFreeFunc] = Tag.materializeCFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GBoxedFreeFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GBoxedFreeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]): GBoxedFreeFunc = o
   extension (v: GBoxedFreeFunc)
     inline def value: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GCallback:
@@ -71,11 +71,11 @@ object GBoxedFreeFunc:
 opaque type GCallback = CFuncPtr0[Unit]
 object GCallback: 
   given _tag: Tag[GCallback] = Tag.materializeCFuncPtr0[Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GCallback = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr0[Unit]): GCallback = o
   extension (v: GCallback)
     inline def value: CFuncPtr0[Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GClassFinalizeFunc: _class: (type GObject.TypeClass): The #GTypeClass structure to finalize
@@ -83,11 +83,11 @@ object GCallback:
 opaque type GClassFinalizeFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GClassFinalizeFunc: 
   given _tag: Tag[GClassFinalizeFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GClassFinalizeFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GClassFinalizeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]): GClassFinalizeFunc = o
   extension (v: GClassFinalizeFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GClassInitFunc: _class: (type GObject.TypeClass): The #GTypeClass structure to initialize.
@@ -95,11 +95,11 @@ object GClassFinalizeFunc:
 opaque type GClassInitFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GClassInitFunc: 
   given _tag: Tag[GClassInitFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GClassInitFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GClassInitFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]): GClassInitFunc = o
   extension (v: GClassInitFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GClosureMarshal: : the #GClosure to which the marshaller belongs
@@ -107,11 +107,11 @@ object GClassInitFunc:
 opaque type GClosureMarshal = CFuncPtr6[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GClosureMarshal: 
   given _tag: Tag[GClosureMarshal] = Tag.materializeCFuncPtr6[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GClosureMarshal = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GClosureMarshal = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr6[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]): GClosureMarshal = o
   extension (v: GClosureMarshal)
     inline def value: CFuncPtr6[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GClosureNotify:
@@ -119,14 +119,12 @@ object GClosureMarshal:
 opaque type GClosureNotify = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GClosure], Unit]
 object GClosureNotify: 
   given _tag: Tag[GClosureNotify] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GClosure], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GClosureNotify = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GClosureNotify = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GClosure], Unit]): GClosureNotify = o
   extension (v: GClosureNotify)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GClosure], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GClosure_autoptr = Ptr[GClosure]
 object GClosure_autoptr: 
   given _tag: Tag[GClosure_autoptr] = Tag.Ptr[GClosure](GClosure._tag)
@@ -134,8 +132,6 @@ object GClosure_autoptr:
   extension (v: GClosure_autoptr)
     inline def value: Ptr[GClosure] = v
 
-/**
-*/
 opaque type GClosure_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GClosure_listautoptr: 
   given _tag: Tag[GClosure_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -143,8 +139,6 @@ object GClosure_listautoptr:
   extension (v: GClosure_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GClosure_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GClosure_queueautoptr: 
   given _tag: Tag[GClosure_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -152,8 +146,6 @@ object GClosure_queueautoptr:
   extension (v: GClosure_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GClosure_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GClosure_slistautoptr: 
   given _tag: Tag[GClosure_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -161,8 +153,6 @@ object GClosure_slistautoptr:
   extension (v: GClosure_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GEnumClass_autoptr = Ptr[GEnumClass]
 object GEnumClass_autoptr: 
   given _tag: Tag[GEnumClass_autoptr] = Tag.Ptr[GEnumClass](GEnumClass._tag)
@@ -170,8 +160,6 @@ object GEnumClass_autoptr:
   extension (v: GEnumClass_autoptr)
     inline def value: Ptr[GEnumClass] = v
 
-/**
-*/
 opaque type GEnumClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GEnumClass_listautoptr: 
   given _tag: Tag[GEnumClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -179,8 +167,6 @@ object GEnumClass_listautoptr:
   extension (v: GEnumClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GEnumClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GEnumClass_queueautoptr: 
   given _tag: Tag[GEnumClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -188,8 +174,6 @@ object GEnumClass_queueautoptr:
   extension (v: GEnumClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GEnumClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GEnumClass_slistautoptr: 
   given _tag: Tag[GEnumClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -197,8 +181,6 @@ object GEnumClass_slistautoptr:
   extension (v: GEnumClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GFlagsClass_autoptr = Ptr[GFlagsClass]
 object GFlagsClass_autoptr: 
   given _tag: Tag[GFlagsClass_autoptr] = Tag.Ptr[GFlagsClass](GFlagsClass._tag)
@@ -206,8 +188,6 @@ object GFlagsClass_autoptr:
   extension (v: GFlagsClass_autoptr)
     inline def value: Ptr[GFlagsClass] = v
 
-/**
-*/
 opaque type GFlagsClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GFlagsClass_listautoptr: 
   given _tag: Tag[GFlagsClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -215,8 +195,6 @@ object GFlagsClass_listautoptr:
   extension (v: GFlagsClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GFlagsClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GFlagsClass_queueautoptr: 
   given _tag: Tag[GFlagsClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -224,8 +202,6 @@ object GFlagsClass_queueautoptr:
   extension (v: GFlagsClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GFlagsClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GFlagsClass_slistautoptr: 
   given _tag: Tag[GFlagsClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -233,8 +209,6 @@ object GFlagsClass_slistautoptr:
   extension (v: GFlagsClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GInitiallyUnowned_autoptr = Ptr[GInitiallyUnowned]
 object GInitiallyUnowned_autoptr: 
   given _tag: Tag[GInitiallyUnowned_autoptr] = Tag.Ptr[GInitiallyUnowned](GInitiallyUnowned._tag)
@@ -242,8 +216,6 @@ object GInitiallyUnowned_autoptr:
   extension (v: GInitiallyUnowned_autoptr)
     inline def value: Ptr[GInitiallyUnowned] = v
 
-/**
-*/
 opaque type GInitiallyUnowned_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GInitiallyUnowned_listautoptr: 
   given _tag: Tag[GInitiallyUnowned_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -251,8 +223,6 @@ object GInitiallyUnowned_listautoptr:
   extension (v: GInitiallyUnowned_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GInitiallyUnowned_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GInitiallyUnowned_queueautoptr: 
   given _tag: Tag[GInitiallyUnowned_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -260,8 +230,6 @@ object GInitiallyUnowned_queueautoptr:
   extension (v: GInitiallyUnowned_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GInitiallyUnowned_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GInitiallyUnowned_slistautoptr: 
   given _tag: Tag[GInitiallyUnowned_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -275,11 +243,11 @@ object GInitiallyUnowned_slistautoptr:
 opaque type GInstanceInitFunc = CFuncPtr2[Ptr[GTypeInstance], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GInstanceInitFunc: 
   given _tag: Tag[GInstanceInitFunc] = Tag.materializeCFuncPtr2[Ptr[GTypeInstance], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GInstanceInitFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GInstanceInitFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GTypeInstance], _root_.sn.gnome.glib.internal.gpointer, Unit]): GInstanceInitFunc = o
   extension (v: GInstanceInitFunc)
     inline def value: CFuncPtr2[Ptr[GTypeInstance], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GInterfaceFinalizeFunc: _iface: (type GObject.TypeInterface): The interface structure to finalize _data: The
@@ -287,11 +255,11 @@ object GInstanceInitFunc:
 opaque type GInterfaceFinalizeFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GInterfaceFinalizeFunc: 
   given _tag: Tag[GInterfaceFinalizeFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GInterfaceFinalizeFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GInterfaceFinalizeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]): GInterfaceFinalizeFunc = o
   extension (v: GInterfaceFinalizeFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GInterfaceInitFunc: _iface: (type GObject.TypeInterface): The interface structure to initialize _data: The
@@ -299,11 +267,11 @@ object GInterfaceFinalizeFunc:
 opaque type GInterfaceInitFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GInterfaceInitFunc: 
   given _tag: Tag[GInterfaceInitFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GInterfaceInitFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GInterfaceInitFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]): GInterfaceInitFunc = o
   extension (v: GInterfaceInitFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GObjectFinalizeFunc: : the #GObject being finalized
@@ -311,11 +279,11 @@ object GInterfaceInitFunc:
 opaque type GObjectFinalizeFunc = CFuncPtr1[Ptr[GObject], Unit]
 object GObjectFinalizeFunc: 
   given _tag: Tag[GObjectFinalizeFunc] = Tag.materializeCFuncPtr1[Ptr[GObject], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GObjectFinalizeFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GObjectFinalizeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[GObject], Unit]): GObjectFinalizeFunc = o
   extension (v: GObjectFinalizeFunc)
     inline def value: CFuncPtr1[Ptr[GObject], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GObjectGetPropertyFunc: : a #GObject g_object_class_install_property(). : a #GValue to return the property value in : the #GParamSpec describing the property
@@ -323,11 +291,11 @@ object GObjectFinalizeFunc:
 opaque type GObjectGetPropertyFunc = CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit]
 object GObjectGetPropertyFunc: 
   given _tag: Tag[GObjectGetPropertyFunc] = Tag.materializeCFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GObjectGetPropertyFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GObjectGetPropertyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit]): GObjectGetPropertyFunc = o
   extension (v: GObjectGetPropertyFunc)
     inline def value: CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GObjectSetPropertyFunc: : a #GObject g_object_class_install_property(). : the new value for the property : the #GParamSpec describing the property
@@ -335,14 +303,12 @@ object GObjectGetPropertyFunc:
 opaque type GObjectSetPropertyFunc = CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit]
 object GObjectSetPropertyFunc: 
   given _tag: Tag[GObjectSetPropertyFunc] = Tag.materializeCFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GObjectSetPropertyFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GObjectSetPropertyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit]): GObjectSetPropertyFunc = o
   extension (v: GObjectSetPropertyFunc)
     inline def value: CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GObject_autoptr = Ptr[GObject]
 object GObject_autoptr: 
   given _tag: Tag[GObject_autoptr] = Tag.Ptr[GObject](GObject._tag)
@@ -350,8 +316,6 @@ object GObject_autoptr:
   extension (v: GObject_autoptr)
     inline def value: Ptr[GObject] = v
 
-/**
-*/
 opaque type GObject_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GObject_listautoptr: 
   given _tag: Tag[GObject_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -359,8 +323,6 @@ object GObject_listautoptr:
   extension (v: GObject_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GObject_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GObject_queueautoptr: 
   given _tag: Tag[GObject_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -368,8 +330,6 @@ object GObject_queueautoptr:
   extension (v: GObject_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GObject_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GObject_slistautoptr: 
   given _tag: Tag[GObject_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -377,8 +337,6 @@ object GObject_slistautoptr:
   extension (v: GObject_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GParamSpec_autoptr = Ptr[GParamSpec]
 object GParamSpec_autoptr: 
   given _tag: Tag[GParamSpec_autoptr] = Tag.Ptr[GParamSpec](GParamSpec._tag)
@@ -386,8 +344,6 @@ object GParamSpec_autoptr:
   extension (v: GParamSpec_autoptr)
     inline def value: Ptr[GParamSpec] = v
 
-/**
-*/
 opaque type GParamSpec_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GParamSpec_listautoptr: 
   given _tag: Tag[GParamSpec_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -395,8 +351,6 @@ object GParamSpec_listautoptr:
   extension (v: GParamSpec_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GParamSpec_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GParamSpec_queueautoptr: 
   given _tag: Tag[GParamSpec_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -404,8 +358,6 @@ object GParamSpec_queueautoptr:
   extension (v: GParamSpec_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GParamSpec_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GParamSpec_slistautoptr: 
   given _tag: Tag[GParamSpec_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -419,11 +371,11 @@ object GParamSpec_slistautoptr:
 opaque type GSignalAccumulator = CFuncPtr4[Ptr[GSignalInvocationHint], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GSignalAccumulator: 
   given _tag: Tag[GSignalAccumulator] = Tag.materializeCFuncPtr4[Ptr[GSignalInvocationHint], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GSignalAccumulator = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GSignalAccumulator = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GSignalInvocationHint], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GSignalAccumulator = o
   extension (v: GSignalAccumulator)
     inline def value: CFuncPtr4[Ptr[GSignalInvocationHint], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GSignalCMarshaller:
@@ -451,11 +403,11 @@ object GSignalCVaMarshaller:
 opaque type GSignalEmissionHook = CFuncPtr4[Ptr[GSignalInvocationHint], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GSignalEmissionHook: 
   given _tag: Tag[GSignalEmissionHook] = Tag.materializeCFuncPtr4[Ptr[GSignalInvocationHint], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GSignalEmissionHook = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GSignalEmissionHook = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GSignalInvocationHint], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GSignalEmissionHook = o
   extension (v: GSignalEmissionHook)
     inline def value: CFuncPtr4[Ptr[GSignalInvocationHint], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GToggleNotify:
@@ -463,14 +415,12 @@ object GSignalEmissionHook:
 opaque type GToggleNotify = CFuncPtr3[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], _root_.sn.gnome.glib.internal.gboolean, Unit]
 object GToggleNotify: 
   given _tag: Tag[GToggleNotify] = Tag.materializeCFuncPtr3[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], _root_.sn.gnome.glib.internal.gboolean, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GToggleNotify = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GToggleNotify = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], _root_.sn.gnome.glib.internal.gboolean, Unit]): GToggleNotify = o
   extension (v: GToggleNotify)
     inline def value: CFuncPtr3[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], _root_.sn.gnome.glib.internal.gboolean, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 type GType = _root_.sn.gnome.glib.internal.gsize
 object GType: 
   given _tag: Tag[GType] = _root_.sn.gnome.glib.internal.gsize._tag
@@ -484,14 +434,12 @@ object GType:
 opaque type GTypeClassCacheFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GTypeClass], _root_.sn.gnome.glib.internal.gboolean]
 object GTypeClassCacheFunc: 
   given _tag: Tag[GTypeClassCacheFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GTypeClass], _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GTypeClassCacheFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeClassCacheFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GTypeClass], _root_.sn.gnome.glib.internal.gboolean]): GTypeClassCacheFunc = o
   extension (v: GTypeClassCacheFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GTypeClass], _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GTypeClass_autoptr = Ptr[GTypeClass]
 object GTypeClass_autoptr: 
   given _tag: Tag[GTypeClass_autoptr] = Tag.Ptr[GTypeClass](GTypeClass._tag)
@@ -499,8 +447,6 @@ object GTypeClass_autoptr:
   extension (v: GTypeClass_autoptr)
     inline def value: Ptr[GTypeClass] = v
 
-/**
-*/
 opaque type GTypeClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GTypeClass_listautoptr: 
   given _tag: Tag[GTypeClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -508,8 +454,6 @@ object GTypeClass_listautoptr:
   extension (v: GTypeClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GTypeClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GTypeClass_queueautoptr: 
   given _tag: Tag[GTypeClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -517,8 +461,6 @@ object GTypeClass_queueautoptr:
   extension (v: GTypeClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GTypeClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GTypeClass_slistautoptr: 
   given _tag: Tag[GTypeClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -532,14 +474,12 @@ object GTypeClass_slistautoptr:
 opaque type GTypeInterfaceCheckFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GTypeInterfaceCheckFunc: 
   given _tag: Tag[GTypeInterfaceCheckFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GTypeInterfaceCheckFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeInterfaceCheckFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit]): GTypeInterfaceCheckFunc = o
   extension (v: GTypeInterfaceCheckFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GTypeModule_autoptr = Ptr[GTypeModule]
 object GTypeModule_autoptr: 
   given _tag: Tag[GTypeModule_autoptr] = Tag.Ptr[GTypeModule](GTypeModule._tag)
@@ -547,8 +487,6 @@ object GTypeModule_autoptr:
   extension (v: GTypeModule_autoptr)
     inline def value: Ptr[GTypeModule] = v
 
-/**
-*/
 opaque type GTypeModule_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GTypeModule_listautoptr: 
   given _tag: Tag[GTypeModule_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -556,8 +494,6 @@ object GTypeModule_listautoptr:
   extension (v: GTypeModule_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GTypeModule_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GTypeModule_queueautoptr: 
   given _tag: Tag[GTypeModule_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -565,8 +501,6 @@ object GTypeModule_queueautoptr:
   extension (v: GTypeModule_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GTypeModule_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GTypeModule_slistautoptr: 
   given _tag: Tag[GTypeModule_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -580,11 +514,11 @@ object GTypeModule_slistautoptr:
 opaque type GTypePluginCompleteInterfaceInfo = CFuncPtr4[Ptr[GTypePlugin], GType, GType, Ptr[GInterfaceInfo], Unit]
 object GTypePluginCompleteInterfaceInfo: 
   given _tag: Tag[GTypePluginCompleteInterfaceInfo] = Tag.materializeCFuncPtr4[Ptr[GTypePlugin], GType, GType, Ptr[GInterfaceInfo], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GTypePluginCompleteInterfaceInfo = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypePluginCompleteInterfaceInfo = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GTypePlugin], GType, GType, Ptr[GInterfaceInfo], Unit]): GTypePluginCompleteInterfaceInfo = o
   extension (v: GTypePluginCompleteInterfaceInfo)
     inline def value: CFuncPtr4[Ptr[GTypePlugin], GType, GType, Ptr[GInterfaceInfo], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GTypePluginCompleteTypeInfo: : the #GTypePlugin _type: the #GType whose info is completed : the #GTypeInfo struct to fill in _table: the #GTypeValueTable to fill in
@@ -592,11 +526,11 @@ object GTypePluginCompleteInterfaceInfo:
 opaque type GTypePluginCompleteTypeInfo = CFuncPtr4[Ptr[GTypePlugin], GType, Ptr[GTypeInfo], Ptr[GTypeValueTable], Unit]
 object GTypePluginCompleteTypeInfo: 
   given _tag: Tag[GTypePluginCompleteTypeInfo] = Tag.materializeCFuncPtr4[Ptr[GTypePlugin], GType, Ptr[GTypeInfo], Ptr[GTypeValueTable], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GTypePluginCompleteTypeInfo = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypePluginCompleteTypeInfo = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GTypePlugin], GType, Ptr[GTypeInfo], Ptr[GTypeValueTable], Unit]): GTypePluginCompleteTypeInfo = o
   extension (v: GTypePluginCompleteTypeInfo)
     inline def value: CFuncPtr4[Ptr[GTypePlugin], GType, Ptr[GTypeInfo], Ptr[GTypeValueTable], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GTypePluginUnuse: : the #GTypePlugin whose use count should be decreased
@@ -604,11 +538,11 @@ object GTypePluginCompleteTypeInfo:
 opaque type GTypePluginUnuse = CFuncPtr1[Ptr[GTypePlugin], Unit]
 object GTypePluginUnuse: 
   given _tag: Tag[GTypePluginUnuse] = Tag.materializeCFuncPtr1[Ptr[GTypePlugin], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GTypePluginUnuse = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypePluginUnuse = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[GTypePlugin], Unit]): GTypePluginUnuse = o
   extension (v: GTypePluginUnuse)
     inline def value: CFuncPtr1[Ptr[GTypePlugin], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GTypePluginUse: : the #GTypePlugin whose use count should be increased
@@ -616,11 +550,83 @@ object GTypePluginUnuse:
 opaque type GTypePluginUse = CFuncPtr1[Ptr[GTypePlugin], Unit]
 object GTypePluginUse: 
   given _tag: Tag[GTypePluginUse] = Tag.materializeCFuncPtr1[Ptr[GTypePlugin], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GTypePluginUse = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypePluginUse = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[GTypePlugin], Unit]): GTypePluginUse = o
   extension (v: GTypePluginUse)
     inline def value: CFuncPtr1[Ptr[GTypePlugin], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
+
+/**
+ * GTypeValueCollectFunc: : the value to initialize _collect_values: the number of collected values _values: (array length=n_collect_values): the collected values _flags: optional flags
+*/
+opaque type GTypeValueCollectFunc = CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
+object GTypeValueCollectFunc: 
+  given _tag: Tag[GTypeValueCollectFunc] = Tag.materializeCFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueCollectFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): GTypeValueCollectFunc = o
+  extension (v: GTypeValueCollectFunc)
+    inline def value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
+
+/**
+ * GTypeValueCopyFunc: _value: the value to copy
+*/
+opaque type GTypeValueCopyFunc = CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]
+object GTypeValueCopyFunc: 
+  given _tag: Tag[GTypeValueCopyFunc] = Tag.materializeCFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueCopyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): GTypeValueCopyFunc = o
+  extension (v: GTypeValueCopyFunc)
+    inline def value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
+
+/**
+ * GTypeValueFreeFunc: : the value to free
+*/
+opaque type GTypeValueFreeFunc = CFuncPtr1[Ptr[GValue], Unit]
+object GTypeValueFreeFunc: 
+  given _tag: Tag[GTypeValueFreeFunc] = Tag.materializeCFuncPtr1[Ptr[GValue], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueFreeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr1[Ptr[GValue], Unit]): GTypeValueFreeFunc = o
+  extension (v: GTypeValueFreeFunc)
+    inline def value: CFuncPtr1[Ptr[GValue], Unit] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
+
+/**
+ * GTypeValueInitFunc: : the value to initialize
+*/
+opaque type GTypeValueInitFunc = CFuncPtr1[Ptr[GValue], Unit]
+object GTypeValueInitFunc: 
+  given _tag: Tag[GTypeValueInitFunc] = Tag.materializeCFuncPtr1[Ptr[GValue], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueInitFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr1[Ptr[GValue], Unit]): GTypeValueInitFunc = o
+  extension (v: GTypeValueInitFunc)
+    inline def value: CFuncPtr1[Ptr[GValue], Unit] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
+
+/**
+ * GTypeValueLCopyFunc: : the value to lcopy _collect_values: the number of collected values _values: (array length=n_collect_values): the collected locations for storage _flags: optional flags
+*/
+opaque type GTypeValueLCopyFunc = CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
+object GTypeValueLCopyFunc: 
+  given _tag: Tag[GTypeValueLCopyFunc] = Tag.materializeCFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueLCopyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): GTypeValueLCopyFunc = o
+  extension (v: GTypeValueLCopyFunc)
+    inline def value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
+
+/**
+ * GTypeValuePeekPointerFunc: : the value to peek
+*/
+opaque type GTypeValuePeekPointerFunc = CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]
+object GTypeValuePeekPointerFunc: 
+  given _tag: Tag[GTypeValuePeekPointerFunc] = Tag.materializeCFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValuePeekPointerFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]): GTypeValuePeekPointerFunc = o
+  extension (v: GTypeValuePeekPointerFunc)
+    inline def value: CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GVaClosureMarshal: : the #GClosure to which the marshaller belongs
@@ -628,11 +634,11 @@ object GTypePluginUse:
 opaque type GVaClosureMarshal = CFuncPtr7[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, va_list, _root_.sn.gnome.glib.internal.gpointer, CInt, Ptr[GType], Unit]
 object GVaClosureMarshal: 
   given _tag: Tag[GVaClosureMarshal] = Tag.materializeCFuncPtr7[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, va_list, _root_.sn.gnome.glib.internal.gpointer, CInt, Ptr[GType], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GVaClosureMarshal = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GVaClosureMarshal = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr7[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, va_list, _root_.sn.gnome.glib.internal.gpointer, CInt, Ptr[GType], Unit]): GVaClosureMarshal = o
   extension (v: GVaClosureMarshal)
     inline def value: CFuncPtr7[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, va_list, _root_.sn.gnome.glib.internal.gpointer, CInt, Ptr[GType], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GValueTransform: _value: Source value.
@@ -640,11 +646,11 @@ object GVaClosureMarshal:
 opaque type GValueTransform = CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]
 object GValueTransform: 
   given _tag: Tag[GValueTransform] = Tag.materializeCFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GValueTransform = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GValueTransform = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): GValueTransform = o
   extension (v: GValueTransform)
     inline def value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GWeakNotify:
@@ -652,11 +658,11 @@ object GValueTransform:
 opaque type GWeakNotify = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], Unit]
 object GWeakNotify: 
   given _tag: Tag[GWeakNotify] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GWeakNotify = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GWeakNotify = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], Unit]): GWeakNotify = o
   extension (v: GWeakNotify)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, Ptr[GObject], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * gchararray:
@@ -681,6 +687,13 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

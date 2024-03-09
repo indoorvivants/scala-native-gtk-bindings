@@ -4,14 +4,26 @@ import _root_.sn.gnome.pango.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class FontsetSimple(private[fluent] val raw: Ptr[PangoFontsetSimple]) extends sn.gnome.pango.fluent.Fontset:
-  def append(font : sn.gnome.pango.fluent.Font): Unit = pango_fontset_simple_append(this.raw, font.raw)
+import sn.gnome.pango.fluent.Font
+import sn.gnome.pango.fluent.Fontset
+import sn.gnome.pango.internal.PangoFontsetSimple
+import sn.gnome.pango.internal.PangoLanguage
 
-  def size(): Int = pango_fontset_simple_size(this.raw)
+class FontsetSimple(raw: Ptr[PangoFontsetSimple])
+    extends Fontset(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
+
+  def append(font: Font): Unit = pango_fontset_simple_append(
+    this.raw.asInstanceOf,
+    font.getUnsafeRawPointer().asInstanceOf
+  )
+
+  def size(): Int = pango_fontset_simple_size(this.raw.asInstanceOf)
 
 end FontsetSimple
 
 object FontsetSimple:
-  def apply(language : Any /* Some(Language): PangoLanguage**/): FontsetSimple = FontsetSimple(pango_fontset_simple_new(language))
-
+  def apply(language: Ptr[PangoLanguage]): FontsetSimple = new FontsetSimple(
+    pango_fontset_simple_new(language).asInstanceOf
+  )
 end FontsetSimple

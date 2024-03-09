@@ -5,12 +5,8 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type _cairo_path_data_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object _cairo_path_data_t:
-  /**
-  */
   opaque type Struct0 = CStruct2[cairo_path_data_type_t, CInt]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct2Tag[cairo_path_data_type_t, CInt]
@@ -25,8 +21,6 @@ object _cairo_path_data_t:
       def type_=(value: cairo_path_data_type_t): Unit = !struct.at1 = value
       def length : CInt = struct._2
       def length_=(value: CInt): Unit = !struct.at2 = value
-  /**
-  */
   opaque type Struct1 = CStruct2[Double, Double]
   object Struct1:
     given _tag: Tag[Struct1] = Tag.materializeCStruct2Tag[Double, Double]
@@ -63,12 +57,8 @@ object _cairo_path_data_t:
     def point : _cairo_path_data_t.Struct1 = !struct.at(0).asInstanceOf[Ptr[_cairo_path_data_t.Struct1]]
     def point_=(value: _cairo_path_data_t.Struct1): Unit = !struct.at(0).asInstanceOf[Ptr[_cairo_path_data_t.Struct1]] = value
 
-/**
-*/
 opaque type cairo_path_data_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object cairo_path_data_t:
-  /**
-  */
   opaque type Struct0 = CStruct2[cairo_path_data_type_t, CInt]
   object Struct0:
     given _tag: Tag[Struct0] = Tag.materializeCStruct2Tag[cairo_path_data_type_t, CInt]
@@ -83,8 +73,6 @@ object cairo_path_data_t:
       def type_=(value: cairo_path_data_type_t): Unit = !struct.at1 = value
       def length : CInt = struct._2
       def length_=(value: CInt): Unit = !struct.at2 = value
-  /**
-  */
   opaque type Struct1 = CStruct2[Double, Double]
   object Struct1:
     given _tag: Tag[Struct1] = Tag.materializeCStruct2Tag[Double, Double]

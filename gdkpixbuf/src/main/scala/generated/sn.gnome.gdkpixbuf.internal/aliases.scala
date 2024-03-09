@@ -5,8 +5,6 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type GdkPixbufAnimationIter_autoptr = Ptr[GdkPixbufAnimationIter]
 object GdkPixbufAnimationIter_autoptr: 
   given _tag: Tag[GdkPixbufAnimationIter_autoptr] = Tag.Ptr[GdkPixbufAnimationIter](GdkPixbufAnimationIter._tag)
@@ -14,8 +12,6 @@ object GdkPixbufAnimationIter_autoptr:
   extension (v: GdkPixbufAnimationIter_autoptr)
     inline def value: Ptr[GdkPixbufAnimationIter] = v
 
-/**
-*/
 opaque type GdkPixbufAnimationIter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GdkPixbufAnimationIter_listautoptr: 
   given _tag: Tag[GdkPixbufAnimationIter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -23,8 +19,6 @@ object GdkPixbufAnimationIter_listautoptr:
   extension (v: GdkPixbufAnimationIter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GdkPixbufAnimationIter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GdkPixbufAnimationIter_queueautoptr: 
   given _tag: Tag[GdkPixbufAnimationIter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -32,8 +26,6 @@ object GdkPixbufAnimationIter_queueautoptr:
   extension (v: GdkPixbufAnimationIter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GdkPixbufAnimationIter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GdkPixbufAnimationIter_slistautoptr: 
   given _tag: Tag[GdkPixbufAnimationIter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -41,8 +33,6 @@ object GdkPixbufAnimationIter_slistautoptr:
   extension (v: GdkPixbufAnimationIter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GdkPixbufAnimation_autoptr = Ptr[GdkPixbufAnimation]
 object GdkPixbufAnimation_autoptr: 
   given _tag: Tag[GdkPixbufAnimation_autoptr] = Tag.Ptr[GdkPixbufAnimation](GdkPixbufAnimation._tag)
@@ -50,8 +40,6 @@ object GdkPixbufAnimation_autoptr:
   extension (v: GdkPixbufAnimation_autoptr)
     inline def value: Ptr[GdkPixbufAnimation] = v
 
-/**
-*/
 opaque type GdkPixbufAnimation_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GdkPixbufAnimation_listautoptr: 
   given _tag: Tag[GdkPixbufAnimation_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -59,8 +47,6 @@ object GdkPixbufAnimation_listautoptr:
   extension (v: GdkPixbufAnimation_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GdkPixbufAnimation_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GdkPixbufAnimation_queueautoptr: 
   given _tag: Tag[GdkPixbufAnimation_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -68,8 +54,6 @@ object GdkPixbufAnimation_queueautoptr:
   extension (v: GdkPixbufAnimation_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GdkPixbufAnimation_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GdkPixbufAnimation_slistautoptr: 
   given _tag: Tag[GdkPixbufAnimation_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -83,14 +67,12 @@ object GdkPixbufAnimation_slistautoptr:
 opaque type GdkPixbufDestroyNotify = CFuncPtr2[Ptr[_root_.sn.gnome.glib.internal.guchar], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GdkPixbufDestroyNotify: 
   given _tag: Tag[GdkPixbufDestroyNotify] = Tag.materializeCFuncPtr2[Ptr[_root_.sn.gnome.glib.internal.guchar], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GdkPixbufDestroyNotify = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GdkPixbufDestroyNotify = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[_root_.sn.gnome.glib.internal.guchar], _root_.sn.gnome.glib.internal.gpointer, Unit]): GdkPixbufDestroyNotify = o
   extension (v: GdkPixbufDestroyNotify)
     inline def value: CFuncPtr2[Ptr[_root_.sn.gnome.glib.internal.guchar], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GdkPixbufLoader_autoptr = Ptr[GdkPixbufLoader]
 object GdkPixbufLoader_autoptr: 
   given _tag: Tag[GdkPixbufLoader_autoptr] = Tag.Ptr[GdkPixbufLoader](GdkPixbufLoader._tag)
@@ -98,8 +80,6 @@ object GdkPixbufLoader_autoptr:
   extension (v: GdkPixbufLoader_autoptr)
     inline def value: Ptr[GdkPixbufLoader] = v
 
-/**
-*/
 opaque type GdkPixbufLoader_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GdkPixbufLoader_listautoptr: 
   given _tag: Tag[GdkPixbufLoader_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -107,8 +87,6 @@ object GdkPixbufLoader_listautoptr:
   extension (v: GdkPixbufLoader_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GdkPixbufLoader_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GdkPixbufLoader_queueautoptr: 
   given _tag: Tag[GdkPixbufLoader_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -116,8 +94,6 @@ object GdkPixbufLoader_queueautoptr:
   extension (v: GdkPixbufLoader_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GdkPixbufLoader_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GdkPixbufLoader_slistautoptr: 
   given _tag: Tag[GdkPixbufLoader_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -131,14 +107,12 @@ object GdkPixbufLoader_slistautoptr:
 opaque type GdkPixbufSaveFunc = CFuncPtr4[Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GdkPixbufSaveFunc: 
   given _tag: Tag[GdkPixbufSaveFunc] = Tag.materializeCFuncPtr4[Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GdkPixbufSaveFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GdkPixbufSaveFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GdkPixbufSaveFunc = o
   extension (v: GdkPixbufSaveFunc)
     inline def value: CFuncPtr4[Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gsize, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GdkPixbufSimpleAnim_autoptr = Ptr[GdkPixbufSimpleAnim]
 object GdkPixbufSimpleAnim_autoptr: 
   given _tag: Tag[GdkPixbufSimpleAnim_autoptr] = Tag.Ptr[GdkPixbufSimpleAnim](GdkPixbufSimpleAnim._tag)
@@ -146,8 +120,6 @@ object GdkPixbufSimpleAnim_autoptr:
   extension (v: GdkPixbufSimpleAnim_autoptr)
     inline def value: Ptr[GdkPixbufSimpleAnim] = v
 
-/**
-*/
 opaque type GdkPixbufSimpleAnim_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GdkPixbufSimpleAnim_listautoptr: 
   given _tag: Tag[GdkPixbufSimpleAnim_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -155,8 +127,6 @@ object GdkPixbufSimpleAnim_listautoptr:
   extension (v: GdkPixbufSimpleAnim_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GdkPixbufSimpleAnim_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GdkPixbufSimpleAnim_queueautoptr: 
   given _tag: Tag[GdkPixbufSimpleAnim_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -164,8 +134,6 @@ object GdkPixbufSimpleAnim_queueautoptr:
   extension (v: GdkPixbufSimpleAnim_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GdkPixbufSimpleAnim_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GdkPixbufSimpleAnim_slistautoptr: 
   given _tag: Tag[GdkPixbufSimpleAnim_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -173,8 +141,6 @@ object GdkPixbufSimpleAnim_slistautoptr:
   extension (v: GdkPixbufSimpleAnim_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GdkPixbuf_autoptr = Ptr[GdkPixbuf]
 object GdkPixbuf_autoptr: 
   given _tag: Tag[GdkPixbuf_autoptr] = Tag.Ptr[GdkPixbuf](GdkPixbuf._tag)
@@ -182,8 +148,6 @@ object GdkPixbuf_autoptr:
   extension (v: GdkPixbuf_autoptr)
     inline def value: Ptr[GdkPixbuf] = v
 
-/**
-*/
 opaque type GdkPixbuf_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GdkPixbuf_listautoptr: 
   given _tag: Tag[GdkPixbuf_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -191,8 +155,6 @@ object GdkPixbuf_listautoptr:
   extension (v: GdkPixbuf_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GdkPixbuf_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GdkPixbuf_queueautoptr: 
   given _tag: Tag[GdkPixbuf_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -200,11 +162,65 @@ object GdkPixbuf_queueautoptr:
   extension (v: GdkPixbuf_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GdkPixbuf_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GdkPixbuf_slistautoptr: 
   given _tag: Tag[GdkPixbuf_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GdkPixbuf_slistautoptr = o
   extension (v: GdkPixbuf_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+type pid_t = posix.sys.types.pid_t
+object pid_t: 
+  val _tag: Tag[pid_t] = summon[Tag[posix.sys.types.pid_t]]
+  inline def apply(inline o: posix.sys.types.pid_t): pid_t = o
+  extension (v: pid_t)
+    inline def value: posix.sys.types.pid_t = v
+
+type pthread_mutex_t = posix.sys.types.pthread_mutex_t
+object pthread_mutex_t: 
+  val _tag: Tag[pthread_mutex_t] = summon[Tag[posix.sys.types.pthread_mutex_t]]
+  inline def apply(inline o: posix.sys.types.pthread_mutex_t): pthread_mutex_t = o
+  extension (v: pthread_mutex_t)
+    inline def value: posix.sys.types.pthread_mutex_t = v
+
+type pthread_t = posix.sys.types.pthread_t
+object pthread_t: 
+  val _tag: Tag[pthread_t] = summon[Tag[posix.sys.types.pthread_t]]
+  inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
+  extension (v: pthread_t)
+    inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
+
+type time_t = posix.sys.types.time_t
+object time_t: 
+  val _tag: Tag[time_t] = summon[Tag[posix.sys.types.time_t]]
+  inline def apply(inline o: posix.sys.types.time_t): time_t = o
+  extension (v: time_t)
+    inline def value: posix.sys.types.time_t = v
+
+type tm = posix.time.tm
+object tm: 
+  val _tag: Tag[tm] = summon[Tag[posix.time.tm]]
+  inline def apply(inline o: posix.time.tm): tm = o
+  extension (v: tm)
+    inline def value: posix.time.tm = v
+
+type uid_t = posix.sys.types.uid_t
+object uid_t: 
+  val _tag: Tag[uid_t] = summon[Tag[posix.sys.types.uid_t]]
+  inline def apply(inline o: posix.sys.types.uid_t): uid_t = o
+  extension (v: uid_t)
+    inline def value: posix.sys.types.uid_t = v
+
+type va_list = unsafe.CVarArgList
+object va_list: 
+  val _tag: Tag[va_list] = summon[Tag[unsafe.CVarArgList]]
+  inline def apply(inline o: unsafe.CVarArgList): va_list = o
+  extension (v: va_list)
+    inline def value: unsafe.CVarArgList = v
