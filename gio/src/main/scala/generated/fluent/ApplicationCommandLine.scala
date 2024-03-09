@@ -9,7 +9,9 @@ import sn.gnome.gio.fluent.InputStream
 import sn.gnome.gio.internal.GApplicationCommandLine
 import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.GVariantDict
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class ApplicationCommandLine(raw: Ptr[GApplicationCommandLine])

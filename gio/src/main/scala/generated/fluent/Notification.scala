@@ -8,7 +8,9 @@ import sn.gnome.gio.fluent.Icon
 import sn.gnome.gio.internal.GNotification
 import sn.gnome.gio.internal.GNotificationPriority
 import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class Notification(raw: Ptr[GNotification]) extends Object(raw.asInstanceOf):
@@ -74,8 +76,10 @@ class Notification(raw: Ptr[GNotification]) extends Object(raw.asInstanceOf):
       __sn_extract_string(title).asInstanceOf[Ptr[gchar]]
     )
 
-  def setUrgent(urgent: Boolean): Unit =
-    g_notification_set_urgent(this.raw.asInstanceOf, urgent)
+  def setUrgent(urgent: Boolean): Unit = g_notification_set_urgent(
+    this.raw.asInstanceOf,
+    gboolean(gint((if urgent == true then 1 else 0)))
+  )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

@@ -10,6 +10,8 @@ import sn.gnome.gio.fluent.Credentials
 import sn.gnome.gio.fluent.SocketConnection
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GUnixConnection
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 
@@ -17,12 +19,15 @@ class UnixConnection(raw: Ptr[GUnixConnection])
     extends SocketConnection(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def receiveCredentials(cancellable: Cancellable): Credentials =
-    new Credentials(
-      g_unix_connection_receive_credentials(
-        this.raw.asInstanceOf,
-        cancellable.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def receiveCredentials(cancellable: Cancellable): GResult[Credentials] =
+    GResult.wrap(__errorPtr =>
+      new Credentials(
+        g_unix_connection_receive_credentials(
+          this.raw.asInstanceOf,
+          cancellable.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
   def receiveCredentialsAsync(
@@ -36,24 +41,34 @@ class UnixConnection(raw: Ptr[GUnixConnection])
     gpointer(user_data)
   )
 
-  def receiveCredentialsFinish(result: AsyncResult): Credentials =
-    new Credentials(
-      g_unix_connection_receive_credentials_finish(
-        this.raw.asInstanceOf,
-        result.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def receiveCredentialsFinish(result: AsyncResult): GResult[Credentials] =
+    GResult.wrap(__errorPtr =>
+      new Credentials(
+        g_unix_connection_receive_credentials_finish(
+          this.raw.asInstanceOf,
+          result.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
-  def receiveFd(cancellable: Cancellable): Int = g_unix_connection_receive_fd(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value
+  def receiveFd(cancellable: Cancellable): GResult[Int] =
+    GResult.wrap(__errorPtr =>
+      g_unix_connection_receive_fd(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
+    )
 
-  def sendCredentials(cancellable: Cancellable): Boolean =
-    g_unix_connection_send_credentials(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def sendCredentials(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_unix_connection_send_credentials(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def sendCredentialsAsync(
       cancellable: Cancellable,
@@ -66,17 +81,23 @@ class UnixConnection(raw: Ptr[GUnixConnection])
     gpointer(user_data)
   )
 
-  def sendCredentialsFinish(result: AsyncResult): Boolean =
-    g_unix_connection_send_credentials_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def sendCredentialsFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_unix_connection_send_credentials_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
-  def sendFd(fd: Int, cancellable: Cancellable): Boolean =
-    g_unix_connection_send_fd(
-      this.raw.asInstanceOf,
-      gint(fd),
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def sendFd(fd: Int, cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_unix_connection_send_fd(
+        this.raw.asInstanceOf,
+        gint(fd),
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
 end UnixConnection

@@ -7,14 +7,21 @@ import _root_.scala.scalanative.unsafe.*
 import sn.gnome.gio.fluent.SocketControlMessage
 import sn.gnome.gio.fluent.UnixFDList
 import sn.gnome.gio.internal.GUnixFDMessage
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
 
 class UnixFDMessage(raw: Ptr[GUnixFDMessage])
     extends SocketControlMessage(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def appendFd(fd: Int): Boolean =
-    g_unix_fd_message_append_fd(this.raw.asInstanceOf, gint(fd)).value.!=(0)
+  def appendFd(fd: Int): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_unix_fd_message_append_fd(
+      this.raw.asInstanceOf,
+      gint(fd),
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def getFdList(): UnixFDList = new UnixFDList(
     g_unix_fd_message_get_fd_list(this.raw.asInstanceOf).asInstanceOf

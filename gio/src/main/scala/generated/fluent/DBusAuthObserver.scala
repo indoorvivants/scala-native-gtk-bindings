@@ -7,7 +7,9 @@ import _root_.scala.scalanative.unsafe.*
 import sn.gnome.gio.fluent.Credentials
 import sn.gnome.gio.fluent.IOStream
 import sn.gnome.gio.internal.GDBusAuthObserver
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class DBusAuthObserver(raw: Ptr[GDBusAuthObserver])

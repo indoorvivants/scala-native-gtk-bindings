@@ -5,6 +5,8 @@ import _root_.sn.gnome.gio.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.internal.GFilenameCompleter
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class FilenameCompleter(raw: Ptr[GFilenameCompleter])
@@ -20,7 +22,10 @@ class FilenameCompleter(raw: Ptr[GFilenameCompleter])
     )
 
   def setDirsOnly(dirs_only: Boolean): Unit =
-    g_filename_completer_set_dirs_only(this.raw.asInstanceOf, dirs_only)
+    g_filename_completer_set_dirs_only(
+      this.raw.asInstanceOf,
+      gboolean(gint((if dirs_only == true then 1 else 0)))
+    )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

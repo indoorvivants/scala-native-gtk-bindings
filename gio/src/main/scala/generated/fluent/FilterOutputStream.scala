@@ -6,6 +6,8 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.fluent.OutputStream
 import sn.gnome.gio.internal.GFilterOutputStream
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 
 class FilterOutputStream(raw: Ptr[GFilterOutputStream])
     extends OutputStream(raw.asInstanceOf):
@@ -22,7 +24,7 @@ class FilterOutputStream(raw: Ptr[GFilterOutputStream])
   def setCloseBaseStream(close_base: Boolean): Unit =
     g_filter_output_stream_set_close_base_stream(
       this.raw.asInstanceOf,
-      close_base
+      gboolean(gint((if close_base == true then 1 else 0)))
     )
 
 end FilterOutputStream

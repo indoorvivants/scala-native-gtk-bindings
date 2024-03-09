@@ -14,6 +14,7 @@ import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GDataInputStream
 import sn.gnome.gio.internal.GDataStreamByteOrder
 import sn.gnome.gio.internal.GDataStreamNewlineType
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -36,28 +37,44 @@ class DataInputStream(raw: Ptr[GDataInputStream])
   def getNewlineType(): GDataStreamNewlineType =
     g_data_input_stream_get_newline_type(this.raw.asInstanceOf)
 
-  def readByte(cancellable: Cancellable): UByte = g_data_input_stream_read_byte(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value
+  def readByte(cancellable: Cancellable): GResult[UByte] =
+    GResult.wrap(__errorPtr =>
+      g_data_input_stream_read_byte(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
+    )
 
-  def readInt16(cancellable: Cancellable): Any /* Some(gint16): `gint16` */ =
+  def readInt16(
+      cancellable: Cancellable
+  ): GResult[Any /* Some(gint16): `gint16` */ ] = GResult.wrap(__errorPtr =>
     g_data_input_stream_read_int16(
       this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
     )
+  )
 
-  def readInt32(cancellable: Cancellable): Any /* Some(gint32): `gint32` */ =
+  def readInt32(
+      cancellable: Cancellable
+  ): GResult[Any /* Some(gint32): `gint32` */ ] = GResult.wrap(__errorPtr =>
     g_data_input_stream_read_int32(
       this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
     )
+  )
 
-  def readInt64(cancellable: Cancellable): Any /* Some(gint64): `gint64` */ =
+  def readInt64(
+      cancellable: Cancellable
+  ): GResult[Any /* Some(gint64): `gint64` */ ] = GResult.wrap(__errorPtr =>
     g_data_input_stream_read_int64(
       this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
     )
+  )
 
   def readLineAsync(
       io_priority: Int,
@@ -72,55 +89,73 @@ class DataInputStream(raw: Ptr[GDataInputStream])
     gpointer(user_data)
   )
 
-  def readLineFinishUtf8(result: AsyncResult, length: Ptr[ULong])(using
-      Zone
-  ): String = fromCString(
-    g_data_input_stream_read_line_finish_utf8(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf,
-      length.asInstanceOf[Ptr[gsize]]
-    ).asInstanceOf
+  def readLineFinishUtf8(result: AsyncResult, length: Ptr[CUnsignedLongInt])(
+      using Zone
+  ): GResult[String] = GResult.wrap(__errorPtr =>
+    fromCString(
+      g_data_input_stream_read_line_finish_utf8(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        length.asInstanceOf[Ptr[gsize]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
-  def readLineUtf8(length: Ptr[ULong], cancellable: Cancellable)(using
-      Zone
-  ): String = fromCString(
-    g_data_input_stream_read_line_utf8(
-      this.raw.asInstanceOf,
-      length.asInstanceOf[Ptr[gsize]],
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  def readLineUtf8(length: Ptr[CUnsignedLongInt], cancellable: Cancellable)(
+      using Zone
+  ): GResult[String] = GResult.wrap(__errorPtr =>
+    fromCString(
+      g_data_input_stream_read_line_utf8(
+        this.raw.asInstanceOf,
+        length.asInstanceOf[Ptr[gsize]],
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
-  def readUint16(cancellable: Cancellable): UShort =
-    g_data_input_stream_read_uint16(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value
+  def readUint16(cancellable: Cancellable): GResult[UShort] =
+    GResult.wrap(__errorPtr =>
+      g_data_input_stream_read_uint16(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
+    )
 
-  def readUint32(cancellable: Cancellable): UInt =
-    g_data_input_stream_read_uint32(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value
+  def readUint32(cancellable: Cancellable): GResult[UInt] =
+    GResult.wrap(__errorPtr =>
+      g_data_input_stream_read_uint32(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
+    )
 
-  def readUint64(cancellable: Cancellable): ULong =
-    g_data_input_stream_read_uint64(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value
+  def readUint64(cancellable: Cancellable): GResult[ULong] =
+    GResult.wrap(__errorPtr =>
+      g_data_input_stream_read_uint64(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
+    )
 
   def readUntil(
       stop_chars: String | CString,
-      length: Ptr[ULong],
+      length: Ptr[CUnsignedLongInt],
       cancellable: Cancellable
-  )(using Zone): String = fromCString(
-    g_data_input_stream_read_until(
-      this.raw.asInstanceOf,
-      __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]],
-      length.asInstanceOf[Ptr[gsize]],
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[String] = GResult.wrap(__errorPtr =>
+    fromCString(
+      g_data_input_stream_read_until(
+        this.raw.asInstanceOf,
+        __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]],
+        length.asInstanceOf[Ptr[gsize]],
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def readUntilAsync(
@@ -138,34 +173,40 @@ class DataInputStream(raw: Ptr[GDataInputStream])
     gpointer(user_data)
   )
 
-  def readUntilFinish(result: AsyncResult, length: Ptr[ULong])(using
+  def readUntilFinish(result: AsyncResult, length: Ptr[CUnsignedLongInt])(using
       Zone
-  ): String = fromCString(
-    g_data_input_stream_read_until_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf,
-      length.asInstanceOf[Ptr[gsize]]
-    ).asInstanceOf
+  ): GResult[String] = GResult.wrap(__errorPtr =>
+    fromCString(
+      g_data_input_stream_read_until_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        length.asInstanceOf[Ptr[gsize]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def readUpto(
       stop_chars: String | CString,
-      stop_chars_len: ULong,
-      length: Ptr[ULong],
+      stop_chars_len: CLongInt,
+      length: Ptr[CUnsignedLongInt],
       cancellable: Cancellable
-  )(using Zone): String = fromCString(
-    g_data_input_stream_read_upto(
-      this.raw.asInstanceOf,
-      __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]],
-      gssize(stop_chars_len),
-      length.asInstanceOf[Ptr[gsize]],
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[String] = GResult.wrap(__errorPtr =>
+    fromCString(
+      g_data_input_stream_read_upto(
+        this.raw.asInstanceOf,
+        __sn_extract_string(stop_chars).asInstanceOf[Ptr[gchar]],
+        gssize(stop_chars_len),
+        length.asInstanceOf[Ptr[gsize]],
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def readUptoAsync(
       stop_chars: String | CString,
-      stop_chars_len: ULong,
+      stop_chars_len: CLongInt,
       io_priority: Int,
       cancellable: Cancellable,
       callback: GAsyncReadyCallback,
@@ -180,14 +221,17 @@ class DataInputStream(raw: Ptr[GDataInputStream])
     gpointer(user_data)
   )
 
-  def readUptoFinish(result: AsyncResult, length: Ptr[ULong])(using
+  def readUptoFinish(result: AsyncResult, length: Ptr[CUnsignedLongInt])(using
       Zone
-  ): String = fromCString(
-    g_data_input_stream_read_upto_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf,
-      length.asInstanceOf[Ptr[gsize]]
-    ).asInstanceOf
+  ): GResult[String] = GResult.wrap(__errorPtr =>
+    fromCString(
+      g_data_input_stream_read_upto_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        length.asInstanceOf[Ptr[gsize]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def setByteOrder(order: GDataStreamByteOrder): Unit =

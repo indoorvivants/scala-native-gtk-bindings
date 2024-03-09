@@ -17,7 +17,10 @@ import sn.gnome.gio.internal.GSocketFamily
 import sn.gnome.gio.internal.GSocketProtocol
 import sn.gnome.gio.internal.GSocketType
 import sn.gnome.gio.internal.GTlsCertificateFlags
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint
 import sn.gnome.glib.internal.guint16
@@ -35,12 +38,15 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
   def connect(
       connectable: SocketConnectable,
       cancellable: Cancellable
-  ): SocketConnection = new SocketConnection(
-    g_socket_client_connect(
-      this.raw.asInstanceOf,
-      connectable.getUnsafeRawPointer().asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  ): GResult[SocketConnection] = GResult.wrap(__errorPtr =>
+    new SocketConnection(
+      g_socket_client_connect(
+        this.raw.asInstanceOf,
+        connectable.getUnsafeRawPointer().asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def connectAsync(
@@ -56,25 +62,31 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
     gpointer(user_data)
   )
 
-  def connectFinish(result: AsyncResult): SocketConnection =
-    new SocketConnection(
-      g_socket_client_connect_finish(
-        this.raw.asInstanceOf,
-        result.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def connectFinish(result: AsyncResult): GResult[SocketConnection] =
+    GResult.wrap(__errorPtr =>
+      new SocketConnection(
+        g_socket_client_connect_finish(
+          this.raw.asInstanceOf,
+          result.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
   def connectToHost(
       host_and_port: String | CString,
       default_port: UShort,
       cancellable: Cancellable
-  )(using Zone): SocketConnection = new SocketConnection(
-    g_socket_client_connect_to_host(
-      this.raw.asInstanceOf,
-      __sn_extract_string(host_and_port).asInstanceOf[Ptr[gchar]],
-      guint16(default_port),
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[SocketConnection] = GResult.wrap(__errorPtr =>
+    new SocketConnection(
+      g_socket_client_connect_to_host(
+        this.raw.asInstanceOf,
+        __sn_extract_string(host_and_port).asInstanceOf[Ptr[gchar]],
+        guint16(default_port),
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def connectToHostAsync(
@@ -92,25 +104,31 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
     gpointer(user_data)
   )
 
-  def connectToHostFinish(result: AsyncResult): SocketConnection =
-    new SocketConnection(
-      g_socket_client_connect_to_host_finish(
-        this.raw.asInstanceOf,
-        result.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def connectToHostFinish(result: AsyncResult): GResult[SocketConnection] =
+    GResult.wrap(__errorPtr =>
+      new SocketConnection(
+        g_socket_client_connect_to_host_finish(
+          this.raw.asInstanceOf,
+          result.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
   def connectToService(
       domain: String | CString,
       service: String | CString,
       cancellable: Cancellable
-  )(using Zone): SocketConnection = new SocketConnection(
-    g_socket_client_connect_to_service(
-      this.raw.asInstanceOf,
-      __sn_extract_string(domain).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(service).asInstanceOf[Ptr[gchar]],
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[SocketConnection] = GResult.wrap(__errorPtr =>
+    new SocketConnection(
+      g_socket_client_connect_to_service(
+        this.raw.asInstanceOf,
+        __sn_extract_string(domain).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(service).asInstanceOf[Ptr[gchar]],
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def connectToServiceAsync(
@@ -128,25 +146,31 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
     gpointer(user_data)
   )
 
-  def connectToServiceFinish(result: AsyncResult): SocketConnection =
-    new SocketConnection(
-      g_socket_client_connect_to_service_finish(
-        this.raw.asInstanceOf,
-        result.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def connectToServiceFinish(result: AsyncResult): GResult[SocketConnection] =
+    GResult.wrap(__errorPtr =>
+      new SocketConnection(
+        g_socket_client_connect_to_service_finish(
+          this.raw.asInstanceOf,
+          result.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
   def connectToUri(
       uri: String | CString,
       default_port: UShort,
       cancellable: Cancellable
-  )(using Zone): SocketConnection = new SocketConnection(
-    g_socket_client_connect_to_uri(
-      this.raw.asInstanceOf,
-      __sn_extract_string(uri).asInstanceOf[Ptr[gchar]],
-      guint16(default_port),
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[SocketConnection] = GResult.wrap(__errorPtr =>
+    new SocketConnection(
+      g_socket_client_connect_to_uri(
+        this.raw.asInstanceOf,
+        __sn_extract_string(uri).asInstanceOf[Ptr[gchar]],
+        guint16(default_port),
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def connectToUriAsync(
@@ -164,12 +188,15 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
     gpointer(user_data)
   )
 
-  def connectToUriFinish(result: AsyncResult): SocketConnection =
-    new SocketConnection(
-      g_socket_client_connect_to_uri_finish(
-        this.raw.asInstanceOf,
-        result.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def connectToUriFinish(result: AsyncResult): GResult[SocketConnection] =
+    GResult.wrap(__errorPtr =>
+      new SocketConnection(
+        g_socket_client_connect_to_uri_finish(
+          this.raw.asInstanceOf,
+          result.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
   def getEnableProxy(): Boolean =
@@ -205,8 +232,10 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
   def getTlsValidationFlags(): GTlsCertificateFlags =
     g_socket_client_get_tls_validation_flags(this.raw.asInstanceOf)
 
-  def setEnableProxy(enable: Boolean): Unit =
-    g_socket_client_set_enable_proxy(this.raw.asInstanceOf, enable)
+  def setEnableProxy(enable: Boolean): Unit = g_socket_client_set_enable_proxy(
+    this.raw.asInstanceOf,
+    gboolean(gint((if enable == true then 1 else 0)))
+  )
 
   def setFamily(family: GSocketFamily): Unit =
     g_socket_client_set_family(this.raw.asInstanceOf, family)
@@ -232,8 +261,10 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
   def setTimeout(timeout: UInt): Unit =
     g_socket_client_set_timeout(this.raw.asInstanceOf, guint(timeout))
 
-  def setTls(tls: Boolean): Unit =
-    g_socket_client_set_tls(this.raw.asInstanceOf, tls)
+  def setTls(tls: Boolean): Unit = g_socket_client_set_tls(
+    this.raw.asInstanceOf,
+    gboolean(gint((if tls == true then 1 else 0)))
+  )
 
   def setTlsValidationFlags(flags: GTlsCertificateFlags): Unit =
     g_socket_client_set_tls_validation_flags(this.raw.asInstanceOf, flags)

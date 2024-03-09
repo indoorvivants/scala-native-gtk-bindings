@@ -10,9 +10,11 @@ import sn.gnome.gio.fluent.Cancellable
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GSimpleAsyncResult
 import sn.gnome.gio.internal.GSimpleAsyncThreadFunc
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GError
 import sn.gnome.glib.internal.GQuark
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.gssize
@@ -36,7 +38,7 @@ class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult])
     this.raw.asInstanceOf
   ).value
 
-  def getOpResGssize(): ULong = g_simple_async_result_get_op_res_gssize(
+  def getOpResGssize(): CLongInt = g_simple_async_result_get_op_res_gssize(
     this.raw.asInstanceOf
   ).value
 
@@ -44,8 +46,12 @@ class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult])
     this.raw.asInstanceOf
   ).value
 
-  def propagateError(): Boolean =
-    g_simple_async_result_propagate_error(this.raw.asInstanceOf).value.!=(0)
+  def propagateError(): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_simple_async_result_propagate_error(
+      this.raw.asInstanceOf,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def runInThread(
       func: GSimpleAsyncThreadFunc,
@@ -83,11 +89,14 @@ class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult])
   def setHandleCancellation(handle_cancellation: Boolean): Unit =
     g_simple_async_result_set_handle_cancellation(
       this.raw.asInstanceOf,
-      handle_cancellation
+      gboolean(gint((if handle_cancellation == true then 1 else 0)))
     )
 
   def setOpResGboolean(op_res: Boolean): Unit =
-    g_simple_async_result_set_op_res_gboolean(this.raw.asInstanceOf, op_res)
+    g_simple_async_result_set_op_res_gboolean(
+      this.raw.asInstanceOf,
+      gboolean(gint((if op_res == true then 1 else 0)))
+    )
 
   def setOpResGpointer(
       op_res: Ptr[Byte],
@@ -98,7 +107,7 @@ class SimpleAsyncResult(raw: Ptr[GSimpleAsyncResult])
     destroy_op_res
   )
 
-  def setOpResGssize(op_res: ULong): Unit =
+  def setOpResGssize(op_res: CLongInt): Unit =
     g_simple_async_result_set_op_res_gssize(
       this.raw.asInstanceOf,
       gssize(op_res)

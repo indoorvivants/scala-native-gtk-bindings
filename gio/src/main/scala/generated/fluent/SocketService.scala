@@ -6,6 +6,8 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.fluent.SocketListener
 import sn.gnome.gio.internal.GSocketService
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 
 class SocketService(raw: Ptr[GSocketService])
     extends SocketListener(raw.asInstanceOf):

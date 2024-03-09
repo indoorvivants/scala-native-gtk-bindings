@@ -25,11 +25,11 @@ class MemoryOutputStream(raw: Ptr[GMemoryOutputStream])
     this.raw.asInstanceOf
   ).value
 
-  def getDataSize(): ULong = g_memory_output_stream_get_data_size(
+  def getDataSize(): CUnsignedLongInt = g_memory_output_stream_get_data_size(
     this.raw.asInstanceOf
   ).value
 
-  def getSize(): ULong = g_memory_output_stream_get_size(
+  def getSize(): CUnsignedLongInt = g_memory_output_stream_get_size(
     this.raw.asInstanceOf
   ).value
 
@@ -46,7 +46,7 @@ end MemoryOutputStream
 object MemoryOutputStream:
   def apply(
       data: Ptr[Byte],
-      size: ULong,
+      size: CUnsignedLongInt,
       realloc_function: GReallocFunc,
       destroy_function: GDestroyNotify
   ): MemoryOutputStream = new MemoryOutputStream(

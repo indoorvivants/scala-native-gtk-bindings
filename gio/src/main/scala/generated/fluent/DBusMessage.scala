@@ -13,8 +13,11 @@ import sn.gnome.gio.internal.GDBusMessageByteOrder
 import sn.gnome.gio.internal.GDBusMessageFlags
 import sn.gnome.gio.internal.GDBusMessageHeaderField
 import sn.gnome.gio.internal.GDBusMessageType
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.guchar
 import sn.gnome.glib.internal.guint
@@ -24,8 +27,10 @@ import sn.gnome.gobject.fluent.Object
 class DBusMessage(raw: Ptr[GDBusMessage]) extends Object(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def copy(): DBusMessage = new DBusMessage(
-    g_dbus_message_copy(this.raw.asInstanceOf).asInstanceOf
+  def copy(): GResult[DBusMessage] = GResult.wrap(__errorPtr =>
+    new DBusMessage(
+      g_dbus_message_copy(this.raw.asInstanceOf, __errorPtr).asInstanceOf
+    )
   )
 
   def getArg0()(using Zone): String = fromCString(
@@ -208,16 +213,20 @@ class DBusMessage(raw: Ptr[GDBusMessage]) extends Object(raw.asInstanceOf):
     )
 
   def toBlob(
-      out_size: Ptr[ULong],
+      out_size: Ptr[CUnsignedLongInt],
       capabilities: GDBusCapabilityFlags
-  ): Ptr[UByte] = g_dbus_message_to_blob(
-    this.raw.asInstanceOf,
-    out_size.asInstanceOf[Ptr[gsize]],
-    capabilities
+  ): GResult[Ptr[UByte]] = GResult.wrap(__errorPtr =>
+    g_dbus_message_to_blob(
+      this.raw.asInstanceOf,
+      out_size.asInstanceOf[Ptr[gsize]],
+      capabilities,
+      __errorPtr
+    )
   )
 
-  def toGerror(): Boolean =
-    g_dbus_message_to_gerror(this.raw.asInstanceOf).value.!=(0)
+  def toGerror(): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_dbus_message_to_gerror(this.raw.asInstanceOf, __errorPtr).value.!=(0)
+  )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

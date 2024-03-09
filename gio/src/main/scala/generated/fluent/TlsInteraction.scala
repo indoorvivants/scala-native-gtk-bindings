@@ -12,6 +12,7 @@ import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GTlsCertificateRequestFlags
 import sn.gnome.gio.internal.GTlsInteraction
 import sn.gnome.gio.internal.GTlsInteractionResult
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.Object
 
@@ -22,10 +23,13 @@ class TlsInteraction(raw: Ptr[GTlsInteraction])
   def askPassword(
       password: TlsPassword,
       cancellable: Cancellable
-  ): GTlsInteractionResult = g_tls_interaction_ask_password(
-    this.raw.asInstanceOf,
-    password.getUnsafeRawPointer().asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  ): GResult[GTlsInteractionResult] = GResult.wrap(__errorPtr =>
+    g_tls_interaction_ask_password(
+      this.raw.asInstanceOf,
+      password.getUnsafeRawPointer().asInstanceOf,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def askPasswordAsync(
@@ -41,41 +45,53 @@ class TlsInteraction(raw: Ptr[GTlsInteraction])
     gpointer(user_data)
   )
 
-  def askPasswordFinish(result: AsyncResult): GTlsInteractionResult =
-    g_tls_interaction_ask_password_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
+  def askPasswordFinish(result: AsyncResult): GResult[GTlsInteractionResult] =
+    GResult.wrap(__errorPtr =>
+      g_tls_interaction_ask_password_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      )
     )
 
   def invokeAskPassword(
       password: TlsPassword,
       cancellable: Cancellable
-  ): GTlsInteractionResult = g_tls_interaction_invoke_ask_password(
-    this.raw.asInstanceOf,
-    password.getUnsafeRawPointer().asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  ): GResult[GTlsInteractionResult] = GResult.wrap(__errorPtr =>
+    g_tls_interaction_invoke_ask_password(
+      this.raw.asInstanceOf,
+      password.getUnsafeRawPointer().asInstanceOf,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def invokeRequestCertificate(
       connection: TlsConnection,
       flags: GTlsCertificateRequestFlags,
       cancellable: Cancellable
-  ): GTlsInteractionResult = g_tls_interaction_invoke_request_certificate(
-    this.raw.asInstanceOf,
-    connection.getUnsafeRawPointer().asInstanceOf,
-    flags,
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  ): GResult[GTlsInteractionResult] = GResult.wrap(__errorPtr =>
+    g_tls_interaction_invoke_request_certificate(
+      this.raw.asInstanceOf,
+      connection.getUnsafeRawPointer().asInstanceOf,
+      flags,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def requestCertificate(
       connection: TlsConnection,
       flags: GTlsCertificateRequestFlags,
       cancellable: Cancellable
-  ): GTlsInteractionResult = g_tls_interaction_request_certificate(
-    this.raw.asInstanceOf,
-    connection.getUnsafeRawPointer().asInstanceOf,
-    flags,
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  ): GResult[GTlsInteractionResult] = GResult.wrap(__errorPtr =>
+    g_tls_interaction_request_certificate(
+      this.raw.asInstanceOf,
+      connection.getUnsafeRawPointer().asInstanceOf,
+      flags,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def requestCertificateAsync(
@@ -93,10 +109,14 @@ class TlsInteraction(raw: Ptr[GTlsInteraction])
     gpointer(user_data)
   )
 
-  def requestCertificateFinish(result: AsyncResult): GTlsInteractionResult =
+  def requestCertificateFinish(
+      result: AsyncResult
+  ): GResult[GTlsInteractionResult] = GResult.wrap(__errorPtr =>
     g_tls_interaction_request_certificate_finish(
       this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
+      result.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
     )
+  )
 
 end TlsInteraction

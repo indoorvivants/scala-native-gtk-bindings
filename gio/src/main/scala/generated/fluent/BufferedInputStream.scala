@@ -12,6 +12,7 @@ import sn.gnome.gio.fluent.InputStream
 import sn.gnome.gio.fluent.Seekable
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GBufferedInputStream
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.gssize
@@ -21,15 +22,18 @@ class BufferedInputStream(raw: Ptr[GBufferedInputStream])
       Seekable:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def fill(count: ULong, cancellable: Cancellable): ULong =
-    g_buffered_input_stream_fill(
-      this.raw.asInstanceOf,
-      gssize(count),
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value
+  def fill(count: CLongInt, cancellable: Cancellable): GResult[CLongInt] =
+    GResult.wrap(__errorPtr =>
+      g_buffered_input_stream_fill(
+        this.raw.asInstanceOf,
+        gssize(count),
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
+    )
 
   def fillAsync(
-      count: ULong,
+      count: CLongInt,
       io_priority: Int,
       cancellable: Cancellable,
       callback: GAsyncReadyCallback,
@@ -43,27 +47,32 @@ class BufferedInputStream(raw: Ptr[GBufferedInputStream])
     gpointer(user_data)
   )
 
-  def fillFinish(result: AsyncResult): ULong =
-    g_buffered_input_stream_fill_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).value
-
-  def getAvailable(): ULong = g_buffered_input_stream_get_available(
-    this.raw.asInstanceOf
-  ).value
-
-  def getBufferSize(): ULong = g_buffered_input_stream_get_buffer_size(
-    this.raw.asInstanceOf
-  ).value
-
-  def readByte(cancellable: Cancellable): Int =
-    g_buffered_input_stream_read_byte(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
+  def fillFinish(result: AsyncResult): GResult[CLongInt] =
+    GResult.wrap(__errorPtr =>
+      g_buffered_input_stream_fill_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
     )
 
-  def setBufferSize(size: ULong): Unit =
+  def getAvailable(): CUnsignedLongInt = g_buffered_input_stream_get_available(
+    this.raw.asInstanceOf
+  ).value
+
+  def getBufferSize(): CUnsignedLongInt =
+    g_buffered_input_stream_get_buffer_size(this.raw.asInstanceOf).value
+
+  def readByte(cancellable: Cancellable): GResult[Int] =
+    GResult.wrap(__errorPtr =>
+      g_buffered_input_stream_read_byte(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      )
+    )
+
+  def setBufferSize(size: CUnsignedLongInt): Unit =
     g_buffered_input_stream_set_buffer_size(this.raw.asInstanceOf, gsize(size))
 
 end BufferedInputStream
@@ -75,11 +84,13 @@ object BufferedInputStream:
         base_stream.getUnsafeRawPointer().asInstanceOf
       ).asInstanceOf
     )
-  def sized(base_stream: InputStream, size: ULong): BufferedInputStream =
-    new BufferedInputStream(
-      g_buffered_input_stream_new_sized(
-        base_stream.getUnsafeRawPointer().asInstanceOf,
-        gsize(size)
-      ).asInstanceOf
-    )
+  def sized(
+      base_stream: InputStream,
+      size: CUnsignedLongInt
+  ): BufferedInputStream = new BufferedInputStream(
+    g_buffered_input_stream_new_sized(
+      base_stream.getUnsafeRawPointer().asInstanceOf,
+      gsize(size)
+    ).asInstanceOf
+  )
 end BufferedInputStream

@@ -10,6 +10,8 @@ import sn.gnome.gio.internal.GListStore
 import sn.gnome.glib.internal.GCompareDataFunc
 import sn.gnome.glib.internal.GEqualFunc
 import sn.gnome.glib.internal.GEqualFuncFull
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object

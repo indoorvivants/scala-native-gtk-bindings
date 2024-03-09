@@ -13,9 +13,11 @@ import sn.gnome.gio.fluent.File
 import sn.gnome.gio.fluent.Notification
 import sn.gnome.gio.internal.GApplication
 import sn.gnome.gio.internal.GApplicationFlags
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GOptionArg
 import sn.gnome.glib.internal.GOptionFlags
 import sn.gnome.glib.internal.GOptionGroup
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -108,10 +110,14 @@ class Application(raw: Ptr[GApplication])
 
   def quit(): Unit = g_application_quit(this.raw.asInstanceOf)
 
-  def register(cancellable: Cancellable): Boolean = g_application_register(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def register(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_application_register(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def release(): Unit = g_application_release(this.raw.asInstanceOf)
 

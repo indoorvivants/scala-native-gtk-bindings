@@ -17,6 +17,7 @@ import sn.gnome.gio.internal.GDBusCallFlags
 import sn.gnome.gio.internal.GDBusInterfaceInfo
 import sn.gnome.gio.internal.GDBusProxy
 import sn.gnome.gio.internal.GDBusProxyFlags
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
@@ -49,10 +50,14 @@ class DBusProxy(raw: Ptr[GDBusProxy])
     gpointer(user_data)
   )
 
-  def callFinish(res: AsyncResult): Ptr[GVariant] = g_dbus_proxy_call_finish(
-    this.raw.asInstanceOf,
-    res.getUnsafeRawPointer().asInstanceOf
-  )
+  def callFinish(res: AsyncResult): GResult[Ptr[GVariant]] =
+    GResult.wrap(__errorPtr =>
+      g_dbus_proxy_call_finish(
+        this.raw.asInstanceOf,
+        res.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      )
+    )
 
   def callSync(
       method_name: String | CString,
@@ -60,13 +65,16 @@ class DBusProxy(raw: Ptr[GDBusProxy])
       flags: GDBusCallFlags,
       timeout_msec: Int,
       cancellable: Cancellable
-  )(using Zone): Ptr[GVariant] = g_dbus_proxy_call_sync(
-    this.raw.asInstanceOf,
-    __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
-    parameters,
-    flags,
-    gint(timeout_msec),
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  )(using Zone): GResult[Ptr[GVariant]] = GResult.wrap(__errorPtr =>
+    g_dbus_proxy_call_sync(
+      this.raw.asInstanceOf,
+      __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
+      parameters,
+      flags,
+      gint(timeout_msec),
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def callWithUnixFdList(
@@ -93,10 +101,13 @@ class DBusProxy(raw: Ptr[GDBusProxy])
   def callWithUnixFdListFinish(
       out_fd_list: UnixFDList,
       res: AsyncResult
-  ): Ptr[GVariant] = g_dbus_proxy_call_with_unix_fd_list_finish(
-    this.raw.asInstanceOf,
-    out_fd_list.getUnsafeRawPointer().asInstanceOf,
-    res.getUnsafeRawPointer().asInstanceOf
+  ): GResult[Ptr[GVariant]] = GResult.wrap(__errorPtr =>
+    g_dbus_proxy_call_with_unix_fd_list_finish(
+      this.raw.asInstanceOf,
+      out_fd_list.getUnsafeRawPointer().asInstanceOf,
+      res.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def callWithUnixFdListSync(
@@ -107,15 +118,18 @@ class DBusProxy(raw: Ptr[GDBusProxy])
       fd_list: UnixFDList,
       out_fd_list: UnixFDList,
       cancellable: Cancellable
-  )(using Zone): Ptr[GVariant] = g_dbus_proxy_call_with_unix_fd_list_sync(
-    this.raw.asInstanceOf,
-    __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
-    parameters,
-    flags,
-    gint(timeout_msec),
-    fd_list.getUnsafeRawPointer().asInstanceOf,
-    out_fd_list.getUnsafeRawPointer().asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  )(using Zone): GResult[Ptr[GVariant]] = GResult.wrap(__errorPtr =>
+    g_dbus_proxy_call_with_unix_fd_list_sync(
+      this.raw.asInstanceOf,
+      __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
+      parameters,
+      flags,
+      gint(timeout_msec),
+      fd_list.getUnsafeRawPointer().asInstanceOf,
+      out_fd_list.getUnsafeRawPointer().asInstanceOf,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def getCachedProperty(
@@ -181,14 +195,23 @@ class DBusProxy(raw: Ptr[GDBusProxy])
 end DBusProxy
 
 object DBusProxy:
-  def finish(res: AsyncResult): DBusProxy = new DBusProxy(
-    g_dbus_proxy_new_finish(res.getUnsafeRawPointer().asInstanceOf).asInstanceOf
+  def finish(res: AsyncResult): GResult[DBusProxy] = GResult.wrap(__errorPtr =>
+    new DBusProxy(
+      g_dbus_proxy_new_finish(
+        res.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
-  def forBusFinish(res: AsyncResult): DBusProxy = new DBusProxy(
-    g_dbus_proxy_new_for_bus_finish(
-      res.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
-  )
+  def forBusFinish(res: AsyncResult): GResult[DBusProxy] =
+    GResult.wrap(__errorPtr =>
+      new DBusProxy(
+        g_dbus_proxy_new_for_bus_finish(
+          res.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
+    )
   def forBusSync(
       bus_type: GBusType,
       flags: GDBusProxyFlags,
@@ -197,16 +220,19 @@ object DBusProxy:
       object_path: String | CString,
       interface_name: String | CString,
       cancellable: Cancellable
-  )(using Zone): DBusProxy = new DBusProxy(
-    g_dbus_proxy_new_for_bus_sync(
-      bus_type,
-      flags,
-      info,
-      __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusProxy] = GResult.wrap(__errorPtr =>
+    new DBusProxy(
+      g_dbus_proxy_new_for_bus_sync(
+        bus_type,
+        flags,
+        info,
+        __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
   def sync(
       connection: DBusConnection,
@@ -216,16 +242,19 @@ object DBusProxy:
       object_path: String | CString,
       interface_name: String | CString,
       cancellable: Cancellable
-  )(using Zone): DBusProxy = new DBusProxy(
-    g_dbus_proxy_new_sync(
-      connection.getUnsafeRawPointer().asInstanceOf,
-      flags,
-      info,
-      __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusProxy] = GResult.wrap(__errorPtr =>
+    new DBusProxy(
+      g_dbus_proxy_new_sync(
+        connection.getUnsafeRawPointer().asInstanceOf,
+        flags,
+        info,
+        __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   private inline def __sn_extract_string(str: String | CString)(using

@@ -8,6 +8,7 @@ import sn.gnome.gio.internal.GSubprocessFlags
 import sn.gnome.gio.internal.GSubprocessLauncher
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GSpawnChildSetupFunc
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -72,7 +73,7 @@ class SubprocessLauncher(raw: Ptr[GSubprocessLauncher])
     this.raw.asInstanceOf,
     __sn_extract_string(variable).asInstanceOf[Ptr[gchar]],
     __sn_extract_string(value).asInstanceOf[Ptr[gchar]],
-    overwrite
+    gboolean(gint((if overwrite == true then 1 else 0)))
   )
 
   def takeFd(source_fd: Int, target_fd: Int): Unit =

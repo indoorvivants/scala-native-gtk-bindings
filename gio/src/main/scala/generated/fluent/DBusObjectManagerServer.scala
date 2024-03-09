@@ -8,7 +8,9 @@ import sn.gnome.gio.fluent.DBusConnection
 import sn.gnome.gio.fluent.DBusObjectManager
 import sn.gnome.gio.fluent.DBusObjectSkeleton
 import sn.gnome.gio.internal.GDBusObjectManagerServer
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class DBusObjectManagerServer(raw: Ptr[GDBusObjectManagerServer])

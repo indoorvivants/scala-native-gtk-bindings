@@ -26,19 +26,36 @@ def renderClassConstructor(cls: AugmentedClass, constructor: Constructor)(using
         )
       )
 
+    val isThrowing = constructor.isThrowing
+
+    if isThrowing then coll.add(importGResultEffect)
+
     val requiresZone = Option
       .when(coll.effectsSoFar().contains(Effect.RequiresZone))("(using Zone)")
       .getOrElse("")
 
     val serialisedParams = renderedParameters.paramSpecs
       .mkString(", ")
-    val serialisedArguments = renderedParameters.arguments.mkString(", ")
+
+    val arguments =
+      if isThrowing then renderedParameters.arguments ++ Seq("__errorPtr")
+      else renderedParameters.arguments
+
+    val serialisedArguments = arguments.mkString(", ")
+
     val instantiation = s"${cConstructor}($serialisedArguments)"
+
     val massagedInstantiation = s"${instantiation}.asInstanceOf"
     val body = s"new ${cls.name}($massagedInstantiation)"
+    val finalBody =
+      if isThrowing then s"GResult.wrap(__errorPtr => $body)"
+      else body
+
+    val returnType = 
+      if isThrowing then s"GResult[${cls.name}]" else cls.name
 
     line(
-      s"def ${escape(sanitisedName)}($serialisedParams)$requiresZone: ${cls.name} = $body"
+      s"def ${escape(sanitisedName)}($serialisedParams)$requiresZone: ${returnType} = $finalBody"
     )
 
 end renderClassConstructor

@@ -10,7 +10,10 @@ import sn.gnome.gio.fluent.InetAddressMask
 import sn.gnome.gio.fluent.Initable
 import sn.gnome.gio.internal.GInetAddressMask
 import sn.gnome.gio.internal.GSocketFamily
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object
 
@@ -48,19 +51,26 @@ class InetAddressMask(raw: Ptr[GInetAddressMask])
 end InetAddressMask
 
 object InetAddressMask:
-  def apply(addr: InetAddress, length: UInt): InetAddressMask =
-    new InetAddressMask(
-      g_inet_address_mask_new(
-        addr.getUnsafeRawPointer().asInstanceOf,
-        guint(length)
-      ).asInstanceOf
+  def apply(addr: InetAddress, length: UInt): GResult[InetAddressMask] =
+    GResult.wrap(__errorPtr =>
+      new InetAddressMask(
+        g_inet_address_mask_new(
+          addr.getUnsafeRawPointer().asInstanceOf,
+          guint(length),
+          __errorPtr
+        ).asInstanceOf
+      )
     )
-  def fromString(mask_string: String | CString)(using Zone): InetAddressMask =
+  def fromString(
+      mask_string: String | CString
+  )(using Zone): GResult[InetAddressMask] = GResult.wrap(__errorPtr =>
     new InetAddressMask(
       g_inet_address_mask_new_from_string(
-        __sn_extract_string(mask_string).asInstanceOf[Ptr[gchar]]
+        __sn_extract_string(mask_string).asInstanceOf[Ptr[gchar]],
+        __errorPtr
       ).asInstanceOf
     )
+  )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

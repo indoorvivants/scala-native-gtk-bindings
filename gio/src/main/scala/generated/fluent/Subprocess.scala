@@ -11,7 +11,9 @@ import sn.gnome.gio.fluent.InputStream
 import sn.gnome.gio.fluent.OutputStream
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GSubprocess
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GBytes
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -27,13 +29,16 @@ class Subprocess(raw: Ptr[GSubprocess])
       cancellable: Cancellable,
       stdout_buf: Ptr[Ptr[GBytes]],
       stderr_buf: Ptr[Ptr[GBytes]]
-  ): Boolean = g_subprocess_communicate(
-    this.raw.asInstanceOf,
-    stdin_buf,
-    cancellable.getUnsafeRawPointer().asInstanceOf,
-    stdout_buf,
-    stderr_buf
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_subprocess_communicate(
+      this.raw.asInstanceOf,
+      stdin_buf,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      stdout_buf,
+      stderr_buf,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def communicateAsync(
       stdin_buf: Ptr[GBytes],
@@ -52,25 +57,31 @@ class Subprocess(raw: Ptr[GSubprocess])
       result: AsyncResult,
       stdout_buf: Ptr[Ptr[GBytes]],
       stderr_buf: Ptr[Ptr[GBytes]]
-  ): Boolean = g_subprocess_communicate_finish(
-    this.raw.asInstanceOf,
-    result.getUnsafeRawPointer().asInstanceOf,
-    stdout_buf,
-    stderr_buf
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_subprocess_communicate_finish(
+      this.raw.asInstanceOf,
+      result.getUnsafeRawPointer().asInstanceOf,
+      stdout_buf,
+      stderr_buf,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def communicateUtf8(
       stdin_buf: String | CString,
       cancellable: Cancellable,
       stdout_buf: Any /* Some(utf8): `char**` */,
       stderr_buf: Any /* Some(utf8): `char**` */
-  )(using Zone): Boolean = g_subprocess_communicate_utf8(
-    this.raw.asInstanceOf,
-    __sn_extract_string(stdin_buf),
-    cancellable.getUnsafeRawPointer().asInstanceOf,
-    stdout_buf,
-    stderr_buf
-  ).value.!=(0)
+  )(using Zone): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_subprocess_communicate_utf8(
+      this.raw.asInstanceOf,
+      __sn_extract_string(stdin_buf),
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      stdout_buf,
+      stderr_buf,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def communicateUtf8Async(
       stdin_buf: String | CString,
@@ -89,12 +100,15 @@ class Subprocess(raw: Ptr[GSubprocess])
       result: AsyncResult,
       stdout_buf: Any /* Some(utf8): `char**` */,
       stderr_buf: Any /* Some(utf8): `char**` */
-  ): Boolean = g_subprocess_communicate_utf8_finish(
-    this.raw.asInstanceOf,
-    result.getUnsafeRawPointer().asInstanceOf,
-    stdout_buf,
-    stderr_buf
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_subprocess_communicate_utf8_finish(
+      this.raw.asInstanceOf,
+      result.getUnsafeRawPointer().asInstanceOf,
+      stdout_buf,
+      stderr_buf,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def forceExit(): Unit = g_subprocess_force_exit(this.raw.asInstanceOf)
 
@@ -134,10 +148,14 @@ class Subprocess(raw: Ptr[GSubprocess])
   def sendSignal(signal_num: Int): Unit =
     g_subprocess_send_signal(this.raw.asInstanceOf, gint(signal_num))
 
-  def _wait(cancellable: Cancellable): Boolean = g_subprocess_wait(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def _wait(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_subprocess_wait(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def waitAsync(
       cancellable: Cancellable,
@@ -150,10 +168,14 @@ class Subprocess(raw: Ptr[GSubprocess])
     gpointer(user_data)
   )
 
-  def waitCheck(cancellable: Cancellable): Boolean = g_subprocess_wait_check(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def waitCheck(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_subprocess_wait_check(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def waitCheckAsync(
       cancellable: Cancellable,
@@ -166,16 +188,23 @@ class Subprocess(raw: Ptr[GSubprocess])
     gpointer(user_data)
   )
 
-  def waitCheckFinish(result: AsyncResult): Boolean =
-    g_subprocess_wait_check_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def waitCheckFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_subprocess_wait_check_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
-  def waitFinish(result: AsyncResult): Boolean = g_subprocess_wait_finish(
-    this.raw.asInstanceOf,
-    result.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def waitFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_subprocess_wait_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

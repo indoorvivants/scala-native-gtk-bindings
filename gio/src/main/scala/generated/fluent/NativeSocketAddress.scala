@@ -19,7 +19,7 @@ class NativeSocketAddress(raw: Ptr[GNativeSocketAddress])
 end NativeSocketAddress
 
 object NativeSocketAddress:
-  def apply(native: Ptr[Byte], len: ULong): NativeSocketAddress =
+  def apply(native: Ptr[Byte], len: CUnsignedLongInt): NativeSocketAddress =
     new NativeSocketAddress(
       g_native_socket_address_new(gpointer(native), gsize(len)).asInstanceOf
     )

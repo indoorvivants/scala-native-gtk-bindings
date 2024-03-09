@@ -10,7 +10,10 @@ import sn.gnome.gio.fluent.File
 import sn.gnome.gio.fluent.FileInfo
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GFileEnumerator
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GList
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.Object
 
@@ -18,10 +21,14 @@ class FileEnumerator(raw: Ptr[GFileEnumerator])
     extends Object(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def close(cancellable: Cancellable): Boolean = g_file_enumerator_close(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def close(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_file_enumerator_close(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def closeAsync(
       io_priority: Int,
@@ -36,11 +43,14 @@ class FileEnumerator(raw: Ptr[GFileEnumerator])
     gpointer(user_data)
   )
 
-  def closeFinish(result: AsyncResult): Boolean =
-    g_file_enumerator_close_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def closeFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_file_enumerator_close_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def getChild(info: FileInfo): File = g_file_enumerator_get_child(
     this.raw.asInstanceOf,
@@ -61,19 +71,26 @@ class FileEnumerator(raw: Ptr[GFileEnumerator])
       out_info: FileInfo,
       out_child: File,
       cancellable: Cancellable
-  ): Boolean = g_file_enumerator_iterate(
-    this.raw.asInstanceOf,
-    out_info.getUnsafeRawPointer().asInstanceOf,
-    out_child.getUnsafeRawPointer().asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
-
-  def nextFile(cancellable: Cancellable): FileInfo = new FileInfo(
-    g_file_enumerator_next_file(
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_file_enumerator_iterate(
       this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+      out_info.getUnsafeRawPointer().asInstanceOf,
+      out_child.getUnsafeRawPointer().asInstanceOf,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    ).value.!=(0)
   )
+
+  def nextFile(cancellable: Cancellable): GResult[FileInfo] =
+    GResult.wrap(__errorPtr =>
+      new FileInfo(
+        g_file_enumerator_next_file(
+          this.raw.asInstanceOf,
+          cancellable.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
+    )
 
   def nextFilesAsync(
       num_files: Int,
@@ -90,13 +107,18 @@ class FileEnumerator(raw: Ptr[GFileEnumerator])
     gpointer(user_data)
   )
 
-  def nextFilesFinish(result: AsyncResult): Ptr[GList] =
-    g_file_enumerator_next_files_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
+  def nextFilesFinish(result: AsyncResult): GResult[Ptr[GList]] =
+    GResult.wrap(__errorPtr =>
+      g_file_enumerator_next_files_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      )
     )
 
-  def setPending(pending: Boolean): Unit =
-    g_file_enumerator_set_pending(this.raw.asInstanceOf, pending)
+  def setPending(pending: Boolean): Unit = g_file_enumerator_set_pending(
+    this.raw.asInstanceOf,
+    gboolean(gint((if pending == true then 1 else 0)))
+  )
 
 end FileEnumerator

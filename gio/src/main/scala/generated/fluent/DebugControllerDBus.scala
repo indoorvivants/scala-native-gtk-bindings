@@ -9,6 +9,7 @@ import sn.gnome.gio.fluent.DBusConnection
 import sn.gnome.gio.fluent.DebugController
 import sn.gnome.gio.fluent.Initable
 import sn.gnome.gio.internal.GDebugControllerDBus
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.gobject.fluent.Object
 
 class DebugControllerDBus(raw: Ptr[GDebugControllerDBus])
@@ -25,10 +26,13 @@ object DebugControllerDBus:
   def apply(
       connection: DBusConnection,
       cancellable: Cancellable
-  ): DebugControllerDBus = new DebugControllerDBus(
-    g_debug_controller_dbus_new(
-      connection.getUnsafeRawPointer().asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  ): GResult[DebugControllerDBus] = GResult.wrap(__errorPtr =>
+    new DebugControllerDBus(
+      g_debug_controller_dbus_new(
+        connection.getUnsafeRawPointer().asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 end DebugControllerDBus

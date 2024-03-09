@@ -14,6 +14,7 @@ import sn.gnome.gio.internal.GBusType
 import sn.gnome.gio.internal.GDBusObjectManagerClient
 import sn.gnome.gio.internal.GDBusObjectManagerClientFlags
 import sn.gnome.gio.internal.GDBusProxyTypeFunc
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gpointer
@@ -48,17 +49,23 @@ class DBusObjectManagerClient(raw: Ptr[GDBusObjectManagerClient])
 end DBusObjectManagerClient
 
 object DBusObjectManagerClient:
-  def finish(res: AsyncResult): DBusObjectManagerClient =
-    new DBusObjectManagerClient(
-      g_dbus_object_manager_client_new_finish(
-        res.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def finish(res: AsyncResult): GResult[DBusObjectManagerClient] =
+    GResult.wrap(__errorPtr =>
+      new DBusObjectManagerClient(
+        g_dbus_object_manager_client_new_finish(
+          res.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
-  def forBusFinish(res: AsyncResult): DBusObjectManagerClient =
-    new DBusObjectManagerClient(
-      g_dbus_object_manager_client_new_for_bus_finish(
-        res.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def forBusFinish(res: AsyncResult): GResult[DBusObjectManagerClient] =
+    GResult.wrap(__errorPtr =>
+      new DBusObjectManagerClient(
+        g_dbus_object_manager_client_new_for_bus_finish(
+          res.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
   def forBusSync(
       bus_type: GBusType,
@@ -69,17 +76,20 @@ object DBusObjectManagerClient:
       get_proxy_type_user_data: Ptr[Byte],
       get_proxy_type_destroy_notify: GDestroyNotify,
       cancellable: Cancellable
-  )(using Zone): DBusObjectManagerClient = new DBusObjectManagerClient(
-    g_dbus_object_manager_client_new_for_bus_sync(
-      bus_type,
-      flags,
-      __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-      get_proxy_type_func,
-      gpointer(get_proxy_type_user_data),
-      get_proxy_type_destroy_notify,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusObjectManagerClient] = GResult.wrap(__errorPtr =>
+    new DBusObjectManagerClient(
+      g_dbus_object_manager_client_new_for_bus_sync(
+        bus_type,
+        flags,
+        __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+        get_proxy_type_func,
+        gpointer(get_proxy_type_user_data),
+        get_proxy_type_destroy_notify,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
   def sync(
       connection: DBusConnection,
@@ -90,17 +100,20 @@ object DBusObjectManagerClient:
       get_proxy_type_user_data: Ptr[Byte],
       get_proxy_type_destroy_notify: GDestroyNotify,
       cancellable: Cancellable
-  )(using Zone): DBusObjectManagerClient = new DBusObjectManagerClient(
-    g_dbus_object_manager_client_new_sync(
-      connection.getUnsafeRawPointer().asInstanceOf,
-      flags,
-      __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-      get_proxy_type_func,
-      gpointer(get_proxy_type_user_data),
-      get_proxy_type_destroy_notify,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusObjectManagerClient] = GResult.wrap(__errorPtr =>
+    new DBusObjectManagerClient(
+      g_dbus_object_manager_client_new_sync(
+        connection.getUnsafeRawPointer().asInstanceOf,
+        flags,
+        __sn_extract_string(name).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+        get_proxy_type_func,
+        gpointer(get_proxy_type_user_data),
+        get_proxy_type_destroy_notify,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   private inline def __sn_extract_string(str: String | CString)(using

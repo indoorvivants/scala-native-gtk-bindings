@@ -8,6 +8,8 @@ import sn.gnome.gio.fluent.File
 import sn.gnome.gio.internal.GVfs
 import sn.gnome.gio.internal.GVfsFileLookupFunc
 import sn.gnome.glib.internal.GDestroyNotify
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.Object
 

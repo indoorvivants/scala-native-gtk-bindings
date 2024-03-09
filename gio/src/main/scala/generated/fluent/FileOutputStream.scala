@@ -11,6 +11,7 @@ import sn.gnome.gio.fluent.OutputStream
 import sn.gnome.gio.fluent.Seekable
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GFileOutputStream
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.gpointer
 
 class FileOutputStream(raw: Ptr[GFileOutputStream])
@@ -24,12 +25,15 @@ class FileOutputStream(raw: Ptr[GFileOutputStream])
 
   def queryInfo(attributes: String | CString, cancellable: Cancellable)(using
       Zone
-  ): FileInfo = new FileInfo(
-    g_file_output_stream_query_info(
-      this.raw.asInstanceOf,
-      __sn_extract_string(attributes),
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  ): GResult[FileInfo] = GResult.wrap(__errorPtr =>
+    new FileInfo(
+      g_file_output_stream_query_info(
+        this.raw.asInstanceOf,
+        __sn_extract_string(attributes),
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def queryInfoAsync(
@@ -47,12 +51,16 @@ class FileOutputStream(raw: Ptr[GFileOutputStream])
     gpointer(user_data)
   )
 
-  def queryInfoFinish(result: AsyncResult): FileInfo = new FileInfo(
-    g_file_output_stream_query_info_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
-  )
+  def queryInfoFinish(result: AsyncResult): GResult[FileInfo] =
+    GResult.wrap(__errorPtr =>
+      new FileInfo(
+        g_file_output_stream_query_info_finish(
+          this.raw.asInstanceOf,
+          result.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
+    )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

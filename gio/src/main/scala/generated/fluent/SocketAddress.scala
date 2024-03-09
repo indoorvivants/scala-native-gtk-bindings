@@ -8,6 +8,9 @@ import _root_.scala.scalanative.unsigned.*
 import sn.gnome.gio.fluent.SocketConnectable
 import sn.gnome.gio.internal.GSocketAddress
 import sn.gnome.gio.internal.GSocketFamily
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.gssize
@@ -22,21 +25,24 @@ class SocketAddress(raw: Ptr[GSocketAddress])
     this.raw.asInstanceOf
   )
 
-  def getNativeSize(): ULong = g_socket_address_get_native_size(
+  def getNativeSize(): CLongInt = g_socket_address_get_native_size(
     this.raw.asInstanceOf
   ).value
 
-  def toNative(dest: Ptr[Byte], destlen: ULong): Boolean =
-    g_socket_address_to_native(
-      this.raw.asInstanceOf,
-      gpointer(dest),
-      gsize(destlen)
-    ).value.!=(0)
+  def toNative(dest: Ptr[Byte], destlen: CUnsignedLongInt): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_socket_address_to_native(
+        this.raw.asInstanceOf,
+        gpointer(dest),
+        gsize(destlen),
+        __errorPtr
+      ).value.!=(0)
+    )
 
 end SocketAddress
 
 object SocketAddress:
-  def fromNative(native: Ptr[Byte], len: ULong): SocketAddress =
+  def fromNative(native: Ptr[Byte], len: CUnsignedLongInt): SocketAddress =
     new SocketAddress(
       g_socket_address_new_from_native(
         gpointer(native),

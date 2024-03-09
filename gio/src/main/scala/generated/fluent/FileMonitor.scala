@@ -7,6 +7,7 @@ import _root_.scala.scalanative.unsafe.*
 import sn.gnome.gio.fluent.File
 import sn.gnome.gio.internal.GFileMonitor
 import sn.gnome.gio.internal.GFileMonitorEvent
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 

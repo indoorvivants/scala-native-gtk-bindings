@@ -9,8 +9,11 @@ import sn.gnome.gio.fluent.SocketConnectable
 import sn.gnome.gio.fluent.TlsCertificate
 import sn.gnome.gio.internal.GTlsCertificate
 import sn.gnome.gio.internal.GTlsCertificateFlags
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GDateTime
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.gssize
 import sn.gnome.glib.internal.guint8
@@ -55,53 +58,73 @@ class TlsCertificate(raw: Ptr[GTlsCertificate])
 end TlsCertificate
 
 object TlsCertificate:
-  def fromFile(file: String | CString)(using Zone): TlsCertificate =
-    new TlsCertificate(
-      g_tls_certificate_new_from_file(
-        __sn_extract_string(file).asInstanceOf[Ptr[gchar]]
-      ).asInstanceOf
+  def fromFile(file: String | CString)(using Zone): GResult[TlsCertificate] =
+    GResult.wrap(__errorPtr =>
+      new TlsCertificate(
+        g_tls_certificate_new_from_file(
+          __sn_extract_string(file).asInstanceOf[Ptr[gchar]],
+          __errorPtr
+        ).asInstanceOf
+      )
     )
   def fromFileWithPassword(file: String | CString, password: String | CString)(
       using Zone
-  ): TlsCertificate = new TlsCertificate(
-    g_tls_certificate_new_from_file_with_password(
-      __sn_extract_string(file).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(password).asInstanceOf[Ptr[gchar]]
-    ).asInstanceOf
+  ): GResult[TlsCertificate] = GResult.wrap(__errorPtr =>
+    new TlsCertificate(
+      g_tls_certificate_new_from_file_with_password(
+        __sn_extract_string(file).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(password).asInstanceOf[Ptr[gchar]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
   def fromFiles(cert_file: String | CString, key_file: String | CString)(using
       Zone
-  ): TlsCertificate = new TlsCertificate(
-    g_tls_certificate_new_from_files(
-      __sn_extract_string(cert_file).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(key_file).asInstanceOf[Ptr[gchar]]
-    ).asInstanceOf
+  ): GResult[TlsCertificate] = GResult.wrap(__errorPtr =>
+    new TlsCertificate(
+      g_tls_certificate_new_from_files(
+        __sn_extract_string(cert_file).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(key_file).asInstanceOf[Ptr[gchar]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
-  def fromPem(data: String | CString, length: ULong)(using
+  def fromPem(data: String | CString, length: CLongInt)(using
       Zone
-  ): TlsCertificate = new TlsCertificate(
-    g_tls_certificate_new_from_pem(
-      __sn_extract_string(data).asInstanceOf[Ptr[gchar]],
-      gssize(length)
-    ).asInstanceOf
+  ): GResult[TlsCertificate] = GResult.wrap(__errorPtr =>
+    new TlsCertificate(
+      g_tls_certificate_new_from_pem(
+        __sn_extract_string(data).asInstanceOf[Ptr[gchar]],
+        gssize(length),
+        __errorPtr
+      ).asInstanceOf
+    )
   )
   def fromPkcs11Uris(
       pkcs11_uri: String | CString,
       private_key_pkcs11_uri: String | CString
-  )(using Zone): TlsCertificate = new TlsCertificate(
-    g_tls_certificate_new_from_pkcs11_uris(
-      __sn_extract_string(pkcs11_uri).asInstanceOf[Ptr[gchar]],
-      __sn_extract_string(private_key_pkcs11_uri).asInstanceOf[Ptr[gchar]]
-    ).asInstanceOf
+  )(using Zone): GResult[TlsCertificate] = GResult.wrap(__errorPtr =>
+    new TlsCertificate(
+      g_tls_certificate_new_from_pkcs11_uris(
+        __sn_extract_string(pkcs11_uri).asInstanceOf[Ptr[gchar]],
+        __sn_extract_string(private_key_pkcs11_uri).asInstanceOf[Ptr[gchar]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
-  def fromPkcs12(data: Ptr[UByte], length: ULong, password: String | CString)(
-      using Zone
-  ): TlsCertificate = new TlsCertificate(
-    g_tls_certificate_new_from_pkcs12(
-      data,
-      gsize(length),
-      __sn_extract_string(password).asInstanceOf[Ptr[gchar]]
-    ).asInstanceOf
+  def fromPkcs12(
+      data: Ptr[UByte],
+      length: CUnsignedLongInt,
+      password: String | CString
+  )(using Zone): GResult[TlsCertificate] = GResult.wrap(__errorPtr =>
+    new TlsCertificate(
+      g_tls_certificate_new_from_pkcs12(
+        data,
+        gsize(length),
+        __sn_extract_string(password).asInstanceOf[Ptr[gchar]],
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   private inline def __sn_extract_string(str: String | CString)(using

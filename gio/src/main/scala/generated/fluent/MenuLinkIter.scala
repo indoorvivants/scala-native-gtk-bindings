@@ -6,7 +6,9 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.fluent.MenuModel
 import sn.gnome.gio.internal.GMenuLinkIter
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class MenuLinkIter(raw: Ptr[GMenuLinkIter]) extends Object(raw.asInstanceOf):

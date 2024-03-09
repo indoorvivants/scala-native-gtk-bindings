@@ -170,6 +170,12 @@ def renderType(
       whenTypeValue("int")("Int"),
       whenTypeValue("gboolean")("Boolean").map(
         _.withMassageFromUnsafe(Massage.Field("value.!=(0)"))
+          .withMassageIntoUnsafe(
+            Massage.Compare("true", "1", "0"),
+            Massage.Apply("gint"),
+            Massage.Apply("gboolean")
+          )
+          .withEffect(importGlib("gboolean"), importGlib("gint"))
       ),
       whenTypeValue("double")("Double"),
       whenTypeValue("va_list")("CVarArgList"),
@@ -179,15 +185,18 @@ def renderType(
           .withMassageFromUnsafe(Massage.Field("value"))
           .withEffect(importGlib("gpointer"))
       ),
-      unsignedAlias("guint8", "UByte"),
+      unsignedAlias("guint8", "UByte").map(
+        _.withMassageIntoUnsafe(Massage.Apply("guint8"))
+          .withEffect(importGlib("guint8"))
+      ),
       unsignedAlias("guchar", "UByte"),
       unsignedAlias("guint16", "UShort"),
       unsignedAlias("guint", "UInt"),
       unsignedAlias("guint32", "UInt"),
       unsignedAlias("guint64", "ULong"),
       unsignedAlias("gulong", "ULong"),
-      unsignedAlias("gsize", "ULong"),
-      unsignedAlias("gssize", "ULong"),
+      unsignedAlias("gsize", "CUnsignedLongInt"),
+      unsignedAlias("gssize", "CLongInt"),
       glibAlias("gchar", "char")("Byte"),
       whenTypeValue("void")("Unit")
     ).reduce(_ orElse _)

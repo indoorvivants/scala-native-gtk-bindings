@@ -9,7 +9,10 @@ import sn.gnome.gio.fluent.DBusAuthObserver
 import sn.gnome.gio.fluent.Initable
 import sn.gnome.gio.internal.GDBusServer
 import sn.gnome.gio.internal.GDBusServerFlags
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class DBusServer(raw: Ptr[GDBusServer])
@@ -45,14 +48,17 @@ object DBusServer:
       guid: String | CString,
       observer: DBusAuthObserver,
       cancellable: Cancellable
-  )(using Zone): DBusServer = new DBusServer(
-    g_dbus_server_new_sync(
-      __sn_extract_string(address).asInstanceOf[Ptr[gchar]],
-      flags,
-      __sn_extract_string(guid).asInstanceOf[Ptr[gchar]],
-      observer.getUnsafeRawPointer().asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusServer] = GResult.wrap(__errorPtr =>
+    new DBusServer(
+      g_dbus_server_new_sync(
+        __sn_extract_string(address).asInstanceOf[Ptr[gchar]],
+        flags,
+        __sn_extract_string(guid).asInstanceOf[Ptr[gchar]],
+        observer.getUnsafeRawPointer().asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   private inline def __sn_extract_string(str: String | CString)(using

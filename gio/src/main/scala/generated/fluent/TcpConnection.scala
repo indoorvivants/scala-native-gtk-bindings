@@ -6,6 +6,8 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.fluent.SocketConnection
 import sn.gnome.gio.internal.GTcpConnection
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 
 class TcpConnection(raw: Ptr[GTcpConnection])
     extends SocketConnection(raw.asInstanceOf):
@@ -17,7 +19,7 @@ class TcpConnection(raw: Ptr[GTcpConnection])
   def setGracefulDisconnect(graceful_disconnect: Boolean): Unit =
     g_tcp_connection_set_graceful_disconnect(
       this.raw.asInstanceOf,
-      graceful_disconnect
+      gboolean(gint((if graceful_disconnect == true then 1 else 0)))
     )
 
 end TcpConnection

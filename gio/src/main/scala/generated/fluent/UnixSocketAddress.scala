@@ -9,7 +9,9 @@ import sn.gnome.gio.fluent.SocketAddress
 import sn.gnome.gio.fluent.SocketConnectable
 import sn.gnome.gio.internal.GUnixSocketAddress
 import sn.gnome.gio.internal.GUnixSocketAddressType
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gsize
 
 class UnixSocketAddress(raw: Ptr[GUnixSocketAddress])
@@ -27,7 +29,7 @@ class UnixSocketAddress(raw: Ptr[GUnixSocketAddress])
     this.raw.asInstanceOf
   )
 
-  def getPathLen(): ULong = g_unix_socket_address_get_path_len(
+  def getPathLen(): CUnsignedLongInt = g_unix_socket_address_get_path_len(
     this.raw.asInstanceOf
   ).value
 

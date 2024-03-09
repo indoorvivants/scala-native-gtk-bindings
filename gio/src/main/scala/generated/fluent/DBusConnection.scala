@@ -29,9 +29,11 @@ import sn.gnome.gio.internal.GDBusSignalCallback
 import sn.gnome.gio.internal.GDBusSignalFlags
 import sn.gnome.gio.internal.GDBusSubtreeFlags
 import sn.gnome.gio.internal.GDBusSubtreeVTable
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.GVariantType
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -84,10 +86,13 @@ class DBusConnection(raw: Ptr[GDBusConnection])
     gpointer(user_data)
   )
 
-  def callFinish(res: AsyncResult): Ptr[GVariant] =
-    g_dbus_connection_call_finish(
-      this.raw.asInstanceOf,
-      res.getUnsafeRawPointer().asInstanceOf
+  def callFinish(res: AsyncResult): GResult[Ptr[GVariant]] =
+    GResult.wrap(__errorPtr =>
+      g_dbus_connection_call_finish(
+        this.raw.asInstanceOf,
+        res.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      )
     )
 
   def callSync(
@@ -100,17 +105,20 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       flags: GDBusCallFlags,
       timeout_msec: Int,
       cancellable: Cancellable
-  )(using Zone): Ptr[GVariant] = g_dbus_connection_call_sync(
-    this.raw.asInstanceOf,
-    __sn_extract_string(bus_name).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
-    parameters,
-    reply_type,
-    flags,
-    gint(timeout_msec),
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  )(using Zone): GResult[Ptr[GVariant]] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_call_sync(
+      this.raw.asInstanceOf,
+      __sn_extract_string(bus_name).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
+      parameters,
+      reply_type,
+      flags,
+      gint(timeout_msec),
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def callWithUnixFdList(
@@ -145,10 +153,13 @@ class DBusConnection(raw: Ptr[GDBusConnection])
   def callWithUnixFdListFinish(
       out_fd_list: UnixFDList,
       res: AsyncResult
-  ): Ptr[GVariant] = g_dbus_connection_call_with_unix_fd_list_finish(
-    this.raw.asInstanceOf,
-    out_fd_list.getUnsafeRawPointer().asInstanceOf,
-    res.getUnsafeRawPointer().asInstanceOf
+  ): GResult[Ptr[GVariant]] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_call_with_unix_fd_list_finish(
+      this.raw.asInstanceOf,
+      out_fd_list.getUnsafeRawPointer().asInstanceOf,
+      res.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def callWithUnixFdListSync(
@@ -163,19 +174,22 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       fd_list: UnixFDList,
       out_fd_list: UnixFDList,
       cancellable: Cancellable
-  )(using Zone): Ptr[GVariant] = g_dbus_connection_call_with_unix_fd_list_sync(
-    this.raw.asInstanceOf,
-    __sn_extract_string(bus_name).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
-    parameters,
-    reply_type,
-    flags,
-    gint(timeout_msec),
-    fd_list.getUnsafeRawPointer().asInstanceOf,
-    out_fd_list.getUnsafeRawPointer().asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
+  )(using Zone): GResult[Ptr[GVariant]] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_call_with_unix_fd_list_sync(
+      this.raw.asInstanceOf,
+      __sn_extract_string(bus_name).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(method_name).asInstanceOf[Ptr[gchar]],
+      parameters,
+      reply_type,
+      flags,
+      gint(timeout_msec),
+      fd_list.getUnsafeRawPointer().asInstanceOf,
+      out_fd_list.getUnsafeRawPointer().asInstanceOf,
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    )
   )
 
   def close(
@@ -189,16 +203,23 @@ class DBusConnection(raw: Ptr[GDBusConnection])
     gpointer(user_data)
   )
 
-  def closeFinish(res: AsyncResult): Boolean = g_dbus_connection_close_finish(
-    this.raw.asInstanceOf,
-    res.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def closeFinish(res: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_dbus_connection_close_finish(
+        this.raw.asInstanceOf,
+        res.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
-  def closeSync(cancellable: Cancellable): Boolean =
-    g_dbus_connection_close_sync(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def closeSync(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_dbus_connection_close_sync(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def emitSignal(
       destination_bus_name: String | CString,
@@ -206,31 +227,40 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       interface_name: String | CString,
       signal_name: String | CString,
       parameters: Ptr[GVariant]
-  )(using Zone): Boolean = g_dbus_connection_emit_signal(
-    this.raw.asInstanceOf,
-    __sn_extract_string(destination_bus_name).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
-    __sn_extract_string(signal_name).asInstanceOf[Ptr[gchar]],
-    parameters
-  ).value.!=(0)
+  )(using Zone): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_emit_signal(
+      this.raw.asInstanceOf,
+      __sn_extract_string(destination_bus_name).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(interface_name).asInstanceOf[Ptr[gchar]],
+      __sn_extract_string(signal_name).asInstanceOf[Ptr[gchar]],
+      parameters,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def exportActionGroup(
       object_path: String | CString,
       action_group: ActionGroup
-  )(using Zone): UInt = g_dbus_connection_export_action_group(
-    this.raw.asInstanceOf,
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    action_group.getUnsafeRawPointer().asInstanceOf
-  ).value
+  )(using Zone): GResult[UInt] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_export_action_group(
+      this.raw.asInstanceOf,
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      action_group.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    ).value
+  )
 
   def exportMenuModel(object_path: String | CString, menu: MenuModel)(using
       Zone
-  ): UInt = g_dbus_connection_export_menu_model(
-    this.raw.asInstanceOf,
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    menu.getUnsafeRawPointer().asInstanceOf
-  ).value
+  ): GResult[UInt] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_export_menu_model(
+      this.raw.asInstanceOf,
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      menu.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
+    ).value
+  )
 
   def flush(
       cancellable: Cancellable,
@@ -243,16 +273,23 @@ class DBusConnection(raw: Ptr[GDBusConnection])
     gpointer(user_data)
   )
 
-  def flushFinish(res: AsyncResult): Boolean = g_dbus_connection_flush_finish(
-    this.raw.asInstanceOf,
-    res.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def flushFinish(res: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_dbus_connection_flush_finish(
+        this.raw.asInstanceOf,
+        res.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
-  def flushSync(cancellable: Cancellable): Boolean =
-    g_dbus_connection_flush_sync(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def flushSync(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_dbus_connection_flush_sync(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def getCapabilities(): GDBusCapabilityFlags =
     g_dbus_connection_get_capabilities(this.raw.asInstanceOf)
@@ -293,14 +330,17 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       vtable: Ptr[GDBusInterfaceVTable],
       user_data: Ptr[Byte],
       user_data_free_func: GDestroyNotify
-  )(using Zone): UInt = g_dbus_connection_register_object(
-    this.raw.asInstanceOf,
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    interface_info,
-    vtable,
-    gpointer(user_data),
-    user_data_free_func
-  ).value
+  )(using Zone): GResult[UInt] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_register_object(
+      this.raw.asInstanceOf,
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      interface_info,
+      vtable,
+      gpointer(user_data),
+      user_data_free_func,
+      __errorPtr
+    ).value
+  )
 
   def registerObjectWithClosures(
       object_path: String | CString,
@@ -308,14 +348,17 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       method_call_closure: Ptr[GClosure],
       get_property_closure: Ptr[GClosure],
       set_property_closure: Ptr[GClosure]
-  )(using Zone): UInt = g_dbus_connection_register_object_with_closures(
-    this.raw.asInstanceOf,
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    interface_info,
-    method_call_closure,
-    get_property_closure,
-    set_property_closure
-  ).value
+  )(using Zone): GResult[UInt] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_register_object_with_closures(
+      this.raw.asInstanceOf,
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      interface_info,
+      method_call_closure,
+      get_property_closure,
+      set_property_closure,
+      __errorPtr
+    ).value
+  )
 
   def registerSubtree(
       object_path: String | CString,
@@ -323,14 +366,17 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       flags: GDBusSubtreeFlags,
       user_data: Ptr[Byte],
       user_data_free_func: GDestroyNotify
-  )(using Zone): UInt = g_dbus_connection_register_subtree(
-    this.raw.asInstanceOf,
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
-    vtable,
-    flags,
-    gpointer(user_data),
-    user_data_free_func
-  ).value
+  )(using Zone): GResult[UInt] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_register_subtree(
+      this.raw.asInstanceOf,
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      vtable,
+      flags,
+      gpointer(user_data),
+      user_data_free_func,
+      __errorPtr
+    ).value
+  )
 
   def removeFilter(filter_id: UInt): Unit =
     g_dbus_connection_remove_filter(this.raw.asInstanceOf, guint(filter_id))
@@ -339,12 +385,15 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       message: DBusMessage,
       flags: GDBusSendMessageFlags,
       out_serial: Any /* Some(guint32): `volatile guint32*` */
-  ): Boolean = g_dbus_connection_send_message(
-    this.raw.asInstanceOf,
-    message.getUnsafeRawPointer().asInstanceOf,
-    flags,
-    out_serial
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_dbus_connection_send_message(
+      this.raw.asInstanceOf,
+      message.getUnsafeRawPointer().asInstanceOf,
+      flags,
+      out_serial,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def sendMessageWithReply(
       message: DBusMessage,
@@ -365,12 +414,15 @@ class DBusConnection(raw: Ptr[GDBusConnection])
     gpointer(user_data)
   )
 
-  def sendMessageWithReplyFinish(res: AsyncResult): DBusMessage =
-    new DBusMessage(
-      g_dbus_connection_send_message_with_reply_finish(
-        this.raw.asInstanceOf,
-        res.getUnsafeRawPointer().asInstanceOf
-      ).asInstanceOf
+  def sendMessageWithReplyFinish(res: AsyncResult): GResult[DBusMessage] =
+    GResult.wrap(__errorPtr =>
+      new DBusMessage(
+        g_dbus_connection_send_message_with_reply_finish(
+          this.raw.asInstanceOf,
+          res.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
     )
 
   def sendMessageWithReplySync(
@@ -379,19 +431,25 @@ class DBusConnection(raw: Ptr[GDBusConnection])
       timeout_msec: Int,
       out_serial: Any /* Some(guint32): `volatile guint32*` */,
       cancellable: Cancellable
-  ): DBusMessage = new DBusMessage(
-    g_dbus_connection_send_message_with_reply_sync(
-      this.raw.asInstanceOf,
-      message.getUnsafeRawPointer().asInstanceOf,
-      flags,
-      gint(timeout_msec),
-      out_serial,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  ): GResult[DBusMessage] = GResult.wrap(__errorPtr =>
+    new DBusMessage(
+      g_dbus_connection_send_message_with_reply_sync(
+        this.raw.asInstanceOf,
+        message.getUnsafeRawPointer().asInstanceOf,
+        flags,
+        gint(timeout_msec),
+        out_serial,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def setExitOnClose(exit_on_close: Boolean): Unit =
-    g_dbus_connection_set_exit_on_close(this.raw.asInstanceOf, exit_on_close)
+    g_dbus_connection_set_exit_on_close(
+      this.raw.asInstanceOf,
+      gboolean(gint((if exit_on_close == true then 1 else 0)))
+    )
 
   def signalSubscribe(
       sender: String | CString,
@@ -460,28 +518,39 @@ class DBusConnection(raw: Ptr[GDBusConnection])
 end DBusConnection
 
 object DBusConnection:
-  def finish(res: AsyncResult): DBusConnection = new DBusConnection(
-    g_dbus_connection_new_finish(
-      res.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
-  )
-  def forAddressFinish(res: AsyncResult): DBusConnection = new DBusConnection(
-    g_dbus_connection_new_for_address_finish(
-      res.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
-  )
+  def finish(res: AsyncResult): GResult[DBusConnection] =
+    GResult.wrap(__errorPtr =>
+      new DBusConnection(
+        g_dbus_connection_new_finish(
+          res.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
+    )
+  def forAddressFinish(res: AsyncResult): GResult[DBusConnection] =
+    GResult.wrap(__errorPtr =>
+      new DBusConnection(
+        g_dbus_connection_new_for_address_finish(
+          res.getUnsafeRawPointer().asInstanceOf,
+          __errorPtr
+        ).asInstanceOf
+      )
+    )
   def forAddressSync(
       address: String | CString,
       flags: GDBusConnectionFlags,
       observer: DBusAuthObserver,
       cancellable: Cancellable
-  )(using Zone): DBusConnection = new DBusConnection(
-    g_dbus_connection_new_for_address_sync(
-      __sn_extract_string(address).asInstanceOf[Ptr[gchar]],
-      flags,
-      observer.getUnsafeRawPointer().asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusConnection] = GResult.wrap(__errorPtr =>
+    new DBusConnection(
+      g_dbus_connection_new_for_address_sync(
+        __sn_extract_string(address).asInstanceOf[Ptr[gchar]],
+        flags,
+        observer.getUnsafeRawPointer().asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
   def sync(
       stream: IOStream,
@@ -489,14 +558,17 @@ object DBusConnection:
       flags: GDBusConnectionFlags,
       observer: DBusAuthObserver,
       cancellable: Cancellable
-  )(using Zone): DBusConnection = new DBusConnection(
-    g_dbus_connection_new_sync(
-      stream.getUnsafeRawPointer().asInstanceOf,
-      __sn_extract_string(guid).asInstanceOf[Ptr[gchar]],
-      flags,
-      observer.getUnsafeRawPointer().asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
-    ).asInstanceOf
+  )(using Zone): GResult[DBusConnection] = GResult.wrap(__errorPtr =>
+    new DBusConnection(
+      g_dbus_connection_new_sync(
+        stream.getUnsafeRawPointer().asInstanceOf,
+        __sn_extract_string(guid).asInstanceOf[Ptr[gchar]],
+        flags,
+        observer.getUnsafeRawPointer().asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   private inline def __sn_extract_string(str: String | CString)(using

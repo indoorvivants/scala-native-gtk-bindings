@@ -18,12 +18,14 @@ enum Massage:
   case Cast(toWhat: String)
   case InferredCast
   case New(cls: String)
+  case Compare(reference: String, ifTrue: String, ifFalse: String)
 
   def render(around: String) =
     this match
-      case Apply(what) => s"$what($around)"
-      case Field(what) => s"$around.$what"
-      case Cast(what)  => s"$around.asInstanceOf[$what]"
-      case InferredCast  => s"$around.asInstanceOf"
-      case New(what)  => s"new $what($around)"
+      case Apply(what)           => s"$what($around)"
+      case Field(what)           => s"$around.$what"
+      case Cast(what)            => s"$around.asInstanceOf[$what]"
+      case InferredCast          => s"$around.asInstanceOf"
+      case New(what)             => s"new $what($around)"
+      case Compare(ref, tr, fls) => s"(if $around == $ref then $tr else $fls)"
 end Massage

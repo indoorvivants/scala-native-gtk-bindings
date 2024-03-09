@@ -12,6 +12,9 @@ import sn.gnome.gio.fluent.OutputStream
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GIOStream
 import sn.gnome.gio.internal.GIOStreamSpliceFlags
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.gobject.fluent.Object
 
@@ -20,10 +23,14 @@ class IOStream(raw: Ptr[GIOStream]) extends Object(raw.asInstanceOf):
 
   def clearPending(): Unit = g_io_stream_clear_pending(this.raw.asInstanceOf)
 
-  def close(cancellable: Cancellable): Boolean = g_io_stream_close(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def close(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_io_stream_close(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def closeAsync(
       io_priority: Int,
@@ -38,10 +45,14 @@ class IOStream(raw: Ptr[GIOStream]) extends Object(raw.asInstanceOf):
     gpointer(user_data)
   )
 
-  def closeFinish(result: AsyncResult): Boolean = g_io_stream_close_finish(
-    this.raw.asInstanceOf,
-    result.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def closeFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_io_stream_close_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def getInputStream(): InputStream = new InputStream(
     g_io_stream_get_input_stream(this.raw.asInstanceOf).asInstanceOf
@@ -57,8 +68,9 @@ class IOStream(raw: Ptr[GIOStream]) extends Object(raw.asInstanceOf):
   def isClosed(): Boolean =
     g_io_stream_is_closed(this.raw.asInstanceOf).value.!=(0)
 
-  def setPending(): Boolean =
-    g_io_stream_set_pending(this.raw.asInstanceOf).value.!=(0)
+  def setPending(): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_io_stream_set_pending(this.raw.asInstanceOf, __errorPtr).value.!=(0)
+  )
 
   def spliceAsync(
       stream2: IOStream,

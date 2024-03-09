@@ -14,6 +14,8 @@ import sn.gnome.gio.internal.GFileInfo
 import sn.gnome.gio.internal.GFileType
 import sn.gnome.glib.internal.GDateTime
 import sn.gnome.glib.internal.GTimeVal
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint32
 import sn.gnome.glib.internal.guint64
@@ -230,7 +232,7 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
   ): Unit = g_file_info_set_attribute_boolean(
     this.raw.asInstanceOf,
     __sn_extract_string(attribute),
-    attr_value
+    gboolean(gint((if attr_value == true then 1 else 0)))
   )
 
   def setAttributeByteString(
@@ -343,11 +345,15 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     icon.getUnsafeRawPointer().asInstanceOf
   )
 
-  def setIsHidden(is_hidden: Boolean): Unit =
-    g_file_info_set_is_hidden(this.raw.asInstanceOf, is_hidden)
+  def setIsHidden(is_hidden: Boolean): Unit = g_file_info_set_is_hidden(
+    this.raw.asInstanceOf,
+    gboolean(gint((if is_hidden == true then 1 else 0)))
+  )
 
-  def setIsSymlink(is_symlink: Boolean): Unit =
-    g_file_info_set_is_symlink(this.raw.asInstanceOf, is_symlink)
+  def setIsSymlink(is_symlink: Boolean): Unit = g_file_info_set_is_symlink(
+    this.raw.asInstanceOf,
+    gboolean(gint((if is_symlink == true then 1 else 0)))
+  )
 
   def setModificationDateTime(mtime: Ptr[GDateTime]): Unit =
     g_file_info_set_modification_date_time(this.raw.asInstanceOf, mtime)

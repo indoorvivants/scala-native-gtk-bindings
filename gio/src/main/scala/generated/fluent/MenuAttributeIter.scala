@@ -6,7 +6,9 @@ import _root_.scala.scalanative.unsafe.*
 
 import sn.gnome.gio.internal.GMenuAttributeIter
 import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class MenuAttributeIter(raw: Ptr[GMenuAttributeIter])

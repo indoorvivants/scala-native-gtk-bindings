@@ -10,6 +10,7 @@ import sn.gnome.gio.fluent.MenuModel
 import sn.gnome.gio.internal.GMenuModel
 import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.GVariantType
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object

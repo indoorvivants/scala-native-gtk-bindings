@@ -10,9 +10,12 @@ import sn.gnome.gio.internal.GDBusInterfaceInfo
 import sn.gnome.gio.internal.GDBusInterfaceSkeleton
 import sn.gnome.gio.internal.GDBusInterfaceSkeletonFlags
 import sn.gnome.gio.internal.GDBusInterfaceVTable
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GList
 import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class DBusInterfaceSkeleton(raw: Ptr[GDBusInterfaceSkeleton])
@@ -22,11 +25,14 @@ class DBusInterfaceSkeleton(raw: Ptr[GDBusInterfaceSkeleton])
 
   def `export`(connection: DBusConnection, object_path: String | CString)(using
       Zone
-  ): Boolean = g_dbus_interface_skeleton_export(
-    this.raw.asInstanceOf,
-    connection.getUnsafeRawPointer().asInstanceOf,
-    __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]]
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_dbus_interface_skeleton_export(
+      this.raw.asInstanceOf,
+      connection.getUnsafeRawPointer().asInstanceOf,
+      __sn_extract_string(object_path).asInstanceOf[Ptr[gchar]],
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def flush(): Unit = g_dbus_interface_skeleton_flush(this.raw.asInstanceOf)
 

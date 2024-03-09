@@ -8,6 +8,8 @@ import _root_.scala.scalanative.unsigned.*
 import sn.gnome.gio.internal.GMountOperation
 import sn.gnome.gio.internal.GMountOperationResult
 import sn.gnome.gio.internal.GPasswordSave
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object
 
@@ -49,8 +51,10 @@ class MountOperation(raw: Ptr[GMountOperation])
   def reply(result: GMountOperationResult): Unit =
     g_mount_operation_reply(this.raw.asInstanceOf, result)
 
-  def setAnonymous(anonymous: Boolean): Unit =
-    g_mount_operation_set_anonymous(this.raw.asInstanceOf, anonymous)
+  def setAnonymous(anonymous: Boolean): Unit = g_mount_operation_set_anonymous(
+    this.raw.asInstanceOf,
+    gboolean(gint((if anonymous == true then 1 else 0)))
+  )
 
   def setChoice(choice: Int): Unit =
     g_mount_operation_set_choice(this.raw.asInstanceOf, choice)
@@ -64,13 +68,13 @@ class MountOperation(raw: Ptr[GMountOperation])
   def setIsTcryptHiddenVolume(hidden_volume: Boolean): Unit =
     g_mount_operation_set_is_tcrypt_hidden_volume(
       this.raw.asInstanceOf,
-      hidden_volume
+      gboolean(gint((if hidden_volume == true then 1 else 0)))
     )
 
   def setIsTcryptSystemVolume(system_volume: Boolean): Unit =
     g_mount_operation_set_is_tcrypt_system_volume(
       this.raw.asInstanceOf,
-      system_volume
+      gboolean(gint((if system_volume == true then 1 else 0)))
     )
 
   def setPassword(password: String | CString)(using Zone): Unit =

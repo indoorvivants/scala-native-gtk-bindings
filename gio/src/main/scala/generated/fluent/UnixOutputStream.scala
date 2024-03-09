@@ -8,6 +8,7 @@ import sn.gnome.gio.fluent.FileDescriptorBased
 import sn.gnome.gio.fluent.OutputStream
 import sn.gnome.gio.fluent.PollableOutputStream
 import sn.gnome.gio.internal.GUnixOutputStream
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
 
 class UnixOutputStream(raw: Ptr[GUnixOutputStream])
@@ -21,14 +22,19 @@ class UnixOutputStream(raw: Ptr[GUnixOutputStream])
 
   def getFd(): Int = g_unix_output_stream_get_fd(this.raw.asInstanceOf).value
 
-  def setCloseFd(close_fd: Boolean): Unit =
-    g_unix_output_stream_set_close_fd(this.raw.asInstanceOf, close_fd)
+  def setCloseFd(close_fd: Boolean): Unit = g_unix_output_stream_set_close_fd(
+    this.raw.asInstanceOf,
+    gboolean(gint((if close_fd == true then 1 else 0)))
+  )
 
 end UnixOutputStream
 
 object UnixOutputStream:
   def apply(fd: Int, close_fd: Boolean): UnixOutputStream =
     new UnixOutputStream(
-      g_unix_output_stream_new(gint(fd), close_fd).asInstanceOf
+      g_unix_output_stream_new(
+        gint(fd),
+        gboolean(gint((if close_fd == true then 1 else 0)))
+      ).asInstanceOf
     )
 end UnixOutputStream

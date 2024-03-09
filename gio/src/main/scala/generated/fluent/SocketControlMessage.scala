@@ -22,7 +22,7 @@ class SocketControlMessage(raw: Ptr[GSocketControlMessage])
     this.raw.asInstanceOf
   )
 
-  def getSize(): ULong = g_socket_control_message_get_size(
+  def getSize(): CUnsignedLongInt = g_socket_control_message_get_size(
     this.raw.asInstanceOf
   ).value
 

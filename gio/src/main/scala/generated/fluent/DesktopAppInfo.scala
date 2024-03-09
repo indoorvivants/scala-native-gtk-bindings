@@ -8,10 +8,12 @@ import sn.gnome.gio.fluent.AppInfo
 import sn.gnome.gio.fluent.AppLaunchContext
 import sn.gnome.gio.internal.GDesktopAppInfo
 import sn.gnome.gio.internal.GDesktopAppLaunchCallback
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GKeyFile
 import sn.gnome.glib.internal.GList
 import sn.gnome.glib.internal.GSpawnChildSetupFunc
 import sn.gnome.glib.internal.GSpawnFlags
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -99,16 +101,19 @@ class DesktopAppInfo(raw: Ptr[GDesktopAppInfo])
       user_setup_data: Ptr[Byte],
       pid_callback: GDesktopAppLaunchCallback,
       pid_callback_data: Ptr[Byte]
-  ): Boolean = g_desktop_app_info_launch_uris_as_manager(
-    this.raw.asInstanceOf,
-    uris,
-    launch_context.getUnsafeRawPointer().asInstanceOf,
-    spawn_flags,
-    user_setup,
-    gpointer(user_setup_data),
-    pid_callback,
-    gpointer(pid_callback_data)
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_desktop_app_info_launch_uris_as_manager(
+      this.raw.asInstanceOf,
+      uris,
+      launch_context.getUnsafeRawPointer().asInstanceOf,
+      spawn_flags,
+      user_setup,
+      gpointer(user_setup_data),
+      pid_callback,
+      gpointer(pid_callback_data),
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def launchUrisAsManagerWithFds(
       uris: Ptr[GList],
@@ -121,19 +126,22 @@ class DesktopAppInfo(raw: Ptr[GDesktopAppInfo])
       stdin_fd: Int,
       stdout_fd: Int,
       stderr_fd: Int
-  ): Boolean = g_desktop_app_info_launch_uris_as_manager_with_fds(
-    this.raw.asInstanceOf,
-    uris,
-    launch_context.getUnsafeRawPointer().asInstanceOf,
-    spawn_flags,
-    user_setup,
-    gpointer(user_setup_data),
-    pid_callback,
-    gpointer(pid_callback_data),
-    gint(stdin_fd),
-    gint(stdout_fd),
-    gint(stderr_fd)
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_desktop_app_info_launch_uris_as_manager_with_fds(
+      this.raw.asInstanceOf,
+      uris,
+      launch_context.getUnsafeRawPointer().asInstanceOf,
+      spawn_flags,
+      user_setup,
+      gpointer(user_setup_data),
+      pid_callback,
+      gpointer(pid_callback_data),
+      gint(stdin_fd),
+      gint(stdout_fd),
+      gint(stderr_fd),
+      __errorPtr
+    ).value.!=(0)
+  )
 
   private inline def __sn_extract_string(str: String | CString)(using
       Zone

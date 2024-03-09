@@ -10,11 +10,13 @@ import sn.gnome.gio.fluent.Cancellable
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GTask
 import sn.gnome.gio.internal.GTaskThreadFunc
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GError
 import sn.gnome.glib.internal.GMainContext
 import sn.gnome.glib.internal.GSource
 import sn.gnome.glib.internal.GSourceFunc
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -65,20 +67,28 @@ class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
 
   def hadError(): Boolean = g_task_had_error(this.raw.asInstanceOf).value.!=(0)
 
-  def propagateBoolean(): Boolean =
-    g_task_propagate_boolean(this.raw.asInstanceOf).value.!=(0)
+  def propagateBoolean(): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_task_propagate_boolean(this.raw.asInstanceOf, __errorPtr).value.!=(0)
+  )
 
-  def propagateInt(): ULong = g_task_propagate_int(this.raw.asInstanceOf).value
+  def propagateInt(): GResult[CLongInt] = GResult.wrap(__errorPtr =>
+    g_task_propagate_int(this.raw.asInstanceOf, __errorPtr).value
+  )
 
-  def propagatePointer(): Ptr[Byte] = g_task_propagate_pointer(
-    this.raw.asInstanceOf
-  ).value
+  def propagatePointer(): GResult[Ptr[Byte]] = GResult.wrap(__errorPtr =>
+    g_task_propagate_pointer(this.raw.asInstanceOf, __errorPtr).value
+  )
 
-  def propagateValue(value: Ptr[GValue]): Boolean =
-    g_task_propagate_value(this.raw.asInstanceOf, value).value.!=(0)
+  def propagateValue(value: Ptr[GValue]): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_task_propagate_value(this.raw.asInstanceOf, value, __errorPtr).value
+        .!=(0)
+    )
 
-  def returnBoolean(result: Boolean): Unit =
-    g_task_return_boolean(this.raw.asInstanceOf, result)
+  def returnBoolean(result: Boolean): Unit = g_task_return_boolean(
+    this.raw.asInstanceOf,
+    gboolean(gint((if result == true then 1 else 0)))
+  )
 
   def returnError(error: Ptr[GError]): Unit =
     g_task_return_error(this.raw.asInstanceOf, error)
@@ -86,7 +96,7 @@ class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
   def returnErrorIfCancelled(): Boolean =
     g_task_return_error_if_cancelled(this.raw.asInstanceOf).value.!=(0)
 
-  def returnInt(result: ULong): Unit =
+  def returnInt(result: CLongInt): Unit =
     g_task_return_int(this.raw.asInstanceOf, gssize(result))
 
   def returnPointer(result: Ptr[Byte], result_destroy: GDestroyNotify): Unit =
@@ -106,7 +116,10 @@ class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
     g_task_run_in_thread_sync(this.raw.asInstanceOf, task_func)
 
   def setCheckCancellable(check_cancellable: Boolean): Unit =
-    g_task_set_check_cancellable(this.raw.asInstanceOf, check_cancellable)
+    g_task_set_check_cancellable(
+      this.raw.asInstanceOf,
+      gboolean(gint((if check_cancellable == true then 1 else 0)))
+    )
 
   def setName(name: String | CString)(using Zone): Unit = g_task_set_name(
     this.raw.asInstanceOf,
@@ -117,8 +130,10 @@ class Task(raw: Ptr[GTask]) extends Object(raw.asInstanceOf), AsyncResult:
     g_task_set_priority(this.raw.asInstanceOf, gint(priority))
 
   def setReturnOnCancel(return_on_cancel: Boolean): Boolean =
-    g_task_set_return_on_cancel(this.raw.asInstanceOf, return_on_cancel).value
-      .!=(0)
+    g_task_set_return_on_cancel(
+      this.raw.asInstanceOf,
+      gboolean(gint((if return_on_cancel == true then 1 else 0)))
+    ).value.!=(0)
 
   def setSourceTag(source_tag: Ptr[Byte]): Unit =
     g_task_set_source_tag(this.raw.asInstanceOf, gpointer(source_tag))

@@ -17,7 +17,10 @@ import sn.gnome.gio.internal.GTlsChannelBindingType
 import sn.gnome.gio.internal.GTlsConnection
 import sn.gnome.gio.internal.GTlsProtocolVersion
 import sn.gnome.gio.internal.GTlsRehandshakeMode
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint8
 
@@ -41,11 +44,14 @@ class TlsConnection(raw: Ptr[GTlsConnection])
   def getChannelBindingData(
       `type`: GTlsChannelBindingType,
       data: Ptr[UByte]
-  ): Boolean = g_tls_connection_get_channel_binding_data(
-    this.raw.asInstanceOf,
-    `type`,
-    data
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    g_tls_connection_get_channel_binding_data(
+      this.raw.asInstanceOf,
+      `type`,
+      data,
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def getCiphersuiteName()(using Zone): String = fromCString(
     g_tls_connection_get_ciphersuite_name(this.raw.asInstanceOf).asInstanceOf
@@ -82,10 +88,14 @@ class TlsConnection(raw: Ptr[GTlsConnection])
   def getUseSystemCertdb(): Boolean =
     g_tls_connection_get_use_system_certdb(this.raw.asInstanceOf).value.!=(0)
 
-  def handshake(cancellable: Cancellable): Boolean = g_tls_connection_handshake(
-    this.raw.asInstanceOf,
-    cancellable.getUnsafeRawPointer().asInstanceOf
-  ).value.!=(0)
+  def handshake(cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_tls_connection_handshake(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def handshakeAsync(
       io_priority: Int,
@@ -100,11 +110,14 @@ class TlsConnection(raw: Ptr[GTlsConnection])
     gpointer(user_data)
   )
 
-  def handshakeFinish(result: AsyncResult): Boolean =
-    g_tls_connection_handshake_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def handshakeFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_tls_connection_handshake_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def setAdvertisedProtocols(protocols: Ptr[CString])(using Zone): Unit =
     g_tls_connection_set_advertised_protocols(
@@ -135,13 +148,13 @@ class TlsConnection(raw: Ptr[GTlsConnection])
   def setRequireCloseNotify(require_close_notify: Boolean): Unit =
     g_tls_connection_set_require_close_notify(
       this.raw.asInstanceOf,
-      require_close_notify
+      gboolean(gint((if require_close_notify == true then 1 else 0)))
     )
 
   def setUseSystemCertdb(use_system_certdb: Boolean): Unit =
     g_tls_connection_set_use_system_certdb(
       this.raw.asInstanceOf,
-      use_system_certdb
+      gboolean(gint((if use_system_certdb == true then 1 else 0)))
     )
 
   private inline def __sn_extract_string(str: String | CString)(using

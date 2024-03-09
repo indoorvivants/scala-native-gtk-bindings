@@ -8,7 +8,9 @@ import sn.gnome.gio.fluent.Action
 import sn.gnome.gio.internal.GSimpleAction
 import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.GVariantType
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 
 class SimpleAction(raw: Ptr[GSimpleAction])
@@ -16,8 +18,10 @@ class SimpleAction(raw: Ptr[GSimpleAction])
       Action:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def setEnabled(enabled: Boolean): Unit =
-    g_simple_action_set_enabled(this.raw.asInstanceOf, enabled)
+  def setEnabled(enabled: Boolean): Unit = g_simple_action_set_enabled(
+    this.raw.asInstanceOf,
+    gboolean(gint((if enabled == true then 1 else 0)))
+  )
 
   def setState(value: Ptr[GVariant]): Unit =
     g_simple_action_set_state(this.raw.asInstanceOf, value)

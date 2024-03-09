@@ -11,18 +11,26 @@ import sn.gnome.gio.fluent.Socket
 import sn.gnome.gio.fluent.SocketAddress
 import sn.gnome.gio.internal.GAsyncReadyCallback
 import sn.gnome.gio.internal.GSocketConnection
+import sn.gnome.glib.fluent.GResult
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 
 class SocketConnection(raw: Ptr[GSocketConnection])
     extends IOStream(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def connect(address: SocketAddress, cancellable: Cancellable): Boolean =
+  def connect(
+      address: SocketAddress,
+      cancellable: Cancellable
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
     g_socket_connection_connect(
       this.raw.asInstanceOf,
       address.getUnsafeRawPointer().asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf
+      cancellable.getUnsafeRawPointer().asInstanceOf,
+      __errorPtr
     ).value.!=(0)
+  )
 
   def connectAsync(
       address: SocketAddress,
@@ -37,18 +45,31 @@ class SocketConnection(raw: Ptr[GSocketConnection])
     gpointer(user_data)
   )
 
-  def connectFinish(result: AsyncResult): Boolean =
-    g_socket_connection_connect_finish(
-      this.raw.asInstanceOf,
-      result.getUnsafeRawPointer().asInstanceOf
-    ).value.!=(0)
+  def connectFinish(result: AsyncResult): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_socket_connection_connect_finish(
+        this.raw.asInstanceOf,
+        result.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
-  def getLocalAddress(): SocketAddress = new SocketAddress(
-    g_socket_connection_get_local_address(this.raw.asInstanceOf).asInstanceOf
+  def getLocalAddress(): GResult[SocketAddress] = GResult.wrap(__errorPtr =>
+    new SocketAddress(
+      g_socket_connection_get_local_address(
+        this.raw.asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
-  def getRemoteAddress(): SocketAddress = new SocketAddress(
-    g_socket_connection_get_remote_address(this.raw.asInstanceOf).asInstanceOf
+  def getRemoteAddress(): GResult[SocketAddress] = GResult.wrap(__errorPtr =>
+    new SocketAddress(
+      g_socket_connection_get_remote_address(
+        this.raw.asInstanceOf,
+        __errorPtr
+      ).asInstanceOf
+    )
   )
 
   def getSocket(): Socket = new Socket(

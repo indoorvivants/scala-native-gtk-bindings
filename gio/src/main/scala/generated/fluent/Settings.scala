@@ -16,6 +16,7 @@ import sn.gnome.gio.internal.GSettingsGetMapping
 import sn.gnome.gio.internal.GSettingsSchema
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GVariant
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
@@ -78,7 +79,7 @@ class Settings(raw: Ptr[GSettings]) extends Object(raw.asInstanceOf):
       `object`.getUnsafeRawPointer().asInstanceOf.asInstanceOf[Ptr[Byte]]
     ),
     __sn_extract_string(property).asInstanceOf[Ptr[gchar]],
-    inverted
+    gboolean(gint((if inverted == true then 1 else 0)))
   )
 
   def createAction(key: String | CString)(using Zone): Action =
@@ -212,7 +213,7 @@ class Settings(raw: Ptr[GSettings]) extends Object(raw.asInstanceOf):
     g_settings_set_boolean(
       this.raw.asInstanceOf,
       __sn_extract_string(key).asInstanceOf[Ptr[gchar]],
-      value
+      gboolean(gint((if value == true then 1 else 0)))
     ).value.!=(0)
 
   def setDouble(

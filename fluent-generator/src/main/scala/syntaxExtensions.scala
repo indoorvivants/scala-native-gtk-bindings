@@ -22,7 +22,10 @@ private def extractParams(
               d.as[Instanceu45parameter]
     .flatten
 
-extension (c: Constructor) def parameters = extractParams(c.constructoroption)
+extension (c: Constructor) 
+  def parameters = extractParams(c.constructoroption)
+  def isThrowing = c.throws.exists(_.toString == "1")
+
 
 extension (c: Method)
   def isThrowing = c.throws.exists(_.toString == "1")
