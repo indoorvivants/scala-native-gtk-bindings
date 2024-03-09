@@ -45,7 +45,7 @@ def renderClassMethod(cls: AugmentedClass, meth: Method)(using
     val body = s"$cMethod(${serialisedArguments})"
 
     val massagedBody = returnType.fromUnsafeForm(body)
-    scribe.info(s"Method: ${meth.name}, $returnType")
+    scribe.info(s"Method: ${meth.name}, ${returnType.massageFromUnsafe}")
 
     val returnTypeRepr =
       if meth.isThrowing then s"GResult[${returnType.scalaRepr}]"

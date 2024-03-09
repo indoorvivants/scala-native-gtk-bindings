@@ -214,8 +214,8 @@ class SocketClient(raw: Ptr[GSocketClient]) extends Object(raw.asInstanceOf):
     this.raw.asInstanceOf
   )
 
-  def getProxyResolver(): ProxyResolver = g_socket_client_get_proxy_resolver(
-    this.raw.asInstanceOf
+  def getProxyResolver(): ProxyResolver = new ProxyResolver.Abstract(
+    g_socket_client_get_proxy_resolver(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getSocketType(): GSocketType = g_socket_client_get_socket_type(

@@ -4,16 +4,34 @@ import _root_.sn.gnome.gdkpixbuf.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class PixbufSimpleAnim(private[fluent] val raw: Ptr[GdkPixbufSimpleAnim]) extends sn.gnome.gdkpixbuf.fluent.PixbufAnimation:
-  def addFrame(pixbuf : sn.gnome.gdkpixbuf.fluent.Pixbuf): Unit = gdk_pixbuf_simple_anim_add_frame(this.raw, pixbuf.raw)
+import sn.gnome.gdkpixbuf.fluent.Pixbuf
+import sn.gnome.gdkpixbuf.fluent.PixbufAnimation
+import sn.gnome.gdkpixbuf.internal.GdkPixbufSimpleAnim
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 
-  def getLoop(): Boolean = gdk_pixbuf_simple_anim_get_loop(this.raw)
+class PixbufSimpleAnim(raw: Ptr[GdkPixbufSimpleAnim])
+    extends PixbufAnimation(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def setLoop(loop : Boolean): Unit = gdk_pixbuf_simple_anim_set_loop(this.raw, loop)
+  def addFrame(pixbuf: Pixbuf): Unit = gdk_pixbuf_simple_anim_add_frame(
+    this.raw.asInstanceOf,
+    pixbuf.getUnsafeRawPointer().asInstanceOf
+  )
+
+  def getLoop(): Boolean =
+    gdk_pixbuf_simple_anim_get_loop(this.raw.asInstanceOf).value.!=(0)
+
+  def setLoop(loop: Boolean): Unit = gdk_pixbuf_simple_anim_set_loop(
+    this.raw.asInstanceOf,
+    gboolean(gint((if loop == true then 1 else 0)))
+  )
 
 end PixbufSimpleAnim
 
 object PixbufSimpleAnim:
-  def apply(width : Int, height : Int, rate : Float): PixbufSimpleAnim = PixbufSimpleAnim(gdk_pixbuf_simple_anim_new(width, height, rate))
-
+  def apply(width: Int, height: Int, rate: Float): PixbufSimpleAnim =
+    new PixbufSimpleAnim(
+      gdk_pixbuf_simple_anim_new(gint(width), gint(height), rate).asInstanceOf
+    )
 end PixbufSimpleAnim

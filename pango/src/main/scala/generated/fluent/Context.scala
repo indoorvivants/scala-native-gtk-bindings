@@ -5,6 +5,8 @@ import _root_.sn.gnome.pango.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import _root_.scala.scalanative.unsigned.*
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object
 import sn.gnome.pango.fluent.Font
@@ -115,7 +117,7 @@ class Context(raw: Ptr[PangoContext]) extends Object(raw.asInstanceOf):
   def setRoundGlyphPositions(round_positions: Boolean): Unit =
     pango_context_set_round_glyph_positions(
       this.raw.asInstanceOf,
-      round_positions
+      gboolean(gint((if round_positions == true then 1 else 0)))
     )
 
 end Context

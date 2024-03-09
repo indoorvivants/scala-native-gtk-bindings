@@ -4,14 +4,32 @@ import _root_.sn.gnome.gdkpixbuf.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
-class PixbufAnimationIter(private[fluent] val raw: Ptr[GdkPixbufAnimationIter]) extends sn.gnome.gobject.fluent.Object:
-  def advance(current_time : Any /* Some(GLib.TimeVal): const GTimeVal**/): Boolean = gdk_pixbuf_animation_iter_advance(this.raw, current_time)
+import sn.gnome.gdkpixbuf.fluent.Pixbuf
+import sn.gnome.gdkpixbuf.internal.GdkPixbufAnimationIter
+import sn.gnome.glib.internal.GTimeVal
+import sn.gnome.glib.internal.gboolean
+import sn.gnome.glib.internal.gint
+import sn.gnome.gobject.fluent.Object
 
-  def getDelayTime(): Int = gdk_pixbuf_animation_iter_get_delay_time(this.raw)
+class PixbufAnimationIter(raw: Ptr[GdkPixbufAnimationIter])
+    extends Object(raw.asInstanceOf):
+  override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getPixbuf(): sn.gnome.gdkpixbuf.fluent.Pixbuf = gdk_pixbuf_animation_iter_get_pixbuf(this.raw)
+  def advance(current_time: Ptr[GTimeVal]): Boolean =
+    gdk_pixbuf_animation_iter_advance(this.raw.asInstanceOf, current_time).value
+      .!=(0)
 
-  def onCurrentlyLoadingFrame(): Boolean = gdk_pixbuf_animation_iter_on_currently_loading_frame(this.raw)
+  def getDelayTime(): Int = gdk_pixbuf_animation_iter_get_delay_time(
+    this.raw.asInstanceOf
+  )
+
+  def getPixbuf(): Pixbuf = new Pixbuf(
+    gdk_pixbuf_animation_iter_get_pixbuf(this.raw.asInstanceOf).asInstanceOf
+  )
+
+  def onCurrentlyLoadingFrame(): Boolean =
+    gdk_pixbuf_animation_iter_on_currently_loading_frame(
+      this.raw.asInstanceOf
+    ).value.!=(0)
 
 end PixbufAnimationIter
-

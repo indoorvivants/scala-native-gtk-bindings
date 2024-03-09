@@ -12,7 +12,8 @@ import sn.gnome.gobject.fluent.Object
 class Emblem(raw: Ptr[GEmblem]) extends Object(raw.asInstanceOf), Icon:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getIcon(): Icon = g_emblem_get_icon(this.raw.asInstanceOf)
+  def getIcon(): Icon =
+    new Icon.Abstract(g_emblem_get_icon(this.raw.asInstanceOf).asInstanceOf)
 
   def getOrigin(): GEmblemOrigin = g_emblem_get_origin(this.raw.asInstanceOf)
 

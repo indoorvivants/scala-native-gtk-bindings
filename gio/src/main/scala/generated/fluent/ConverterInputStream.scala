@@ -15,8 +15,8 @@ class ConverterInputStream(raw: Ptr[GConverterInputStream])
       PollableInputStream:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getConverter(): Converter = g_converter_input_stream_get_converter(
-    this.raw.asInstanceOf
+  def getConverter(): Converter = new Converter.Abstract(
+    g_converter_input_stream_get_converter(this.raw.asInstanceOf).asInstanceOf
   )
 
 end ConverterInputStream

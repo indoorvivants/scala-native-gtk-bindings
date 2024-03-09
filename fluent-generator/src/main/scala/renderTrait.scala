@@ -15,4 +15,10 @@ def renderTrait(ns: AugmentedNamespace, iface: AugmentedInterface)(using
         s"end ${iface.name}"
       ):
         line("def getUnsafeRawPointer(): Ptr[Byte]")
+
+      emptyLine()
+
+      block(s"object ${iface.name}:", s"end ${iface.name}"):
+        block(s"class Abstract(raw: Ptr[Byte]) extends ${iface.name}:", "end Abstract"):
+          line("override def getUnsafeRawPointer(): Ptr[Byte] = raw")
 end renderTrait

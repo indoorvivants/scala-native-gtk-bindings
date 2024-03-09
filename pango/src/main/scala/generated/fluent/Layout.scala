@@ -5,8 +5,10 @@ import _root_.sn.gnome.pango.internal.*
 import _root_.scala.scalanative.unsafe.*
 
 import _root_.scala.scalanative.unsigned.*
+import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.GBytes
 import sn.gnome.glib.internal.GSList
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Object
@@ -190,7 +192,7 @@ class Layout(raw: Ptr[PangoLayout]) extends Object(raw.asInstanceOf):
   ): Unit = pango_layout_index_to_line_x(
     this.raw.asInstanceOf,
     `index_`,
-    trailing,
+    gboolean(gint((if trailing == true then 1 else 0))),
     line.asInstanceOf[Ptr[int]],
     x_pos.asInstanceOf[Ptr[int]]
   )
@@ -213,7 +215,7 @@ class Layout(raw: Ptr[PangoLayout]) extends Object(raw.asInstanceOf):
       new_trailing: Ptr[Int]
   ): Unit = pango_layout_move_cursor_visually(
     this.raw.asInstanceOf,
-    strong,
+    gboolean(gint((if strong == true then 1 else 0))),
     old_index,
     old_trailing,
     direction,
@@ -230,8 +232,10 @@ class Layout(raw: Ptr[PangoLayout]) extends Object(raw.asInstanceOf):
   def setAttributes(attrs: Ptr[PangoAttrList]): Unit =
     pango_layout_set_attributes(this.raw.asInstanceOf, attrs)
 
-  def setAutoDir(auto_dir: Boolean): Unit =
-    pango_layout_set_auto_dir(this.raw.asInstanceOf, auto_dir)
+  def setAutoDir(auto_dir: Boolean): Unit = pango_layout_set_auto_dir(
+    this.raw.asInstanceOf,
+    gboolean(gint((if auto_dir == true then 1 else 0)))
+  )
 
   def setEllipsize(ellipsize: PangoEllipsizeMode): Unit =
     pango_layout_set_ellipsize(this.raw.asInstanceOf, ellipsize)
@@ -245,11 +249,16 @@ class Layout(raw: Ptr[PangoLayout]) extends Object(raw.asInstanceOf):
   def setIndent(indent: Int): Unit =
     pango_layout_set_indent(this.raw.asInstanceOf, indent)
 
-  def setJustify(justify: Boolean): Unit =
-    pango_layout_set_justify(this.raw.asInstanceOf, justify)
+  def setJustify(justify: Boolean): Unit = pango_layout_set_justify(
+    this.raw.asInstanceOf,
+    gboolean(gint((if justify == true then 1 else 0)))
+  )
 
   def setJustifyLastLine(justify: Boolean): Unit =
-    pango_layout_set_justify_last_line(this.raw.asInstanceOf, justify)
+    pango_layout_set_justify_last_line(
+      this.raw.asInstanceOf,
+      gboolean(gint((if justify == true then 1 else 0)))
+    )
 
   def setLineSpacing(factor: Any /* Some(gfloat): `float` */ ): Unit =
     pango_layout_set_line_spacing(this.raw.asInstanceOf, factor)
@@ -275,7 +284,10 @@ class Layout(raw: Ptr[PangoLayout]) extends Object(raw.asInstanceOf):
   )
 
   def setSingleParagraphMode(setting: Boolean): Unit =
-    pango_layout_set_single_paragraph_mode(this.raw.asInstanceOf, setting)
+    pango_layout_set_single_paragraph_mode(
+      this.raw.asInstanceOf,
+      gboolean(gint((if setting == true then 1 else 0)))
+    )
 
   def setSpacing(spacing: Int): Unit =
     pango_layout_set_spacing(this.raw.asInstanceOf, spacing)
@@ -298,11 +310,14 @@ class Layout(raw: Ptr[PangoLayout]) extends Object(raw.asInstanceOf):
 
   def writeToFile(flags: PangoLayoutSerializeFlags, filename: String | CString)(
       using Zone
-  ): Boolean = pango_layout_write_to_file(
-    this.raw.asInstanceOf,
-    flags,
-    __sn_extract_string(filename)
-  ).value.!=(0)
+  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
+    pango_layout_write_to_file(
+      this.raw.asInstanceOf,
+      flags,
+      __sn_extract_string(filename),
+      __errorPtr
+    ).value.!=(0)
+  )
 
   def xyToIndex(
       x: Int,

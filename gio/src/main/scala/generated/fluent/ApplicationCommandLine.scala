@@ -19,9 +19,11 @@ class ApplicationCommandLine(raw: Ptr[GApplicationCommandLine])
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
   def createFileForArg(arg: String | CString)(using Zone): File =
-    g_application_command_line_create_file_for_arg(
-      this.raw.asInstanceOf,
-      __sn_extract_string(arg).asInstanceOf[Ptr[gchar]]
+    new File.Abstract(
+      g_application_command_line_create_file_for_arg(
+        this.raw.asInstanceOf,
+        __sn_extract_string(arg).asInstanceOf[Ptr[gchar]]
+      ).asInstanceOf
     )
 
   def getCwd()(using Zone): String = fromCString(

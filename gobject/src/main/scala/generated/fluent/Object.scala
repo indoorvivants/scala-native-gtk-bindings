@@ -8,7 +8,9 @@ import _root_.scala.scalanative.unsigned.*
 import sn.gnome.glib.internal.GDestroyNotify
 import sn.gnome.glib.internal.GDuplicateFunc
 import sn.gnome.glib.internal.GQuark
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint
 import sn.gnome.gobject.fluent.Binding

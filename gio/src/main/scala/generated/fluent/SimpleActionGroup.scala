@@ -37,9 +37,11 @@ class SimpleActionGroup(raw: Ptr[GSimpleActionGroup])
   )
 
   def lookup(action_name: String | CString)(using Zone): Action =
-    g_simple_action_group_lookup(
-      this.raw.asInstanceOf,
-      __sn_extract_string(action_name).asInstanceOf[Ptr[gchar]]
+    new Action.Abstract(
+      g_simple_action_group_lookup(
+        this.raw.asInstanceOf,
+        __sn_extract_string(action_name).asInstanceOf[Ptr[gchar]]
+      ).asInstanceOf
     )
 
   def remove(action_name: String | CString)(using Zone): Unit =

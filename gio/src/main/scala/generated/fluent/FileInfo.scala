@@ -159,7 +159,8 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     this.raw.asInstanceOf
   )
 
-  def getIcon(): Icon = g_file_info_get_icon(this.raw.asInstanceOf)
+  def getIcon(): Icon =
+    new Icon.Abstract(g_file_info_get_icon(this.raw.asInstanceOf).asInstanceOf)
 
   def getIsBackup(): Boolean =
     g_file_info_get_is_backup(this.raw.asInstanceOf).value.!=(0)
@@ -187,8 +188,8 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
   def getSortOrder(): Any /* Some(gint32): `gint32` */ =
     g_file_info_get_sort_order(this.raw.asInstanceOf)
 
-  def getSymbolicIcon(): Icon = g_file_info_get_symbolic_icon(
-    this.raw.asInstanceOf
+  def getSymbolicIcon(): Icon = new Icon.Abstract(
+    g_file_info_get_symbolic_icon(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getSymlinkTarget()(using Zone): String = g_file_info_get_symlink_target(

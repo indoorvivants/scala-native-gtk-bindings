@@ -52,13 +52,15 @@ class FileEnumerator(raw: Ptr[GFileEnumerator])
       ).value.!=(0)
     )
 
-  def getChild(info: FileInfo): File = g_file_enumerator_get_child(
-    this.raw.asInstanceOf,
-    info.getUnsafeRawPointer().asInstanceOf
+  def getChild(info: FileInfo): File = new File.Abstract(
+    g_file_enumerator_get_child(
+      this.raw.asInstanceOf,
+      info.getUnsafeRawPointer().asInstanceOf
+    ).asInstanceOf
   )
 
-  def getContainer(): File = g_file_enumerator_get_container(
-    this.raw.asInstanceOf
+  def getContainer(): File = new File.Abstract(
+    g_file_enumerator_get_container(this.raw.asInstanceOf).asInstanceOf
   )
 
   def hasPending(): Boolean =

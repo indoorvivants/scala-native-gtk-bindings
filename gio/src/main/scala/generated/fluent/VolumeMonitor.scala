@@ -18,9 +18,11 @@ class VolumeMonitor(raw: Ptr[GVolumeMonitor]) extends Object(raw.asInstanceOf):
   )
 
   def getMountForUuid(uuid: String | CString)(using Zone): Mount =
-    g_volume_monitor_get_mount_for_uuid(
-      this.raw.asInstanceOf,
-      __sn_extract_string(uuid)
+    new Mount.Abstract(
+      g_volume_monitor_get_mount_for_uuid(
+        this.raw.asInstanceOf,
+        __sn_extract_string(uuid)
+      ).asInstanceOf
     )
 
   def getMounts(): Ptr[GList] = g_volume_monitor_get_mounts(
@@ -28,9 +30,11 @@ class VolumeMonitor(raw: Ptr[GVolumeMonitor]) extends Object(raw.asInstanceOf):
   )
 
   def getVolumeForUuid(uuid: String | CString)(using Zone): Volume =
-    g_volume_monitor_get_volume_for_uuid(
-      this.raw.asInstanceOf,
-      __sn_extract_string(uuid)
+    new Volume.Abstract(
+      g_volume_monitor_get_volume_for_uuid(
+        this.raw.asInstanceOf,
+        __sn_extract_string(uuid)
+      ).asInstanceOf
     )
 
   def getVolumes(): Ptr[GList] = g_volume_monitor_get_volumes(

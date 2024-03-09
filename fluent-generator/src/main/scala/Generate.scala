@@ -74,7 +74,7 @@ end config
         .foreach: (relative, contents) =>
           val filePath = target / relative
           if contents.trim.nonEmpty then
-            scribe.info(s"Rendering ${relative}")
+            scribe.debug(s"Rendering ${relative}")
             os.write.over(filePath, contents)
             nonEmptyFiles += filePath
           else scribe.warn(s"Filepath $filePath was empty, not writing to disk")

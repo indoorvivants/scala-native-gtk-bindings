@@ -28,7 +28,9 @@ class EmblemedIcon(raw: Ptr[GEmblemedIcon])
     this.raw.asInstanceOf
   )
 
-  def getIcon(): Icon = g_emblemed_icon_get_icon(this.raw.asInstanceOf)
+  def getIcon(): Icon = new Icon.Abstract(
+    g_emblemed_icon_get_icon(this.raw.asInstanceOf).asInstanceOf
+  )
 
 end EmblemedIcon
 

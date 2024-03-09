@@ -16,7 +16,8 @@ class FileIcon(raw: Ptr[GFileIcon])
       LoadableIcon:
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
-  def getFile(): File = g_file_icon_get_file(this.raw.asInstanceOf)
+  def getFile(): File =
+    new File.Abstract(g_file_icon_get_file(this.raw.asInstanceOf).asInstanceOf)
 
 end FileIcon
 

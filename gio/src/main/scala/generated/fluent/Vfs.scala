@@ -17,15 +17,30 @@ class Vfs(raw: Ptr[GVfs]) extends Object(raw.asInstanceOf):
   override def getUnsafeRawPointer(): Ptr[Byte] = this.raw.asInstanceOf
 
   def getFileForPath(path: String | CString)(using Zone): File =
-    g_vfs_get_file_for_path(this.raw.asInstanceOf, __sn_extract_string(path))
+    new File.Abstract(
+      g_vfs_get_file_for_path(
+        this.raw.asInstanceOf,
+        __sn_extract_string(path)
+      ).asInstanceOf
+    )
 
   def getFileForUri(uri: String | CString)(using Zone): File =
-    g_vfs_get_file_for_uri(this.raw.asInstanceOf, __sn_extract_string(uri))
+    new File.Abstract(
+      g_vfs_get_file_for_uri(
+        this.raw.asInstanceOf,
+        __sn_extract_string(uri)
+      ).asInstanceOf
+    )
 
   def isActive(): Boolean = g_vfs_is_active(this.raw.asInstanceOf).value.!=(0)
 
   def parseName(parse_name: String | CString)(using Zone): File =
-    g_vfs_parse_name(this.raw.asInstanceOf, __sn_extract_string(parse_name))
+    new File.Abstract(
+      g_vfs_parse_name(
+        this.raw.asInstanceOf,
+        __sn_extract_string(parse_name)
+      ).asInstanceOf
+    )
 
   def registerUriScheme(
       scheme: String | CString,

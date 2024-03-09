@@ -215,6 +215,10 @@ def renderType(
                 Massage.Field("getUnsafeRawPointer()"),
                 Massage.InferredCast
               )
+              .withMassageFromUnsafe(
+                Massage.InferredCast,
+                Massage.New(name.short + ".Abstract")
+              )
 
           case name if name.tpe == NameType.Class =>
             val base =

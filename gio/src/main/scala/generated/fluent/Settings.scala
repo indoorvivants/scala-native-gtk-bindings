@@ -83,9 +83,11 @@ class Settings(raw: Ptr[GSettings]) extends Object(raw.asInstanceOf):
   )
 
   def createAction(key: String | CString)(using Zone): Action =
-    g_settings_create_action(
-      this.raw.asInstanceOf,
-      __sn_extract_string(key).asInstanceOf[Ptr[gchar]]
+    new Action.Abstract(
+      g_settings_create_action(
+        this.raw.asInstanceOf,
+        __sn_extract_string(key).asInstanceOf[Ptr[gchar]]
+      ).asInstanceOf
     )
 
   def delay(): Unit = g_settings_delay(this.raw.asInstanceOf)

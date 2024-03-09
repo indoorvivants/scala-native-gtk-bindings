@@ -4,7 +4,9 @@ import _root_.sn.gnome.gobject.internal.*
 
 import _root_.scala.scalanative.unsafe.*
 
+import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
+import sn.gnome.glib.internal.gint
 import sn.gnome.gobject.fluent.Object
 import sn.gnome.gobject.fluent.TypePlugin
 import sn.gnome.gobject.internal.GEnumValue
