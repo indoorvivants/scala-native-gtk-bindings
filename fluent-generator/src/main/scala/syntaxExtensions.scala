@@ -26,6 +26,24 @@ extension (c: Constructor)
   def parameters = extractParams(c.constructoroption)
   def isThrowing = c.throws.exists(_.toString == "1")
 
+extension (c: Virtualu45method)
+  def isThrowing = c.throws.exists(_.toString == "1")
+  def parameters: Seq[Parameter | Instanceu45parameter] = extractParams(
+    c.virtualu45methodoption
+  )
+  def instanceParameter: Option[Instanceu45parameter] =
+    c.virtualu45methodoption.collectFirst:
+      case d if d.value.isInstanceOf[Instanceu45parameter] =>
+        d.as[Instanceu45parameter]
+
+  def returnType: Option[Type | ArrayType] = c.virtualu45methodoption
+    .collectFirst:
+      case d if d.value.isInstanceOf[Returnu45value] => d.as[Returnu45value]
+    .flatMap: rv =>
+      rv.returnu45valueoption.collectFirst:
+        case d if d.value.isInstanceOf[Type]      => d.as[Type]
+        case d if d.value.isInstanceOf[ArrayType] => d.as[ArrayType]
+end extension
 
 extension (c: Method)
   def isThrowing = c.throws.exists(_.toString == "1")

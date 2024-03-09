@@ -18,7 +18,12 @@ def renderTrait(ns: AugmentedNamespace, iface: AugmentedInterface)(using
 
       emptyLine()
 
+      // if iface.name == "Icon" then println(iface.virtualMethods)
+
       block(s"object ${iface.name}:", s"end ${iface.name}"):
-        block(s"class Abstract(raw: Ptr[Byte]) extends ${iface.name}:", "end Abstract"):
+        block(
+          s"class Abstract(raw: Ptr[Byte]) extends ${iface.name}:",
+          "end Abstract"
+        ):
           line("override def getUnsafeRawPointer(): Ptr[Byte] = raw")
 end renderTrait
