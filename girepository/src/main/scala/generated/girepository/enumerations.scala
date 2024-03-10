@@ -1,5 +1,4 @@
 package girepository
-package enumerations
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
@@ -14,8 +13,6 @@ private[girepository] trait CEnumU[T](using eq: T =:= UInt):
    inline def value: CUnsignedInt = eq.apply(t)
 /**
  * GIArrayType: _ARRAY_TYPE_C: a C array, char[] for instance _ARRAY_TYPE_ARRAY: a array _ARRAY_TYPE_PTR_ARRAY: a #GPtrArray array _ARRAY_TYPE_BYTE_ARRAY: a #GByteArray array
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIArrayType = CUnsignedInt
 object GIArrayType extends CEnumU[GIArrayType]:
@@ -39,8 +36,6 @@ object GIArrayType extends CEnumU[GIArrayType]:
 
 /**
  * GIDirection: _DIRECTION_IN: in argument. _DIRECTION_OUT: out argument. _DIRECTION_INOUT: in and out argument.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIDirection = CUnsignedInt
 object GIDirection extends CEnumU[GIDirection]:
@@ -62,8 +57,6 @@ object GIDirection extends CEnumU[GIDirection]:
 
 /**
  * GIFieldInfoFlags: _FIELD_IS_READABLE: field is readable. _FIELD_IS_WRITABLE: field is writable.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIFieldInfoFlags = CUnsignedInt
 object GIFieldInfoFlags extends CEnumU[GIFieldInfoFlags]:
@@ -83,8 +76,6 @@ object GIFieldInfoFlags extends CEnumU[GIFieldInfoFlags]:
 
 /**
  * GIFunctionInfoFlags: _FUNCTION_IS_METHOD: is a method. _FUNCTION_IS_CONSTRUCTOR: is a constructor. _FUNCTION_IS_GETTER: is a getter of a #GIPropertyInfo. _FUNCTION_IS_SETTER: is a setter of a #GIPropertyInfo. _FUNCTION_WRAPS_VFUNC: represents a virtual function. _FUNCTION_THROWS: the function may throw an error.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIFunctionInfoFlags = CUnsignedInt
 object GIFunctionInfoFlags extends CEnumU[GIFunctionInfoFlags]:
@@ -112,8 +103,6 @@ object GIFunctionInfoFlags extends CEnumU[GIFunctionInfoFlags]:
 
 /**
  * GIInfoType: _INFO_TYPE_INVALID: invalid type _INFO_TYPE_FUNCTION: function, see #GIFunctionInfo _INFO_TYPE_CALLBACK: callback, see #GIFunctionInfo _INFO_TYPE_STRUCT: struct, see #GIStructInfo _INFO_TYPE_BOXED: boxed, see #GIStructInfo or #GIUnionInfo _INFO_TYPE_ENUM: enum, see #GIEnumInfo _INFO_TYPE_FLAGS: flags, see #GIEnumInfo _INFO_TYPE_OBJECT: object, see #GIObjectInfo _INFO_TYPE_INTERFACE: interface, see #GIInterfaceInfo _INFO_TYPE_CONSTANT: contant, see #GIConstantInfo _INFO_TYPE_INVALID_0: deleted, used to be GI_INFO_TYPE_ERROR_DOMAIN. _INFO_TYPE_UNION: union, see #GIUnionInfo _INFO_TYPE_VALUE: enum value, see #GIValueInfo _INFO_TYPE_SIGNAL: signal, see #GISignalInfo _INFO_TYPE_VFUNC: virtual function, see #GIVFuncInfo _INFO_TYPE_PROPERTY: GObject property, see #GIPropertyInfo _INFO_TYPE_FIELD: struct or union field, see #GIFieldInfo _INFO_TYPE_ARG: argument of a function or callback, see #GIArgInfo _INFO_TYPE_TYPE: type information, see #GITypeInfo _INFO_TYPE_UNRESOLVED: unresolved type, a type which is not present in the typelib, or any of its dependencies.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIInfoType = CUnsignedInt
 object GIInfoType extends CEnumU[GIInfoType]:
@@ -169,8 +158,6 @@ object GIInfoType extends CEnumU[GIInfoType]:
 
 /**
  * GIRepositoryError: _IREPOSITORY_ERROR_TYPELIB_NOT_FOUND: the typelib could not be found. _IREPOSITORY_ERROR_NAMESPACE_MISMATCH: the namespace does not match the requested namespace. _IREPOSITORY_ERROR_NAMESPACE_VERSION_CONFLICT: the version of the typelib does not match the requested version. _IREPOSITORY_ERROR_LIBRARY_NOT_FOUND: the library used by the typelib could not be found.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/girepository.h
 */
 opaque type GIRepositoryError = CUnsignedInt
 object GIRepositoryError extends CEnumU[GIRepositoryError]:
@@ -194,8 +181,6 @@ object GIRepositoryError extends CEnumU[GIRepositoryError]:
 
 /**
  * GIRepositoryLoadFlags: _IREPOSITORY_LOAD_FLAG_LAZY: Lazily load the typelib.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/girepository.h
 */
 opaque type GIRepositoryLoadFlags = CUnsignedInt
 object GIRepositoryLoadFlags extends CEnumU[GIRepositoryLoadFlags]:
@@ -213,8 +198,6 @@ object GIRepositoryLoadFlags extends CEnumU[GIRepositoryLoadFlags]:
 
 /**
  * GIScopeType: _SCOPE_TYPE_INVALID: The argument is not of callback type. _SCOPE_TYPE_CALL: The callback and associated user_data is only used during the call to this function. _SCOPE_TYPE_ASYNC: The callback and associated user_data is only used until the callback is invoked, and the callback. is invoked always exactly once. _SCOPE_TYPE_NOTIFIED: The callback and associated user_data is used until the caller is notfied via the destroy_notify. _SCOPE_TYPE_FOREVER: The callback and associated user_data is used until the process terminates
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIScopeType = CUnsignedInt
 object GIScopeType extends CEnumU[GIScopeType]:
@@ -240,8 +223,6 @@ object GIScopeType extends CEnumU[GIScopeType]:
 
 /**
  * GITransfer: _TRANSFER_NOTHING: transfer nothing from the callee (function or the type instance the property belongs to) to the caller. The callee retains the ownership of the transfer and the caller doesn't need to do anything to free up the resources of this transfer. _TRANSFER_CONTAINER: transfer the container (list, array, hash table) from the callee to the caller. The callee retains the ownership of the individual items in the container and the caller has to free up the container resources (g_list_free()/g_hash_table_destroy() etc) of this transfer. _TRANSFER_EVERYTHING: transfer everything, eg the container and its contents from the callee to the caller. This is the case when the callee creates a copy of all the data it returns. The caller is responsible for cleaning up the container and item resources of this transfer.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GITransfer = CUnsignedInt
 object GITransfer extends CEnumU[GITransfer]:
@@ -263,8 +244,6 @@ object GITransfer extends CEnumU[GITransfer]:
 
 /**
  * GITypeTag: _TYPE_TAG_VOID: void _TYPE_TAG_BOOLEAN: boolean _TYPE_TAG_INT8: 8-bit signed integer _TYPE_TAG_UINT8: 8-bit unsigned integer _TYPE_TAG_INT16: 16-bit signed integer _TYPE_TAG_UINT16: 16-bit unsigned integer _TYPE_TAG_INT32: 32-bit signed integer _TYPE_TAG_UINT32: 32-bit unsigned integer _TYPE_TAG_INT64: 64-bit signed integer _TYPE_TAG_UINT64: 64-bit unsigned integer _TYPE_TAG_FLOAT: float _TYPE_TAG_DOUBLE: double floating point _TYPE_TAG_GTYPE: a #GType _TYPE_TAG_UTF8: a UTF-8 encoded string _TYPE_TAG_FILENAME: a filename, encoded in the same encoding as the native filesystem is using. _TYPE_TAG_ARRAY: an array _TYPE_TAG_INTERFACE: an extended interface object _TYPE_TAG_GLIST: a #GList _TYPE_TAG_GSLIST: a #GSList _TYPE_TAG_GHASH: a #GHashTable _TYPE_TAG_ERROR: a #GError _TYPE_TAG_UNICHAR: Unicode character
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GITypeTag = CUnsignedInt
 object GITypeTag extends CEnumU[GITypeTag]:
@@ -324,8 +303,6 @@ object GITypeTag extends CEnumU[GITypeTag]:
 
 /**
  * GIVFuncInfoFlags: _VFUNC_MUST_CHAIN_UP: chains up to the parent type _VFUNC_MUST_OVERRIDE: overrides _VFUNC_MUST_NOT_OVERRIDE: does not override _VFUNC_THROWS: Includes a #GError
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 opaque type GIVFuncInfoFlags = CUnsignedInt
 object GIVFuncInfoFlags extends CEnumU[GIVFuncInfoFlags]:
@@ -349,8 +326,6 @@ object GIVFuncInfoFlags extends CEnumU[GIVFuncInfoFlags]:
 
 /**
  * GInvokeError: _INVOKE_ERROR_FAILED: invokation failed, unknown error. _INVOKE_ERROR_SYMBOL_NOT_FOUND: symbol couldn't be found in any of the libraries associated with the typelib of the function. _INVOKE_ERROR_ARGUMENT_MISMATCH: the arguments provided didn't match the expected arguments for the functions type signature.
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gifunctioninfo.h
 */
 opaque type GInvokeError = CUnsignedInt
 object GInvokeError extends CEnumU[GInvokeError]:
@@ -369,4 +344,3 @@ object GInvokeError extends CEnumU[GInvokeError]:
     inline def &(b: GInvokeError): GInvokeError = a & b
     inline def |(b: GInvokeError): GInvokeError = a | b
     inline def is(b: GInvokeError): Boolean = (a & b) == b
-

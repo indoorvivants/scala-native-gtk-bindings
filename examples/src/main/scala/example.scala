@@ -1,7 +1,7 @@
-import gio.all.*
-import glib.all.*
-import gtk.all.*
-import gtk.fluent.*
+import sn.gnome.gio.internal.*
+import sn.gnome.glib.internal.*
+import sn.gnome.gtk4.internal.*
+import sn.gnome.gtk4.fluent.*
 import scala.scalanative.unsafe.*
 
 @main def example =

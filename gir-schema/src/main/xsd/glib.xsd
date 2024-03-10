@@ -77,9 +77,6 @@
     </xs:simpleType>
   </xs:attribute>
   <xs:element name="boxed">
-    <xs:annotation>
-      <xs:documentation>Boxed type (wrapper to opaque C structures registered by the type system)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -124,9 +121,6 @@
     </xs:annotation>
   </xs:attribute>
   <xs:element name="signal">
-    <xs:annotation>
-      <xs:documentation>A signal as defined in the GObject system (https://docs.gtk.org/gobject/concepts.html#signals)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>

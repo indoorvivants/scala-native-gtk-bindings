@@ -29,12 +29,14 @@
         <xs:element ref="core:record"/>
         <xs:element ref="core:enumeration"/>
         <xs:element ref="core:function"/>
+        <xs:element ref="core:function-macro"/>
         <xs:element ref="core:union"/>
         <xs:element ref="core:bitfield"/>
         <xs:element ref="core:callback"/>
         <xs:element ref="core:constant"/>
         <xs:element ref="core:attribute"/>
         <xs:element ref="glib:boxed"/>
+        <xs:element ref="core:docsection"/>
       </xs:choice>
       <xs:attribute name="name" type="xs:string">
         <xs:annotation>
@@ -57,9 +59,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="attribute">
-    <xs:annotation>
-      <xs:documentation>element defining an annotation from the source code, usually a user-defined annotation associated to a parameter or a return value</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string">
         <xs:annotation>
@@ -74,9 +73,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="include">
-    <xs:annotation>
-      <xs:documentation>Dependant namespace to include with the current namespace. For example, Gtk will need the namespace GLib</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string">
         <xs:annotation>
@@ -91,9 +87,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="package">
-    <xs:annotation>
-      <xs:documentation>Deprecated: package name containing the library</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string">
         <xs:annotation>
@@ -103,13 +96,10 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="alias">
-    <xs:annotation>
-      <xs:documentation>Type's name substitution, representing a typedef in C</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
-        <xs:element ref="core:type"/>
+        <xs:element ref="core:AnyType"/>
       </xs:choice>
       <xs:attributeGroup ref="core:Info.attrs"/>
       <xs:attribute name="name" use="required" type="xs:string">
@@ -121,9 +111,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="interface">
-    <xs:annotation>
-      <xs:documentation>Abstract interface to other classes</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -153,9 +140,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="class">
-    <xs:annotation>
-      <xs:documentation>GObject inherited class definition</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -218,9 +202,6 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="record">
-    <xs:annotation>
-      <xs:documentation>Record definition, equivalent to a C struct, that is a simple structure, not a class</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -314,10 +295,16 @@ Replaced by "opaque" and "pointer".</xs:documentation>
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-    <xs:attribute name="deprecated" type="xs:string">
+    <xs:attribute name="deprecated">
       <xs:annotation>
         <xs:documentation>Binary attribute which is "1" (true) if the element has been deprecated</xs:documentation>
       </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="0"/>
+          <xs:enumeration value="1"/>
+        </xs:restriction>
+      </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="deprecated-version" type="xs:string">
       <xs:annotation>
@@ -382,7 +369,7 @@ Replaced by "opaque" and "pointer".</xs:documentation>
           <xs:documentation>The first line of the documentation in the source code</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="column" use="required" type="xs:string">
+      <xs:attribute name="column" type="xs:string">
         <xs:annotation>
           <xs:documentation>The first column of the documentation in the source code</xs:documentation>
         </xs:annotation>
@@ -413,7 +400,7 @@ Replaced by "opaque" and "pointer".</xs:documentation>
           <xs:documentation>The first line of the documentation in the source code</xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="column" use="required" type="xs:string">
+      <xs:attribute name="column" type="xs:string">
         <xs:annotation>
           <xs:documentation>The first column of the documentation in the source code</xs:documentation>
         </xs:annotation>
@@ -430,9 +417,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:sequence>
   </xs:group>
   <xs:element name="constant">
-    <xs:annotation>
-      <xs:documentation>A constant entity, similar to const variable in C</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -454,9 +438,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="property">
-    <xs:annotation>
-      <xs:documentation>Property, that is a variable or members with getter and setter functions</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -528,9 +509,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
         </xs:annotation>
       </xs:attribute>
       <xs:attribute name="transfer-ownership">
-        <xs:annotation>
-          <xs:documentation>attributes used by many elements for the transfer of ownership, with for example, a returned value. "none" if the recipient does not own the value, "container" if the recipient owns the container but not the value (for arrays or lists for example) , "full" the recipient owns the entire value. For details, see https://gi.readthedocs.io/en/latest/annotations/giannotations.html#memory-and-lifecycle-management</xs:documentation>
-        </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:token">
             <xs:enumeration value="none"/>
@@ -542,9 +520,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="field">
-    <xs:annotation>
-      <xs:documentation>A field of struct of union structure, that is a C bit field, that is a fixed length in bits variable</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -600,9 +575,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="callback">
-    <xs:annotation>
-      <xs:documentation>A callback closure, that is a function called when a signal is emitted (as an answer to that signal)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -630,9 +602,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="implements">
-    <xs:annotation>
-      <xs:documentation>Give the name of the interface it implements. This element is generally used within a class element</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string">
         <xs:annotation>
@@ -642,9 +611,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="prerequisite">
-    <xs:annotation>
-      <xs:documentation>Interface which is pre-required to implement another interface. This node is generally using within an interface element</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string">
         <xs:annotation>
@@ -681,9 +647,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="array" substitutionGroup="core:AnyType">
-    <xs:annotation>
-      <xs:documentation>An array type of data where each element is of the same type</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="core:AnyType"/>
@@ -730,9 +693,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
   </xs:element>
   <xs:attributeGroup name="TransferOwnership">
     <xs:attribute name="transfer-ownership" use="required">
-      <xs:annotation>
-        <xs:documentation>attributes used by many elements for the transfer of ownership, with for example, a returned value. "none" if the recipient does not own the value, "container" if the recipient owns the container but not the value (for arrays or lists for example) , "full" the recipient owns the entire value. For details, see https://gi.readthedocs.io/en/latest/annotations/giannotations.html#memory-and-lifecycle-management</xs:documentation>
-      </xs:annotation>
       <xs:simpleType>
         <xs:restriction base="xs:token">
           <xs:enumeration value="none"/>
@@ -743,9 +703,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:element name="constructor">
-    <xs:annotation>
-      <xs:documentation>A constructor of a class</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -755,10 +712,8 @@ Replaced by "opaque" and "pointer".</xs:documentation>
       <xs:attributeGroup ref="core:Callable.attrs"/>
     </xs:complexType>
   </xs:element>
+  <!-- Attributes of a Callable (functions, callbacks, closures, etc...) -->
   <xs:attributeGroup name="Callable.attrs">
-    <xs:annotation>
-      <xs:documentation>Attributes of a Callable (functions, callbacks, closures, etc...)</xs:documentation>
-    </xs:annotation>
     <xs:attributeGroup ref="core:Info.attrs"/>
     <xs:attribute name="name" use="required" type="xs:string">
       <xs:annotation>
@@ -789,14 +744,11 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:attribute>
     <xs:attribute name="moved-to" type="xs:string">
       <xs:annotation>
-        <xs:documentation>if for backward compatibility reason the callable has a name in the source code but should be known by another one, this attribute contains the new name    </xs:documentation>
+        <xs:documentation>if for backward compatibility reason the callable has a name in the source code but should be known by another one, this attribute contains the new name</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
   <xs:element name="varargs">
-    <xs:annotation>
-      <xs:documentation>an element, usually found in a parameter element for variadic parameter in a function or callable</xs:documentation>
-    </xs:annotation>
     <xs:complexType/>
   </xs:element>
   <!-- Refer to https://gi.readthedocs.io/en/latest/annotations/giannotations.html#support-for-gobject-closures -->
@@ -822,6 +774,7 @@ Replaced by "opaque" and "pointer".</xs:documentation>
           <xs:element ref="core:AnyType"/>
           <xs:element ref="core:varargs"/>
         </xs:choice>
+        <xs:element ref="core:attribute"/>
       </xs:choice>
       <xs:attribute name="name" type="xs:string">
         <xs:annotation>
@@ -930,9 +883,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="transfer-ownership">
-        <xs:annotation>
-          <xs:documentation>attributes used by many elements for the transfer of ownership, with for example, a returned value. "none" if the recipient does not own the value, "container" if the recipient owns the container but not the value (for arrays or lists for example) , "full" the recipient owns the entire value. For details, see https://gi.readthedocs.io/en/latest/annotations/giannotations.html#memory-and-lifecycle-management</xs:documentation>
-        </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:token">
             <xs:enumeration value="none"/>
@@ -1003,9 +953,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="transfer-ownership">
-        <xs:annotation>
-          <xs:documentation>attributes used by many elements for the transfer of ownership, with for example, a returned value. "none" if the recipient does not own the value, "container" if the recipient owns the container but not the value (for arrays or lists for example) , "full" the recipient owns the entire value. For details, see https://gi.readthedocs.io/en/latest/annotations/giannotations.html#memory-and-lifecycle-management</xs:documentation>
-        </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:token">
             <xs:enumeration value="none"/>
@@ -1017,12 +964,10 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="return-value">
-    <xs:annotation>
-      <xs:documentation>return value of a callable</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:DocElements"/>
+        <xs:element ref="core:attribute"/>
         <xs:element ref="core:AnyType"/>
       </xs:choice>
       <xs:attribute name="introspectable">
@@ -1093,9 +1038,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="transfer-ownership">
-        <xs:annotation>
-          <xs:documentation>attributes used by many elements for the transfer of ownership, with for example, a returned value. "none" if the recipient does not own the value, "container" if the recipient owns the container but not the value (for arrays or lists for example) , "full" the recipient owns the entire value. For details, see https://gi.readthedocs.io/en/latest/annotations/giannotations.html#memory-and-lifecycle-management</xs:documentation>
-        </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:token">
             <xs:enumeration value="none"/>
@@ -1107,22 +1049,25 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="function">
-    <xs:annotation>
-      <xs:documentation>element defining a standalone function (as usual in most programming languages)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="core:Info.elements"/>
         <xs:element ref="core:parameters"/>
         <xs:element ref="core:return-value"/>
-        <xs:group ref="core:DocElements"/>
+      </xs:choice>
+      <xs:attributeGroup ref="core:Callable.attrs"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="function-macro">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:group ref="core:Info.elements"/>
+        <xs:element ref="core:parameters"/>
       </xs:choice>
       <xs:attributeGroup ref="core:Callable.attrs"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="method">
-    <xs:annotation>
-      <xs:documentation>element defining a method from a class</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -1135,9 +1080,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="virtual-method">
-    <xs:annotation>
-      <xs:documentation>element defining a virtual method from a class, concept similar to C++</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -1153,9 +1095,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="union">
-    <xs:annotation>
-      <xs:documentation>element defining a type of data being a union of type, similar to union in C/C++ but extended with fields and methods</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -1188,9 +1127,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="bitfield">
-    <xs:annotation>
-      <xs:documentation>element defining a bit field (as in C)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -1209,9 +1145,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="enumeration">
-    <xs:annotation>
-      <xs:documentation>element defining a enumeration type similar to enum in C/C++</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -1231,9 +1164,6 @@ Replaced by "opaque" and "pointer".</xs:documentation>
     </xs:complexType>
   </xs:element>
   <xs:element name="member">
-    <xs:annotation>
-      <xs:documentation>element defining a member of a bit field or an enumeration</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:group ref="core:Info.elements"/>
       <xs:attributeGroup ref="core:Info.attrs"/>
@@ -1250,6 +1180,12 @@ Replaced by "opaque" and "pointer".</xs:documentation>
       <xs:attributeGroup ref="c:identifier2"/>
       <xs:attribute ref="glib:nick"/>
       <xs:attribute ref="glib:name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="docsection">
+    <xs:complexType>
+      <xs:group ref="core:DocElements"/>
+      <xs:attribute name="name" use="required" type="xs:string"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>

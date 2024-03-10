@@ -1,12 +1,9 @@
-package gtk
+package sn.gnome.gtk4
 package fluent
 
 import scalanative.unsafe.*
-import gobject.aliases.*
-import glib.aliases.*
-import gobject.enumerations.GConnectFlags
-import gobject.functions.g_signal_connect_data
-
+import sn.gnome.gobject.internal.*
+import sn.gnome.glib.internal.*
 
 extension [T <: CFuncPtr](inline ptr: T)
   inline def asGCallback: GCallback =

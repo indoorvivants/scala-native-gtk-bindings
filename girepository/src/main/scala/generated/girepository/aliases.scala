@@ -1,19 +1,10 @@
 package girepository
-package aliases
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-import _root_.girepository.enumerations.*
-import _root_.girepository.aliases.*
-import _root_.girepository.structs.*
-import _root_.girepository.unions.*
-
-/**
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
-*/
 type GArgument = GIArgument
 object GArgument: 
   given _tag: Tag[GArgument] = GIArgument._tag
@@ -23,8 +14,6 @@ object GArgument:
 
 /**
  * GIArgInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIArgInfo = GIBaseInfo
 object GIArgInfo: 
@@ -35,8 +24,6 @@ object GIArgInfo:
 
 /**
  * GICallableInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GICallableInfo = GIBaseInfo
 object GICallableInfo: 
@@ -47,8 +34,6 @@ object GICallableInfo:
 
 /**
  * GICallbackInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GICallbackInfo = GIBaseInfo
 object GICallbackInfo: 
@@ -59,8 +44,6 @@ object GICallbackInfo:
 
 /**
  * GIConstantInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIConstantInfo = GIBaseInfo
 object GIConstantInfo: 
@@ -71,8 +54,6 @@ object GIConstantInfo:
 
 /**
  * GIEnumInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIEnumInfo = GIBaseInfo
 object GIEnumInfo: 
@@ -83,8 +64,6 @@ object GIEnumInfo:
 
 /**
  * GIFieldInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIFieldInfo = GIBaseInfo
 object GIFieldInfo: 
@@ -95,8 +74,6 @@ object GIFieldInfo:
 
 /**
  * GIFunctionInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIFunctionInfo = GIBaseInfo
 object GIFunctionInfo: 
@@ -107,8 +84,6 @@ object GIFunctionInfo:
 
 /**
  * GIInterfaceInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIInterfaceInfo = GIBaseInfo
 object GIInterfaceInfo: 
@@ -119,8 +94,6 @@ object GIInterfaceInfo:
 
 /**
  * GIObjectInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIObjectInfo = GIBaseInfo
 object GIObjectInfo: 
@@ -131,56 +104,54 @@ object GIObjectInfo:
 
 /**
  * GIObjectInfoGetValueFunction: (skip) : a #GValue
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/giobjectinfo.h
 */
-opaque type GIObjectInfoGetValueFunction = CFuncPtr1[Ptr[_root_.gobject.all.GValue], Ptr[Byte]]
+opaque type GIObjectInfoGetValueFunction = CFuncPtr1[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte]]
 object GIObjectInfoGetValueFunction: 
-  given _tag: Tag[GIObjectInfoGetValueFunction] = Tag.materializeCFuncPtr1[Ptr[_root_.gobject.all.GValue], Ptr[Byte]]
-  inline def apply(inline o: CFuncPtr1[Ptr[_root_.gobject.all.GValue], Ptr[Byte]]): GIObjectInfoGetValueFunction = o
+  given _tag: Tag[GIObjectInfoGetValueFunction] = Tag.materializeCFuncPtr1[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte]]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GIObjectInfoGetValueFunction = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr1[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte]]): GIObjectInfoGetValueFunction = o
   extension (v: GIObjectInfoGetValueFunction)
-    inline def value: CFuncPtr1[Ptr[_root_.gobject.all.GValue], Ptr[Byte]] = v
+    inline def value: CFuncPtr1[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte]] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GIObjectInfoRefFunction: (skip) : object instance pointer
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/giobjectinfo.h
 */
 opaque type GIObjectInfoRefFunction = CFuncPtr1[Ptr[Byte], Ptr[Byte]]
 object GIObjectInfoRefFunction: 
   given _tag: Tag[GIObjectInfoRefFunction] = Tag.materializeCFuncPtr1[Ptr[Byte], Ptr[Byte]]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GIObjectInfoRefFunction = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[Byte], Ptr[Byte]]): GIObjectInfoRefFunction = o
   extension (v: GIObjectInfoRefFunction)
     inline def value: CFuncPtr1[Ptr[Byte], Ptr[Byte]] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GIObjectInfoSetValueFunction: (skip) : a #GValue : object instance pointer
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/giobjectinfo.h
 */
-opaque type GIObjectInfoSetValueFunction = CFuncPtr2[Ptr[_root_.gobject.all.GValue], Ptr[Byte], Unit]
+opaque type GIObjectInfoSetValueFunction = CFuncPtr2[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte], Unit]
 object GIObjectInfoSetValueFunction: 
-  given _tag: Tag[GIObjectInfoSetValueFunction] = Tag.materializeCFuncPtr2[Ptr[_root_.gobject.all.GValue], Ptr[Byte], Unit]
-  inline def apply(inline o: CFuncPtr2[Ptr[_root_.gobject.all.GValue], Ptr[Byte], Unit]): GIObjectInfoSetValueFunction = o
+  given _tag: Tag[GIObjectInfoSetValueFunction] = Tag.materializeCFuncPtr2[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GIObjectInfoSetValueFunction = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr2[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte], Unit]): GIObjectInfoSetValueFunction = o
   extension (v: GIObjectInfoSetValueFunction)
-    inline def value: CFuncPtr2[Ptr[_root_.gobject.all.GValue], Ptr[Byte], Unit] = v
+    inline def value: CFuncPtr2[Ptr[_root_.sn.gnome.gobject.internal.GValue], Ptr[Byte], Unit] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GIObjectInfoUnrefFunction: (skip) : object instance pointer
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/giobjectinfo.h
 */
 opaque type GIObjectInfoUnrefFunction = CFuncPtr1[Ptr[Byte], Unit]
 object GIObjectInfoUnrefFunction: 
   given _tag: Tag[GIObjectInfoUnrefFunction] = Tag.materializeCFuncPtr1[Ptr[Byte], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GIObjectInfoUnrefFunction = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[Byte], Unit]): GIObjectInfoUnrefFunction = o
   extension (v: GIObjectInfoUnrefFunction)
     inline def value: CFuncPtr1[Ptr[Byte], Unit] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GIPropertyInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIPropertyInfo = GIBaseInfo
 object GIPropertyInfo: 
@@ -191,8 +162,6 @@ object GIPropertyInfo:
 
 /**
  * GIRegisteredTypeInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIRegisteredTypeInfo = GIBaseInfo
 object GIRegisteredTypeInfo: 
@@ -203,8 +172,6 @@ object GIRegisteredTypeInfo:
 
 /**
  * GISignalInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GISignalInfo = GIBaseInfo
 object GISignalInfo: 
@@ -215,8 +182,6 @@ object GISignalInfo:
 
 /**
  * GIStructInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIStructInfo = GIBaseInfo
 object GIStructInfo: 
@@ -227,8 +192,6 @@ object GIStructInfo:
 
 /**
  * GITypeInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GITypeInfo = GIBaseInfo
 object GITypeInfo: 
@@ -239,8 +202,6 @@ object GITypeInfo:
 
 /**
  * GIUnionInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIUnionInfo = GIBaseInfo
 object GIUnionInfo: 
@@ -251,8 +212,6 @@ object GIUnionInfo:
 
 /**
  * GIVFuncInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIVFuncInfo = GIBaseInfo
 object GIVFuncInfo: 
@@ -263,8 +222,6 @@ object GIVFuncInfo:
 
 /**
  * GIValueInfo:
-
- * [bindgen] header: /usr/include/gobject-introspection-1.0/gitypes.h
 */
 type GIValueInfo = GIBaseInfo
 object GIValueInfo: 
@@ -287,6 +244,13 @@ object pthread_t:
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
 
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
+
 type time_t = posix.sys.types.time_t
 object time_t: 
   val _tag: Tag[time_t] = summon[Tag[posix.sys.types.time_t]]
@@ -307,4 +271,3 @@ object va_list:
   inline def apply(inline o: unsafe.CVarArgList): va_list = o
   extension (v: va_list)
     inline def value: unsafe.CVarArgList = v
-
