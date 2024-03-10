@@ -17,6 +17,7 @@ import sn.gnome.gio.internal.GDataStreamNewlineType
 import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gint64
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.gssize
@@ -66,15 +67,14 @@ class DataInputStream(raw: Ptr[GDataInputStream])
     )
   )
 
-  def readInt64(
-      cancellable: Cancellable
-  ): GResult[Any /* Some(gint64): `gint64` */ ] = GResult.wrap(__errorPtr =>
-    g_data_input_stream_read_int64(
-      this.raw.asInstanceOf,
-      cancellable.getUnsafeRawPointer().asInstanceOf,
-      __errorPtr
+  def readInt64(cancellable: Cancellable): GResult[Long] =
+    GResult.wrap(__errorPtr =>
+      g_data_input_stream_read_int64(
+        this.raw.asInstanceOf,
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value
     )
-  )
 
   def readLineAsync(
       io_priority: Int,

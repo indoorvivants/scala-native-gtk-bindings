@@ -29,7 +29,7 @@ class TlsPassword(raw: Ptr[GTlsPassword]) extends Object(raw.asInstanceOf):
     g_tls_password_get_value(
       this.raw.asInstanceOf,
       length.asInstanceOf[Ptr[gsize]]
-    )
+    ).asInstanceOf
 
   def getWarning()(using Zone): String = fromCString(
     g_tls_password_get_warning(this.raw.asInstanceOf).asInstanceOf
@@ -45,7 +45,11 @@ class TlsPassword(raw: Ptr[GTlsPassword]) extends Object(raw.asInstanceOf):
     g_tls_password_set_flags(this.raw.asInstanceOf, flags)
 
   def setValue(value: Ptr[UByte], length: CLongInt): Unit =
-    g_tls_password_set_value(this.raw.asInstanceOf, value, gssize(length))
+    g_tls_password_set_value(
+      this.raw.asInstanceOf,
+      value.asInstanceOf,
+      gssize(length)
+    )
 
   def setValueFull(
       value: Ptr[UByte],
@@ -53,7 +57,7 @@ class TlsPassword(raw: Ptr[GTlsPassword]) extends Object(raw.asInstanceOf):
       destroy: GDestroyNotify
   ): Unit = g_tls_password_set_value_full(
     this.raw.asInstanceOf,
-    value,
+    value.asInstanceOf,
     gssize(length),
     destroy
   )

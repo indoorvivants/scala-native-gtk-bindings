@@ -62,7 +62,7 @@ end config
 
       renderNamespace(
         r = streams,
-        ns = repository.namespace.get,
+        namespace = repository.namespace.get,
         global = globalKnowledge,
         policy = policy
       )

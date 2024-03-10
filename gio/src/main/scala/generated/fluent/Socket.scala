@@ -29,6 +29,7 @@ import sn.gnome.glib.internal.GSource
 import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gint64
 import sn.gnome.glib.internal.gsize
 import sn.gnome.glib.internal.gssize
 import sn.gnome.glib.internal.guint
@@ -74,13 +75,13 @@ class Socket(raw: Ptr[GSocket])
 
   def conditionTimedWait(
       condition: GIOCondition,
-      timeout_us: Any /* Some(gint64): `gint64` */,
+      timeout_us: Long,
       cancellable: Cancellable
   ): GResult[Boolean] = GResult.wrap(__errorPtr =>
     g_socket_condition_timed_wait(
       this.raw.asInstanceOf,
       condition,
-      timeout_us,
+      gint64(timeout_us),
       cancellable.getUnsafeRawPointer().asInstanceOf,
       __errorPtr
     ).value.!=(0)
@@ -166,19 +167,16 @@ class Socket(raw: Ptr[GSocket])
     this.raw.asInstanceOf
   ).value
 
-  def getOption(
-      level: Int,
-      optname: Int,
-      value: Any /* Some(gint): `gint*` */
-  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
-    g_socket_get_option(
-      this.raw.asInstanceOf,
-      gint(level),
-      gint(optname),
-      value,
-      __errorPtr
-    ).value.!=(0)
-  )
+  def getOption(level: Int, optname: Int, value: Ptr[Int]): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_socket_get_option(
+        this.raw.asInstanceOf,
+        gint(level),
+        gint(optname),
+        value.asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def getProtocol(): GSocketProtocol = g_socket_get_protocol(
     this.raw.asInstanceOf
@@ -272,8 +270,8 @@ class Socket(raw: Ptr[GSocket])
       vectors: Ptr[GInputVector],
       num_vectors: Int,
       messages: Ptr[SocketControlMessage],
-      num_messages: Any /* Some(gint): `gint*` */,
-      flags: Any /* Some(gint): `gint*` */,
+      num_messages: Ptr[Int],
+      flags: Ptr[Int],
       cancellable: Cancellable
   ): GResult[CLongInt] = GResult.wrap(__errorPtr =>
     g_socket_receive_message(
@@ -282,8 +280,8 @@ class Socket(raw: Ptr[GSocket])
       vectors,
       gint(num_vectors),
       messages,
-      num_messages,
-      flags,
+      num_messages.asInstanceOf,
+      flags.asInstanceOf,
       cancellable.getUnsafeRawPointer().asInstanceOf,
       __errorPtr
     ).value
@@ -334,7 +332,7 @@ class Socket(raw: Ptr[GSocket])
       messages: Ptr[SocketControlMessage],
       num_messages: Int,
       flags: Int,
-      timeout_us: Any /* Some(gint64): `gint64` */,
+      timeout_us: Long,
       bytes_written: Ptr[CUnsignedLongInt],
       cancellable: Cancellable
   ): GResult[GPollableReturn] = GResult.wrap(__errorPtr =>
@@ -346,7 +344,7 @@ class Socket(raw: Ptr[GSocket])
       messages,
       gint(num_messages),
       gint(flags),
-      timeout_us,
+      gint64(timeout_us),
       bytes_written.asInstanceOf[Ptr[gsize]],
       cancellable.getUnsafeRawPointer().asInstanceOf,
       __errorPtr

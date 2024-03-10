@@ -19,6 +19,7 @@ import sn.gnome.glib.internal.GVariant
 import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gchar
 import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gint64
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint
 import sn.gnome.glib.internal.guint64
@@ -136,12 +137,10 @@ class Settings(raw: Ptr[GSettings]) extends Object(raw.asInstanceOf):
     __sn_extract_string(key).asInstanceOf[Ptr[gchar]]
   ).value
 
-  def getInt64(
-      key: String | CString
-  )(using Zone): Any /* Some(gint64): `gint64` */ = g_settings_get_int64(
+  def getInt64(key: String | CString)(using Zone): Long = g_settings_get_int64(
     this.raw.asInstanceOf,
     __sn_extract_string(key).asInstanceOf[Ptr[gchar]]
-  )
+  ).value
 
   def getMapped(
       key: String | CString,
@@ -248,13 +247,12 @@ class Settings(raw: Ptr[GSettings]) extends Object(raw.asInstanceOf):
       gint(value)
     ).value.!=(0)
 
-  def setInt64(key: String | CString, value: Any /* Some(gint64): `gint64` */ )(
-      using Zone
-  ): Boolean = g_settings_set_int64(
-    this.raw.asInstanceOf,
-    __sn_extract_string(key).asInstanceOf[Ptr[gchar]],
-    value
-  ).value.!=(0)
+  def setInt64(key: String | CString, value: Long)(using Zone): Boolean =
+    g_settings_set_int64(
+      this.raw.asInstanceOf,
+      __sn_extract_string(key).asInstanceOf[Ptr[gchar]],
+      gint64(value)
+    ).value.!=(0)
 
   def setString(key: String | CString, value: String | CString)(using
       Zone

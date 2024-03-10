@@ -14,6 +14,7 @@ import sn.gnome.gio.internal.GDataStreamByteOrder
 import sn.gnome.glib.fluent.GResult
 import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gint64
 import sn.gnome.glib.internal.guchar
 import sn.gnome.glib.internal.guint16
 import sn.gnome.glib.internal.guint32
@@ -61,17 +62,15 @@ class DataOutputStream(raw: Ptr[GDataOutputStream])
     ).value.!=(0)
   )
 
-  def putInt64(
-      data: Any /* Some(gint64): `gint64` */,
-      cancellable: Cancellable
-  ): GResult[Boolean] = GResult.wrap(__errorPtr =>
-    g_data_output_stream_put_int64(
-      this.raw.asInstanceOf,
-      data,
-      cancellable.getUnsafeRawPointer().asInstanceOf,
-      __errorPtr
-    ).value.!=(0)
-  )
+  def putInt64(data: Long, cancellable: Cancellable): GResult[Boolean] =
+    GResult.wrap(__errorPtr =>
+      g_data_output_stream_put_int64(
+        this.raw.asInstanceOf,
+        gint64(data),
+        cancellable.getUnsafeRawPointer().asInstanceOf,
+        __errorPtr
+      ).value.!=(0)
+    )
 
   def putString(str: String | CString, cancellable: Cancellable)(using
       Zone

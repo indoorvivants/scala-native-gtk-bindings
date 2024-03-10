@@ -70,8 +70,8 @@ class Subprocess(raw: Ptr[GSubprocess])
   def communicateUtf8(
       stdin_buf: String | CString,
       cancellable: Cancellable,
-      stdout_buf: Any /* Some(utf8): `char**` */,
-      stderr_buf: Any /* Some(utf8): `char**` */
+      stdout_buf: Ptr[CString],
+      stderr_buf: Ptr[CString]
   )(using Zone): GResult[Boolean] = GResult.wrap(__errorPtr =>
     g_subprocess_communicate_utf8(
       this.raw.asInstanceOf,
@@ -98,8 +98,8 @@ class Subprocess(raw: Ptr[GSubprocess])
 
   def communicateUtf8Finish(
       result: AsyncResult,
-      stdout_buf: Any /* Some(utf8): `char**` */,
-      stderr_buf: Any /* Some(utf8): `char**` */
+      stdout_buf: Ptr[CString],
+      stderr_buf: Ptr[CString]
   ): GResult[Boolean] = GResult.wrap(__errorPtr =>
     g_subprocess_communicate_utf8_finish(
       this.raw.asInstanceOf,

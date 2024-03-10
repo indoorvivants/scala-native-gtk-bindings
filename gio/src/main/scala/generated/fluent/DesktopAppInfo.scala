@@ -38,16 +38,17 @@ class DesktopAppInfo(raw: Ptr[GDesktopAppInfo])
       __sn_extract_string(key)
     ).value.!=(0)
 
-  def getCategories()(using Zone): String = g_desktop_app_info_get_categories(
-    this.raw.asInstanceOf
+  def getCategories()(using Zone): String = fromCString(
+    g_desktop_app_info_get_categories(this.raw.asInstanceOf).asInstanceOf
   )
 
-  def getFilename()(using Zone): String = g_desktop_app_info_get_filename(
-    this.raw.asInstanceOf
+  def getFilename()(using Zone): String = fromCString(
+    g_desktop_app_info_get_filename(this.raw.asInstanceOf).asInstanceOf
   )
 
-  def getGenericName()(using Zone): String =
-    g_desktop_app_info_get_generic_name(this.raw.asInstanceOf)
+  def getGenericName()(using Zone): String = fromCString(
+    g_desktop_app_info_get_generic_name(this.raw.asInstanceOf).asInstanceOf
+  )
 
   def getIsHidden(): Boolean =
     g_desktop_app_info_get_is_hidden(this.raw.asInstanceOf).value.!=(0)
@@ -68,8 +69,9 @@ class DesktopAppInfo(raw: Ptr[GDesktopAppInfo])
       __sn_extract_string(desktop_env).asInstanceOf[Ptr[gchar]]
     ).value.!=(0)
 
-  def getStartupWmClass()(using Zone): String =
-    g_desktop_app_info_get_startup_wm_class(this.raw.asInstanceOf)
+  def getStartupWmClass()(using Zone): String = fromCString(
+    g_desktop_app_info_get_startup_wm_class(this.raw.asInstanceOf).asInstanceOf
+  )
 
   def getString(key: String | CString)(using Zone): String = fromCString(
     g_desktop_app_info_get_string(

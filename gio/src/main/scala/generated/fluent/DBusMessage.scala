@@ -60,7 +60,7 @@ class DBusMessage(raw: Ptr[GDBusMessage]) extends Object(raw.asInstanceOf):
 
   def getHeaderFields(): Ptr[UByte] = g_dbus_message_get_header_fields(
     this.raw.asInstanceOf
-  )
+  ).asInstanceOf
 
   def getInterface()(using Zone): String = fromCString(
     g_dbus_message_get_interface(this.raw.asInstanceOf).asInstanceOf
@@ -221,7 +221,7 @@ class DBusMessage(raw: Ptr[GDBusMessage]) extends Object(raw.asInstanceOf):
       out_size.asInstanceOf[Ptr[gsize]],
       capabilities,
       __errorPtr
-    )
+    ).asInstanceOf
   )
 
   def toGerror(): GResult[Boolean] = GResult.wrap(__errorPtr =>

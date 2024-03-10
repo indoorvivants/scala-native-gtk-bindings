@@ -24,6 +24,8 @@ def renderClassMethod(cls: AugmentedClass, meth: Method)(using
       ),
       position = TypePosition.ReturnType
     )
+    if meth.name == "get_etag" then
+      scribe.info(s"Return type: $returnType")
 
     coll.addAll(returnType.effects)
 

@@ -16,6 +16,7 @@ import sn.gnome.glib.internal.GDateTime
 import sn.gnome.glib.internal.GTimeVal
 import sn.gnome.glib.internal.gboolean
 import sn.gnome.glib.internal.gint
+import sn.gnome.glib.internal.gint64
 import sn.gnome.glib.internal.gpointer
 import sn.gnome.glib.internal.guint32
 import sn.gnome.glib.internal.guint64
@@ -54,9 +55,11 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     ).value.!=(0)
 
   def getAttributeByteString(attribute: String | CString)(using Zone): String =
-    g_file_info_get_attribute_byte_string(
-      this.raw.asInstanceOf,
-      __sn_extract_string(attribute)
+    fromCString(
+      g_file_info_get_attribute_byte_string(
+        this.raw.asInstanceOf,
+        __sn_extract_string(attribute)
+      ).asInstanceOf
     )
 
   def getAttributeData(
@@ -73,9 +76,11 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
   ).value.!=(0)
 
   def getAttributeFilePath(attribute: String | CString)(using Zone): String =
-    g_file_info_get_attribute_file_path(
-      this.raw.asInstanceOf,
-      __sn_extract_string(attribute)
+    fromCString(
+      g_file_info_get_attribute_file_path(
+        this.raw.asInstanceOf,
+        __sn_extract_string(attribute)
+      ).asInstanceOf
     )
 
   def getAttributeInt32(attribute: String | CString)(using
@@ -85,12 +90,11 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     __sn_extract_string(attribute)
   )
 
-  def getAttributeInt64(attribute: String | CString)(using
-      Zone
-  ): Any /* Some(gint64): `gint64` */ = g_file_info_get_attribute_int64(
-    this.raw.asInstanceOf,
-    __sn_extract_string(attribute)
-  )
+  def getAttributeInt64(attribute: String | CString)(using Zone): Long =
+    g_file_info_get_attribute_int64(
+      this.raw.asInstanceOf,
+      __sn_extract_string(attribute)
+    ).value
 
   def getAttributeObject(attribute: String | CString)(using Zone): Object =
     new Object(
@@ -108,9 +112,11 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
   )
 
   def getAttributeString(attribute: String | CString)(using Zone): String =
-    g_file_info_get_attribute_string(
-      this.raw.asInstanceOf,
-      __sn_extract_string(attribute)
+    fromCString(
+      g_file_info_get_attribute_string(
+        this.raw.asInstanceOf,
+        __sn_extract_string(attribute)
+      ).asInstanceOf
     )
 
   def getAttributeType(
@@ -132,8 +138,8 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
       __sn_extract_string(attribute)
     ).value
 
-  def getContentType()(using Zone): String = g_file_info_get_content_type(
-    this.raw.asInstanceOf
+  def getContentType()(using Zone): String = fromCString(
+    g_file_info_get_content_type(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getCreationDateTime(): Ptr[GDateTime] =
@@ -143,16 +149,16 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     this.raw.asInstanceOf
   )
 
-  def getDisplayName()(using Zone): String = g_file_info_get_display_name(
-    this.raw.asInstanceOf
+  def getDisplayName()(using Zone): String = fromCString(
+    g_file_info_get_display_name(this.raw.asInstanceOf).asInstanceOf
   )
 
-  def getEditName()(using Zone): String = g_file_info_get_edit_name(
-    this.raw.asInstanceOf
+  def getEditName()(using Zone): String = fromCString(
+    g_file_info_get_edit_name(this.raw.asInstanceOf).asInstanceOf
   )
 
-  def getEtag()(using Zone): String = g_file_info_get_etag(
-    this.raw.asInstanceOf
+  def getEtag()(using Zone): String = fromCString(
+    g_file_info_get_etag(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getFileType(): GFileType = g_file_info_get_file_type(
@@ -177,8 +183,8 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
   def getModificationTime(result: Ptr[GTimeVal]): Unit =
     g_file_info_get_modification_time(this.raw.asInstanceOf, result)
 
-  def getName()(using Zone): String = g_file_info_get_name(
-    this.raw.asInstanceOf
+  def getName()(using Zone): String = fromCString(
+    g_file_info_get_name(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getSize(): Any /* Some(gint64): `goffset` */ = g_file_info_get_size(
@@ -192,8 +198,8 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     g_file_info_get_symbolic_icon(this.raw.asInstanceOf).asInstanceOf
   )
 
-  def getSymlinkTarget()(using Zone): String = g_file_info_get_symlink_target(
-    this.raw.asInstanceOf
+  def getSymlinkTarget()(using Zone): String = fromCString(
+    g_file_info_get_symlink_target(this.raw.asInstanceOf).asInstanceOf
   )
 
   def hasAttribute(attribute: String | CString)(using Zone): Boolean =
@@ -263,13 +269,12 @@ class FileInfo(raw: Ptr[GFileInfo]) extends Object(raw.asInstanceOf):
     attr_value
   )
 
-  def setAttributeInt64(
-      attribute: String | CString,
-      attr_value: Any /* Some(gint64): `gint64` */
-  )(using Zone): Unit = g_file_info_set_attribute_int64(
+  def setAttributeInt64(attribute: String | CString, attr_value: Long)(using
+      Zone
+  ): Unit = g_file_info_set_attribute_int64(
     this.raw.asInstanceOf,
     __sn_extract_string(attribute),
-    attr_value
+    gint64(attr_value)
   )
 
   def setAttributeMask(mask: Ptr[GFileAttributeMatcher]): Unit =

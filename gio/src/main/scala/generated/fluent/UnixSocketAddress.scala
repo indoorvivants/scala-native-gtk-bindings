@@ -25,22 +25,14 @@ class UnixSocketAddress(raw: Ptr[GUnixSocketAddress])
   def getIsAbstract(): Boolean =
     g_unix_socket_address_get_is_abstract(this.raw.asInstanceOf).value.!=(0)
 
-  def getPath()(using Zone): String = g_unix_socket_address_get_path(
-    this.raw.asInstanceOf
+  def getPath()(using Zone): String = fromCString(
+    g_unix_socket_address_get_path(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getPathLen(): CUnsignedLongInt = g_unix_socket_address_get_path_len(
     this.raw.asInstanceOf
   ).value
 
-  private inline def __sn_extract_string(str: String | CString)(using
-      Zone
-  ): CString =
-    str match
-      case s: String  => toCString(s)
-      case s: CString => s
-    end match
-  end __sn_extract_string
 end UnixSocketAddress
 
 object UnixSocketAddress:

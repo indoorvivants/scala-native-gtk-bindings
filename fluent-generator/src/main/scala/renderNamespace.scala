@@ -2,7 +2,7 @@ import rendition.*
 
 def renderNamespace(
     r: RenderingStreams,
-    ns: AugmentedNamespace,
+    namespace: AugmentedNamespace,
     global: GlobalKnowledge,
     policy: NamingPolicy
 ) =
@@ -10,10 +10,18 @@ def renderNamespace(
   given GlobalKnowledge = global
   given NamingPolicy = policy
 
-  val fluentPackageName = policy.namespaceToFluentPackage(ns.name.get)
-  val internalPackageName = policy.namespaceToInternalPackage(ns.name.get)
+  val fluentPackageName = policy.namespaceToFluentPackage(namespace.name.get)
+  val internalPackageName = policy.namespaceToInternalPackage(namespace.name.get)
 
-  ns.interfaces.map: iface =>
+  val filteredInterfaces =
+    namespace.interfaces.flatMap: iface =>
+      filterDefinitions(namespace = Some(namespace), iface = Some(iface)) match
+        case None => Some(iface)
+        case Some(value) =>
+          scribe.warn(s"Filtering out interface ${iface.name}: $value")
+          None
+
+  filteredInterfaces.map: iface =>
     r.in(iface.name + ".scala"):
       val newLB = LineBuilder()
       var error = Option.empty[String]
@@ -21,7 +29,7 @@ def renderNamespace(
       val effects = WithEffects.collect: coll =>
         newLB.use:
           error = transact[String]:
-            coll.observe(renderTrait(ns, iface))
+            coll.observe(renderTrait(namespace, iface))
 
       error match
         case None =>
@@ -42,7 +50,15 @@ def renderNamespace(
           scribe.warn(s"Failed to render class ${iface.name}: `$msg`")
       end match
 
-  ns.classes.map: cls =>
+  val filteredClasses =
+    namespace.classes.flatMap: cls =>
+      filterDefinitions(namespace = Some(namespace), cls = Some(cls)) match
+        case None => Some(cls)
+        case Some(value) =>
+          scribe.warn(s"Filtering out class ${cls.name}: $value")
+          None
+
+  filteredClasses.map: cls =>
     r.in(cls.name + ".scala"):
       val newLB = LineBuilder()
       var error = Option.empty[String]
@@ -50,7 +66,7 @@ def renderNamespace(
       val effects = WithEffects.collect: coll =>
         newLB.use:
           error = transact[String]:
-            coll.observe(renderClass(ns, cls))
+            coll.observe(renderClass(namespace, cls))
 
       error match
         case None =>

@@ -22,8 +22,8 @@ class MountOperation(raw: Ptr[GMountOperation])
 
   def getChoice(): Int = g_mount_operation_get_choice(this.raw.asInstanceOf)
 
-  def getDomain()(using Zone): String = g_mount_operation_get_domain(
-    this.raw.asInstanceOf
+  def getDomain()(using Zone): String = fromCString(
+    g_mount_operation_get_domain(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getIsTcryptHiddenVolume(): Boolean =
@@ -34,8 +34,8 @@ class MountOperation(raw: Ptr[GMountOperation])
     g_mount_operation_get_is_tcrypt_system_volume(this.raw.asInstanceOf).value
       .!=(0)
 
-  def getPassword()(using Zone): String = g_mount_operation_get_password(
-    this.raw.asInstanceOf
+  def getPassword()(using Zone): String = fromCString(
+    g_mount_operation_get_password(this.raw.asInstanceOf).asInstanceOf
   )
 
   def getPasswordSave(): GPasswordSave = g_mount_operation_get_password_save(
@@ -44,8 +44,8 @@ class MountOperation(raw: Ptr[GMountOperation])
 
   def getPim(): UInt = g_mount_operation_get_pim(this.raw.asInstanceOf).value
 
-  def getUsername()(using Zone): String = g_mount_operation_get_username(
-    this.raw.asInstanceOf
+  def getUsername()(using Zone): String = fromCString(
+    g_mount_operation_get_username(this.raw.asInstanceOf).asInstanceOf
   )
 
   def reply(result: GMountOperationResult): Unit =

@@ -124,7 +124,7 @@ def renderType(
         .map(
           _.withEffect(Effect.RequiresZone)
         )
-        .map(requiresStringExtractor),
+        .map(stringTypeWrap),
       whenTypeValue("const gchar*")(stringType)
         .map(stringTypeWrap)
         .map(
@@ -144,6 +144,19 @@ def renderType(
           _.withEffect(Effect.RequiresZone)
         )
         .map(stringTypeWrap),
+      whenTypeValue("guchar*")("Ptr[UByte]")
+        .map(
+          _.withEffect(
+            Effect.RequiresImport(
+              policy.namespaceToInternalPackage("glib"),
+              "guchar"
+            )
+          )
+            .withMassageIntoUnsafe(
+              Massage.Cast("Ptr[guchar]")
+            )
+        )
+        .map(stringTypeWrap),
       whenTypeValue("gchar*")(stringType)
         .map(
           _.withEffect(
@@ -158,6 +171,7 @@ def renderType(
             )
         )
         .map(stringTypeWrap),
+      whenTypeValue("char**")("Ptr[CString]"), // TODO
       whenTypeValue("const char*")(stringType)
         .map(
           _.withEffect(Effect.RequiresZone).withMassageIntoUnsafe(
@@ -167,6 +181,11 @@ def renderType(
         .map(stringTypeWrap),
       whenTypeValue("gfloat")("Float"),
       glibAlias("gint", "gint")("Int"),
+      whenTypeValue("gint*")("Ptr[Int]").map(
+        _.withMassageFromUnsafe(Massage.InferredCast).withMassageIntoUnsafe(
+          Massage.InferredCast
+        )
+      ),
       whenTypeValue("int")("Int"),
       whenTypeValue("gboolean")("Boolean").map(
         _.withMassageFromUnsafe(Massage.Field("value.!=(0)"))
@@ -194,6 +213,7 @@ def renderType(
       unsignedAlias("guint", "UInt"),
       unsignedAlias("guint32", "UInt"),
       unsignedAlias("guint64", "ULong"),
+      unsignedAlias("gint64", "Long"),
       unsignedAlias("gulong", "ULong"),
       unsignedAlias("gsize", "CUnsignedLongInt"),
       unsignedAlias("gssize", "CLongInt"),
@@ -255,6 +275,14 @@ def renderType(
       if elementType.typeValue.endsWith("gchar*") then
         TypeMapping(s"Ptr[CString]", effects = renderedElementType.effects)
           .withMassageIntoUnsafe(Massage.InferredCast)
+      else if elementType.typeValue.endsWith("guchar") then
+        TypeMapping(s"Ptr[UByte]", effects = renderedElementType.effects)
+          .withMassageIntoUnsafe(Massage.InferredCast)
+          .withMassageFromUnsafe(Massage.InferredCast)
+      else if elementType.typeValue.endsWith("gint") then
+        TypeMapping(s"Ptr[Int]", effects = renderedElementType.effects)
+          .withMassageIntoUnsafe(Massage.InferredCast)
+          .withMassageFromUnsafe(Massage.InferredCast)
       else if elementType.typeValue.endsWith("char*") then
         TypeMapping(s"Ptr[CString]", effects = renderedElementType.effects)
       else

@@ -22,17 +22,21 @@ class UnixFDList(raw: Ptr[GUnixFDList]) extends Object(raw.asInstanceOf):
 
   def getLength(): Int = g_unix_fd_list_get_length(this.raw.asInstanceOf).value
 
-  def peekFds(length: Any /* Some(gint): `gint*` */ ): Ptr[Int] =
-    g_unix_fd_list_peek_fds(this.raw.asInstanceOf, length)
+  def peekFds(length: Ptr[Int]): Ptr[Int] = g_unix_fd_list_peek_fds(
+    this.raw.asInstanceOf,
+    length.asInstanceOf
+  ).asInstanceOf
 
-  def stealFds(length: Any /* Some(gint): `gint*` */ ): Ptr[Int] =
-    g_unix_fd_list_steal_fds(this.raw.asInstanceOf, length)
+  def stealFds(length: Ptr[Int]): Ptr[Int] = g_unix_fd_list_steal_fds(
+    this.raw.asInstanceOf,
+    length.asInstanceOf
+  ).asInstanceOf
 
 end UnixFDList
 
 object UnixFDList:
   def apply(): UnixFDList = new UnixFDList(g_unix_fd_list_new().asInstanceOf)
   def fromArray(fds: Ptr[Int], n_fds: Int): UnixFDList = new UnixFDList(
-    g_unix_fd_list_new_from_array(fds, gint(n_fds)).asInstanceOf
+    g_unix_fd_list_new_from_array(fds.asInstanceOf, gint(n_fds)).asInstanceOf
   )
 end UnixFDList
