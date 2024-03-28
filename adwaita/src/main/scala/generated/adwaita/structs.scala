@@ -883,7 +883,7 @@ opaque type AdwSwipeableInterface = CArray[CChar, Nat.Digit2[Nat._8, Nat._8]]
 object AdwSwipeableInterface:
   given _tag: Tag[AdwSwipeableInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._8, Nat._8]](Tag.Byte, Tag.Digit2[Nat._8, Nat._8](Tag.Nat8, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwSwipeableInterface] = scala.scalanative.unsafe.alloc[AdwSwipeableInterface](1)
-  def apply(parent : _root_.gobject.all.GTypeInterface, get_distance : CFuncPtr1[Ptr[AdwSwipeable], Double], get_snap_points : CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], get_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit], padding : CArray[_root_.glib.all.gpointer, Nat._4])(using Zone): Ptr[AdwSwipeableInterface] = 
+  def apply(parent : _root_.gobject.all.GTypeInterface, get_distance : CFuncPtr1[Ptr[AdwSwipeable], Double], get_snap_points : CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], get_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit], padding : CArray[_root_.glib.all.gpointer, Nat._4])(using Zone): Ptr[AdwSwipeableInterface] = 
     val ____ptr = apply()
     (!____ptr).parent = parent
     (!____ptr).get_distance = get_distance
@@ -904,8 +904,8 @@ object AdwSwipeableInterface:
     def get_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]] = value
     def get_cancel_progress: CFuncPtr1[Ptr[AdwSwipeable], Double] = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]]
     def get_cancel_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]] = value
-    def get_swipe_area: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit]]]
-    def get_swipe_area_=(value: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit]]] = value
+    def get_swipe_area: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit]]]
+    def get_swipe_area_=(value: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit]]] = value
     def padding: CArray[_root_.glib.all.gpointer, Nat._4] = !struct.at(56).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._4]]]
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._4]): Unit = !struct.at(56).asInstanceOf[Ptr[CArray[_root_.glib.all.gpointer, Nat._4]]] = value
 
@@ -1767,11 +1767,11 @@ object _AdwSwipeable:
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
 */
-opaque type _AdwSwipeableInterface = CStruct7[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit], CArray[_root_.glib.all.gpointer, Nat._4]]
+opaque type _AdwSwipeableInterface = CStruct7[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit], CArray[_root_.glib.all.gpointer, Nat._4]]
 object _AdwSwipeableInterface:
-  given _tag: Tag[_AdwSwipeableInterface] = Tag.materializeCStruct7Tag[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit], CArray[_root_.glib.all.gpointer, Nat._4]]
+  given _tag: Tag[_AdwSwipeableInterface] = Tag.materializeCStruct7Tag[_root_.gobject.all.GTypeInterface, CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit], CArray[_root_.glib.all.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[_AdwSwipeableInterface] = scala.scalanative.unsafe.alloc[_AdwSwipeableInterface](1)
-  def apply(parent : _root_.gobject.all.GTypeInterface, get_distance : CFuncPtr1[Ptr[AdwSwipeable], Double], get_snap_points : CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], get_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit], padding : CArray[_root_.glib.all.gpointer, Nat._4])(using Zone): Ptr[_AdwSwipeableInterface] = 
+  def apply(parent : _root_.gobject.all.GTypeInterface, get_distance : CFuncPtr1[Ptr[AdwSwipeable], Double], get_snap_points : CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], get_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit], padding : CArray[_root_.glib.all.gpointer, Nat._4])(using Zone): Ptr[_AdwSwipeableInterface] = 
     val ____ptr = apply()
     (!____ptr).parent = parent
     (!____ptr).get_distance = get_distance
@@ -1792,8 +1792,8 @@ object _AdwSwipeableInterface:
     def get_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at4 = value
     def get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double] = struct._5
     def get_cancel_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at5 = value
-    def get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit] = struct._6
-    def get_swipe_area_=(value: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gdk.all.GdkRectangle], Unit]): Unit = !struct.at6 = value
+    def get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit] = struct._6
+    def get_swipe_area_=(value: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, _root_.glib.all.gboolean, Ptr[_root_.gtk.all.GdkRectangle], Unit]): Unit = !struct.at6 = value
     def padding : CArray[_root_.glib.all.gpointer, Nat._4] = struct._7
     def padding_=(value: CArray[_root_.glib.all.gpointer, Nat._4]): Unit = !struct.at7 = value
 

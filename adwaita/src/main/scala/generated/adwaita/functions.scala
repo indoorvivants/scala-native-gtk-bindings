@@ -916,12 +916,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
   */
-  def adw_avatar_draw_to_texture(self : Ptr[AdwAvatar], scale_factor : CInt): Ptr[_root_.gdk.all.GdkTexture] = extern
+  def adw_avatar_draw_to_texture(self : Ptr[AdwAvatar], scale_factor : CInt): Ptr[_root_.gtk.all.GdkTexture] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
   */
-  def adw_avatar_get_custom_image(self : Ptr[AdwAvatar]): Ptr[_root_.gdk.all.GdkPaintable] = extern
+  def adw_avatar_get_custom_image(self : Ptr[AdwAvatar]): Ptr[_root_.gtk.all.GdkPaintable] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -956,7 +956,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
   */
-  def adw_avatar_set_custom_image(self : Ptr[AdwAvatar], custom_image : Ptr[_root_.gdk.all.GdkPaintable]): Unit = extern
+  def adw_avatar_set_custom_image(self : Ptr[AdwAvatar], custom_image : Ptr[_root_.gtk.all.GdkPaintable]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -2636,7 +2636,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
   */
-  def adw_status_page_get_paintable(self : Ptr[AdwStatusPage]): Ptr[_root_.gdk.all.GdkPaintable] = extern
+  def adw_status_page_get_paintable(self : Ptr[AdwStatusPage]): Ptr[_root_.gtk.all.GdkPaintable] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -2671,7 +2671,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
   */
-  def adw_status_page_set_paintable(self : Ptr[AdwStatusPage], paintable : Ptr[_root_.gdk.all.GdkPaintable]): Unit = extern
+  def adw_status_page_set_paintable(self : Ptr[AdwStatusPage], paintable : Ptr[_root_.gtk.all.GdkPaintable]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -2696,12 +2696,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
   */
-  def adw_style_manager_get_display(self : Ptr[AdwStyleManager]): Ptr[_root_.gdk.all.GdkDisplay] = extern
+  def adw_style_manager_get_display(self : Ptr[AdwStyleManager]): Ptr[_root_.gtk.all.GdkDisplay] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
   */
-  def adw_style_manager_get_for_display(display : Ptr[_root_.gdk.all.GdkDisplay]): Ptr[AdwStyleManager] = extern
+  def adw_style_manager_get_for_display(display : Ptr[_root_.gtk.all.GdkDisplay]): Ptr[AdwStyleManager] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
@@ -2806,7 +2806,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
   */
-  def adw_swipeable_get_swipe_area(self : Ptr[AdwSwipeable], navigation_direction : AdwNavigationDirection, is_drag : _root_.glib.all.gboolean, rect : Ptr[_root_.gdk.all.GdkRectangle]): Unit = extern
+  def adw_swipeable_get_swipe_area(self : Ptr[AdwSwipeable], navigation_direction : AdwNavigationDirection, is_drag : _root_.glib.all.gboolean, rect : Ptr[_root_.gtk.all.GdkRectangle]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
@@ -2896,7 +2896,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
   */
-  def adw_tab_bar_setup_extra_drop_target(self : Ptr[AdwTabBar], actions : _root_.gdk.all.GdkDragAction, types : Ptr[_root_.gobject.all.GType], n_types : _root_.glib.all.gsize): Unit = extern
+  def adw_tab_bar_setup_extra_drop_target(self : Ptr[AdwTabBar], actions : _root_.gtk.all.GdkDragAction, types : Ptr[_root_.gobject.all.GType], n_types : _root_.glib.all.gsize): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
