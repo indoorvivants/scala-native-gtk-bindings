@@ -34,6 +34,7 @@ val publishing = Seq(
 lazy val root = project
   .in(file("."))
   .aggregate(
+    adwaita,
     gio,
     glib,
     gobject,
@@ -62,6 +63,31 @@ lazy val examples = project
   .dependsOn(gtk4)
   .configure(pkgConfigured("gtk4"))
   .settings(publish / skip := true, publishLocal / skip := true)
+
+lazy val adwaita = project
+  .in(file("adwaita"))
+  .dependsOn(gtk4)
+  .configure(pkgConfigured("libadwaita-1"))
+  .settings(
+    bindgenBindings +=
+      buildWithDependencies(
+        "gdkpixbuf",
+        "gio",
+        "glib",
+        "gobject",
+        "graphene",
+        "gtk",
+        "libcairo",
+        "libharfbuzz",
+        "pango"
+      ) {
+        Binding
+          .builder(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
+          .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
+          .addCImport("adwaita.h")
+          .withMultiFile(true)
+      }
+  )
 
 lazy val gio = project
   .in(file("gio"))
@@ -99,20 +125,20 @@ lazy val gtk4 = project
   .settings(
     bindgenBindings +=
       buildWithDependencies(
+        "gdkpixbuf",
         "gio",
         "glib",
         "gobject",
+        "graphene",
         "libcairo",
-        "libharfbuzz"
+        "libharfbuzz",
+        "pango"
       ) {
         Binding
           .builder(findHeader("gtk4", _ / "gtk" / "gtk.h"), "gtk")
           .withClangFlags(pkgConfig("gtk4", "cflags"))
           .addCImport("graphene.h")
           .withMultiFile(true)
-          .addExternalPath("*/graphene-1.0/*", "libgraphene")
-          .addExternalPath("*/pango-1.0/*", "libpango")
-          .addExternalPath("*/gdk-pixbuf-2.0/*", "libgdkpixbuf")
       }
   )
 
@@ -275,7 +301,7 @@ lazy val generateXsd = TaskKey[Unit]("generateXsd")
 
 lazy val `gir-schema` = project
   .in(file("gir-schema"))
-  .configure(pkgConfigured("gir-schema"))
+  .configure(pkgConfiguredSimple)
   .enablePlugins(ScalaxbPlugin)
   .settings(
     Compile / generateXsd := {
@@ -315,9 +341,9 @@ def findHeader(pkgName: String, file: java.io.File => java.io.File) = {
     )
 }
 
-def pkgConfigured(name: String): Project => Project = { proj =>
+def pkgConfiguredSimple: Project => Project = { proj =>
   proj
-    .enablePlugins(ScalaNativePlugin, BindgenPlugin)
+    .enablePlugins(ScalaNativePlugin)
     .settings(publishing)
     .settings(
       Compile / doc / sources := Seq.empty,
@@ -328,7 +354,15 @@ def pkgConfigured(name: String): Project => Project = { proj =>
         )
       ),
       resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
-      scalaVersion := "3.2.2",
+      scalaVersion := "3.3.3"
+    )
+}
+
+def pkgConfigured(name: String): Project => Project = { proj =>
+  pkgConfiguredSimple(proj)
+    .enablePlugins(BindgenPlugin)
+    .settings(publishing)
+    .settings(
       nativeCompileOptions ++= {
         pkgConfig(name, "cflags")
       },
@@ -364,6 +398,15 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
     case "libcairo" =>
       List("*/cairo/*")
     case "libharfbuzz" => List("*/harfbuzz/*")
+    case "gtk" =>
+      List(
+        "*/gtk-4.0/gdk/*",
+        "*/gtk-4.0/gsk/*",
+        "*/gtk-4.0/gtk/*"
+      )
+    case "graphene"  => List("*/graphene-1.0/*")
+    case "pango"     => List("*/pango-1.0/*")
+    case "gdkpixbuf" => List("*/gdk-pixbuf-2.0/*")
   }
 
   val externals =
