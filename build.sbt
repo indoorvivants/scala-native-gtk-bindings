@@ -71,6 +71,7 @@ lazy val adwaita = project
   .settings(
     bindgenBindings +=
       buildWithDependencies(
+        "gdkpixbuf",
         "gio",
         "glib",
         "gobject",
@@ -86,7 +87,6 @@ lazy val adwaita = project
           .addCImport("adwaita.h")
           .withOpaqueStructs(Set("G*", "Adw*"))
           .withMultiFile(true)
-          .addExternalPath("*/gdk-pixbuf-2.0/*", "libgdkpixbuf")
       }
   )
 
@@ -126,20 +126,20 @@ lazy val gtk4 = project
   .settings(
     bindgenBindings +=
       buildWithDependencies(
+        "gdkpixbuf",
         "gio",
         "glib",
         "gobject",
+        "graphene",
         "libcairo",
-        "libharfbuzz"
+        "libharfbuzz",
+        "pango"
       ) {
         Binding
           .builder(findHeader("gtk4", _ / "gtk" / "gtk.h"), "gtk")
           .withClangFlags(pkgConfig("gtk4", "cflags"))
           .addCImport("graphene.h")
           .withMultiFile(true)
-          .addExternalPath("*/graphene-1.0/*", "libgraphene")
-          .addExternalPath("*/pango-1.0/*", "libpango")
-          .addExternalPath("*/gdk-pixbuf-2.0/*", "libgdkpixbuf")
       }
   )
 
@@ -405,8 +405,9 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
         "*/gtk-4.0/gsk/*",
         "*/gtk-4.0/gtk/*"
       )
-    case "graphene" => List("*/graphene-1.0/*")
-    case "pango"    => List("*/pango-1.0/*")
+    case "graphene"  => List("*/graphene-1.0/*")
+    case "pango"     => List("*/pango-1.0/*")
+    case "gdkpixbuf" => List("*/gdk-pixbuf-2.0/*")
   }
 
   val externals =
