@@ -75,7 +75,7 @@ lazy val adwaita = project
           .builder(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
           .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
           .addCImport("adwaita.h")
-          .withOpaqueStructs(Set("G*"))
+          .withOpaqueStructs(Set("G*", "Adw*"))
           .withMultiFile(true)
       }
   )

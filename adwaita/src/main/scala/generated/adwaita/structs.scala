@@ -14,26 +14,26 @@ import _root_.adwaita.unions.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-opaque type AdwActionRow = CStruct1[AdwPreferencesRow]
+opaque type AdwActionRow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwActionRow:
-  given _tag: Tag[AdwActionRow] = Tag.materializeCStruct1Tag[AdwPreferencesRow]
+  given _tag: Tag[AdwActionRow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwActionRow] = scala.scalanative.unsafe.alloc[AdwActionRow](1)
   def apply(parent_instance : AdwPreferencesRow)(using Zone): Ptr[AdwActionRow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwActionRow)
-    def parent_instance : AdwPreferencesRow = struct._1
-    def parent_instance_=(value: AdwPreferencesRow): Unit = !struct.at1 = value
+    def parent_instance: AdwPreferencesRow = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRow]]
+    def parent_instance_=(value: AdwPreferencesRow): Unit = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRow]] = value
 
 /**
  * AdwActionRowClass _class: The parent class : Activates the row to trigger its main action.
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-opaque type AdwActionRowClass = CStruct3[AdwPreferencesRowClass, CFuncPtr1[Ptr[AdwActionRow], Unit], CArray[gpointer, Nat._4]]
+opaque type AdwActionRowClass = CArray[CChar, Nat.Digit3[Nat._5, Nat._5, Nat._2]]
 object AdwActionRowClass:
-  given _tag: Tag[AdwActionRowClass] = Tag.materializeCStruct3Tag[AdwPreferencesRowClass, CFuncPtr1[Ptr[AdwActionRow], Unit], CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwActionRowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._5, Nat._5, Nat._2]](Tag.Byte, Tag.Digit3[Nat._5, Nat._5, Nat._2](Tag.Nat5, Tag.Nat5, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwActionRowClass] = scala.scalanative.unsafe.alloc[AdwActionRowClass](1)
   def apply(parent_class : AdwPreferencesRowClass, activate : CFuncPtr1[Ptr[AdwActionRow], Unit], padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwActionRowClass] = 
     val ____ptr = apply()
@@ -42,27 +42,27 @@ object AdwActionRowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwActionRowClass)
-    def parent_class : AdwPreferencesRowClass = struct._1
-    def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at1 = value
-    def activate : CFuncPtr1[Ptr[AdwActionRow], Unit] = struct._2
-    def activate_=(value: CFuncPtr1[Ptr[AdwActionRow], Unit]): Unit = !struct.at2 = value
-    def padding : CArray[gpointer, Nat._4] = struct._3
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at3 = value
+    def parent_class: AdwPreferencesRowClass = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRowClass]]
+    def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRowClass]] = value
+    def activate: CFuncPtr1[Ptr[AdwActionRow], Unit] = !struct.at(512).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwActionRow], Unit]]]
+    def activate_=(value: CFuncPtr1[Ptr[AdwActionRow], Unit]): Unit = !struct.at(512).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwActionRow], Unit]]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(520).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(520).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
 */
-opaque type AdwAnimation = CStruct1[GObject]
+opaque type AdwAnimation = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object AdwAnimation:
-  given _tag: Tag[AdwAnimation] = Tag.materializeCStruct1Tag[GObject]
+  given _tag: Tag[AdwAnimation] = Tag.CArray[CChar, Nat.Digit2[Nat._2, Nat._4]](Tag.Byte, Tag.Digit2[Nat._2, Nat._4](Tag.Nat2, Tag.Nat4))
   def apply()(using Zone): Ptr[AdwAnimation] = scala.scalanative.unsafe.alloc[AdwAnimation](1)
   def apply(parent_instance : GObject)(using Zone): Ptr[AdwAnimation] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwAnimation)
-    def parent_instance : GObject = struct._1
-    def parent_instance_=(value: GObject): Unit = !struct.at1 = value
+    def parent_instance: GObject = !struct.at(0).asInstanceOf[Ptr[GObject]]
+    def parent_instance_=(value: GObject): Unit = !struct.at(0).asInstanceOf[Ptr[GObject]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -88,26 +88,26 @@ object AdwAnimationTargetClass:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application.h
 */
-opaque type AdwApplication = CStruct1[_root_.gtk4.all.GtkApplication]
+opaque type AdwApplication = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwApplication:
-  given _tag: Tag[AdwApplication] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkApplication]
+  given _tag: Tag[AdwApplication] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwApplication] = scala.scalanative.unsafe.alloc[AdwApplication](1)
   def apply(parent_instance : _root_.gtk4.all.GtkApplication)(using Zone): Ptr[AdwApplication] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwApplication)
-    def parent_instance : _root_.gtk4.all.GtkApplication = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkApplication): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkApplication = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplication]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkApplication): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplication]] = value
 
 /**
  * AdwApplicationClass: _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-application.h
 */
-opaque type AdwApplicationClass = CStruct2[_root_.gtk4.all.GtkApplicationClass, CArray[gpointer, Nat._4]]
+opaque type AdwApplicationClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._2, Nat._4]]
 object AdwApplicationClass:
-  given _tag: Tag[AdwApplicationClass] = Tag.materializeCStruct2Tag[_root_.gtk4.all.GtkApplicationClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwApplicationClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._2, Nat._4]](Tag.Byte, Tag.Digit3[Nat._4, Nat._2, Nat._4](Tag.Nat4, Tag.Nat2, Tag.Nat4))
   def apply()(using Zone): Ptr[AdwApplicationClass] = scala.scalanative.unsafe.alloc[AdwApplicationClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkApplicationClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwApplicationClass] = 
     val ____ptr = apply()
@@ -115,32 +115,32 @@ object AdwApplicationClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwApplicationClass)
-    def parent_class : _root_.gtk4.all.GtkApplicationClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkApplicationClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: _root_.gtk4.all.GtkApplicationClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplicationClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkApplicationClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplicationClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(392).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(392).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
-opaque type AdwApplicationWindow = CStruct1[_root_.gtk4.all.GtkApplicationWindow]
+opaque type AdwApplicationWindow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwApplicationWindow:
-  given _tag: Tag[AdwApplicationWindow] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkApplicationWindow]
+  given _tag: Tag[AdwApplicationWindow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwApplicationWindow] = scala.scalanative.unsafe.alloc[AdwApplicationWindow](1)
   def apply(parent_instance : _root_.gtk4.all.GtkApplicationWindow)(using Zone): Ptr[AdwApplicationWindow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwApplicationWindow)
-    def parent_instance : _root_.gtk4.all.GtkApplicationWindow = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkApplicationWindow): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkApplicationWindow = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplicationWindow]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkApplicationWindow): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplicationWindow]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
-opaque type AdwApplicationWindowClass = CStruct2[_root_.gtk4.all.GtkApplicationWindowClass, CArray[gpointer, Nat._4]]
+opaque type AdwApplicationWindowClass = CArray[CChar, Nat.Digit3[Nat._6, Nat._0, Nat._8]]
 object AdwApplicationWindowClass:
-  given _tag: Tag[AdwApplicationWindowClass] = Tag.materializeCStruct2Tag[_root_.gtk4.all.GtkApplicationWindowClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwApplicationWindowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._6, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._6, Nat._0, Nat._8](Tag.Nat6, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwApplicationWindowClass] = scala.scalanative.unsafe.alloc[AdwApplicationWindowClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkApplicationWindowClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwApplicationWindowClass] = 
     val ____ptr = apply()
@@ -148,10 +148,10 @@ object AdwApplicationWindowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwApplicationWindowClass)
-    def parent_class : _root_.gtk4.all.GtkApplicationWindowClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkApplicationWindowClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: _root_.gtk4.all.GtkApplicationWindowClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplicationWindowClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkApplicationWindowClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkApplicationWindowClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(576).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(576).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -163,47 +163,47 @@ object AdwAvatar:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-opaque type AdwAvatarClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwAvatarClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwAvatarClass:
-  given _tag: Tag[AdwAvatarClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwAvatarClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwAvatarClass] = scala.scalanative.unsafe.alloc[AdwAvatarClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwAvatarClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwAvatarClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
-opaque type AdwBin = CStruct1[_root_.gtk4.all.GtkWidget]
+opaque type AdwBin = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwBin:
-  given _tag: Tag[AdwBin] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidget]
+  given _tag: Tag[AdwBin] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwBin] = scala.scalanative.unsafe.alloc[AdwBin](1)
   def apply(parent_instance : _root_.gtk4.all.GtkWidget)(using Zone): Ptr[AdwBin] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwBin)
-    def parent_instance : _root_.gtk4.all.GtkWidget = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkWidget): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkWidget = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidget]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkWidget): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidget]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
-opaque type AdwBinClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwBinClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwBinClass:
-  given _tag: Tag[AdwBinClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwBinClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwBinClass] = scala.scalanative.unsafe.alloc[AdwBinClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwBinClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwBinClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -215,17 +215,17 @@ object AdwButtonContent:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
-opaque type AdwButtonContentClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwButtonContentClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwButtonContentClass:
-  given _tag: Tag[AdwButtonContentClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwButtonContentClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwButtonContentClass] = scala.scalanative.unsafe.alloc[AdwButtonContentClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwButtonContentClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwButtonContentClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
@@ -251,17 +251,17 @@ object AdwCarousel:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-opaque type AdwCarouselClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwCarouselClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwCarouselClass:
-  given _tag: Tag[AdwCarouselClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwCarouselClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwCarouselClass] = scala.scalanative.unsafe.alloc[AdwCarouselClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwCarouselClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwCarouselClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
@@ -273,17 +273,17 @@ object AdwCarouselIndicatorDots:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
 */
-opaque type AdwCarouselIndicatorDotsClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwCarouselIndicatorDotsClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwCarouselIndicatorDotsClass:
-  given _tag: Tag[AdwCarouselIndicatorDotsClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwCarouselIndicatorDotsClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwCarouselIndicatorDotsClass] = scala.scalanative.unsafe.alloc[AdwCarouselIndicatorDotsClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwCarouselIndicatorDotsClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwCarouselIndicatorDotsClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
@@ -295,17 +295,17 @@ object AdwCarouselIndicatorLines:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
 */
-opaque type AdwCarouselIndicatorLinesClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwCarouselIndicatorLinesClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwCarouselIndicatorLinesClass:
-  given _tag: Tag[AdwCarouselIndicatorLinesClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwCarouselIndicatorLinesClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwCarouselIndicatorLinesClass] = scala.scalanative.unsafe.alloc[AdwCarouselIndicatorLinesClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwCarouselIndicatorLinesClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwCarouselIndicatorLinesClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
@@ -317,17 +317,17 @@ object AdwClamp:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
 */
-opaque type AdwClampClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwClampClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwClampClass:
-  given _tag: Tag[AdwClampClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwClampClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwClampClass] = scala.scalanative.unsafe.alloc[AdwClampClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwClampClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwClampClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
@@ -339,17 +339,17 @@ object AdwClampLayout:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
 */
-opaque type AdwClampLayoutClass = CStruct1[_root_.gtk4.all.GtkLayoutManagerClass]
+opaque type AdwClampLayoutClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]]
 object AdwClampLayoutClass:
-  given _tag: Tag[AdwClampLayoutClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkLayoutManagerClass]
+  given _tag: Tag[AdwClampLayoutClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._0](Tag.Nat3, Tag.Nat2, Tag.Nat0))
   def apply()(using Zone): Ptr[AdwClampLayoutClass] = scala.scalanative.unsafe.alloc[AdwClampLayoutClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkLayoutManagerClass)(using Zone): Ptr[AdwClampLayoutClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwClampLayoutClass)
-    def parent_class : _root_.gtk4.all.GtkLayoutManagerClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkLayoutManagerClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkLayoutManagerClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkLayoutManagerClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkLayoutManagerClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkLayoutManagerClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
@@ -361,41 +361,41 @@ object AdwClampScrollable:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
 */
-opaque type AdwClampScrollableClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwClampScrollableClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwClampScrollableClass:
-  given _tag: Tag[AdwClampScrollableClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwClampScrollableClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwClampScrollableClass] = scala.scalanative.unsafe.alloc[AdwClampScrollableClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwClampScrollableClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwClampScrollableClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-opaque type AdwComboRow = CStruct1[AdwActionRow]
+opaque type AdwComboRow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwComboRow:
-  given _tag: Tag[AdwComboRow] = Tag.materializeCStruct1Tag[AdwActionRow]
+  given _tag: Tag[AdwComboRow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwComboRow] = scala.scalanative.unsafe.alloc[AdwComboRow](1)
   def apply(parent_instance : AdwActionRow)(using Zone): Ptr[AdwComboRow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwComboRow)
-    def parent_instance : AdwActionRow = struct._1
-    def parent_instance_=(value: AdwActionRow): Unit = !struct.at1 = value
+    def parent_instance: AdwActionRow = !struct.at(0).asInstanceOf[Ptr[AdwActionRow]]
+    def parent_instance_=(value: AdwActionRow): Unit = !struct.at(0).asInstanceOf[Ptr[AdwActionRow]] = value
 
 /**
  * AdwComboRowClass _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-opaque type AdwComboRowClass = CStruct2[AdwActionRowClass, CArray[gpointer, Nat._4]]
+opaque type AdwComboRowClass = CArray[CChar, Nat.Digit3[Nat._5, Nat._8, Nat._4]]
 object AdwComboRowClass:
-  given _tag: Tag[AdwComboRowClass] = Tag.materializeCStruct2Tag[AdwActionRowClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwComboRowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._5, Nat._8, Nat._4]](Tag.Byte, Tag.Digit3[Nat._5, Nat._8, Nat._4](Tag.Nat5, Tag.Nat8, Tag.Nat4))
   def apply()(using Zone): Ptr[AdwComboRowClass] = scala.scalanative.unsafe.alloc[AdwComboRowClass](1)
   def apply(parent_class : AdwActionRowClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwComboRowClass] = 
     val ____ptr = apply()
@@ -403,10 +403,10 @@ object AdwComboRowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwComboRowClass)
-    def parent_class : AdwActionRowClass = struct._1
-    def parent_class_=(value: AdwActionRowClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: AdwActionRowClass = !struct.at(0).asInstanceOf[Ptr[AdwActionRowClass]]
+    def parent_class_=(value: AdwActionRowClass): Unit = !struct.at(0).asInstanceOf[Ptr[AdwActionRowClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(552).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(552).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
@@ -418,17 +418,17 @@ object AdwEnumListItem:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
-opaque type AdwEnumListItemClass = CStruct1[GObjectClass]
+opaque type AdwEnumListItemClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwEnumListItemClass:
-  given _tag: Tag[AdwEnumListItemClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwEnumListItemClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwEnumListItemClass] = scala.scalanative.unsafe.alloc[AdwEnumListItemClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwEnumListItemClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwEnumListItemClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
@@ -440,41 +440,41 @@ object AdwEnumListModel:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
-opaque type AdwEnumListModelClass = CStruct1[GObjectClass]
+opaque type AdwEnumListModelClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwEnumListModelClass:
-  given _tag: Tag[AdwEnumListModelClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwEnumListModelClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwEnumListModelClass] = scala.scalanative.unsafe.alloc[AdwEnumListModelClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwEnumListModelClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwEnumListModelClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-opaque type AdwExpanderRow = CStruct1[AdwPreferencesRow]
+opaque type AdwExpanderRow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwExpanderRow:
-  given _tag: Tag[AdwExpanderRow] = Tag.materializeCStruct1Tag[AdwPreferencesRow]
+  given _tag: Tag[AdwExpanderRow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwExpanderRow] = scala.scalanative.unsafe.alloc[AdwExpanderRow](1)
   def apply(parent_instance : AdwPreferencesRow)(using Zone): Ptr[AdwExpanderRow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwExpanderRow)
-    def parent_instance : AdwPreferencesRow = struct._1
-    def parent_instance_=(value: AdwPreferencesRow): Unit = !struct.at1 = value
+    def parent_instance: AdwPreferencesRow = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRow]]
+    def parent_instance_=(value: AdwPreferencesRow): Unit = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRow]] = value
 
 /**
  * AdwExpanderRowClass _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-opaque type AdwExpanderRowClass = CStruct2[AdwPreferencesRowClass, CArray[gpointer, Nat._4]]
+opaque type AdwExpanderRowClass = CArray[CChar, Nat.Digit3[Nat._5, Nat._4, Nat._4]]
 object AdwExpanderRowClass:
-  given _tag: Tag[AdwExpanderRowClass] = Tag.materializeCStruct2Tag[AdwPreferencesRowClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwExpanderRowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._5, Nat._4, Nat._4]](Tag.Byte, Tag.Digit3[Nat._5, Nat._4, Nat._4](Tag.Nat5, Tag.Nat4, Tag.Nat4))
   def apply()(using Zone): Ptr[AdwExpanderRowClass] = scala.scalanative.unsafe.alloc[AdwExpanderRowClass](1)
   def apply(parent_class : AdwPreferencesRowClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwExpanderRowClass] = 
     val ____ptr = apply()
@@ -482,10 +482,10 @@ object AdwExpanderRowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwExpanderRowClass)
-    def parent_class : AdwPreferencesRowClass = struct._1
-    def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: AdwPreferencesRowClass = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRowClass]]
+    def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at(0).asInstanceOf[Ptr[AdwPreferencesRowClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(512).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(512).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -497,17 +497,17 @@ object AdwFlap:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-opaque type AdwFlapClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwFlapClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwFlapClass:
-  given _tag: Tag[AdwFlapClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwFlapClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwFlapClass] = scala.scalanative.unsafe.alloc[AdwFlapClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwFlapClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwFlapClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -519,17 +519,17 @@ object AdwHeaderBar:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-opaque type AdwHeaderBarClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwHeaderBarClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwHeaderBarClass:
-  given _tag: Tag[AdwHeaderBarClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwHeaderBarClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwHeaderBarClass] = scala.scalanative.unsafe.alloc[AdwHeaderBarClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwHeaderBarClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwHeaderBarClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -541,17 +541,17 @@ object AdwLeaflet:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-opaque type AdwLeafletClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwLeafletClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwLeafletClass:
-  given _tag: Tag[AdwLeafletClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwLeafletClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwLeafletClass] = scala.scalanative.unsafe.alloc[AdwLeafletClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwLeafletClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwLeafletClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -563,41 +563,41 @@ object AdwLeafletPage:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-opaque type AdwLeafletPageClass = CStruct1[GObjectClass]
+opaque type AdwLeafletPageClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwLeafletPageClass:
-  given _tag: Tag[AdwLeafletPageClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwLeafletPageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwLeafletPageClass] = scala.scalanative.unsafe.alloc[AdwLeafletPageClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwLeafletPageClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwLeafletPageClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-opaque type AdwPreferencesGroup = CStruct1[_root_.gtk4.all.GtkWidget]
+opaque type AdwPreferencesGroup = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwPreferencesGroup:
-  given _tag: Tag[AdwPreferencesGroup] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidget]
+  given _tag: Tag[AdwPreferencesGroup] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwPreferencesGroup] = scala.scalanative.unsafe.alloc[AdwPreferencesGroup](1)
   def apply(parent_instance : _root_.gtk4.all.GtkWidget)(using Zone): Ptr[AdwPreferencesGroup] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwPreferencesGroup)
-    def parent_instance : _root_.gtk4.all.GtkWidget = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkWidget): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkWidget = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidget]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkWidget): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidget]] = value
 
 /**
  * AdwPreferencesGroupClass _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-opaque type AdwPreferencesGroupClass = CStruct2[_root_.gtk4.all.GtkWidgetClass, CArray[gpointer, Nat._4]]
+opaque type AdwPreferencesGroupClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._4, Nat._0]]
 object AdwPreferencesGroupClass:
-  given _tag: Tag[AdwPreferencesGroupClass] = Tag.materializeCStruct2Tag[_root_.gtk4.all.GtkWidgetClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwPreferencesGroupClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._4, Nat._4, Nat._0](Tag.Nat4, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[AdwPreferencesGroupClass] = scala.scalanative.unsafe.alloc[AdwPreferencesGroupClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwPreferencesGroupClass] = 
     val ____ptr = apply()
@@ -605,34 +605,34 @@ object AdwPreferencesGroupClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwPreferencesGroupClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(408).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(408).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-opaque type AdwPreferencesPage = CStruct1[_root_.gtk4.all.GtkWidget]
+opaque type AdwPreferencesPage = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwPreferencesPage:
-  given _tag: Tag[AdwPreferencesPage] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidget]
+  given _tag: Tag[AdwPreferencesPage] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwPreferencesPage] = scala.scalanative.unsafe.alloc[AdwPreferencesPage](1)
   def apply(parent_instance : _root_.gtk4.all.GtkWidget)(using Zone): Ptr[AdwPreferencesPage] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwPreferencesPage)
-    def parent_instance : _root_.gtk4.all.GtkWidget = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkWidget): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkWidget = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidget]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkWidget): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidget]] = value
 
 /**
  * AdwPreferencesPageClass _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-opaque type AdwPreferencesPageClass = CStruct2[_root_.gtk4.all.GtkWidgetClass, CArray[gpointer, Nat._4]]
+opaque type AdwPreferencesPageClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._4, Nat._0]]
 object AdwPreferencesPageClass:
-  given _tag: Tag[AdwPreferencesPageClass] = Tag.materializeCStruct2Tag[_root_.gtk4.all.GtkWidgetClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwPreferencesPageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._4, Nat._4, Nat._0](Tag.Nat4, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[AdwPreferencesPageClass] = scala.scalanative.unsafe.alloc[AdwPreferencesPageClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwPreferencesPageClass] = 
     val ____ptr = apply()
@@ -640,34 +640,34 @@ object AdwPreferencesPageClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwPreferencesPageClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(408).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(408).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
-opaque type AdwPreferencesRow = CStruct1[_root_.gtk4.all.GtkListBoxRow]
+opaque type AdwPreferencesRow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwPreferencesRow:
-  given _tag: Tag[AdwPreferencesRow] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkListBoxRow]
+  given _tag: Tag[AdwPreferencesRow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwPreferencesRow] = scala.scalanative.unsafe.alloc[AdwPreferencesRow](1)
   def apply(parent_instance : _root_.gtk4.all.GtkListBoxRow)(using Zone): Ptr[AdwPreferencesRow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwPreferencesRow)
-    def parent_instance : _root_.gtk4.all.GtkListBoxRow = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkListBoxRow): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkListBoxRow = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkListBoxRow]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkListBoxRow): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkListBoxRow]] = value
 
 /**
  * AdwPreferencesRowClass _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
-opaque type AdwPreferencesRowClass = CStruct2[_root_.gtk4.all.GtkListBoxRowClass, CArray[gpointer, Nat._4]]
+opaque type AdwPreferencesRowClass = CArray[CChar, Nat.Digit3[Nat._5, Nat._1, Nat._2]]
 object AdwPreferencesRowClass:
-  given _tag: Tag[AdwPreferencesRowClass] = Tag.materializeCStruct2Tag[_root_.gtk4.all.GtkListBoxRowClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwPreferencesRowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._5, Nat._1, Nat._2]](Tag.Byte, Tag.Digit3[Nat._5, Nat._1, Nat._2](Tag.Nat5, Tag.Nat1, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwPreferencesRowClass] = scala.scalanative.unsafe.alloc[AdwPreferencesRowClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkListBoxRowClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwPreferencesRowClass] = 
     val ____ptr = apply()
@@ -675,34 +675,34 @@ object AdwPreferencesRowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwPreferencesRowClass)
-    def parent_class : _root_.gtk4.all.GtkListBoxRowClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkListBoxRowClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: _root_.gtk4.all.GtkListBoxRowClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkListBoxRowClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkListBoxRowClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkListBoxRowClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(480).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(480).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
-opaque type AdwPreferencesWindow = CStruct1[AdwWindow]
+opaque type AdwPreferencesWindow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwPreferencesWindow:
-  given _tag: Tag[AdwPreferencesWindow] = Tag.materializeCStruct1Tag[AdwWindow]
+  given _tag: Tag[AdwPreferencesWindow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwPreferencesWindow] = scala.scalanative.unsafe.alloc[AdwPreferencesWindow](1)
   def apply(parent_instance : AdwWindow)(using Zone): Ptr[AdwPreferencesWindow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwPreferencesWindow)
-    def parent_instance : AdwWindow = struct._1
-    def parent_instance_=(value: AdwWindow): Unit = !struct.at1 = value
+    def parent_instance: AdwWindow = !struct.at(0).asInstanceOf[Ptr[AdwWindow]]
+    def parent_instance_=(value: AdwWindow): Unit = !struct.at(0).asInstanceOf[Ptr[AdwWindow]] = value
 
 /**
  * AdwPreferencesWindowClass _class: The parent class
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
-opaque type AdwPreferencesWindowClass = CStruct2[AdwWindowClass, CArray[gpointer, Nat._4]]
+opaque type AdwPreferencesWindowClass = CArray[CChar, Nat.Digit3[Nat._5, Nat._7, Nat._6]]
 object AdwPreferencesWindowClass:
-  given _tag: Tag[AdwPreferencesWindowClass] = Tag.materializeCStruct2Tag[AdwWindowClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwPreferencesWindowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._5, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._5, Nat._7, Nat._6](Tag.Nat5, Tag.Nat7, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwPreferencesWindowClass] = scala.scalanative.unsafe.alloc[AdwPreferencesWindowClass](1)
   def apply(parent_class : AdwWindowClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwPreferencesWindowClass] = 
     val ____ptr = apply()
@@ -710,10 +710,10 @@ object AdwPreferencesWindowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwPreferencesWindowClass)
-    def parent_class : AdwWindowClass = struct._1
-    def parent_class_=(value: AdwWindowClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: AdwWindowClass = !struct.at(0).asInstanceOf[Ptr[AdwWindowClass]]
+    def parent_class_=(value: AdwWindowClass): Unit = !struct.at(0).asInstanceOf[Ptr[AdwWindowClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(544).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(544).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -725,17 +725,17 @@ object AdwSplitButton:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-opaque type AdwSplitButtonClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwSplitButtonClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwSplitButtonClass:
-  given _tag: Tag[AdwSplitButtonClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwSplitButtonClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwSplitButtonClass] = scala.scalanative.unsafe.alloc[AdwSplitButtonClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwSplitButtonClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwSplitButtonClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
@@ -768,17 +768,17 @@ object AdwSqueezer:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-opaque type AdwSqueezerClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwSqueezerClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwSqueezerClass:
-  given _tag: Tag[AdwSqueezerClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwSqueezerClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwSqueezerClass] = scala.scalanative.unsafe.alloc[AdwSqueezerClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwSqueezerClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwSqueezerClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -790,17 +790,17 @@ object AdwSqueezerPage:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-opaque type AdwSqueezerPageClass = CStruct1[GObjectClass]
+opaque type AdwSqueezerPageClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwSqueezerPageClass:
-  given _tag: Tag[AdwSqueezerPageClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwSqueezerPageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwSqueezerPageClass] = scala.scalanative.unsafe.alloc[AdwSqueezerPageClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwSqueezerPageClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwSqueezerPageClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -812,17 +812,17 @@ object AdwStatusPage:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-opaque type AdwStatusPageClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwStatusPageClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwStatusPageClass:
-  given _tag: Tag[AdwStatusPageClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwStatusPageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwStatusPageClass] = scala.scalanative.unsafe.alloc[AdwStatusPageClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwStatusPageClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwStatusPageClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
@@ -834,17 +834,17 @@ object AdwStyleManager:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
 */
-opaque type AdwStyleManagerClass = CStruct1[GObjectClass]
+opaque type AdwStyleManagerClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwStyleManagerClass:
-  given _tag: Tag[AdwStyleManagerClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwStyleManagerClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwStyleManagerClass] = scala.scalanative.unsafe.alloc[AdwStyleManagerClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwStyleManagerClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwStyleManagerClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
@@ -856,17 +856,17 @@ object AdwSwipeTracker:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
 */
-opaque type AdwSwipeTrackerClass = CStruct1[GObjectClass]
+opaque type AdwSwipeTrackerClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwSwipeTrackerClass:
-  given _tag: Tag[AdwSwipeTrackerClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwSwipeTrackerClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwSwipeTrackerClass] = scala.scalanative.unsafe.alloc[AdwSwipeTrackerClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwSwipeTrackerClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwSwipeTrackerClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
@@ -880,9 +880,9 @@ object AdwSwipeable:
 
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
 */
-opaque type AdwSwipeableInterface = CStruct7[GTypeInterface, CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit], CArray[gpointer, Nat._4]]
+opaque type AdwSwipeableInterface = CArray[CChar, Nat.Digit2[Nat._8, Nat._8]]
 object AdwSwipeableInterface:
-  given _tag: Tag[AdwSwipeableInterface] = Tag.materializeCStruct7Tag[GTypeInterface, CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr1[Ptr[AdwSwipeable], Double], CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit], CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwSwipeableInterface] = Tag.CArray[CChar, Nat.Digit2[Nat._8, Nat._8]](Tag.Byte, Tag.Digit2[Nat._8, Nat._8](Tag.Nat8, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwSwipeableInterface] = scala.scalanative.unsafe.alloc[AdwSwipeableInterface](1)
   def apply(parent : GTypeInterface, get_distance : CFuncPtr1[Ptr[AdwSwipeable], Double], get_snap_points : CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]], get_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double], get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit], padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwSwipeableInterface] = 
     val ____ptr = apply()
@@ -895,20 +895,20 @@ object AdwSwipeableInterface:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwSwipeableInterface)
-    def parent : GTypeInterface = struct._1
-    def parent_=(value: GTypeInterface): Unit = !struct.at1 = value
-    def get_distance : CFuncPtr1[Ptr[AdwSwipeable], Double] = struct._2
-    def get_distance_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at2 = value
-    def get_snap_points : CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]] = struct._3
-    def get_snap_points_=(value: CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]]): Unit = !struct.at3 = value
-    def get_progress : CFuncPtr1[Ptr[AdwSwipeable], Double] = struct._4
-    def get_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at4 = value
-    def get_cancel_progress : CFuncPtr1[Ptr[AdwSwipeable], Double] = struct._5
-    def get_cancel_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at5 = value
-    def get_swipe_area : CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit] = struct._6
-    def get_swipe_area_=(value: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit]): Unit = !struct.at6 = value
-    def padding : CArray[gpointer, Nat._4] = struct._7
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at7 = value
+    def parent: GTypeInterface = !struct.at(0).asInstanceOf[Ptr[GTypeInterface]]
+    def parent_=(value: GTypeInterface): Unit = !struct.at(0).asInstanceOf[Ptr[GTypeInterface]] = value
+    def get_distance: CFuncPtr1[Ptr[AdwSwipeable], Double] = !struct.at(16).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]]
+    def get_distance_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at(16).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]] = value
+    def get_snap_points: CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]] = !struct.at(24).asInstanceOf[Ptr[CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]]]]
+    def get_snap_points_=(value: CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]]): Unit = !struct.at(24).asInstanceOf[Ptr[CFuncPtr2[Ptr[AdwSwipeable], Ptr[CInt], Ptr[Double]]]] = value
+    def get_progress: CFuncPtr1[Ptr[AdwSwipeable], Double] = !struct.at(32).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]]
+    def get_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at(32).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]] = value
+    def get_cancel_progress: CFuncPtr1[Ptr[AdwSwipeable], Double] = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]]
+    def get_cancel_progress_=(value: CFuncPtr1[Ptr[AdwSwipeable], Double]): Unit = !struct.at(40).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwSwipeable], Double]]] = value
+    def get_swipe_area: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit] = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit]]]
+    def get_swipe_area_=(value: CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit]): Unit = !struct.at(48).asInstanceOf[Ptr[CFuncPtr4[Ptr[AdwSwipeable], AdwNavigationDirection, gboolean, Ptr[GdkRectangle], Unit]]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(56).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(56).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -920,17 +920,17 @@ object AdwTabBar:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-opaque type AdwTabBarClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwTabBarClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwTabBarClass:
-  given _tag: Tag[AdwTabBarClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwTabBarClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwTabBarClass] = scala.scalanative.unsafe.alloc[AdwTabBarClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwTabBarClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwTabBarClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -942,17 +942,17 @@ object AdwTabPage:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-opaque type AdwTabPageClass = CStruct1[GObjectClass]
+opaque type AdwTabPageClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwTabPageClass:
-  given _tag: Tag[AdwTabPageClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwTabPageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwTabPageClass] = scala.scalanative.unsafe.alloc[AdwTabPageClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwTabPageClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwTabPageClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -964,17 +964,17 @@ object AdwTabView:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-opaque type AdwTabViewClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwTabViewClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwTabViewClass:
-  given _tag: Tag[AdwTabViewClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwTabViewClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwTabViewClass] = scala.scalanative.unsafe.alloc[AdwTabViewClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwTabViewClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwTabViewClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-timed-animation.h
@@ -1000,17 +1000,17 @@ object AdwToast:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-opaque type AdwToastClass = CStruct1[GObjectClass]
+opaque type AdwToastClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwToastClass:
-  given _tag: Tag[AdwToastClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwToastClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwToastClass] = scala.scalanative.unsafe.alloc[AdwToastClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwToastClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwToastClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
@@ -1022,17 +1022,17 @@ object AdwToastOverlay:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
 */
-opaque type AdwToastOverlayClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwToastOverlayClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwToastOverlayClass:
-  given _tag: Tag[AdwToastOverlayClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwToastOverlayClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwToastOverlayClass] = scala.scalanative.unsafe.alloc[AdwToastOverlayClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwToastOverlayClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwToastOverlayClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -1044,17 +1044,17 @@ object AdwViewStack:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-opaque type AdwViewStackClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwViewStackClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwViewStackClass:
-  given _tag: Tag[AdwViewStackClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwViewStackClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwViewStackClass] = scala.scalanative.unsafe.alloc[AdwViewStackClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwViewStackClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwViewStackClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -1066,17 +1066,17 @@ object AdwViewStackPage:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-opaque type AdwViewStackPageClass = CStruct1[GObjectClass]
+opaque type AdwViewStackPageClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]]
 object AdwViewStackPageClass:
-  given _tag: Tag[AdwViewStackPageClass] = Tag.materializeCStruct1Tag[GObjectClass]
+  given _tag: Tag[AdwViewStackPageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._3, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._3, Nat._6](Tag.Nat1, Tag.Nat3, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwViewStackPageClass] = scala.scalanative.unsafe.alloc[AdwViewStackPageClass](1)
   def apply(parent_class : GObjectClass)(using Zone): Ptr[AdwViewStackPageClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwViewStackPageClass)
-    def parent_class : GObjectClass = struct._1
-    def parent_class_=(value: GObjectClass): Unit = !struct.at1 = value
+    def parent_class: GObjectClass = !struct.at(0).asInstanceOf[Ptr[GObjectClass]]
+    def parent_class_=(value: GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[GObjectClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -1095,32 +1095,32 @@ object AdwViewSwitcherBar:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-bar.h
 */
-opaque type AdwViewSwitcherBarClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwViewSwitcherBarClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwViewSwitcherBarClass:
-  given _tag: Tag[AdwViewSwitcherBarClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwViewSwitcherBarClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwViewSwitcherBarClass] = scala.scalanative.unsafe.alloc[AdwViewSwitcherBarClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwViewSwitcherBarClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwViewSwitcherBarClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
 */
-opaque type AdwViewSwitcherClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwViewSwitcherClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwViewSwitcherClass:
-  given _tag: Tag[AdwViewSwitcherClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwViewSwitcherClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwViewSwitcherClass] = scala.scalanative.unsafe.alloc[AdwViewSwitcherClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwViewSwitcherClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwViewSwitcherClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
@@ -1132,39 +1132,39 @@ object AdwViewSwitcherTitle:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
 */
-opaque type AdwViewSwitcherTitleClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwViewSwitcherTitleClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwViewSwitcherTitleClass:
-  given _tag: Tag[AdwViewSwitcherTitleClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwViewSwitcherTitleClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwViewSwitcherTitleClass] = scala.scalanative.unsafe.alloc[AdwViewSwitcherTitleClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwViewSwitcherTitleClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwViewSwitcherTitleClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
-opaque type AdwWindow = CStruct1[_root_.gtk4.all.GtkWindow]
+opaque type AdwWindow = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object AdwWindow:
-  given _tag: Tag[AdwWindow] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWindow]
+  given _tag: Tag[AdwWindow] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
   def apply()(using Zone): Ptr[AdwWindow] = scala.scalanative.unsafe.alloc[AdwWindow](1)
   def apply(parent_instance : _root_.gtk4.all.GtkWindow)(using Zone): Ptr[AdwWindow] = 
     val ____ptr = apply()
     (!____ptr).parent_instance = parent_instance
     ____ptr
   extension (struct: AdwWindow)
-    def parent_instance : _root_.gtk4.all.GtkWindow = struct._1
-    def parent_instance_=(value: _root_.gtk4.all.GtkWindow): Unit = !struct.at1 = value
+    def parent_instance: _root_.gtk4.all.GtkWindow = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWindow]]
+    def parent_instance_=(value: _root_.gtk4.all.GtkWindow): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWindow]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
-opaque type AdwWindowClass = CStruct2[_root_.gtk4.all.GtkWindowClass, CArray[gpointer, Nat._4]]
+opaque type AdwWindowClass = CArray[CChar, Nat.Digit3[Nat._5, Nat._4, Nat._4]]
 object AdwWindowClass:
-  given _tag: Tag[AdwWindowClass] = Tag.materializeCStruct2Tag[_root_.gtk4.all.GtkWindowClass, CArray[gpointer, Nat._4]]
+  given _tag: Tag[AdwWindowClass] = Tag.CArray[CChar, Nat.Digit3[Nat._5, Nat._4, Nat._4]](Tag.Byte, Tag.Digit3[Nat._5, Nat._4, Nat._4](Tag.Nat5, Tag.Nat4, Tag.Nat4))
   def apply()(using Zone): Ptr[AdwWindowClass] = scala.scalanative.unsafe.alloc[AdwWindowClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWindowClass, padding : CArray[gpointer, Nat._4])(using Zone): Ptr[AdwWindowClass] = 
     val ____ptr = apply()
@@ -1172,10 +1172,10 @@ object AdwWindowClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwWindowClass)
-    def parent_class : _root_.gtk4.all.GtkWindowClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWindowClass): Unit = !struct.at1 = value
-    def padding : CArray[gpointer, Nat._4] = struct._2
-    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at2 = value
+    def parent_class: _root_.gtk4.all.GtkWindowClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWindowClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWindowClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWindowClass]] = value
+    def padding: CArray[gpointer, Nat._4] = !struct.at(512).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]]
+    def padding_=(value: CArray[gpointer, Nat._4]): Unit = !struct.at(512).asInstanceOf[Ptr[CArray[gpointer, Nat._4]]] = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
@@ -1187,17 +1187,17 @@ object AdwWindowTitle:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-opaque type AdwWindowTitleClass = CStruct1[_root_.gtk4.all.GtkWidgetClass]
+opaque type AdwWindowTitleClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]]
 object AdwWindowTitleClass:
-  given _tag: Tag[AdwWindowTitleClass] = Tag.materializeCStruct1Tag[_root_.gtk4.all.GtkWidgetClass]
+  given _tag: Tag[AdwWindowTitleClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._0, Nat._8]](Tag.Byte, Tag.Digit3[Nat._4, Nat._0, Nat._8](Tag.Nat4, Tag.Nat0, Tag.Nat8))
   def apply()(using Zone): Ptr[AdwWindowTitleClass] = scala.scalanative.unsafe.alloc[AdwWindowTitleClass](1)
   def apply(parent_class : _root_.gtk4.all.GtkWidgetClass)(using Zone): Ptr[AdwWindowTitleClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwWindowTitleClass)
-    def parent_class : _root_.gtk4.all.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at1 = value
+    def parent_class: _root_.gtk4.all.GtkWidgetClass = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]]
+    def parent_class_=(value: _root_.gtk4.all.GtkWidgetClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.gtk4.all.GtkWidgetClass]] = value
 
 /**
  * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h

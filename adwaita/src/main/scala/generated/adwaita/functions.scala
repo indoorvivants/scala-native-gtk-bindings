@@ -45731,6 +45731,12 @@ export extern_functions.*
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_add(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_add(a, b, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_add(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = a
@@ -45745,20 +45751,6 @@ def graphene_simd4f_add(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_add(a, b, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_add(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_add(a, b, __return)
-
-/**
- * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_clamp(v : Ptr[graphene_simd4f_t], min : Ptr[graphene_simd4f_t], max : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_clamp(v, min, max, __return)
 
 /**
  * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
@@ -45784,6 +45776,14 @@ def graphene_simd4f_clamp(v : graphene_simd4f_t, min : graphene_simd4f_t, max : 
   !(__ptr_0 + 3)
 
 /**
+ * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_clamp(v : Ptr[graphene_simd4f_t], min : Ptr[graphene_simd4f_t], max : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_clamp(v, min, max, __return)
+
+/**
  * graphene_simd4f_clamp_scalar: : a #graphene_simd4f_t : the lower boundary : the upper boundary
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45799,18 +45799,24 @@ def graphene_simd4f_clamp_scalar(v : graphene_simd4f_t, min : Float, max : Float
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : Float)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar(v, min, max, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar(v, min, max, __return)
 
 /**
  * graphene_simd4f_clamp_scalar: : a #graphene_simd4f_t : the lower boundary : the upper boundary
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar(v, min, max, __return)
+def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : Float)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar(v, min, max, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_cmp_eq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_eq(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45824,8 +45830,8 @@ def graphene_simd4f_cmp_eq(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_eq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_eq(a, b)
+def graphene_simd4f_cmp_ge(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_ge(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45839,8 +45845,8 @@ def graphene_simd4f_cmp_ge(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_ge(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_ge(a, b)
+def graphene_simd4f_cmp_gt(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_gt(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45850,12 +45856,6 @@ def graphene_simd4f_cmp_gt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
   !(__ptr_0 + 0) = a
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_cmp_gt((__ptr_0 + 0), (__ptr_0 + 1))
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_cmp_gt(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_gt(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45875,6 +45875,12 @@ def graphene_simd4f_cmp_le(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_cmp_lt(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_lt(a, b)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_cmp_lt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): Boolean = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
   !(__ptr_0 + 0) = a
@@ -45884,8 +45890,8 @@ def graphene_simd4f_cmp_lt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_lt(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_lt(a, b)
+def graphene_simd4f_cmp_neq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_neq(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45899,8 +45905,8 @@ def graphene_simd4f_cmp_neq(a : graphene_simd4f_t, b : graphene_simd4f_t)(using 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_neq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_neq(a, b)
+def graphene_simd4f_cross3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_cross3(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45911,12 +45917,6 @@ def graphene_simd4f_cross3(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_cross3((__ptr_0 + 0), (__ptr_0 + 1), (__ptr_0 + 2))
   !(__ptr_0 + 2)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_cross3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_cross3(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -45955,20 +45955,20 @@ def graphene_simd4f_div(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dot2(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
-  !(__ptr_0 + 0) = a
-  !(__ptr_0 + 1) = b
-  __sn_wrap_adwaita_graphene_simd4f_dot2((__ptr_0 + 0), (__ptr_0 + 1), (__ptr_0 + 2))
-  !(__ptr_0 + 2)
+def graphene_simd4f_dot2(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dot2(a, b, __return)
 
 /**
  * graphene_simd4f_dot2: : a #graphene_simd4f_t : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dot2(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dot2(a, b, __return)
+def graphene_simd4f_dot2(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
+  !(__ptr_0 + 0) = a
+  !(__ptr_0 + 1) = b
+  __sn_wrap_adwaita_graphene_simd4f_dot2((__ptr_0 + 0), (__ptr_0 + 1), (__ptr_0 + 2))
+  !(__ptr_0 + 2)
 
 /**
  * graphene_simd4f_dot2: : a #graphene_simd4f_t : a #graphene_simd4f_t
@@ -45993,6 +45993,12 @@ def graphene_simd4f_dot3(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zon
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, (__ptr_0 + 0))
@@ -46001,8 +46007,8 @@ def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, __return)
+def graphene_simd4f_dot3_scalar(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Float = 
+  __sn_wrap_adwaita_graphene_simd4f_dot3_scalar(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46012,12 +46018,6 @@ def graphene_simd4f_dot3_scalar(a : graphene_simd4f_t, b : graphene_simd4f_t)(us
   !(__ptr_0 + 0) = a
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_dot3_scalar((__ptr_0 + 0), (__ptr_0 + 1))
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_dot3_scalar(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Float = 
-  __sn_wrap_adwaita_graphene_simd4f_dot3_scalar(a, b)
 
 /**
  * graphene_simd4f_dot4: : a #graphene_simd4f_t : a #graphene_simd4f_t
@@ -46052,16 +46052,16 @@ def graphene_simd4f_dot4(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dup_2f(s : Ptr[graphene_simd4f_t], v : Ptr[Float]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dup_2f(s, v)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_dup_2f(s : graphene_simd4f_t, v : Ptr[Float])(using Zone): Unit = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   !(__ptr_0 + 0) = s
   __sn_wrap_adwaita_graphene_simd4f_dup_2f((__ptr_0 + 0), v)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_dup_2f(s : Ptr[graphene_simd4f_t], v : Ptr[Float]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dup_2f(s, v)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46094,16 +46094,16 @@ def graphene_simd4f_dup_4f(s : Ptr[graphene_simd4f_t], v : Ptr[Float]): Unit =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_flip_sign_0101(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_flip_sign_0101(s, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_flip_sign_0101(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_flip_sign_0101(s, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_flip_sign_0101(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_flip_sign_0101(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46168,12 +46168,6 @@ def graphene_simd4f_get_w(s : graphene_simd4f_t)(using Zone): Float =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_get_x(s : Ptr[graphene_simd4f_t]): Float = 
-  __sn_wrap_adwaita_graphene_simd4f_get_x(s)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_get_x(s : graphene_simd4f_t)(using Zone): Float = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   !(__ptr_0 + 0) = s
@@ -46182,16 +46176,22 @@ def graphene_simd4f_get_x(s : graphene_simd4f_t)(using Zone): Float =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_get_y(s : graphene_simd4f_t)(using Zone): Float = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  !(__ptr_0 + 0) = s
-  __sn_wrap_adwaita_graphene_simd4f_get_y((__ptr_0 + 0))
+def graphene_simd4f_get_x(s : Ptr[graphene_simd4f_t]): Float = 
+  __sn_wrap_adwaita_graphene_simd4f_get_x(s)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
 def graphene_simd4f_get_y(s : Ptr[graphene_simd4f_t]): Float = 
   __sn_wrap_adwaita_graphene_simd4f_get_y(s)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_get_y(s : graphene_simd4f_t)(using Zone): Float = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  !(__ptr_0 + 0) = s
+  __sn_wrap_adwaita_graphene_simd4f_get_y((__ptr_0 + 0))
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46210,6 +46210,12 @@ def graphene_simd4f_get_z(s : graphene_simd4f_t)(using Zone): Float =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_init(x, y, z, w, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_init(x, y, z, w, (__ptr_0 + 0))
@@ -46218,8 +46224,8 @@ def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(using Zone)
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_init(x, y, z, w, __return)
+def graphene_simd4f_init_2f(v : Ptr[Float])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_init_2f(v, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46228,12 +46234,6 @@ def graphene_simd4f_init_2f(v : Ptr[Float])(using Zone): graphene_simd4f_t =
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_init_2f(v, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_init_2f(v : Ptr[Float])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_init_2f(v, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46266,16 +46266,16 @@ def graphene_simd4f_init_4f(v : Ptr[Float])(using Zone): graphene_simd4f_t =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_init_zero()(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_init_zero((__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_init_zero()(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_init_zero(__return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_init_zero()(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_init_zero(__return)
+def graphene_simd4f_init_zero()(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_init_zero((__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_interpolate: : a #graphene_simd4f_t : a #graphene_simd4f_t : the interpolation factor
@@ -46290,22 +46290,22 @@ def graphene_simd4f_interpolate(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_sim
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_interpolate(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t], f : Float)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_interpolate(a, b, f, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
-
-/**
- * graphene_simd4f_interpolate: : a #graphene_simd4f_t : a #graphene_simd4f_t : the interpolation factor
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_interpolate(a : graphene_simd4f_t, b : graphene_simd4f_t, f : Float)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = a
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_interpolate((__ptr_0 + 0), (__ptr_0 + 1), f, (__ptr_0 + 2))
   !(__ptr_0 + 2)
+
+/**
+ * graphene_simd4f_interpolate: : a #graphene_simd4f_t : a #graphene_simd4f_t : the interpolation factor
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_interpolate(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t], f : Float)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_interpolate(a, b, f, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_is_zero2: : a #graphene_simd4f_t
@@ -46377,18 +46377,26 @@ def graphene_simd4f_length2(v : graphene_simd4f_t)(using Zone): graphene_simd4f_
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_length2(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_length2(v, __return)
+def graphene_simd4f_length2(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_length2(v, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_length2: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_length2(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_length2(v, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_length2(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_length2(v, __return)
+
+/**
+ * graphene_simd4f_length3: : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_length3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_length3(v, __return)
 
 /**
  * graphene_simd4f_length3: : a #graphene_simd4f_t
@@ -46399,14 +46407,6 @@ def graphene_simd4f_length3(v : Ptr[graphene_simd4f_t])(using Zone): graphene_si
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_length3(v, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * graphene_simd4f_length3: : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_length3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_length3(v, __return)
 
 /**
  * graphene_simd4f_length3: : a #graphene_simd4f_t
@@ -46434,19 +46434,19 @@ def graphene_simd4f_length4(v : Ptr[graphene_simd4f_t])(using Zone): graphene_si
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_length4(v : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
-  !(__ptr_0 + 0) = v
-  __sn_wrap_adwaita_graphene_simd4f_length4((__ptr_0 + 0), (__ptr_0 + 1))
-  !(__ptr_0 + 1)
+def graphene_simd4f_length4(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_length4(v, __return)
 
 /**
  * graphene_simd4f_length4: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_length4(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_length4(v, __return)
+def graphene_simd4f_length4(v : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
+  !(__ptr_0 + 0) = v
+  __sn_wrap_adwaita_graphene_simd4f_length4((__ptr_0 + 0), (__ptr_0 + 1))
+  !(__ptr_0 + 1)
 
 /**
  * graphene_simd4f_madd: : a #graphene_simd4f_t : a #graphene_simd4f_t : a #graphene_simd4f_t
@@ -46559,16 +46559,16 @@ def graphene_simd4f_merge_high(a : graphene_simd4f_t, b : graphene_simd4f_t)(usi
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_merge_low(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_merge_low(a, b, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_merge_low(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_merge_low(a, b, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_merge_low(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_merge_low(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46579,14 +46579,6 @@ def graphene_simd4f_merge_low(a : graphene_simd4f_t, b : graphene_simd4f_t)(usin
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_merge_low((__ptr_0 + 0), (__ptr_0 + 1), (__ptr_0 + 2))
   !(__ptr_0 + 2)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_merge_w(s : Ptr[graphene_simd4f_t], v : Float)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_merge_w(s, v, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46606,6 +46598,14 @@ def graphene_simd4f_merge_w(s : Ptr[graphene_simd4f_t], v : Float)(__return : Pt
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_merge_w(s : Ptr[graphene_simd4f_t], v : Float)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_merge_w(s, v, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_min(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = a
@@ -46616,16 +46616,16 @@ def graphene_simd4f_min(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_min(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_min(a, b, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_min(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_min(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_min(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_min(a, b, __return)
+def graphene_simd4f_min(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_min(a, b, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_min_val: : a #graphene_simd4f_t
@@ -46659,16 +46659,16 @@ def graphene_simd4f_min_val(v : Ptr[graphene_simd4f_t])(using Zone): graphene_si
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_mul(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_mul(a, b, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_mul(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_mul(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_mul(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_mul(a, b, __return)
+def graphene_simd4f_mul(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_mul(a, b, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46737,18 +46737,18 @@ def graphene_simd4f_normalize2(v : Ptr[graphene_simd4f_t])(using Zone): graphene
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_normalize3(v, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_normalize3(v, __return)
 
 /**
  * graphene_simd4f_normalize3: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_normalize3(v, __return)
+def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_normalize3(v, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_normalize3: : a #graphene_simd4f_t
@@ -46816,6 +46816,12 @@ def graphene_simd4f_reciprocal(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphe
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_rsqrt(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_rsqrt(s, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_rsqrt(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_rsqrt(s, (__ptr_0 + 0))
@@ -46833,16 +46839,16 @@ def graphene_simd4f_rsqrt(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_rsqrt(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_rsqrt(s, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_shuffle_wxyz(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_shuffle_wxyz(s, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_shuffle_wxyz(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_shuffle_wxyz(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46852,12 +46858,6 @@ def graphene_simd4f_shuffle_wxyz(s : graphene_simd4f_t)(using Zone): graphene_si
   !(__ptr_0 + 0) = s
   __sn_wrap_adwaita_graphene_simd4f_shuffle_wxyz((__ptr_0 + 0), (__ptr_0 + 1))
   !(__ptr_0 + 1)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_shuffle_wxyz(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_shuffle_wxyz(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46930,17 +46930,17 @@ def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(using Zone): graphene_si
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_splat_w(s, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_splat_w(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
   !(__ptr_0 + 0) = s
   __sn_wrap_adwaita_graphene_simd4f_splat_w((__ptr_0 + 0), (__ptr_0 + 1))
   !(__ptr_0 + 1)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_splat_w(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -46968,16 +46968,16 @@ def graphene_simd4f_splat_x(s : graphene_simd4f_t)(using Zone): graphene_simd4f_
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_splat_y(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_splat_y(s, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_splat_y(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_splat_y(s, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_splat_y(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_splat_y(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -47014,6 +47014,12 @@ def graphene_simd4f_splat_z(s : Ptr[graphene_simd4f_t])(using Zone): graphene_si
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_sqrt(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_sqrt(s, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_sqrt(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
   !(__ptr_0 + 0) = s
@@ -47031,8 +47037,8 @@ def graphene_simd4f_sqrt(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_sqrt(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_sqrt(s, __return)
+def graphene_simd4f_sub(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_sub(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -47041,12 +47047,6 @@ def graphene_simd4f_sub(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_sub(a, b, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_sub(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_sub(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -47074,26 +47074,18 @@ def graphene_simd4f_sum(v : graphene_simd4f_t)(using Zone): graphene_simd4f_t =
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_sum(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_sum(v, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_sum(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_sum(v, __return)
 
 /**
  * graphene_simd4f_sum: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_sum(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_sum(v, __return)
-
-/**
- * graphene_simd4f_sum_scalar: : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_sum_scalar(v : Ptr[graphene_simd4f_t]): Float = 
-  __sn_wrap_adwaita_graphene_simd4f_sum_scalar(v)
+def graphene_simd4f_sum(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_sum(v, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_sum_scalar: : a #graphene_simd4f_t
@@ -47106,10 +47098,12 @@ def graphene_simd4f_sum_scalar(v : graphene_simd4f_t)(using Zone): Float =
   __sn_wrap_adwaita_graphene_simd4f_sum_scalar((__ptr_0 + 0))
 
 /**
+ * graphene_simd4f_sum_scalar: : a #graphene_simd4f_t
+
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_zero_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_zero_w(s, __return)
+def graphene_simd4f_sum_scalar(v : Ptr[graphene_simd4f_t]): Float = 
+  __sn_wrap_adwaita_graphene_simd4f_sum_scalar(v)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -47131,16 +47125,22 @@ def graphene_simd4f_zero_w(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_zero_zw(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_zero_zw(s, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_zero_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_zero_w(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
 def graphene_simd4f_zero_zw(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
   __sn_wrap_adwaita_graphene_simd4f_zero_zw(s, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_zero_zw(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_zero_zw(s, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
