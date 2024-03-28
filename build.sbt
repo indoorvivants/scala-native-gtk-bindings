@@ -302,7 +302,7 @@ lazy val generateXsd = TaskKey[Unit]("generateXsd")
 
 lazy val `gir-schema` = project
   .in(file("gir-schema"))
-  .configure(pkgConfigured("gir-schema"))
+  .configure(pkgConfiguredSimple)
   .enablePlugins(ScalaxbPlugin)
   .settings(
     Compile / generateXsd := {
@@ -342,9 +342,9 @@ def findHeader(pkgName: String, file: java.io.File => java.io.File) = {
     )
 }
 
-def pkgConfigured(name: String): Project => Project = { proj =>
+def pkgConfiguredSimple: Project => Project = { proj =>
   proj
-    .enablePlugins(ScalaNativePlugin, BindgenPlugin)
+    .enablePlugins(ScalaNativePlugin)
     .settings(publishing)
     .settings(
       Compile / doc / sources := Seq.empty,
@@ -355,7 +355,15 @@ def pkgConfigured(name: String): Project => Project = { proj =>
         )
       ),
       resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
-      scalaVersion := "3.3.3",
+      scalaVersion := "3.3.3"
+    )
+}
+
+def pkgConfigured(name: String): Project => Project = { proj =>
+  pkgConfiguredSimple(proj)
+    .enablePlugins(BindgenPlugin)
+    .settings(publishing)
+    .settings(
       nativeCompileOptions ++= {
         pkgConfig(name, "cflags")
       },
