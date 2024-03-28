@@ -34,6 +34,7 @@ val publishing = Seq(
 lazy val root = project
   .in(file("."))
   .aggregate(
+    adwaita,
     gio,
     glib,
     gobject,
@@ -62,6 +63,22 @@ lazy val examples = project
   .dependsOn(gtk4)
   .configure(pkgConfigured("gtk4"))
   .settings(publish / skip := true, publishLocal / skip := true)
+
+lazy val adwaita = project
+  .in(file("adwaita"))
+  .dependsOn(gtk4)
+  .configure(pkgConfigured("libadwaita-1"))
+  .settings(
+    bindgenBindings +=
+      buildWithDependencies("gtk4") {
+        Binding
+          .builder(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
+          .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
+          .addCImport("adwaita.h")
+          .withOpaqueStructs(Set("G*"))
+          .withMultiFile(true)
+      }
+  )
 
 lazy val gio = project
   .in(file("gio"))
@@ -364,6 +381,7 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
     case "libcairo" =>
       List("*/cairo/*")
     case "libharfbuzz" => List("*/harfbuzz/*")
+    case "gtk4"        => List("*/gtk/*")
   }
 
   val externals =

@@ -39,7 +39,7 @@ jobs:
         run: sbt --client pullRemoteCache || echo 'remote cache not found'
 
       - name: Install GTK
-        run: sudo apt-get install libgtk-4-dev
+        run: sudo apt-get install libgtk-4-dev libadwaita-1-dev
 
       - name: Build binary
         run: sbt --client examples/nativeLink
