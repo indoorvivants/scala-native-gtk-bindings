@@ -955,17 +955,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
   */
-  def adw_action_row_add_prefix(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_action_row_add_prefix(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
   */
-  def adw_action_row_add_suffix(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_action_row_add_suffix(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
   */
-  def adw_action_row_get_activatable_widget(self : Ptr[AdwActionRow]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_action_row_get_activatable_widget(self : Ptr[AdwActionRow]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -995,17 +995,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
   */
-  def adw_action_row_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_action_row_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
   */
-  def adw_action_row_remove(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_action_row_remove(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
   */
-  def adw_action_row_set_activatable_widget(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_action_row_set_activatable_widget(self : Ptr[AdwActionRow], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -1050,7 +1050,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
   */
-  def adw_animation_get_widget(self : Ptr[AdwAnimation]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_animation_get_widget(self : Ptr[AdwAnimation]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -1105,7 +1105,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
   */
-  def adw_application_window_get_content(self : Ptr[AdwApplicationWindow]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_application_window_get_content(self : Ptr[AdwApplicationWindow]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
@@ -1115,12 +1115,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
   */
-  def adw_application_window_new(app : Ptr[_root_.gtk4.all.GtkApplication]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_application_window_new(app : Ptr[_root_.gtk.all.GtkApplication]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
   */
-  def adw_application_window_set_content(self : Ptr[AdwApplicationWindow], content : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_application_window_set_content(self : Ptr[AdwApplicationWindow], content : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1160,7 +1160,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
   */
-  def adw_avatar_new(size : CInt, text : CString, show_initials : _root_.glib.all.gboolean): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_avatar_new(size : CInt, text : CString, show_initials : _root_.glib.all.gboolean): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1190,7 +1190,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
   */
-  def adw_bin_get_child(self : Ptr[AdwBin]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_bin_get_child(self : Ptr[AdwBin]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
@@ -1200,12 +1200,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
   */
-  def adw_bin_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_bin_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
   */
-  def adw_bin_set_child(self : Ptr[AdwBin], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_bin_set_child(self : Ptr[AdwBin], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -1230,7 +1230,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
   */
-  def adw_button_content_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_button_content_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -1260,7 +1260,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_append(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_carousel_append(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
@@ -1290,7 +1290,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_get_nth_page(self : Ptr[AdwCarousel], n : _root_.glib.all.guint): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_carousel_get_nth_page(self : Ptr[AdwCarousel], n : _root_.glib.all.guint): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
@@ -1330,7 +1330,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
   */
-  def adw_carousel_indicator_dots_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_carousel_indicator_dots_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
@@ -1350,7 +1350,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
   */
-  def adw_carousel_indicator_lines_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_carousel_indicator_lines_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
@@ -1360,32 +1360,32 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_insert(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk4.all.GtkWidget], position : CInt): Unit = extern
+  def adw_carousel_insert(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk.all.GtkWidget], position : CInt): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_carousel_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_prepend(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_carousel_prepend(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_remove(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_carousel_remove(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_reorder(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk4.all.GtkWidget], position : CInt): Unit = extern
+  def adw_carousel_reorder(self : Ptr[AdwCarousel], child : Ptr[_root_.gtk.all.GtkWidget], position : CInt): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
   */
-  def adw_carousel_scroll_to(self : Ptr[AdwCarousel], widget : Ptr[_root_.gtk4.all.GtkWidget], animate : _root_.glib.all.gboolean): Unit = extern
+  def adw_carousel_scroll_to(self : Ptr[AdwCarousel], widget : Ptr[_root_.gtk.all.GtkWidget], animate : _root_.glib.all.gboolean): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
@@ -1430,7 +1430,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
   */
-  def adw_clamp_get_child(self : Ptr[AdwClamp]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_clamp_get_child(self : Ptr[AdwClamp]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
@@ -1465,7 +1465,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
   */
-  def adw_clamp_layout_new(): Ptr[_root_.gtk4.all.GtkLayoutManager] = extern
+  def adw_clamp_layout_new(): Ptr[_root_.gtk.all.GtkLayoutManager] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
@@ -1480,12 +1480,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
   */
-  def adw_clamp_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_clamp_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
   */
-  def adw_clamp_scrollable_get_child(self : Ptr[AdwClampScrollable]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_clamp_scrollable_get_child(self : Ptr[AdwClampScrollable]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
@@ -1505,12 +1505,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
   */
-  def adw_clamp_scrollable_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_clamp_scrollable_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
   */
-  def adw_clamp_scrollable_set_child(self : Ptr[AdwClampScrollable], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_clamp_scrollable_set_child(self : Ptr[AdwClampScrollable], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
@@ -1525,7 +1525,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
   */
-  def adw_clamp_set_child(self : Ptr[AdwClamp], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_clamp_set_child(self : Ptr[AdwClamp], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
@@ -1545,17 +1545,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_get_expression(self : Ptr[AdwComboRow]): Ptr[_root_.gtk4.all.GtkExpression] = extern
+  def adw_combo_row_get_expression(self : Ptr[AdwComboRow]): Ptr[_root_.gtk.all.GtkExpression] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_get_factory(self : Ptr[AdwComboRow]): Ptr[_root_.gtk4.all.GtkListItemFactory] = extern
+  def adw_combo_row_get_factory(self : Ptr[AdwComboRow]): Ptr[_root_.gtk.all.GtkListItemFactory] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_get_list_factory(self : Ptr[AdwComboRow]): Ptr[_root_.gtk4.all.GtkListItemFactory] = extern
+  def adw_combo_row_get_list_factory(self : Ptr[AdwComboRow]): Ptr[_root_.gtk.all.GtkListItemFactory] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
@@ -1585,22 +1585,22 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_combo_row_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_set_expression(self : Ptr[AdwComboRow], expression : Ptr[_root_.gtk4.all.GtkExpression]): Unit = extern
+  def adw_combo_row_set_expression(self : Ptr[AdwComboRow], expression : Ptr[_root_.gtk.all.GtkExpression]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_set_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.gtk4.all.GtkListItemFactory]): Unit = extern
+  def adw_combo_row_set_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.gtk.all.GtkListItemFactory]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
   */
-  def adw_combo_row_set_list_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.gtk4.all.GtkListItemFactory]): Unit = extern
+  def adw_combo_row_set_list_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.gtk.all.GtkListItemFactory]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
@@ -1670,17 +1670,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
   */
-  def adw_expander_row_add_action(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_expander_row_add_action(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
   */
-  def adw_expander_row_add_prefix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_expander_row_add_prefix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
   */
-  def adw_expander_row_add_row(self : Ptr[AdwExpanderRow], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_expander_row_add_row(self : Ptr[AdwExpanderRow], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -1715,12 +1715,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
   */
-  def adw_expander_row_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_expander_row_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
   */
-  def adw_expander_row_remove(self : Ptr[AdwExpanderRow], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_expander_row_remove(self : Ptr[AdwExpanderRow], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -1755,17 +1755,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_get_content(self : Ptr[AdwFlap]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_flap_get_content(self : Ptr[AdwFlap]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_get_flap(self : Ptr[AdwFlap]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_flap_get_flap(self : Ptr[AdwFlap]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_get_flap_position(self : Ptr[AdwFlap]): _root_.gtk4.all.GtkPackType = extern
+  def adw_flap_get_flap_position(self : Ptr[AdwFlap]): _root_.gtk.all.GtkPackType = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -1815,7 +1815,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_get_separator(self : Ptr[AdwFlap]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_flap_get_separator(self : Ptr[AdwFlap]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -1840,22 +1840,22 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_flap_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_set_content(self : Ptr[AdwFlap], content : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_flap_set_content(self : Ptr[AdwFlap], content : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_set_flap(self : Ptr[AdwFlap], flap : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_flap_set_flap(self : Ptr[AdwFlap], flap : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_set_flap_position(self : Ptr[AdwFlap], position : _root_.gtk4.all.GtkPackType): Unit = extern
+  def adw_flap_set_flap_position(self : Ptr[AdwFlap], position : _root_.gtk.all.GtkPackType): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -1895,7 +1895,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
   */
-  def adw_flap_set_separator(self : Ptr[AdwFlap], separator : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_flap_set_separator(self : Ptr[AdwFlap], separator : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -1925,7 +1925,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-animation-util.h
   */
-  def adw_get_enable_animations(widget : Ptr[_root_.gtk4.all.GtkWidget]): _root_.glib.all.gboolean = extern
+  def adw_get_enable_animations(widget : Ptr[_root_.gtk.all.GtkWidget]): _root_.glib.all.gboolean = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-version.h
@@ -1965,7 +1965,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
   */
-  def adw_header_bar_get_title_widget(self : Ptr[AdwHeaderBar]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_header_bar_get_title_widget(self : Ptr[AdwHeaderBar]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -1975,22 +1975,22 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
   */
-  def adw_header_bar_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_header_bar_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
   */
-  def adw_header_bar_pack_end(self : Ptr[AdwHeaderBar], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_header_bar_pack_end(self : Ptr[AdwHeaderBar], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
   */
-  def adw_header_bar_pack_start(self : Ptr[AdwHeaderBar], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_header_bar_pack_start(self : Ptr[AdwHeaderBar], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
   */
-  def adw_header_bar_remove(self : Ptr[AdwHeaderBar], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_header_bar_remove(self : Ptr[AdwHeaderBar], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -2015,7 +2015,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
   */
-  def adw_header_bar_set_title_widget(self : Ptr[AdwHeaderBar], title_widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_header_bar_set_title_widget(self : Ptr[AdwHeaderBar], title_widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-main.h
@@ -2030,12 +2030,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_append(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
+  def adw_leaflet_append(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_get_adjacent_child(self : Ptr[AdwLeaflet], direction : AdwNavigationDirection): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_leaflet_get_adjacent_child(self : Ptr[AdwLeaflet], direction : AdwNavigationDirection): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2055,7 +2055,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_get_child_by_name(self : Ptr[AdwLeaflet], name : CString): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_leaflet_get_child_by_name(self : Ptr[AdwLeaflet], name : CString): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2090,12 +2090,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_get_page(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
+  def adw_leaflet_get_page(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_get_pages(self : Ptr[AdwLeaflet]): Ptr[_root_.gtk4.all.GtkSelectionModel] = extern
+  def adw_leaflet_get_pages(self : Ptr[AdwLeaflet]): Ptr[_root_.gtk.all.GtkSelectionModel] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2110,7 +2110,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_get_visible_child(self : Ptr[AdwLeaflet]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_leaflet_get_visible_child(self : Ptr[AdwLeaflet]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2120,7 +2120,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_insert_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk4.all.GtkWidget], sibling : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
+  def adw_leaflet_insert_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk.all.GtkWidget], sibling : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2130,12 +2130,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_leaflet_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_page_get_child(self : Ptr[AdwLeafletPage]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_leaflet_page_get_child(self : Ptr[AdwLeafletPage]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2165,17 +2165,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_prepend(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
+  def adw_leaflet_prepend(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_remove(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_leaflet_remove(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_reorder_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk4.all.GtkWidget], sibling : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_leaflet_reorder_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.gtk.all.GtkWidget], sibling : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2220,7 +2220,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
   */
-  def adw_leaflet_set_visible_child(self : Ptr[AdwLeaflet], visible_child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_leaflet_set_visible_child(self : Ptr[AdwLeaflet], visible_child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -2245,7 +2245,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
   */
-  def adw_preferences_group_add(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_preferences_group_add(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -2255,7 +2255,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
   */
-  def adw_preferences_group_get_header_suffix(self : Ptr[AdwPreferencesGroup]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_preferences_group_get_header_suffix(self : Ptr[AdwPreferencesGroup]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -2270,12 +2270,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
   */
-  def adw_preferences_group_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_preferences_group_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
   */
-  def adw_preferences_group_remove(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_preferences_group_remove(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -2285,7 +2285,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
   */
-  def adw_preferences_group_set_header_suffix(self : Ptr[AdwPreferencesGroup], suffix : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_preferences_group_set_header_suffix(self : Ptr[AdwPreferencesGroup], suffix : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -2325,7 +2325,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
   */
-  def adw_preferences_page_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_preferences_page_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
@@ -2375,7 +2375,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
   */
-  def adw_preferences_row_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_preferences_row_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
@@ -2435,12 +2435,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
   */
-  def adw_preferences_window_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_preferences_window_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
   */
-  def adw_preferences_window_present_subpage(self : Ptr[AdwPreferencesWindow], subpage : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_preferences_window_present_subpage(self : Ptr[AdwPreferencesWindow], subpage : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
@@ -2470,12 +2470,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_get_child(self : Ptr[AdwSplitButton]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_split_button_get_child(self : Ptr[AdwSplitButton]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_get_direction(self : Ptr[AdwSplitButton]): _root_.gtk4.all.GtkArrowType = extern
+  def adw_split_button_get_direction(self : Ptr[AdwSplitButton]): _root_.gtk.all.GtkArrowType = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2495,7 +2495,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_get_popover(self : Ptr[AdwSplitButton]): Ptr[_root_.gtk4.all.GtkPopover] = extern
+  def adw_split_button_get_popover(self : Ptr[AdwSplitButton]): Ptr[_root_.gtk.all.GtkPopover] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2510,7 +2510,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_split_button_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2525,12 +2525,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_set_child(self : Ptr[AdwSplitButton], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_split_button_set_child(self : Ptr[AdwSplitButton], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_set_direction(self : Ptr[AdwSplitButton], direction : _root_.gtk4.all.GtkArrowType): Unit = extern
+  def adw_split_button_set_direction(self : Ptr[AdwSplitButton], direction : _root_.gtk.all.GtkArrowType): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2550,7 +2550,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
   */
-  def adw_split_button_set_popover(self : Ptr[AdwSplitButton], popover : Ptr[_root_.gtk4.all.GtkPopover]): Unit = extern
+  def adw_split_button_set_popover(self : Ptr[AdwSplitButton], popover : Ptr[_root_.gtk.all.GtkPopover]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2605,7 +2605,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
   */
-  def adw_spring_animation_new(widget : Ptr[_root_.gtk4.all.GtkWidget], from : Double, to : Double, spring_params : Ptr[AdwSpringParams], target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
+  def adw_spring_animation_new(widget : Ptr[_root_.gtk.all.GtkWidget], from : Double, to : Double, spring_params : Ptr[AdwSpringParams], target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
@@ -2685,7 +2685,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_add(self : Ptr[AdwSqueezer], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwSqueezerPage] = extern
+  def adw_squeezer_add(self : Ptr[AdwSqueezer], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwSqueezerPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -2705,12 +2705,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_get_page(self : Ptr[AdwSqueezer], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwSqueezerPage] = extern
+  def adw_squeezer_get_page(self : Ptr[AdwSqueezer], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwSqueezerPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_get_pages(self : Ptr[AdwSqueezer]): Ptr[_root_.gtk4.all.GtkSelectionModel] = extern
+  def adw_squeezer_get_pages(self : Ptr[AdwSqueezer]): Ptr[_root_.gtk.all.GtkSelectionModel] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -2740,7 +2740,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_get_visible_child(self : Ptr[AdwSqueezer]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_squeezer_get_visible_child(self : Ptr[AdwSqueezer]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -2755,12 +2755,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_squeezer_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_page_get_child(self : Ptr[AdwSqueezerPage]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_squeezer_page_get_child(self : Ptr[AdwSqueezerPage]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -2780,7 +2780,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
   */
-  def adw_squeezer_remove(self : Ptr[AdwSqueezer], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_squeezer_remove(self : Ptr[AdwSqueezer], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -2830,7 +2830,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
   */
-  def adw_status_page_get_child(self : Ptr[AdwStatusPage]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_status_page_get_child(self : Ptr[AdwStatusPage]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -2860,12 +2860,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
   */
-  def adw_status_page_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_status_page_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
   */
-  def adw_status_page_set_child(self : Ptr[AdwStatusPage], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_status_page_set_child(self : Ptr[AdwStatusPage], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -3030,7 +3030,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
   */
-  def adw_tab_bar_get_end_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_tab_bar_get_end_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -3050,7 +3050,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
   */
-  def adw_tab_bar_get_start_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_tab_bar_get_start_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -3080,7 +3080,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
   */
-  def adw_tab_bar_set_end_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_tab_bar_set_end_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -3095,7 +3095,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
   */
-  def adw_tab_bar_set_start_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_tab_bar_set_start_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -3110,7 +3110,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_page_get_child(self : Ptr[AdwTabPage]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_tab_page_get_child(self : Ptr[AdwTabPage]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3205,17 +3205,17 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_add_page(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget], parent : Ptr[AdwTabPage]): Ptr[AdwTabPage] = extern
+  def adw_tab_view_add_page(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget], parent : Ptr[AdwTabPage]): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_append(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwTabPage] = extern
+  def adw_tab_view_append(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_append_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwTabPage] = extern
+  def adw_tab_view_append_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3275,7 +3275,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_get_page(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwTabPage] = extern
+  def adw_tab_view_get_page(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3285,7 +3285,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_get_pages(self : Ptr[AdwTabView]): Ptr[_root_.gtk4.all.GtkSelectionModel] = extern
+  def adw_tab_view_get_pages(self : Ptr[AdwTabView]): Ptr[_root_.gtk.all.GtkSelectionModel] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3300,12 +3300,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_insert(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
+  def adw_tab_view_insert(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_insert_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
+  def adw_tab_view_insert_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3315,12 +3315,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_prepend(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwTabPage] = extern
+  def adw_tab_view_prepend(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
   */
-  def adw_tab_view_prepend_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwTabPage] = extern
+  def adw_tab_view_prepend_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwTabPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3425,7 +3425,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-timed-animation.h
   */
-  def adw_timed_animation_new(widget : Ptr[_root_.gtk4.all.GtkWidget], from : Double, to : Double, duration : _root_.glib.all.guint, target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
+  def adw_timed_animation_new(widget : Ptr[_root_.gtk.all.GtkWidget], from : Double, to : Double, duration : _root_.glib.all.guint, target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-timed-animation.h
@@ -3515,7 +3515,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
   */
-  def adw_toast_overlay_get_child(self : Ptr[AdwToastOverlay]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_toast_overlay_get_child(self : Ptr[AdwToastOverlay]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
@@ -3525,12 +3525,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
   */
-  def adw_toast_overlay_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_toast_overlay_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
   */
-  def adw_toast_overlay_set_child(self : Ptr[AdwToastOverlay], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_toast_overlay_set_child(self : Ptr[AdwToastOverlay], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -3580,22 +3580,22 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_add(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwViewStackPage] = extern
+  def adw_view_stack_add(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwViewStackPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_add_named(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk4.all.GtkWidget], name : CString): Ptr[AdwViewStackPage] = extern
+  def adw_view_stack_add_named(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk.all.GtkWidget], name : CString): Ptr[AdwViewStackPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk4.all.GtkWidget], name : CString, title : CString): Ptr[AdwViewStackPage] = extern
+  def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk.all.GtkWidget], name : CString, title : CString): Ptr[AdwViewStackPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_get_child_by_name(self : Ptr[AdwViewStack], name : CString): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_stack_get_child_by_name(self : Ptr[AdwViewStack], name : CString): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3605,12 +3605,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_get_page(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk4.all.GtkWidget]): Ptr[AdwViewStackPage] = extern
+  def adw_view_stack_get_page(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk.all.GtkWidget]): Ptr[AdwViewStackPage] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_get_pages(self : Ptr[AdwViewStack]): Ptr[_root_.gtk4.all.GtkSelectionModel] = extern
+  def adw_view_stack_get_pages(self : Ptr[AdwViewStack]): Ptr[_root_.gtk.all.GtkSelectionModel] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3625,7 +3625,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_get_visible_child(self : Ptr[AdwViewStack]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_stack_get_visible_child(self : Ptr[AdwViewStack]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3635,7 +3635,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_stack_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3645,7 +3645,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_page_get_child(self : Ptr[AdwViewStackPage]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_stack_page_get_child(self : Ptr[AdwViewStackPage]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3720,7 +3720,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_remove(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_view_stack_remove(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3735,7 +3735,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
   */
-  def adw_view_stack_set_visible_child(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_view_stack_set_visible_child(self : Ptr[AdwViewStack], child : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3760,7 +3760,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-bar.h
   */
-  def adw_view_switcher_bar_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_switcher_bar_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-bar.h
@@ -3790,7 +3790,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
   */
-  def adw_view_switcher_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_switcher_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -3840,7 +3840,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
   */
-  def adw_view_switcher_title_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_view_switcher_title_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
@@ -3865,7 +3865,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
   */
-  def adw_window_get_content(self : Ptr[AdwWindow]): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_window_get_content(self : Ptr[AdwWindow]): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
@@ -3875,12 +3875,12 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
   */
-  def adw_window_new(): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_window_new(): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
   */
-  def adw_window_set_content(self : Ptr[AdwWindow], content : Ptr[_root_.gtk4.all.GtkWidget]): Unit = extern
+  def adw_window_set_content(self : Ptr[AdwWindow], content : Ptr[_root_.gtk.all.GtkWidget]): Unit = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
@@ -3900,7 +3900,7 @@ private[adwaita] object extern_functions:
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
   */
-  def adw_window_title_new(title : CString, subtitle : CString): Ptr[_root_.gtk4.all.GtkWidget] = extern
+  def adw_window_title_new(title : CString, subtitle : CString): Ptr[_root_.gtk.all.GtkWidget] = extern
 
   /**
    * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
@@ -16638,12 +16638,6 @@ export extern_functions.*
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_add(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_add(a, b, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_add(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = a
@@ -16660,6 +16654,12 @@ def graphene_simd4f_add(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(
   !(__ptr_0 + 0)
 
 /**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_add(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_add(a, b, __return)
+
+/**
  * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16668,6 +16668,14 @@ def graphene_simd4f_clamp(v : Ptr[graphene_simd4f_t], min : Ptr[graphene_simd4f_
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_clamp(v, min, max, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_clamp(v : Ptr[graphene_simd4f_t], min : Ptr[graphene_simd4f_t], max : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_clamp(v, min, max, __return)
 
 /**
  * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
@@ -16683,23 +16691,14 @@ def graphene_simd4f_clamp(v : graphene_simd4f_t, min : graphene_simd4f_t, max : 
   !(__ptr_0 + 3)
 
 /**
- * graphene_simd4f_clamp: : a #graphene_simd4f_t : the lower boundary : the upper boundary
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_clamp(v : Ptr[graphene_simd4f_t], min : Ptr[graphene_simd4f_t], max : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_clamp(v, min, max, __return)
-
-/**
  * graphene_simd4f_clamp_scalar: : a #graphene_simd4f_t : the lower boundary : the upper boundary
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_clamp_scalar(v : graphene_simd4f_t, min : Float, max : Float)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
-  !(__ptr_0 + 0) = v
-  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar((__ptr_0 + 0), min, max, (__ptr_0 + 1))
-  !(__ptr_0 + 1)
+def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : Float)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar(v, min, max, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_clamp_scalar: : a #graphene_simd4f_t : the lower boundary : the upper boundary
@@ -16714,10 +16713,17 @@ def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : 
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_clamp_scalar(v : Ptr[graphene_simd4f_t], min : Float, max : Float)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar(v, min, max, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_clamp_scalar(v : graphene_simd4f_t, min : Float, max : Float)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
+  !(__ptr_0 + 0) = v
+  __sn_wrap_adwaita_graphene_simd4f_clamp_scalar((__ptr_0 + 0), min, max, (__ptr_0 + 1))
+  !(__ptr_0 + 1)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_cmp_eq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_eq(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16727,12 +16733,6 @@ def graphene_simd4f_cmp_eq(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
   !(__ptr_0 + 0) = a
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_cmp_eq((__ptr_0 + 0), (__ptr_0 + 1))
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_cmp_eq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_eq(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16752,23 +16752,17 @@ def graphene_simd4f_cmp_ge(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_gt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): Boolean = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
-  !(__ptr_0 + 0) = a
-  !(__ptr_0 + 1) = b
-  __sn_wrap_adwaita_graphene_simd4f_cmp_gt((__ptr_0 + 0), (__ptr_0 + 1))
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_cmp_gt(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
   __sn_wrap_adwaita_graphene_simd4f_cmp_gt(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_le(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_cmp_le(a, b)
+def graphene_simd4f_cmp_gt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): Boolean = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
+  !(__ptr_0 + 0) = a
+  !(__ptr_0 + 1) = b
+  __sn_wrap_adwaita_graphene_simd4f_cmp_gt((__ptr_0 + 0), (__ptr_0 + 1))
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16782,17 +16776,23 @@ def graphene_simd4f_cmp_le(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cmp_lt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): Boolean = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
-  !(__ptr_0 + 0) = a
-  !(__ptr_0 + 1) = b
-  __sn_wrap_adwaita_graphene_simd4f_cmp_lt((__ptr_0 + 0), (__ptr_0 + 1))
+def graphene_simd4f_cmp_le(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_cmp_le(a, b)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
 def graphene_simd4f_cmp_lt(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Boolean = 
   __sn_wrap_adwaita_graphene_simd4f_cmp_lt(a, b)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_cmp_lt(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): Boolean = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
+  !(__ptr_0 + 0) = a
+  !(__ptr_0 + 1) = b
+  __sn_wrap_adwaita_graphene_simd4f_cmp_lt((__ptr_0 + 0), (__ptr_0 + 1))
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16812,6 +16812,12 @@ def graphene_simd4f_cmp_neq(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_cross3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_cross3(a, b, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_cross3(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = a
@@ -16822,22 +16828,10 @@ def graphene_simd4f_cross3(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Z
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_cross3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_cross3(a, b, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_cross3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_cross3(a, b, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_div(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_div(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16856,6 +16850,20 @@ def graphene_simd4f_div(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_div(a, b, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_div(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_div(a, b, __return)
+
+/**
+ * graphene_simd4f_dot2: : a #graphene_simd4f_t : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_dot2(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dot2(a, b, __return)
 
 /**
  * graphene_simd4f_dot2: : a #graphene_simd4f_t : a #graphene_simd4f_t
@@ -16880,20 +16888,6 @@ def graphene_simd4f_dot2(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])
   !(__ptr_0 + 0)
 
 /**
- * graphene_simd4f_dot2: : a #graphene_simd4f_t : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_dot2(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dot2(a, b, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, __return)
-
-/**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
 def graphene_simd4f_dot3(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
@@ -16906,16 +16900,16 @@ def graphene_simd4f_dot3(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zon
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dot3_scalar(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Float = 
-  __sn_wrap_adwaita_graphene_simd4f_dot3_scalar(a, b)
+def graphene_simd4f_dot3(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_dot3(a, b, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -16925,6 +16919,20 @@ def graphene_simd4f_dot3_scalar(a : graphene_simd4f_t, b : graphene_simd4f_t)(us
   !(__ptr_0 + 0) = a
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_dot3_scalar((__ptr_0 + 0), (__ptr_0 + 1))
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_dot3_scalar(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t]): Float = 
+  __sn_wrap_adwaita_graphene_simd4f_dot3_scalar(a, b)
+
+/**
+ * graphene_simd4f_dot4: : a #graphene_simd4f_t : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_dot4(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dot4(a, b, __return)
 
 /**
  * graphene_simd4f_dot4: : a #graphene_simd4f_t : a #graphene_simd4f_t
@@ -16943,14 +16951,6 @@ def graphene_simd4f_dot4(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zon
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dot4(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dot4(a, b, __return)
-
-/**
- * graphene_simd4f_dot4: : a #graphene_simd4f_t : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_dot4(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_dot4(a, b, (__ptr_0 + 0))
@@ -16959,16 +16959,16 @@ def graphene_simd4f_dot4(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_dup_2f(s : Ptr[graphene_simd4f_t], v : Ptr[Float]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_dup_2f(s, v)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_dup_2f(s : graphene_simd4f_t, v : Ptr[Float])(using Zone): Unit = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   !(__ptr_0 + 0) = s
   __sn_wrap_adwaita_graphene_simd4f_dup_2f((__ptr_0 + 0), v)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_dup_2f(s : Ptr[graphene_simd4f_t], v : Ptr[Float]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_dup_2f(s, v)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17075,16 +17075,16 @@ def graphene_simd4f_get_w(s : graphene_simd4f_t)(using Zone): Float =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_get_x(s : graphene_simd4f_t)(using Zone): Float = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  !(__ptr_0 + 0) = s
-  __sn_wrap_adwaita_graphene_simd4f_get_x((__ptr_0 + 0))
+def graphene_simd4f_get_x(s : Ptr[graphene_simd4f_t]): Float = 
+  __sn_wrap_adwaita_graphene_simd4f_get_x(s)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_get_x(s : Ptr[graphene_simd4f_t]): Float = 
-  __sn_wrap_adwaita_graphene_simd4f_get_x(s)
+def graphene_simd4f_get_x(s : graphene_simd4f_t)(using Zone): Float = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  !(__ptr_0 + 0) = s
+  __sn_wrap_adwaita_graphene_simd4f_get_x((__ptr_0 + 0))
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17117,12 +17117,6 @@ def graphene_simd4f_get_z(s : graphene_simd4f_t)(using Zone): Float =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_init(x, y, z, w, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_init(x, y, z, w, (__ptr_0 + 0))
@@ -17131,16 +17125,22 @@ def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(using Zone)
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_init_2f(v : Ptr[Float])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_init_2f(v, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_init(x : Float, y : Float, z : Float, w : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_init(x, y, z, w, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
 def graphene_simd4f_init_2f(v : Ptr[Float])(__return : Ptr[graphene_simd4f_t]): Unit = 
   __sn_wrap_adwaita_graphene_simd4f_init_2f(v, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_init_2f(v : Ptr[Float])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_init_2f(v, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17189,18 +17189,6 @@ def graphene_simd4f_init_zero()(using Zone): graphene_simd4f_t =
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_interpolate(a : graphene_simd4f_t, b : graphene_simd4f_t, f : Float)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
-  !(__ptr_0 + 0) = a
-  !(__ptr_0 + 1) = b
-  __sn_wrap_adwaita_graphene_simd4f_interpolate((__ptr_0 + 0), (__ptr_0 + 1), f, (__ptr_0 + 2))
-  !(__ptr_0 + 2)
-
-/**
- * graphene_simd4f_interpolate: : a #graphene_simd4f_t : a #graphene_simd4f_t : the interpolation factor
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_interpolate(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t], f : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
   __sn_wrap_adwaita_graphene_simd4f_interpolate(a, b, f, __return)
 
@@ -17215,12 +17203,16 @@ def graphene_simd4f_interpolate(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_sim
   !(__ptr_0 + 0)
 
 /**
- * graphene_simd4f_is_zero2: : a #graphene_simd4f_t
+ * graphene_simd4f_interpolate: : a #graphene_simd4f_t : a #graphene_simd4f_t : the interpolation factor
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_is_zero2(v : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_is_zero2(v)
+def graphene_simd4f_interpolate(a : graphene_simd4f_t, b : graphene_simd4f_t, f : Float)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
+  !(__ptr_0 + 0) = a
+  !(__ptr_0 + 1) = b
+  __sn_wrap_adwaita_graphene_simd4f_interpolate((__ptr_0 + 0), (__ptr_0 + 1), f, (__ptr_0 + 2))
+  !(__ptr_0 + 2)
 
 /**
  * graphene_simd4f_is_zero2: : a #graphene_simd4f_t
@@ -17231,6 +17223,14 @@ def graphene_simd4f_is_zero2(v : graphene_simd4f_t)(using Zone): Boolean =
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   !(__ptr_0 + 0) = v
   __sn_wrap_adwaita_graphene_simd4f_is_zero2((__ptr_0 + 0))
+
+/**
+ * graphene_simd4f_is_zero2: : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_is_zero2(v : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_is_zero2(v)
 
 /**
  * graphene_simd4f_is_zero3: : a #graphene_simd4f_t
@@ -17255,18 +17255,18 @@ def graphene_simd4f_is_zero3(v : graphene_simd4f_t)(using Zone): Boolean =
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_is_zero4(v : Ptr[graphene_simd4f_t]): Boolean = 
-  __sn_wrap_adwaita_graphene_simd4f_is_zero4(v)
+def graphene_simd4f_is_zero4(v : graphene_simd4f_t)(using Zone): Boolean = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  !(__ptr_0 + 0) = v
+  __sn_wrap_adwaita_graphene_simd4f_is_zero4((__ptr_0 + 0))
 
 /**
  * graphene_simd4f_is_zero4: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_is_zero4(v : graphene_simd4f_t)(using Zone): Boolean = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  !(__ptr_0 + 0) = v
-  __sn_wrap_adwaita_graphene_simd4f_is_zero4((__ptr_0 + 0))
+def graphene_simd4f_is_zero4(v : Ptr[graphene_simd4f_t]): Boolean = 
+  __sn_wrap_adwaita_graphene_simd4f_is_zero4(v)
 
 /**
  * graphene_simd4f_length2: : a #graphene_simd4f_t
@@ -17302,6 +17302,14 @@ def graphene_simd4f_length2(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_length3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_length3(v, __return)
+
+/**
+ * graphene_simd4f_length3: : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_length3(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_length3(v, (__ptr_0 + 0))
@@ -17317,14 +17325,6 @@ def graphene_simd4f_length3(v : graphene_simd4f_t)(using Zone): graphene_simd4f_
   !(__ptr_0 + 0) = v
   __sn_wrap_adwaita_graphene_simd4f_length3((__ptr_0 + 0), (__ptr_0 + 1))
   !(__ptr_0 + 1)
-
-/**
- * graphene_simd4f_length3: : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_length3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_length3(v, __return)
 
 /**
  * graphene_simd4f_length4: : a #graphene_simd4f_t
@@ -17373,18 +17373,18 @@ def graphene_simd4f_madd(m1 : graphene_simd4f_t, m2 : graphene_simd4f_t, a : gra
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_madd(m1 : Ptr[graphene_simd4f_t], m2 : Ptr[graphene_simd4f_t], a : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_madd(m1, m2, a, __return)
+def graphene_simd4f_madd(m1 : Ptr[graphene_simd4f_t], m2 : Ptr[graphene_simd4f_t], a : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_madd(m1, m2, a, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * graphene_simd4f_madd: : a #graphene_simd4f_t : a #graphene_simd4f_t : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_madd(m1 : Ptr[graphene_simd4f_t], m2 : Ptr[graphene_simd4f_t], a : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_madd(m1, m2, a, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_madd(m1 : Ptr[graphene_simd4f_t], m2 : Ptr[graphene_simd4f_t], a : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_madd(m1, m2, a, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17415,14 +17415,6 @@ def graphene_simd4f_max(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_max_val(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_max_val(v, __return)
-
-/**
- * graphene_simd4f_max_val: : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_max_val(v : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
   !(__ptr_0 + 0) = v
@@ -17440,18 +17432,20 @@ def graphene_simd4f_max_val(v : Ptr[graphene_simd4f_t])(using Zone): graphene_si
   !(__ptr_0 + 0)
 
 /**
+ * graphene_simd4f_max_val: : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_max_val(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_max_val(v, __return)
+
+/**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
 def graphene_simd4f_merge_high(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_merge_high(a, b, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_merge_high(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_merge_high(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17466,10 +17460,8 @@ def graphene_simd4f_merge_high(a : graphene_simd4f_t, b : graphene_simd4f_t)(usi
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_merge_low(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_merge_low(a, b, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_merge_high(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_merge_high(a, b, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17480,12 +17472,26 @@ def graphene_simd4f_merge_low(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_merge_low(a : Ptr[graphene_simd4f_t], b : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_merge_low(a, b, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_merge_low(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = a
   !(__ptr_0 + 1) = b
   __sn_wrap_adwaita_graphene_simd4f_merge_low((__ptr_0 + 0), (__ptr_0 + 1), (__ptr_0 + 2))
   !(__ptr_0 + 2)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_merge_w(s : Ptr[graphene_simd4f_t], v : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_merge_w(s, v, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17503,12 +17509,6 @@ def graphene_simd4f_merge_w(s : Ptr[graphene_simd4f_t], v : Float)(using Zone): 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_merge_w(s, v, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_merge_w(s : Ptr[graphene_simd4f_t], v : Float)(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_merge_w(s, v, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17590,6 +17590,12 @@ def graphene_simd4f_mul(a : graphene_simd4f_t, b : graphene_simd4f_t)(using Zone
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_neg(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_neg(s, __return)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_neg(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
   !(__ptr_0 + 0) = s
@@ -17599,16 +17605,18 @@ def graphene_simd4f_neg(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_neg(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_neg(s, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_neg(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_neg(s, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * graphene_simd4f_normalize2: : a #graphene_simd4f_t
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_normalize2(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_normalize2(v, __return)
 
 /**
  * graphene_simd4f_normalize2: : a #graphene_simd4f_t
@@ -17632,12 +17640,12 @@ def graphene_simd4f_normalize2(v : Ptr[graphene_simd4f_t])(using Zone): graphene
   !(__ptr_0 + 0)
 
 /**
- * graphene_simd4f_normalize2: : a #graphene_simd4f_t
+ * graphene_simd4f_normalize3: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_normalize2(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_normalize2(v, __return)
+def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_normalize3(v, __return)
 
 /**
  * graphene_simd4f_normalize3: : a #graphene_simd4f_t
@@ -17648,14 +17656,6 @@ def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(using Zone): graphene
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_normalize3(v, (__ptr_0 + 0))
   !(__ptr_0 + 0)
-
-/**
- * graphene_simd4f_normalize3: : a #graphene_simd4f_t
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_normalize3(v : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_normalize3(v, __return)
 
 /**
  * graphene_simd4f_normalize3: : a #graphene_simd4f_t
@@ -17708,17 +17708,23 @@ def graphene_simd4f_reciprocal(s : Ptr[graphene_simd4f_t])(using Zone): graphene
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
+def graphene_simd4f_reciprocal(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
+  !(__ptr_0 + 0) = s
+  __sn_wrap_adwaita_graphene_simd4f_reciprocal((__ptr_0 + 0), (__ptr_0 + 1))
+  !(__ptr_0 + 1)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
 def graphene_simd4f_reciprocal(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
   __sn_wrap_adwaita_graphene_simd4f_reciprocal(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_reciprocal(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](2)
-  !(__ptr_0 + 0) = s
-  __sn_wrap_adwaita_graphene_simd4f_reciprocal((__ptr_0 + 0), (__ptr_0 + 1))
-  !(__ptr_0 + 1)
+def graphene_simd4f_rsqrt(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_rsqrt(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17736,12 +17742,6 @@ def graphene_simd4f_rsqrt(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t 
   !(__ptr_0 + 0) = s
   __sn_wrap_adwaita_graphene_simd4f_rsqrt((__ptr_0 + 0), (__ptr_0 + 1))
   !(__ptr_0 + 1)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_rsqrt(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_rsqrt(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17769,12 +17769,6 @@ def graphene_simd4f_shuffle_wxyz(s : Ptr[graphene_simd4f_t])(__return : Ptr[grap
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_shuffle_yzwx(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_shuffle_yzwx(s, __return)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
 def graphene_simd4f_shuffle_yzwx(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_shuffle_yzwx(s, (__ptr_0 + 0))
@@ -17792,8 +17786,8 @@ def graphene_simd4f_shuffle_yzwx(s : graphene_simd4f_t)(using Zone): graphene_si
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_shuffle_zwxy(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_shuffle_zwxy(s, __return)
+def graphene_simd4f_shuffle_yzwx(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_shuffle_yzwx(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17802,6 +17796,12 @@ def graphene_simd4f_shuffle_zwxy(s : Ptr[graphene_simd4f_t])(using Zone): graphe
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
   __sn_wrap_adwaita_graphene_simd4f_shuffle_zwxy(s, (__ptr_0 + 0))
   !(__ptr_0 + 0)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_shuffle_zwxy(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_shuffle_zwxy(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17829,16 +17829,16 @@ def graphene_simd4f_splat(v : Float)(__return : Ptr[graphene_simd4f_t]): Unit =
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  __sn_wrap_adwaita_graphene_simd4f_splat_w(s, (__ptr_0 + 0))
-  !(__ptr_0 + 0)
+def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_splat_w(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_splat_w(s, __return)
+def graphene_simd4f_splat_w(s : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f_t = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  __sn_wrap_adwaita_graphene_simd4f_splat_w(s, (__ptr_0 + 0))
+  !(__ptr_0 + 0)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -17999,18 +17999,24 @@ def graphene_simd4f_sum(v : Ptr[graphene_simd4f_t])(using Zone): graphene_simd4f
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_sum_scalar(v : Ptr[graphene_simd4f_t]): Float = 
-  __sn_wrap_adwaita_graphene_simd4f_sum_scalar(v)
+def graphene_simd4f_sum_scalar(v : graphene_simd4f_t)(using Zone): Float = 
+  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
+  !(__ptr_0 + 0) = v
+  __sn_wrap_adwaita_graphene_simd4f_sum_scalar((__ptr_0 + 0))
 
 /**
  * graphene_simd4f_sum_scalar: : a #graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
 */
-def graphene_simd4f_sum_scalar(v : graphene_simd4f_t)(using Zone): Float = 
-  val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](1)
-  !(__ptr_0 + 0) = v
-  __sn_wrap_adwaita_graphene_simd4f_sum_scalar((__ptr_0 + 0))
+def graphene_simd4f_sum_scalar(v : Ptr[graphene_simd4f_t]): Float = 
+  __sn_wrap_adwaita_graphene_simd4f_sum_scalar(v)
+
+/**
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
+*/
+def graphene_simd4f_zero_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4f_zero_w(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -18028,12 +18034,6 @@ def graphene_simd4f_zero_w(s : graphene_simd4f_t)(using Zone): graphene_simd4f_t
   !(__ptr_0 + 0) = s
   __sn_wrap_adwaita_graphene_simd4f_zero_w((__ptr_0 + 0), (__ptr_0 + 1))
   !(__ptr_0 + 1)
-
-/**
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
-*/
-def graphene_simd4f_zero_w(s : Ptr[graphene_simd4f_t])(__return : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4f_zero_w(s, __return)
 
 /**
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4f.h
@@ -18096,20 +18096,20 @@ def graphene_simd4x4f_init(x : Ptr[graphene_simd4f_t], y : Ptr[graphene_simd4f_t
 
  * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4x4f.h
 */
-def graphene_simd4x4f_init_look_at(m : Ptr[graphene_simd4x4f_t], eye : Ptr[graphene_simd4f_t], center : Ptr[graphene_simd4f_t], up : Ptr[graphene_simd4f_t]): Unit = 
-  __sn_wrap_adwaita_graphene_simd4x4f_init_look_at(m, eye, center, up)
-
-/**
- * graphene_simd4x4f_init_look_at: : a #graphene_simd4x4f_t : vector for the camera coordinates : vector for the object coordinates : vector for the upwards direction
-
- * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4x4f.h
-*/
 def graphene_simd4x4f_init_look_at(m : Ptr[graphene_simd4x4f_t], eye : graphene_simd4f_t, center : graphene_simd4f_t, up : graphene_simd4f_t)(using Zone): Unit = 
   val __ptr_0: Ptr[graphene_simd4f_t] = alloc[graphene_simd4f_t](3)
   !(__ptr_0 + 0) = eye
   !(__ptr_0 + 1) = center
   !(__ptr_0 + 2) = up
   __sn_wrap_adwaita_graphene_simd4x4f_init_look_at(m, (__ptr_0 + 0), (__ptr_0 + 1), (__ptr_0 + 2))
+
+/**
+ * graphene_simd4x4f_init_look_at: : a #graphene_simd4x4f_t : vector for the camera coordinates : vector for the object coordinates : vector for the upwards direction
+
+ * [bindgen] header: /usr/include/graphene-1.0/graphene-simd4x4f.h
+*/
+def graphene_simd4x4f_init_look_at(m : Ptr[graphene_simd4x4f_t], eye : Ptr[graphene_simd4f_t], center : Ptr[graphene_simd4f_t], up : Ptr[graphene_simd4f_t]): Unit = 
+  __sn_wrap_adwaita_graphene_simd4x4f_init_look_at(m, eye, center, up)
 
 /**
  * graphene_simd4x4f_rotation: : a #graphene_simd4x4f_t : the rotation, in radians : the vector of the axis of rotation

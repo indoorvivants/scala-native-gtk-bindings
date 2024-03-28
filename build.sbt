@@ -71,7 +71,7 @@ lazy val adwaita = project
   .settings(
     bindgenBindings +=
       buildWithDependencies(
-        "gtk4",
+        "gtk",
         "gio",
         "glib",
         "gobject",
@@ -388,7 +388,7 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
     case "libcairo" =>
       List("*/cairo/*")
     case "libharfbuzz" => List("*/harfbuzz/*")
-    case "gtk4"        => List("*/gtk/*")
+    case "gtk"         => List("*/gtk/*")
   }
 
   val externals =
