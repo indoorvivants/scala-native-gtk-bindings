@@ -103,14 +103,6 @@ export _root_.adwaita.structs.AdwWindow
 export _root_.adwaita.structs.AdwWindowClass
 export _root_.adwaita.structs.AdwWindowTitle
 export _root_.adwaita.structs.AdwWindowTitleClass
-export _root_.adwaita.structs.GdkPixbuf
-export _root_.adwaita.structs.GdkPixbufAnimation
-export _root_.adwaita.structs.GdkPixbufAnimationIter
-export _root_.adwaita.structs.GdkPixbufFormat
-export _root_.adwaita.structs.GdkPixbufLoader
-export _root_.adwaita.structs.GdkPixbufLoaderClass
-export _root_.adwaita.structs.GdkPixbufSimpleAnim
-export _root_.adwaita.structs.GdkPixbufSimpleAnimClass
 export _root_.adwaita.structs._AdwActionRow
 export _root_.adwaita.structs._AdwActionRowClass
 export _root_.adwaita.structs._AdwAnimation
@@ -177,11 +169,3 @@ export _root_.adwaita.structs._AdwViewSwitcherTitle
 export _root_.adwaita.structs._AdwWindow
 export _root_.adwaita.structs._AdwWindowClass
 export _root_.adwaita.structs._AdwWindowTitle
-export _root_.adwaita.structs._GdkPixbuf
-export _root_.adwaita.structs._GdkPixbufAnimation
-export _root_.adwaita.structs._GdkPixbufAnimationIter
-export _root_.adwaita.structs._GdkPixbufFormat
-export _root_.adwaita.structs._GdkPixbufLoader
-export _root_.adwaita.structs._GdkPixbufLoaderClass
-export _root_.adwaita.structs._GdkPixbufSimpleAnim
-export _root_.adwaita.structs._GdkPixbufSimpleAnimClass

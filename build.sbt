@@ -88,6 +88,9 @@ lazy val adwaita = project
           .addCImport("adwaita.h")
           .withOpaqueStructs(Set("G*", "Adw*"))
           .withMultiFile(true)
+          .addExternalPath("*/graphene-1.0/*", "libgraphene")
+          .addExternalPath("*/pango-1.0/*", "libpango")
+          .addExternalPath("*/gdk-pixbuf-2.0/*", "libgdkpixbuf")
       }
   )
 

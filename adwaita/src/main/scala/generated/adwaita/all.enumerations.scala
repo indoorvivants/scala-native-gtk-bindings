@@ -18,8 +18,3 @@ export _root_.adwaita.enumerations.AdwNavigationDirection
 export _root_.adwaita.enumerations.AdwSqueezerTransitionType
 export _root_.adwaita.enumerations.AdwToastPriority
 export _root_.adwaita.enumerations.AdwViewSwitcherPolicy
-export _root_.adwaita.enumerations.GdkColorspace
-export _root_.adwaita.enumerations.GdkInterpType
-export _root_.adwaita.enumerations.GdkPixbufAlphaMode
-export _root_.adwaita.enumerations.GdkPixbufError
-export _root_.adwaita.enumerations.GdkPixbufRotation
