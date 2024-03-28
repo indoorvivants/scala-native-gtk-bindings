@@ -41,11 +41,14 @@ jobs:
       - name: Install GTK
         run: sudo apt-get install libgtk-4-dev libadwaita-1-dev
 
-      - name: Build binary
-        run: sbt --client examples/nativeLink
+      - name: Test
+        run: sbt --client test
 
       - name: Publish locally
         run: sbt --client publishLocal
+
+      - name: Build binary
+        run: sbt --client examples/nativeLink
 
       - name: Push cache 
         run: sbt --client pushRemoteCache || echo 'oh well then'
