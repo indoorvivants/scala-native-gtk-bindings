@@ -70,7 +70,14 @@ lazy val adwaita = project
   .configure(pkgConfigured("libadwaita-1"))
   .settings(
     bindgenBindings +=
-      buildWithDependencies("gtk4") {
+      buildWithDependencies(
+        "gtk4",
+        "gio",
+        "glib",
+        "gobject",
+        "libcairo",
+        "libharfbuzz"
+      ) {
         Binding
           .builder(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
           .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
