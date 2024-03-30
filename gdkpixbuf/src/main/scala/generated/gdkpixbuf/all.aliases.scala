@@ -1,0 +1,37 @@
+package gdkpixbuf
+package all
+
+import _root_.scala.scalanative.unsafe.*
+import _root_.scala.scalanative.unsigned.*
+import _root_.scala.scalanative.libc.*
+import _root_.scala.scalanative.*
+
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimationIter_autoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimationIter_listautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimationIter_queueautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimationIter_slistautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimation_autoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimation_listautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimation_queueautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufAnimation_slistautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufDestroyNotify
+export _root_.gdkpixbuf.aliases.GdkPixbufLoader_autoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufLoader_listautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufLoader_queueautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufLoader_slistautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufSaveFunc
+export _root_.gdkpixbuf.aliases.GdkPixbufSimpleAnim_autoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufSimpleAnim_listautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufSimpleAnim_queueautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbufSimpleAnim_slistautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbuf_autoptr
+export _root_.gdkpixbuf.aliases.GdkPixbuf_listautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbuf_queueautoptr
+export _root_.gdkpixbuf.aliases.GdkPixbuf_slistautoptr
+export _root_.gdkpixbuf.aliases.pid_t
+export _root_.gdkpixbuf.aliases.pthread_mutex_t
+export _root_.gdkpixbuf.aliases.pthread_t
+export _root_.gdkpixbuf.aliases.time_t
+export _root_.gdkpixbuf.aliases.tm
+export _root_.gdkpixbuf.aliases.uid_t
+export _root_.gdkpixbuf.aliases.va_list
