@@ -41,6 +41,9 @@ jobs:
       - name: Install GTK
         run: sudo apt-get install libgtk-4-dev libadwaita-1-dev
 
+      - name: Compile
+        run: sbt --client Test/compile
+
       - name: Test
         run: sbt --client test
 
