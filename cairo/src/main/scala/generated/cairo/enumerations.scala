@@ -1,5 +1,4 @@
 package cairo
-package enumerations
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
@@ -769,4 +768,3 @@ object cairo_surface_observer_mode_t extends CEnumU[cairo_surface_observer_mode_
     inline def &(b: cairo_surface_observer_mode_t): cairo_surface_observer_mode_t = a & b
     inline def |(b: cairo_surface_observer_mode_t): cairo_surface_observer_mode_t = a | b
     inline def is(b: cairo_surface_observer_mode_t): Boolean = (a & b) == b
-

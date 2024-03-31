@@ -1,15 +1,9 @@
 package cairo
-package structs
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
-
-import _root_.cairo.enumerations.*
-import _root_.cairo.aliases.*
-import _root_.cairo.structs.*
-import _root_.cairo.unions.*
 
 /**
  * [bindgen] header: /usr/include/cairo/cairo.h
@@ -520,4 +514,3 @@ object cairo_user_data_key_t:
   extension (struct: cairo_user_data_key_t)
     def unused : CInt = struct._1
     def unused_=(value: CInt): Unit = !struct.at1 = value
-

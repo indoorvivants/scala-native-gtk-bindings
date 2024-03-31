@@ -1,15 +1,9 @@
 package graphene
-package aliases
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
-
-import _root_.graphene.enumerations.*
-import _root_.graphene.aliases.*
-import _root_.graphene.structs.*
-import _root_.graphene.unions.*
 
 /**
  * [bindgen] header: /usr/lib/llvm-14/lib/clang/14.0.0/include/xmmintrin.h
@@ -30,4 +24,3 @@ object graphene_simd4f_t:
   inline def apply(inline o: __m128): graphene_simd4f_t = o
   extension (v: graphene_simd4f_t)
     inline def value: __m128 = v
-
