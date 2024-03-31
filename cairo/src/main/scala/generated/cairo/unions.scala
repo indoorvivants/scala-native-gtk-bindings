@@ -1,15 +1,9 @@
 package cairo
-package unions
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
-
-import _root_.cairo.enumerations.*
-import _root_.cairo.aliases.*
-import _root_.cairo.structs.*
-import _root_.cairo.unions.*
 
 /**
  * [bindgen] header: /usr/include/cairo/cairo.h
@@ -132,4 +126,3 @@ object cairo_path_data_t:
     def header_=(value: cairo_path_data_t.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct0]] = value
     def point : cairo_path_data_t.Struct1 = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct1]]
     def point_=(value: cairo_path_data_t.Struct1): Unit = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct1]] = value
-

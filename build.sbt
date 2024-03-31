@@ -81,8 +81,7 @@ lazy val adwaita = project
         "harfbuzz",
         "pango"
       ) {
-        Binding
-          .builder(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
+        Binding(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
           .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
           .addCImport("adwaita.h")
           .withMultiFile(true)
@@ -96,8 +95,7 @@ lazy val gio = project
   .settings(
     bindgenBindings +=
       buildWithDependencies("glib", "gobject") {
-        Binding
-          .builder(findHeader("gio-2.0", _ / "gio" / "gio.h"), "gio")
+        Binding(findHeader("gio-2.0", _ / "gio" / "gio.h"), "gio")
           .withClangFlags(pkgConfig("gio-2.0", "cflags"))
           .addCImport("gio.h")
           .withOpaqueStructs(Set("G*"))
@@ -110,12 +108,10 @@ lazy val glib = project
   .configure(pkgConfigured("glib-2.0"))
   .settings(
     bindgenBindings +=
-      Binding
-        .builder(findHeader("glib-2.0", _ / "glib.h"), "glib")
+      Binding(findHeader("glib-2.0", _ / "glib.h"), "glib")
         .withClangFlags(pkgConfig("glib-2.0", "cflags"))
         .addCImport("glib.h")
         .withMultiFile(true)
-        .build
   )
 
 lazy val gtk = project
@@ -134,8 +130,7 @@ lazy val gtk = project
         "harfbuzz",
         "pango"
       ) {
-        Binding
-          .builder(findHeader("gtk4", _ / "gtk" / "gtk.h"), "gtk")
+        Binding(findHeader("gtk4", _ / "gtk" / "gtk.h"), "gtk")
           .withClangFlags(pkgConfig("gtk4", "cflags"))
           .addCImport("gtk.h")
           .withMultiFile(true)
@@ -150,8 +145,7 @@ lazy val gobject =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "gio") {
-          Binding
-            .builder(findHeader("gobject-2.0", _ / "glib-object.h"), "gobject")
+          Binding(findHeader("gobject-2.0", _ / "glib-object.h"), "gobject")
             .withClangFlags(pkgConfig("gobject-2.0", "cflags"))
             .addCImport("glib-object.h")
             .withMultiFile(true)
@@ -166,8 +160,7 @@ lazy val pango =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "cairo", "gobject", "harfbuzz") {
-          Binding
-            .builder(findHeader("pango", _ / "pango" / "pango.h"), "pango")
+          Binding(findHeader("pango", _ / "pango" / "pango.h"), "pango")
             .withClangFlags(pkgConfig("pango", "cflags"))
             .addCImport("pango.h")
             .withMultiFile(true)
@@ -182,11 +175,10 @@ lazy val gdkpixbuf =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "gobject", "gio", "cairo") {
-          Binding
-            .builder(
-              findHeader("gdk-pixbuf-2.0", _ / "gdk-pixbuf" / "gdk-pixbuf.h"),
-              "gdkpixbuf"
-            )
+          Binding(
+            findHeader("gdk-pixbuf-2.0", _ / "gdk-pixbuf" / "gdk-pixbuf.h"),
+            "gdkpixbuf"
+          )
             .withClangFlags(pkgConfig("gdk-pixbuf-2.0", "cflags"))
             .addCImport("gdk-pixbuf.h")
             .withMultiFile(true)
@@ -200,12 +192,10 @@ lazy val cairo =
     .configure(pkgConfigured("cairo"))
     .settings(
       bindgenBindings +=
-        Binding
-          .builder(findHeader("cairo", _ / "cairo.h"), "cairo")
+        Binding(findHeader("cairo", _ / "cairo.h"), "cairo")
           .withClangFlags(pkgConfig("cairo", "cflags"))
           .addCImport("cairo.h")
           .withMultiFile(true)
-          .build
     )
 
 lazy val graphene =
@@ -215,8 +205,7 @@ lazy val graphene =
     .configure(pkgConfigured("graphene-1.0"))
     .settings(
       bindgenBindings +=
-        Binding
-          .builder(findHeader("graphene-1.0", _ / "graphene.h"), "graphene")
+        Binding(findHeader("graphene-1.0", _ / "graphene.h"), "graphene")
           .withClangFlags(pkgConfig("graphene-1.0", "cflags"))
           .addCImport("graphene.h")
           .addClangFlag(
@@ -224,7 +213,6 @@ lazy val graphene =
           )
           .addExternalName("graphene_simd4f_get", "<nopackage>")
           .withMultiFile(true)
-          .build
     )
 
 lazy val girepository =
@@ -235,11 +223,10 @@ lazy val girepository =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "gobject") {
-          Binding
-            .builder(
-              findHeader("gobject-introspection-1.0", _ / "girepository.h"),
-              "girepository"
-            )
+          Binding(
+            findHeader("gobject-introspection-1.0", _ / "girepository.h"),
+            "girepository"
+          )
             .withClangFlags(pkgConfig("gobject-introspection-1.0", "cflags"))
             .addCImport("girepository.h")
             .withMultiFile(true)
@@ -253,12 +240,10 @@ lazy val harfbuzz =
     .configure(pkgConfigured("harfbuzz"))
     .settings(
       bindgenBindings +=
-        Binding
-          .builder(findHeader("harfbuzz", _ / "hb.h"), "harfbuzz")
+        Binding(findHeader("harfbuzz", _ / "hb.h"), "harfbuzz")
           .withClangFlags(pkgConfig("harfbuzz", "cflags"))
           .addCImport("hb.h")
           .withMultiFile(true)
-          .build
     )
 
 def generateXsd(
@@ -353,7 +338,6 @@ def pkgConfiguredSimple: Project => Project = { proj =>
           (ThisBuild / baseDirectory).value / ".remote-cache"
         )
       ),
-      resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
       scalaVersion := "3.3.3"
     )
 }
@@ -377,7 +361,7 @@ def pkgConfigured(name: String): Project => Project = { proj =>
     )
 }
 
-def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
+def buildWithDependencies(deps: String*)(bb: Binding) = {
   def extPaths(dep: String) = dep match {
     case "glib" =>
       List(
@@ -412,7 +396,7 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
   val externals =
     deps.flatMap { dep => extPaths(dep).map(_ -> dep).toMap }.toMap
 
-  bb.addExternalPaths(externals).build
+  bb.addExternalPaths(externals)
 }
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
