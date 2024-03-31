@@ -1,4 +1,4 @@
-package adwaita
+package graphene
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
@@ -14,3 +14,13 @@ object __m128:
   inline def apply(inline o: CStruct4[Float, Float, Float, Float]): __m128 = o
   extension (v: __m128)
     inline def value: CStruct4[Float, Float, Float, Float] = v
+
+/**
+ * [bindgen] header: /usr/lib/x86_64-linux-gnu/graphene-1.0/include/graphene-config.h
+*/
+type graphene_simd4f_t = __m128
+object graphene_simd4f_t: 
+  given _tag: Tag[graphene_simd4f_t] = __m128._tag
+  inline def apply(inline o: __m128): graphene_simd4f_t = o
+  extension (v: graphene_simd4f_t)
+    inline def value: __m128 = v

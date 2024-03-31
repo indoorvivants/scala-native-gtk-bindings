@@ -1,4 +1,4 @@
-package adwaita
+package gtk
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
