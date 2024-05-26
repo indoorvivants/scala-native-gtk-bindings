@@ -116,6 +116,6 @@ val importantData =
 val importantDataContents: Ptr[Byte] = g_bytes_get_data(testData, null)
 ```
 
-The provided bytes is always null terminated. As this loaded in UTF-8 text data this means
+The provided bytes are always null terminated. As this loaded in UTF-8 text data this means
 `importantDataContents` is a valid `CString`.
 
