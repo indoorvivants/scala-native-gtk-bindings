@@ -46,13 +46,13 @@ within the executable. The overall process for integration with `scala-native-gt
 4. This `.c` file will be automatically compiled as part of the scala native build.
 5. The application is now ready to access resources using `g_resource_lookup_data` and related APIs.
 
-Aside from the `glib-compile-sources`, most of the process is automatic: The generated C will be automatically
-included and the registration functions in the generated C will be automatically called.
-
+Aside from the `glib-compile-sources`, the process is automatic: The generated C will be automatically
+included in the compile and the resource registration functions in the generated C will be automatically
+called.
 
 ### Example using `sbt`
 
-Here is an example using the `sbt` build tool the process build and load a resource.
+Here is an example, using the `sbt` build tool, of the build process and loading a resource.
 
 #### Create the `gresource.xml`
 
@@ -103,8 +103,8 @@ errors as failures.
 
 #### Use the resources
 
-At this point the required steps are done! The resources will be compiled into the application and are
-available to access. EG:
+At this point the required steps are done! The resources are compiled into the application and are
+available for access. EG:
 
 ```scala
 val importantData =
@@ -116,6 +116,5 @@ val importantData =
 val importantDataContents: Ptr[Byte] = g_bytes_get_data(testData, null)
 ```
 
-The provided bytes are always null terminated. As this loaded in UTF-8 text data this means
-`importantDataContents` is a valid `CString`.
+The provided bytes are always null terminated. In this case, `importantDataContents` is a valid `CString`.
 
