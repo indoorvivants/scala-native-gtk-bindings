@@ -107,14 +107,15 @@ At this point the required steps are done! The resources are compiled into the a
 available for access. EG:
 
 ```scala
-val importantData =
+val myData =
     g_resources_lookup_data(
         c"/com/example/my-scala-native-exe/data.txt",
         GResourceLookupFlags.G_RESOURCE_LOOKUP_FLAGS_NONE,
         null
     )
-val importantDataContents: Ptr[Byte] = g_bytes_get_data(testData, null)
+val myDataContents: Ptr[Byte] = g_bytes_get_data(myData, null)
 ```
 
-The provided bytes are always null terminated. In this case, `importantDataContents` is a valid `CString`.
+The bytes from `g_byte_get_data` are always null terminated. In this case, `myDataContents` is a valid
+`CString`.
 
