@@ -76,14 +76,16 @@ lazy val adwaita = project
         "gobject",
         "graphene",
         "gtk",
-        "libcairo",
-        "libharfbuzz",
+        "cairo",
+        "harfbuzz",
         "pango"
       ) {
-        Binding(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
+        val headerPath = findHeader("libadwaita-1", _ / "adwaita.h")
+        Binding(headerPath, "adwaita")
           .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
           .addCImport("adwaita.h")
           .withMultiFile(true)
+          .addExcludedSystemPath(headerPath.toPath().getParent())
       }
   )
 

@@ -1,5 +1,4 @@
 package adwaita
-package enumerations
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
@@ -29,7 +28,7 @@ object AdwAnimationState extends CEnumU[AdwAnimationState]:
       case ADW_ANIMATION_PAUSED => Some("ADW_ANIMATION_PAUSED")
       case ADW_ANIMATION_PLAYING => Some("ADW_ANIMATION_PLAYING")
       case ADW_ANIMATION_FINISHED => Some("ADW_ANIMATION_FINISHED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwAnimationState)
     inline def &(b: AdwAnimationState): AdwAnimationState = a & b
     inline def |(b: AdwAnimationState): AdwAnimationState = a | b
@@ -48,7 +47,7 @@ object AdwCenteringPolicy extends CEnumU[AdwCenteringPolicy]:
     inline value match
       case ADW_CENTERING_POLICY_LOOSE => Some("ADW_CENTERING_POLICY_LOOSE")
       case ADW_CENTERING_POLICY_STRICT => Some("ADW_CENTERING_POLICY_STRICT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwCenteringPolicy)
     inline def &(b: AdwCenteringPolicy): AdwCenteringPolicy = a & b
     inline def |(b: AdwCenteringPolicy): AdwCenteringPolicy = a | b
@@ -73,7 +72,7 @@ object AdwColorScheme extends CEnumU[AdwColorScheme]:
       case ADW_COLOR_SCHEME_PREFER_LIGHT => Some("ADW_COLOR_SCHEME_PREFER_LIGHT")
       case ADW_COLOR_SCHEME_PREFER_DARK => Some("ADW_COLOR_SCHEME_PREFER_DARK")
       case ADW_COLOR_SCHEME_FORCE_DARK => Some("ADW_COLOR_SCHEME_FORCE_DARK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwColorScheme)
     inline def &(b: AdwColorScheme): AdwColorScheme = a & b
     inline def |(b: AdwColorScheme): AdwColorScheme = a | b
@@ -150,7 +149,7 @@ object AdwEasing extends CEnumU[AdwEasing]:
       case ADW_EASE_IN_BOUNCE => Some("ADW_EASE_IN_BOUNCE")
       case ADW_EASE_OUT_BOUNCE => Some("ADW_EASE_OUT_BOUNCE")
       case ADW_EASE_IN_OUT_BOUNCE => Some("ADW_EASE_IN_OUT_BOUNCE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwEasing)
     inline def &(b: AdwEasing): AdwEasing = a & b
     inline def |(b: AdwEasing): AdwEasing = a | b
@@ -171,7 +170,7 @@ object AdwFlapFoldPolicy extends CEnumU[AdwFlapFoldPolicy]:
       case ADW_FLAP_FOLD_POLICY_NEVER => Some("ADW_FLAP_FOLD_POLICY_NEVER")
       case ADW_FLAP_FOLD_POLICY_ALWAYS => Some("ADW_FLAP_FOLD_POLICY_ALWAYS")
       case ADW_FLAP_FOLD_POLICY_AUTO => Some("ADW_FLAP_FOLD_POLICY_AUTO")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwFlapFoldPolicy)
     inline def &(b: AdwFlapFoldPolicy): AdwFlapFoldPolicy = a & b
     inline def |(b: AdwFlapFoldPolicy): AdwFlapFoldPolicy = a | b
@@ -192,7 +191,7 @@ object AdwFlapTransitionType extends CEnumU[AdwFlapTransitionType]:
       case ADW_FLAP_TRANSITION_TYPE_OVER => Some("ADW_FLAP_TRANSITION_TYPE_OVER")
       case ADW_FLAP_TRANSITION_TYPE_UNDER => Some("ADW_FLAP_TRANSITION_TYPE_UNDER")
       case ADW_FLAP_TRANSITION_TYPE_SLIDE => Some("ADW_FLAP_TRANSITION_TYPE_SLIDE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwFlapTransitionType)
     inline def &(b: AdwFlapTransitionType): AdwFlapTransitionType = a & b
     inline def |(b: AdwFlapTransitionType): AdwFlapTransitionType = a | b
@@ -211,7 +210,7 @@ object AdwFoldThresholdPolicy extends CEnumU[AdwFoldThresholdPolicy]:
     inline value match
       case ADW_FOLD_THRESHOLD_POLICY_MINIMUM => Some("ADW_FOLD_THRESHOLD_POLICY_MINIMUM")
       case ADW_FOLD_THRESHOLD_POLICY_NATURAL => Some("ADW_FOLD_THRESHOLD_POLICY_NATURAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwFoldThresholdPolicy)
     inline def &(b: AdwFoldThresholdPolicy): AdwFoldThresholdPolicy = a & b
     inline def |(b: AdwFoldThresholdPolicy): AdwFoldThresholdPolicy = a | b
@@ -232,7 +231,7 @@ object AdwLeafletTransitionType extends CEnumU[AdwLeafletTransitionType]:
       case ADW_LEAFLET_TRANSITION_TYPE_OVER => Some("ADW_LEAFLET_TRANSITION_TYPE_OVER")
       case ADW_LEAFLET_TRANSITION_TYPE_UNDER => Some("ADW_LEAFLET_TRANSITION_TYPE_UNDER")
       case ADW_LEAFLET_TRANSITION_TYPE_SLIDE => Some("ADW_LEAFLET_TRANSITION_TYPE_SLIDE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwLeafletTransitionType)
     inline def &(b: AdwLeafletTransitionType): AdwLeafletTransitionType = a & b
     inline def |(b: AdwLeafletTransitionType): AdwLeafletTransitionType = a | b
@@ -251,7 +250,7 @@ object AdwNavigationDirection extends CEnumU[AdwNavigationDirection]:
     inline value match
       case ADW_NAVIGATION_DIRECTION_BACK => Some("ADW_NAVIGATION_DIRECTION_BACK")
       case ADW_NAVIGATION_DIRECTION_FORWARD => Some("ADW_NAVIGATION_DIRECTION_FORWARD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwNavigationDirection)
     inline def &(b: AdwNavigationDirection): AdwNavigationDirection = a & b
     inline def |(b: AdwNavigationDirection): AdwNavigationDirection = a | b
@@ -270,7 +269,7 @@ object AdwSqueezerTransitionType extends CEnumU[AdwSqueezerTransitionType]:
     inline value match
       case ADW_SQUEEZER_TRANSITION_TYPE_NONE => Some("ADW_SQUEEZER_TRANSITION_TYPE_NONE")
       case ADW_SQUEEZER_TRANSITION_TYPE_CROSSFADE => Some("ADW_SQUEEZER_TRANSITION_TYPE_CROSSFADE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwSqueezerTransitionType)
     inline def &(b: AdwSqueezerTransitionType): AdwSqueezerTransitionType = a & b
     inline def |(b: AdwSqueezerTransitionType): AdwSqueezerTransitionType = a | b
@@ -289,7 +288,7 @@ object AdwToastPriority extends CEnumU[AdwToastPriority]:
     inline value match
       case ADW_TOAST_PRIORITY_NORMAL => Some("ADW_TOAST_PRIORITY_NORMAL")
       case ADW_TOAST_PRIORITY_HIGH => Some("ADW_TOAST_PRIORITY_HIGH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwToastPriority)
     inline def &(b: AdwToastPriority): AdwToastPriority = a & b
     inline def |(b: AdwToastPriority): AdwToastPriority = a | b
@@ -308,9 +307,8 @@ object AdwViewSwitcherPolicy extends CEnumU[AdwViewSwitcherPolicy]:
     inline value match
       case ADW_VIEW_SWITCHER_POLICY_NARROW => Some("ADW_VIEW_SWITCHER_POLICY_NARROW")
       case ADW_VIEW_SWITCHER_POLICY_WIDE => Some("ADW_VIEW_SWITCHER_POLICY_WIDE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: AdwViewSwitcherPolicy)
     inline def &(b: AdwViewSwitcherPolicy): AdwViewSwitcherPolicy = a & b
     inline def |(b: AdwViewSwitcherPolicy): AdwViewSwitcherPolicy = a | b
     inline def is(b: AdwViewSwitcherPolicy): Boolean = (a & b) == b
-
