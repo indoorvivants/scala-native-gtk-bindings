@@ -59,6 +59,7 @@ def renderClass(
               scribe.warn(s"Failed to render method ${meth.name}: `$msg`")
           case Some(value) =>
             line("// " + value)
+            emptyLine()
 
       coll
         .effectsSoFar()

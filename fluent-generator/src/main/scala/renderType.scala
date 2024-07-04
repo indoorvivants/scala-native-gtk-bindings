@@ -187,6 +187,13 @@ def renderType(
         )
       ),
       whenTypeValue("int")("Int"),
+      whenTypeValue("goffset")("Long").map(
+        _.withMassageFromUnsafe(Massage.InferredCast)
+          .withMassageIntoUnsafe(
+            Massage.Apply("gint64"),
+            Massage.Apply("goffset")
+          )
+      ),
       whenTypeValue("gboolean")("Boolean").map(
         _.withMassageFromUnsafe(Massage.Field("value.!=(0)"))
           .withMassageIntoUnsafe(
@@ -199,6 +206,7 @@ def renderType(
       whenTypeValue("double")("Double"),
       whenTypeValue("va_list")("CVarArgList"),
       glibAlias("gpointer", "gpointer")("Ptr[Byte]"),
+      glibAlias("goffset", "goffset")("Long"),
       whenTypeValue("gpointer")("Ptr[Byte]").map(
         _.withMassageIntoUnsafe(Massage.Apply("gpointer"))
           .withMassageFromUnsafe(Massage.Field("value"))
@@ -211,13 +219,22 @@ def renderType(
       unsignedAlias("guchar", "UByte"),
       unsignedAlias("guint16", "UShort"),
       unsignedAlias("guint", "UInt"),
+      whenTypeValue("unsigned")("UInt").map(
+        _.withMassageFromUnsafe(Massage.InferredCast)
+          .withMassageIntoUnsafe(Massage.Apply("guint"), Massage.InferredCast)
+          .withEffect(importGlib("guint"))
+          .withEffect(importUnsigned)
+      ),
       unsignedAlias("guint32", "UInt"),
       unsignedAlias("guint64", "ULong"),
+      unsignedAlias("gint32", "Int"),
       unsignedAlias("gint64", "Long"),
       unsignedAlias("gulong", "ULong"),
       unsignedAlias("gsize", "CUnsignedLongInt"),
       unsignedAlias("gssize", "CLongInt"),
-      glibAlias("gchar", "char")("Byte"),
+      glibAlias("gchar", "char")("Byte").map(
+        _.withMassageIntoUnsafe(Massage.InferredCast)
+      ),
       whenTypeValue("void")("Unit")
     ).reduce(_ orElse _)
   end getCType
@@ -264,7 +281,11 @@ def renderType(
             TypeMapping(other.short).withEffect(other.effects*)
         .orElse(getCType(tpe.name, tpe.typeValue))
         .orElse(deconstructCType(tpe.typeValue))
-        .getOrElse(TypeMapping(s"Any /* ${tpe.name}: `${tpe.typeValue}` */"))
+        .getOrElse(
+          TypeMapping(
+            s"Any /* failed to render type: name=`${tpe.name}`: typeValue=`${tpe.typeValue}` */"
+          )
+        )
 
     case ar: ArrayType =>
       val elementType = ar.AnyType.as[Type]

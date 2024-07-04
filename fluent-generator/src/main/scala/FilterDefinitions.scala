@@ -22,6 +22,23 @@ def filterDefinitions(
   def all(b: Boolean*) =
     b.forall(identity)
 
+  def hasArray(meth: Method): Boolean =
+    meth.parameters
+      .flatMap(_.tpe)
+      .collectFirst:
+        case _: ArrayType => true
+      .contains(true)
+  end hasArray
+
+  def hasOutParameters(meth: Method): Boolean =
+    meth.parameters
+      .collectFirst:
+        case p: Parameter if p.direction.contains(Out)                 => true
+        case p: Instanceu45parameter if p.direction.contains(OutValue) => true
+        // case _: ArrayType => true
+      .contains(true)
+  end hasOutParameters
+
   boundary[Option[String]]:
     def check(b: Boolean, msg: String) =
       if b then break(Some(msg))
@@ -44,7 +61,18 @@ def filterDefinitions(
     weirdClass("UnixMountMonitor")
     weirdClass("UnixOutputStream")
     weirdClass("UnixFDMessage")
-    weirdClass("DekstopAppInfo")
+    weirdClass("DesktopAppInfo")
+    weirdClass("ThreadedResolver")
+
+    method.foreach: meth =>
+      check(
+        hasArray(meth),
+        s"Method ${meth.name} contains an array parameter, which is not supported yet"
+      )
+      check(
+        hasOutParameters(meth),
+        s"Method ${meth.name} contains an OUT parameter, which is not supported yet"
+      )
 
     None
 
