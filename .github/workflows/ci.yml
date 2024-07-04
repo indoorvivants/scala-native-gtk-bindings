@@ -8,6 +8,7 @@ on:
 
 env: 
   JAVA_OPTS: -Xmx6G
+  LLVM_VERSION: 17
 
 jobs:
   build:
@@ -40,6 +41,15 @@ jobs:
 
       - name: Install GTK
         run: sudo apt-get install libgtk-4-dev
+
+      - name: Install LLVM 17
+        run: |
+          ./.github/workflows/scripts/setup.sh $LLVM_VERSION
+          echo "LLVM_BIN=/usr/lib/llvm-$LLVM_VERSION/bin" >> $GITHUB_ENV
+
+      - name: Check raw bindings
+        run: |
+          sbt --client bindgenGenerateAll && git diff --exit-code
 
       - name: Build binary
         run: sbt --client examples/nativeLink
