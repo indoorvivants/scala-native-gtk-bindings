@@ -22,7 +22,7 @@ object GdkColorspace extends CEnumU[GdkColorspace]:
   inline def getName(inline value: GdkColorspace): Option[String] =
     inline value match
       case GDK_COLORSPACE_RGB => Some("GDK_COLORSPACE_RGB")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkColorspace)
     inline def &(b: GdkColorspace): GdkColorspace = a & b
     inline def |(b: GdkColorspace): GdkColorspace = a | b
@@ -45,7 +45,7 @@ object GdkInterpType extends CEnumU[GdkInterpType]:
       case GDK_INTERP_TILES => Some("GDK_INTERP_TILES")
       case GDK_INTERP_BILINEAR => Some("GDK_INTERP_BILINEAR")
       case GDK_INTERP_HYPER => Some("GDK_INTERP_HYPER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkInterpType)
     inline def &(b: GdkInterpType): GdkInterpType = a & b
     inline def |(b: GdkInterpType): GdkInterpType = a | b
@@ -64,7 +64,7 @@ object GdkPixbufAlphaMode extends CEnumU[GdkPixbufAlphaMode]:
     inline value match
       case GDK_PIXBUF_ALPHA_BILEVEL => Some("GDK_PIXBUF_ALPHA_BILEVEL")
       case GDK_PIXBUF_ALPHA_FULL => Some("GDK_PIXBUF_ALPHA_FULL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkPixbufAlphaMode)
     inline def &(b: GdkPixbufAlphaMode): GdkPixbufAlphaMode = a & b
     inline def |(b: GdkPixbufAlphaMode): GdkPixbufAlphaMode = a | b
@@ -93,7 +93,7 @@ object GdkPixbufError extends CEnumU[GdkPixbufError]:
       case GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION => Some("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION")
       case GDK_PIXBUF_ERROR_FAILED => Some("GDK_PIXBUF_ERROR_FAILED")
       case GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION => Some("GDK_PIXBUF_ERROR_INCOMPLETE_ANIMATION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkPixbufError)
     inline def &(b: GdkPixbufError): GdkPixbufError = a & b
     inline def |(b: GdkPixbufError): GdkPixbufError = a | b
@@ -116,7 +116,7 @@ object GdkPixbufRotation extends CEnumU[GdkPixbufRotation]:
       case GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE => Some("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE")
       case GDK_PIXBUF_ROTATE_UPSIDEDOWN => Some("GDK_PIXBUF_ROTATE_UPSIDEDOWN")
       case GDK_PIXBUF_ROTATE_CLOCKWISE => Some("GDK_PIXBUF_ROTATE_CLOCKWISE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkPixbufRotation)
     inline def &(b: GdkPixbufRotation): GdkPixbufRotation = a & b
     inline def |(b: GdkPixbufRotation): GdkPixbufRotation = a | b

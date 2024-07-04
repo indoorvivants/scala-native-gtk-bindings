@@ -44,7 +44,7 @@ object GAsciiType extends CEnumU[GAsciiType]:
       case G_ASCII_SPACE => Some("G_ASCII_SPACE")
       case G_ASCII_UPPER => Some("G_ASCII_UPPER")
       case G_ASCII_XDIGIT => Some("G_ASCII_XDIGIT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GAsciiType)
     inline def &(b: GAsciiType): GAsciiType = a & b
     inline def |(b: GAsciiType): GAsciiType = a | b
@@ -75,7 +75,7 @@ object GBookmarkFileError extends CEnumU[GBookmarkFileError]:
       case G_BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING => Some("G_BOOKMARK_FILE_ERROR_UNKNOWN_ENCODING")
       case G_BOOKMARK_FILE_ERROR_WRITE => Some("G_BOOKMARK_FILE_ERROR_WRITE")
       case G_BOOKMARK_FILE_ERROR_FILE_NOT_FOUND => Some("G_BOOKMARK_FILE_ERROR_FILE_NOT_FOUND")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GBookmarkFileError)
     inline def &(b: GBookmarkFileError): GBookmarkFileError = a & b
     inline def |(b: GBookmarkFileError): GBookmarkFileError = a | b
@@ -100,7 +100,7 @@ object GChecksumType extends CEnumU[GChecksumType]:
       case G_CHECKSUM_SHA256 => Some("G_CHECKSUM_SHA256")
       case G_CHECKSUM_SHA512 => Some("G_CHECKSUM_SHA512")
       case G_CHECKSUM_SHA384 => Some("G_CHECKSUM_SHA384")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GChecksumType)
     inline def &(b: GChecksumType): GChecksumType = a & b
     inline def |(b: GChecksumType): GChecksumType = a | b
@@ -131,7 +131,7 @@ object GConvertError extends CEnumU[GConvertError]:
       case G_CONVERT_ERROR_NOT_ABSOLUTE_PATH => Some("G_CONVERT_ERROR_NOT_ABSOLUTE_PATH")
       case G_CONVERT_ERROR_NO_MEMORY => Some("G_CONVERT_ERROR_NO_MEMORY")
       case G_CONVERT_ERROR_EMBEDDED_NUL => Some("G_CONVERT_ERROR_EMBEDDED_NUL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GConvertError)
     inline def &(b: GConvertError): GConvertError = a & b
     inline def |(b: GConvertError): GConvertError = a | b
@@ -149,7 +149,7 @@ object GDateDMY extends CEnumU[GDateDMY]:
       case G_DATE_DAY => Some("G_DATE_DAY")
       case G_DATE_MONTH => Some("G_DATE_MONTH")
       case G_DATE_YEAR => Some("G_DATE_YEAR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDateDMY)
     inline def &(b: GDateDMY): GDateDMY = a & b
     inline def |(b: GDateDMY): GDateDMY = a | b
@@ -187,7 +187,7 @@ object GDateMonth extends CEnumU[GDateMonth]:
       case G_DATE_OCTOBER => Some("G_DATE_OCTOBER")
       case G_DATE_NOVEMBER => Some("G_DATE_NOVEMBER")
       case G_DATE_DECEMBER => Some("G_DATE_DECEMBER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDateMonth)
     inline def &(b: GDateMonth): GDateMonth = a & b
     inline def |(b: GDateMonth): GDateMonth = a | b
@@ -215,7 +215,7 @@ object GDateWeekday extends CEnumU[GDateWeekday]:
       case G_DATE_FRIDAY => Some("G_DATE_FRIDAY")
       case G_DATE_SATURDAY => Some("G_DATE_SATURDAY")
       case G_DATE_SUNDAY => Some("G_DATE_SUNDAY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDateWeekday)
     inline def &(b: GDateWeekday): GDateWeekday = a & b
     inline def |(b: GDateWeekday): GDateWeekday = a | b
@@ -243,7 +243,7 @@ object GErrorType extends CEnumU[GErrorType]:
       case G_ERR_DIGIT_RADIX => Some("G_ERR_DIGIT_RADIX")
       case G_ERR_FLOAT_RADIX => Some("G_ERR_FLOAT_RADIX")
       case G_ERR_FLOAT_MALFORMED => Some("G_ERR_FLOAT_MALFORMED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GErrorType)
     inline def &(b: GErrorType): GErrorType = a & b
     inline def |(b: GErrorType): GErrorType = a | b
@@ -305,7 +305,7 @@ object GFileError extends CEnumU[GFileError]:
       case G_FILE_ERROR_PERM => Some("G_FILE_ERROR_PERM")
       case G_FILE_ERROR_NOSYS => Some("G_FILE_ERROR_NOSYS")
       case G_FILE_ERROR_FAILED => Some("G_FILE_ERROR_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileError)
     inline def &(b: GFileError): GFileError = a & b
     inline def |(b: GFileError): GFileError = a | b
@@ -328,7 +328,7 @@ object GFileSetContentsFlags extends CEnumU[GFileSetContentsFlags]:
       case G_FILE_SET_CONTENTS_CONSISTENT => Some("G_FILE_SET_CONTENTS_CONSISTENT")
       case G_FILE_SET_CONTENTS_DURABLE => Some("G_FILE_SET_CONTENTS_DURABLE")
       case G_FILE_SET_CONTENTS_ONLY_EXISTING => Some("G_FILE_SET_CONTENTS_ONLY_EXISTING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileSetContentsFlags)
     inline def &(b: GFileSetContentsFlags): GFileSetContentsFlags = a & b
     inline def |(b: GFileSetContentsFlags): GFileSetContentsFlags = a | b
@@ -350,7 +350,7 @@ object GFileTest extends CEnumU[GFileTest]:
       case G_FILE_TEST_IS_DIR => Some("G_FILE_TEST_IS_DIR")
       case G_FILE_TEST_IS_EXECUTABLE => Some("G_FILE_TEST_IS_EXECUTABLE")
       case G_FILE_TEST_EXISTS => Some("G_FILE_TEST_EXISTS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileTest)
     inline def &(b: GFileTest): GFileTest = a & b
     inline def |(b: GFileTest): GFileTest = a | b
@@ -364,17 +364,13 @@ object GFormatSizeFlags extends CEnumU[GFormatSizeFlags]:
   val G_FORMAT_SIZE_LONG_FORMAT = define(1)
   val G_FORMAT_SIZE_IEC_UNITS = define(2)
   val G_FORMAT_SIZE_BITS = define(4)
-  val G_FORMAT_SIZE_ONLY_VALUE = define(8)
-  val G_FORMAT_SIZE_ONLY_UNIT = define(16)
   inline def getName(inline value: GFormatSizeFlags): Option[String] =
     inline value match
       case G_FORMAT_SIZE_DEFAULT => Some("G_FORMAT_SIZE_DEFAULT")
       case G_FORMAT_SIZE_LONG_FORMAT => Some("G_FORMAT_SIZE_LONG_FORMAT")
       case G_FORMAT_SIZE_IEC_UNITS => Some("G_FORMAT_SIZE_IEC_UNITS")
       case G_FORMAT_SIZE_BITS => Some("G_FORMAT_SIZE_BITS")
-      case G_FORMAT_SIZE_ONLY_VALUE => Some("G_FORMAT_SIZE_ONLY_VALUE")
-      case G_FORMAT_SIZE_ONLY_UNIT => Some("G_FORMAT_SIZE_ONLY_UNIT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFormatSizeFlags)
     inline def &(b: GFormatSizeFlags): GFormatSizeFlags = a & b
     inline def |(b: GFormatSizeFlags): GFormatSizeFlags = a | b
@@ -392,7 +388,7 @@ object GHookFlagMask extends CEnumU[GHookFlagMask]:
       case G_HOOK_FLAG_ACTIVE => Some("G_HOOK_FLAG_ACTIVE")
       case G_HOOK_FLAG_IN_CALL => Some("G_HOOK_FLAG_IN_CALL")
       case G_HOOK_FLAG_MASK => Some("G_HOOK_FLAG_MASK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GHookFlagMask)
     inline def &(b: GHookFlagMask): GHookFlagMask = a & b
     inline def |(b: GHookFlagMask): GHookFlagMask = a | b
@@ -422,7 +418,7 @@ object GIOChannelError extends CEnumU[GIOChannelError]:
       case G_IO_CHANNEL_ERROR_OVERFLOW => Some("G_IO_CHANNEL_ERROR_OVERFLOW")
       case G_IO_CHANNEL_ERROR_PIPE => Some("G_IO_CHANNEL_ERROR_PIPE")
       case G_IO_CHANNEL_ERROR_FAILED => Some("G_IO_CHANNEL_ERROR_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOChannelError)
     inline def &(b: GIOChannelError): GIOChannelError = a & b
     inline def |(b: GIOChannelError): GIOChannelError = a | b
@@ -446,7 +442,7 @@ object GIOCondition extends CEnumU[GIOCondition]:
       case G_IO_ERR => Some("G_IO_ERR")
       case G_IO_HUP => Some("G_IO_HUP")
       case G_IO_NVAL => Some("G_IO_NVAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOCondition)
     inline def &(b: GIOCondition): GIOCondition = a & b
     inline def |(b: GIOCondition): GIOCondition = a | b
@@ -466,7 +462,7 @@ object GIOError extends CEnumU[GIOError]:
       case G_IO_ERROR_AGAIN => Some("G_IO_ERROR_AGAIN")
       case G_IO_ERROR_INVAL => Some("G_IO_ERROR_INVAL")
       case G_IO_ERROR_UNKNOWN => Some("G_IO_ERROR_UNKNOWN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOError)
     inline def &(b: GIOError): GIOError = a & b
     inline def |(b: GIOError): GIOError = a | b
@@ -476,7 +472,6 @@ opaque type GIOFlags = CUnsignedInt
 object GIOFlags extends CEnumU[GIOFlags]:
   given _tag: Tag[GIOFlags] = Tag.UInt
   inline def define(inline a: Long): GIOFlags = a.toUInt
-  val G_IO_FLAG_NONE = define(0)
   val G_IO_FLAG_APPEND = define(1)
   val G_IO_FLAG_NONBLOCK = define(2)
   val G_IO_FLAG_IS_READABLE = define(4)
@@ -488,7 +483,6 @@ object GIOFlags extends CEnumU[GIOFlags]:
   val G_IO_FLAG_SET_MASK = define(3)
   inline def getName(inline value: GIOFlags): Option[String] =
     inline value match
-      case G_IO_FLAG_NONE => Some("G_IO_FLAG_NONE")
       case G_IO_FLAG_APPEND => Some("G_IO_FLAG_APPEND")
       case G_IO_FLAG_NONBLOCK => Some("G_IO_FLAG_NONBLOCK")
       case G_IO_FLAG_IS_READABLE => Some("G_IO_FLAG_IS_READABLE")
@@ -498,7 +492,7 @@ object GIOFlags extends CEnumU[GIOFlags]:
       case G_IO_FLAG_MASK => Some("G_IO_FLAG_MASK")
       case G_IO_FLAG_GET_MASK => Some("G_IO_FLAG_GET_MASK")
       case G_IO_FLAG_SET_MASK => Some("G_IO_FLAG_SET_MASK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOFlags)
     inline def &(b: GIOFlags): GIOFlags = a & b
     inline def |(b: GIOFlags): GIOFlags = a | b
@@ -518,7 +512,7 @@ object GIOStatus extends CEnumU[GIOStatus]:
       case G_IO_STATUS_NORMAL => Some("G_IO_STATUS_NORMAL")
       case G_IO_STATUS_EOF => Some("G_IO_STATUS_EOF")
       case G_IO_STATUS_AGAIN => Some("G_IO_STATUS_AGAIN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOStatus)
     inline def &(b: GIOStatus): GIOStatus = a & b
     inline def |(b: GIOStatus): GIOStatus = a | b
@@ -542,7 +536,7 @@ object GKeyFileError extends CEnumU[GKeyFileError]:
       case G_KEY_FILE_ERROR_KEY_NOT_FOUND => Some("G_KEY_FILE_ERROR_KEY_NOT_FOUND")
       case G_KEY_FILE_ERROR_GROUP_NOT_FOUND => Some("G_KEY_FILE_ERROR_GROUP_NOT_FOUND")
       case G_KEY_FILE_ERROR_INVALID_VALUE => Some("G_KEY_FILE_ERROR_INVALID_VALUE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GKeyFileError)
     inline def &(b: GKeyFileError): GKeyFileError = a & b
     inline def |(b: GKeyFileError): GKeyFileError = a | b
@@ -560,7 +554,7 @@ object GKeyFileFlags extends CEnumU[GKeyFileFlags]:
       case G_KEY_FILE_NONE => Some("G_KEY_FILE_NONE")
       case G_KEY_FILE_KEEP_COMMENTS => Some("G_KEY_FILE_KEEP_COMMENTS")
       case G_KEY_FILE_KEEP_TRANSLATIONS => Some("G_KEY_FILE_KEEP_TRANSLATIONS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GKeyFileFlags)
     inline def &(b: GKeyFileFlags): GKeyFileFlags = a & b
     inline def |(b: GKeyFileFlags): GKeyFileFlags = a | b
@@ -590,7 +584,7 @@ object GLogLevelFlags extends CEnum[GLogLevelFlags]:
       case G_LOG_LEVEL_INFO => Some("G_LOG_LEVEL_INFO")
       case G_LOG_LEVEL_DEBUG => Some("G_LOG_LEVEL_DEBUG")
       case G_LOG_LEVEL_MASK => Some("G_LOG_LEVEL_MASK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GLogLevelFlags)
     inline def &(b: GLogLevelFlags): GLogLevelFlags = a & b
     inline def |(b: GLogLevelFlags): GLogLevelFlags = a | b
@@ -609,7 +603,7 @@ object GLogWriterOutput extends CEnumU[GLogWriterOutput]:
     inline value match
       case G_LOG_WRITER_HANDLED => Some("G_LOG_WRITER_HANDLED")
       case G_LOG_WRITER_UNHANDLED => Some("G_LOG_WRITER_UNHANDLED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GLogWriterOutput)
     inline def &(b: GLogWriterOutput): GLogWriterOutput = a & b
     inline def |(b: GLogWriterOutput): GLogWriterOutput = a | b
@@ -628,7 +622,7 @@ object GMainContextFlags extends CEnumU[GMainContextFlags]:
     inline value match
       case G_MAIN_CONTEXT_FLAGS_NONE => Some("G_MAIN_CONTEXT_FLAGS_NONE")
       case G_MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING => Some("G_MAIN_CONTEXT_FLAGS_OWNERLESS_POLLING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMainContextFlags)
     inline def &(b: GMainContextFlags): GMainContextFlags = a & b
     inline def |(b: GMainContextFlags): GMainContextFlags = a | b
@@ -652,7 +646,7 @@ object GMarkupCollectType extends CEnumU[GMarkupCollectType]:
       case G_MARKUP_COLLECT_BOOLEAN => Some("G_MARKUP_COLLECT_BOOLEAN")
       case G_MARKUP_COLLECT_TRISTATE => Some("G_MARKUP_COLLECT_TRISTATE")
       case G_MARKUP_COLLECT_OPTIONAL => Some("G_MARKUP_COLLECT_OPTIONAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMarkupCollectType)
     inline def &(b: GMarkupCollectType): GMarkupCollectType = a & b
     inline def |(b: GMarkupCollectType): GMarkupCollectType = a | b
@@ -681,32 +675,30 @@ object GMarkupError extends CEnumU[GMarkupError]:
       case G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE => Some("G_MARKUP_ERROR_UNKNOWN_ATTRIBUTE")
       case G_MARKUP_ERROR_INVALID_CONTENT => Some("G_MARKUP_ERROR_INVALID_CONTENT")
       case G_MARKUP_ERROR_MISSING_ATTRIBUTE => Some("G_MARKUP_ERROR_MISSING_ATTRIBUTE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMarkupError)
     inline def &(b: GMarkupError): GMarkupError = a & b
     inline def |(b: GMarkupError): GMarkupError = a | b
     inline def is(b: GMarkupError): Boolean = (a & b) == b
 
 /**
- * GMarkupParseFlags: _MARKUP_DEFAULT_FLAGS: No special behaviour. Since: 2.74 _MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG: flag you should not use _MARKUP_TREAT_CDATA_AS_TEXT: When this flag is set, CDATA marked sections are not passed literally to the function of the parser. Instead, the content of the section (without the `<![CDATA[` and `]]>`) is passed to the
+ * GMarkupParseFlags: _MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG: flag you should not use _MARKUP_TREAT_CDATA_AS_TEXT: When this flag is set, CDATA marked sections are not passed literally to the function of the parser. Instead, the content of the section (without the `<![CDATA[` and `]]>`) is passed to the
 */
 opaque type GMarkupParseFlags = CUnsignedInt
 object GMarkupParseFlags extends CEnumU[GMarkupParseFlags]:
   given _tag: Tag[GMarkupParseFlags] = Tag.UInt
   inline def define(inline a: Long): GMarkupParseFlags = a.toUInt
-  val G_MARKUP_DEFAULT_FLAGS = define(0)
   val G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG = define(1)
   val G_MARKUP_TREAT_CDATA_AS_TEXT = define(2)
   val G_MARKUP_PREFIX_ERROR_POSITION = define(4)
   val G_MARKUP_IGNORE_QUALIFIED = define(8)
   inline def getName(inline value: GMarkupParseFlags): Option[String] =
     inline value match
-      case G_MARKUP_DEFAULT_FLAGS => Some("G_MARKUP_DEFAULT_FLAGS")
       case G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG => Some("G_MARKUP_DO_NOT_USE_THIS_UNSUPPORTED_FLAG")
       case G_MARKUP_TREAT_CDATA_AS_TEXT => Some("G_MARKUP_TREAT_CDATA_AS_TEXT")
       case G_MARKUP_PREFIX_ERROR_POSITION => Some("G_MARKUP_PREFIX_ERROR_POSITION")
       case G_MARKUP_IGNORE_QUALIFIED => Some("G_MARKUP_IGNORE_QUALIFIED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMarkupParseFlags)
     inline def &(b: GMarkupParseFlags): GMarkupParseFlags = a & b
     inline def |(b: GMarkupParseFlags): GMarkupParseFlags = a | b
@@ -737,7 +729,7 @@ object GNormalizeMode extends CEnumU[GNormalizeMode]:
       case G_NORMALIZE_NFKD => Some("G_NORMALIZE_NFKD")
       case G_NORMALIZE_ALL_COMPOSE => Some("G_NORMALIZE_ALL_COMPOSE")
       case G_NORMALIZE_NFKC => Some("G_NORMALIZE_NFKC")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GNormalizeMode)
     inline def &(b: GNormalizeMode): GNormalizeMode = a & b
     inline def |(b: GNormalizeMode): GNormalizeMode = a | b
@@ -756,7 +748,7 @@ object GNumberParserError extends CEnumU[GNumberParserError]:
     inline value match
       case G_NUMBER_PARSER_ERROR_INVALID => Some("G_NUMBER_PARSER_ERROR_INVALID")
       case G_NUMBER_PARSER_ERROR_OUT_OF_BOUNDS => Some("G_NUMBER_PARSER_ERROR_OUT_OF_BOUNDS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GNumberParserError)
     inline def &(b: GNumberParserError): GNumberParserError = a & b
     inline def |(b: GNumberParserError): GNumberParserError = a | b
@@ -774,14 +766,14 @@ object GOnceStatus extends CEnumU[GOnceStatus]:
       case G_ONCE_STATUS_NOTCALLED => Some("G_ONCE_STATUS_NOTCALLED")
       case G_ONCE_STATUS_PROGRESS => Some("G_ONCE_STATUS_PROGRESS")
       case G_ONCE_STATUS_READY => Some("G_ONCE_STATUS_READY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GOnceStatus)
     inline def &(b: GOnceStatus): GOnceStatus = a & b
     inline def |(b: GOnceStatus): GOnceStatus = a | b
     inline def is(b: GOnceStatus): Boolean = (a & b) == b
 
 /**
- * GOptionArg: _OPTION_ARG_NONE: No extra argument. This is useful for simple flags or booleans. _OPTION_ARG_STRING: The option takes a UTF-8 string argument. _OPTION_ARG_INT: The option takes an integer argument. _OPTION_ARG_CALLBACK: The option provides a callback (of type #GOptionArgFunc) to parse the extra argument. _OPTION_ARG_FILENAME: The option takes a filename as argument, which will be in the GLib filename encoding rather than UTF-8. _OPTION_ARG_STRING_ARRAY: The option takes a string argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_FILENAME_ARRAY: The option takes a filename as argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_DOUBLE: The option takes a double argument. The argument can be formatted either for the user's locale or for the "C" locale. Since 2.12 _OPTION_ARG_INT64: The option takes a 64-bit integer. Like %G_OPTION_ARG_INT but for larger numbers. The number can be in decimal base, or in hexadecimal (when prefixed with `0x`, for example, `0xffffffff`). Since 2.12
+ * GOptionArg: _OPTION_ARG_NONE: No extra argument. This is useful for simple flags. _OPTION_ARG_STRING: The option takes a UTF-8 string argument. _OPTION_ARG_INT: The option takes an integer argument. _OPTION_ARG_CALLBACK: The option provides a callback (of type #GOptionArgFunc) to parse the extra argument. _OPTION_ARG_FILENAME: The option takes a filename as argument, which will be in the GLib filename encoding rather than UTF-8. _OPTION_ARG_STRING_ARRAY: The option takes a string argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_FILENAME_ARRAY: The option takes a filename as argument, multiple uses of the option are collected into an array of strings. _OPTION_ARG_DOUBLE: The option takes a double argument. The argument can be formatted either for the user's locale or for the "C" locale. Since 2.12 _OPTION_ARG_INT64: The option takes a 64-bit integer. Like %G_OPTION_ARG_INT but for larger numbers. The number can be in decimal base, or in hexadecimal (when prefixed with `0x`, for example, `0xffffffff`). Since 2.12
 */
 opaque type GOptionArg = CUnsignedInt
 object GOptionArg extends CEnumU[GOptionArg]:
@@ -807,7 +799,7 @@ object GOptionArg extends CEnumU[GOptionArg]:
       case G_OPTION_ARG_FILENAME_ARRAY => Some("G_OPTION_ARG_FILENAME_ARRAY")
       case G_OPTION_ARG_DOUBLE => Some("G_OPTION_ARG_DOUBLE")
       case G_OPTION_ARG_INT64 => Some("G_OPTION_ARG_INT64")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GOptionArg)
     inline def &(b: GOptionArg): GOptionArg = a & b
     inline def |(b: GOptionArg): GOptionArg = a | b
@@ -828,14 +820,14 @@ object GOptionError extends CEnumU[GOptionError]:
       case G_OPTION_ERROR_UNKNOWN_OPTION => Some("G_OPTION_ERROR_UNKNOWN_OPTION")
       case G_OPTION_ERROR_BAD_VALUE => Some("G_OPTION_ERROR_BAD_VALUE")
       case G_OPTION_ERROR_FAILED => Some("G_OPTION_ERROR_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GOptionError)
     inline def &(b: GOptionError): GOptionError = a & b
     inline def |(b: GOptionError): GOptionError = a | b
     inline def is(b: GOptionError): Boolean = (a & b) == b
 
 /**
- * GOptionFlags: _OPTION_FLAG_NONE: No flags. Since: 2.42. _OPTION_FLAG_HIDDEN: The option doesn't appear in `--help` output. _OPTION_FLAG_IN_MAIN: The option appears in the main section of the `--help` output, even if it is defined in a group. _OPTION_FLAG_REVERSE: For options of the %G_OPTION_ARG_NONE kind, this flag indicates that the sense of the option is reversed. i.e. %FALSE will be stored into the argument rather than %TRUE. _OPTION_FLAG_NO_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the callback does not take any argument (like a %G_OPTION_ARG_NONE option). Since 2.8 _OPTION_FLAG_FILENAME: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument should be passed to the callback in the GLib filename encoding rather than UTF-8. Since 2.8 _OPTION_FLAG_OPTIONAL_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument supply is optional. If no argument is given then data of %GOptionParseFunc will be set to NULL. Since 2.8 _OPTION_FLAG_NOALIAS: This flag turns off the automatic conflict resolution which prefixes long option names with `groupname-` if there is a conflict. This option should only be used in situations where aliasing is necessary to model some legacy commandline interface. It is not safe to use this option, unless all option groups are under your direct control. Since 2.8.
+ * GOptionFlags: _OPTION_FLAG_NONE: No flags. Since: 2.42. _OPTION_FLAG_HIDDEN: The option doesn't appear in `--help` output. _OPTION_FLAG_IN_MAIN: The option appears in the main section of the `--help` output, even if it is defined in a group. _OPTION_FLAG_REVERSE: For options of the %G_OPTION_ARG_NONE kind, this flag indicates that the sense of the option is reversed. _OPTION_FLAG_NO_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the callback does not take any argument (like a %G_OPTION_ARG_NONE option). Since 2.8 _OPTION_FLAG_FILENAME: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument should be passed to the callback in the GLib filename encoding rather than UTF-8. Since 2.8 _OPTION_FLAG_OPTIONAL_ARG: For options of the %G_OPTION_ARG_CALLBACK kind, this flag indicates that the argument supply is optional. If no argument is given then data of %GOptionParseFunc will be set to NULL. Since 2.8 _OPTION_FLAG_NOALIAS: This flag turns off the automatic conflict resolution which prefixes long option names with `groupname-` if there is a conflict. This option should only be used in situations where aliasing is necessary to model some legacy commandline interface. It is not safe to use this option, unless all option groups are under your direct control. Since 2.8.
 */
 opaque type GOptionFlags = CUnsignedInt
 object GOptionFlags extends CEnumU[GOptionFlags]:
@@ -859,20 +851,19 @@ object GOptionFlags extends CEnumU[GOptionFlags]:
       case G_OPTION_FLAG_FILENAME => Some("G_OPTION_FLAG_FILENAME")
       case G_OPTION_FLAG_OPTIONAL_ARG => Some("G_OPTION_FLAG_OPTIONAL_ARG")
       case G_OPTION_FLAG_NOALIAS => Some("G_OPTION_FLAG_NOALIAS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GOptionFlags)
     inline def &(b: GOptionFlags): GOptionFlags = a & b
     inline def |(b: GOptionFlags): GOptionFlags = a | b
     inline def is(b: GOptionFlags): Boolean = (a & b) == b
 
 /**
- * GRegexCompileFlags: _REGEX_DEFAULT: No special options set. Since: 2.74 _REGEX_CASELESS: Letters in the pattern match both upper- and lowercase letters. This option can be changed within a pattern by a "(?i)" option setting. _REGEX_MULTILINE: By default, GRegex treats the strings as consisting of a single line of characters (even if it actually contains newlines). The "start of line" metacharacter ("^") matches only at the start of the string, while the "end of line" metacharacter ("$") matches only at the end of the string, or before a terminating newline (unless %G_REGEX_DOLLAR_ENDONLY is set). When %G_REGEX_MULTILINE is set, the "start of line" and "end of line" constructs match immediately following or immediately before any newline in the string, respectively, as well as at the very start and end. This can be changed within a pattern by a "(?m)" option setting. _REGEX_DOTALL: A dot metacharacter (".") in the pattern matches all characters, including newlines. Without it, newlines are excluded. This option can be changed within a pattern by a ("?s") option setting. _REGEX_EXTENDED: Whitespace data characters in the pattern are totally ignored except when escaped or inside a character class. Whitespace does not include the VT character (code 11). In addition, characters between an unescaped "#" outside a character class and the next newline character, inclusive, are also ignored. This can be changed within a pattern by a "(?x)" option setting. _REGEX_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_DOLLAR_ENDONLY: A dollar metacharacter ("$") in the pattern matches only at the end of the string. Without this option, a dollar also matches immediately before the final character if it is a newline (but not before any other newlines). This option is ignored if %G_REGEX_MULTILINE is set. _REGEX_UNGREEDY: Inverts the "greediness" of the quantifiers so that they are not greedy by default, but become greedy if followed by "?". It can also be set by a "(?U)" option setting within the pattern. _REGEX_RAW: Usually strings must be valid UTF-8 strings, using this flag they are considered as a raw sequence of bytes. _REGEX_NO_AUTO_CAPTURE: Disables the use of numbered capturing parentheses in the pattern. Any opening parenthesis that is not followed by "?" behaves as if it were followed by "?:" but named parentheses can still be used for capturing (and they acquire numbers in the usual way). _REGEX_OPTIMIZE: Since 2.74 and the port to pcre2, requests JIT compilation, which, if the just-in-time compiler is available, further processes a compiled pattern into machine code that executes much faster. However, it comes at the cost of extra processing before the match is performed, so it is most beneficial to use this when the same compiled pattern is used for matching many times. Before 2.74 this option used the built-in non-JIT optimizations in pcre1. _REGEX_FIRSTLINE: Limits an unanchored pattern to match before (or at) the first newline. Since: 2.34 _REGEX_DUPNAMES: Names used to identify capturing subpatterns need not be unique. This can be helpful for certain types of pattern when it is known that only one instance of the named subpattern can ever be matched. _REGEX_NEWLINE_CR: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_LF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_CRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequence is ''. _REGEX_NEWLINE_ANYCRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequences are '', '', and ''. Since: 2.34 _REGEX_BSR_ANYCRLF: Usually any newline character or character sequence is recognised. If this option is set, then "\R" only recognizes the newline characters '', '' and ''. Since: 2.34 _REGEX_JAVASCRIPT_COMPAT: Changes behaviour so that it is compatible with JavaScript rather than PCRE. Since GLib 2.74 this is no longer supported, as libpcre2 does not support it. Since: 2.34 Deprecated: 2.74
+ * GRegexCompileFlags: _REGEX_CASELESS: Letters in the pattern match both upper- and lowercase letters. This option can be changed within a pattern by a "(?i)" option setting. _REGEX_MULTILINE: By default, GRegex treats the strings as consisting of a single line of characters (even if it actually contains newlines). The "start of line" metacharacter ("^") matches only at the start of the string, while the "end of line" metacharacter ("$") matches only at the end of the string, or before a terminating newline (unless %G_REGEX_DOLLAR_ENDONLY is set). When %G_REGEX_MULTILINE is set, the "start of line" and "end of line" constructs match immediately following or immediately before any newline in the string, respectively, as well as at the very start and end. This can be changed within a pattern by a "(?m)" option setting. _REGEX_DOTALL: A dot metacharacter (".") in the pattern matches all characters, including newlines. Without it, newlines are excluded. This option can be changed within a pattern by a ("?s") option setting. _REGEX_EXTENDED: Whitespace data characters in the pattern are totally ignored except when escaped or inside a character class. Whitespace does not include the VT character (code 11). In addition, characters between an unescaped "#" outside a character class and the next newline character, inclusive, are also ignored. This can be changed within a pattern by a "(?x)" option setting. _REGEX_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_DOLLAR_ENDONLY: A dollar metacharacter ("$") in the pattern matches only at the end of the string. Without this option, a dollar also matches immediately before the final character if it is a newline (but not before any other newlines). This option is ignored if %G_REGEX_MULTILINE is set. _REGEX_UNGREEDY: Inverts the "greediness" of the quantifiers so that they are not greedy by default, but become greedy if followed by "?". It can also be set by a "(?U)" option setting within the pattern. _REGEX_RAW: Usually strings must be valid UTF-8 strings, using this flag they are considered as a raw sequence of bytes. _REGEX_NO_AUTO_CAPTURE: Disables the use of numbered capturing parentheses in the pattern. Any opening parenthesis that is not followed by "?" behaves as if it were followed by "?:" but named parentheses can still be used for capturing (and they acquire numbers in the usual way). _REGEX_OPTIMIZE: Optimize the regular expression. If the pattern will be used many times, then it may be worth the effort to optimize it to improve the speed of matches. _REGEX_FIRSTLINE: Limits an unanchored pattern to match before (or at) the first newline. Since: 2.34 _REGEX_DUPNAMES: Names used to identify capturing subpatterns need not be unique. This can be helpful for certain types of pattern when it is known that only one instance of the named subpattern can ever be matched. _REGEX_NEWLINE_CR: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_LF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character is ''. _REGEX_NEWLINE_CRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequence is ''. _REGEX_NEWLINE_ANYCRLF: Usually any newline character or character sequence is recognized. If this option is set, the only recognized newline character sequences are '', '', and ''. Since: 2.34 _REGEX_BSR_ANYCRLF: Usually any newline character or character sequence is recognised. If this option is set, then "\R" only recognizes the newline characters '', '' and ''. Since: 2.34 _REGEX_JAVASCRIPT_COMPAT: Changes behaviour so that it is compatible with JavaScript rather than PCRE. Since: 2.34
 */
 opaque type GRegexCompileFlags = CUnsignedInt
 object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
   given _tag: Tag[GRegexCompileFlags] = Tag.UInt
   inline def define(inline a: Long): GRegexCompileFlags = a.toUInt
-  val G_REGEX_DEFAULT = define(0)
   val G_REGEX_CASELESS = define(1)
   val G_REGEX_MULTILINE = define(2)
   val G_REGEX_DOTALL = define(4)
@@ -893,7 +884,6 @@ object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
   val G_REGEX_JAVASCRIPT_COMPAT = define(33554432)
   inline def getName(inline value: GRegexCompileFlags): Option[String] =
     inline value match
-      case G_REGEX_DEFAULT => Some("G_REGEX_DEFAULT")
       case G_REGEX_CASELESS => Some("G_REGEX_CASELESS")
       case G_REGEX_MULTILINE => Some("G_REGEX_MULTILINE")
       case G_REGEX_DOTALL => Some("G_REGEX_DOTALL")
@@ -912,7 +902,7 @@ object GRegexCompileFlags extends CEnumU[GRegexCompileFlags]:
       case G_REGEX_NEWLINE_ANYCRLF => Some("G_REGEX_NEWLINE_ANYCRLF")
       case G_REGEX_BSR_ANYCRLF => Some("G_REGEX_BSR_ANYCRLF")
       case G_REGEX_JAVASCRIPT_COMPAT => Some("G_REGEX_JAVASCRIPT_COMPAT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GRegexCompileFlags)
     inline def &(b: GRegexCompileFlags): GRegexCompileFlags = a & b
     inline def |(b: GRegexCompileFlags): GRegexCompileFlags = a | b
@@ -1041,20 +1031,19 @@ object GRegexError extends CEnumU[GRegexError]:
       case G_REGEX_ERROR_TOO_MANY_FORWARD_REFERENCES => Some("G_REGEX_ERROR_TOO_MANY_FORWARD_REFERENCES")
       case G_REGEX_ERROR_NAME_TOO_LONG => Some("G_REGEX_ERROR_NAME_TOO_LONG")
       case G_REGEX_ERROR_CHARACTER_VALUE_TOO_LARGE => Some("G_REGEX_ERROR_CHARACTER_VALUE_TOO_LARGE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GRegexError)
     inline def &(b: GRegexError): GRegexError = a & b
     inline def |(b: GRegexError): GRegexError = a | b
     inline def is(b: GRegexError): Boolean = (a & b) == b
 
 /**
- * GRegexMatchFlags: _REGEX_MATCH_DEFAULT: No special options set. Since: 2.74 _REGEX_MATCH_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_MATCH_NOTBOL: Specifies that first character of the string is not the beginning of a line, so the circumflex metacharacter should not match before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes circumflex never to match. This option affects only the behaviour of the circumflex metacharacter, it does not affect "\A". _REGEX_MATCH_NOTEOL: Specifies that the end of the subject string is not the end of a line, so the dollar metacharacter should not match it nor (except in multiline mode) a newline immediately before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes dollar never to match. This option affects only the behaviour of the dollar metacharacter, it does not affect "\Z" or "\z". _REGEX_MATCH_NOTEMPTY: An empty string is not considered to be a valid match if this option is set. If there are alternatives in the pattern, they are tried. If all the alternatives match the empty string, the entire match fails. For example, if the pattern "a?b?" is applied to a string not beginning with "a" or "b", it matches the empty string at the start of the string. With this flag set, this match is not valid, so GRegex searches further into the string for occurrences of "a" or "b". _REGEX_MATCH_PARTIAL: Turns on the partial matching feature, for more documentation on partial matching see g_match_info_is_partial_match(). _REGEX_MATCH_NEWLINE_CR: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_LF: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_CRLF: Overrides the newline definition set when creating a new #GRegex, setting the '' characters sequence as line terminator. _REGEX_MATCH_NEWLINE_ANY: Overrides the newline definition set when creating a new #GRegex, any Unicode newline sequence is recognised as a newline. These are '', '' and '', and the single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. _REGEX_MATCH_NEWLINE_ANYCRLF: Overrides the newline definition set when creating a new #GRegex; any '', '', or '' character sequence is recognized as a newline. Since: 2.34 _REGEX_MATCH_BSR_ANYCRLF: Overrides the newline definition for "\R" set when creating a new #GRegex; only '', '', or '' character sequences are recognized as a newline by "\R". Since: 2.34 _REGEX_MATCH_BSR_ANY: Overrides the newline definition for "\R" set when creating a new #GRegex; any Unicode newline character or character sequence are recognized as a newline by "\R". These are '', '' and '', and the single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. Since: 2.34 _REGEX_MATCH_PARTIAL_SOFT: An alias for %G_REGEX_MATCH_PARTIAL. Since: 2.34 _REGEX_MATCH_PARTIAL_HARD: Turns on the partial matching feature. In contrast to to %G_REGEX_MATCH_PARTIAL_SOFT, this stops matching as soon as a partial match is found, without continuing to search for a possible complete match. See g_match_info_is_partial_match() for more information. Since: 2.34 _REGEX_MATCH_NOTEMPTY_ATSTART: Like %G_REGEX_MATCH_NOTEMPTY, but only applied to the start of the matched string. For anchored patterns this can only happen for pattern containing "\K". Since: 2.34
+ * GRegexMatchFlags: _REGEX_MATCH_ANCHORED: The pattern is forced to be "anchored", that is, it is constrained to match only at the first matching point in the string that is being searched. This effect can also be achieved by appropriate constructs in the pattern itself such as the "^" metacharacter. _REGEX_MATCH_NOTBOL: Specifies that first character of the string is not the beginning of a line, so the circumflex metacharacter should not match before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes circumflex never to match. This option affects only the behaviour of the circumflex metacharacter, it does not affect "\A". _REGEX_MATCH_NOTEOL: Specifies that the end of the subject string is not the end of a line, so the dollar metacharacter should not match it nor (except in multiline mode) a newline immediately before it. Setting this without %G_REGEX_MULTILINE (at compile time) causes dollar never to match. This option affects only the behaviour of the dollar metacharacter, it does not affect "\Z" or "\z". _REGEX_MATCH_NOTEMPTY: An empty string is not considered to be a valid match if this option is set. If there are alternatives in the pattern, they are tried. If all the alternatives match the empty string, the entire match fails. For example, if the pattern "a?b?" is applied to a string not beginning with "a" or "b", it matches the empty string at the start of the string. With this flag set, this match is not valid, so GRegex searches further into the string for occurrences of "a" or "b". _REGEX_MATCH_PARTIAL: Turns on the partial matching feature, for more documentation on partial matching see g_match_info_is_partial_match(). _REGEX_MATCH_NEWLINE_CR: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_LF: Overrides the newline definition set when creating a new #GRegex, setting the '' character as line terminator. _REGEX_MATCH_NEWLINE_CRLF: Overrides the newline definition set when creating a new #GRegex, setting the '' characters sequence as line terminator. _REGEX_MATCH_NEWLINE_ANY: Overrides the newline definition set when creating a new #GRegex, any Unicode newline sequence is recognised as a newline. These are '', '' and '', and the single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. _REGEX_MATCH_NEWLINE_ANYCRLF: Overrides the newline definition set when creating a new #GRegex; any '', '', or '' character sequence is recognized as a newline. Since: 2.34 _REGEX_MATCH_BSR_ANYCRLF: Overrides the newline definition for "\R" set when creating a new #GRegex; only '', '', or '' character sequences are recognized as a newline by "\R". Since: 2.34 _REGEX_MATCH_BSR_ANY: Overrides the newline definition for "\R" set when creating a new #GRegex; any Unicode newline character or character sequence are recognized as a newline by "\R". These are '', '' and '', and the single characters U+000B LINE TABULATION, U+000C FORM FEED (FF), U+0085 NEXT LINE (NEL), U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. Since: 2.34 _REGEX_MATCH_PARTIAL_SOFT: An alias for %G_REGEX_MATCH_PARTIAL. Since: 2.34 _REGEX_MATCH_PARTIAL_HARD: Turns on the partial matching feature. In contrast to to %G_REGEX_MATCH_PARTIAL_SOFT, this stops matching as soon as a partial match is found, without continuing to search for a possible complete match. See g_match_info_is_partial_match() for more information. Since: 2.34 _REGEX_MATCH_NOTEMPTY_ATSTART: Like %G_REGEX_MATCH_NOTEMPTY, but only applied to the start of the matched string. For anchored patterns this can only happen for pattern containing "\K". Since: 2.34
 */
 opaque type GRegexMatchFlags = CUnsignedInt
 object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
   given _tag: Tag[GRegexMatchFlags] = Tag.UInt
   inline def define(inline a: Long): GRegexMatchFlags = a.toUInt
-  val G_REGEX_MATCH_DEFAULT = define(0)
   val G_REGEX_MATCH_ANCHORED = define(16)
   val G_REGEX_MATCH_NOTBOL = define(128)
   val G_REGEX_MATCH_NOTEOL = define(256)
@@ -1072,7 +1061,6 @@ object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
   val G_REGEX_MATCH_NOTEMPTY_ATSTART = define(268435456)
   inline def getName(inline value: GRegexMatchFlags): Option[String] =
     inline value match
-      case G_REGEX_MATCH_DEFAULT => Some("G_REGEX_MATCH_DEFAULT")
       case G_REGEX_MATCH_ANCHORED => Some("G_REGEX_MATCH_ANCHORED")
       case G_REGEX_MATCH_NOTBOL => Some("G_REGEX_MATCH_NOTBOL")
       case G_REGEX_MATCH_NOTEOL => Some("G_REGEX_MATCH_NOTEOL")
@@ -1088,7 +1076,7 @@ object GRegexMatchFlags extends CEnumU[GRegexMatchFlags]:
       case G_REGEX_MATCH_PARTIAL_SOFT => Some("G_REGEX_MATCH_PARTIAL_SOFT")
       case G_REGEX_MATCH_PARTIAL_HARD => Some("G_REGEX_MATCH_PARTIAL_HARD")
       case G_REGEX_MATCH_NOTEMPTY_ATSTART => Some("G_REGEX_MATCH_NOTEMPTY_ATSTART")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GRegexMatchFlags)
     inline def &(b: GRegexMatchFlags): GRegexMatchFlags = a & b
     inline def |(b: GRegexMatchFlags): GRegexMatchFlags = a | b
@@ -1106,7 +1094,7 @@ object GSeekType extends CEnumU[GSeekType]:
       case G_SEEK_CUR => Some("G_SEEK_CUR")
       case G_SEEK_SET => Some("G_SEEK_SET")
       case G_SEEK_END => Some("G_SEEK_END")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSeekType)
     inline def &(b: GSeekType): GSeekType = a & b
     inline def |(b: GSeekType): GSeekType = a | b
@@ -1124,7 +1112,7 @@ object GShellError extends CEnumU[GShellError]:
       case G_SHELL_ERROR_BAD_QUOTING => Some("G_SHELL_ERROR_BAD_QUOTING")
       case G_SHELL_ERROR_EMPTY_STRING => Some("G_SHELL_ERROR_EMPTY_STRING")
       case G_SHELL_ERROR_FAILED => Some("G_SHELL_ERROR_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GShellError)
     inline def &(b: GShellError): GShellError = a & b
     inline def |(b: GShellError): GShellError = a | b
@@ -1148,7 +1136,7 @@ object GSliceConfig extends CEnumU[GSliceConfig]:
       case G_SLICE_CONFIG_COLOR_INCREMENT => Some("G_SLICE_CONFIG_COLOR_INCREMENT")
       case G_SLICE_CONFIG_CHUNK_SIZES => Some("G_SLICE_CONFIG_CHUNK_SIZES")
       case G_SLICE_CONFIG_CONTENTION_COUNTER => Some("G_SLICE_CONFIG_CONTENTION_COUNTER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSliceConfig)
     inline def &(b: GSliceConfig): GSliceConfig = a & b
     inline def |(b: GSliceConfig): GSliceConfig = a | b
@@ -1205,14 +1193,14 @@ object GSpawnError extends CEnumU[GSpawnError]:
       case G_SPAWN_ERROR_ISDIR => Some("G_SPAWN_ERROR_ISDIR")
       case G_SPAWN_ERROR_LIBBAD => Some("G_SPAWN_ERROR_LIBBAD")
       case G_SPAWN_ERROR_FAILED => Some("G_SPAWN_ERROR_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSpawnError)
     inline def &(b: GSpawnError): GSpawnError = a & b
     inline def |(b: GSpawnError): GSpawnError = a | b
     inline def is(b: GSpawnError): Boolean = (a & b) == b
 
 /**
- * GSpawnFlags: _SPAWN_DEFAULT: no flags, default behaviour _SPAWN_LEAVE_DESCRIPTORS_OPEN: the parent's open file descriptors will be inherited by the child; otherwise all descriptors except stdin, stdout and stderr will be closed before calling exec() in the child. _SPAWN_DO_NOT_REAP_CHILD: the child will not be automatically reaped; you must use g_child_watch_add() yourself (or call waitpid() or handle `SIGCHLD` yourself), or the child will become a zombie. _SPAWN_SEARCH_PATH: `argv[0]` need not be an absolute path, it will be looked for in the user's `PATH`. _SPAWN_STDOUT_TO_DEV_NULL: the child's standard output will be discarded, instead of going to the same location as the parent's standard output. _SPAWN_STDERR_TO_DEV_NULL: the child's standard error will be discarded. _SPAWN_CHILD_INHERITS_STDIN: the child will inherit the parent's standard input (by default, the child's standard input is attached to `/dev/null`). _SPAWN_FILE_AND_ARGV_ZERO: the first element of `argv` is the file to execute, while the remaining elements are the actual argument vector to pass to the file. Normally g_spawn_async_with_pipes() uses `argv[0]` as the file to execute, and passes all of `argv` to the child. _SPAWN_SEARCH_PATH_FROM_ENVP: if `argv[0]` is not an absolute path, it will be looked for in the `PATH` from the passed child environment. Since: 2.34 _SPAWN_CLOEXEC_PIPES: create all pipes with the `O_CLOEXEC` flag set. Since: 2.40 _SPAWN_CHILD_INHERITS_STDOUT: the child will inherit the parent's standard output. Since: 2.74 _SPAWN_CHILD_INHERITS_STDERR: the child will inherit the parent's standard error. Since: 2.74 _SPAWN_STDIN_FROM_DEV_NULL: the child's standard input is attached to `/dev/null`. Since: 2.74
+ * GSpawnFlags: _SPAWN_DEFAULT: no flags, default behaviour _SPAWN_LEAVE_DESCRIPTORS_OPEN: the parent's open file descriptors will be inherited by the child; otherwise all descriptors except stdin, stdout and stderr will be closed before calling exec() in the child. _SPAWN_DO_NOT_REAP_CHILD: the child will not be automatically reaped; you must use g_child_watch_add() yourself (or call waitpid() or handle `SIGCHLD` yourself), or the child will become a zombie. _SPAWN_SEARCH_PATH: `argv[0]` need not be an absolute path, it will be looked for in the user's `PATH`. _SPAWN_STDOUT_TO_DEV_NULL: the child's standard output will be discarded, instead of going to the same location as the parent's standard output. _SPAWN_STDERR_TO_DEV_NULL: the child's standard error will be discarded. _SPAWN_CHILD_INHERITS_STDIN: the child will inherit the parent's standard input (by default, the child's standard input is attached to `/dev/null`). _SPAWN_FILE_AND_ARGV_ZERO: the first element of `argv` is the file to execute, while the remaining elements are the actual argument vector to pass to the file. Normally g_spawn_async_with_pipes() uses `argv[0]` as the file to execute, and passes all of `argv` to the child. _SPAWN_SEARCH_PATH_FROM_ENVP: if `argv[0]` is not an absolute path, it will be looked for in the `PATH` from the passed child environment. Since: 2.34 _SPAWN_CLOEXEC_PIPES: create all pipes with the `O_CLOEXEC` flag set. Since: 2.40
 */
 opaque type GSpawnFlags = CUnsignedInt
 object GSpawnFlags extends CEnumU[GSpawnFlags]:
@@ -1228,9 +1216,6 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
   val G_SPAWN_FILE_AND_ARGV_ZERO = define(64)
   val G_SPAWN_SEARCH_PATH_FROM_ENVP = define(128)
   val G_SPAWN_CLOEXEC_PIPES = define(256)
-  val G_SPAWN_CHILD_INHERITS_STDOUT = define(512)
-  val G_SPAWN_CHILD_INHERITS_STDERR = define(1024)
-  val G_SPAWN_STDIN_FROM_DEV_NULL = define(2048)
   inline def getName(inline value: GSpawnFlags): Option[String] =
     inline value match
       case G_SPAWN_DEFAULT => Some("G_SPAWN_DEFAULT")
@@ -1243,10 +1228,7 @@ object GSpawnFlags extends CEnumU[GSpawnFlags]:
       case G_SPAWN_FILE_AND_ARGV_ZERO => Some("G_SPAWN_FILE_AND_ARGV_ZERO")
       case G_SPAWN_SEARCH_PATH_FROM_ENVP => Some("G_SPAWN_SEARCH_PATH_FROM_ENVP")
       case G_SPAWN_CLOEXEC_PIPES => Some("G_SPAWN_CLOEXEC_PIPES")
-      case G_SPAWN_CHILD_INHERITS_STDOUT => Some("G_SPAWN_CHILD_INHERITS_STDOUT")
-      case G_SPAWN_CHILD_INHERITS_STDERR => Some("G_SPAWN_CHILD_INHERITS_STDERR")
-      case G_SPAWN_STDIN_FROM_DEV_NULL => Some("G_SPAWN_STDIN_FROM_DEV_NULL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSpawnFlags)
     inline def &(b: GSpawnFlags): GSpawnFlags = a & b
     inline def |(b: GSpawnFlags): GSpawnFlags = a | b
@@ -1262,7 +1244,7 @@ object GTestFileType extends CEnumU[GTestFileType]:
     inline value match
       case G_TEST_DIST => Some("G_TEST_DIST")
       case G_TEST_BUILT => Some("G_TEST_BUILT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTestFileType)
     inline def &(b: GTestFileType): GTestFileType = a & b
     inline def |(b: GTestFileType): GTestFileType = a | b
@@ -1298,7 +1280,7 @@ object GTestLogType extends CEnumU[GTestLogType]:
       case G_TEST_LOG_MESSAGE => Some("G_TEST_LOG_MESSAGE")
       case G_TEST_LOG_START_SUITE => Some("G_TEST_LOG_START_SUITE")
       case G_TEST_LOG_STOP_SUITE => Some("G_TEST_LOG_STOP_SUITE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTestLogType)
     inline def &(b: GTestLogType): GTestLogType = a & b
     inline def |(b: GTestLogType): GTestLogType = a | b
@@ -1318,7 +1300,7 @@ object GTestResult extends CEnumU[GTestResult]:
       case G_TEST_RUN_SKIPPED => Some("G_TEST_RUN_SKIPPED")
       case G_TEST_RUN_FAILURE => Some("G_TEST_RUN_FAILURE")
       case G_TEST_RUN_INCOMPLETE => Some("G_TEST_RUN_INCOMPLETE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTestResult)
     inline def &(b: GTestResult): GTestResult = a & b
     inline def |(b: GTestResult): GTestResult = a | b
@@ -1328,40 +1310,36 @@ opaque type GTestSubprocessFlags = CUnsignedInt
 object GTestSubprocessFlags extends CEnumU[GTestSubprocessFlags]:
   given _tag: Tag[GTestSubprocessFlags] = Tag.UInt
   inline def define(inline a: Long): GTestSubprocessFlags = a.toUInt
-  val G_TEST_SUBPROCESS_DEFAULT = define(0)
   val G_TEST_SUBPROCESS_INHERIT_STDIN = define(1)
   val G_TEST_SUBPROCESS_INHERIT_STDOUT = define(2)
   val G_TEST_SUBPROCESS_INHERIT_STDERR = define(4)
   inline def getName(inline value: GTestSubprocessFlags): Option[String] =
     inline value match
-      case G_TEST_SUBPROCESS_DEFAULT => Some("G_TEST_SUBPROCESS_DEFAULT")
       case G_TEST_SUBPROCESS_INHERIT_STDIN => Some("G_TEST_SUBPROCESS_INHERIT_STDIN")
       case G_TEST_SUBPROCESS_INHERIT_STDOUT => Some("G_TEST_SUBPROCESS_INHERIT_STDOUT")
       case G_TEST_SUBPROCESS_INHERIT_STDERR => Some("G_TEST_SUBPROCESS_INHERIT_STDERR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTestSubprocessFlags)
     inline def &(b: GTestSubprocessFlags): GTestSubprocessFlags = a & b
     inline def |(b: GTestSubprocessFlags): GTestSubprocessFlags = a | b
     inline def is(b: GTestSubprocessFlags): Boolean = (a & b) == b
 
 /**
- * GTestTrapFlags: _TEST_TRAP_DEFAULT: Default behaviour. Since: 2.74 _TEST_TRAP_SILENCE_STDOUT: Redirect stdout of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stdout(). _TEST_TRAP_SILENCE_STDERR: Redirect stderr of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stderr(). _TEST_TRAP_INHERIT_STDIN: If this flag is given, stdin of the child process is shared with stdin of its parent process. It is redirected to `/dev/null` otherwise.
+ * GTestTrapFlags: _TEST_TRAP_SILENCE_STDOUT: Redirect stdout of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stdout(). _TEST_TRAP_SILENCE_STDERR: Redirect stderr of the test child to `/dev/null` so it cannot be observed on the console during test runs. The actual output is still captured though to allow later tests with g_test_trap_assert_stderr(). _TEST_TRAP_INHERIT_STDIN: If this flag is given, stdin of the child process is shared with stdin of its parent process. It is redirected to `/dev/null` otherwise.
 */
 opaque type GTestTrapFlags = CUnsignedInt
 object GTestTrapFlags extends CEnumU[GTestTrapFlags]:
   given _tag: Tag[GTestTrapFlags] = Tag.UInt
   inline def define(inline a: Long): GTestTrapFlags = a.toUInt
-  val G_TEST_TRAP_DEFAULT = define(0)
   val G_TEST_TRAP_SILENCE_STDOUT = define(128)
   val G_TEST_TRAP_SILENCE_STDERR = define(256)
   val G_TEST_TRAP_INHERIT_STDIN = define(512)
   inline def getName(inline value: GTestTrapFlags): Option[String] =
     inline value match
-      case G_TEST_TRAP_DEFAULT => Some("G_TEST_TRAP_DEFAULT")
       case G_TEST_TRAP_SILENCE_STDOUT => Some("G_TEST_TRAP_SILENCE_STDOUT")
       case G_TEST_TRAP_SILENCE_STDERR => Some("G_TEST_TRAP_SILENCE_STDERR")
       case G_TEST_TRAP_INHERIT_STDIN => Some("G_TEST_TRAP_INHERIT_STDIN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTestTrapFlags)
     inline def &(b: GTestTrapFlags): GTestTrapFlags = a & b
     inline def |(b: GTestTrapFlags): GTestTrapFlags = a | b
@@ -1375,7 +1353,7 @@ object GThreadError extends CEnumU[GThreadError]:
   inline def getName(inline value: GThreadError): Option[String] =
     inline value match
       case G_THREAD_ERROR_AGAIN => Some("G_THREAD_ERROR_AGAIN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GThreadError)
     inline def &(b: GThreadError): GThreadError = a & b
     inline def |(b: GThreadError): GThreadError = a | b
@@ -1395,7 +1373,7 @@ object GThreadPriority extends CEnumU[GThreadPriority]:
       case G_THREAD_PRIORITY_NORMAL => Some("G_THREAD_PRIORITY_NORMAL")
       case G_THREAD_PRIORITY_HIGH => Some("G_THREAD_PRIORITY_HIGH")
       case G_THREAD_PRIORITY_URGENT => Some("G_THREAD_PRIORITY_URGENT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GThreadPriority)
     inline def &(b: GThreadPriority): GThreadPriority = a & b
     inline def |(b: GThreadPriority): GThreadPriority = a | b
@@ -1416,7 +1394,7 @@ object GTimeType extends CEnumU[GTimeType]:
       case G_TIME_TYPE_STANDARD => Some("G_TIME_TYPE_STANDARD")
       case G_TIME_TYPE_DAYLIGHT => Some("G_TIME_TYPE_DAYLIGHT")
       case G_TIME_TYPE_UNIVERSAL => Some("G_TIME_TYPE_UNIVERSAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTimeType)
     inline def &(b: GTimeType): GTimeType = a & b
     inline def |(b: GTimeType): GTimeType = a | b
@@ -1476,7 +1454,7 @@ object GTokenType extends CEnumU[GTokenType]:
       case G_TOKEN_COMMENT_SINGLE => Some("G_TOKEN_COMMENT_SINGLE")
       case G_TOKEN_COMMENT_MULTI => Some("G_TOKEN_COMMENT_MULTI")
       case G_TOKEN_LAST => Some("G_TOKEN_LAST")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTokenType)
     inline def &(b: GTokenType): GTokenType = a & b
     inline def |(b: GTokenType): GTokenType = a | b
@@ -1500,7 +1478,7 @@ object GTraverseFlags extends CEnumU[GTraverseFlags]:
       case G_TRAVERSE_MASK => Some("G_TRAVERSE_MASK")
       case G_TRAVERSE_LEAFS => Some("G_TRAVERSE_LEAFS")
       case G_TRAVERSE_NON_LEAFS => Some("G_TRAVERSE_NON_LEAFS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTraverseFlags)
     inline def &(b: GTraverseFlags): GTraverseFlags = a & b
     inline def |(b: GTraverseFlags): GTraverseFlags = a | b
@@ -1520,7 +1498,7 @@ object GTraverseType extends CEnumU[GTraverseType]:
       case G_PRE_ORDER => Some("G_PRE_ORDER")
       case G_POST_ORDER => Some("G_POST_ORDER")
       case G_LEVEL_ORDER => Some("G_LEVEL_ORDER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTraverseType)
     inline def &(b: GTraverseType): GTraverseType = a & b
     inline def |(b: GTraverseType): GTraverseType = a | b
@@ -1623,14 +1601,14 @@ object GUnicodeBreakType extends CEnumU[GUnicodeBreakType]:
       case G_UNICODE_BREAK_EMOJI_BASE => Some("G_UNICODE_BREAK_EMOJI_BASE")
       case G_UNICODE_BREAK_EMOJI_MODIFIER => Some("G_UNICODE_BREAK_EMOJI_MODIFIER")
       case G_UNICODE_BREAK_ZERO_WIDTH_JOINER => Some("G_UNICODE_BREAK_ZERO_WIDTH_JOINER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUnicodeBreakType)
     inline def &(b: GUnicodeBreakType): GUnicodeBreakType = a & b
     inline def |(b: GUnicodeBreakType): GUnicodeBreakType = a | b
     inline def is(b: GUnicodeBreakType): Boolean = (a & b) == b
 
 /**
- * GUnicodeScript: _UNICODE_SCRIPT_INVALID_CODE: a value never returned from g_unichar_get_script() _UNICODE_SCRIPT_COMMON: a character used by multiple different scripts _UNICODE_SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _UNICODE_SCRIPT_ARABIC: Arabic _UNICODE_SCRIPT_ARMENIAN: Armenian _UNICODE_SCRIPT_BENGALI: Bengali _UNICODE_SCRIPT_BOPOMOFO: Bopomofo _UNICODE_SCRIPT_CHEROKEE: Cherokee _UNICODE_SCRIPT_COPTIC: Coptic _UNICODE_SCRIPT_CYRILLIC: Cyrillic _UNICODE_SCRIPT_DESERET: Deseret _UNICODE_SCRIPT_DEVANAGARI: Devanagari _UNICODE_SCRIPT_ETHIOPIC: Ethiopic _UNICODE_SCRIPT_GEORGIAN: Georgian _UNICODE_SCRIPT_GOTHIC: Gothic _UNICODE_SCRIPT_GREEK: Greek _UNICODE_SCRIPT_GUJARATI: Gujarati _UNICODE_SCRIPT_GURMUKHI: Gurmukhi _UNICODE_SCRIPT_HAN: Han _UNICODE_SCRIPT_HANGUL: Hangul _UNICODE_SCRIPT_HEBREW: Hebrew _UNICODE_SCRIPT_HIRAGANA: Hiragana _UNICODE_SCRIPT_KANNADA: Kannada _UNICODE_SCRIPT_KATAKANA: Katakana _UNICODE_SCRIPT_KHMER: Khmer _UNICODE_SCRIPT_LAO: Lao _UNICODE_SCRIPT_LATIN: Latin _UNICODE_SCRIPT_MALAYALAM: Malayalam _UNICODE_SCRIPT_MONGOLIAN: Mongolian _UNICODE_SCRIPT_MYANMAR: Myanmar _UNICODE_SCRIPT_OGHAM: Ogham _UNICODE_SCRIPT_OLD_ITALIC: Old Italic _UNICODE_SCRIPT_ORIYA: Oriya _UNICODE_SCRIPT_RUNIC: Runic _UNICODE_SCRIPT_SINHALA: Sinhala _UNICODE_SCRIPT_SYRIAC: Syriac _UNICODE_SCRIPT_TAMIL: Tamil _UNICODE_SCRIPT_TELUGU: Telugu _UNICODE_SCRIPT_THAANA: Thaana _UNICODE_SCRIPT_THAI: Thai _UNICODE_SCRIPT_TIBETAN: Tibetan _UNICODE_SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _UNICODE_SCRIPT_YI: Yi _UNICODE_SCRIPT_TAGALOG: Tagalog _UNICODE_SCRIPT_HANUNOO: Hanunoo _UNICODE_SCRIPT_BUHID: Buhid _UNICODE_SCRIPT_TAGBANWA: Tagbanwa _UNICODE_SCRIPT_BRAILLE: Braille _UNICODE_SCRIPT_CYPRIOT: Cypriot _UNICODE_SCRIPT_LIMBU: Limbu _UNICODE_SCRIPT_OSMANYA: Osmanya _UNICODE_SCRIPT_SHAVIAN: Shavian _UNICODE_SCRIPT_LINEAR_B: Linear B _UNICODE_SCRIPT_TAI_LE: Tai Le _UNICODE_SCRIPT_UGARITIC: Ugaritic _UNICODE_SCRIPT_NEW_TAI_LUE: New Tai Lue _UNICODE_SCRIPT_BUGINESE: Buginese _UNICODE_SCRIPT_GLAGOLITIC: Glagolitic _UNICODE_SCRIPT_TIFINAGH: Tifinagh _UNICODE_SCRIPT_SYLOTI_NAGRI: Syloti Nagri _UNICODE_SCRIPT_OLD_PERSIAN: Old Persian _UNICODE_SCRIPT_KHAROSHTHI: Kharoshthi _UNICODE_SCRIPT_UNKNOWN: an unassigned code point _UNICODE_SCRIPT_BALINESE: Balinese _UNICODE_SCRIPT_CUNEIFORM: Cuneiform _UNICODE_SCRIPT_PHOENICIAN: Phoenician _UNICODE_SCRIPT_PHAGS_PA: Phags-pa _UNICODE_SCRIPT_NKO: N'Ko _UNICODE_SCRIPT_KAYAH_LI: Kayah Li. Since 2.16.3 _UNICODE_SCRIPT_LEPCHA: Lepcha. Since 2.16.3 _UNICODE_SCRIPT_REJANG: Rejang. Since 2.16.3 _UNICODE_SCRIPT_SUNDANESE: Sundanese. Since 2.16.3 _UNICODE_SCRIPT_SAURASHTRA: Saurashtra. Since 2.16.3 _UNICODE_SCRIPT_CHAM: Cham. Since 2.16.3 _UNICODE_SCRIPT_OL_CHIKI: Ol Chiki. Since 2.16.3 _UNICODE_SCRIPT_VAI: Vai. Since 2.16.3 _UNICODE_SCRIPT_CARIAN: Carian. Since 2.16.3 _UNICODE_SCRIPT_LYCIAN: Lycian. Since 2.16.3 _UNICODE_SCRIPT_LYDIAN: Lydian. Since 2.16.3 _UNICODE_SCRIPT_AVESTAN: Avestan. Since 2.26 _UNICODE_SCRIPT_BAMUM: Bamum. Since 2.26 _UNICODE_SCRIPT_EGYPTIAN_HIEROGLYPHS: Egyptian Hieroglpyhs. Since 2.26 _UNICODE_SCRIPT_IMPERIAL_ARAMAIC: Imperial Aramaic. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PAHLAVI: Inscriptional Pahlavi. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PARTHIAN: Inscriptional Parthian. Since 2.26 _UNICODE_SCRIPT_JAVANESE: Javanese. Since 2.26 _UNICODE_SCRIPT_KAITHI: Kaithi. Since 2.26 _UNICODE_SCRIPT_LISU: Lisu. Since 2.26 _UNICODE_SCRIPT_MEETEI_MAYEK: Meetei Mayek. Since 2.26 _UNICODE_SCRIPT_OLD_SOUTH_ARABIAN: Old South Arabian. Since 2.26 _UNICODE_SCRIPT_OLD_TURKIC: Old Turkic. Since 2.28 _UNICODE_SCRIPT_SAMARITAN: Samaritan. Since 2.26 _UNICODE_SCRIPT_TAI_THAM: Tai Tham. Since 2.26 _UNICODE_SCRIPT_TAI_VIET: Tai Viet. Since 2.26 _UNICODE_SCRIPT_BATAK: Batak. Since 2.28 _UNICODE_SCRIPT_BRAHMI: Brahmi. Since 2.28 _UNICODE_SCRIPT_MANDAIC: Mandaic. Since 2.28 _UNICODE_SCRIPT_CHAKMA: Chakma. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 2.32 _UNICODE_SCRIPT_MIAO: Miao. Since: 2.32 _UNICODE_SCRIPT_SHARADA: Sharada. Since: 2.32 _UNICODE_SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 2.32 _UNICODE_SCRIPT_TAKRI: Takri. Since: 2.32 _UNICODE_SCRIPT_BASSA_VAH: Bassa. Since: 2.42 _UNICODE_SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 2.42 _UNICODE_SCRIPT_DUPLOYAN: Duployan. Since: 2.42 _UNICODE_SCRIPT_ELBASAN: Elbasan. Since: 2.42 _UNICODE_SCRIPT_GRANTHA: Grantha. Since: 2.42 _UNICODE_SCRIPT_KHOJKI: Kjohki. Since: 2.42 _UNICODE_SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 2.42 _UNICODE_SCRIPT_LINEAR_A: Linear A. Since: 2.42 _UNICODE_SCRIPT_MAHAJANI: Mahajani. Since: 2.42 _UNICODE_SCRIPT_MANICHAEAN: Manichaean. Since: 2.42 _UNICODE_SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 2.42 _UNICODE_SCRIPT_MODI: Modi. Since: 2.42 _UNICODE_SCRIPT_MRO: Mro. Since: 2.42 _UNICODE_SCRIPT_NABATAEAN: Nabataean. Since: 2.42 _UNICODE_SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 2.42 _UNICODE_SCRIPT_OLD_PERMIC: Old Permic. Since: 2.42 _UNICODE_SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 2.42 _UNICODE_SCRIPT_PALMYRENE: Palmyrene. Since: 2.42 _UNICODE_SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 2.42 _UNICODE_SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 2.42 _UNICODE_SCRIPT_SIDDHAM: Siddham. Since: 2.42 _UNICODE_SCRIPT_TIRHUTA: Tirhuta. Since: 2.42 _UNICODE_SCRIPT_WARANG_CITI: Warang Citi. Since: 2.42 _UNICODE_SCRIPT_AHOM: Ahom. Since: 2.48 _UNICODE_SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 2.48 _UNICODE_SCRIPT_HATRAN: Hatran. Since: 2.48 _UNICODE_SCRIPT_MULTANI: Multani. Since: 2.48 _UNICODE_SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 2.48 _UNICODE_SCRIPT_SIGNWRITING: Signwriting. Since: 2.48 _UNICODE_SCRIPT_ADLAM: Adlam. Since: 2.50 _UNICODE_SCRIPT_BHAIKSUKI: Bhaiksuki. Since: 2.50 _UNICODE_SCRIPT_MARCHEN: Marchen. Since: 2.50 _UNICODE_SCRIPT_NEWA: Newa. Since: 2.50 _UNICODE_SCRIPT_OSAGE: Osage. Since: 2.50 _UNICODE_SCRIPT_TANGUT: Tangut. Since: 2.50 _UNICODE_SCRIPT_MASARAM_GONDI: Masaram Gondi. Since: 2.54 _UNICODE_SCRIPT_NUSHU: Nushu. Since: 2.54 _UNICODE_SCRIPT_SOYOMBO: Soyombo. Since: 2.54 _UNICODE_SCRIPT_ZANABAZAR_SQUARE: Zanabazar Square. Since: 2.54 _UNICODE_SCRIPT_DOGRA: Dogra. Since: 2.58 _UNICODE_SCRIPT_GUNJALA_GONDI: Gunjala Gondi. Since: 2.58 _UNICODE_SCRIPT_HANIFI_ROHINGYA: Hanifi Rohingya. Since: 2.58 _UNICODE_SCRIPT_MAKASAR: Makasar. Since: 2.58 _UNICODE_SCRIPT_MEDEFAIDRIN: Medefaidrin. Since: 2.58 _UNICODE_SCRIPT_OLD_SOGDIAN: Old Sogdian. Since: 2.58 _UNICODE_SCRIPT_SOGDIAN: Sogdian. Since: 2.58 _UNICODE_SCRIPT_ELYMAIC: Elym. Since: 2.62 _UNICODE_SCRIPT_NANDINAGARI: Nand. Since: 2.62 _UNICODE_SCRIPT_NYIAKENG_PUACHUE_HMONG: Rohg. Since: 2.62 _UNICODE_SCRIPT_WANCHO: Wcho. Since: 2.62 _UNICODE_SCRIPT_CHORASMIAN: Chorasmian. Since: 2.66 _UNICODE_SCRIPT_DIVES_AKURU: Dives Akuru. Since: 2.66 _UNICODE_SCRIPT_KHITAN_SMALL_SCRIPT: Khitan small script. Since: 2.66 _UNICODE_SCRIPT_YEZIDI: Yezidi. Since: 2.66 _UNICODE_SCRIPT_CYPRO_MINOAN: Cypro-Minoan. Since: 2.72 _UNICODE_SCRIPT_OLD_UYGHUR: Old Uyghur. Since: 2.72 _UNICODE_SCRIPT_TANGSA: Tangsa. Since: 2.72 _UNICODE_SCRIPT_TOTO: Toto. Since: 2.72 _UNICODE_SCRIPT_VITHKUQI: Vithkuqi. Since: 2.72 _UNICODE_SCRIPT_MATH: Mathematical notation. Since: 2.72 _UNICODE_SCRIPT_KAWI: Kawi. Since 2.74 _UNICODE_SCRIPT_NAG_MUNDARI: Nag Mundari. Since 2.74
+ * GUnicodeScript: _UNICODE_SCRIPT_INVALID_CODE: a value never returned from g_unichar_get_script() _UNICODE_SCRIPT_COMMON: a character used by multiple different scripts _UNICODE_SCRIPT_INHERITED: a mark glyph that takes its script from the base glyph to which it is attached _UNICODE_SCRIPT_ARABIC: Arabic _UNICODE_SCRIPT_ARMENIAN: Armenian _UNICODE_SCRIPT_BENGALI: Bengali _UNICODE_SCRIPT_BOPOMOFO: Bopomofo _UNICODE_SCRIPT_CHEROKEE: Cherokee _UNICODE_SCRIPT_COPTIC: Coptic _UNICODE_SCRIPT_CYRILLIC: Cyrillic _UNICODE_SCRIPT_DESERET: Deseret _UNICODE_SCRIPT_DEVANAGARI: Devanagari _UNICODE_SCRIPT_ETHIOPIC: Ethiopic _UNICODE_SCRIPT_GEORGIAN: Georgian _UNICODE_SCRIPT_GOTHIC: Gothic _UNICODE_SCRIPT_GREEK: Greek _UNICODE_SCRIPT_GUJARATI: Gujarati _UNICODE_SCRIPT_GURMUKHI: Gurmukhi _UNICODE_SCRIPT_HAN: Han _UNICODE_SCRIPT_HANGUL: Hangul _UNICODE_SCRIPT_HEBREW: Hebrew _UNICODE_SCRIPT_HIRAGANA: Hiragana _UNICODE_SCRIPT_KANNADA: Kannada _UNICODE_SCRIPT_KATAKANA: Katakana _UNICODE_SCRIPT_KHMER: Khmer _UNICODE_SCRIPT_LAO: Lao _UNICODE_SCRIPT_LATIN: Latin _UNICODE_SCRIPT_MALAYALAM: Malayalam _UNICODE_SCRIPT_MONGOLIAN: Mongolian _UNICODE_SCRIPT_MYANMAR: Myanmar _UNICODE_SCRIPT_OGHAM: Ogham _UNICODE_SCRIPT_OLD_ITALIC: Old Italic _UNICODE_SCRIPT_ORIYA: Oriya _UNICODE_SCRIPT_RUNIC: Runic _UNICODE_SCRIPT_SINHALA: Sinhala _UNICODE_SCRIPT_SYRIAC: Syriac _UNICODE_SCRIPT_TAMIL: Tamil _UNICODE_SCRIPT_TELUGU: Telugu _UNICODE_SCRIPT_THAANA: Thaana _UNICODE_SCRIPT_THAI: Thai _UNICODE_SCRIPT_TIBETAN: Tibetan _UNICODE_SCRIPT_CANADIAN_ABORIGINAL: Canadian Aboriginal _UNICODE_SCRIPT_YI: Yi _UNICODE_SCRIPT_TAGALOG: Tagalog _UNICODE_SCRIPT_HANUNOO: Hanunoo _UNICODE_SCRIPT_BUHID: Buhid _UNICODE_SCRIPT_TAGBANWA: Tagbanwa _UNICODE_SCRIPT_BRAILLE: Braille _UNICODE_SCRIPT_CYPRIOT: Cypriot _UNICODE_SCRIPT_LIMBU: Limbu _UNICODE_SCRIPT_OSMANYA: Osmanya _UNICODE_SCRIPT_SHAVIAN: Shavian _UNICODE_SCRIPT_LINEAR_B: Linear B _UNICODE_SCRIPT_TAI_LE: Tai Le _UNICODE_SCRIPT_UGARITIC: Ugaritic _UNICODE_SCRIPT_NEW_TAI_LUE: New Tai Lue _UNICODE_SCRIPT_BUGINESE: Buginese _UNICODE_SCRIPT_GLAGOLITIC: Glagolitic _UNICODE_SCRIPT_TIFINAGH: Tifinagh _UNICODE_SCRIPT_SYLOTI_NAGRI: Syloti Nagri _UNICODE_SCRIPT_OLD_PERSIAN: Old Persian _UNICODE_SCRIPT_KHAROSHTHI: Kharoshthi _UNICODE_SCRIPT_UNKNOWN: an unassigned code point _UNICODE_SCRIPT_BALINESE: Balinese _UNICODE_SCRIPT_CUNEIFORM: Cuneiform _UNICODE_SCRIPT_PHOENICIAN: Phoenician _UNICODE_SCRIPT_PHAGS_PA: Phags-pa _UNICODE_SCRIPT_NKO: N'Ko _UNICODE_SCRIPT_KAYAH_LI: Kayah Li. Since 2.16.3 _UNICODE_SCRIPT_LEPCHA: Lepcha. Since 2.16.3 _UNICODE_SCRIPT_REJANG: Rejang. Since 2.16.3 _UNICODE_SCRIPT_SUNDANESE: Sundanese. Since 2.16.3 _UNICODE_SCRIPT_SAURASHTRA: Saurashtra. Since 2.16.3 _UNICODE_SCRIPT_CHAM: Cham. Since 2.16.3 _UNICODE_SCRIPT_OL_CHIKI: Ol Chiki. Since 2.16.3 _UNICODE_SCRIPT_VAI: Vai. Since 2.16.3 _UNICODE_SCRIPT_CARIAN: Carian. Since 2.16.3 _UNICODE_SCRIPT_LYCIAN: Lycian. Since 2.16.3 _UNICODE_SCRIPT_LYDIAN: Lydian. Since 2.16.3 _UNICODE_SCRIPT_AVESTAN: Avestan. Since 2.26 _UNICODE_SCRIPT_BAMUM: Bamum. Since 2.26 _UNICODE_SCRIPT_EGYPTIAN_HIEROGLYPHS: Egyptian Hieroglpyhs. Since 2.26 _UNICODE_SCRIPT_IMPERIAL_ARAMAIC: Imperial Aramaic. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PAHLAVI: Inscriptional Pahlavi. Since 2.26 _UNICODE_SCRIPT_INSCRIPTIONAL_PARTHIAN: Inscriptional Parthian. Since 2.26 _UNICODE_SCRIPT_JAVANESE: Javanese. Since 2.26 _UNICODE_SCRIPT_KAITHI: Kaithi. Since 2.26 _UNICODE_SCRIPT_LISU: Lisu. Since 2.26 _UNICODE_SCRIPT_MEETEI_MAYEK: Meetei Mayek. Since 2.26 _UNICODE_SCRIPT_OLD_SOUTH_ARABIAN: Old South Arabian. Since 2.26 _UNICODE_SCRIPT_OLD_TURKIC: Old Turkic. Since 2.28 _UNICODE_SCRIPT_SAMARITAN: Samaritan. Since 2.26 _UNICODE_SCRIPT_TAI_THAM: Tai Tham. Since 2.26 _UNICODE_SCRIPT_TAI_VIET: Tai Viet. Since 2.26 _UNICODE_SCRIPT_BATAK: Batak. Since 2.28 _UNICODE_SCRIPT_BRAHMI: Brahmi. Since 2.28 _UNICODE_SCRIPT_MANDAIC: Mandaic. Since 2.28 _UNICODE_SCRIPT_CHAKMA: Chakma. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_CURSIVE: Meroitic Cursive. Since: 2.32 _UNICODE_SCRIPT_MEROITIC_HIEROGLYPHS: Meroitic Hieroglyphs. Since: 2.32 _UNICODE_SCRIPT_MIAO: Miao. Since: 2.32 _UNICODE_SCRIPT_SHARADA: Sharada. Since: 2.32 _UNICODE_SCRIPT_SORA_SOMPENG: Sora Sompeng. Since: 2.32 _UNICODE_SCRIPT_TAKRI: Takri. Since: 2.32 _UNICODE_SCRIPT_BASSA_VAH: Bassa. Since: 2.42 _UNICODE_SCRIPT_CAUCASIAN_ALBANIAN: Caucasian Albanian. Since: 2.42 _UNICODE_SCRIPT_DUPLOYAN: Duployan. Since: 2.42 _UNICODE_SCRIPT_ELBASAN: Elbasan. Since: 2.42 _UNICODE_SCRIPT_GRANTHA: Grantha. Since: 2.42 _UNICODE_SCRIPT_KHOJKI: Kjohki. Since: 2.42 _UNICODE_SCRIPT_KHUDAWADI: Khudawadi, Sindhi. Since: 2.42 _UNICODE_SCRIPT_LINEAR_A: Linear A. Since: 2.42 _UNICODE_SCRIPT_MAHAJANI: Mahajani. Since: 2.42 _UNICODE_SCRIPT_MANICHAEAN: Manichaean. Since: 2.42 _UNICODE_SCRIPT_MENDE_KIKAKUI: Mende Kikakui. Since: 2.42 _UNICODE_SCRIPT_MODI: Modi. Since: 2.42 _UNICODE_SCRIPT_MRO: Mro. Since: 2.42 _UNICODE_SCRIPT_NABATAEAN: Nabataean. Since: 2.42 _UNICODE_SCRIPT_OLD_NORTH_ARABIAN: Old North Arabian. Since: 2.42 _UNICODE_SCRIPT_OLD_PERMIC: Old Permic. Since: 2.42 _UNICODE_SCRIPT_PAHAWH_HMONG: Pahawh Hmong. Since: 2.42 _UNICODE_SCRIPT_PALMYRENE: Palmyrene. Since: 2.42 _UNICODE_SCRIPT_PAU_CIN_HAU: Pau Cin Hau. Since: 2.42 _UNICODE_SCRIPT_PSALTER_PAHLAVI: Psalter Pahlavi. Since: 2.42 _UNICODE_SCRIPT_SIDDHAM: Siddham. Since: 2.42 _UNICODE_SCRIPT_TIRHUTA: Tirhuta. Since: 2.42 _UNICODE_SCRIPT_WARANG_CITI: Warang Citi. Since: 2.42 _UNICODE_SCRIPT_AHOM: Ahom. Since: 2.48 _UNICODE_SCRIPT_ANATOLIAN_HIEROGLYPHS: Anatolian Hieroglyphs. Since: 2.48 _UNICODE_SCRIPT_HATRAN: Hatran. Since: 2.48 _UNICODE_SCRIPT_MULTANI: Multani. Since: 2.48 _UNICODE_SCRIPT_OLD_HUNGARIAN: Old Hungarian. Since: 2.48 _UNICODE_SCRIPT_SIGNWRITING: Signwriting. Since: 2.48 _UNICODE_SCRIPT_ADLAM: Adlam. Since: 2.50 _UNICODE_SCRIPT_BHAIKSUKI: Bhaiksuki. Since: 2.50 _UNICODE_SCRIPT_MARCHEN: Marchen. Since: 2.50 _UNICODE_SCRIPT_NEWA: Newa. Since: 2.50 _UNICODE_SCRIPT_OSAGE: Osage. Since: 2.50 _UNICODE_SCRIPT_TANGUT: Tangut. Since: 2.50 _UNICODE_SCRIPT_MASARAM_GONDI: Masaram Gondi. Since: 2.54 _UNICODE_SCRIPT_NUSHU: Nushu. Since: 2.54 _UNICODE_SCRIPT_SOYOMBO: Soyombo. Since: 2.54 _UNICODE_SCRIPT_ZANABAZAR_SQUARE: Zanabazar Square. Since: 2.54 _UNICODE_SCRIPT_DOGRA: Dogra. Since: 2.58 _UNICODE_SCRIPT_GUNJALA_GONDI: Gunjala Gondi. Since: 2.58 _UNICODE_SCRIPT_HANIFI_ROHINGYA: Hanifi Rohingya. Since: 2.58 _UNICODE_SCRIPT_MAKASAR: Makasar. Since: 2.58 _UNICODE_SCRIPT_MEDEFAIDRIN: Medefaidrin. Since: 2.58 _UNICODE_SCRIPT_OLD_SOGDIAN: Old Sogdian. Since: 2.58 _UNICODE_SCRIPT_SOGDIAN: Sogdian. Since: 2.58 _UNICODE_SCRIPT_ELYMAIC: Elym. Since: 2.62 _UNICODE_SCRIPT_NANDINAGARI: Nand. Since: 2.62 _UNICODE_SCRIPT_NYIAKENG_PUACHUE_HMONG: Rohg. Since: 2.62 _UNICODE_SCRIPT_WANCHO: Wcho. Since: 2.62 _UNICODE_SCRIPT_CHORASMIAN: Chorasmian. Since: 2.66 _UNICODE_SCRIPT_DIVES_AKURU: Dives Akuru. Since: 2.66 _UNICODE_SCRIPT_KHITAN_SMALL_SCRIPT: Khitan small script. Since: 2.66 _UNICODE_SCRIPT_YEZIDI: Yezidi. Since: 2.66 _UNICODE_SCRIPT_CYPRO_MINOAN: Cypro-Minoan. Since: 2.72 _UNICODE_SCRIPT_OLD_UYGHUR: Old Uyghur. Since: 2.72 _UNICODE_SCRIPT_TANGSA: Tangsa. Since: 2.72 _UNICODE_SCRIPT_TOTO: Toto. Since: 2.72 _UNICODE_SCRIPT_VITHKUQI: Vithkuqi. Since: 2.72 _UNICODE_SCRIPT_MATH: Mathematical notation. Since: 2.72
 */
 opaque type GUnicodeScript = CInt
 object GUnicodeScript extends CEnum[GUnicodeScript]:
@@ -1800,8 +1778,6 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
   val G_UNICODE_SCRIPT_TOTO = define(160)
   val G_UNICODE_SCRIPT_VITHKUQI = define(161)
   val G_UNICODE_SCRIPT_MATH = define(162)
-  val G_UNICODE_SCRIPT_KAWI = define(163)
-  val G_UNICODE_SCRIPT_NAG_MUNDARI = define(164)
   inline def getName(inline value: GUnicodeScript): Option[String] =
     inline value match
       case G_UNICODE_SCRIPT_INVALID_CODE => Some("G_UNICODE_SCRIPT_INVALID_CODE")
@@ -1968,9 +1944,7 @@ object GUnicodeScript extends CEnum[GUnicodeScript]:
       case G_UNICODE_SCRIPT_TOTO => Some("G_UNICODE_SCRIPT_TOTO")
       case G_UNICODE_SCRIPT_VITHKUQI => Some("G_UNICODE_SCRIPT_VITHKUQI")
       case G_UNICODE_SCRIPT_MATH => Some("G_UNICODE_SCRIPT_MATH")
-      case G_UNICODE_SCRIPT_KAWI => Some("G_UNICODE_SCRIPT_KAWI")
-      case G_UNICODE_SCRIPT_NAG_MUNDARI => Some("G_UNICODE_SCRIPT_NAG_MUNDARI")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUnicodeScript)
     inline def &(b: GUnicodeScript): GUnicodeScript = a & b
     inline def |(b: GUnicodeScript): GUnicodeScript = a | b
@@ -2045,7 +2019,7 @@ object GUnicodeType extends CEnumU[GUnicodeType]:
       case G_UNICODE_LINE_SEPARATOR => Some("G_UNICODE_LINE_SEPARATOR")
       case G_UNICODE_PARAGRAPH_SEPARATOR => Some("G_UNICODE_PARAGRAPH_SEPARATOR")
       case G_UNICODE_SPACE_SEPARATOR => Some("G_UNICODE_SPACE_SEPARATOR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUnicodeType)
     inline def &(b: GUnicodeType): GUnicodeType = a & b
     inline def |(b: GUnicodeType): GUnicodeType = a | b
@@ -2080,7 +2054,7 @@ object GUriError extends CEnumU[GUriError]:
       case G_URI_ERROR_BAD_PATH => Some("G_URI_ERROR_BAD_PATH")
       case G_URI_ERROR_BAD_QUERY => Some("G_URI_ERROR_BAD_QUERY")
       case G_URI_ERROR_BAD_FRAGMENT => Some("G_URI_ERROR_BAD_FRAGMENT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUriError)
     inline def &(b: GUriError): GUriError = a & b
     inline def |(b: GUriError): GUriError = a | b
@@ -2115,7 +2089,7 @@ object GUriFlags extends CEnumU[GUriFlags]:
       case G_URI_FLAGS_ENCODED_PATH => Some("G_URI_FLAGS_ENCODED_PATH")
       case G_URI_FLAGS_ENCODED_FRAGMENT => Some("G_URI_FLAGS_ENCODED_FRAGMENT")
       case G_URI_FLAGS_SCHEME_NORMALIZE => Some("G_URI_FLAGS_SCHEME_NORMALIZE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUriFlags)
     inline def &(b: GUriFlags): GUriFlags = a & b
     inline def |(b: GUriFlags): GUriFlags = a | b
@@ -2142,7 +2116,7 @@ object GUriHideFlags extends CEnumU[GUriHideFlags]:
       case G_URI_HIDE_AUTH_PARAMS => Some("G_URI_HIDE_AUTH_PARAMS")
       case G_URI_HIDE_QUERY => Some("G_URI_HIDE_QUERY")
       case G_URI_HIDE_FRAGMENT => Some("G_URI_HIDE_FRAGMENT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUriHideFlags)
     inline def &(b: GUriHideFlags): GUriHideFlags = a & b
     inline def |(b: GUriHideFlags): GUriHideFlags = a | b
@@ -2165,7 +2139,7 @@ object GUriParamsFlags extends CEnumU[GUriParamsFlags]:
       case G_URI_PARAMS_CASE_INSENSITIVE => Some("G_URI_PARAMS_CASE_INSENSITIVE")
       case G_URI_PARAMS_WWW_FORM => Some("G_URI_PARAMS_WWW_FORM")
       case G_URI_PARAMS_PARSE_RELAXED => Some("G_URI_PARAMS_PARSE_RELAXED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUriParamsFlags)
     inline def &(b: GUriParamsFlags): GUriParamsFlags = a & b
     inline def |(b: GUriParamsFlags): GUriParamsFlags = a | b
@@ -2198,7 +2172,7 @@ object GUserDirectory extends CEnumU[GUserDirectory]:
       case G_USER_DIRECTORY_TEMPLATES => Some("G_USER_DIRECTORY_TEMPLATES")
       case G_USER_DIRECTORY_VIDEOS => Some("G_USER_DIRECTORY_VIDEOS")
       case G_USER_N_DIRECTORIES => Some("G_USER_N_DIRECTORIES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUserDirectory)
     inline def &(b: GUserDirectory): GUserDirectory = a & b
     inline def |(b: GUserDirectory): GUserDirectory = a | b
@@ -2246,7 +2220,7 @@ object GVariantClass extends CEnumU[GVariantClass]:
       case G_VARIANT_CLASS_ARRAY => Some("G_VARIANT_CLASS_ARRAY")
       case G_VARIANT_CLASS_TUPLE => Some("G_VARIANT_CLASS_TUPLE")
       case G_VARIANT_CLASS_DICT_ENTRY => Some("G_VARIANT_CLASS_DICT_ENTRY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GVariantClass)
     inline def &(b: GVariantClass): GVariantClass = a & b
     inline def |(b: GVariantClass): GVariantClass = a | b
@@ -2296,7 +2270,7 @@ object GVariantParseError extends CEnumU[GVariantParseError]:
       case G_VARIANT_PARSE_ERROR_UNTERMINATED_STRING_CONSTANT => Some("G_VARIANT_PARSE_ERROR_UNTERMINATED_STRING_CONSTANT")
       case G_VARIANT_PARSE_ERROR_VALUE_EXPECTED => Some("G_VARIANT_PARSE_ERROR_VALUE_EXPECTED")
       case G_VARIANT_PARSE_ERROR_RECURSION => Some("G_VARIANT_PARSE_ERROR_RECURSION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GVariantParseError)
     inline def &(b: GVariantParseError): GVariantParseError = a & b
     inline def |(b: GVariantParseError): GVariantParseError = a | b

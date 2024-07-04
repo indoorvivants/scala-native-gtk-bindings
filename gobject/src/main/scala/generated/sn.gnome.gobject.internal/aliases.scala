@@ -557,78 +557,6 @@ object GTypePluginUse:
     inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
- * GTypeValueCollectFunc: : the value to initialize _collect_values: the number of collected values _values: (array length=n_collect_values): the collected values _flags: optional flags
-*/
-opaque type GTypeValueCollectFunc = CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
-object GTypeValueCollectFunc: 
-  given _tag: Tag[GTypeValueCollectFunc] = Tag.materializeCFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueCollectFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): GTypeValueCollectFunc = o
-  extension (v: GTypeValueCollectFunc)
-    inline def value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
- * GTypeValueCopyFunc: _value: the value to copy
-*/
-opaque type GTypeValueCopyFunc = CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]
-object GTypeValueCopyFunc: 
-  given _tag: Tag[GTypeValueCopyFunc] = Tag.materializeCFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueCopyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): GTypeValueCopyFunc = o
-  extension (v: GTypeValueCopyFunc)
-    inline def value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
- * GTypeValueFreeFunc: : the value to free
-*/
-opaque type GTypeValueFreeFunc = CFuncPtr1[Ptr[GValue], Unit]
-object GTypeValueFreeFunc: 
-  given _tag: Tag[GTypeValueFreeFunc] = Tag.materializeCFuncPtr1[Ptr[GValue], Unit]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueFreeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr1[Ptr[GValue], Unit]): GTypeValueFreeFunc = o
-  extension (v: GTypeValueFreeFunc)
-    inline def value: CFuncPtr1[Ptr[GValue], Unit] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
- * GTypeValueInitFunc: : the value to initialize
-*/
-opaque type GTypeValueInitFunc = CFuncPtr1[Ptr[GValue], Unit]
-object GTypeValueInitFunc: 
-  given _tag: Tag[GTypeValueInitFunc] = Tag.materializeCFuncPtr1[Ptr[GValue], Unit]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueInitFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr1[Ptr[GValue], Unit]): GTypeValueInitFunc = o
-  extension (v: GTypeValueInitFunc)
-    inline def value: CFuncPtr1[Ptr[GValue], Unit] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
- * GTypeValueLCopyFunc: : the value to lcopy _collect_values: the number of collected values _values: (array length=n_collect_values): the collected locations for storage _flags: optional flags
-*/
-opaque type GTypeValueLCopyFunc = CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
-object GTypeValueLCopyFunc: 
-  given _tag: Tag[GTypeValueLCopyFunc] = Tag.materializeCFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValueLCopyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): GTypeValueLCopyFunc = o
-  extension (v: GTypeValueLCopyFunc)
-    inline def value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
- * GTypeValuePeekPointerFunc: : the value to peek
-*/
-opaque type GTypeValuePeekPointerFunc = CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]
-object GTypeValuePeekPointerFunc: 
-  given _tag: Tag[GTypeValuePeekPointerFunc] = Tag.materializeCFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GTypeValuePeekPointerFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]): GTypeValuePeekPointerFunc = o
-  extension (v: GTypeValuePeekPointerFunc)
-    inline def value: CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
  * GVaClosureMarshal: : the #GClosure to which the marshaller belongs
 */
 opaque type GVaClosureMarshal = CFuncPtr7[Ptr[GClosure], Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer, va_list, _root_.sn.gnome.glib.internal.gpointer, CInt, Ptr[GType], Unit]
@@ -687,13 +615,6 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
-
-type size_t = libc.stddef.size_t
-object size_t: 
-  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
-  inline def apply(inline o: libc.stddef.size_t): size_t = o
-  extension (v: size_t)
-    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

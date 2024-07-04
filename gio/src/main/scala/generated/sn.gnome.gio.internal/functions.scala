@@ -91,8 +91,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_action_map_remove_action(action_map : Ptr[GActionMap], action_name : Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = extern
 
-@extern def g_action_map_remove_action_entries(action_map : Ptr[GActionMap], entries : Ptr[GActionEntry], n_entries : _root_.sn.gnome.glib.internal.gint): Unit = extern
-
 @extern def g_action_name_is_valid(action_name : Ptr[_root_.sn.gnome.glib.internal.gchar]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_action_parse_detailed_name(detailed_name : Ptr[_root_.sn.gnome.glib.internal.gchar], action_name : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], target_value : Ptr[Ptr[_root_.sn.gnome.glib.internal.GVariant]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -123,15 +121,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_app_info_get_default_for_type(content_type : CString, must_support_uris : _root_.sn.gnome.glib.internal.gboolean): Ptr[GAppInfo] = extern
 
-@extern def g_app_info_get_default_for_type_async(content_type : CString, must_support_uris : _root_.sn.gnome.glib.internal.gboolean, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_app_info_get_default_for_type_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GAppInfo] = extern
-
 @extern def g_app_info_get_default_for_uri_scheme(uri_scheme : CString): Ptr[GAppInfo] = extern
-
-@extern def g_app_info_get_default_for_uri_scheme_async(uri_scheme : CString, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_app_info_get_default_for_uri_scheme_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GAppInfo] = extern
 
 @extern def g_app_info_get_description(appinfo : Ptr[GAppInfo]): CString = extern
 
@@ -1556,8 +1546,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_info_get_attribute_data(info : Ptr[GFileInfo], attribute : CString, `type` : Ptr[GFileAttributeType], value_pp : Ptr[_root_.sn.gnome.glib.internal.gpointer], status : Ptr[GFileAttributeStatus]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_info_get_attribute_file_path(info : Ptr[GFileInfo], attribute : CString): CString = extern
-
 @extern def g_file_info_get_attribute_int32(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.gint32 = extern
 
 @extern def g_file_info_get_attribute_int64(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.gint64 = extern
@@ -1631,8 +1619,6 @@ import _root_.scala.scalanative.*
 @extern def g_file_info_set_attribute_boolean(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 @extern def g_file_info_set_attribute_byte_string(info : Ptr[GFileInfo], attribute : CString, attr_value : CString): Unit = extern
-
-@extern def g_file_info_set_attribute_file_path(info : Ptr[GFileInfo], attribute : CString, attr_value : CString): Unit = extern
 
 @extern def g_file_info_set_attribute_int32(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.gint32): Unit = extern
 
@@ -1730,10 +1716,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_make_symbolic_link(file : Ptr[GFile], symlink_value : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_make_symbolic_link_async(file : Ptr[GFile], symlink_value : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_file_make_symbolic_link_finish(file : Ptr[GFile], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
-
 @extern def g_file_measure_disk_usage(file : Ptr[GFile], flags : GFileMeasureFlags, cancellable : Ptr[GCancellable], progress_callback : GFileMeasureProgressCallback, progress_data : _root_.sn.gnome.glib.internal.gpointer, disk_usage : Ptr[_root_.sn.gnome.glib.internal.guint64], num_dirs : Ptr[_root_.sn.gnome.glib.internal.guint64], num_files : Ptr[_root_.sn.gnome.glib.internal.guint64], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_measure_disk_usage_async(file : Ptr[GFile], flags : GFileMeasureFlags, io_priority : _root_.sn.gnome.glib.internal.gint, cancellable : Ptr[GCancellable], progress_callback : GFileMeasureProgressCallback, progress_data : _root_.sn.gnome.glib.internal.gpointer, callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
@@ -1778,8 +1760,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_new_build_filename(first_element : Ptr[_root_.sn.gnome.glib.internal.gchar], rest: Any*): Ptr[GFile] = extern
 
-@extern def g_file_new_build_filenamev(args : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]): Ptr[GFile] = extern
-
 @extern def g_file_new_for_commandline_arg(arg : CString): Ptr[GFile] = extern
 
 @extern def g_file_new_for_commandline_arg_and_cwd(arg : Ptr[_root_.sn.gnome.glib.internal.gchar], cwd : Ptr[_root_.sn.gnome.glib.internal.gchar]): Ptr[GFile] = extern
@@ -1789,14 +1769,6 @@ import _root_.scala.scalanative.*
 @extern def g_file_new_for_uri(uri : CString): Ptr[GFile] = extern
 
 @extern def g_file_new_tmp(tmpl : CString, iostream : Ptr[Ptr[GFileIOStream]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
-
-@extern def g_file_new_tmp_async(tmpl : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_file_new_tmp_dir_async(tmpl : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_file_new_tmp_dir_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
-
-@extern def g_file_new_tmp_finish(result : Ptr[GAsyncResult], iostream : Ptr[Ptr[GFileIOStream]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
 
 @extern def g_file_open_readwrite(file : Ptr[GFile], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileIOStream] = extern
 
@@ -2098,8 +2070,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_io_error_from_errno(err_no : _root_.sn.gnome.glib.internal.gint): GIOErrorEnum = extern
 
-@extern def g_io_error_from_file_error(file_error : _root_.sn.gnome.glib.internal.GFileError): GIOErrorEnum = extern
-
 @extern def g_io_error_quark(): _root_.sn.gnome.glib.internal.GQuark = extern
 
 @extern def g_io_extension_get_name(extension : Ptr[GIOExtension]): CString = extern
@@ -2210,8 +2180,6 @@ import _root_.scala.scalanative.*
 @extern def g_list_store_find(store : Ptr[GListStore], item : _root_.sn.gnome.glib.internal.gpointer, position : Ptr[_root_.sn.gnome.glib.internal.guint]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_list_store_find_with_equal_func(store : Ptr[GListStore], item : _root_.sn.gnome.glib.internal.gpointer, equal_func : _root_.sn.gnome.glib.internal.GEqualFunc, position : Ptr[_root_.sn.gnome.glib.internal.guint]): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_list_store_find_with_equal_func_full(store : Ptr[GListStore], item : _root_.sn.gnome.glib.internal.gpointer, equal_func : _root_.sn.gnome.glib.internal.GEqualFuncFull, user_data : _root_.sn.gnome.glib.internal.gpointer, position : Ptr[_root_.sn.gnome.glib.internal.guint]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_list_store_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -2769,8 +2737,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_resolver_get_default(): Ptr[GResolver] = extern
 
-@extern def g_resolver_get_timeout(resolver : Ptr[GResolver]): CUnsignedInt = extern
-
 @extern def g_resolver_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def g_resolver_lookup_by_address(resolver : Ptr[GResolver], address : Ptr[GInetAddress], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[_root_.sn.gnome.glib.internal.gchar] = extern
@@ -2808,8 +2774,6 @@ import _root_.scala.scalanative.*
 @extern def g_resolver_record_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def g_resolver_set_default(resolver : Ptr[GResolver]): Unit = extern
-
-@extern def g_resolver_set_timeout(resolver : Ptr[GResolver], timeout_ms : CUnsignedInt): Unit = extern
 
 @extern def g_resource_enumerate_children(resource : Ptr[GResource], path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CString] = extern
 
@@ -3556,8 +3520,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_task_new(source_object : _root_.sn.gnome.glib.internal.gpointer, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, callback_data : _root_.sn.gnome.glib.internal.gpointer): Ptr[GTask] = extern
 
-@extern def g_task_print_alive_tasks(): Unit = extern
-
 @extern def g_task_propagate_boolean(task : Ptr[GTask], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_task_propagate_int(task : Ptr[GTask], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gssize = extern
@@ -3597,8 +3559,6 @@ import _root_.scala.scalanative.*
 @extern def g_task_set_return_on_cancel(task : Ptr[GTask], return_on_cancel : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_task_set_source_tag(task : Ptr[GTask], source_tag : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_task_set_static_name(task : Ptr[GTask], name : Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = extern
 
 @extern def g_task_set_task_data(task : Ptr[GTask], task_data : _root_.sn.gnome.glib.internal.gpointer, task_data_destroy : _root_.sn.gnome.glib.internal.GDestroyNotify): Unit = extern
 
@@ -3881,68 +3841,6 @@ import _root_.scala.scalanative.*
 @extern def g_tls_server_connection_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def g_tls_server_connection_new(base_io_stream : Ptr[GIOStream], certificate : Ptr[GTlsCertificate], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GIOStream] = extern
-
-@extern def g_unix_connection_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
-
-@extern def g_unix_connection_receive_credentials(connection : Ptr[GUnixConnection], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GCredentials] = extern
-
-@extern def g_unix_connection_receive_credentials_async(connection : Ptr[GUnixConnection], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_unix_connection_receive_credentials_finish(connection : Ptr[GUnixConnection], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GCredentials] = extern
-
-@extern def g_unix_connection_receive_fd(connection : Ptr[GUnixConnection], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gint = extern
-
-@extern def g_unix_connection_send_credentials(connection : Ptr[GUnixConnection], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_unix_connection_send_credentials_async(connection : Ptr[GUnixConnection], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_unix_connection_send_credentials_finish(connection : Ptr[GUnixConnection], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_unix_connection_send_fd(connection : Ptr[GUnixConnection], fd : _root_.sn.gnome.glib.internal.gint, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_unix_credentials_message_get_credentials(message : Ptr[GUnixCredentialsMessage]): Ptr[GCredentials] = extern
-
-@extern def g_unix_credentials_message_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
-
-@extern def g_unix_credentials_message_is_supported(): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_unix_credentials_message_new(): Ptr[GSocketControlMessage] = extern
-
-@extern def g_unix_credentials_message_new_with_credentials(credentials : Ptr[GCredentials]): Ptr[GSocketControlMessage] = extern
-
-@extern def g_unix_fd_list_append(list : Ptr[GUnixFDList], fd : _root_.sn.gnome.glib.internal.gint, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gint = extern
-
-@extern def g_unix_fd_list_get(list : Ptr[GUnixFDList], `index_` : _root_.sn.gnome.glib.internal.gint, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gint = extern
-
-@extern def g_unix_fd_list_get_length(list : Ptr[GUnixFDList]): _root_.sn.gnome.glib.internal.gint = extern
-
-@extern def g_unix_fd_list_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
-
-@extern def g_unix_fd_list_new(): Ptr[GUnixFDList] = extern
-
-@extern def g_unix_fd_list_new_from_array(fds : Ptr[_root_.sn.gnome.glib.internal.gint], n_fds : _root_.sn.gnome.glib.internal.gint): Ptr[GUnixFDList] = extern
-
-@extern def g_unix_fd_list_peek_fds(list : Ptr[GUnixFDList], length : Ptr[_root_.sn.gnome.glib.internal.gint]): Ptr[_root_.sn.gnome.glib.internal.gint] = extern
-
-@extern def g_unix_fd_list_steal_fds(list : Ptr[GUnixFDList], length : Ptr[_root_.sn.gnome.glib.internal.gint]): Ptr[_root_.sn.gnome.glib.internal.gint] = extern
-
-@extern def g_unix_socket_address_abstract_names_supported(): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_unix_socket_address_get_address_type(address : Ptr[GUnixSocketAddress]): GUnixSocketAddressType = extern
-
-@extern def g_unix_socket_address_get_is_abstract(address : Ptr[GUnixSocketAddress]): _root_.sn.gnome.glib.internal.gboolean = extern
-
-@extern def g_unix_socket_address_get_path(address : Ptr[GUnixSocketAddress]): CString = extern
-
-@extern def g_unix_socket_address_get_path_len(address : Ptr[GUnixSocketAddress]): _root_.sn.gnome.glib.internal.gsize = extern
-
-@extern def g_unix_socket_address_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
-
-@extern def g_unix_socket_address_new(path : Ptr[_root_.sn.gnome.glib.internal.gchar]): Ptr[GSocketAddress] = extern
-
-@extern def g_unix_socket_address_new_abstract(path : Ptr[_root_.sn.gnome.glib.internal.gchar], path_len : _root_.sn.gnome.glib.internal.gint): Ptr[GSocketAddress] = extern
-
-@extern def g_unix_socket_address_new_with_type(path : Ptr[_root_.sn.gnome.glib.internal.gchar], path_len : _root_.sn.gnome.glib.internal.gint, `type` : GUnixSocketAddressType): Ptr[GSocketAddress] = extern
 
 @extern def g_unix_socket_address_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -4304,14 +4202,6 @@ import _root_.scala.scalanative.*
 
 @extern def glib_autoptr_cleanup_GTlsServerConnection(_ptr : Ptr[Ptr[GTlsServerConnection]]): Unit = extern
 
-@extern def glib_autoptr_cleanup_GUnixConnection(_ptr : Ptr[Ptr[GUnixConnection]]): Unit = extern
-
-@extern def glib_autoptr_cleanup_GUnixCredentialsMessage(_ptr : Ptr[Ptr[GUnixCredentialsMessage]]): Unit = extern
-
-@extern def glib_autoptr_cleanup_GUnixFDList(_ptr : Ptr[Ptr[GUnixFDList]]): Unit = extern
-
-@extern def glib_autoptr_cleanup_GUnixSocketAddress(_ptr : Ptr[Ptr[GUnixSocketAddress]]): Unit = extern
-
 @extern def glib_autoptr_cleanup_GVfs(_ptr : Ptr[Ptr[GVfs]]): Unit = extern
 
 @extern def glib_autoptr_cleanup_GVolume(_ptr : Ptr[Ptr[GVolume]]): Unit = extern
@@ -4587,14 +4477,6 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_GTlsPassword(_ptr : Ptr[GTlsPassword]): Unit = extern
 
 @extern def glib_autoptr_clear_GTlsServerConnection(_ptr : Ptr[GTlsServerConnection]): Unit = extern
-
-@extern def glib_autoptr_clear_GUnixConnection(_ptr : Ptr[GUnixConnection]): Unit = extern
-
-@extern def glib_autoptr_clear_GUnixCredentialsMessage(_ptr : Ptr[GUnixCredentialsMessage]): Unit = extern
-
-@extern def glib_autoptr_clear_GUnixFDList(_ptr : Ptr[GUnixFDList]): Unit = extern
-
-@extern def glib_autoptr_clear_GUnixSocketAddress(_ptr : Ptr[GUnixSocketAddress]): Unit = extern
 
 @extern def glib_autoptr_clear_GVfs(_ptr : Ptr[GVfs]): Unit = extern
 
@@ -4872,14 +4754,6 @@ import _root_.scala.scalanative.*
 
 @extern def glib_listautoptr_cleanup_GTlsServerConnection(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
-@extern def glib_listautoptr_cleanup_GUnixConnection(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
-
-@extern def glib_listautoptr_cleanup_GUnixCredentialsMessage(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
-
-@extern def glib_listautoptr_cleanup_GUnixFDList(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
-
-@extern def glib_listautoptr_cleanup_GUnixSocketAddress(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
-
 @extern def glib_listautoptr_cleanup_GVfs(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 @extern def glib_listautoptr_cleanup_GVolume(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -5156,14 +5030,6 @@ import _root_.scala.scalanative.*
 
 @extern def glib_queueautoptr_cleanup_GTlsServerConnection(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
-@extern def glib_queueautoptr_cleanup_GUnixConnection(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
-
-@extern def glib_queueautoptr_cleanup_GUnixCredentialsMessage(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
-
-@extern def glib_queueautoptr_cleanup_GUnixFDList(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
-
-@extern def glib_queueautoptr_cleanup_GUnixSocketAddress(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
-
 @extern def glib_queueautoptr_cleanup_GVfs(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 @extern def glib_queueautoptr_cleanup_GVolume(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5439,14 +5305,6 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_GTlsPassword(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 @extern def glib_slistautoptr_cleanup_GTlsServerConnection(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
-
-@extern def glib_slistautoptr_cleanup_GUnixConnection(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
-
-@extern def glib_slistautoptr_cleanup_GUnixCredentialsMessage(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
-
-@extern def glib_slistautoptr_cleanup_GUnixFDList(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
-
-@extern def glib_slistautoptr_cleanup_GUnixSocketAddress(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 @extern def glib_slistautoptr_cleanup_GVfs(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 

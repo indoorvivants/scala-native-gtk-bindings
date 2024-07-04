@@ -407,18 +407,6 @@ object GEqualFunc:
     inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
- * GEqualFuncFull: : a value : a value to compare with _data: user data provided by the caller
-*/
-opaque type GEqualFuncFull = CFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean]
-object GEqualFuncFull: 
-  given _tag: Tag[GEqualFuncFull] = Tag.materializeCFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GEqualFuncFull = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean]): GEqualFuncFull = o
-  extension (v: GEqualFuncFull)
-    inline def value: CFuncPtr3[gconstpointer, gconstpointer, gpointer, gboolean] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
-/**
  * GErrorClearFunc: : extended error to clear
 */
 opaque type GErrorClearFunc = CFuncPtr1[Ptr[GError], Unit]
@@ -1127,34 +1115,6 @@ object GOptionParseFunc:
     inline def value: CFuncPtr4[Ptr[GOptionContext], Ptr[GOptionGroup], gpointer, Ptr[Ptr[GError]], gboolean] = v
     inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-opaque type GPathBuf_autoptr = Ptr[GPathBuf]
-object GPathBuf_autoptr: 
-  given _tag: Tag[GPathBuf_autoptr] = Tag.Ptr[GPathBuf](GPathBuf._tag)
-  inline def apply(inline o: Ptr[GPathBuf]): GPathBuf_autoptr = o
-  extension (v: GPathBuf_autoptr)
-    inline def value: Ptr[GPathBuf] = v
-
-opaque type GPathBuf_listautoptr = Ptr[GList]
-object GPathBuf_listautoptr: 
-  given _tag: Tag[GPathBuf_listautoptr] = Tag.Ptr[GList](GList._tag)
-  inline def apply(inline o: Ptr[GList]): GPathBuf_listautoptr = o
-  extension (v: GPathBuf_listautoptr)
-    inline def value: Ptr[GList] = v
-
-opaque type GPathBuf_queueautoptr = Ptr[GQueue]
-object GPathBuf_queueautoptr: 
-  given _tag: Tag[GPathBuf_queueautoptr] = Tag.Ptr[GQueue](GQueue._tag)
-  inline def apply(inline o: Ptr[GQueue]): GPathBuf_queueautoptr = o
-  extension (v: GPathBuf_queueautoptr)
-    inline def value: Ptr[GQueue] = v
-
-opaque type GPathBuf_slistautoptr = Ptr[GSList]
-object GPathBuf_slistautoptr: 
-  given _tag: Tag[GPathBuf_slistautoptr] = Tag.Ptr[GSList](GSList._tag)
-  inline def apply(inline o: Ptr[GSList]): GPathBuf_slistautoptr = o
-  extension (v: GPathBuf_slistautoptr)
-    inline def value: Ptr[GSList] = v
-
 opaque type GPatternSpec_autoptr = Ptr[GPatternSpec]
 object GPatternSpec_autoptr: 
   given _tag: Tag[GPatternSpec_autoptr] = Tag.Ptr[GPatternSpec](GPatternSpec._tag)
@@ -1635,18 +1595,6 @@ object GSourceFunc:
     inline def value: CFuncPtr1[gpointer, gboolean] = v
     inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
- * GSourceOnceFunc: _data: data passed to the function, set when the source was created
-*/
-opaque type GSourceOnceFunc = CFuncPtr1[gpointer, Unit]
-object GSourceOnceFunc: 
-  given _tag: Tag[GSourceOnceFunc] = Tag.materializeCFuncPtr1[gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GSourceOnceFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr1[gpointer, Unit]): GSourceOnceFunc = o
-  extension (v: GSourceOnceFunc)
-    inline def value: CFuncPtr1[gpointer, Unit] = v
-    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
-
 opaque type GSource_autoptr = Ptr[GSource]
 object GSource_autoptr: 
   given _tag: Tag[GSource_autoptr] = Tag.Ptr[GSource](GSource._tag)
@@ -1676,7 +1624,7 @@ object GSource_slistautoptr:
     inline def value: Ptr[GSList] = v
 
 /**
- * GSpawnChildSetupFunc:
+ * GSpawnChildSetupFunc: _data: (closure): user data to pass to the function.
 */
 opaque type GSpawnChildSetupFunc = CFuncPtr1[gpointer, Unit]
 object GSpawnChildSetupFunc: 
@@ -2231,12 +2179,12 @@ object gint32:
   extension (v: gint32)
     inline def value: CInt = v
 
-opaque type gint64 = CLongLong
+opaque type gint64 = CLongInt
 object gint64: 
   given _tag: Tag[gint64] = Tag.Long
-  inline def apply(inline o: CLongLong): gint64 = o
+  inline def apply(inline o: CLongInt): gint64 = o
   extension (v: gint64)
-    inline def value: CLongLong = v
+    inline def value: CLongInt = v
 
 opaque type gint8 = CChar
 object gint8: 
@@ -2329,12 +2277,12 @@ object guint32:
   extension (v: guint32)
     inline def value: CUnsignedInt = v
 
-opaque type guint64 = CUnsignedLongLong
+opaque type guint64 = CUnsignedLongInt
 object guint64: 
   given _tag: Tag[guint64] = Tag.ULong
-  inline def apply(inline o: CUnsignedLongLong): guint64 = o
+  inline def apply(inline o: CUnsignedLongInt): guint64 = o
   extension (v: guint64)
-    inline def value: CUnsignedLongLong = v
+    inline def value: CUnsignedLongInt = v
 
 opaque type guint8 = CUnsignedChar
 object guint8: 
@@ -2397,13 +2345,6 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
-
-type size_t = libc.stddef.size_t
-object size_t: 
-  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
-  inline def apply(inline o: libc.stddef.size_t): size_t = o
-  extension (v: size_t)
-    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 

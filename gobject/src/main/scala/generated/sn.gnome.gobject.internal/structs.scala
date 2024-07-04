@@ -211,11 +211,11 @@ object GInitiallyUnowned:
 /**
  * GObjectClass: _type_class: the parent class : the function is called by g_object_new () to complete the object initialization after all the construction properties are set. The first thing a implementation must do is chain up to the of the parent class. Overriding should be rarely needed, e.g. to handle construct properties, or to implement singletons.
 */
-opaque type GInitiallyUnownedClass = CStruct15[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+opaque type GInitiallyUnownedClass = CStruct12[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]
 object GInitiallyUnownedClass:
-  given _tag: Tag[GInitiallyUnownedClass] = Tag.materializeCStruct15Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+  given _tag: Tag[GInitiallyUnownedClass] = Tag.materializeCStruct12Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]
   def apply()(using Zone): Ptr[GInitiallyUnownedClass] = scala.scalanative.unsafe.alloc[GInitiallyUnownedClass](1)
-  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.sn.gnome.glib.internal.GSList], constructor : CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.sn.gnome.glib.internal.gsize, n_construct_properties : _root_.sn.gnome.glib.internal.gsize, pspecs : _root_.sn.gnome.glib.internal.gpointer, n_pspecs : _root_.sn.gnome.glib.internal.gsize, pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3])(using Zone): Ptr[GInitiallyUnownedClass] = 
+  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.sn.gnome.glib.internal.GSList], constructor : CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.sn.gnome.glib.internal.gsize, pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6])(using Zone): Ptr[GInitiallyUnownedClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).construct_properties = construct_properties
@@ -228,9 +228,6 @@ object GInitiallyUnownedClass:
     (!____ptr)._notify = _notify
     (!____ptr).constructed = constructed
     (!____ptr).flags = flags
-    (!____ptr).n_construct_properties = n_construct_properties
-    (!____ptr).pspecs = pspecs
-    (!____ptr).n_pspecs = n_pspecs
     (!____ptr).pdummy = pdummy
     ____ptr
   extension (struct: GInitiallyUnownedClass)
@@ -256,14 +253,8 @@ object GInitiallyUnownedClass:
     def constructed_=(value: CFuncPtr1[Ptr[GObject], Unit]): Unit = !struct.at10 = value
     def flags : _root_.sn.gnome.glib.internal.gsize = struct._11
     def flags_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at11 = value
-    def n_construct_properties : _root_.sn.gnome.glib.internal.gsize = struct._12
-    def n_construct_properties_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at12 = value
-    def pspecs : _root_.sn.gnome.glib.internal.gpointer = struct._13
-    def pspecs_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at13 = value
-    def n_pspecs : _root_.sn.gnome.glib.internal.gsize = struct._14
-    def n_pspecs_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at14 = value
-    def pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3] = struct._15
-    def pdummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]): Unit = !struct.at15 = value
+    def pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6] = struct._12
+    def pdummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]): Unit = !struct.at12 = value
 
 /**
  * GInterfaceInfo:
@@ -310,11 +301,11 @@ object GObject:
 /**
  * GObjectClass: _type_class: the parent class : the function is called by g_object_new () to complete the object initialization after all the construction properties are set. The first thing a implementation must do is chain up to the of the parent class. Overriding should be rarely needed, e.g. to handle construct properties, or to implement singletons.
 */
-opaque type GObjectClass = CStruct15[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+opaque type GObjectClass = CStruct12[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]
 object GObjectClass:
-  given _tag: Tag[GObjectClass] = Tag.materializeCStruct15Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+  given _tag: Tag[GObjectClass] = Tag.materializeCStruct12Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]
   def apply()(using Zone): Ptr[GObjectClass] = scala.scalanative.unsafe.alloc[GObjectClass](1)
-  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.sn.gnome.glib.internal.GSList], constructor : CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.sn.gnome.glib.internal.gsize, n_construct_properties : _root_.sn.gnome.glib.internal.gsize, pspecs : _root_.sn.gnome.glib.internal.gpointer, n_pspecs : _root_.sn.gnome.glib.internal.gsize, pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3])(using Zone): Ptr[GObjectClass] = 
+  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.sn.gnome.glib.internal.GSList], constructor : CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.sn.gnome.glib.internal.gsize, pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6])(using Zone): Ptr[GObjectClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).construct_properties = construct_properties
@@ -327,9 +318,6 @@ object GObjectClass:
     (!____ptr)._notify = _notify
     (!____ptr).constructed = constructed
     (!____ptr).flags = flags
-    (!____ptr).n_construct_properties = n_construct_properties
-    (!____ptr).pspecs = pspecs
-    (!____ptr).n_pspecs = n_pspecs
     (!____ptr).pdummy = pdummy
     ____ptr
   extension (struct: GObjectClass)
@@ -355,14 +343,8 @@ object GObjectClass:
     def constructed_=(value: CFuncPtr1[Ptr[GObject], Unit]): Unit = !struct.at10 = value
     def flags : _root_.sn.gnome.glib.internal.gsize = struct._11
     def flags_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at11 = value
-    def n_construct_properties : _root_.sn.gnome.glib.internal.gsize = struct._12
-    def n_construct_properties_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at12 = value
-    def pspecs : _root_.sn.gnome.glib.internal.gpointer = struct._13
-    def pspecs_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at13 = value
-    def n_pspecs : _root_.sn.gnome.glib.internal.gsize = struct._14
-    def n_pspecs_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at14 = value
-    def pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3] = struct._15
-    def pdummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]): Unit = !struct.at15 = value
+    def pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6] = struct._12
+    def pdummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]): Unit = !struct.at12 = value
 
 /**
  * GObjectConstructParam: : the #GParamSpec of the construct parameter : the value to set the parameter to
@@ -482,13 +464,13 @@ object GParamSpecChar:
     def default_value_=(value: _root_.sn.gnome.glib.internal.gint8): Unit = !struct.at4 = value
 
 /**
- * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp(). _is_valid: Checks if contents of comply with the specifications set out by this type, without modifying the value. This vfunc is optional. If it isn't set, GObject will use _validate. Since 2.74
+ * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp().
 */
-opaque type GParamSpecClass = CStruct8[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+opaque type GParamSpecClass = CStruct7[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
 object GParamSpecClass:
-  given _tag: Tag[GParamSpecClass] = Tag.materializeCStruct8Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+  given _tag: Tag[GParamSpecClass] = Tag.materializeCStruct7Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[GParamSpecClass] = scala.scalanative.unsafe.alloc[GParamSpecClass](1)
-  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3])(using Zone): Ptr[GParamSpecClass] = 
+  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[GParamSpecClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).value_type = value_type
@@ -496,7 +478,6 @@ object GParamSpecClass:
     (!____ptr).value_set_default = value_set_default
     (!____ptr).value_validate = value_validate
     (!____ptr).values_cmp = values_cmp
-    (!____ptr).value_is_valid = value_is_valid
     (!____ptr).dummy = dummy
     ____ptr
   extension (struct: GParamSpecClass)
@@ -512,10 +493,8 @@ object GParamSpecClass:
     def value_validate_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
     def values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint] = struct._6
     def values_cmp_=(value: CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint]): Unit = !struct.at6 = value
-    def value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean] = struct._7
-    def value_is_valid_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at7 = value
-    def dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3] = struct._8
-    def dummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]): Unit = !struct.at8 = value
+    def dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._7
+    def dummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at7 = value
 
 /**
  * GParamSpecDouble: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified : values closer than will be considered identical by g_param_values_cmp(); the default value is 1e-90.
@@ -1105,7 +1084,7 @@ object GTypeFundamentalInfo:
     def type_flags_=(value: GTypeFundamentalFlags): Unit = !struct.at1 = value
 
 /**
- * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10 this field is ignored. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
+ * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10, it is ignored, since instances are allocated with the [slice allocator][glib-Memory-Slices] now. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
 */
 opaque type GTypeInfo = CStruct10[_root_.sn.gnome.glib.internal.guint16, GBaseInitFunc, GBaseFinalizeFunc, GClassInitFunc, GClassFinalizeFunc, _root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.guint16, _root_.sn.gnome.glib.internal.guint16, GInstanceInitFunc, Ptr[GTypeValueTable]]
 object GTypeInfo:
@@ -1295,13 +1274,13 @@ object GTypeQuery:
     def instance_size_=(value: _root_.sn.gnome.glib.internal.guint): Unit = !struct.at4 = value
 
 /**
- * GTypeValueTable: _init: Function to initialize a GValue _free: Function to free a GValue _copy: Function to copy a GValue _peek_pointer: Function to peek the contents of a GValue if they fit into a pointer _format: A string format describing how to collect the contents of this value bit-by-bit. Each character in the format represents an argument to be collected, and the characters themselves indicate the type of the argument. Currently supported arguments are: - `'i'`: Integers, passed as `collect_values[].v_int` - `'l'`: Longs, passed as `collect_values[].v_long` - `'d'`: Doubles, passed as `collect_values[].v_double` - `'p'`: Pointers, passed as `collect_values[].v_pointer` It should be noted that for variable argument list construction, ANSI C promotes every type smaller than an integer to an int, and floats to doubles. So for collection of short int or char, `'i'` needs to be used, and for collection of floats `'d'`. _value: Function to initialize a GValue from the values collected from variadic arguments _format: Format description of the arguments to collect for _value, analogous to _format. Usually, _format string consists only of `'p'`s to provide lcopy_value() with pointers to storage locations. _value: Function to store the contents of a value into the locations collected from variadic arguments
+ * GTypeValueTable: _init: Default initialize contents by poking values directly into the value->data array. The data array of the #GValue passed into this function was zero-filled with `memset()`, so no care has to be taken to free any old contents. E.g. for the implementation of a string value that may never be %NULL, the implementation might look like: |[<!-- language="C" --> value->data[0].v_pointer = g_strdup (""); ]| _free: Free any old contents that might be left in the data array of the passed in . No resources may remain allocated through the #GValue contents after this function returns. E.g. for our above string type: |[<!-- language="C" --> // only free strings without a specific flag for static storage if (!(value->data[1].v_uint & G_VALUE_NOCOPY_CONTENTS)) g_free (value->data[0].v_pointer); ]| _copy:
 */
-opaque type GTypeValueTable = CStruct8[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueCollectFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueLCopyFunc]
+opaque type GTypeValueTable = CStruct8[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]]
 object GTypeValueTable:
-  given _tag: Tag[GTypeValueTable] = Tag.materializeCStruct8Tag[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueCollectFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueLCopyFunc]
+  given _tag: Tag[GTypeValueTable] = Tag.materializeCStruct8Tag[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]]
   def apply()(using Zone): Ptr[GTypeValueTable] = scala.scalanative.unsafe.alloc[GTypeValueTable](1)
-  def apply(value_init : GTypeValueInitFunc, value_free : GTypeValueFreeFunc, value_copy : GTypeValueCopyFunc, value_peek_pointer : GTypeValuePeekPointerFunc, collect_format : Ptr[_root_.sn.gnome.glib.internal.gchar], collect_value : GTypeValueCollectFunc, lcopy_format : Ptr[_root_.sn.gnome.glib.internal.gchar], lcopy_value : GTypeValueLCopyFunc)(using Zone): Ptr[GTypeValueTable] = 
+  def apply(value_init : CFuncPtr1[Ptr[GValue], Unit], value_free : CFuncPtr1[Ptr[GValue], Unit], value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer], collect_format : Ptr[_root_.sn.gnome.glib.internal.gchar], collect_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]], lcopy_format : Ptr[_root_.sn.gnome.glib.internal.gchar], lcopy_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]])(using Zone): Ptr[GTypeValueTable] = 
     val ____ptr = apply()
     (!____ptr).value_init = value_init
     (!____ptr).value_free = value_free
@@ -1313,22 +1292,22 @@ object GTypeValueTable:
     (!____ptr).lcopy_value = lcopy_value
     ____ptr
   extension (struct: GTypeValueTable)
-    def value_init : GTypeValueInitFunc = struct._1
-    def value_init_=(value: GTypeValueInitFunc): Unit = !struct.at1 = value
-    def value_free : GTypeValueFreeFunc = struct._2
-    def value_free_=(value: GTypeValueFreeFunc): Unit = !struct.at2 = value
-    def value_copy : GTypeValueCopyFunc = struct._3
-    def value_copy_=(value: GTypeValueCopyFunc): Unit = !struct.at3 = value
-    def value_peek_pointer : GTypeValuePeekPointerFunc = struct._4
-    def value_peek_pointer_=(value: GTypeValuePeekPointerFunc): Unit = !struct.at4 = value
+    def value_init : CFuncPtr1[Ptr[GValue], Unit] = struct._1
+    def value_init_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at1 = value
+    def value_free : CFuncPtr1[Ptr[GValue], Unit] = struct._2
+    def value_free_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at2 = value
+    def value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = struct._3
+    def value_copy_=(value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): Unit = !struct.at3 = value
+    def value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer] = struct._4
+    def value_peek_pointer_=(value: CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]): Unit = !struct.at4 = value
     def collect_format : Ptr[_root_.sn.gnome.glib.internal.gchar] = struct._5
     def collect_format_=(value: Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = !struct.at5 = value
-    def collect_value : GTypeValueCollectFunc = struct._6
-    def collect_value_=(value: GTypeValueCollectFunc): Unit = !struct.at6 = value
+    def collect_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = struct._6
+    def collect_value_=(value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): Unit = !struct.at6 = value
     def lcopy_format : Ptr[_root_.sn.gnome.glib.internal.gchar] = struct._7
     def lcopy_format_=(value: Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = !struct.at7 = value
-    def lcopy_value : GTypeValueLCopyFunc = struct._8
-    def lcopy_value_=(value: GTypeValueLCopyFunc): Unit = !struct.at8 = value
+    def lcopy_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = struct._8
+    def lcopy_value_=(value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): Unit = !struct.at8 = value
 
 /**
  * GValue:
@@ -1702,11 +1681,11 @@ object _GObject:
 /**
  * GObjectClass: _type_class: the parent class : the function is called by g_object_new () to complete the object initialization after all the construction properties are set. The first thing a implementation must do is chain up to the of the parent class. Overriding should be rarely needed, e.g. to handle construct properties, or to implement singletons.
 */
-opaque type _GObjectClass = CStruct15[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+opaque type _GObjectClass = CStruct12[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]
 object _GObjectClass:
-  given _tag: Tag[_GObjectClass] = Tag.materializeCStruct15Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+  given _tag: Tag[_GObjectClass] = Tag.materializeCStruct12Tag[GTypeClass, Ptr[Byte], CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr1[Ptr[GObject], Unit], CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], CFuncPtr1[Ptr[GObject], Unit], _root_.sn.gnome.glib.internal.gsize, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]]
   def apply()(using Zone): Ptr[_GObjectClass] = scala.scalanative.unsafe.alloc[_GObjectClass](1)
-  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.sn.gnome.glib.internal.GSList], constructor : CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.sn.gnome.glib.internal.gsize, n_construct_properties : _root_.sn.gnome.glib.internal.gsize, pspecs : _root_.sn.gnome.glib.internal.gpointer, n_pspecs : _root_.sn.gnome.glib.internal.gsize, pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3])(using Zone): Ptr[_GObjectClass] = 
+  def apply(g_type_class : GTypeClass, construct_properties : Ptr[_root_.sn.gnome.glib.internal.GSList], constructor : CFuncPtr3[GType, _root_.sn.gnome.glib.internal.guint, Ptr[GObjectConstructParam], Ptr[GObject]], set_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], get_property : CFuncPtr4[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[GValue], Ptr[GParamSpec], Unit], dispose : CFuncPtr1[Ptr[GObject], Unit], finalize : CFuncPtr1[Ptr[GObject], Unit], dispatch_properties_changed : CFuncPtr3[Ptr[GObject], _root_.sn.gnome.glib.internal.guint, Ptr[Ptr[GParamSpec]], Unit], _notify : CFuncPtr2[Ptr[GObject], Ptr[GParamSpec], Unit], constructed : CFuncPtr1[Ptr[GObject], Unit], flags : _root_.sn.gnome.glib.internal.gsize, pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6])(using Zone): Ptr[_GObjectClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).construct_properties = construct_properties
@@ -1719,9 +1698,6 @@ object _GObjectClass:
     (!____ptr)._notify = _notify
     (!____ptr).constructed = constructed
     (!____ptr).flags = flags
-    (!____ptr).n_construct_properties = n_construct_properties
-    (!____ptr).pspecs = pspecs
-    (!____ptr).n_pspecs = n_pspecs
     (!____ptr).pdummy = pdummy
     ____ptr
   extension (struct: _GObjectClass)
@@ -1747,14 +1723,8 @@ object _GObjectClass:
     def constructed_=(value: CFuncPtr1[Ptr[GObject], Unit]): Unit = !struct.at10 = value
     def flags : _root_.sn.gnome.glib.internal.gsize = struct._11
     def flags_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at11 = value
-    def n_construct_properties : _root_.sn.gnome.glib.internal.gsize = struct._12
-    def n_construct_properties_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at12 = value
-    def pspecs : _root_.sn.gnome.glib.internal.gpointer = struct._13
-    def pspecs_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at13 = value
-    def n_pspecs : _root_.sn.gnome.glib.internal.gsize = struct._14
-    def n_pspecs_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at14 = value
-    def pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3] = struct._15
-    def pdummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]): Unit = !struct.at15 = value
+    def pdummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6] = struct._12
+    def pdummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._6]): Unit = !struct.at12 = value
 
 /**
  * GObjectConstructParam: : the #GParamSpec of the construct parameter : the value to set the parameter to
@@ -1874,13 +1844,13 @@ object _GParamSpecChar:
     def default_value_=(value: _root_.sn.gnome.glib.internal.gint8): Unit = !struct.at4 = value
 
 /**
- * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp(). _is_valid: Checks if contents of comply with the specifications set out by this type, without modifying the value. This vfunc is optional. If it isn't set, GObject will use _validate. Since 2.74
+ * GParamSpecClass: _type_class: the parent class _type: the #GValue type for this parameter : The instance finalization function (optional), should chain up to the finalize method of the parent class. _set_default: Resets a to the default value for this type (recommended, the default is g_value_reset()), see g_param_value_set_default(). _validate: Ensures that the contents of comply with the specifications set out by this type (optional), see g_param_value_validate(). _cmp: Compares with according to this type (recommended, the default is memcmp()), see g_param_values_cmp().
 */
-opaque type _GParamSpecClass = CStruct8[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+opaque type _GParamSpecClass = CStruct7[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
 object _GParamSpecClass:
-  given _tag: Tag[_GParamSpecClass] = Tag.materializeCStruct8Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]]
+  given _tag: Tag[_GParamSpecClass] = Tag.materializeCStruct7Tag[GTypeClass, GType, CFuncPtr1[Ptr[GParamSpec], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[_GParamSpecClass] = scala.scalanative.unsafe.alloc[_GParamSpecClass](1)
-  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3])(using Zone): Ptr[_GParamSpecClass] = 
+  def apply(g_type_class : GTypeClass, value_type : GType, finalize : CFuncPtr1[Ptr[GParamSpec], Unit], value_set_default : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], Unit], value_validate : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean], values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint], dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_GParamSpecClass] = 
     val ____ptr = apply()
     (!____ptr).g_type_class = g_type_class
     (!____ptr).value_type = value_type
@@ -1888,7 +1858,6 @@ object _GParamSpecClass:
     (!____ptr).value_set_default = value_set_default
     (!____ptr).value_validate = value_validate
     (!____ptr).values_cmp = values_cmp
-    (!____ptr).value_is_valid = value_is_valid
     (!____ptr).dummy = dummy
     ____ptr
   extension (struct: _GParamSpecClass)
@@ -1904,10 +1873,8 @@ object _GParamSpecClass:
     def value_validate_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
     def values_cmp : CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint] = struct._6
     def values_cmp_=(value: CFuncPtr3[Ptr[GParamSpec], Ptr[GValue], Ptr[GValue], _root_.sn.gnome.glib.internal.gint]): Unit = !struct.at6 = value
-    def value_is_valid : CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean] = struct._7
-    def value_is_valid_=(value: CFuncPtr2[Ptr[GParamSpec], Ptr[GValue], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at7 = value
-    def dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3] = struct._8
-    def dummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._3]): Unit = !struct.at8 = value
+    def dummy : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._7
+    def dummy_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at7 = value
 
 /**
  * GParamSpecDouble: _instance: private #GParamSpec portion : minimum value for the property specified : maximum value for the property specified _value: default value for the property specified : values closer than will be considered identical by g_param_values_cmp(); the default value is 1e-90.
@@ -2497,7 +2464,7 @@ object _GTypeFundamentalInfo:
     def type_flags_=(value: GTypeFundamentalFlags): Unit = !struct.at1 = value
 
 /**
- * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10 this field is ignored. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
+ * GTypeInfo: _init: Location of the base initialization function (optional) _finalize: Location of the base finalization function (optional) classed and instantiatable types. Location of the default vtable inititalization function for interface types. (optional) This function is used both to fill in virtual functions in the class or default vtable, and to do type-specific setup such as registering signals and object properties. classed and instantiatable types. Location of the default vtable finalization function for interface types. (optional) _size: Size of the instance (object) structure (required for instantiatable types only) _preallocs: Prior to GLib 2.10, it specified the number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching). Since GLib 2.10, it is ignored, since instances are allocated with the [slice allocator][glib-Memory-Slices] now. _init: Location of the instance initialization function (optional, for instantiatable types only) _table: A #GTypeValueTable function table for generic handling of GValues of this type (usually only useful for fundamental types)
 */
 opaque type _GTypeInfo = CStruct10[_root_.sn.gnome.glib.internal.guint16, GBaseInitFunc, GBaseFinalizeFunc, GClassInitFunc, GClassFinalizeFunc, _root_.sn.gnome.glib.internal.gconstpointer, _root_.sn.gnome.glib.internal.guint16, _root_.sn.gnome.glib.internal.guint16, GInstanceInitFunc, Ptr[GTypeValueTable]]
 object _GTypeInfo:
@@ -2687,13 +2654,13 @@ object _GTypeQuery:
     def instance_size_=(value: _root_.sn.gnome.glib.internal.guint): Unit = !struct.at4 = value
 
 /**
- * GTypeValueTable: _init: Function to initialize a GValue _free: Function to free a GValue _copy: Function to copy a GValue _peek_pointer: Function to peek the contents of a GValue if they fit into a pointer _format: A string format describing how to collect the contents of this value bit-by-bit. Each character in the format represents an argument to be collected, and the characters themselves indicate the type of the argument. Currently supported arguments are: - `'i'`: Integers, passed as `collect_values[].v_int` - `'l'`: Longs, passed as `collect_values[].v_long` - `'d'`: Doubles, passed as `collect_values[].v_double` - `'p'`: Pointers, passed as `collect_values[].v_pointer` It should be noted that for variable argument list construction, ANSI C promotes every type smaller than an integer to an int, and floats to doubles. So for collection of short int or char, `'i'` needs to be used, and for collection of floats `'d'`. _value: Function to initialize a GValue from the values collected from variadic arguments _format: Format description of the arguments to collect for _value, analogous to _format. Usually, _format string consists only of `'p'`s to provide lcopy_value() with pointers to storage locations. _value: Function to store the contents of a value into the locations collected from variadic arguments
+ * GTypeValueTable: _init: Default initialize contents by poking values directly into the value->data array. The data array of the #GValue passed into this function was zero-filled with `memset()`, so no care has to be taken to free any old contents. E.g. for the implementation of a string value that may never be %NULL, the implementation might look like: |[<!-- language="C" --> value->data[0].v_pointer = g_strdup (""); ]| _free: Free any old contents that might be left in the data array of the passed in . No resources may remain allocated through the #GValue contents after this function returns. E.g. for our above string type: |[<!-- language="C" --> // only free strings without a specific flag for static storage if (!(value->data[1].v_uint & G_VALUE_NOCOPY_CONTENTS)) g_free (value->data[0].v_pointer); ]| _copy:
 */
-opaque type _GTypeValueTable = CStruct8[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueCollectFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueLCopyFunc]
+opaque type _GTypeValueTable = CStruct8[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]]
 object _GTypeValueTable:
-  given _tag: Tag[_GTypeValueTable] = Tag.materializeCStruct8Tag[GTypeValueInitFunc, GTypeValueFreeFunc, GTypeValueCopyFunc, GTypeValuePeekPointerFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueCollectFunc, Ptr[_root_.sn.gnome.glib.internal.gchar], GTypeValueLCopyFunc]
+  given _tag: Tag[_GTypeValueTable] = Tag.materializeCStruct8Tag[CFuncPtr1[Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], Unit], CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]], Ptr[_root_.sn.gnome.glib.internal.gchar], CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]]
   def apply()(using Zone): Ptr[_GTypeValueTable] = scala.scalanative.unsafe.alloc[_GTypeValueTable](1)
-  def apply(value_init : GTypeValueInitFunc, value_free : GTypeValueFreeFunc, value_copy : GTypeValueCopyFunc, value_peek_pointer : GTypeValuePeekPointerFunc, collect_format : Ptr[_root_.sn.gnome.glib.internal.gchar], collect_value : GTypeValueCollectFunc, lcopy_format : Ptr[_root_.sn.gnome.glib.internal.gchar], lcopy_value : GTypeValueLCopyFunc)(using Zone): Ptr[_GTypeValueTable] = 
+  def apply(value_init : CFuncPtr1[Ptr[GValue], Unit], value_free : CFuncPtr1[Ptr[GValue], Unit], value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit], value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer], collect_format : Ptr[_root_.sn.gnome.glib.internal.gchar], collect_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]], lcopy_format : Ptr[_root_.sn.gnome.glib.internal.gchar], lcopy_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]])(using Zone): Ptr[_GTypeValueTable] = 
     val ____ptr = apply()
     (!____ptr).value_init = value_init
     (!____ptr).value_free = value_free
@@ -2705,22 +2672,22 @@ object _GTypeValueTable:
     (!____ptr).lcopy_value = lcopy_value
     ____ptr
   extension (struct: _GTypeValueTable)
-    def value_init : GTypeValueInitFunc = struct._1
-    def value_init_=(value: GTypeValueInitFunc): Unit = !struct.at1 = value
-    def value_free : GTypeValueFreeFunc = struct._2
-    def value_free_=(value: GTypeValueFreeFunc): Unit = !struct.at2 = value
-    def value_copy : GTypeValueCopyFunc = struct._3
-    def value_copy_=(value: GTypeValueCopyFunc): Unit = !struct.at3 = value
-    def value_peek_pointer : GTypeValuePeekPointerFunc = struct._4
-    def value_peek_pointer_=(value: GTypeValuePeekPointerFunc): Unit = !struct.at4 = value
+    def value_init : CFuncPtr1[Ptr[GValue], Unit] = struct._1
+    def value_init_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at1 = value
+    def value_free : CFuncPtr1[Ptr[GValue], Unit] = struct._2
+    def value_free_=(value: CFuncPtr1[Ptr[GValue], Unit]): Unit = !struct.at2 = value
+    def value_copy : CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit] = struct._3
+    def value_copy_=(value: CFuncPtr2[Ptr[GValue], Ptr[GValue], Unit]): Unit = !struct.at3 = value
+    def value_peek_pointer : CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer] = struct._4
+    def value_peek_pointer_=(value: CFuncPtr1[Ptr[GValue], _root_.sn.gnome.glib.internal.gpointer]): Unit = !struct.at4 = value
     def collect_format : Ptr[_root_.sn.gnome.glib.internal.gchar] = struct._5
     def collect_format_=(value: Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = !struct.at5 = value
-    def collect_value : GTypeValueCollectFunc = struct._6
-    def collect_value_=(value: GTypeValueCollectFunc): Unit = !struct.at6 = value
+    def collect_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = struct._6
+    def collect_value_=(value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): Unit = !struct.at6 = value
     def lcopy_format : Ptr[_root_.sn.gnome.glib.internal.gchar] = struct._7
     def lcopy_format_=(value: Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = !struct.at7 = value
-    def lcopy_value : GTypeValueLCopyFunc = struct._8
-    def lcopy_value_=(value: GTypeValueLCopyFunc): Unit = !struct.at8 = value
+    def lcopy_value : CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]] = struct._8
+    def lcopy_value_=(value: CFuncPtr4[Ptr[GValue], _root_.sn.gnome.glib.internal.guint, Ptr[GTypeCValue], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.gchar]]): Unit = !struct.at8 = value
 
 /**
  * GValue:

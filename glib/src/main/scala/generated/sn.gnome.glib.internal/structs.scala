@@ -568,21 +568,6 @@ opaque type GOptionGroup = CStruct0
 object GOptionGroup:
   given _tag: Tag[GOptionGroup] = Tag.materializeCStruct0Tag
 
-/**
- * GPathBuf: (copy-func g_path_buf_copy) (free-func g_path_buf_free)
-*/
-opaque type GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
-object GPathBuf:
-  given _tag: Tag[GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
-  def apply()(using Zone): Ptr[GPathBuf] = scala.scalanative.unsafe.alloc[GPathBuf](1)
-  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[GPathBuf] = 
-    val ____ptr = apply()
-    (!____ptr).dummy = dummy
-    ____ptr
-  extension (struct: GPathBuf)
-    def dummy : CArray[gpointer, Nat._8] = struct._1
-    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
-
 opaque type GPatternSpec = CStruct0
 object GPatternSpec:
   given _tag: Tag[GPatternSpec] = Tag.materializeCStruct0Tag
@@ -791,9 +776,9 @@ object GScanner:
     def msg_handler : GScannerMsgFunc = struct._21.asInstanceOf[GScannerMsgFunc]
     def msg_handler_=(value: GScannerMsgFunc): Unit = !struct.at21 = value.asInstanceOf[Ptr[Byte]]
 
-opaque type GScannerConfig = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
+opaque type GScannerConfig = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object GScannerConfig:
-  given _tag: Tag[GScannerConfig] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
+  given _tag: Tag[GScannerConfig] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[GScannerConfig] = scala.scalanative.unsafe.alloc[GScannerConfig](1)
   def apply(cset_skip_characters : Ptr[gchar], cset_identifier_first : Ptr[gchar], cset_identifier_nth : Ptr[gchar], cpair_comment_single : Ptr[gchar], case_sensitive : guint, skip_comment_multi : guint, skip_comment_single : guint, scan_comment_multi : guint, scan_identifier : guint, scan_identifier_1char : guint, scan_identifier_NULL : guint, scan_symbols : guint, scan_binary : guint, scan_octal : guint, scan_float : guint, scan_hex : guint, scan_hex_dollar : guint, scan_string_sq : guint, scan_string_dq : guint, numbers_2_int : guint, int_2_float : guint, identifier_2_string : guint, char_2_token : guint, symbol_2_token : guint, scope_0_fallback : guint, store_int64 : guint, padding_dummy : guint)(using Zone): Ptr[GScannerConfig] = 
     val ____ptr = apply()
@@ -826,60 +811,99 @@ object GScannerConfig:
     (!____ptr).padding_dummy = padding_dummy
     ____ptr
   extension (struct: GScannerConfig)
-    def cset_skip_characters: Ptr[gchar] = !struct.at(0).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cset_skip_characters_=(value: Ptr[gchar]): Unit = !struct.at(0).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def cset_identifier_first: Ptr[gchar] = !struct.at(8).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cset_identifier_first_=(value: Ptr[gchar]): Unit = !struct.at(8).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def cset_identifier_nth: Ptr[gchar] = !struct.at(16).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cset_identifier_nth_=(value: Ptr[gchar]): Unit = !struct.at(16).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def cpair_comment_single: Ptr[gchar] = !struct.at(24).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cpair_comment_single_=(value: Ptr[gchar]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def case_sensitive: guint = !struct.at(32).asInstanceOf[Ptr[guint]]
-    def case_sensitive_=(value: guint): Unit = !struct.at(32).asInstanceOf[Ptr[guint]] = value
-    def skip_comment_multi: guint = !struct.at(36).asInstanceOf[Ptr[guint]]
-    def skip_comment_multi_=(value: guint): Unit = !struct.at(36).asInstanceOf[Ptr[guint]] = value
-    def skip_comment_single: guint = !struct.at(40).asInstanceOf[Ptr[guint]]
-    def skip_comment_single_=(value: guint): Unit = !struct.at(40).asInstanceOf[Ptr[guint]] = value
-    def scan_comment_multi: guint = !struct.at(44).asInstanceOf[Ptr[guint]]
-    def scan_comment_multi_=(value: guint): Unit = !struct.at(44).asInstanceOf[Ptr[guint]] = value
-    def scan_identifier: guint = !struct.at(48).asInstanceOf[Ptr[guint]]
-    def scan_identifier_=(value: guint): Unit = !struct.at(48).asInstanceOf[Ptr[guint]] = value
-    def scan_identifier_1char: guint = !struct.at(52).asInstanceOf[Ptr[guint]]
-    def scan_identifier_1char_=(value: guint): Unit = !struct.at(52).asInstanceOf[Ptr[guint]] = value
-    def scan_identifier_NULL: guint = !struct.at(56).asInstanceOf[Ptr[guint]]
-    def scan_identifier_NULL_=(value: guint): Unit = !struct.at(56).asInstanceOf[Ptr[guint]] = value
-    def scan_symbols: guint = !struct.at(60).asInstanceOf[Ptr[guint]]
-    def scan_symbols_=(value: guint): Unit = !struct.at(60).asInstanceOf[Ptr[guint]] = value
-    def scan_binary: guint = !struct.at(64).asInstanceOf[Ptr[guint]]
-    def scan_binary_=(value: guint): Unit = !struct.at(64).asInstanceOf[Ptr[guint]] = value
-    def scan_octal: guint = !struct.at(68).asInstanceOf[Ptr[guint]]
-    def scan_octal_=(value: guint): Unit = !struct.at(68).asInstanceOf[Ptr[guint]] = value
-    def scan_float: guint = !struct.at(72).asInstanceOf[Ptr[guint]]
-    def scan_float_=(value: guint): Unit = !struct.at(72).asInstanceOf[Ptr[guint]] = value
-    def scan_hex: guint = !struct.at(76).asInstanceOf[Ptr[guint]]
-    def scan_hex_=(value: guint): Unit = !struct.at(76).asInstanceOf[Ptr[guint]] = value
-    def scan_hex_dollar: guint = !struct.at(80).asInstanceOf[Ptr[guint]]
-    def scan_hex_dollar_=(value: guint): Unit = !struct.at(80).asInstanceOf[Ptr[guint]] = value
-    def scan_string_sq: guint = !struct.at(84).asInstanceOf[Ptr[guint]]
-    def scan_string_sq_=(value: guint): Unit = !struct.at(84).asInstanceOf[Ptr[guint]] = value
-    def scan_string_dq: guint = !struct.at(88).asInstanceOf[Ptr[guint]]
-    def scan_string_dq_=(value: guint): Unit = !struct.at(88).asInstanceOf[Ptr[guint]] = value
-    def numbers_2_int: guint = !struct.at(92).asInstanceOf[Ptr[guint]]
-    def numbers_2_int_=(value: guint): Unit = !struct.at(92).asInstanceOf[Ptr[guint]] = value
-    def int_2_float: guint = !struct.at(96).asInstanceOf[Ptr[guint]]
-    def int_2_float_=(value: guint): Unit = !struct.at(96).asInstanceOf[Ptr[guint]] = value
-    def identifier_2_string: guint = !struct.at(100).asInstanceOf[Ptr[guint]]
-    def identifier_2_string_=(value: guint): Unit = !struct.at(100).asInstanceOf[Ptr[guint]] = value
-    def char_2_token: guint = !struct.at(104).asInstanceOf[Ptr[guint]]
-    def char_2_token_=(value: guint): Unit = !struct.at(104).asInstanceOf[Ptr[guint]] = value
-    def symbol_2_token: guint = !struct.at(108).asInstanceOf[Ptr[guint]]
-    def symbol_2_token_=(value: guint): Unit = !struct.at(108).asInstanceOf[Ptr[guint]] = value
-    def scope_0_fallback: guint = !struct.at(112).asInstanceOf[Ptr[guint]]
-    def scope_0_fallback_=(value: guint): Unit = !struct.at(112).asInstanceOf[Ptr[guint]] = value
-    def store_int64: guint = !struct.at(116).asInstanceOf[Ptr[guint]]
-    def store_int64_=(value: guint): Unit = !struct.at(116).asInstanceOf[Ptr[guint]] = value
-    def padding_dummy: guint = !struct.at(120).asInstanceOf[Ptr[guint]]
-    def padding_dummy_=(value: guint): Unit = !struct.at(120).asInstanceOf[Ptr[guint]] = value
+    def cset_skip_characters: Ptr[gchar] = !struct.at(offsets(0)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cset_skip_characters_=(value: Ptr[gchar]): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def cset_identifier_first: Ptr[gchar] = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cset_identifier_first_=(value: Ptr[gchar]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def cset_identifier_nth: Ptr[gchar] = !struct.at(offsets(2)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cset_identifier_nth_=(value: Ptr[gchar]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def cpair_comment_single: Ptr[gchar] = !struct.at(offsets(3)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cpair_comment_single_=(value: Ptr[gchar]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def case_sensitive: guint = !struct.at(offsets(4)).asInstanceOf[Ptr[guint]]
+    def case_sensitive_=(value: guint): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[guint]] = value
+    def skip_comment_multi: guint = !struct.at(offsets(5)).asInstanceOf[Ptr[guint]]
+    def skip_comment_multi_=(value: guint): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[guint]] = value
+    def skip_comment_single: guint = !struct.at(offsets(6)).asInstanceOf[Ptr[guint]]
+    def skip_comment_single_=(value: guint): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[guint]] = value
+    def scan_comment_multi: guint = !struct.at(offsets(7)).asInstanceOf[Ptr[guint]]
+    def scan_comment_multi_=(value: guint): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[guint]] = value
+    def scan_identifier: guint = !struct.at(offsets(8)).asInstanceOf[Ptr[guint]]
+    def scan_identifier_=(value: guint): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[guint]] = value
+    def scan_identifier_1char: guint = !struct.at(offsets(9)).asInstanceOf[Ptr[guint]]
+    def scan_identifier_1char_=(value: guint): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[guint]] = value
+    def scan_identifier_NULL: guint = !struct.at(offsets(10)).asInstanceOf[Ptr[guint]]
+    def scan_identifier_NULL_=(value: guint): Unit = !struct.at(offsets(10)).asInstanceOf[Ptr[guint]] = value
+    def scan_symbols: guint = !struct.at(offsets(11)).asInstanceOf[Ptr[guint]]
+    def scan_symbols_=(value: guint): Unit = !struct.at(offsets(11)).asInstanceOf[Ptr[guint]] = value
+    def scan_binary: guint = !struct.at(offsets(12)).asInstanceOf[Ptr[guint]]
+    def scan_binary_=(value: guint): Unit = !struct.at(offsets(12)).asInstanceOf[Ptr[guint]] = value
+    def scan_octal: guint = !struct.at(offsets(13)).asInstanceOf[Ptr[guint]]
+    def scan_octal_=(value: guint): Unit = !struct.at(offsets(13)).asInstanceOf[Ptr[guint]] = value
+    def scan_float: guint = !struct.at(offsets(14)).asInstanceOf[Ptr[guint]]
+    def scan_float_=(value: guint): Unit = !struct.at(offsets(14)).asInstanceOf[Ptr[guint]] = value
+    def scan_hex: guint = !struct.at(offsets(15)).asInstanceOf[Ptr[guint]]
+    def scan_hex_=(value: guint): Unit = !struct.at(offsets(15)).asInstanceOf[Ptr[guint]] = value
+    def scan_hex_dollar: guint = !struct.at(offsets(16)).asInstanceOf[Ptr[guint]]
+    def scan_hex_dollar_=(value: guint): Unit = !struct.at(offsets(16)).asInstanceOf[Ptr[guint]] = value
+    def scan_string_sq: guint = !struct.at(offsets(17)).asInstanceOf[Ptr[guint]]
+    def scan_string_sq_=(value: guint): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[guint]] = value
+    def scan_string_dq: guint = !struct.at(offsets(18)).asInstanceOf[Ptr[guint]]
+    def scan_string_dq_=(value: guint): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[guint]] = value
+    def numbers_2_int: guint = !struct.at(offsets(19)).asInstanceOf[Ptr[guint]]
+    def numbers_2_int_=(value: guint): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[guint]] = value
+    def int_2_float: guint = !struct.at(offsets(20)).asInstanceOf[Ptr[guint]]
+    def int_2_float_=(value: guint): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[guint]] = value
+    def identifier_2_string: guint = !struct.at(offsets(21)).asInstanceOf[Ptr[guint]]
+    def identifier_2_string_=(value: guint): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[guint]] = value
+    def char_2_token: guint = !struct.at(offsets(22)).asInstanceOf[Ptr[guint]]
+    def char_2_token_=(value: guint): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[guint]] = value
+    def symbol_2_token: guint = !struct.at(offsets(23)).asInstanceOf[Ptr[guint]]
+    def symbol_2_token_=(value: guint): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[guint]] = value
+    def scope_0_fallback: guint = !struct.at(offsets(24)).asInstanceOf[Ptr[guint]]
+    def scope_0_fallback_=(value: guint): Unit = !struct.at(offsets(24)).asInstanceOf[Ptr[guint]] = value
+    def store_int64: guint = !struct.at(offsets(25)).asInstanceOf[Ptr[guint]]
+    def store_int64_=(value: guint): Unit = !struct.at(offsets(25)).asInstanceOf[Ptr[guint]] = value
+    def padding_dummy: guint = !struct.at(offsets(26)).asInstanceOf[Ptr[guint]]
+    def padding_dummy_=(value: guint): Unit = !struct.at(offsets(26)).asInstanceOf[Ptr[guint]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](27)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[Ptr[gchar]].toInt)
+    res(1) = align(res(0) + sizeof[Ptr[gchar]].toInt, alignmentof[Ptr[gchar]].toInt)
+    res(2) = align(res(1) + sizeof[Ptr[gchar]].toInt, alignmentof[Ptr[gchar]].toInt)
+    res(3) = align(res(2) + sizeof[Ptr[gchar]].toInt, alignmentof[Ptr[gchar]].toInt)
+    res(4) = align(res(3) + sizeof[Ptr[gchar]].toInt, alignmentof[guint].toInt)
+    res(5) = align(res(4) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(6) = align(res(5) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(7) = align(res(6) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(8) = align(res(7) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(9) = align(res(8) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(10) = align(res(9) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(11) = align(res(10) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(12) = align(res(11) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(13) = align(res(12) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(14) = align(res(13) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(15) = align(res(14) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(16) = align(res(15) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(17) = align(res(16) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(18) = align(res(17) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(19) = align(res(18) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(20) = align(res(19) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(21) = align(res(20) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(22) = align(res(21) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(23) = align(res(22) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(24) = align(res(23) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(25) = align(res(24) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(26) = align(res(25) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res
+  end offsets
 
 opaque type GSequence = CStruct0
 object GSequence:
@@ -1383,11 +1407,11 @@ opaque type GVariantBuilder = CStruct1[GVariantBuilder.Union0]
 object GVariantBuilder:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -1398,8 +1422,8 @@ object GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1411,16 +1435,16 @@ object GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]]
       def s_=(value: GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantBuilder] = Tag.materializeCStruct1Tag[GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[GVariantBuilder] = scala.scalanative.unsafe.alloc[GVariantBuilder](1)
   def apply(u : GVariantBuilder.Union0)(using Zone): Ptr[GVariantBuilder] = 
@@ -1435,11 +1459,11 @@ opaque type GVariantDict = CStruct1[GVariantDict.Union0]
 object GVariantDict:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -1450,8 +1474,8 @@ object GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1463,16 +1487,16 @@ object GVariantDict:
       un.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]]
       def s_=(value: GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]] = value
-      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantDict] = Tag.materializeCStruct1Tag[GVariantDict.Union0]
   def apply()(using Zone): Ptr[GVariantDict] = scala.scalanative.unsafe.alloc[GVariantDict](1)
   def apply(u : GVariantDict.Union0)(using Zone): Ptr[GVariantDict] = 
@@ -1483,17 +1507,17 @@ object GVariantDict:
     def u : GVariantDict.Union0 = struct._1
     def u_=(value: GVariantDict.Union0): Unit = !struct.at1 = value
 
-opaque type GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
 object GVariantIter:
-  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[GVariantIter] = scala.scalanative.unsafe.alloc[GVariantIter](1)
-  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
+  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: GVariantIter)
-    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
 opaque type GVariantType = CStruct0
 object GVariantType:
@@ -2066,21 +2090,6 @@ opaque type _GOptionGroup = CStruct0
 object _GOptionGroup:
   given _tag: Tag[_GOptionGroup] = Tag.materializeCStruct0Tag
 
-/**
- * GPathBuf: (copy-func g_path_buf_copy) (free-func g_path_buf_free)
-*/
-opaque type _GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
-object _GPathBuf:
-  given _tag: Tag[_GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
-  def apply()(using Zone): Ptr[_GPathBuf] = scala.scalanative.unsafe.alloc[_GPathBuf](1)
-  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[_GPathBuf] = 
-    val ____ptr = apply()
-    (!____ptr).dummy = dummy
-    ____ptr
-  extension (struct: _GPathBuf)
-    def dummy : CArray[gpointer, Nat._8] = struct._1
-    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
-
 opaque type _GPatternSpec = CStruct0
 object _GPatternSpec:
   given _tag: Tag[_GPatternSpec] = Tag.materializeCStruct0Tag
@@ -2289,9 +2298,9 @@ object _GScanner:
     def msg_handler : GScannerMsgFunc = struct._21.asInstanceOf[GScannerMsgFunc]
     def msg_handler_=(value: GScannerMsgFunc): Unit = !struct.at21 = value.asInstanceOf[Ptr[Byte]]
 
-opaque type _GScannerConfig = CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
+opaque type _GScannerConfig = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
 object _GScannerConfig:
-  given _tag: Tag[_GScannerConfig] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
+  given _tag: Tag[_GScannerConfig] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[_GScannerConfig] = scala.scalanative.unsafe.alloc[_GScannerConfig](1)
   def apply(cset_skip_characters : Ptr[gchar], cset_identifier_first : Ptr[gchar], cset_identifier_nth : Ptr[gchar], cpair_comment_single : Ptr[gchar], case_sensitive : guint, skip_comment_multi : guint, skip_comment_single : guint, scan_comment_multi : guint, scan_identifier : guint, scan_identifier_1char : guint, scan_identifier_NULL : guint, scan_symbols : guint, scan_binary : guint, scan_octal : guint, scan_float : guint, scan_hex : guint, scan_hex_dollar : guint, scan_string_sq : guint, scan_string_dq : guint, numbers_2_int : guint, int_2_float : guint, identifier_2_string : guint, char_2_token : guint, symbol_2_token : guint, scope_0_fallback : guint, store_int64 : guint, padding_dummy : guint)(using Zone): Ptr[_GScannerConfig] = 
     val ____ptr = apply()
@@ -2324,60 +2333,99 @@ object _GScannerConfig:
     (!____ptr).padding_dummy = padding_dummy
     ____ptr
   extension (struct: _GScannerConfig)
-    def cset_skip_characters: Ptr[gchar] = !struct.at(0).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cset_skip_characters_=(value: Ptr[gchar]): Unit = !struct.at(0).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def cset_identifier_first: Ptr[gchar] = !struct.at(8).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cset_identifier_first_=(value: Ptr[gchar]): Unit = !struct.at(8).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def cset_identifier_nth: Ptr[gchar] = !struct.at(16).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cset_identifier_nth_=(value: Ptr[gchar]): Unit = !struct.at(16).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def cpair_comment_single: Ptr[gchar] = !struct.at(24).asInstanceOf[Ptr[Ptr[gchar]]]
-    def cpair_comment_single_=(value: Ptr[gchar]): Unit = !struct.at(24).asInstanceOf[Ptr[Ptr[gchar]]] = value
-    def case_sensitive: guint = !struct.at(32).asInstanceOf[Ptr[guint]]
-    def case_sensitive_=(value: guint): Unit = !struct.at(32).asInstanceOf[Ptr[guint]] = value
-    def skip_comment_multi: guint = !struct.at(36).asInstanceOf[Ptr[guint]]
-    def skip_comment_multi_=(value: guint): Unit = !struct.at(36).asInstanceOf[Ptr[guint]] = value
-    def skip_comment_single: guint = !struct.at(40).asInstanceOf[Ptr[guint]]
-    def skip_comment_single_=(value: guint): Unit = !struct.at(40).asInstanceOf[Ptr[guint]] = value
-    def scan_comment_multi: guint = !struct.at(44).asInstanceOf[Ptr[guint]]
-    def scan_comment_multi_=(value: guint): Unit = !struct.at(44).asInstanceOf[Ptr[guint]] = value
-    def scan_identifier: guint = !struct.at(48).asInstanceOf[Ptr[guint]]
-    def scan_identifier_=(value: guint): Unit = !struct.at(48).asInstanceOf[Ptr[guint]] = value
-    def scan_identifier_1char: guint = !struct.at(52).asInstanceOf[Ptr[guint]]
-    def scan_identifier_1char_=(value: guint): Unit = !struct.at(52).asInstanceOf[Ptr[guint]] = value
-    def scan_identifier_NULL: guint = !struct.at(56).asInstanceOf[Ptr[guint]]
-    def scan_identifier_NULL_=(value: guint): Unit = !struct.at(56).asInstanceOf[Ptr[guint]] = value
-    def scan_symbols: guint = !struct.at(60).asInstanceOf[Ptr[guint]]
-    def scan_symbols_=(value: guint): Unit = !struct.at(60).asInstanceOf[Ptr[guint]] = value
-    def scan_binary: guint = !struct.at(64).asInstanceOf[Ptr[guint]]
-    def scan_binary_=(value: guint): Unit = !struct.at(64).asInstanceOf[Ptr[guint]] = value
-    def scan_octal: guint = !struct.at(68).asInstanceOf[Ptr[guint]]
-    def scan_octal_=(value: guint): Unit = !struct.at(68).asInstanceOf[Ptr[guint]] = value
-    def scan_float: guint = !struct.at(72).asInstanceOf[Ptr[guint]]
-    def scan_float_=(value: guint): Unit = !struct.at(72).asInstanceOf[Ptr[guint]] = value
-    def scan_hex: guint = !struct.at(76).asInstanceOf[Ptr[guint]]
-    def scan_hex_=(value: guint): Unit = !struct.at(76).asInstanceOf[Ptr[guint]] = value
-    def scan_hex_dollar: guint = !struct.at(80).asInstanceOf[Ptr[guint]]
-    def scan_hex_dollar_=(value: guint): Unit = !struct.at(80).asInstanceOf[Ptr[guint]] = value
-    def scan_string_sq: guint = !struct.at(84).asInstanceOf[Ptr[guint]]
-    def scan_string_sq_=(value: guint): Unit = !struct.at(84).asInstanceOf[Ptr[guint]] = value
-    def scan_string_dq: guint = !struct.at(88).asInstanceOf[Ptr[guint]]
-    def scan_string_dq_=(value: guint): Unit = !struct.at(88).asInstanceOf[Ptr[guint]] = value
-    def numbers_2_int: guint = !struct.at(92).asInstanceOf[Ptr[guint]]
-    def numbers_2_int_=(value: guint): Unit = !struct.at(92).asInstanceOf[Ptr[guint]] = value
-    def int_2_float: guint = !struct.at(96).asInstanceOf[Ptr[guint]]
-    def int_2_float_=(value: guint): Unit = !struct.at(96).asInstanceOf[Ptr[guint]] = value
-    def identifier_2_string: guint = !struct.at(100).asInstanceOf[Ptr[guint]]
-    def identifier_2_string_=(value: guint): Unit = !struct.at(100).asInstanceOf[Ptr[guint]] = value
-    def char_2_token: guint = !struct.at(104).asInstanceOf[Ptr[guint]]
-    def char_2_token_=(value: guint): Unit = !struct.at(104).asInstanceOf[Ptr[guint]] = value
-    def symbol_2_token: guint = !struct.at(108).asInstanceOf[Ptr[guint]]
-    def symbol_2_token_=(value: guint): Unit = !struct.at(108).asInstanceOf[Ptr[guint]] = value
-    def scope_0_fallback: guint = !struct.at(112).asInstanceOf[Ptr[guint]]
-    def scope_0_fallback_=(value: guint): Unit = !struct.at(112).asInstanceOf[Ptr[guint]] = value
-    def store_int64: guint = !struct.at(116).asInstanceOf[Ptr[guint]]
-    def store_int64_=(value: guint): Unit = !struct.at(116).asInstanceOf[Ptr[guint]] = value
-    def padding_dummy: guint = !struct.at(120).asInstanceOf[Ptr[guint]]
-    def padding_dummy_=(value: guint): Unit = !struct.at(120).asInstanceOf[Ptr[guint]] = value
+    def cset_skip_characters: Ptr[gchar] = !struct.at(offsets(0)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cset_skip_characters_=(value: Ptr[gchar]): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def cset_identifier_first: Ptr[gchar] = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cset_identifier_first_=(value: Ptr[gchar]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def cset_identifier_nth: Ptr[gchar] = !struct.at(offsets(2)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cset_identifier_nth_=(value: Ptr[gchar]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def cpair_comment_single: Ptr[gchar] = !struct.at(offsets(3)).asInstanceOf[Ptr[Ptr[gchar]]]
+    def cpair_comment_single_=(value: Ptr[gchar]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[Ptr[gchar]]] = value
+    def case_sensitive: guint = !struct.at(offsets(4)).asInstanceOf[Ptr[guint]]
+    def case_sensitive_=(value: guint): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[guint]] = value
+    def skip_comment_multi: guint = !struct.at(offsets(5)).asInstanceOf[Ptr[guint]]
+    def skip_comment_multi_=(value: guint): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[guint]] = value
+    def skip_comment_single: guint = !struct.at(offsets(6)).asInstanceOf[Ptr[guint]]
+    def skip_comment_single_=(value: guint): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[guint]] = value
+    def scan_comment_multi: guint = !struct.at(offsets(7)).asInstanceOf[Ptr[guint]]
+    def scan_comment_multi_=(value: guint): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[guint]] = value
+    def scan_identifier: guint = !struct.at(offsets(8)).asInstanceOf[Ptr[guint]]
+    def scan_identifier_=(value: guint): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[guint]] = value
+    def scan_identifier_1char: guint = !struct.at(offsets(9)).asInstanceOf[Ptr[guint]]
+    def scan_identifier_1char_=(value: guint): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[guint]] = value
+    def scan_identifier_NULL: guint = !struct.at(offsets(10)).asInstanceOf[Ptr[guint]]
+    def scan_identifier_NULL_=(value: guint): Unit = !struct.at(offsets(10)).asInstanceOf[Ptr[guint]] = value
+    def scan_symbols: guint = !struct.at(offsets(11)).asInstanceOf[Ptr[guint]]
+    def scan_symbols_=(value: guint): Unit = !struct.at(offsets(11)).asInstanceOf[Ptr[guint]] = value
+    def scan_binary: guint = !struct.at(offsets(12)).asInstanceOf[Ptr[guint]]
+    def scan_binary_=(value: guint): Unit = !struct.at(offsets(12)).asInstanceOf[Ptr[guint]] = value
+    def scan_octal: guint = !struct.at(offsets(13)).asInstanceOf[Ptr[guint]]
+    def scan_octal_=(value: guint): Unit = !struct.at(offsets(13)).asInstanceOf[Ptr[guint]] = value
+    def scan_float: guint = !struct.at(offsets(14)).asInstanceOf[Ptr[guint]]
+    def scan_float_=(value: guint): Unit = !struct.at(offsets(14)).asInstanceOf[Ptr[guint]] = value
+    def scan_hex: guint = !struct.at(offsets(15)).asInstanceOf[Ptr[guint]]
+    def scan_hex_=(value: guint): Unit = !struct.at(offsets(15)).asInstanceOf[Ptr[guint]] = value
+    def scan_hex_dollar: guint = !struct.at(offsets(16)).asInstanceOf[Ptr[guint]]
+    def scan_hex_dollar_=(value: guint): Unit = !struct.at(offsets(16)).asInstanceOf[Ptr[guint]] = value
+    def scan_string_sq: guint = !struct.at(offsets(17)).asInstanceOf[Ptr[guint]]
+    def scan_string_sq_=(value: guint): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[guint]] = value
+    def scan_string_dq: guint = !struct.at(offsets(18)).asInstanceOf[Ptr[guint]]
+    def scan_string_dq_=(value: guint): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[guint]] = value
+    def numbers_2_int: guint = !struct.at(offsets(19)).asInstanceOf[Ptr[guint]]
+    def numbers_2_int_=(value: guint): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[guint]] = value
+    def int_2_float: guint = !struct.at(offsets(20)).asInstanceOf[Ptr[guint]]
+    def int_2_float_=(value: guint): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[guint]] = value
+    def identifier_2_string: guint = !struct.at(offsets(21)).asInstanceOf[Ptr[guint]]
+    def identifier_2_string_=(value: guint): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[guint]] = value
+    def char_2_token: guint = !struct.at(offsets(22)).asInstanceOf[Ptr[guint]]
+    def char_2_token_=(value: guint): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[guint]] = value
+    def symbol_2_token: guint = !struct.at(offsets(23)).asInstanceOf[Ptr[guint]]
+    def symbol_2_token_=(value: guint): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[guint]] = value
+    def scope_0_fallback: guint = !struct.at(offsets(24)).asInstanceOf[Ptr[guint]]
+    def scope_0_fallback_=(value: guint): Unit = !struct.at(offsets(24)).asInstanceOf[Ptr[guint]] = value
+    def store_int64: guint = !struct.at(offsets(25)).asInstanceOf[Ptr[guint]]
+    def store_int64_=(value: guint): Unit = !struct.at(offsets(25)).asInstanceOf[Ptr[guint]] = value
+    def padding_dummy: guint = !struct.at(offsets(26)).asInstanceOf[Ptr[guint]]
+    def padding_dummy_=(value: guint): Unit = !struct.at(offsets(26)).asInstanceOf[Ptr[guint]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](27)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[Ptr[gchar]].toInt)
+    res(1) = align(res(0) + sizeof[Ptr[gchar]].toInt, alignmentof[Ptr[gchar]].toInt)
+    res(2) = align(res(1) + sizeof[Ptr[gchar]].toInt, alignmentof[Ptr[gchar]].toInt)
+    res(3) = align(res(2) + sizeof[Ptr[gchar]].toInt, alignmentof[Ptr[gchar]].toInt)
+    res(4) = align(res(3) + sizeof[Ptr[gchar]].toInt, alignmentof[guint].toInt)
+    res(5) = align(res(4) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(6) = align(res(5) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(7) = align(res(6) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(8) = align(res(7) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(9) = align(res(8) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(10) = align(res(9) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(11) = align(res(10) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(12) = align(res(11) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(13) = align(res(12) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(14) = align(res(13) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(15) = align(res(14) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(16) = align(res(15) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(17) = align(res(16) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(18) = align(res(17) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(19) = align(res(18) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(20) = align(res(19) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(21) = align(res(20) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(22) = align(res(21) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(23) = align(res(22) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(24) = align(res(23) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(25) = align(res(24) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res(26) = align(res(25) + sizeof[guint].toInt, alignmentof[guint].toInt)
+    res
+  end offsets
 
 opaque type _GSequence = CStruct0
 object _GSequence:
@@ -2792,11 +2840,11 @@ opaque type _GVariantBuilder = CStruct1[_GVariantBuilder.Union0]
 object _GVariantBuilder:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -2807,8 +2855,8 @@ object _GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -2820,16 +2868,16 @@ object _GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]]
       def s_=(value: _GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantBuilder] = Tag.materializeCStruct1Tag[_GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[_GVariantBuilder] = scala.scalanative.unsafe.alloc[_GVariantBuilder](1)
   def apply(u : _GVariantBuilder.Union0)(using Zone): Ptr[_GVariantBuilder] = 
@@ -2844,11 +2892,11 @@ opaque type _GVariantDict = CStruct1[_GVariantDict.Union0]
 object _GVariantDict:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -2859,8 +2907,8 @@ object _GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -2872,16 +2920,16 @@ object _GVariantDict:
       un.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]]
       def s_=(value: _GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]] = value
-      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantDict] = Tag.materializeCStruct1Tag[_GVariantDict.Union0]
   def apply()(using Zone): Ptr[_GVariantDict] = scala.scalanative.unsafe.alloc[_GVariantDict](1)
   def apply(u : _GVariantDict.Union0)(using Zone): Ptr[_GVariantDict] = 
@@ -2892,17 +2940,17 @@ object _GVariantDict:
     def u : _GVariantDict.Union0 = struct._1
     def u_=(value: _GVariantDict.Union0): Unit = !struct.at1 = value
 
-opaque type _GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type _GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
 object _GVariantIter:
-  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[_GVariantIter] = scala.scalanative.unsafe.alloc[_GVariantIter](1)
-  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
+  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: _GVariantIter)
-    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
 opaque type _GVariantType = CStruct0
 object _GVariantType:

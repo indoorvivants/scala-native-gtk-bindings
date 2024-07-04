@@ -5,8 +5,6 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type graphene_simd4f_uif_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object graphene_simd4f_uif_t:
   given _tag: Tag[graphene_simd4f_uif_t] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
@@ -31,8 +29,6 @@ object graphene_simd4f_uif_t:
     def f : CArray[Float, Nat._4] = !struct.at(0).asInstanceOf[Ptr[CArray[Float, Nat._4]]]
     def f_=(value: CArray[Float, Nat._4]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[Float, Nat._4]]] = value
 
-/**
-*/
 opaque type graphene_simd4f_union_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object graphene_simd4f_union_t:
   given _tag: Tag[graphene_simd4f_union_t] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))

@@ -15,8 +15,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_aligned_free(mem : gpointer): Unit = extern
 
-@extern def g_aligned_free_sized(mem : gpointer, alignment : size_t, size : size_t): Unit = extern
-
 @extern def g_allocator_free(allocator : Ptr[GAllocator]): Unit = extern
 
 @extern def g_allocator_new(name : Ptr[gchar], n_preallocs : guint): Ptr[GAllocator] = extern
@@ -34,10 +32,6 @@ import _root_.scala.scalanative.*
 @extern def g_array_insert_vals(array : Ptr[GArray], `index_` : guint, data : gconstpointer, len : guint): Ptr[GArray] = extern
 
 @extern def g_array_new(zero_terminated : gboolean, `clear_` : gboolean, element_size : guint): Ptr[GArray] = extern
-
-@extern def g_array_new_take(data : gpointer, len : gsize, clear : gboolean, element_size : gsize): Ptr[GArray] = extern
-
-@extern def g_array_new_take_zero_terminated(data : gpointer, clear : gboolean, element_size : gsize): Ptr[GArray] = extern
 
 @extern def g_array_prepend_vals(array : Ptr[GArray], data : gconstpointer, len : guint): Ptr[GArray] = extern
 
@@ -96,8 +90,6 @@ import _root_.scala.scalanative.*
 @extern def g_assert_warning(log_domain : CString, file : CString, line : CInt, pretty_function : CString, expression : CString): Unit = extern
 
 @extern def g_assertion_message(domain : CString, file : CString, line : CInt, func : CString, message : CString): Unit = extern
-
-@extern def g_assertion_message_cmpint(domain : CString, file : CString, line : CInt, func : CString, expr : CString, arg1 : guint64, cmp : CString, arg2 : guint64, numtype : CChar): Unit = extern
 
 @extern def g_assertion_message_cmpnum(domain : CString, file : CString, line : CInt, func : CString, expr : CString, arg1 : Double, cmp : CString, arg2 : Double, numtype : CChar): Unit = extern
 
@@ -173,11 +165,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_atomic_int_compare_and_exchange(atomic : Ptr[gint], oldval : gint, newval : gint): gboolean = extern
 
-@extern def g_atomic_int_compare_and_exchange_full(atomic : Ptr[gint], oldval : gint, newval : gint, preval : Ptr[gint]): gboolean = extern
-
 @extern def g_atomic_int_dec_and_test(atomic : Ptr[gint]): gboolean = extern
-
-@extern def g_atomic_int_exchange(atomic : Ptr[gint], newval : gint): gint = extern
 
 @extern def g_atomic_int_exchange_and_add(atomic : Ptr[gint], `val` : gint): gint = extern
 
@@ -196,10 +184,6 @@ import _root_.scala.scalanative.*
 @extern def g_atomic_pointer_and(atomic : Ptr[Byte], `val` : gsize): gsize = extern
 
 @extern def g_atomic_pointer_compare_and_exchange(atomic : Ptr[Byte], oldval : gpointer, newval : gpointer): gboolean = extern
-
-@extern def g_atomic_pointer_compare_and_exchange_full(atomic : Ptr[Byte], oldval : gpointer, newval : gpointer, preval : Ptr[Byte]): gboolean = extern
-
-@extern def g_atomic_pointer_exchange(atomic : Ptr[Byte], newval : gpointer): gpointer = extern
 
 @extern def g_atomic_pointer_get(atomic : Ptr[Byte]): gpointer = extern
 
@@ -272,8 +256,6 @@ import _root_.scala.scalanative.*
 @extern def g_bookmark_file_add_application(bookmark : Ptr[GBookmarkFile], uri : Ptr[gchar], name : Ptr[gchar], exec : Ptr[gchar]): Unit = extern
 
 @extern def g_bookmark_file_add_group(bookmark : Ptr[GBookmarkFile], uri : Ptr[gchar], group : Ptr[gchar]): Unit = extern
-
-@extern def g_bookmark_file_copy(bookmark : Ptr[GBookmarkFile]): Ptr[GBookmarkFile] = extern
 
 @extern def g_bookmark_file_error_quark(): GQuark = extern
 
@@ -550,8 +532,6 @@ import _root_.scala.scalanative.*
 @extern def g_datalist_id_dup_data(datalist : Ptr[Ptr[GData]], key_id : GQuark, dup_func : GDuplicateFunc, user_data : gpointer): gpointer = extern
 
 @extern def g_datalist_id_get_data(datalist : Ptr[Ptr[GData]], key_id : GQuark): gpointer = extern
-
-@extern def g_datalist_id_remove_multiple(datalist : Ptr[Ptr[GData]], keys : Ptr[GQuark], n_keys : gsize): Unit = extern
 
 @extern def g_datalist_id_remove_no_notify(datalist : Ptr[Ptr[GData]], key_id : GQuark): gpointer = extern
 
@@ -861,8 +841,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_free(mem : gpointer): Unit = extern
 
-@extern def g_free_sized(mem : gpointer, size : size_t): Unit = extern
-
 @extern def g_get_application_name(): Ptr[gchar] = extern
 
 @extern def g_get_charset(charset : Ptr[CString]): gboolean = extern
@@ -941,11 +919,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_hash_table_get_keys_as_array(hash_table : Ptr[GHashTable], length : Ptr[guint]): Ptr[gpointer] = extern
 
-@extern def g_hash_table_get_keys_as_ptr_array(hash_table : Ptr[GHashTable]): Ptr[GPtrArray] = extern
-
 @extern def g_hash_table_get_values(hash_table : Ptr[GHashTable]): Ptr[GList] = extern
-
-@extern def g_hash_table_get_values_as_ptr_array(hash_table : Ptr[GHashTable]): Ptr[GPtrArray] = extern
 
 @extern def g_hash_table_insert(hash_table : Ptr[GHashTable], key : gpointer, value : gpointer): gboolean = extern
 
@@ -984,10 +958,6 @@ import _root_.scala.scalanative.*
 @extern def g_hash_table_steal(hash_table : Ptr[GHashTable], key : gconstpointer): gboolean = extern
 
 @extern def g_hash_table_steal_all(hash_table : Ptr[GHashTable]): Unit = extern
-
-@extern def g_hash_table_steal_all_keys(hash_table : Ptr[GHashTable]): Ptr[GPtrArray] = extern
-
-@extern def g_hash_table_steal_all_values(hash_table : Ptr[GHashTable]): Ptr[GPtrArray] = extern
 
 @extern def g_hash_table_steal_extended(hash_table : Ptr[GHashTable], lookup_key : gconstpointer, stolen_key : Ptr[gpointer], stolen_value : Ptr[gpointer]): gboolean = extern
 
@@ -1072,8 +1042,6 @@ import _root_.scala.scalanative.*
 @extern def g_idle_add(function : GSourceFunc, data : gpointer): guint = extern
 
 @extern def g_idle_add_full(priority : gint, function : GSourceFunc, data : gpointer, notify : GDestroyNotify): guint = extern
-
-@extern def g_idle_add_once(function : GSourceOnceFunc, data : gpointer): guint = extern
 
 @extern def g_idle_remove_by_data(data : gpointer): gboolean = extern
 
@@ -1761,36 +1729,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_parse_debug_string(string : Ptr[gchar], keys : Ptr[GDebugKey], nkeys : guint): guint = extern
 
-@extern def g_path_buf_clear(buf : Ptr[GPathBuf]): Unit = extern
-
-@extern def g_path_buf_clear_to_path(buf : Ptr[GPathBuf]): CString = extern
-
-@extern def g_path_buf_copy(buf : Ptr[GPathBuf]): Ptr[GPathBuf] = extern
-
-@extern def g_path_buf_equal(v1 : gconstpointer, v2 : gconstpointer): gboolean = extern
-
-@extern def g_path_buf_free(buf : Ptr[GPathBuf]): Unit = extern
-
-@extern def g_path_buf_free_to_path(buf : Ptr[GPathBuf]): CString = extern
-
-@extern def g_path_buf_init(buf : Ptr[GPathBuf]): Ptr[GPathBuf] = extern
-
-@extern def g_path_buf_init_from_path(buf : Ptr[GPathBuf], path : CString): Ptr[GPathBuf] = extern
-
-@extern def g_path_buf_new(): Ptr[GPathBuf] = extern
-
-@extern def g_path_buf_new_from_path(path : CString): Ptr[GPathBuf] = extern
-
-@extern def g_path_buf_pop(buf : Ptr[GPathBuf]): gboolean = extern
-
-@extern def g_path_buf_push(buf : Ptr[GPathBuf], path : CString): Ptr[GPathBuf] = extern
-
-@extern def g_path_buf_set_extension(buf : Ptr[GPathBuf], extension : CString): gboolean = extern
-
-@extern def g_path_buf_set_filename(buf : Ptr[GPathBuf], file_name : CString): gboolean = extern
-
-@extern def g_path_buf_to_path(buf : Ptr[GPathBuf]): CString = extern
-
 @extern def g_path_get_basename(file_name : Ptr[gchar]): Ptr[gchar] = extern
 
 @extern def g_path_get_dirname(file_name : Ptr[gchar]): Ptr[gchar] = extern
@@ -1868,21 +1806,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_ptr_array_insert(array : Ptr[GPtrArray], `index_` : gint, data : gpointer): Unit = extern
 
-@extern def g_ptr_array_is_null_terminated(array : Ptr[GPtrArray]): gboolean = extern
-
 @extern def g_ptr_array_new(): Ptr[GPtrArray] = extern
 
-@extern def g_ptr_array_new_from_array(data : Ptr[gpointer], len : gsize, copy_func : GCopyFunc, copy_func_user_data : gpointer, element_free_func : GDestroyNotify): Ptr[GPtrArray] = extern
-
-@extern def g_ptr_array_new_from_null_terminated_array(data : Ptr[gpointer], copy_func : GCopyFunc, copy_func_user_data : gpointer, element_free_func : GDestroyNotify): Ptr[GPtrArray] = extern
-
 @extern def g_ptr_array_new_full(reserved_size : guint, element_free_func : GDestroyNotify): Ptr[GPtrArray] = extern
-
-@extern def g_ptr_array_new_null_terminated(reserved_size : guint, element_free_func : GDestroyNotify, null_terminated : gboolean): Ptr[GPtrArray] = extern
-
-@extern def g_ptr_array_new_take(data : Ptr[gpointer], len : gsize, element_free_func : GDestroyNotify): Ptr[GPtrArray] = extern
-
-@extern def g_ptr_array_new_take_null_terminated(data : Ptr[gpointer], element_free_func : GDestroyNotify): Ptr[GPtrArray] = extern
 
 @extern def g_ptr_array_new_with_free_func(element_free_func : GDestroyNotify): Ptr[GPtrArray] = extern
 
@@ -1905,10 +1831,6 @@ import _root_.scala.scalanative.*
 @extern def g_ptr_array_sized_new(reserved_size : guint): Ptr[GPtrArray] = extern
 
 @extern def g_ptr_array_sort(array : Ptr[GPtrArray], compare_func : GCompareFunc): Unit = extern
-
-@extern def g_ptr_array_sort_values(array : Ptr[GPtrArray], compare_func : GCompareFunc): Unit = extern
-
-@extern def g_ptr_array_sort_values_with_data(array : Ptr[GPtrArray], compare_func : GCompareDataFunc, user_data : gpointer): Unit = extern
 
 @extern def g_ptr_array_sort_with_data(array : Ptr[GPtrArray], compare_func : GCompareDataFunc, user_data : gpointer): Unit = extern
 
@@ -2346,11 +2268,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_set_printerr_handler(func : GPrintFunc): GPrintFunc = extern
 
-/**
- * g_set_str: (skip) _pointer: (inout) (not optional) (nullable): a pointer to either a string or %NULL _str: (nullable): a string to assign to _pointer, or %NULL
-*/
-@extern def g_set_str(str_pointer : Ptr[CString], new_str : CString): gboolean = extern
-
 @extern def g_setenv(variable : Ptr[gchar], value : Ptr[gchar], overwrite : gboolean): gboolean = extern
 
 @extern def g_shell_error_quark(): GQuark = extern
@@ -2626,8 +2543,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_strdup(str : Ptr[gchar]): Ptr[gchar] = extern
 
-@extern def g_strdup_inline(str : CString): CString = extern
-
 @extern def g_strdup_printf(format : Ptr[gchar], rest: Any*): Ptr[gchar] = extern
 
 @extern def g_strdup_vprintf(format : Ptr[gchar], args : va_list): Ptr[gchar] = extern
@@ -2647,8 +2562,6 @@ import _root_.scala.scalanative.*
 @extern def g_string_append_c_inline(gstring : Ptr[GString], c : gchar): Ptr[GString] = extern
 
 @extern def g_string_append_len(string : Ptr[GString], `val` : Ptr[gchar], len : gssize): Ptr[GString] = extern
-
-@extern def g_string_append_len_inline(gstring : Ptr[GString], `val` : CString, len : gssize): Ptr[GString] = extern
 
 @extern def g_string_append_printf(string : Ptr[GString], format : Ptr[gchar], rest: Any*): Unit = extern
 
@@ -2684,8 +2597,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_string_free(string : Ptr[GString], free_segment : gboolean): Ptr[gchar] = extern
 
-@extern def g_string_free_and_steal(string : Ptr[GString]): Ptr[gchar] = extern
-
 @extern def g_string_free_to_bytes(string : Ptr[GString]): Ptr[GBytes] = extern
 
 @extern def g_string_hash(str : Ptr[GString]): guint = extern
@@ -2701,8 +2612,6 @@ import _root_.scala.scalanative.*
 @extern def g_string_new(init : Ptr[gchar]): Ptr[GString] = extern
 
 @extern def g_string_new_len(init : Ptr[gchar], len : gssize): Ptr[GString] = extern
-
-@extern def g_string_new_take(init : Ptr[gchar]): Ptr[GString] = extern
 
 @extern def g_string_overwrite(string : Ptr[GString], pos : gsize, `val` : Ptr[gchar]): Ptr[GString] = extern
 
@@ -2725,8 +2634,6 @@ import _root_.scala.scalanative.*
 @extern def g_string_sized_new(dfl_size : gsize): Ptr[GString] = extern
 
 @extern def g_string_truncate(string : Ptr[GString], len : gsize): Ptr[GString] = extern
-
-@extern def g_string_truncate_inline(gstring : Ptr[GString], len : gsize): Ptr[GString] = extern
 
 @extern def g_string_up(string : Ptr[GString]): Ptr[GString] = extern
 
@@ -2807,8 +2714,6 @@ import _root_.scala.scalanative.*
 @extern def g_test_create_case(test_name : CString, data_size : gsize, test_data : gconstpointer, data_setup : GTestFixtureFunc, data_test : GTestFixtureFunc, data_teardown : GTestFixtureFunc): Ptr[GTestCase] = extern
 
 @extern def g_test_create_suite(suite_name : CString): Ptr[GTestSuite] = extern
-
-@extern def g_test_disable_crash_reporting(): Unit = extern
 
 @extern def g_test_expect_message(log_domain : Ptr[gchar], log_level : GLogLevelFlags, pattern : Ptr[gchar]): Unit = extern
 
@@ -3000,13 +2905,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_timeout_add_full(priority : gint, interval : guint, function : GSourceFunc, data : gpointer, notify : GDestroyNotify): guint = extern
 
-@extern def g_timeout_add_once(interval : guint, function : GSourceOnceFunc, data : gpointer): guint = extern
-
 @extern def g_timeout_add_seconds(interval : guint, function : GSourceFunc, data : gpointer): guint = extern
 
 @extern def g_timeout_add_seconds_full(priority : gint, interval : guint, function : GSourceFunc, data : gpointer, notify : GDestroyNotify): guint = extern
-
-@extern def g_timeout_add_seconds_once(interval : guint, function : GSourceOnceFunc, data : gpointer): guint = extern
 
 @extern def g_timeout_source_new(interval : guint): Ptr[GSource] = extern
 
@@ -3321,8 +3222,6 @@ import _root_.scala.scalanative.*
 @extern def g_utf8_to_ucs4_fast(str : Ptr[gchar], len : glong, items_written : Ptr[glong]): Ptr[gunichar] = extern
 
 @extern def g_utf8_to_utf16(str : Ptr[gchar], len : glong, items_read : Ptr[glong], items_written : Ptr[glong], error : Ptr[Ptr[GError]]): Ptr[gunichar2] = extern
-
-@extern def g_utf8_truncate_middle(string : Ptr[gchar], truncate_length : gsize): Ptr[gchar] = extern
 
 @extern def g_utf8_validate(str : Ptr[gchar], max_len : gssize, end : Ptr[Ptr[gchar]]): gboolean = extern
 
@@ -3644,8 +3543,6 @@ import _root_.scala.scalanative.*
 
 @extern def glib_auto_cleanup_GMutex(_ptr : Ptr[GMutex]): Unit = extern
 
-@extern def glib_auto_cleanup_GPathBuf(_ptr : Ptr[GPathBuf]): Unit = extern
-
 @extern def glib_auto_cleanup_GQueue(_ptr : Ptr[GQueue]): Unit = extern
 
 @extern def glib_auto_cleanup_GStrv(_ptr : Ptr[GStrv]): Unit = extern
@@ -3703,8 +3600,6 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_GOptionContext(_ptr : Ptr[Ptr[GOptionContext]]): Unit = extern
 
 @extern def glib_autoptr_cleanup_GOptionGroup(_ptr : Ptr[Ptr[GOptionGroup]]): Unit = extern
-
-@extern def glib_autoptr_cleanup_GPathBuf(_ptr : Ptr[Ptr[GPathBuf]]): Unit = extern
 
 @extern def glib_autoptr_cleanup_GPatternSpec(_ptr : Ptr[Ptr[GPatternSpec]]): Unit = extern
 
@@ -3807,8 +3702,6 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_GOptionContext(_ptr : Ptr[GOptionContext]): Unit = extern
 
 @extern def glib_autoptr_clear_GOptionGroup(_ptr : Ptr[GOptionGroup]): Unit = extern
-
-@extern def glib_autoptr_clear_GPathBuf(_ptr : Ptr[GPathBuf]): Unit = extern
 
 @extern def glib_autoptr_clear_GPatternSpec(_ptr : Ptr[GPatternSpec]): Unit = extern
 
@@ -3914,8 +3807,6 @@ import _root_.scala.scalanative.*
 
 @extern def glib_listautoptr_cleanup_GOptionGroup(_l : Ptr[Ptr[GList]]): Unit = extern
 
-@extern def glib_listautoptr_cleanup_GPathBuf(_l : Ptr[Ptr[GList]]): Unit = extern
-
 @extern def glib_listautoptr_cleanup_GPatternSpec(_l : Ptr[Ptr[GList]]): Unit = extern
 
 @extern def glib_listautoptr_cleanup_GPtrArray(_l : Ptr[Ptr[GList]]): Unit = extern
@@ -4018,8 +3909,6 @@ import _root_.scala.scalanative.*
 
 @extern def glib_queueautoptr_cleanup_GOptionGroup(_q : Ptr[Ptr[GQueue]]): Unit = extern
 
-@extern def glib_queueautoptr_cleanup_GPathBuf(_q : Ptr[Ptr[GQueue]]): Unit = extern
-
 @extern def glib_queueautoptr_cleanup_GPatternSpec(_q : Ptr[Ptr[GQueue]]): Unit = extern
 
 @extern def glib_queueautoptr_cleanup_GPtrArray(_q : Ptr[Ptr[GQueue]]): Unit = extern
@@ -4121,8 +4010,6 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_GOptionContext(_l : Ptr[Ptr[GSList]]): Unit = extern
 
 @extern def glib_slistautoptr_cleanup_GOptionGroup(_l : Ptr[Ptr[GSList]]): Unit = extern
-
-@extern def glib_slistautoptr_cleanup_GPathBuf(_l : Ptr[Ptr[GSList]]): Unit = extern
 
 @extern def glib_slistautoptr_cleanup_GPatternSpec(_l : Ptr[Ptr[GSList]]): Unit = extern
 

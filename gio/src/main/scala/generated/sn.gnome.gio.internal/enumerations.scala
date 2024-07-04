@@ -33,21 +33,20 @@ object GAppInfoCreateFlags extends CEnumU[GAppInfoCreateFlags]:
       case G_APP_INFO_CREATE_NEEDS_TERMINAL => Some("G_APP_INFO_CREATE_NEEDS_TERMINAL")
       case G_APP_INFO_CREATE_SUPPORTS_URIS => Some("G_APP_INFO_CREATE_SUPPORTS_URIS")
       case G_APP_INFO_CREATE_SUPPORTS_STARTUP_NOTIFICATION => Some("G_APP_INFO_CREATE_SUPPORTS_STARTUP_NOTIFICATION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GAppInfoCreateFlags)
     inline def &(b: GAppInfoCreateFlags): GAppInfoCreateFlags = a & b
     inline def |(b: GAppInfoCreateFlags): GAppInfoCreateFlags = a | b
     inline def is(b: GAppInfoCreateFlags): Boolean = (a & b) == b
 
 /**
- * GApplicationFlags: _APPLICATION_FLAGS_NONE: Default. Deprecated in 2.74, use %G_APPLICATION_DEFAULT_FLAGS instead _APPLICATION_DEFAULT_FLAGS: Default flags. Since: 2.74 _APPLICATION_IS_SERVICE: Run as a service. In this mode, registration fails if the service is already running, and the application will initially wait up to 10 seconds for an initial activation message to arrive. _APPLICATION_IS_LAUNCHER: Don't try to become the primary instance. _APPLICATION_HANDLES_OPEN: This application handles opening files (in the primary instance). Note that this flag only affects the default implementation of local_command_line(), and has no effect if %G_APPLICATION_HANDLES_COMMAND_LINE is given. See g_application_run() for details. _APPLICATION_HANDLES_COMMAND_LINE: This application handles command line arguments (in the primary instance). Note that this flag only affect the default implementation of local_command_line(). See g_application_run() for details. _APPLICATION_SEND_ENVIRONMENT: Send the environment of the launching process to the primary instance. Set this flag if your application is expected to behave differently depending on certain environment variables. For instance, an editor might be expected to use the `GIT_COMMITTER_NAME` environment variable when editing a git commit message. The environment is available to the #GApplication::command-line signal handler, via g_application_command_line_getenv(). _APPLICATION_NON_UNIQUE: Make no attempts to do any of the typical single-instance application negotiation, even if the application ID is given. The application neither attempts to become the owner of the application ID nor does it check if an existing owner already exists. Everything occurs in the local process. Since: 2.30. _APPLICATION_CAN_OVERRIDE_APP_ID: Allow users to override the application ID from the command line with `--gapplication-app-id`. Since: 2.48 _APPLICATION_ALLOW_REPLACEMENT: Allow another instance to take over the bus name. Since: 2.60 _APPLICATION_REPLACE: Take over from another instance. This flag is usually set by passing `--gapplication-replace` on the commandline. Since: 2.60
+ * GApplicationFlags: _APPLICATION_FLAGS_NONE: Default _APPLICATION_IS_SERVICE: Run as a service. In this mode, registration fails if the service is already running, and the application will initially wait up to 10 seconds for an initial activation message to arrive. _APPLICATION_IS_LAUNCHER: Don't try to become the primary instance. _APPLICATION_HANDLES_OPEN: This application handles opening files (in the primary instance). Note that this flag only affects the default implementation of local_command_line(), and has no effect if %G_APPLICATION_HANDLES_COMMAND_LINE is given. See g_application_run() for details. _APPLICATION_HANDLES_COMMAND_LINE: This application handles command line arguments (in the primary instance). Note that this flag only affect the default implementation of local_command_line(). See g_application_run() for details. _APPLICATION_SEND_ENVIRONMENT: Send the environment of the launching process to the primary instance. Set this flag if your application is expected to behave differently depending on certain environment variables. For instance, an editor might be expected to use the `GIT_COMMITTER_NAME` environment variable when editing a git commit message. The environment is available to the #GApplication::command-line signal handler, via g_application_command_line_getenv(). _APPLICATION_NON_UNIQUE: Make no attempts to do any of the typical single-instance application negotiation, even if the application ID is given. The application neither attempts to become the owner of the application ID nor does it check if an existing owner already exists. Everything occurs in the local process. Since: 2.30. _APPLICATION_CAN_OVERRIDE_APP_ID: Allow users to override the application ID from the command line with `--gapplication-app-id`. Since: 2.48 _APPLICATION_ALLOW_REPLACEMENT: Allow another instance to take over the bus name. Since: 2.60 _APPLICATION_REPLACE: Take over from another instance. This flag is usually set by passing `--gapplication-replace` on the commandline. Since: 2.60
 */
 opaque type GApplicationFlags = CUnsignedInt
 object GApplicationFlags extends CEnumU[GApplicationFlags]:
   given _tag: Tag[GApplicationFlags] = Tag.UInt
   inline def define(inline a: Long): GApplicationFlags = a.toUInt
   val G_APPLICATION_FLAGS_NONE = define(0)
-  val G_APPLICATION_DEFAULT_FLAGS = define(0)
   val G_APPLICATION_IS_SERVICE = define(1)
   val G_APPLICATION_IS_LAUNCHER = define(2)
   val G_APPLICATION_HANDLES_OPEN = define(4)
@@ -60,7 +59,6 @@ object GApplicationFlags extends CEnumU[GApplicationFlags]:
   inline def getName(inline value: GApplicationFlags): Option[String] =
     inline value match
       case G_APPLICATION_FLAGS_NONE => Some("G_APPLICATION_FLAGS_NONE")
-      case G_APPLICATION_DEFAULT_FLAGS => Some("G_APPLICATION_DEFAULT_FLAGS")
       case G_APPLICATION_IS_SERVICE => Some("G_APPLICATION_IS_SERVICE")
       case G_APPLICATION_IS_LAUNCHER => Some("G_APPLICATION_IS_LAUNCHER")
       case G_APPLICATION_HANDLES_OPEN => Some("G_APPLICATION_HANDLES_OPEN")
@@ -70,7 +68,7 @@ object GApplicationFlags extends CEnumU[GApplicationFlags]:
       case G_APPLICATION_CAN_OVERRIDE_APP_ID => Some("G_APPLICATION_CAN_OVERRIDE_APP_ID")
       case G_APPLICATION_ALLOW_REPLACEMENT => Some("G_APPLICATION_ALLOW_REPLACEMENT")
       case G_APPLICATION_REPLACE => Some("G_APPLICATION_REPLACE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GApplicationFlags)
     inline def &(b: GApplicationFlags): GApplicationFlags = a & b
     inline def |(b: GApplicationFlags): GApplicationFlags = a | b
@@ -97,7 +95,7 @@ object GAskPasswordFlags extends CEnumU[GAskPasswordFlags]:
       case G_ASK_PASSWORD_SAVING_SUPPORTED => Some("G_ASK_PASSWORD_SAVING_SUPPORTED")
       case G_ASK_PASSWORD_ANONYMOUS_SUPPORTED => Some("G_ASK_PASSWORD_ANONYMOUS_SUPPORTED")
       case G_ASK_PASSWORD_TCRYPT => Some("G_ASK_PASSWORD_TCRYPT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GAskPasswordFlags)
     inline def &(b: GAskPasswordFlags): GAskPasswordFlags = a & b
     inline def |(b: GAskPasswordFlags): GAskPasswordFlags = a | b
@@ -120,7 +118,7 @@ object GBusNameOwnerFlags extends CEnumU[GBusNameOwnerFlags]:
       case G_BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT => Some("G_BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT")
       case G_BUS_NAME_OWNER_FLAGS_REPLACE => Some("G_BUS_NAME_OWNER_FLAGS_REPLACE")
       case G_BUS_NAME_OWNER_FLAGS_DO_NOT_QUEUE => Some("G_BUS_NAME_OWNER_FLAGS_DO_NOT_QUEUE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GBusNameOwnerFlags)
     inline def &(b: GBusNameOwnerFlags): GBusNameOwnerFlags = a & b
     inline def |(b: GBusNameOwnerFlags): GBusNameOwnerFlags = a | b
@@ -139,7 +137,7 @@ object GBusNameWatcherFlags extends CEnumU[GBusNameWatcherFlags]:
     inline value match
       case G_BUS_NAME_WATCHER_FLAGS_NONE => Some("G_BUS_NAME_WATCHER_FLAGS_NONE")
       case G_BUS_NAME_WATCHER_FLAGS_AUTO_START => Some("G_BUS_NAME_WATCHER_FLAGS_AUTO_START")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GBusNameWatcherFlags)
     inline def &(b: GBusNameWatcherFlags): GBusNameWatcherFlags = a & b
     inline def |(b: GBusNameWatcherFlags): GBusNameWatcherFlags = a | b
@@ -162,7 +160,7 @@ object GBusType extends CEnum[GBusType]:
       case G_BUS_TYPE_NONE => Some("G_BUS_TYPE_NONE")
       case G_BUS_TYPE_SYSTEM => Some("G_BUS_TYPE_SYSTEM")
       case G_BUS_TYPE_SESSION => Some("G_BUS_TYPE_SESSION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GBusType)
     inline def &(b: GBusType): GBusType = a & b
     inline def |(b: GBusType): GBusType = a | b
@@ -183,7 +181,7 @@ object GConverterFlags extends CEnumU[GConverterFlags]:
       case G_CONVERTER_NO_FLAGS => Some("G_CONVERTER_NO_FLAGS")
       case G_CONVERTER_INPUT_AT_END => Some("G_CONVERTER_INPUT_AT_END")
       case G_CONVERTER_FLUSH => Some("G_CONVERTER_FLUSH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GConverterFlags)
     inline def &(b: GConverterFlags): GConverterFlags = a & b
     inline def |(b: GConverterFlags): GConverterFlags = a | b
@@ -206,7 +204,7 @@ object GConverterResult extends CEnumU[GConverterResult]:
       case G_CONVERTER_CONVERTED => Some("G_CONVERTER_CONVERTED")
       case G_CONVERTER_FINISHED => Some("G_CONVERTER_FINISHED")
       case G_CONVERTER_FLUSHED => Some("G_CONVERTER_FLUSHED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GConverterResult)
     inline def &(b: GConverterResult): GConverterResult = a & b
     inline def |(b: GConverterResult): GConverterResult = a | b
@@ -237,7 +235,7 @@ object GCredentialsType extends CEnumU[GCredentialsType]:
       case G_CREDENTIALS_TYPE_NETBSD_UNPCBID => Some("G_CREDENTIALS_TYPE_NETBSD_UNPCBID")
       case G_CREDENTIALS_TYPE_APPLE_XUCRED => Some("G_CREDENTIALS_TYPE_APPLE_XUCRED")
       case G_CREDENTIALS_TYPE_WIN32_PID => Some("G_CREDENTIALS_TYPE_WIN32_PID")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GCredentialsType)
     inline def &(b: GCredentialsType): GCredentialsType = a & b
     inline def |(b: GCredentialsType): GCredentialsType = a | b
@@ -258,7 +256,7 @@ object GDBusCallFlags extends CEnumU[GDBusCallFlags]:
       case G_DBUS_CALL_FLAGS_NONE => Some("G_DBUS_CALL_FLAGS_NONE")
       case G_DBUS_CALL_FLAGS_NO_AUTO_START => Some("G_DBUS_CALL_FLAGS_NO_AUTO_START")
       case G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION => Some("G_DBUS_CALL_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusCallFlags)
     inline def &(b: GDBusCallFlags): GDBusCallFlags = a & b
     inline def |(b: GDBusCallFlags): GDBusCallFlags = a | b
@@ -277,14 +275,14 @@ object GDBusCapabilityFlags extends CEnumU[GDBusCapabilityFlags]:
     inline value match
       case G_DBUS_CAPABILITY_FLAGS_NONE => Some("G_DBUS_CAPABILITY_FLAGS_NONE")
       case G_DBUS_CAPABILITY_FLAGS_UNIX_FD_PASSING => Some("G_DBUS_CAPABILITY_FLAGS_UNIX_FD_PASSING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusCapabilityFlags)
     inline def &(b: GDBusCapabilityFlags): GDBusCapabilityFlags = a & b
     inline def |(b: GDBusCapabilityFlags): GDBusCapabilityFlags = a | b
     inline def is(b: GDBusCapabilityFlags): Boolean = (a & b) == b
 
 /**
- * GDBusConnectionFlags: _DBUS_CONNECTION_FLAGS_NONE: No flags set. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT: Perform authentication against server. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_SERVER: Perform authentication against client. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS: When authenticating as a server, allow the anonymous authentication method. _DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION: Pass this flag if connecting to a peer that is a message bus. This means that the Hello() method will be invoked as part of the connection setup. _DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING: If set, processing of D-Bus messages is delayed until g_dbus_connection_start_message_processing() is called. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER: When authenticating as a server, require the UID of the peer to be the same as the UID of the server. (Since: 2.68) _DBUS_CONNECTION_FLAGS_CROSS_NAMESPACE: When authenticating, try to use protocols that work across a Linux user namespace boundary, even if this reduces interoperability with older D-Bus implementations. This currently affects client-side `EXTERNAL` authentication, for which this flag makes connections to a server in another user namespace succeed, but causes a deadlock when connecting to a GDBus server older than 2.73.3. Since: 2.74
+ * GDBusConnectionFlags: _DBUS_CONNECTION_FLAGS_NONE: No flags set. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_CLIENT: Perform authentication against server. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_SERVER: Perform authentication against client. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS: When authenticating as a server, allow the anonymous authentication method. _DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION: Pass this flag if connecting to a peer that is a message bus. This means that the Hello() method will be invoked as part of the connection setup. _DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING: If set, processing of D-Bus messages is delayed until g_dbus_connection_start_message_processing() is called. _DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER: When authenticating as a server, require the UID of the peer to be the same as the UID of the server. (Since: 2.68)
 */
 opaque type GDBusConnectionFlags = CUnsignedInt
 object GDBusConnectionFlags extends CEnumU[GDBusConnectionFlags]:
@@ -297,7 +295,6 @@ object GDBusConnectionFlags extends CEnumU[GDBusConnectionFlags]:
   val G_DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION = define(8)
   val G_DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING = define(16)
   val G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER = define(32)
-  val G_DBUS_CONNECTION_FLAGS_CROSS_NAMESPACE = define(64)
   inline def getName(inline value: GDBusConnectionFlags): Option[String] =
     inline value match
       case G_DBUS_CONNECTION_FLAGS_NONE => Some("G_DBUS_CONNECTION_FLAGS_NONE")
@@ -307,8 +304,7 @@ object GDBusConnectionFlags extends CEnumU[GDBusConnectionFlags]:
       case G_DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION => Some("G_DBUS_CONNECTION_FLAGS_MESSAGE_BUS_CONNECTION")
       case G_DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING => Some("G_DBUS_CONNECTION_FLAGS_DELAY_MESSAGE_PROCESSING")
       case G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER => Some("G_DBUS_CONNECTION_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER")
-      case G_DBUS_CONNECTION_FLAGS_CROSS_NAMESPACE => Some("G_DBUS_CONNECTION_FLAGS_CROSS_NAMESPACE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusConnectionFlags)
     inline def &(b: GDBusConnectionFlags): GDBusConnectionFlags = a & b
     inline def |(b: GDBusConnectionFlags): GDBusConnectionFlags = a | b
@@ -413,7 +409,7 @@ object GDBusError extends CEnumU[GDBusError]:
       case G_DBUS_ERROR_UNKNOWN_INTERFACE => Some("G_DBUS_ERROR_UNKNOWN_INTERFACE")
       case G_DBUS_ERROR_UNKNOWN_PROPERTY => Some("G_DBUS_ERROR_UNKNOWN_PROPERTY")
       case G_DBUS_ERROR_PROPERTY_READ_ONLY => Some("G_DBUS_ERROR_PROPERTY_READ_ONLY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusError)
     inline def &(b: GDBusError): GDBusError = a & b
     inline def |(b: GDBusError): GDBusError = a | b
@@ -432,7 +428,7 @@ object GDBusInterfaceSkeletonFlags extends CEnumU[GDBusInterfaceSkeletonFlags]:
     inline value match
       case G_DBUS_INTERFACE_SKELETON_FLAGS_NONE => Some("G_DBUS_INTERFACE_SKELETON_FLAGS_NONE")
       case G_DBUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD => Some("G_DBUS_INTERFACE_SKELETON_FLAGS_HANDLE_METHOD_INVOCATIONS_IN_THREAD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusInterfaceSkeletonFlags)
     inline def &(b: GDBusInterfaceSkeletonFlags): GDBusInterfaceSkeletonFlags = a & b
     inline def |(b: GDBusInterfaceSkeletonFlags): GDBusInterfaceSkeletonFlags = a | b
@@ -451,7 +447,7 @@ object GDBusMessageByteOrder extends CEnumU[GDBusMessageByteOrder]:
     inline value match
       case G_DBUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN => Some("G_DBUS_MESSAGE_BYTE_ORDER_BIG_ENDIAN")
       case G_DBUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN => Some("G_DBUS_MESSAGE_BYTE_ORDER_LITTLE_ENDIAN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusMessageByteOrder)
     inline def &(b: GDBusMessageByteOrder): GDBusMessageByteOrder = a & b
     inline def |(b: GDBusMessageByteOrder): GDBusMessageByteOrder = a | b
@@ -474,7 +470,7 @@ object GDBusMessageFlags extends CEnumU[GDBusMessageFlags]:
       case G_DBUS_MESSAGE_FLAGS_NO_REPLY_EXPECTED => Some("G_DBUS_MESSAGE_FLAGS_NO_REPLY_EXPECTED")
       case G_DBUS_MESSAGE_FLAGS_NO_AUTO_START => Some("G_DBUS_MESSAGE_FLAGS_NO_AUTO_START")
       case G_DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION => Some("G_DBUS_MESSAGE_FLAGS_ALLOW_INTERACTIVE_AUTHORIZATION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusMessageFlags)
     inline def &(b: GDBusMessageFlags): GDBusMessageFlags = a & b
     inline def |(b: GDBusMessageFlags): GDBusMessageFlags = a | b
@@ -509,7 +505,7 @@ object GDBusMessageHeaderField extends CEnumU[GDBusMessageHeaderField]:
       case G_DBUS_MESSAGE_HEADER_FIELD_SENDER => Some("G_DBUS_MESSAGE_HEADER_FIELD_SENDER")
       case G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE => Some("G_DBUS_MESSAGE_HEADER_FIELD_SIGNATURE")
       case G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS => Some("G_DBUS_MESSAGE_HEADER_FIELD_NUM_UNIX_FDS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusMessageHeaderField)
     inline def &(b: GDBusMessageHeaderField): GDBusMessageHeaderField = a & b
     inline def |(b: GDBusMessageHeaderField): GDBusMessageHeaderField = a | b
@@ -534,7 +530,7 @@ object GDBusMessageType extends CEnumU[GDBusMessageType]:
       case G_DBUS_MESSAGE_TYPE_METHOD_RETURN => Some("G_DBUS_MESSAGE_TYPE_METHOD_RETURN")
       case G_DBUS_MESSAGE_TYPE_ERROR => Some("G_DBUS_MESSAGE_TYPE_ERROR")
       case G_DBUS_MESSAGE_TYPE_SIGNAL => Some("G_DBUS_MESSAGE_TYPE_SIGNAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusMessageType)
     inline def &(b: GDBusMessageType): GDBusMessageType = a & b
     inline def |(b: GDBusMessageType): GDBusMessageType = a | b
@@ -553,7 +549,7 @@ object GDBusObjectManagerClientFlags extends CEnumU[GDBusObjectManagerClientFlag
     inline value match
       case G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE => Some("G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_NONE")
       case G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START => Some("G_DBUS_OBJECT_MANAGER_CLIENT_FLAGS_DO_NOT_AUTO_START")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusObjectManagerClientFlags)
     inline def &(b: GDBusObjectManagerClientFlags): GDBusObjectManagerClientFlags = a & b
     inline def |(b: GDBusObjectManagerClientFlags): GDBusObjectManagerClientFlags = a | b
@@ -574,7 +570,7 @@ object GDBusPropertyInfoFlags extends CEnumU[GDBusPropertyInfoFlags]:
       case G_DBUS_PROPERTY_INFO_FLAGS_NONE => Some("G_DBUS_PROPERTY_INFO_FLAGS_NONE")
       case G_DBUS_PROPERTY_INFO_FLAGS_READABLE => Some("G_DBUS_PROPERTY_INFO_FLAGS_READABLE")
       case G_DBUS_PROPERTY_INFO_FLAGS_WRITABLE => Some("G_DBUS_PROPERTY_INFO_FLAGS_WRITABLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusPropertyInfoFlags)
     inline def &(b: GDBusPropertyInfoFlags): GDBusPropertyInfoFlags = a & b
     inline def |(b: GDBusPropertyInfoFlags): GDBusPropertyInfoFlags = a | b
@@ -603,7 +599,7 @@ object GDBusProxyFlags extends CEnumU[GDBusProxyFlags]:
       case G_DBUS_PROXY_FLAGS_GET_INVALIDATED_PROPERTIES => Some("G_DBUS_PROXY_FLAGS_GET_INVALIDATED_PROPERTIES")
       case G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START_AT_CONSTRUCTION => Some("G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START_AT_CONSTRUCTION")
       case G_DBUS_PROXY_FLAGS_NO_MATCH_RULE => Some("G_DBUS_PROXY_FLAGS_NO_MATCH_RULE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusProxyFlags)
     inline def &(b: GDBusProxyFlags): GDBusProxyFlags = a & b
     inline def |(b: GDBusProxyFlags): GDBusProxyFlags = a | b
@@ -622,7 +618,7 @@ object GDBusSendMessageFlags extends CEnumU[GDBusSendMessageFlags]:
     inline value match
       case G_DBUS_SEND_MESSAGE_FLAGS_NONE => Some("G_DBUS_SEND_MESSAGE_FLAGS_NONE")
       case G_DBUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL => Some("G_DBUS_SEND_MESSAGE_FLAGS_PRESERVE_SERIAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusSendMessageFlags)
     inline def &(b: GDBusSendMessageFlags): GDBusSendMessageFlags = a & b
     inline def |(b: GDBusSendMessageFlags): GDBusSendMessageFlags = a | b
@@ -645,7 +641,7 @@ object GDBusServerFlags extends CEnumU[GDBusServerFlags]:
       case G_DBUS_SERVER_FLAGS_RUN_IN_THREAD => Some("G_DBUS_SERVER_FLAGS_RUN_IN_THREAD")
       case G_DBUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS => Some("G_DBUS_SERVER_FLAGS_AUTHENTICATION_ALLOW_ANONYMOUS")
       case G_DBUS_SERVER_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER => Some("G_DBUS_SERVER_FLAGS_AUTHENTICATION_REQUIRE_SAME_USER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusServerFlags)
     inline def &(b: GDBusServerFlags): GDBusServerFlags = a & b
     inline def |(b: GDBusServerFlags): GDBusServerFlags = a | b
@@ -668,7 +664,7 @@ object GDBusSignalFlags extends CEnumU[GDBusSignalFlags]:
       case G_DBUS_SIGNAL_FLAGS_NO_MATCH_RULE => Some("G_DBUS_SIGNAL_FLAGS_NO_MATCH_RULE")
       case G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE => Some("G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_NAMESPACE")
       case G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_PATH => Some("G_DBUS_SIGNAL_FLAGS_MATCH_ARG0_PATH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusSignalFlags)
     inline def &(b: GDBusSignalFlags): GDBusSignalFlags = a & b
     inline def |(b: GDBusSignalFlags): GDBusSignalFlags = a | b
@@ -687,7 +683,7 @@ object GDBusSubtreeFlags extends CEnumU[GDBusSubtreeFlags]:
     inline value match
       case G_DBUS_SUBTREE_FLAGS_NONE => Some("G_DBUS_SUBTREE_FLAGS_NONE")
       case G_DBUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES => Some("G_DBUS_SUBTREE_FLAGS_DISPATCH_TO_UNENUMERATED_NODES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDBusSubtreeFlags)
     inline def &(b: GDBusSubtreeFlags): GDBusSubtreeFlags = a & b
     inline def |(b: GDBusSubtreeFlags): GDBusSubtreeFlags = a | b
@@ -708,7 +704,7 @@ object GDataStreamByteOrder extends CEnumU[GDataStreamByteOrder]:
       case G_DATA_STREAM_BYTE_ORDER_BIG_ENDIAN => Some("G_DATA_STREAM_BYTE_ORDER_BIG_ENDIAN")
       case G_DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN => Some("G_DATA_STREAM_BYTE_ORDER_LITTLE_ENDIAN")
       case G_DATA_STREAM_BYTE_ORDER_HOST_ENDIAN => Some("G_DATA_STREAM_BYTE_ORDER_HOST_ENDIAN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDataStreamByteOrder)
     inline def &(b: GDataStreamByteOrder): GDataStreamByteOrder = a & b
     inline def |(b: GDataStreamByteOrder): GDataStreamByteOrder = a | b
@@ -731,7 +727,7 @@ object GDataStreamNewlineType extends CEnumU[GDataStreamNewlineType]:
       case G_DATA_STREAM_NEWLINE_TYPE_CR => Some("G_DATA_STREAM_NEWLINE_TYPE_CR")
       case G_DATA_STREAM_NEWLINE_TYPE_CR_LF => Some("G_DATA_STREAM_NEWLINE_TYPE_CR_LF")
       case G_DATA_STREAM_NEWLINE_TYPE_ANY => Some("G_DATA_STREAM_NEWLINE_TYPE_ANY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDataStreamNewlineType)
     inline def &(b: GDataStreamNewlineType): GDataStreamNewlineType = a & b
     inline def |(b: GDataStreamNewlineType): GDataStreamNewlineType = a | b
@@ -748,7 +744,7 @@ object GDriveStartFlags extends CEnumU[GDriveStartFlags]:
   inline def getName(inline value: GDriveStartFlags): Option[String] =
     inline value match
       case G_DRIVE_START_NONE => Some("G_DRIVE_START_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDriveStartFlags)
     inline def &(b: GDriveStartFlags): GDriveStartFlags = a & b
     inline def |(b: GDriveStartFlags): GDriveStartFlags = a | b
@@ -773,7 +769,7 @@ object GDriveStartStopType extends CEnumU[GDriveStartStopType]:
       case G_DRIVE_START_STOP_TYPE_NETWORK => Some("G_DRIVE_START_STOP_TYPE_NETWORK")
       case G_DRIVE_START_STOP_TYPE_MULTIDISK => Some("G_DRIVE_START_STOP_TYPE_MULTIDISK")
       case G_DRIVE_START_STOP_TYPE_PASSWORD => Some("G_DRIVE_START_STOP_TYPE_PASSWORD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GDriveStartStopType)
     inline def &(b: GDriveStartStopType): GDriveStartStopType = a & b
     inline def |(b: GDriveStartStopType): GDriveStartStopType = a | b
@@ -796,7 +792,7 @@ object GEmblemOrigin extends CEnumU[GEmblemOrigin]:
       case G_EMBLEM_ORIGIN_DEVICE => Some("G_EMBLEM_ORIGIN_DEVICE")
       case G_EMBLEM_ORIGIN_LIVEMETADATA => Some("G_EMBLEM_ORIGIN_LIVEMETADATA")
       case G_EMBLEM_ORIGIN_TAG => Some("G_EMBLEM_ORIGIN_TAG")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GEmblemOrigin)
     inline def &(b: GEmblemOrigin): GEmblemOrigin = a & b
     inline def |(b: GEmblemOrigin): GEmblemOrigin = a | b
@@ -817,7 +813,7 @@ object GFileAttributeInfoFlags extends CEnumU[GFileAttributeInfoFlags]:
       case G_FILE_ATTRIBUTE_INFO_NONE => Some("G_FILE_ATTRIBUTE_INFO_NONE")
       case G_FILE_ATTRIBUTE_INFO_COPY_WITH_FILE => Some("G_FILE_ATTRIBUTE_INFO_COPY_WITH_FILE")
       case G_FILE_ATTRIBUTE_INFO_COPY_WHEN_MOVED => Some("G_FILE_ATTRIBUTE_INFO_COPY_WHEN_MOVED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileAttributeInfoFlags)
     inline def &(b: GFileAttributeInfoFlags): GFileAttributeInfoFlags = a & b
     inline def |(b: GFileAttributeInfoFlags): GFileAttributeInfoFlags = a | b
@@ -838,7 +834,7 @@ object GFileAttributeStatus extends CEnumU[GFileAttributeStatus]:
       case G_FILE_ATTRIBUTE_STATUS_UNSET => Some("G_FILE_ATTRIBUTE_STATUS_UNSET")
       case G_FILE_ATTRIBUTE_STATUS_SET => Some("G_FILE_ATTRIBUTE_STATUS_SET")
       case G_FILE_ATTRIBUTE_STATUS_ERROR_SETTING => Some("G_FILE_ATTRIBUTE_STATUS_ERROR_SETTING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileAttributeStatus)
     inline def &(b: GFileAttributeStatus): GFileAttributeStatus = a & b
     inline def |(b: GFileAttributeStatus): GFileAttributeStatus = a | b
@@ -873,7 +869,7 @@ object GFileAttributeType extends CEnumU[GFileAttributeType]:
       case G_FILE_ATTRIBUTE_TYPE_INT64 => Some("G_FILE_ATTRIBUTE_TYPE_INT64")
       case G_FILE_ATTRIBUTE_TYPE_OBJECT => Some("G_FILE_ATTRIBUTE_TYPE_OBJECT")
       case G_FILE_ATTRIBUTE_TYPE_STRINGV => Some("G_FILE_ATTRIBUTE_TYPE_STRINGV")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileAttributeType)
     inline def &(b: GFileAttributeType): GFileAttributeType = a & b
     inline def |(b: GFileAttributeType): GFileAttributeType = a | b
@@ -902,7 +898,7 @@ object GFileCopyFlags extends CEnumU[GFileCopyFlags]:
       case G_FILE_COPY_ALL_METADATA => Some("G_FILE_COPY_ALL_METADATA")
       case G_FILE_COPY_NO_FALLBACK_FOR_MOVE => Some("G_FILE_COPY_NO_FALLBACK_FOR_MOVE")
       case G_FILE_COPY_TARGET_DEFAULT_PERMS => Some("G_FILE_COPY_TARGET_DEFAULT_PERMS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileCopyFlags)
     inline def &(b: GFileCopyFlags): GFileCopyFlags = a & b
     inline def |(b: GFileCopyFlags): GFileCopyFlags = a | b
@@ -923,14 +919,14 @@ object GFileCreateFlags extends CEnumU[GFileCreateFlags]:
       case G_FILE_CREATE_NONE => Some("G_FILE_CREATE_NONE")
       case G_FILE_CREATE_PRIVATE => Some("G_FILE_CREATE_PRIVATE")
       case G_FILE_CREATE_REPLACE_DESTINATION => Some("G_FILE_CREATE_REPLACE_DESTINATION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileCreateFlags)
     inline def &(b: GFileCreateFlags): GFileCreateFlags = a & b
     inline def |(b: GFileCreateFlags): GFileCreateFlags = a | b
     inline def is(b: GFileCreateFlags): Boolean = (a & b) == b
 
 /**
- * GFileMeasureFlags: _FILE_MEASURE_NONE: No flags set. _FILE_MEASURE_REPORT_ANY_ERROR: Report any error encountered while traversing the directory tree. Normally errors are only reported for the toplevel file. _FILE_MEASURE_APPARENT_SIZE: Tally usage based on apparent file sizes. Normally, the block-size is used, if available, as this is a more accurate representation of disk space used. Compare with `du --apparent-size`. Since GLib 2.78. and similarly to `du` since GNU Coreutils 9.2, this will ignore the sizes of file types other than regular files and links, as the sizes of other file types are not specified in a standard way. _FILE_MEASURE_NO_XDEV: Do not cross mount point boundaries. Compare with `du -x`.
+ * GFileMeasureFlags: _FILE_MEASURE_NONE: No flags set. _FILE_MEASURE_REPORT_ANY_ERROR: Report any error encountered while traversing the directory tree. Normally errors are only reported for the toplevel file. _FILE_MEASURE_APPARENT_SIZE: Tally usage based on apparent file sizes. Normally, the block-size is used, if available, as this is a more accurate representation of disk space used. Compare with `du --apparent-size`. _FILE_MEASURE_NO_XDEV: Do not cross mount point boundaries. Compare with `du -x`.
 */
 opaque type GFileMeasureFlags = CUnsignedInt
 object GFileMeasureFlags extends CEnumU[GFileMeasureFlags]:
@@ -946,7 +942,7 @@ object GFileMeasureFlags extends CEnumU[GFileMeasureFlags]:
       case G_FILE_MEASURE_REPORT_ANY_ERROR => Some("G_FILE_MEASURE_REPORT_ANY_ERROR")
       case G_FILE_MEASURE_APPARENT_SIZE => Some("G_FILE_MEASURE_APPARENT_SIZE")
       case G_FILE_MEASURE_NO_XDEV => Some("G_FILE_MEASURE_NO_XDEV")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileMeasureFlags)
     inline def &(b: GFileMeasureFlags): GFileMeasureFlags = a & b
     inline def |(b: GFileMeasureFlags): GFileMeasureFlags = a | b
@@ -983,7 +979,7 @@ object GFileMonitorEvent extends CEnumU[GFileMonitorEvent]:
       case G_FILE_MONITOR_EVENT_RENAMED => Some("G_FILE_MONITOR_EVENT_RENAMED")
       case G_FILE_MONITOR_EVENT_MOVED_IN => Some("G_FILE_MONITOR_EVENT_MOVED_IN")
       case G_FILE_MONITOR_EVENT_MOVED_OUT => Some("G_FILE_MONITOR_EVENT_MOVED_OUT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileMonitorEvent)
     inline def &(b: GFileMonitorEvent): GFileMonitorEvent = a & b
     inline def |(b: GFileMonitorEvent): GFileMonitorEvent = a | b
@@ -1008,7 +1004,7 @@ object GFileMonitorFlags extends CEnumU[GFileMonitorFlags]:
       case G_FILE_MONITOR_SEND_MOVED => Some("G_FILE_MONITOR_SEND_MOVED")
       case G_FILE_MONITOR_WATCH_HARD_LINKS => Some("G_FILE_MONITOR_WATCH_HARD_LINKS")
       case G_FILE_MONITOR_WATCH_MOVES => Some("G_FILE_MONITOR_WATCH_MOVES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileMonitorFlags)
     inline def &(b: GFileMonitorFlags): GFileMonitorFlags = a & b
     inline def |(b: GFileMonitorFlags): GFileMonitorFlags = a | b
@@ -1027,7 +1023,7 @@ object GFileQueryInfoFlags extends CEnumU[GFileQueryInfoFlags]:
     inline value match
       case G_FILE_QUERY_INFO_NONE => Some("G_FILE_QUERY_INFO_NONE")
       case G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS => Some("G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileQueryInfoFlags)
     inline def &(b: GFileQueryInfoFlags): GFileQueryInfoFlags = a & b
     inline def |(b: GFileQueryInfoFlags): GFileQueryInfoFlags = a | b
@@ -1056,7 +1052,7 @@ object GFileType extends CEnumU[GFileType]:
       case G_FILE_TYPE_SPECIAL => Some("G_FILE_TYPE_SPECIAL")
       case G_FILE_TYPE_SHORTCUT => Some("G_FILE_TYPE_SHORTCUT")
       case G_FILE_TYPE_MOUNTABLE => Some("G_FILE_TYPE_MOUNTABLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFileType)
     inline def &(b: GFileType): GFileType = a & b
     inline def |(b: GFileType): GFileType = a | b
@@ -1077,14 +1073,14 @@ object GFilesystemPreviewType extends CEnumU[GFilesystemPreviewType]:
       case G_FILESYSTEM_PREVIEW_TYPE_IF_ALWAYS => Some("G_FILESYSTEM_PREVIEW_TYPE_IF_ALWAYS")
       case G_FILESYSTEM_PREVIEW_TYPE_IF_LOCAL => Some("G_FILESYSTEM_PREVIEW_TYPE_IF_LOCAL")
       case G_FILESYSTEM_PREVIEW_TYPE_NEVER => Some("G_FILESYSTEM_PREVIEW_TYPE_NEVER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GFilesystemPreviewType)
     inline def &(b: GFilesystemPreviewType): GFilesystemPreviewType = a & b
     inline def |(b: GFilesystemPreviewType): GFilesystemPreviewType = a | b
     inline def is(b: GFilesystemPreviewType): Boolean = (a & b) == b
 
 /**
- * GIOErrorEnum: _IO_ERROR_FAILED: Generic error condition for when an operation fails and no more specific #GIOErrorEnum value is defined. _IO_ERROR_NOT_FOUND: File not found. _IO_ERROR_EXISTS: File already exists. _IO_ERROR_IS_DIRECTORY: File is a directory. _IO_ERROR_NOT_DIRECTORY: File is not a directory. _IO_ERROR_NOT_EMPTY: File is a directory that isn't empty. _IO_ERROR_NOT_REGULAR_FILE: File is not a regular file. _IO_ERROR_NOT_SYMBOLIC_LINK: File is not a symbolic link. _IO_ERROR_NOT_MOUNTABLE_FILE: File cannot be mounted. _IO_ERROR_FILENAME_TOO_LONG: Filename is too many characters. _IO_ERROR_INVALID_FILENAME: Filename is invalid or contains invalid characters. _IO_ERROR_TOO_MANY_LINKS: File contains too many symbolic links. _IO_ERROR_NO_SPACE: No space left on drive. _IO_ERROR_INVALID_ARGUMENT: Invalid argument. _IO_ERROR_PERMISSION_DENIED: Permission denied. _IO_ERROR_NOT_SUPPORTED: Operation (or one of its parameters) not supported _IO_ERROR_NOT_MOUNTED: File isn't mounted. _IO_ERROR_ALREADY_MOUNTED: File is already mounted. _IO_ERROR_CLOSED: File was closed. _IO_ERROR_CANCELLED: Operation was cancelled. See #GCancellable. _IO_ERROR_PENDING: Operations are still pending. _IO_ERROR_READ_ONLY: File is read only. _IO_ERROR_CANT_CREATE_BACKUP: Backup couldn't be created. _IO_ERROR_WRONG_ETAG: File's Entity Tag was incorrect. _IO_ERROR_TIMED_OUT: Operation timed out. _IO_ERROR_WOULD_RECURSE: Operation would be recursive. _IO_ERROR_BUSY: File is busy. _IO_ERROR_WOULD_BLOCK: Operation would block. _IO_ERROR_HOST_NOT_FOUND: Host couldn't be found (remote operations). _IO_ERROR_WOULD_MERGE: Operation would merge files. _IO_ERROR_FAILED_HANDLED: Operation failed and a helper program has already interacted with the user. Do not display any error dialog. _IO_ERROR_TOO_MANY_OPEN_FILES: The current process has too many files open and can't open any more. Duplicate descriptors do count toward this limit. Since 2.20 _IO_ERROR_NOT_INITIALIZED: The object has not been initialized. Since 2.22 _IO_ERROR_ADDRESS_IN_USE: The requested address is already in use. Since 2.22 _IO_ERROR_PARTIAL_INPUT: Need more input to finish operation. Since 2.24 _IO_ERROR_INVALID_DATA: The input data was invalid. Since 2.24 _IO_ERROR_DBUS_ERROR: A remote object generated an error that doesn't correspond to a locally registered #GError error domain. Use g_dbus_error_get_remote_error() to extract the D-Bus error name and g_dbus_error_strip_remote_error() to fix up the message so it matches what was received on the wire. Since 2.26. _IO_ERROR_HOST_UNREACHABLE: Host unreachable. Since 2.26 _IO_ERROR_NETWORK_UNREACHABLE: Network unreachable. Since 2.26 _IO_ERROR_CONNECTION_REFUSED: Connection refused. Since 2.26 _IO_ERROR_PROXY_FAILED: Connection to proxy server failed. Since 2.26 _IO_ERROR_PROXY_AUTH_FAILED: Proxy authentication failed. Since 2.26 _IO_ERROR_PROXY_NEED_AUTH: Proxy server needs authentication. Since 2.26 _IO_ERROR_PROXY_NOT_ALLOWED: Proxy connection is not allowed by ruleset. Since 2.26 _IO_ERROR_BROKEN_PIPE: Broken pipe. Since 2.36 _IO_ERROR_CONNECTION_CLOSED: Connection closed by peer. Note that this is the same code as %G_IO_ERROR_BROKEN_PIPE; before 2.44 some "connection closed" errors returned %G_IO_ERROR_BROKEN_PIPE, but others returned %G_IO_ERROR_FAILED. Now they should all return the same value, which has this more logical name. Since 2.44. _IO_ERROR_NOT_CONNECTED: Transport endpoint is not connected. Since 2.44 _IO_ERROR_MESSAGE_TOO_LARGE: Message too large. Since 2.48. _IO_ERROR_NO_SUCH_DEVICE: No such device found. Since 2.74
+ * GIOErrorEnum: _IO_ERROR_FAILED: Generic error condition for when an operation fails and no more specific #GIOErrorEnum value is defined. _IO_ERROR_NOT_FOUND: File not found. _IO_ERROR_EXISTS: File already exists. _IO_ERROR_IS_DIRECTORY: File is a directory. _IO_ERROR_NOT_DIRECTORY: File is not a directory. _IO_ERROR_NOT_EMPTY: File is a directory that isn't empty. _IO_ERROR_NOT_REGULAR_FILE: File is not a regular file. _IO_ERROR_NOT_SYMBOLIC_LINK: File is not a symbolic link. _IO_ERROR_NOT_MOUNTABLE_FILE: File cannot be mounted. _IO_ERROR_FILENAME_TOO_LONG: Filename is too many characters. _IO_ERROR_INVALID_FILENAME: Filename is invalid or contains invalid characters. _IO_ERROR_TOO_MANY_LINKS: File contains too many symbolic links. _IO_ERROR_NO_SPACE: No space left on drive. _IO_ERROR_INVALID_ARGUMENT: Invalid argument. _IO_ERROR_PERMISSION_DENIED: Permission denied. _IO_ERROR_NOT_SUPPORTED: Operation (or one of its parameters) not supported _IO_ERROR_NOT_MOUNTED: File isn't mounted. _IO_ERROR_ALREADY_MOUNTED: File is already mounted. _IO_ERROR_CLOSED: File was closed. _IO_ERROR_CANCELLED: Operation was cancelled. See #GCancellable. _IO_ERROR_PENDING: Operations are still pending. _IO_ERROR_READ_ONLY: File is read only. _IO_ERROR_CANT_CREATE_BACKUP: Backup couldn't be created. _IO_ERROR_WRONG_ETAG: File's Entity Tag was incorrect. _IO_ERROR_TIMED_OUT: Operation timed out. _IO_ERROR_WOULD_RECURSE: Operation would be recursive. _IO_ERROR_BUSY: File is busy. _IO_ERROR_WOULD_BLOCK: Operation would block. _IO_ERROR_HOST_NOT_FOUND: Host couldn't be found (remote operations). _IO_ERROR_WOULD_MERGE: Operation would merge files. _IO_ERROR_FAILED_HANDLED: Operation failed and a helper program has already interacted with the user. Do not display any error dialog. _IO_ERROR_TOO_MANY_OPEN_FILES: The current process has too many files open and can't open any more. Duplicate descriptors do count toward this limit. Since 2.20 _IO_ERROR_NOT_INITIALIZED: The object has not been initialized. Since 2.22 _IO_ERROR_ADDRESS_IN_USE: The requested address is already in use. Since 2.22 _IO_ERROR_PARTIAL_INPUT: Need more input to finish operation. Since 2.24 _IO_ERROR_INVALID_DATA: The input data was invalid. Since 2.24 _IO_ERROR_DBUS_ERROR: A remote object generated an error that doesn't correspond to a locally registered #GError error domain. Use g_dbus_error_get_remote_error() to extract the D-Bus error name and g_dbus_error_strip_remote_error() to fix up the message so it matches what was received on the wire. Since 2.26. _IO_ERROR_HOST_UNREACHABLE: Host unreachable. Since 2.26 _IO_ERROR_NETWORK_UNREACHABLE: Network unreachable. Since 2.26 _IO_ERROR_CONNECTION_REFUSED: Connection refused. Since 2.26 _IO_ERROR_PROXY_FAILED: Connection to proxy server failed. Since 2.26 _IO_ERROR_PROXY_AUTH_FAILED: Proxy authentication failed. Since 2.26 _IO_ERROR_PROXY_NEED_AUTH: Proxy server needs authentication. Since 2.26 _IO_ERROR_PROXY_NOT_ALLOWED: Proxy connection is not allowed by ruleset. Since 2.26 _IO_ERROR_BROKEN_PIPE: Broken pipe. Since 2.36 _IO_ERROR_CONNECTION_CLOSED: Connection closed by peer. Note that this is the same code as %G_IO_ERROR_BROKEN_PIPE; before 2.44 some "connection closed" errors returned %G_IO_ERROR_BROKEN_PIPE, but others returned %G_IO_ERROR_FAILED. Now they should all return the same value, which has this more logical name. Since 2.44. _IO_ERROR_NOT_CONNECTED: Transport endpoint is not connected. Since 2.44 _IO_ERROR_MESSAGE_TOO_LARGE: Message too large. Since 2.48.
 */
 opaque type GIOErrorEnum = CUnsignedInt
 object GIOErrorEnum extends CEnumU[GIOErrorEnum]:
@@ -1138,7 +1134,6 @@ object GIOErrorEnum extends CEnumU[GIOErrorEnum]:
   val G_IO_ERROR_CONNECTION_CLOSED = define(44)
   val G_IO_ERROR_NOT_CONNECTED = define(45)
   val G_IO_ERROR_MESSAGE_TOO_LARGE = define(46)
-  val G_IO_ERROR_NO_SUCH_DEVICE = define(47)
   inline def getName(inline value: GIOErrorEnum): Option[String] =
     inline value match
       case G_IO_ERROR_FAILED => Some("G_IO_ERROR_FAILED")
@@ -1189,8 +1184,7 @@ object GIOErrorEnum extends CEnumU[GIOErrorEnum]:
       case G_IO_ERROR_CONNECTION_CLOSED => Some("G_IO_ERROR_CONNECTION_CLOSED")
       case G_IO_ERROR_NOT_CONNECTED => Some("G_IO_ERROR_NOT_CONNECTED")
       case G_IO_ERROR_MESSAGE_TOO_LARGE => Some("G_IO_ERROR_MESSAGE_TOO_LARGE")
-      case G_IO_ERROR_NO_SUCH_DEVICE => Some("G_IO_ERROR_NO_SUCH_DEVICE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOErrorEnum)
     inline def &(b: GIOErrorEnum): GIOErrorEnum = a & b
     inline def |(b: GIOErrorEnum): GIOErrorEnum = a | b
@@ -1209,7 +1203,7 @@ object GIOModuleScopeFlags extends CEnumU[GIOModuleScopeFlags]:
     inline value match
       case G_IO_MODULE_SCOPE_NONE => Some("G_IO_MODULE_SCOPE_NONE")
       case G_IO_MODULE_SCOPE_BLOCK_DUPLICATES => Some("G_IO_MODULE_SCOPE_BLOCK_DUPLICATES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOModuleScopeFlags)
     inline def &(b: GIOModuleScopeFlags): GIOModuleScopeFlags = a & b
     inline def |(b: GIOModuleScopeFlags): GIOModuleScopeFlags = a | b
@@ -1232,7 +1226,7 @@ object GIOStreamSpliceFlags extends CEnumU[GIOStreamSpliceFlags]:
       case G_IO_STREAM_SPLICE_CLOSE_STREAM1 => Some("G_IO_STREAM_SPLICE_CLOSE_STREAM1")
       case G_IO_STREAM_SPLICE_CLOSE_STREAM2 => Some("G_IO_STREAM_SPLICE_CLOSE_STREAM2")
       case G_IO_STREAM_SPLICE_WAIT_FOR_BOTH => Some("G_IO_STREAM_SPLICE_WAIT_FOR_BOTH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GIOStreamSpliceFlags)
     inline def &(b: GIOStreamSpliceFlags): GIOStreamSpliceFlags = a & b
     inline def |(b: GIOStreamSpliceFlags): GIOStreamSpliceFlags = a | b
@@ -1253,7 +1247,7 @@ object GMemoryMonitorWarningLevel extends CEnumU[GMemoryMonitorWarningLevel]:
       case G_MEMORY_MONITOR_WARNING_LEVEL_LOW => Some("G_MEMORY_MONITOR_WARNING_LEVEL_LOW")
       case G_MEMORY_MONITOR_WARNING_LEVEL_MEDIUM => Some("G_MEMORY_MONITOR_WARNING_LEVEL_MEDIUM")
       case G_MEMORY_MONITOR_WARNING_LEVEL_CRITICAL => Some("G_MEMORY_MONITOR_WARNING_LEVEL_CRITICAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMemoryMonitorWarningLevel)
     inline def &(b: GMemoryMonitorWarningLevel): GMemoryMonitorWarningLevel = a & b
     inline def |(b: GMemoryMonitorWarningLevel): GMemoryMonitorWarningLevel = a | b
@@ -1270,7 +1264,7 @@ object GMountMountFlags extends CEnumU[GMountMountFlags]:
   inline def getName(inline value: GMountMountFlags): Option[String] =
     inline value match
       case G_MOUNT_MOUNT_NONE => Some("G_MOUNT_MOUNT_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMountMountFlags)
     inline def &(b: GMountMountFlags): GMountMountFlags = a & b
     inline def |(b: GMountMountFlags): GMountMountFlags = a | b
@@ -1291,7 +1285,7 @@ object GMountOperationResult extends CEnumU[GMountOperationResult]:
       case G_MOUNT_OPERATION_HANDLED => Some("G_MOUNT_OPERATION_HANDLED")
       case G_MOUNT_OPERATION_ABORTED => Some("G_MOUNT_OPERATION_ABORTED")
       case G_MOUNT_OPERATION_UNHANDLED => Some("G_MOUNT_OPERATION_UNHANDLED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMountOperationResult)
     inline def &(b: GMountOperationResult): GMountOperationResult = a & b
     inline def |(b: GMountOperationResult): GMountOperationResult = a | b
@@ -1310,7 +1304,7 @@ object GMountUnmountFlags extends CEnumU[GMountUnmountFlags]:
     inline value match
       case G_MOUNT_UNMOUNT_NONE => Some("G_MOUNT_UNMOUNT_NONE")
       case G_MOUNT_UNMOUNT_FORCE => Some("G_MOUNT_UNMOUNT_FORCE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GMountUnmountFlags)
     inline def &(b: GMountUnmountFlags): GMountUnmountFlags = a & b
     inline def |(b: GMountUnmountFlags): GMountUnmountFlags = a | b
@@ -1333,7 +1327,7 @@ object GNetworkConnectivity extends CEnumU[GNetworkConnectivity]:
       case G_NETWORK_CONNECTIVITY_LIMITED => Some("G_NETWORK_CONNECTIVITY_LIMITED")
       case G_NETWORK_CONNECTIVITY_PORTAL => Some("G_NETWORK_CONNECTIVITY_PORTAL")
       case G_NETWORK_CONNECTIVITY_FULL => Some("G_NETWORK_CONNECTIVITY_FULL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GNetworkConnectivity)
     inline def &(b: GNetworkConnectivity): GNetworkConnectivity = a & b
     inline def |(b: GNetworkConnectivity): GNetworkConnectivity = a | b
@@ -1356,7 +1350,7 @@ object GNotificationPriority extends CEnumU[GNotificationPriority]:
       case G_NOTIFICATION_PRIORITY_LOW => Some("G_NOTIFICATION_PRIORITY_LOW")
       case G_NOTIFICATION_PRIORITY_HIGH => Some("G_NOTIFICATION_PRIORITY_HIGH")
       case G_NOTIFICATION_PRIORITY_URGENT => Some("G_NOTIFICATION_PRIORITY_URGENT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GNotificationPriority)
     inline def &(b: GNotificationPriority): GNotificationPriority = a & b
     inline def |(b: GNotificationPriority): GNotificationPriority = a | b
@@ -1377,7 +1371,7 @@ object GOutputStreamSpliceFlags extends CEnumU[GOutputStreamSpliceFlags]:
       case G_OUTPUT_STREAM_SPLICE_NONE => Some("G_OUTPUT_STREAM_SPLICE_NONE")
       case G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE => Some("G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE")
       case G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET => Some("G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GOutputStreamSpliceFlags)
     inline def &(b: GOutputStreamSpliceFlags): GOutputStreamSpliceFlags = a & b
     inline def |(b: GOutputStreamSpliceFlags): GOutputStreamSpliceFlags = a | b
@@ -1398,7 +1392,7 @@ object GPasswordSave extends CEnumU[GPasswordSave]:
       case G_PASSWORD_SAVE_NEVER => Some("G_PASSWORD_SAVE_NEVER")
       case G_PASSWORD_SAVE_FOR_SESSION => Some("G_PASSWORD_SAVE_FOR_SESSION")
       case G_PASSWORD_SAVE_PERMANENTLY => Some("G_PASSWORD_SAVE_PERMANENTLY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GPasswordSave)
     inline def &(b: GPasswordSave): GPasswordSave = a & b
     inline def |(b: GPasswordSave): GPasswordSave = a | b
@@ -1419,7 +1413,7 @@ object GPollableReturn extends CEnum[GPollableReturn]:
       case G_POLLABLE_RETURN_FAILED => Some("G_POLLABLE_RETURN_FAILED")
       case G_POLLABLE_RETURN_OK => Some("G_POLLABLE_RETURN_OK")
       case G_POLLABLE_RETURN_WOULD_BLOCK => Some("G_POLLABLE_RETURN_WOULD_BLOCK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GPollableReturn)
     inline def &(b: GPollableReturn): GPollableReturn = a & b
     inline def |(b: GPollableReturn): GPollableReturn = a | b
@@ -1440,7 +1434,7 @@ object GResolverError extends CEnumU[GResolverError]:
       case G_RESOLVER_ERROR_NOT_FOUND => Some("G_RESOLVER_ERROR_NOT_FOUND")
       case G_RESOLVER_ERROR_TEMPORARY_FAILURE => Some("G_RESOLVER_ERROR_TEMPORARY_FAILURE")
       case G_RESOLVER_ERROR_INTERNAL => Some("G_RESOLVER_ERROR_INTERNAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GResolverError)
     inline def &(b: GResolverError): GResolverError = a & b
     inline def |(b: GResolverError): GResolverError = a | b
@@ -1461,7 +1455,7 @@ object GResolverNameLookupFlags extends CEnumU[GResolverNameLookupFlags]:
       case G_RESOLVER_NAME_LOOKUP_FLAGS_DEFAULT => Some("G_RESOLVER_NAME_LOOKUP_FLAGS_DEFAULT")
       case G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY => Some("G_RESOLVER_NAME_LOOKUP_FLAGS_IPV4_ONLY")
       case G_RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY => Some("G_RESOLVER_NAME_LOOKUP_FLAGS_IPV6_ONLY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GResolverNameLookupFlags)
     inline def &(b: GResolverNameLookupFlags): GResolverNameLookupFlags = a & b
     inline def |(b: GResolverNameLookupFlags): GResolverNameLookupFlags = a | b
@@ -1486,7 +1480,7 @@ object GResolverRecordType extends CEnumU[GResolverRecordType]:
       case G_RESOLVER_RECORD_TXT => Some("G_RESOLVER_RECORD_TXT")
       case G_RESOLVER_RECORD_SOA => Some("G_RESOLVER_RECORD_SOA")
       case G_RESOLVER_RECORD_NS => Some("G_RESOLVER_RECORD_NS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GResolverRecordType)
     inline def &(b: GResolverRecordType): GResolverRecordType = a & b
     inline def |(b: GResolverRecordType): GResolverRecordType = a | b
@@ -1505,7 +1499,7 @@ object GResourceError extends CEnumU[GResourceError]:
     inline value match
       case G_RESOURCE_ERROR_NOT_FOUND => Some("G_RESOURCE_ERROR_NOT_FOUND")
       case G_RESOURCE_ERROR_INTERNAL => Some("G_RESOURCE_ERROR_INTERNAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GResourceError)
     inline def &(b: GResourceError): GResourceError = a & b
     inline def |(b: GResourceError): GResourceError = a | b
@@ -1524,7 +1518,7 @@ object GResourceFlags extends CEnumU[GResourceFlags]:
     inline value match
       case G_RESOURCE_FLAGS_NONE => Some("G_RESOURCE_FLAGS_NONE")
       case G_RESOURCE_FLAGS_COMPRESSED => Some("G_RESOURCE_FLAGS_COMPRESSED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GResourceFlags)
     inline def &(b: GResourceFlags): GResourceFlags = a & b
     inline def |(b: GResourceFlags): GResourceFlags = a | b
@@ -1541,7 +1535,7 @@ object GResourceLookupFlags extends CEnumU[GResourceLookupFlags]:
   inline def getName(inline value: GResourceLookupFlags): Option[String] =
     inline value match
       case G_RESOURCE_LOOKUP_FLAGS_NONE => Some("G_RESOURCE_LOOKUP_FLAGS_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GResourceLookupFlags)
     inline def &(b: GResourceLookupFlags): GResourceLookupFlags = a & b
     inline def |(b: GResourceLookupFlags): GResourceLookupFlags = a | b
@@ -1568,7 +1562,7 @@ object GSettingsBindFlags extends CEnumU[GSettingsBindFlags]:
       case G_SETTINGS_BIND_NO_SENSITIVITY => Some("G_SETTINGS_BIND_NO_SENSITIVITY")
       case G_SETTINGS_BIND_GET_NO_CHANGES => Some("G_SETTINGS_BIND_GET_NO_CHANGES")
       case G_SETTINGS_BIND_INVERT_BOOLEAN => Some("G_SETTINGS_BIND_INVERT_BOOLEAN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSettingsBindFlags)
     inline def &(b: GSettingsBindFlags): GSettingsBindFlags = a & b
     inline def |(b: GSettingsBindFlags): GSettingsBindFlags = a | b
@@ -1601,7 +1595,7 @@ object GSocketClientEvent extends CEnumU[GSocketClientEvent]:
       case G_SOCKET_CLIENT_TLS_HANDSHAKING => Some("G_SOCKET_CLIENT_TLS_HANDSHAKING")
       case G_SOCKET_CLIENT_TLS_HANDSHAKED => Some("G_SOCKET_CLIENT_TLS_HANDSHAKED")
       case G_SOCKET_CLIENT_COMPLETE => Some("G_SOCKET_CLIENT_COMPLETE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSocketClientEvent)
     inline def &(b: GSocketClientEvent): GSocketClientEvent = a & b
     inline def |(b: GSocketClientEvent): GSocketClientEvent = a | b
@@ -1617,14 +1611,14 @@ object GSocketFamily extends CEnumU[GSocketFamily]:
   val G_SOCKET_FAMILY_INVALID = define(0)
   val G_SOCKET_FAMILY_UNIX = define(1)
   val G_SOCKET_FAMILY_IPV4 = define(2)
-  val G_SOCKET_FAMILY_IPV6 = define(30)
+  val G_SOCKET_FAMILY_IPV6 = define(10)
   inline def getName(inline value: GSocketFamily): Option[String] =
     inline value match
       case G_SOCKET_FAMILY_INVALID => Some("G_SOCKET_FAMILY_INVALID")
       case G_SOCKET_FAMILY_UNIX => Some("G_SOCKET_FAMILY_UNIX")
       case G_SOCKET_FAMILY_IPV4 => Some("G_SOCKET_FAMILY_IPV4")
       case G_SOCKET_FAMILY_IPV6 => Some("G_SOCKET_FAMILY_IPV6")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSocketFamily)
     inline def &(b: GSocketFamily): GSocketFamily = a & b
     inline def |(b: GSocketFamily): GSocketFamily = a | b
@@ -1647,7 +1641,7 @@ object GSocketListenerEvent extends CEnumU[GSocketListenerEvent]:
       case G_SOCKET_LISTENER_BOUND => Some("G_SOCKET_LISTENER_BOUND")
       case G_SOCKET_LISTENER_LISTENING => Some("G_SOCKET_LISTENER_LISTENING")
       case G_SOCKET_LISTENER_LISTENED => Some("G_SOCKET_LISTENER_LISTENED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSocketListenerEvent)
     inline def &(b: GSocketListenerEvent): GSocketListenerEvent = a & b
     inline def |(b: GSocketListenerEvent): GSocketListenerEvent = a | b
@@ -1670,7 +1664,7 @@ object GSocketMsgFlags extends CEnumU[GSocketMsgFlags]:
       case G_SOCKET_MSG_OOB => Some("G_SOCKET_MSG_OOB")
       case G_SOCKET_MSG_PEEK => Some("G_SOCKET_MSG_PEEK")
       case G_SOCKET_MSG_DONTROUTE => Some("G_SOCKET_MSG_DONTROUTE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSocketMsgFlags)
     inline def &(b: GSocketMsgFlags): GSocketMsgFlags = a & b
     inline def |(b: GSocketMsgFlags): GSocketMsgFlags = a | b
@@ -1695,7 +1689,7 @@ object GSocketProtocol extends CEnum[GSocketProtocol]:
       case G_SOCKET_PROTOCOL_TCP => Some("G_SOCKET_PROTOCOL_TCP")
       case G_SOCKET_PROTOCOL_UDP => Some("G_SOCKET_PROTOCOL_UDP")
       case G_SOCKET_PROTOCOL_SCTP => Some("G_SOCKET_PROTOCOL_SCTP")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSocketProtocol)
     inline def &(b: GSocketProtocol): GSocketProtocol = a & b
     inline def |(b: GSocketProtocol): GSocketProtocol = a | b
@@ -1718,7 +1712,7 @@ object GSocketType extends CEnumU[GSocketType]:
       case G_SOCKET_TYPE_STREAM => Some("G_SOCKET_TYPE_STREAM")
       case G_SOCKET_TYPE_DATAGRAM => Some("G_SOCKET_TYPE_DATAGRAM")
       case G_SOCKET_TYPE_SEQPACKET => Some("G_SOCKET_TYPE_SEQPACKET")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSocketType)
     inline def &(b: GSocketType): GSocketType = a & b
     inline def |(b: GSocketType): GSocketType = a | b
@@ -1753,7 +1747,7 @@ object GSubprocessFlags extends CEnumU[GSubprocessFlags]:
       case G_SUBPROCESS_FLAGS_STDERR_MERGE => Some("G_SUBPROCESS_FLAGS_STDERR_MERGE")
       case G_SUBPROCESS_FLAGS_INHERIT_FDS => Some("G_SUBPROCESS_FLAGS_INHERIT_FDS")
       case G_SUBPROCESS_FLAGS_SEARCH_PATH_FROM_ENVP => Some("G_SUBPROCESS_FLAGS_SEARCH_PATH_FROM_ENVP")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GSubprocessFlags)
     inline def &(b: GSubprocessFlags): GSubprocessFlags = a & b
     inline def |(b: GSubprocessFlags): GSubprocessFlags = a | b
@@ -1770,7 +1764,7 @@ object GTestDBusFlags extends CEnumU[GTestDBusFlags]:
   inline def getName(inline value: GTestDBusFlags): Option[String] =
     inline value match
       case G_TEST_DBUS_NONE => Some("G_TEST_DBUS_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTestDBusFlags)
     inline def &(b: GTestDBusFlags): GTestDBusFlags = a & b
     inline def |(b: GTestDBusFlags): GTestDBusFlags = a | b
@@ -1791,20 +1785,19 @@ object GTlsAuthenticationMode extends CEnumU[GTlsAuthenticationMode]:
       case G_TLS_AUTHENTICATION_NONE => Some("G_TLS_AUTHENTICATION_NONE")
       case G_TLS_AUTHENTICATION_REQUESTED => Some("G_TLS_AUTHENTICATION_REQUESTED")
       case G_TLS_AUTHENTICATION_REQUIRED => Some("G_TLS_AUTHENTICATION_REQUIRED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsAuthenticationMode)
     inline def &(b: GTlsAuthenticationMode): GTlsAuthenticationMode = a & b
     inline def |(b: GTlsAuthenticationMode): GTlsAuthenticationMode = a | b
     inline def is(b: GTlsAuthenticationMode): Boolean = (a & b) == b
 
 /**
- * GTlsCertificateFlags: _TLS_CERTIFICATE_NO_FLAGS: No flags set. Since: 2.74 _TLS_CERTIFICATE_UNKNOWN_CA: The signing certificate authority is not known. _TLS_CERTIFICATE_BAD_IDENTITY: The certificate does not match the expected identity of the site that it was retrieved from. _TLS_CERTIFICATE_NOT_ACTIVATED: The certificate's activation time is still in the future _TLS_CERTIFICATE_EXPIRED: The certificate has expired _TLS_CERTIFICATE_REVOKED: The certificate has been revoked according to the #GTlsConnection's certificate revocation list. _TLS_CERTIFICATE_INSECURE: The certificate's algorithm is considered insecure. _TLS_CERTIFICATE_GENERIC_ERROR: Some other error occurred validating the certificate _TLS_CERTIFICATE_VALIDATE_ALL: the combination of all of the above flags
+ * GTlsCertificateFlags: _TLS_CERTIFICATE_UNKNOWN_CA: The signing certificate authority is not known. _TLS_CERTIFICATE_BAD_IDENTITY: The certificate does not match the expected identity of the site that it was retrieved from. _TLS_CERTIFICATE_NOT_ACTIVATED: The certificate's activation time is still in the future _TLS_CERTIFICATE_EXPIRED: The certificate has expired _TLS_CERTIFICATE_REVOKED: The certificate has been revoked according to the #GTlsConnection's certificate revocation list. _TLS_CERTIFICATE_INSECURE: The certificate's algorithm is considered insecure. _TLS_CERTIFICATE_GENERIC_ERROR: Some other error occurred validating the certificate _TLS_CERTIFICATE_VALIDATE_ALL: the combination of all of the above flags
 */
 opaque type GTlsCertificateFlags = CUnsignedInt
 object GTlsCertificateFlags extends CEnumU[GTlsCertificateFlags]:
   given _tag: Tag[GTlsCertificateFlags] = Tag.UInt
   inline def define(inline a: Long): GTlsCertificateFlags = a.toUInt
-  val G_TLS_CERTIFICATE_NO_FLAGS = define(0)
   val G_TLS_CERTIFICATE_UNKNOWN_CA = define(1)
   val G_TLS_CERTIFICATE_BAD_IDENTITY = define(2)
   val G_TLS_CERTIFICATE_NOT_ACTIVATED = define(4)
@@ -1815,7 +1808,6 @@ object GTlsCertificateFlags extends CEnumU[GTlsCertificateFlags]:
   val G_TLS_CERTIFICATE_VALIDATE_ALL = define(127)
   inline def getName(inline value: GTlsCertificateFlags): Option[String] =
     inline value match
-      case G_TLS_CERTIFICATE_NO_FLAGS => Some("G_TLS_CERTIFICATE_NO_FLAGS")
       case G_TLS_CERTIFICATE_UNKNOWN_CA => Some("G_TLS_CERTIFICATE_UNKNOWN_CA")
       case G_TLS_CERTIFICATE_BAD_IDENTITY => Some("G_TLS_CERTIFICATE_BAD_IDENTITY")
       case G_TLS_CERTIFICATE_NOT_ACTIVATED => Some("G_TLS_CERTIFICATE_NOT_ACTIVATED")
@@ -1824,7 +1816,7 @@ object GTlsCertificateFlags extends CEnumU[GTlsCertificateFlags]:
       case G_TLS_CERTIFICATE_INSECURE => Some("G_TLS_CERTIFICATE_INSECURE")
       case G_TLS_CERTIFICATE_GENERIC_ERROR => Some("G_TLS_CERTIFICATE_GENERIC_ERROR")
       case G_TLS_CERTIFICATE_VALIDATE_ALL => Some("G_TLS_CERTIFICATE_VALIDATE_ALL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsCertificateFlags)
     inline def &(b: GTlsCertificateFlags): GTlsCertificateFlags = a & b
     inline def |(b: GTlsCertificateFlags): GTlsCertificateFlags = a | b
@@ -1841,7 +1833,7 @@ object GTlsCertificateRequestFlags extends CEnumU[GTlsCertificateRequestFlags]:
   inline def getName(inline value: GTlsCertificateRequestFlags): Option[String] =
     inline value match
       case G_TLS_CERTIFICATE_REQUEST_NONE => Some("G_TLS_CERTIFICATE_REQUEST_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsCertificateRequestFlags)
     inline def &(b: GTlsCertificateRequestFlags): GTlsCertificateRequestFlags = a & b
     inline def |(b: GTlsCertificateRequestFlags): GTlsCertificateRequestFlags = a | b
@@ -1866,14 +1858,14 @@ object GTlsChannelBindingError extends CEnumU[GTlsChannelBindingError]:
       case G_TLS_CHANNEL_BINDING_ERROR_NOT_AVAILABLE => Some("G_TLS_CHANNEL_BINDING_ERROR_NOT_AVAILABLE")
       case G_TLS_CHANNEL_BINDING_ERROR_NOT_SUPPORTED => Some("G_TLS_CHANNEL_BINDING_ERROR_NOT_SUPPORTED")
       case G_TLS_CHANNEL_BINDING_ERROR_GENERAL_ERROR => Some("G_TLS_CHANNEL_BINDING_ERROR_GENERAL_ERROR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsChannelBindingError)
     inline def &(b: GTlsChannelBindingError): GTlsChannelBindingError = a & b
     inline def |(b: GTlsChannelBindingError): GTlsChannelBindingError = a | b
     inline def is(b: GTlsChannelBindingError): Boolean = (a & b) == b
 
 /**
- * GTlsChannelBindingType: _TLS_CHANNEL_BINDING_TLS_UNIQUE: [`tls-unique`](https://tools.ietf.org/html/rfc5929#section-3) binding type _TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT: [`tls-server-end-point`](https://tools.ietf.org/html/rfc5929#section-4) binding type _TLS_CHANNEL_BINDING_TLS_EXPORTER: [`tls-exporter`](https://www.rfc-editor.org/rfc/rfc9266.html) binding type. Since: 2.74
+ * GTlsChannelBindingType: _TLS_CHANNEL_BINDING_TLS_UNIQUE: [`tls-unique`](https://tools.ietf.org/html/rfc5929#section-3) binding type _TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT: [`tls-server-end-point`](https://tools.ietf.org/html/rfc5929#section-4) binding type
 */
 opaque type GTlsChannelBindingType = CUnsignedInt
 object GTlsChannelBindingType extends CEnumU[GTlsChannelBindingType]:
@@ -1881,13 +1873,11 @@ object GTlsChannelBindingType extends CEnumU[GTlsChannelBindingType]:
   inline def define(inline a: Long): GTlsChannelBindingType = a.toUInt
   val G_TLS_CHANNEL_BINDING_TLS_UNIQUE = define(0)
   val G_TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT = define(1)
-  val G_TLS_CHANNEL_BINDING_TLS_EXPORTER = define(2)
   inline def getName(inline value: GTlsChannelBindingType): Option[String] =
     inline value match
       case G_TLS_CHANNEL_BINDING_TLS_UNIQUE => Some("G_TLS_CHANNEL_BINDING_TLS_UNIQUE")
       case G_TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT => Some("G_TLS_CHANNEL_BINDING_TLS_SERVER_END_POINT")
-      case G_TLS_CHANNEL_BINDING_TLS_EXPORTER => Some("G_TLS_CHANNEL_BINDING_TLS_EXPORTER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsChannelBindingType)
     inline def &(b: GTlsChannelBindingType): GTlsChannelBindingType = a & b
     inline def |(b: GTlsChannelBindingType): GTlsChannelBindingType = a | b
@@ -1906,7 +1896,7 @@ object GTlsDatabaseLookupFlags extends CEnumU[GTlsDatabaseLookupFlags]:
     inline value match
       case G_TLS_DATABASE_LOOKUP_NONE => Some("G_TLS_DATABASE_LOOKUP_NONE")
       case G_TLS_DATABASE_LOOKUP_KEYPAIR => Some("G_TLS_DATABASE_LOOKUP_KEYPAIR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsDatabaseLookupFlags)
     inline def &(b: GTlsDatabaseLookupFlags): GTlsDatabaseLookupFlags = a & b
     inline def |(b: GTlsDatabaseLookupFlags): GTlsDatabaseLookupFlags = a | b
@@ -1923,7 +1913,7 @@ object GTlsDatabaseVerifyFlags extends CEnumU[GTlsDatabaseVerifyFlags]:
   inline def getName(inline value: GTlsDatabaseVerifyFlags): Option[String] =
     inline value match
       case G_TLS_DATABASE_VERIFY_NONE => Some("G_TLS_DATABASE_VERIFY_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsDatabaseVerifyFlags)
     inline def &(b: GTlsDatabaseVerifyFlags): GTlsDatabaseVerifyFlags = a & b
     inline def |(b: GTlsDatabaseVerifyFlags): GTlsDatabaseVerifyFlags = a | b
@@ -1956,7 +1946,7 @@ object GTlsError extends CEnumU[GTlsError]:
       case G_TLS_ERROR_EOF => Some("G_TLS_ERROR_EOF")
       case G_TLS_ERROR_INAPPROPRIATE_FALLBACK => Some("G_TLS_ERROR_INAPPROPRIATE_FALLBACK")
       case G_TLS_ERROR_BAD_CERTIFICATE_PASSWORD => Some("G_TLS_ERROR_BAD_CERTIFICATE_PASSWORD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsError)
     inline def &(b: GTlsError): GTlsError = a & b
     inline def |(b: GTlsError): GTlsError = a | b
@@ -1977,7 +1967,7 @@ object GTlsInteractionResult extends CEnumU[GTlsInteractionResult]:
       case G_TLS_INTERACTION_UNHANDLED => Some("G_TLS_INTERACTION_UNHANDLED")
       case G_TLS_INTERACTION_HANDLED => Some("G_TLS_INTERACTION_HANDLED")
       case G_TLS_INTERACTION_FAILED => Some("G_TLS_INTERACTION_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsInteractionResult)
     inline def &(b: GTlsInteractionResult): GTlsInteractionResult = a & b
     inline def |(b: GTlsInteractionResult): GTlsInteractionResult = a | b
@@ -2008,7 +1998,7 @@ object GTlsProtocolVersion extends CEnumU[GTlsProtocolVersion]:
       case G_TLS_PROTOCOL_VERSION_TLS_1_3 => Some("G_TLS_PROTOCOL_VERSION_TLS_1_3")
       case G_TLS_PROTOCOL_VERSION_DTLS_1_0 => Some("G_TLS_PROTOCOL_VERSION_DTLS_1_0")
       case G_TLS_PROTOCOL_VERSION_DTLS_1_2 => Some("G_TLS_PROTOCOL_VERSION_DTLS_1_2")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsProtocolVersion)
     inline def &(b: GTlsProtocolVersion): GTlsProtocolVersion = a & b
     inline def |(b: GTlsProtocolVersion): GTlsProtocolVersion = a | b
@@ -2029,7 +2019,7 @@ object GTlsRehandshakeMode extends CEnumU[GTlsRehandshakeMode]:
       case G_TLS_REHANDSHAKE_NEVER => Some("G_TLS_REHANDSHAKE_NEVER")
       case G_TLS_REHANDSHAKE_SAFELY => Some("G_TLS_REHANDSHAKE_SAFELY")
       case G_TLS_REHANDSHAKE_UNSAFELY => Some("G_TLS_REHANDSHAKE_UNSAFELY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GTlsRehandshakeMode)
     inline def &(b: GTlsRehandshakeMode): GTlsRehandshakeMode = a & b
     inline def |(b: GTlsRehandshakeMode): GTlsRehandshakeMode = a | b
@@ -2054,7 +2044,7 @@ object GUnixSocketAddressType extends CEnumU[GUnixSocketAddressType]:
       case G_UNIX_SOCKET_ADDRESS_PATH => Some("G_UNIX_SOCKET_ADDRESS_PATH")
       case G_UNIX_SOCKET_ADDRESS_ABSTRACT => Some("G_UNIX_SOCKET_ADDRESS_ABSTRACT")
       case G_UNIX_SOCKET_ADDRESS_ABSTRACT_PADDED => Some("G_UNIX_SOCKET_ADDRESS_ABSTRACT_PADDED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GUnixSocketAddressType)
     inline def &(b: GUnixSocketAddressType): GUnixSocketAddressType = a & b
     inline def |(b: GUnixSocketAddressType): GUnixSocketAddressType = a | b
@@ -2075,7 +2065,7 @@ object GZlibCompressorFormat extends CEnumU[GZlibCompressorFormat]:
       case G_ZLIB_COMPRESSOR_FORMAT_ZLIB => Some("G_ZLIB_COMPRESSOR_FORMAT_ZLIB")
       case G_ZLIB_COMPRESSOR_FORMAT_GZIP => Some("G_ZLIB_COMPRESSOR_FORMAT_GZIP")
       case G_ZLIB_COMPRESSOR_FORMAT_RAW => Some("G_ZLIB_COMPRESSOR_FORMAT_RAW")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GZlibCompressorFormat)
     inline def &(b: GZlibCompressorFormat): GZlibCompressorFormat = a & b
     inline def |(b: GZlibCompressorFormat): GZlibCompressorFormat = a | b
@@ -2104,7 +2094,7 @@ object _GTlsPasswordFlags extends CEnumU[_GTlsPasswordFlags]:
       case G_TLS_PASSWORD_PKCS11_USER => Some("G_TLS_PASSWORD_PKCS11_USER")
       case G_TLS_PASSWORD_PKCS11_SECURITY_OFFICER => Some("G_TLS_PASSWORD_PKCS11_SECURITY_OFFICER")
       case G_TLS_PASSWORD_PKCS11_CONTEXT_SPECIFIC => Some("G_TLS_PASSWORD_PKCS11_CONTEXT_SPECIFIC")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: _GTlsPasswordFlags)
     inline def &(b: _GTlsPasswordFlags): _GTlsPasswordFlags = a & b
     inline def |(b: _GTlsPasswordFlags): _GTlsPasswordFlags = a | b

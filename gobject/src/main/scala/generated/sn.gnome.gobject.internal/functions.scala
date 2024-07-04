@@ -52,8 +52,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_binding_unbind(binding : Ptr[GBinding]): Unit = extern
 
-@extern def g_bookmark_file_get_type(): GType = extern
-
 @extern def g_boxed_copy(boxed_type : GType, src_boxed : _root_.sn.gnome.glib.internal.gconstpointer): _root_.sn.gnome.glib.internal.gpointer = extern
 
 @extern def g_boxed_free(boxed_type : GType, boxed : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
@@ -476,8 +474,6 @@ import _root_.scala.scalanative.*
 
 @extern def g_param_value_defaults(pspec : Ptr[GParamSpec], value : Ptr[GValue]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_param_value_is_valid(pspec : Ptr[GParamSpec], value : Ptr[GValue]): _root_.sn.gnome.glib.internal.gboolean = extern
-
 @extern def g_param_value_set_default(pspec : Ptr[GParamSpec], value : Ptr[GValue]): Unit = extern
 
 @extern def g_param_value_validate(pspec : Ptr[GParamSpec], value : Ptr[GValue]): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -537,8 +533,6 @@ import _root_.scala.scalanative.*
 @extern def g_signal_group_connect(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], c_handler : GCallback, data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_signal_group_connect_after(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], c_handler : GCallback, data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
-
-@extern def g_signal_group_connect_closure(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], closure : Ptr[GClosure], after : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 @extern def g_signal_group_connect_data(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], c_handler : GCallback, data : _root_.sn.gnome.glib.internal.gpointer, notify : GClosureNotify, flags : GConnectFlags): Unit = extern
 

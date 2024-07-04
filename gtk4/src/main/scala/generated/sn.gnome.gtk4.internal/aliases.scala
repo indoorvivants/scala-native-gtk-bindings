@@ -5,8 +5,6 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 type GdkRectangle = _root_.sn.gnome.cairo.internal.cairo_rectangle_int_t
 object GdkRectangle: 
   given _tag: Tag[GdkRectangle] = _root_.sn.gnome.cairo.internal.cairo_rectangle_int_t._tag
@@ -14,8 +12,6 @@ object GdkRectangle:
   extension (v: GdkRectangle)
     inline def value: _root_.sn.gnome.cairo.internal.cairo_rectangle_int_t = v
 
-/**
-*/
 opaque type GtkATContextClass_autoptr = Ptr[GtkATContextClass]
 object GtkATContextClass_autoptr: 
   given _tag: Tag[GtkATContextClass_autoptr] = Tag.Ptr[GtkATContextClass](GtkATContextClass._tag)
@@ -23,8 +19,6 @@ object GtkATContextClass_autoptr:
   extension (v: GtkATContextClass_autoptr)
     inline def value: Ptr[GtkATContextClass] = v
 
-/**
-*/
 opaque type GtkATContextClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkATContextClass_listautoptr: 
   given _tag: Tag[GtkATContextClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -32,8 +26,6 @@ object GtkATContextClass_listautoptr:
   extension (v: GtkATContextClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkATContextClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkATContextClass_queueautoptr: 
   given _tag: Tag[GtkATContextClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -41,8 +33,6 @@ object GtkATContextClass_queueautoptr:
   extension (v: GtkATContextClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkATContextClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkATContextClass_slistautoptr: 
   given _tag: Tag[GtkATContextClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -50,8 +40,6 @@ object GtkATContextClass_slistautoptr:
   extension (v: GtkATContextClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkATContext_autoptr = Ptr[GtkATContext]
 object GtkATContext_autoptr: 
   given _tag: Tag[GtkATContext_autoptr] = Tag.Ptr[GtkATContext](GtkATContext._tag)
@@ -59,8 +47,6 @@ object GtkATContext_autoptr:
   extension (v: GtkATContext_autoptr)
     inline def value: Ptr[GtkATContext] = v
 
-/**
-*/
 opaque type GtkATContext_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkATContext_listautoptr: 
   given _tag: Tag[GtkATContext_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -68,8 +54,6 @@ object GtkATContext_listautoptr:
   extension (v: GtkATContext_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkATContext_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkATContext_queueautoptr: 
   given _tag: Tag[GtkATContext_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -77,8 +61,6 @@ object GtkATContext_queueautoptr:
   extension (v: GtkATContext_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkATContext_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkATContext_slistautoptr: 
   given _tag: Tag[GtkATContext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -86,8 +68,6 @@ object GtkATContext_slistautoptr:
   extension (v: GtkATContext_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAboutDialog_autoptr = Ptr[GtkAboutDialog]
 object GtkAboutDialog_autoptr: 
   given _tag: Tag[GtkAboutDialog_autoptr] = Tag.Ptr[GtkAboutDialog](GtkAboutDialog._tag)
@@ -95,8 +75,6 @@ object GtkAboutDialog_autoptr:
   extension (v: GtkAboutDialog_autoptr)
     inline def value: Ptr[GtkAboutDialog] = v
 
-/**
-*/
 opaque type GtkAboutDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAboutDialog_listautoptr: 
   given _tag: Tag[GtkAboutDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -104,8 +82,6 @@ object GtkAboutDialog_listautoptr:
   extension (v: GtkAboutDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAboutDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAboutDialog_queueautoptr: 
   given _tag: Tag[GtkAboutDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -113,8 +89,6 @@ object GtkAboutDialog_queueautoptr:
   extension (v: GtkAboutDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAboutDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAboutDialog_slistautoptr: 
   given _tag: Tag[GtkAboutDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -122,8 +96,6 @@ object GtkAboutDialog_slistautoptr:
   extension (v: GtkAboutDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAccessible_autoptr = Ptr[GtkAccessible]
 object GtkAccessible_autoptr: 
   given _tag: Tag[GtkAccessible_autoptr] = Tag.Ptr[GtkAccessible](GtkAccessible._tag)
@@ -131,8 +103,6 @@ object GtkAccessible_autoptr:
   extension (v: GtkAccessible_autoptr)
     inline def value: Ptr[GtkAccessible] = v
 
-/**
-*/
 opaque type GtkAccessible_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAccessible_listautoptr: 
   given _tag: Tag[GtkAccessible_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -140,8 +110,6 @@ object GtkAccessible_listautoptr:
   extension (v: GtkAccessible_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAccessible_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAccessible_queueautoptr: 
   given _tag: Tag[GtkAccessible_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -149,8 +117,6 @@ object GtkAccessible_queueautoptr:
   extension (v: GtkAccessible_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAccessible_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAccessible_slistautoptr: 
   given _tag: Tag[GtkAccessible_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -158,8 +124,6 @@ object GtkAccessible_slistautoptr:
   extension (v: GtkAccessible_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkActionBar_autoptr = Ptr[GtkActionBar]
 object GtkActionBar_autoptr: 
   given _tag: Tag[GtkActionBar_autoptr] = Tag.Ptr[GtkActionBar](GtkActionBar._tag)
@@ -167,8 +131,6 @@ object GtkActionBar_autoptr:
   extension (v: GtkActionBar_autoptr)
     inline def value: Ptr[GtkActionBar] = v
 
-/**
-*/
 opaque type GtkActionBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkActionBar_listautoptr: 
   given _tag: Tag[GtkActionBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -176,8 +138,6 @@ object GtkActionBar_listautoptr:
   extension (v: GtkActionBar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkActionBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkActionBar_queueautoptr: 
   given _tag: Tag[GtkActionBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -185,8 +145,6 @@ object GtkActionBar_queueautoptr:
   extension (v: GtkActionBar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkActionBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkActionBar_slistautoptr: 
   given _tag: Tag[GtkActionBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -194,8 +152,6 @@ object GtkActionBar_slistautoptr:
   extension (v: GtkActionBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkActionable_autoptr = Ptr[GtkActionable]
 object GtkActionable_autoptr: 
   given _tag: Tag[GtkActionable_autoptr] = Tag.Ptr[GtkActionable](GtkActionable._tag)
@@ -203,8 +159,6 @@ object GtkActionable_autoptr:
   extension (v: GtkActionable_autoptr)
     inline def value: Ptr[GtkActionable] = v
 
-/**
-*/
 opaque type GtkActionable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkActionable_listautoptr: 
   given _tag: Tag[GtkActionable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -212,8 +166,6 @@ object GtkActionable_listautoptr:
   extension (v: GtkActionable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkActionable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkActionable_queueautoptr: 
   given _tag: Tag[GtkActionable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -221,8 +173,6 @@ object GtkActionable_queueautoptr:
   extension (v: GtkActionable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkActionable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkActionable_slistautoptr: 
   given _tag: Tag[GtkActionable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -230,8 +180,6 @@ object GtkActionable_slistautoptr:
   extension (v: GtkActionable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkActivateActionClass_autoptr = Ptr[GtkActivateActionClass]
 object GtkActivateActionClass_autoptr: 
   given _tag: Tag[GtkActivateActionClass_autoptr] = Tag.Ptr[GtkActivateActionClass](GtkActivateActionClass._tag)
@@ -239,8 +187,6 @@ object GtkActivateActionClass_autoptr:
   extension (v: GtkActivateActionClass_autoptr)
     inline def value: Ptr[GtkActivateActionClass] = v
 
-/**
-*/
 opaque type GtkActivateActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkActivateActionClass_listautoptr: 
   given _tag: Tag[GtkActivateActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -248,8 +194,6 @@ object GtkActivateActionClass_listautoptr:
   extension (v: GtkActivateActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkActivateActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkActivateActionClass_queueautoptr: 
   given _tag: Tag[GtkActivateActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -257,8 +201,6 @@ object GtkActivateActionClass_queueautoptr:
   extension (v: GtkActivateActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkActivateActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkActivateActionClass_slistautoptr: 
   given _tag: Tag[GtkActivateActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -266,8 +208,6 @@ object GtkActivateActionClass_slistautoptr:
   extension (v: GtkActivateActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkActivateAction_autoptr = Ptr[GtkActivateAction]
 object GtkActivateAction_autoptr: 
   given _tag: Tag[GtkActivateAction_autoptr] = Tag.Ptr[GtkActivateAction](GtkActivateAction._tag)
@@ -275,8 +215,6 @@ object GtkActivateAction_autoptr:
   extension (v: GtkActivateAction_autoptr)
     inline def value: Ptr[GtkActivateAction] = v
 
-/**
-*/
 opaque type GtkActivateAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkActivateAction_listautoptr: 
   given _tag: Tag[GtkActivateAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -284,8 +222,6 @@ object GtkActivateAction_listautoptr:
   extension (v: GtkActivateAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkActivateAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkActivateAction_queueautoptr: 
   given _tag: Tag[GtkActivateAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -293,8 +229,6 @@ object GtkActivateAction_queueautoptr:
   extension (v: GtkActivateAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkActivateAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkActivateAction_slistautoptr: 
   given _tag: Tag[GtkActivateAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -302,8 +236,6 @@ object GtkActivateAction_slistautoptr:
   extension (v: GtkActivateAction_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAdjustment_autoptr = Ptr[GtkAdjustment]
 object GtkAdjustment_autoptr: 
   given _tag: Tag[GtkAdjustment_autoptr] = Tag.Ptr[GtkAdjustment](GtkAdjustment._tag)
@@ -311,8 +243,6 @@ object GtkAdjustment_autoptr:
   extension (v: GtkAdjustment_autoptr)
     inline def value: Ptr[GtkAdjustment] = v
 
-/**
-*/
 opaque type GtkAdjustment_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAdjustment_listautoptr: 
   given _tag: Tag[GtkAdjustment_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -320,8 +250,6 @@ object GtkAdjustment_listautoptr:
   extension (v: GtkAdjustment_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAdjustment_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAdjustment_queueautoptr: 
   given _tag: Tag[GtkAdjustment_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -329,8 +257,6 @@ object GtkAdjustment_queueautoptr:
   extension (v: GtkAdjustment_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAdjustment_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAdjustment_slistautoptr: 
   given _tag: Tag[GtkAdjustment_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -348,8 +274,6 @@ object GtkAllocation:
   extension (v: GtkAllocation)
     inline def value: GdkRectangle = v
 
-/**
-*/
 opaque type GtkAlternativeTriggerClass_autoptr = Ptr[GtkAlternativeTriggerClass]
 object GtkAlternativeTriggerClass_autoptr: 
   given _tag: Tag[GtkAlternativeTriggerClass_autoptr] = Tag.Ptr[GtkAlternativeTriggerClass](GtkAlternativeTriggerClass._tag)
@@ -357,8 +281,6 @@ object GtkAlternativeTriggerClass_autoptr:
   extension (v: GtkAlternativeTriggerClass_autoptr)
     inline def value: Ptr[GtkAlternativeTriggerClass] = v
 
-/**
-*/
 opaque type GtkAlternativeTriggerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAlternativeTriggerClass_listautoptr: 
   given _tag: Tag[GtkAlternativeTriggerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -366,8 +288,6 @@ object GtkAlternativeTriggerClass_listautoptr:
   extension (v: GtkAlternativeTriggerClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAlternativeTriggerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAlternativeTriggerClass_queueautoptr: 
   given _tag: Tag[GtkAlternativeTriggerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -375,8 +295,6 @@ object GtkAlternativeTriggerClass_queueautoptr:
   extension (v: GtkAlternativeTriggerClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAlternativeTriggerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAlternativeTriggerClass_slistautoptr: 
   given _tag: Tag[GtkAlternativeTriggerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -384,8 +302,6 @@ object GtkAlternativeTriggerClass_slistautoptr:
   extension (v: GtkAlternativeTriggerClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAlternativeTrigger_autoptr = Ptr[GtkAlternativeTrigger]
 object GtkAlternativeTrigger_autoptr: 
   given _tag: Tag[GtkAlternativeTrigger_autoptr] = Tag.Ptr[GtkAlternativeTrigger](GtkAlternativeTrigger._tag)
@@ -393,8 +309,6 @@ object GtkAlternativeTrigger_autoptr:
   extension (v: GtkAlternativeTrigger_autoptr)
     inline def value: Ptr[GtkAlternativeTrigger] = v
 
-/**
-*/
 opaque type GtkAlternativeTrigger_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAlternativeTrigger_listautoptr: 
   given _tag: Tag[GtkAlternativeTrigger_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -402,8 +316,6 @@ object GtkAlternativeTrigger_listautoptr:
   extension (v: GtkAlternativeTrigger_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAlternativeTrigger_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAlternativeTrigger_queueautoptr: 
   given _tag: Tag[GtkAlternativeTrigger_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -411,8 +323,6 @@ object GtkAlternativeTrigger_queueautoptr:
   extension (v: GtkAlternativeTrigger_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAlternativeTrigger_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAlternativeTrigger_slistautoptr: 
   given _tag: Tag[GtkAlternativeTrigger_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -420,8 +330,6 @@ object GtkAlternativeTrigger_slistautoptr:
   extension (v: GtkAlternativeTrigger_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAnyFilterClass_autoptr = Ptr[GtkAnyFilterClass]
 object GtkAnyFilterClass_autoptr: 
   given _tag: Tag[GtkAnyFilterClass_autoptr] = Tag.Ptr[GtkAnyFilterClass](GtkAnyFilterClass._tag)
@@ -429,8 +337,6 @@ object GtkAnyFilterClass_autoptr:
   extension (v: GtkAnyFilterClass_autoptr)
     inline def value: Ptr[GtkAnyFilterClass] = v
 
-/**
-*/
 opaque type GtkAnyFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAnyFilterClass_listautoptr: 
   given _tag: Tag[GtkAnyFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -438,8 +344,6 @@ object GtkAnyFilterClass_listautoptr:
   extension (v: GtkAnyFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAnyFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAnyFilterClass_queueautoptr: 
   given _tag: Tag[GtkAnyFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -447,8 +351,6 @@ object GtkAnyFilterClass_queueautoptr:
   extension (v: GtkAnyFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAnyFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAnyFilterClass_slistautoptr: 
   given _tag: Tag[GtkAnyFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -456,8 +358,6 @@ object GtkAnyFilterClass_slistautoptr:
   extension (v: GtkAnyFilterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAnyFilter_autoptr = Ptr[GtkAnyFilter]
 object GtkAnyFilter_autoptr: 
   given _tag: Tag[GtkAnyFilter_autoptr] = Tag.Ptr[GtkAnyFilter](GtkAnyFilter._tag)
@@ -465,8 +365,6 @@ object GtkAnyFilter_autoptr:
   extension (v: GtkAnyFilter_autoptr)
     inline def value: Ptr[GtkAnyFilter] = v
 
-/**
-*/
 opaque type GtkAnyFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAnyFilter_listautoptr: 
   given _tag: Tag[GtkAnyFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -474,8 +372,6 @@ object GtkAnyFilter_listautoptr:
   extension (v: GtkAnyFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAnyFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAnyFilter_queueautoptr: 
   given _tag: Tag[GtkAnyFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -483,8 +379,6 @@ object GtkAnyFilter_queueautoptr:
   extension (v: GtkAnyFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAnyFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAnyFilter_slistautoptr: 
   given _tag: Tag[GtkAnyFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -492,8 +386,6 @@ object GtkAnyFilter_slistautoptr:
   extension (v: GtkAnyFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAppChooserButton_autoptr = Ptr[GtkAppChooserButton]
 object GtkAppChooserButton_autoptr: 
   given _tag: Tag[GtkAppChooserButton_autoptr] = Tag.Ptr[GtkAppChooserButton](GtkAppChooserButton._tag)
@@ -501,8 +393,6 @@ object GtkAppChooserButton_autoptr:
   extension (v: GtkAppChooserButton_autoptr)
     inline def value: Ptr[GtkAppChooserButton] = v
 
-/**
-*/
 opaque type GtkAppChooserButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAppChooserButton_listautoptr: 
   given _tag: Tag[GtkAppChooserButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -510,8 +400,6 @@ object GtkAppChooserButton_listautoptr:
   extension (v: GtkAppChooserButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAppChooserButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAppChooserButton_queueautoptr: 
   given _tag: Tag[GtkAppChooserButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -519,8 +407,6 @@ object GtkAppChooserButton_queueautoptr:
   extension (v: GtkAppChooserButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAppChooserButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAppChooserButton_slistautoptr: 
   given _tag: Tag[GtkAppChooserButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -528,8 +414,6 @@ object GtkAppChooserButton_slistautoptr:
   extension (v: GtkAppChooserButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAppChooserDialog_autoptr = Ptr[GtkAppChooserDialog]
 object GtkAppChooserDialog_autoptr: 
   given _tag: Tag[GtkAppChooserDialog_autoptr] = Tag.Ptr[GtkAppChooserDialog](GtkAppChooserDialog._tag)
@@ -537,8 +421,6 @@ object GtkAppChooserDialog_autoptr:
   extension (v: GtkAppChooserDialog_autoptr)
     inline def value: Ptr[GtkAppChooserDialog] = v
 
-/**
-*/
 opaque type GtkAppChooserDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAppChooserDialog_listautoptr: 
   given _tag: Tag[GtkAppChooserDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -546,8 +428,6 @@ object GtkAppChooserDialog_listautoptr:
   extension (v: GtkAppChooserDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAppChooserDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAppChooserDialog_queueautoptr: 
   given _tag: Tag[GtkAppChooserDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -555,8 +435,6 @@ object GtkAppChooserDialog_queueautoptr:
   extension (v: GtkAppChooserDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAppChooserDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAppChooserDialog_slistautoptr: 
   given _tag: Tag[GtkAppChooserDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -564,8 +442,6 @@ object GtkAppChooserDialog_slistautoptr:
   extension (v: GtkAppChooserDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAppChooserWidget_autoptr = Ptr[GtkAppChooserWidget]
 object GtkAppChooserWidget_autoptr: 
   given _tag: Tag[GtkAppChooserWidget_autoptr] = Tag.Ptr[GtkAppChooserWidget](GtkAppChooserWidget._tag)
@@ -573,8 +449,6 @@ object GtkAppChooserWidget_autoptr:
   extension (v: GtkAppChooserWidget_autoptr)
     inline def value: Ptr[GtkAppChooserWidget] = v
 
-/**
-*/
 opaque type GtkAppChooserWidget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAppChooserWidget_listautoptr: 
   given _tag: Tag[GtkAppChooserWidget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -582,8 +456,6 @@ object GtkAppChooserWidget_listautoptr:
   extension (v: GtkAppChooserWidget_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAppChooserWidget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAppChooserWidget_queueautoptr: 
   given _tag: Tag[GtkAppChooserWidget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -591,8 +463,6 @@ object GtkAppChooserWidget_queueautoptr:
   extension (v: GtkAppChooserWidget_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAppChooserWidget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAppChooserWidget_slistautoptr: 
   given _tag: Tag[GtkAppChooserWidget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -600,8 +470,6 @@ object GtkAppChooserWidget_slistautoptr:
   extension (v: GtkAppChooserWidget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAppChooser_autoptr = Ptr[GtkAppChooser]
 object GtkAppChooser_autoptr: 
   given _tag: Tag[GtkAppChooser_autoptr] = Tag.Ptr[GtkAppChooser](GtkAppChooser._tag)
@@ -609,8 +477,6 @@ object GtkAppChooser_autoptr:
   extension (v: GtkAppChooser_autoptr)
     inline def value: Ptr[GtkAppChooser] = v
 
-/**
-*/
 opaque type GtkAppChooser_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAppChooser_listautoptr: 
   given _tag: Tag[GtkAppChooser_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -618,8 +484,6 @@ object GtkAppChooser_listautoptr:
   extension (v: GtkAppChooser_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAppChooser_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAppChooser_queueautoptr: 
   given _tag: Tag[GtkAppChooser_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -627,8 +491,6 @@ object GtkAppChooser_queueautoptr:
   extension (v: GtkAppChooser_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAppChooser_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAppChooser_slistautoptr: 
   given _tag: Tag[GtkAppChooser_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -636,8 +498,6 @@ object GtkAppChooser_slistautoptr:
   extension (v: GtkAppChooser_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkApplicationWindow_autoptr = Ptr[GtkApplicationWindow]
 object GtkApplicationWindow_autoptr: 
   given _tag: Tag[GtkApplicationWindow_autoptr] = Tag.Ptr[GtkApplicationWindow](GtkApplicationWindow._tag)
@@ -645,8 +505,6 @@ object GtkApplicationWindow_autoptr:
   extension (v: GtkApplicationWindow_autoptr)
     inline def value: Ptr[GtkApplicationWindow] = v
 
-/**
-*/
 opaque type GtkApplicationWindow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkApplicationWindow_listautoptr: 
   given _tag: Tag[GtkApplicationWindow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -654,8 +512,6 @@ object GtkApplicationWindow_listautoptr:
   extension (v: GtkApplicationWindow_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkApplicationWindow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkApplicationWindow_queueautoptr: 
   given _tag: Tag[GtkApplicationWindow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -663,8 +519,6 @@ object GtkApplicationWindow_queueautoptr:
   extension (v: GtkApplicationWindow_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkApplicationWindow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkApplicationWindow_slistautoptr: 
   given _tag: Tag[GtkApplicationWindow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -672,8 +526,6 @@ object GtkApplicationWindow_slistautoptr:
   extension (v: GtkApplicationWindow_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkApplication_autoptr = Ptr[GtkApplication]
 object GtkApplication_autoptr: 
   given _tag: Tag[GtkApplication_autoptr] = Tag.Ptr[GtkApplication](GtkApplication._tag)
@@ -681,8 +533,6 @@ object GtkApplication_autoptr:
   extension (v: GtkApplication_autoptr)
     inline def value: Ptr[GtkApplication] = v
 
-/**
-*/
 opaque type GtkApplication_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkApplication_listautoptr: 
   given _tag: Tag[GtkApplication_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -690,8 +540,6 @@ object GtkApplication_listautoptr:
   extension (v: GtkApplication_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkApplication_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkApplication_queueautoptr: 
   given _tag: Tag[GtkApplication_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -699,8 +547,6 @@ object GtkApplication_queueautoptr:
   extension (v: GtkApplication_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkApplication_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkApplication_slistautoptr: 
   given _tag: Tag[GtkApplication_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -708,8 +554,6 @@ object GtkApplication_slistautoptr:
   extension (v: GtkApplication_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkAspectFrame_autoptr = Ptr[GtkAspectFrame]
 object GtkAspectFrame_autoptr: 
   given _tag: Tag[GtkAspectFrame_autoptr] = Tag.Ptr[GtkAspectFrame](GtkAspectFrame._tag)
@@ -717,8 +561,6 @@ object GtkAspectFrame_autoptr:
   extension (v: GtkAspectFrame_autoptr)
     inline def value: Ptr[GtkAspectFrame] = v
 
-/**
-*/
 opaque type GtkAspectFrame_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAspectFrame_listautoptr: 
   given _tag: Tag[GtkAspectFrame_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -726,8 +568,6 @@ object GtkAspectFrame_listautoptr:
   extension (v: GtkAspectFrame_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAspectFrame_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAspectFrame_queueautoptr: 
   given _tag: Tag[GtkAspectFrame_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -735,8 +575,6 @@ object GtkAspectFrame_queueautoptr:
   extension (v: GtkAspectFrame_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAspectFrame_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAspectFrame_slistautoptr: 
   given _tag: Tag[GtkAspectFrame_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -750,14 +588,12 @@ object GtkAspectFrame_slistautoptr:
 opaque type GtkAssistantPageFunc = CFuncPtr2[CInt, _root_.sn.gnome.glib.internal.gpointer, CInt]
 object GtkAssistantPageFunc: 
   given _tag: Tag[GtkAssistantPageFunc] = Tag.materializeCFuncPtr2[CInt, _root_.sn.gnome.glib.internal.gpointer, CInt]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkAssistantPageFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkAssistantPageFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[CInt, _root_.sn.gnome.glib.internal.gpointer, CInt]): GtkAssistantPageFunc = o
   extension (v: GtkAssistantPageFunc)
     inline def value: CFuncPtr2[CInt, _root_.sn.gnome.glib.internal.gpointer, CInt] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkAssistant_autoptr = Ptr[GtkAssistant]
 object GtkAssistant_autoptr: 
   given _tag: Tag[GtkAssistant_autoptr] = Tag.Ptr[GtkAssistant](GtkAssistant._tag)
@@ -765,8 +601,6 @@ object GtkAssistant_autoptr:
   extension (v: GtkAssistant_autoptr)
     inline def value: Ptr[GtkAssistant] = v
 
-/**
-*/
 opaque type GtkAssistant_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkAssistant_listautoptr: 
   given _tag: Tag[GtkAssistant_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -774,8 +608,6 @@ object GtkAssistant_listautoptr:
   extension (v: GtkAssistant_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkAssistant_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkAssistant_queueautoptr: 
   given _tag: Tag[GtkAssistant_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -783,8 +615,6 @@ object GtkAssistant_queueautoptr:
   extension (v: GtkAssistant_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkAssistant_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkAssistant_slistautoptr: 
   given _tag: Tag[GtkAssistant_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -792,8 +622,6 @@ object GtkAssistant_slistautoptr:
   extension (v: GtkAssistant_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBinLayoutClass_autoptr = Ptr[GtkBinLayoutClass]
 object GtkBinLayoutClass_autoptr: 
   given _tag: Tag[GtkBinLayoutClass_autoptr] = Tag.Ptr[GtkBinLayoutClass](GtkBinLayoutClass._tag)
@@ -801,8 +629,6 @@ object GtkBinLayoutClass_autoptr:
   extension (v: GtkBinLayoutClass_autoptr)
     inline def value: Ptr[GtkBinLayoutClass] = v
 
-/**
-*/
 opaque type GtkBinLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBinLayoutClass_listautoptr: 
   given _tag: Tag[GtkBinLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -810,8 +636,6 @@ object GtkBinLayoutClass_listautoptr:
   extension (v: GtkBinLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBinLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBinLayoutClass_queueautoptr: 
   given _tag: Tag[GtkBinLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -819,8 +643,6 @@ object GtkBinLayoutClass_queueautoptr:
   extension (v: GtkBinLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBinLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBinLayoutClass_slistautoptr: 
   given _tag: Tag[GtkBinLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -828,8 +650,6 @@ object GtkBinLayoutClass_slistautoptr:
   extension (v: GtkBinLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBinLayout_autoptr = Ptr[GtkBinLayout]
 object GtkBinLayout_autoptr: 
   given _tag: Tag[GtkBinLayout_autoptr] = Tag.Ptr[GtkBinLayout](GtkBinLayout._tag)
@@ -837,8 +657,6 @@ object GtkBinLayout_autoptr:
   extension (v: GtkBinLayout_autoptr)
     inline def value: Ptr[GtkBinLayout] = v
 
-/**
-*/
 opaque type GtkBinLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBinLayout_listautoptr: 
   given _tag: Tag[GtkBinLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -846,8 +664,6 @@ object GtkBinLayout_listautoptr:
   extension (v: GtkBinLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBinLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBinLayout_queueautoptr: 
   given _tag: Tag[GtkBinLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -855,8 +671,6 @@ object GtkBinLayout_queueautoptr:
   extension (v: GtkBinLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBinLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBinLayout_slistautoptr: 
   given _tag: Tag[GtkBinLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -864,8 +678,6 @@ object GtkBinLayout_slistautoptr:
   extension (v: GtkBinLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBitset_autoptr = Ptr[GtkBitset]
 object GtkBitset_autoptr: 
   given _tag: Tag[GtkBitset_autoptr] = Tag.Ptr[GtkBitset](GtkBitset._tag)
@@ -873,8 +685,6 @@ object GtkBitset_autoptr:
   extension (v: GtkBitset_autoptr)
     inline def value: Ptr[GtkBitset] = v
 
-/**
-*/
 opaque type GtkBitset_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBitset_listautoptr: 
   given _tag: Tag[GtkBitset_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -882,8 +692,6 @@ object GtkBitset_listautoptr:
   extension (v: GtkBitset_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBitset_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBitset_queueautoptr: 
   given _tag: Tag[GtkBitset_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -891,8 +699,6 @@ object GtkBitset_queueautoptr:
   extension (v: GtkBitset_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBitset_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBitset_slistautoptr: 
   given _tag: Tag[GtkBitset_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -900,8 +706,6 @@ object GtkBitset_slistautoptr:
   extension (v: GtkBitset_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBookmarkListClass_autoptr = Ptr[GtkBookmarkListClass]
 object GtkBookmarkListClass_autoptr: 
   given _tag: Tag[GtkBookmarkListClass_autoptr] = Tag.Ptr[GtkBookmarkListClass](GtkBookmarkListClass._tag)
@@ -909,8 +713,6 @@ object GtkBookmarkListClass_autoptr:
   extension (v: GtkBookmarkListClass_autoptr)
     inline def value: Ptr[GtkBookmarkListClass] = v
 
-/**
-*/
 opaque type GtkBookmarkListClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBookmarkListClass_listautoptr: 
   given _tag: Tag[GtkBookmarkListClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -918,8 +720,6 @@ object GtkBookmarkListClass_listautoptr:
   extension (v: GtkBookmarkListClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBookmarkListClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBookmarkListClass_queueautoptr: 
   given _tag: Tag[GtkBookmarkListClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -927,8 +727,6 @@ object GtkBookmarkListClass_queueautoptr:
   extension (v: GtkBookmarkListClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBookmarkListClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBookmarkListClass_slistautoptr: 
   given _tag: Tag[GtkBookmarkListClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -936,8 +734,6 @@ object GtkBookmarkListClass_slistautoptr:
   extension (v: GtkBookmarkListClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBookmarkList_autoptr = Ptr[GtkBookmarkList]
 object GtkBookmarkList_autoptr: 
   given _tag: Tag[GtkBookmarkList_autoptr] = Tag.Ptr[GtkBookmarkList](GtkBookmarkList._tag)
@@ -945,8 +741,6 @@ object GtkBookmarkList_autoptr:
   extension (v: GtkBookmarkList_autoptr)
     inline def value: Ptr[GtkBookmarkList] = v
 
-/**
-*/
 opaque type GtkBookmarkList_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBookmarkList_listautoptr: 
   given _tag: Tag[GtkBookmarkList_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -954,8 +748,6 @@ object GtkBookmarkList_listautoptr:
   extension (v: GtkBookmarkList_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBookmarkList_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBookmarkList_queueautoptr: 
   given _tag: Tag[GtkBookmarkList_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -963,8 +755,6 @@ object GtkBookmarkList_queueautoptr:
   extension (v: GtkBookmarkList_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBookmarkList_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBookmarkList_slistautoptr: 
   given _tag: Tag[GtkBookmarkList_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -972,8 +762,6 @@ object GtkBookmarkList_slistautoptr:
   extension (v: GtkBookmarkList_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBoolFilterClass_autoptr = Ptr[GtkBoolFilterClass]
 object GtkBoolFilterClass_autoptr: 
   given _tag: Tag[GtkBoolFilterClass_autoptr] = Tag.Ptr[GtkBoolFilterClass](GtkBoolFilterClass._tag)
@@ -981,8 +769,6 @@ object GtkBoolFilterClass_autoptr:
   extension (v: GtkBoolFilterClass_autoptr)
     inline def value: Ptr[GtkBoolFilterClass] = v
 
-/**
-*/
 opaque type GtkBoolFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBoolFilterClass_listautoptr: 
   given _tag: Tag[GtkBoolFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -990,8 +776,6 @@ object GtkBoolFilterClass_listautoptr:
   extension (v: GtkBoolFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBoolFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBoolFilterClass_queueautoptr: 
   given _tag: Tag[GtkBoolFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -999,8 +783,6 @@ object GtkBoolFilterClass_queueautoptr:
   extension (v: GtkBoolFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBoolFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBoolFilterClass_slistautoptr: 
   given _tag: Tag[GtkBoolFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1008,8 +790,6 @@ object GtkBoolFilterClass_slistautoptr:
   extension (v: GtkBoolFilterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBoolFilter_autoptr = Ptr[GtkBoolFilter]
 object GtkBoolFilter_autoptr: 
   given _tag: Tag[GtkBoolFilter_autoptr] = Tag.Ptr[GtkBoolFilter](GtkBoolFilter._tag)
@@ -1017,8 +797,6 @@ object GtkBoolFilter_autoptr:
   extension (v: GtkBoolFilter_autoptr)
     inline def value: Ptr[GtkBoolFilter] = v
 
-/**
-*/
 opaque type GtkBoolFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBoolFilter_listautoptr: 
   given _tag: Tag[GtkBoolFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1026,8 +804,6 @@ object GtkBoolFilter_listautoptr:
   extension (v: GtkBoolFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBoolFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBoolFilter_queueautoptr: 
   given _tag: Tag[GtkBoolFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1035,8 +811,6 @@ object GtkBoolFilter_queueautoptr:
   extension (v: GtkBoolFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBoolFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBoolFilter_slistautoptr: 
   given _tag: Tag[GtkBoolFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1044,8 +818,6 @@ object GtkBoolFilter_slistautoptr:
   extension (v: GtkBoolFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBorder_autoptr = Ptr[GtkBorder]
 object GtkBorder_autoptr: 
   given _tag: Tag[GtkBorder_autoptr] = Tag.Ptr[GtkBorder](GtkBorder._tag)
@@ -1053,8 +825,6 @@ object GtkBorder_autoptr:
   extension (v: GtkBorder_autoptr)
     inline def value: Ptr[GtkBorder] = v
 
-/**
-*/
 opaque type GtkBorder_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBorder_listautoptr: 
   given _tag: Tag[GtkBorder_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1062,8 +832,6 @@ object GtkBorder_listautoptr:
   extension (v: GtkBorder_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBorder_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBorder_queueautoptr: 
   given _tag: Tag[GtkBorder_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1071,8 +839,6 @@ object GtkBorder_queueautoptr:
   extension (v: GtkBorder_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBorder_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBorder_slistautoptr: 
   given _tag: Tag[GtkBorder_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1080,8 +846,6 @@ object GtkBorder_slistautoptr:
   extension (v: GtkBorder_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBoxLayoutClass_autoptr = Ptr[GtkBoxLayoutClass]
 object GtkBoxLayoutClass_autoptr: 
   given _tag: Tag[GtkBoxLayoutClass_autoptr] = Tag.Ptr[GtkBoxLayoutClass](GtkBoxLayoutClass._tag)
@@ -1089,8 +853,6 @@ object GtkBoxLayoutClass_autoptr:
   extension (v: GtkBoxLayoutClass_autoptr)
     inline def value: Ptr[GtkBoxLayoutClass] = v
 
-/**
-*/
 opaque type GtkBoxLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBoxLayoutClass_listautoptr: 
   given _tag: Tag[GtkBoxLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1098,8 +860,6 @@ object GtkBoxLayoutClass_listautoptr:
   extension (v: GtkBoxLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBoxLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBoxLayoutClass_queueautoptr: 
   given _tag: Tag[GtkBoxLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1107,8 +867,6 @@ object GtkBoxLayoutClass_queueautoptr:
   extension (v: GtkBoxLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBoxLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBoxLayoutClass_slistautoptr: 
   given _tag: Tag[GtkBoxLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1116,8 +874,6 @@ object GtkBoxLayoutClass_slistautoptr:
   extension (v: GtkBoxLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBoxLayout_autoptr = Ptr[GtkBoxLayout]
 object GtkBoxLayout_autoptr: 
   given _tag: Tag[GtkBoxLayout_autoptr] = Tag.Ptr[GtkBoxLayout](GtkBoxLayout._tag)
@@ -1125,8 +881,6 @@ object GtkBoxLayout_autoptr:
   extension (v: GtkBoxLayout_autoptr)
     inline def value: Ptr[GtkBoxLayout] = v
 
-/**
-*/
 opaque type GtkBoxLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBoxLayout_listautoptr: 
   given _tag: Tag[GtkBoxLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1134,8 +888,6 @@ object GtkBoxLayout_listautoptr:
   extension (v: GtkBoxLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBoxLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBoxLayout_queueautoptr: 
   given _tag: Tag[GtkBoxLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1143,8 +895,6 @@ object GtkBoxLayout_queueautoptr:
   extension (v: GtkBoxLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBoxLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBoxLayout_slistautoptr: 
   given _tag: Tag[GtkBoxLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1152,8 +902,6 @@ object GtkBoxLayout_slistautoptr:
   extension (v: GtkBoxLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBox_autoptr = Ptr[GtkBox]
 object GtkBox_autoptr: 
   given _tag: Tag[GtkBox_autoptr] = Tag.Ptr[GtkBox](GtkBox._tag)
@@ -1161,8 +909,6 @@ object GtkBox_autoptr:
   extension (v: GtkBox_autoptr)
     inline def value: Ptr[GtkBox] = v
 
-/**
-*/
 opaque type GtkBox_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBox_listautoptr: 
   given _tag: Tag[GtkBox_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1170,8 +916,6 @@ object GtkBox_listautoptr:
   extension (v: GtkBox_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBox_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBox_queueautoptr: 
   given _tag: Tag[GtkBox_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1179,8 +923,6 @@ object GtkBox_queueautoptr:
   extension (v: GtkBox_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBox_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBox_slistautoptr: 
   given _tag: Tag[GtkBox_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1188,8 +930,6 @@ object GtkBox_slistautoptr:
   extension (v: GtkBox_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBuildable_autoptr = Ptr[GtkBuildable]
 object GtkBuildable_autoptr: 
   given _tag: Tag[GtkBuildable_autoptr] = Tag.Ptr[GtkBuildable](GtkBuildable._tag)
@@ -1197,8 +937,6 @@ object GtkBuildable_autoptr:
   extension (v: GtkBuildable_autoptr)
     inline def value: Ptr[GtkBuildable] = v
 
-/**
-*/
 opaque type GtkBuildable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBuildable_listautoptr: 
   given _tag: Tag[GtkBuildable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1206,8 +944,6 @@ object GtkBuildable_listautoptr:
   extension (v: GtkBuildable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBuildable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBuildable_queueautoptr: 
   given _tag: Tag[GtkBuildable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1215,8 +951,6 @@ object GtkBuildable_queueautoptr:
   extension (v: GtkBuildable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBuildable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBuildable_slistautoptr: 
   given _tag: Tag[GtkBuildable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1224,8 +958,6 @@ object GtkBuildable_slistautoptr:
   extension (v: GtkBuildable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBuilderCScopeClass_autoptr = Ptr[GtkBuilderCScopeClass]
 object GtkBuilderCScopeClass_autoptr: 
   given _tag: Tag[GtkBuilderCScopeClass_autoptr] = Tag.Ptr[GtkBuilderCScopeClass](GtkBuilderCScopeClass._tag)
@@ -1233,8 +965,6 @@ object GtkBuilderCScopeClass_autoptr:
   extension (v: GtkBuilderCScopeClass_autoptr)
     inline def value: Ptr[GtkBuilderCScopeClass] = v
 
-/**
-*/
 opaque type GtkBuilderCScopeClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBuilderCScopeClass_listautoptr: 
   given _tag: Tag[GtkBuilderCScopeClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1242,8 +972,6 @@ object GtkBuilderCScopeClass_listautoptr:
   extension (v: GtkBuilderCScopeClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBuilderCScopeClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBuilderCScopeClass_queueautoptr: 
   given _tag: Tag[GtkBuilderCScopeClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1251,8 +979,6 @@ object GtkBuilderCScopeClass_queueautoptr:
   extension (v: GtkBuilderCScopeClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBuilderCScopeClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBuilderCScopeClass_slistautoptr: 
   given _tag: Tag[GtkBuilderCScopeClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1260,8 +986,6 @@ object GtkBuilderCScopeClass_slistautoptr:
   extension (v: GtkBuilderCScopeClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBuilderCScope_autoptr = Ptr[GtkBuilderCScope]
 object GtkBuilderCScope_autoptr: 
   given _tag: Tag[GtkBuilderCScope_autoptr] = Tag.Ptr[GtkBuilderCScope](GtkBuilderCScope._tag)
@@ -1269,8 +993,6 @@ object GtkBuilderCScope_autoptr:
   extension (v: GtkBuilderCScope_autoptr)
     inline def value: Ptr[GtkBuilderCScope] = v
 
-/**
-*/
 opaque type GtkBuilderCScope_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBuilderCScope_listautoptr: 
   given _tag: Tag[GtkBuilderCScope_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1278,8 +1000,6 @@ object GtkBuilderCScope_listautoptr:
   extension (v: GtkBuilderCScope_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBuilderCScope_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBuilderCScope_queueautoptr: 
   given _tag: Tag[GtkBuilderCScope_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1287,8 +1007,6 @@ object GtkBuilderCScope_queueautoptr:
   extension (v: GtkBuilderCScope_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBuilderCScope_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBuilderCScope_slistautoptr: 
   given _tag: Tag[GtkBuilderCScope_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1296,8 +1014,6 @@ object GtkBuilderCScope_slistautoptr:
   extension (v: GtkBuilderCScope_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBuilderScope_autoptr = Ptr[GtkBuilderScope]
 object GtkBuilderScope_autoptr: 
   given _tag: Tag[GtkBuilderScope_autoptr] = Tag.Ptr[GtkBuilderScope](GtkBuilderScope._tag)
@@ -1305,8 +1021,6 @@ object GtkBuilderScope_autoptr:
   extension (v: GtkBuilderScope_autoptr)
     inline def value: Ptr[GtkBuilderScope] = v
 
-/**
-*/
 opaque type GtkBuilderScope_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBuilderScope_listautoptr: 
   given _tag: Tag[GtkBuilderScope_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1314,8 +1028,6 @@ object GtkBuilderScope_listautoptr:
   extension (v: GtkBuilderScope_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBuilderScope_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBuilderScope_queueautoptr: 
   given _tag: Tag[GtkBuilderScope_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1323,8 +1035,6 @@ object GtkBuilderScope_queueautoptr:
   extension (v: GtkBuilderScope_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBuilderScope_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBuilderScope_slistautoptr: 
   given _tag: Tag[GtkBuilderScope_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1332,8 +1042,6 @@ object GtkBuilderScope_slistautoptr:
   extension (v: GtkBuilderScope_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkBuilder_autoptr = Ptr[GtkBuilder]
 object GtkBuilder_autoptr: 
   given _tag: Tag[GtkBuilder_autoptr] = Tag.Ptr[GtkBuilder](GtkBuilder._tag)
@@ -1341,8 +1049,6 @@ object GtkBuilder_autoptr:
   extension (v: GtkBuilder_autoptr)
     inline def value: Ptr[GtkBuilder] = v
 
-/**
-*/
 opaque type GtkBuilder_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkBuilder_listautoptr: 
   given _tag: Tag[GtkBuilder_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1350,8 +1056,6 @@ object GtkBuilder_listautoptr:
   extension (v: GtkBuilder_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkBuilder_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkBuilder_queueautoptr: 
   given _tag: Tag[GtkBuilder_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1359,8 +1063,6 @@ object GtkBuilder_queueautoptr:
   extension (v: GtkBuilder_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkBuilder_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkBuilder_slistautoptr: 
   given _tag: Tag[GtkBuilder_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1368,8 +1070,6 @@ object GtkBuilder_slistautoptr:
   extension (v: GtkBuilder_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkButton_autoptr = Ptr[GtkButton]
 object GtkButton_autoptr: 
   given _tag: Tag[GtkButton_autoptr] = Tag.Ptr[GtkButton](GtkButton._tag)
@@ -1377,8 +1077,6 @@ object GtkButton_autoptr:
   extension (v: GtkButton_autoptr)
     inline def value: Ptr[GtkButton] = v
 
-/**
-*/
 opaque type GtkButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkButton_listautoptr: 
   given _tag: Tag[GtkButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1386,8 +1084,6 @@ object GtkButton_listautoptr:
   extension (v: GtkButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkButton_queueautoptr: 
   given _tag: Tag[GtkButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1395,8 +1091,6 @@ object GtkButton_queueautoptr:
   extension (v: GtkButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkButton_slistautoptr: 
   given _tag: Tag[GtkButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1404,8 +1098,6 @@ object GtkButton_slistautoptr:
   extension (v: GtkButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCalendar_autoptr = Ptr[GtkCalendar]
 object GtkCalendar_autoptr: 
   given _tag: Tag[GtkCalendar_autoptr] = Tag.Ptr[GtkCalendar](GtkCalendar._tag)
@@ -1413,8 +1105,6 @@ object GtkCalendar_autoptr:
   extension (v: GtkCalendar_autoptr)
     inline def value: Ptr[GtkCalendar] = v
 
-/**
-*/
 opaque type GtkCalendar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCalendar_listautoptr: 
   given _tag: Tag[GtkCalendar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1422,8 +1112,6 @@ object GtkCalendar_listautoptr:
   extension (v: GtkCalendar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCalendar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCalendar_queueautoptr: 
   given _tag: Tag[GtkCalendar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1431,8 +1119,6 @@ object GtkCalendar_queueautoptr:
   extension (v: GtkCalendar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCalendar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCalendar_slistautoptr: 
   given _tag: Tag[GtkCalendar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1440,8 +1126,6 @@ object GtkCalendar_slistautoptr:
   extension (v: GtkCalendar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCallbackActionClass_autoptr = Ptr[GtkCallbackActionClass]
 object GtkCallbackActionClass_autoptr: 
   given _tag: Tag[GtkCallbackActionClass_autoptr] = Tag.Ptr[GtkCallbackActionClass](GtkCallbackActionClass._tag)
@@ -1449,8 +1133,6 @@ object GtkCallbackActionClass_autoptr:
   extension (v: GtkCallbackActionClass_autoptr)
     inline def value: Ptr[GtkCallbackActionClass] = v
 
-/**
-*/
 opaque type GtkCallbackActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCallbackActionClass_listautoptr: 
   given _tag: Tag[GtkCallbackActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1458,8 +1140,6 @@ object GtkCallbackActionClass_listautoptr:
   extension (v: GtkCallbackActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCallbackActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCallbackActionClass_queueautoptr: 
   given _tag: Tag[GtkCallbackActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1467,8 +1147,6 @@ object GtkCallbackActionClass_queueautoptr:
   extension (v: GtkCallbackActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCallbackActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCallbackActionClass_slistautoptr: 
   given _tag: Tag[GtkCallbackActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1476,8 +1154,6 @@ object GtkCallbackActionClass_slistautoptr:
   extension (v: GtkCallbackActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCallbackAction_autoptr = Ptr[GtkCallbackAction]
 object GtkCallbackAction_autoptr: 
   given _tag: Tag[GtkCallbackAction_autoptr] = Tag.Ptr[GtkCallbackAction](GtkCallbackAction._tag)
@@ -1485,8 +1161,6 @@ object GtkCallbackAction_autoptr:
   extension (v: GtkCallbackAction_autoptr)
     inline def value: Ptr[GtkCallbackAction] = v
 
-/**
-*/
 opaque type GtkCallbackAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCallbackAction_listautoptr: 
   given _tag: Tag[GtkCallbackAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1494,8 +1168,6 @@ object GtkCallbackAction_listautoptr:
   extension (v: GtkCallbackAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCallbackAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCallbackAction_queueautoptr: 
   given _tag: Tag[GtkCallbackAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1503,8 +1175,6 @@ object GtkCallbackAction_queueautoptr:
   extension (v: GtkCallbackAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCallbackAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCallbackAction_slistautoptr: 
   given _tag: Tag[GtkCallbackAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1518,14 +1188,12 @@ object GtkCallbackAction_slistautoptr:
 opaque type GtkCellAllocCallback = CFuncPtr4[Ptr[GtkCellRenderer], Ptr[GdkRectangle], Ptr[GdkRectangle], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkCellAllocCallback: 
   given _tag: Tag[GtkCellAllocCallback] = Tag.materializeCFuncPtr4[Ptr[GtkCellRenderer], Ptr[GdkRectangle], Ptr[GdkRectangle], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCellAllocCallback = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCellAllocCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GtkCellRenderer], Ptr[GdkRectangle], Ptr[GdkRectangle], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkCellAllocCallback = o
   extension (v: GtkCellAllocCallback)
     inline def value: CFuncPtr4[Ptr[GtkCellRenderer], Ptr[GdkRectangle], Ptr[GdkRectangle], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkCellAreaBox_autoptr = Ptr[GtkCellAreaBox]
 object GtkCellAreaBox_autoptr: 
   given _tag: Tag[GtkCellAreaBox_autoptr] = Tag.Ptr[GtkCellAreaBox](GtkCellAreaBox._tag)
@@ -1533,8 +1201,6 @@ object GtkCellAreaBox_autoptr:
   extension (v: GtkCellAreaBox_autoptr)
     inline def value: Ptr[GtkCellAreaBox] = v
 
-/**
-*/
 opaque type GtkCellAreaBox_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellAreaBox_listautoptr: 
   given _tag: Tag[GtkCellAreaBox_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1542,8 +1208,6 @@ object GtkCellAreaBox_listautoptr:
   extension (v: GtkCellAreaBox_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellAreaBox_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellAreaBox_queueautoptr: 
   given _tag: Tag[GtkCellAreaBox_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1551,8 +1215,6 @@ object GtkCellAreaBox_queueautoptr:
   extension (v: GtkCellAreaBox_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellAreaBox_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellAreaBox_slistautoptr: 
   given _tag: Tag[GtkCellAreaBox_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1560,8 +1222,6 @@ object GtkCellAreaBox_slistautoptr:
   extension (v: GtkCellAreaBox_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellAreaContext_autoptr = Ptr[GtkCellAreaContext]
 object GtkCellAreaContext_autoptr: 
   given _tag: Tag[GtkCellAreaContext_autoptr] = Tag.Ptr[GtkCellAreaContext](GtkCellAreaContext._tag)
@@ -1569,8 +1229,6 @@ object GtkCellAreaContext_autoptr:
   extension (v: GtkCellAreaContext_autoptr)
     inline def value: Ptr[GtkCellAreaContext] = v
 
-/**
-*/
 opaque type GtkCellAreaContext_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellAreaContext_listautoptr: 
   given _tag: Tag[GtkCellAreaContext_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1578,8 +1236,6 @@ object GtkCellAreaContext_listautoptr:
   extension (v: GtkCellAreaContext_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellAreaContext_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellAreaContext_queueautoptr: 
   given _tag: Tag[GtkCellAreaContext_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1587,8 +1243,6 @@ object GtkCellAreaContext_queueautoptr:
   extension (v: GtkCellAreaContext_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellAreaContext_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellAreaContext_slistautoptr: 
   given _tag: Tag[GtkCellAreaContext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1596,8 +1250,6 @@ object GtkCellAreaContext_slistautoptr:
   extension (v: GtkCellAreaContext_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellArea_autoptr = Ptr[GtkCellArea]
 object GtkCellArea_autoptr: 
   given _tag: Tag[GtkCellArea_autoptr] = Tag.Ptr[GtkCellArea](GtkCellArea._tag)
@@ -1605,8 +1257,6 @@ object GtkCellArea_autoptr:
   extension (v: GtkCellArea_autoptr)
     inline def value: Ptr[GtkCellArea] = v
 
-/**
-*/
 opaque type GtkCellArea_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellArea_listautoptr: 
   given _tag: Tag[GtkCellArea_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1614,8 +1264,6 @@ object GtkCellArea_listautoptr:
   extension (v: GtkCellArea_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellArea_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellArea_queueautoptr: 
   given _tag: Tag[GtkCellArea_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1623,8 +1271,6 @@ object GtkCellArea_queueautoptr:
   extension (v: GtkCellArea_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellArea_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellArea_slistautoptr: 
   given _tag: Tag[GtkCellArea_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1638,14 +1284,12 @@ object GtkCellArea_slistautoptr:
 opaque type GtkCellCallback = CFuncPtr2[Ptr[GtkCellRenderer], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkCellCallback: 
   given _tag: Tag[GtkCellCallback] = Tag.materializeCFuncPtr2[Ptr[GtkCellRenderer], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCellCallback = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCellCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GtkCellRenderer], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkCellCallback = o
   extension (v: GtkCellCallback)
     inline def value: CFuncPtr2[Ptr[GtkCellRenderer], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkCellEditable_autoptr = Ptr[GtkCellEditable]
 object GtkCellEditable_autoptr: 
   given _tag: Tag[GtkCellEditable_autoptr] = Tag.Ptr[GtkCellEditable](GtkCellEditable._tag)
@@ -1653,8 +1297,6 @@ object GtkCellEditable_autoptr:
   extension (v: GtkCellEditable_autoptr)
     inline def value: Ptr[GtkCellEditable] = v
 
-/**
-*/
 opaque type GtkCellEditable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellEditable_listautoptr: 
   given _tag: Tag[GtkCellEditable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1662,8 +1304,6 @@ object GtkCellEditable_listautoptr:
   extension (v: GtkCellEditable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellEditable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellEditable_queueautoptr: 
   given _tag: Tag[GtkCellEditable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1671,8 +1311,6 @@ object GtkCellEditable_queueautoptr:
   extension (v: GtkCellEditable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellEditable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellEditable_slistautoptr: 
   given _tag: Tag[GtkCellEditable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1686,14 +1324,12 @@ object GtkCellEditable_slistautoptr:
 opaque type GtkCellLayoutDataFunc = CFuncPtr5[Ptr[GtkCellLayout], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkCellLayoutDataFunc: 
   given _tag: Tag[GtkCellLayoutDataFunc] = Tag.materializeCFuncPtr5[Ptr[GtkCellLayout], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCellLayoutDataFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCellLayoutDataFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkCellLayout], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkCellLayoutDataFunc = o
   extension (v: GtkCellLayoutDataFunc)
     inline def value: CFuncPtr5[Ptr[GtkCellLayout], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkCellLayout_autoptr = Ptr[GtkCellLayout]
 object GtkCellLayout_autoptr: 
   given _tag: Tag[GtkCellLayout_autoptr] = Tag.Ptr[GtkCellLayout](GtkCellLayout._tag)
@@ -1701,8 +1337,6 @@ object GtkCellLayout_autoptr:
   extension (v: GtkCellLayout_autoptr)
     inline def value: Ptr[GtkCellLayout] = v
 
-/**
-*/
 opaque type GtkCellLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellLayout_listautoptr: 
   given _tag: Tag[GtkCellLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1710,8 +1344,6 @@ object GtkCellLayout_listautoptr:
   extension (v: GtkCellLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellLayout_queueautoptr: 
   given _tag: Tag[GtkCellLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1719,8 +1351,6 @@ object GtkCellLayout_queueautoptr:
   extension (v: GtkCellLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellLayout_slistautoptr: 
   given _tag: Tag[GtkCellLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1728,8 +1358,6 @@ object GtkCellLayout_slistautoptr:
   extension (v: GtkCellLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererAccel_autoptr = Ptr[GtkCellRendererAccel]
 object GtkCellRendererAccel_autoptr: 
   given _tag: Tag[GtkCellRendererAccel_autoptr] = Tag.Ptr[GtkCellRendererAccel](GtkCellRendererAccel._tag)
@@ -1737,8 +1365,6 @@ object GtkCellRendererAccel_autoptr:
   extension (v: GtkCellRendererAccel_autoptr)
     inline def value: Ptr[GtkCellRendererAccel] = v
 
-/**
-*/
 opaque type GtkCellRendererAccel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererAccel_listautoptr: 
   given _tag: Tag[GtkCellRendererAccel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1746,8 +1372,6 @@ object GtkCellRendererAccel_listautoptr:
   extension (v: GtkCellRendererAccel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererAccel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererAccel_queueautoptr: 
   given _tag: Tag[GtkCellRendererAccel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1755,8 +1379,6 @@ object GtkCellRendererAccel_queueautoptr:
   extension (v: GtkCellRendererAccel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererAccel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererAccel_slistautoptr: 
   given _tag: Tag[GtkCellRendererAccel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1764,8 +1386,6 @@ object GtkCellRendererAccel_slistautoptr:
   extension (v: GtkCellRendererAccel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererCombo_autoptr = Ptr[GtkCellRendererCombo]
 object GtkCellRendererCombo_autoptr: 
   given _tag: Tag[GtkCellRendererCombo_autoptr] = Tag.Ptr[GtkCellRendererCombo](GtkCellRendererCombo._tag)
@@ -1773,8 +1393,6 @@ object GtkCellRendererCombo_autoptr:
   extension (v: GtkCellRendererCombo_autoptr)
     inline def value: Ptr[GtkCellRendererCombo] = v
 
-/**
-*/
 opaque type GtkCellRendererCombo_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererCombo_listautoptr: 
   given _tag: Tag[GtkCellRendererCombo_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1782,8 +1400,6 @@ object GtkCellRendererCombo_listautoptr:
   extension (v: GtkCellRendererCombo_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererCombo_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererCombo_queueautoptr: 
   given _tag: Tag[GtkCellRendererCombo_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1791,8 +1407,6 @@ object GtkCellRendererCombo_queueautoptr:
   extension (v: GtkCellRendererCombo_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererCombo_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererCombo_slistautoptr: 
   given _tag: Tag[GtkCellRendererCombo_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1800,8 +1414,6 @@ object GtkCellRendererCombo_slistautoptr:
   extension (v: GtkCellRendererCombo_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererPixbuf_autoptr = Ptr[GtkCellRendererPixbuf]
 object GtkCellRendererPixbuf_autoptr: 
   given _tag: Tag[GtkCellRendererPixbuf_autoptr] = Tag.Ptr[GtkCellRendererPixbuf](GtkCellRendererPixbuf._tag)
@@ -1809,8 +1421,6 @@ object GtkCellRendererPixbuf_autoptr:
   extension (v: GtkCellRendererPixbuf_autoptr)
     inline def value: Ptr[GtkCellRendererPixbuf] = v
 
-/**
-*/
 opaque type GtkCellRendererPixbuf_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererPixbuf_listautoptr: 
   given _tag: Tag[GtkCellRendererPixbuf_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1818,8 +1428,6 @@ object GtkCellRendererPixbuf_listautoptr:
   extension (v: GtkCellRendererPixbuf_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererPixbuf_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererPixbuf_queueautoptr: 
   given _tag: Tag[GtkCellRendererPixbuf_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1827,8 +1435,6 @@ object GtkCellRendererPixbuf_queueautoptr:
   extension (v: GtkCellRendererPixbuf_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererPixbuf_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererPixbuf_slistautoptr: 
   given _tag: Tag[GtkCellRendererPixbuf_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1836,8 +1442,6 @@ object GtkCellRendererPixbuf_slistautoptr:
   extension (v: GtkCellRendererPixbuf_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererProgress_autoptr = Ptr[GtkCellRendererProgress]
 object GtkCellRendererProgress_autoptr: 
   given _tag: Tag[GtkCellRendererProgress_autoptr] = Tag.Ptr[GtkCellRendererProgress](GtkCellRendererProgress._tag)
@@ -1845,8 +1449,6 @@ object GtkCellRendererProgress_autoptr:
   extension (v: GtkCellRendererProgress_autoptr)
     inline def value: Ptr[GtkCellRendererProgress] = v
 
-/**
-*/
 opaque type GtkCellRendererProgress_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererProgress_listautoptr: 
   given _tag: Tag[GtkCellRendererProgress_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1854,8 +1456,6 @@ object GtkCellRendererProgress_listautoptr:
   extension (v: GtkCellRendererProgress_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererProgress_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererProgress_queueautoptr: 
   given _tag: Tag[GtkCellRendererProgress_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1863,8 +1463,6 @@ object GtkCellRendererProgress_queueautoptr:
   extension (v: GtkCellRendererProgress_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererProgress_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererProgress_slistautoptr: 
   given _tag: Tag[GtkCellRendererProgress_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1872,8 +1470,6 @@ object GtkCellRendererProgress_slistautoptr:
   extension (v: GtkCellRendererProgress_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererSpin_autoptr = Ptr[GtkCellRendererSpin]
 object GtkCellRendererSpin_autoptr: 
   given _tag: Tag[GtkCellRendererSpin_autoptr] = Tag.Ptr[GtkCellRendererSpin](GtkCellRendererSpin._tag)
@@ -1881,8 +1477,6 @@ object GtkCellRendererSpin_autoptr:
   extension (v: GtkCellRendererSpin_autoptr)
     inline def value: Ptr[GtkCellRendererSpin] = v
 
-/**
-*/
 opaque type GtkCellRendererSpin_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererSpin_listautoptr: 
   given _tag: Tag[GtkCellRendererSpin_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1890,8 +1484,6 @@ object GtkCellRendererSpin_listautoptr:
   extension (v: GtkCellRendererSpin_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererSpin_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererSpin_queueautoptr: 
   given _tag: Tag[GtkCellRendererSpin_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1899,8 +1491,6 @@ object GtkCellRendererSpin_queueautoptr:
   extension (v: GtkCellRendererSpin_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererSpin_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererSpin_slistautoptr: 
   given _tag: Tag[GtkCellRendererSpin_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1908,8 +1498,6 @@ object GtkCellRendererSpin_slistautoptr:
   extension (v: GtkCellRendererSpin_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererSpinner_autoptr = Ptr[GtkCellRendererSpinner]
 object GtkCellRendererSpinner_autoptr: 
   given _tag: Tag[GtkCellRendererSpinner_autoptr] = Tag.Ptr[GtkCellRendererSpinner](GtkCellRendererSpinner._tag)
@@ -1917,8 +1505,6 @@ object GtkCellRendererSpinner_autoptr:
   extension (v: GtkCellRendererSpinner_autoptr)
     inline def value: Ptr[GtkCellRendererSpinner] = v
 
-/**
-*/
 opaque type GtkCellRendererSpinner_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererSpinner_listautoptr: 
   given _tag: Tag[GtkCellRendererSpinner_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1926,8 +1512,6 @@ object GtkCellRendererSpinner_listautoptr:
   extension (v: GtkCellRendererSpinner_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererSpinner_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererSpinner_queueautoptr: 
   given _tag: Tag[GtkCellRendererSpinner_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1935,8 +1519,6 @@ object GtkCellRendererSpinner_queueautoptr:
   extension (v: GtkCellRendererSpinner_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererSpinner_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererSpinner_slistautoptr: 
   given _tag: Tag[GtkCellRendererSpinner_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1944,8 +1526,6 @@ object GtkCellRendererSpinner_slistautoptr:
   extension (v: GtkCellRendererSpinner_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererText_autoptr = Ptr[GtkCellRendererText]
 object GtkCellRendererText_autoptr: 
   given _tag: Tag[GtkCellRendererText_autoptr] = Tag.Ptr[GtkCellRendererText](GtkCellRendererText._tag)
@@ -1953,8 +1533,6 @@ object GtkCellRendererText_autoptr:
   extension (v: GtkCellRendererText_autoptr)
     inline def value: Ptr[GtkCellRendererText] = v
 
-/**
-*/
 opaque type GtkCellRendererText_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererText_listautoptr: 
   given _tag: Tag[GtkCellRendererText_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1962,8 +1540,6 @@ object GtkCellRendererText_listautoptr:
   extension (v: GtkCellRendererText_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererText_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererText_queueautoptr: 
   given _tag: Tag[GtkCellRendererText_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -1971,8 +1547,6 @@ object GtkCellRendererText_queueautoptr:
   extension (v: GtkCellRendererText_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererText_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererText_slistautoptr: 
   given _tag: Tag[GtkCellRendererText_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -1980,8 +1554,6 @@ object GtkCellRendererText_slistautoptr:
   extension (v: GtkCellRendererText_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRendererToggle_autoptr = Ptr[GtkCellRendererToggle]
 object GtkCellRendererToggle_autoptr: 
   given _tag: Tag[GtkCellRendererToggle_autoptr] = Tag.Ptr[GtkCellRendererToggle](GtkCellRendererToggle._tag)
@@ -1989,8 +1561,6 @@ object GtkCellRendererToggle_autoptr:
   extension (v: GtkCellRendererToggle_autoptr)
     inline def value: Ptr[GtkCellRendererToggle] = v
 
-/**
-*/
 opaque type GtkCellRendererToggle_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRendererToggle_listautoptr: 
   given _tag: Tag[GtkCellRendererToggle_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -1998,8 +1568,6 @@ object GtkCellRendererToggle_listautoptr:
   extension (v: GtkCellRendererToggle_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRendererToggle_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRendererToggle_queueautoptr: 
   given _tag: Tag[GtkCellRendererToggle_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2007,8 +1575,6 @@ object GtkCellRendererToggle_queueautoptr:
   extension (v: GtkCellRendererToggle_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRendererToggle_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRendererToggle_slistautoptr: 
   given _tag: Tag[GtkCellRendererToggle_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2016,8 +1582,6 @@ object GtkCellRendererToggle_slistautoptr:
   extension (v: GtkCellRendererToggle_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellRenderer_autoptr = Ptr[GtkCellRenderer]
 object GtkCellRenderer_autoptr: 
   given _tag: Tag[GtkCellRenderer_autoptr] = Tag.Ptr[GtkCellRenderer](GtkCellRenderer._tag)
@@ -2025,8 +1589,6 @@ object GtkCellRenderer_autoptr:
   extension (v: GtkCellRenderer_autoptr)
     inline def value: Ptr[GtkCellRenderer] = v
 
-/**
-*/
 opaque type GtkCellRenderer_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellRenderer_listautoptr: 
   given _tag: Tag[GtkCellRenderer_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2034,8 +1596,6 @@ object GtkCellRenderer_listautoptr:
   extension (v: GtkCellRenderer_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellRenderer_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellRenderer_queueautoptr: 
   given _tag: Tag[GtkCellRenderer_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2043,8 +1603,6 @@ object GtkCellRenderer_queueautoptr:
   extension (v: GtkCellRenderer_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellRenderer_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellRenderer_slistautoptr: 
   given _tag: Tag[GtkCellRenderer_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2052,8 +1610,6 @@ object GtkCellRenderer_slistautoptr:
   extension (v: GtkCellRenderer_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCellView_autoptr = Ptr[GtkCellView]
 object GtkCellView_autoptr: 
   given _tag: Tag[GtkCellView_autoptr] = Tag.Ptr[GtkCellView](GtkCellView._tag)
@@ -2061,8 +1617,6 @@ object GtkCellView_autoptr:
   extension (v: GtkCellView_autoptr)
     inline def value: Ptr[GtkCellView] = v
 
-/**
-*/
 opaque type GtkCellView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCellView_listautoptr: 
   given _tag: Tag[GtkCellView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2070,8 +1624,6 @@ object GtkCellView_listautoptr:
   extension (v: GtkCellView_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCellView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCellView_queueautoptr: 
   given _tag: Tag[GtkCellView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2079,8 +1631,6 @@ object GtkCellView_queueautoptr:
   extension (v: GtkCellView_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCellView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCellView_slistautoptr: 
   given _tag: Tag[GtkCellView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2088,8 +1638,6 @@ object GtkCellView_slistautoptr:
   extension (v: GtkCellView_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCenterLayoutClass_autoptr = Ptr[GtkCenterLayoutClass]
 object GtkCenterLayoutClass_autoptr: 
   given _tag: Tag[GtkCenterLayoutClass_autoptr] = Tag.Ptr[GtkCenterLayoutClass](GtkCenterLayoutClass._tag)
@@ -2097,8 +1645,6 @@ object GtkCenterLayoutClass_autoptr:
   extension (v: GtkCenterLayoutClass_autoptr)
     inline def value: Ptr[GtkCenterLayoutClass] = v
 
-/**
-*/
 opaque type GtkCenterLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCenterLayoutClass_listautoptr: 
   given _tag: Tag[GtkCenterLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2106,8 +1652,6 @@ object GtkCenterLayoutClass_listautoptr:
   extension (v: GtkCenterLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCenterLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCenterLayoutClass_queueautoptr: 
   given _tag: Tag[GtkCenterLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2115,8 +1659,6 @@ object GtkCenterLayoutClass_queueautoptr:
   extension (v: GtkCenterLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCenterLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCenterLayoutClass_slistautoptr: 
   given _tag: Tag[GtkCenterLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2124,8 +1666,6 @@ object GtkCenterLayoutClass_slistautoptr:
   extension (v: GtkCenterLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCenterLayout_autoptr = Ptr[GtkCenterLayout]
 object GtkCenterLayout_autoptr: 
   given _tag: Tag[GtkCenterLayout_autoptr] = Tag.Ptr[GtkCenterLayout](GtkCenterLayout._tag)
@@ -2133,8 +1673,6 @@ object GtkCenterLayout_autoptr:
   extension (v: GtkCenterLayout_autoptr)
     inline def value: Ptr[GtkCenterLayout] = v
 
-/**
-*/
 opaque type GtkCenterLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCenterLayout_listautoptr: 
   given _tag: Tag[GtkCenterLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2142,8 +1680,6 @@ object GtkCenterLayout_listautoptr:
   extension (v: GtkCenterLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCenterLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCenterLayout_queueautoptr: 
   given _tag: Tag[GtkCenterLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2151,8 +1687,6 @@ object GtkCenterLayout_queueautoptr:
   extension (v: GtkCenterLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCenterLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCenterLayout_slistautoptr: 
   given _tag: Tag[GtkCenterLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2160,8 +1694,6 @@ object GtkCenterLayout_slistautoptr:
   extension (v: GtkCenterLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCheckButton_autoptr = Ptr[GtkCheckButton]
 object GtkCheckButton_autoptr: 
   given _tag: Tag[GtkCheckButton_autoptr] = Tag.Ptr[GtkCheckButton](GtkCheckButton._tag)
@@ -2169,8 +1701,6 @@ object GtkCheckButton_autoptr:
   extension (v: GtkCheckButton_autoptr)
     inline def value: Ptr[GtkCheckButton] = v
 
-/**
-*/
 opaque type GtkCheckButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCheckButton_listautoptr: 
   given _tag: Tag[GtkCheckButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2178,8 +1708,6 @@ object GtkCheckButton_listautoptr:
   extension (v: GtkCheckButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCheckButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCheckButton_queueautoptr: 
   given _tag: Tag[GtkCheckButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2187,8 +1715,6 @@ object GtkCheckButton_queueautoptr:
   extension (v: GtkCheckButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCheckButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCheckButton_slistautoptr: 
   given _tag: Tag[GtkCheckButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2196,8 +1722,6 @@ object GtkCheckButton_slistautoptr:
   extension (v: GtkCheckButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkColorButton_autoptr = Ptr[GtkColorButton]
 object GtkColorButton_autoptr: 
   given _tag: Tag[GtkColorButton_autoptr] = Tag.Ptr[GtkColorButton](GtkColorButton._tag)
@@ -2205,8 +1729,6 @@ object GtkColorButton_autoptr:
   extension (v: GtkColorButton_autoptr)
     inline def value: Ptr[GtkColorButton] = v
 
-/**
-*/
 opaque type GtkColorButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkColorButton_listautoptr: 
   given _tag: Tag[GtkColorButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2214,8 +1736,6 @@ object GtkColorButton_listautoptr:
   extension (v: GtkColorButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkColorButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkColorButton_queueautoptr: 
   given _tag: Tag[GtkColorButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2223,8 +1743,6 @@ object GtkColorButton_queueautoptr:
   extension (v: GtkColorButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkColorButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkColorButton_slistautoptr: 
   given _tag: Tag[GtkColorButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2232,8 +1750,6 @@ object GtkColorButton_slistautoptr:
   extension (v: GtkColorButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkColorChooserDialog_autoptr = Ptr[GtkColorChooserDialog]
 object GtkColorChooserDialog_autoptr: 
   given _tag: Tag[GtkColorChooserDialog_autoptr] = Tag.Ptr[GtkColorChooserDialog](GtkColorChooserDialog._tag)
@@ -2241,8 +1757,6 @@ object GtkColorChooserDialog_autoptr:
   extension (v: GtkColorChooserDialog_autoptr)
     inline def value: Ptr[GtkColorChooserDialog] = v
 
-/**
-*/
 opaque type GtkColorChooserDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkColorChooserDialog_listautoptr: 
   given _tag: Tag[GtkColorChooserDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2250,8 +1764,6 @@ object GtkColorChooserDialog_listautoptr:
   extension (v: GtkColorChooserDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkColorChooserDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkColorChooserDialog_queueautoptr: 
   given _tag: Tag[GtkColorChooserDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2259,8 +1771,6 @@ object GtkColorChooserDialog_queueautoptr:
   extension (v: GtkColorChooserDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkColorChooserDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkColorChooserDialog_slistautoptr: 
   given _tag: Tag[GtkColorChooserDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2268,8 +1778,6 @@ object GtkColorChooserDialog_slistautoptr:
   extension (v: GtkColorChooserDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkColorChooserWidget_autoptr = Ptr[GtkColorChooserWidget]
 object GtkColorChooserWidget_autoptr: 
   given _tag: Tag[GtkColorChooserWidget_autoptr] = Tag.Ptr[GtkColorChooserWidget](GtkColorChooserWidget._tag)
@@ -2277,8 +1785,6 @@ object GtkColorChooserWidget_autoptr:
   extension (v: GtkColorChooserWidget_autoptr)
     inline def value: Ptr[GtkColorChooserWidget] = v
 
-/**
-*/
 opaque type GtkColorChooserWidget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkColorChooserWidget_listautoptr: 
   given _tag: Tag[GtkColorChooserWidget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2286,8 +1792,6 @@ object GtkColorChooserWidget_listautoptr:
   extension (v: GtkColorChooserWidget_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkColorChooserWidget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkColorChooserWidget_queueautoptr: 
   given _tag: Tag[GtkColorChooserWidget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2295,8 +1799,6 @@ object GtkColorChooserWidget_queueautoptr:
   extension (v: GtkColorChooserWidget_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkColorChooserWidget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkColorChooserWidget_slistautoptr: 
   given _tag: Tag[GtkColorChooserWidget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2304,8 +1806,6 @@ object GtkColorChooserWidget_slistautoptr:
   extension (v: GtkColorChooserWidget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkColorChooser_autoptr = Ptr[GtkColorChooser]
 object GtkColorChooser_autoptr: 
   given _tag: Tag[GtkColorChooser_autoptr] = Tag.Ptr[GtkColorChooser](GtkColorChooser._tag)
@@ -2313,8 +1813,6 @@ object GtkColorChooser_autoptr:
   extension (v: GtkColorChooser_autoptr)
     inline def value: Ptr[GtkColorChooser] = v
 
-/**
-*/
 opaque type GtkColorChooser_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkColorChooser_listautoptr: 
   given _tag: Tag[GtkColorChooser_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2322,8 +1820,6 @@ object GtkColorChooser_listautoptr:
   extension (v: GtkColorChooser_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkColorChooser_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkColorChooser_queueautoptr: 
   given _tag: Tag[GtkColorChooser_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2331,8 +1827,6 @@ object GtkColorChooser_queueautoptr:
   extension (v: GtkColorChooser_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkColorChooser_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkColorChooser_slistautoptr: 
   given _tag: Tag[GtkColorChooser_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2340,8 +1834,6 @@ object GtkColorChooser_slistautoptr:
   extension (v: GtkColorChooser_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkColumnViewColumn_autoptr = Ptr[GtkColumnViewColumn]
 object GtkColumnViewColumn_autoptr: 
   given _tag: Tag[GtkColumnViewColumn_autoptr] = Tag.Ptr[GtkColumnViewColumn](GtkColumnViewColumn._tag)
@@ -2349,8 +1841,6 @@ object GtkColumnViewColumn_autoptr:
   extension (v: GtkColumnViewColumn_autoptr)
     inline def value: Ptr[GtkColumnViewColumn] = v
 
-/**
-*/
 opaque type GtkColumnViewColumn_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkColumnViewColumn_listautoptr: 
   given _tag: Tag[GtkColumnViewColumn_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2358,8 +1848,6 @@ object GtkColumnViewColumn_listautoptr:
   extension (v: GtkColumnViewColumn_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkColumnViewColumn_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkColumnViewColumn_queueautoptr: 
   given _tag: Tag[GtkColumnViewColumn_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2367,8 +1855,6 @@ object GtkColumnViewColumn_queueautoptr:
   extension (v: GtkColumnViewColumn_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkColumnViewColumn_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkColumnViewColumn_slistautoptr: 
   given _tag: Tag[GtkColumnViewColumn_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2376,8 +1862,6 @@ object GtkColumnViewColumn_slistautoptr:
   extension (v: GtkColumnViewColumn_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkComboBoxText_autoptr = Ptr[GtkComboBoxText]
 object GtkComboBoxText_autoptr: 
   given _tag: Tag[GtkComboBoxText_autoptr] = Tag.Ptr[GtkComboBoxText](GtkComboBoxText._tag)
@@ -2385,8 +1869,6 @@ object GtkComboBoxText_autoptr:
   extension (v: GtkComboBoxText_autoptr)
     inline def value: Ptr[GtkComboBoxText] = v
 
-/**
-*/
 opaque type GtkComboBoxText_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkComboBoxText_listautoptr: 
   given _tag: Tag[GtkComboBoxText_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2394,8 +1876,6 @@ object GtkComboBoxText_listautoptr:
   extension (v: GtkComboBoxText_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkComboBoxText_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkComboBoxText_queueautoptr: 
   given _tag: Tag[GtkComboBoxText_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2403,8 +1883,6 @@ object GtkComboBoxText_queueautoptr:
   extension (v: GtkComboBoxText_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkComboBoxText_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkComboBoxText_slistautoptr: 
   given _tag: Tag[GtkComboBoxText_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2412,8 +1890,6 @@ object GtkComboBoxText_slistautoptr:
   extension (v: GtkComboBoxText_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkComboBox_autoptr = Ptr[GtkComboBox]
 object GtkComboBox_autoptr: 
   given _tag: Tag[GtkComboBox_autoptr] = Tag.Ptr[GtkComboBox](GtkComboBox._tag)
@@ -2421,8 +1897,6 @@ object GtkComboBox_autoptr:
   extension (v: GtkComboBox_autoptr)
     inline def value: Ptr[GtkComboBox] = v
 
-/**
-*/
 opaque type GtkComboBox_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkComboBox_listautoptr: 
   given _tag: Tag[GtkComboBox_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2430,8 +1904,6 @@ object GtkComboBox_listautoptr:
   extension (v: GtkComboBox_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkComboBox_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkComboBox_queueautoptr: 
   given _tag: Tag[GtkComboBox_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2439,8 +1911,6 @@ object GtkComboBox_queueautoptr:
   extension (v: GtkComboBox_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkComboBox_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkComboBox_slistautoptr: 
   given _tag: Tag[GtkComboBox_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2448,8 +1918,6 @@ object GtkComboBox_slistautoptr:
   extension (v: GtkComboBox_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintClass_autoptr = Ptr[GtkConstraintClass]
 object GtkConstraintClass_autoptr: 
   given _tag: Tag[GtkConstraintClass_autoptr] = Tag.Ptr[GtkConstraintClass](GtkConstraintClass._tag)
@@ -2457,8 +1925,6 @@ object GtkConstraintClass_autoptr:
   extension (v: GtkConstraintClass_autoptr)
     inline def value: Ptr[GtkConstraintClass] = v
 
-/**
-*/
 opaque type GtkConstraintClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintClass_listautoptr: 
   given _tag: Tag[GtkConstraintClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2466,8 +1932,6 @@ object GtkConstraintClass_listautoptr:
   extension (v: GtkConstraintClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintClass_queueautoptr: 
   given _tag: Tag[GtkConstraintClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2475,8 +1939,6 @@ object GtkConstraintClass_queueautoptr:
   extension (v: GtkConstraintClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintClass_slistautoptr: 
   given _tag: Tag[GtkConstraintClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2484,8 +1946,6 @@ object GtkConstraintClass_slistautoptr:
   extension (v: GtkConstraintClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintGuideClass_autoptr = Ptr[GtkConstraintGuideClass]
 object GtkConstraintGuideClass_autoptr: 
   given _tag: Tag[GtkConstraintGuideClass_autoptr] = Tag.Ptr[GtkConstraintGuideClass](GtkConstraintGuideClass._tag)
@@ -2493,8 +1953,6 @@ object GtkConstraintGuideClass_autoptr:
   extension (v: GtkConstraintGuideClass_autoptr)
     inline def value: Ptr[GtkConstraintGuideClass] = v
 
-/**
-*/
 opaque type GtkConstraintGuideClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintGuideClass_listautoptr: 
   given _tag: Tag[GtkConstraintGuideClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2502,8 +1960,6 @@ object GtkConstraintGuideClass_listautoptr:
   extension (v: GtkConstraintGuideClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintGuideClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintGuideClass_queueautoptr: 
   given _tag: Tag[GtkConstraintGuideClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2511,8 +1967,6 @@ object GtkConstraintGuideClass_queueautoptr:
   extension (v: GtkConstraintGuideClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintGuideClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintGuideClass_slistautoptr: 
   given _tag: Tag[GtkConstraintGuideClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2520,8 +1974,6 @@ object GtkConstraintGuideClass_slistautoptr:
   extension (v: GtkConstraintGuideClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintGuide_autoptr = Ptr[GtkConstraintGuide]
 object GtkConstraintGuide_autoptr: 
   given _tag: Tag[GtkConstraintGuide_autoptr] = Tag.Ptr[GtkConstraintGuide](GtkConstraintGuide._tag)
@@ -2529,8 +1981,6 @@ object GtkConstraintGuide_autoptr:
   extension (v: GtkConstraintGuide_autoptr)
     inline def value: Ptr[GtkConstraintGuide] = v
 
-/**
-*/
 opaque type GtkConstraintGuide_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintGuide_listautoptr: 
   given _tag: Tag[GtkConstraintGuide_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2538,8 +1988,6 @@ object GtkConstraintGuide_listautoptr:
   extension (v: GtkConstraintGuide_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintGuide_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintGuide_queueautoptr: 
   given _tag: Tag[GtkConstraintGuide_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2547,8 +1995,6 @@ object GtkConstraintGuide_queueautoptr:
   extension (v: GtkConstraintGuide_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintGuide_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintGuide_slistautoptr: 
   given _tag: Tag[GtkConstraintGuide_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2556,8 +2002,6 @@ object GtkConstraintGuide_slistautoptr:
   extension (v: GtkConstraintGuide_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChildClass_autoptr = Ptr[GtkConstraintLayoutChildClass]
 object GtkConstraintLayoutChildClass_autoptr: 
   given _tag: Tag[GtkConstraintLayoutChildClass_autoptr] = Tag.Ptr[GtkConstraintLayoutChildClass](GtkConstraintLayoutChildClass._tag)
@@ -2565,8 +2009,6 @@ object GtkConstraintLayoutChildClass_autoptr:
   extension (v: GtkConstraintLayoutChildClass_autoptr)
     inline def value: Ptr[GtkConstraintLayoutChildClass] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChildClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintLayoutChildClass_listautoptr: 
   given _tag: Tag[GtkConstraintLayoutChildClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2574,8 +2016,6 @@ object GtkConstraintLayoutChildClass_listautoptr:
   extension (v: GtkConstraintLayoutChildClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChildClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintLayoutChildClass_queueautoptr: 
   given _tag: Tag[GtkConstraintLayoutChildClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2583,8 +2023,6 @@ object GtkConstraintLayoutChildClass_queueautoptr:
   extension (v: GtkConstraintLayoutChildClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChildClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintLayoutChildClass_slistautoptr: 
   given _tag: Tag[GtkConstraintLayoutChildClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2592,8 +2030,6 @@ object GtkConstraintLayoutChildClass_slistautoptr:
   extension (v: GtkConstraintLayoutChildClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChild_autoptr = Ptr[GtkConstraintLayoutChild]
 object GtkConstraintLayoutChild_autoptr: 
   given _tag: Tag[GtkConstraintLayoutChild_autoptr] = Tag.Ptr[GtkConstraintLayoutChild](GtkConstraintLayoutChild._tag)
@@ -2601,8 +2037,6 @@ object GtkConstraintLayoutChild_autoptr:
   extension (v: GtkConstraintLayoutChild_autoptr)
     inline def value: Ptr[GtkConstraintLayoutChild] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChild_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintLayoutChild_listautoptr: 
   given _tag: Tag[GtkConstraintLayoutChild_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2610,8 +2044,6 @@ object GtkConstraintLayoutChild_listautoptr:
   extension (v: GtkConstraintLayoutChild_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChild_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintLayoutChild_queueautoptr: 
   given _tag: Tag[GtkConstraintLayoutChild_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2619,8 +2051,6 @@ object GtkConstraintLayoutChild_queueautoptr:
   extension (v: GtkConstraintLayoutChild_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutChild_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintLayoutChild_slistautoptr: 
   given _tag: Tag[GtkConstraintLayoutChild_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2628,8 +2058,6 @@ object GtkConstraintLayoutChild_slistautoptr:
   extension (v: GtkConstraintLayoutChild_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutClass_autoptr = Ptr[GtkConstraintLayoutClass]
 object GtkConstraintLayoutClass_autoptr: 
   given _tag: Tag[GtkConstraintLayoutClass_autoptr] = Tag.Ptr[GtkConstraintLayoutClass](GtkConstraintLayoutClass._tag)
@@ -2637,8 +2065,6 @@ object GtkConstraintLayoutClass_autoptr:
   extension (v: GtkConstraintLayoutClass_autoptr)
     inline def value: Ptr[GtkConstraintLayoutClass] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintLayoutClass_listautoptr: 
   given _tag: Tag[GtkConstraintLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2646,8 +2072,6 @@ object GtkConstraintLayoutClass_listautoptr:
   extension (v: GtkConstraintLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintLayoutClass_queueautoptr: 
   given _tag: Tag[GtkConstraintLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2655,8 +2079,6 @@ object GtkConstraintLayoutClass_queueautoptr:
   extension (v: GtkConstraintLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintLayoutClass_slistautoptr: 
   given _tag: Tag[GtkConstraintLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2664,8 +2086,6 @@ object GtkConstraintLayoutClass_slistautoptr:
   extension (v: GtkConstraintLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintLayout_autoptr = Ptr[GtkConstraintLayout]
 object GtkConstraintLayout_autoptr: 
   given _tag: Tag[GtkConstraintLayout_autoptr] = Tag.Ptr[GtkConstraintLayout](GtkConstraintLayout._tag)
@@ -2673,8 +2093,6 @@ object GtkConstraintLayout_autoptr:
   extension (v: GtkConstraintLayout_autoptr)
     inline def value: Ptr[GtkConstraintLayout] = v
 
-/**
-*/
 opaque type GtkConstraintLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintLayout_listautoptr: 
   given _tag: Tag[GtkConstraintLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2682,8 +2100,6 @@ object GtkConstraintLayout_listautoptr:
   extension (v: GtkConstraintLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintLayout_queueautoptr: 
   given _tag: Tag[GtkConstraintLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2691,8 +2107,6 @@ object GtkConstraintLayout_queueautoptr:
   extension (v: GtkConstraintLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintLayout_slistautoptr: 
   given _tag: Tag[GtkConstraintLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2700,8 +2114,6 @@ object GtkConstraintLayout_slistautoptr:
   extension (v: GtkConstraintLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraintTarget_autoptr = Ptr[GtkConstraintTarget]
 object GtkConstraintTarget_autoptr: 
   given _tag: Tag[GtkConstraintTarget_autoptr] = Tag.Ptr[GtkConstraintTarget](GtkConstraintTarget._tag)
@@ -2709,8 +2121,6 @@ object GtkConstraintTarget_autoptr:
   extension (v: GtkConstraintTarget_autoptr)
     inline def value: Ptr[GtkConstraintTarget] = v
 
-/**
-*/
 opaque type GtkConstraintTarget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraintTarget_listautoptr: 
   given _tag: Tag[GtkConstraintTarget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2718,8 +2128,6 @@ object GtkConstraintTarget_listautoptr:
   extension (v: GtkConstraintTarget_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraintTarget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraintTarget_queueautoptr: 
   given _tag: Tag[GtkConstraintTarget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2727,8 +2135,6 @@ object GtkConstraintTarget_queueautoptr:
   extension (v: GtkConstraintTarget_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraintTarget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraintTarget_slistautoptr: 
   given _tag: Tag[GtkConstraintTarget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2736,8 +2142,6 @@ object GtkConstraintTarget_slistautoptr:
   extension (v: GtkConstraintTarget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkConstraint_autoptr = Ptr[GtkConstraint]
 object GtkConstraint_autoptr: 
   given _tag: Tag[GtkConstraint_autoptr] = Tag.Ptr[GtkConstraint](GtkConstraint._tag)
@@ -2745,8 +2149,6 @@ object GtkConstraint_autoptr:
   extension (v: GtkConstraint_autoptr)
     inline def value: Ptr[GtkConstraint] = v
 
-/**
-*/
 opaque type GtkConstraint_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkConstraint_listautoptr: 
   given _tag: Tag[GtkConstraint_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2754,8 +2156,6 @@ object GtkConstraint_listautoptr:
   extension (v: GtkConstraint_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkConstraint_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkConstraint_queueautoptr: 
   given _tag: Tag[GtkConstraint_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2763,8 +2163,6 @@ object GtkConstraint_queueautoptr:
   extension (v: GtkConstraint_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkConstraint_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkConstraint_slistautoptr: 
   given _tag: Tag[GtkConstraint_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2772,8 +2170,6 @@ object GtkConstraint_slistautoptr:
   extension (v: GtkConstraint_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCssProvider_autoptr = Ptr[GtkCssProvider]
 object GtkCssProvider_autoptr: 
   given _tag: Tag[GtkCssProvider_autoptr] = Tag.Ptr[GtkCssProvider](GtkCssProvider._tag)
@@ -2781,8 +2177,6 @@ object GtkCssProvider_autoptr:
   extension (v: GtkCssProvider_autoptr)
     inline def value: Ptr[GtkCssProvider] = v
 
-/**
-*/
 opaque type GtkCssProvider_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCssProvider_listautoptr: 
   given _tag: Tag[GtkCssProvider_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2790,8 +2184,6 @@ object GtkCssProvider_listautoptr:
   extension (v: GtkCssProvider_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCssProvider_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCssProvider_queueautoptr: 
   given _tag: Tag[GtkCssProvider_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2799,8 +2191,6 @@ object GtkCssProvider_queueautoptr:
   extension (v: GtkCssProvider_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCssProvider_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCssProvider_slistautoptr: 
   given _tag: Tag[GtkCssProvider_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2814,14 +2204,12 @@ object GtkCssProvider_slistautoptr:
 opaque type GtkCustomAllocateFunc = CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]
 object GtkCustomAllocateFunc: 
   given _tag: Tag[GtkCustomAllocateFunc] = Tag.materializeCFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCustomAllocateFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCustomAllocateFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]): GtkCustomAllocateFunc = o
   extension (v: GtkCustomAllocateFunc)
     inline def value: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkCustomFilterClass_autoptr = Ptr[GtkCustomFilterClass]
 object GtkCustomFilterClass_autoptr: 
   given _tag: Tag[GtkCustomFilterClass_autoptr] = Tag.Ptr[GtkCustomFilterClass](GtkCustomFilterClass._tag)
@@ -2829,8 +2217,6 @@ object GtkCustomFilterClass_autoptr:
   extension (v: GtkCustomFilterClass_autoptr)
     inline def value: Ptr[GtkCustomFilterClass] = v
 
-/**
-*/
 opaque type GtkCustomFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCustomFilterClass_listautoptr: 
   given _tag: Tag[GtkCustomFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2838,8 +2224,6 @@ object GtkCustomFilterClass_listautoptr:
   extension (v: GtkCustomFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCustomFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCustomFilterClass_queueautoptr: 
   given _tag: Tag[GtkCustomFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2847,8 +2231,6 @@ object GtkCustomFilterClass_queueautoptr:
   extension (v: GtkCustomFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCustomFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCustomFilterClass_slistautoptr: 
   given _tag: Tag[GtkCustomFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2862,14 +2244,12 @@ object GtkCustomFilterClass_slistautoptr:
 opaque type GtkCustomFilterFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkCustomFilterFunc: 
   given _tag: Tag[GtkCustomFilterFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCustomFilterFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCustomFilterFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkCustomFilterFunc = o
   extension (v: GtkCustomFilterFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkCustomFilter_autoptr = Ptr[GtkCustomFilter]
 object GtkCustomFilter_autoptr: 
   given _tag: Tag[GtkCustomFilter_autoptr] = Tag.Ptr[GtkCustomFilter](GtkCustomFilter._tag)
@@ -2877,8 +2257,6 @@ object GtkCustomFilter_autoptr:
   extension (v: GtkCustomFilter_autoptr)
     inline def value: Ptr[GtkCustomFilter] = v
 
-/**
-*/
 opaque type GtkCustomFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCustomFilter_listautoptr: 
   given _tag: Tag[GtkCustomFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2886,8 +2264,6 @@ object GtkCustomFilter_listautoptr:
   extension (v: GtkCustomFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCustomFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCustomFilter_queueautoptr: 
   given _tag: Tag[GtkCustomFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2895,8 +2271,6 @@ object GtkCustomFilter_queueautoptr:
   extension (v: GtkCustomFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCustomFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCustomFilter_slistautoptr: 
   given _tag: Tag[GtkCustomFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2904,8 +2278,6 @@ object GtkCustomFilter_slistautoptr:
   extension (v: GtkCustomFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCustomLayoutClass_autoptr = Ptr[GtkCustomLayoutClass]
 object GtkCustomLayoutClass_autoptr: 
   given _tag: Tag[GtkCustomLayoutClass_autoptr] = Tag.Ptr[GtkCustomLayoutClass](GtkCustomLayoutClass._tag)
@@ -2913,8 +2285,6 @@ object GtkCustomLayoutClass_autoptr:
   extension (v: GtkCustomLayoutClass_autoptr)
     inline def value: Ptr[GtkCustomLayoutClass] = v
 
-/**
-*/
 opaque type GtkCustomLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCustomLayoutClass_listautoptr: 
   given _tag: Tag[GtkCustomLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2922,8 +2292,6 @@ object GtkCustomLayoutClass_listautoptr:
   extension (v: GtkCustomLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCustomLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCustomLayoutClass_queueautoptr: 
   given _tag: Tag[GtkCustomLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2931,8 +2299,6 @@ object GtkCustomLayoutClass_queueautoptr:
   extension (v: GtkCustomLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCustomLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCustomLayoutClass_slistautoptr: 
   given _tag: Tag[GtkCustomLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2940,8 +2306,6 @@ object GtkCustomLayoutClass_slistautoptr:
   extension (v: GtkCustomLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCustomLayout_autoptr = Ptr[GtkCustomLayout]
 object GtkCustomLayout_autoptr: 
   given _tag: Tag[GtkCustomLayout_autoptr] = Tag.Ptr[GtkCustomLayout](GtkCustomLayout._tag)
@@ -2949,8 +2313,6 @@ object GtkCustomLayout_autoptr:
   extension (v: GtkCustomLayout_autoptr)
     inline def value: Ptr[GtkCustomLayout] = v
 
-/**
-*/
 opaque type GtkCustomLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCustomLayout_listautoptr: 
   given _tag: Tag[GtkCustomLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -2958,8 +2320,6 @@ object GtkCustomLayout_listautoptr:
   extension (v: GtkCustomLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCustomLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCustomLayout_queueautoptr: 
   given _tag: Tag[GtkCustomLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -2967,8 +2327,6 @@ object GtkCustomLayout_queueautoptr:
   extension (v: GtkCustomLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCustomLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCustomLayout_slistautoptr: 
   given _tag: Tag[GtkCustomLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -2982,11 +2340,11 @@ object GtkCustomLayout_slistautoptr:
 opaque type GtkCustomMeasureFunc = CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]
 object GtkCustomMeasureFunc: 
   given _tag: Tag[GtkCustomMeasureFunc] = Tag.materializeCFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCustomMeasureFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCustomMeasureFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]): GtkCustomMeasureFunc = o
   extension (v: GtkCustomMeasureFunc)
     inline def value: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkCustomRequestModeFunc: : the widget to be queried
@@ -2994,14 +2352,12 @@ object GtkCustomMeasureFunc:
 opaque type GtkCustomRequestModeFunc = CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]
 object GtkCustomRequestModeFunc: 
   given _tag: Tag[GtkCustomRequestModeFunc] = Tag.materializeCFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkCustomRequestModeFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkCustomRequestModeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]): GtkCustomRequestModeFunc = o
   extension (v: GtkCustomRequestModeFunc)
     inline def value: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkCustomSorterClass_autoptr = Ptr[GtkCustomSorterClass]
 object GtkCustomSorterClass_autoptr: 
   given _tag: Tag[GtkCustomSorterClass_autoptr] = Tag.Ptr[GtkCustomSorterClass](GtkCustomSorterClass._tag)
@@ -3009,8 +2365,6 @@ object GtkCustomSorterClass_autoptr:
   extension (v: GtkCustomSorterClass_autoptr)
     inline def value: Ptr[GtkCustomSorterClass] = v
 
-/**
-*/
 opaque type GtkCustomSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCustomSorterClass_listautoptr: 
   given _tag: Tag[GtkCustomSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3018,8 +2372,6 @@ object GtkCustomSorterClass_listautoptr:
   extension (v: GtkCustomSorterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCustomSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCustomSorterClass_queueautoptr: 
   given _tag: Tag[GtkCustomSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3027,8 +2379,6 @@ object GtkCustomSorterClass_queueautoptr:
   extension (v: GtkCustomSorterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCustomSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCustomSorterClass_slistautoptr: 
   given _tag: Tag[GtkCustomSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3036,8 +2386,6 @@ object GtkCustomSorterClass_slistautoptr:
   extension (v: GtkCustomSorterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkCustomSorter_autoptr = Ptr[GtkCustomSorter]
 object GtkCustomSorter_autoptr: 
   given _tag: Tag[GtkCustomSorter_autoptr] = Tag.Ptr[GtkCustomSorter](GtkCustomSorter._tag)
@@ -3045,8 +2393,6 @@ object GtkCustomSorter_autoptr:
   extension (v: GtkCustomSorter_autoptr)
     inline def value: Ptr[GtkCustomSorter] = v
 
-/**
-*/
 opaque type GtkCustomSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkCustomSorter_listautoptr: 
   given _tag: Tag[GtkCustomSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3054,8 +2400,6 @@ object GtkCustomSorter_listautoptr:
   extension (v: GtkCustomSorter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkCustomSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkCustomSorter_queueautoptr: 
   given _tag: Tag[GtkCustomSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3063,8 +2407,6 @@ object GtkCustomSorter_queueautoptr:
   extension (v: GtkCustomSorter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkCustomSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkCustomSorter_slistautoptr: 
   given _tag: Tag[GtkCustomSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3072,8 +2414,6 @@ object GtkCustomSorter_slistautoptr:
   extension (v: GtkCustomSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDialog_autoptr = Ptr[GtkDialog]
 object GtkDialog_autoptr: 
   given _tag: Tag[GtkDialog_autoptr] = Tag.Ptr[GtkDialog](GtkDialog._tag)
@@ -3081,8 +2421,6 @@ object GtkDialog_autoptr:
   extension (v: GtkDialog_autoptr)
     inline def value: Ptr[GtkDialog] = v
 
-/**
-*/
 opaque type GtkDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDialog_listautoptr: 
   given _tag: Tag[GtkDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3090,8 +2428,6 @@ object GtkDialog_listautoptr:
   extension (v: GtkDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDialog_queueautoptr: 
   given _tag: Tag[GtkDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3099,8 +2435,6 @@ object GtkDialog_queueautoptr:
   extension (v: GtkDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDialog_slistautoptr: 
   given _tag: Tag[GtkDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3108,8 +2442,6 @@ object GtkDialog_slistautoptr:
   extension (v: GtkDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDirectoryListClass_autoptr = Ptr[GtkDirectoryListClass]
 object GtkDirectoryListClass_autoptr: 
   given _tag: Tag[GtkDirectoryListClass_autoptr] = Tag.Ptr[GtkDirectoryListClass](GtkDirectoryListClass._tag)
@@ -3117,8 +2449,6 @@ object GtkDirectoryListClass_autoptr:
   extension (v: GtkDirectoryListClass_autoptr)
     inline def value: Ptr[GtkDirectoryListClass] = v
 
-/**
-*/
 opaque type GtkDirectoryListClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDirectoryListClass_listautoptr: 
   given _tag: Tag[GtkDirectoryListClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3126,8 +2456,6 @@ object GtkDirectoryListClass_listautoptr:
   extension (v: GtkDirectoryListClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDirectoryListClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDirectoryListClass_queueautoptr: 
   given _tag: Tag[GtkDirectoryListClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3135,8 +2463,6 @@ object GtkDirectoryListClass_queueautoptr:
   extension (v: GtkDirectoryListClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDirectoryListClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDirectoryListClass_slistautoptr: 
   given _tag: Tag[GtkDirectoryListClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3144,8 +2470,6 @@ object GtkDirectoryListClass_slistautoptr:
   extension (v: GtkDirectoryListClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDirectoryList_autoptr = Ptr[GtkDirectoryList]
 object GtkDirectoryList_autoptr: 
   given _tag: Tag[GtkDirectoryList_autoptr] = Tag.Ptr[GtkDirectoryList](GtkDirectoryList._tag)
@@ -3153,8 +2477,6 @@ object GtkDirectoryList_autoptr:
   extension (v: GtkDirectoryList_autoptr)
     inline def value: Ptr[GtkDirectoryList] = v
 
-/**
-*/
 opaque type GtkDirectoryList_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDirectoryList_listautoptr: 
   given _tag: Tag[GtkDirectoryList_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3162,8 +2484,6 @@ object GtkDirectoryList_listautoptr:
   extension (v: GtkDirectoryList_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDirectoryList_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDirectoryList_queueautoptr: 
   given _tag: Tag[GtkDirectoryList_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3171,8 +2491,6 @@ object GtkDirectoryList_queueautoptr:
   extension (v: GtkDirectoryList_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDirectoryList_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDirectoryList_slistautoptr: 
   given _tag: Tag[GtkDirectoryList_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3180,8 +2498,6 @@ object GtkDirectoryList_slistautoptr:
   extension (v: GtkDirectoryList_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDragIconClass_autoptr = Ptr[GtkDragIconClass]
 object GtkDragIconClass_autoptr: 
   given _tag: Tag[GtkDragIconClass_autoptr] = Tag.Ptr[GtkDragIconClass](GtkDragIconClass._tag)
@@ -3189,8 +2505,6 @@ object GtkDragIconClass_autoptr:
   extension (v: GtkDragIconClass_autoptr)
     inline def value: Ptr[GtkDragIconClass] = v
 
-/**
-*/
 opaque type GtkDragIconClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDragIconClass_listautoptr: 
   given _tag: Tag[GtkDragIconClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3198,8 +2512,6 @@ object GtkDragIconClass_listautoptr:
   extension (v: GtkDragIconClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDragIconClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDragIconClass_queueautoptr: 
   given _tag: Tag[GtkDragIconClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3207,8 +2519,6 @@ object GtkDragIconClass_queueautoptr:
   extension (v: GtkDragIconClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDragIconClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDragIconClass_slistautoptr: 
   given _tag: Tag[GtkDragIconClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3216,8 +2526,6 @@ object GtkDragIconClass_slistautoptr:
   extension (v: GtkDragIconClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDragIcon_autoptr = Ptr[GtkDragIcon]
 object GtkDragIcon_autoptr: 
   given _tag: Tag[GtkDragIcon_autoptr] = Tag.Ptr[GtkDragIcon](GtkDragIcon._tag)
@@ -3225,8 +2533,6 @@ object GtkDragIcon_autoptr:
   extension (v: GtkDragIcon_autoptr)
     inline def value: Ptr[GtkDragIcon] = v
 
-/**
-*/
 opaque type GtkDragIcon_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDragIcon_listautoptr: 
   given _tag: Tag[GtkDragIcon_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3234,8 +2540,6 @@ object GtkDragIcon_listautoptr:
   extension (v: GtkDragIcon_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDragIcon_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDragIcon_queueautoptr: 
   given _tag: Tag[GtkDragIcon_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3243,8 +2547,6 @@ object GtkDragIcon_queueautoptr:
   extension (v: GtkDragIcon_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDragIcon_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDragIcon_slistautoptr: 
   given _tag: Tag[GtkDragIcon_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3258,14 +2560,12 @@ object GtkDragIcon_slistautoptr:
 opaque type GtkDrawingAreaDrawFunc = CFuncPtr5[Ptr[GtkDrawingArea], Ptr[_root_.sn.gnome.cairo.internal.cairo_t], CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkDrawingAreaDrawFunc: 
   given _tag: Tag[GtkDrawingAreaDrawFunc] = Tag.materializeCFuncPtr5[Ptr[GtkDrawingArea], Ptr[_root_.sn.gnome.cairo.internal.cairo_t], CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkDrawingAreaDrawFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkDrawingAreaDrawFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkDrawingArea], Ptr[_root_.sn.gnome.cairo.internal.cairo_t], CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkDrawingAreaDrawFunc = o
   extension (v: GtkDrawingAreaDrawFunc)
     inline def value: CFuncPtr5[Ptr[GtkDrawingArea], Ptr[_root_.sn.gnome.cairo.internal.cairo_t], CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkDrawingArea_autoptr = Ptr[GtkDrawingArea]
 object GtkDrawingArea_autoptr: 
   given _tag: Tag[GtkDrawingArea_autoptr] = Tag.Ptr[GtkDrawingArea](GtkDrawingArea._tag)
@@ -3273,8 +2573,6 @@ object GtkDrawingArea_autoptr:
   extension (v: GtkDrawingArea_autoptr)
     inline def value: Ptr[GtkDrawingArea] = v
 
-/**
-*/
 opaque type GtkDrawingArea_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDrawingArea_listautoptr: 
   given _tag: Tag[GtkDrawingArea_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3282,8 +2580,6 @@ object GtkDrawingArea_listautoptr:
   extension (v: GtkDrawingArea_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDrawingArea_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDrawingArea_queueautoptr: 
   given _tag: Tag[GtkDrawingArea_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3291,8 +2587,6 @@ object GtkDrawingArea_queueautoptr:
   extension (v: GtkDrawingArea_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDrawingArea_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDrawingArea_slistautoptr: 
   given _tag: Tag[GtkDrawingArea_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3300,8 +2594,6 @@ object GtkDrawingArea_slistautoptr:
   extension (v: GtkDrawingArea_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDropDownClass_autoptr = Ptr[GtkDropDownClass]
 object GtkDropDownClass_autoptr: 
   given _tag: Tag[GtkDropDownClass_autoptr] = Tag.Ptr[GtkDropDownClass](GtkDropDownClass._tag)
@@ -3309,8 +2601,6 @@ object GtkDropDownClass_autoptr:
   extension (v: GtkDropDownClass_autoptr)
     inline def value: Ptr[GtkDropDownClass] = v
 
-/**
-*/
 opaque type GtkDropDownClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDropDownClass_listautoptr: 
   given _tag: Tag[GtkDropDownClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3318,8 +2608,6 @@ object GtkDropDownClass_listautoptr:
   extension (v: GtkDropDownClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDropDownClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDropDownClass_queueautoptr: 
   given _tag: Tag[GtkDropDownClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3327,8 +2615,6 @@ object GtkDropDownClass_queueautoptr:
   extension (v: GtkDropDownClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDropDownClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDropDownClass_slistautoptr: 
   given _tag: Tag[GtkDropDownClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3336,8 +2622,6 @@ object GtkDropDownClass_slistautoptr:
   extension (v: GtkDropDownClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkDropDown_autoptr = Ptr[GtkDropDown]
 object GtkDropDown_autoptr: 
   given _tag: Tag[GtkDropDown_autoptr] = Tag.Ptr[GtkDropDown](GtkDropDown._tag)
@@ -3345,8 +2629,6 @@ object GtkDropDown_autoptr:
   extension (v: GtkDropDown_autoptr)
     inline def value: Ptr[GtkDropDown] = v
 
-/**
-*/
 opaque type GtkDropDown_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkDropDown_listautoptr: 
   given _tag: Tag[GtkDropDown_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3354,8 +2636,6 @@ object GtkDropDown_listautoptr:
   extension (v: GtkDropDown_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkDropDown_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkDropDown_queueautoptr: 
   given _tag: Tag[GtkDropDown_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3363,8 +2643,6 @@ object GtkDropDown_queueautoptr:
   extension (v: GtkDropDown_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkDropDown_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkDropDown_slistautoptr: 
   given _tag: Tag[GtkDropDown_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3372,8 +2650,6 @@ object GtkDropDown_slistautoptr:
   extension (v: GtkDropDown_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEditableLabelClass_autoptr = Ptr[GtkEditableLabelClass]
 object GtkEditableLabelClass_autoptr: 
   given _tag: Tag[GtkEditableLabelClass_autoptr] = Tag.Ptr[GtkEditableLabelClass](GtkEditableLabelClass._tag)
@@ -3381,8 +2657,6 @@ object GtkEditableLabelClass_autoptr:
   extension (v: GtkEditableLabelClass_autoptr)
     inline def value: Ptr[GtkEditableLabelClass] = v
 
-/**
-*/
 opaque type GtkEditableLabelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEditableLabelClass_listautoptr: 
   given _tag: Tag[GtkEditableLabelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3390,8 +2664,6 @@ object GtkEditableLabelClass_listautoptr:
   extension (v: GtkEditableLabelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEditableLabelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEditableLabelClass_queueautoptr: 
   given _tag: Tag[GtkEditableLabelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3399,8 +2671,6 @@ object GtkEditableLabelClass_queueautoptr:
   extension (v: GtkEditableLabelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEditableLabelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEditableLabelClass_slistautoptr: 
   given _tag: Tag[GtkEditableLabelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3408,8 +2678,6 @@ object GtkEditableLabelClass_slistautoptr:
   extension (v: GtkEditableLabelClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEditableLabel_autoptr = Ptr[GtkEditableLabel]
 object GtkEditableLabel_autoptr: 
   given _tag: Tag[GtkEditableLabel_autoptr] = Tag.Ptr[GtkEditableLabel](GtkEditableLabel._tag)
@@ -3417,8 +2685,6 @@ object GtkEditableLabel_autoptr:
   extension (v: GtkEditableLabel_autoptr)
     inline def value: Ptr[GtkEditableLabel] = v
 
-/**
-*/
 opaque type GtkEditableLabel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEditableLabel_listautoptr: 
   given _tag: Tag[GtkEditableLabel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3426,8 +2692,6 @@ object GtkEditableLabel_listautoptr:
   extension (v: GtkEditableLabel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEditableLabel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEditableLabel_queueautoptr: 
   given _tag: Tag[GtkEditableLabel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3435,8 +2699,6 @@ object GtkEditableLabel_queueautoptr:
   extension (v: GtkEditableLabel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEditableLabel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEditableLabel_slistautoptr: 
   given _tag: Tag[GtkEditableLabel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3444,8 +2706,6 @@ object GtkEditableLabel_slistautoptr:
   extension (v: GtkEditableLabel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEditable_autoptr = Ptr[GtkEditable]
 object GtkEditable_autoptr: 
   given _tag: Tag[GtkEditable_autoptr] = Tag.Ptr[GtkEditable](GtkEditable._tag)
@@ -3453,8 +2713,6 @@ object GtkEditable_autoptr:
   extension (v: GtkEditable_autoptr)
     inline def value: Ptr[GtkEditable] = v
 
-/**
-*/
 opaque type GtkEditable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEditable_listautoptr: 
   given _tag: Tag[GtkEditable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3462,8 +2720,6 @@ object GtkEditable_listautoptr:
   extension (v: GtkEditable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEditable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEditable_queueautoptr: 
   given _tag: Tag[GtkEditable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3471,8 +2727,6 @@ object GtkEditable_queueautoptr:
   extension (v: GtkEditable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEditable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEditable_slistautoptr: 
   given _tag: Tag[GtkEditable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3480,8 +2734,6 @@ object GtkEditable_slistautoptr:
   extension (v: GtkEditable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEntryBuffer_autoptr = Ptr[GtkEntryBuffer]
 object GtkEntryBuffer_autoptr: 
   given _tag: Tag[GtkEntryBuffer_autoptr] = Tag.Ptr[GtkEntryBuffer](GtkEntryBuffer._tag)
@@ -3489,8 +2741,6 @@ object GtkEntryBuffer_autoptr:
   extension (v: GtkEntryBuffer_autoptr)
     inline def value: Ptr[GtkEntryBuffer] = v
 
-/**
-*/
 opaque type GtkEntryBuffer_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEntryBuffer_listautoptr: 
   given _tag: Tag[GtkEntryBuffer_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3498,8 +2748,6 @@ object GtkEntryBuffer_listautoptr:
   extension (v: GtkEntryBuffer_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEntryBuffer_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEntryBuffer_queueautoptr: 
   given _tag: Tag[GtkEntryBuffer_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3507,8 +2755,6 @@ object GtkEntryBuffer_queueautoptr:
   extension (v: GtkEntryBuffer_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEntryBuffer_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEntryBuffer_slistautoptr: 
   given _tag: Tag[GtkEntryBuffer_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3522,14 +2768,12 @@ object GtkEntryBuffer_slistautoptr:
 opaque type GtkEntryCompletionMatchFunc = CFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkEntryCompletionMatchFunc: 
   given _tag: Tag[GtkEntryCompletionMatchFunc] = Tag.materializeCFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkEntryCompletionMatchFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkEntryCompletionMatchFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkEntryCompletionMatchFunc = o
   extension (v: GtkEntryCompletionMatchFunc)
     inline def value: CFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkEntryCompletion_autoptr = Ptr[GtkEntryCompletion]
 object GtkEntryCompletion_autoptr: 
   given _tag: Tag[GtkEntryCompletion_autoptr] = Tag.Ptr[GtkEntryCompletion](GtkEntryCompletion._tag)
@@ -3537,8 +2781,6 @@ object GtkEntryCompletion_autoptr:
   extension (v: GtkEntryCompletion_autoptr)
     inline def value: Ptr[GtkEntryCompletion] = v
 
-/**
-*/
 opaque type GtkEntryCompletion_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEntryCompletion_listautoptr: 
   given _tag: Tag[GtkEntryCompletion_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3546,8 +2788,6 @@ object GtkEntryCompletion_listautoptr:
   extension (v: GtkEntryCompletion_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEntryCompletion_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEntryCompletion_queueautoptr: 
   given _tag: Tag[GtkEntryCompletion_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3555,8 +2795,6 @@ object GtkEntryCompletion_queueautoptr:
   extension (v: GtkEntryCompletion_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEntryCompletion_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEntryCompletion_slistautoptr: 
   given _tag: Tag[GtkEntryCompletion_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3564,8 +2802,6 @@ object GtkEntryCompletion_slistautoptr:
   extension (v: GtkEntryCompletion_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEntry_autoptr = Ptr[GtkEntry]
 object GtkEntry_autoptr: 
   given _tag: Tag[GtkEntry_autoptr] = Tag.Ptr[GtkEntry](GtkEntry._tag)
@@ -3573,8 +2809,6 @@ object GtkEntry_autoptr:
   extension (v: GtkEntry_autoptr)
     inline def value: Ptr[GtkEntry] = v
 
-/**
-*/
 opaque type GtkEntry_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEntry_listautoptr: 
   given _tag: Tag[GtkEntry_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3582,8 +2816,6 @@ object GtkEntry_listautoptr:
   extension (v: GtkEntry_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEntry_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEntry_queueautoptr: 
   given _tag: Tag[GtkEntry_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3591,8 +2823,6 @@ object GtkEntry_queueautoptr:
   extension (v: GtkEntry_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEntry_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEntry_slistautoptr: 
   given _tag: Tag[GtkEntry_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3600,8 +2830,6 @@ object GtkEntry_slistautoptr:
   extension (v: GtkEntry_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEventController_autoptr = Ptr[GtkEventController]
 object GtkEventController_autoptr: 
   given _tag: Tag[GtkEventController_autoptr] = Tag.Ptr[GtkEventController](GtkEventController._tag)
@@ -3609,8 +2837,6 @@ object GtkEventController_autoptr:
   extension (v: GtkEventController_autoptr)
     inline def value: Ptr[GtkEventController] = v
 
-/**
-*/
 opaque type GtkEventController_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEventController_listautoptr: 
   given _tag: Tag[GtkEventController_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3618,8 +2844,6 @@ object GtkEventController_listautoptr:
   extension (v: GtkEventController_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEventController_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEventController_queueautoptr: 
   given _tag: Tag[GtkEventController_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3627,8 +2851,6 @@ object GtkEventController_queueautoptr:
   extension (v: GtkEventController_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEventController_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEventController_slistautoptr: 
   given _tag: Tag[GtkEventController_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3636,8 +2858,6 @@ object GtkEventController_slistautoptr:
   extension (v: GtkEventController_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEveryFilterClass_autoptr = Ptr[GtkEveryFilterClass]
 object GtkEveryFilterClass_autoptr: 
   given _tag: Tag[GtkEveryFilterClass_autoptr] = Tag.Ptr[GtkEveryFilterClass](GtkEveryFilterClass._tag)
@@ -3645,8 +2865,6 @@ object GtkEveryFilterClass_autoptr:
   extension (v: GtkEveryFilterClass_autoptr)
     inline def value: Ptr[GtkEveryFilterClass] = v
 
-/**
-*/
 opaque type GtkEveryFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEveryFilterClass_listautoptr: 
   given _tag: Tag[GtkEveryFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3654,8 +2872,6 @@ object GtkEveryFilterClass_listautoptr:
   extension (v: GtkEveryFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEveryFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEveryFilterClass_queueautoptr: 
   given _tag: Tag[GtkEveryFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3663,8 +2879,6 @@ object GtkEveryFilterClass_queueautoptr:
   extension (v: GtkEveryFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEveryFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEveryFilterClass_slistautoptr: 
   given _tag: Tag[GtkEveryFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3672,8 +2886,6 @@ object GtkEveryFilterClass_slistautoptr:
   extension (v: GtkEveryFilterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkEveryFilter_autoptr = Ptr[GtkEveryFilter]
 object GtkEveryFilter_autoptr: 
   given _tag: Tag[GtkEveryFilter_autoptr] = Tag.Ptr[GtkEveryFilter](GtkEveryFilter._tag)
@@ -3681,8 +2893,6 @@ object GtkEveryFilter_autoptr:
   extension (v: GtkEveryFilter_autoptr)
     inline def value: Ptr[GtkEveryFilter] = v
 
-/**
-*/
 opaque type GtkEveryFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkEveryFilter_listautoptr: 
   given _tag: Tag[GtkEveryFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3690,8 +2900,6 @@ object GtkEveryFilter_listautoptr:
   extension (v: GtkEveryFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkEveryFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkEveryFilter_queueautoptr: 
   given _tag: Tag[GtkEveryFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3699,8 +2907,6 @@ object GtkEveryFilter_queueautoptr:
   extension (v: GtkEveryFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkEveryFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkEveryFilter_slistautoptr: 
   given _tag: Tag[GtkEveryFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3708,8 +2914,6 @@ object GtkEveryFilter_slistautoptr:
   extension (v: GtkEveryFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkExpander_autoptr = Ptr[GtkExpander]
 object GtkExpander_autoptr: 
   given _tag: Tag[GtkExpander_autoptr] = Tag.Ptr[GtkExpander](GtkExpander._tag)
@@ -3717,8 +2921,6 @@ object GtkExpander_autoptr:
   extension (v: GtkExpander_autoptr)
     inline def value: Ptr[GtkExpander] = v
 
-/**
-*/
 opaque type GtkExpander_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkExpander_listautoptr: 
   given _tag: Tag[GtkExpander_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3726,8 +2928,6 @@ object GtkExpander_listautoptr:
   extension (v: GtkExpander_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkExpander_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkExpander_queueautoptr: 
   given _tag: Tag[GtkExpander_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3735,8 +2935,6 @@ object GtkExpander_queueautoptr:
   extension (v: GtkExpander_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkExpander_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkExpander_slistautoptr: 
   given _tag: Tag[GtkExpander_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3750,14 +2948,12 @@ object GtkExpander_slistautoptr:
 opaque type GtkExpressionNotify = CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkExpressionNotify: 
   given _tag: Tag[GtkExpressionNotify] = Tag.materializeCFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkExpressionNotify = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkExpressionNotify = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit]): GtkExpressionNotify = o
   extension (v: GtkExpressionNotify)
     inline def value: CFuncPtr1[_root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkExpression_autoptr = Ptr[GtkExpression]
 object GtkExpression_autoptr: 
   given _tag: Tag[GtkExpression_autoptr] = Tag.Ptr[GtkExpression](GtkExpression._tag)
@@ -3765,8 +2961,6 @@ object GtkExpression_autoptr:
   extension (v: GtkExpression_autoptr)
     inline def value: Ptr[GtkExpression] = v
 
-/**
-*/
 opaque type GtkExpression_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkExpression_listautoptr: 
   given _tag: Tag[GtkExpression_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3774,8 +2968,6 @@ object GtkExpression_listautoptr:
   extension (v: GtkExpression_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkExpression_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkExpression_queueautoptr: 
   given _tag: Tag[GtkExpression_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3783,8 +2975,6 @@ object GtkExpression_queueautoptr:
   extension (v: GtkExpression_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkExpression_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkExpression_slistautoptr: 
   given _tag: Tag[GtkExpression_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3792,8 +2982,6 @@ object GtkExpression_slistautoptr:
   extension (v: GtkExpression_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFileChooserDialog_autoptr = Ptr[GtkFileChooserDialog]
 object GtkFileChooserDialog_autoptr: 
   given _tag: Tag[GtkFileChooserDialog_autoptr] = Tag.Ptr[GtkFileChooserDialog](GtkFileChooserDialog._tag)
@@ -3801,8 +2989,6 @@ object GtkFileChooserDialog_autoptr:
   extension (v: GtkFileChooserDialog_autoptr)
     inline def value: Ptr[GtkFileChooserDialog] = v
 
-/**
-*/
 opaque type GtkFileChooserDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFileChooserDialog_listautoptr: 
   given _tag: Tag[GtkFileChooserDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3810,8 +2996,6 @@ object GtkFileChooserDialog_listautoptr:
   extension (v: GtkFileChooserDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFileChooserDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFileChooserDialog_queueautoptr: 
   given _tag: Tag[GtkFileChooserDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3819,8 +3003,6 @@ object GtkFileChooserDialog_queueautoptr:
   extension (v: GtkFileChooserDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFileChooserDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFileChooserDialog_slistautoptr: 
   given _tag: Tag[GtkFileChooserDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3828,8 +3010,6 @@ object GtkFileChooserDialog_slistautoptr:
   extension (v: GtkFileChooserDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFileChooserNativeClass_autoptr = Ptr[GtkFileChooserNativeClass]
 object GtkFileChooserNativeClass_autoptr: 
   given _tag: Tag[GtkFileChooserNativeClass_autoptr] = Tag.Ptr[GtkFileChooserNativeClass](GtkFileChooserNativeClass._tag)
@@ -3837,8 +3017,6 @@ object GtkFileChooserNativeClass_autoptr:
   extension (v: GtkFileChooserNativeClass_autoptr)
     inline def value: Ptr[GtkFileChooserNativeClass] = v
 
-/**
-*/
 opaque type GtkFileChooserNativeClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFileChooserNativeClass_listautoptr: 
   given _tag: Tag[GtkFileChooserNativeClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3846,8 +3024,6 @@ object GtkFileChooserNativeClass_listautoptr:
   extension (v: GtkFileChooserNativeClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFileChooserNativeClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFileChooserNativeClass_queueautoptr: 
   given _tag: Tag[GtkFileChooserNativeClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3855,8 +3031,6 @@ object GtkFileChooserNativeClass_queueautoptr:
   extension (v: GtkFileChooserNativeClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFileChooserNativeClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFileChooserNativeClass_slistautoptr: 
   given _tag: Tag[GtkFileChooserNativeClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3864,8 +3038,6 @@ object GtkFileChooserNativeClass_slistautoptr:
   extension (v: GtkFileChooserNativeClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFileChooserNative_autoptr = Ptr[GtkFileChooserNative]
 object GtkFileChooserNative_autoptr: 
   given _tag: Tag[GtkFileChooserNative_autoptr] = Tag.Ptr[GtkFileChooserNative](GtkFileChooserNative._tag)
@@ -3873,8 +3045,6 @@ object GtkFileChooserNative_autoptr:
   extension (v: GtkFileChooserNative_autoptr)
     inline def value: Ptr[GtkFileChooserNative] = v
 
-/**
-*/
 opaque type GtkFileChooserNative_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFileChooserNative_listautoptr: 
   given _tag: Tag[GtkFileChooserNative_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3882,8 +3052,6 @@ object GtkFileChooserNative_listautoptr:
   extension (v: GtkFileChooserNative_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFileChooserNative_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFileChooserNative_queueautoptr: 
   given _tag: Tag[GtkFileChooserNative_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3891,8 +3059,6 @@ object GtkFileChooserNative_queueautoptr:
   extension (v: GtkFileChooserNative_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFileChooserNative_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFileChooserNative_slistautoptr: 
   given _tag: Tag[GtkFileChooserNative_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3900,8 +3066,6 @@ object GtkFileChooserNative_slistautoptr:
   extension (v: GtkFileChooserNative_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFileChooserWidget_autoptr = Ptr[GtkFileChooserWidget]
 object GtkFileChooserWidget_autoptr: 
   given _tag: Tag[GtkFileChooserWidget_autoptr] = Tag.Ptr[GtkFileChooserWidget](GtkFileChooserWidget._tag)
@@ -3909,8 +3073,6 @@ object GtkFileChooserWidget_autoptr:
   extension (v: GtkFileChooserWidget_autoptr)
     inline def value: Ptr[GtkFileChooserWidget] = v
 
-/**
-*/
 opaque type GtkFileChooserWidget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFileChooserWidget_listautoptr: 
   given _tag: Tag[GtkFileChooserWidget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3918,8 +3080,6 @@ object GtkFileChooserWidget_listautoptr:
   extension (v: GtkFileChooserWidget_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFileChooserWidget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFileChooserWidget_queueautoptr: 
   given _tag: Tag[GtkFileChooserWidget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3927,8 +3087,6 @@ object GtkFileChooserWidget_queueautoptr:
   extension (v: GtkFileChooserWidget_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFileChooserWidget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFileChooserWidget_slistautoptr: 
   given _tag: Tag[GtkFileChooserWidget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3936,8 +3094,6 @@ object GtkFileChooserWidget_slistautoptr:
   extension (v: GtkFileChooserWidget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFileFilter_autoptr = Ptr[GtkFileFilter]
 object GtkFileFilter_autoptr: 
   given _tag: Tag[GtkFileFilter_autoptr] = Tag.Ptr[GtkFileFilter](GtkFileFilter._tag)
@@ -3945,8 +3101,6 @@ object GtkFileFilter_autoptr:
   extension (v: GtkFileFilter_autoptr)
     inline def value: Ptr[GtkFileFilter] = v
 
-/**
-*/
 opaque type GtkFileFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFileFilter_listautoptr: 
   given _tag: Tag[GtkFileFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3954,8 +3108,6 @@ object GtkFileFilter_listautoptr:
   extension (v: GtkFileFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFileFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFileFilter_queueautoptr: 
   given _tag: Tag[GtkFileFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3963,8 +3115,6 @@ object GtkFileFilter_queueautoptr:
   extension (v: GtkFileFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFileFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFileFilter_slistautoptr: 
   given _tag: Tag[GtkFileFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -3972,8 +3122,6 @@ object GtkFileFilter_slistautoptr:
   extension (v: GtkFileFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFilterClass_autoptr = Ptr[GtkFilterClass]
 object GtkFilterClass_autoptr: 
   given _tag: Tag[GtkFilterClass_autoptr] = Tag.Ptr[GtkFilterClass](GtkFilterClass._tag)
@@ -3981,8 +3129,6 @@ object GtkFilterClass_autoptr:
   extension (v: GtkFilterClass_autoptr)
     inline def value: Ptr[GtkFilterClass] = v
 
-/**
-*/
 opaque type GtkFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFilterClass_listautoptr: 
   given _tag: Tag[GtkFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -3990,8 +3136,6 @@ object GtkFilterClass_listautoptr:
   extension (v: GtkFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFilterClass_queueautoptr: 
   given _tag: Tag[GtkFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -3999,8 +3143,6 @@ object GtkFilterClass_queueautoptr:
   extension (v: GtkFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFilterClass_slistautoptr: 
   given _tag: Tag[GtkFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4008,8 +3150,6 @@ object GtkFilterClass_slistautoptr:
   extension (v: GtkFilterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFilterListModelClass_autoptr = Ptr[GtkFilterListModelClass]
 object GtkFilterListModelClass_autoptr: 
   given _tag: Tag[GtkFilterListModelClass_autoptr] = Tag.Ptr[GtkFilterListModelClass](GtkFilterListModelClass._tag)
@@ -4017,8 +3157,6 @@ object GtkFilterListModelClass_autoptr:
   extension (v: GtkFilterListModelClass_autoptr)
     inline def value: Ptr[GtkFilterListModelClass] = v
 
-/**
-*/
 opaque type GtkFilterListModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFilterListModelClass_listautoptr: 
   given _tag: Tag[GtkFilterListModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4026,8 +3164,6 @@ object GtkFilterListModelClass_listautoptr:
   extension (v: GtkFilterListModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFilterListModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFilterListModelClass_queueautoptr: 
   given _tag: Tag[GtkFilterListModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4035,8 +3171,6 @@ object GtkFilterListModelClass_queueautoptr:
   extension (v: GtkFilterListModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFilterListModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFilterListModelClass_slistautoptr: 
   given _tag: Tag[GtkFilterListModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4044,8 +3178,6 @@ object GtkFilterListModelClass_slistautoptr:
   extension (v: GtkFilterListModelClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFilterListModel_autoptr = Ptr[GtkFilterListModel]
 object GtkFilterListModel_autoptr: 
   given _tag: Tag[GtkFilterListModel_autoptr] = Tag.Ptr[GtkFilterListModel](GtkFilterListModel._tag)
@@ -4053,8 +3185,6 @@ object GtkFilterListModel_autoptr:
   extension (v: GtkFilterListModel_autoptr)
     inline def value: Ptr[GtkFilterListModel] = v
 
-/**
-*/
 opaque type GtkFilterListModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFilterListModel_listautoptr: 
   given _tag: Tag[GtkFilterListModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4062,8 +3192,6 @@ object GtkFilterListModel_listautoptr:
   extension (v: GtkFilterListModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFilterListModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFilterListModel_queueautoptr: 
   given _tag: Tag[GtkFilterListModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4071,8 +3199,6 @@ object GtkFilterListModel_queueautoptr:
   extension (v: GtkFilterListModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFilterListModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFilterListModel_slistautoptr: 
   given _tag: Tag[GtkFilterListModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4080,8 +3206,6 @@ object GtkFilterListModel_slistautoptr:
   extension (v: GtkFilterListModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFilter_autoptr = Ptr[GtkFilter]
 object GtkFilter_autoptr: 
   given _tag: Tag[GtkFilter_autoptr] = Tag.Ptr[GtkFilter](GtkFilter._tag)
@@ -4089,8 +3213,6 @@ object GtkFilter_autoptr:
   extension (v: GtkFilter_autoptr)
     inline def value: Ptr[GtkFilter] = v
 
-/**
-*/
 opaque type GtkFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFilter_listautoptr: 
   given _tag: Tag[GtkFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4098,8 +3220,6 @@ object GtkFilter_listautoptr:
   extension (v: GtkFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFilter_queueautoptr: 
   given _tag: Tag[GtkFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4107,8 +3227,6 @@ object GtkFilter_queueautoptr:
   extension (v: GtkFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFilter_slistautoptr: 
   given _tag: Tag[GtkFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4116,8 +3234,6 @@ object GtkFilter_slistautoptr:
   extension (v: GtkFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChildClass_autoptr = Ptr[GtkFixedLayoutChildClass]
 object GtkFixedLayoutChildClass_autoptr: 
   given _tag: Tag[GtkFixedLayoutChildClass_autoptr] = Tag.Ptr[GtkFixedLayoutChildClass](GtkFixedLayoutChildClass._tag)
@@ -4125,8 +3241,6 @@ object GtkFixedLayoutChildClass_autoptr:
   extension (v: GtkFixedLayoutChildClass_autoptr)
     inline def value: Ptr[GtkFixedLayoutChildClass] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChildClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFixedLayoutChildClass_listautoptr: 
   given _tag: Tag[GtkFixedLayoutChildClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4134,8 +3248,6 @@ object GtkFixedLayoutChildClass_listautoptr:
   extension (v: GtkFixedLayoutChildClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChildClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFixedLayoutChildClass_queueautoptr: 
   given _tag: Tag[GtkFixedLayoutChildClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4143,8 +3255,6 @@ object GtkFixedLayoutChildClass_queueautoptr:
   extension (v: GtkFixedLayoutChildClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChildClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFixedLayoutChildClass_slistautoptr: 
   given _tag: Tag[GtkFixedLayoutChildClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4152,8 +3262,6 @@ object GtkFixedLayoutChildClass_slistautoptr:
   extension (v: GtkFixedLayoutChildClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChild_autoptr = Ptr[GtkFixedLayoutChild]
 object GtkFixedLayoutChild_autoptr: 
   given _tag: Tag[GtkFixedLayoutChild_autoptr] = Tag.Ptr[GtkFixedLayoutChild](GtkFixedLayoutChild._tag)
@@ -4161,8 +3269,6 @@ object GtkFixedLayoutChild_autoptr:
   extension (v: GtkFixedLayoutChild_autoptr)
     inline def value: Ptr[GtkFixedLayoutChild] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChild_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFixedLayoutChild_listautoptr: 
   given _tag: Tag[GtkFixedLayoutChild_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4170,8 +3276,6 @@ object GtkFixedLayoutChild_listautoptr:
   extension (v: GtkFixedLayoutChild_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChild_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFixedLayoutChild_queueautoptr: 
   given _tag: Tag[GtkFixedLayoutChild_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4179,8 +3283,6 @@ object GtkFixedLayoutChild_queueautoptr:
   extension (v: GtkFixedLayoutChild_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFixedLayoutChild_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFixedLayoutChild_slistautoptr: 
   given _tag: Tag[GtkFixedLayoutChild_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4188,8 +3290,6 @@ object GtkFixedLayoutChild_slistautoptr:
   extension (v: GtkFixedLayoutChild_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFixedLayoutClass_autoptr = Ptr[GtkFixedLayoutClass]
 object GtkFixedLayoutClass_autoptr: 
   given _tag: Tag[GtkFixedLayoutClass_autoptr] = Tag.Ptr[GtkFixedLayoutClass](GtkFixedLayoutClass._tag)
@@ -4197,8 +3297,6 @@ object GtkFixedLayoutClass_autoptr:
   extension (v: GtkFixedLayoutClass_autoptr)
     inline def value: Ptr[GtkFixedLayoutClass] = v
 
-/**
-*/
 opaque type GtkFixedLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFixedLayoutClass_listautoptr: 
   given _tag: Tag[GtkFixedLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4206,8 +3304,6 @@ object GtkFixedLayoutClass_listautoptr:
   extension (v: GtkFixedLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFixedLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFixedLayoutClass_queueautoptr: 
   given _tag: Tag[GtkFixedLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4215,8 +3311,6 @@ object GtkFixedLayoutClass_queueautoptr:
   extension (v: GtkFixedLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFixedLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFixedLayoutClass_slistautoptr: 
   given _tag: Tag[GtkFixedLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4224,8 +3318,6 @@ object GtkFixedLayoutClass_slistautoptr:
   extension (v: GtkFixedLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFixedLayout_autoptr = Ptr[GtkFixedLayout]
 object GtkFixedLayout_autoptr: 
   given _tag: Tag[GtkFixedLayout_autoptr] = Tag.Ptr[GtkFixedLayout](GtkFixedLayout._tag)
@@ -4233,8 +3325,6 @@ object GtkFixedLayout_autoptr:
   extension (v: GtkFixedLayout_autoptr)
     inline def value: Ptr[GtkFixedLayout] = v
 
-/**
-*/
 opaque type GtkFixedLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFixedLayout_listautoptr: 
   given _tag: Tag[GtkFixedLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4242,8 +3332,6 @@ object GtkFixedLayout_listautoptr:
   extension (v: GtkFixedLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFixedLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFixedLayout_queueautoptr: 
   given _tag: Tag[GtkFixedLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4251,8 +3339,6 @@ object GtkFixedLayout_queueautoptr:
   extension (v: GtkFixedLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFixedLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFixedLayout_slistautoptr: 
   given _tag: Tag[GtkFixedLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4260,8 +3346,6 @@ object GtkFixedLayout_slistautoptr:
   extension (v: GtkFixedLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFixed_autoptr = Ptr[GtkFixed]
 object GtkFixed_autoptr: 
   given _tag: Tag[GtkFixed_autoptr] = Tag.Ptr[GtkFixed](GtkFixed._tag)
@@ -4269,8 +3353,6 @@ object GtkFixed_autoptr:
   extension (v: GtkFixed_autoptr)
     inline def value: Ptr[GtkFixed] = v
 
-/**
-*/
 opaque type GtkFixed_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFixed_listautoptr: 
   given _tag: Tag[GtkFixed_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4278,8 +3360,6 @@ object GtkFixed_listautoptr:
   extension (v: GtkFixed_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFixed_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFixed_queueautoptr: 
   given _tag: Tag[GtkFixed_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4287,8 +3367,6 @@ object GtkFixed_queueautoptr:
   extension (v: GtkFixed_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFixed_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFixed_slistautoptr: 
   given _tag: Tag[GtkFixed_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4296,8 +3374,6 @@ object GtkFixed_slistautoptr:
   extension (v: GtkFixed_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFlattenListModelClass_autoptr = Ptr[GtkFlattenListModelClass]
 object GtkFlattenListModelClass_autoptr: 
   given _tag: Tag[GtkFlattenListModelClass_autoptr] = Tag.Ptr[GtkFlattenListModelClass](GtkFlattenListModelClass._tag)
@@ -4305,8 +3381,6 @@ object GtkFlattenListModelClass_autoptr:
   extension (v: GtkFlattenListModelClass_autoptr)
     inline def value: Ptr[GtkFlattenListModelClass] = v
 
-/**
-*/
 opaque type GtkFlattenListModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFlattenListModelClass_listautoptr: 
   given _tag: Tag[GtkFlattenListModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4314,8 +3388,6 @@ object GtkFlattenListModelClass_listautoptr:
   extension (v: GtkFlattenListModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFlattenListModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFlattenListModelClass_queueautoptr: 
   given _tag: Tag[GtkFlattenListModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4323,8 +3395,6 @@ object GtkFlattenListModelClass_queueautoptr:
   extension (v: GtkFlattenListModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFlattenListModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFlattenListModelClass_slistautoptr: 
   given _tag: Tag[GtkFlattenListModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4332,8 +3402,6 @@ object GtkFlattenListModelClass_slistautoptr:
   extension (v: GtkFlattenListModelClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFlattenListModel_autoptr = Ptr[GtkFlattenListModel]
 object GtkFlattenListModel_autoptr: 
   given _tag: Tag[GtkFlattenListModel_autoptr] = Tag.Ptr[GtkFlattenListModel](GtkFlattenListModel._tag)
@@ -4341,8 +3409,6 @@ object GtkFlattenListModel_autoptr:
   extension (v: GtkFlattenListModel_autoptr)
     inline def value: Ptr[GtkFlattenListModel] = v
 
-/**
-*/
 opaque type GtkFlattenListModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFlattenListModel_listautoptr: 
   given _tag: Tag[GtkFlattenListModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4350,8 +3416,6 @@ object GtkFlattenListModel_listautoptr:
   extension (v: GtkFlattenListModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFlattenListModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFlattenListModel_queueautoptr: 
   given _tag: Tag[GtkFlattenListModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4359,8 +3423,6 @@ object GtkFlattenListModel_queueautoptr:
   extension (v: GtkFlattenListModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFlattenListModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFlattenListModel_slistautoptr: 
   given _tag: Tag[GtkFlattenListModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4368,8 +3430,6 @@ object GtkFlattenListModel_slistautoptr:
   extension (v: GtkFlattenListModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFlowBoxChild_autoptr = Ptr[GtkFlowBoxChild]
 object GtkFlowBoxChild_autoptr: 
   given _tag: Tag[GtkFlowBoxChild_autoptr] = Tag.Ptr[GtkFlowBoxChild](GtkFlowBoxChild._tag)
@@ -4377,8 +3437,6 @@ object GtkFlowBoxChild_autoptr:
   extension (v: GtkFlowBoxChild_autoptr)
     inline def value: Ptr[GtkFlowBoxChild] = v
 
-/**
-*/
 opaque type GtkFlowBoxChild_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFlowBoxChild_listautoptr: 
   given _tag: Tag[GtkFlowBoxChild_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4386,8 +3444,6 @@ object GtkFlowBoxChild_listautoptr:
   extension (v: GtkFlowBoxChild_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFlowBoxChild_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFlowBoxChild_queueautoptr: 
   given _tag: Tag[GtkFlowBoxChild_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4395,8 +3451,6 @@ object GtkFlowBoxChild_queueautoptr:
   extension (v: GtkFlowBoxChild_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFlowBoxChild_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFlowBoxChild_slistautoptr: 
   given _tag: Tag[GtkFlowBoxChild_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4410,47 +3464,39 @@ object GtkFlowBoxChild_slistautoptr:
 opaque type GtkFlowBoxCreateWidgetFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]]
 object GtkFlowBoxCreateWidgetFunc: 
   given _tag: Tag[GtkFlowBoxCreateWidgetFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkFlowBoxCreateWidgetFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkFlowBoxCreateWidgetFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]]): GtkFlowBoxCreateWidgetFunc = o
   extension (v: GtkFlowBoxCreateWidgetFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkFlowBoxFilterFunc = CFuncPtr2[Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkFlowBoxFilterFunc: 
   given _tag: Tag[GtkFlowBoxFilterFunc] = Tag.materializeCFuncPtr2[Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkFlowBoxFilterFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkFlowBoxFilterFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkFlowBoxFilterFunc = o
   extension (v: GtkFlowBoxFilterFunc)
     inline def value: CFuncPtr2[Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkFlowBoxForeachFunc = CFuncPtr3[Ptr[GtkFlowBox], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkFlowBoxForeachFunc: 
   given _tag: Tag[GtkFlowBoxForeachFunc] = Tag.materializeCFuncPtr3[Ptr[GtkFlowBox], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkFlowBoxForeachFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkFlowBoxForeachFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkFlowBox], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkFlowBoxForeachFunc = o
   extension (v: GtkFlowBoxForeachFunc)
     inline def value: CFuncPtr3[Ptr[GtkFlowBox], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkFlowBoxSortFunc = CFuncPtr3[Ptr[GtkFlowBoxChild], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, CInt]
 object GtkFlowBoxSortFunc: 
   given _tag: Tag[GtkFlowBoxSortFunc] = Tag.materializeCFuncPtr3[Ptr[GtkFlowBoxChild], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, CInt]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkFlowBoxSortFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkFlowBoxSortFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkFlowBoxChild], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, CInt]): GtkFlowBoxSortFunc = o
   extension (v: GtkFlowBoxSortFunc)
     inline def value: CFuncPtr3[Ptr[GtkFlowBoxChild], Ptr[GtkFlowBoxChild], _root_.sn.gnome.glib.internal.gpointer, CInt] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkFlowBox_autoptr = Ptr[GtkFlowBox]
 object GtkFlowBox_autoptr: 
   given _tag: Tag[GtkFlowBox_autoptr] = Tag.Ptr[GtkFlowBox](GtkFlowBox._tag)
@@ -4458,8 +3504,6 @@ object GtkFlowBox_autoptr:
   extension (v: GtkFlowBox_autoptr)
     inline def value: Ptr[GtkFlowBox] = v
 
-/**
-*/
 opaque type GtkFlowBox_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFlowBox_listautoptr: 
   given _tag: Tag[GtkFlowBox_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4467,8 +3511,6 @@ object GtkFlowBox_listautoptr:
   extension (v: GtkFlowBox_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFlowBox_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFlowBox_queueautoptr: 
   given _tag: Tag[GtkFlowBox_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4476,8 +3518,6 @@ object GtkFlowBox_queueautoptr:
   extension (v: GtkFlowBox_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFlowBox_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFlowBox_slistautoptr: 
   given _tag: Tag[GtkFlowBox_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4485,8 +3525,6 @@ object GtkFlowBox_slistautoptr:
   extension (v: GtkFlowBox_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFontButton_autoptr = Ptr[GtkFontButton]
 object GtkFontButton_autoptr: 
   given _tag: Tag[GtkFontButton_autoptr] = Tag.Ptr[GtkFontButton](GtkFontButton._tag)
@@ -4494,8 +3532,6 @@ object GtkFontButton_autoptr:
   extension (v: GtkFontButton_autoptr)
     inline def value: Ptr[GtkFontButton] = v
 
-/**
-*/
 opaque type GtkFontButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFontButton_listautoptr: 
   given _tag: Tag[GtkFontButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4503,8 +3539,6 @@ object GtkFontButton_listautoptr:
   extension (v: GtkFontButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFontButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFontButton_queueautoptr: 
   given _tag: Tag[GtkFontButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4512,8 +3546,6 @@ object GtkFontButton_queueautoptr:
   extension (v: GtkFontButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFontButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFontButton_slistautoptr: 
   given _tag: Tag[GtkFontButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4521,8 +3553,6 @@ object GtkFontButton_slistautoptr:
   extension (v: GtkFontButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFontChooserDialog_autoptr = Ptr[GtkFontChooserDialog]
 object GtkFontChooserDialog_autoptr: 
   given _tag: Tag[GtkFontChooserDialog_autoptr] = Tag.Ptr[GtkFontChooserDialog](GtkFontChooserDialog._tag)
@@ -4530,8 +3560,6 @@ object GtkFontChooserDialog_autoptr:
   extension (v: GtkFontChooserDialog_autoptr)
     inline def value: Ptr[GtkFontChooserDialog] = v
 
-/**
-*/
 opaque type GtkFontChooserDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFontChooserDialog_listautoptr: 
   given _tag: Tag[GtkFontChooserDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4539,8 +3567,6 @@ object GtkFontChooserDialog_listautoptr:
   extension (v: GtkFontChooserDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFontChooserDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFontChooserDialog_queueautoptr: 
   given _tag: Tag[GtkFontChooserDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4548,8 +3574,6 @@ object GtkFontChooserDialog_queueautoptr:
   extension (v: GtkFontChooserDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFontChooserDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFontChooserDialog_slistautoptr: 
   given _tag: Tag[GtkFontChooserDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4557,8 +3581,6 @@ object GtkFontChooserDialog_slistautoptr:
   extension (v: GtkFontChooserDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFontChooserWidget_autoptr = Ptr[GtkFontChooserWidget]
 object GtkFontChooserWidget_autoptr: 
   given _tag: Tag[GtkFontChooserWidget_autoptr] = Tag.Ptr[GtkFontChooserWidget](GtkFontChooserWidget._tag)
@@ -4566,8 +3588,6 @@ object GtkFontChooserWidget_autoptr:
   extension (v: GtkFontChooserWidget_autoptr)
     inline def value: Ptr[GtkFontChooserWidget] = v
 
-/**
-*/
 opaque type GtkFontChooserWidget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFontChooserWidget_listautoptr: 
   given _tag: Tag[GtkFontChooserWidget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4575,8 +3595,6 @@ object GtkFontChooserWidget_listautoptr:
   extension (v: GtkFontChooserWidget_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFontChooserWidget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFontChooserWidget_queueautoptr: 
   given _tag: Tag[GtkFontChooserWidget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4584,8 +3602,6 @@ object GtkFontChooserWidget_queueautoptr:
   extension (v: GtkFontChooserWidget_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFontChooserWidget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFontChooserWidget_slistautoptr: 
   given _tag: Tag[GtkFontChooserWidget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4593,8 +3609,6 @@ object GtkFontChooserWidget_slistautoptr:
   extension (v: GtkFontChooserWidget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkFontChooser_autoptr = Ptr[GtkFontChooser]
 object GtkFontChooser_autoptr: 
   given _tag: Tag[GtkFontChooser_autoptr] = Tag.Ptr[GtkFontChooser](GtkFontChooser._tag)
@@ -4602,8 +3616,6 @@ object GtkFontChooser_autoptr:
   extension (v: GtkFontChooser_autoptr)
     inline def value: Ptr[GtkFontChooser] = v
 
-/**
-*/
 opaque type GtkFontChooser_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFontChooser_listautoptr: 
   given _tag: Tag[GtkFontChooser_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4611,8 +3623,6 @@ object GtkFontChooser_listautoptr:
   extension (v: GtkFontChooser_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFontChooser_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFontChooser_queueautoptr: 
   given _tag: Tag[GtkFontChooser_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4620,8 +3630,6 @@ object GtkFontChooser_queueautoptr:
   extension (v: GtkFontChooser_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFontChooser_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFontChooser_slistautoptr: 
   given _tag: Tag[GtkFontChooser_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4632,17 +3640,15 @@ object GtkFontChooser_slistautoptr:
 /**
  * GtkFontFilterFunc: : a `PangoFontFamily` : a `PangoFontFace` belonging to
 */
-opaque type GtkFontFilterFunc = CFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+opaque type GtkFontFilterFunc = CFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkFontFilterFunc: 
-  given _tag: Tag[GtkFontFilterFunc] = Tag.materializeCFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkFontFilterFunc = CFuncPtr.fromPtr(ptr)
-  inline def apply(inline o: CFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkFontFilterFunc = o
+  given _tag: Tag[GtkFontFilterFunc] = Tag.materializeCFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkFontFilterFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkFontFilterFunc = o
   extension (v: GtkFontFilterFunc)
-    inline def value: CFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def value: CFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkFrame_autoptr = Ptr[GtkFrame]
 object GtkFrame_autoptr: 
   given _tag: Tag[GtkFrame_autoptr] = Tag.Ptr[GtkFrame](GtkFrame._tag)
@@ -4650,8 +3656,6 @@ object GtkFrame_autoptr:
   extension (v: GtkFrame_autoptr)
     inline def value: Ptr[GtkFrame] = v
 
-/**
-*/
 opaque type GtkFrame_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkFrame_listautoptr: 
   given _tag: Tag[GtkFrame_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4659,8 +3663,6 @@ object GtkFrame_listautoptr:
   extension (v: GtkFrame_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkFrame_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkFrame_queueautoptr: 
   given _tag: Tag[GtkFrame_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4668,8 +3670,6 @@ object GtkFrame_queueautoptr:
   extension (v: GtkFrame_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkFrame_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkFrame_slistautoptr: 
   given _tag: Tag[GtkFrame_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4677,8 +3677,6 @@ object GtkFrame_slistautoptr:
   extension (v: GtkFrame_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGLArea_autoptr = Ptr[GtkGLArea]
 object GtkGLArea_autoptr: 
   given _tag: Tag[GtkGLArea_autoptr] = Tag.Ptr[GtkGLArea](GtkGLArea._tag)
@@ -4686,8 +3684,6 @@ object GtkGLArea_autoptr:
   extension (v: GtkGLArea_autoptr)
     inline def value: Ptr[GtkGLArea] = v
 
-/**
-*/
 opaque type GtkGLArea_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGLArea_listautoptr: 
   given _tag: Tag[GtkGLArea_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4695,8 +3691,6 @@ object GtkGLArea_listautoptr:
   extension (v: GtkGLArea_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGLArea_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGLArea_queueautoptr: 
   given _tag: Tag[GtkGLArea_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4704,8 +3698,6 @@ object GtkGLArea_queueautoptr:
   extension (v: GtkGLArea_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGLArea_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGLArea_slistautoptr: 
   given _tag: Tag[GtkGLArea_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4713,8 +3705,6 @@ object GtkGLArea_slistautoptr:
   extension (v: GtkGLArea_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureClick_autoptr = Ptr[GtkGestureClick]
 object GtkGestureClick_autoptr: 
   given _tag: Tag[GtkGestureClick_autoptr] = Tag.Ptr[GtkGestureClick](GtkGestureClick._tag)
@@ -4722,8 +3712,6 @@ object GtkGestureClick_autoptr:
   extension (v: GtkGestureClick_autoptr)
     inline def value: Ptr[GtkGestureClick] = v
 
-/**
-*/
 opaque type GtkGestureClick_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureClick_listautoptr: 
   given _tag: Tag[GtkGestureClick_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4731,8 +3719,6 @@ object GtkGestureClick_listautoptr:
   extension (v: GtkGestureClick_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureClick_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureClick_queueautoptr: 
   given _tag: Tag[GtkGestureClick_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4740,8 +3726,6 @@ object GtkGestureClick_queueautoptr:
   extension (v: GtkGestureClick_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureClick_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureClick_slistautoptr: 
   given _tag: Tag[GtkGestureClick_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4749,8 +3733,6 @@ object GtkGestureClick_slistautoptr:
   extension (v: GtkGestureClick_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureDrag_autoptr = Ptr[GtkGestureDrag]
 object GtkGestureDrag_autoptr: 
   given _tag: Tag[GtkGestureDrag_autoptr] = Tag.Ptr[GtkGestureDrag](GtkGestureDrag._tag)
@@ -4758,8 +3740,6 @@ object GtkGestureDrag_autoptr:
   extension (v: GtkGestureDrag_autoptr)
     inline def value: Ptr[GtkGestureDrag] = v
 
-/**
-*/
 opaque type GtkGestureDrag_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureDrag_listautoptr: 
   given _tag: Tag[GtkGestureDrag_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4767,8 +3747,6 @@ object GtkGestureDrag_listautoptr:
   extension (v: GtkGestureDrag_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureDrag_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureDrag_queueautoptr: 
   given _tag: Tag[GtkGestureDrag_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4776,8 +3754,6 @@ object GtkGestureDrag_queueautoptr:
   extension (v: GtkGestureDrag_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureDrag_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureDrag_slistautoptr: 
   given _tag: Tag[GtkGestureDrag_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4785,8 +3761,6 @@ object GtkGestureDrag_slistautoptr:
   extension (v: GtkGestureDrag_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureLongPress_autoptr = Ptr[GtkGestureLongPress]
 object GtkGestureLongPress_autoptr: 
   given _tag: Tag[GtkGestureLongPress_autoptr] = Tag.Ptr[GtkGestureLongPress](GtkGestureLongPress._tag)
@@ -4794,8 +3768,6 @@ object GtkGestureLongPress_autoptr:
   extension (v: GtkGestureLongPress_autoptr)
     inline def value: Ptr[GtkGestureLongPress] = v
 
-/**
-*/
 opaque type GtkGestureLongPress_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureLongPress_listautoptr: 
   given _tag: Tag[GtkGestureLongPress_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4803,8 +3775,6 @@ object GtkGestureLongPress_listautoptr:
   extension (v: GtkGestureLongPress_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureLongPress_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureLongPress_queueautoptr: 
   given _tag: Tag[GtkGestureLongPress_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4812,8 +3782,6 @@ object GtkGestureLongPress_queueautoptr:
   extension (v: GtkGestureLongPress_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureLongPress_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureLongPress_slistautoptr: 
   given _tag: Tag[GtkGestureLongPress_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4821,8 +3789,6 @@ object GtkGestureLongPress_slistautoptr:
   extension (v: GtkGestureLongPress_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGesturePan_autoptr = Ptr[GtkGesturePan]
 object GtkGesturePan_autoptr: 
   given _tag: Tag[GtkGesturePan_autoptr] = Tag.Ptr[GtkGesturePan](GtkGesturePan._tag)
@@ -4830,8 +3796,6 @@ object GtkGesturePan_autoptr:
   extension (v: GtkGesturePan_autoptr)
     inline def value: Ptr[GtkGesturePan] = v
 
-/**
-*/
 opaque type GtkGesturePan_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGesturePan_listautoptr: 
   given _tag: Tag[GtkGesturePan_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4839,8 +3803,6 @@ object GtkGesturePan_listautoptr:
   extension (v: GtkGesturePan_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGesturePan_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGesturePan_queueautoptr: 
   given _tag: Tag[GtkGesturePan_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4848,8 +3810,6 @@ object GtkGesturePan_queueautoptr:
   extension (v: GtkGesturePan_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGesturePan_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGesturePan_slistautoptr: 
   given _tag: Tag[GtkGesturePan_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4857,8 +3817,6 @@ object GtkGesturePan_slistautoptr:
   extension (v: GtkGesturePan_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureRotate_autoptr = Ptr[GtkGestureRotate]
 object GtkGestureRotate_autoptr: 
   given _tag: Tag[GtkGestureRotate_autoptr] = Tag.Ptr[GtkGestureRotate](GtkGestureRotate._tag)
@@ -4866,8 +3824,6 @@ object GtkGestureRotate_autoptr:
   extension (v: GtkGestureRotate_autoptr)
     inline def value: Ptr[GtkGestureRotate] = v
 
-/**
-*/
 opaque type GtkGestureRotate_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureRotate_listautoptr: 
   given _tag: Tag[GtkGestureRotate_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4875,8 +3831,6 @@ object GtkGestureRotate_listautoptr:
   extension (v: GtkGestureRotate_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureRotate_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureRotate_queueautoptr: 
   given _tag: Tag[GtkGestureRotate_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4884,8 +3838,6 @@ object GtkGestureRotate_queueautoptr:
   extension (v: GtkGestureRotate_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureRotate_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureRotate_slistautoptr: 
   given _tag: Tag[GtkGestureRotate_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4893,8 +3845,6 @@ object GtkGestureRotate_slistautoptr:
   extension (v: GtkGestureRotate_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureSingle_autoptr = Ptr[GtkGestureSingle]
 object GtkGestureSingle_autoptr: 
   given _tag: Tag[GtkGestureSingle_autoptr] = Tag.Ptr[GtkGestureSingle](GtkGestureSingle._tag)
@@ -4902,8 +3852,6 @@ object GtkGestureSingle_autoptr:
   extension (v: GtkGestureSingle_autoptr)
     inline def value: Ptr[GtkGestureSingle] = v
 
-/**
-*/
 opaque type GtkGestureSingle_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureSingle_listautoptr: 
   given _tag: Tag[GtkGestureSingle_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4911,8 +3859,6 @@ object GtkGestureSingle_listautoptr:
   extension (v: GtkGestureSingle_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureSingle_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureSingle_queueautoptr: 
   given _tag: Tag[GtkGestureSingle_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4920,8 +3866,6 @@ object GtkGestureSingle_queueautoptr:
   extension (v: GtkGestureSingle_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureSingle_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureSingle_slistautoptr: 
   given _tag: Tag[GtkGestureSingle_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4929,8 +3873,6 @@ object GtkGestureSingle_slistautoptr:
   extension (v: GtkGestureSingle_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureSwipe_autoptr = Ptr[GtkGestureSwipe]
 object GtkGestureSwipe_autoptr: 
   given _tag: Tag[GtkGestureSwipe_autoptr] = Tag.Ptr[GtkGestureSwipe](GtkGestureSwipe._tag)
@@ -4938,8 +3880,6 @@ object GtkGestureSwipe_autoptr:
   extension (v: GtkGestureSwipe_autoptr)
     inline def value: Ptr[GtkGestureSwipe] = v
 
-/**
-*/
 opaque type GtkGestureSwipe_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureSwipe_listautoptr: 
   given _tag: Tag[GtkGestureSwipe_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4947,8 +3887,6 @@ object GtkGestureSwipe_listautoptr:
   extension (v: GtkGestureSwipe_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureSwipe_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureSwipe_queueautoptr: 
   given _tag: Tag[GtkGestureSwipe_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4956,8 +3894,6 @@ object GtkGestureSwipe_queueautoptr:
   extension (v: GtkGestureSwipe_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureSwipe_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureSwipe_slistautoptr: 
   given _tag: Tag[GtkGestureSwipe_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -4965,8 +3901,6 @@ object GtkGestureSwipe_slistautoptr:
   extension (v: GtkGestureSwipe_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGestureZoom_autoptr = Ptr[GtkGestureZoom]
 object GtkGestureZoom_autoptr: 
   given _tag: Tag[GtkGestureZoom_autoptr] = Tag.Ptr[GtkGestureZoom](GtkGestureZoom._tag)
@@ -4974,8 +3908,6 @@ object GtkGestureZoom_autoptr:
   extension (v: GtkGestureZoom_autoptr)
     inline def value: Ptr[GtkGestureZoom] = v
 
-/**
-*/
 opaque type GtkGestureZoom_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGestureZoom_listautoptr: 
   given _tag: Tag[GtkGestureZoom_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -4983,8 +3915,6 @@ object GtkGestureZoom_listautoptr:
   extension (v: GtkGestureZoom_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGestureZoom_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGestureZoom_queueautoptr: 
   given _tag: Tag[GtkGestureZoom_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -4992,8 +3922,6 @@ object GtkGestureZoom_queueautoptr:
   extension (v: GtkGestureZoom_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGestureZoom_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGestureZoom_slistautoptr: 
   given _tag: Tag[GtkGestureZoom_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5001,8 +3929,6 @@ object GtkGestureZoom_slistautoptr:
   extension (v: GtkGestureZoom_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGesture_autoptr = Ptr[GtkGesture]
 object GtkGesture_autoptr: 
   given _tag: Tag[GtkGesture_autoptr] = Tag.Ptr[GtkGesture](GtkGesture._tag)
@@ -5010,8 +3936,6 @@ object GtkGesture_autoptr:
   extension (v: GtkGesture_autoptr)
     inline def value: Ptr[GtkGesture] = v
 
-/**
-*/
 opaque type GtkGesture_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGesture_listautoptr: 
   given _tag: Tag[GtkGesture_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5019,8 +3943,6 @@ object GtkGesture_listautoptr:
   extension (v: GtkGesture_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGesture_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGesture_queueautoptr: 
   given _tag: Tag[GtkGesture_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5028,8 +3950,6 @@ object GtkGesture_queueautoptr:
   extension (v: GtkGesture_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGesture_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGesture_slistautoptr: 
   given _tag: Tag[GtkGesture_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5037,8 +3957,6 @@ object GtkGesture_slistautoptr:
   extension (v: GtkGesture_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGridLayoutChildClass_autoptr = Ptr[GtkGridLayoutChildClass]
 object GtkGridLayoutChildClass_autoptr: 
   given _tag: Tag[GtkGridLayoutChildClass_autoptr] = Tag.Ptr[GtkGridLayoutChildClass](GtkGridLayoutChildClass._tag)
@@ -5046,8 +3964,6 @@ object GtkGridLayoutChildClass_autoptr:
   extension (v: GtkGridLayoutChildClass_autoptr)
     inline def value: Ptr[GtkGridLayoutChildClass] = v
 
-/**
-*/
 opaque type GtkGridLayoutChildClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGridLayoutChildClass_listautoptr: 
   given _tag: Tag[GtkGridLayoutChildClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5055,8 +3971,6 @@ object GtkGridLayoutChildClass_listautoptr:
   extension (v: GtkGridLayoutChildClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGridLayoutChildClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGridLayoutChildClass_queueautoptr: 
   given _tag: Tag[GtkGridLayoutChildClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5064,8 +3978,6 @@ object GtkGridLayoutChildClass_queueautoptr:
   extension (v: GtkGridLayoutChildClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGridLayoutChildClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGridLayoutChildClass_slistautoptr: 
   given _tag: Tag[GtkGridLayoutChildClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5073,8 +3985,6 @@ object GtkGridLayoutChildClass_slistautoptr:
   extension (v: GtkGridLayoutChildClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGridLayoutChild_autoptr = Ptr[GtkGridLayoutChild]
 object GtkGridLayoutChild_autoptr: 
   given _tag: Tag[GtkGridLayoutChild_autoptr] = Tag.Ptr[GtkGridLayoutChild](GtkGridLayoutChild._tag)
@@ -5082,8 +3992,6 @@ object GtkGridLayoutChild_autoptr:
   extension (v: GtkGridLayoutChild_autoptr)
     inline def value: Ptr[GtkGridLayoutChild] = v
 
-/**
-*/
 opaque type GtkGridLayoutChild_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGridLayoutChild_listautoptr: 
   given _tag: Tag[GtkGridLayoutChild_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5091,8 +3999,6 @@ object GtkGridLayoutChild_listautoptr:
   extension (v: GtkGridLayoutChild_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGridLayoutChild_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGridLayoutChild_queueautoptr: 
   given _tag: Tag[GtkGridLayoutChild_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5100,8 +4006,6 @@ object GtkGridLayoutChild_queueautoptr:
   extension (v: GtkGridLayoutChild_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGridLayoutChild_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGridLayoutChild_slistautoptr: 
   given _tag: Tag[GtkGridLayoutChild_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5109,8 +4013,6 @@ object GtkGridLayoutChild_slistautoptr:
   extension (v: GtkGridLayoutChild_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGridLayoutClass_autoptr = Ptr[GtkGridLayoutClass]
 object GtkGridLayoutClass_autoptr: 
   given _tag: Tag[GtkGridLayoutClass_autoptr] = Tag.Ptr[GtkGridLayoutClass](GtkGridLayoutClass._tag)
@@ -5118,8 +4020,6 @@ object GtkGridLayoutClass_autoptr:
   extension (v: GtkGridLayoutClass_autoptr)
     inline def value: Ptr[GtkGridLayoutClass] = v
 
-/**
-*/
 opaque type GtkGridLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGridLayoutClass_listautoptr: 
   given _tag: Tag[GtkGridLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5127,8 +4027,6 @@ object GtkGridLayoutClass_listautoptr:
   extension (v: GtkGridLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGridLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGridLayoutClass_queueautoptr: 
   given _tag: Tag[GtkGridLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5136,8 +4034,6 @@ object GtkGridLayoutClass_queueautoptr:
   extension (v: GtkGridLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGridLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGridLayoutClass_slistautoptr: 
   given _tag: Tag[GtkGridLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5145,8 +4041,6 @@ object GtkGridLayoutClass_slistautoptr:
   extension (v: GtkGridLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGridLayout_autoptr = Ptr[GtkGridLayout]
 object GtkGridLayout_autoptr: 
   given _tag: Tag[GtkGridLayout_autoptr] = Tag.Ptr[GtkGridLayout](GtkGridLayout._tag)
@@ -5154,8 +4048,6 @@ object GtkGridLayout_autoptr:
   extension (v: GtkGridLayout_autoptr)
     inline def value: Ptr[GtkGridLayout] = v
 
-/**
-*/
 opaque type GtkGridLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGridLayout_listautoptr: 
   given _tag: Tag[GtkGridLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5163,8 +4055,6 @@ object GtkGridLayout_listautoptr:
   extension (v: GtkGridLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGridLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGridLayout_queueautoptr: 
   given _tag: Tag[GtkGridLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5172,8 +4062,6 @@ object GtkGridLayout_queueautoptr:
   extension (v: GtkGridLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGridLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGridLayout_slistautoptr: 
   given _tag: Tag[GtkGridLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5181,8 +4069,6 @@ object GtkGridLayout_slistautoptr:
   extension (v: GtkGridLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGridView_autoptr = Ptr[GtkGridView]
 object GtkGridView_autoptr: 
   given _tag: Tag[GtkGridView_autoptr] = Tag.Ptr[GtkGridView](GtkGridView._tag)
@@ -5190,8 +4076,6 @@ object GtkGridView_autoptr:
   extension (v: GtkGridView_autoptr)
     inline def value: Ptr[GtkGridView] = v
 
-/**
-*/
 opaque type GtkGridView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGridView_listautoptr: 
   given _tag: Tag[GtkGridView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5199,8 +4083,6 @@ object GtkGridView_listautoptr:
   extension (v: GtkGridView_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGridView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGridView_queueautoptr: 
   given _tag: Tag[GtkGridView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5208,8 +4090,6 @@ object GtkGridView_queueautoptr:
   extension (v: GtkGridView_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGridView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGridView_slistautoptr: 
   given _tag: Tag[GtkGridView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5217,8 +4097,6 @@ object GtkGridView_slistautoptr:
   extension (v: GtkGridView_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkGrid_autoptr = Ptr[GtkGrid]
 object GtkGrid_autoptr: 
   given _tag: Tag[GtkGrid_autoptr] = Tag.Ptr[GtkGrid](GtkGrid._tag)
@@ -5226,8 +4104,6 @@ object GtkGrid_autoptr:
   extension (v: GtkGrid_autoptr)
     inline def value: Ptr[GtkGrid] = v
 
-/**
-*/
 opaque type GtkGrid_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkGrid_listautoptr: 
   given _tag: Tag[GtkGrid_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5235,8 +4111,6 @@ object GtkGrid_listautoptr:
   extension (v: GtkGrid_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkGrid_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkGrid_queueautoptr: 
   given _tag: Tag[GtkGrid_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5244,8 +4118,6 @@ object GtkGrid_queueautoptr:
   extension (v: GtkGrid_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkGrid_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkGrid_slistautoptr: 
   given _tag: Tag[GtkGrid_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5253,8 +4125,6 @@ object GtkGrid_slistautoptr:
   extension (v: GtkGrid_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkHeaderBar_autoptr = Ptr[GtkHeaderBar]
 object GtkHeaderBar_autoptr: 
   given _tag: Tag[GtkHeaderBar_autoptr] = Tag.Ptr[GtkHeaderBar](GtkHeaderBar._tag)
@@ -5262,8 +4132,6 @@ object GtkHeaderBar_autoptr:
   extension (v: GtkHeaderBar_autoptr)
     inline def value: Ptr[GtkHeaderBar] = v
 
-/**
-*/
 opaque type GtkHeaderBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkHeaderBar_listautoptr: 
   given _tag: Tag[GtkHeaderBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5271,8 +4139,6 @@ object GtkHeaderBar_listautoptr:
   extension (v: GtkHeaderBar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkHeaderBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkHeaderBar_queueautoptr: 
   given _tag: Tag[GtkHeaderBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5280,8 +4146,6 @@ object GtkHeaderBar_queueautoptr:
   extension (v: GtkHeaderBar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkHeaderBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkHeaderBar_slistautoptr: 
   given _tag: Tag[GtkHeaderBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5289,8 +4153,6 @@ object GtkHeaderBar_slistautoptr:
   extension (v: GtkHeaderBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkIMContextSimple_autoptr = Ptr[GtkIMContextSimple]
 object GtkIMContextSimple_autoptr: 
   given _tag: Tag[GtkIMContextSimple_autoptr] = Tag.Ptr[GtkIMContextSimple](GtkIMContextSimple._tag)
@@ -5298,8 +4160,6 @@ object GtkIMContextSimple_autoptr:
   extension (v: GtkIMContextSimple_autoptr)
     inline def value: Ptr[GtkIMContextSimple] = v
 
-/**
-*/
 opaque type GtkIMContextSimple_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkIMContextSimple_listautoptr: 
   given _tag: Tag[GtkIMContextSimple_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5307,8 +4167,6 @@ object GtkIMContextSimple_listautoptr:
   extension (v: GtkIMContextSimple_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkIMContextSimple_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkIMContextSimple_queueautoptr: 
   given _tag: Tag[GtkIMContextSimple_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5316,8 +4174,6 @@ object GtkIMContextSimple_queueautoptr:
   extension (v: GtkIMContextSimple_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkIMContextSimple_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkIMContextSimple_slistautoptr: 
   given _tag: Tag[GtkIMContextSimple_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5325,8 +4181,6 @@ object GtkIMContextSimple_slistautoptr:
   extension (v: GtkIMContextSimple_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkIMContext_autoptr = Ptr[GtkIMContext]
 object GtkIMContext_autoptr: 
   given _tag: Tag[GtkIMContext_autoptr] = Tag.Ptr[GtkIMContext](GtkIMContext._tag)
@@ -5334,8 +4188,6 @@ object GtkIMContext_autoptr:
   extension (v: GtkIMContext_autoptr)
     inline def value: Ptr[GtkIMContext] = v
 
-/**
-*/
 opaque type GtkIMContext_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkIMContext_listautoptr: 
   given _tag: Tag[GtkIMContext_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5343,8 +4195,6 @@ object GtkIMContext_listautoptr:
   extension (v: GtkIMContext_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkIMContext_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkIMContext_queueautoptr: 
   given _tag: Tag[GtkIMContext_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5352,8 +4202,6 @@ object GtkIMContext_queueautoptr:
   extension (v: GtkIMContext_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkIMContext_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkIMContext_slistautoptr: 
   given _tag: Tag[GtkIMContext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5361,8 +4209,6 @@ object GtkIMContext_slistautoptr:
   extension (v: GtkIMContext_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkIMMulticontext_autoptr = Ptr[GtkIMMulticontext]
 object GtkIMMulticontext_autoptr: 
   given _tag: Tag[GtkIMMulticontext_autoptr] = Tag.Ptr[GtkIMMulticontext](GtkIMMulticontext._tag)
@@ -5370,8 +4216,6 @@ object GtkIMMulticontext_autoptr:
   extension (v: GtkIMMulticontext_autoptr)
     inline def value: Ptr[GtkIMMulticontext] = v
 
-/**
-*/
 opaque type GtkIMMulticontext_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkIMMulticontext_listautoptr: 
   given _tag: Tag[GtkIMMulticontext_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5379,8 +4223,6 @@ object GtkIMMulticontext_listautoptr:
   extension (v: GtkIMMulticontext_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkIMMulticontext_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkIMMulticontext_queueautoptr: 
   given _tag: Tag[GtkIMMulticontext_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5388,8 +4230,6 @@ object GtkIMMulticontext_queueautoptr:
   extension (v: GtkIMMulticontext_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkIMMulticontext_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkIMMulticontext_slistautoptr: 
   given _tag: Tag[GtkIMMulticontext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5397,8 +4237,6 @@ object GtkIMMulticontext_slistautoptr:
   extension (v: GtkIMMulticontext_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkIconPaintable_autoptr = Ptr[GtkIconPaintable]
 object GtkIconPaintable_autoptr: 
   given _tag: Tag[GtkIconPaintable_autoptr] = Tag.Ptr[GtkIconPaintable](GtkIconPaintable._tag)
@@ -5406,8 +4244,6 @@ object GtkIconPaintable_autoptr:
   extension (v: GtkIconPaintable_autoptr)
     inline def value: Ptr[GtkIconPaintable] = v
 
-/**
-*/
 opaque type GtkIconPaintable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkIconPaintable_listautoptr: 
   given _tag: Tag[GtkIconPaintable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5415,8 +4251,6 @@ object GtkIconPaintable_listautoptr:
   extension (v: GtkIconPaintable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkIconPaintable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkIconPaintable_queueautoptr: 
   given _tag: Tag[GtkIconPaintable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5424,8 +4258,6 @@ object GtkIconPaintable_queueautoptr:
   extension (v: GtkIconPaintable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkIconPaintable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkIconPaintable_slistautoptr: 
   given _tag: Tag[GtkIconPaintable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5433,8 +4265,6 @@ object GtkIconPaintable_slistautoptr:
   extension (v: GtkIconPaintable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkIconTheme_autoptr = Ptr[GtkIconTheme]
 object GtkIconTheme_autoptr: 
   given _tag: Tag[GtkIconTheme_autoptr] = Tag.Ptr[GtkIconTheme](GtkIconTheme._tag)
@@ -5442,8 +4272,6 @@ object GtkIconTheme_autoptr:
   extension (v: GtkIconTheme_autoptr)
     inline def value: Ptr[GtkIconTheme] = v
 
-/**
-*/
 opaque type GtkIconTheme_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkIconTheme_listautoptr: 
   given _tag: Tag[GtkIconTheme_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5451,8 +4279,6 @@ object GtkIconTheme_listautoptr:
   extension (v: GtkIconTheme_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkIconTheme_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkIconTheme_queueautoptr: 
   given _tag: Tag[GtkIconTheme_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5460,8 +4286,6 @@ object GtkIconTheme_queueautoptr:
   extension (v: GtkIconTheme_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkIconTheme_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkIconTheme_slistautoptr: 
   given _tag: Tag[GtkIconTheme_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5475,14 +4299,12 @@ object GtkIconTheme_slistautoptr:
 opaque type GtkIconViewForeachFunc = CFuncPtr3[Ptr[GtkIconView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkIconViewForeachFunc: 
   given _tag: Tag[GtkIconViewForeachFunc] = Tag.materializeCFuncPtr3[Ptr[GtkIconView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkIconViewForeachFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkIconViewForeachFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkIconView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkIconViewForeachFunc = o
   extension (v: GtkIconViewForeachFunc)
     inline def value: CFuncPtr3[Ptr[GtkIconView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkIconView_autoptr = Ptr[GtkIconView]
 object GtkIconView_autoptr: 
   given _tag: Tag[GtkIconView_autoptr] = Tag.Ptr[GtkIconView](GtkIconView._tag)
@@ -5490,8 +4312,6 @@ object GtkIconView_autoptr:
   extension (v: GtkIconView_autoptr)
     inline def value: Ptr[GtkIconView] = v
 
-/**
-*/
 opaque type GtkIconView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkIconView_listautoptr: 
   given _tag: Tag[GtkIconView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5499,8 +4319,6 @@ object GtkIconView_listautoptr:
   extension (v: GtkIconView_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkIconView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkIconView_queueautoptr: 
   given _tag: Tag[GtkIconView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5508,8 +4326,6 @@ object GtkIconView_queueautoptr:
   extension (v: GtkIconView_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkIconView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkIconView_slistautoptr: 
   given _tag: Tag[GtkIconView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5517,8 +4333,6 @@ object GtkIconView_slistautoptr:
   extension (v: GtkIconView_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkImage_autoptr = Ptr[GtkImage]
 object GtkImage_autoptr: 
   given _tag: Tag[GtkImage_autoptr] = Tag.Ptr[GtkImage](GtkImage._tag)
@@ -5526,8 +4340,6 @@ object GtkImage_autoptr:
   extension (v: GtkImage_autoptr)
     inline def value: Ptr[GtkImage] = v
 
-/**
-*/
 opaque type GtkImage_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkImage_listautoptr: 
   given _tag: Tag[GtkImage_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5535,8 +4347,6 @@ object GtkImage_listautoptr:
   extension (v: GtkImage_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkImage_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkImage_queueautoptr: 
   given _tag: Tag[GtkImage_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5544,8 +4354,6 @@ object GtkImage_queueautoptr:
   extension (v: GtkImage_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkImage_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkImage_slistautoptr: 
   given _tag: Tag[GtkImage_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5553,8 +4361,6 @@ object GtkImage_slistautoptr:
   extension (v: GtkImage_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkInfoBar_autoptr = Ptr[GtkInfoBar]
 object GtkInfoBar_autoptr: 
   given _tag: Tag[GtkInfoBar_autoptr] = Tag.Ptr[GtkInfoBar](GtkInfoBar._tag)
@@ -5562,8 +4368,6 @@ object GtkInfoBar_autoptr:
   extension (v: GtkInfoBar_autoptr)
     inline def value: Ptr[GtkInfoBar] = v
 
-/**
-*/
 opaque type GtkInfoBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkInfoBar_listautoptr: 
   given _tag: Tag[GtkInfoBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5571,8 +4375,6 @@ object GtkInfoBar_listautoptr:
   extension (v: GtkInfoBar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkInfoBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkInfoBar_queueautoptr: 
   given _tag: Tag[GtkInfoBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5580,8 +4382,6 @@ object GtkInfoBar_queueautoptr:
   extension (v: GtkInfoBar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkInfoBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkInfoBar_slistautoptr: 
   given _tag: Tag[GtkInfoBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5589,8 +4389,6 @@ object GtkInfoBar_slistautoptr:
   extension (v: GtkInfoBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkKeyvalTriggerClass_autoptr = Ptr[GtkKeyvalTriggerClass]
 object GtkKeyvalTriggerClass_autoptr: 
   given _tag: Tag[GtkKeyvalTriggerClass_autoptr] = Tag.Ptr[GtkKeyvalTriggerClass](GtkKeyvalTriggerClass._tag)
@@ -5598,8 +4396,6 @@ object GtkKeyvalTriggerClass_autoptr:
   extension (v: GtkKeyvalTriggerClass_autoptr)
     inline def value: Ptr[GtkKeyvalTriggerClass] = v
 
-/**
-*/
 opaque type GtkKeyvalTriggerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkKeyvalTriggerClass_listautoptr: 
   given _tag: Tag[GtkKeyvalTriggerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5607,8 +4403,6 @@ object GtkKeyvalTriggerClass_listautoptr:
   extension (v: GtkKeyvalTriggerClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkKeyvalTriggerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkKeyvalTriggerClass_queueautoptr: 
   given _tag: Tag[GtkKeyvalTriggerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5616,8 +4410,6 @@ object GtkKeyvalTriggerClass_queueautoptr:
   extension (v: GtkKeyvalTriggerClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkKeyvalTriggerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkKeyvalTriggerClass_slistautoptr: 
   given _tag: Tag[GtkKeyvalTriggerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5625,8 +4417,6 @@ object GtkKeyvalTriggerClass_slistautoptr:
   extension (v: GtkKeyvalTriggerClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkKeyvalTrigger_autoptr = Ptr[GtkKeyvalTrigger]
 object GtkKeyvalTrigger_autoptr: 
   given _tag: Tag[GtkKeyvalTrigger_autoptr] = Tag.Ptr[GtkKeyvalTrigger](GtkKeyvalTrigger._tag)
@@ -5634,8 +4424,6 @@ object GtkKeyvalTrigger_autoptr:
   extension (v: GtkKeyvalTrigger_autoptr)
     inline def value: Ptr[GtkKeyvalTrigger] = v
 
-/**
-*/
 opaque type GtkKeyvalTrigger_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkKeyvalTrigger_listautoptr: 
   given _tag: Tag[GtkKeyvalTrigger_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5643,8 +4431,6 @@ object GtkKeyvalTrigger_listautoptr:
   extension (v: GtkKeyvalTrigger_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkKeyvalTrigger_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkKeyvalTrigger_queueautoptr: 
   given _tag: Tag[GtkKeyvalTrigger_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5652,8 +4438,6 @@ object GtkKeyvalTrigger_queueautoptr:
   extension (v: GtkKeyvalTrigger_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkKeyvalTrigger_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkKeyvalTrigger_slistautoptr: 
   given _tag: Tag[GtkKeyvalTrigger_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5661,8 +4445,6 @@ object GtkKeyvalTrigger_slistautoptr:
   extension (v: GtkKeyvalTrigger_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLabel_autoptr = Ptr[GtkLabel]
 object GtkLabel_autoptr: 
   given _tag: Tag[GtkLabel_autoptr] = Tag.Ptr[GtkLabel](GtkLabel._tag)
@@ -5670,8 +4452,6 @@ object GtkLabel_autoptr:
   extension (v: GtkLabel_autoptr)
     inline def value: Ptr[GtkLabel] = v
 
-/**
-*/
 opaque type GtkLabel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLabel_listautoptr: 
   given _tag: Tag[GtkLabel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5679,8 +4459,6 @@ object GtkLabel_listautoptr:
   extension (v: GtkLabel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLabel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLabel_queueautoptr: 
   given _tag: Tag[GtkLabel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5688,8 +4466,6 @@ object GtkLabel_queueautoptr:
   extension (v: GtkLabel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLabel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLabel_slistautoptr: 
   given _tag: Tag[GtkLabel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5697,8 +4473,6 @@ object GtkLabel_slistautoptr:
   extension (v: GtkLabel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLayoutChildClass_autoptr = Ptr[GtkLayoutChildClass]
 object GtkLayoutChildClass_autoptr: 
   given _tag: Tag[GtkLayoutChildClass_autoptr] = Tag.Ptr[GtkLayoutChildClass](GtkLayoutChildClass._tag)
@@ -5706,8 +4480,6 @@ object GtkLayoutChildClass_autoptr:
   extension (v: GtkLayoutChildClass_autoptr)
     inline def value: Ptr[GtkLayoutChildClass] = v
 
-/**
-*/
 opaque type GtkLayoutChildClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLayoutChildClass_listautoptr: 
   given _tag: Tag[GtkLayoutChildClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5715,8 +4487,6 @@ object GtkLayoutChildClass_listautoptr:
   extension (v: GtkLayoutChildClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLayoutChildClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLayoutChildClass_queueautoptr: 
   given _tag: Tag[GtkLayoutChildClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5724,8 +4494,6 @@ object GtkLayoutChildClass_queueautoptr:
   extension (v: GtkLayoutChildClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLayoutChildClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLayoutChildClass_slistautoptr: 
   given _tag: Tag[GtkLayoutChildClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5733,8 +4501,6 @@ object GtkLayoutChildClass_slistautoptr:
   extension (v: GtkLayoutChildClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLayoutChild_autoptr = Ptr[GtkLayoutChild]
 object GtkLayoutChild_autoptr: 
   given _tag: Tag[GtkLayoutChild_autoptr] = Tag.Ptr[GtkLayoutChild](GtkLayoutChild._tag)
@@ -5742,8 +4508,6 @@ object GtkLayoutChild_autoptr:
   extension (v: GtkLayoutChild_autoptr)
     inline def value: Ptr[GtkLayoutChild] = v
 
-/**
-*/
 opaque type GtkLayoutChild_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLayoutChild_listautoptr: 
   given _tag: Tag[GtkLayoutChild_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5751,8 +4515,6 @@ object GtkLayoutChild_listautoptr:
   extension (v: GtkLayoutChild_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLayoutChild_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLayoutChild_queueautoptr: 
   given _tag: Tag[GtkLayoutChild_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5760,8 +4522,6 @@ object GtkLayoutChild_queueautoptr:
   extension (v: GtkLayoutChild_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLayoutChild_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLayoutChild_slistautoptr: 
   given _tag: Tag[GtkLayoutChild_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5769,8 +4529,6 @@ object GtkLayoutChild_slistautoptr:
   extension (v: GtkLayoutChild_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLayoutManagerClass_autoptr = Ptr[GtkLayoutManagerClass]
 object GtkLayoutManagerClass_autoptr: 
   given _tag: Tag[GtkLayoutManagerClass_autoptr] = Tag.Ptr[GtkLayoutManagerClass](GtkLayoutManagerClass._tag)
@@ -5778,8 +4536,6 @@ object GtkLayoutManagerClass_autoptr:
   extension (v: GtkLayoutManagerClass_autoptr)
     inline def value: Ptr[GtkLayoutManagerClass] = v
 
-/**
-*/
 opaque type GtkLayoutManagerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLayoutManagerClass_listautoptr: 
   given _tag: Tag[GtkLayoutManagerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5787,8 +4543,6 @@ object GtkLayoutManagerClass_listautoptr:
   extension (v: GtkLayoutManagerClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLayoutManagerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLayoutManagerClass_queueautoptr: 
   given _tag: Tag[GtkLayoutManagerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5796,8 +4550,6 @@ object GtkLayoutManagerClass_queueautoptr:
   extension (v: GtkLayoutManagerClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLayoutManagerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLayoutManagerClass_slistautoptr: 
   given _tag: Tag[GtkLayoutManagerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5805,8 +4557,6 @@ object GtkLayoutManagerClass_slistautoptr:
   extension (v: GtkLayoutManagerClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLayoutManager_autoptr = Ptr[GtkLayoutManager]
 object GtkLayoutManager_autoptr: 
   given _tag: Tag[GtkLayoutManager_autoptr] = Tag.Ptr[GtkLayoutManager](GtkLayoutManager._tag)
@@ -5814,8 +4564,6 @@ object GtkLayoutManager_autoptr:
   extension (v: GtkLayoutManager_autoptr)
     inline def value: Ptr[GtkLayoutManager] = v
 
-/**
-*/
 opaque type GtkLayoutManager_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLayoutManager_listautoptr: 
   given _tag: Tag[GtkLayoutManager_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5823,8 +4571,6 @@ object GtkLayoutManager_listautoptr:
   extension (v: GtkLayoutManager_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLayoutManager_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLayoutManager_queueautoptr: 
   given _tag: Tag[GtkLayoutManager_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5832,8 +4578,6 @@ object GtkLayoutManager_queueautoptr:
   extension (v: GtkLayoutManager_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLayoutManager_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLayoutManager_slistautoptr: 
   given _tag: Tag[GtkLayoutManager_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5841,8 +4585,6 @@ object GtkLayoutManager_slistautoptr:
   extension (v: GtkLayoutManager_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLevelBar_autoptr = Ptr[GtkLevelBar]
 object GtkLevelBar_autoptr: 
   given _tag: Tag[GtkLevelBar_autoptr] = Tag.Ptr[GtkLevelBar](GtkLevelBar._tag)
@@ -5850,8 +4592,6 @@ object GtkLevelBar_autoptr:
   extension (v: GtkLevelBar_autoptr)
     inline def value: Ptr[GtkLevelBar] = v
 
-/**
-*/
 opaque type GtkLevelBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLevelBar_listautoptr: 
   given _tag: Tag[GtkLevelBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5859,8 +4599,6 @@ object GtkLevelBar_listautoptr:
   extension (v: GtkLevelBar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLevelBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLevelBar_queueautoptr: 
   given _tag: Tag[GtkLevelBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5868,8 +4606,6 @@ object GtkLevelBar_queueautoptr:
   extension (v: GtkLevelBar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLevelBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLevelBar_slistautoptr: 
   given _tag: Tag[GtkLevelBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5877,8 +4613,6 @@ object GtkLevelBar_slistautoptr:
   extension (v: GtkLevelBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLinkButton_autoptr = Ptr[GtkLinkButton]
 object GtkLinkButton_autoptr: 
   given _tag: Tag[GtkLinkButton_autoptr] = Tag.Ptr[GtkLinkButton](GtkLinkButton._tag)
@@ -5886,8 +4620,6 @@ object GtkLinkButton_autoptr:
   extension (v: GtkLinkButton_autoptr)
     inline def value: Ptr[GtkLinkButton] = v
 
-/**
-*/
 opaque type GtkLinkButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLinkButton_listautoptr: 
   given _tag: Tag[GtkLinkButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5895,8 +4627,6 @@ object GtkLinkButton_listautoptr:
   extension (v: GtkLinkButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLinkButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLinkButton_queueautoptr: 
   given _tag: Tag[GtkLinkButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5904,8 +4634,6 @@ object GtkLinkButton_queueautoptr:
   extension (v: GtkLinkButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLinkButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLinkButton_slistautoptr: 
   given _tag: Tag[GtkLinkButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5919,11 +4647,11 @@ object GtkLinkButton_slistautoptr:
 opaque type GtkListBoxCreateWidgetFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]]
 object GtkListBoxCreateWidgetFunc: 
   given _tag: Tag[GtkListBoxCreateWidgetFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkListBoxCreateWidgetFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkListBoxCreateWidgetFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]]): GtkListBoxCreateWidgetFunc = o
   extension (v: GtkListBoxCreateWidgetFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[GtkWidget]] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkListBoxFilterFunc: : the row that may be filtered _data: (closure): user data
@@ -5931,25 +4659,21 @@ object GtkListBoxCreateWidgetFunc:
 opaque type GtkListBoxFilterFunc = CFuncPtr2[Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkListBoxFilterFunc: 
   given _tag: Tag[GtkListBoxFilterFunc] = Tag.materializeCFuncPtr2[Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkListBoxFilterFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkListBoxFilterFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkListBoxFilterFunc = o
   extension (v: GtkListBoxFilterFunc)
     inline def value: CFuncPtr2[Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkListBoxForeachFunc = CFuncPtr3[Ptr[GtkListBox], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkListBoxForeachFunc: 
   given _tag: Tag[GtkListBoxForeachFunc] = Tag.materializeCFuncPtr3[Ptr[GtkListBox], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkListBoxForeachFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkListBoxForeachFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkListBox], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkListBoxForeachFunc = o
   extension (v: GtkListBoxForeachFunc)
     inline def value: CFuncPtr3[Ptr[GtkListBox], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkListBoxRow_autoptr = Ptr[GtkListBoxRow]
 object GtkListBoxRow_autoptr: 
   given _tag: Tag[GtkListBoxRow_autoptr] = Tag.Ptr[GtkListBoxRow](GtkListBoxRow._tag)
@@ -5957,8 +4681,6 @@ object GtkListBoxRow_autoptr:
   extension (v: GtkListBoxRow_autoptr)
     inline def value: Ptr[GtkListBoxRow] = v
 
-/**
-*/
 opaque type GtkListBoxRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkListBoxRow_listautoptr: 
   given _tag: Tag[GtkListBoxRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -5966,8 +4688,6 @@ object GtkListBoxRow_listautoptr:
   extension (v: GtkListBoxRow_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkListBoxRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkListBoxRow_queueautoptr: 
   given _tag: Tag[GtkListBoxRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -5975,8 +4695,6 @@ object GtkListBoxRow_queueautoptr:
   extension (v: GtkListBoxRow_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkListBoxRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkListBoxRow_slistautoptr: 
   given _tag: Tag[GtkListBoxRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -5990,11 +4708,11 @@ object GtkListBoxRow_slistautoptr:
 opaque type GtkListBoxSortFunc = CFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, CInt]
 object GtkListBoxSortFunc: 
   given _tag: Tag[GtkListBoxSortFunc] = Tag.materializeCFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, CInt]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkListBoxSortFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkListBoxSortFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, CInt]): GtkListBoxSortFunc = o
   extension (v: GtkListBoxSortFunc)
     inline def value: CFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, CInt] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkListBoxUpdateHeaderFunc: : the row to update : (nullable): the row before , or %NULL if it is first _data: (closure): user data
@@ -6002,14 +4720,12 @@ object GtkListBoxSortFunc:
 opaque type GtkListBoxUpdateHeaderFunc = CFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkListBoxUpdateHeaderFunc: 
   given _tag: Tag[GtkListBoxUpdateHeaderFunc] = Tag.materializeCFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkListBoxUpdateHeaderFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkListBoxUpdateHeaderFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkListBoxUpdateHeaderFunc = o
   extension (v: GtkListBoxUpdateHeaderFunc)
     inline def value: CFuncPtr3[Ptr[GtkListBoxRow], Ptr[GtkListBoxRow], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkListBox_autoptr = Ptr[GtkListBox]
 object GtkListBox_autoptr: 
   given _tag: Tag[GtkListBox_autoptr] = Tag.Ptr[GtkListBox](GtkListBox._tag)
@@ -6017,8 +4733,6 @@ object GtkListBox_autoptr:
   extension (v: GtkListBox_autoptr)
     inline def value: Ptr[GtkListBox] = v
 
-/**
-*/
 opaque type GtkListBox_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkListBox_listautoptr: 
   given _tag: Tag[GtkListBox_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6026,8 +4740,6 @@ object GtkListBox_listautoptr:
   extension (v: GtkListBox_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkListBox_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkListBox_queueautoptr: 
   given _tag: Tag[GtkListBox_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6035,8 +4747,6 @@ object GtkListBox_queueautoptr:
   extension (v: GtkListBox_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkListBox_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkListBox_slistautoptr: 
   given _tag: Tag[GtkListBox_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6044,8 +4754,6 @@ object GtkListBox_slistautoptr:
   extension (v: GtkListBox_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkListItemFactory_autoptr = Ptr[GtkListItemFactory]
 object GtkListItemFactory_autoptr: 
   given _tag: Tag[GtkListItemFactory_autoptr] = Tag.Ptr[GtkListItemFactory](GtkListItemFactory._tag)
@@ -6053,8 +4761,6 @@ object GtkListItemFactory_autoptr:
   extension (v: GtkListItemFactory_autoptr)
     inline def value: Ptr[GtkListItemFactory] = v
 
-/**
-*/
 opaque type GtkListItemFactory_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkListItemFactory_listautoptr: 
   given _tag: Tag[GtkListItemFactory_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6062,8 +4768,6 @@ object GtkListItemFactory_listautoptr:
   extension (v: GtkListItemFactory_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkListItemFactory_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkListItemFactory_queueautoptr: 
   given _tag: Tag[GtkListItemFactory_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6071,8 +4775,6 @@ object GtkListItemFactory_queueautoptr:
   extension (v: GtkListItemFactory_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkListItemFactory_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkListItemFactory_slistautoptr: 
   given _tag: Tag[GtkListItemFactory_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6080,8 +4782,6 @@ object GtkListItemFactory_slistautoptr:
   extension (v: GtkListItemFactory_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkListItem_autoptr = Ptr[GtkListItem]
 object GtkListItem_autoptr: 
   given _tag: Tag[GtkListItem_autoptr] = Tag.Ptr[GtkListItem](GtkListItem._tag)
@@ -6089,8 +4789,6 @@ object GtkListItem_autoptr:
   extension (v: GtkListItem_autoptr)
     inline def value: Ptr[GtkListItem] = v
 
-/**
-*/
 opaque type GtkListItem_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkListItem_listautoptr: 
   given _tag: Tag[GtkListItem_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6098,8 +4796,6 @@ object GtkListItem_listautoptr:
   extension (v: GtkListItem_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkListItem_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkListItem_queueautoptr: 
   given _tag: Tag[GtkListItem_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6107,8 +4803,6 @@ object GtkListItem_queueautoptr:
   extension (v: GtkListItem_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkListItem_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkListItem_slistautoptr: 
   given _tag: Tag[GtkListItem_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6116,8 +4810,6 @@ object GtkListItem_slistautoptr:
   extension (v: GtkListItem_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkListStore_autoptr = Ptr[GtkListStore]
 object GtkListStore_autoptr: 
   given _tag: Tag[GtkListStore_autoptr] = Tag.Ptr[GtkListStore](GtkListStore._tag)
@@ -6125,8 +4817,6 @@ object GtkListStore_autoptr:
   extension (v: GtkListStore_autoptr)
     inline def value: Ptr[GtkListStore] = v
 
-/**
-*/
 opaque type GtkListStore_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkListStore_listautoptr: 
   given _tag: Tag[GtkListStore_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6134,8 +4824,6 @@ object GtkListStore_listautoptr:
   extension (v: GtkListStore_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkListStore_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkListStore_queueautoptr: 
   given _tag: Tag[GtkListStore_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6143,8 +4831,6 @@ object GtkListStore_queueautoptr:
   extension (v: GtkListStore_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkListStore_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkListStore_slistautoptr: 
   given _tag: Tag[GtkListStore_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6152,8 +4838,6 @@ object GtkListStore_slistautoptr:
   extension (v: GtkListStore_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkListView_autoptr = Ptr[GtkListView]
 object GtkListView_autoptr: 
   given _tag: Tag[GtkListView_autoptr] = Tag.Ptr[GtkListView](GtkListView._tag)
@@ -6161,8 +4845,6 @@ object GtkListView_autoptr:
   extension (v: GtkListView_autoptr)
     inline def value: Ptr[GtkListView] = v
 
-/**
-*/
 opaque type GtkListView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkListView_listautoptr: 
   given _tag: Tag[GtkListView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6170,8 +4852,6 @@ object GtkListView_listautoptr:
   extension (v: GtkListView_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkListView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkListView_queueautoptr: 
   given _tag: Tag[GtkListView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6179,8 +4859,6 @@ object GtkListView_queueautoptr:
   extension (v: GtkListView_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkListView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkListView_slistautoptr: 
   given _tag: Tag[GtkListView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6188,8 +4866,6 @@ object GtkListView_slistautoptr:
   extension (v: GtkListView_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkLockButton_autoptr = Ptr[GtkLockButton]
 object GtkLockButton_autoptr: 
   given _tag: Tag[GtkLockButton_autoptr] = Tag.Ptr[GtkLockButton](GtkLockButton._tag)
@@ -6197,8 +4873,6 @@ object GtkLockButton_autoptr:
   extension (v: GtkLockButton_autoptr)
     inline def value: Ptr[GtkLockButton] = v
 
-/**
-*/
 opaque type GtkLockButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkLockButton_listautoptr: 
   given _tag: Tag[GtkLockButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6206,8 +4880,6 @@ object GtkLockButton_listautoptr:
   extension (v: GtkLockButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkLockButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkLockButton_queueautoptr: 
   given _tag: Tag[GtkLockButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6215,8 +4887,6 @@ object GtkLockButton_queueautoptr:
   extension (v: GtkLockButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkLockButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkLockButton_slistautoptr: 
   given _tag: Tag[GtkLockButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6224,8 +4894,6 @@ object GtkLockButton_slistautoptr:
   extension (v: GtkLockButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMapListModelClass_autoptr = Ptr[GtkMapListModelClass]
 object GtkMapListModelClass_autoptr: 
   given _tag: Tag[GtkMapListModelClass_autoptr] = Tag.Ptr[GtkMapListModelClass](GtkMapListModelClass._tag)
@@ -6233,8 +4901,6 @@ object GtkMapListModelClass_autoptr:
   extension (v: GtkMapListModelClass_autoptr)
     inline def value: Ptr[GtkMapListModelClass] = v
 
-/**
-*/
 opaque type GtkMapListModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMapListModelClass_listautoptr: 
   given _tag: Tag[GtkMapListModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6242,8 +4908,6 @@ object GtkMapListModelClass_listautoptr:
   extension (v: GtkMapListModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMapListModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMapListModelClass_queueautoptr: 
   given _tag: Tag[GtkMapListModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6251,8 +4915,6 @@ object GtkMapListModelClass_queueautoptr:
   extension (v: GtkMapListModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMapListModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMapListModelClass_slistautoptr: 
   given _tag: Tag[GtkMapListModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6266,14 +4928,12 @@ object GtkMapListModelClass_slistautoptr:
 opaque type GtkMapListModelMapFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer]
 object GtkMapListModelMapFunc: 
   given _tag: Tag[GtkMapListModelMapFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkMapListModelMapFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkMapListModelMapFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer]): GtkMapListModelMapFunc = o
   extension (v: GtkMapListModelMapFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkMapListModel_autoptr = Ptr[GtkMapListModel]
 object GtkMapListModel_autoptr: 
   given _tag: Tag[GtkMapListModel_autoptr] = Tag.Ptr[GtkMapListModel](GtkMapListModel._tag)
@@ -6281,8 +4941,6 @@ object GtkMapListModel_autoptr:
   extension (v: GtkMapListModel_autoptr)
     inline def value: Ptr[GtkMapListModel] = v
 
-/**
-*/
 opaque type GtkMapListModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMapListModel_listautoptr: 
   given _tag: Tag[GtkMapListModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6290,8 +4948,6 @@ object GtkMapListModel_listautoptr:
   extension (v: GtkMapListModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMapListModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMapListModel_queueautoptr: 
   given _tag: Tag[GtkMapListModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6299,8 +4955,6 @@ object GtkMapListModel_queueautoptr:
   extension (v: GtkMapListModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMapListModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMapListModel_slistautoptr: 
   given _tag: Tag[GtkMapListModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6308,8 +4962,6 @@ object GtkMapListModel_slistautoptr:
   extension (v: GtkMapListModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMediaControlsClass_autoptr = Ptr[GtkMediaControlsClass]
 object GtkMediaControlsClass_autoptr: 
   given _tag: Tag[GtkMediaControlsClass_autoptr] = Tag.Ptr[GtkMediaControlsClass](GtkMediaControlsClass._tag)
@@ -6317,8 +4969,6 @@ object GtkMediaControlsClass_autoptr:
   extension (v: GtkMediaControlsClass_autoptr)
     inline def value: Ptr[GtkMediaControlsClass] = v
 
-/**
-*/
 opaque type GtkMediaControlsClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMediaControlsClass_listautoptr: 
   given _tag: Tag[GtkMediaControlsClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6326,8 +4976,6 @@ object GtkMediaControlsClass_listautoptr:
   extension (v: GtkMediaControlsClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMediaControlsClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMediaControlsClass_queueautoptr: 
   given _tag: Tag[GtkMediaControlsClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6335,8 +4983,6 @@ object GtkMediaControlsClass_queueautoptr:
   extension (v: GtkMediaControlsClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMediaControlsClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMediaControlsClass_slistautoptr: 
   given _tag: Tag[GtkMediaControlsClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6344,8 +4990,6 @@ object GtkMediaControlsClass_slistautoptr:
   extension (v: GtkMediaControlsClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMediaControls_autoptr = Ptr[GtkMediaControls]
 object GtkMediaControls_autoptr: 
   given _tag: Tag[GtkMediaControls_autoptr] = Tag.Ptr[GtkMediaControls](GtkMediaControls._tag)
@@ -6353,8 +4997,6 @@ object GtkMediaControls_autoptr:
   extension (v: GtkMediaControls_autoptr)
     inline def value: Ptr[GtkMediaControls] = v
 
-/**
-*/
 opaque type GtkMediaControls_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMediaControls_listautoptr: 
   given _tag: Tag[GtkMediaControls_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6362,8 +5004,6 @@ object GtkMediaControls_listautoptr:
   extension (v: GtkMediaControls_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMediaControls_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMediaControls_queueautoptr: 
   given _tag: Tag[GtkMediaControls_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6371,8 +5011,6 @@ object GtkMediaControls_queueautoptr:
   extension (v: GtkMediaControls_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMediaControls_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMediaControls_slistautoptr: 
   given _tag: Tag[GtkMediaControls_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6380,8 +5018,6 @@ object GtkMediaControls_slistautoptr:
   extension (v: GtkMediaControls_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMediaFileClass_autoptr = Ptr[GtkMediaFileClass]
 object GtkMediaFileClass_autoptr: 
   given _tag: Tag[GtkMediaFileClass_autoptr] = Tag.Ptr[GtkMediaFileClass](GtkMediaFileClass._tag)
@@ -6389,8 +5025,6 @@ object GtkMediaFileClass_autoptr:
   extension (v: GtkMediaFileClass_autoptr)
     inline def value: Ptr[GtkMediaFileClass] = v
 
-/**
-*/
 opaque type GtkMediaFileClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMediaFileClass_listautoptr: 
   given _tag: Tag[GtkMediaFileClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6398,8 +5032,6 @@ object GtkMediaFileClass_listautoptr:
   extension (v: GtkMediaFileClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMediaFileClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMediaFileClass_queueautoptr: 
   given _tag: Tag[GtkMediaFileClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6407,8 +5039,6 @@ object GtkMediaFileClass_queueautoptr:
   extension (v: GtkMediaFileClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMediaFileClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMediaFileClass_slistautoptr: 
   given _tag: Tag[GtkMediaFileClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6416,8 +5046,6 @@ object GtkMediaFileClass_slistautoptr:
   extension (v: GtkMediaFileClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMediaFile_autoptr = Ptr[GtkMediaFile]
 object GtkMediaFile_autoptr: 
   given _tag: Tag[GtkMediaFile_autoptr] = Tag.Ptr[GtkMediaFile](GtkMediaFile._tag)
@@ -6425,8 +5053,6 @@ object GtkMediaFile_autoptr:
   extension (v: GtkMediaFile_autoptr)
     inline def value: Ptr[GtkMediaFile] = v
 
-/**
-*/
 opaque type GtkMediaFile_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMediaFile_listautoptr: 
   given _tag: Tag[GtkMediaFile_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6434,8 +5060,6 @@ object GtkMediaFile_listautoptr:
   extension (v: GtkMediaFile_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMediaFile_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMediaFile_queueautoptr: 
   given _tag: Tag[GtkMediaFile_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6443,8 +5067,6 @@ object GtkMediaFile_queueautoptr:
   extension (v: GtkMediaFile_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMediaFile_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMediaFile_slistautoptr: 
   given _tag: Tag[GtkMediaFile_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6452,8 +5074,6 @@ object GtkMediaFile_slistautoptr:
   extension (v: GtkMediaFile_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMediaStreamClass_autoptr = Ptr[GtkMediaStreamClass]
 object GtkMediaStreamClass_autoptr: 
   given _tag: Tag[GtkMediaStreamClass_autoptr] = Tag.Ptr[GtkMediaStreamClass](GtkMediaStreamClass._tag)
@@ -6461,8 +5081,6 @@ object GtkMediaStreamClass_autoptr:
   extension (v: GtkMediaStreamClass_autoptr)
     inline def value: Ptr[GtkMediaStreamClass] = v
 
-/**
-*/
 opaque type GtkMediaStreamClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMediaStreamClass_listautoptr: 
   given _tag: Tag[GtkMediaStreamClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6470,8 +5088,6 @@ object GtkMediaStreamClass_listautoptr:
   extension (v: GtkMediaStreamClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMediaStreamClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMediaStreamClass_queueautoptr: 
   given _tag: Tag[GtkMediaStreamClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6479,8 +5095,6 @@ object GtkMediaStreamClass_queueautoptr:
   extension (v: GtkMediaStreamClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMediaStreamClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMediaStreamClass_slistautoptr: 
   given _tag: Tag[GtkMediaStreamClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6488,8 +5102,6 @@ object GtkMediaStreamClass_slistautoptr:
   extension (v: GtkMediaStreamClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMediaStream_autoptr = Ptr[GtkMediaStream]
 object GtkMediaStream_autoptr: 
   given _tag: Tag[GtkMediaStream_autoptr] = Tag.Ptr[GtkMediaStream](GtkMediaStream._tag)
@@ -6497,8 +5109,6 @@ object GtkMediaStream_autoptr:
   extension (v: GtkMediaStream_autoptr)
     inline def value: Ptr[GtkMediaStream] = v
 
-/**
-*/
 opaque type GtkMediaStream_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMediaStream_listautoptr: 
   given _tag: Tag[GtkMediaStream_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6506,8 +5116,6 @@ object GtkMediaStream_listautoptr:
   extension (v: GtkMediaStream_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMediaStream_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMediaStream_queueautoptr: 
   given _tag: Tag[GtkMediaStream_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6515,8 +5123,6 @@ object GtkMediaStream_queueautoptr:
   extension (v: GtkMediaStream_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMediaStream_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMediaStream_slistautoptr: 
   given _tag: Tag[GtkMediaStream_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6530,14 +5136,12 @@ object GtkMediaStream_slistautoptr:
 opaque type GtkMenuButtonCreatePopupFunc = CFuncPtr2[Ptr[GtkMenuButton], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkMenuButtonCreatePopupFunc: 
   given _tag: Tag[GtkMenuButtonCreatePopupFunc] = Tag.materializeCFuncPtr2[Ptr[GtkMenuButton], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkMenuButtonCreatePopupFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkMenuButtonCreatePopupFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GtkMenuButton], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkMenuButtonCreatePopupFunc = o
   extension (v: GtkMenuButtonCreatePopupFunc)
     inline def value: CFuncPtr2[Ptr[GtkMenuButton], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkMenuButton_autoptr = Ptr[GtkMenuButton]
 object GtkMenuButton_autoptr: 
   given _tag: Tag[GtkMenuButton_autoptr] = Tag.Ptr[GtkMenuButton](GtkMenuButton._tag)
@@ -6545,8 +5149,6 @@ object GtkMenuButton_autoptr:
   extension (v: GtkMenuButton_autoptr)
     inline def value: Ptr[GtkMenuButton] = v
 
-/**
-*/
 opaque type GtkMenuButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMenuButton_listautoptr: 
   given _tag: Tag[GtkMenuButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6554,8 +5156,6 @@ object GtkMenuButton_listautoptr:
   extension (v: GtkMenuButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMenuButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMenuButton_queueautoptr: 
   given _tag: Tag[GtkMenuButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6563,8 +5163,6 @@ object GtkMenuButton_queueautoptr:
   extension (v: GtkMenuButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMenuButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMenuButton_slistautoptr: 
   given _tag: Tag[GtkMenuButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6572,8 +5170,6 @@ object GtkMenuButton_slistautoptr:
   extension (v: GtkMenuButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMessageDialog_autoptr = Ptr[GtkMessageDialog]
 object GtkMessageDialog_autoptr: 
   given _tag: Tag[GtkMessageDialog_autoptr] = Tag.Ptr[GtkMessageDialog](GtkMessageDialog._tag)
@@ -6581,8 +5177,6 @@ object GtkMessageDialog_autoptr:
   extension (v: GtkMessageDialog_autoptr)
     inline def value: Ptr[GtkMessageDialog] = v
 
-/**
-*/
 opaque type GtkMessageDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMessageDialog_listautoptr: 
   given _tag: Tag[GtkMessageDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6590,8 +5184,6 @@ object GtkMessageDialog_listautoptr:
   extension (v: GtkMessageDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMessageDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMessageDialog_queueautoptr: 
   given _tag: Tag[GtkMessageDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6599,8 +5191,6 @@ object GtkMessageDialog_queueautoptr:
   extension (v: GtkMessageDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMessageDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMessageDialog_slistautoptr: 
   given _tag: Tag[GtkMessageDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6608,8 +5198,6 @@ object GtkMessageDialog_slistautoptr:
   extension (v: GtkMessageDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMnemonicActionClass_autoptr = Ptr[GtkMnemonicActionClass]
 object GtkMnemonicActionClass_autoptr: 
   given _tag: Tag[GtkMnemonicActionClass_autoptr] = Tag.Ptr[GtkMnemonicActionClass](GtkMnemonicActionClass._tag)
@@ -6617,8 +5205,6 @@ object GtkMnemonicActionClass_autoptr:
   extension (v: GtkMnemonicActionClass_autoptr)
     inline def value: Ptr[GtkMnemonicActionClass] = v
 
-/**
-*/
 opaque type GtkMnemonicActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMnemonicActionClass_listautoptr: 
   given _tag: Tag[GtkMnemonicActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6626,8 +5212,6 @@ object GtkMnemonicActionClass_listautoptr:
   extension (v: GtkMnemonicActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMnemonicActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMnemonicActionClass_queueautoptr: 
   given _tag: Tag[GtkMnemonicActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6635,8 +5219,6 @@ object GtkMnemonicActionClass_queueautoptr:
   extension (v: GtkMnemonicActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMnemonicActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMnemonicActionClass_slistautoptr: 
   given _tag: Tag[GtkMnemonicActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6644,8 +5226,6 @@ object GtkMnemonicActionClass_slistautoptr:
   extension (v: GtkMnemonicActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMnemonicAction_autoptr = Ptr[GtkMnemonicAction]
 object GtkMnemonicAction_autoptr: 
   given _tag: Tag[GtkMnemonicAction_autoptr] = Tag.Ptr[GtkMnemonicAction](GtkMnemonicAction._tag)
@@ -6653,8 +5233,6 @@ object GtkMnemonicAction_autoptr:
   extension (v: GtkMnemonicAction_autoptr)
     inline def value: Ptr[GtkMnemonicAction] = v
 
-/**
-*/
 opaque type GtkMnemonicAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMnemonicAction_listautoptr: 
   given _tag: Tag[GtkMnemonicAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6662,8 +5240,6 @@ object GtkMnemonicAction_listautoptr:
   extension (v: GtkMnemonicAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMnemonicAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMnemonicAction_queueautoptr: 
   given _tag: Tag[GtkMnemonicAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6671,8 +5247,6 @@ object GtkMnemonicAction_queueautoptr:
   extension (v: GtkMnemonicAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMnemonicAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMnemonicAction_slistautoptr: 
   given _tag: Tag[GtkMnemonicAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6680,8 +5254,6 @@ object GtkMnemonicAction_slistautoptr:
   extension (v: GtkMnemonicAction_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMnemonicTriggerClass_autoptr = Ptr[GtkMnemonicTriggerClass]
 object GtkMnemonicTriggerClass_autoptr: 
   given _tag: Tag[GtkMnemonicTriggerClass_autoptr] = Tag.Ptr[GtkMnemonicTriggerClass](GtkMnemonicTriggerClass._tag)
@@ -6689,8 +5261,6 @@ object GtkMnemonicTriggerClass_autoptr:
   extension (v: GtkMnemonicTriggerClass_autoptr)
     inline def value: Ptr[GtkMnemonicTriggerClass] = v
 
-/**
-*/
 opaque type GtkMnemonicTriggerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMnemonicTriggerClass_listautoptr: 
   given _tag: Tag[GtkMnemonicTriggerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6698,8 +5268,6 @@ object GtkMnemonicTriggerClass_listautoptr:
   extension (v: GtkMnemonicTriggerClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMnemonicTriggerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMnemonicTriggerClass_queueautoptr: 
   given _tag: Tag[GtkMnemonicTriggerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6707,8 +5275,6 @@ object GtkMnemonicTriggerClass_queueautoptr:
   extension (v: GtkMnemonicTriggerClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMnemonicTriggerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMnemonicTriggerClass_slistautoptr: 
   given _tag: Tag[GtkMnemonicTriggerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6716,8 +5282,6 @@ object GtkMnemonicTriggerClass_slistautoptr:
   extension (v: GtkMnemonicTriggerClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMnemonicTrigger_autoptr = Ptr[GtkMnemonicTrigger]
 object GtkMnemonicTrigger_autoptr: 
   given _tag: Tag[GtkMnemonicTrigger_autoptr] = Tag.Ptr[GtkMnemonicTrigger](GtkMnemonicTrigger._tag)
@@ -6725,8 +5289,6 @@ object GtkMnemonicTrigger_autoptr:
   extension (v: GtkMnemonicTrigger_autoptr)
     inline def value: Ptr[GtkMnemonicTrigger] = v
 
-/**
-*/
 opaque type GtkMnemonicTrigger_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMnemonicTrigger_listautoptr: 
   given _tag: Tag[GtkMnemonicTrigger_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6734,8 +5296,6 @@ object GtkMnemonicTrigger_listautoptr:
   extension (v: GtkMnemonicTrigger_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMnemonicTrigger_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMnemonicTrigger_queueautoptr: 
   given _tag: Tag[GtkMnemonicTrigger_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6743,8 +5303,6 @@ object GtkMnemonicTrigger_queueautoptr:
   extension (v: GtkMnemonicTrigger_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMnemonicTrigger_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMnemonicTrigger_slistautoptr: 
   given _tag: Tag[GtkMnemonicTrigger_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6752,8 +5310,6 @@ object GtkMnemonicTrigger_slistautoptr:
   extension (v: GtkMnemonicTrigger_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMountOperation_autoptr = Ptr[GtkMountOperation]
 object GtkMountOperation_autoptr: 
   given _tag: Tag[GtkMountOperation_autoptr] = Tag.Ptr[GtkMountOperation](GtkMountOperation._tag)
@@ -6761,8 +5317,6 @@ object GtkMountOperation_autoptr:
   extension (v: GtkMountOperation_autoptr)
     inline def value: Ptr[GtkMountOperation] = v
 
-/**
-*/
 opaque type GtkMountOperation_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMountOperation_listautoptr: 
   given _tag: Tag[GtkMountOperation_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6770,8 +5324,6 @@ object GtkMountOperation_listautoptr:
   extension (v: GtkMountOperation_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMountOperation_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMountOperation_queueautoptr: 
   given _tag: Tag[GtkMountOperation_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6779,8 +5331,6 @@ object GtkMountOperation_queueautoptr:
   extension (v: GtkMountOperation_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMountOperation_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMountOperation_slistautoptr: 
   given _tag: Tag[GtkMountOperation_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6788,8 +5338,6 @@ object GtkMountOperation_slistautoptr:
   extension (v: GtkMountOperation_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMultiFilterClass_autoptr = Ptr[GtkMultiFilterClass]
 object GtkMultiFilterClass_autoptr: 
   given _tag: Tag[GtkMultiFilterClass_autoptr] = Tag.Ptr[GtkMultiFilterClass](GtkMultiFilterClass._tag)
@@ -6797,8 +5345,6 @@ object GtkMultiFilterClass_autoptr:
   extension (v: GtkMultiFilterClass_autoptr)
     inline def value: Ptr[GtkMultiFilterClass] = v
 
-/**
-*/
 opaque type GtkMultiFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMultiFilterClass_listautoptr: 
   given _tag: Tag[GtkMultiFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6806,8 +5352,6 @@ object GtkMultiFilterClass_listautoptr:
   extension (v: GtkMultiFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMultiFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMultiFilterClass_queueautoptr: 
   given _tag: Tag[GtkMultiFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6815,8 +5359,6 @@ object GtkMultiFilterClass_queueautoptr:
   extension (v: GtkMultiFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMultiFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMultiFilterClass_slistautoptr: 
   given _tag: Tag[GtkMultiFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6824,8 +5366,6 @@ object GtkMultiFilterClass_slistautoptr:
   extension (v: GtkMultiFilterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMultiFilter_autoptr = Ptr[GtkMultiFilter]
 object GtkMultiFilter_autoptr: 
   given _tag: Tag[GtkMultiFilter_autoptr] = Tag.Ptr[GtkMultiFilter](GtkMultiFilter._tag)
@@ -6833,8 +5373,6 @@ object GtkMultiFilter_autoptr:
   extension (v: GtkMultiFilter_autoptr)
     inline def value: Ptr[GtkMultiFilter] = v
 
-/**
-*/
 opaque type GtkMultiFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMultiFilter_listautoptr: 
   given _tag: Tag[GtkMultiFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6842,8 +5380,6 @@ object GtkMultiFilter_listautoptr:
   extension (v: GtkMultiFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMultiFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMultiFilter_queueautoptr: 
   given _tag: Tag[GtkMultiFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6851,8 +5387,6 @@ object GtkMultiFilter_queueautoptr:
   extension (v: GtkMultiFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMultiFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMultiFilter_slistautoptr: 
   given _tag: Tag[GtkMultiFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6860,8 +5394,6 @@ object GtkMultiFilter_slistautoptr:
   extension (v: GtkMultiFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMultiSelectionClass_autoptr = Ptr[GtkMultiSelectionClass]
 object GtkMultiSelectionClass_autoptr: 
   given _tag: Tag[GtkMultiSelectionClass_autoptr] = Tag.Ptr[GtkMultiSelectionClass](GtkMultiSelectionClass._tag)
@@ -6869,8 +5401,6 @@ object GtkMultiSelectionClass_autoptr:
   extension (v: GtkMultiSelectionClass_autoptr)
     inline def value: Ptr[GtkMultiSelectionClass] = v
 
-/**
-*/
 opaque type GtkMultiSelectionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMultiSelectionClass_listautoptr: 
   given _tag: Tag[GtkMultiSelectionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6878,8 +5408,6 @@ object GtkMultiSelectionClass_listautoptr:
   extension (v: GtkMultiSelectionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMultiSelectionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMultiSelectionClass_queueautoptr: 
   given _tag: Tag[GtkMultiSelectionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6887,8 +5415,6 @@ object GtkMultiSelectionClass_queueautoptr:
   extension (v: GtkMultiSelectionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMultiSelectionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMultiSelectionClass_slistautoptr: 
   given _tag: Tag[GtkMultiSelectionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6896,8 +5422,6 @@ object GtkMultiSelectionClass_slistautoptr:
   extension (v: GtkMultiSelectionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMultiSelection_autoptr = Ptr[GtkMultiSelection]
 object GtkMultiSelection_autoptr: 
   given _tag: Tag[GtkMultiSelection_autoptr] = Tag.Ptr[GtkMultiSelection](GtkMultiSelection._tag)
@@ -6905,8 +5429,6 @@ object GtkMultiSelection_autoptr:
   extension (v: GtkMultiSelection_autoptr)
     inline def value: Ptr[GtkMultiSelection] = v
 
-/**
-*/
 opaque type GtkMultiSelection_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMultiSelection_listautoptr: 
   given _tag: Tag[GtkMultiSelection_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6914,8 +5436,6 @@ object GtkMultiSelection_listautoptr:
   extension (v: GtkMultiSelection_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMultiSelection_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMultiSelection_queueautoptr: 
   given _tag: Tag[GtkMultiSelection_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6923,8 +5443,6 @@ object GtkMultiSelection_queueautoptr:
   extension (v: GtkMultiSelection_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMultiSelection_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMultiSelection_slistautoptr: 
   given _tag: Tag[GtkMultiSelection_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6932,8 +5450,6 @@ object GtkMultiSelection_slistautoptr:
   extension (v: GtkMultiSelection_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMultiSorterClass_autoptr = Ptr[GtkMultiSorterClass]
 object GtkMultiSorterClass_autoptr: 
   given _tag: Tag[GtkMultiSorterClass_autoptr] = Tag.Ptr[GtkMultiSorterClass](GtkMultiSorterClass._tag)
@@ -6941,8 +5457,6 @@ object GtkMultiSorterClass_autoptr:
   extension (v: GtkMultiSorterClass_autoptr)
     inline def value: Ptr[GtkMultiSorterClass] = v
 
-/**
-*/
 opaque type GtkMultiSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMultiSorterClass_listautoptr: 
   given _tag: Tag[GtkMultiSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6950,8 +5464,6 @@ object GtkMultiSorterClass_listautoptr:
   extension (v: GtkMultiSorterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMultiSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMultiSorterClass_queueautoptr: 
   given _tag: Tag[GtkMultiSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6959,8 +5471,6 @@ object GtkMultiSorterClass_queueautoptr:
   extension (v: GtkMultiSorterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMultiSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMultiSorterClass_slistautoptr: 
   given _tag: Tag[GtkMultiSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -6968,8 +5478,6 @@ object GtkMultiSorterClass_slistautoptr:
   extension (v: GtkMultiSorterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkMultiSorter_autoptr = Ptr[GtkMultiSorter]
 object GtkMultiSorter_autoptr: 
   given _tag: Tag[GtkMultiSorter_autoptr] = Tag.Ptr[GtkMultiSorter](GtkMultiSorter._tag)
@@ -6977,8 +5485,6 @@ object GtkMultiSorter_autoptr:
   extension (v: GtkMultiSorter_autoptr)
     inline def value: Ptr[GtkMultiSorter] = v
 
-/**
-*/
 opaque type GtkMultiSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkMultiSorter_listautoptr: 
   given _tag: Tag[GtkMultiSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -6986,8 +5492,6 @@ object GtkMultiSorter_listautoptr:
   extension (v: GtkMultiSorter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkMultiSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkMultiSorter_queueautoptr: 
   given _tag: Tag[GtkMultiSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -6995,8 +5499,6 @@ object GtkMultiSorter_queueautoptr:
   extension (v: GtkMultiSorter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkMultiSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkMultiSorter_slistautoptr: 
   given _tag: Tag[GtkMultiSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7004,8 +5506,6 @@ object GtkMultiSorter_slistautoptr:
   extension (v: GtkMultiSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNamedActionClass_autoptr = Ptr[GtkNamedActionClass]
 object GtkNamedActionClass_autoptr: 
   given _tag: Tag[GtkNamedActionClass_autoptr] = Tag.Ptr[GtkNamedActionClass](GtkNamedActionClass._tag)
@@ -7013,8 +5513,6 @@ object GtkNamedActionClass_autoptr:
   extension (v: GtkNamedActionClass_autoptr)
     inline def value: Ptr[GtkNamedActionClass] = v
 
-/**
-*/
 opaque type GtkNamedActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNamedActionClass_listautoptr: 
   given _tag: Tag[GtkNamedActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7022,8 +5520,6 @@ object GtkNamedActionClass_listautoptr:
   extension (v: GtkNamedActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNamedActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNamedActionClass_queueautoptr: 
   given _tag: Tag[GtkNamedActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7031,8 +5527,6 @@ object GtkNamedActionClass_queueautoptr:
   extension (v: GtkNamedActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNamedActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNamedActionClass_slistautoptr: 
   given _tag: Tag[GtkNamedActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7040,8 +5534,6 @@ object GtkNamedActionClass_slistautoptr:
   extension (v: GtkNamedActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNamedAction_autoptr = Ptr[GtkNamedAction]
 object GtkNamedAction_autoptr: 
   given _tag: Tag[GtkNamedAction_autoptr] = Tag.Ptr[GtkNamedAction](GtkNamedAction._tag)
@@ -7049,8 +5541,6 @@ object GtkNamedAction_autoptr:
   extension (v: GtkNamedAction_autoptr)
     inline def value: Ptr[GtkNamedAction] = v
 
-/**
-*/
 opaque type GtkNamedAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNamedAction_listautoptr: 
   given _tag: Tag[GtkNamedAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7058,8 +5548,6 @@ object GtkNamedAction_listautoptr:
   extension (v: GtkNamedAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNamedAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNamedAction_queueautoptr: 
   given _tag: Tag[GtkNamedAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7067,8 +5555,6 @@ object GtkNamedAction_queueautoptr:
   extension (v: GtkNamedAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNamedAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNamedAction_slistautoptr: 
   given _tag: Tag[GtkNamedAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7076,8 +5562,6 @@ object GtkNamedAction_slistautoptr:
   extension (v: GtkNamedAction_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNativeDialogClass_autoptr = Ptr[GtkNativeDialogClass]
 object GtkNativeDialogClass_autoptr: 
   given _tag: Tag[GtkNativeDialogClass_autoptr] = Tag.Ptr[GtkNativeDialogClass](GtkNativeDialogClass._tag)
@@ -7085,8 +5569,6 @@ object GtkNativeDialogClass_autoptr:
   extension (v: GtkNativeDialogClass_autoptr)
     inline def value: Ptr[GtkNativeDialogClass] = v
 
-/**
-*/
 opaque type GtkNativeDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNativeDialogClass_listautoptr: 
   given _tag: Tag[GtkNativeDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7094,8 +5576,6 @@ object GtkNativeDialogClass_listautoptr:
   extension (v: GtkNativeDialogClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNativeDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNativeDialogClass_queueautoptr: 
   given _tag: Tag[GtkNativeDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7103,8 +5583,6 @@ object GtkNativeDialogClass_queueautoptr:
   extension (v: GtkNativeDialogClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNativeDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNativeDialogClass_slistautoptr: 
   given _tag: Tag[GtkNativeDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7112,8 +5590,6 @@ object GtkNativeDialogClass_slistautoptr:
   extension (v: GtkNativeDialogClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNativeDialog_autoptr = Ptr[GtkNativeDialog]
 object GtkNativeDialog_autoptr: 
   given _tag: Tag[GtkNativeDialog_autoptr] = Tag.Ptr[GtkNativeDialog](GtkNativeDialog._tag)
@@ -7121,8 +5597,6 @@ object GtkNativeDialog_autoptr:
   extension (v: GtkNativeDialog_autoptr)
     inline def value: Ptr[GtkNativeDialog] = v
 
-/**
-*/
 opaque type GtkNativeDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNativeDialog_listautoptr: 
   given _tag: Tag[GtkNativeDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7130,8 +5604,6 @@ object GtkNativeDialog_listautoptr:
   extension (v: GtkNativeDialog_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNativeDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNativeDialog_queueautoptr: 
   given _tag: Tag[GtkNativeDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7139,8 +5611,6 @@ object GtkNativeDialog_queueautoptr:
   extension (v: GtkNativeDialog_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNativeDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNativeDialog_slistautoptr: 
   given _tag: Tag[GtkNativeDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7148,8 +5618,6 @@ object GtkNativeDialog_slistautoptr:
   extension (v: GtkNativeDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNative_autoptr = Ptr[GtkNative]
 object GtkNative_autoptr: 
   given _tag: Tag[GtkNative_autoptr] = Tag.Ptr[GtkNative](GtkNative._tag)
@@ -7157,8 +5625,6 @@ object GtkNative_autoptr:
   extension (v: GtkNative_autoptr)
     inline def value: Ptr[GtkNative] = v
 
-/**
-*/
 opaque type GtkNative_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNative_listautoptr: 
   given _tag: Tag[GtkNative_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7166,8 +5632,6 @@ object GtkNative_listautoptr:
   extension (v: GtkNative_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNative_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNative_queueautoptr: 
   given _tag: Tag[GtkNative_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7175,8 +5639,6 @@ object GtkNative_queueautoptr:
   extension (v: GtkNative_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNative_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNative_slistautoptr: 
   given _tag: Tag[GtkNative_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7184,8 +5646,6 @@ object GtkNative_slistautoptr:
   extension (v: GtkNative_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNeverTriggerClass_autoptr = Ptr[GtkNeverTriggerClass]
 object GtkNeverTriggerClass_autoptr: 
   given _tag: Tag[GtkNeverTriggerClass_autoptr] = Tag.Ptr[GtkNeverTriggerClass](GtkNeverTriggerClass._tag)
@@ -7193,8 +5653,6 @@ object GtkNeverTriggerClass_autoptr:
   extension (v: GtkNeverTriggerClass_autoptr)
     inline def value: Ptr[GtkNeverTriggerClass] = v
 
-/**
-*/
 opaque type GtkNeverTriggerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNeverTriggerClass_listautoptr: 
   given _tag: Tag[GtkNeverTriggerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7202,8 +5660,6 @@ object GtkNeverTriggerClass_listautoptr:
   extension (v: GtkNeverTriggerClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNeverTriggerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNeverTriggerClass_queueautoptr: 
   given _tag: Tag[GtkNeverTriggerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7211,8 +5667,6 @@ object GtkNeverTriggerClass_queueautoptr:
   extension (v: GtkNeverTriggerClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNeverTriggerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNeverTriggerClass_slistautoptr: 
   given _tag: Tag[GtkNeverTriggerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7220,8 +5674,6 @@ object GtkNeverTriggerClass_slistautoptr:
   extension (v: GtkNeverTriggerClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNeverTrigger_autoptr = Ptr[GtkNeverTrigger]
 object GtkNeverTrigger_autoptr: 
   given _tag: Tag[GtkNeverTrigger_autoptr] = Tag.Ptr[GtkNeverTrigger](GtkNeverTrigger._tag)
@@ -7229,8 +5681,6 @@ object GtkNeverTrigger_autoptr:
   extension (v: GtkNeverTrigger_autoptr)
     inline def value: Ptr[GtkNeverTrigger] = v
 
-/**
-*/
 opaque type GtkNeverTrigger_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNeverTrigger_listautoptr: 
   given _tag: Tag[GtkNeverTrigger_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7238,8 +5688,6 @@ object GtkNeverTrigger_listautoptr:
   extension (v: GtkNeverTrigger_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNeverTrigger_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNeverTrigger_queueautoptr: 
   given _tag: Tag[GtkNeverTrigger_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7247,8 +5695,6 @@ object GtkNeverTrigger_queueautoptr:
   extension (v: GtkNeverTrigger_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNeverTrigger_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNeverTrigger_slistautoptr: 
   given _tag: Tag[GtkNeverTrigger_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7256,8 +5702,6 @@ object GtkNeverTrigger_slistautoptr:
   extension (v: GtkNeverTrigger_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNoSelectionClass_autoptr = Ptr[GtkNoSelectionClass]
 object GtkNoSelectionClass_autoptr: 
   given _tag: Tag[GtkNoSelectionClass_autoptr] = Tag.Ptr[GtkNoSelectionClass](GtkNoSelectionClass._tag)
@@ -7265,8 +5709,6 @@ object GtkNoSelectionClass_autoptr:
   extension (v: GtkNoSelectionClass_autoptr)
     inline def value: Ptr[GtkNoSelectionClass] = v
 
-/**
-*/
 opaque type GtkNoSelectionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNoSelectionClass_listautoptr: 
   given _tag: Tag[GtkNoSelectionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7274,8 +5716,6 @@ object GtkNoSelectionClass_listautoptr:
   extension (v: GtkNoSelectionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNoSelectionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNoSelectionClass_queueautoptr: 
   given _tag: Tag[GtkNoSelectionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7283,8 +5723,6 @@ object GtkNoSelectionClass_queueautoptr:
   extension (v: GtkNoSelectionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNoSelectionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNoSelectionClass_slistautoptr: 
   given _tag: Tag[GtkNoSelectionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7292,8 +5730,6 @@ object GtkNoSelectionClass_slistautoptr:
   extension (v: GtkNoSelectionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNoSelection_autoptr = Ptr[GtkNoSelection]
 object GtkNoSelection_autoptr: 
   given _tag: Tag[GtkNoSelection_autoptr] = Tag.Ptr[GtkNoSelection](GtkNoSelection._tag)
@@ -7301,8 +5737,6 @@ object GtkNoSelection_autoptr:
   extension (v: GtkNoSelection_autoptr)
     inline def value: Ptr[GtkNoSelection] = v
 
-/**
-*/
 opaque type GtkNoSelection_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNoSelection_listautoptr: 
   given _tag: Tag[GtkNoSelection_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7310,8 +5744,6 @@ object GtkNoSelection_listautoptr:
   extension (v: GtkNoSelection_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNoSelection_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNoSelection_queueautoptr: 
   given _tag: Tag[GtkNoSelection_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7319,8 +5751,6 @@ object GtkNoSelection_queueautoptr:
   extension (v: GtkNoSelection_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNoSelection_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNoSelection_slistautoptr: 
   given _tag: Tag[GtkNoSelection_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7328,8 +5758,6 @@ object GtkNoSelection_slistautoptr:
   extension (v: GtkNoSelection_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNotebook_autoptr = Ptr[GtkNotebook]
 object GtkNotebook_autoptr: 
   given _tag: Tag[GtkNotebook_autoptr] = Tag.Ptr[GtkNotebook](GtkNotebook._tag)
@@ -7337,8 +5765,6 @@ object GtkNotebook_autoptr:
   extension (v: GtkNotebook_autoptr)
     inline def value: Ptr[GtkNotebook] = v
 
-/**
-*/
 opaque type GtkNotebook_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNotebook_listautoptr: 
   given _tag: Tag[GtkNotebook_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7346,8 +5772,6 @@ object GtkNotebook_listautoptr:
   extension (v: GtkNotebook_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNotebook_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNotebook_queueautoptr: 
   given _tag: Tag[GtkNotebook_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7355,8 +5779,6 @@ object GtkNotebook_queueautoptr:
   extension (v: GtkNotebook_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNotebook_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNotebook_slistautoptr: 
   given _tag: Tag[GtkNotebook_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7364,8 +5786,6 @@ object GtkNotebook_slistautoptr:
   extension (v: GtkNotebook_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNothingActionClass_autoptr = Ptr[GtkNothingActionClass]
 object GtkNothingActionClass_autoptr: 
   given _tag: Tag[GtkNothingActionClass_autoptr] = Tag.Ptr[GtkNothingActionClass](GtkNothingActionClass._tag)
@@ -7373,8 +5793,6 @@ object GtkNothingActionClass_autoptr:
   extension (v: GtkNothingActionClass_autoptr)
     inline def value: Ptr[GtkNothingActionClass] = v
 
-/**
-*/
 opaque type GtkNothingActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNothingActionClass_listautoptr: 
   given _tag: Tag[GtkNothingActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7382,8 +5800,6 @@ object GtkNothingActionClass_listautoptr:
   extension (v: GtkNothingActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNothingActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNothingActionClass_queueautoptr: 
   given _tag: Tag[GtkNothingActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7391,8 +5807,6 @@ object GtkNothingActionClass_queueautoptr:
   extension (v: GtkNothingActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNothingActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNothingActionClass_slistautoptr: 
   given _tag: Tag[GtkNothingActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7400,8 +5814,6 @@ object GtkNothingActionClass_slistautoptr:
   extension (v: GtkNothingActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNothingAction_autoptr = Ptr[GtkNothingAction]
 object GtkNothingAction_autoptr: 
   given _tag: Tag[GtkNothingAction_autoptr] = Tag.Ptr[GtkNothingAction](GtkNothingAction._tag)
@@ -7409,8 +5821,6 @@ object GtkNothingAction_autoptr:
   extension (v: GtkNothingAction_autoptr)
     inline def value: Ptr[GtkNothingAction] = v
 
-/**
-*/
 opaque type GtkNothingAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNothingAction_listautoptr: 
   given _tag: Tag[GtkNothingAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7418,8 +5828,6 @@ object GtkNothingAction_listautoptr:
   extension (v: GtkNothingAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNothingAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNothingAction_queueautoptr: 
   given _tag: Tag[GtkNothingAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7427,8 +5835,6 @@ object GtkNothingAction_queueautoptr:
   extension (v: GtkNothingAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNothingAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNothingAction_slistautoptr: 
   given _tag: Tag[GtkNothingAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7436,8 +5842,6 @@ object GtkNothingAction_slistautoptr:
   extension (v: GtkNothingAction_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNumericSorterClass_autoptr = Ptr[GtkNumericSorterClass]
 object GtkNumericSorterClass_autoptr: 
   given _tag: Tag[GtkNumericSorterClass_autoptr] = Tag.Ptr[GtkNumericSorterClass](GtkNumericSorterClass._tag)
@@ -7445,8 +5849,6 @@ object GtkNumericSorterClass_autoptr:
   extension (v: GtkNumericSorterClass_autoptr)
     inline def value: Ptr[GtkNumericSorterClass] = v
 
-/**
-*/
 opaque type GtkNumericSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNumericSorterClass_listautoptr: 
   given _tag: Tag[GtkNumericSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7454,8 +5856,6 @@ object GtkNumericSorterClass_listautoptr:
   extension (v: GtkNumericSorterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNumericSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNumericSorterClass_queueautoptr: 
   given _tag: Tag[GtkNumericSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7463,8 +5863,6 @@ object GtkNumericSorterClass_queueautoptr:
   extension (v: GtkNumericSorterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNumericSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNumericSorterClass_slistautoptr: 
   given _tag: Tag[GtkNumericSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7472,8 +5870,6 @@ object GtkNumericSorterClass_slistautoptr:
   extension (v: GtkNumericSorterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkNumericSorter_autoptr = Ptr[GtkNumericSorter]
 object GtkNumericSorter_autoptr: 
   given _tag: Tag[GtkNumericSorter_autoptr] = Tag.Ptr[GtkNumericSorter](GtkNumericSorter._tag)
@@ -7481,8 +5877,6 @@ object GtkNumericSorter_autoptr:
   extension (v: GtkNumericSorter_autoptr)
     inline def value: Ptr[GtkNumericSorter] = v
 
-/**
-*/
 opaque type GtkNumericSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkNumericSorter_listautoptr: 
   given _tag: Tag[GtkNumericSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7490,8 +5884,6 @@ object GtkNumericSorter_listautoptr:
   extension (v: GtkNumericSorter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkNumericSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkNumericSorter_queueautoptr: 
   given _tag: Tag[GtkNumericSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7499,8 +5891,6 @@ object GtkNumericSorter_queueautoptr:
   extension (v: GtkNumericSorter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkNumericSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkNumericSorter_slistautoptr: 
   given _tag: Tag[GtkNumericSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7508,8 +5898,6 @@ object GtkNumericSorter_slistautoptr:
   extension (v: GtkNumericSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkOrientable_autoptr = Ptr[GtkOrientable]
 object GtkOrientable_autoptr: 
   given _tag: Tag[GtkOrientable_autoptr] = Tag.Ptr[GtkOrientable](GtkOrientable._tag)
@@ -7517,8 +5905,6 @@ object GtkOrientable_autoptr:
   extension (v: GtkOrientable_autoptr)
     inline def value: Ptr[GtkOrientable] = v
 
-/**
-*/
 opaque type GtkOrientable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkOrientable_listautoptr: 
   given _tag: Tag[GtkOrientable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7526,8 +5912,6 @@ object GtkOrientable_listautoptr:
   extension (v: GtkOrientable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkOrientable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkOrientable_queueautoptr: 
   given _tag: Tag[GtkOrientable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7535,8 +5919,6 @@ object GtkOrientable_queueautoptr:
   extension (v: GtkOrientable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkOrientable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkOrientable_slistautoptr: 
   given _tag: Tag[GtkOrientable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7544,8 +5926,6 @@ object GtkOrientable_slistautoptr:
   extension (v: GtkOrientable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChildClass_autoptr = Ptr[GtkOverlayLayoutChildClass]
 object GtkOverlayLayoutChildClass_autoptr: 
   given _tag: Tag[GtkOverlayLayoutChildClass_autoptr] = Tag.Ptr[GtkOverlayLayoutChildClass](GtkOverlayLayoutChildClass._tag)
@@ -7553,8 +5933,6 @@ object GtkOverlayLayoutChildClass_autoptr:
   extension (v: GtkOverlayLayoutChildClass_autoptr)
     inline def value: Ptr[GtkOverlayLayoutChildClass] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChildClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkOverlayLayoutChildClass_listautoptr: 
   given _tag: Tag[GtkOverlayLayoutChildClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7562,8 +5940,6 @@ object GtkOverlayLayoutChildClass_listautoptr:
   extension (v: GtkOverlayLayoutChildClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChildClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkOverlayLayoutChildClass_queueautoptr: 
   given _tag: Tag[GtkOverlayLayoutChildClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7571,8 +5947,6 @@ object GtkOverlayLayoutChildClass_queueautoptr:
   extension (v: GtkOverlayLayoutChildClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChildClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkOverlayLayoutChildClass_slistautoptr: 
   given _tag: Tag[GtkOverlayLayoutChildClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7580,8 +5954,6 @@ object GtkOverlayLayoutChildClass_slistautoptr:
   extension (v: GtkOverlayLayoutChildClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChild_autoptr = Ptr[GtkOverlayLayoutChild]
 object GtkOverlayLayoutChild_autoptr: 
   given _tag: Tag[GtkOverlayLayoutChild_autoptr] = Tag.Ptr[GtkOverlayLayoutChild](GtkOverlayLayoutChild._tag)
@@ -7589,8 +5961,6 @@ object GtkOverlayLayoutChild_autoptr:
   extension (v: GtkOverlayLayoutChild_autoptr)
     inline def value: Ptr[GtkOverlayLayoutChild] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChild_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkOverlayLayoutChild_listautoptr: 
   given _tag: Tag[GtkOverlayLayoutChild_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7598,8 +5968,6 @@ object GtkOverlayLayoutChild_listautoptr:
   extension (v: GtkOverlayLayoutChild_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChild_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkOverlayLayoutChild_queueautoptr: 
   given _tag: Tag[GtkOverlayLayoutChild_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7607,8 +5975,6 @@ object GtkOverlayLayoutChild_queueautoptr:
   extension (v: GtkOverlayLayoutChild_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutChild_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkOverlayLayoutChild_slistautoptr: 
   given _tag: Tag[GtkOverlayLayoutChild_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7616,8 +5982,6 @@ object GtkOverlayLayoutChild_slistautoptr:
   extension (v: GtkOverlayLayoutChild_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutClass_autoptr = Ptr[GtkOverlayLayoutClass]
 object GtkOverlayLayoutClass_autoptr: 
   given _tag: Tag[GtkOverlayLayoutClass_autoptr] = Tag.Ptr[GtkOverlayLayoutClass](GtkOverlayLayoutClass._tag)
@@ -7625,8 +5989,6 @@ object GtkOverlayLayoutClass_autoptr:
   extension (v: GtkOverlayLayoutClass_autoptr)
     inline def value: Ptr[GtkOverlayLayoutClass] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkOverlayLayoutClass_listautoptr: 
   given _tag: Tag[GtkOverlayLayoutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7634,8 +5996,6 @@ object GtkOverlayLayoutClass_listautoptr:
   extension (v: GtkOverlayLayoutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkOverlayLayoutClass_queueautoptr: 
   given _tag: Tag[GtkOverlayLayoutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7643,8 +6003,6 @@ object GtkOverlayLayoutClass_queueautoptr:
   extension (v: GtkOverlayLayoutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkOverlayLayoutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkOverlayLayoutClass_slistautoptr: 
   given _tag: Tag[GtkOverlayLayoutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7652,8 +6010,6 @@ object GtkOverlayLayoutClass_slistautoptr:
   extension (v: GtkOverlayLayoutClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkOverlayLayout_autoptr = Ptr[GtkOverlayLayout]
 object GtkOverlayLayout_autoptr: 
   given _tag: Tag[GtkOverlayLayout_autoptr] = Tag.Ptr[GtkOverlayLayout](GtkOverlayLayout._tag)
@@ -7661,8 +6017,6 @@ object GtkOverlayLayout_autoptr:
   extension (v: GtkOverlayLayout_autoptr)
     inline def value: Ptr[GtkOverlayLayout] = v
 
-/**
-*/
 opaque type GtkOverlayLayout_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkOverlayLayout_listautoptr: 
   given _tag: Tag[GtkOverlayLayout_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7670,8 +6024,6 @@ object GtkOverlayLayout_listautoptr:
   extension (v: GtkOverlayLayout_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkOverlayLayout_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkOverlayLayout_queueautoptr: 
   given _tag: Tag[GtkOverlayLayout_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7679,8 +6031,6 @@ object GtkOverlayLayout_queueautoptr:
   extension (v: GtkOverlayLayout_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkOverlayLayout_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkOverlayLayout_slistautoptr: 
   given _tag: Tag[GtkOverlayLayout_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7688,8 +6038,6 @@ object GtkOverlayLayout_slistautoptr:
   extension (v: GtkOverlayLayout_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkOverlay_autoptr = Ptr[GtkOverlay]
 object GtkOverlay_autoptr: 
   given _tag: Tag[GtkOverlay_autoptr] = Tag.Ptr[GtkOverlay](GtkOverlay._tag)
@@ -7697,8 +6045,6 @@ object GtkOverlay_autoptr:
   extension (v: GtkOverlay_autoptr)
     inline def value: Ptr[GtkOverlay] = v
 
-/**
-*/
 opaque type GtkOverlay_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkOverlay_listautoptr: 
   given _tag: Tag[GtkOverlay_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7706,8 +6052,6 @@ object GtkOverlay_listautoptr:
   extension (v: GtkOverlay_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkOverlay_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkOverlay_queueautoptr: 
   given _tag: Tag[GtkOverlay_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7715,8 +6059,6 @@ object GtkOverlay_queueautoptr:
   extension (v: GtkOverlay_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkOverlay_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkOverlay_slistautoptr: 
   given _tag: Tag[GtkOverlay_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7730,14 +6072,12 @@ object GtkOverlay_slistautoptr:
 opaque type GtkPageSetupDoneFunc = CFuncPtr2[Ptr[GtkPageSetup], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkPageSetupDoneFunc: 
   given _tag: Tag[GtkPageSetupDoneFunc] = Tag.materializeCFuncPtr2[Ptr[GtkPageSetup], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkPageSetupDoneFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkPageSetupDoneFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GtkPageSetup], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkPageSetupDoneFunc = o
   extension (v: GtkPageSetupDoneFunc)
     inline def value: CFuncPtr2[Ptr[GtkPageSetup], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkPageSetup_autoptr = Ptr[GtkPageSetup]
 object GtkPageSetup_autoptr: 
   given _tag: Tag[GtkPageSetup_autoptr] = Tag.Ptr[GtkPageSetup](GtkPageSetup._tag)
@@ -7745,8 +6085,6 @@ object GtkPageSetup_autoptr:
   extension (v: GtkPageSetup_autoptr)
     inline def value: Ptr[GtkPageSetup] = v
 
-/**
-*/
 opaque type GtkPageSetup_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPageSetup_listautoptr: 
   given _tag: Tag[GtkPageSetup_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7754,8 +6092,6 @@ object GtkPageSetup_listautoptr:
   extension (v: GtkPageSetup_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPageSetup_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPageSetup_queueautoptr: 
   given _tag: Tag[GtkPageSetup_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7763,8 +6099,6 @@ object GtkPageSetup_queueautoptr:
   extension (v: GtkPageSetup_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPageSetup_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPageSetup_slistautoptr: 
   given _tag: Tag[GtkPageSetup_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7772,8 +6106,6 @@ object GtkPageSetup_slistautoptr:
   extension (v: GtkPageSetup_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPaned_autoptr = Ptr[GtkPaned]
 object GtkPaned_autoptr: 
   given _tag: Tag[GtkPaned_autoptr] = Tag.Ptr[GtkPaned](GtkPaned._tag)
@@ -7781,8 +6113,6 @@ object GtkPaned_autoptr:
   extension (v: GtkPaned_autoptr)
     inline def value: Ptr[GtkPaned] = v
 
-/**
-*/
 opaque type GtkPaned_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPaned_listautoptr: 
   given _tag: Tag[GtkPaned_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7790,8 +6120,6 @@ object GtkPaned_listautoptr:
   extension (v: GtkPaned_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPaned_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPaned_queueautoptr: 
   given _tag: Tag[GtkPaned_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7799,8 +6127,6 @@ object GtkPaned_queueautoptr:
   extension (v: GtkPaned_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPaned_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPaned_slistautoptr: 
   given _tag: Tag[GtkPaned_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7808,8 +6134,6 @@ object GtkPaned_slistautoptr:
   extension (v: GtkPaned_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPaperSize_autoptr = Ptr[GtkPaperSize]
 object GtkPaperSize_autoptr: 
   given _tag: Tag[GtkPaperSize_autoptr] = Tag.Ptr[GtkPaperSize](GtkPaperSize._tag)
@@ -7817,8 +6141,6 @@ object GtkPaperSize_autoptr:
   extension (v: GtkPaperSize_autoptr)
     inline def value: Ptr[GtkPaperSize] = v
 
-/**
-*/
 opaque type GtkPaperSize_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPaperSize_listautoptr: 
   given _tag: Tag[GtkPaperSize_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7826,8 +6148,6 @@ object GtkPaperSize_listautoptr:
   extension (v: GtkPaperSize_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPaperSize_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPaperSize_queueautoptr: 
   given _tag: Tag[GtkPaperSize_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7835,8 +6155,6 @@ object GtkPaperSize_queueautoptr:
   extension (v: GtkPaperSize_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPaperSize_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPaperSize_slistautoptr: 
   given _tag: Tag[GtkPaperSize_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7844,8 +6162,6 @@ object GtkPaperSize_slistautoptr:
   extension (v: GtkPaperSize_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBufferClass_autoptr = Ptr[GtkPasswordEntryBufferClass]
 object GtkPasswordEntryBufferClass_autoptr: 
   given _tag: Tag[GtkPasswordEntryBufferClass_autoptr] = Tag.Ptr[GtkPasswordEntryBufferClass](GtkPasswordEntryBufferClass._tag)
@@ -7853,8 +6169,6 @@ object GtkPasswordEntryBufferClass_autoptr:
   extension (v: GtkPasswordEntryBufferClass_autoptr)
     inline def value: Ptr[GtkPasswordEntryBufferClass] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBufferClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPasswordEntryBufferClass_listautoptr: 
   given _tag: Tag[GtkPasswordEntryBufferClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7862,8 +6176,6 @@ object GtkPasswordEntryBufferClass_listautoptr:
   extension (v: GtkPasswordEntryBufferClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBufferClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPasswordEntryBufferClass_queueautoptr: 
   given _tag: Tag[GtkPasswordEntryBufferClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7871,8 +6183,6 @@ object GtkPasswordEntryBufferClass_queueautoptr:
   extension (v: GtkPasswordEntryBufferClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBufferClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPasswordEntryBufferClass_slistautoptr: 
   given _tag: Tag[GtkPasswordEntryBufferClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7880,8 +6190,6 @@ object GtkPasswordEntryBufferClass_slistautoptr:
   extension (v: GtkPasswordEntryBufferClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBuffer_autoptr = Ptr[GtkPasswordEntryBuffer]
 object GtkPasswordEntryBuffer_autoptr: 
   given _tag: Tag[GtkPasswordEntryBuffer_autoptr] = Tag.Ptr[GtkPasswordEntryBuffer](GtkPasswordEntryBuffer._tag)
@@ -7889,8 +6197,6 @@ object GtkPasswordEntryBuffer_autoptr:
   extension (v: GtkPasswordEntryBuffer_autoptr)
     inline def value: Ptr[GtkPasswordEntryBuffer] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBuffer_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPasswordEntryBuffer_listautoptr: 
   given _tag: Tag[GtkPasswordEntryBuffer_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7898,8 +6204,6 @@ object GtkPasswordEntryBuffer_listautoptr:
   extension (v: GtkPasswordEntryBuffer_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBuffer_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPasswordEntryBuffer_queueautoptr: 
   given _tag: Tag[GtkPasswordEntryBuffer_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7907,8 +6211,6 @@ object GtkPasswordEntryBuffer_queueautoptr:
   extension (v: GtkPasswordEntryBuffer_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPasswordEntryBuffer_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPasswordEntryBuffer_slistautoptr: 
   given _tag: Tag[GtkPasswordEntryBuffer_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7916,8 +6218,6 @@ object GtkPasswordEntryBuffer_slistautoptr:
   extension (v: GtkPasswordEntryBuffer_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPictureClass_autoptr = Ptr[GtkPictureClass]
 object GtkPictureClass_autoptr: 
   given _tag: Tag[GtkPictureClass_autoptr] = Tag.Ptr[GtkPictureClass](GtkPictureClass._tag)
@@ -7925,8 +6225,6 @@ object GtkPictureClass_autoptr:
   extension (v: GtkPictureClass_autoptr)
     inline def value: Ptr[GtkPictureClass] = v
 
-/**
-*/
 opaque type GtkPictureClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPictureClass_listautoptr: 
   given _tag: Tag[GtkPictureClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7934,8 +6232,6 @@ object GtkPictureClass_listautoptr:
   extension (v: GtkPictureClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPictureClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPictureClass_queueautoptr: 
   given _tag: Tag[GtkPictureClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7943,8 +6239,6 @@ object GtkPictureClass_queueautoptr:
   extension (v: GtkPictureClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPictureClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPictureClass_slistautoptr: 
   given _tag: Tag[GtkPictureClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7952,8 +6246,6 @@ object GtkPictureClass_slistautoptr:
   extension (v: GtkPictureClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPicture_autoptr = Ptr[GtkPicture]
 object GtkPicture_autoptr: 
   given _tag: Tag[GtkPicture_autoptr] = Tag.Ptr[GtkPicture](GtkPicture._tag)
@@ -7961,8 +6253,6 @@ object GtkPicture_autoptr:
   extension (v: GtkPicture_autoptr)
     inline def value: Ptr[GtkPicture] = v
 
-/**
-*/
 opaque type GtkPicture_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPicture_listautoptr: 
   given _tag: Tag[GtkPicture_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -7970,8 +6260,6 @@ object GtkPicture_listautoptr:
   extension (v: GtkPicture_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPicture_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPicture_queueautoptr: 
   given _tag: Tag[GtkPicture_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -7979,8 +6267,6 @@ object GtkPicture_queueautoptr:
   extension (v: GtkPicture_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPicture_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPicture_slistautoptr: 
   given _tag: Tag[GtkPicture_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -7988,8 +6274,6 @@ object GtkPicture_slistautoptr:
   extension (v: GtkPicture_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPopoverMenu_autoptr = Ptr[GtkPopoverMenu]
 object GtkPopoverMenu_autoptr: 
   given _tag: Tag[GtkPopoverMenu_autoptr] = Tag.Ptr[GtkPopoverMenu](GtkPopoverMenu._tag)
@@ -7997,8 +6281,6 @@ object GtkPopoverMenu_autoptr:
   extension (v: GtkPopoverMenu_autoptr)
     inline def value: Ptr[GtkPopoverMenu] = v
 
-/**
-*/
 opaque type GtkPopoverMenu_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPopoverMenu_listautoptr: 
   given _tag: Tag[GtkPopoverMenu_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8006,8 +6288,6 @@ object GtkPopoverMenu_listautoptr:
   extension (v: GtkPopoverMenu_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPopoverMenu_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPopoverMenu_queueautoptr: 
   given _tag: Tag[GtkPopoverMenu_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8015,8 +6295,6 @@ object GtkPopoverMenu_queueautoptr:
   extension (v: GtkPopoverMenu_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPopoverMenu_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPopoverMenu_slistautoptr: 
   given _tag: Tag[GtkPopoverMenu_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8024,8 +6302,6 @@ object GtkPopoverMenu_slistautoptr:
   extension (v: GtkPopoverMenu_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPopover_autoptr = Ptr[GtkPopover]
 object GtkPopover_autoptr: 
   given _tag: Tag[GtkPopover_autoptr] = Tag.Ptr[GtkPopover](GtkPopover._tag)
@@ -8033,8 +6309,6 @@ object GtkPopover_autoptr:
   extension (v: GtkPopover_autoptr)
     inline def value: Ptr[GtkPopover] = v
 
-/**
-*/
 opaque type GtkPopover_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPopover_listautoptr: 
   given _tag: Tag[GtkPopover_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8042,8 +6316,6 @@ object GtkPopover_listautoptr:
   extension (v: GtkPopover_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPopover_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPopover_queueautoptr: 
   given _tag: Tag[GtkPopover_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8051,8 +6323,6 @@ object GtkPopover_queueautoptr:
   extension (v: GtkPopover_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPopover_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPopover_slistautoptr: 
   given _tag: Tag[GtkPopover_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8060,8 +6330,6 @@ object GtkPopover_slistautoptr:
   extension (v: GtkPopover_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPrintContext_autoptr = Ptr[GtkPrintContext]
 object GtkPrintContext_autoptr: 
   given _tag: Tag[GtkPrintContext_autoptr] = Tag.Ptr[GtkPrintContext](GtkPrintContext._tag)
@@ -8069,8 +6337,6 @@ object GtkPrintContext_autoptr:
   extension (v: GtkPrintContext_autoptr)
     inline def value: Ptr[GtkPrintContext] = v
 
-/**
-*/
 opaque type GtkPrintContext_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPrintContext_listautoptr: 
   given _tag: Tag[GtkPrintContext_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8078,8 +6344,6 @@ object GtkPrintContext_listautoptr:
   extension (v: GtkPrintContext_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPrintContext_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPrintContext_queueautoptr: 
   given _tag: Tag[GtkPrintContext_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8087,8 +6351,6 @@ object GtkPrintContext_queueautoptr:
   extension (v: GtkPrintContext_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPrintContext_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPrintContext_slistautoptr: 
   given _tag: Tag[GtkPrintContext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8096,8 +6358,6 @@ object GtkPrintContext_slistautoptr:
   extension (v: GtkPrintContext_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPrintOperationPreview_autoptr = Ptr[GtkPrintOperationPreview]
 object GtkPrintOperationPreview_autoptr: 
   given _tag: Tag[GtkPrintOperationPreview_autoptr] = Tag.Ptr[GtkPrintOperationPreview](GtkPrintOperationPreview._tag)
@@ -8105,8 +6365,6 @@ object GtkPrintOperationPreview_autoptr:
   extension (v: GtkPrintOperationPreview_autoptr)
     inline def value: Ptr[GtkPrintOperationPreview] = v
 
-/**
-*/
 opaque type GtkPrintOperationPreview_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPrintOperationPreview_listautoptr: 
   given _tag: Tag[GtkPrintOperationPreview_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8114,8 +6372,6 @@ object GtkPrintOperationPreview_listautoptr:
   extension (v: GtkPrintOperationPreview_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPrintOperationPreview_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPrintOperationPreview_queueautoptr: 
   given _tag: Tag[GtkPrintOperationPreview_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8123,8 +6379,6 @@ object GtkPrintOperationPreview_queueautoptr:
   extension (v: GtkPrintOperationPreview_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPrintOperationPreview_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPrintOperationPreview_slistautoptr: 
   given _tag: Tag[GtkPrintOperationPreview_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8132,8 +6386,6 @@ object GtkPrintOperationPreview_slistautoptr:
   extension (v: GtkPrintOperationPreview_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPrintOperation_autoptr = Ptr[GtkPrintOperation]
 object GtkPrintOperation_autoptr: 
   given _tag: Tag[GtkPrintOperation_autoptr] = Tag.Ptr[GtkPrintOperation](GtkPrintOperation._tag)
@@ -8141,8 +6393,6 @@ object GtkPrintOperation_autoptr:
   extension (v: GtkPrintOperation_autoptr)
     inline def value: Ptr[GtkPrintOperation] = v
 
-/**
-*/
 opaque type GtkPrintOperation_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPrintOperation_listautoptr: 
   given _tag: Tag[GtkPrintOperation_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8150,8 +6400,6 @@ object GtkPrintOperation_listautoptr:
   extension (v: GtkPrintOperation_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPrintOperation_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPrintOperation_queueautoptr: 
   given _tag: Tag[GtkPrintOperation_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8159,8 +6407,6 @@ object GtkPrintOperation_queueautoptr:
   extension (v: GtkPrintOperation_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPrintOperation_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPrintOperation_slistautoptr: 
   given _tag: Tag[GtkPrintOperation_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8168,19 +6414,15 @@ object GtkPrintOperation_slistautoptr:
   extension (v: GtkPrintOperation_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkPrintSettingsFunc = CFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkPrintSettingsFunc: 
   given _tag: Tag[GtkPrintSettingsFunc] = Tag.materializeCFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkPrintSettingsFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkPrintSettingsFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkPrintSettingsFunc = o
   extension (v: GtkPrintSettingsFunc)
     inline def value: CFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkPrintSettings_autoptr = Ptr[GtkPrintSettings]
 object GtkPrintSettings_autoptr: 
   given _tag: Tag[GtkPrintSettings_autoptr] = Tag.Ptr[GtkPrintSettings](GtkPrintSettings._tag)
@@ -8188,8 +6430,6 @@ object GtkPrintSettings_autoptr:
   extension (v: GtkPrintSettings_autoptr)
     inline def value: Ptr[GtkPrintSettings] = v
 
-/**
-*/
 opaque type GtkPrintSettings_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkPrintSettings_listautoptr: 
   given _tag: Tag[GtkPrintSettings_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8197,8 +6437,6 @@ object GtkPrintSettings_listautoptr:
   extension (v: GtkPrintSettings_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkPrintSettings_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkPrintSettings_queueautoptr: 
   given _tag: Tag[GtkPrintSettings_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8206,8 +6444,6 @@ object GtkPrintSettings_queueautoptr:
   extension (v: GtkPrintSettings_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkPrintSettings_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkPrintSettings_slistautoptr: 
   given _tag: Tag[GtkPrintSettings_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8215,8 +6451,6 @@ object GtkPrintSettings_slistautoptr:
   extension (v: GtkPrintSettings_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkProgressBar_autoptr = Ptr[GtkProgressBar]
 object GtkProgressBar_autoptr: 
   given _tag: Tag[GtkProgressBar_autoptr] = Tag.Ptr[GtkProgressBar](GtkProgressBar._tag)
@@ -8224,8 +6458,6 @@ object GtkProgressBar_autoptr:
   extension (v: GtkProgressBar_autoptr)
     inline def value: Ptr[GtkProgressBar] = v
 
-/**
-*/
 opaque type GtkProgressBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkProgressBar_listautoptr: 
   given _tag: Tag[GtkProgressBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8233,8 +6465,6 @@ object GtkProgressBar_listautoptr:
   extension (v: GtkProgressBar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkProgressBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkProgressBar_queueautoptr: 
   given _tag: Tag[GtkProgressBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8242,8 +6472,6 @@ object GtkProgressBar_queueautoptr:
   extension (v: GtkProgressBar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkProgressBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkProgressBar_slistautoptr: 
   given _tag: Tag[GtkProgressBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8251,8 +6479,6 @@ object GtkProgressBar_slistautoptr:
   extension (v: GtkProgressBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkRange_autoptr = Ptr[GtkRange]
 object GtkRange_autoptr: 
   given _tag: Tag[GtkRange_autoptr] = Tag.Ptr[GtkRange](GtkRange._tag)
@@ -8260,8 +6486,6 @@ object GtkRange_autoptr:
   extension (v: GtkRange_autoptr)
     inline def value: Ptr[GtkRange] = v
 
-/**
-*/
 opaque type GtkRange_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkRange_listautoptr: 
   given _tag: Tag[GtkRange_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8269,8 +6493,6 @@ object GtkRange_listautoptr:
   extension (v: GtkRange_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkRange_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkRange_queueautoptr: 
   given _tag: Tag[GtkRange_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8278,8 +6500,6 @@ object GtkRange_queueautoptr:
   extension (v: GtkRange_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkRange_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkRange_slistautoptr: 
   given _tag: Tag[GtkRange_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8287,8 +6507,6 @@ object GtkRange_slistautoptr:
   extension (v: GtkRange_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkRecentInfo_autoptr = Ptr[GtkRecentInfo]
 object GtkRecentInfo_autoptr: 
   given _tag: Tag[GtkRecentInfo_autoptr] = Tag.Ptr[GtkRecentInfo](GtkRecentInfo._tag)
@@ -8296,8 +6514,6 @@ object GtkRecentInfo_autoptr:
   extension (v: GtkRecentInfo_autoptr)
     inline def value: Ptr[GtkRecentInfo] = v
 
-/**
-*/
 opaque type GtkRecentInfo_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkRecentInfo_listautoptr: 
   given _tag: Tag[GtkRecentInfo_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8305,8 +6521,6 @@ object GtkRecentInfo_listautoptr:
   extension (v: GtkRecentInfo_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkRecentInfo_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkRecentInfo_queueautoptr: 
   given _tag: Tag[GtkRecentInfo_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8314,8 +6528,6 @@ object GtkRecentInfo_queueautoptr:
   extension (v: GtkRecentInfo_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkRecentInfo_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkRecentInfo_slistautoptr: 
   given _tag: Tag[GtkRecentInfo_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8323,8 +6535,6 @@ object GtkRecentInfo_slistautoptr:
   extension (v: GtkRecentInfo_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkRecentManager_autoptr = Ptr[GtkRecentManager]
 object GtkRecentManager_autoptr: 
   given _tag: Tag[GtkRecentManager_autoptr] = Tag.Ptr[GtkRecentManager](GtkRecentManager._tag)
@@ -8332,8 +6542,6 @@ object GtkRecentManager_autoptr:
   extension (v: GtkRecentManager_autoptr)
     inline def value: Ptr[GtkRecentManager] = v
 
-/**
-*/
 opaque type GtkRecentManager_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkRecentManager_listautoptr: 
   given _tag: Tag[GtkRecentManager_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8341,8 +6549,6 @@ object GtkRecentManager_listautoptr:
   extension (v: GtkRecentManager_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkRecentManager_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkRecentManager_queueautoptr: 
   given _tag: Tag[GtkRecentManager_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8350,8 +6556,6 @@ object GtkRecentManager_queueautoptr:
   extension (v: GtkRecentManager_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkRecentManager_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkRecentManager_slistautoptr: 
   given _tag: Tag[GtkRecentManager_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8359,8 +6563,6 @@ object GtkRecentManager_slistautoptr:
   extension (v: GtkRecentManager_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkRequisition_autoptr = Ptr[GtkRequisition]
 object GtkRequisition_autoptr: 
   given _tag: Tag[GtkRequisition_autoptr] = Tag.Ptr[GtkRequisition](GtkRequisition._tag)
@@ -8368,8 +6570,6 @@ object GtkRequisition_autoptr:
   extension (v: GtkRequisition_autoptr)
     inline def value: Ptr[GtkRequisition] = v
 
-/**
-*/
 opaque type GtkRequisition_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkRequisition_listautoptr: 
   given _tag: Tag[GtkRequisition_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8377,8 +6577,6 @@ object GtkRequisition_listautoptr:
   extension (v: GtkRequisition_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkRequisition_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkRequisition_queueautoptr: 
   given _tag: Tag[GtkRequisition_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8386,8 +6584,6 @@ object GtkRequisition_queueautoptr:
   extension (v: GtkRequisition_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkRequisition_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkRequisition_slistautoptr: 
   given _tag: Tag[GtkRequisition_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8395,8 +6591,6 @@ object GtkRequisition_slistautoptr:
   extension (v: GtkRequisition_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkRevealer_autoptr = Ptr[GtkRevealer]
 object GtkRevealer_autoptr: 
   given _tag: Tag[GtkRevealer_autoptr] = Tag.Ptr[GtkRevealer](GtkRevealer._tag)
@@ -8404,8 +6598,6 @@ object GtkRevealer_autoptr:
   extension (v: GtkRevealer_autoptr)
     inline def value: Ptr[GtkRevealer] = v
 
-/**
-*/
 opaque type GtkRevealer_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkRevealer_listautoptr: 
   given _tag: Tag[GtkRevealer_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8413,8 +6605,6 @@ object GtkRevealer_listautoptr:
   extension (v: GtkRevealer_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkRevealer_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkRevealer_queueautoptr: 
   given _tag: Tag[GtkRevealer_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8422,8 +6612,6 @@ object GtkRevealer_queueautoptr:
   extension (v: GtkRevealer_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkRevealer_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkRevealer_slistautoptr: 
   given _tag: Tag[GtkRevealer_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8431,8 +6619,6 @@ object GtkRevealer_slistautoptr:
   extension (v: GtkRevealer_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkRoot_autoptr = Ptr[GtkRoot]
 object GtkRoot_autoptr: 
   given _tag: Tag[GtkRoot_autoptr] = Tag.Ptr[GtkRoot](GtkRoot._tag)
@@ -8440,8 +6626,6 @@ object GtkRoot_autoptr:
   extension (v: GtkRoot_autoptr)
     inline def value: Ptr[GtkRoot] = v
 
-/**
-*/
 opaque type GtkRoot_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkRoot_listautoptr: 
   given _tag: Tag[GtkRoot_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8449,8 +6633,6 @@ object GtkRoot_listautoptr:
   extension (v: GtkRoot_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkRoot_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkRoot_queueautoptr: 
   given _tag: Tag[GtkRoot_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8458,8 +6640,6 @@ object GtkRoot_queueautoptr:
   extension (v: GtkRoot_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkRoot_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkRoot_slistautoptr: 
   given _tag: Tag[GtkRoot_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8467,8 +6647,6 @@ object GtkRoot_slistautoptr:
   extension (v: GtkRoot_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkScaleButton_autoptr = Ptr[GtkScaleButton]
 object GtkScaleButton_autoptr: 
   given _tag: Tag[GtkScaleButton_autoptr] = Tag.Ptr[GtkScaleButton](GtkScaleButton._tag)
@@ -8476,8 +6654,6 @@ object GtkScaleButton_autoptr:
   extension (v: GtkScaleButton_autoptr)
     inline def value: Ptr[GtkScaleButton] = v
 
-/**
-*/
 opaque type GtkScaleButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkScaleButton_listautoptr: 
   given _tag: Tag[GtkScaleButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8485,8 +6661,6 @@ object GtkScaleButton_listautoptr:
   extension (v: GtkScaleButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkScaleButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkScaleButton_queueautoptr: 
   given _tag: Tag[GtkScaleButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8494,8 +6668,6 @@ object GtkScaleButton_queueautoptr:
   extension (v: GtkScaleButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkScaleButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkScaleButton_slistautoptr: 
   given _tag: Tag[GtkScaleButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8509,14 +6681,12 @@ object GtkScaleButton_slistautoptr:
 opaque type GtkScaleFormatValueFunc = CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString]
 object GtkScaleFormatValueFunc: 
   given _tag: Tag[GtkScaleFormatValueFunc] = Tag.materializeCFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkScaleFormatValueFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkScaleFormatValueFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString]): GtkScaleFormatValueFunc = o
   extension (v: GtkScaleFormatValueFunc)
     inline def value: CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkScale_autoptr = Ptr[GtkScale]
 object GtkScale_autoptr: 
   given _tag: Tag[GtkScale_autoptr] = Tag.Ptr[GtkScale](GtkScale._tag)
@@ -8524,8 +6694,6 @@ object GtkScale_autoptr:
   extension (v: GtkScale_autoptr)
     inline def value: Ptr[GtkScale] = v
 
-/**
-*/
 opaque type GtkScale_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkScale_listautoptr: 
   given _tag: Tag[GtkScale_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8533,8 +6701,6 @@ object GtkScale_listautoptr:
   extension (v: GtkScale_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkScale_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkScale_queueautoptr: 
   given _tag: Tag[GtkScale_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8542,8 +6708,6 @@ object GtkScale_queueautoptr:
   extension (v: GtkScale_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkScale_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkScale_slistautoptr: 
   given _tag: Tag[GtkScale_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8551,8 +6715,6 @@ object GtkScale_slistautoptr:
   extension (v: GtkScale_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkScrollable_autoptr = Ptr[GtkScrollable]
 object GtkScrollable_autoptr: 
   given _tag: Tag[GtkScrollable_autoptr] = Tag.Ptr[GtkScrollable](GtkScrollable._tag)
@@ -8560,8 +6722,6 @@ object GtkScrollable_autoptr:
   extension (v: GtkScrollable_autoptr)
     inline def value: Ptr[GtkScrollable] = v
 
-/**
-*/
 opaque type GtkScrollable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkScrollable_listautoptr: 
   given _tag: Tag[GtkScrollable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8569,8 +6729,6 @@ object GtkScrollable_listautoptr:
   extension (v: GtkScrollable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkScrollable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkScrollable_queueautoptr: 
   given _tag: Tag[GtkScrollable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8578,8 +6736,6 @@ object GtkScrollable_queueautoptr:
   extension (v: GtkScrollable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkScrollable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkScrollable_slistautoptr: 
   given _tag: Tag[GtkScrollable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8587,8 +6743,6 @@ object GtkScrollable_slistautoptr:
   extension (v: GtkScrollable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkScrollbar_autoptr = Ptr[GtkScrollbar]
 object GtkScrollbar_autoptr: 
   given _tag: Tag[GtkScrollbar_autoptr] = Tag.Ptr[GtkScrollbar](GtkScrollbar._tag)
@@ -8596,8 +6750,6 @@ object GtkScrollbar_autoptr:
   extension (v: GtkScrollbar_autoptr)
     inline def value: Ptr[GtkScrollbar] = v
 
-/**
-*/
 opaque type GtkScrollbar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkScrollbar_listautoptr: 
   given _tag: Tag[GtkScrollbar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8605,8 +6757,6 @@ object GtkScrollbar_listautoptr:
   extension (v: GtkScrollbar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkScrollbar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkScrollbar_queueautoptr: 
   given _tag: Tag[GtkScrollbar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8614,8 +6764,6 @@ object GtkScrollbar_queueautoptr:
   extension (v: GtkScrollbar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkScrollbar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkScrollbar_slistautoptr: 
   given _tag: Tag[GtkScrollbar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8623,8 +6771,6 @@ object GtkScrollbar_slistautoptr:
   extension (v: GtkScrollbar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkScrolledWindow_autoptr = Ptr[GtkScrolledWindow]
 object GtkScrolledWindow_autoptr: 
   given _tag: Tag[GtkScrolledWindow_autoptr] = Tag.Ptr[GtkScrolledWindow](GtkScrolledWindow._tag)
@@ -8632,8 +6778,6 @@ object GtkScrolledWindow_autoptr:
   extension (v: GtkScrolledWindow_autoptr)
     inline def value: Ptr[GtkScrolledWindow] = v
 
-/**
-*/
 opaque type GtkScrolledWindow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkScrolledWindow_listautoptr: 
   given _tag: Tag[GtkScrolledWindow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8641,8 +6785,6 @@ object GtkScrolledWindow_listautoptr:
   extension (v: GtkScrolledWindow_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkScrolledWindow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkScrolledWindow_queueautoptr: 
   given _tag: Tag[GtkScrolledWindow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8650,8 +6792,6 @@ object GtkScrolledWindow_queueautoptr:
   extension (v: GtkScrolledWindow_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkScrolledWindow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkScrolledWindow_slistautoptr: 
   given _tag: Tag[GtkScrolledWindow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8659,8 +6799,6 @@ object GtkScrolledWindow_slistautoptr:
   extension (v: GtkScrolledWindow_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSearchBar_autoptr = Ptr[GtkSearchBar]
 object GtkSearchBar_autoptr: 
   given _tag: Tag[GtkSearchBar_autoptr] = Tag.Ptr[GtkSearchBar](GtkSearchBar._tag)
@@ -8668,8 +6806,6 @@ object GtkSearchBar_autoptr:
   extension (v: GtkSearchBar_autoptr)
     inline def value: Ptr[GtkSearchBar] = v
 
-/**
-*/
 opaque type GtkSearchBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSearchBar_listautoptr: 
   given _tag: Tag[GtkSearchBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8677,8 +6813,6 @@ object GtkSearchBar_listautoptr:
   extension (v: GtkSearchBar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSearchBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSearchBar_queueautoptr: 
   given _tag: Tag[GtkSearchBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8686,8 +6820,6 @@ object GtkSearchBar_queueautoptr:
   extension (v: GtkSearchBar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSearchBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSearchBar_slistautoptr: 
   given _tag: Tag[GtkSearchBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8695,8 +6827,6 @@ object GtkSearchBar_slistautoptr:
   extension (v: GtkSearchBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSearchEntry_autoptr = Ptr[GtkSearchEntry]
 object GtkSearchEntry_autoptr: 
   given _tag: Tag[GtkSearchEntry_autoptr] = Tag.Ptr[GtkSearchEntry](GtkSearchEntry._tag)
@@ -8704,8 +6834,6 @@ object GtkSearchEntry_autoptr:
   extension (v: GtkSearchEntry_autoptr)
     inline def value: Ptr[GtkSearchEntry] = v
 
-/**
-*/
 opaque type GtkSearchEntry_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSearchEntry_listautoptr: 
   given _tag: Tag[GtkSearchEntry_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8713,8 +6841,6 @@ object GtkSearchEntry_listautoptr:
   extension (v: GtkSearchEntry_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSearchEntry_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSearchEntry_queueautoptr: 
   given _tag: Tag[GtkSearchEntry_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8722,8 +6848,6 @@ object GtkSearchEntry_queueautoptr:
   extension (v: GtkSearchEntry_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSearchEntry_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSearchEntry_slistautoptr: 
   given _tag: Tag[GtkSearchEntry_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8731,8 +6855,6 @@ object GtkSearchEntry_slistautoptr:
   extension (v: GtkSearchEntry_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModelClass_autoptr = Ptr[GtkSelectionFilterModelClass]
 object GtkSelectionFilterModelClass_autoptr: 
   given _tag: Tag[GtkSelectionFilterModelClass_autoptr] = Tag.Ptr[GtkSelectionFilterModelClass](GtkSelectionFilterModelClass._tag)
@@ -8740,8 +6862,6 @@ object GtkSelectionFilterModelClass_autoptr:
   extension (v: GtkSelectionFilterModelClass_autoptr)
     inline def value: Ptr[GtkSelectionFilterModelClass] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSelectionFilterModelClass_listautoptr: 
   given _tag: Tag[GtkSelectionFilterModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8749,8 +6869,6 @@ object GtkSelectionFilterModelClass_listautoptr:
   extension (v: GtkSelectionFilterModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSelectionFilterModelClass_queueautoptr: 
   given _tag: Tag[GtkSelectionFilterModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8758,8 +6876,6 @@ object GtkSelectionFilterModelClass_queueautoptr:
   extension (v: GtkSelectionFilterModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSelectionFilterModelClass_slistautoptr: 
   given _tag: Tag[GtkSelectionFilterModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8767,8 +6883,6 @@ object GtkSelectionFilterModelClass_slistautoptr:
   extension (v: GtkSelectionFilterModelClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModel_autoptr = Ptr[GtkSelectionFilterModel]
 object GtkSelectionFilterModel_autoptr: 
   given _tag: Tag[GtkSelectionFilterModel_autoptr] = Tag.Ptr[GtkSelectionFilterModel](GtkSelectionFilterModel._tag)
@@ -8776,8 +6890,6 @@ object GtkSelectionFilterModel_autoptr:
   extension (v: GtkSelectionFilterModel_autoptr)
     inline def value: Ptr[GtkSelectionFilterModel] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSelectionFilterModel_listautoptr: 
   given _tag: Tag[GtkSelectionFilterModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8785,8 +6897,6 @@ object GtkSelectionFilterModel_listautoptr:
   extension (v: GtkSelectionFilterModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSelectionFilterModel_queueautoptr: 
   given _tag: Tag[GtkSelectionFilterModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8794,8 +6904,6 @@ object GtkSelectionFilterModel_queueautoptr:
   extension (v: GtkSelectionFilterModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSelectionFilterModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSelectionFilterModel_slistautoptr: 
   given _tag: Tag[GtkSelectionFilterModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8803,8 +6911,6 @@ object GtkSelectionFilterModel_slistautoptr:
   extension (v: GtkSelectionFilterModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSelectionModel_autoptr = Ptr[GtkSelectionModel]
 object GtkSelectionModel_autoptr: 
   given _tag: Tag[GtkSelectionModel_autoptr] = Tag.Ptr[GtkSelectionModel](GtkSelectionModel._tag)
@@ -8812,8 +6918,6 @@ object GtkSelectionModel_autoptr:
   extension (v: GtkSelectionModel_autoptr)
     inline def value: Ptr[GtkSelectionModel] = v
 
-/**
-*/
 opaque type GtkSelectionModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSelectionModel_listautoptr: 
   given _tag: Tag[GtkSelectionModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8821,8 +6925,6 @@ object GtkSelectionModel_listautoptr:
   extension (v: GtkSelectionModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSelectionModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSelectionModel_queueautoptr: 
   given _tag: Tag[GtkSelectionModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8830,8 +6932,6 @@ object GtkSelectionModel_queueautoptr:
   extension (v: GtkSelectionModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSelectionModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSelectionModel_slistautoptr: 
   given _tag: Tag[GtkSelectionModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8839,8 +6939,6 @@ object GtkSelectionModel_slistautoptr:
   extension (v: GtkSelectionModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSeparator_autoptr = Ptr[GtkSeparator]
 object GtkSeparator_autoptr: 
   given _tag: Tag[GtkSeparator_autoptr] = Tag.Ptr[GtkSeparator](GtkSeparator._tag)
@@ -8848,8 +6946,6 @@ object GtkSeparator_autoptr:
   extension (v: GtkSeparator_autoptr)
     inline def value: Ptr[GtkSeparator] = v
 
-/**
-*/
 opaque type GtkSeparator_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSeparator_listautoptr: 
   given _tag: Tag[GtkSeparator_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8857,8 +6953,6 @@ object GtkSeparator_listautoptr:
   extension (v: GtkSeparator_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSeparator_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSeparator_queueautoptr: 
   given _tag: Tag[GtkSeparator_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8866,8 +6960,6 @@ object GtkSeparator_queueautoptr:
   extension (v: GtkSeparator_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSeparator_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSeparator_slistautoptr: 
   given _tag: Tag[GtkSeparator_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8875,8 +6967,6 @@ object GtkSeparator_slistautoptr:
   extension (v: GtkSeparator_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSettings_autoptr = Ptr[GtkSettings]
 object GtkSettings_autoptr: 
   given _tag: Tag[GtkSettings_autoptr] = Tag.Ptr[GtkSettings](GtkSettings._tag)
@@ -8884,8 +6974,6 @@ object GtkSettings_autoptr:
   extension (v: GtkSettings_autoptr)
     inline def value: Ptr[GtkSettings] = v
 
-/**
-*/
 opaque type GtkSettings_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSettings_listautoptr: 
   given _tag: Tag[GtkSettings_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8893,8 +6981,6 @@ object GtkSettings_listautoptr:
   extension (v: GtkSettings_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSettings_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSettings_queueautoptr: 
   given _tag: Tag[GtkSettings_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8902,8 +6988,6 @@ object GtkSettings_queueautoptr:
   extension (v: GtkSettings_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSettings_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSettings_slistautoptr: 
   given _tag: Tag[GtkSettings_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8911,8 +6995,6 @@ object GtkSettings_slistautoptr:
   extension (v: GtkSettings_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcutActionClass_autoptr = Ptr[GtkShortcutActionClass]
 object GtkShortcutActionClass_autoptr: 
   given _tag: Tag[GtkShortcutActionClass_autoptr] = Tag.Ptr[GtkShortcutActionClass](GtkShortcutActionClass._tag)
@@ -8920,8 +7002,6 @@ object GtkShortcutActionClass_autoptr:
   extension (v: GtkShortcutActionClass_autoptr)
     inline def value: Ptr[GtkShortcutActionClass] = v
 
-/**
-*/
 opaque type GtkShortcutActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutActionClass_listautoptr: 
   given _tag: Tag[GtkShortcutActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8929,8 +7009,6 @@ object GtkShortcutActionClass_listautoptr:
   extension (v: GtkShortcutActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutActionClass_queueautoptr: 
   given _tag: Tag[GtkShortcutActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8938,8 +7016,6 @@ object GtkShortcutActionClass_queueautoptr:
   extension (v: GtkShortcutActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutActionClass_slistautoptr: 
   given _tag: Tag[GtkShortcutActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8947,8 +7023,6 @@ object GtkShortcutActionClass_slistautoptr:
   extension (v: GtkShortcutActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcutAction_autoptr = Ptr[GtkShortcutAction]
 object GtkShortcutAction_autoptr: 
   given _tag: Tag[GtkShortcutAction_autoptr] = Tag.Ptr[GtkShortcutAction](GtkShortcutAction._tag)
@@ -8956,8 +7030,6 @@ object GtkShortcutAction_autoptr:
   extension (v: GtkShortcutAction_autoptr)
     inline def value: Ptr[GtkShortcutAction] = v
 
-/**
-*/
 opaque type GtkShortcutAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutAction_listautoptr: 
   given _tag: Tag[GtkShortcutAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -8965,8 +7037,6 @@ object GtkShortcutAction_listautoptr:
   extension (v: GtkShortcutAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutAction_queueautoptr: 
   given _tag: Tag[GtkShortcutAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -8974,8 +7044,6 @@ object GtkShortcutAction_queueautoptr:
   extension (v: GtkShortcutAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutAction_slistautoptr: 
   given _tag: Tag[GtkShortcutAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -8983,8 +7051,6 @@ object GtkShortcutAction_slistautoptr:
   extension (v: GtkShortcutAction_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcutClass_autoptr = Ptr[GtkShortcutClass]
 object GtkShortcutClass_autoptr: 
   given _tag: Tag[GtkShortcutClass_autoptr] = Tag.Ptr[GtkShortcutClass](GtkShortcutClass._tag)
@@ -8992,8 +7058,6 @@ object GtkShortcutClass_autoptr:
   extension (v: GtkShortcutClass_autoptr)
     inline def value: Ptr[GtkShortcutClass] = v
 
-/**
-*/
 opaque type GtkShortcutClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutClass_listautoptr: 
   given _tag: Tag[GtkShortcutClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9001,8 +7065,6 @@ object GtkShortcutClass_listautoptr:
   extension (v: GtkShortcutClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutClass_queueautoptr: 
   given _tag: Tag[GtkShortcutClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9010,8 +7072,6 @@ object GtkShortcutClass_queueautoptr:
   extension (v: GtkShortcutClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutClass_slistautoptr: 
   given _tag: Tag[GtkShortcutClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9025,14 +7085,12 @@ object GtkShortcutClass_slistautoptr:
 opaque type GtkShortcutFunc = CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkShortcutFunc: 
   given _tag: Tag[GtkShortcutFunc] = Tag.materializeCFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkShortcutFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkShortcutFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkShortcutFunc = o
   extension (v: GtkShortcutFunc)
     inline def value: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.GVariant], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkShortcutManager_autoptr = Ptr[GtkShortcutManager]
 object GtkShortcutManager_autoptr: 
   given _tag: Tag[GtkShortcutManager_autoptr] = Tag.Ptr[GtkShortcutManager](GtkShortcutManager._tag)
@@ -9040,8 +7098,6 @@ object GtkShortcutManager_autoptr:
   extension (v: GtkShortcutManager_autoptr)
     inline def value: Ptr[GtkShortcutManager] = v
 
-/**
-*/
 opaque type GtkShortcutManager_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutManager_listautoptr: 
   given _tag: Tag[GtkShortcutManager_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9049,8 +7105,6 @@ object GtkShortcutManager_listautoptr:
   extension (v: GtkShortcutManager_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutManager_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutManager_queueautoptr: 
   given _tag: Tag[GtkShortcutManager_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9058,8 +7112,6 @@ object GtkShortcutManager_queueautoptr:
   extension (v: GtkShortcutManager_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutManager_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutManager_slistautoptr: 
   given _tag: Tag[GtkShortcutManager_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9067,8 +7119,6 @@ object GtkShortcutManager_slistautoptr:
   extension (v: GtkShortcutManager_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcutTriggerClass_autoptr = Ptr[GtkShortcutTriggerClass]
 object GtkShortcutTriggerClass_autoptr: 
   given _tag: Tag[GtkShortcutTriggerClass_autoptr] = Tag.Ptr[GtkShortcutTriggerClass](GtkShortcutTriggerClass._tag)
@@ -9076,8 +7126,6 @@ object GtkShortcutTriggerClass_autoptr:
   extension (v: GtkShortcutTriggerClass_autoptr)
     inline def value: Ptr[GtkShortcutTriggerClass] = v
 
-/**
-*/
 opaque type GtkShortcutTriggerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutTriggerClass_listautoptr: 
   given _tag: Tag[GtkShortcutTriggerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9085,8 +7133,6 @@ object GtkShortcutTriggerClass_listautoptr:
   extension (v: GtkShortcutTriggerClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutTriggerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutTriggerClass_queueautoptr: 
   given _tag: Tag[GtkShortcutTriggerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9094,8 +7140,6 @@ object GtkShortcutTriggerClass_queueautoptr:
   extension (v: GtkShortcutTriggerClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutTriggerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutTriggerClass_slistautoptr: 
   given _tag: Tag[GtkShortcutTriggerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9103,8 +7147,6 @@ object GtkShortcutTriggerClass_slistautoptr:
   extension (v: GtkShortcutTriggerClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcutTrigger_autoptr = Ptr[GtkShortcutTrigger]
 object GtkShortcutTrigger_autoptr: 
   given _tag: Tag[GtkShortcutTrigger_autoptr] = Tag.Ptr[GtkShortcutTrigger](GtkShortcutTrigger._tag)
@@ -9112,8 +7154,6 @@ object GtkShortcutTrigger_autoptr:
   extension (v: GtkShortcutTrigger_autoptr)
     inline def value: Ptr[GtkShortcutTrigger] = v
 
-/**
-*/
 opaque type GtkShortcutTrigger_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutTrigger_listautoptr: 
   given _tag: Tag[GtkShortcutTrigger_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9121,8 +7161,6 @@ object GtkShortcutTrigger_listautoptr:
   extension (v: GtkShortcutTrigger_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutTrigger_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutTrigger_queueautoptr: 
   given _tag: Tag[GtkShortcutTrigger_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9130,8 +7168,6 @@ object GtkShortcutTrigger_queueautoptr:
   extension (v: GtkShortcutTrigger_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutTrigger_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutTrigger_slistautoptr: 
   given _tag: Tag[GtkShortcutTrigger_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9139,8 +7175,6 @@ object GtkShortcutTrigger_slistautoptr:
   extension (v: GtkShortcutTrigger_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcut_autoptr = Ptr[GtkShortcut]
 object GtkShortcut_autoptr: 
   given _tag: Tag[GtkShortcut_autoptr] = Tag.Ptr[GtkShortcut](GtkShortcut._tag)
@@ -9148,8 +7182,6 @@ object GtkShortcut_autoptr:
   extension (v: GtkShortcut_autoptr)
     inline def value: Ptr[GtkShortcut] = v
 
-/**
-*/
 opaque type GtkShortcut_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcut_listautoptr: 
   given _tag: Tag[GtkShortcut_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9157,8 +7189,6 @@ object GtkShortcut_listautoptr:
   extension (v: GtkShortcut_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcut_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcut_queueautoptr: 
   given _tag: Tag[GtkShortcut_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9166,8 +7196,6 @@ object GtkShortcut_queueautoptr:
   extension (v: GtkShortcut_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcut_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcut_slistautoptr: 
   given _tag: Tag[GtkShortcut_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9175,8 +7203,6 @@ object GtkShortcut_slistautoptr:
   extension (v: GtkShortcut_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkShortcutsWindow_autoptr = Ptr[GtkShortcutsWindow]
 object GtkShortcutsWindow_autoptr: 
   given _tag: Tag[GtkShortcutsWindow_autoptr] = Tag.Ptr[GtkShortcutsWindow](GtkShortcutsWindow._tag)
@@ -9184,8 +7210,6 @@ object GtkShortcutsWindow_autoptr:
   extension (v: GtkShortcutsWindow_autoptr)
     inline def value: Ptr[GtkShortcutsWindow] = v
 
-/**
-*/
 opaque type GtkShortcutsWindow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkShortcutsWindow_listautoptr: 
   given _tag: Tag[GtkShortcutsWindow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9193,8 +7217,6 @@ object GtkShortcutsWindow_listautoptr:
   extension (v: GtkShortcutsWindow_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkShortcutsWindow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkShortcutsWindow_queueautoptr: 
   given _tag: Tag[GtkShortcutsWindow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9202,8 +7224,6 @@ object GtkShortcutsWindow_queueautoptr:
   extension (v: GtkShortcutsWindow_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkShortcutsWindow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkShortcutsWindow_slistautoptr: 
   given _tag: Tag[GtkShortcutsWindow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9211,8 +7231,6 @@ object GtkShortcutsWindow_slistautoptr:
   extension (v: GtkShortcutsWindow_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSignalActionClass_autoptr = Ptr[GtkSignalActionClass]
 object GtkSignalActionClass_autoptr: 
   given _tag: Tag[GtkSignalActionClass_autoptr] = Tag.Ptr[GtkSignalActionClass](GtkSignalActionClass._tag)
@@ -9220,8 +7238,6 @@ object GtkSignalActionClass_autoptr:
   extension (v: GtkSignalActionClass_autoptr)
     inline def value: Ptr[GtkSignalActionClass] = v
 
-/**
-*/
 opaque type GtkSignalActionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSignalActionClass_listautoptr: 
   given _tag: Tag[GtkSignalActionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9229,8 +7245,6 @@ object GtkSignalActionClass_listautoptr:
   extension (v: GtkSignalActionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSignalActionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSignalActionClass_queueautoptr: 
   given _tag: Tag[GtkSignalActionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9238,8 +7252,6 @@ object GtkSignalActionClass_queueautoptr:
   extension (v: GtkSignalActionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSignalActionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSignalActionClass_slistautoptr: 
   given _tag: Tag[GtkSignalActionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9247,8 +7259,6 @@ object GtkSignalActionClass_slistautoptr:
   extension (v: GtkSignalActionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSignalAction_autoptr = Ptr[GtkSignalAction]
 object GtkSignalAction_autoptr: 
   given _tag: Tag[GtkSignalAction_autoptr] = Tag.Ptr[GtkSignalAction](GtkSignalAction._tag)
@@ -9256,8 +7266,6 @@ object GtkSignalAction_autoptr:
   extension (v: GtkSignalAction_autoptr)
     inline def value: Ptr[GtkSignalAction] = v
 
-/**
-*/
 opaque type GtkSignalAction_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSignalAction_listautoptr: 
   given _tag: Tag[GtkSignalAction_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9265,8 +7273,6 @@ object GtkSignalAction_listautoptr:
   extension (v: GtkSignalAction_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSignalAction_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSignalAction_queueautoptr: 
   given _tag: Tag[GtkSignalAction_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9274,8 +7280,6 @@ object GtkSignalAction_queueautoptr:
   extension (v: GtkSignalAction_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSignalAction_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSignalAction_slistautoptr: 
   given _tag: Tag[GtkSignalAction_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9283,8 +7287,6 @@ object GtkSignalAction_slistautoptr:
   extension (v: GtkSignalAction_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSingleSelectionClass_autoptr = Ptr[GtkSingleSelectionClass]
 object GtkSingleSelectionClass_autoptr: 
   given _tag: Tag[GtkSingleSelectionClass_autoptr] = Tag.Ptr[GtkSingleSelectionClass](GtkSingleSelectionClass._tag)
@@ -9292,8 +7294,6 @@ object GtkSingleSelectionClass_autoptr:
   extension (v: GtkSingleSelectionClass_autoptr)
     inline def value: Ptr[GtkSingleSelectionClass] = v
 
-/**
-*/
 opaque type GtkSingleSelectionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSingleSelectionClass_listautoptr: 
   given _tag: Tag[GtkSingleSelectionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9301,8 +7301,6 @@ object GtkSingleSelectionClass_listautoptr:
   extension (v: GtkSingleSelectionClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSingleSelectionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSingleSelectionClass_queueautoptr: 
   given _tag: Tag[GtkSingleSelectionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9310,8 +7308,6 @@ object GtkSingleSelectionClass_queueautoptr:
   extension (v: GtkSingleSelectionClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSingleSelectionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSingleSelectionClass_slistautoptr: 
   given _tag: Tag[GtkSingleSelectionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9319,8 +7315,6 @@ object GtkSingleSelectionClass_slistautoptr:
   extension (v: GtkSingleSelectionClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSingleSelection_autoptr = Ptr[GtkSingleSelection]
 object GtkSingleSelection_autoptr: 
   given _tag: Tag[GtkSingleSelection_autoptr] = Tag.Ptr[GtkSingleSelection](GtkSingleSelection._tag)
@@ -9328,8 +7322,6 @@ object GtkSingleSelection_autoptr:
   extension (v: GtkSingleSelection_autoptr)
     inline def value: Ptr[GtkSingleSelection] = v
 
-/**
-*/
 opaque type GtkSingleSelection_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSingleSelection_listautoptr: 
   given _tag: Tag[GtkSingleSelection_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9337,8 +7329,6 @@ object GtkSingleSelection_listautoptr:
   extension (v: GtkSingleSelection_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSingleSelection_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSingleSelection_queueautoptr: 
   given _tag: Tag[GtkSingleSelection_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9346,8 +7336,6 @@ object GtkSingleSelection_queueautoptr:
   extension (v: GtkSingleSelection_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSingleSelection_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSingleSelection_slistautoptr: 
   given _tag: Tag[GtkSingleSelection_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9355,8 +7343,6 @@ object GtkSingleSelection_slistautoptr:
   extension (v: GtkSingleSelection_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSizeGroup_autoptr = Ptr[GtkSizeGroup]
 object GtkSizeGroup_autoptr: 
   given _tag: Tag[GtkSizeGroup_autoptr] = Tag.Ptr[GtkSizeGroup](GtkSizeGroup._tag)
@@ -9364,8 +7350,6 @@ object GtkSizeGroup_autoptr:
   extension (v: GtkSizeGroup_autoptr)
     inline def value: Ptr[GtkSizeGroup] = v
 
-/**
-*/
 opaque type GtkSizeGroup_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSizeGroup_listautoptr: 
   given _tag: Tag[GtkSizeGroup_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9373,8 +7357,6 @@ object GtkSizeGroup_listautoptr:
   extension (v: GtkSizeGroup_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSizeGroup_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSizeGroup_queueautoptr: 
   given _tag: Tag[GtkSizeGroup_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9382,8 +7364,6 @@ object GtkSizeGroup_queueautoptr:
   extension (v: GtkSizeGroup_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSizeGroup_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSizeGroup_slistautoptr: 
   given _tag: Tag[GtkSizeGroup_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9391,8 +7371,6 @@ object GtkSizeGroup_slistautoptr:
   extension (v: GtkSizeGroup_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSliceListModelClass_autoptr = Ptr[GtkSliceListModelClass]
 object GtkSliceListModelClass_autoptr: 
   given _tag: Tag[GtkSliceListModelClass_autoptr] = Tag.Ptr[GtkSliceListModelClass](GtkSliceListModelClass._tag)
@@ -9400,8 +7378,6 @@ object GtkSliceListModelClass_autoptr:
   extension (v: GtkSliceListModelClass_autoptr)
     inline def value: Ptr[GtkSliceListModelClass] = v
 
-/**
-*/
 opaque type GtkSliceListModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSliceListModelClass_listautoptr: 
   given _tag: Tag[GtkSliceListModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9409,8 +7385,6 @@ object GtkSliceListModelClass_listautoptr:
   extension (v: GtkSliceListModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSliceListModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSliceListModelClass_queueautoptr: 
   given _tag: Tag[GtkSliceListModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9418,8 +7392,6 @@ object GtkSliceListModelClass_queueautoptr:
   extension (v: GtkSliceListModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSliceListModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSliceListModelClass_slistautoptr: 
   given _tag: Tag[GtkSliceListModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9427,8 +7399,6 @@ object GtkSliceListModelClass_slistautoptr:
   extension (v: GtkSliceListModelClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSliceListModel_autoptr = Ptr[GtkSliceListModel]
 object GtkSliceListModel_autoptr: 
   given _tag: Tag[GtkSliceListModel_autoptr] = Tag.Ptr[GtkSliceListModel](GtkSliceListModel._tag)
@@ -9436,8 +7406,6 @@ object GtkSliceListModel_autoptr:
   extension (v: GtkSliceListModel_autoptr)
     inline def value: Ptr[GtkSliceListModel] = v
 
-/**
-*/
 opaque type GtkSliceListModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSliceListModel_listautoptr: 
   given _tag: Tag[GtkSliceListModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9445,8 +7413,6 @@ object GtkSliceListModel_listautoptr:
   extension (v: GtkSliceListModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSliceListModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSliceListModel_queueautoptr: 
   given _tag: Tag[GtkSliceListModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9454,8 +7420,6 @@ object GtkSliceListModel_queueautoptr:
   extension (v: GtkSliceListModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSliceListModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSliceListModel_slistautoptr: 
   given _tag: Tag[GtkSliceListModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9463,8 +7427,6 @@ object GtkSliceListModel_slistautoptr:
   extension (v: GtkSliceListModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 type GtkSnapshot = GdkSnapshot
 object GtkSnapshot: 
   given _tag: Tag[GtkSnapshot] = GdkSnapshot._tag
@@ -9472,8 +7434,6 @@ object GtkSnapshot:
   extension (v: GtkSnapshot)
     inline def value: GdkSnapshot = v
 
-/**
-*/
 opaque type GtkSnapshot_autoptr = Ptr[GtkSnapshot]
 object GtkSnapshot_autoptr: 
   given _tag: Tag[GtkSnapshot_autoptr] = Tag.Ptr[GtkSnapshot](GtkSnapshot._tag)
@@ -9481,8 +7441,6 @@ object GtkSnapshot_autoptr:
   extension (v: GtkSnapshot_autoptr)
     inline def value: Ptr[GtkSnapshot] = v
 
-/**
-*/
 opaque type GtkSnapshot_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSnapshot_listautoptr: 
   given _tag: Tag[GtkSnapshot_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9490,8 +7448,6 @@ object GtkSnapshot_listautoptr:
   extension (v: GtkSnapshot_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSnapshot_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSnapshot_queueautoptr: 
   given _tag: Tag[GtkSnapshot_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9499,8 +7455,6 @@ object GtkSnapshot_queueautoptr:
   extension (v: GtkSnapshot_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSnapshot_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSnapshot_slistautoptr: 
   given _tag: Tag[GtkSnapshot_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9508,8 +7462,6 @@ object GtkSnapshot_slistautoptr:
   extension (v: GtkSnapshot_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSortListModelClass_autoptr = Ptr[GtkSortListModelClass]
 object GtkSortListModelClass_autoptr: 
   given _tag: Tag[GtkSortListModelClass_autoptr] = Tag.Ptr[GtkSortListModelClass](GtkSortListModelClass._tag)
@@ -9517,8 +7469,6 @@ object GtkSortListModelClass_autoptr:
   extension (v: GtkSortListModelClass_autoptr)
     inline def value: Ptr[GtkSortListModelClass] = v
 
-/**
-*/
 opaque type GtkSortListModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSortListModelClass_listautoptr: 
   given _tag: Tag[GtkSortListModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9526,8 +7476,6 @@ object GtkSortListModelClass_listautoptr:
   extension (v: GtkSortListModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSortListModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSortListModelClass_queueautoptr: 
   given _tag: Tag[GtkSortListModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9535,8 +7483,6 @@ object GtkSortListModelClass_queueautoptr:
   extension (v: GtkSortListModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSortListModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSortListModelClass_slistautoptr: 
   given _tag: Tag[GtkSortListModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9544,8 +7490,6 @@ object GtkSortListModelClass_slistautoptr:
   extension (v: GtkSortListModelClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSortListModel_autoptr = Ptr[GtkSortListModel]
 object GtkSortListModel_autoptr: 
   given _tag: Tag[GtkSortListModel_autoptr] = Tag.Ptr[GtkSortListModel](GtkSortListModel._tag)
@@ -9553,8 +7497,6 @@ object GtkSortListModel_autoptr:
   extension (v: GtkSortListModel_autoptr)
     inline def value: Ptr[GtkSortListModel] = v
 
-/**
-*/
 opaque type GtkSortListModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSortListModel_listautoptr: 
   given _tag: Tag[GtkSortListModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9562,8 +7504,6 @@ object GtkSortListModel_listautoptr:
   extension (v: GtkSortListModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSortListModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSortListModel_queueautoptr: 
   given _tag: Tag[GtkSortListModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9571,8 +7511,6 @@ object GtkSortListModel_queueautoptr:
   extension (v: GtkSortListModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSortListModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSortListModel_slistautoptr: 
   given _tag: Tag[GtkSortListModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9580,8 +7518,6 @@ object GtkSortListModel_slistautoptr:
   extension (v: GtkSortListModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSorterClass_autoptr = Ptr[GtkSorterClass]
 object GtkSorterClass_autoptr: 
   given _tag: Tag[GtkSorterClass_autoptr] = Tag.Ptr[GtkSorterClass](GtkSorterClass._tag)
@@ -9589,8 +7525,6 @@ object GtkSorterClass_autoptr:
   extension (v: GtkSorterClass_autoptr)
     inline def value: Ptr[GtkSorterClass] = v
 
-/**
-*/
 opaque type GtkSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSorterClass_listautoptr: 
   given _tag: Tag[GtkSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9598,8 +7532,6 @@ object GtkSorterClass_listautoptr:
   extension (v: GtkSorterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSorterClass_queueautoptr: 
   given _tag: Tag[GtkSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9607,8 +7539,6 @@ object GtkSorterClass_queueautoptr:
   extension (v: GtkSorterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSorterClass_slistautoptr: 
   given _tag: Tag[GtkSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9616,8 +7546,6 @@ object GtkSorterClass_slistautoptr:
   extension (v: GtkSorterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSorter_autoptr = Ptr[GtkSorter]
 object GtkSorter_autoptr: 
   given _tag: Tag[GtkSorter_autoptr] = Tag.Ptr[GtkSorter](GtkSorter._tag)
@@ -9625,8 +7553,6 @@ object GtkSorter_autoptr:
   extension (v: GtkSorter_autoptr)
     inline def value: Ptr[GtkSorter] = v
 
-/**
-*/
 opaque type GtkSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSorter_listautoptr: 
   given _tag: Tag[GtkSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9634,8 +7560,6 @@ object GtkSorter_listautoptr:
   extension (v: GtkSorter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSorter_queueautoptr: 
   given _tag: Tag[GtkSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9643,8 +7567,6 @@ object GtkSorter_queueautoptr:
   extension (v: GtkSorter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSorter_slistautoptr: 
   given _tag: Tag[GtkSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9652,8 +7574,6 @@ object GtkSorter_slistautoptr:
   extension (v: GtkSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSpinButton_autoptr = Ptr[GtkSpinButton]
 object GtkSpinButton_autoptr: 
   given _tag: Tag[GtkSpinButton_autoptr] = Tag.Ptr[GtkSpinButton](GtkSpinButton._tag)
@@ -9661,8 +7581,6 @@ object GtkSpinButton_autoptr:
   extension (v: GtkSpinButton_autoptr)
     inline def value: Ptr[GtkSpinButton] = v
 
-/**
-*/
 opaque type GtkSpinButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSpinButton_listautoptr: 
   given _tag: Tag[GtkSpinButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9670,8 +7588,6 @@ object GtkSpinButton_listautoptr:
   extension (v: GtkSpinButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSpinButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSpinButton_queueautoptr: 
   given _tag: Tag[GtkSpinButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9679,8 +7595,6 @@ object GtkSpinButton_queueautoptr:
   extension (v: GtkSpinButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSpinButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSpinButton_slistautoptr: 
   given _tag: Tag[GtkSpinButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9688,8 +7602,6 @@ object GtkSpinButton_slistautoptr:
   extension (v: GtkSpinButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSpinner_autoptr = Ptr[GtkSpinner]
 object GtkSpinner_autoptr: 
   given _tag: Tag[GtkSpinner_autoptr] = Tag.Ptr[GtkSpinner](GtkSpinner._tag)
@@ -9697,8 +7609,6 @@ object GtkSpinner_autoptr:
   extension (v: GtkSpinner_autoptr)
     inline def value: Ptr[GtkSpinner] = v
 
-/**
-*/
 opaque type GtkSpinner_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSpinner_listautoptr: 
   given _tag: Tag[GtkSpinner_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9706,8 +7616,6 @@ object GtkSpinner_listautoptr:
   extension (v: GtkSpinner_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSpinner_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSpinner_queueautoptr: 
   given _tag: Tag[GtkSpinner_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9715,8 +7623,6 @@ object GtkSpinner_queueautoptr:
   extension (v: GtkSpinner_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSpinner_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSpinner_slistautoptr: 
   given _tag: Tag[GtkSpinner_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9724,8 +7630,6 @@ object GtkSpinner_slistautoptr:
   extension (v: GtkSpinner_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStackSidebar_autoptr = Ptr[GtkStackSidebar]
 object GtkStackSidebar_autoptr: 
   given _tag: Tag[GtkStackSidebar_autoptr] = Tag.Ptr[GtkStackSidebar](GtkStackSidebar._tag)
@@ -9733,8 +7637,6 @@ object GtkStackSidebar_autoptr:
   extension (v: GtkStackSidebar_autoptr)
     inline def value: Ptr[GtkStackSidebar] = v
 
-/**
-*/
 opaque type GtkStackSidebar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStackSidebar_listautoptr: 
   given _tag: Tag[GtkStackSidebar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9742,8 +7644,6 @@ object GtkStackSidebar_listautoptr:
   extension (v: GtkStackSidebar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStackSidebar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStackSidebar_queueautoptr: 
   given _tag: Tag[GtkStackSidebar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9751,8 +7651,6 @@ object GtkStackSidebar_queueautoptr:
   extension (v: GtkStackSidebar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStackSidebar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStackSidebar_slistautoptr: 
   given _tag: Tag[GtkStackSidebar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9760,8 +7658,6 @@ object GtkStackSidebar_slistautoptr:
   extension (v: GtkStackSidebar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStackSwitcher_autoptr = Ptr[GtkStackSwitcher]
 object GtkStackSwitcher_autoptr: 
   given _tag: Tag[GtkStackSwitcher_autoptr] = Tag.Ptr[GtkStackSwitcher](GtkStackSwitcher._tag)
@@ -9769,8 +7665,6 @@ object GtkStackSwitcher_autoptr:
   extension (v: GtkStackSwitcher_autoptr)
     inline def value: Ptr[GtkStackSwitcher] = v
 
-/**
-*/
 opaque type GtkStackSwitcher_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStackSwitcher_listautoptr: 
   given _tag: Tag[GtkStackSwitcher_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9778,8 +7672,6 @@ object GtkStackSwitcher_listautoptr:
   extension (v: GtkStackSwitcher_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStackSwitcher_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStackSwitcher_queueautoptr: 
   given _tag: Tag[GtkStackSwitcher_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9787,8 +7679,6 @@ object GtkStackSwitcher_queueautoptr:
   extension (v: GtkStackSwitcher_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStackSwitcher_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStackSwitcher_slistautoptr: 
   given _tag: Tag[GtkStackSwitcher_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9796,8 +7686,6 @@ object GtkStackSwitcher_slistautoptr:
   extension (v: GtkStackSwitcher_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStack_autoptr = Ptr[GtkStack]
 object GtkStack_autoptr: 
   given _tag: Tag[GtkStack_autoptr] = Tag.Ptr[GtkStack](GtkStack._tag)
@@ -9805,8 +7693,6 @@ object GtkStack_autoptr:
   extension (v: GtkStack_autoptr)
     inline def value: Ptr[GtkStack] = v
 
-/**
-*/
 opaque type GtkStack_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStack_listautoptr: 
   given _tag: Tag[GtkStack_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9814,8 +7700,6 @@ object GtkStack_listautoptr:
   extension (v: GtkStack_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStack_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStack_queueautoptr: 
   given _tag: Tag[GtkStack_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9823,8 +7707,6 @@ object GtkStack_queueautoptr:
   extension (v: GtkStack_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStack_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStack_slistautoptr: 
   given _tag: Tag[GtkStack_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9832,8 +7714,6 @@ object GtkStack_slistautoptr:
   extension (v: GtkStack_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStatusbar_autoptr = Ptr[GtkStatusbar]
 object GtkStatusbar_autoptr: 
   given _tag: Tag[GtkStatusbar_autoptr] = Tag.Ptr[GtkStatusbar](GtkStatusbar._tag)
@@ -9841,8 +7721,6 @@ object GtkStatusbar_autoptr:
   extension (v: GtkStatusbar_autoptr)
     inline def value: Ptr[GtkStatusbar] = v
 
-/**
-*/
 opaque type GtkStatusbar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStatusbar_listautoptr: 
   given _tag: Tag[GtkStatusbar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9850,8 +7728,6 @@ object GtkStatusbar_listautoptr:
   extension (v: GtkStatusbar_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStatusbar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStatusbar_queueautoptr: 
   given _tag: Tag[GtkStatusbar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9859,8 +7735,6 @@ object GtkStatusbar_queueautoptr:
   extension (v: GtkStatusbar_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStatusbar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStatusbar_slistautoptr: 
   given _tag: Tag[GtkStatusbar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9868,8 +7742,6 @@ object GtkStatusbar_slistautoptr:
   extension (v: GtkStatusbar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringFilterClass_autoptr = Ptr[GtkStringFilterClass]
 object GtkStringFilterClass_autoptr: 
   given _tag: Tag[GtkStringFilterClass_autoptr] = Tag.Ptr[GtkStringFilterClass](GtkStringFilterClass._tag)
@@ -9877,8 +7749,6 @@ object GtkStringFilterClass_autoptr:
   extension (v: GtkStringFilterClass_autoptr)
     inline def value: Ptr[GtkStringFilterClass] = v
 
-/**
-*/
 opaque type GtkStringFilterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringFilterClass_listautoptr: 
   given _tag: Tag[GtkStringFilterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9886,8 +7756,6 @@ object GtkStringFilterClass_listautoptr:
   extension (v: GtkStringFilterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringFilterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringFilterClass_queueautoptr: 
   given _tag: Tag[GtkStringFilterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9895,8 +7763,6 @@ object GtkStringFilterClass_queueautoptr:
   extension (v: GtkStringFilterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringFilterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringFilterClass_slistautoptr: 
   given _tag: Tag[GtkStringFilterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9904,8 +7770,6 @@ object GtkStringFilterClass_slistautoptr:
   extension (v: GtkStringFilterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringFilter_autoptr = Ptr[GtkStringFilter]
 object GtkStringFilter_autoptr: 
   given _tag: Tag[GtkStringFilter_autoptr] = Tag.Ptr[GtkStringFilter](GtkStringFilter._tag)
@@ -9913,8 +7777,6 @@ object GtkStringFilter_autoptr:
   extension (v: GtkStringFilter_autoptr)
     inline def value: Ptr[GtkStringFilter] = v
 
-/**
-*/
 opaque type GtkStringFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringFilter_listautoptr: 
   given _tag: Tag[GtkStringFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9922,8 +7784,6 @@ object GtkStringFilter_listautoptr:
   extension (v: GtkStringFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringFilter_queueautoptr: 
   given _tag: Tag[GtkStringFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9931,8 +7791,6 @@ object GtkStringFilter_queueautoptr:
   extension (v: GtkStringFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringFilter_slistautoptr: 
   given _tag: Tag[GtkStringFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9940,8 +7798,6 @@ object GtkStringFilter_slistautoptr:
   extension (v: GtkStringFilter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringListClass_autoptr = Ptr[GtkStringListClass]
 object GtkStringListClass_autoptr: 
   given _tag: Tag[GtkStringListClass_autoptr] = Tag.Ptr[GtkStringListClass](GtkStringListClass._tag)
@@ -9949,8 +7805,6 @@ object GtkStringListClass_autoptr:
   extension (v: GtkStringListClass_autoptr)
     inline def value: Ptr[GtkStringListClass] = v
 
-/**
-*/
 opaque type GtkStringListClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringListClass_listautoptr: 
   given _tag: Tag[GtkStringListClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9958,8 +7812,6 @@ object GtkStringListClass_listautoptr:
   extension (v: GtkStringListClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringListClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringListClass_queueautoptr: 
   given _tag: Tag[GtkStringListClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -9967,8 +7819,6 @@ object GtkStringListClass_queueautoptr:
   extension (v: GtkStringListClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringListClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringListClass_slistautoptr: 
   given _tag: Tag[GtkStringListClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -9976,8 +7826,6 @@ object GtkStringListClass_slistautoptr:
   extension (v: GtkStringListClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringList_autoptr = Ptr[GtkStringList]
 object GtkStringList_autoptr: 
   given _tag: Tag[GtkStringList_autoptr] = Tag.Ptr[GtkStringList](GtkStringList._tag)
@@ -9985,8 +7833,6 @@ object GtkStringList_autoptr:
   extension (v: GtkStringList_autoptr)
     inline def value: Ptr[GtkStringList] = v
 
-/**
-*/
 opaque type GtkStringList_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringList_listautoptr: 
   given _tag: Tag[GtkStringList_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -9994,8 +7840,6 @@ object GtkStringList_listautoptr:
   extension (v: GtkStringList_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringList_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringList_queueautoptr: 
   given _tag: Tag[GtkStringList_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10003,8 +7847,6 @@ object GtkStringList_queueautoptr:
   extension (v: GtkStringList_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringList_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringList_slistautoptr: 
   given _tag: Tag[GtkStringList_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10012,8 +7854,6 @@ object GtkStringList_slistautoptr:
   extension (v: GtkStringList_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringObjectClass_autoptr = Ptr[GtkStringObjectClass]
 object GtkStringObjectClass_autoptr: 
   given _tag: Tag[GtkStringObjectClass_autoptr] = Tag.Ptr[GtkStringObjectClass](GtkStringObjectClass._tag)
@@ -10021,8 +7861,6 @@ object GtkStringObjectClass_autoptr:
   extension (v: GtkStringObjectClass_autoptr)
     inline def value: Ptr[GtkStringObjectClass] = v
 
-/**
-*/
 opaque type GtkStringObjectClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringObjectClass_listautoptr: 
   given _tag: Tag[GtkStringObjectClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10030,8 +7868,6 @@ object GtkStringObjectClass_listautoptr:
   extension (v: GtkStringObjectClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringObjectClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringObjectClass_queueautoptr: 
   given _tag: Tag[GtkStringObjectClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10039,8 +7875,6 @@ object GtkStringObjectClass_queueautoptr:
   extension (v: GtkStringObjectClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringObjectClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringObjectClass_slistautoptr: 
   given _tag: Tag[GtkStringObjectClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10048,8 +7882,6 @@ object GtkStringObjectClass_slistautoptr:
   extension (v: GtkStringObjectClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringObject_autoptr = Ptr[GtkStringObject]
 object GtkStringObject_autoptr: 
   given _tag: Tag[GtkStringObject_autoptr] = Tag.Ptr[GtkStringObject](GtkStringObject._tag)
@@ -10057,8 +7889,6 @@ object GtkStringObject_autoptr:
   extension (v: GtkStringObject_autoptr)
     inline def value: Ptr[GtkStringObject] = v
 
-/**
-*/
 opaque type GtkStringObject_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringObject_listautoptr: 
   given _tag: Tag[GtkStringObject_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10066,8 +7896,6 @@ object GtkStringObject_listautoptr:
   extension (v: GtkStringObject_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringObject_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringObject_queueautoptr: 
   given _tag: Tag[GtkStringObject_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10075,8 +7903,6 @@ object GtkStringObject_queueautoptr:
   extension (v: GtkStringObject_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringObject_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringObject_slistautoptr: 
   given _tag: Tag[GtkStringObject_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10084,8 +7910,6 @@ object GtkStringObject_slistautoptr:
   extension (v: GtkStringObject_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringSorterClass_autoptr = Ptr[GtkStringSorterClass]
 object GtkStringSorterClass_autoptr: 
   given _tag: Tag[GtkStringSorterClass_autoptr] = Tag.Ptr[GtkStringSorterClass](GtkStringSorterClass._tag)
@@ -10093,8 +7917,6 @@ object GtkStringSorterClass_autoptr:
   extension (v: GtkStringSorterClass_autoptr)
     inline def value: Ptr[GtkStringSorterClass] = v
 
-/**
-*/
 opaque type GtkStringSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringSorterClass_listautoptr: 
   given _tag: Tag[GtkStringSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10102,8 +7924,6 @@ object GtkStringSorterClass_listautoptr:
   extension (v: GtkStringSorterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringSorterClass_queueautoptr: 
   given _tag: Tag[GtkStringSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10111,8 +7931,6 @@ object GtkStringSorterClass_queueautoptr:
   extension (v: GtkStringSorterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringSorterClass_slistautoptr: 
   given _tag: Tag[GtkStringSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10120,8 +7938,6 @@ object GtkStringSorterClass_slistautoptr:
   extension (v: GtkStringSorterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStringSorter_autoptr = Ptr[GtkStringSorter]
 object GtkStringSorter_autoptr: 
   given _tag: Tag[GtkStringSorter_autoptr] = Tag.Ptr[GtkStringSorter](GtkStringSorter._tag)
@@ -10129,8 +7945,6 @@ object GtkStringSorter_autoptr:
   extension (v: GtkStringSorter_autoptr)
     inline def value: Ptr[GtkStringSorter] = v
 
-/**
-*/
 opaque type GtkStringSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStringSorter_listautoptr: 
   given _tag: Tag[GtkStringSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10138,8 +7952,6 @@ object GtkStringSorter_listautoptr:
   extension (v: GtkStringSorter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStringSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStringSorter_queueautoptr: 
   given _tag: Tag[GtkStringSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10147,8 +7959,6 @@ object GtkStringSorter_queueautoptr:
   extension (v: GtkStringSorter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStringSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStringSorter_slistautoptr: 
   given _tag: Tag[GtkStringSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10156,8 +7966,6 @@ object GtkStringSorter_slistautoptr:
   extension (v: GtkStringSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStyleContext_autoptr = Ptr[GtkStyleContext]
 object GtkStyleContext_autoptr: 
   given _tag: Tag[GtkStyleContext_autoptr] = Tag.Ptr[GtkStyleContext](GtkStyleContext._tag)
@@ -10165,8 +7973,6 @@ object GtkStyleContext_autoptr:
   extension (v: GtkStyleContext_autoptr)
     inline def value: Ptr[GtkStyleContext] = v
 
-/**
-*/
 opaque type GtkStyleContext_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStyleContext_listautoptr: 
   given _tag: Tag[GtkStyleContext_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10174,8 +7980,6 @@ object GtkStyleContext_listautoptr:
   extension (v: GtkStyleContext_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStyleContext_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStyleContext_queueautoptr: 
   given _tag: Tag[GtkStyleContext_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10183,8 +7987,6 @@ object GtkStyleContext_queueautoptr:
   extension (v: GtkStyleContext_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStyleContext_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStyleContext_slistautoptr: 
   given _tag: Tag[GtkStyleContext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10192,8 +7994,6 @@ object GtkStyleContext_slistautoptr:
   extension (v: GtkStyleContext_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkStyleProvider_autoptr = Ptr[GtkStyleProvider]
 object GtkStyleProvider_autoptr: 
   given _tag: Tag[GtkStyleProvider_autoptr] = Tag.Ptr[GtkStyleProvider](GtkStyleProvider._tag)
@@ -10201,8 +8001,6 @@ object GtkStyleProvider_autoptr:
   extension (v: GtkStyleProvider_autoptr)
     inline def value: Ptr[GtkStyleProvider] = v
 
-/**
-*/
 opaque type GtkStyleProvider_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkStyleProvider_listautoptr: 
   given _tag: Tag[GtkStyleProvider_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10210,8 +8008,6 @@ object GtkStyleProvider_listautoptr:
   extension (v: GtkStyleProvider_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkStyleProvider_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkStyleProvider_queueautoptr: 
   given _tag: Tag[GtkStyleProvider_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10219,8 +8015,6 @@ object GtkStyleProvider_queueautoptr:
   extension (v: GtkStyleProvider_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkStyleProvider_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkStyleProvider_slistautoptr: 
   given _tag: Tag[GtkStyleProvider_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10228,8 +8022,6 @@ object GtkStyleProvider_slistautoptr:
   extension (v: GtkStyleProvider_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSwitch_autoptr = Ptr[GtkSwitch]
 object GtkSwitch_autoptr: 
   given _tag: Tag[GtkSwitch_autoptr] = Tag.Ptr[GtkSwitch](GtkSwitch._tag)
@@ -10237,8 +8029,6 @@ object GtkSwitch_autoptr:
   extension (v: GtkSwitch_autoptr)
     inline def value: Ptr[GtkSwitch] = v
 
-/**
-*/
 opaque type GtkSwitch_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSwitch_listautoptr: 
   given _tag: Tag[GtkSwitch_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10246,8 +8036,6 @@ object GtkSwitch_listautoptr:
   extension (v: GtkSwitch_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSwitch_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSwitch_queueautoptr: 
   given _tag: Tag[GtkSwitch_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10255,8 +8043,6 @@ object GtkSwitch_queueautoptr:
   extension (v: GtkSwitch_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSwitch_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSwitch_slistautoptr: 
   given _tag: Tag[GtkSwitch_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10264,8 +8050,6 @@ object GtkSwitch_slistautoptr:
   extension (v: GtkSwitch_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkSymbolicPaintable_autoptr = Ptr[GtkSymbolicPaintable]
 object GtkSymbolicPaintable_autoptr: 
   given _tag: Tag[GtkSymbolicPaintable_autoptr] = Tag.Ptr[GtkSymbolicPaintable](GtkSymbolicPaintable._tag)
@@ -10273,8 +8057,6 @@ object GtkSymbolicPaintable_autoptr:
   extension (v: GtkSymbolicPaintable_autoptr)
     inline def value: Ptr[GtkSymbolicPaintable] = v
 
-/**
-*/
 opaque type GtkSymbolicPaintable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkSymbolicPaintable_listautoptr: 
   given _tag: Tag[GtkSymbolicPaintable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10282,8 +8064,6 @@ object GtkSymbolicPaintable_listautoptr:
   extension (v: GtkSymbolicPaintable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkSymbolicPaintable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkSymbolicPaintable_queueautoptr: 
   given _tag: Tag[GtkSymbolicPaintable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10291,8 +8071,6 @@ object GtkSymbolicPaintable_queueautoptr:
   extension (v: GtkSymbolicPaintable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkSymbolicPaintable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkSymbolicPaintable_slistautoptr: 
   given _tag: Tag[GtkSymbolicPaintable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10300,8 +8078,6 @@ object GtkSymbolicPaintable_slistautoptr:
   extension (v: GtkSymbolicPaintable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTextBuffer_autoptr = Ptr[GtkTextBuffer]
 object GtkTextBuffer_autoptr: 
   given _tag: Tag[GtkTextBuffer_autoptr] = Tag.Ptr[GtkTextBuffer](GtkTextBuffer._tag)
@@ -10309,8 +8085,6 @@ object GtkTextBuffer_autoptr:
   extension (v: GtkTextBuffer_autoptr)
     inline def value: Ptr[GtkTextBuffer] = v
 
-/**
-*/
 opaque type GtkTextBuffer_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextBuffer_listautoptr: 
   given _tag: Tag[GtkTextBuffer_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10318,8 +8092,6 @@ object GtkTextBuffer_listautoptr:
   extension (v: GtkTextBuffer_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextBuffer_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextBuffer_queueautoptr: 
   given _tag: Tag[GtkTextBuffer_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10327,8 +8099,6 @@ object GtkTextBuffer_queueautoptr:
   extension (v: GtkTextBuffer_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextBuffer_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextBuffer_slistautoptr: 
   given _tag: Tag[GtkTextBuffer_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10342,14 +8112,12 @@ object GtkTextBuffer_slistautoptr:
 opaque type GtkTextCharPredicate = CFuncPtr2[_root_.sn.gnome.glib.internal.gunichar, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTextCharPredicate: 
   given _tag: Tag[GtkTextCharPredicate] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gunichar, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTextCharPredicate = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTextCharPredicate = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gunichar, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTextCharPredicate = o
   extension (v: GtkTextCharPredicate)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gunichar, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTextChildAnchor_autoptr = Ptr[GtkTextChildAnchor]
 object GtkTextChildAnchor_autoptr: 
   given _tag: Tag[GtkTextChildAnchor_autoptr] = Tag.Ptr[GtkTextChildAnchor](GtkTextChildAnchor._tag)
@@ -10357,8 +8125,6 @@ object GtkTextChildAnchor_autoptr:
   extension (v: GtkTextChildAnchor_autoptr)
     inline def value: Ptr[GtkTextChildAnchor] = v
 
-/**
-*/
 opaque type GtkTextChildAnchor_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextChildAnchor_listautoptr: 
   given _tag: Tag[GtkTextChildAnchor_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10366,8 +8132,6 @@ object GtkTextChildAnchor_listautoptr:
   extension (v: GtkTextChildAnchor_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextChildAnchor_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextChildAnchor_queueautoptr: 
   given _tag: Tag[GtkTextChildAnchor_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10375,8 +8139,6 @@ object GtkTextChildAnchor_queueautoptr:
   extension (v: GtkTextChildAnchor_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextChildAnchor_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextChildAnchor_slistautoptr: 
   given _tag: Tag[GtkTextChildAnchor_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10384,8 +8146,6 @@ object GtkTextChildAnchor_slistautoptr:
   extension (v: GtkTextChildAnchor_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTextIter_autoptr = Ptr[GtkTextIter]
 object GtkTextIter_autoptr: 
   given _tag: Tag[GtkTextIter_autoptr] = Tag.Ptr[GtkTextIter](GtkTextIter._tag)
@@ -10393,8 +8153,6 @@ object GtkTextIter_autoptr:
   extension (v: GtkTextIter_autoptr)
     inline def value: Ptr[GtkTextIter] = v
 
-/**
-*/
 opaque type GtkTextIter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextIter_listautoptr: 
   given _tag: Tag[GtkTextIter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10402,8 +8160,6 @@ object GtkTextIter_listautoptr:
   extension (v: GtkTextIter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextIter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextIter_queueautoptr: 
   given _tag: Tag[GtkTextIter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10411,8 +8167,6 @@ object GtkTextIter_queueautoptr:
   extension (v: GtkTextIter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextIter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextIter_slistautoptr: 
   given _tag: Tag[GtkTextIter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10420,8 +8174,6 @@ object GtkTextIter_slistautoptr:
   extension (v: GtkTextIter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTextMark_autoptr = Ptr[GtkTextMark]
 object GtkTextMark_autoptr: 
   given _tag: Tag[GtkTextMark_autoptr] = Tag.Ptr[GtkTextMark](GtkTextMark._tag)
@@ -10429,8 +8181,6 @@ object GtkTextMark_autoptr:
   extension (v: GtkTextMark_autoptr)
     inline def value: Ptr[GtkTextMark] = v
 
-/**
-*/
 opaque type GtkTextMark_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextMark_listautoptr: 
   given _tag: Tag[GtkTextMark_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10438,8 +8188,6 @@ object GtkTextMark_listautoptr:
   extension (v: GtkTextMark_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextMark_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextMark_queueautoptr: 
   given _tag: Tag[GtkTextMark_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10447,8 +8195,6 @@ object GtkTextMark_queueautoptr:
   extension (v: GtkTextMark_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextMark_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextMark_slistautoptr: 
   given _tag: Tag[GtkTextMark_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10462,14 +8208,12 @@ object GtkTextMark_slistautoptr:
 opaque type GtkTextTagTableForeach = CFuncPtr2[Ptr[GtkTextTag], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkTextTagTableForeach: 
   given _tag: Tag[GtkTextTagTableForeach] = Tag.materializeCFuncPtr2[Ptr[GtkTextTag], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTextTagTableForeach = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTextTagTableForeach = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[Ptr[GtkTextTag], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkTextTagTableForeach = o
   extension (v: GtkTextTagTableForeach)
     inline def value: CFuncPtr2[Ptr[GtkTextTag], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTextTagTable_autoptr = Ptr[GtkTextTagTable]
 object GtkTextTagTable_autoptr: 
   given _tag: Tag[GtkTextTagTable_autoptr] = Tag.Ptr[GtkTextTagTable](GtkTextTagTable._tag)
@@ -10477,8 +8221,6 @@ object GtkTextTagTable_autoptr:
   extension (v: GtkTextTagTable_autoptr)
     inline def value: Ptr[GtkTextTagTable] = v
 
-/**
-*/
 opaque type GtkTextTagTable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextTagTable_listautoptr: 
   given _tag: Tag[GtkTextTagTable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10486,8 +8228,6 @@ object GtkTextTagTable_listautoptr:
   extension (v: GtkTextTagTable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextTagTable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextTagTable_queueautoptr: 
   given _tag: Tag[GtkTextTagTable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10495,8 +8235,6 @@ object GtkTextTagTable_queueautoptr:
   extension (v: GtkTextTagTable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextTagTable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextTagTable_slistautoptr: 
   given _tag: Tag[GtkTextTagTable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10504,8 +8242,6 @@ object GtkTextTagTable_slistautoptr:
   extension (v: GtkTextTagTable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTextTag_autoptr = Ptr[GtkTextTag]
 object GtkTextTag_autoptr: 
   given _tag: Tag[GtkTextTag_autoptr] = Tag.Ptr[GtkTextTag](GtkTextTag._tag)
@@ -10513,8 +8249,6 @@ object GtkTextTag_autoptr:
   extension (v: GtkTextTag_autoptr)
     inline def value: Ptr[GtkTextTag] = v
 
-/**
-*/
 opaque type GtkTextTag_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextTag_listautoptr: 
   given _tag: Tag[GtkTextTag_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10522,8 +8256,6 @@ object GtkTextTag_listautoptr:
   extension (v: GtkTextTag_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextTag_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextTag_queueautoptr: 
   given _tag: Tag[GtkTextTag_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10531,8 +8263,6 @@ object GtkTextTag_queueautoptr:
   extension (v: GtkTextTag_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextTag_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextTag_slistautoptr: 
   given _tag: Tag[GtkTextTag_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10540,8 +8270,6 @@ object GtkTextTag_slistautoptr:
   extension (v: GtkTextTag_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTextView_autoptr = Ptr[GtkTextView]
 object GtkTextView_autoptr: 
   given _tag: Tag[GtkTextView_autoptr] = Tag.Ptr[GtkTextView](GtkTextView._tag)
@@ -10549,8 +8277,6 @@ object GtkTextView_autoptr:
   extension (v: GtkTextView_autoptr)
     inline def value: Ptr[GtkTextView] = v
 
-/**
-*/
 opaque type GtkTextView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTextView_listautoptr: 
   given _tag: Tag[GtkTextView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10558,8 +8284,6 @@ object GtkTextView_listautoptr:
   extension (v: GtkTextView_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTextView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTextView_queueautoptr: 
   given _tag: Tag[GtkTextView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10567,8 +8291,6 @@ object GtkTextView_queueautoptr:
   extension (v: GtkTextView_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTextView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTextView_slistautoptr: 
   given _tag: Tag[GtkTextView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10582,14 +8304,12 @@ object GtkTextView_slistautoptr:
 opaque type GtkTickCallback = CFuncPtr3[Ptr[GtkWidget], Ptr[GdkFrameClock], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTickCallback: 
   given _tag: Tag[GtkTickCallback] = Tag.materializeCFuncPtr3[Ptr[GtkWidget], Ptr[GdkFrameClock], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTickCallback = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTickCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkWidget], Ptr[GdkFrameClock], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTickCallback = o
   extension (v: GtkTickCallback)
     inline def value: CFuncPtr3[Ptr[GtkWidget], Ptr[GdkFrameClock], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkToggleButton_autoptr = Ptr[GtkToggleButton]
 object GtkToggleButton_autoptr: 
   given _tag: Tag[GtkToggleButton_autoptr] = Tag.Ptr[GtkToggleButton](GtkToggleButton._tag)
@@ -10597,8 +8317,6 @@ object GtkToggleButton_autoptr:
   extension (v: GtkToggleButton_autoptr)
     inline def value: Ptr[GtkToggleButton] = v
 
-/**
-*/
 opaque type GtkToggleButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkToggleButton_listautoptr: 
   given _tag: Tag[GtkToggleButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10606,8 +8324,6 @@ object GtkToggleButton_listautoptr:
   extension (v: GtkToggleButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkToggleButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkToggleButton_queueautoptr: 
   given _tag: Tag[GtkToggleButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10615,8 +8331,6 @@ object GtkToggleButton_queueautoptr:
   extension (v: GtkToggleButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkToggleButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkToggleButton_slistautoptr: 
   given _tag: Tag[GtkToggleButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10624,8 +8338,6 @@ object GtkToggleButton_slistautoptr:
   extension (v: GtkToggleButton_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTooltip_autoptr = Ptr[GtkTooltip]
 object GtkTooltip_autoptr: 
   given _tag: Tag[GtkTooltip_autoptr] = Tag.Ptr[GtkTooltip](GtkTooltip._tag)
@@ -10633,8 +8345,6 @@ object GtkTooltip_autoptr:
   extension (v: GtkTooltip_autoptr)
     inline def value: Ptr[GtkTooltip] = v
 
-/**
-*/
 opaque type GtkTooltip_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTooltip_listautoptr: 
   given _tag: Tag[GtkTooltip_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10642,8 +8352,6 @@ object GtkTooltip_listautoptr:
   extension (v: GtkTooltip_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTooltip_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTooltip_queueautoptr: 
   given _tag: Tag[GtkTooltip_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10651,8 +8359,6 @@ object GtkTooltip_queueautoptr:
   extension (v: GtkTooltip_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTooltip_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTooltip_slistautoptr: 
   given _tag: Tag[GtkTooltip_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10666,14 +8372,12 @@ object GtkTooltip_slistautoptr:
 opaque type GtkTreeCellDataFunc = CFuncPtr5[Ptr[GtkTreeViewColumn], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkTreeCellDataFunc: 
   given _tag: Tag[GtkTreeCellDataFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeViewColumn], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeCellDataFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeCellDataFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeViewColumn], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkTreeCellDataFunc = o
   extension (v: GtkTreeCellDataFunc)
     inline def value: CFuncPtr5[Ptr[GtkTreeViewColumn], Ptr[GtkCellRenderer], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeDragDest_autoptr = Ptr[GtkTreeDragDest]
 object GtkTreeDragDest_autoptr: 
   given _tag: Tag[GtkTreeDragDest_autoptr] = Tag.Ptr[GtkTreeDragDest](GtkTreeDragDest._tag)
@@ -10681,8 +8385,6 @@ object GtkTreeDragDest_autoptr:
   extension (v: GtkTreeDragDest_autoptr)
     inline def value: Ptr[GtkTreeDragDest] = v
 
-/**
-*/
 opaque type GtkTreeDragDest_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeDragDest_listautoptr: 
   given _tag: Tag[GtkTreeDragDest_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10690,8 +8392,6 @@ object GtkTreeDragDest_listautoptr:
   extension (v: GtkTreeDragDest_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeDragDest_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeDragDest_queueautoptr: 
   given _tag: Tag[GtkTreeDragDest_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10699,8 +8399,6 @@ object GtkTreeDragDest_queueautoptr:
   extension (v: GtkTreeDragDest_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeDragDest_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeDragDest_slistautoptr: 
   given _tag: Tag[GtkTreeDragDest_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10708,8 +8406,6 @@ object GtkTreeDragDest_slistautoptr:
   extension (v: GtkTreeDragDest_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeDragSource_autoptr = Ptr[GtkTreeDragSource]
 object GtkTreeDragSource_autoptr: 
   given _tag: Tag[GtkTreeDragSource_autoptr] = Tag.Ptr[GtkTreeDragSource](GtkTreeDragSource._tag)
@@ -10717,8 +8413,6 @@ object GtkTreeDragSource_autoptr:
   extension (v: GtkTreeDragSource_autoptr)
     inline def value: Ptr[GtkTreeDragSource] = v
 
-/**
-*/
 opaque type GtkTreeDragSource_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeDragSource_listautoptr: 
   given _tag: Tag[GtkTreeDragSource_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10726,8 +8420,6 @@ object GtkTreeDragSource_listautoptr:
   extension (v: GtkTreeDragSource_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeDragSource_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeDragSource_queueautoptr: 
   given _tag: Tag[GtkTreeDragSource_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10735,8 +8427,6 @@ object GtkTreeDragSource_queueautoptr:
   extension (v: GtkTreeDragSource_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeDragSource_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeDragSource_slistautoptr: 
   given _tag: Tag[GtkTreeDragSource_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10744,8 +8434,6 @@ object GtkTreeDragSource_slistautoptr:
   extension (v: GtkTreeDragSource_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeExpanderClass_autoptr = Ptr[GtkTreeExpanderClass]
 object GtkTreeExpanderClass_autoptr: 
   given _tag: Tag[GtkTreeExpanderClass_autoptr] = Tag.Ptr[GtkTreeExpanderClass](GtkTreeExpanderClass._tag)
@@ -10753,8 +8441,6 @@ object GtkTreeExpanderClass_autoptr:
   extension (v: GtkTreeExpanderClass_autoptr)
     inline def value: Ptr[GtkTreeExpanderClass] = v
 
-/**
-*/
 opaque type GtkTreeExpanderClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeExpanderClass_listautoptr: 
   given _tag: Tag[GtkTreeExpanderClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10762,8 +8448,6 @@ object GtkTreeExpanderClass_listautoptr:
   extension (v: GtkTreeExpanderClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeExpanderClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeExpanderClass_queueautoptr: 
   given _tag: Tag[GtkTreeExpanderClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10771,8 +8455,6 @@ object GtkTreeExpanderClass_queueautoptr:
   extension (v: GtkTreeExpanderClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeExpanderClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeExpanderClass_slistautoptr: 
   given _tag: Tag[GtkTreeExpanderClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10780,8 +8462,6 @@ object GtkTreeExpanderClass_slistautoptr:
   extension (v: GtkTreeExpanderClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeExpander_autoptr = Ptr[GtkTreeExpander]
 object GtkTreeExpander_autoptr: 
   given _tag: Tag[GtkTreeExpander_autoptr] = Tag.Ptr[GtkTreeExpander](GtkTreeExpander._tag)
@@ -10789,8 +8469,6 @@ object GtkTreeExpander_autoptr:
   extension (v: GtkTreeExpander_autoptr)
     inline def value: Ptr[GtkTreeExpander] = v
 
-/**
-*/
 opaque type GtkTreeExpander_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeExpander_listautoptr: 
   given _tag: Tag[GtkTreeExpander_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10798,8 +8476,6 @@ object GtkTreeExpander_listautoptr:
   extension (v: GtkTreeExpander_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeExpander_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeExpander_queueautoptr: 
   given _tag: Tag[GtkTreeExpander_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10807,8 +8483,6 @@ object GtkTreeExpander_queueautoptr:
   extension (v: GtkTreeExpander_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeExpander_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeExpander_slistautoptr: 
   given _tag: Tag[GtkTreeExpander_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10822,14 +8496,12 @@ object GtkTreeExpander_slistautoptr:
 opaque type GtkTreeIterCompareFunc = CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, CInt]
 object GtkTreeIterCompareFunc: 
   given _tag: Tag[GtkTreeIterCompareFunc] = Tag.materializeCFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, CInt]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeIterCompareFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeIterCompareFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, CInt]): GtkTreeIterCompareFunc = o
   extension (v: GtkTreeIterCompareFunc)
     inline def value: CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, CInt] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeIter_autoptr = Ptr[GtkTreeIter]
 object GtkTreeIter_autoptr: 
   given _tag: Tag[GtkTreeIter_autoptr] = Tag.Ptr[GtkTreeIter](GtkTreeIter._tag)
@@ -10837,8 +8509,6 @@ object GtkTreeIter_autoptr:
   extension (v: GtkTreeIter_autoptr)
     inline def value: Ptr[GtkTreeIter] = v
 
-/**
-*/
 opaque type GtkTreeIter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeIter_listautoptr: 
   given _tag: Tag[GtkTreeIter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10846,8 +8516,6 @@ object GtkTreeIter_listautoptr:
   extension (v: GtkTreeIter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeIter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeIter_queueautoptr: 
   given _tag: Tag[GtkTreeIter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10855,8 +8523,6 @@ object GtkTreeIter_queueautoptr:
   extension (v: GtkTreeIter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeIter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeIter_slistautoptr: 
   given _tag: Tag[GtkTreeIter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10864,8 +8530,6 @@ object GtkTreeIter_slistautoptr:
   extension (v: GtkTreeIter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeListModelClass_autoptr = Ptr[GtkTreeListModelClass]
 object GtkTreeListModelClass_autoptr: 
   given _tag: Tag[GtkTreeListModelClass_autoptr] = Tag.Ptr[GtkTreeListModelClass](GtkTreeListModelClass._tag)
@@ -10873,8 +8537,6 @@ object GtkTreeListModelClass_autoptr:
   extension (v: GtkTreeListModelClass_autoptr)
     inline def value: Ptr[GtkTreeListModelClass] = v
 
-/**
-*/
 opaque type GtkTreeListModelClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeListModelClass_listautoptr: 
   given _tag: Tag[GtkTreeListModelClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10882,8 +8544,6 @@ object GtkTreeListModelClass_listautoptr:
   extension (v: GtkTreeListModelClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeListModelClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeListModelClass_queueautoptr: 
   given _tag: Tag[GtkTreeListModelClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10891,8 +8551,6 @@ object GtkTreeListModelClass_queueautoptr:
   extension (v: GtkTreeListModelClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeListModelClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeListModelClass_slistautoptr: 
   given _tag: Tag[GtkTreeListModelClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10906,14 +8564,12 @@ object GtkTreeListModelClass_slistautoptr:
 opaque type GtkTreeListModelCreateModelFunc = CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.gio.internal.GListModel]]
 object GtkTreeListModelCreateModelFunc: 
   given _tag: Tag[GtkTreeListModelCreateModelFunc] = Tag.materializeCFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.gio.internal.GListModel]]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeListModelCreateModelFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeListModelCreateModelFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.gio.internal.GListModel]]): GtkTreeListModelCreateModelFunc = o
   extension (v: GtkTreeListModelCreateModelFunc)
     inline def value: CFuncPtr2[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.gio.internal.GListModel]] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeListModel_autoptr = Ptr[GtkTreeListModel]
 object GtkTreeListModel_autoptr: 
   given _tag: Tag[GtkTreeListModel_autoptr] = Tag.Ptr[GtkTreeListModel](GtkTreeListModel._tag)
@@ -10921,8 +8577,6 @@ object GtkTreeListModel_autoptr:
   extension (v: GtkTreeListModel_autoptr)
     inline def value: Ptr[GtkTreeListModel] = v
 
-/**
-*/
 opaque type GtkTreeListModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeListModel_listautoptr: 
   given _tag: Tag[GtkTreeListModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10930,8 +8584,6 @@ object GtkTreeListModel_listautoptr:
   extension (v: GtkTreeListModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeListModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeListModel_queueautoptr: 
   given _tag: Tag[GtkTreeListModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10939,8 +8591,6 @@ object GtkTreeListModel_queueautoptr:
   extension (v: GtkTreeListModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeListModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeListModel_slistautoptr: 
   given _tag: Tag[GtkTreeListModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10948,8 +8598,6 @@ object GtkTreeListModel_slistautoptr:
   extension (v: GtkTreeListModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeListRowClass_autoptr = Ptr[GtkTreeListRowClass]
 object GtkTreeListRowClass_autoptr: 
   given _tag: Tag[GtkTreeListRowClass_autoptr] = Tag.Ptr[GtkTreeListRowClass](GtkTreeListRowClass._tag)
@@ -10957,8 +8605,6 @@ object GtkTreeListRowClass_autoptr:
   extension (v: GtkTreeListRowClass_autoptr)
     inline def value: Ptr[GtkTreeListRowClass] = v
 
-/**
-*/
 opaque type GtkTreeListRowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeListRowClass_listautoptr: 
   given _tag: Tag[GtkTreeListRowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -10966,8 +8612,6 @@ object GtkTreeListRowClass_listautoptr:
   extension (v: GtkTreeListRowClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeListRowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeListRowClass_queueautoptr: 
   given _tag: Tag[GtkTreeListRowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -10975,8 +8619,6 @@ object GtkTreeListRowClass_queueautoptr:
   extension (v: GtkTreeListRowClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeListRowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeListRowClass_slistautoptr: 
   given _tag: Tag[GtkTreeListRowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -10984,8 +8626,6 @@ object GtkTreeListRowClass_slistautoptr:
   extension (v: GtkTreeListRowClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorterClass_autoptr = Ptr[GtkTreeListRowSorterClass]
 object GtkTreeListRowSorterClass_autoptr: 
   given _tag: Tag[GtkTreeListRowSorterClass_autoptr] = Tag.Ptr[GtkTreeListRowSorterClass](GtkTreeListRowSorterClass._tag)
@@ -10993,8 +8633,6 @@ object GtkTreeListRowSorterClass_autoptr:
   extension (v: GtkTreeListRowSorterClass_autoptr)
     inline def value: Ptr[GtkTreeListRowSorterClass] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeListRowSorterClass_listautoptr: 
   given _tag: Tag[GtkTreeListRowSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11002,8 +8640,6 @@ object GtkTreeListRowSorterClass_listautoptr:
   extension (v: GtkTreeListRowSorterClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeListRowSorterClass_queueautoptr: 
   given _tag: Tag[GtkTreeListRowSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11011,8 +8647,6 @@ object GtkTreeListRowSorterClass_queueautoptr:
   extension (v: GtkTreeListRowSorterClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeListRowSorterClass_slistautoptr: 
   given _tag: Tag[GtkTreeListRowSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11020,8 +8654,6 @@ object GtkTreeListRowSorterClass_slistautoptr:
   extension (v: GtkTreeListRowSorterClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorter_autoptr = Ptr[GtkTreeListRowSorter]
 object GtkTreeListRowSorter_autoptr: 
   given _tag: Tag[GtkTreeListRowSorter_autoptr] = Tag.Ptr[GtkTreeListRowSorter](GtkTreeListRowSorter._tag)
@@ -11029,8 +8661,6 @@ object GtkTreeListRowSorter_autoptr:
   extension (v: GtkTreeListRowSorter_autoptr)
     inline def value: Ptr[GtkTreeListRowSorter] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeListRowSorter_listautoptr: 
   given _tag: Tag[GtkTreeListRowSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11038,8 +8668,6 @@ object GtkTreeListRowSorter_listautoptr:
   extension (v: GtkTreeListRowSorter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeListRowSorter_queueautoptr: 
   given _tag: Tag[GtkTreeListRowSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11047,8 +8675,6 @@ object GtkTreeListRowSorter_queueautoptr:
   extension (v: GtkTreeListRowSorter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeListRowSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeListRowSorter_slistautoptr: 
   given _tag: Tag[GtkTreeListRowSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11056,8 +8682,6 @@ object GtkTreeListRowSorter_slistautoptr:
   extension (v: GtkTreeListRowSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeListRow_autoptr = Ptr[GtkTreeListRow]
 object GtkTreeListRow_autoptr: 
   given _tag: Tag[GtkTreeListRow_autoptr] = Tag.Ptr[GtkTreeListRow](GtkTreeListRow._tag)
@@ -11065,8 +8689,6 @@ object GtkTreeListRow_autoptr:
   extension (v: GtkTreeListRow_autoptr)
     inline def value: Ptr[GtkTreeListRow] = v
 
-/**
-*/
 opaque type GtkTreeListRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeListRow_listautoptr: 
   given _tag: Tag[GtkTreeListRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11074,8 +8696,6 @@ object GtkTreeListRow_listautoptr:
   extension (v: GtkTreeListRow_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeListRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeListRow_queueautoptr: 
   given _tag: Tag[GtkTreeListRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11083,8 +8703,6 @@ object GtkTreeListRow_queueautoptr:
   extension (v: GtkTreeListRow_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeListRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeListRow_slistautoptr: 
   given _tag: Tag[GtkTreeListRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11098,11 +8716,11 @@ object GtkTreeListRow_slistautoptr:
 opaque type GtkTreeModelFilterModifyFunc = CFuncPtr5[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkTreeModelFilterModifyFunc: 
   given _tag: Tag[GtkTreeModelFilterModifyFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeModelFilterModifyFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeModelFilterModifyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkTreeModelFilterModifyFunc = o
   extension (v: GtkTreeModelFilterModifyFunc)
     inline def value: CFuncPtr5[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkTreeModelFilterVisibleFunc: : the child model of the `GtkTreeModelFilter` : a `GtkTreeIter` pointing to the row in whose visibility is determined
@@ -11110,14 +8728,12 @@ object GtkTreeModelFilterModifyFunc:
 opaque type GtkTreeModelFilterVisibleFunc = CFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeModelFilterVisibleFunc: 
   given _tag: Tag[GtkTreeModelFilterVisibleFunc] = Tag.materializeCFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeModelFilterVisibleFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeModelFilterVisibleFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeModelFilterVisibleFunc = o
   extension (v: GtkTreeModelFilterVisibleFunc)
     inline def value: CFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeModelFilter_autoptr = Ptr[GtkTreeModelFilter]
 object GtkTreeModelFilter_autoptr: 
   given _tag: Tag[GtkTreeModelFilter_autoptr] = Tag.Ptr[GtkTreeModelFilter](GtkTreeModelFilter._tag)
@@ -11125,8 +8741,6 @@ object GtkTreeModelFilter_autoptr:
   extension (v: GtkTreeModelFilter_autoptr)
     inline def value: Ptr[GtkTreeModelFilter] = v
 
-/**
-*/
 opaque type GtkTreeModelFilter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeModelFilter_listautoptr: 
   given _tag: Tag[GtkTreeModelFilter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11134,8 +8748,6 @@ object GtkTreeModelFilter_listautoptr:
   extension (v: GtkTreeModelFilter_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeModelFilter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeModelFilter_queueautoptr: 
   given _tag: Tag[GtkTreeModelFilter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11143,8 +8755,6 @@ object GtkTreeModelFilter_queueautoptr:
   extension (v: GtkTreeModelFilter_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeModelFilter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeModelFilter_slistautoptr: 
   given _tag: Tag[GtkTreeModelFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11158,14 +8768,12 @@ object GtkTreeModelFilter_slistautoptr:
 opaque type GtkTreeModelForeachFunc = CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeModelForeachFunc: 
   given _tag: Tag[GtkTreeModelForeachFunc] = Tag.materializeCFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeModelForeachFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeModelForeachFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeModelForeachFunc = o
   extension (v: GtkTreeModelForeachFunc)
     inline def value: CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeModelSort_autoptr = Ptr[GtkTreeModelSort]
 object GtkTreeModelSort_autoptr: 
   given _tag: Tag[GtkTreeModelSort_autoptr] = Tag.Ptr[GtkTreeModelSort](GtkTreeModelSort._tag)
@@ -11173,8 +8781,6 @@ object GtkTreeModelSort_autoptr:
   extension (v: GtkTreeModelSort_autoptr)
     inline def value: Ptr[GtkTreeModelSort] = v
 
-/**
-*/
 opaque type GtkTreeModelSort_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeModelSort_listautoptr: 
   given _tag: Tag[GtkTreeModelSort_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11182,8 +8788,6 @@ object GtkTreeModelSort_listautoptr:
   extension (v: GtkTreeModelSort_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeModelSort_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeModelSort_queueautoptr: 
   given _tag: Tag[GtkTreeModelSort_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11191,8 +8795,6 @@ object GtkTreeModelSort_queueautoptr:
   extension (v: GtkTreeModelSort_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeModelSort_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeModelSort_slistautoptr: 
   given _tag: Tag[GtkTreeModelSort_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11200,8 +8802,6 @@ object GtkTreeModelSort_slistautoptr:
   extension (v: GtkTreeModelSort_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeModel_autoptr = Ptr[GtkTreeModel]
 object GtkTreeModel_autoptr: 
   given _tag: Tag[GtkTreeModel_autoptr] = Tag.Ptr[GtkTreeModel](GtkTreeModel._tag)
@@ -11209,8 +8809,6 @@ object GtkTreeModel_autoptr:
   extension (v: GtkTreeModel_autoptr)
     inline def value: Ptr[GtkTreeModel] = v
 
-/**
-*/
 opaque type GtkTreeModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeModel_listautoptr: 
   given _tag: Tag[GtkTreeModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11218,8 +8816,6 @@ object GtkTreeModel_listautoptr:
   extension (v: GtkTreeModel_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeModel_queueautoptr: 
   given _tag: Tag[GtkTreeModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11227,8 +8823,6 @@ object GtkTreeModel_queueautoptr:
   extension (v: GtkTreeModel_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeModel_slistautoptr: 
   given _tag: Tag[GtkTreeModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11236,8 +8830,6 @@ object GtkTreeModel_slistautoptr:
   extension (v: GtkTreeModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreePath_autoptr = Ptr[GtkTreePath]
 object GtkTreePath_autoptr: 
   given _tag: Tag[GtkTreePath_autoptr] = Tag.Ptr[GtkTreePath](GtkTreePath._tag)
@@ -11245,8 +8837,6 @@ object GtkTreePath_autoptr:
   extension (v: GtkTreePath_autoptr)
     inline def value: Ptr[GtkTreePath] = v
 
-/**
-*/
 opaque type GtkTreePath_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreePath_listautoptr: 
   given _tag: Tag[GtkTreePath_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11254,8 +8844,6 @@ object GtkTreePath_listautoptr:
   extension (v: GtkTreePath_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreePath_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreePath_queueautoptr: 
   given _tag: Tag[GtkTreePath_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11263,8 +8851,6 @@ object GtkTreePath_queueautoptr:
   extension (v: GtkTreePath_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreePath_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreePath_slistautoptr: 
   given _tag: Tag[GtkTreePath_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11272,8 +8858,6 @@ object GtkTreePath_slistautoptr:
   extension (v: GtkTreePath_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeRowReference_autoptr = Ptr[GtkTreeRowReference]
 object GtkTreeRowReference_autoptr: 
   given _tag: Tag[GtkTreeRowReference_autoptr] = Tag.Ptr[GtkTreeRowReference](GtkTreeRowReference._tag)
@@ -11281,8 +8865,6 @@ object GtkTreeRowReference_autoptr:
   extension (v: GtkTreeRowReference_autoptr)
     inline def value: Ptr[GtkTreeRowReference] = v
 
-/**
-*/
 opaque type GtkTreeRowReference_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeRowReference_listautoptr: 
   given _tag: Tag[GtkTreeRowReference_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11290,8 +8872,6 @@ object GtkTreeRowReference_listautoptr:
   extension (v: GtkTreeRowReference_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeRowReference_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeRowReference_queueautoptr: 
   given _tag: Tag[GtkTreeRowReference_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11299,8 +8879,6 @@ object GtkTreeRowReference_queueautoptr:
   extension (v: GtkTreeRowReference_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeRowReference_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeRowReference_slistautoptr: 
   given _tag: Tag[GtkTreeRowReference_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11314,11 +8892,11 @@ object GtkTreeRowReference_slistautoptr:
 opaque type GtkTreeSelectionForeachFunc = CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkTreeSelectionForeachFunc: 
   given _tag: Tag[GtkTreeSelectionForeachFunc] = Tag.materializeCFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeSelectionForeachFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeSelectionForeachFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkTreeSelectionForeachFunc = o
   extension (v: GtkTreeSelectionForeachFunc)
     inline def value: CFuncPtr4[Ptr[GtkTreeModel], Ptr[GtkTreePath], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkTreeSelectionFunc: : A `GtkTreeSelection` : A `GtkTreeModel` being viewed : The `GtkTreePath` of the row in question _currently_selected: %TRUE, if the path is currently selected
@@ -11326,14 +8904,12 @@ object GtkTreeSelectionForeachFunc:
 opaque type GtkTreeSelectionFunc = CFuncPtr5[Ptr[GtkTreeSelection], Ptr[GtkTreeModel], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeSelectionFunc: 
   given _tag: Tag[GtkTreeSelectionFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeSelection], Ptr[GtkTreeModel], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeSelectionFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeSelectionFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeSelection], Ptr[GtkTreeModel], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeSelectionFunc = o
   extension (v: GtkTreeSelectionFunc)
     inline def value: CFuncPtr5[Ptr[GtkTreeSelection], Ptr[GtkTreeModel], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeSelection_autoptr = Ptr[GtkTreeSelection]
 object GtkTreeSelection_autoptr: 
   given _tag: Tag[GtkTreeSelection_autoptr] = Tag.Ptr[GtkTreeSelection](GtkTreeSelection._tag)
@@ -11341,8 +8917,6 @@ object GtkTreeSelection_autoptr:
   extension (v: GtkTreeSelection_autoptr)
     inline def value: Ptr[GtkTreeSelection] = v
 
-/**
-*/
 opaque type GtkTreeSelection_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeSelection_listautoptr: 
   given _tag: Tag[GtkTreeSelection_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11350,8 +8924,6 @@ object GtkTreeSelection_listautoptr:
   extension (v: GtkTreeSelection_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeSelection_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeSelection_queueautoptr: 
   given _tag: Tag[GtkTreeSelection_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11359,8 +8931,6 @@ object GtkTreeSelection_queueautoptr:
   extension (v: GtkTreeSelection_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeSelection_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeSelection_slistautoptr: 
   given _tag: Tag[GtkTreeSelection_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11368,8 +8938,6 @@ object GtkTreeSelection_slistautoptr:
   extension (v: GtkTreeSelection_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeSortable_autoptr = Ptr[GtkTreeSortable]
 object GtkTreeSortable_autoptr: 
   given _tag: Tag[GtkTreeSortable_autoptr] = Tag.Ptr[GtkTreeSortable](GtkTreeSortable._tag)
@@ -11377,8 +8945,6 @@ object GtkTreeSortable_autoptr:
   extension (v: GtkTreeSortable_autoptr)
     inline def value: Ptr[GtkTreeSortable] = v
 
-/**
-*/
 opaque type GtkTreeSortable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeSortable_listautoptr: 
   given _tag: Tag[GtkTreeSortable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11386,8 +8952,6 @@ object GtkTreeSortable_listautoptr:
   extension (v: GtkTreeSortable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeSortable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeSortable_queueautoptr: 
   given _tag: Tag[GtkTreeSortable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11395,8 +8959,6 @@ object GtkTreeSortable_queueautoptr:
   extension (v: GtkTreeSortable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeSortable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeSortable_slistautoptr: 
   given _tag: Tag[GtkTreeSortable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11404,8 +8966,6 @@ object GtkTreeSortable_slistautoptr:
   extension (v: GtkTreeSortable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkTreeStore_autoptr = Ptr[GtkTreeStore]
 object GtkTreeStore_autoptr: 
   given _tag: Tag[GtkTreeStore_autoptr] = Tag.Ptr[GtkTreeStore](GtkTreeStore._tag)
@@ -11413,8 +8973,6 @@ object GtkTreeStore_autoptr:
   extension (v: GtkTreeStore_autoptr)
     inline def value: Ptr[GtkTreeStore] = v
 
-/**
-*/
 opaque type GtkTreeStore_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeStore_listautoptr: 
   given _tag: Tag[GtkTreeStore_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11422,8 +8980,6 @@ object GtkTreeStore_listautoptr:
   extension (v: GtkTreeStore_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeStore_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeStore_queueautoptr: 
   given _tag: Tag[GtkTreeStore_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11431,8 +8987,6 @@ object GtkTreeStore_queueautoptr:
   extension (v: GtkTreeStore_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeStore_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeStore_slistautoptr: 
   given _tag: Tag[GtkTreeStore_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11446,14 +9000,12 @@ object GtkTreeStore_slistautoptr:
 opaque type GtkTreeViewColumnDropFunc = CFuncPtr5[Ptr[GtkTreeView], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeViewColumnDropFunc: 
   given _tag: Tag[GtkTreeViewColumnDropFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeView], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeViewColumnDropFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeViewColumnDropFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeView], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeViewColumnDropFunc = o
   extension (v: GtkTreeViewColumnDropFunc)
     inline def value: CFuncPtr5[Ptr[GtkTreeView], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], Ptr[GtkTreeViewColumn], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeViewColumn_autoptr = Ptr[GtkTreeViewColumn]
 object GtkTreeViewColumn_autoptr: 
   given _tag: Tag[GtkTreeViewColumn_autoptr] = Tag.Ptr[GtkTreeViewColumn](GtkTreeViewColumn._tag)
@@ -11461,8 +9013,6 @@ object GtkTreeViewColumn_autoptr:
   extension (v: GtkTreeViewColumn_autoptr)
     inline def value: Ptr[GtkTreeViewColumn] = v
 
-/**
-*/
 opaque type GtkTreeViewColumn_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeViewColumn_listautoptr: 
   given _tag: Tag[GtkTreeViewColumn_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11470,8 +9020,6 @@ object GtkTreeViewColumn_listautoptr:
   extension (v: GtkTreeViewColumn_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeViewColumn_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeViewColumn_queueautoptr: 
   given _tag: Tag[GtkTreeViewColumn_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11479,8 +9027,6 @@ object GtkTreeViewColumn_queueautoptr:
   extension (v: GtkTreeViewColumn_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeViewColumn_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeViewColumn_slistautoptr: 
   given _tag: Tag[GtkTreeViewColumn_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11494,11 +9040,11 @@ object GtkTreeViewColumn_slistautoptr:
 opaque type GtkTreeViewMappingFunc = CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkTreeViewMappingFunc: 
   given _tag: Tag[GtkTreeViewMappingFunc] = Tag.materializeCFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeViewMappingFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeViewMappingFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkTreeViewMappingFunc = o
   extension (v: GtkTreeViewMappingFunc)
     inline def value: CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkTreeViewRowSeparatorFunc: : the `GtkTreeModel` : a `GtkTreeIter` pointing at a row in
@@ -11506,11 +9052,11 @@ object GtkTreeViewMappingFunc:
 opaque type GtkTreeViewRowSeparatorFunc = CFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeViewRowSeparatorFunc: 
   given _tag: Tag[GtkTreeViewRowSeparatorFunc] = Tag.materializeCFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeViewRowSeparatorFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeViewRowSeparatorFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeViewRowSeparatorFunc = o
   extension (v: GtkTreeViewRowSeparatorFunc)
     inline def value: CFuncPtr3[Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 /**
  * GtkTreeViewSearchEqualFunc: : the `GtkTreeModel` being searched : the search column set by gtk_tree_view_set_search_column() : the key string to compare with : a `GtkTreeIter` pointing the row of that should be compared with . _data: (closure): user data from gtk_tree_view_set_search_equal_func()
@@ -11518,14 +9064,12 @@ object GtkTreeViewRowSeparatorFunc:
 opaque type GtkTreeViewSearchEqualFunc = CFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeViewSearchEqualFunc: 
   given _tag: Tag[GtkTreeViewSearchEqualFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkTreeViewSearchEqualFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkTreeViewSearchEqualFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeViewSearchEqualFunc = o
   extension (v: GtkTreeViewSearchEqualFunc)
     inline def value: CFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkTreeView_autoptr = Ptr[GtkTreeView]
 object GtkTreeView_autoptr: 
   given _tag: Tag[GtkTreeView_autoptr] = Tag.Ptr[GtkTreeView](GtkTreeView._tag)
@@ -11533,8 +9077,6 @@ object GtkTreeView_autoptr:
   extension (v: GtkTreeView_autoptr)
     inline def value: Ptr[GtkTreeView] = v
 
-/**
-*/
 opaque type GtkTreeView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkTreeView_listautoptr: 
   given _tag: Tag[GtkTreeView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11542,8 +9084,6 @@ object GtkTreeView_listautoptr:
   extension (v: GtkTreeView_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkTreeView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkTreeView_queueautoptr: 
   given _tag: Tag[GtkTreeView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11551,8 +9091,6 @@ object GtkTreeView_queueautoptr:
   extension (v: GtkTreeView_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkTreeView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkTreeView_slistautoptr: 
   given _tag: Tag[GtkTreeView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11560,8 +9098,6 @@ object GtkTreeView_slistautoptr:
   extension (v: GtkTreeView_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkVideoClass_autoptr = Ptr[GtkVideoClass]
 object GtkVideoClass_autoptr: 
   given _tag: Tag[GtkVideoClass_autoptr] = Tag.Ptr[GtkVideoClass](GtkVideoClass._tag)
@@ -11569,8 +9105,6 @@ object GtkVideoClass_autoptr:
   extension (v: GtkVideoClass_autoptr)
     inline def value: Ptr[GtkVideoClass] = v
 
-/**
-*/
 opaque type GtkVideoClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkVideoClass_listautoptr: 
   given _tag: Tag[GtkVideoClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11578,8 +9112,6 @@ object GtkVideoClass_listautoptr:
   extension (v: GtkVideoClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkVideoClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkVideoClass_queueautoptr: 
   given _tag: Tag[GtkVideoClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11587,8 +9119,6 @@ object GtkVideoClass_queueautoptr:
   extension (v: GtkVideoClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkVideoClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkVideoClass_slistautoptr: 
   given _tag: Tag[GtkVideoClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11596,8 +9126,6 @@ object GtkVideoClass_slistautoptr:
   extension (v: GtkVideoClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkVideo_autoptr = Ptr[GtkVideo]
 object GtkVideo_autoptr: 
   given _tag: Tag[GtkVideo_autoptr] = Tag.Ptr[GtkVideo](GtkVideo._tag)
@@ -11605,8 +9133,6 @@ object GtkVideo_autoptr:
   extension (v: GtkVideo_autoptr)
     inline def value: Ptr[GtkVideo] = v
 
-/**
-*/
 opaque type GtkVideo_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkVideo_listautoptr: 
   given _tag: Tag[GtkVideo_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11614,8 +9140,6 @@ object GtkVideo_listautoptr:
   extension (v: GtkVideo_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkVideo_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkVideo_queueautoptr: 
   given _tag: Tag[GtkVideo_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11623,8 +9147,6 @@ object GtkVideo_queueautoptr:
   extension (v: GtkVideo_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkVideo_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkVideo_slistautoptr: 
   given _tag: Tag[GtkVideo_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11632,8 +9154,6 @@ object GtkVideo_slistautoptr:
   extension (v: GtkVideo_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkViewport_autoptr = Ptr[GtkViewport]
 object GtkViewport_autoptr: 
   given _tag: Tag[GtkViewport_autoptr] = Tag.Ptr[GtkViewport](GtkViewport._tag)
@@ -11641,8 +9161,6 @@ object GtkViewport_autoptr:
   extension (v: GtkViewport_autoptr)
     inline def value: Ptr[GtkViewport] = v
 
-/**
-*/
 opaque type GtkViewport_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkViewport_listautoptr: 
   given _tag: Tag[GtkViewport_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11650,8 +9168,6 @@ object GtkViewport_listautoptr:
   extension (v: GtkViewport_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkViewport_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkViewport_queueautoptr: 
   given _tag: Tag[GtkViewport_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11659,8 +9175,6 @@ object GtkViewport_queueautoptr:
   extension (v: GtkViewport_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkViewport_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkViewport_slistautoptr: 
   given _tag: Tag[GtkViewport_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11668,8 +9182,6 @@ object GtkViewport_slistautoptr:
   extension (v: GtkViewport_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkVolumeButton_autoptr = Ptr[GtkVolumeButton]
 object GtkVolumeButton_autoptr: 
   given _tag: Tag[GtkVolumeButton_autoptr] = Tag.Ptr[GtkVolumeButton](GtkVolumeButton._tag)
@@ -11677,8 +9189,6 @@ object GtkVolumeButton_autoptr:
   extension (v: GtkVolumeButton_autoptr)
     inline def value: Ptr[GtkVolumeButton] = v
 
-/**
-*/
 opaque type GtkVolumeButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkVolumeButton_listautoptr: 
   given _tag: Tag[GtkVolumeButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11686,8 +9196,6 @@ object GtkVolumeButton_listautoptr:
   extension (v: GtkVolumeButton_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkVolumeButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkVolumeButton_queueautoptr: 
   given _tag: Tag[GtkVolumeButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11695,8 +9203,6 @@ object GtkVolumeButton_queueautoptr:
   extension (v: GtkVolumeButton_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkVolumeButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkVolumeButton_slistautoptr: 
   given _tag: Tag[GtkVolumeButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11710,14 +9216,12 @@ object GtkVolumeButton_slistautoptr:
 opaque type GtkWidgetActionActivateFunc = CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
 object GtkWidgetActionActivateFunc: 
   given _tag: Tag[GtkWidgetActionActivateFunc] = Tag.materializeCFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
-  inline def fromPtr(ptr: Ptr[Byte]): GtkWidgetActionActivateFunc = CFuncPtr.fromPtr(ptr)
+  inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkWidgetActionActivateFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
   inline def apply(inline o: CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): GtkWidgetActionActivateFunc = o
   extension (v: GtkWidgetActionActivateFunc)
     inline def value: CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = v
-    inline def toPtr: Ptr[Byte] = CFuncPtr.toPtr(v)
+    inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
-/**
-*/
 opaque type GtkWidgetPaintableClass_autoptr = Ptr[GtkWidgetPaintableClass]
 object GtkWidgetPaintableClass_autoptr: 
   given _tag: Tag[GtkWidgetPaintableClass_autoptr] = Tag.Ptr[GtkWidgetPaintableClass](GtkWidgetPaintableClass._tag)
@@ -11725,8 +9229,6 @@ object GtkWidgetPaintableClass_autoptr:
   extension (v: GtkWidgetPaintableClass_autoptr)
     inline def value: Ptr[GtkWidgetPaintableClass] = v
 
-/**
-*/
 opaque type GtkWidgetPaintableClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWidgetPaintableClass_listautoptr: 
   given _tag: Tag[GtkWidgetPaintableClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11734,8 +9236,6 @@ object GtkWidgetPaintableClass_listautoptr:
   extension (v: GtkWidgetPaintableClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWidgetPaintableClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWidgetPaintableClass_queueautoptr: 
   given _tag: Tag[GtkWidgetPaintableClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11743,8 +9243,6 @@ object GtkWidgetPaintableClass_queueautoptr:
   extension (v: GtkWidgetPaintableClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWidgetPaintableClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWidgetPaintableClass_slistautoptr: 
   given _tag: Tag[GtkWidgetPaintableClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11752,8 +9250,6 @@ object GtkWidgetPaintableClass_slistautoptr:
   extension (v: GtkWidgetPaintableClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWidgetPaintable_autoptr = Ptr[GtkWidgetPaintable]
 object GtkWidgetPaintable_autoptr: 
   given _tag: Tag[GtkWidgetPaintable_autoptr] = Tag.Ptr[GtkWidgetPaintable](GtkWidgetPaintable._tag)
@@ -11761,8 +9257,6 @@ object GtkWidgetPaintable_autoptr:
   extension (v: GtkWidgetPaintable_autoptr)
     inline def value: Ptr[GtkWidgetPaintable] = v
 
-/**
-*/
 opaque type GtkWidgetPaintable_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWidgetPaintable_listautoptr: 
   given _tag: Tag[GtkWidgetPaintable_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11770,8 +9264,6 @@ object GtkWidgetPaintable_listautoptr:
   extension (v: GtkWidgetPaintable_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWidgetPaintable_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWidgetPaintable_queueautoptr: 
   given _tag: Tag[GtkWidgetPaintable_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11779,8 +9271,6 @@ object GtkWidgetPaintable_queueautoptr:
   extension (v: GtkWidgetPaintable_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWidgetPaintable_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWidgetPaintable_slistautoptr: 
   given _tag: Tag[GtkWidgetPaintable_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11788,8 +9278,6 @@ object GtkWidgetPaintable_slistautoptr:
   extension (v: GtkWidgetPaintable_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWidget_autoptr = Ptr[GtkWidget]
 object GtkWidget_autoptr: 
   given _tag: Tag[GtkWidget_autoptr] = Tag.Ptr[GtkWidget](GtkWidget._tag)
@@ -11797,8 +9285,6 @@ object GtkWidget_autoptr:
   extension (v: GtkWidget_autoptr)
     inline def value: Ptr[GtkWidget] = v
 
-/**
-*/
 opaque type GtkWidget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWidget_listautoptr: 
   given _tag: Tag[GtkWidget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11806,8 +9292,6 @@ object GtkWidget_listautoptr:
   extension (v: GtkWidget_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWidget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWidget_queueautoptr: 
   given _tag: Tag[GtkWidget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11815,8 +9299,6 @@ object GtkWidget_queueautoptr:
   extension (v: GtkWidget_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWidget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWidget_slistautoptr: 
   given _tag: Tag[GtkWidget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11824,8 +9306,6 @@ object GtkWidget_slistautoptr:
   extension (v: GtkWidget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWindowControlsClass_autoptr = Ptr[GtkWindowControlsClass]
 object GtkWindowControlsClass_autoptr: 
   given _tag: Tag[GtkWindowControlsClass_autoptr] = Tag.Ptr[GtkWindowControlsClass](GtkWindowControlsClass._tag)
@@ -11833,8 +9313,6 @@ object GtkWindowControlsClass_autoptr:
   extension (v: GtkWindowControlsClass_autoptr)
     inline def value: Ptr[GtkWindowControlsClass] = v
 
-/**
-*/
 opaque type GtkWindowControlsClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWindowControlsClass_listautoptr: 
   given _tag: Tag[GtkWindowControlsClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11842,8 +9320,6 @@ object GtkWindowControlsClass_listautoptr:
   extension (v: GtkWindowControlsClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWindowControlsClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWindowControlsClass_queueautoptr: 
   given _tag: Tag[GtkWindowControlsClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11851,8 +9327,6 @@ object GtkWindowControlsClass_queueautoptr:
   extension (v: GtkWindowControlsClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWindowControlsClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWindowControlsClass_slistautoptr: 
   given _tag: Tag[GtkWindowControlsClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11860,8 +9334,6 @@ object GtkWindowControlsClass_slistautoptr:
   extension (v: GtkWindowControlsClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWindowControls_autoptr = Ptr[GtkWindowControls]
 object GtkWindowControls_autoptr: 
   given _tag: Tag[GtkWindowControls_autoptr] = Tag.Ptr[GtkWindowControls](GtkWindowControls._tag)
@@ -11869,8 +9341,6 @@ object GtkWindowControls_autoptr:
   extension (v: GtkWindowControls_autoptr)
     inline def value: Ptr[GtkWindowControls] = v
 
-/**
-*/
 opaque type GtkWindowControls_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWindowControls_listautoptr: 
   given _tag: Tag[GtkWindowControls_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11878,8 +9348,6 @@ object GtkWindowControls_listautoptr:
   extension (v: GtkWindowControls_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWindowControls_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWindowControls_queueautoptr: 
   given _tag: Tag[GtkWindowControls_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11887,8 +9355,6 @@ object GtkWindowControls_queueautoptr:
   extension (v: GtkWindowControls_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWindowControls_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWindowControls_slistautoptr: 
   given _tag: Tag[GtkWindowControls_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11896,8 +9362,6 @@ object GtkWindowControls_slistautoptr:
   extension (v: GtkWindowControls_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWindowGroup_autoptr = Ptr[GtkWindowGroup]
 object GtkWindowGroup_autoptr: 
   given _tag: Tag[GtkWindowGroup_autoptr] = Tag.Ptr[GtkWindowGroup](GtkWindowGroup._tag)
@@ -11905,8 +9369,6 @@ object GtkWindowGroup_autoptr:
   extension (v: GtkWindowGroup_autoptr)
     inline def value: Ptr[GtkWindowGroup] = v
 
-/**
-*/
 opaque type GtkWindowGroup_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWindowGroup_listautoptr: 
   given _tag: Tag[GtkWindowGroup_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11914,8 +9376,6 @@ object GtkWindowGroup_listautoptr:
   extension (v: GtkWindowGroup_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWindowGroup_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWindowGroup_queueautoptr: 
   given _tag: Tag[GtkWindowGroup_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11923,8 +9383,6 @@ object GtkWindowGroup_queueautoptr:
   extension (v: GtkWindowGroup_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWindowGroup_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWindowGroup_slistautoptr: 
   given _tag: Tag[GtkWindowGroup_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11932,8 +9390,6 @@ object GtkWindowGroup_slistautoptr:
   extension (v: GtkWindowGroup_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWindowHandleClass_autoptr = Ptr[GtkWindowHandleClass]
 object GtkWindowHandleClass_autoptr: 
   given _tag: Tag[GtkWindowHandleClass_autoptr] = Tag.Ptr[GtkWindowHandleClass](GtkWindowHandleClass._tag)
@@ -11941,8 +9397,6 @@ object GtkWindowHandleClass_autoptr:
   extension (v: GtkWindowHandleClass_autoptr)
     inline def value: Ptr[GtkWindowHandleClass] = v
 
-/**
-*/
 opaque type GtkWindowHandleClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWindowHandleClass_listautoptr: 
   given _tag: Tag[GtkWindowHandleClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11950,8 +9404,6 @@ object GtkWindowHandleClass_listautoptr:
   extension (v: GtkWindowHandleClass_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWindowHandleClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWindowHandleClass_queueautoptr: 
   given _tag: Tag[GtkWindowHandleClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11959,8 +9411,6 @@ object GtkWindowHandleClass_queueautoptr:
   extension (v: GtkWindowHandleClass_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWindowHandleClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWindowHandleClass_slistautoptr: 
   given _tag: Tag[GtkWindowHandleClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -11968,8 +9418,6 @@ object GtkWindowHandleClass_slistautoptr:
   extension (v: GtkWindowHandleClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWindowHandle_autoptr = Ptr[GtkWindowHandle]
 object GtkWindowHandle_autoptr: 
   given _tag: Tag[GtkWindowHandle_autoptr] = Tag.Ptr[GtkWindowHandle](GtkWindowHandle._tag)
@@ -11977,8 +9425,6 @@ object GtkWindowHandle_autoptr:
   extension (v: GtkWindowHandle_autoptr)
     inline def value: Ptr[GtkWindowHandle] = v
 
-/**
-*/
 opaque type GtkWindowHandle_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWindowHandle_listautoptr: 
   given _tag: Tag[GtkWindowHandle_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -11986,8 +9432,6 @@ object GtkWindowHandle_listautoptr:
   extension (v: GtkWindowHandle_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWindowHandle_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWindowHandle_queueautoptr: 
   given _tag: Tag[GtkWindowHandle_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -11995,8 +9439,6 @@ object GtkWindowHandle_queueautoptr:
   extension (v: GtkWindowHandle_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWindowHandle_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWindowHandle_slistautoptr: 
   given _tag: Tag[GtkWindowHandle_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -12004,8 +9446,6 @@ object GtkWindowHandle_slistautoptr:
   extension (v: GtkWindowHandle_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type GtkWindow_autoptr = Ptr[GtkWindow]
 object GtkWindow_autoptr: 
   given _tag: Tag[GtkWindow_autoptr] = Tag.Ptr[GtkWindow](GtkWindow._tag)
@@ -12013,8 +9453,6 @@ object GtkWindow_autoptr:
   extension (v: GtkWindow_autoptr)
     inline def value: Ptr[GtkWindow] = v
 
-/**
-*/
 opaque type GtkWindow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
 object GtkWindow_listautoptr: 
   given _tag: Tag[GtkWindow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
@@ -12022,8 +9460,6 @@ object GtkWindow_listautoptr:
   extension (v: GtkWindow_listautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
 
-/**
-*/
 opaque type GtkWindow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
 object GtkWindow_queueautoptr: 
   given _tag: Tag[GtkWindow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
@@ -12031,8 +9467,6 @@ object GtkWindow_queueautoptr:
   extension (v: GtkWindow_queueautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
 
-/**
-*/
 opaque type GtkWindow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
 object GtkWindow_slistautoptr: 
   given _tag: Tag[GtkWindow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
@@ -12040,14 +9474,19 @@ object GtkWindow_slistautoptr:
   extension (v: GtkWindow_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-/**
-*/
 opaque type __m128 = CStruct4[Float, Float, Float, Float]
 object __m128: 
   given _tag: Tag[__m128] = Tag.materializeCStruct4Tag[Float, Float, Float, Float]
   inline def apply(inline o: CStruct4[Float, Float, Float, Float]): __m128 = o
   extension (v: __m128)
     inline def value: CStruct4[Float, Float, Float, Float] = v
+
+type graphene_simd4f_t = __m128
+object graphene_simd4f_t: 
+  given _tag: Tag[graphene_simd4f_t] = __m128._tag
+  inline def apply(inline o: __m128): graphene_simd4f_t = o
+  extension (v: graphene_simd4f_t)
+    inline def value: __m128 = v
 
 type va_list = unsafe.CVarArgList
 object va_list: 

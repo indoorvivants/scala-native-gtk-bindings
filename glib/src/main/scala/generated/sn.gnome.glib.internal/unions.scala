@@ -5,7 +5,7 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-opaque type GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
+opaque type GDoubleIEEE754 = CArray[Byte, Nat._8]
 object GDoubleIEEE754:
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
@@ -27,7 +27,7 @@ object GDoubleIEEE754:
       def biased_exponent_=(value: guint): Unit = !struct.at3 = value
       def sign : guint = struct._4
       def sign_=(value: guint): Unit = !struct.at4 = value
-  given _tag: Tag[GDoubleIEEE754] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
+  given _tag: Tag[GDoubleIEEE754] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
   def apply()(using Zone): Ptr[GDoubleIEEE754] = 
     val ___ptr = alloc[GDoubleIEEE754](1)
     ___ptr
@@ -49,7 +49,7 @@ object GDoubleIEEE754:
     def mpn : GDoubleIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]]
     def mpn_=(value: GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GDoubleIEEE754.Struct0]] = value
 
-opaque type GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
+opaque type GFloatIEEE754 = CArray[Byte, Nat._4]
 object GFloatIEEE754:
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
@@ -68,7 +68,7 @@ object GFloatIEEE754:
       def biased_exponent_=(value: guint): Unit = !struct.at2 = value
       def sign : guint = struct._3
       def sign_=(value: guint): Unit = !struct.at3 = value
-  given _tag: Tag[GFloatIEEE754] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._2]](Tag.Byte, Tag.Digit2[Nat._1, Nat._2](Tag.Nat1, Tag.Nat2))
+  given _tag: Tag[GFloatIEEE754] = Tag.CArray[CChar, Nat._4](Tag.Byte, Tag.Nat4)
   def apply()(using Zone): Ptr[GFloatIEEE754] = 
     val ___ptr = alloc[GFloatIEEE754](1)
     ___ptr
@@ -218,7 +218,7 @@ object GTokenValue:
     def v_error : guint = !struct.at(0).asInstanceOf[Ptr[guint]]
     def v_error_=(value: guint): Unit = !struct.at(0).asInstanceOf[Ptr[guint]] = value
 
-opaque type _GDoubleIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
+opaque type _GDoubleIEEE754 = CArray[Byte, Nat._8]
 object _GDoubleIEEE754:
   opaque type Struct0 = CStruct4[guint, guint, guint, guint]
   object Struct0:
@@ -240,7 +240,7 @@ object _GDoubleIEEE754:
       def biased_exponent_=(value: guint): Unit = !struct.at3 = value
       def sign : guint = struct._4
       def sign_=(value: guint): Unit = !struct.at4 = value
-  given _tag: Tag[_GDoubleIEEE754] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._6]](Tag.Byte, Tag.Digit2[Nat._1, Nat._6](Tag.Nat1, Tag.Nat6))
+  given _tag: Tag[_GDoubleIEEE754] = Tag.CArray[CChar, Nat._8](Tag.Byte, Tag.Nat8)
   def apply()(using Zone): Ptr[_GDoubleIEEE754] = 
     val ___ptr = alloc[_GDoubleIEEE754](1)
     ___ptr
@@ -262,7 +262,7 @@ object _GDoubleIEEE754:
     def mpn : _GDoubleIEEE754.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]]
     def mpn_=(value: _GDoubleIEEE754.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GDoubleIEEE754.Struct0]] = value
 
-opaque type _GFloatIEEE754 = CArray[Byte, Nat.Digit2[Nat._1, Nat._2]]
+opaque type _GFloatIEEE754 = CArray[Byte, Nat._4]
 object _GFloatIEEE754:
   opaque type Struct0 = CStruct3[guint, guint, guint]
   object Struct0:
@@ -281,7 +281,7 @@ object _GFloatIEEE754:
       def biased_exponent_=(value: guint): Unit = !struct.at2 = value
       def sign : guint = struct._3
       def sign_=(value: guint): Unit = !struct.at3 = value
-  given _tag: Tag[_GFloatIEEE754] = Tag.CArray[CChar, Nat.Digit2[Nat._1, Nat._2]](Tag.Byte, Tag.Digit2[Nat._1, Nat._2](Tag.Nat1, Tag.Nat2))
+  given _tag: Tag[_GFloatIEEE754] = Tag.CArray[CChar, Nat._4](Tag.Byte, Tag.Nat4)
   def apply()(using Zone): Ptr[_GFloatIEEE754] = 
     val ___ptr = alloc[_GFloatIEEE754](1)
     ___ptr

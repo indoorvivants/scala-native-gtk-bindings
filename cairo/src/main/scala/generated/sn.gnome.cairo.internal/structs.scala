@@ -56,7 +56,7 @@ object _cairo_pattern:
   given _tag: Tag[_cairo_pattern] = Tag.materializeCStruct0Tag
 
 /**
- * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type _cairo_rectangle = CStruct4[Double, Double, Double, Double]
 object _cairo_rectangle:
@@ -80,7 +80,7 @@ object _cairo_rectangle:
     def height_=(value: Double): Unit = !struct.at4 = value
 
 /**
- * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type _cairo_rectangle_int = CStruct4[CInt, CInt, CInt, CInt]
 object _cairo_rectangle_int:
@@ -288,7 +288,7 @@ object cairo_pattern_t:
   given _tag: Tag[cairo_pattern_t] = Tag.materializeCStruct0Tag
 
 /**
- * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_int_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type cairo_rectangle_int_t = CStruct4[CInt, CInt, CInt, CInt]
 object cairo_rectangle_int_t:
@@ -333,7 +333,7 @@ object cairo_rectangle_list_t:
     def num_rectangles_=(value: CInt): Unit = !struct.at3 = value
 
 /**
- * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the top side of the rectangle : width of the rectangle : height of the rectangle
+ * cairo_rectangle_t: : X coordinate of the left side of the rectangle : Y coordinate of the the top side of the rectangle : width of the rectangle : height of the rectangle
 */
 opaque type cairo_rectangle_t = CStruct4[Double, Double, Double, Double]
 object cairo_rectangle_t:

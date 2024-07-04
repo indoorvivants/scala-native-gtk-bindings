@@ -230,7 +230,7 @@ object GAsyncInitable_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GAsyncReadyCallback: _object: (nullable): the object the asynchronous operation was started with. : a #GAsyncResult.
+ * GAsyncReadyCallback: _object: (nullable): the object the asynchronous operation was started with. : a #GAsyncResult. _data: user data passed to the callback.
 */
 opaque type GAsyncReadyCallback = CFuncPtr3[Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[GAsyncResult], _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GAsyncReadyCallback: 
@@ -414,7 +414,7 @@ object GBytesIcon_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GCancellableSourceFunc: : the #GCancellable
+ * GCancellableSourceFunc: : the #GCancellable _data: data passed in by the user.
 */
 opaque type GCancellableSourceFunc = CFuncPtr2[Ptr[GCancellable], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GCancellableSourceFunc: 
@@ -1062,7 +1062,7 @@ object GDBusObject_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GDBusProxyTypeFunc: : A #GDBusObjectManagerClient. _path: The object path of the remote object.
+ * GDBusProxyTypeFunc: : A #GDBusObjectManagerClient. _path: The object path of the remote object. _data: User data.
 */
 opaque type GDBusProxyTypeFunc = CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.sn.gnome.glib.internal.gchar], Ptr[_root_.sn.gnome.glib.internal.gchar], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.gobject.internal.GType]
 object GDBusProxyTypeFunc: 
@@ -1234,7 +1234,7 @@ object GDataOutputStream_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GDatagramBasedSourceFunc: _based: the #GDatagramBased : the current condition at the source fired
+ * GDatagramBasedSourceFunc: _based: the #GDatagramBased : the current condition at the source fired _data: data passed in by the user
 */
 opaque type GDatagramBasedSourceFunc = CFuncPtr3[Ptr[GDatagramBased], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GDatagramBasedSourceFunc: 
@@ -1610,7 +1610,7 @@ object GFileInputStream_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GFileMeasureProgressCallback: : %TRUE if more reports will come _size: the current cumulative size measurement
+ * GFileMeasureProgressCallback: : %TRUE if more reports will come _size: the current cumulative size measurement _data: the data passed to the original request for this callback
 */
 opaque type GFileMeasureProgressCallback = CFuncPtr5[_root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.guint64, _root_.sn.gnome.glib.internal.guint64, _root_.sn.gnome.glib.internal.guint64, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GFileMeasureProgressCallback: 
@@ -1678,7 +1678,7 @@ object GFileOutputStream_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GFileProgressCallback: _num_bytes: the current number of bytes in the operation. _num_bytes: the total number of bytes in the operation.
+ * GFileProgressCallback: _num_bytes: the current number of bytes in the operation. _num_bytes: the total number of bytes in the operation. _data: user data passed to the callback.
 */
 opaque type GFileProgressCallback = CFuncPtr3[_root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GFileProgressCallback: 
@@ -1842,7 +1842,7 @@ object GIOModule_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GIOSchedulerJobFunc: : a #GIOSchedulerJob. : optional #GCancellable object, %NULL to ignore.
+ * GIOSchedulerJobFunc: : a #GIOSchedulerJob. : optional #GCancellable object, %NULL to ignore. _data: the data to pass to callback function
 */
 opaque type GIOSchedulerJobFunc = CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GIOSchedulerJobFunc: 
@@ -2694,7 +2694,7 @@ object GPollableOutputStream_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GPollableSourceFunc: _stream: the #GPollableInputStream or #GPollableOutputStream
+ * GPollableSourceFunc: _stream: the #GPollableInputStream or #GPollableOutputStream _data: data passed in by the user.
 */
 opaque type GPollableSourceFunc = CFuncPtr2[Ptr[_root_.sn.gnome.gobject.internal.GObject], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GPollableSourceFunc: 
@@ -3550,7 +3550,7 @@ object GSocketService_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GSocketSourceFunc: : the #GSocket : the current condition at the source fired.
+ * GSocketSourceFunc: : the #GSocket : the current condition at the source fired. _data: data passed in by the user.
 */
 opaque type GSocketSourceFunc = CFuncPtr3[Ptr[GSocket], _root_.sn.gnome.glib.internal.GIOCondition, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GSocketSourceFunc: 
@@ -4084,118 +4084,6 @@ object GTlsServerConnection_slistautoptr:
   extension (v: GTlsServerConnection_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-opaque type GUnixConnection_autoptr = Ptr[GUnixConnection]
-object GUnixConnection_autoptr: 
-  given _tag: Tag[GUnixConnection_autoptr] = Tag.Ptr[GUnixConnection](GUnixConnection._tag)
-  inline def apply(inline o: Ptr[GUnixConnection]): GUnixConnection_autoptr = o
-  extension (v: GUnixConnection_autoptr)
-    inline def value: Ptr[GUnixConnection] = v
-
-opaque type GUnixConnection_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
-object GUnixConnection_listautoptr: 
-  given _tag: Tag[GUnixConnection_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GUnixConnection_listautoptr = o
-  extension (v: GUnixConnection_listautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
-
-opaque type GUnixConnection_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
-object GUnixConnection_queueautoptr: 
-  given _tag: Tag[GUnixConnection_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GUnixConnection_queueautoptr = o
-  extension (v: GUnixConnection_queueautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
-
-opaque type GUnixConnection_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
-object GUnixConnection_slistautoptr: 
-  given _tag: Tag[GUnixConnection_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GUnixConnection_slistautoptr = o
-  extension (v: GUnixConnection_slistautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
-
-opaque type GUnixCredentialsMessage_autoptr = Ptr[GUnixCredentialsMessage]
-object GUnixCredentialsMessage_autoptr: 
-  given _tag: Tag[GUnixCredentialsMessage_autoptr] = Tag.Ptr[GUnixCredentialsMessage](GUnixCredentialsMessage._tag)
-  inline def apply(inline o: Ptr[GUnixCredentialsMessage]): GUnixCredentialsMessage_autoptr = o
-  extension (v: GUnixCredentialsMessage_autoptr)
-    inline def value: Ptr[GUnixCredentialsMessage] = v
-
-opaque type GUnixCredentialsMessage_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
-object GUnixCredentialsMessage_listautoptr: 
-  given _tag: Tag[GUnixCredentialsMessage_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GUnixCredentialsMessage_listautoptr = o
-  extension (v: GUnixCredentialsMessage_listautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
-
-opaque type GUnixCredentialsMessage_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
-object GUnixCredentialsMessage_queueautoptr: 
-  given _tag: Tag[GUnixCredentialsMessage_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GUnixCredentialsMessage_queueautoptr = o
-  extension (v: GUnixCredentialsMessage_queueautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
-
-opaque type GUnixCredentialsMessage_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
-object GUnixCredentialsMessage_slistautoptr: 
-  given _tag: Tag[GUnixCredentialsMessage_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GUnixCredentialsMessage_slistautoptr = o
-  extension (v: GUnixCredentialsMessage_slistautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
-
-opaque type GUnixFDList_autoptr = Ptr[GUnixFDList]
-object GUnixFDList_autoptr: 
-  given _tag: Tag[GUnixFDList_autoptr] = Tag.Ptr[GUnixFDList](GUnixFDList._tag)
-  inline def apply(inline o: Ptr[GUnixFDList]): GUnixFDList_autoptr = o
-  extension (v: GUnixFDList_autoptr)
-    inline def value: Ptr[GUnixFDList] = v
-
-opaque type GUnixFDList_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
-object GUnixFDList_listautoptr: 
-  given _tag: Tag[GUnixFDList_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GUnixFDList_listautoptr = o
-  extension (v: GUnixFDList_listautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
-
-opaque type GUnixFDList_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
-object GUnixFDList_queueautoptr: 
-  given _tag: Tag[GUnixFDList_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GUnixFDList_queueautoptr = o
-  extension (v: GUnixFDList_queueautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
-
-opaque type GUnixFDList_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
-object GUnixFDList_slistautoptr: 
-  given _tag: Tag[GUnixFDList_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GUnixFDList_slistautoptr = o
-  extension (v: GUnixFDList_slistautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
-
-opaque type GUnixSocketAddress_autoptr = Ptr[GUnixSocketAddress]
-object GUnixSocketAddress_autoptr: 
-  given _tag: Tag[GUnixSocketAddress_autoptr] = Tag.Ptr[GUnixSocketAddress](GUnixSocketAddress._tag)
-  inline def apply(inline o: Ptr[GUnixSocketAddress]): GUnixSocketAddress_autoptr = o
-  extension (v: GUnixSocketAddress_autoptr)
-    inline def value: Ptr[GUnixSocketAddress] = v
-
-opaque type GUnixSocketAddress_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
-object GUnixSocketAddress_listautoptr: 
-  given _tag: Tag[GUnixSocketAddress_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GUnixSocketAddress_listautoptr = o
-  extension (v: GUnixSocketAddress_listautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
-
-opaque type GUnixSocketAddress_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
-object GUnixSocketAddress_queueautoptr: 
-  given _tag: Tag[GUnixSocketAddress_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GUnixSocketAddress_queueautoptr = o
-  extension (v: GUnixSocketAddress_queueautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
-
-opaque type GUnixSocketAddress_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
-object GUnixSocketAddress_slistautoptr: 
-  given _tag: Tag[GUnixSocketAddress_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GUnixSocketAddress_slistautoptr = o
-  extension (v: GUnixSocketAddress_slistautoptr)
-    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
-
 /**
  * GVfsFileLookupFunc: : a #GVfs : the identifier to look up a #GFile for. This can either be an URI or a parse name as returned by g_file_get_parse_name() _data: user data passed to the function
 */
@@ -4354,41 +4242,6 @@ object pid_t:
   inline def apply(inline o: posix.sys.types.pid_t): pid_t = o
   extension (v: pid_t)
     inline def value: posix.sys.types.pid_t = v
-
-type pthread_mutex_t = posix.sys.types.pthread_mutex_t
-object pthread_mutex_t: 
-  val _tag: Tag[pthread_mutex_t] = summon[Tag[posix.sys.types.pthread_mutex_t]]
-  inline def apply(inline o: posix.sys.types.pthread_mutex_t): pthread_mutex_t = o
-  extension (v: pthread_mutex_t)
-    inline def value: posix.sys.types.pthread_mutex_t = v
-
-type pthread_t = posix.sys.types.pthread_t
-object pthread_t: 
-  val _tag: Tag[pthread_t] = summon[Tag[posix.sys.types.pthread_t]]
-  inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
-  extension (v: pthread_t)
-    inline def value: posix.sys.types.pthread_t = v
-
-type size_t = libc.stddef.size_t
-object size_t: 
-  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
-  inline def apply(inline o: libc.stddef.size_t): size_t = o
-  extension (v: size_t)
-    inline def value: libc.stddef.size_t = v
-
-type time_t = posix.sys.types.time_t
-object time_t: 
-  val _tag: Tag[time_t] = summon[Tag[posix.sys.types.time_t]]
-  inline def apply(inline o: posix.sys.types.time_t): time_t = o
-  extension (v: time_t)
-    inline def value: posix.sys.types.time_t = v
-
-type tm = posix.time.tm
-object tm: 
-  val _tag: Tag[tm] = summon[Tag[posix.time.tm]]
-  inline def apply(inline o: posix.time.tm): tm = o
-  extension (v: tm)
-    inline def value: posix.time.tm = v
 
 type uid_t = posix.sys.types.uid_t
 object uid_t: 

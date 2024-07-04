@@ -87,7 +87,7 @@ object graphene_euler_order_t extends CEnum[graphene_euler_order_t]:
       case GRAPHENE_EULER_ORDER_RZXZ => Some("GRAPHENE_EULER_ORDER_RZXZ")
       case GRAPHENE_EULER_ORDER_RXYZ => Some("GRAPHENE_EULER_ORDER_RXYZ")
       case GRAPHENE_EULER_ORDER_RZYZ => Some("GRAPHENE_EULER_ORDER_RZYZ")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: graphene_euler_order_t)
     inline def &(b: graphene_euler_order_t): graphene_euler_order_t = a & b
     inline def |(b: graphene_euler_order_t): graphene_euler_order_t = a | b
@@ -108,7 +108,7 @@ object graphene_ray_intersection_kind_t extends CEnumU[graphene_ray_intersection
       case GRAPHENE_RAY_INTERSECTION_KIND_NONE => Some("GRAPHENE_RAY_INTERSECTION_KIND_NONE")
       case GRAPHENE_RAY_INTERSECTION_KIND_ENTER => Some("GRAPHENE_RAY_INTERSECTION_KIND_ENTER")
       case GRAPHENE_RAY_INTERSECTION_KIND_LEAVE => Some("GRAPHENE_RAY_INTERSECTION_KIND_LEAVE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: graphene_ray_intersection_kind_t)
     inline def &(b: graphene_ray_intersection_kind_t): graphene_ray_intersection_kind_t = a & b
     inline def |(b: graphene_ray_intersection_kind_t): graphene_ray_intersection_kind_t = a | b

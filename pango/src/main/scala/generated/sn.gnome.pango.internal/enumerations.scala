@@ -31,7 +31,7 @@ object PangoAlignment extends CEnumU[PangoAlignment]:
       case PANGO_ALIGN_LEFT => Some("PANGO_ALIGN_LEFT")
       case PANGO_ALIGN_CENTER => Some("PANGO_ALIGN_CENTER")
       case PANGO_ALIGN_RIGHT => Some("PANGO_ALIGN_RIGHT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoAlignment)
     inline def &(b: PangoAlignment): PangoAlignment = a & b
     inline def |(b: PangoAlignment): PangoAlignment = a | b
@@ -122,7 +122,7 @@ object PangoAttrType extends CEnumU[PangoAttrType]:
       case PANGO_ATTR_SENTENCE => Some("PANGO_ATTR_SENTENCE")
       case PANGO_ATTR_BASELINE_SHIFT => Some("PANGO_ATTR_BASELINE_SHIFT")
       case PANGO_ATTR_FONT_SCALE => Some("PANGO_ATTR_FONT_SCALE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoAttrType)
     inline def &(b: PangoAttrType): PangoAttrType = a & b
     inline def |(b: PangoAttrType): PangoAttrType = a | b
@@ -143,7 +143,7 @@ object PangoBaselineShift extends CEnumU[PangoBaselineShift]:
       case PANGO_BASELINE_SHIFT_NONE => Some("PANGO_BASELINE_SHIFT_NONE")
       case PANGO_BASELINE_SHIFT_SUPERSCRIPT => Some("PANGO_BASELINE_SHIFT_SUPERSCRIPT")
       case PANGO_BASELINE_SHIFT_SUBSCRIPT => Some("PANGO_BASELINE_SHIFT_SUBSCRIPT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoBaselineShift)
     inline def &(b: PangoBaselineShift): PangoBaselineShift = a & b
     inline def |(b: PangoBaselineShift): PangoBaselineShift = a | b
@@ -204,7 +204,7 @@ object PangoBidiType extends CEnumU[PangoBidiType]:
       case PANGO_BIDI_TYPE_RLI => Some("PANGO_BIDI_TYPE_RLI")
       case PANGO_BIDI_TYPE_FSI => Some("PANGO_BIDI_TYPE_FSI")
       case PANGO_BIDI_TYPE_PDI => Some("PANGO_BIDI_TYPE_PDI")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoBidiType)
     inline def &(b: PangoBidiType): PangoBidiType = a & b
     inline def |(b: PangoBidiType): PangoBidiType = a | b
@@ -227,7 +227,7 @@ object PangoCoverageLevel extends CEnumU[PangoCoverageLevel]:
       case PANGO_COVERAGE_FALLBACK => Some("PANGO_COVERAGE_FALLBACK")
       case PANGO_COVERAGE_APPROXIMATE => Some("PANGO_COVERAGE_APPROXIMATE")
       case PANGO_COVERAGE_EXACT => Some("PANGO_COVERAGE_EXACT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoCoverageLevel)
     inline def &(b: PangoCoverageLevel): PangoCoverageLevel = a & b
     inline def |(b: PangoCoverageLevel): PangoCoverageLevel = a | b
@@ -256,7 +256,7 @@ object PangoDirection extends CEnumU[PangoDirection]:
       case PANGO_DIRECTION_WEAK_LTR => Some("PANGO_DIRECTION_WEAK_LTR")
       case PANGO_DIRECTION_WEAK_RTL => Some("PANGO_DIRECTION_WEAK_RTL")
       case PANGO_DIRECTION_NEUTRAL => Some("PANGO_DIRECTION_NEUTRAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoDirection)
     inline def &(b: PangoDirection): PangoDirection = a & b
     inline def |(b: PangoDirection): PangoDirection = a | b
@@ -279,7 +279,7 @@ object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
       case PANGO_ELLIPSIZE_START => Some("PANGO_ELLIPSIZE_START")
       case PANGO_ELLIPSIZE_MIDDLE => Some("PANGO_ELLIPSIZE_MIDDLE")
       case PANGO_ELLIPSIZE_END => Some("PANGO_ELLIPSIZE_END")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoEllipsizeMode)
     inline def &(b: PangoEllipsizeMode): PangoEllipsizeMode = a & b
     inline def |(b: PangoEllipsizeMode): PangoEllipsizeMode = a | b
@@ -310,7 +310,7 @@ object PangoFontMask extends CEnumU[PangoFontMask]:
       case PANGO_FONT_MASK_SIZE => Some("PANGO_FONT_MASK_SIZE")
       case PANGO_FONT_MASK_GRAVITY => Some("PANGO_FONT_MASK_GRAVITY")
       case PANGO_FONT_MASK_VARIATIONS => Some("PANGO_FONT_MASK_VARIATIONS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoFontMask)
     inline def &(b: PangoFontMask): PangoFontMask = a & b
     inline def |(b: PangoFontMask): PangoFontMask = a | b
@@ -333,7 +333,7 @@ object PangoFontScale extends CEnumU[PangoFontScale]:
       case PANGO_FONT_SCALE_SUPERSCRIPT => Some("PANGO_FONT_SCALE_SUPERSCRIPT")
       case PANGO_FONT_SCALE_SUBSCRIPT => Some("PANGO_FONT_SCALE_SUBSCRIPT")
       case PANGO_FONT_SCALE_SMALL_CAPS => Some("PANGO_FONT_SCALE_SMALL_CAPS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoFontScale)
     inline def &(b: PangoFontScale): PangoFontScale = a & b
     inline def |(b: PangoFontScale): PangoFontScale = a | b
@@ -358,7 +358,7 @@ object PangoGravity extends CEnumU[PangoGravity]:
       case PANGO_GRAVITY_NORTH => Some("PANGO_GRAVITY_NORTH")
       case PANGO_GRAVITY_WEST => Some("PANGO_GRAVITY_WEST")
       case PANGO_GRAVITY_AUTO => Some("PANGO_GRAVITY_AUTO")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoGravity)
     inline def &(b: PangoGravity): PangoGravity = a & b
     inline def |(b: PangoGravity): PangoGravity = a | b
@@ -379,7 +379,7 @@ object PangoGravityHint extends CEnumU[PangoGravityHint]:
       case PANGO_GRAVITY_HINT_NATURAL => Some("PANGO_GRAVITY_HINT_NATURAL")
       case PANGO_GRAVITY_HINT_STRONG => Some("PANGO_GRAVITY_HINT_STRONG")
       case PANGO_GRAVITY_HINT_LINE => Some("PANGO_GRAVITY_HINT_LINE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoGravityHint)
     inline def &(b: PangoGravityHint): PangoGravityHint = a & b
     inline def |(b: PangoGravityHint): PangoGravityHint = a | b
@@ -400,7 +400,7 @@ object PangoLayoutDeserializeError extends CEnumU[PangoLayoutDeserializeError]:
       case PANGO_LAYOUT_DESERIALIZE_INVALID => Some("PANGO_LAYOUT_DESERIALIZE_INVALID")
       case PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE => Some("PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE")
       case PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE => Some("PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoLayoutDeserializeError)
     inline def &(b: PangoLayoutDeserializeError): PangoLayoutDeserializeError = a & b
     inline def |(b: PangoLayoutDeserializeError): PangoLayoutDeserializeError = a | b
@@ -419,7 +419,7 @@ object PangoLayoutDeserializeFlags extends CEnumU[PangoLayoutDeserializeFlags]:
     inline value match
       case PANGO_LAYOUT_DESERIALIZE_DEFAULT => Some("PANGO_LAYOUT_DESERIALIZE_DEFAULT")
       case PANGO_LAYOUT_DESERIALIZE_CONTEXT => Some("PANGO_LAYOUT_DESERIALIZE_CONTEXT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoLayoutDeserializeFlags)
     inline def &(b: PangoLayoutDeserializeFlags): PangoLayoutDeserializeFlags = a & b
     inline def |(b: PangoLayoutDeserializeFlags): PangoLayoutDeserializeFlags = a | b
@@ -440,7 +440,7 @@ object PangoLayoutSerializeFlags extends CEnumU[PangoLayoutSerializeFlags]:
       case PANGO_LAYOUT_SERIALIZE_DEFAULT => Some("PANGO_LAYOUT_SERIALIZE_DEFAULT")
       case PANGO_LAYOUT_SERIALIZE_CONTEXT => Some("PANGO_LAYOUT_SERIALIZE_CONTEXT")
       case PANGO_LAYOUT_SERIALIZE_OUTPUT => Some("PANGO_LAYOUT_SERIALIZE_OUTPUT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoLayoutSerializeFlags)
     inline def &(b: PangoLayoutSerializeFlags): PangoLayoutSerializeFlags = a & b
     inline def |(b: PangoLayoutSerializeFlags): PangoLayoutSerializeFlags = a | b
@@ -459,7 +459,7 @@ object PangoOverline extends CEnumU[PangoOverline]:
     inline value match
       case PANGO_OVERLINE_NONE => Some("PANGO_OVERLINE_NONE")
       case PANGO_OVERLINE_SINGLE => Some("PANGO_OVERLINE_SINGLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoOverline)
     inline def &(b: PangoOverline): PangoOverline = a & b
     inline def |(b: PangoOverline): PangoOverline = a | b
@@ -481,7 +481,7 @@ object PangoRenderPart extends CEnumU[PangoRenderPart]:
       case PANGO_RENDER_PART_UNDERLINE => Some("PANGO_RENDER_PART_UNDERLINE")
       case PANGO_RENDER_PART_STRIKETHROUGH => Some("PANGO_RENDER_PART_STRIKETHROUGH")
       case PANGO_RENDER_PART_OVERLINE => Some("PANGO_RENDER_PART_OVERLINE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoRenderPart)
     inline def &(b: PangoRenderPart): PangoRenderPart = a & b
     inline def |(b: PangoRenderPart): PangoRenderPart = a | b
@@ -732,7 +732,7 @@ object PangoScript extends CEnum[PangoScript]:
       case PANGO_SCRIPT_MULTANI => Some("PANGO_SCRIPT_MULTANI")
       case PANGO_SCRIPT_OLD_HUNGARIAN => Some("PANGO_SCRIPT_OLD_HUNGARIAN")
       case PANGO_SCRIPT_SIGNWRITING => Some("PANGO_SCRIPT_SIGNWRITING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoScript)
     inline def &(b: PangoScript): PangoScript = a & b
     inline def |(b: PangoScript): PangoScript = a | b
@@ -751,7 +751,7 @@ object PangoShapeFlags extends CEnumU[PangoShapeFlags]:
     inline value match
       case PANGO_SHAPE_NONE => Some("PANGO_SHAPE_NONE")
       case PANGO_SHAPE_ROUND_POSITIONS => Some("PANGO_SHAPE_ROUND_POSITIONS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoShapeFlags)
     inline def &(b: PangoShapeFlags): PangoShapeFlags = a & b
     inline def |(b: PangoShapeFlags): PangoShapeFlags = a | b
@@ -774,7 +774,7 @@ object PangoShowFlags extends CEnumU[PangoShowFlags]:
       case PANGO_SHOW_SPACES => Some("PANGO_SHOW_SPACES")
       case PANGO_SHOW_LINE_BREAKS => Some("PANGO_SHOW_LINE_BREAKS")
       case PANGO_SHOW_IGNORABLES => Some("PANGO_SHOW_IGNORABLES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoShowFlags)
     inline def &(b: PangoShowFlags): PangoShowFlags = a & b
     inline def |(b: PangoShowFlags): PangoShowFlags = a | b
@@ -807,7 +807,7 @@ object PangoStretch extends CEnumU[PangoStretch]:
       case PANGO_STRETCH_EXPANDED => Some("PANGO_STRETCH_EXPANDED")
       case PANGO_STRETCH_EXTRA_EXPANDED => Some("PANGO_STRETCH_EXTRA_EXPANDED")
       case PANGO_STRETCH_ULTRA_EXPANDED => Some("PANGO_STRETCH_ULTRA_EXPANDED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoStretch)
     inline def &(b: PangoStretch): PangoStretch = a & b
     inline def |(b: PangoStretch): PangoStretch = a | b
@@ -828,7 +828,7 @@ object PangoStyle extends CEnumU[PangoStyle]:
       case PANGO_STYLE_NORMAL => Some("PANGO_STYLE_NORMAL")
       case PANGO_STYLE_OBLIQUE => Some("PANGO_STYLE_OBLIQUE")
       case PANGO_STYLE_ITALIC => Some("PANGO_STYLE_ITALIC")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoStyle)
     inline def &(b: PangoStyle): PangoStyle = a & b
     inline def |(b: PangoStyle): PangoStyle = a | b
@@ -851,7 +851,7 @@ object PangoTabAlign extends CEnumU[PangoTabAlign]:
       case PANGO_TAB_RIGHT => Some("PANGO_TAB_RIGHT")
       case PANGO_TAB_CENTER => Some("PANGO_TAB_CENTER")
       case PANGO_TAB_DECIMAL => Some("PANGO_TAB_DECIMAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoTabAlign)
     inline def &(b: PangoTabAlign): PangoTabAlign = a & b
     inline def |(b: PangoTabAlign): PangoTabAlign = a | b
@@ -874,7 +874,7 @@ object PangoTextTransform extends CEnumU[PangoTextTransform]:
       case PANGO_TEXT_TRANSFORM_LOWERCASE => Some("PANGO_TEXT_TRANSFORM_LOWERCASE")
       case PANGO_TEXT_TRANSFORM_UPPERCASE => Some("PANGO_TEXT_TRANSFORM_UPPERCASE")
       case PANGO_TEXT_TRANSFORM_CAPITALIZE => Some("PANGO_TEXT_TRANSFORM_CAPITALIZE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoTextTransform)
     inline def &(b: PangoTextTransform): PangoTextTransform = a & b
     inline def |(b: PangoTextTransform): PangoTextTransform = a | b
@@ -905,7 +905,7 @@ object PangoUnderline extends CEnumU[PangoUnderline]:
       case PANGO_UNDERLINE_SINGLE_LINE => Some("PANGO_UNDERLINE_SINGLE_LINE")
       case PANGO_UNDERLINE_DOUBLE_LINE => Some("PANGO_UNDERLINE_DOUBLE_LINE")
       case PANGO_UNDERLINE_ERROR_LINE => Some("PANGO_UNDERLINE_ERROR_LINE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoUnderline)
     inline def &(b: PangoUnderline): PangoUnderline = a & b
     inline def |(b: PangoUnderline): PangoUnderline = a | b
@@ -934,14 +934,14 @@ object PangoVariant extends CEnumU[PangoVariant]:
       case PANGO_VARIANT_ALL_PETITE_CAPS => Some("PANGO_VARIANT_ALL_PETITE_CAPS")
       case PANGO_VARIANT_UNICASE => Some("PANGO_VARIANT_UNICASE")
       case PANGO_VARIANT_TITLE_CAPS => Some("PANGO_VARIANT_TITLE_CAPS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoVariant)
     inline def &(b: PangoVariant): PangoVariant = a & b
     inline def |(b: PangoVariant): PangoVariant = a | b
     inline def is(b: PangoVariant): Boolean = (a & b) == b
 
 /**
- * PangoWeight: _WEIGHT_THIN: the thin weight (= 100) Since: 1.24 _WEIGHT_ULTRALIGHT: the ultralight weight (= 200) _WEIGHT_LIGHT: the light weight (= 300) _WEIGHT_SEMILIGHT: the semilight weight (= 350) Since: 1.36.7 _WEIGHT_BOOK: the book weight (= 380) Since: 1.24) _WEIGHT_NORMAL: the default weight (= 400) _WEIGHT_MEDIUM: the medium weight (= 500) Since: 1.24 _WEIGHT_SEMIBOLD: the semibold weight (= 600) _WEIGHT_BOLD: the bold weight (= 700) _WEIGHT_ULTRABOLD: the ultrabold weight (= 800) _WEIGHT_HEAVY: the heavy weight (= 900) _WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000) Since: 1.24
+ * PangoWeight: _WEIGHT_THIN: the thin weight (= 100) Since: 1.24 _WEIGHT_ULTRALIGHT: the ultralight weight (= 200) _WEIGHT_LIGHT: the light weight (= 300) _WEIGHT_SEMILIGHT: the semilight weight (= 350) Since: 1.36.7 _WEIGHT_BOOK: the book weight (= 380) Since: 1.24) _WEIGHT_NORMAL: the default weight (= 400) _WEIGHT_MEDIUM: the normal weight (= 500) Since: 1.24 _WEIGHT_SEMIBOLD: the semibold weight (= 600) _WEIGHT_BOLD: the bold weight (= 700) _WEIGHT_ULTRABOLD: the ultrabold weight (= 800) _WEIGHT_HEAVY: the heavy weight (= 900) _WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000) Since: 1.24
 */
 opaque type PangoWeight = CUnsignedInt
 object PangoWeight extends CEnumU[PangoWeight]:
@@ -973,7 +973,7 @@ object PangoWeight extends CEnumU[PangoWeight]:
       case PANGO_WEIGHT_ULTRABOLD => Some("PANGO_WEIGHT_ULTRABOLD")
       case PANGO_WEIGHT_HEAVY => Some("PANGO_WEIGHT_HEAVY")
       case PANGO_WEIGHT_ULTRAHEAVY => Some("PANGO_WEIGHT_ULTRAHEAVY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoWeight)
     inline def &(b: PangoWeight): PangoWeight = a & b
     inline def |(b: PangoWeight): PangoWeight = a | b
@@ -994,7 +994,7 @@ object PangoWrapMode extends CEnumU[PangoWrapMode]:
       case PANGO_WRAP_WORD => Some("PANGO_WRAP_WORD")
       case PANGO_WRAP_CHAR => Some("PANGO_WRAP_CHAR")
       case PANGO_WRAP_WORD_CHAR => Some("PANGO_WRAP_WORD_CHAR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: PangoWrapMode)
     inline def &(b: PangoWrapMode): PangoWrapMode = a & b
     inline def |(b: PangoWrapMode): PangoWrapMode = a | b

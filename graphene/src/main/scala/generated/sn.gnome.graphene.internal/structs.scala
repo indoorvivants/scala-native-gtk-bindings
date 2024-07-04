@@ -503,8 +503,6 @@ object graphene_rect_t:
     def size : graphene_size_t = struct._2
     def size_=(value: graphene_size_t): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type graphene_simd4x4f_t = CStruct4[graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t]
 object graphene_simd4x4f_t:
   given _tag: Tag[graphene_simd4x4f_t] = Tag.materializeCStruct4Tag[graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t]

@@ -414,86 +414,9 @@ object PangoTabArray_slistautoptr:
   extension (v: PangoTabArray_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-type int16_t = scala.Short
-object int16_t: 
-  val _tag: Tag[int16_t] = summon[Tag[scala.Short]]
-  inline def apply(inline o: scala.Short): int16_t = o
-  extension (v: int16_t)
-    inline def value: scala.Short = v
-
-type int32_t = scala.scalanative.unsafe.CInt
-object int32_t: 
-  val _tag: Tag[int32_t] = summon[Tag[scala.scalanative.unsafe.CInt]]
-  inline def apply(inline o: scala.scalanative.unsafe.CInt): int32_t = o
-  extension (v: int32_t)
-    inline def value: scala.scalanative.unsafe.CInt = v
-
-type int8_t = scala.scalanative.unsafe.CChar
-object int8_t: 
-  val _tag: Tag[int8_t] = summon[Tag[scala.scalanative.unsafe.CChar]]
-  inline def apply(inline o: scala.scalanative.unsafe.CChar): int8_t = o
-  extension (v: int8_t)
-    inline def value: scala.scalanative.unsafe.CChar = v
-
-type pthread_mutex_t = posix.sys.types.pthread_mutex_t
-object pthread_mutex_t: 
-  val _tag: Tag[pthread_mutex_t] = summon[Tag[posix.sys.types.pthread_mutex_t]]
-  inline def apply(inline o: posix.sys.types.pthread_mutex_t): pthread_mutex_t = o
-  extension (v: pthread_mutex_t)
-    inline def value: posix.sys.types.pthread_mutex_t = v
-
-type pthread_t = posix.sys.types.pthread_t
-object pthread_t: 
-  val _tag: Tag[pthread_t] = summon[Tag[posix.sys.types.pthread_t]]
-  inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
-  extension (v: pthread_t)
-    inline def value: posix.sys.types.pthread_t = v
-
-type size_t = libc.stddef.size_t
-object size_t: 
-  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
-  inline def apply(inline o: libc.stddef.size_t): size_t = o
-  extension (v: size_t)
-    inline def value: libc.stddef.size_t = v
-
-type time_t = posix.sys.types.time_t
-object time_t: 
-  val _tag: Tag[time_t] = summon[Tag[posix.sys.types.time_t]]
-  inline def apply(inline o: posix.sys.types.time_t): time_t = o
-  extension (v: time_t)
-    inline def value: posix.sys.types.time_t = v
-
-type tm = posix.time.tm
-object tm: 
-  val _tag: Tag[tm] = summon[Tag[posix.time.tm]]
-  inline def apply(inline o: posix.time.tm): tm = o
-  extension (v: tm)
-    inline def value: posix.time.tm = v
-
-type uint16_t = scala.scalanative.unsigned.UShort
-object uint16_t: 
-  val _tag: Tag[uint16_t] = summon[Tag[scala.scalanative.unsigned.UShort]]
-  inline def apply(inline o: scala.scalanative.unsigned.UShort): uint16_t = o
-  extension (v: uint16_t)
-    inline def value: scala.scalanative.unsigned.UShort = v
-
 type uint32_t = scala.scalanative.unsigned.UInt
 object uint32_t: 
   val _tag: Tag[uint32_t] = summon[Tag[scala.scalanative.unsigned.UInt]]
   inline def apply(inline o: scala.scalanative.unsigned.UInt): uint32_t = o
   extension (v: uint32_t)
     inline def value: scala.scalanative.unsigned.UInt = v
-
-type uint8_t = scala.scalanative.unsigned.UByte
-object uint8_t: 
-  val _tag: Tag[uint8_t] = summon[Tag[scala.scalanative.unsigned.UByte]]
-  inline def apply(inline o: scala.scalanative.unsigned.UByte): uint8_t = o
-  extension (v: uint8_t)
-    inline def value: scala.scalanative.unsigned.UByte = v
-
-type va_list = unsafe.CVarArgList
-object va_list: 
-  val _tag: Tag[va_list] = summon[Tag[unsafe.CVarArgList]]
-  inline def apply(inline o: unsafe.CVarArgList): va_list = o
-  extension (v: va_list)
-    inline def value: unsafe.CVarArgList = v

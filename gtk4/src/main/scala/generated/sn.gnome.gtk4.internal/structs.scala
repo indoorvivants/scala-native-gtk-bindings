@@ -5,20 +5,14 @@ import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-/**
-*/
 opaque type GdkClipboard = CStruct0
 object GdkClipboard:
   given _tag: Tag[GdkClipboard] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkContentFormats = CStruct0
 object GdkContentFormats:
   given _tag: Tag[GdkContentFormats] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkContentProvider = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GdkContentProvider:
   given _tag: Tag[GdkContentProvider] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -31,80 +25,54 @@ object GdkContentProvider:
     def parent : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GdkCursor = CStruct0
 object GdkCursor:
   given _tag: Tag[GdkCursor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkDevice = CStruct0
 object GdkDevice:
   given _tag: Tag[GdkDevice] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkDeviceTool = CStruct0
 object GdkDeviceTool:
   given _tag: Tag[GdkDeviceTool] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkDisplay = CStruct0
 object GdkDisplay:
   given _tag: Tag[GdkDisplay] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkDrag = CStruct0
 object GdkDrag:
   given _tag: Tag[GdkDrag] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkDrop = CStruct0
 object GdkDrop:
   given _tag: Tag[GdkDrop] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkEvent = CStruct0
 object GdkEvent:
   given _tag: Tag[GdkEvent] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkEventSequence = CStruct0
 object GdkEventSequence:
   given _tag: Tag[GdkEventSequence] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkFrameClock = CStruct0
 object GdkFrameClock:
   given _tag: Tag[GdkFrameClock] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkGLContext = CStruct0
 object GdkGLContext:
   given _tag: Tag[GdkGLContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkMonitor = CStruct0
 object GdkMonitor:
   given _tag: Tag[GdkMonitor] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkPaintable = CStruct0
 object GdkPaintable:
   given _tag: Tag[GdkPaintable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkRGBA = CStruct4[Float, Float, Float, Float]
 object GdkRGBA:
   given _tag: Tag[GdkRGBA] = Tag.materializeCStruct4Tag[Float, Float, Float, Float]
@@ -126,20 +94,14 @@ object GdkRGBA:
     def alpha : Float = struct._4
     def alpha_=(value: Float): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GdkSnapshot = CStruct0
 object GdkSnapshot:
   given _tag: Tag[GdkSnapshot] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkSurface = CStruct0
 object GdkSurface:
   given _tag: Tag[GdkSurface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GdkTexture = CStruct0
 object GdkTexture:
   given _tag: Tag[GdkTexture] = Tag.materializeCStruct0Tag
@@ -183,40 +145,32 @@ object GskColorStop:
     def color : GdkRGBA = struct._2
     def color_=(value: GdkRGBA): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GskGLShader = CStruct0
 object GskGLShader:
   given _tag: Tag[GskGLShader] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GskRenderNode = CStruct0
 object GskRenderNode:
   given _tag: Tag[GskRenderNode] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GskRenderer = CStruct0
 object GskRenderer:
   given _tag: Tag[GskRenderer] = Tag.materializeCStruct0Tag
 
-/**
-*/
-opaque type GskRoundedRect = CStruct2[_root_.sn.gnome.graphene.internal.graphene_rect_t, CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4]]
+opaque type GskRoundedRect = CStruct2[graphene_rect_t, CArray[graphene_size_t, Nat._4]]
 object GskRoundedRect:
-  given _tag: Tag[GskRoundedRect] = Tag.materializeCStruct2Tag[_root_.sn.gnome.graphene.internal.graphene_rect_t, CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4]]
+  given _tag: Tag[GskRoundedRect] = Tag.materializeCStruct2Tag[graphene_rect_t, CArray[graphene_size_t, Nat._4]]
   def apply()(using Zone): Ptr[GskRoundedRect] = scala.scalanative.unsafe.alloc[GskRoundedRect](1)
-  def apply(bounds : _root_.sn.gnome.graphene.internal.graphene_rect_t, corner : CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4])(using Zone): Ptr[GskRoundedRect] = 
+  def apply(bounds : graphene_rect_t, corner : CArray[graphene_size_t, Nat._4])(using Zone): Ptr[GskRoundedRect] = 
     val ____ptr = apply()
     (!____ptr).bounds = bounds
     (!____ptr).corner = corner
     ____ptr
   extension (struct: GskRoundedRect)
-    def bounds : _root_.sn.gnome.graphene.internal.graphene_rect_t = struct._1
-    def bounds_=(value: _root_.sn.gnome.graphene.internal.graphene_rect_t): Unit = !struct.at1 = value
-    def corner : CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4] = struct._2
-    def corner_=(value: CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4]): Unit = !struct.at2 = value
+    def bounds : graphene_rect_t = struct._1
+    def bounds_=(value: graphene_rect_t): Unit = !struct.at1 = value
+    def corner : CArray[graphene_size_t, Nat._4] = struct._2
+    def corner_=(value: CArray[graphene_size_t, Nat._4]): Unit = !struct.at2 = value
 
 /**
  * GskShadow: : the color of the shadow : the horizontal offset of the shadow : the vertical offset of the shadow : the radius of the shadow
@@ -242,56 +196,38 @@ object GskShadow:
     def radius : Float = struct._4
     def radius_=(value: Float): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GskTransform = CStruct0
 object GskTransform:
   given _tag: Tag[GskTransform] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkATContext = CStruct0
 object GtkATContext:
   given _tag: Tag[GtkATContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkATContextClass = CStruct0
 object GtkATContextClass:
   given _tag: Tag[GtkATContextClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAboutDialog = CStruct0
 object GtkAboutDialog:
   given _tag: Tag[GtkAboutDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAccessible = CStruct0
 object GtkAccessible:
   given _tag: Tag[GtkAccessible] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAccessibleInterface = CStruct0
 object GtkAccessibleInterface:
   given _tag: Tag[GtkAccessibleInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkActionBar = CStruct0
 object GtkActionBar:
   given _tag: Tag[GtkActionBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkActionable = CStruct0
 object GtkActionable:
   given _tag: Tag[GtkActionable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkActionableInterface = CStruct5[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkActionable], CString], CFuncPtr2[Ptr[GtkActionable], CString, Unit], CFuncPtr1[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
 object GtkActionableInterface:
   given _tag: Tag[GtkActionableInterface] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkActionable], CString], CFuncPtr2[Ptr[GtkActionable], CString, Unit], CFuncPtr1[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
@@ -316,20 +252,14 @@ object GtkActionableInterface:
     def set_action_target_value : CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = struct._5
     def set_action_target_value_=(value: CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkActivateAction = CStruct0
 object GtkActivateAction:
   given _tag: Tag[GtkActivateAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkActivateActionClass = CStruct0
 object GtkActivateActionClass:
   given _tag: Tag[GtkActivateActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAdjustment = CStruct1[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
 object GtkAdjustment:
   given _tag: Tag[GtkAdjustment] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
@@ -342,8 +272,6 @@ object GtkAdjustment:
     def parent_instance : _root_.sn.gnome.gobject.internal.GInitiallyUnowned = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnowned): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkAdjustmentClass = CStruct7[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass, CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkAdjustmentClass:
   given _tag: Tag[GtkAdjustmentClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass, CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -374,56 +302,38 @@ object GtkAdjustmentClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._7
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GtkAlternativeTrigger = CStruct0
 object GtkAlternativeTrigger:
   given _tag: Tag[GtkAlternativeTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAlternativeTriggerClass = CStruct0
 object GtkAlternativeTriggerClass:
   given _tag: Tag[GtkAlternativeTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAnyFilter = CStruct0
 object GtkAnyFilter:
   given _tag: Tag[GtkAnyFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAnyFilterClass = CStruct0
 object GtkAnyFilterClass:
   given _tag: Tag[GtkAnyFilterClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAppChooser = CStruct0
 object GtkAppChooser:
   given _tag: Tag[GtkAppChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAppChooserButton = CStruct0
 object GtkAppChooserButton:
   given _tag: Tag[GtkAppChooserButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAppChooserDialog = CStruct0
 object GtkAppChooserDialog:
   given _tag: Tag[GtkAppChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAppChooserWidget = CStruct0
 object GtkAppChooserWidget:
   given _tag: Tag[GtkAppChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkApplication = CStruct1[_root_.sn.gnome.gio.internal.GApplication]
 object GtkApplication:
   given _tag: Tag[GtkApplication] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gio.internal.GApplication]
@@ -460,8 +370,6 @@ object GtkApplicationClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkApplicationWindow = CStruct1[GtkWindow]
 object GtkApplicationWindow:
   given _tag: Tag[GtkApplicationWindow] = Tag.materializeCStruct1Tag[GtkWindow]
@@ -492,32 +400,22 @@ object GtkApplicationWindowClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkAspectFrame = CStruct0
 object GtkAspectFrame:
   given _tag: Tag[GtkAspectFrame] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAssistant = CStruct0
 object GtkAssistant:
   given _tag: Tag[GtkAssistant] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkAssistantPage = CStruct0
 object GtkAssistantPage:
   given _tag: Tag[GtkAssistantPage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBinLayout = CStruct0
 object GtkBinLayout:
   given _tag: Tag[GtkBinLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBinLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkBinLayoutClass:
   given _tag: Tag[GtkBinLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -530,14 +428,10 @@ object GtkBinLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkBitset = CStruct0
 object GtkBitset:
   given _tag: Tag[GtkBitset] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBitsetIter = CStruct1[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object GtkBitsetIter:
   given _tag: Tag[GtkBitsetIter] = Tag.materializeCStruct1Tag[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
@@ -550,14 +444,10 @@ object GtkBitsetIter:
     def private_data : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._1
     def private_data_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkBookmarkList = CStruct0
 object GtkBookmarkList:
   given _tag: Tag[GtkBookmarkList] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBookmarkListClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkBookmarkListClass:
   given _tag: Tag[GtkBookmarkListClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -570,14 +460,10 @@ object GtkBookmarkListClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkBoolFilter = CStruct0
 object GtkBoolFilter:
   given _tag: Tag[GtkBoolFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBoolFilterClass = CStruct1[GtkFilterClass]
 object GtkBoolFilterClass:
   given _tag: Tag[GtkBoolFilterClass] = Tag.materializeCStruct1Tag[GtkFilterClass]
@@ -614,8 +500,6 @@ object GtkBorder:
     def bottom : _root_.sn.gnome.glib.internal.gint16 = struct._4
     def bottom_=(value: _root_.sn.gnome.glib.internal.gint16): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkBox = CStruct1[GtkWidget]
 object GtkBox:
   given _tag: Tag[GtkBox] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -646,14 +530,10 @@ object GtkBoxClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkBoxLayout = CStruct0
 object GtkBoxLayout:
   given _tag: Tag[GtkBoxLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBoxLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkBoxLayoutClass:
   given _tag: Tag[GtkBoxLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -666,8 +546,6 @@ object GtkBoxLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkBuildable = CStruct0
 object GtkBuildable:
   given _tag: Tag[GtkBuildable] = Tag.materializeCStruct0Tag
@@ -717,8 +595,6 @@ object GtkBuildableIface:
     def get_internal_child : CFuncPtr3[Ptr[GtkBuildable], Ptr[GtkBuilder], CString, Ptr[_root_.sn.gnome.gobject.internal.GObject]] = struct._11
     def get_internal_child_=(value: CFuncPtr3[Ptr[GtkBuildable], Ptr[GtkBuilder], CString, Ptr[_root_.sn.gnome.gobject.internal.GObject]]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type GtkBuildableParseContext = CStruct0
 object GtkBuildableParseContext:
   given _tag: Tag[GtkBuildableParseContext] = Tag.materializeCStruct0Tag
@@ -750,14 +626,10 @@ object GtkBuildableParser:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._5
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkBuilder = CStruct0
 object GtkBuilder:
   given _tag: Tag[GtkBuilder] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBuilderCScope = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkBuilderCScope:
   given _tag: Tag[GtkBuilderCScope] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -770,8 +642,6 @@ object GtkBuilderCScope:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkBuilderCScopeClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkBuilderCScopeClass:
   given _tag: Tag[GtkBuilderCScopeClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -784,26 +654,18 @@ object GtkBuilderCScopeClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkBuilderClass = CStruct0
 object GtkBuilderClass:
   given _tag: Tag[GtkBuilderClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBuilderListItemFactory = CStruct0
 object GtkBuilderListItemFactory:
   given _tag: Tag[GtkBuilderListItemFactory] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBuilderListItemFactoryClass = CStruct0
 object GtkBuilderListItemFactoryClass:
   given _tag: Tag[GtkBuilderListItemFactoryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkBuilderScope = CStruct0
 object GtkBuilderScope:
   given _tag: Tag[GtkBuilderScope] = Tag.materializeCStruct0Tag
@@ -832,8 +694,6 @@ object GtkBuilderScopeInterface:
     def create_closure : CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.gobject.internal.GClosure]] = struct._4.asInstanceOf[CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.gobject.internal.GClosure]]]
     def create_closure_=(value: CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.gobject.internal.GClosure]]): Unit = !struct.at4 = value.asInstanceOf[CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
 
-/**
-*/
 opaque type GtkButton = CStruct1[GtkWidget]
 object GtkButton:
   given _tag: Tag[GtkButton] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -870,38 +730,26 @@ object GtkButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkButtonPrivate = CStruct0
 object GtkButtonPrivate:
   given _tag: Tag[GtkButtonPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCClosureExpression = CStruct0
 object GtkCClosureExpression:
   given _tag: Tag[GtkCClosureExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCalendar = CStruct0
 object GtkCalendar:
   given _tag: Tag[GtkCalendar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCallbackAction = CStruct0
 object GtkCallbackAction:
   given _tag: Tag[GtkCallbackAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCallbackActionClass = CStruct0
 object GtkCallbackActionClass:
   given _tag: Tag[GtkCallbackActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellArea = CStruct1[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
 object GtkCellArea:
   given _tag: Tag[GtkCellArea] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
@@ -914,8 +762,6 @@ object GtkCellArea:
     def parent_instance : _root_.sn.gnome.gobject.internal.GInitiallyUnowned = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnowned): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCellAreaBox = CStruct0
 object GtkCellAreaBox:
   given _tag: Tag[GtkCellAreaBox] = Tag.materializeCStruct0Tag
@@ -995,8 +841,6 @@ object GtkCellAreaClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._21
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type GtkCellAreaContext = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkCellAreaContext:
   given _tag: Tag[GtkCellAreaContext] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -1039,14 +883,10 @@ object GtkCellAreaContextClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._6
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GtkCellAreaContextPrivate = CStruct0
 object GtkCellAreaContextPrivate:
   given _tag: Tag[GtkCellAreaContextPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellEditable = CStruct0
 object GtkCellEditable:
   given _tag: Tag[GtkCellEditable] = Tag.materializeCStruct0Tag
@@ -1075,8 +915,6 @@ object GtkCellEditableIface:
     def start_editing : CFuncPtr2[Ptr[GtkCellEditable], Ptr[GdkEvent], Unit] = struct._4
     def start_editing_=(value: CFuncPtr2[Ptr[GtkCellEditable], Ptr[GdkEvent], Unit]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkCellLayout = CStruct0
 object GtkCellLayout:
   given _tag: Tag[GtkCellLayout] = Tag.materializeCStruct0Tag
@@ -1123,8 +961,6 @@ object GtkCellLayoutIface:
     def get_area : CFuncPtr1[Ptr[GtkCellLayout], Ptr[GtkCellArea]] = struct._10
     def get_area_=(value: CFuncPtr1[Ptr[GtkCellLayout], Ptr[GtkCellArea]]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type GtkCellRenderer = CStruct2[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkCellRendererPrivate]]
 object GtkCellRenderer:
   given _tag: Tag[GtkCellRenderer] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkCellRendererPrivate]]
@@ -1140,8 +976,6 @@ object GtkCellRenderer:
     def priv : Ptr[GtkCellRendererPrivate] = struct._2
     def priv_=(value: Ptr[GtkCellRendererPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkCellRendererAccel = CStruct0
 object GtkCellRendererAccel:
   given _tag: Tag[GtkCellRendererAccel] = Tag.materializeCStruct0Tag
@@ -1197,50 +1031,34 @@ object GtkCellRendererClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._13
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at13 = value
 
-/**
-*/
 opaque type GtkCellRendererClassPrivate = CStruct0
 object GtkCellRendererClassPrivate:
   given _tag: Tag[GtkCellRendererClassPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererCombo = CStruct0
 object GtkCellRendererCombo:
   given _tag: Tag[GtkCellRendererCombo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererPixbuf = CStruct0
 object GtkCellRendererPixbuf:
   given _tag: Tag[GtkCellRendererPixbuf] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererPrivate = CStruct0
 object GtkCellRendererPrivate:
   given _tag: Tag[GtkCellRendererPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererProgress = CStruct0
 object GtkCellRendererProgress:
   given _tag: Tag[GtkCellRendererProgress] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererSpin = CStruct0
 object GtkCellRendererSpin:
   given _tag: Tag[GtkCellRendererSpin] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererSpinner = CStruct0
 object GtkCellRendererSpinner:
   given _tag: Tag[GtkCellRendererSpinner] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellRendererText = CStruct1[GtkCellRenderer]
 object GtkCellRendererText:
   given _tag: Tag[GtkCellRendererText] = Tag.materializeCStruct1Tag[GtkCellRenderer]
@@ -1253,8 +1071,6 @@ object GtkCellRendererText:
     def parent : GtkCellRenderer = struct._1
     def parent_=(value: GtkCellRenderer): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCellRendererTextClass = CStruct3[GtkCellRendererClass, CFuncPtr3[Ptr[GtkCellRendererText], CString, CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkCellRendererTextClass:
   given _tag: Tag[GtkCellRendererTextClass] = Tag.materializeCStruct3Tag[GtkCellRendererClass, CFuncPtr3[Ptr[GtkCellRendererText], CString, CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -1273,38 +1089,26 @@ object GtkCellRendererTextClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkCellRendererToggle = CStruct0
 object GtkCellRendererToggle:
   given _tag: Tag[GtkCellRendererToggle] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCellView = CStruct0
 object GtkCellView:
   given _tag: Tag[GtkCellView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCenterBox = CStruct0
 object GtkCenterBox:
   given _tag: Tag[GtkCenterBox] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCenterBoxClass = CStruct0
 object GtkCenterBoxClass:
   given _tag: Tag[GtkCenterBoxClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCenterLayout = CStruct0
 object GtkCenterLayout:
   given _tag: Tag[GtkCenterLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCenterLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkCenterLayoutClass:
   given _tag: Tag[GtkCenterLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -1317,8 +1121,6 @@ object GtkCenterLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCheckButton = CStruct1[GtkWidget]
 object GtkCheckButton:
   given _tag: Tag[GtkCheckButton] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -1331,8 +1133,6 @@ object GtkCheckButton:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCheckButtonClass = CStruct4[GtkWidgetClass, CFuncPtr1[Ptr[GtkCheckButton], Unit], CFuncPtr1[Ptr[GtkCheckButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]
 object GtkCheckButtonClass:
   given _tag: Tag[GtkCheckButtonClass] = Tag.materializeCStruct4Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkCheckButton], Unit], CFuncPtr1[Ptr[GtkCheckButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]
@@ -1354,32 +1154,22 @@ object GtkCheckButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkClosureExpression = CStruct0
 object GtkClosureExpression:
   given _tag: Tag[GtkClosureExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColorButton = CStruct0
 object GtkColorButton:
   given _tag: Tag[GtkColorButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColorChooser = CStruct0
 object GtkColorChooser:
   given _tag: Tag[GtkColorChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColorChooserDialog = CStruct0
 object GtkColorChooserDialog:
   given _tag: Tag[GtkColorChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColorChooserInterface = CStruct6[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr5[Ptr[GtkColorChooser], GtkOrientation, CInt, CInt, Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
 object GtkColorChooserInterface:
   given _tag: Tag[GtkColorChooserInterface] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr5[Ptr[GtkColorChooser], GtkOrientation, CInt, CInt, Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
@@ -1407,38 +1197,26 @@ object GtkColorChooserInterface:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]] = struct._6
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GtkColorChooserWidget = CStruct0
 object GtkColorChooserWidget:
   given _tag: Tag[GtkColorChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColumnView = CStruct0
 object GtkColumnView:
   given _tag: Tag[GtkColumnView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColumnViewClass = CStruct0
 object GtkColumnViewClass:
   given _tag: Tag[GtkColumnViewClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColumnViewColumn = CStruct0
 object GtkColumnViewColumn:
   given _tag: Tag[GtkColumnViewColumn] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkColumnViewColumnClass = CStruct0
 object GtkColumnViewColumnClass:
   given _tag: Tag[GtkColumnViewColumnClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkComboBox = CStruct1[GtkWidget]
 object GtkComboBox:
   given _tag: Tag[GtkComboBox] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -1478,26 +1256,18 @@ object GtkComboBoxClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7] = struct._5
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkComboBoxText = CStruct0
 object GtkComboBoxText:
   given _tag: Tag[GtkComboBoxText] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstantExpression = CStruct0
 object GtkConstantExpression:
   given _tag: Tag[GtkConstantExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstraint = CStruct0
 object GtkConstraint:
   given _tag: Tag[GtkConstraint] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstraintClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkConstraintClass:
   given _tag: Tag[GtkConstraintClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -1510,14 +1280,10 @@ object GtkConstraintClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkConstraintGuide = CStruct0
 object GtkConstraintGuide:
   given _tag: Tag[GtkConstraintGuide] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstraintGuideClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkConstraintGuideClass:
   given _tag: Tag[GtkConstraintGuideClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -1530,20 +1296,14 @@ object GtkConstraintGuideClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkConstraintLayout = CStruct0
 object GtkConstraintLayout:
   given _tag: Tag[GtkConstraintLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstraintLayoutChild = CStruct0
 object GtkConstraintLayoutChild:
   given _tag: Tag[GtkConstraintLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstraintLayoutChildClass = CStruct1[GtkLayoutChildClass]
 object GtkConstraintLayoutChildClass:
   given _tag: Tag[GtkConstraintLayoutChildClass] = Tag.materializeCStruct1Tag[GtkLayoutChildClass]
@@ -1556,8 +1316,6 @@ object GtkConstraintLayoutChildClass:
     def parent_class : GtkLayoutChildClass = struct._1
     def parent_class_=(value: GtkLayoutChildClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkConstraintLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkConstraintLayoutClass:
   given _tag: Tag[GtkConstraintLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -1570,20 +1328,14 @@ object GtkConstraintLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkConstraintTarget = CStruct0
 object GtkConstraintTarget:
   given _tag: Tag[GtkConstraintTarget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkConstraintTargetInterface = CStruct0
 object GtkConstraintTargetInterface:
   given _tag: Tag[GtkConstraintTargetInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCssLocation = CStruct5[_root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize]
 object GtkCssLocation:
   given _tag: Tag[GtkCssLocation] = Tag.materializeCStruct5Tag[_root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize]
@@ -1608,8 +1360,6 @@ object GtkCssLocation:
     def line_chars : _root_.sn.gnome.glib.internal.gsize = struct._5
     def line_chars_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkCssProvider = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkCssProvider:
   given _tag: Tag[GtkCssProvider] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -1622,38 +1372,26 @@ object GtkCssProvider:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCssProviderClass = CStruct0
 object GtkCssProviderClass:
   given _tag: Tag[GtkCssProviderClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCssProviderPrivate = CStruct0
 object GtkCssProviderPrivate:
   given _tag: Tag[GtkCssProviderPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCssSection = CStruct0
 object GtkCssSection:
   given _tag: Tag[GtkCssSection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCssStyleChange = CStruct0
 object GtkCssStyleChange:
   given _tag: Tag[GtkCssStyleChange] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCustomFilter = CStruct0
 object GtkCustomFilter:
   given _tag: Tag[GtkCustomFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCustomFilterClass = CStruct1[GtkFilterClass]
 object GtkCustomFilterClass:
   given _tag: Tag[GtkCustomFilterClass] = Tag.materializeCStruct1Tag[GtkFilterClass]
@@ -1666,14 +1404,10 @@ object GtkCustomFilterClass:
     def parent_class : GtkFilterClass = struct._1
     def parent_class_=(value: GtkFilterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCustomLayout = CStruct0
 object GtkCustomLayout:
   given _tag: Tag[GtkCustomLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCustomLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkCustomLayoutClass:
   given _tag: Tag[GtkCustomLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -1686,14 +1420,10 @@ object GtkCustomLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkCustomSorter = CStruct0
 object GtkCustomSorter:
   given _tag: Tag[GtkCustomSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkCustomSorterClass = CStruct1[GtkSorterClass]
 object GtkCustomSorterClass:
   given _tag: Tag[GtkCustomSorterClass] = Tag.materializeCStruct1Tag[GtkSorterClass]
@@ -1706,8 +1436,6 @@ object GtkCustomSorterClass:
     def parent_class : GtkSorterClass = struct._1
     def parent_class_=(value: GtkSorterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkDialog = CStruct1[GtkWindow]
 object GtkDialog:
   given _tag: Tag[GtkDialog] = Tag.materializeCStruct1Tag[GtkWindow]
@@ -1744,14 +1472,10 @@ object GtkDialogClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkDirectoryList = CStruct0
 object GtkDirectoryList:
   given _tag: Tag[GtkDirectoryList] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDirectoryListClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkDirectoryListClass:
   given _tag: Tag[GtkDirectoryListClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -1764,14 +1488,10 @@ object GtkDirectoryListClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkDragIcon = CStruct0
 object GtkDragIcon:
   given _tag: Tag[GtkDragIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDragIconClass = CStruct1[GtkWidgetClass]
 object GtkDragIconClass:
   given _tag: Tag[GtkDragIconClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -1784,20 +1504,14 @@ object GtkDragIconClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkDragSource = CStruct0
 object GtkDragSource:
   given _tag: Tag[GtkDragSource] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDragSourceClass = CStruct0
 object GtkDragSourceClass:
   given _tag: Tag[GtkDragSourceClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDrawingArea = CStruct1[GtkWidget]
 object GtkDrawingArea:
   given _tag: Tag[GtkDrawingArea] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -1810,8 +1524,6 @@ object GtkDrawingArea:
     def widget : GtkWidget = struct._1
     def widget_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkDrawingAreaClass = CStruct3[GtkWidgetClass, CFuncPtr3[Ptr[GtkDrawingArea], CInt, CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkDrawingAreaClass:
   given _tag: Tag[GtkDrawingAreaClass] = Tag.materializeCStruct3Tag[GtkWidgetClass, CFuncPtr3[Ptr[GtkDrawingArea], CInt, CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -1830,26 +1542,18 @@ object GtkDrawingAreaClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkDropControllerMotion = CStruct0
 object GtkDropControllerMotion:
   given _tag: Tag[GtkDropControllerMotion] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDropControllerMotionClass = CStruct0
 object GtkDropControllerMotionClass:
   given _tag: Tag[GtkDropControllerMotionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDropDown = CStruct0
 object GtkDropDown:
   given _tag: Tag[GtkDropDown] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDropDownClass = CStruct1[GtkWidgetClass]
 object GtkDropDownClass:
   given _tag: Tag[GtkDropDownClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -1862,38 +1566,26 @@ object GtkDropDownClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkDropTarget = CStruct0
 object GtkDropTarget:
   given _tag: Tag[GtkDropTarget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDropTargetAsync = CStruct0
 object GtkDropTargetAsync:
   given _tag: Tag[GtkDropTargetAsync] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDropTargetAsyncClass = CStruct0
 object GtkDropTargetAsyncClass:
   given _tag: Tag[GtkDropTargetAsyncClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkDropTargetClass = CStruct0
 object GtkDropTargetClass:
   given _tag: Tag[GtkDropTargetClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEditable = CStruct0
 object GtkEditable:
   given _tag: Tag[GtkEditable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEditableInterface = CStruct10[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Unit], CFuncPtr1[Ptr[GtkEditable], CString], CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr3[Ptr[GtkEditable], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]]]
 object GtkEditableInterface:
   given _tag: Tag[GtkEditableInterface] = Tag.materializeCStruct10Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Unit], CFuncPtr1[Ptr[GtkEditable], CString], CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr3[Ptr[GtkEditable], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]]]
@@ -1933,14 +1625,10 @@ object GtkEditableInterface:
     def get_delegate : CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]] = struct._10
     def get_delegate_=(value: CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type GtkEditableLabel = CStruct0
 object GtkEditableLabel:
   given _tag: Tag[GtkEditableLabel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEditableLabelClass = CStruct1[GtkWidgetClass]
 object GtkEditableLabelClass:
   given _tag: Tag[GtkEditableLabelClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -1953,20 +1641,14 @@ object GtkEditableLabelClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkEmojiChooser = CStruct0
 object GtkEmojiChooser:
   given _tag: Tag[GtkEmojiChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEmojiChooserClass = CStruct0
 object GtkEmojiChooserClass:
   given _tag: Tag[GtkEmojiChooserClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEntry = CStruct1[GtkWidget]
 object GtkEntry:
   given _tag: Tag[GtkEntry] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -1979,8 +1661,6 @@ object GtkEntry:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkEntryBuffer = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkEntryBuffer:
   given _tag: Tag[GtkEntryBuffer] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -1993,8 +1673,6 @@ object GtkEntryBuffer:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkEntryBufferClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr2[Ptr[GtkEntryBuffer], Ptr[_root_.sn.gnome.glib.internal.gsize], CString], CFuncPtr1[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint], CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkEntryBufferClass:
   given _tag: Tag[GtkEntryBufferClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr2[Ptr[GtkEntryBuffer], Ptr[_root_.sn.gnome.glib.internal.gsize], CString], CFuncPtr1[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint], CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -2070,134 +1748,90 @@ object GtkEntryClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkEntryCompletion = CStruct0
 object GtkEntryCompletion:
   given _tag: Tag[GtkEntryCompletion] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventController = CStruct0
 object GtkEventController:
   given _tag: Tag[GtkEventController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerClass = CStruct0
 object GtkEventControllerClass:
   given _tag: Tag[GtkEventControllerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerFocus = CStruct0
 object GtkEventControllerFocus:
   given _tag: Tag[GtkEventControllerFocus] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerFocusClass = CStruct0
 object GtkEventControllerFocusClass:
   given _tag: Tag[GtkEventControllerFocusClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerKey = CStruct0
 object GtkEventControllerKey:
   given _tag: Tag[GtkEventControllerKey] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerKeyClass = CStruct0
 object GtkEventControllerKeyClass:
   given _tag: Tag[GtkEventControllerKeyClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerLegacy = CStruct0
 object GtkEventControllerLegacy:
   given _tag: Tag[GtkEventControllerLegacy] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerLegacyClass = CStruct0
 object GtkEventControllerLegacyClass:
   given _tag: Tag[GtkEventControllerLegacyClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerMotion = CStruct0
 object GtkEventControllerMotion:
   given _tag: Tag[GtkEventControllerMotion] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerMotionClass = CStruct0
 object GtkEventControllerMotionClass:
   given _tag: Tag[GtkEventControllerMotionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerScroll = CStruct0
 object GtkEventControllerScroll:
   given _tag: Tag[GtkEventControllerScroll] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEventControllerScrollClass = CStruct0
 object GtkEventControllerScrollClass:
   given _tag: Tag[GtkEventControllerScrollClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEveryFilter = CStruct0
 object GtkEveryFilter:
   given _tag: Tag[GtkEveryFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkEveryFilterClass = CStruct0
 object GtkEveryFilterClass:
   given _tag: Tag[GtkEveryFilterClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkExpander = CStruct0
 object GtkExpander:
   given _tag: Tag[GtkExpander] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkExpression = CStruct0
 object GtkExpression:
   given _tag: Tag[GtkExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkExpressionWatch = CStruct0
 object GtkExpressionWatch:
   given _tag: Tag[GtkExpressionWatch] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFileChooser = CStruct0
 object GtkFileChooser:
   given _tag: Tag[GtkFileChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFileChooserDialog = CStruct0
 object GtkFileChooserDialog:
   given _tag: Tag[GtkFileChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFileChooserNative = CStruct0
 object GtkFileChooserNative:
   given _tag: Tag[GtkFileChooserNative] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFileChooserNativeClass = CStruct1[GtkNativeDialogClass]
 object GtkFileChooserNativeClass:
   given _tag: Tag[GtkFileChooserNativeClass] = Tag.materializeCStruct1Tag[GtkNativeDialogClass]
@@ -2210,20 +1844,14 @@ object GtkFileChooserNativeClass:
     def parent_class : GtkNativeDialogClass = struct._1
     def parent_class_=(value: GtkNativeDialogClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFileChooserWidget = CStruct0
 object GtkFileChooserWidget:
   given _tag: Tag[GtkFileChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFileFilter = CStruct0
 object GtkFileFilter:
   given _tag: Tag[GtkFileFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFilter = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkFilter:
   given _tag: Tag[GtkFilter] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -2236,8 +1864,6 @@ object GtkFilter:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFilterClass = CStruct11[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GtkFilter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkFilter], GtkFilterMatch], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkFilterClass:
   given _tag: Tag[GtkFilterClass] = Tag.materializeCStruct11Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GtkFilter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkFilter], GtkFilterMatch], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -2280,14 +1906,10 @@ object GtkFilterClass:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._11
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type GtkFilterListModel = CStruct0
 object GtkFilterListModel:
   given _tag: Tag[GtkFilterListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFilterListModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkFilterListModelClass:
   given _tag: Tag[GtkFilterListModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -2300,8 +1922,6 @@ object GtkFilterListModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFixed = CStruct1[GtkWidget]
 object GtkFixed:
   given _tag: Tag[GtkFixed] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -2314,8 +1934,6 @@ object GtkFixed:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFixedClass = CStruct2[GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkFixedClass:
   given _tag: Tag[GtkFixedClass] = Tag.materializeCStruct2Tag[GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -2331,20 +1949,14 @@ object GtkFixedClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkFixedLayout = CStruct0
 object GtkFixedLayout:
   given _tag: Tag[GtkFixedLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFixedLayoutChild = CStruct0
 object GtkFixedLayoutChild:
   given _tag: Tag[GtkFixedLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFixedLayoutChildClass = CStruct1[GtkLayoutChildClass]
 object GtkFixedLayoutChildClass:
   given _tag: Tag[GtkFixedLayoutChildClass] = Tag.materializeCStruct1Tag[GtkLayoutChildClass]
@@ -2357,8 +1969,6 @@ object GtkFixedLayoutChildClass:
     def parent_class : GtkLayoutChildClass = struct._1
     def parent_class_=(value: GtkLayoutChildClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFixedLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkFixedLayoutClass:
   given _tag: Tag[GtkFixedLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -2371,14 +1981,10 @@ object GtkFixedLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFlattenListModel = CStruct0
 object GtkFlattenListModel:
   given _tag: Tag[GtkFlattenListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFlattenListModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkFlattenListModelClass:
   given _tag: Tag[GtkFlattenListModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -2391,14 +1997,10 @@ object GtkFlattenListModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFlowBox = CStruct0
 object GtkFlowBox:
   given _tag: Tag[GtkFlowBox] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFlowBoxChild = CStruct1[GtkWidget]
 object GtkFlowBoxChild:
   given _tag: Tag[GtkFlowBoxChild] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -2411,8 +2013,6 @@ object GtkFlowBoxChild:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkFlowBoxChildClass = CStruct3[GtkWidgetClass, CFuncPtr1[Ptr[GtkFlowBoxChild], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkFlowBoxChildClass:
   given _tag: Tag[GtkFlowBoxChildClass] = Tag.materializeCStruct3Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkFlowBoxChild], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -2431,31 +2031,23 @@ object GtkFlowBoxChildClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkFontButton = CStruct0
 object GtkFontButton:
   given _tag: Tag[GtkFontButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFontChooser = CStruct0
 object GtkFontChooser:
   given _tag: Tag[GtkFontChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFontChooserDialog = CStruct0
 object GtkFontChooserDialog:
   given _tag: Tag[GtkFontChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
-opaque type GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+opaque type GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object GtkFontChooserIface:
-  given _tag: Tag[GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+  given _tag: Tag[GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
   def apply()(using Zone): Ptr[GtkFontChooserIface] = scala.scalanative.unsafe.alloc[GtkFontChooserIface](1)
-  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[GtkFontChooserIface] = 
+  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[GtkFontChooserIface] = 
     val ____ptr = apply()
     (!____ptr).base_iface = base_iface
     (!____ptr).get_font_family = get_font_family
@@ -2470,31 +2062,27 @@ object GtkFontChooserIface:
   extension (struct: GtkFontChooserIface)
     def base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def base_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
-    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]] = struct._2
-    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]]): Unit = !struct.at2 = value
-    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]] = struct._3
-    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]]): Unit = !struct.at3 = value
+    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]] = struct._2
+    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]]): Unit = !struct.at2 = value
+    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]] = struct._3
+    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]]): Unit = !struct.at3 = value
     def get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt] = struct._4
     def get_font_size_=(value: CFuncPtr1[Ptr[GtkFontChooser], CInt]): Unit = !struct.at4 = value
     def set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit] = struct._5
     def set_filter_func_=(value: CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit]): Unit = !struct.at5 = value
     def font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit] = struct._6
     def font_activated_=(value: CFuncPtr2[Ptr[GtkFontChooser], CString, Unit]): Unit = !struct.at6 = value
-    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit] = struct._7
-    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit]): Unit = !struct.at7 = value
-    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]] = struct._8
-    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]]): Unit = !struct.at8 = value
+    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit] = struct._7
+    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit]): Unit = !struct.at7 = value
+    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]] = struct._8
+    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]]): Unit = !struct.at8 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._9
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type GtkFontChooserWidget = CStruct0
 object GtkFontChooserWidget:
   given _tag: Tag[GtkFontChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkFrame = CStruct1[GtkWidget]
 object GtkFrame:
   given _tag: Tag[GtkFrame] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -2528,8 +2116,6 @@ object GtkFrameClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkGLArea = CStruct1[GtkWidget]
 object GtkGLArea:
   given _tag: Tag[GtkGLArea] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -2569,128 +2155,86 @@ object GtkGLAreaClass:
     def _padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._5
     def _padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkGesture = CStruct0
 object GtkGesture:
   given _tag: Tag[GtkGesture] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureClass = CStruct0
 object GtkGestureClass:
   given _tag: Tag[GtkGestureClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureClick = CStruct0
 object GtkGestureClick:
   given _tag: Tag[GtkGestureClick] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureClickClass = CStruct0
 object GtkGestureClickClass:
   given _tag: Tag[GtkGestureClickClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureDrag = CStruct0
 object GtkGestureDrag:
   given _tag: Tag[GtkGestureDrag] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureDragClass = CStruct0
 object GtkGestureDragClass:
   given _tag: Tag[GtkGestureDragClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureLongPress = CStruct0
 object GtkGestureLongPress:
   given _tag: Tag[GtkGestureLongPress] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureLongPressClass = CStruct0
 object GtkGestureLongPressClass:
   given _tag: Tag[GtkGestureLongPressClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGesturePan = CStruct0
 object GtkGesturePan:
   given _tag: Tag[GtkGesturePan] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGesturePanClass = CStruct0
 object GtkGesturePanClass:
   given _tag: Tag[GtkGesturePanClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureRotate = CStruct0
 object GtkGestureRotate:
   given _tag: Tag[GtkGestureRotate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureRotateClass = CStruct0
 object GtkGestureRotateClass:
   given _tag: Tag[GtkGestureRotateClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureSingle = CStruct0
 object GtkGestureSingle:
   given _tag: Tag[GtkGestureSingle] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureSingleClass = CStruct0
 object GtkGestureSingleClass:
   given _tag: Tag[GtkGestureSingleClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureStylus = CStruct0
 object GtkGestureStylus:
   given _tag: Tag[GtkGestureStylus] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureStylusClass = CStruct0
 object GtkGestureStylusClass:
   given _tag: Tag[GtkGestureStylusClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureSwipe = CStruct0
 object GtkGestureSwipe:
   given _tag: Tag[GtkGestureSwipe] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureSwipeClass = CStruct0
 object GtkGestureSwipeClass:
   given _tag: Tag[GtkGestureSwipeClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureZoom = CStruct0
 object GtkGestureZoom:
   given _tag: Tag[GtkGestureZoom] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGestureZoomClass = CStruct0
 object GtkGestureZoomClass:
   given _tag: Tag[GtkGestureZoomClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGrid = CStruct1[GtkWidget]
 object GtkGrid:
   given _tag: Tag[GtkGrid] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -2721,20 +2265,14 @@ object GtkGridClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkGridLayout = CStruct0
 object GtkGridLayout:
   given _tag: Tag[GtkGridLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGridLayoutChild = CStruct0
 object GtkGridLayoutChild:
   given _tag: Tag[GtkGridLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGridLayoutChildClass = CStruct1[GtkLayoutChildClass]
 object GtkGridLayoutChildClass:
   given _tag: Tag[GtkGridLayoutChildClass] = Tag.materializeCStruct1Tag[GtkLayoutChildClass]
@@ -2747,8 +2285,6 @@ object GtkGridLayoutChildClass:
     def parent_class : GtkLayoutChildClass = struct._1
     def parent_class_=(value: GtkLayoutChildClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkGridLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkGridLayoutClass:
   given _tag: Tag[GtkGridLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -2761,26 +2297,18 @@ object GtkGridLayoutClass:
     def parent_class : GtkLayoutManagerClass = struct._1
     def parent_class_=(value: GtkLayoutManagerClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkGridView = CStruct0
 object GtkGridView:
   given _tag: Tag[GtkGridView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkGridViewClass = CStruct0
 object GtkGridViewClass:
   given _tag: Tag[GtkGridViewClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkHeaderBar = CStruct0
 object GtkHeaderBar:
   given _tag: Tag[GtkHeaderBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkIMContext = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkIMContext:
   given _tag: Tag[GtkIMContext] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -2793,13 +2321,11 @@ object GtkIMContext:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkIMContextClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]]
 object GtkIMContextClass:
   given _tag: Tag[GtkIMContextClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._0](Tag.Nat3, Tag.Nat2, Tag.Nat0))
   def apply()(using Zone): Ptr[GtkIMContextClass] = scala.scalanative.unsafe.alloc[GtkIMContextClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved1 : CFuncPtr0[Unit], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit], _gtk_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[GtkIMContextClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved1 : CFuncPtr0[Unit], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit], _gtk_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[GtkIMContextClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).preedit_start = preedit_start
@@ -2827,57 +2353,91 @@ object GtkIMContextClass:
     (!____ptr)._gtk_reserved5 = _gtk_reserved5
     ____ptr
   extension (struct: GtkIMContextClass)
-    def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
-    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
-    def preedit_start: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def preedit_start_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def preedit_end: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def preedit_end_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def preedit_changed: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def preedit_changed_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def commit: CFuncPtr2[Ptr[GtkIMContext], CString, Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]]
-    def commit_=(value: CFuncPtr2[Ptr[GtkIMContext], CString, Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]] = value
-    def retrieve_surrounding: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]]
-    def retrieve_surrounding_=(value: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def delete_surrounding: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(176).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]]
-    def delete_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def set_client_widget: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit] = !struct.at(184).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]]
-    def set_client_widget_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]] = value
-    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit] = !struct.at(192).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]]
-    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]] = value
-    def filter_keypress: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(200).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
-    def filter_keypress_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(200).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def focus_in: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def focus_in_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def focus_out: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(216).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def focus_out_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(216).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def reset: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def reset_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def set_cursor_location: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit] = !struct.at(232).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]]
-    def set_cursor_location_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]): Unit = !struct.at(232).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]] = value
-    def set_use_preedit: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit] = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]]
-    def set_use_preedit_=(value: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]] = value
-    def set_surrounding: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit] = !struct.at(248).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]]
-    def set_surrounding_=(value: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]] = value
-    def get_surrounding: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(256).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
-    def get_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(256).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def set_surrounding_with_selection: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]]
-    def set_surrounding_with_selection_=(value: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]] = value
-    def get_surrounding_with_selection: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(272).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
-    def get_surrounding_with_selection_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(272).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _gtk_reserved1: CFuncPtr0[Unit] = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved5: CFuncPtr0[Unit] = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
+    def preedit_start: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def preedit_start_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def preedit_end: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def preedit_end_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def preedit_changed: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def preedit_changed_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def commit: CFuncPtr2[Ptr[GtkIMContext], CString, Unit] = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]]
+    def commit_=(value: CFuncPtr2[Ptr[GtkIMContext], CString, Unit]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]] = value
+    def retrieve_surrounding: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]]
+    def retrieve_surrounding_=(value: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def delete_surrounding: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]]
+    def delete_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def set_client_widget: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit] = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]]
+    def set_client_widget_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]] = value
+    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]]
+    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]] = value
+    def filter_keypress: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
+    def filter_keypress_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def focus_in: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def focus_in_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def focus_out: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def focus_out_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def reset: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def reset_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def set_cursor_location: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit] = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]]
+    def set_cursor_location_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]): Unit = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]] = value
+    def set_use_preedit: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit] = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]]
+    def set_use_preedit_=(value: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]): Unit = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]] = value
+    def set_surrounding: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit] = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]]
+    def set_surrounding_=(value: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]): Unit = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]] = value
+    def get_surrounding: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
+    def get_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def set_surrounding_with_selection: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit] = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]]
+    def set_surrounding_with_selection_=(value: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]] = value
+    def get_surrounding_with_selection: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
+    def get_surrounding_with_selection_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def _gtk_reserved1: CFuncPtr0[Unit] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved5: CFuncPtr0[Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](24)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(3) = align(res(2) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(4) = align(res(3) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]].toInt)
+    res(5) = align(res(4) + sizeof[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(6) = align(res(5) + sizeof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(7) = align(res(6) + sizeof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt)
+    res(8) = align(res(7) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt)
+    res(9) = align(res(8) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(10) = align(res(9) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(11) = align(res(10) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(12) = align(res(11) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(13) = align(res(12) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]].toInt)
+    res(14) = align(res(13) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]].toInt)
+    res(15) = align(res(14) + sizeof[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]].toInt)
+    res(16) = align(res(15) + sizeof[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(17) = align(res(16) + sizeof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt)
+    res(18) = align(res(17) + sizeof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(19) = align(res(18) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(20) = align(res(19) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(21) = align(res(20) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(22) = align(res(21) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(23) = align(res(22) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res
+  end offsets
 
-/**
-*/
 opaque type GtkIMContextSimple = CStruct2[GtkIMContext, Ptr[GtkIMContextSimplePrivate]]
 object GtkIMContextSimple:
   given _tag: Tag[GtkIMContextSimple] = Tag.materializeCStruct2Tag[GtkIMContext, Ptr[GtkIMContextSimplePrivate]]
@@ -2893,8 +2453,6 @@ object GtkIMContextSimple:
     def priv : Ptr[GtkIMContextSimplePrivate] = struct._2
     def priv_=(value: Ptr[GtkIMContextSimplePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkIMContextSimpleClass = CStruct1[GtkIMContextClass]
 object GtkIMContextSimpleClass:
   given _tag: Tag[GtkIMContextSimpleClass] = Tag.materializeCStruct1Tag[GtkIMContextClass]
@@ -2907,14 +2465,10 @@ object GtkIMContextSimpleClass:
     def parent_class : GtkIMContextClass = struct._1
     def parent_class_=(value: GtkIMContextClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkIMContextSimplePrivate = CStruct0
 object GtkIMContextSimplePrivate:
   given _tag: Tag[GtkIMContextSimplePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkIMMulticontext = CStruct2[GtkIMContext, Ptr[GtkIMMulticontextPrivate]]
 object GtkIMMulticontext:
   given _tag: Tag[GtkIMMulticontext] = Tag.materializeCStruct2Tag[GtkIMContext, Ptr[GtkIMMulticontextPrivate]]
@@ -2930,8 +2484,6 @@ object GtkIMMulticontext:
     def priv : Ptr[GtkIMMulticontextPrivate] = struct._2
     def priv_=(value: Ptr[GtkIMMulticontextPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkIMMulticontextClass = CStruct5[GtkIMContextClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkIMMulticontextClass:
   given _tag: Tag[GtkIMMulticontextClass] = Tag.materializeCStruct5Tag[GtkIMContextClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -2956,62 +2508,42 @@ object GtkIMMulticontextClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkIMMulticontextPrivate = CStruct0
 object GtkIMMulticontextPrivate:
   given _tag: Tag[GtkIMMulticontextPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkIconPaintable = CStruct0
 object GtkIconPaintable:
   given _tag: Tag[GtkIconPaintable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkIconTheme = CStruct0
 object GtkIconTheme:
   given _tag: Tag[GtkIconTheme] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkIconView = CStruct0
 object GtkIconView:
   given _tag: Tag[GtkIconView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkImage = CStruct0
 object GtkImage:
   given _tag: Tag[GtkImage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkInfoBar = CStruct0
 object GtkInfoBar:
   given _tag: Tag[GtkInfoBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkKeyvalTrigger = CStruct0
 object GtkKeyvalTrigger:
   given _tag: Tag[GtkKeyvalTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkKeyvalTriggerClass = CStruct0
 object GtkKeyvalTriggerClass:
   given _tag: Tag[GtkKeyvalTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkLabel = CStruct0
 object GtkLabel:
   given _tag: Tag[GtkLabel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkLayoutChild = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkLayoutChild:
   given _tag: Tag[GtkLayoutChild] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -3024,8 +2556,6 @@ object GtkLayoutChild:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkLayoutChildClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkLayoutChildClass:
   given _tag: Tag[GtkLayoutChildClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -3038,8 +2568,6 @@ object GtkLayoutChildClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkLayoutManager = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkLayoutManager:
   given _tag: Tag[GtkLayoutManager] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -3091,38 +2619,26 @@ object GtkLayoutManagerClass:
     def _padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = struct._9
     def _padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type GtkLevelBar = CStruct0
 object GtkLevelBar:
   given _tag: Tag[GtkLevelBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkLinkButton = CStruct0
 object GtkLinkButton:
   given _tag: Tag[GtkLinkButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListBase = CStruct0
 object GtkListBase:
   given _tag: Tag[GtkListBase] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListBaseClass = CStruct0
 object GtkListBaseClass:
   given _tag: Tag[GtkListBaseClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListBox = CStruct0
 object GtkListBox:
   given _tag: Tag[GtkListBox] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListBoxRow = CStruct1[GtkWidget]
 object GtkListBoxRow:
   given _tag: Tag[GtkListBoxRow] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -3156,32 +2672,22 @@ object GtkListBoxRowClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkListItem = CStruct0
 object GtkListItem:
   given _tag: Tag[GtkListItem] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListItemClass = CStruct0
 object GtkListItemClass:
   given _tag: Tag[GtkListItemClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListItemFactory = CStruct0
 object GtkListItemFactory:
   given _tag: Tag[GtkListItemFactory] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListItemFactoryClass = CStruct0
 object GtkListItemFactoryClass:
   given _tag: Tag[GtkListItemFactoryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListStore = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkListStorePrivate]]
 object GtkListStore:
   given _tag: Tag[GtkListStore] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkListStorePrivate]]
@@ -3197,8 +2703,6 @@ object GtkListStore:
     def priv : Ptr[GtkListStorePrivate] = struct._2
     def priv_=(value: Ptr[GtkListStorePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkListStoreClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkListStoreClass:
   given _tag: Tag[GtkListStoreClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -3214,38 +2718,26 @@ object GtkListStoreClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkListStorePrivate = CStruct0
 object GtkListStorePrivate:
   given _tag: Tag[GtkListStorePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListView = CStruct0
 object GtkListView:
   given _tag: Tag[GtkListView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkListViewClass = CStruct0
 object GtkListViewClass:
   given _tag: Tag[GtkListViewClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkLockButton = CStruct0
 object GtkLockButton:
   given _tag: Tag[GtkLockButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMapListModel = CStruct0
 object GtkMapListModel:
   given _tag: Tag[GtkMapListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMapListModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkMapListModelClass:
   given _tag: Tag[GtkMapListModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -3258,14 +2750,10 @@ object GtkMapListModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkMediaControls = CStruct0
 object GtkMediaControls:
   given _tag: Tag[GtkMediaControls] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMediaControlsClass = CStruct1[GtkWidgetClass]
 object GtkMediaControlsClass:
   given _tag: Tag[GtkMediaControlsClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -3278,8 +2766,6 @@ object GtkMediaControlsClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkMediaFile = CStruct1[GtkMediaStream]
 object GtkMediaFile:
   given _tag: Tag[GtkMediaFile] = Tag.materializeCStruct1Tag[GtkMediaStream]
@@ -3292,8 +2778,6 @@ object GtkMediaFile:
     def parent_instance : GtkMediaStream = struct._1
     def parent_instance_=(value: GtkMediaStream): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkMediaFileClass = CStruct7[GtkMediaStreamClass, CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkMediaFileClass:
   given _tag: Tag[GtkMediaFileClass] = Tag.materializeCStruct7Tag[GtkMediaStreamClass, CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -3324,8 +2808,6 @@ object GtkMediaFileClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._7
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GtkMediaStream = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkMediaStream:
   given _tag: Tag[GtkMediaStream] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -3338,8 +2820,6 @@ object GtkMediaStream:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkMediaStreamClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkMediaStream], Unit], CFuncPtr2[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gint64, Unit], CFuncPtr3[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean, Double, Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkMediaStreamClass:
   given _tag: Tag[GtkMediaStreamClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkMediaStream], Unit], CFuncPtr2[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gint64, Unit], CFuncPtr3[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean, Double, Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -3394,14 +2874,10 @@ object GtkMediaStreamClass:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._15
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type GtkMenuButton = CStruct0
 object GtkMenuButton:
   given _tag: Tag[GtkMenuButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMessageDialog = CStruct1[GtkDialog]
 object GtkMessageDialog:
   given _tag: Tag[GtkMessageDialog] = Tag.materializeCStruct1Tag[GtkDialog]
@@ -3414,38 +2890,26 @@ object GtkMessageDialog:
     def parent_instance : GtkDialog = struct._1
     def parent_instance_=(value: GtkDialog): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkMessageDialogClass = CStruct0
 object GtkMessageDialogClass:
   given _tag: Tag[GtkMessageDialogClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMnemonicAction = CStruct0
 object GtkMnemonicAction:
   given _tag: Tag[GtkMnemonicAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMnemonicActionClass = CStruct0
 object GtkMnemonicActionClass:
   given _tag: Tag[GtkMnemonicActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMnemonicTrigger = CStruct0
 object GtkMnemonicTrigger:
   given _tag: Tag[GtkMnemonicTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMnemonicTriggerClass = CStruct0
 object GtkMnemonicTriggerClass:
   given _tag: Tag[GtkMnemonicTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMountOperation = CStruct2[_root_.sn.gnome.gio.internal.GMountOperation, Ptr[GtkMountOperationPrivate]]
 object GtkMountOperation:
   given _tag: Tag[GtkMountOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gio.internal.GMountOperation, Ptr[GtkMountOperationPrivate]]
@@ -3488,32 +2952,22 @@ object GtkMountOperationClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkMountOperationPrivate = CStruct0
 object GtkMountOperationPrivate:
   given _tag: Tag[GtkMountOperationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMultiFilter = CStruct0
 object GtkMultiFilter:
   given _tag: Tag[GtkMultiFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMultiFilterClass = CStruct0
 object GtkMultiFilterClass:
   given _tag: Tag[GtkMultiFilterClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMultiSelection = CStruct0
 object GtkMultiSelection:
   given _tag: Tag[GtkMultiSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMultiSelectionClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkMultiSelectionClass:
   given _tag: Tag[GtkMultiSelectionClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -3526,14 +2980,10 @@ object GtkMultiSelectionClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkMultiSorter = CStruct0
 object GtkMultiSorter:
   given _tag: Tag[GtkMultiSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkMultiSorterClass = CStruct1[GtkSorterClass]
 object GtkMultiSorterClass:
   given _tag: Tag[GtkMultiSorterClass] = Tag.materializeCStruct1Tag[GtkSorterClass]
@@ -3546,26 +2996,18 @@ object GtkMultiSorterClass:
     def parent_class : GtkSorterClass = struct._1
     def parent_class_=(value: GtkSorterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkNamedAction = CStruct0
 object GtkNamedAction:
   given _tag: Tag[GtkNamedAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNamedActionClass = CStruct0
 object GtkNamedActionClass:
   given _tag: Tag[GtkNamedActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNative = CStruct0
 object GtkNative:
   given _tag: Tag[GtkNative] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNativeDialog = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkNativeDialog:
   given _tag: Tag[GtkNativeDialog] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -3614,32 +3056,22 @@ object GtkNativeDialogClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._8
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type GtkNativeInterface = CStruct0
 object GtkNativeInterface:
   given _tag: Tag[GtkNativeInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNeverTrigger = CStruct0
 object GtkNeverTrigger:
   given _tag: Tag[GtkNeverTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNeverTriggerClass = CStruct0
 object GtkNeverTriggerClass:
   given _tag: Tag[GtkNeverTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNoSelection = CStruct0
 object GtkNoSelection:
   given _tag: Tag[GtkNoSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNoSelectionClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkNoSelectionClass:
   given _tag: Tag[GtkNoSelectionClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -3652,38 +3084,26 @@ object GtkNoSelectionClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkNotebook = CStruct0
 object GtkNotebook:
   given _tag: Tag[GtkNotebook] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNotebookPage = CStruct0
 object GtkNotebookPage:
   given _tag: Tag[GtkNotebookPage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNothingAction = CStruct0
 object GtkNothingAction:
   given _tag: Tag[GtkNothingAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNothingActionClass = CStruct0
 object GtkNothingActionClass:
   given _tag: Tag[GtkNothingActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNumericSorter = CStruct0
 object GtkNumericSorter:
   given _tag: Tag[GtkNumericSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkNumericSorterClass = CStruct1[GtkSorterClass]
 object GtkNumericSorterClass:
   given _tag: Tag[GtkNumericSorterClass] = Tag.materializeCStruct1Tag[GtkSorterClass]
@@ -3696,20 +3116,14 @@ object GtkNumericSorterClass:
     def parent_class : GtkSorterClass = struct._1
     def parent_class_=(value: GtkSorterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkObjectExpression = CStruct0
 object GtkObjectExpression:
   given _tag: Tag[GtkObjectExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkOrientable = CStruct0
 object GtkOrientable:
   given _tag: Tag[GtkOrientable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkOrientableIface = CStruct1[_root_.sn.gnome.gobject.internal.GTypeInterface]
 object GtkOrientableIface:
   given _tag: Tag[GtkOrientableIface] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GTypeInterface]
@@ -3722,26 +3136,18 @@ object GtkOrientableIface:
     def base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def base_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkOverlay = CStruct0
 object GtkOverlay:
   given _tag: Tag[GtkOverlay] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkOverlayLayout = CStruct0
 object GtkOverlayLayout:
   given _tag: Tag[GtkOverlayLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkOverlayLayoutChild = CStruct0
 object GtkOverlayLayoutChild:
   given _tag: Tag[GtkOverlayLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkOverlayLayoutChildClass = CStruct1[GtkLayoutChildClass]
 object GtkOverlayLayoutChildClass:
   given _tag: Tag[GtkOverlayLayoutChildClass] = Tag.materializeCStruct1Tag[GtkLayoutChildClass]
@@ -3754,8 +3160,6 @@ object GtkOverlayLayoutChildClass:
     def parent_class : GtkLayoutChildClass = struct._1
     def parent_class_=(value: GtkLayoutChildClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkOverlayLayoutClass = CStruct1[GtkLayoutManagerClass]
 object GtkOverlayLayoutClass:
   given _tag: Tag[GtkOverlayLayoutClass] = Tag.materializeCStruct1Tag[GtkLayoutManagerClass]
@@ -3795,14 +3199,10 @@ object GtkPadActionEntry:
     def action_name : CString = struct._5
     def action_name_=(value: CString): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkPadController = CStruct0
 object GtkPadController:
   given _tag: Tag[GtkPadController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPadControllerClass = CStruct0
 object GtkPadControllerClass:
   given _tag: Tag[GtkPadControllerClass] = Tag.materializeCStruct0Tag
@@ -3825,20 +3225,14 @@ object GtkPageRange:
     def end : CInt = struct._2
     def end_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkPageSetup = CStruct0
 object GtkPageSetup:
   given _tag: Tag[GtkPageSetup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPaned = CStruct0
 object GtkPaned:
   given _tag: Tag[GtkPaned] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPaperSize = CStruct0
 object GtkPaperSize:
   given _tag: Tag[GtkPaperSize] = Tag.materializeCStruct0Tag
@@ -3858,20 +3252,14 @@ object GtkParamSpecExpression:
     def parent_instance : _root_.sn.gnome.gobject.internal.GParamSpec = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GParamSpec): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkPasswordEntry = CStruct0
 object GtkPasswordEntry:
   given _tag: Tag[GtkPasswordEntry] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPasswordEntryBuffer = CStruct0
 object GtkPasswordEntryBuffer:
   given _tag: Tag[GtkPasswordEntryBuffer] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPasswordEntryBufferClass = CStruct1[GtkEntryBufferClass]
 object GtkPasswordEntryBufferClass:
   given _tag: Tag[GtkPasswordEntryBufferClass] = Tag.materializeCStruct1Tag[GtkEntryBufferClass]
@@ -3884,20 +3272,14 @@ object GtkPasswordEntryBufferClass:
     def parent_class : GtkEntryBufferClass = struct._1
     def parent_class_=(value: GtkEntryBufferClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkPasswordEntryClass = CStruct0
 object GtkPasswordEntryClass:
   given _tag: Tag[GtkPasswordEntryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPicture = CStruct0
 object GtkPicture:
   given _tag: Tag[GtkPicture] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPictureClass = CStruct1[GtkWidgetClass]
 object GtkPictureClass:
   given _tag: Tag[GtkPictureClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -3910,8 +3292,6 @@ object GtkPictureClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkPopover = CStruct1[GtkWidget]
 object GtkPopover:
   given _tag: Tag[GtkPopover] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -3924,8 +3304,6 @@ object GtkPopover:
     def parent : GtkWidget = struct._1
     def parent_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkPopoverClass = CStruct4[GtkWidgetClass, CFuncPtr1[Ptr[GtkPopover], Unit], CFuncPtr1[Ptr[GtkPopover], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkPopoverClass:
   given _tag: Tag[GtkPopoverClass] = Tag.materializeCStruct4Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkPopover], Unit], CFuncPtr1[Ptr[GtkPopover], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -3947,26 +3325,18 @@ object GtkPopoverClass:
     def reserved : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def reserved_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkPopoverMenu = CStruct0
 object GtkPopoverMenu:
   given _tag: Tag[GtkPopoverMenu] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPopoverMenuBar = CStruct0
 object GtkPopoverMenuBar:
   given _tag: Tag[GtkPopoverMenuBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPrintContext = CStruct0
 object GtkPrintContext:
   given _tag: Tag[GtkPrintContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPrintOperation = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
 object GtkPrintOperation:
   given _tag: Tag[GtkPrintOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
@@ -4033,14 +3403,10 @@ object GtkPrintOperationClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._13
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at13 = value
 
-/**
-*/
 opaque type GtkPrintOperationPreview = CStruct0
 object GtkPrintOperationPreview:
   given _tag: Tag[GtkPrintOperationPreview] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPrintOperationPreviewIface = CStruct14[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Unit], CFuncPtr3[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Ptr[GtkPageSetup], Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkPrintOperationPreview], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkPrintOperationPreviewIface:
   given _tag: Tag[GtkPrintOperationPreviewIface] = Tag.materializeCStruct14Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Unit], CFuncPtr3[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Ptr[GtkPageSetup], Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkPrintOperationPreview], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -4092,32 +3458,22 @@ object GtkPrintOperationPreviewIface:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._14
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at14 = value
 
-/**
-*/
 opaque type GtkPrintOperationPrivate = CStruct0
 object GtkPrintOperationPrivate:
   given _tag: Tag[GtkPrintOperationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPrintSettings = CStruct0
 object GtkPrintSettings:
   given _tag: Tag[GtkPrintSettings] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkProgressBar = CStruct0
 object GtkProgressBar:
   given _tag: Tag[GtkProgressBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkPropertyExpression = CStruct0
 object GtkPropertyExpression:
   given _tag: Tag[GtkPropertyExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkRange = CStruct1[GtkWidget]
 object GtkRange:
   given _tag: Tag[GtkRange] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -4130,8 +3486,6 @@ object GtkRange:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkRangeClass = CStruct7[GtkWidgetClass, CFuncPtr1[Ptr[GtkRange], Unit], CFuncPtr2[Ptr[GtkRange], Double, Unit], CFuncPtr2[Ptr[GtkRange], GtkScrollType, Unit], CFuncPtr2[Ptr[GtkRange], Ptr[GtkBorder], Unit], CFuncPtr3[Ptr[GtkRange], GtkScrollType, Double, _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkRangeClass:
   given _tag: Tag[GtkRangeClass] = Tag.materializeCStruct7Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkRange], Unit], CFuncPtr2[Ptr[GtkRange], Double, Unit], CFuncPtr2[Ptr[GtkRange], GtkScrollType, Unit], CFuncPtr2[Ptr[GtkRange], Ptr[GtkBorder], Unit], CFuncPtr3[Ptr[GtkRange], GtkScrollType, Double, _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -4195,14 +3549,10 @@ object GtkRecentData:
     def is_private : _root_.sn.gnome.glib.internal.gboolean = struct._7
     def is_private_=(value: _root_.sn.gnome.glib.internal.gboolean): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GtkRecentInfo = CStruct0
 object GtkRecentInfo:
   given _tag: Tag[GtkRecentInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkRecentManager = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkRecentManagerPrivate]]
 object GtkRecentManager:
   given _tag: Tag[GtkRecentManager] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkRecentManagerPrivate]]
@@ -4248,8 +3598,6 @@ object GtkRecentManagerClass:
     def _gtk_recent4 : CFuncPtr0[Unit] = struct._6
     def _gtk_recent4_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GtkRecentManagerPrivate = CStruct0
 object GtkRecentManagerPrivate:
   given _tag: Tag[GtkRecentManagerPrivate] = Tag.materializeCStruct0Tag
@@ -4293,26 +3641,18 @@ object GtkRequisition:
     def height : CInt = struct._2
     def height_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkRevealer = CStruct0
 object GtkRevealer:
   given _tag: Tag[GtkRevealer] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkRoot = CStruct0
 object GtkRoot:
   given _tag: Tag[GtkRoot] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkRootInterface = CStruct0
 object GtkRootInterface:
   given _tag: Tag[GtkRootInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkScale = CStruct1[GtkRange]
 object GtkScale:
   given _tag: Tag[GtkScale] = Tag.materializeCStruct1Tag[GtkRange]
@@ -4325,8 +3665,6 @@ object GtkScale:
     def parent_instance : GtkRange = struct._1
     def parent_instance_=(value: GtkRange): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkScaleButton = CStruct1[GtkWidget]
 object GtkScaleButton:
   given _tag: Tag[GtkScaleButton] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -4339,8 +3677,6 @@ object GtkScaleButton:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkScaleButtonClass = CStruct3[GtkWidgetClass, CFuncPtr2[Ptr[GtkScaleButton], Double, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkScaleButtonClass:
   given _tag: Tag[GtkScaleButtonClass] = Tag.materializeCStruct3Tag[GtkWidgetClass, CFuncPtr2[Ptr[GtkScaleButton], Double, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -4359,8 +3695,6 @@ object GtkScaleButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkScaleClass = CStruct3[GtkRangeClass, CFuncPtr3[Ptr[GtkScale], Ptr[CInt], Ptr[CInt], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkScaleClass:
   given _tag: Tag[GtkScaleClass] = Tag.materializeCStruct3Tag[GtkRangeClass, CFuncPtr3[Ptr[GtkScale], Ptr[CInt], Ptr[CInt], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -4379,14 +3713,10 @@ object GtkScaleClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkScrollable = CStruct0
 object GtkScrollable:
   given _tag: Tag[GtkScrollable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkScrollableInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean]]
 object GtkScrollableInterface:
   given _tag: Tag[GtkScrollableInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean]]
@@ -4402,38 +3732,26 @@ object GtkScrollableInterface:
     def get_border : CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean] = struct._2
     def get_border_=(value: CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkScrollbar = CStruct0
 object GtkScrollbar:
   given _tag: Tag[GtkScrollbar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkScrolledWindow = CStruct0
 object GtkScrolledWindow:
   given _tag: Tag[GtkScrolledWindow] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSearchBar = CStruct0
 object GtkSearchBar:
   given _tag: Tag[GtkSearchBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSearchEntry = CStruct0
 object GtkSearchEntry:
   given _tag: Tag[GtkSearchEntry] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSelectionFilterModel = CStruct0
 object GtkSelectionFilterModel:
   given _tag: Tag[GtkSelectionFilterModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSelectionFilterModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkSelectionFilterModelClass:
   given _tag: Tag[GtkSelectionFilterModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4446,8 +3764,6 @@ object GtkSelectionFilterModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkSelectionModel = CStruct0
 object GtkSelectionModel:
   given _tag: Tag[GtkSelectionModel] = Tag.materializeCStruct0Tag
@@ -4494,38 +3810,26 @@ object GtkSelectionModelInterface:
     def set_selection : CFuncPtr3[Ptr[GtkSelectionModel], Ptr[GtkBitset], Ptr[GtkBitset], _root_.sn.gnome.glib.internal.gboolean] = struct._10
     def set_selection_=(value: CFuncPtr3[Ptr[GtkSelectionModel], Ptr[GtkBitset], Ptr[GtkBitset], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type GtkSeparator = CStruct0
 object GtkSeparator:
   given _tag: Tag[GtkSeparator] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSettings = CStruct0
 object GtkSettings:
   given _tag: Tag[GtkSettings] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcut = CStruct0
 object GtkShortcut:
   given _tag: Tag[GtkShortcut] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutAction = CStruct0
 object GtkShortcutAction:
   given _tag: Tag[GtkShortcutAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutActionClass = CStruct0
 object GtkShortcutActionClass:
   given _tag: Tag[GtkShortcutActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkShortcutClass:
   given _tag: Tag[GtkShortcutClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4538,32 +3842,22 @@ object GtkShortcutClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkShortcutController = CStruct0
 object GtkShortcutController:
   given _tag: Tag[GtkShortcutController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutControllerClass = CStruct0
 object GtkShortcutControllerClass:
   given _tag: Tag[GtkShortcutControllerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutLabel = CStruct0
 object GtkShortcutLabel:
   given _tag: Tag[GtkShortcutLabel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutLabelClass = CStruct0
 object GtkShortcutLabelClass:
   given _tag: Tag[GtkShortcutLabelClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutManager = CStruct0
 object GtkShortcutManager:
   given _tag: Tag[GtkShortcutManager] = Tag.materializeCStruct0Tag
@@ -4589,92 +3883,62 @@ object GtkShortcutManagerInterface:
     def remove_controller : CFuncPtr2[Ptr[GtkShortcutManager], Ptr[GtkShortcutController], Unit] = struct._3
     def remove_controller_=(value: CFuncPtr2[Ptr[GtkShortcutManager], Ptr[GtkShortcutController], Unit]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkShortcutTrigger = CStruct0
 object GtkShortcutTrigger:
   given _tag: Tag[GtkShortcutTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutTriggerClass = CStruct0
 object GtkShortcutTriggerClass:
   given _tag: Tag[GtkShortcutTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsGroup = CStruct0
 object GtkShortcutsGroup:
   given _tag: Tag[GtkShortcutsGroup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsGroupClass = CStruct0
 object GtkShortcutsGroupClass:
   given _tag: Tag[GtkShortcutsGroupClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsSection = CStruct0
 object GtkShortcutsSection:
   given _tag: Tag[GtkShortcutsSection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsSectionClass = CStruct0
 object GtkShortcutsSectionClass:
   given _tag: Tag[GtkShortcutsSectionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsShortcut = CStruct0
 object GtkShortcutsShortcut:
   given _tag: Tag[GtkShortcutsShortcut] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsShortcutClass = CStruct0
 object GtkShortcutsShortcutClass:
   given _tag: Tag[GtkShortcutsShortcutClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkShortcutsWindow = CStruct0
 object GtkShortcutsWindow:
   given _tag: Tag[GtkShortcutsWindow] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSignalAction = CStruct0
 object GtkSignalAction:
   given _tag: Tag[GtkSignalAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSignalActionClass = CStruct0
 object GtkSignalActionClass:
   given _tag: Tag[GtkSignalActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSignalListItemFactory = CStruct0
 object GtkSignalListItemFactory:
   given _tag: Tag[GtkSignalListItemFactory] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSignalListItemFactoryClass = CStruct0
 object GtkSignalListItemFactoryClass:
   given _tag: Tag[GtkSignalListItemFactoryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSingleSelection = CStruct0
 object GtkSingleSelection:
   given _tag: Tag[GtkSingleSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSingleSelectionClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkSingleSelectionClass:
   given _tag: Tag[GtkSingleSelectionClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4687,8 +3951,6 @@ object GtkSingleSelectionClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkSizeGroup = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkSizeGroup:
   given _tag: Tag[GtkSizeGroup] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -4701,14 +3963,10 @@ object GtkSizeGroup:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkSliceListModel = CStruct0
 object GtkSliceListModel:
   given _tag: Tag[GtkSliceListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSliceListModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkSliceListModelClass:
   given _tag: Tag[GtkSliceListModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4721,20 +3979,14 @@ object GtkSliceListModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkSnapshotClass = CStruct0
 object GtkSnapshotClass:
   given _tag: Tag[GtkSnapshotClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSortListModel = CStruct0
 object GtkSortListModel:
   given _tag: Tag[GtkSortListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSortListModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkSortListModelClass:
   given _tag: Tag[GtkSortListModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4747,8 +3999,6 @@ object GtkSortListModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkSorter = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkSorter:
   given _tag: Tag[GtkSorter] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -4806,56 +4056,38 @@ object GtkSorterClass:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._11
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type GtkSpinButton = CStruct0
 object GtkSpinButton:
   given _tag: Tag[GtkSpinButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSpinner = CStruct0
 object GtkSpinner:
   given _tag: Tag[GtkSpinner] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStack = CStruct0
 object GtkStack:
   given _tag: Tag[GtkStack] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStackPage = CStruct0
 object GtkStackPage:
   given _tag: Tag[GtkStackPage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStackSidebar = CStruct0
 object GtkStackSidebar:
   given _tag: Tag[GtkStackSidebar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStackSwitcher = CStruct0
 object GtkStackSwitcher:
   given _tag: Tag[GtkStackSwitcher] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStatusbar = CStruct0
 object GtkStatusbar:
   given _tag: Tag[GtkStatusbar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStringFilter = CStruct0
 object GtkStringFilter:
   given _tag: Tag[GtkStringFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStringFilterClass = CStruct1[GtkFilterClass]
 object GtkStringFilterClass:
   given _tag: Tag[GtkStringFilterClass] = Tag.materializeCStruct1Tag[GtkFilterClass]
@@ -4868,14 +4100,10 @@ object GtkStringFilterClass:
     def parent_class : GtkFilterClass = struct._1
     def parent_class_=(value: GtkFilterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkStringList = CStruct0
 object GtkStringList:
   given _tag: Tag[GtkStringList] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStringListClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkStringListClass:
   given _tag: Tag[GtkStringListClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4888,14 +4116,10 @@ object GtkStringListClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkStringObject = CStruct0
 object GtkStringObject:
   given _tag: Tag[GtkStringObject] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStringObjectClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkStringObjectClass:
   given _tag: Tag[GtkStringObjectClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -4908,14 +4132,10 @@ object GtkStringObjectClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkStringSorter = CStruct0
 object GtkStringSorter:
   given _tag: Tag[GtkStringSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkStringSorterClass = CStruct1[GtkSorterClass]
 object GtkStringSorterClass:
   given _tag: Tag[GtkStringSorterClass] = Tag.materializeCStruct1Tag[GtkSorterClass]
@@ -4928,8 +4148,6 @@ object GtkStringSorterClass:
     def parent_class : GtkSorterClass = struct._1
     def parent_class_=(value: GtkSorterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkStyleContext = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkStyleContext:
   given _tag: Tag[GtkStyleContext] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -4942,8 +4160,6 @@ object GtkStyleContext:
     def parent_object : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_object_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkStyleContextClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkStyleContext], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkStyleContextClass:
   given _tag: Tag[GtkStyleContextClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkStyleContext], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -4971,20 +4187,14 @@ object GtkStyleContextClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._6
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type GtkStyleProvider = CStruct0
 object GtkStyleProvider:
   given _tag: Tag[GtkStyleProvider] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSwitch = CStruct0
 object GtkSwitch:
   given _tag: Tag[GtkSwitch] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkSymbolicPaintable = CStruct0
 object GtkSymbolicPaintable:
   given _tag: Tag[GtkSymbolicPaintable] = Tag.materializeCStruct0Tag
@@ -5007,8 +4217,6 @@ object GtkSymbolicPaintableInterface:
     def snapshot_symbolic : CFuncPtr6[Ptr[GtkSymbolicPaintable], Ptr[GdkSnapshot], Double, Double, Ptr[GdkRGBA], _root_.sn.gnome.glib.internal.gsize, Unit] = struct._2
     def snapshot_symbolic_=(value: CFuncPtr6[Ptr[GtkSymbolicPaintable], Ptr[GdkSnapshot], Double, Double, Ptr[GdkRGBA], _root_.sn.gnome.glib.internal.gsize, Unit]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkText = CStruct1[GtkWidget]
 object GtkText:
   given _tag: Tag[GtkText] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -5021,8 +4229,6 @@ object GtkText:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkTextBuffer = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextBufferPrivate]]
 object GtkTextBuffer:
   given _tag: Tag[GtkTextBuffer] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextBufferPrivate]]
@@ -5110,14 +4316,10 @@ object GtkTextBufferClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._20
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at20 = value
 
-/**
-*/
 opaque type GtkTextBufferPrivate = CStruct0
 object GtkTextBufferPrivate:
   given _tag: Tag[GtkTextBufferPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTextChildAnchor = CStruct2[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
 object GtkTextChildAnchor:
   given _tag: Tag[GtkTextChildAnchor] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
@@ -5133,8 +4335,6 @@ object GtkTextChildAnchor:
     def segment : _root_.sn.gnome.glib.internal.gpointer = struct._2
     def segment_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTextChildAnchorClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkTextChildAnchorClass:
   given _tag: Tag[GtkTextChildAnchorClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -5159,8 +4359,6 @@ object GtkTextChildAnchorClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkTextIter = CStruct14[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer]
 object GtkTextIter:
   given _tag: Tag[GtkTextIter] = Tag.materializeCStruct14Tag[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer]
@@ -5212,8 +4410,6 @@ object GtkTextIter:
     def dummy14 : _root_.sn.gnome.glib.internal.gpointer = struct._14
     def dummy14_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at14 = value
 
-/**
-*/
 opaque type GtkTextMark = CStruct2[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
 object GtkTextMark:
   given _tag: Tag[GtkTextMark] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
@@ -5229,8 +4425,6 @@ object GtkTextMark:
     def segment : _root_.sn.gnome.glib.internal.gpointer = struct._2
     def segment_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTextMarkClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkTextMarkClass:
   given _tag: Tag[GtkTextMarkClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -5246,8 +4440,6 @@ object GtkTextMarkClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTextTag = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextTagPrivate]]
 object GtkTextTag:
   given _tag: Tag[GtkTextTag] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextTagPrivate]]
@@ -5263,8 +4455,6 @@ object GtkTextTag:
     def priv : Ptr[GtkTextTagPrivate] = struct._2
     def priv_=(value: Ptr[GtkTextTagPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTextTagClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkTextTagClass:
   given _tag: Tag[GtkTextTagClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -5280,20 +4470,14 @@ object GtkTextTagClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTextTagPrivate = CStruct0
 object GtkTextTagPrivate:
   given _tag: Tag[GtkTextTagPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTextTagTable = CStruct0
 object GtkTextTagTable:
   given _tag: Tag[GtkTextTagTable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTextView = CStruct2[GtkWidget, Ptr[GtkTextViewPrivate]]
 object GtkTextView:
   given _tag: Tag[GtkTextView] = Tag.materializeCStruct2Tag[GtkWidget, Ptr[GtkTextViewPrivate]]
@@ -5366,14 +4550,10 @@ object GtkTextViewClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._15
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type GtkTextViewPrivate = CStruct0
 object GtkTextViewPrivate:
   given _tag: Tag[GtkTextViewPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkToggleButton = CStruct1[GtkButton]
 object GtkToggleButton:
   given _tag: Tag[GtkToggleButton] = Tag.materializeCStruct1Tag[GtkButton]
@@ -5386,8 +4566,6 @@ object GtkToggleButton:
     def button : GtkButton = struct._1
     def button_=(value: GtkButton): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkToggleButtonClass = CStruct3[GtkButtonClass, CFuncPtr1[Ptr[GtkToggleButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkToggleButtonClass:
   given _tag: Tag[GtkToggleButtonClass] = Tag.materializeCStruct3Tag[GtkButtonClass, CFuncPtr1[Ptr[GtkToggleButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -5406,14 +4584,10 @@ object GtkToggleButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkTooltip = CStruct0
 object GtkTooltip:
   given _tag: Tag[GtkTooltip] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeDragDest = CStruct0
 object GtkTreeDragDest:
   given _tag: Tag[GtkTreeDragDest] = Tag.materializeCStruct0Tag
@@ -5439,8 +4613,6 @@ object GtkTreeDragDestIface:
     def row_drop_possible : CFuncPtr3[Ptr[GtkTreeDragDest], Ptr[GtkTreePath], Ptr[_root_.sn.gnome.gobject.internal.GValue], _root_.sn.gnome.glib.internal.gboolean] = struct._3
     def row_drop_possible_=(value: CFuncPtr3[Ptr[GtkTreeDragDest], Ptr[GtkTreePath], Ptr[_root_.sn.gnome.gobject.internal.GValue], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type GtkTreeDragSource = CStruct0
 object GtkTreeDragSource:
   given _tag: Tag[GtkTreeDragSource] = Tag.materializeCStruct0Tag
@@ -5469,14 +4641,10 @@ object GtkTreeDragSourceIface:
     def drag_data_delete : CFuncPtr2[Ptr[GtkTreeDragSource], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean] = struct._4
     def drag_data_delete_=(value: CFuncPtr2[Ptr[GtkTreeDragSource], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkTreeExpander = CStruct0
 object GtkTreeExpander:
   given _tag: Tag[GtkTreeExpander] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeExpanderClass = CStruct1[GtkWidgetClass]
 object GtkTreeExpanderClass:
   given _tag: Tag[GtkTreeExpanderClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -5513,14 +4681,10 @@ object GtkTreeIter:
     def user_data3 : _root_.sn.gnome.glib.internal.gpointer = struct._4
     def user_data3_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkTreeListModel = CStruct0
 object GtkTreeListModel:
   given _tag: Tag[GtkTreeListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeListModelClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkTreeListModelClass:
   given _tag: Tag[GtkTreeListModelClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -5533,14 +4697,10 @@ object GtkTreeListModelClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkTreeListRow = CStruct0
 object GtkTreeListRow:
   given _tag: Tag[GtkTreeListRow] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeListRowClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkTreeListRowClass:
   given _tag: Tag[GtkTreeListRowClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -5553,14 +4713,10 @@ object GtkTreeListRowClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkTreeListRowSorter = CStruct0
 object GtkTreeListRowSorter:
   given _tag: Tag[GtkTreeListRowSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeListRowSorterClass = CStruct1[GtkSorterClass]
 object GtkTreeListRowSorterClass:
   given _tag: Tag[GtkTreeListRowSorterClass] = Tag.materializeCStruct1Tag[GtkSorterClass]
@@ -5573,14 +4729,10 @@ object GtkTreeListRowSorterClass:
     def parent_class : GtkSorterClass = struct._1
     def parent_class_=(value: GtkSorterClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkTreeModel = CStruct0
 object GtkTreeModel:
   given _tag: Tag[GtkTreeModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeModelFilter = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelFilterPrivate]]
 object GtkTreeModelFilter:
   given _tag: Tag[GtkTreeModelFilter] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelFilterPrivate]]
@@ -5596,8 +4748,6 @@ object GtkTreeModelFilter:
     def priv : Ptr[GtkTreeModelFilterPrivate] = struct._2
     def priv_=(value: Ptr[GtkTreeModelFilterPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTreeModelFilterClass = CStruct4[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkTreeModelFilterClass:
   given _tag: Tag[GtkTreeModelFilterClass] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -5619,8 +4769,6 @@ object GtkTreeModelFilterClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type GtkTreeModelFilterPrivate = CStruct0
 object GtkTreeModelFilterPrivate:
   given _tag: Tag[GtkTreeModelFilterPrivate] = Tag.materializeCStruct0Tag
@@ -5700,8 +4848,6 @@ object GtkTreeModelIface:
     def unref_node : CFuncPtr2[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Unit] = struct._21
     def unref_node_=(value: CFuncPtr2[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Unit]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type GtkTreeModelSort = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelSortPrivate]]
 object GtkTreeModelSort:
   given _tag: Tag[GtkTreeModelSort] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelSortPrivate]]
@@ -5717,8 +4863,6 @@ object GtkTreeModelSort:
     def priv : Ptr[GtkTreeModelSortPrivate] = struct._2
     def priv_=(value: Ptr[GtkTreeModelSortPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTreeModelSortClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkTreeModelSortClass:
   given _tag: Tag[GtkTreeModelSortClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -5734,32 +4878,22 @@ object GtkTreeModelSortClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTreeModelSortPrivate = CStruct0
 object GtkTreeModelSortPrivate:
   given _tag: Tag[GtkTreeModelSortPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreePath = CStruct0
 object GtkTreePath:
   given _tag: Tag[GtkTreePath] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeRowReference = CStruct0
 object GtkTreeRowReference:
   given _tag: Tag[GtkTreeRowReference] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeSelection = CStruct0
 object GtkTreeSelection:
   given _tag: Tag[GtkTreeSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeSortable = CStruct0
 object GtkTreeSortable:
   given _tag: Tag[GtkTreeSortable] = Tag.materializeCStruct0Tag
@@ -5797,8 +4931,6 @@ object GtkTreeSortableIface:
     def has_default_sort_func : CFuncPtr1[Ptr[GtkTreeSortable], _root_.sn.gnome.glib.internal.gboolean] = struct._7
     def has_default_sort_func_=(value: CFuncPtr1[Ptr[GtkTreeSortable], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GtkTreeStore = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeStorePrivate]]
 object GtkTreeStore:
   given _tag: Tag[GtkTreeStore] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeStorePrivate]]
@@ -5814,8 +4946,6 @@ object GtkTreeStore:
     def priv : Ptr[GtkTreeStorePrivate] = struct._2
     def priv_=(value: Ptr[GtkTreeStorePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTreeStoreClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object GtkTreeStoreClass:
   given _tag: Tag[GtkTreeStoreClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -5831,14 +4961,10 @@ object GtkTreeStoreClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkTreeStorePrivate = CStruct0
 object GtkTreeStorePrivate:
   given _tag: Tag[GtkTreeStorePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkTreeView = CStruct1[GtkWidget]
 object GtkTreeView:
   given _tag: Tag[GtkTreeView] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -5851,8 +4977,6 @@ object GtkTreeView:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkTreeViewClass = CStruct17[GtkWidgetClass, CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], Ptr[GtkTreeViewColumn], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr5[Ptr[GtkTreeView], GtkMovementStep, CInt, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
 object GtkTreeViewClass:
   given _tag: Tag[GtkTreeViewClass] = Tag.materializeCStruct17Tag[GtkWidgetClass, CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], Ptr[GtkTreeViewColumn], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr5[Ptr[GtkTreeView], GtkMovementStep, CInt, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
@@ -5913,20 +5037,14 @@ object GtkTreeViewClass:
     def _reserved : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = struct._17
     def _reserved_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at17 = value
 
-/**
-*/
 opaque type GtkTreeViewColumn = CStruct0
 object GtkTreeViewColumn:
   given _tag: Tag[GtkTreeViewColumn] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkVideo = CStruct0
 object GtkVideo:
   given _tag: Tag[GtkVideo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkVideoClass = CStruct1[GtkWidgetClass]
 object GtkVideoClass:
   given _tag: Tag[GtkVideoClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -5939,14 +5057,10 @@ object GtkVideoClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkViewport = CStruct0
 object GtkViewport:
   given _tag: Tag[GtkViewport] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkVolumeButton = CStruct1[GtkScaleButton]
 object GtkVolumeButton:
   given _tag: Tag[GtkVolumeButton] = Tag.materializeCStruct1Tag[GtkScaleButton]
@@ -5959,8 +5073,6 @@ object GtkVolumeButton:
     def parent : GtkScaleButton = struct._1
     def parent_=(value: GtkScaleButton): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkWidget = CStruct2[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkWidgetPrivate]]
 object GtkWidget:
   given _tag: Tag[GtkWidget] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkWidgetPrivate]]
@@ -6015,77 +5127,111 @@ object GtkWidgetClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: GtkWidgetClass)
-    def parent_class: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]]
-    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]] = value
-    def show: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def show_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def hide: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def hide_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def map: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def map_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def unmap: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def unmap_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def realize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def realize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def unrealize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def unrealize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def root: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(184).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def root_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def unroot: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(192).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def unroot_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def size_allocate: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit] = !struct.at(200).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]]
-    def size_allocate_=(value: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]): Unit = !struct.at(200).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]] = value
-    def state_flags_changed: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]]
-    def state_flags_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]] = value
-    def direction_changed: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit] = !struct.at(216).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]]
-    def direction_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]): Unit = !struct.at(216).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]] = value
-    def get_request_mode: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]]
-    def get_request_mode_=(value: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]] = value
-    def measure: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit] = !struct.at(232).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]]
-    def measure_=(value: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]): Unit = !struct.at(232).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]] = value
-    def mnemonic_activate: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]]
-    def mnemonic_activate_=(value: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def grab_focus: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(248).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]]
-    def grab_focus_=(value: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(256).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
-    def focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(256).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def set_focus_child: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]]
-    def set_focus_child_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]] = value
-    def move_focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit] = !struct.at(272).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]]
-    def move_focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]): Unit = !struct.at(272).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]] = value
-    def keynav_failed: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(280).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
-    def keynav_failed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(280).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def query_tooltip: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(288).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]]
-    def query_tooltip_=(value: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def compute_expand: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit] = !struct.at(296).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]]
-    def compute_expand_=(value: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]): Unit = !struct.at(296).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]] = value
-    def css_changed: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit] = !struct.at(304).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]]
-    def css_changed_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]): Unit = !struct.at(304).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]] = value
-    def system_setting_changed: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit] = !struct.at(312).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]]
-    def system_setting_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]): Unit = !struct.at(312).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]] = value
-    def snapshot: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit] = !struct.at(320).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]]
-    def snapshot_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]): Unit = !struct.at(320).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]] = value
-    def contains: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]]
-    def contains_=(value: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def priv: Ptr[GtkWidgetClassPrivate] = !struct.at(336).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]]
-    def priv_=(value: Ptr[GtkWidgetClassPrivate]): Unit = !struct.at(336).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]] = value
-    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(344).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
-    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(344).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
+    def parent_class: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]]
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]] = value
+    def show: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def show_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def hide: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def hide_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def map: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def map_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def unmap: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def unmap_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def realize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def realize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def unrealize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def unrealize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def root: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def root_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def unroot: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def unroot_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def size_allocate: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit] = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]]
+    def size_allocate_=(value: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]] = value
+    def state_flags_changed: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit] = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]]
+    def state_flags_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]): Unit = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]] = value
+    def direction_changed: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit] = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]]
+    def direction_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]): Unit = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]] = value
+    def get_request_mode: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode] = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]]
+    def get_request_mode_=(value: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]): Unit = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]] = value
+    def measure: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit] = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]]
+    def measure_=(value: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]): Unit = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]] = value
+    def mnemonic_activate: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]]
+    def mnemonic_activate_=(value: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def grab_focus: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]]
+    def grab_focus_=(value: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
+    def focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def set_focus_child: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit] = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]]
+    def set_focus_child_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]] = value
+    def move_focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit] = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]]
+    def move_focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]] = value
+    def keynav_failed: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
+    def keynav_failed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def query_tooltip: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]]
+    def query_tooltip_=(value: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def compute_expand: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]]
+    def compute_expand_=(value: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]] = value
+    def css_changed: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]]
+    def css_changed_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]] = value
+    def system_setting_changed: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]]
+    def system_setting_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]] = value
+    def snapshot: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit] = !struct.at(offsets(24)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]]
+    def snapshot_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]): Unit = !struct.at(offsets(24)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]] = value
+    def contains: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(25)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]]
+    def contains_=(value: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(25)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def priv: Ptr[GtkWidgetClassPrivate] = !struct.at(offsets(26)).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]]
+    def priv_=(value: Ptr[GtkWidgetClassPrivate]): Unit = !struct.at(offsets(26)).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]] = value
+    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(offsets(27)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(offsets(27)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](28)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(3) = align(res(2) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(4) = align(res(3) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(5) = align(res(4) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(6) = align(res(5) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(7) = align(res(6) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(8) = align(res(7) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(9) = align(res(8) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]].toInt)
+    res(10) = align(res(9) + sizeof[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]].toInt)
+    res(11) = align(res(10) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]].toInt)
+    res(12) = align(res(11) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]].toInt)
+    res(13) = align(res(12) + sizeof[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]].toInt, alignmentof[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]].toInt)
+    res(14) = align(res(13) + sizeof[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(15) = align(res(14) + sizeof[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(16) = align(res(15) + sizeof[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(17) = align(res(16) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]].toInt)
+    res(18) = align(res(17) + sizeof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]].toInt)
+    res(19) = align(res(18) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(20) = align(res(19) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(21) = align(res(20) + sizeof[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]].toInt)
+    res(22) = align(res(21) + sizeof[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]].toInt)
+    res(23) = align(res(22) + sizeof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]].toInt)
+    res(24) = align(res(23) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]].toInt)
+    res(25) = align(res(24) + sizeof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(26) = align(res(25) + sizeof[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[Ptr[GtkWidgetClassPrivate]].toInt)
+    res(27) = align(res(26) + sizeof[Ptr[GtkWidgetClassPrivate]].toInt, alignmentof[_root_.sn.gnome.glib.internal.gpointer].toInt)
+    res
+  end offsets
 
-/**
-*/
 opaque type GtkWidgetClassPrivate = CStruct0
 object GtkWidgetClassPrivate:
   given _tag: Tag[GtkWidgetClassPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkWidgetPaintable = CStruct0
 object GtkWidgetPaintable:
   given _tag: Tag[GtkWidgetPaintable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkWidgetPaintableClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object GtkWidgetPaintableClass:
   given _tag: Tag[GtkWidgetPaintableClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -6098,14 +5244,10 @@ object GtkWidgetPaintableClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkWidgetPrivate = CStruct0
 object GtkWidgetPrivate:
   given _tag: Tag[GtkWidgetPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkWindow = CStruct1[GtkWidget]
 object GtkWindow:
   given _tag: Tag[GtkWindow] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -6151,14 +5293,10 @@ object GtkWindowClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._7
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type GtkWindowControls = CStruct0
 object GtkWindowControls:
   given _tag: Tag[GtkWindowControls] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkWindowControlsClass = CStruct1[GtkWidgetClass]
 object GtkWindowControlsClass:
   given _tag: Tag[GtkWindowControlsClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -6171,8 +5309,6 @@ object GtkWindowControlsClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type GtkWindowGroup = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkWindowGroupPrivate]]
 object GtkWindowGroup:
   given _tag: Tag[GtkWindowGroup] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkWindowGroupPrivate]]
@@ -6188,8 +5324,6 @@ object GtkWindowGroup:
     def priv : Ptr[GtkWindowGroupPrivate] = struct._2
     def priv_=(value: Ptr[GtkWindowGroupPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type GtkWindowGroupClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object GtkWindowGroupClass:
   given _tag: Tag[GtkWindowGroupClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -6214,20 +5348,14 @@ object GtkWindowGroupClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type GtkWindowGroupPrivate = CStruct0
 object GtkWindowGroupPrivate:
   given _tag: Tag[GtkWindowGroupPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkWindowHandle = CStruct0
 object GtkWindowHandle:
   given _tag: Tag[GtkWindowHandle] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type GtkWindowHandleClass = CStruct1[GtkWidgetClass]
 object GtkWindowHandleClass:
   given _tag: Tag[GtkWindowHandleClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
@@ -6240,50 +5368,103 @@ object GtkWindowHandleClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
+opaque type PangoAttrList = CStruct0
+object PangoAttrList:
+  given _tag: Tag[PangoAttrList] = Tag.materializeCStruct0Tag
+
+opaque type PangoContext = CStruct0
+object PangoContext:
+  given _tag: Tag[PangoContext] = Tag.materializeCStruct0Tag
+
+opaque type PangoFontDescription = CStruct0
+object PangoFontDescription:
+  given _tag: Tag[PangoFontDescription] = Tag.materializeCStruct0Tag
+
 /**
+ * PangoFontFace:
 */
+opaque type PangoFontFace = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
+object PangoFontFace:
+  given _tag: Tag[PangoFontFace] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
+  def apply()(using Zone): Ptr[PangoFontFace] = scala.scalanative.unsafe.alloc[PangoFontFace](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject)(using Zone): Ptr[PangoFontFace] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: PangoFontFace)
+    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
+
+/**
+ * PangoFontFamily:
+*/
+opaque type PangoFontFamily = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
+object PangoFontFamily:
+  given _tag: Tag[PangoFontFamily] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
+  def apply()(using Zone): Ptr[PangoFontFamily] = scala.scalanative.unsafe.alloc[PangoFontFamily](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject)(using Zone): Ptr[PangoFontFamily] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: PangoFontFamily)
+    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
+
+/**
+ * PangoFontMap:
+*/
+opaque type PangoFontMap = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
+object PangoFontMap:
+  given _tag: Tag[PangoFontMap] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
+  def apply()(using Zone): Ptr[PangoFontMap] = scala.scalanative.unsafe.alloc[PangoFontMap](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject)(using Zone): Ptr[PangoFontMap] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: PangoFontMap)
+    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
+
+opaque type PangoLanguage = CStruct0
+object PangoLanguage:
+  given _tag: Tag[PangoLanguage] = Tag.materializeCStruct0Tag
+
+opaque type PangoLayout = CStruct0
+object PangoLayout:
+  given _tag: Tag[PangoLayout] = Tag.materializeCStruct0Tag
+
+opaque type PangoTabArray = CStruct0
+object PangoTabArray:
+  given _tag: Tag[PangoTabArray] = Tag.materializeCStruct0Tag
+
 opaque type _GtkATContext = CStruct0
 object _GtkATContext:
   given _tag: Tag[_GtkATContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkATContextClass = CStruct0
 object _GtkATContextClass:
   given _tag: Tag[_GtkATContextClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAboutDialog = CStruct0
 object _GtkAboutDialog:
   given _tag: Tag[_GtkAboutDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAccessible = CStruct0
 object _GtkAccessible:
   given _tag: Tag[_GtkAccessible] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAccessibleInterface = CStruct0
 object _GtkAccessibleInterface:
   given _tag: Tag[_GtkAccessibleInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkActionBar = CStruct0
 object _GtkActionBar:
   given _tag: Tag[_GtkActionBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkActionable = CStruct0
 object _GtkActionable:
   given _tag: Tag[_GtkActionable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkActionableInterface = CStruct5[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkActionable], CString], CFuncPtr2[Ptr[GtkActionable], CString, Unit], CFuncPtr1[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
 object _GtkActionableInterface:
   given _tag: Tag[_GtkActionableInterface] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkActionable], CString], CFuncPtr2[Ptr[GtkActionable], CString, Unit], CFuncPtr1[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant]], CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]]
@@ -6308,20 +5489,14 @@ object _GtkActionableInterface:
     def set_action_target_value : CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = struct._5
     def set_action_target_value_=(value: CFuncPtr2[Ptr[GtkActionable], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkActivateAction = CStruct0
 object _GtkActivateAction:
   given _tag: Tag[_GtkActivateAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkActivateActionClass = CStruct0
 object _GtkActivateActionClass:
   given _tag: Tag[_GtkActivateActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAdjustment = CStruct1[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
 object _GtkAdjustment:
   given _tag: Tag[_GtkAdjustment] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
@@ -6334,8 +5509,6 @@ object _GtkAdjustment:
     def parent_instance : _root_.sn.gnome.gobject.internal.GInitiallyUnowned = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnowned): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkAdjustmentClass = CStruct7[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass, CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkAdjustmentClass:
   given _tag: Tag[_GtkAdjustmentClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass, CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr1[Ptr[GtkAdjustment], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -6366,56 +5539,38 @@ object _GtkAdjustmentClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._7
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GtkAlternativeTrigger = CStruct0
 object _GtkAlternativeTrigger:
   given _tag: Tag[_GtkAlternativeTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAlternativeTriggerClass = CStruct0
 object _GtkAlternativeTriggerClass:
   given _tag: Tag[_GtkAlternativeTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAnyFilter = CStruct0
 object _GtkAnyFilter:
   given _tag: Tag[_GtkAnyFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAnyFilterClass = CStruct0
 object _GtkAnyFilterClass:
   given _tag: Tag[_GtkAnyFilterClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAppChooser = CStruct0
 object _GtkAppChooser:
   given _tag: Tag[_GtkAppChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAppChooserButton = CStruct0
 object _GtkAppChooserButton:
   given _tag: Tag[_GtkAppChooserButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAppChooserDialog = CStruct0
 object _GtkAppChooserDialog:
   given _tag: Tag[_GtkAppChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAppChooserWidget = CStruct0
 object _GtkAppChooserWidget:
   given _tag: Tag[_GtkAppChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkApplication = CStruct1[_root_.sn.gnome.gio.internal.GApplication]
 object _GtkApplication:
   given _tag: Tag[_GtkApplication] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gio.internal.GApplication]
@@ -6452,8 +5607,6 @@ object _GtkApplicationClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkApplicationWindow = CStruct1[GtkWindow]
 object _GtkApplicationWindow:
   given _tag: Tag[_GtkApplicationWindow] = Tag.materializeCStruct1Tag[GtkWindow]
@@ -6484,38 +5637,26 @@ object _GtkApplicationWindowClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkAspectFrame = CStruct0
 object _GtkAspectFrame:
   given _tag: Tag[_GtkAspectFrame] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAssistant = CStruct0
 object _GtkAssistant:
   given _tag: Tag[_GtkAssistant] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkAssistantPage = CStruct0
 object _GtkAssistantPage:
   given _tag: Tag[_GtkAssistantPage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBinLayout = CStruct0
 object _GtkBinLayout:
   given _tag: Tag[_GtkBinLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBitset = CStruct0
 object _GtkBitset:
   given _tag: Tag[_GtkBitset] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBitsetIter = CStruct1[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object _GtkBitsetIter:
   given _tag: Tag[_GtkBitsetIter] = Tag.materializeCStruct1Tag[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
@@ -6528,14 +5669,10 @@ object _GtkBitsetIter:
     def private_data : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._1
     def private_data_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkBookmarkList = CStruct0
 object _GtkBookmarkList:
   given _tag: Tag[_GtkBookmarkList] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBoolFilter = CStruct0
 object _GtkBoolFilter:
   given _tag: Tag[_GtkBoolFilter] = Tag.materializeCStruct0Tag
@@ -6564,8 +5701,6 @@ object _GtkBorder:
     def bottom : _root_.sn.gnome.glib.internal.gint16 = struct._4
     def bottom_=(value: _root_.sn.gnome.glib.internal.gint16): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkBox = CStruct1[GtkWidget]
 object _GtkBox:
   given _tag: Tag[_GtkBox] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -6596,14 +5731,10 @@ object _GtkBoxClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkBoxLayout = CStruct0
 object _GtkBoxLayout:
   given _tag: Tag[_GtkBoxLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBuildable = CStruct0
 object _GtkBuildable:
   given _tag: Tag[_GtkBuildable] = Tag.materializeCStruct0Tag
@@ -6653,8 +5784,6 @@ object _GtkBuildableIface:
     def get_internal_child : CFuncPtr3[Ptr[GtkBuildable], Ptr[GtkBuilder], CString, Ptr[_root_.sn.gnome.gobject.internal.GObject]] = struct._11
     def get_internal_child_=(value: CFuncPtr3[Ptr[GtkBuildable], Ptr[GtkBuilder], CString, Ptr[_root_.sn.gnome.gobject.internal.GObject]]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type _GtkBuildableParseContext = CStruct0
 object _GtkBuildableParseContext:
   given _tag: Tag[_GtkBuildableParseContext] = Tag.materializeCStruct0Tag
@@ -6686,14 +5815,10 @@ object _GtkBuildableParser:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._5
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkBuilder = CStruct0
 object _GtkBuilder:
   given _tag: Tag[_GtkBuilder] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBuilderCScope = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkBuilderCScope:
   given _tag: Tag[_GtkBuilderCScope] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -6706,8 +5831,6 @@ object _GtkBuilderCScope:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkBuilderCScopeClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GtkBuilderCScopeClass:
   given _tag: Tag[_GtkBuilderCScopeClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -6720,26 +5843,18 @@ object _GtkBuilderCScopeClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkBuilderClass = CStruct0
 object _GtkBuilderClass:
   given _tag: Tag[_GtkBuilderClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBuilderListItemFactory = CStruct0
 object _GtkBuilderListItemFactory:
   given _tag: Tag[_GtkBuilderListItemFactory] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBuilderListItemFactoryClass = CStruct0
 object _GtkBuilderListItemFactoryClass:
   given _tag: Tag[_GtkBuilderListItemFactoryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkBuilderScope = CStruct0
 object _GtkBuilderScope:
   given _tag: Tag[_GtkBuilderScope] = Tag.materializeCStruct0Tag
@@ -6768,8 +5883,6 @@ object _GtkBuilderScopeInterface:
     def create_closure : CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.gobject.internal.GClosure]] = struct._4.asInstanceOf[CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.gobject.internal.GClosure]]]
     def create_closure_=(value: CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[_root_.sn.gnome.gobject.internal.GClosure]]): Unit = !struct.at4 = value.asInstanceOf[CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
 
-/**
-*/
 opaque type _GtkButton = CStruct1[GtkWidget]
 object _GtkButton:
   given _tag: Tag[_GtkButton] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -6806,38 +5919,26 @@ object _GtkButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkButtonPrivate = CStruct0
 object _GtkButtonPrivate:
   given _tag: Tag[_GtkButtonPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCClosureExpression = CStruct0
 object _GtkCClosureExpression:
   given _tag: Tag[_GtkCClosureExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCalendar = CStruct0
 object _GtkCalendar:
   given _tag: Tag[_GtkCalendar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCallbackAction = CStruct0
 object _GtkCallbackAction:
   given _tag: Tag[_GtkCallbackAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCallbackActionClass = CStruct0
 object _GtkCallbackActionClass:
   given _tag: Tag[_GtkCallbackActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellArea = CStruct1[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
 object _GtkCellArea:
   given _tag: Tag[_GtkCellArea] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned]
@@ -6850,8 +5951,6 @@ object _GtkCellArea:
     def parent_instance : _root_.sn.gnome.gobject.internal.GInitiallyUnowned = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnowned): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkCellAreaBox = CStruct0
 object _GtkCellAreaBox:
   given _tag: Tag[_GtkCellAreaBox] = Tag.materializeCStruct0Tag
@@ -6931,8 +6030,6 @@ object _GtkCellAreaClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._21
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type _GtkCellAreaContext = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkCellAreaContext:
   given _tag: Tag[_GtkCellAreaContext] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -6975,14 +6072,10 @@ object _GtkCellAreaContextClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._6
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GtkCellAreaContextPrivate = CStruct0
 object _GtkCellAreaContextPrivate:
   given _tag: Tag[_GtkCellAreaContextPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellEditable = CStruct0
 object _GtkCellEditable:
   given _tag: Tag[_GtkCellEditable] = Tag.materializeCStruct0Tag
@@ -7011,8 +6104,6 @@ object _GtkCellEditableIface:
     def start_editing : CFuncPtr2[Ptr[GtkCellEditable], Ptr[GdkEvent], Unit] = struct._4
     def start_editing_=(value: CFuncPtr2[Ptr[GtkCellEditable], Ptr[GdkEvent], Unit]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkCellLayout = CStruct0
 object _GtkCellLayout:
   given _tag: Tag[_GtkCellLayout] = Tag.materializeCStruct0Tag
@@ -7059,8 +6150,6 @@ object _GtkCellLayoutIface:
     def get_area : CFuncPtr1[Ptr[GtkCellLayout], Ptr[GtkCellArea]] = struct._10
     def get_area_=(value: CFuncPtr1[Ptr[GtkCellLayout], Ptr[GtkCellArea]]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type _GtkCellRenderer = CStruct2[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkCellRendererPrivate]]
 object _GtkCellRenderer:
   given _tag: Tag[_GtkCellRenderer] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkCellRendererPrivate]]
@@ -7076,8 +6165,6 @@ object _GtkCellRenderer:
     def priv : Ptr[GtkCellRendererPrivate] = struct._2
     def priv_=(value: Ptr[GtkCellRendererPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkCellRendererAccel = CStruct0
 object _GtkCellRendererAccel:
   given _tag: Tag[_GtkCellRendererAccel] = Tag.materializeCStruct0Tag
@@ -7133,50 +6220,34 @@ object _GtkCellRendererClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._13
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at13 = value
 
-/**
-*/
 opaque type _GtkCellRendererClassPrivate = CStruct0
 object _GtkCellRendererClassPrivate:
   given _tag: Tag[_GtkCellRendererClassPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererCombo = CStruct0
 object _GtkCellRendererCombo:
   given _tag: Tag[_GtkCellRendererCombo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererPixbuf = CStruct0
 object _GtkCellRendererPixbuf:
   given _tag: Tag[_GtkCellRendererPixbuf] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererPrivate = CStruct0
 object _GtkCellRendererPrivate:
   given _tag: Tag[_GtkCellRendererPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererProgress = CStruct0
 object _GtkCellRendererProgress:
   given _tag: Tag[_GtkCellRendererProgress] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererSpin = CStruct0
 object _GtkCellRendererSpin:
   given _tag: Tag[_GtkCellRendererSpin] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererSpinner = CStruct0
 object _GtkCellRendererSpinner:
   given _tag: Tag[_GtkCellRendererSpinner] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellRendererText = CStruct1[GtkCellRenderer]
 object _GtkCellRendererText:
   given _tag: Tag[_GtkCellRendererText] = Tag.materializeCStruct1Tag[GtkCellRenderer]
@@ -7189,8 +6260,6 @@ object _GtkCellRendererText:
     def parent : GtkCellRenderer = struct._1
     def parent_=(value: GtkCellRenderer): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkCellRendererTextClass = CStruct3[GtkCellRendererClass, CFuncPtr3[Ptr[GtkCellRendererText], CString, CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkCellRendererTextClass:
   given _tag: Tag[_GtkCellRendererTextClass] = Tag.materializeCStruct3Tag[GtkCellRendererClass, CFuncPtr3[Ptr[GtkCellRendererText], CString, CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -7209,38 +6278,26 @@ object _GtkCellRendererTextClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkCellRendererToggle = CStruct0
 object _GtkCellRendererToggle:
   given _tag: Tag[_GtkCellRendererToggle] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCellView = CStruct0
 object _GtkCellView:
   given _tag: Tag[_GtkCellView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCenterBox = CStruct0
 object _GtkCenterBox:
   given _tag: Tag[_GtkCenterBox] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCenterBoxClass = CStruct0
 object _GtkCenterBoxClass:
   given _tag: Tag[_GtkCenterBoxClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCenterLayout = CStruct0
 object _GtkCenterLayout:
   given _tag: Tag[_GtkCenterLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCheckButton = CStruct1[GtkWidget]
 object _GtkCheckButton:
   given _tag: Tag[_GtkCheckButton] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -7253,8 +6310,6 @@ object _GtkCheckButton:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkCheckButtonClass = CStruct4[GtkWidgetClass, CFuncPtr1[Ptr[GtkCheckButton], Unit], CFuncPtr1[Ptr[GtkCheckButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]
 object _GtkCheckButtonClass:
   given _tag: Tag[_GtkCheckButtonClass] = Tag.materializeCStruct4Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkCheckButton], Unit], CFuncPtr1[Ptr[GtkCheckButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]]
@@ -7276,32 +6331,22 @@ object _GtkCheckButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkClosureExpression = CStruct0
 object _GtkClosureExpression:
   given _tag: Tag[_GtkClosureExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColorButton = CStruct0
 object _GtkColorButton:
   given _tag: Tag[_GtkColorButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColorChooser = CStruct0
 object _GtkColorChooser:
   given _tag: Tag[_GtkColorChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColorChooserDialog = CStruct0
 object _GtkColorChooserDialog:
   given _tag: Tag[_GtkColorChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColorChooserInterface = CStruct6[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr5[Ptr[GtkColorChooser], GtkOrientation, CInt, CInt, Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
 object _GtkColorChooserInterface:
   given _tag: Tag[_GtkColorChooserInterface] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CFuncPtr5[Ptr[GtkColorChooser], GtkOrientation, CInt, CInt, Ptr[GdkRGBA], Unit], CFuncPtr2[Ptr[GtkColorChooser], Ptr[GdkRGBA], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]]
@@ -7329,38 +6374,26 @@ object _GtkColorChooserInterface:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]] = struct._6
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._2]]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GtkColorChooserWidget = CStruct0
 object _GtkColorChooserWidget:
   given _tag: Tag[_GtkColorChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColumnView = CStruct0
 object _GtkColumnView:
   given _tag: Tag[_GtkColumnView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColumnViewClass = CStruct0
 object _GtkColumnViewClass:
   given _tag: Tag[_GtkColumnViewClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColumnViewColumn = CStruct0
 object _GtkColumnViewColumn:
   given _tag: Tag[_GtkColumnViewColumn] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkColumnViewColumnClass = CStruct0
 object _GtkColumnViewColumnClass:
   given _tag: Tag[_GtkColumnViewColumnClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkComboBox = CStruct1[GtkWidget]
 object _GtkComboBox:
   given _tag: Tag[_GtkComboBox] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -7400,56 +6433,38 @@ object _GtkComboBoxClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7] = struct._5
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._7]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkComboBoxText = CStruct0
 object _GtkComboBoxText:
   given _tag: Tag[_GtkComboBoxText] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstantExpression = CStruct0
 object _GtkConstantExpression:
   given _tag: Tag[_GtkConstantExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstraint = CStruct0
 object _GtkConstraint:
   given _tag: Tag[_GtkConstraint] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstraintGuide = CStruct0
 object _GtkConstraintGuide:
   given _tag: Tag[_GtkConstraintGuide] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstraintLayout = CStruct0
 object _GtkConstraintLayout:
   given _tag: Tag[_GtkConstraintLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstraintLayoutChild = CStruct0
 object _GtkConstraintLayoutChild:
   given _tag: Tag[_GtkConstraintLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstraintTarget = CStruct0
 object _GtkConstraintTarget:
   given _tag: Tag[_GtkConstraintTarget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkConstraintTargetInterface = CStruct0
 object _GtkConstraintTargetInterface:
   given _tag: Tag[_GtkConstraintTargetInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCssLocation = CStruct5[_root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize]
 object _GtkCssLocation:
   given _tag: Tag[_GtkCssLocation] = Tag.materializeCStruct5Tag[_root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize]
@@ -7474,8 +6489,6 @@ object _GtkCssLocation:
     def line_chars : _root_.sn.gnome.glib.internal.gsize = struct._5
     def line_chars_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkCssProvider = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkCssProvider:
   given _tag: Tag[_GtkCssProvider] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -7488,50 +6501,34 @@ object _GtkCssProvider:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkCssProviderClass = CStruct0
 object _GtkCssProviderClass:
   given _tag: Tag[_GtkCssProviderClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCssProviderPrivate = CStruct0
 object _GtkCssProviderPrivate:
   given _tag: Tag[_GtkCssProviderPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCssSection = CStruct0
 object _GtkCssSection:
   given _tag: Tag[_GtkCssSection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCssStyleChange = CStruct0
 object _GtkCssStyleChange:
   given _tag: Tag[_GtkCssStyleChange] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCustomFilter = CStruct0
 object _GtkCustomFilter:
   given _tag: Tag[_GtkCustomFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCustomLayout = CStruct0
 object _GtkCustomLayout:
   given _tag: Tag[_GtkCustomLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkCustomSorter = CStruct0
 object _GtkCustomSorter:
   given _tag: Tag[_GtkCustomSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDialog = CStruct1[GtkWindow]
 object _GtkDialog:
   given _tag: Tag[_GtkDialog] = Tag.materializeCStruct1Tag[GtkWindow]
@@ -7568,32 +6565,22 @@ object _GtkDialogClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkDirectoryList = CStruct0
 object _GtkDirectoryList:
   given _tag: Tag[_GtkDirectoryList] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDragIcon = CStruct0
 object _GtkDragIcon:
   given _tag: Tag[_GtkDragIcon] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDragSource = CStruct0
 object _GtkDragSource:
   given _tag: Tag[_GtkDragSource] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDragSourceClass = CStruct0
 object _GtkDragSourceClass:
   given _tag: Tag[_GtkDragSourceClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDrawingArea = CStruct1[GtkWidget]
 object _GtkDrawingArea:
   given _tag: Tag[_GtkDrawingArea] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -7606,8 +6593,6 @@ object _GtkDrawingArea:
     def widget : GtkWidget = struct._1
     def widget_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkDrawingAreaClass = CStruct3[GtkWidgetClass, CFuncPtr3[Ptr[GtkDrawingArea], CInt, CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkDrawingAreaClass:
   given _tag: Tag[_GtkDrawingAreaClass] = Tag.materializeCStruct3Tag[GtkWidgetClass, CFuncPtr3[Ptr[GtkDrawingArea], CInt, CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -7626,56 +6611,38 @@ object _GtkDrawingAreaClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkDropControllerMotion = CStruct0
 object _GtkDropControllerMotion:
   given _tag: Tag[_GtkDropControllerMotion] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDropControllerMotionClass = CStruct0
 object _GtkDropControllerMotionClass:
   given _tag: Tag[_GtkDropControllerMotionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDropDown = CStruct0
 object _GtkDropDown:
   given _tag: Tag[_GtkDropDown] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDropTarget = CStruct0
 object _GtkDropTarget:
   given _tag: Tag[_GtkDropTarget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDropTargetAsync = CStruct0
 object _GtkDropTargetAsync:
   given _tag: Tag[_GtkDropTargetAsync] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDropTargetAsyncClass = CStruct0
 object _GtkDropTargetAsyncClass:
   given _tag: Tag[_GtkDropTargetAsyncClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkDropTargetClass = CStruct0
 object _GtkDropTargetClass:
   given _tag: Tag[_GtkDropTargetClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEditable = CStruct0
 object _GtkEditable:
   given _tag: Tag[_GtkEditable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEditableInterface = CStruct10[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Unit], CFuncPtr1[Ptr[GtkEditable], CString], CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr3[Ptr[GtkEditable], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]]]
 object _GtkEditableInterface:
   given _tag: Tag[_GtkEditableInterface] = Tag.materializeCStruct10Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Unit], CFuncPtr1[Ptr[GtkEditable], CString], CFuncPtr4[Ptr[GtkEditable], CString, CInt, Ptr[CInt], Unit], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr3[Ptr[GtkEditable], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkEditable], CInt, CInt, Unit], CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]]]
@@ -7715,26 +6682,18 @@ object _GtkEditableInterface:
     def get_delegate : CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]] = struct._10
     def get_delegate_=(value: CFuncPtr1[Ptr[GtkEditable], Ptr[GtkEditable]]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type _GtkEditableLabel = CStruct0
 object _GtkEditableLabel:
   given _tag: Tag[_GtkEditableLabel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEmojiChooser = CStruct0
 object _GtkEmojiChooser:
   given _tag: Tag[_GtkEmojiChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEmojiChooserClass = CStruct0
 object _GtkEmojiChooserClass:
   given _tag: Tag[_GtkEmojiChooserClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEntry = CStruct1[GtkWidget]
 object _GtkEntry:
   given _tag: Tag[_GtkEntry] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -7747,8 +6706,6 @@ object _GtkEntry:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkEntryBuffer = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkEntryBuffer:
   given _tag: Tag[_GtkEntryBuffer] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -7761,8 +6718,6 @@ object _GtkEntryBuffer:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkEntryBufferClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr2[Ptr[GtkEntryBuffer], Ptr[_root_.sn.gnome.glib.internal.gsize], CString], CFuncPtr1[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint], CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkEntryBufferClass:
   given _tag: Tag[_GtkEntryBufferClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, Unit], CFuncPtr2[Ptr[GtkEntryBuffer], Ptr[_root_.sn.gnome.glib.internal.gsize], CString], CFuncPtr1[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint], CFuncPtr4[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, CString, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr3[Ptr[GtkEntryBuffer], _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint, _root_.sn.gnome.glib.internal.guint], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -7838,146 +6793,98 @@ object _GtkEntryClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkEntryCompletion = CStruct0
 object _GtkEntryCompletion:
   given _tag: Tag[_GtkEntryCompletion] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventController = CStruct0
 object _GtkEventController:
   given _tag: Tag[_GtkEventController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerClass = CStruct0
 object _GtkEventControllerClass:
   given _tag: Tag[_GtkEventControllerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerFocus = CStruct0
 object _GtkEventControllerFocus:
   given _tag: Tag[_GtkEventControllerFocus] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerFocusClass = CStruct0
 object _GtkEventControllerFocusClass:
   given _tag: Tag[_GtkEventControllerFocusClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerKey = CStruct0
 object _GtkEventControllerKey:
   given _tag: Tag[_GtkEventControllerKey] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerKeyClass = CStruct0
 object _GtkEventControllerKeyClass:
   given _tag: Tag[_GtkEventControllerKeyClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerLegacy = CStruct0
 object _GtkEventControllerLegacy:
   given _tag: Tag[_GtkEventControllerLegacy] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerLegacyClass = CStruct0
 object _GtkEventControllerLegacyClass:
   given _tag: Tag[_GtkEventControllerLegacyClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerMotion = CStruct0
 object _GtkEventControllerMotion:
   given _tag: Tag[_GtkEventControllerMotion] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerMotionClass = CStruct0
 object _GtkEventControllerMotionClass:
   given _tag: Tag[_GtkEventControllerMotionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerScroll = CStruct0
 object _GtkEventControllerScroll:
   given _tag: Tag[_GtkEventControllerScroll] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEventControllerScrollClass = CStruct0
 object _GtkEventControllerScrollClass:
   given _tag: Tag[_GtkEventControllerScrollClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEveryFilter = CStruct0
 object _GtkEveryFilter:
   given _tag: Tag[_GtkEveryFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkEveryFilterClass = CStruct0
 object _GtkEveryFilterClass:
   given _tag: Tag[_GtkEveryFilterClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkExpander = CStruct0
 object _GtkExpander:
   given _tag: Tag[_GtkExpander] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkExpression = CStruct0
 object _GtkExpression:
   given _tag: Tag[_GtkExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkExpressionWatch = CStruct0
 object _GtkExpressionWatch:
   given _tag: Tag[_GtkExpressionWatch] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFileChooser = CStruct0
 object _GtkFileChooser:
   given _tag: Tag[_GtkFileChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFileChooserDialog = CStruct0
 object _GtkFileChooserDialog:
   given _tag: Tag[_GtkFileChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFileChooserNative = CStruct0
 object _GtkFileChooserNative:
   given _tag: Tag[_GtkFileChooserNative] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFileChooserWidget = CStruct0
 object _GtkFileChooserWidget:
   given _tag: Tag[_GtkFileChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFileFilter = CStruct0
 object _GtkFileFilter:
   given _tag: Tag[_GtkFileFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFilter = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkFilter:
   given _tag: Tag[_GtkFilter] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -7990,8 +6897,6 @@ object _GtkFilter:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkFilterClass = CStruct11[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GtkFilter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkFilter], GtkFilterMatch], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkFilterClass:
   given _tag: Tag[_GtkFilterClass] = Tag.materializeCStruct11Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GtkFilter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkFilter], GtkFilterMatch], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8034,14 +6939,10 @@ object _GtkFilterClass:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._11
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type _GtkFilterListModel = CStruct0
 object _GtkFilterListModel:
   given _tag: Tag[_GtkFilterListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFixed = CStruct1[GtkWidget]
 object _GtkFixed:
   given _tag: Tag[_GtkFixed] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -8054,8 +6955,6 @@ object _GtkFixed:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkFixedClass = CStruct2[GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkFixedClass:
   given _tag: Tag[_GtkFixedClass] = Tag.materializeCStruct2Tag[GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -8071,32 +6970,22 @@ object _GtkFixedClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkFixedLayout = CStruct0
 object _GtkFixedLayout:
   given _tag: Tag[_GtkFixedLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFixedLayoutChild = CStruct0
 object _GtkFixedLayoutChild:
   given _tag: Tag[_GtkFixedLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFlattenListModel = CStruct0
 object _GtkFlattenListModel:
   given _tag: Tag[_GtkFlattenListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFlowBox = CStruct0
 object _GtkFlowBox:
   given _tag: Tag[_GtkFlowBox] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFlowBoxChild = CStruct1[GtkWidget]
 object _GtkFlowBoxChild:
   given _tag: Tag[_GtkFlowBoxChild] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -8109,8 +6998,6 @@ object _GtkFlowBoxChild:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkFlowBoxChildClass = CStruct3[GtkWidgetClass, CFuncPtr1[Ptr[GtkFlowBoxChild], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkFlowBoxChildClass:
   given _tag: Tag[_GtkFlowBoxChildClass] = Tag.materializeCStruct3Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkFlowBoxChild], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -8129,31 +7016,23 @@ object _GtkFlowBoxChildClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkFontButton = CStruct0
 object _GtkFontButton:
   given _tag: Tag[_GtkFontButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFontChooser = CStruct0
 object _GtkFontChooser:
   given _tag: Tag[_GtkFontChooser] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFontChooserDialog = CStruct0
 object _GtkFontChooserDialog:
   given _tag: Tag[_GtkFontChooserDialog] = Tag.materializeCStruct0Tag
 
-/**
-*/
-opaque type _GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+opaque type _GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object _GtkFontChooserIface:
-  given _tag: Tag[_GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+  given _tag: Tag[_GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
   def apply()(using Zone): Ptr[_GtkFontChooserIface] = scala.scalanative.unsafe.alloc[_GtkFontChooserIface](1)
-  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[_GtkFontChooserIface] = 
+  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[_GtkFontChooserIface] = 
     val ____ptr = apply()
     (!____ptr).base_iface = base_iface
     (!____ptr).get_font_family = get_font_family
@@ -8168,31 +7047,27 @@ object _GtkFontChooserIface:
   extension (struct: _GtkFontChooserIface)
     def base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def base_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
-    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]] = struct._2
-    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]]): Unit = !struct.at2 = value
-    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]] = struct._3
-    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]]): Unit = !struct.at3 = value
+    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]] = struct._2
+    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]]): Unit = !struct.at2 = value
+    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]] = struct._3
+    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]]): Unit = !struct.at3 = value
     def get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt] = struct._4
     def get_font_size_=(value: CFuncPtr1[Ptr[GtkFontChooser], CInt]): Unit = !struct.at4 = value
     def set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit] = struct._5
     def set_filter_func_=(value: CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit]): Unit = !struct.at5 = value
     def font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit] = struct._6
     def font_activated_=(value: CFuncPtr2[Ptr[GtkFontChooser], CString, Unit]): Unit = !struct.at6 = value
-    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit] = struct._7
-    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit]): Unit = !struct.at7 = value
-    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]] = struct._8
-    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]]): Unit = !struct.at8 = value
+    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit] = struct._7
+    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit]): Unit = !struct.at7 = value
+    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]] = struct._8
+    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]]): Unit = !struct.at8 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._9
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _GtkFontChooserWidget = CStruct0
 object _GtkFontChooserWidget:
   given _tag: Tag[_GtkFontChooserWidget] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkFrame = CStruct1[GtkWidget]
 object _GtkFrame:
   given _tag: Tag[_GtkFrame] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -8226,8 +7101,6 @@ object _GtkFrameClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkGLArea = CStruct1[GtkWidget]
 object _GtkGLArea:
   given _tag: Tag[_GtkGLArea] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -8267,128 +7140,86 @@ object _GtkGLAreaClass:
     def _padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._5
     def _padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkGesture = CStruct0
 object _GtkGesture:
   given _tag: Tag[_GtkGesture] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureClass = CStruct0
 object _GtkGestureClass:
   given _tag: Tag[_GtkGestureClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureClick = CStruct0
 object _GtkGestureClick:
   given _tag: Tag[_GtkGestureClick] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureClickClass = CStruct0
 object _GtkGestureClickClass:
   given _tag: Tag[_GtkGestureClickClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureDrag = CStruct0
 object _GtkGestureDrag:
   given _tag: Tag[_GtkGestureDrag] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureDragClass = CStruct0
 object _GtkGestureDragClass:
   given _tag: Tag[_GtkGestureDragClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureLongPress = CStruct0
 object _GtkGestureLongPress:
   given _tag: Tag[_GtkGestureLongPress] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureLongPressClass = CStruct0
 object _GtkGestureLongPressClass:
   given _tag: Tag[_GtkGestureLongPressClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGesturePan = CStruct0
 object _GtkGesturePan:
   given _tag: Tag[_GtkGesturePan] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGesturePanClass = CStruct0
 object _GtkGesturePanClass:
   given _tag: Tag[_GtkGesturePanClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureRotate = CStruct0
 object _GtkGestureRotate:
   given _tag: Tag[_GtkGestureRotate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureRotateClass = CStruct0
 object _GtkGestureRotateClass:
   given _tag: Tag[_GtkGestureRotateClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureSingle = CStruct0
 object _GtkGestureSingle:
   given _tag: Tag[_GtkGestureSingle] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureSingleClass = CStruct0
 object _GtkGestureSingleClass:
   given _tag: Tag[_GtkGestureSingleClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureStylus = CStruct0
 object _GtkGestureStylus:
   given _tag: Tag[_GtkGestureStylus] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureStylusClass = CStruct0
 object _GtkGestureStylusClass:
   given _tag: Tag[_GtkGestureStylusClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureSwipe = CStruct0
 object _GtkGestureSwipe:
   given _tag: Tag[_GtkGestureSwipe] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureSwipeClass = CStruct0
 object _GtkGestureSwipeClass:
   given _tag: Tag[_GtkGestureSwipeClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureZoom = CStruct0
 object _GtkGestureZoom:
   given _tag: Tag[_GtkGestureZoom] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGestureZoomClass = CStruct0
 object _GtkGestureZoomClass:
   given _tag: Tag[_GtkGestureZoomClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGrid = CStruct1[GtkWidget]
 object _GtkGrid:
   given _tag: Tag[_GtkGrid] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -8419,38 +7250,26 @@ object _GtkGridClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkGridLayout = CStruct0
 object _GtkGridLayout:
   given _tag: Tag[_GtkGridLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGridLayoutChild = CStruct0
 object _GtkGridLayoutChild:
   given _tag: Tag[_GtkGridLayoutChild] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGridView = CStruct0
 object _GtkGridView:
   given _tag: Tag[_GtkGridView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkGridViewClass = CStruct0
 object _GtkGridViewClass:
   given _tag: Tag[_GtkGridViewClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkHeaderBar = CStruct0
 object _GtkHeaderBar:
   given _tag: Tag[_GtkHeaderBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkIMContext = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkIMContext:
   given _tag: Tag[_GtkIMContext] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -8463,13 +7282,11 @@ object _GtkIMContext:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkIMContextClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]]
 object _GtkIMContextClass:
   given _tag: Tag[_GtkIMContextClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._0](Tag.Nat3, Tag.Nat2, Tag.Nat0))
   def apply()(using Zone): Ptr[_GtkIMContextClass] = scala.scalanative.unsafe.alloc[_GtkIMContextClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved1 : CFuncPtr0[Unit], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit], _gtk_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[_GtkIMContextClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved1 : CFuncPtr0[Unit], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit], _gtk_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[_GtkIMContextClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).preedit_start = preedit_start
@@ -8497,57 +7314,91 @@ object _GtkIMContextClass:
     (!____ptr)._gtk_reserved5 = _gtk_reserved5
     ____ptr
   extension (struct: _GtkIMContextClass)
-    def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
-    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
-    def preedit_start: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def preedit_start_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def preedit_end: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def preedit_end_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def preedit_changed: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def preedit_changed_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def commit: CFuncPtr2[Ptr[GtkIMContext], CString, Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]]
-    def commit_=(value: CFuncPtr2[Ptr[GtkIMContext], CString, Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]] = value
-    def retrieve_surrounding: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]]
-    def retrieve_surrounding_=(value: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def delete_surrounding: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(176).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]]
-    def delete_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def set_client_widget: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit] = !struct.at(184).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]]
-    def set_client_widget_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]] = value
-    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit] = !struct.at(192).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]]
-    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]] = value
-    def filter_keypress: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(200).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
-    def filter_keypress_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(200).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def focus_in: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def focus_in_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def focus_out: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(216).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def focus_out_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(216).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def reset: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
-    def reset_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
-    def set_cursor_location: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit] = !struct.at(232).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]]
-    def set_cursor_location_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]): Unit = !struct.at(232).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]] = value
-    def set_use_preedit: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit] = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]]
-    def set_use_preedit_=(value: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]] = value
-    def set_surrounding: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit] = !struct.at(248).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]]
-    def set_surrounding_=(value: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]] = value
-    def get_surrounding: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(256).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
-    def get_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(256).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def set_surrounding_with_selection: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]]
-    def set_surrounding_with_selection_=(value: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]] = value
-    def get_surrounding_with_selection: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(272).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
-    def get_surrounding_with_selection_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(272).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _gtk_reserved1: CFuncPtr0[Unit] = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(280).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(296).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(304).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved5: CFuncPtr0[Unit] = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(312).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
+    def preedit_start: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def preedit_start_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def preedit_end: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def preedit_end_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def preedit_changed: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def preedit_changed_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def commit: CFuncPtr2[Ptr[GtkIMContext], CString, Unit] = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]]
+    def commit_=(value: CFuncPtr2[Ptr[GtkIMContext], CString, Unit]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]]] = value
+    def retrieve_surrounding: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]]
+    def retrieve_surrounding_=(value: CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def delete_surrounding: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]]
+    def delete_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def set_client_widget: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit] = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]]
+    def set_client_widget_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]] = value
+    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]]
+    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]] = value
+    def filter_keypress: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
+    def filter_keypress_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def focus_in: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def focus_in_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def focus_out: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def focus_out_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def reset: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def reset_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def set_cursor_location: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit] = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]]
+    def set_cursor_location_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]): Unit = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]]] = value
+    def set_use_preedit: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit] = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]]
+    def set_use_preedit_=(value: CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]): Unit = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]]] = value
+    def set_surrounding: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit] = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]]
+    def set_surrounding_=(value: CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]): Unit = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]]] = value
+    def get_surrounding: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
+    def get_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def set_surrounding_with_selection: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit] = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]]
+    def set_surrounding_with_selection_=(value: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]] = value
+    def get_surrounding_with_selection: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
+    def get_surrounding_with_selection_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def _gtk_reserved1: CFuncPtr0[Unit] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved5: CFuncPtr0[Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](24)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(3) = align(res(2) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(4) = align(res(3) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]].toInt)
+    res(5) = align(res(4) + sizeof[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(6) = align(res(5) + sizeof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(7) = align(res(6) + sizeof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt)
+    res(8) = align(res(7) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt)
+    res(9) = align(res(8) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(10) = align(res(9) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(11) = align(res(10) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(12) = align(res(11) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(13) = align(res(12) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]].toInt)
+    res(14) = align(res(13) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]].toInt)
+    res(15) = align(res(14) + sizeof[CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]].toInt)
+    res(16) = align(res(15) + sizeof[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(17) = align(res(16) + sizeof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt)
+    res(18) = align(res(17) + sizeof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(19) = align(res(18) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(20) = align(res(19) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(21) = align(res(20) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(22) = align(res(21) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(23) = align(res(22) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res
+  end offsets
 
-/**
-*/
 opaque type _GtkIMContextSimple = CStruct2[GtkIMContext, Ptr[GtkIMContextSimplePrivate]]
 object _GtkIMContextSimple:
   given _tag: Tag[_GtkIMContextSimple] = Tag.materializeCStruct2Tag[GtkIMContext, Ptr[GtkIMContextSimplePrivate]]
@@ -8563,8 +7414,6 @@ object _GtkIMContextSimple:
     def priv : Ptr[GtkIMContextSimplePrivate] = struct._2
     def priv_=(value: Ptr[GtkIMContextSimplePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkIMContextSimpleClass = CStruct1[GtkIMContextClass]
 object _GtkIMContextSimpleClass:
   given _tag: Tag[_GtkIMContextSimpleClass] = Tag.materializeCStruct1Tag[GtkIMContextClass]
@@ -8577,14 +7426,10 @@ object _GtkIMContextSimpleClass:
     def parent_class : GtkIMContextClass = struct._1
     def parent_class_=(value: GtkIMContextClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkIMContextSimplePrivate = CStruct0
 object _GtkIMContextSimplePrivate:
   given _tag: Tag[_GtkIMContextSimplePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkIMMulticontext = CStruct2[GtkIMContext, Ptr[GtkIMMulticontextPrivate]]
 object _GtkIMMulticontext:
   given _tag: Tag[_GtkIMMulticontext] = Tag.materializeCStruct2Tag[GtkIMContext, Ptr[GtkIMMulticontextPrivate]]
@@ -8600,8 +7445,6 @@ object _GtkIMMulticontext:
     def priv : Ptr[GtkIMMulticontextPrivate] = struct._2
     def priv_=(value: Ptr[GtkIMMulticontextPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkIMMulticontextClass = CStruct5[GtkIMContextClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkIMMulticontextClass:
   given _tag: Tag[_GtkIMMulticontextClass] = Tag.materializeCStruct5Tag[GtkIMContextClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8626,62 +7469,42 @@ object _GtkIMMulticontextClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkIMMulticontextPrivate = CStruct0
 object _GtkIMMulticontextPrivate:
   given _tag: Tag[_GtkIMMulticontextPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkIconPaintable = CStruct0
 object _GtkIconPaintable:
   given _tag: Tag[_GtkIconPaintable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkIconTheme = CStruct0
 object _GtkIconTheme:
   given _tag: Tag[_GtkIconTheme] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkIconView = CStruct0
 object _GtkIconView:
   given _tag: Tag[_GtkIconView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkImage = CStruct0
 object _GtkImage:
   given _tag: Tag[_GtkImage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkInfoBar = CStruct0
 object _GtkInfoBar:
   given _tag: Tag[_GtkInfoBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkKeyvalTrigger = CStruct0
 object _GtkKeyvalTrigger:
   given _tag: Tag[_GtkKeyvalTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkKeyvalTriggerClass = CStruct0
 object _GtkKeyvalTriggerClass:
   given _tag: Tag[_GtkKeyvalTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkLabel = CStruct0
 object _GtkLabel:
   given _tag: Tag[_GtkLabel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkLayoutChild = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkLayoutChild:
   given _tag: Tag[_GtkLayoutChild] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -8694,8 +7517,6 @@ object _GtkLayoutChild:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkLayoutChildClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
 object _GtkLayoutChildClass:
   given _tag: Tag[_GtkLayoutChildClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
@@ -8708,8 +7529,6 @@ object _GtkLayoutChildClass:
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkLayoutManager = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkLayoutManager:
   given _tag: Tag[_GtkLayoutManager] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -8761,38 +7580,26 @@ object _GtkLayoutManagerClass:
     def _padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = struct._9
     def _padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at9 = value
 
-/**
-*/
 opaque type _GtkLevelBar = CStruct0
 object _GtkLevelBar:
   given _tag: Tag[_GtkLevelBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkLinkButton = CStruct0
 object _GtkLinkButton:
   given _tag: Tag[_GtkLinkButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListBase = CStruct0
 object _GtkListBase:
   given _tag: Tag[_GtkListBase] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListBaseClass = CStruct0
 object _GtkListBaseClass:
   given _tag: Tag[_GtkListBaseClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListBox = CStruct0
 object _GtkListBox:
   given _tag: Tag[_GtkListBox] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListBoxRow = CStruct1[GtkWidget]
 object _GtkListBoxRow:
   given _tag: Tag[_GtkListBoxRow] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -8826,32 +7633,22 @@ object _GtkListBoxRowClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkListItem = CStruct0
 object _GtkListItem:
   given _tag: Tag[_GtkListItem] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListItemClass = CStruct0
 object _GtkListItemClass:
   given _tag: Tag[_GtkListItemClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListItemFactory = CStruct0
 object _GtkListItemFactory:
   given _tag: Tag[_GtkListItemFactory] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListItemFactoryClass = CStruct0
 object _GtkListItemFactoryClass:
   given _tag: Tag[_GtkListItemFactoryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListStore = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkListStorePrivate]]
 object _GtkListStore:
   given _tag: Tag[_GtkListStore] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkListStorePrivate]]
@@ -8867,8 +7664,6 @@ object _GtkListStore:
     def priv : Ptr[GtkListStorePrivate] = struct._2
     def priv_=(value: Ptr[GtkListStorePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkListStoreClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkListStoreClass:
   given _tag: Tag[_GtkListStoreClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -8884,44 +7679,30 @@ object _GtkListStoreClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkListStorePrivate = CStruct0
 object _GtkListStorePrivate:
   given _tag: Tag[_GtkListStorePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListView = CStruct0
 object _GtkListView:
   given _tag: Tag[_GtkListView] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkListViewClass = CStruct0
 object _GtkListViewClass:
   given _tag: Tag[_GtkListViewClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkLockButton = CStruct0
 object _GtkLockButton:
   given _tag: Tag[_GtkLockButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMapListModel = CStruct0
 object _GtkMapListModel:
   given _tag: Tag[_GtkMapListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMediaControls = CStruct0
 object _GtkMediaControls:
   given _tag: Tag[_GtkMediaControls] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMediaFile = CStruct1[GtkMediaStream]
 object _GtkMediaFile:
   given _tag: Tag[_GtkMediaFile] = Tag.materializeCStruct1Tag[GtkMediaStream]
@@ -8934,8 +7715,6 @@ object _GtkMediaFile:
     def parent_instance : GtkMediaStream = struct._1
     def parent_instance_=(value: GtkMediaStream): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkMediaFileClass = CStruct7[GtkMediaStreamClass, CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkMediaFileClass:
   given _tag: Tag[_GtkMediaFileClass] = Tag.materializeCStruct7Tag[GtkMediaStreamClass, CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr1[Ptr[GtkMediaFile], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -8966,8 +7745,6 @@ object _GtkMediaFileClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._7
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GtkMediaStream = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkMediaStream:
   given _tag: Tag[_GtkMediaStream] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -8980,8 +7757,6 @@ object _GtkMediaStream:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkMediaStreamClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkMediaStream], Unit], CFuncPtr2[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gint64, Unit], CFuncPtr3[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean, Double, Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkMediaStreamClass:
   given _tag: Tag[_GtkMediaStreamClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkMediaStream], Unit], CFuncPtr2[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gint64, Unit], CFuncPtr3[Ptr[GtkMediaStream], _root_.sn.gnome.glib.internal.gboolean, Double, Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr2[Ptr[GtkMediaStream], Ptr[GdkSurface], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9036,14 +7811,10 @@ object _GtkMediaStreamClass:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._15
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GtkMenuButton = CStruct0
 object _GtkMenuButton:
   given _tag: Tag[_GtkMenuButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMessageDialog = CStruct1[GtkDialog]
 object _GtkMessageDialog:
   given _tag: Tag[_GtkMessageDialog] = Tag.materializeCStruct1Tag[GtkDialog]
@@ -9056,38 +7827,26 @@ object _GtkMessageDialog:
     def parent_instance : GtkDialog = struct._1
     def parent_instance_=(value: GtkDialog): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkMessageDialogClass = CStruct0
 object _GtkMessageDialogClass:
   given _tag: Tag[_GtkMessageDialogClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMnemonicAction = CStruct0
 object _GtkMnemonicAction:
   given _tag: Tag[_GtkMnemonicAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMnemonicActionClass = CStruct0
 object _GtkMnemonicActionClass:
   given _tag: Tag[_GtkMnemonicActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMnemonicTrigger = CStruct0
 object _GtkMnemonicTrigger:
   given _tag: Tag[_GtkMnemonicTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMnemonicTriggerClass = CStruct0
 object _GtkMnemonicTriggerClass:
   given _tag: Tag[_GtkMnemonicTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMountOperation = CStruct2[_root_.sn.gnome.gio.internal.GMountOperation, Ptr[GtkMountOperationPrivate]]
 object _GtkMountOperation:
   given _tag: Tag[_GtkMountOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gio.internal.GMountOperation, Ptr[GtkMountOperationPrivate]]
@@ -9130,56 +7889,38 @@ object _GtkMountOperationClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkMountOperationPrivate = CStruct0
 object _GtkMountOperationPrivate:
   given _tag: Tag[_GtkMountOperationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMultiFilter = CStruct0
 object _GtkMultiFilter:
   given _tag: Tag[_GtkMultiFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMultiFilterClass = CStruct0
 object _GtkMultiFilterClass:
   given _tag: Tag[_GtkMultiFilterClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMultiSelection = CStruct0
 object _GtkMultiSelection:
   given _tag: Tag[_GtkMultiSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkMultiSorter = CStruct0
 object _GtkMultiSorter:
   given _tag: Tag[_GtkMultiSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNamedAction = CStruct0
 object _GtkNamedAction:
   given _tag: Tag[_GtkNamedAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNamedActionClass = CStruct0
 object _GtkNamedActionClass:
   given _tag: Tag[_GtkNamedActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNative = CStruct0
 object _GtkNative:
   given _tag: Tag[_GtkNative] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNativeDialog = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkNativeDialog:
   given _tag: Tag[_GtkNativeDialog] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -9228,74 +7969,50 @@ object _GtkNativeDialogClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._8
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at8 = value
 
-/**
-*/
 opaque type _GtkNativeInterface = CStruct0
 object _GtkNativeInterface:
   given _tag: Tag[_GtkNativeInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNeverTrigger = CStruct0
 object _GtkNeverTrigger:
   given _tag: Tag[_GtkNeverTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNeverTriggerClass = CStruct0
 object _GtkNeverTriggerClass:
   given _tag: Tag[_GtkNeverTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNoSelection = CStruct0
 object _GtkNoSelection:
   given _tag: Tag[_GtkNoSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNotebook = CStruct0
 object _GtkNotebook:
   given _tag: Tag[_GtkNotebook] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNotebookPage = CStruct0
 object _GtkNotebookPage:
   given _tag: Tag[_GtkNotebookPage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNothingAction = CStruct0
 object _GtkNothingAction:
   given _tag: Tag[_GtkNothingAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNothingActionClass = CStruct0
 object _GtkNothingActionClass:
   given _tag: Tag[_GtkNothingActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkNumericSorter = CStruct0
 object _GtkNumericSorter:
   given _tag: Tag[_GtkNumericSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkObjectExpression = CStruct0
 object _GtkObjectExpression:
   given _tag: Tag[_GtkObjectExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkOrientable = CStruct0
 object _GtkOrientable:
   given _tag: Tag[_GtkOrientable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkOrientableIface = CStruct1[_root_.sn.gnome.gobject.internal.GTypeInterface]
 object _GtkOrientableIface:
   given _tag: Tag[_GtkOrientableIface] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GTypeInterface]
@@ -9308,20 +8025,14 @@ object _GtkOrientableIface:
     def base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def base_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkOverlay = CStruct0
 object _GtkOverlay:
   given _tag: Tag[_GtkOverlay] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkOverlayLayout = CStruct0
 object _GtkOverlayLayout:
   given _tag: Tag[_GtkOverlayLayout] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkOverlayLayoutChild = CStruct0
 object _GtkOverlayLayoutChild:
   given _tag: Tag[_GtkOverlayLayoutChild] = Tag.materializeCStruct0Tag
@@ -9353,14 +8064,10 @@ object _GtkPadActionEntry:
     def action_name : CString = struct._5
     def action_name_=(value: CString): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkPadController = CStruct0
 object _GtkPadController:
   given _tag: Tag[_GtkPadController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPadControllerClass = CStruct0
 object _GtkPadControllerClass:
   given _tag: Tag[_GtkPadControllerClass] = Tag.materializeCStruct0Tag
@@ -9383,50 +8090,34 @@ object _GtkPageRange:
     def end : CInt = struct._2
     def end_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkPageSetup = CStruct0
 object _GtkPageSetup:
   given _tag: Tag[_GtkPageSetup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPaned = CStruct0
 object _GtkPaned:
   given _tag: Tag[_GtkPaned] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPaperSize = CStruct0
 object _GtkPaperSize:
   given _tag: Tag[_GtkPaperSize] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPasswordEntry = CStruct0
 object _GtkPasswordEntry:
   given _tag: Tag[_GtkPasswordEntry] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPasswordEntryBuffer = CStruct0
 object _GtkPasswordEntryBuffer:
   given _tag: Tag[_GtkPasswordEntryBuffer] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPasswordEntryClass = CStruct0
 object _GtkPasswordEntryClass:
   given _tag: Tag[_GtkPasswordEntryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPicture = CStruct0
 object _GtkPicture:
   given _tag: Tag[_GtkPicture] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPopover = CStruct1[GtkWidget]
 object _GtkPopover:
   given _tag: Tag[_GtkPopover] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -9439,8 +8130,6 @@ object _GtkPopover:
     def parent : GtkWidget = struct._1
     def parent_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkPopoverClass = CStruct4[GtkWidgetClass, CFuncPtr1[Ptr[GtkPopover], Unit], CFuncPtr1[Ptr[GtkPopover], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkPopoverClass:
   given _tag: Tag[_GtkPopoverClass] = Tag.materializeCStruct4Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkPopover], Unit], CFuncPtr1[Ptr[GtkPopover], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -9462,26 +8151,18 @@ object _GtkPopoverClass:
     def reserved : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def reserved_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkPopoverMenu = CStruct0
 object _GtkPopoverMenu:
   given _tag: Tag[_GtkPopoverMenu] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPopoverMenuBar = CStruct0
 object _GtkPopoverMenuBar:
   given _tag: Tag[_GtkPopoverMenuBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPrintContext = CStruct0
 object _GtkPrintContext:
   given _tag: Tag[_GtkPrintContext] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPrintOperation = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
 object _GtkPrintOperation:
   given _tag: Tag[_GtkPrintOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
@@ -9548,14 +8229,10 @@ object _GtkPrintOperationClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._13
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at13 = value
 
-/**
-*/
 opaque type _GtkPrintOperationPreview = CStruct0
 object _GtkPrintOperationPreview:
   given _tag: Tag[_GtkPrintOperationPreview] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPrintOperationPreviewIface = CStruct14[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Unit], CFuncPtr3[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Ptr[GtkPageSetup], Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkPrintOperationPreview], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkPrintOperationPreviewIface:
   given _tag: Tag[_GtkPrintOperationPreviewIface] = Tag.materializeCStruct14Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Unit], CFuncPtr3[Ptr[GtkPrintOperationPreview], Ptr[GtkPrintContext], Ptr[GtkPageSetup], Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, Unit], CFuncPtr2[Ptr[GtkPrintOperationPreview], CInt, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkPrintOperationPreview], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -9607,32 +8284,22 @@ object _GtkPrintOperationPreviewIface:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._14
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at14 = value
 
-/**
-*/
 opaque type _GtkPrintOperationPrivate = CStruct0
 object _GtkPrintOperationPrivate:
   given _tag: Tag[_GtkPrintOperationPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPrintSettings = CStruct0
 object _GtkPrintSettings:
   given _tag: Tag[_GtkPrintSettings] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkProgressBar = CStruct0
 object _GtkProgressBar:
   given _tag: Tag[_GtkProgressBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkPropertyExpression = CStruct0
 object _GtkPropertyExpression:
   given _tag: Tag[_GtkPropertyExpression] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkRange = CStruct1[GtkWidget]
 object _GtkRange:
   given _tag: Tag[_GtkRange] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -9645,8 +8312,6 @@ object _GtkRange:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkRangeClass = CStruct7[GtkWidgetClass, CFuncPtr1[Ptr[GtkRange], Unit], CFuncPtr2[Ptr[GtkRange], Double, Unit], CFuncPtr2[Ptr[GtkRange], GtkScrollType, Unit], CFuncPtr2[Ptr[GtkRange], Ptr[GtkBorder], Unit], CFuncPtr3[Ptr[GtkRange], GtkScrollType, Double, _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkRangeClass:
   given _tag: Tag[_GtkRangeClass] = Tag.materializeCStruct7Tag[GtkWidgetClass, CFuncPtr1[Ptr[GtkRange], Unit], CFuncPtr2[Ptr[GtkRange], Double, Unit], CFuncPtr2[Ptr[GtkRange], GtkScrollType, Unit], CFuncPtr2[Ptr[GtkRange], Ptr[GtkBorder], Unit], CFuncPtr3[Ptr[GtkRange], GtkScrollType, Double, _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -9710,14 +8375,10 @@ object _GtkRecentData:
     def is_private : _root_.sn.gnome.glib.internal.gboolean = struct._7
     def is_private_=(value: _root_.sn.gnome.glib.internal.gboolean): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GtkRecentInfo = CStruct0
 object _GtkRecentInfo:
   given _tag: Tag[_GtkRecentInfo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkRecentManager = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkRecentManagerPrivate]]
 object _GtkRecentManager:
   given _tag: Tag[_GtkRecentManager] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkRecentManagerPrivate]]
@@ -9763,8 +8424,6 @@ object _GtkRecentManagerClass:
     def _gtk_recent4 : CFuncPtr0[Unit] = struct._6
     def _gtk_recent4_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GtkRecentManagerPrivate = CStruct0
 object _GtkRecentManagerPrivate:
   given _tag: Tag[_GtkRecentManagerPrivate] = Tag.materializeCStruct0Tag
@@ -9808,26 +8467,18 @@ object _GtkRequisition:
     def height : CInt = struct._2
     def height_=(value: CInt): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkRevealer = CStruct0
 object _GtkRevealer:
   given _tag: Tag[_GtkRevealer] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkRoot = CStruct0
 object _GtkRoot:
   given _tag: Tag[_GtkRoot] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkRootInterface = CStruct0
 object _GtkRootInterface:
   given _tag: Tag[_GtkRootInterface] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkScale = CStruct1[GtkRange]
 object _GtkScale:
   given _tag: Tag[_GtkScale] = Tag.materializeCStruct1Tag[GtkRange]
@@ -9840,8 +8491,6 @@ object _GtkScale:
     def parent_instance : GtkRange = struct._1
     def parent_instance_=(value: GtkRange): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkScaleButton = CStruct1[GtkWidget]
 object _GtkScaleButton:
   given _tag: Tag[_GtkScaleButton] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -9854,8 +8503,6 @@ object _GtkScaleButton:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkScaleButtonClass = CStruct3[GtkWidgetClass, CFuncPtr2[Ptr[GtkScaleButton], Double, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkScaleButtonClass:
   given _tag: Tag[_GtkScaleButtonClass] = Tag.materializeCStruct3Tag[GtkWidgetClass, CFuncPtr2[Ptr[GtkScaleButton], Double, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -9874,8 +8521,6 @@ object _GtkScaleButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkScaleClass = CStruct3[GtkRangeClass, CFuncPtr3[Ptr[GtkScale], Ptr[CInt], Ptr[CInt], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkScaleClass:
   given _tag: Tag[_GtkScaleClass] = Tag.materializeCStruct3Tag[GtkRangeClass, CFuncPtr3[Ptr[GtkScale], Ptr[CInt], Ptr[CInt], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -9894,14 +8539,10 @@ object _GtkScaleClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkScrollable = CStruct0
 object _GtkScrollable:
   given _tag: Tag[_GtkScrollable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkScrollableInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean]]
 object _GtkScrollableInterface:
   given _tag: Tag[_GtkScrollableInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean]]
@@ -9917,38 +8558,26 @@ object _GtkScrollableInterface:
     def get_border : CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean] = struct._2
     def get_border_=(value: CFuncPtr2[Ptr[GtkScrollable], Ptr[GtkBorder], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkScrollbar = CStruct0
 object _GtkScrollbar:
   given _tag: Tag[_GtkScrollbar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkScrolledWindow = CStruct0
 object _GtkScrolledWindow:
   given _tag: Tag[_GtkScrolledWindow] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSearchBar = CStruct0
 object _GtkSearchBar:
   given _tag: Tag[_GtkSearchBar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSearchEntry = CStruct0
 object _GtkSearchEntry:
   given _tag: Tag[_GtkSearchEntry] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSelectionFilterModel = CStruct0
 object _GtkSelectionFilterModel:
   given _tag: Tag[_GtkSelectionFilterModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSelectionModel = CStruct0
 object _GtkSelectionModel:
   given _tag: Tag[_GtkSelectionModel] = Tag.materializeCStruct0Tag
@@ -9995,62 +8624,42 @@ object _GtkSelectionModelInterface:
     def set_selection : CFuncPtr3[Ptr[GtkSelectionModel], Ptr[GtkBitset], Ptr[GtkBitset], _root_.sn.gnome.glib.internal.gboolean] = struct._10
     def set_selection_=(value: CFuncPtr3[Ptr[GtkSelectionModel], Ptr[GtkBitset], Ptr[GtkBitset], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at10 = value
 
-/**
-*/
 opaque type _GtkSeparator = CStruct0
 object _GtkSeparator:
   given _tag: Tag[_GtkSeparator] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSettings = CStruct0
 object _GtkSettings:
   given _tag: Tag[_GtkSettings] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcut = CStruct0
 object _GtkShortcut:
   given _tag: Tag[_GtkShortcut] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutAction = CStruct0
 object _GtkShortcutAction:
   given _tag: Tag[_GtkShortcutAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutActionClass = CStruct0
 object _GtkShortcutActionClass:
   given _tag: Tag[_GtkShortcutActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutController = CStruct0
 object _GtkShortcutController:
   given _tag: Tag[_GtkShortcutController] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutControllerClass = CStruct0
 object _GtkShortcutControllerClass:
   given _tag: Tag[_GtkShortcutControllerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutLabel = CStruct0
 object _GtkShortcutLabel:
   given _tag: Tag[_GtkShortcutLabel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutLabelClass = CStruct0
 object _GtkShortcutLabelClass:
   given _tag: Tag[_GtkShortcutLabelClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutManager = CStruct0
 object _GtkShortcutManager:
   given _tag: Tag[_GtkShortcutManager] = Tag.materializeCStruct0Tag
@@ -10076,92 +8685,62 @@ object _GtkShortcutManagerInterface:
     def remove_controller : CFuncPtr2[Ptr[GtkShortcutManager], Ptr[GtkShortcutController], Unit] = struct._3
     def remove_controller_=(value: CFuncPtr2[Ptr[GtkShortcutManager], Ptr[GtkShortcutController], Unit]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkShortcutTrigger = CStruct0
 object _GtkShortcutTrigger:
   given _tag: Tag[_GtkShortcutTrigger] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutTriggerClass = CStruct0
 object _GtkShortcutTriggerClass:
   given _tag: Tag[_GtkShortcutTriggerClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsGroup = CStruct0
 object _GtkShortcutsGroup:
   given _tag: Tag[_GtkShortcutsGroup] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsGroupClass = CStruct0
 object _GtkShortcutsGroupClass:
   given _tag: Tag[_GtkShortcutsGroupClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsSection = CStruct0
 object _GtkShortcutsSection:
   given _tag: Tag[_GtkShortcutsSection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsSectionClass = CStruct0
 object _GtkShortcutsSectionClass:
   given _tag: Tag[_GtkShortcutsSectionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsShortcut = CStruct0
 object _GtkShortcutsShortcut:
   given _tag: Tag[_GtkShortcutsShortcut] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsShortcutClass = CStruct0
 object _GtkShortcutsShortcutClass:
   given _tag: Tag[_GtkShortcutsShortcutClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkShortcutsWindow = CStruct0
 object _GtkShortcutsWindow:
   given _tag: Tag[_GtkShortcutsWindow] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSignalAction = CStruct0
 object _GtkSignalAction:
   given _tag: Tag[_GtkSignalAction] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSignalActionClass = CStruct0
 object _GtkSignalActionClass:
   given _tag: Tag[_GtkSignalActionClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSignalListItemFactory = CStruct0
 object _GtkSignalListItemFactory:
   given _tag: Tag[_GtkSignalListItemFactory] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSignalListItemFactoryClass = CStruct0
 object _GtkSignalListItemFactoryClass:
   given _tag: Tag[_GtkSignalListItemFactoryClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSingleSelection = CStruct0
 object _GtkSingleSelection:
   given _tag: Tag[_GtkSingleSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSizeGroup = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkSizeGroup:
   given _tag: Tag[_GtkSizeGroup] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -10174,26 +8753,18 @@ object _GtkSizeGroup:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkSliceListModel = CStruct0
 object _GtkSliceListModel:
   given _tag: Tag[_GtkSliceListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSnapshotClass = CStruct0
 object _GtkSnapshotClass:
   given _tag: Tag[_GtkSnapshotClass] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSortListModel = CStruct0
 object _GtkSortListModel:
   given _tag: Tag[_GtkSortListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSorter = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkSorter:
   given _tag: Tag[_GtkSorter] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -10251,74 +8822,50 @@ object _GtkSorterClass:
     def _gtk_reserved8 : CFuncPtr0[Unit] = struct._11
     def _gtk_reserved8_=(value: CFuncPtr0[Unit]): Unit = !struct.at11 = value
 
-/**
-*/
 opaque type _GtkSpinButton = CStruct0
 object _GtkSpinButton:
   given _tag: Tag[_GtkSpinButton] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSpinner = CStruct0
 object _GtkSpinner:
   given _tag: Tag[_GtkSpinner] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStack = CStruct0
 object _GtkStack:
   given _tag: Tag[_GtkStack] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStackPage = CStruct0
 object _GtkStackPage:
   given _tag: Tag[_GtkStackPage] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStackSidebar = CStruct0
 object _GtkStackSidebar:
   given _tag: Tag[_GtkStackSidebar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStackSwitcher = CStruct0
 object _GtkStackSwitcher:
   given _tag: Tag[_GtkStackSwitcher] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStatusbar = CStruct0
 object _GtkStatusbar:
   given _tag: Tag[_GtkStatusbar] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStringFilter = CStruct0
 object _GtkStringFilter:
   given _tag: Tag[_GtkStringFilter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStringList = CStruct0
 object _GtkStringList:
   given _tag: Tag[_GtkStringList] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStringObject = CStruct0
 object _GtkStringObject:
   given _tag: Tag[_GtkStringObject] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStringSorter = CStruct0
 object _GtkStringSorter:
   given _tag: Tag[_GtkStringSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkStyleContext = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkStyleContext:
   given _tag: Tag[_GtkStyleContext] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
@@ -10331,8 +8878,6 @@ object _GtkStyleContext:
     def parent_object : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_object_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkStyleContextClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkStyleContext], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkStyleContextClass:
   given _tag: Tag[_GtkStyleContextClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[GtkStyleContext], Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -10360,20 +8905,14 @@ object _GtkStyleContextClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._6
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
 
-/**
-*/
 opaque type _GtkStyleProvider = CStruct0
 object _GtkStyleProvider:
   given _tag: Tag[_GtkStyleProvider] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSwitch = CStruct0
 object _GtkSwitch:
   given _tag: Tag[_GtkSwitch] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkSymbolicPaintable = CStruct0
 object _GtkSymbolicPaintable:
   given _tag: Tag[_GtkSymbolicPaintable] = Tag.materializeCStruct0Tag
@@ -10396,8 +8935,6 @@ object _GtkSymbolicPaintableInterface:
     def snapshot_symbolic : CFuncPtr6[Ptr[GtkSymbolicPaintable], Ptr[GdkSnapshot], Double, Double, Ptr[GdkRGBA], _root_.sn.gnome.glib.internal.gsize, Unit] = struct._2
     def snapshot_symbolic_=(value: CFuncPtr6[Ptr[GtkSymbolicPaintable], Ptr[GdkSnapshot], Double, Double, Ptr[GdkRGBA], _root_.sn.gnome.glib.internal.gsize, Unit]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkText = CStruct1[GtkWidget]
 object _GtkText:
   given _tag: Tag[_GtkText] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -10410,8 +8947,6 @@ object _GtkText:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkTextBuffer = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextBufferPrivate]]
 object _GtkTextBuffer:
   given _tag: Tag[_GtkTextBuffer] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextBufferPrivate]]
@@ -10499,14 +9034,10 @@ object _GtkTextBufferClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._20
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at20 = value
 
-/**
-*/
 opaque type _GtkTextBufferPrivate = CStruct0
 object _GtkTextBufferPrivate:
   given _tag: Tag[_GtkTextBufferPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTextChildAnchor = CStruct2[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
 object _GtkTextChildAnchor:
   given _tag: Tag[_GtkTextChildAnchor] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
@@ -10522,8 +9053,6 @@ object _GtkTextChildAnchor:
     def segment : _root_.sn.gnome.glib.internal.gpointer = struct._2
     def segment_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTextChildAnchorClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkTextChildAnchorClass:
   given _tag: Tag[_GtkTextChildAnchorClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -10548,8 +9077,6 @@ object _GtkTextChildAnchorClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkTextIter = CStruct14[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer]
 object _GtkTextIter:
   given _tag: Tag[_GtkTextIter] = Tag.materializeCStruct14Tag[_root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gpointer, CInt, CInt, CInt, _root_.sn.gnome.glib.internal.gpointer]
@@ -10601,8 +9128,6 @@ object _GtkTextIter:
     def dummy14 : _root_.sn.gnome.glib.internal.gpointer = struct._14
     def dummy14_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at14 = value
 
-/**
-*/
 opaque type _GtkTextMark = CStruct2[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
 object _GtkTextMark:
   given _tag: Tag[_GtkTextMark] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, _root_.sn.gnome.glib.internal.gpointer]
@@ -10618,8 +9143,6 @@ object _GtkTextMark:
     def segment : _root_.sn.gnome.glib.internal.gpointer = struct._2
     def segment_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTextMarkClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkTextMarkClass:
   given _tag: Tag[_GtkTextMarkClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -10635,8 +9158,6 @@ object _GtkTextMarkClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTextTag = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextTagPrivate]]
 object _GtkTextTag:
   given _tag: Tag[_GtkTextTag] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTextTagPrivate]]
@@ -10652,8 +9173,6 @@ object _GtkTextTag:
     def priv : Ptr[GtkTextTagPrivate] = struct._2
     def priv_=(value: Ptr[GtkTextTagPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTextTagClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkTextTagClass:
   given _tag: Tag[_GtkTextTagClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -10669,20 +9188,14 @@ object _GtkTextTagClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTextTagPrivate = CStruct0
 object _GtkTextTagPrivate:
   given _tag: Tag[_GtkTextTagPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTextTagTable = CStruct0
 object _GtkTextTagTable:
   given _tag: Tag[_GtkTextTagTable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTextView = CStruct2[GtkWidget, Ptr[GtkTextViewPrivate]]
 object _GtkTextView:
   given _tag: Tag[_GtkTextView] = Tag.materializeCStruct2Tag[GtkWidget, Ptr[GtkTextViewPrivate]]
@@ -10755,14 +9268,10 @@ object _GtkTextViewClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._15
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at15 = value
 
-/**
-*/
 opaque type _GtkTextViewPrivate = CStruct0
 object _GtkTextViewPrivate:
   given _tag: Tag[_GtkTextViewPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkToggleButton = CStruct1[GtkButton]
 object _GtkToggleButton:
   given _tag: Tag[_GtkToggleButton] = Tag.materializeCStruct1Tag[GtkButton]
@@ -10775,8 +9284,6 @@ object _GtkToggleButton:
     def button : GtkButton = struct._1
     def button_=(value: GtkButton): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkToggleButtonClass = CStruct3[GtkButtonClass, CFuncPtr1[Ptr[GtkToggleButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkToggleButtonClass:
   given _tag: Tag[_GtkToggleButtonClass] = Tag.materializeCStruct3Tag[GtkButtonClass, CFuncPtr1[Ptr[GtkToggleButton], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -10795,14 +9302,10 @@ object _GtkToggleButtonClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkTooltip = CStruct0
 object _GtkTooltip:
   given _tag: Tag[_GtkTooltip] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeDragDest = CStruct0
 object _GtkTreeDragDest:
   given _tag: Tag[_GtkTreeDragDest] = Tag.materializeCStruct0Tag
@@ -10828,8 +9331,6 @@ object _GtkTreeDragDestIface:
     def row_drop_possible : CFuncPtr3[Ptr[GtkTreeDragDest], Ptr[GtkTreePath], Ptr[_root_.sn.gnome.gobject.internal.GValue], _root_.sn.gnome.glib.internal.gboolean] = struct._3
     def row_drop_possible_=(value: CFuncPtr3[Ptr[GtkTreeDragDest], Ptr[GtkTreePath], Ptr[_root_.sn.gnome.gobject.internal.GValue], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at3 = value
 
-/**
-*/
 opaque type _GtkTreeDragSource = CStruct0
 object _GtkTreeDragSource:
   given _tag: Tag[_GtkTreeDragSource] = Tag.materializeCStruct0Tag
@@ -10858,8 +9359,6 @@ object _GtkTreeDragSourceIface:
     def drag_data_delete : CFuncPtr2[Ptr[GtkTreeDragSource], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean] = struct._4
     def drag_data_delete_=(value: CFuncPtr2[Ptr[GtkTreeDragSource], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkTreeExpander = CStruct0
 object _GtkTreeExpander:
   given _tag: Tag[_GtkTreeExpander] = Tag.materializeCStruct0Tag
@@ -10888,32 +9387,22 @@ object _GtkTreeIter:
     def user_data3 : _root_.sn.gnome.glib.internal.gpointer = struct._4
     def user_data3_=(value: _root_.sn.gnome.glib.internal.gpointer): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkTreeListModel = CStruct0
 object _GtkTreeListModel:
   given _tag: Tag[_GtkTreeListModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeListRow = CStruct0
 object _GtkTreeListRow:
   given _tag: Tag[_GtkTreeListRow] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeListRowSorter = CStruct0
 object _GtkTreeListRowSorter:
   given _tag: Tag[_GtkTreeListRowSorter] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeModel = CStruct0
 object _GtkTreeModel:
   given _tag: Tag[_GtkTreeModel] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeModelFilter = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelFilterPrivate]]
 object _GtkTreeModelFilter:
   given _tag: Tag[_GtkTreeModelFilter] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelFilterPrivate]]
@@ -10929,8 +9418,6 @@ object _GtkTreeModelFilter:
     def priv : Ptr[GtkTreeModelFilterPrivate] = struct._2
     def priv_=(value: Ptr[GtkTreeModelFilterPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTreeModelFilterClass = CStruct4[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkTreeModelFilterClass:
   given _tag: Tag[_GtkTreeModelFilterClass] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr5[Ptr[GtkTreeModelFilter], Ptr[GtkTreeModel], Ptr[GtkTreeIter], Ptr[_root_.sn.gnome.gobject.internal.GValue], CInt, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -10952,8 +9439,6 @@ object _GtkTreeModelFilterClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._4
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at4 = value
 
-/**
-*/
 opaque type _GtkTreeModelFilterPrivate = CStruct0
 object _GtkTreeModelFilterPrivate:
   given _tag: Tag[_GtkTreeModelFilterPrivate] = Tag.materializeCStruct0Tag
@@ -11033,8 +9518,6 @@ object _GtkTreeModelIface:
     def unref_node : CFuncPtr2[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Unit] = struct._21
     def unref_node_=(value: CFuncPtr2[Ptr[GtkTreeModel], Ptr[GtkTreeIter], Unit]): Unit = !struct.at21 = value
 
-/**
-*/
 opaque type _GtkTreeModelSort = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelSortPrivate]]
 object _GtkTreeModelSort:
   given _tag: Tag[_GtkTreeModelSort] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeModelSortPrivate]]
@@ -11050,8 +9533,6 @@ object _GtkTreeModelSort:
     def priv : Ptr[GtkTreeModelSortPrivate] = struct._2
     def priv_=(value: Ptr[GtkTreeModelSortPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTreeModelSortClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkTreeModelSortClass:
   given _tag: Tag[_GtkTreeModelSortClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -11067,32 +9548,22 @@ object _GtkTreeModelSortClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTreeModelSortPrivate = CStruct0
 object _GtkTreeModelSortPrivate:
   given _tag: Tag[_GtkTreeModelSortPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreePath = CStruct0
 object _GtkTreePath:
   given _tag: Tag[_GtkTreePath] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeRowReference = CStruct0
 object _GtkTreeRowReference:
   given _tag: Tag[_GtkTreeRowReference] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeSelection = CStruct0
 object _GtkTreeSelection:
   given _tag: Tag[_GtkTreeSelection] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeSortable = CStruct0
 object _GtkTreeSortable:
   given _tag: Tag[_GtkTreeSortable] = Tag.materializeCStruct0Tag
@@ -11130,8 +9601,6 @@ object _GtkTreeSortableIface:
     def has_default_sort_func : CFuncPtr1[Ptr[GtkTreeSortable], _root_.sn.gnome.glib.internal.gboolean] = struct._7
     def has_default_sort_func_=(value: CFuncPtr1[Ptr[GtkTreeSortable], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GtkTreeStore = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeStorePrivate]]
 object _GtkTreeStore:
   given _tag: Tag[_GtkTreeStore] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkTreeStorePrivate]]
@@ -11147,8 +9616,6 @@ object _GtkTreeStore:
     def priv : Ptr[GtkTreeStorePrivate] = struct._2
     def priv_=(value: Ptr[GtkTreeStorePrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTreeStoreClass = CStruct2[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
 object _GtkTreeStoreClass:
   given _tag: Tag[_GtkTreeStoreClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
@@ -11164,14 +9631,10 @@ object _GtkTreeStoreClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkTreeStorePrivate = CStruct0
 object _GtkTreeStorePrivate:
   given _tag: Tag[_GtkTreeStorePrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkTreeView = CStruct1[GtkWidget]
 object _GtkTreeView:
   given _tag: Tag[_GtkTreeView] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -11184,8 +9647,6 @@ object _GtkTreeView:
     def parent_instance : GtkWidget = struct._1
     def parent_instance_=(value: GtkWidget): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkTreeViewClass = CStruct17[GtkWidgetClass, CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], Ptr[GtkTreeViewColumn], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr5[Ptr[GtkTreeView], GtkMovementStep, CInt, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
 object _GtkTreeViewClass:
   given _tag: Tag[_GtkTreeViewClass] = Tag.materializeCStruct17Tag[GtkWidgetClass, CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreePath], Ptr[GtkTreeViewColumn], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr3[Ptr[GtkTreeView], Ptr[GtkTreeIter], Ptr[GtkTreePath], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr1[Ptr[GtkTreeView], Unit], CFuncPtr5[Ptr[GtkTreeView], GtkMovementStep, CInt, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr4[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkTreeView], _root_.sn.gnome.glib.internal.gboolean], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]]
@@ -11246,26 +9707,18 @@ object _GtkTreeViewClass:
     def _reserved : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]] = struct._17
     def _reserved_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at17 = value
 
-/**
-*/
 opaque type _GtkTreeViewColumn = CStruct0
 object _GtkTreeViewColumn:
   given _tag: Tag[_GtkTreeViewColumn] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkVideo = CStruct0
 object _GtkVideo:
   given _tag: Tag[_GtkVideo] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkViewport = CStruct0
 object _GtkViewport:
   given _tag: Tag[_GtkViewport] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkVolumeButton = CStruct1[GtkScaleButton]
 object _GtkVolumeButton:
   given _tag: Tag[_GtkVolumeButton] = Tag.materializeCStruct1Tag[GtkScaleButton]
@@ -11278,8 +9731,6 @@ object _GtkVolumeButton:
     def parent : GtkScaleButton = struct._1
     def parent_=(value: GtkScaleButton): Unit = !struct.at1 = value
 
-/**
-*/
 opaque type _GtkWidget = CStruct2[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkWidgetPrivate]]
 object _GtkWidget:
   given _tag: Tag[_GtkWidget] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GInitiallyUnowned, Ptr[GtkWidgetPrivate]]
@@ -11334,83 +9785,115 @@ object _GtkWidgetClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: _GtkWidgetClass)
-    def parent_class: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]]
-    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass): Unit = !struct.at(0).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]] = value
-    def show: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def show_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(136).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def hide: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def hide_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(144).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def map: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def map_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(152).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def unmap: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(160).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def unmap_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(160).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def realize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def realize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(168).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def unrealize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def unrealize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(176).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def root: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(184).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def root_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(184).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def unroot: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(192).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
-    def unroot_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(192).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
-    def size_allocate: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit] = !struct.at(200).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]]
-    def size_allocate_=(value: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]): Unit = !struct.at(200).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]] = value
-    def state_flags_changed: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit] = !struct.at(208).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]]
-    def state_flags_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]): Unit = !struct.at(208).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]] = value
-    def direction_changed: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit] = !struct.at(216).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]]
-    def direction_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]): Unit = !struct.at(216).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]] = value
-    def get_request_mode: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode] = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]]
-    def get_request_mode_=(value: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]): Unit = !struct.at(224).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]] = value
-    def measure: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit] = !struct.at(232).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]]
-    def measure_=(value: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]): Unit = !struct.at(232).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]] = value
-    def mnemonic_activate: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]]
-    def mnemonic_activate_=(value: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(240).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def grab_focus: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(248).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]]
-    def grab_focus_=(value: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(248).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(256).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
-    def focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(256).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def set_focus_child: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit] = !struct.at(264).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]]
-    def set_focus_child_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]): Unit = !struct.at(264).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]] = value
-    def move_focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit] = !struct.at(272).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]]
-    def move_focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]): Unit = !struct.at(272).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]] = value
-    def keynav_failed: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(280).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
-    def keynav_failed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(280).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def query_tooltip: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(288).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]]
-    def query_tooltip_=(value: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(288).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def compute_expand: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit] = !struct.at(296).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]]
-    def compute_expand_=(value: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]): Unit = !struct.at(296).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]] = value
-    def css_changed: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit] = !struct.at(304).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]]
-    def css_changed_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]): Unit = !struct.at(304).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]] = value
-    def system_setting_changed: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit] = !struct.at(312).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]]
-    def system_setting_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]): Unit = !struct.at(312).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]] = value
-    def snapshot: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit] = !struct.at(320).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]]
-    def snapshot_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]): Unit = !struct.at(320).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]] = value
-    def contains: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(328).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]]
-    def contains_=(value: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(328).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def priv: Ptr[GtkWidgetClassPrivate] = !struct.at(336).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]]
-    def priv_=(value: Ptr[GtkWidgetClassPrivate]): Unit = !struct.at(336).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]] = value
-    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(344).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
-    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(344).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
+    def parent_class: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]]
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GInitiallyUnownedClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass]] = value
+    def show: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def show_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def hide: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def hide_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def map: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def map_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def unmap: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def unmap_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def realize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def realize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def unrealize: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def unrealize_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def root: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def root_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def unroot: CFuncPtr1[Ptr[GtkWidget], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]]
+    def unroot_=(value: CFuncPtr1[Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], Unit]]] = value
+    def size_allocate: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit] = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]]
+    def size_allocate_=(value: CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]]] = value
+    def state_flags_changed: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit] = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]]
+    def state_flags_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]): Unit = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]]] = value
+    def direction_changed: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit] = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]]
+    def direction_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]): Unit = !struct.at(offsets(11)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]]] = value
+    def get_request_mode: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode] = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]]
+    def get_request_mode_=(value: CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]): Unit = !struct.at(offsets(12)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]]] = value
+    def measure: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit] = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]]
+    def measure_=(value: CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]): Unit = !struct.at(offsets(13)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]]] = value
+    def mnemonic_activate: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]]
+    def mnemonic_activate_=(value: CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(14)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def grab_focus: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]]
+    def grab_focus_=(value: CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(15)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
+    def focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(16)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def set_focus_child: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit] = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]]
+    def set_focus_child_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]]] = value
+    def move_focus: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit] = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]]
+    def move_focus_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]]] = value
+    def keynav_failed: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]]
+    def keynav_failed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def query_tooltip: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]]
+    def query_tooltip_=(value: CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def compute_expand: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]]
+    def compute_expand_=(value: CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]]] = value
+    def css_changed: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]]
+    def css_changed_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]]] = value
+    def system_setting_changed: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]]
+    def system_setting_changed_=(value: CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]]] = value
+    def snapshot: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit] = !struct.at(offsets(24)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]]
+    def snapshot_=(value: CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]): Unit = !struct.at(offsets(24)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]]] = value
+    def contains: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(25)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]]
+    def contains_=(value: CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(25)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def priv: Ptr[GtkWidgetClassPrivate] = !struct.at(offsets(26)).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]]
+    def priv_=(value: Ptr[GtkWidgetClassPrivate]): Unit = !struct.at(offsets(26)).asInstanceOf[Ptr[Ptr[GtkWidgetClassPrivate]]] = value
+    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = !struct.at(offsets(27)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]]
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at(offsets(27)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](28)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GInitiallyUnownedClass].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(3) = align(res(2) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(4) = align(res(3) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(5) = align(res(4) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(6) = align(res(5) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(7) = align(res(6) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(8) = align(res(7) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt)
+    res(9) = align(res(8) + sizeof[CFuncPtr1[Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]].toInt)
+    res(10) = align(res(9) + sizeof[CFuncPtr4[Ptr[GtkWidget], CInt, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]].toInt)
+    res(11) = align(res(10) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkStateFlags, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]].toInt)
+    res(12) = align(res(11) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkTextDirection, Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]].toInt)
+    res(13) = align(res(12) + sizeof[CFuncPtr1[Ptr[GtkWidget], GtkSizeRequestMode]].toInt, alignmentof[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]].toInt)
+    res(14) = align(res(13) + sizeof[CFuncPtr7[Ptr[GtkWidget], GtkOrientation, CInt, Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(15) = align(res(14) + sizeof[CFuncPtr2[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(16) = align(res(15) + sizeof[CFuncPtr1[Ptr[GtkWidget], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(17) = align(res(16) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]].toInt)
+    res(18) = align(res(17) + sizeof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]].toInt)
+    res(19) = align(res(18) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(20) = align(res(19) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkDirectionType, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(21) = align(res(20) + sizeof[CFuncPtr5[Ptr[GtkWidget], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean, Ptr[GtkTooltip], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]].toInt)
+    res(22) = align(res(21) + sizeof[CFuncPtr3[Ptr[GtkWidget], Ptr[_root_.sn.gnome.glib.internal.gboolean], Ptr[_root_.sn.gnome.glib.internal.gboolean], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]].toInt)
+    res(23) = align(res(22) + sizeof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkCssStyleChange], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]].toInt)
+    res(24) = align(res(23) + sizeof[CFuncPtr2[Ptr[GtkWidget], GtkSystemSetting, Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]].toInt)
+    res(25) = align(res(24) + sizeof[CFuncPtr2[Ptr[GtkWidget], Ptr[GtkSnapshot], Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(26) = align(res(25) + sizeof[CFuncPtr3[Ptr[GtkWidget], Double, Double, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[Ptr[GtkWidgetClassPrivate]].toInt)
+    res(27) = align(res(26) + sizeof[Ptr[GtkWidgetClassPrivate]].toInt, alignmentof[_root_.sn.gnome.glib.internal.gpointer].toInt)
+    res
+  end offsets
 
-/**
-*/
 opaque type _GtkWidgetClassPrivate = CStruct0
 object _GtkWidgetClassPrivate:
   given _tag: Tag[_GtkWidgetClassPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkWidgetPaintable = CStruct0
 object _GtkWidgetPaintable:
   given _tag: Tag[_GtkWidgetPaintable] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkWidgetPrivate = CStruct0
 object _GtkWidgetPrivate:
   given _tag: Tag[_GtkWidgetPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkWindow = CStruct1[GtkWidget]
 object _GtkWindow:
   given _tag: Tag[_GtkWindow] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -11456,14 +9939,10 @@ object _GtkWindowClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._7
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at7 = value
 
-/**
-*/
 opaque type _GtkWindowControls = CStruct0
 object _GtkWindowControls:
   given _tag: Tag[_GtkWindowControls] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkWindowGroup = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkWindowGroupPrivate]]
 object _GtkWindowGroup:
   given _tag: Tag[_GtkWindowGroup] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkWindowGroupPrivate]]
@@ -11479,8 +9958,6 @@ object _GtkWindowGroup:
     def priv : Ptr[GtkWindowGroupPrivate] = struct._2
     def priv_=(value: Ptr[GtkWindowGroupPrivate]): Unit = !struct.at2 = value
 
-/**
-*/
 opaque type _GtkWindowGroupClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _GtkWindowGroupClass:
   given _tag: Tag[_GtkWindowGroupClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
@@ -11505,14 +9982,151 @@ object _GtkWindowGroupClass:
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._5
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
 
-/**
-*/
 opaque type _GtkWindowGroupPrivate = CStruct0
 object _GtkWindowGroupPrivate:
   given _tag: Tag[_GtkWindowGroupPrivate] = Tag.materializeCStruct0Tag
 
-/**
-*/
 opaque type _GtkWindowHandle = CStruct0
 object _GtkWindowHandle:
   given _tag: Tag[_GtkWindowHandle] = Tag.materializeCStruct0Tag
+
+/**
+ * graphene_matrix_t:
+*/
+opaque type graphene_matrix_t = CStruct1[graphene_simd4x4f_t]
+object graphene_matrix_t:
+  given _tag: Tag[graphene_matrix_t] = Tag.materializeCStruct1Tag[graphene_simd4x4f_t]
+  def apply()(using Zone): Ptr[graphene_matrix_t] = scala.scalanative.unsafe.alloc[graphene_matrix_t](1)
+  def apply(__graphene_private_value : graphene_simd4x4f_t)(using Zone): Ptr[graphene_matrix_t] = 
+    val ____ptr = apply()
+    (!____ptr).__graphene_private_value = __graphene_private_value
+    ____ptr
+  extension (struct: graphene_matrix_t)
+    def __graphene_private_value : graphene_simd4x4f_t = struct._1
+    def __graphene_private_value_=(value: graphene_simd4x4f_t): Unit = !struct.at1 = value
+
+/**
+ * graphene_point3d_t: : the X coordinate : the Y coordinate : the Z coordinate
+*/
+opaque type graphene_point3d_t = CStruct3[Float, Float, Float]
+object graphene_point3d_t:
+  given _tag: Tag[graphene_point3d_t] = Tag.materializeCStruct3Tag[Float, Float, Float]
+  def apply()(using Zone): Ptr[graphene_point3d_t] = scala.scalanative.unsafe.alloc[graphene_point3d_t](1)
+  def apply(x : Float, y : Float, z : Float)(using Zone): Ptr[graphene_point3d_t] = 
+    val ____ptr = apply()
+    (!____ptr).x = x
+    (!____ptr).y = y
+    (!____ptr).z = z
+    ____ptr
+  extension (struct: graphene_point3d_t)
+    def x : Float = struct._1
+    def x_=(value: Float): Unit = !struct.at1 = value
+    def y : Float = struct._2
+    def y_=(value: Float): Unit = !struct.at2 = value
+    def z : Float = struct._3
+    def z_=(value: Float): Unit = !struct.at3 = value
+
+/**
+ * graphene_point_t: : the X coordinate of the point : the Y coordinate of the point
+*/
+opaque type graphene_point_t = CStruct2[Float, Float]
+object graphene_point_t:
+  given _tag: Tag[graphene_point_t] = Tag.materializeCStruct2Tag[Float, Float]
+  def apply()(using Zone): Ptr[graphene_point_t] = scala.scalanative.unsafe.alloc[graphene_point_t](1)
+  def apply(x : Float, y : Float)(using Zone): Ptr[graphene_point_t] = 
+    val ____ptr = apply()
+    (!____ptr).x = x
+    (!____ptr).y = y
+    ____ptr
+  extension (struct: graphene_point_t)
+    def x : Float = struct._1
+    def x_=(value: Float): Unit = !struct.at1 = value
+    def y : Float = struct._2
+    def y_=(value: Float): Unit = !struct.at2 = value
+
+/**
+ * graphene_rect_t: : the coordinates of the origin of the rectangle : the size of the rectangle
+*/
+opaque type graphene_rect_t = CStruct2[graphene_point_t, graphene_size_t]
+object graphene_rect_t:
+  given _tag: Tag[graphene_rect_t] = Tag.materializeCStruct2Tag[graphene_point_t, graphene_size_t]
+  def apply()(using Zone): Ptr[graphene_rect_t] = scala.scalanative.unsafe.alloc[graphene_rect_t](1)
+  def apply(origin : graphene_point_t, size : graphene_size_t)(using Zone): Ptr[graphene_rect_t] = 
+    val ____ptr = apply()
+    (!____ptr).origin = origin
+    (!____ptr).size = size
+    ____ptr
+  extension (struct: graphene_rect_t)
+    def origin : graphene_point_t = struct._1
+    def origin_=(value: graphene_point_t): Unit = !struct.at1 = value
+    def size : graphene_size_t = struct._2
+    def size_=(value: graphene_size_t): Unit = !struct.at2 = value
+
+opaque type graphene_simd4x4f_t = CStruct4[graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t]
+object graphene_simd4x4f_t:
+  given _tag: Tag[graphene_simd4x4f_t] = Tag.materializeCStruct4Tag[graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t]
+  def apply()(using Zone): Ptr[graphene_simd4x4f_t] = scala.scalanative.unsafe.alloc[graphene_simd4x4f_t](1)
+  def apply(x : graphene_simd4f_t, y : graphene_simd4f_t, z : graphene_simd4f_t, w : graphene_simd4f_t)(using Zone): Ptr[graphene_simd4x4f_t] = 
+    val ____ptr = apply()
+    (!____ptr).x = x
+    (!____ptr).y = y
+    (!____ptr).z = z
+    (!____ptr).w = w
+    ____ptr
+  extension (struct: graphene_simd4x4f_t)
+    def x : graphene_simd4f_t = struct._1
+    def x_=(value: graphene_simd4f_t): Unit = !struct.at1 = value
+    def y : graphene_simd4f_t = struct._2
+    def y_=(value: graphene_simd4f_t): Unit = !struct.at2 = value
+    def z : graphene_simd4f_t = struct._3
+    def z_=(value: graphene_simd4f_t): Unit = !struct.at3 = value
+    def w : graphene_simd4f_t = struct._4
+    def w_=(value: graphene_simd4f_t): Unit = !struct.at4 = value
+
+/**
+ * graphene_size_t: : the width : the height
+*/
+opaque type graphene_size_t = CStruct2[Float, Float]
+object graphene_size_t:
+  given _tag: Tag[graphene_size_t] = Tag.materializeCStruct2Tag[Float, Float]
+  def apply()(using Zone): Ptr[graphene_size_t] = scala.scalanative.unsafe.alloc[graphene_size_t](1)
+  def apply(width : Float, height : Float)(using Zone): Ptr[graphene_size_t] = 
+    val ____ptr = apply()
+    (!____ptr).width = width
+    (!____ptr).height = height
+    ____ptr
+  extension (struct: graphene_size_t)
+    def width : Float = struct._1
+    def width_=(value: Float): Unit = !struct.at1 = value
+    def height : Float = struct._2
+    def height_=(value: Float): Unit = !struct.at2 = value
+
+/**
+ * graphene_vec3_t:
+*/
+opaque type graphene_vec3_t = CStruct1[graphene_simd4f_t]
+object graphene_vec3_t:
+  given _tag: Tag[graphene_vec3_t] = Tag.materializeCStruct1Tag[graphene_simd4f_t]
+  def apply()(using Zone): Ptr[graphene_vec3_t] = scala.scalanative.unsafe.alloc[graphene_vec3_t](1)
+  def apply(__graphene_private_value : graphene_simd4f_t)(using Zone): Ptr[graphene_vec3_t] = 
+    val ____ptr = apply()
+    (!____ptr).__graphene_private_value = __graphene_private_value
+    ____ptr
+  extension (struct: graphene_vec3_t)
+    def __graphene_private_value : graphene_simd4f_t = struct._1
+    def __graphene_private_value_=(value: graphene_simd4f_t): Unit = !struct.at1 = value
+
+/**
+ * graphene_vec4_t:
+*/
+opaque type graphene_vec4_t = CStruct1[graphene_simd4f_t]
+object graphene_vec4_t:
+  given _tag: Tag[graphene_vec4_t] = Tag.materializeCStruct1Tag[graphene_simd4f_t]
+  def apply()(using Zone): Ptr[graphene_vec4_t] = scala.scalanative.unsafe.alloc[graphene_vec4_t](1)
+  def apply(__graphene_private_value : graphene_simd4f_t)(using Zone): Ptr[graphene_vec4_t] = 
+    val ____ptr = apply()
+    (!____ptr).__graphene_private_value = __graphene_private_value
+    ____ptr
+  extension (struct: graphene_vec4_t)
+    def __graphene_private_value : graphene_simd4f_t = struct._1
+    def __graphene_private_value_=(value: graphene_simd4f_t): Unit = !struct.at1 = value

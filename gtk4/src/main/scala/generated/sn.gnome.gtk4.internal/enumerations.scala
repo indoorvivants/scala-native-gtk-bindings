@@ -47,7 +47,7 @@ object GdkAxisFlags extends CEnumU[GdkAxisFlags]:
       case GDK_AXIS_FLAG_DISTANCE => Some("GDK_AXIS_FLAG_DISTANCE")
       case GDK_AXIS_FLAG_ROTATION => Some("GDK_AXIS_FLAG_ROTATION")
       case GDK_AXIS_FLAG_SLIDER => Some("GDK_AXIS_FLAG_SLIDER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkAxisFlags)
     inline def &(b: GdkAxisFlags): GdkAxisFlags = a & b
     inline def |(b: GdkAxisFlags): GdkAxisFlags = a | b
@@ -88,7 +88,7 @@ object GdkAxisUse extends CEnumU[GdkAxisUse]:
       case GDK_AXIS_ROTATION => Some("GDK_AXIS_ROTATION")
       case GDK_AXIS_SLIDER => Some("GDK_AXIS_SLIDER")
       case GDK_AXIS_LAST => Some("GDK_AXIS_LAST")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkAxisUse)
     inline def &(b: GdkAxisUse): GdkAxisUse = a & b
     inline def |(b: GdkAxisUse): GdkAxisUse = a | b
@@ -111,7 +111,7 @@ object GdkDragAction extends CEnumU[GdkDragAction]:
       case GDK_ACTION_MOVE => Some("GDK_ACTION_MOVE")
       case GDK_ACTION_LINK => Some("GDK_ACTION_LINK")
       case GDK_ACTION_ASK => Some("GDK_ACTION_ASK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkDragAction)
     inline def &(b: GdkDragAction): GdkDragAction = a & b
     inline def |(b: GdkDragAction): GdkDragAction = a | b
@@ -132,7 +132,7 @@ object GdkKeyMatch extends CEnumU[GdkKeyMatch]:
       case GDK_KEY_MATCH_NONE => Some("GDK_KEY_MATCH_NONE")
       case GDK_KEY_MATCH_PARTIAL => Some("GDK_KEY_MATCH_PARTIAL")
       case GDK_KEY_MATCH_EXACT => Some("GDK_KEY_MATCH_EXACT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkKeyMatch)
     inline def &(b: GdkKeyMatch): GdkKeyMatch = a & b
     inline def |(b: GdkKeyMatch): GdkKeyMatch = a | b
@@ -171,7 +171,7 @@ object GdkModifierType extends CEnumU[GdkModifierType]:
       case GDK_SUPER_MASK => Some("GDK_SUPER_MASK")
       case GDK_HYPER_MASK => Some("GDK_HYPER_MASK")
       case GDK_META_MASK => Some("GDK_META_MASK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GdkModifierType)
     inline def &(b: GdkModifierType): GdkModifierType = a & b
     inline def |(b: GdkModifierType): GdkModifierType = a | b
@@ -218,7 +218,7 @@ object GskBlendMode extends CEnumU[GskBlendMode]:
       case GSK_BLEND_MODE_HUE => Some("GSK_BLEND_MODE_HUE")
       case GSK_BLEND_MODE_SATURATION => Some("GSK_BLEND_MODE_SATURATION")
       case GSK_BLEND_MODE_LUMINOSITY => Some("GSK_BLEND_MODE_LUMINOSITY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GskBlendMode)
     inline def &(b: GskBlendMode): GskBlendMode = a & b
     inline def |(b: GskBlendMode): GskBlendMode = a | b
@@ -241,7 +241,7 @@ object GtkAccessibleAutocomplete extends CEnumU[GtkAccessibleAutocomplete]:
       case GTK_ACCESSIBLE_AUTOCOMPLETE_INLINE => Some("GTK_ACCESSIBLE_AUTOCOMPLETE_INLINE")
       case GTK_ACCESSIBLE_AUTOCOMPLETE_LIST => Some("GTK_ACCESSIBLE_AUTOCOMPLETE_LIST")
       case GTK_ACCESSIBLE_AUTOCOMPLETE_BOTH => Some("GTK_ACCESSIBLE_AUTOCOMPLETE_BOTH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleAutocomplete)
     inline def &(b: GtkAccessibleAutocomplete): GtkAccessibleAutocomplete = a & b
     inline def |(b: GtkAccessibleAutocomplete): GtkAccessibleAutocomplete = a | b
@@ -264,7 +264,7 @@ object GtkAccessibleInvalidState extends CEnumU[GtkAccessibleInvalidState]:
       case GTK_ACCESSIBLE_INVALID_TRUE => Some("GTK_ACCESSIBLE_INVALID_TRUE")
       case GTK_ACCESSIBLE_INVALID_GRAMMAR => Some("GTK_ACCESSIBLE_INVALID_GRAMMAR")
       case GTK_ACCESSIBLE_INVALID_SPELLING => Some("GTK_ACCESSIBLE_INVALID_SPELLING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleInvalidState)
     inline def &(b: GtkAccessibleInvalidState): GtkAccessibleInvalidState = a & b
     inline def |(b: GtkAccessibleInvalidState): GtkAccessibleInvalidState = a | b
@@ -317,7 +317,7 @@ object GtkAccessibleProperty extends CEnumU[GtkAccessibleProperty]:
       case GTK_ACCESSIBLE_PROPERTY_VALUE_MIN => Some("GTK_ACCESSIBLE_PROPERTY_VALUE_MIN")
       case GTK_ACCESSIBLE_PROPERTY_VALUE_NOW => Some("GTK_ACCESSIBLE_PROPERTY_VALUE_NOW")
       case GTK_ACCESSIBLE_PROPERTY_VALUE_TEXT => Some("GTK_ACCESSIBLE_PROPERTY_VALUE_TEXT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleProperty)
     inline def &(b: GtkAccessibleProperty): GtkAccessibleProperty = a & b
     inline def |(b: GtkAccessibleProperty): GtkAccessibleProperty = a | b
@@ -368,7 +368,7 @@ object GtkAccessibleRelation extends CEnumU[GtkAccessibleRelation]:
       case GTK_ACCESSIBLE_RELATION_ROW_INDEX_TEXT => Some("GTK_ACCESSIBLE_RELATION_ROW_INDEX_TEXT")
       case GTK_ACCESSIBLE_RELATION_ROW_SPAN => Some("GTK_ACCESSIBLE_RELATION_ROW_SPAN")
       case GTK_ACCESSIBLE_RELATION_SET_SIZE => Some("GTK_ACCESSIBLE_RELATION_SET_SIZE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleRelation)
     inline def &(b: GtkAccessibleRelation): GtkAccessibleRelation = a & b
     inline def |(b: GtkAccessibleRelation): GtkAccessibleRelation = a | b
@@ -539,7 +539,7 @@ object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
       case GTK_ACCESSIBLE_ROLE_TREE_ITEM => Some("GTK_ACCESSIBLE_ROLE_TREE_ITEM")
       case GTK_ACCESSIBLE_ROLE_WIDGET => Some("GTK_ACCESSIBLE_ROLE_WIDGET")
       case GTK_ACCESSIBLE_ROLE_WINDOW => Some("GTK_ACCESSIBLE_ROLE_WINDOW")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleRole)
     inline def &(b: GtkAccessibleRole): GtkAccessibleRole = a & b
     inline def |(b: GtkAccessibleRole): GtkAccessibleRole = a | b
@@ -562,7 +562,7 @@ object GtkAccessibleSort extends CEnumU[GtkAccessibleSort]:
       case GTK_ACCESSIBLE_SORT_ASCENDING => Some("GTK_ACCESSIBLE_SORT_ASCENDING")
       case GTK_ACCESSIBLE_SORT_DESCENDING => Some("GTK_ACCESSIBLE_SORT_DESCENDING")
       case GTK_ACCESSIBLE_SORT_OTHER => Some("GTK_ACCESSIBLE_SORT_OTHER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleSort)
     inline def &(b: GtkAccessibleSort): GtkAccessibleSort = a & b
     inline def |(b: GtkAccessibleSort): GtkAccessibleSort = a | b
@@ -593,7 +593,7 @@ object GtkAccessibleState extends CEnumU[GtkAccessibleState]:
       case GTK_ACCESSIBLE_STATE_INVALID => Some("GTK_ACCESSIBLE_STATE_INVALID")
       case GTK_ACCESSIBLE_STATE_PRESSED => Some("GTK_ACCESSIBLE_STATE_PRESSED")
       case GTK_ACCESSIBLE_STATE_SELECTED => Some("GTK_ACCESSIBLE_STATE_SELECTED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleState)
     inline def &(b: GtkAccessibleState): GtkAccessibleState = a & b
     inline def |(b: GtkAccessibleState): GtkAccessibleState = a | b
@@ -614,7 +614,7 @@ object GtkAccessibleTristate extends CEnumU[GtkAccessibleTristate]:
       case GTK_ACCESSIBLE_TRISTATE_FALSE => Some("GTK_ACCESSIBLE_TRISTATE_FALSE")
       case GTK_ACCESSIBLE_TRISTATE_TRUE => Some("GTK_ACCESSIBLE_TRISTATE_TRUE")
       case GTK_ACCESSIBLE_TRISTATE_MIXED => Some("GTK_ACCESSIBLE_TRISTATE_MIXED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAccessibleTristate)
     inline def &(b: GtkAccessibleTristate): GtkAccessibleTristate = a & b
     inline def |(b: GtkAccessibleTristate): GtkAccessibleTristate = a | b
@@ -639,14 +639,12 @@ object GtkAlign extends CEnumU[GtkAlign]:
       case GTK_ALIGN_END => Some("GTK_ALIGN_END")
       case GTK_ALIGN_CENTER => Some("GTK_ALIGN_CENTER")
       case GTK_ALIGN_BASELINE => Some("GTK_ALIGN_BASELINE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAlign)
     inline def &(b: GtkAlign): GtkAlign = a & b
     inline def |(b: GtkAlign): GtkAlign = a | b
     inline def is(b: GtkAlign): Boolean = (a & b) == b
 
-/**
-*/
 opaque type GtkApplicationInhibitFlags = CUnsignedInt
 object GtkApplicationInhibitFlags extends CEnumU[GtkApplicationInhibitFlags]:
   given _tag: Tag[GtkApplicationInhibitFlags] = Tag.UInt
@@ -661,7 +659,7 @@ object GtkApplicationInhibitFlags extends CEnumU[GtkApplicationInhibitFlags]:
       case GTK_APPLICATION_INHIBIT_SWITCH => Some("GTK_APPLICATION_INHIBIT_SWITCH")
       case GTK_APPLICATION_INHIBIT_SUSPEND => Some("GTK_APPLICATION_INHIBIT_SUSPEND")
       case GTK_APPLICATION_INHIBIT_IDLE => Some("GTK_APPLICATION_INHIBIT_IDLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkApplicationInhibitFlags)
     inline def &(b: GtkApplicationInhibitFlags): GtkApplicationInhibitFlags = a & b
     inline def |(b: GtkApplicationInhibitFlags): GtkApplicationInhibitFlags = a | b
@@ -686,7 +684,7 @@ object GtkArrowType extends CEnumU[GtkArrowType]:
       case GTK_ARROW_LEFT => Some("GTK_ARROW_LEFT")
       case GTK_ARROW_RIGHT => Some("GTK_ARROW_RIGHT")
       case GTK_ARROW_NONE => Some("GTK_ARROW_NONE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkArrowType)
     inline def &(b: GtkArrowType): GtkArrowType = a & b
     inline def |(b: GtkArrowType): GtkArrowType = a | b
@@ -713,7 +711,7 @@ object GtkAssistantPageType extends CEnumU[GtkAssistantPageType]:
       case GTK_ASSISTANT_PAGE_SUMMARY => Some("GTK_ASSISTANT_PAGE_SUMMARY")
       case GTK_ASSISTANT_PAGE_PROGRESS => Some("GTK_ASSISTANT_PAGE_PROGRESS")
       case GTK_ASSISTANT_PAGE_CUSTOM => Some("GTK_ASSISTANT_PAGE_CUSTOM")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkAssistantPageType)
     inline def &(b: GtkAssistantPageType): GtkAssistantPageType = a & b
     inline def |(b: GtkAssistantPageType): GtkAssistantPageType = a | b
@@ -734,7 +732,7 @@ object GtkBaselinePosition extends CEnumU[GtkBaselinePosition]:
       case GTK_BASELINE_POSITION_TOP => Some("GTK_BASELINE_POSITION_TOP")
       case GTK_BASELINE_POSITION_CENTER => Some("GTK_BASELINE_POSITION_CENTER")
       case GTK_BASELINE_POSITION_BOTTOM => Some("GTK_BASELINE_POSITION_BOTTOM")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkBaselinePosition)
     inline def &(b: GtkBaselinePosition): GtkBaselinePosition = a & b
     inline def |(b: GtkBaselinePosition): GtkBaselinePosition = a | b
@@ -769,7 +767,7 @@ object GtkBorderStyle extends CEnumU[GtkBorderStyle]:
       case GTK_BORDER_STYLE_DOUBLE => Some("GTK_BORDER_STYLE_DOUBLE")
       case GTK_BORDER_STYLE_GROOVE => Some("GTK_BORDER_STYLE_GROOVE")
       case GTK_BORDER_STYLE_RIDGE => Some("GTK_BORDER_STYLE_RIDGE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkBorderStyle)
     inline def &(b: GtkBorderStyle): GtkBorderStyle = a & b
     inline def |(b: GtkBorderStyle): GtkBorderStyle = a | b
@@ -786,7 +784,7 @@ object GtkBuilderClosureFlags extends CEnumU[GtkBuilderClosureFlags]:
   inline def getName(inline value: GtkBuilderClosureFlags): Option[String] =
     inline value match
       case GTK_BUILDER_CLOSURE_SWAPPED => Some("GTK_BUILDER_CLOSURE_SWAPPED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkBuilderClosureFlags)
     inline def &(b: GtkBuilderClosureFlags): GtkBuilderClosureFlags = a & b
     inline def |(b: GtkBuilderClosureFlags): GtkBuilderClosureFlags = a | b
@@ -831,7 +829,7 @@ object GtkBuilderError extends CEnumU[GtkBuilderError]:
       case GTK_BUILDER_ERROR_INVALID_SIGNAL => Some("GTK_BUILDER_ERROR_INVALID_SIGNAL")
       case GTK_BUILDER_ERROR_INVALID_ID => Some("GTK_BUILDER_ERROR_INVALID_ID")
       case GTK_BUILDER_ERROR_INVALID_FUNCTION => Some("GTK_BUILDER_ERROR_INVALID_FUNCTION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkBuilderError)
     inline def &(b: GtkBuilderError): GtkBuilderError = a & b
     inline def |(b: GtkBuilderError): GtkBuilderError = a | b
@@ -858,7 +856,7 @@ object GtkButtonsType extends CEnumU[GtkButtonsType]:
       case GTK_BUTTONS_CANCEL => Some("GTK_BUTTONS_CANCEL")
       case GTK_BUTTONS_YES_NO => Some("GTK_BUTTONS_YES_NO")
       case GTK_BUTTONS_OK_CANCEL => Some("GTK_BUTTONS_OK_CANCEL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkButtonsType)
     inline def &(b: GtkButtonsType): GtkButtonsType = a & b
     inline def |(b: GtkButtonsType): GtkButtonsType = a | b
@@ -877,7 +875,7 @@ object GtkCellRendererAccelMode extends CEnumU[GtkCellRendererAccelMode]:
     inline value match
       case GTK_CELL_RENDERER_ACCEL_MODE_GTK => Some("GTK_CELL_RENDERER_ACCEL_MODE_GTK")
       case GTK_CELL_RENDERER_ACCEL_MODE_OTHER => Some("GTK_CELL_RENDERER_ACCEL_MODE_OTHER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkCellRendererAccelMode)
     inline def &(b: GtkCellRendererAccelMode): GtkCellRendererAccelMode = a & b
     inline def |(b: GtkCellRendererAccelMode): GtkCellRendererAccelMode = a | b
@@ -898,7 +896,7 @@ object GtkCellRendererMode extends CEnumU[GtkCellRendererMode]:
       case GTK_CELL_RENDERER_MODE_INERT => Some("GTK_CELL_RENDERER_MODE_INERT")
       case GTK_CELL_RENDERER_MODE_ACTIVATABLE => Some("GTK_CELL_RENDERER_MODE_ACTIVATABLE")
       case GTK_CELL_RENDERER_MODE_EDITABLE => Some("GTK_CELL_RENDERER_MODE_EDITABLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkCellRendererMode)
     inline def &(b: GtkCellRendererMode): GtkCellRendererMode = a & b
     inline def |(b: GtkCellRendererMode): GtkCellRendererMode = a | b
@@ -927,7 +925,7 @@ object GtkCellRendererState extends CEnumU[GtkCellRendererState]:
       case GTK_CELL_RENDERER_FOCUSED => Some("GTK_CELL_RENDERER_FOCUSED")
       case GTK_CELL_RENDERER_EXPANDABLE => Some("GTK_CELL_RENDERER_EXPANDABLE")
       case GTK_CELL_RENDERER_EXPANDED => Some("GTK_CELL_RENDERER_EXPANDED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkCellRendererState)
     inline def &(b: GtkCellRendererState): GtkCellRendererState = a & b
     inline def |(b: GtkCellRendererState): GtkCellRendererState = a | b
@@ -966,7 +964,7 @@ object GtkConstraintAttribute extends CEnumU[GtkConstraintAttribute]:
       case GTK_CONSTRAINT_ATTRIBUTE_CENTER_X => Some("GTK_CONSTRAINT_ATTRIBUTE_CENTER_X")
       case GTK_CONSTRAINT_ATTRIBUTE_CENTER_Y => Some("GTK_CONSTRAINT_ATTRIBUTE_CENTER_Y")
       case GTK_CONSTRAINT_ATTRIBUTE_BASELINE => Some("GTK_CONSTRAINT_ATTRIBUTE_BASELINE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkConstraintAttribute)
     inline def &(b: GtkConstraintAttribute): GtkConstraintAttribute = a & b
     inline def |(b: GtkConstraintAttribute): GtkConstraintAttribute = a | b
@@ -987,7 +985,7 @@ object GtkConstraintRelation extends CEnum[GtkConstraintRelation]:
       case GTK_CONSTRAINT_RELATION_LE => Some("GTK_CONSTRAINT_RELATION_LE")
       case GTK_CONSTRAINT_RELATION_EQ => Some("GTK_CONSTRAINT_RELATION_EQ")
       case GTK_CONSTRAINT_RELATION_GE => Some("GTK_CONSTRAINT_RELATION_GE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkConstraintRelation)
     inline def &(b: GtkConstraintRelation): GtkConstraintRelation = a & b
     inline def |(b: GtkConstraintRelation): GtkConstraintRelation = a | b
@@ -1010,7 +1008,7 @@ object GtkConstraintStrength extends CEnumU[GtkConstraintStrength]:
       case GTK_CONSTRAINT_STRENGTH_STRONG => Some("GTK_CONSTRAINT_STRENGTH_STRONG")
       case GTK_CONSTRAINT_STRENGTH_MEDIUM => Some("GTK_CONSTRAINT_STRENGTH_MEDIUM")
       case GTK_CONSTRAINT_STRENGTH_WEAK => Some("GTK_CONSTRAINT_STRENGTH_WEAK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkConstraintStrength)
     inline def &(b: GtkConstraintStrength): GtkConstraintStrength = a & b
     inline def |(b: GtkConstraintStrength): GtkConstraintStrength = a | b
@@ -1037,7 +1035,7 @@ object GtkConstraintVflParserError extends CEnumU[GtkConstraintVflParserError]:
       case GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_METRIC => Some("GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_METRIC")
       case GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_PRIORITY => Some("GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_PRIORITY")
       case GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_RELATION => Some("GTK_CONSTRAINT_VFL_PARSER_ERROR_INVALID_RELATION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkConstraintVflParserError)
     inline def &(b: GtkConstraintVflParserError): GtkConstraintVflParserError = a & b
     inline def |(b: GtkConstraintVflParserError): GtkConstraintVflParserError = a | b
@@ -1060,7 +1058,7 @@ object GtkCornerType extends CEnumU[GtkCornerType]:
       case GTK_CORNER_BOTTOM_LEFT => Some("GTK_CORNER_BOTTOM_LEFT")
       case GTK_CORNER_TOP_RIGHT => Some("GTK_CORNER_TOP_RIGHT")
       case GTK_CORNER_BOTTOM_RIGHT => Some("GTK_CORNER_BOTTOM_RIGHT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkCornerType)
     inline def &(b: GtkCornerType): GtkCornerType = a & b
     inline def |(b: GtkCornerType): GtkCornerType = a | b
@@ -1085,7 +1083,7 @@ object GtkCssParserError extends CEnumU[GtkCssParserError]:
       case GTK_CSS_PARSER_ERROR_IMPORT => Some("GTK_CSS_PARSER_ERROR_IMPORT")
       case GTK_CSS_PARSER_ERROR_NAME => Some("GTK_CSS_PARSER_ERROR_NAME")
       case GTK_CSS_PARSER_ERROR_UNKNOWN_VALUE => Some("GTK_CSS_PARSER_ERROR_UNKNOWN_VALUE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkCssParserError)
     inline def &(b: GtkCssParserError): GtkCssParserError = a & b
     inline def |(b: GtkCssParserError): GtkCssParserError = a | b
@@ -1106,7 +1104,7 @@ object GtkCssParserWarning extends CEnumU[GtkCssParserWarning]:
       case GTK_CSS_PARSER_WARNING_DEPRECATED => Some("GTK_CSS_PARSER_WARNING_DEPRECATED")
       case GTK_CSS_PARSER_WARNING_SYNTAX => Some("GTK_CSS_PARSER_WARNING_SYNTAX")
       case GTK_CSS_PARSER_WARNING_UNIMPLEMENTED => Some("GTK_CSS_PARSER_WARNING_UNIMPLEMENTED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkCssParserWarning)
     inline def &(b: GtkCssParserWarning): GtkCssParserWarning = a & b
     inline def |(b: GtkCssParserWarning): GtkCssParserWarning = a | b
@@ -1159,7 +1157,7 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
       case GTK_DEBUG_BUILDER_OBJECTS => Some("GTK_DEBUG_BUILDER_OBJECTS")
       case GTK_DEBUG_A11Y => Some("GTK_DEBUG_A11Y")
       case GTK_DEBUG_ICONFALLBACK => Some("GTK_DEBUG_ICONFALLBACK")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkDebugFlags)
     inline def &(b: GtkDebugFlags): GtkDebugFlags = a & b
     inline def |(b: GtkDebugFlags): GtkDebugFlags = a | b
@@ -1190,7 +1188,7 @@ object GtkDeleteType extends CEnumU[GtkDeleteType]:
       case GTK_DELETE_PARAGRAPH_ENDS => Some("GTK_DELETE_PARAGRAPH_ENDS")
       case GTK_DELETE_PARAGRAPHS => Some("GTK_DELETE_PARAGRAPHS")
       case GTK_DELETE_WHITESPACE => Some("GTK_DELETE_WHITESPACE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkDeleteType)
     inline def &(b: GtkDeleteType): GtkDeleteType = a & b
     inline def |(b: GtkDeleteType): GtkDeleteType = a | b
@@ -1211,7 +1209,7 @@ object GtkDialogFlags extends CEnumU[GtkDialogFlags]:
       case GTK_DIALOG_MODAL => Some("GTK_DIALOG_MODAL")
       case GTK_DIALOG_DESTROY_WITH_PARENT => Some("GTK_DIALOG_DESTROY_WITH_PARENT")
       case GTK_DIALOG_USE_HEADER_BAR => Some("GTK_DIALOG_USE_HEADER_BAR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkDialogFlags)
     inline def &(b: GtkDialogFlags): GtkDialogFlags = a & b
     inline def |(b: GtkDialogFlags): GtkDialogFlags = a | b
@@ -1238,7 +1236,7 @@ object GtkDirectionType extends CEnumU[GtkDirectionType]:
       case GTK_DIR_DOWN => Some("GTK_DIR_DOWN")
       case GTK_DIR_LEFT => Some("GTK_DIR_LEFT")
       case GTK_DIR_RIGHT => Some("GTK_DIR_RIGHT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkDirectionType)
     inline def &(b: GtkDirectionType): GtkDirectionType = a & b
     inline def |(b: GtkDirectionType): GtkDirectionType = a | b
@@ -1271,7 +1269,7 @@ object GtkEditableProperties extends CEnumU[GtkEditableProperties]:
       case GTK_EDITABLE_PROP_XALIGN => Some("GTK_EDITABLE_PROP_XALIGN")
       case GTK_EDITABLE_PROP_ENABLE_UNDO => Some("GTK_EDITABLE_PROP_ENABLE_UNDO")
       case GTK_EDITABLE_NUM_PROPERTIES => Some("GTK_EDITABLE_NUM_PROPERTIES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkEditableProperties)
     inline def &(b: GtkEditableProperties): GtkEditableProperties = a & b
     inline def |(b: GtkEditableProperties): GtkEditableProperties = a | b
@@ -1290,7 +1288,7 @@ object GtkEntryIconPosition extends CEnumU[GtkEntryIconPosition]:
     inline value match
       case GTK_ENTRY_ICON_PRIMARY => Some("GTK_ENTRY_ICON_PRIMARY")
       case GTK_ENTRY_ICON_SECONDARY => Some("GTK_ENTRY_ICON_SECONDARY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkEntryIconPosition)
     inline def &(b: GtkEntryIconPosition): GtkEntryIconPosition = a & b
     inline def |(b: GtkEntryIconPosition): GtkEntryIconPosition = a | b
@@ -1317,7 +1315,7 @@ object GtkEventControllerScrollFlags extends CEnumU[GtkEventControllerScrollFlag
       case GTK_EVENT_CONTROLLER_SCROLL_DISCRETE => Some("GTK_EVENT_CONTROLLER_SCROLL_DISCRETE")
       case GTK_EVENT_CONTROLLER_SCROLL_KINETIC => Some("GTK_EVENT_CONTROLLER_SCROLL_KINETIC")
       case GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES => Some("GTK_EVENT_CONTROLLER_SCROLL_BOTH_AXES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkEventControllerScrollFlags)
     inline def &(b: GtkEventControllerScrollFlags): GtkEventControllerScrollFlags = a & b
     inline def |(b: GtkEventControllerScrollFlags): GtkEventControllerScrollFlags = a | b
@@ -1338,7 +1336,7 @@ object GtkEventSequenceState extends CEnumU[GtkEventSequenceState]:
       case GTK_EVENT_SEQUENCE_NONE => Some("GTK_EVENT_SEQUENCE_NONE")
       case GTK_EVENT_SEQUENCE_CLAIMED => Some("GTK_EVENT_SEQUENCE_CLAIMED")
       case GTK_EVENT_SEQUENCE_DENIED => Some("GTK_EVENT_SEQUENCE_DENIED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkEventSequenceState)
     inline def &(b: GtkEventSequenceState): GtkEventSequenceState = a & b
     inline def |(b: GtkEventSequenceState): GtkEventSequenceState = a | b
@@ -1359,7 +1357,7 @@ object GtkFileChooserAction extends CEnumU[GtkFileChooserAction]:
       case GTK_FILE_CHOOSER_ACTION_OPEN => Some("GTK_FILE_CHOOSER_ACTION_OPEN")
       case GTK_FILE_CHOOSER_ACTION_SAVE => Some("GTK_FILE_CHOOSER_ACTION_SAVE")
       case GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER => Some("GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkFileChooserAction)
     inline def &(b: GtkFileChooserAction): GtkFileChooserAction = a & b
     inline def |(b: GtkFileChooserAction): GtkFileChooserAction = a | b
@@ -1382,7 +1380,7 @@ object GtkFileChooserError extends CEnumU[GtkFileChooserError]:
       case GTK_FILE_CHOOSER_ERROR_BAD_FILENAME => Some("GTK_FILE_CHOOSER_ERROR_BAD_FILENAME")
       case GTK_FILE_CHOOSER_ERROR_ALREADY_EXISTS => Some("GTK_FILE_CHOOSER_ERROR_ALREADY_EXISTS")
       case GTK_FILE_CHOOSER_ERROR_INCOMPLETE_HOSTNAME => Some("GTK_FILE_CHOOSER_ERROR_INCOMPLETE_HOSTNAME")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkFileChooserError)
     inline def &(b: GtkFileChooserError): GtkFileChooserError = a & b
     inline def |(b: GtkFileChooserError): GtkFileChooserError = a | b
@@ -1403,7 +1401,7 @@ object GtkFilterChange extends CEnumU[GtkFilterChange]:
       case GTK_FILTER_CHANGE_DIFFERENT => Some("GTK_FILTER_CHANGE_DIFFERENT")
       case GTK_FILTER_CHANGE_LESS_STRICT => Some("GTK_FILTER_CHANGE_LESS_STRICT")
       case GTK_FILTER_CHANGE_MORE_STRICT => Some("GTK_FILTER_CHANGE_MORE_STRICT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkFilterChange)
     inline def &(b: GtkFilterChange): GtkFilterChange = a & b
     inline def |(b: GtkFilterChange): GtkFilterChange = a | b
@@ -1424,7 +1422,7 @@ object GtkFilterMatch extends CEnumU[GtkFilterMatch]:
       case GTK_FILTER_MATCH_SOME => Some("GTK_FILTER_MATCH_SOME")
       case GTK_FILTER_MATCH_NONE => Some("GTK_FILTER_MATCH_NONE")
       case GTK_FILTER_MATCH_ALL => Some("GTK_FILTER_MATCH_ALL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkFilterMatch)
     inline def &(b: GtkFilterMatch): GtkFilterMatch = a & b
     inline def |(b: GtkFilterMatch): GtkFilterMatch = a | b
@@ -1449,7 +1447,7 @@ object GtkFontChooserLevel extends CEnumU[GtkFontChooserLevel]:
       case GTK_FONT_CHOOSER_LEVEL_SIZE => Some("GTK_FONT_CHOOSER_LEVEL_SIZE")
       case GTK_FONT_CHOOSER_LEVEL_VARIATIONS => Some("GTK_FONT_CHOOSER_LEVEL_VARIATIONS")
       case GTK_FONT_CHOOSER_LEVEL_FEATURES => Some("GTK_FONT_CHOOSER_LEVEL_FEATURES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkFontChooserLevel)
     inline def &(b: GtkFontChooserLevel): GtkFontChooserLevel = a & b
     inline def |(b: GtkFontChooserLevel): GtkFontChooserLevel = a | b
@@ -1470,7 +1468,7 @@ object GtkIconLookupFlags extends CEnumU[GtkIconLookupFlags]:
       case GTK_ICON_LOOKUP_FORCE_REGULAR => Some("GTK_ICON_LOOKUP_FORCE_REGULAR")
       case GTK_ICON_LOOKUP_FORCE_SYMBOLIC => Some("GTK_ICON_LOOKUP_FORCE_SYMBOLIC")
       case GTK_ICON_LOOKUP_PRELOAD => Some("GTK_ICON_LOOKUP_PRELOAD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkIconLookupFlags)
     inline def &(b: GtkIconLookupFlags): GtkIconLookupFlags = a & b
     inline def |(b: GtkIconLookupFlags): GtkIconLookupFlags = a | b
@@ -1491,7 +1489,7 @@ object GtkIconSize extends CEnumU[GtkIconSize]:
       case GTK_ICON_SIZE_INHERIT => Some("GTK_ICON_SIZE_INHERIT")
       case GTK_ICON_SIZE_NORMAL => Some("GTK_ICON_SIZE_NORMAL")
       case GTK_ICON_SIZE_LARGE => Some("GTK_ICON_SIZE_LARGE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkIconSize)
     inline def &(b: GtkIconSize): GtkIconSize = a & b
     inline def |(b: GtkIconSize): GtkIconSize = a | b
@@ -1510,7 +1508,7 @@ object GtkIconThemeError extends CEnumU[GtkIconThemeError]:
     inline value match
       case GTK_ICON_THEME_NOT_FOUND => Some("GTK_ICON_THEME_NOT_FOUND")
       case GTK_ICON_THEME_FAILED => Some("GTK_ICON_THEME_FAILED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkIconThemeError)
     inline def &(b: GtkIconThemeError): GtkIconThemeError = a & b
     inline def |(b: GtkIconThemeError): GtkIconThemeError = a | b
@@ -1537,7 +1535,7 @@ object GtkIconViewDropPosition extends CEnumU[GtkIconViewDropPosition]:
       case GTK_ICON_VIEW_DROP_RIGHT => Some("GTK_ICON_VIEW_DROP_RIGHT")
       case GTK_ICON_VIEW_DROP_ABOVE => Some("GTK_ICON_VIEW_DROP_ABOVE")
       case GTK_ICON_VIEW_DROP_BELOW => Some("GTK_ICON_VIEW_DROP_BELOW")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkIconViewDropPosition)
     inline def &(b: GtkIconViewDropPosition): GtkIconViewDropPosition = a & b
     inline def |(b: GtkIconViewDropPosition): GtkIconViewDropPosition = a | b
@@ -1560,7 +1558,7 @@ object GtkImageType extends CEnumU[GtkImageType]:
       case GTK_IMAGE_ICON_NAME => Some("GTK_IMAGE_ICON_NAME")
       case GTK_IMAGE_GICON => Some("GTK_IMAGE_GICON")
       case GTK_IMAGE_PAINTABLE => Some("GTK_IMAGE_PAINTABLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkImageType)
     inline def &(b: GtkImageType): GtkImageType = a & b
     inline def |(b: GtkImageType): GtkImageType = a | b
@@ -1601,7 +1599,7 @@ object GtkInputHints extends CEnumU[GtkInputHints]:
       case GTK_INPUT_HINT_EMOJI => Some("GTK_INPUT_HINT_EMOJI")
       case GTK_INPUT_HINT_NO_EMOJI => Some("GTK_INPUT_HINT_NO_EMOJI")
       case GTK_INPUT_HINT_PRIVATE => Some("GTK_INPUT_HINT_PRIVATE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkInputHints)
     inline def &(b: GtkInputHints): GtkInputHints = a & b
     inline def |(b: GtkInputHints): GtkInputHints = a | b
@@ -1638,7 +1636,7 @@ object GtkInputPurpose extends CEnumU[GtkInputPurpose]:
       case GTK_INPUT_PURPOSE_PASSWORD => Some("GTK_INPUT_PURPOSE_PASSWORD")
       case GTK_INPUT_PURPOSE_PIN => Some("GTK_INPUT_PURPOSE_PIN")
       case GTK_INPUT_PURPOSE_TERMINAL => Some("GTK_INPUT_PURPOSE_TERMINAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkInputPurpose)
     inline def &(b: GtkInputPurpose): GtkInputPurpose = a & b
     inline def |(b: GtkInputPurpose): GtkInputPurpose = a | b
@@ -1661,7 +1659,7 @@ object GtkJustification extends CEnumU[GtkJustification]:
       case GTK_JUSTIFY_RIGHT => Some("GTK_JUSTIFY_RIGHT")
       case GTK_JUSTIFY_CENTER => Some("GTK_JUSTIFY_CENTER")
       case GTK_JUSTIFY_FILL => Some("GTK_JUSTIFY_FILL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkJustification)
     inline def &(b: GtkJustification): GtkJustification = a & b
     inline def |(b: GtkJustification): GtkJustification = a | b
@@ -1680,7 +1678,7 @@ object GtkLevelBarMode extends CEnumU[GtkLevelBarMode]:
     inline value match
       case GTK_LEVEL_BAR_MODE_CONTINUOUS => Some("GTK_LEVEL_BAR_MODE_CONTINUOUS")
       case GTK_LEVEL_BAR_MODE_DISCRETE => Some("GTK_LEVEL_BAR_MODE_DISCRETE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkLevelBarMode)
     inline def &(b: GtkLevelBarMode): GtkLevelBarMode = a & b
     inline def |(b: GtkLevelBarMode): GtkLevelBarMode = a | b
@@ -1731,7 +1729,7 @@ object GtkLicense extends CEnumU[GtkLicense]:
       case GTK_LICENSE_BSD_3 => Some("GTK_LICENSE_BSD_3")
       case GTK_LICENSE_APACHE_2_0 => Some("GTK_LICENSE_APACHE_2_0")
       case GTK_LICENSE_MPL_2_0 => Some("GTK_LICENSE_MPL_2_0")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkLicense)
     inline def &(b: GtkLicense): GtkLicense = a & b
     inline def |(b: GtkLicense): GtkLicense = a | b
@@ -1756,7 +1754,7 @@ object GtkMessageType extends CEnumU[GtkMessageType]:
       case GTK_MESSAGE_QUESTION => Some("GTK_MESSAGE_QUESTION")
       case GTK_MESSAGE_ERROR => Some("GTK_MESSAGE_ERROR")
       case GTK_MESSAGE_OTHER => Some("GTK_MESSAGE_OTHER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkMessageType)
     inline def &(b: GtkMessageType): GtkMessageType = a & b
     inline def |(b: GtkMessageType): GtkMessageType = a | b
@@ -1791,7 +1789,7 @@ object GtkMovementStep extends CEnumU[GtkMovementStep]:
       case GTK_MOVEMENT_PAGES => Some("GTK_MOVEMENT_PAGES")
       case GTK_MOVEMENT_BUFFER_ENDS => Some("GTK_MOVEMENT_BUFFER_ENDS")
       case GTK_MOVEMENT_HORIZONTAL_PAGES => Some("GTK_MOVEMENT_HORIZONTAL_PAGES")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkMovementStep)
     inline def &(b: GtkMovementStep): GtkMovementStep = a & b
     inline def |(b: GtkMovementStep): GtkMovementStep = a | b
@@ -1812,7 +1810,7 @@ object GtkNaturalWrapMode extends CEnumU[GtkNaturalWrapMode]:
       case GTK_NATURAL_WRAP_INHERIT => Some("GTK_NATURAL_WRAP_INHERIT")
       case GTK_NATURAL_WRAP_NONE => Some("GTK_NATURAL_WRAP_NONE")
       case GTK_NATURAL_WRAP_WORD => Some("GTK_NATURAL_WRAP_WORD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkNaturalWrapMode)
     inline def &(b: GtkNaturalWrapMode): GtkNaturalWrapMode = a & b
     inline def |(b: GtkNaturalWrapMode): GtkNaturalWrapMode = a | b
@@ -1831,7 +1829,7 @@ object GtkNotebookTab extends CEnumU[GtkNotebookTab]:
     inline value match
       case GTK_NOTEBOOK_TAB_FIRST => Some("GTK_NOTEBOOK_TAB_FIRST")
       case GTK_NOTEBOOK_TAB_LAST => Some("GTK_NOTEBOOK_TAB_LAST")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkNotebookTab)
     inline def &(b: GtkNotebookTab): GtkNotebookTab = a & b
     inline def |(b: GtkNotebookTab): GtkNotebookTab = a | b
@@ -1862,7 +1860,7 @@ object GtkNumberUpLayout extends CEnumU[GtkNumberUpLayout]:
       case GTK_NUMBER_UP_LAYOUT_TOP_TO_BOTTOM_RIGHT_TO_LEFT => Some("GTK_NUMBER_UP_LAYOUT_TOP_TO_BOTTOM_RIGHT_TO_LEFT")
       case GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_LEFT_TO_RIGHT => Some("GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_LEFT_TO_RIGHT")
       case GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_RIGHT_TO_LEFT => Some("GTK_NUMBER_UP_LAYOUT_BOTTOM_TO_TOP_RIGHT_TO_LEFT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkNumberUpLayout)
     inline def &(b: GtkNumberUpLayout): GtkNumberUpLayout = a & b
     inline def |(b: GtkNumberUpLayout): GtkNumberUpLayout = a | b
@@ -1883,7 +1881,7 @@ object GtkOrdering extends CEnum[GtkOrdering]:
       case GTK_ORDERING_SMALLER => Some("GTK_ORDERING_SMALLER")
       case GTK_ORDERING_EQUAL => Some("GTK_ORDERING_EQUAL")
       case GTK_ORDERING_LARGER => Some("GTK_ORDERING_LARGER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkOrdering)
     inline def &(b: GtkOrdering): GtkOrdering = a & b
     inline def |(b: GtkOrdering): GtkOrdering = a | b
@@ -1902,7 +1900,7 @@ object GtkOrientation extends CEnumU[GtkOrientation]:
     inline value match
       case GTK_ORIENTATION_HORIZONTAL => Some("GTK_ORIENTATION_HORIZONTAL")
       case GTK_ORIENTATION_VERTICAL => Some("GTK_ORIENTATION_VERTICAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkOrientation)
     inline def &(b: GtkOrientation): GtkOrientation = a & b
     inline def |(b: GtkOrientation): GtkOrientation = a | b
@@ -1921,7 +1919,7 @@ object GtkOverflow extends CEnumU[GtkOverflow]:
     inline value match
       case GTK_OVERFLOW_VISIBLE => Some("GTK_OVERFLOW_VISIBLE")
       case GTK_OVERFLOW_HIDDEN => Some("GTK_OVERFLOW_HIDDEN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkOverflow)
     inline def &(b: GtkOverflow): GtkOverflow = a & b
     inline def |(b: GtkOverflow): GtkOverflow = a | b
@@ -1940,7 +1938,7 @@ object GtkPackType extends CEnumU[GtkPackType]:
     inline value match
       case GTK_PACK_START => Some("GTK_PACK_START")
       case GTK_PACK_END => Some("GTK_PACK_END")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPackType)
     inline def &(b: GtkPackType): GtkPackType = a & b
     inline def |(b: GtkPackType): GtkPackType = a | b
@@ -1961,7 +1959,7 @@ object GtkPadActionType extends CEnumU[GtkPadActionType]:
       case GTK_PAD_ACTION_BUTTON => Some("GTK_PAD_ACTION_BUTTON")
       case GTK_PAD_ACTION_RING => Some("GTK_PAD_ACTION_RING")
       case GTK_PAD_ACTION_STRIP => Some("GTK_PAD_ACTION_STRIP")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPadActionType)
     inline def &(b: GtkPadActionType): GtkPadActionType = a & b
     inline def |(b: GtkPadActionType): GtkPadActionType = a | b
@@ -1984,7 +1982,7 @@ object GtkPageOrientation extends CEnumU[GtkPageOrientation]:
       case GTK_PAGE_ORIENTATION_LANDSCAPE => Some("GTK_PAGE_ORIENTATION_LANDSCAPE")
       case GTK_PAGE_ORIENTATION_REVERSE_PORTRAIT => Some("GTK_PAGE_ORIENTATION_REVERSE_PORTRAIT")
       case GTK_PAGE_ORIENTATION_REVERSE_LANDSCAPE => Some("GTK_PAGE_ORIENTATION_REVERSE_LANDSCAPE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPageOrientation)
     inline def &(b: GtkPageOrientation): GtkPageOrientation = a & b
     inline def |(b: GtkPageOrientation): GtkPageOrientation = a | b
@@ -2005,7 +2003,7 @@ object GtkPageSet extends CEnumU[GtkPageSet]:
       case GTK_PAGE_SET_ALL => Some("GTK_PAGE_SET_ALL")
       case GTK_PAGE_SET_EVEN => Some("GTK_PAGE_SET_EVEN")
       case GTK_PAGE_SET_ODD => Some("GTK_PAGE_SET_ODD")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPageSet)
     inline def &(b: GtkPageSet): GtkPageSet = a & b
     inline def |(b: GtkPageSet): GtkPageSet = a | b
@@ -2028,7 +2026,7 @@ object GtkPanDirection extends CEnumU[GtkPanDirection]:
       case GTK_PAN_DIRECTION_RIGHT => Some("GTK_PAN_DIRECTION_RIGHT")
       case GTK_PAN_DIRECTION_UP => Some("GTK_PAN_DIRECTION_UP")
       case GTK_PAN_DIRECTION_DOWN => Some("GTK_PAN_DIRECTION_DOWN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPanDirection)
     inline def &(b: GtkPanDirection): GtkPanDirection = a & b
     inline def |(b: GtkPanDirection): GtkPanDirection = a | b
@@ -2049,7 +2047,7 @@ object GtkPickFlags extends CEnumU[GtkPickFlags]:
       case GTK_PICK_DEFAULT => Some("GTK_PICK_DEFAULT")
       case GTK_PICK_INSENSITIVE => Some("GTK_PICK_INSENSITIVE")
       case GTK_PICK_NON_TARGETABLE => Some("GTK_PICK_NON_TARGETABLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPickFlags)
     inline def &(b: GtkPickFlags): GtkPickFlags = a & b
     inline def |(b: GtkPickFlags): GtkPickFlags = a | b
@@ -2072,7 +2070,7 @@ object GtkPolicyType extends CEnumU[GtkPolicyType]:
       case GTK_POLICY_AUTOMATIC => Some("GTK_POLICY_AUTOMATIC")
       case GTK_POLICY_NEVER => Some("GTK_POLICY_NEVER")
       case GTK_POLICY_EXTERNAL => Some("GTK_POLICY_EXTERNAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPolicyType)
     inline def &(b: GtkPolicyType): GtkPolicyType = a & b
     inline def |(b: GtkPolicyType): GtkPolicyType = a | b
@@ -2089,7 +2087,7 @@ object GtkPopoverMenuFlags extends CEnumU[GtkPopoverMenuFlags]:
   inline def getName(inline value: GtkPopoverMenuFlags): Option[String] =
     inline value match
       case GTK_POPOVER_MENU_NESTED => Some("GTK_POPOVER_MENU_NESTED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPopoverMenuFlags)
     inline def &(b: GtkPopoverMenuFlags): GtkPopoverMenuFlags = a & b
     inline def |(b: GtkPopoverMenuFlags): GtkPopoverMenuFlags = a | b
@@ -2112,7 +2110,7 @@ object GtkPositionType extends CEnumU[GtkPositionType]:
       case GTK_POS_RIGHT => Some("GTK_POS_RIGHT")
       case GTK_POS_TOP => Some("GTK_POS_TOP")
       case GTK_POS_BOTTOM => Some("GTK_POS_BOTTOM")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPositionType)
     inline def &(b: GtkPositionType): GtkPositionType = a & b
     inline def |(b: GtkPositionType): GtkPositionType = a | b
@@ -2133,7 +2131,7 @@ object GtkPrintDuplex extends CEnumU[GtkPrintDuplex]:
       case GTK_PRINT_DUPLEX_SIMPLEX => Some("GTK_PRINT_DUPLEX_SIMPLEX")
       case GTK_PRINT_DUPLEX_HORIZONTAL => Some("GTK_PRINT_DUPLEX_HORIZONTAL")
       case GTK_PRINT_DUPLEX_VERTICAL => Some("GTK_PRINT_DUPLEX_VERTICAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintDuplex)
     inline def &(b: GtkPrintDuplex): GtkPrintDuplex = a & b
     inline def |(b: GtkPrintDuplex): GtkPrintDuplex = a | b
@@ -2156,7 +2154,7 @@ object GtkPrintError extends CEnumU[GtkPrintError]:
       case GTK_PRINT_ERROR_INTERNAL_ERROR => Some("GTK_PRINT_ERROR_INTERNAL_ERROR")
       case GTK_PRINT_ERROR_NOMEM => Some("GTK_PRINT_ERROR_NOMEM")
       case GTK_PRINT_ERROR_INVALID_FILE => Some("GTK_PRINT_ERROR_INVALID_FILE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintError)
     inline def &(b: GtkPrintError): GtkPrintError = a & b
     inline def |(b: GtkPrintError): GtkPrintError = a | b
@@ -2179,7 +2177,7 @@ object GtkPrintOperationAction extends CEnumU[GtkPrintOperationAction]:
       case GTK_PRINT_OPERATION_ACTION_PRINT => Some("GTK_PRINT_OPERATION_ACTION_PRINT")
       case GTK_PRINT_OPERATION_ACTION_PREVIEW => Some("GTK_PRINT_OPERATION_ACTION_PREVIEW")
       case GTK_PRINT_OPERATION_ACTION_EXPORT => Some("GTK_PRINT_OPERATION_ACTION_EXPORT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintOperationAction)
     inline def &(b: GtkPrintOperationAction): GtkPrintOperationAction = a & b
     inline def |(b: GtkPrintOperationAction): GtkPrintOperationAction = a | b
@@ -2202,7 +2200,7 @@ object GtkPrintOperationResult extends CEnumU[GtkPrintOperationResult]:
       case GTK_PRINT_OPERATION_RESULT_APPLY => Some("GTK_PRINT_OPERATION_RESULT_APPLY")
       case GTK_PRINT_OPERATION_RESULT_CANCEL => Some("GTK_PRINT_OPERATION_RESULT_CANCEL")
       case GTK_PRINT_OPERATION_RESULT_IN_PROGRESS => Some("GTK_PRINT_OPERATION_RESULT_IN_PROGRESS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintOperationResult)
     inline def &(b: GtkPrintOperationResult): GtkPrintOperationResult = a & b
     inline def |(b: GtkPrintOperationResult): GtkPrintOperationResult = a | b
@@ -2225,7 +2223,7 @@ object GtkPrintPages extends CEnumU[GtkPrintPages]:
       case GTK_PRINT_PAGES_CURRENT => Some("GTK_PRINT_PAGES_CURRENT")
       case GTK_PRINT_PAGES_RANGES => Some("GTK_PRINT_PAGES_RANGES")
       case GTK_PRINT_PAGES_SELECTION => Some("GTK_PRINT_PAGES_SELECTION")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintPages)
     inline def &(b: GtkPrintPages): GtkPrintPages = a & b
     inline def |(b: GtkPrintPages): GtkPrintPages = a | b
@@ -2248,7 +2246,7 @@ object GtkPrintQuality extends CEnumU[GtkPrintQuality]:
       case GTK_PRINT_QUALITY_NORMAL => Some("GTK_PRINT_QUALITY_NORMAL")
       case GTK_PRINT_QUALITY_HIGH => Some("GTK_PRINT_QUALITY_HIGH")
       case GTK_PRINT_QUALITY_DRAFT => Some("GTK_PRINT_QUALITY_DRAFT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintQuality)
     inline def &(b: GtkPrintQuality): GtkPrintQuality = a & b
     inline def |(b: GtkPrintQuality): GtkPrintQuality = a | b
@@ -2281,7 +2279,7 @@ object GtkPrintStatus extends CEnumU[GtkPrintStatus]:
       case GTK_PRINT_STATUS_PRINTING => Some("GTK_PRINT_STATUS_PRINTING")
       case GTK_PRINT_STATUS_FINISHED => Some("GTK_PRINT_STATUS_FINISHED")
       case GTK_PRINT_STATUS_FINISHED_ABORTED => Some("GTK_PRINT_STATUS_FINISHED_ABORTED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPrintStatus)
     inline def &(b: GtkPrintStatus): GtkPrintStatus = a & b
     inline def |(b: GtkPrintStatus): GtkPrintStatus = a | b
@@ -2300,7 +2298,7 @@ object GtkPropagationLimit extends CEnumU[GtkPropagationLimit]:
     inline value match
       case GTK_LIMIT_NONE => Some("GTK_LIMIT_NONE")
       case GTK_LIMIT_SAME_NATIVE => Some("GTK_LIMIT_SAME_NATIVE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPropagationLimit)
     inline def &(b: GtkPropagationLimit): GtkPropagationLimit = a & b
     inline def |(b: GtkPropagationLimit): GtkPropagationLimit = a | b
@@ -2323,7 +2321,7 @@ object GtkPropagationPhase extends CEnumU[GtkPropagationPhase]:
       case GTK_PHASE_CAPTURE => Some("GTK_PHASE_CAPTURE")
       case GTK_PHASE_BUBBLE => Some("GTK_PHASE_BUBBLE")
       case GTK_PHASE_TARGET => Some("GTK_PHASE_TARGET")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkPropagationPhase)
     inline def &(b: GtkPropagationPhase): GtkPropagationPhase = a & b
     inline def |(b: GtkPropagationPhase): GtkPropagationPhase = a | b
@@ -2352,7 +2350,7 @@ object GtkRecentManagerError extends CEnumU[GtkRecentManagerError]:
       case GTK_RECENT_MANAGER_ERROR_READ => Some("GTK_RECENT_MANAGER_ERROR_READ")
       case GTK_RECENT_MANAGER_ERROR_WRITE => Some("GTK_RECENT_MANAGER_ERROR_WRITE")
       case GTK_RECENT_MANAGER_ERROR_UNKNOWN => Some("GTK_RECENT_MANAGER_ERROR_UNKNOWN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkRecentManagerError)
     inline def &(b: GtkRecentManagerError): GtkRecentManagerError = a & b
     inline def |(b: GtkRecentManagerError): GtkRecentManagerError = a | b
@@ -2389,14 +2387,12 @@ object GtkResponseType extends CEnum[GtkResponseType]:
       case GTK_RESPONSE_NO => Some("GTK_RESPONSE_NO")
       case GTK_RESPONSE_APPLY => Some("GTK_RESPONSE_APPLY")
       case GTK_RESPONSE_HELP => Some("GTK_RESPONSE_HELP")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkResponseType)
     inline def &(b: GtkResponseType): GtkResponseType = a & b
     inline def |(b: GtkResponseType): GtkResponseType = a | b
     inline def is(b: GtkResponseType): Boolean = (a & b) == b
 
-/**
-*/
 opaque type GtkRevealerTransitionType = CUnsignedInt
 object GtkRevealerTransitionType extends CEnumU[GtkRevealerTransitionType]:
   given _tag: Tag[GtkRevealerTransitionType] = Tag.UInt
@@ -2423,7 +2419,7 @@ object GtkRevealerTransitionType extends CEnumU[GtkRevealerTransitionType]:
       case GTK_REVEALER_TRANSITION_TYPE_SWING_LEFT => Some("GTK_REVEALER_TRANSITION_TYPE_SWING_LEFT")
       case GTK_REVEALER_TRANSITION_TYPE_SWING_UP => Some("GTK_REVEALER_TRANSITION_TYPE_SWING_UP")
       case GTK_REVEALER_TRANSITION_TYPE_SWING_DOWN => Some("GTK_REVEALER_TRANSITION_TYPE_SWING_DOWN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkRevealerTransitionType)
     inline def &(b: GtkRevealerTransitionType): GtkRevealerTransitionType = a & b
     inline def |(b: GtkRevealerTransitionType): GtkRevealerTransitionType = a | b
@@ -2450,7 +2446,7 @@ object GtkScrollStep extends CEnumU[GtkScrollStep]:
       case GTK_SCROLL_HORIZONTAL_STEPS => Some("GTK_SCROLL_HORIZONTAL_STEPS")
       case GTK_SCROLL_HORIZONTAL_PAGES => Some("GTK_SCROLL_HORIZONTAL_PAGES")
       case GTK_SCROLL_HORIZONTAL_ENDS => Some("GTK_SCROLL_HORIZONTAL_ENDS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkScrollStep)
     inline def &(b: GtkScrollStep): GtkScrollStep = a & b
     inline def |(b: GtkScrollStep): GtkScrollStep = a | b
@@ -2497,7 +2493,7 @@ object GtkScrollType extends CEnumU[GtkScrollType]:
       case GTK_SCROLL_PAGE_RIGHT => Some("GTK_SCROLL_PAGE_RIGHT")
       case GTK_SCROLL_START => Some("GTK_SCROLL_START")
       case GTK_SCROLL_END => Some("GTK_SCROLL_END")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkScrollType)
     inline def &(b: GtkScrollType): GtkScrollType = a & b
     inline def |(b: GtkScrollType): GtkScrollType = a | b
@@ -2516,7 +2512,7 @@ object GtkScrollablePolicy extends CEnumU[GtkScrollablePolicy]:
     inline value match
       case GTK_SCROLL_MINIMUM => Some("GTK_SCROLL_MINIMUM")
       case GTK_SCROLL_NATURAL => Some("GTK_SCROLL_NATURAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkScrollablePolicy)
     inline def &(b: GtkScrollablePolicy): GtkScrollablePolicy = a & b
     inline def |(b: GtkScrollablePolicy): GtkScrollablePolicy = a | b
@@ -2539,7 +2535,7 @@ object GtkSelectionMode extends CEnumU[GtkSelectionMode]:
       case GTK_SELECTION_SINGLE => Some("GTK_SELECTION_SINGLE")
       case GTK_SELECTION_BROWSE => Some("GTK_SELECTION_BROWSE")
       case GTK_SELECTION_MULTIPLE => Some("GTK_SELECTION_MULTIPLE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSelectionMode)
     inline def &(b: GtkSelectionMode): GtkSelectionMode = a & b
     inline def |(b: GtkSelectionMode): GtkSelectionMode = a | b
@@ -2560,7 +2556,7 @@ object GtkSensitivityType extends CEnumU[GtkSensitivityType]:
       case GTK_SENSITIVITY_AUTO => Some("GTK_SENSITIVITY_AUTO")
       case GTK_SENSITIVITY_ON => Some("GTK_SENSITIVITY_ON")
       case GTK_SENSITIVITY_OFF => Some("GTK_SENSITIVITY_OFF")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSensitivityType)
     inline def &(b: GtkSensitivityType): GtkSensitivityType = a & b
     inline def |(b: GtkSensitivityType): GtkSensitivityType = a | b
@@ -2577,7 +2573,7 @@ object GtkShortcutActionFlags extends CEnumU[GtkShortcutActionFlags]:
   inline def getName(inline value: GtkShortcutActionFlags): Option[String] =
     inline value match
       case GTK_SHORTCUT_ACTION_EXCLUSIVE => Some("GTK_SHORTCUT_ACTION_EXCLUSIVE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkShortcutActionFlags)
     inline def &(b: GtkShortcutActionFlags): GtkShortcutActionFlags = a & b
     inline def |(b: GtkShortcutActionFlags): GtkShortcutActionFlags = a | b
@@ -2598,7 +2594,7 @@ object GtkShortcutScope extends CEnumU[GtkShortcutScope]:
       case GTK_SHORTCUT_SCOPE_LOCAL => Some("GTK_SHORTCUT_SCOPE_LOCAL")
       case GTK_SHORTCUT_SCOPE_MANAGED => Some("GTK_SHORTCUT_SCOPE_MANAGED")
       case GTK_SHORTCUT_SCOPE_GLOBAL => Some("GTK_SHORTCUT_SCOPE_GLOBAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkShortcutScope)
     inline def &(b: GtkShortcutScope): GtkShortcutScope = a & b
     inline def |(b: GtkShortcutScope): GtkShortcutScope = a | b
@@ -2633,7 +2629,7 @@ object GtkShortcutType extends CEnumU[GtkShortcutType]:
       case GTK_SHORTCUT_GESTURE => Some("GTK_SHORTCUT_GESTURE")
       case GTK_SHORTCUT_GESTURE_SWIPE_LEFT => Some("GTK_SHORTCUT_GESTURE_SWIPE_LEFT")
       case GTK_SHORTCUT_GESTURE_SWIPE_RIGHT => Some("GTK_SHORTCUT_GESTURE_SWIPE_RIGHT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkShortcutType)
     inline def &(b: GtkShortcutType): GtkShortcutType = a & b
     inline def |(b: GtkShortcutType): GtkShortcutType = a | b
@@ -2656,7 +2652,7 @@ object GtkSizeGroupMode extends CEnumU[GtkSizeGroupMode]:
       case GTK_SIZE_GROUP_HORIZONTAL => Some("GTK_SIZE_GROUP_HORIZONTAL")
       case GTK_SIZE_GROUP_VERTICAL => Some("GTK_SIZE_GROUP_VERTICAL")
       case GTK_SIZE_GROUP_BOTH => Some("GTK_SIZE_GROUP_BOTH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSizeGroupMode)
     inline def &(b: GtkSizeGroupMode): GtkSizeGroupMode = a & b
     inline def |(b: GtkSizeGroupMode): GtkSizeGroupMode = a | b
@@ -2677,7 +2673,7 @@ object GtkSizeRequestMode extends CEnumU[GtkSizeRequestMode]:
       case GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH => Some("GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH")
       case GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT => Some("GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT")
       case GTK_SIZE_REQUEST_CONSTANT_SIZE => Some("GTK_SIZE_REQUEST_CONSTANT_SIZE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSizeRequestMode)
     inline def &(b: GtkSizeRequestMode): GtkSizeRequestMode = a & b
     inline def |(b: GtkSizeRequestMode): GtkSizeRequestMode = a | b
@@ -2696,7 +2692,7 @@ object GtkSortType extends CEnumU[GtkSortType]:
     inline value match
       case GTK_SORT_ASCENDING => Some("GTK_SORT_ASCENDING")
       case GTK_SORT_DESCENDING => Some("GTK_SORT_DESCENDING")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSortType)
     inline def &(b: GtkSortType): GtkSortType = a & b
     inline def |(b: GtkSortType): GtkSortType = a | b
@@ -2719,7 +2715,7 @@ object GtkSorterChange extends CEnumU[GtkSorterChange]:
       case GTK_SORTER_CHANGE_INVERTED => Some("GTK_SORTER_CHANGE_INVERTED")
       case GTK_SORTER_CHANGE_LESS_STRICT => Some("GTK_SORTER_CHANGE_LESS_STRICT")
       case GTK_SORTER_CHANGE_MORE_STRICT => Some("GTK_SORTER_CHANGE_MORE_STRICT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSorterChange)
     inline def &(b: GtkSorterChange): GtkSorterChange = a & b
     inline def |(b: GtkSorterChange): GtkSorterChange = a | b
@@ -2740,7 +2736,7 @@ object GtkSorterOrder extends CEnumU[GtkSorterOrder]:
       case GTK_SORTER_ORDER_PARTIAL => Some("GTK_SORTER_ORDER_PARTIAL")
       case GTK_SORTER_ORDER_NONE => Some("GTK_SORTER_ORDER_NONE")
       case GTK_SORTER_ORDER_TOTAL => Some("GTK_SORTER_ORDER_TOTAL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSorterOrder)
     inline def &(b: GtkSorterOrder): GtkSorterOrder = a & b
     inline def |(b: GtkSorterOrder): GtkSorterOrder = a | b
@@ -2759,7 +2755,7 @@ object GtkSpinButtonUpdatePolicy extends CEnumU[GtkSpinButtonUpdatePolicy]:
     inline value match
       case GTK_UPDATE_ALWAYS => Some("GTK_UPDATE_ALWAYS")
       case GTK_UPDATE_IF_VALID => Some("GTK_UPDATE_IF_VALID")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSpinButtonUpdatePolicy)
     inline def &(b: GtkSpinButtonUpdatePolicy): GtkSpinButtonUpdatePolicy = a & b
     inline def |(b: GtkSpinButtonUpdatePolicy): GtkSpinButtonUpdatePolicy = a | b
@@ -2788,14 +2784,12 @@ object GtkSpinType extends CEnumU[GtkSpinType]:
       case GTK_SPIN_HOME => Some("GTK_SPIN_HOME")
       case GTK_SPIN_END => Some("GTK_SPIN_END")
       case GTK_SPIN_USER_DEFINED => Some("GTK_SPIN_USER_DEFINED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSpinType)
     inline def &(b: GtkSpinType): GtkSpinType = a & b
     inline def |(b: GtkSpinType): GtkSpinType = a | b
     inline def is(b: GtkSpinType): Boolean = (a & b) == b
 
-/**
-*/
 opaque type GtkStackTransitionType = CUnsignedInt
 object GtkStackTransitionType extends CEnumU[GtkStackTransitionType]:
   given _tag: Tag[GtkStackTransitionType] = Tag.UInt
@@ -2848,7 +2842,7 @@ object GtkStackTransitionType extends CEnumU[GtkStackTransitionType]:
       case GTK_STACK_TRANSITION_TYPE_ROTATE_LEFT => Some("GTK_STACK_TRANSITION_TYPE_ROTATE_LEFT")
       case GTK_STACK_TRANSITION_TYPE_ROTATE_RIGHT => Some("GTK_STACK_TRANSITION_TYPE_ROTATE_RIGHT")
       case GTK_STACK_TRANSITION_TYPE_ROTATE_LEFT_RIGHT => Some("GTK_STACK_TRANSITION_TYPE_ROTATE_LEFT_RIGHT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkStackTransitionType)
     inline def &(b: GtkStackTransitionType): GtkStackTransitionType = a & b
     inline def |(b: GtkStackTransitionType): GtkStackTransitionType = a | b
@@ -2895,7 +2889,7 @@ object GtkStateFlags extends CEnumU[GtkStateFlags]:
       case GTK_STATE_FLAG_DROP_ACTIVE => Some("GTK_STATE_FLAG_DROP_ACTIVE")
       case GTK_STATE_FLAG_FOCUS_VISIBLE => Some("GTK_STATE_FLAG_FOCUS_VISIBLE")
       case GTK_STATE_FLAG_FOCUS_WITHIN => Some("GTK_STATE_FLAG_FOCUS_WITHIN")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkStateFlags)
     inline def &(b: GtkStateFlags): GtkStateFlags = a & b
     inline def |(b: GtkStateFlags): GtkStateFlags = a | b
@@ -2916,14 +2910,12 @@ object GtkStringFilterMatchMode extends CEnumU[GtkStringFilterMatchMode]:
       case GTK_STRING_FILTER_MATCH_MODE_EXACT => Some("GTK_STRING_FILTER_MATCH_MODE_EXACT")
       case GTK_STRING_FILTER_MATCH_MODE_SUBSTRING => Some("GTK_STRING_FILTER_MATCH_MODE_SUBSTRING")
       case GTK_STRING_FILTER_MATCH_MODE_PREFIX => Some("GTK_STRING_FILTER_MATCH_MODE_PREFIX")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkStringFilterMatchMode)
     inline def &(b: GtkStringFilterMatchMode): GtkStringFilterMatchMode = a & b
     inline def |(b: GtkStringFilterMatchMode): GtkStringFilterMatchMode = a | b
     inline def is(b: GtkStringFilterMatchMode): Boolean = (a & b) == b
 
-/**
-*/
 opaque type GtkStyleContextPrintFlags = CUnsignedInt
 object GtkStyleContextPrintFlags extends CEnumU[GtkStyleContextPrintFlags]:
   given _tag: Tag[GtkStyleContextPrintFlags] = Tag.UInt
@@ -2938,7 +2930,7 @@ object GtkStyleContextPrintFlags extends CEnumU[GtkStyleContextPrintFlags]:
       case GTK_STYLE_CONTEXT_PRINT_RECURSE => Some("GTK_STYLE_CONTEXT_PRINT_RECURSE")
       case GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE => Some("GTK_STYLE_CONTEXT_PRINT_SHOW_STYLE")
       case GTK_STYLE_CONTEXT_PRINT_SHOW_CHANGE => Some("GTK_STYLE_CONTEXT_PRINT_SHOW_CHANGE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkStyleContextPrintFlags)
     inline def &(b: GtkStyleContextPrintFlags): GtkStyleContextPrintFlags = a & b
     inline def |(b: GtkStyleContextPrintFlags): GtkStyleContextPrintFlags = a | b
@@ -2961,7 +2953,7 @@ object GtkSymbolicColor extends CEnumU[GtkSymbolicColor]:
       case GTK_SYMBOLIC_COLOR_ERROR => Some("GTK_SYMBOLIC_COLOR_ERROR")
       case GTK_SYMBOLIC_COLOR_WARNING => Some("GTK_SYMBOLIC_COLOR_WARNING")
       case GTK_SYMBOLIC_COLOR_SUCCESS => Some("GTK_SYMBOLIC_COLOR_SUCCESS")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSymbolicColor)
     inline def &(b: GtkSymbolicColor): GtkSymbolicColor = a & b
     inline def |(b: GtkSymbolicColor): GtkSymbolicColor = a | b
@@ -2986,7 +2978,7 @@ object GtkSystemSetting extends CEnumU[GtkSystemSetting]:
       case GTK_SYSTEM_SETTING_FONT_CONFIG => Some("GTK_SYSTEM_SETTING_FONT_CONFIG")
       case GTK_SYSTEM_SETTING_DISPLAY => Some("GTK_SYSTEM_SETTING_DISPLAY")
       case GTK_SYSTEM_SETTING_ICON_THEME => Some("GTK_SYSTEM_SETTING_ICON_THEME")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkSystemSetting)
     inline def &(b: GtkSystemSetting): GtkSystemSetting = a & b
     inline def |(b: GtkSystemSetting): GtkSystemSetting = a | b
@@ -3007,7 +2999,7 @@ object GtkTextDirection extends CEnumU[GtkTextDirection]:
       case GTK_TEXT_DIR_NONE => Some("GTK_TEXT_DIR_NONE")
       case GTK_TEXT_DIR_LTR => Some("GTK_TEXT_DIR_LTR")
       case GTK_TEXT_DIR_RTL => Some("GTK_TEXT_DIR_RTL")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTextDirection)
     inline def &(b: GtkTextDirection): GtkTextDirection = a & b
     inline def |(b: GtkTextDirection): GtkTextDirection = a | b
@@ -3026,7 +3018,7 @@ object GtkTextExtendSelection extends CEnumU[GtkTextExtendSelection]:
     inline value match
       case GTK_TEXT_EXTEND_SELECTION_WORD => Some("GTK_TEXT_EXTEND_SELECTION_WORD")
       case GTK_TEXT_EXTEND_SELECTION_LINE => Some("GTK_TEXT_EXTEND_SELECTION_LINE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTextExtendSelection)
     inline def &(b: GtkTextExtendSelection): GtkTextExtendSelection = a & b
     inline def |(b: GtkTextExtendSelection): GtkTextExtendSelection = a | b
@@ -3047,7 +3039,7 @@ object GtkTextSearchFlags extends CEnumU[GtkTextSearchFlags]:
       case GTK_TEXT_SEARCH_VISIBLE_ONLY => Some("GTK_TEXT_SEARCH_VISIBLE_ONLY")
       case GTK_TEXT_SEARCH_TEXT_ONLY => Some("GTK_TEXT_SEARCH_TEXT_ONLY")
       case GTK_TEXT_SEARCH_CASE_INSENSITIVE => Some("GTK_TEXT_SEARCH_CASE_INSENSITIVE")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTextSearchFlags)
     inline def &(b: GtkTextSearchFlags): GtkTextSearchFlags = a & b
     inline def |(b: GtkTextSearchFlags): GtkTextSearchFlags = a | b
@@ -3066,7 +3058,7 @@ object GtkTextViewLayer extends CEnumU[GtkTextViewLayer]:
     inline value match
       case GTK_TEXT_VIEW_LAYER_BELOW_TEXT => Some("GTK_TEXT_VIEW_LAYER_BELOW_TEXT")
       case GTK_TEXT_VIEW_LAYER_ABOVE_TEXT => Some("GTK_TEXT_VIEW_LAYER_ABOVE_TEXT")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTextViewLayer)
     inline def &(b: GtkTextViewLayer): GtkTextViewLayer = a & b
     inline def |(b: GtkTextViewLayer): GtkTextViewLayer = a | b
@@ -3093,7 +3085,7 @@ object GtkTextWindowType extends CEnumU[GtkTextWindowType]:
       case GTK_TEXT_WINDOW_RIGHT => Some("GTK_TEXT_WINDOW_RIGHT")
       case GTK_TEXT_WINDOW_TOP => Some("GTK_TEXT_WINDOW_TOP")
       case GTK_TEXT_WINDOW_BOTTOM => Some("GTK_TEXT_WINDOW_BOTTOM")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTextWindowType)
     inline def &(b: GtkTextWindowType): GtkTextWindowType = a & b
     inline def |(b: GtkTextWindowType): GtkTextWindowType = a | b
@@ -3112,7 +3104,7 @@ object GtkTreeModelFlags extends CEnumU[GtkTreeModelFlags]:
     inline value match
       case GTK_TREE_MODEL_ITERS_PERSIST => Some("GTK_TREE_MODEL_ITERS_PERSIST")
       case GTK_TREE_MODEL_LIST_ONLY => Some("GTK_TREE_MODEL_LIST_ONLY")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTreeModelFlags)
     inline def &(b: GtkTreeModelFlags): GtkTreeModelFlags = a & b
     inline def |(b: GtkTreeModelFlags): GtkTreeModelFlags = a | b
@@ -3133,7 +3125,7 @@ object GtkTreeViewColumnSizing extends CEnumU[GtkTreeViewColumnSizing]:
       case GTK_TREE_VIEW_COLUMN_GROW_ONLY => Some("GTK_TREE_VIEW_COLUMN_GROW_ONLY")
       case GTK_TREE_VIEW_COLUMN_AUTOSIZE => Some("GTK_TREE_VIEW_COLUMN_AUTOSIZE")
       case GTK_TREE_VIEW_COLUMN_FIXED => Some("GTK_TREE_VIEW_COLUMN_FIXED")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTreeViewColumnSizing)
     inline def &(b: GtkTreeViewColumnSizing): GtkTreeViewColumnSizing = a & b
     inline def |(b: GtkTreeViewColumnSizing): GtkTreeViewColumnSizing = a | b
@@ -3156,7 +3148,7 @@ object GtkTreeViewDropPosition extends CEnumU[GtkTreeViewDropPosition]:
       case GTK_TREE_VIEW_DROP_AFTER => Some("GTK_TREE_VIEW_DROP_AFTER")
       case GTK_TREE_VIEW_DROP_INTO_OR_BEFORE => Some("GTK_TREE_VIEW_DROP_INTO_OR_BEFORE")
       case GTK_TREE_VIEW_DROP_INTO_OR_AFTER => Some("GTK_TREE_VIEW_DROP_INTO_OR_AFTER")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTreeViewDropPosition)
     inline def &(b: GtkTreeViewDropPosition): GtkTreeViewDropPosition = a & b
     inline def |(b: GtkTreeViewDropPosition): GtkTreeViewDropPosition = a | b
@@ -3179,7 +3171,7 @@ object GtkTreeViewGridLines extends CEnumU[GtkTreeViewGridLines]:
       case GTK_TREE_VIEW_GRID_LINES_HORIZONTAL => Some("GTK_TREE_VIEW_GRID_LINES_HORIZONTAL")
       case GTK_TREE_VIEW_GRID_LINES_VERTICAL => Some("GTK_TREE_VIEW_GRID_LINES_VERTICAL")
       case GTK_TREE_VIEW_GRID_LINES_BOTH => Some("GTK_TREE_VIEW_GRID_LINES_BOTH")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkTreeViewGridLines)
     inline def &(b: GtkTreeViewGridLines): GtkTreeViewGridLines = a & b
     inline def |(b: GtkTreeViewGridLines): GtkTreeViewGridLines = a | b
@@ -3202,7 +3194,7 @@ object GtkUnit extends CEnumU[GtkUnit]:
       case GTK_UNIT_POINTS => Some("GTK_UNIT_POINTS")
       case GTK_UNIT_INCH => Some("GTK_UNIT_INCH")
       case GTK_UNIT_MM => Some("GTK_UNIT_MM")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkUnit)
     inline def &(b: GtkUnit): GtkUnit = a & b
     inline def |(b: GtkUnit): GtkUnit = a | b
@@ -3225,8 +3217,81 @@ object GtkWrapMode extends CEnumU[GtkWrapMode]:
       case GTK_WRAP_CHAR => Some("GTK_WRAP_CHAR")
       case GTK_WRAP_WORD => Some("GTK_WRAP_WORD")
       case GTK_WRAP_WORD_CHAR => Some("GTK_WRAP_WORD_CHAR")
-      case _ => None
+      case _ => _root_.scala.None
   extension (a: GtkWrapMode)
     inline def &(b: GtkWrapMode): GtkWrapMode = a & b
     inline def |(b: GtkWrapMode): GtkWrapMode = a | b
     inline def is(b: GtkWrapMode): Boolean = (a & b) == b
+
+/**
+ * PangoDirection: _DIRECTION_LTR: A strong left-to-right direction _DIRECTION_RTL: A strong right-to-left direction _DIRECTION_TTB_LTR: Deprecated value; treated the same as `PANGO_DIRECTION_RTL`. _DIRECTION_TTB_RTL: Deprecated value; treated the same as `PANGO_DIRECTION_LTR` _DIRECTION_WEAK_LTR: A weak left-to-right direction _DIRECTION_WEAK_RTL: A weak right-to-left direction _DIRECTION_NEUTRAL: No direction specified
+*/
+opaque type PangoDirection = CUnsignedInt
+object PangoDirection extends CEnumU[PangoDirection]:
+  given _tag: Tag[PangoDirection] = Tag.UInt
+  inline def define(inline a: Long): PangoDirection = a.toUInt
+  val PANGO_DIRECTION_LTR = define(0)
+  val PANGO_DIRECTION_RTL = define(1)
+  val PANGO_DIRECTION_TTB_LTR = define(2)
+  val PANGO_DIRECTION_TTB_RTL = define(3)
+  val PANGO_DIRECTION_WEAK_LTR = define(4)
+  val PANGO_DIRECTION_WEAK_RTL = define(5)
+  val PANGO_DIRECTION_NEUTRAL = define(6)
+  inline def getName(inline value: PangoDirection): Option[String] =
+    inline value match
+      case PANGO_DIRECTION_LTR => Some("PANGO_DIRECTION_LTR")
+      case PANGO_DIRECTION_RTL => Some("PANGO_DIRECTION_RTL")
+      case PANGO_DIRECTION_TTB_LTR => Some("PANGO_DIRECTION_TTB_LTR")
+      case PANGO_DIRECTION_TTB_RTL => Some("PANGO_DIRECTION_TTB_RTL")
+      case PANGO_DIRECTION_WEAK_LTR => Some("PANGO_DIRECTION_WEAK_LTR")
+      case PANGO_DIRECTION_WEAK_RTL => Some("PANGO_DIRECTION_WEAK_RTL")
+      case PANGO_DIRECTION_NEUTRAL => Some("PANGO_DIRECTION_NEUTRAL")
+      case _ => _root_.scala.None
+  extension (a: PangoDirection)
+    inline def &(b: PangoDirection): PangoDirection = a & b
+    inline def |(b: PangoDirection): PangoDirection = a | b
+    inline def is(b: PangoDirection): Boolean = (a & b) == b
+
+/**
+ * PangoEllipsizeMode: _ELLIPSIZE_NONE: No ellipsization _ELLIPSIZE_START: Omit characters at the start of the text _ELLIPSIZE_MIDDLE: Omit characters in the middle of the text _ELLIPSIZE_END: Omit characters at the end of the text
+*/
+opaque type PangoEllipsizeMode = CUnsignedInt
+object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
+  given _tag: Tag[PangoEllipsizeMode] = Tag.UInt
+  inline def define(inline a: Long): PangoEllipsizeMode = a.toUInt
+  val PANGO_ELLIPSIZE_NONE = define(0)
+  val PANGO_ELLIPSIZE_START = define(1)
+  val PANGO_ELLIPSIZE_MIDDLE = define(2)
+  val PANGO_ELLIPSIZE_END = define(3)
+  inline def getName(inline value: PangoEllipsizeMode): Option[String] =
+    inline value match
+      case PANGO_ELLIPSIZE_NONE => Some("PANGO_ELLIPSIZE_NONE")
+      case PANGO_ELLIPSIZE_START => Some("PANGO_ELLIPSIZE_START")
+      case PANGO_ELLIPSIZE_MIDDLE => Some("PANGO_ELLIPSIZE_MIDDLE")
+      case PANGO_ELLIPSIZE_END => Some("PANGO_ELLIPSIZE_END")
+      case _ => _root_.scala.None
+  extension (a: PangoEllipsizeMode)
+    inline def &(b: PangoEllipsizeMode): PangoEllipsizeMode = a & b
+    inline def |(b: PangoEllipsizeMode): PangoEllipsizeMode = a | b
+    inline def is(b: PangoEllipsizeMode): Boolean = (a & b) == b
+
+/**
+ * PangoWrapMode: _WRAP_WORD: wrap lines at word boundaries. _WRAP_CHAR: wrap lines at character boundaries. _WRAP_WORD_CHAR: wrap lines at word boundaries, but fall back to character boundaries if there is not enough space for a full word.
+*/
+opaque type PangoWrapMode = CUnsignedInt
+object PangoWrapMode extends CEnumU[PangoWrapMode]:
+  given _tag: Tag[PangoWrapMode] = Tag.UInt
+  inline def define(inline a: Long): PangoWrapMode = a.toUInt
+  val PANGO_WRAP_WORD = define(0)
+  val PANGO_WRAP_CHAR = define(1)
+  val PANGO_WRAP_WORD_CHAR = define(2)
+  inline def getName(inline value: PangoWrapMode): Option[String] =
+    inline value match
+      case PANGO_WRAP_WORD => Some("PANGO_WRAP_WORD")
+      case PANGO_WRAP_CHAR => Some("PANGO_WRAP_CHAR")
+      case PANGO_WRAP_WORD_CHAR => Some("PANGO_WRAP_WORD_CHAR")
+      case _ => _root_.scala.None
+  extension (a: PangoWrapMode)
+    inline def &(b: PangoWrapMode): PangoWrapMode = a & b
+    inline def |(b: PangoWrapMode): PangoWrapMode = a | b
+    inline def is(b: PangoWrapMode): Boolean = (a & b) == b

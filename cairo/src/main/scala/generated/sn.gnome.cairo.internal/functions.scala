@@ -51,19 +51,19 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_device_get_user_data(device : Ptr[cairo_device_t], key : Ptr[cairo_user_data_key_t]): Ptr[Byte] = extern
 
-@extern def cairo_device_observer_elapsed(abstract_device : Ptr[cairo_device_t]): Double = extern
+@extern def cairo_device_observer_elapsed(device : Ptr[cairo_device_t]): Double = extern
 
-@extern def cairo_device_observer_fill_elapsed(abstract_device : Ptr[cairo_device_t]): Double = extern
+@extern def cairo_device_observer_fill_elapsed(device : Ptr[cairo_device_t]): Double = extern
 
-@extern def cairo_device_observer_glyphs_elapsed(abstract_device : Ptr[cairo_device_t]): Double = extern
+@extern def cairo_device_observer_glyphs_elapsed(device : Ptr[cairo_device_t]): Double = extern
 
-@extern def cairo_device_observer_mask_elapsed(abstract_device : Ptr[cairo_device_t]): Double = extern
+@extern def cairo_device_observer_mask_elapsed(device : Ptr[cairo_device_t]): Double = extern
 
-@extern def cairo_device_observer_paint_elapsed(abstract_device : Ptr[cairo_device_t]): Double = extern
+@extern def cairo_device_observer_paint_elapsed(device : Ptr[cairo_device_t]): Double = extern
 
-@extern def cairo_device_observer_print(abstract_device : Ptr[cairo_device_t], write_func : cairo_write_func_t, closure : Ptr[Byte]): cairo_status_t = extern
+@extern def cairo_device_observer_print(device : Ptr[cairo_device_t], write_func : cairo_write_func_t, closure : Ptr[Byte]): cairo_status_t = extern
 
-@extern def cairo_device_observer_stroke_elapsed(abstract_device : Ptr[cairo_device_t]): Double = extern
+@extern def cairo_device_observer_stroke_elapsed(device : Ptr[cairo_device_t]): Double = extern
 
 @extern def cairo_device_reference(device : Ptr[cairo_device_t]): Ptr[cairo_device_t] = extern
 
@@ -109,12 +109,6 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_font_options_get_antialias(options : Ptr[cairo_font_options_t]): cairo_antialias_t = extern
 
-@extern def cairo_font_options_get_color_mode(options : Ptr[cairo_font_options_t]): cairo_color_mode_t = extern
-
-@extern def cairo_font_options_get_color_palette(options : Ptr[cairo_font_options_t]): CUnsignedInt = extern
-
-@extern def cairo_font_options_get_custom_palette_color(options : Ptr[cairo_font_options_t], index : CUnsignedInt, red : Ptr[Double], green : Ptr[Double], blue : Ptr[Double], alpha : Ptr[Double]): cairo_status_t = extern
-
 @extern def cairo_font_options_get_hint_metrics(options : Ptr[cairo_font_options_t]): cairo_hint_metrics_t = extern
 
 @extern def cairo_font_options_get_hint_style(options : Ptr[cairo_font_options_t]): cairo_hint_style_t = extern
@@ -128,12 +122,6 @@ import _root_.scala.scalanative.*
 @extern def cairo_font_options_merge(options : Ptr[cairo_font_options_t], other : Ptr[cairo_font_options_t]): Unit = extern
 
 @extern def cairo_font_options_set_antialias(options : Ptr[cairo_font_options_t], antialias : cairo_antialias_t): Unit = extern
-
-@extern def cairo_font_options_set_color_mode(options : Ptr[cairo_font_options_t], color_mode : cairo_color_mode_t): Unit = extern
-
-@extern def cairo_font_options_set_color_palette(options : Ptr[cairo_font_options_t], palette_index : CUnsignedInt): Unit = extern
-
-@extern def cairo_font_options_set_custom_palette_color(options : Ptr[cairo_font_options_t], index : CUnsignedInt, red : Double, green : Double, blue : Double, alpha : Double): Unit = extern
 
 @extern def cairo_font_options_set_hint_metrics(options : Ptr[cairo_font_options_t], hint_metrics : cairo_hint_metrics_t): Unit = extern
 
@@ -164,8 +152,6 @@ import _root_.scala.scalanative.*
 @extern def cairo_get_font_options(cr : Ptr[cairo_t], options : Ptr[cairo_font_options_t]): Unit = extern
 
 @extern def cairo_get_group_target(cr : Ptr[cairo_t]): Ptr[cairo_surface_t] = extern
-
-@extern def cairo_get_hairline(cr : Ptr[cairo_t]): cairo_bool_t = extern
 
 @extern def cairo_get_line_cap(cr : Ptr[cairo_t]): cairo_line_cap_t = extern
 
@@ -319,8 +305,6 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_pattern_get_color_stop_rgba(pattern : Ptr[cairo_pattern_t], index : CInt, offset : Ptr[Double], red : Ptr[Double], green : Ptr[Double], blue : Ptr[Double], alpha : Ptr[Double]): cairo_status_t = extern
 
-@extern def cairo_pattern_get_dither(pattern : Ptr[cairo_pattern_t]): cairo_dither_t = extern
-
 @extern def cairo_pattern_get_extend(pattern : Ptr[cairo_pattern_t]): cairo_extend_t = extern
 
 @extern def cairo_pattern_get_filter(pattern : Ptr[cairo_pattern_t]): cairo_filter_t = extern
@@ -342,8 +326,6 @@ import _root_.scala.scalanative.*
 @extern def cairo_pattern_get_user_data(pattern : Ptr[cairo_pattern_t], key : Ptr[cairo_user_data_key_t]): Ptr[Byte] = extern
 
 @extern def cairo_pattern_reference(pattern : Ptr[cairo_pattern_t]): Ptr[cairo_pattern_t] = extern
-
-@extern def cairo_pattern_set_dither(pattern : Ptr[cairo_pattern_t], dither : cairo_dither_t): Unit = extern
 
 @extern def cairo_pattern_set_extend(pattern : Ptr[cairo_pattern_t], extend : cairo_extend_t): Unit = extern
 
@@ -507,8 +489,6 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_set_font_size(cr : Ptr[cairo_t], size : Double): Unit = extern
 
-@extern def cairo_set_hairline(cr : Ptr[cairo_t], set_hairline : cairo_bool_t): Unit = extern
-
 @extern def cairo_set_line_cap(cr : Ptr[cairo_t], line_cap : cairo_line_cap_t): Unit = extern
 
 @extern def cairo_set_line_join(cr : Ptr[cairo_t], line_join : cairo_line_join_t): Unit = extern
@@ -611,9 +591,9 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_surface_observer_add_stroke_callback(abstract_surface : Ptr[cairo_surface_t], func : cairo_surface_observer_callback_t, data : Ptr[Byte]): cairo_status_t = extern
 
-@extern def cairo_surface_observer_elapsed(abstract_surface : Ptr[cairo_surface_t]): Double = extern
+@extern def cairo_surface_observer_elapsed(surface : Ptr[cairo_surface_t]): Double = extern
 
-@extern def cairo_surface_observer_print(abstract_surface : Ptr[cairo_surface_t], write_func : cairo_write_func_t, closure : Ptr[Byte]): cairo_status_t = extern
+@extern def cairo_surface_observer_print(surface : Ptr[cairo_surface_t], write_func : cairo_write_func_t, closure : Ptr[Byte]): cairo_status_t = extern
 
 @extern def cairo_surface_reference(surface : Ptr[cairo_surface_t]): Ptr[cairo_surface_t] = extern
 
@@ -667,8 +647,6 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_user_font_face_get_init_func(font_face : Ptr[cairo_font_face_t]): cairo_user_scaled_font_init_func_t = extern
 
-@extern def cairo_user_font_face_get_render_color_glyph_func(font_face : Ptr[cairo_font_face_t]): cairo_user_scaled_font_render_glyph_func_t = extern
-
 @extern def cairo_user_font_face_get_render_glyph_func(font_face : Ptr[cairo_font_face_t]): cairo_user_scaled_font_render_glyph_func_t = extern
 
 @extern def cairo_user_font_face_get_text_to_glyphs_func(font_face : Ptr[cairo_font_face_t]): cairo_user_scaled_font_text_to_glyphs_func_t = extern
@@ -677,17 +655,11 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_user_font_face_set_init_func(font_face : Ptr[cairo_font_face_t], init_func : cairo_user_scaled_font_init_func_t): Unit = extern
 
-@extern def cairo_user_font_face_set_render_color_glyph_func(font_face : Ptr[cairo_font_face_t], render_glyph_func : cairo_user_scaled_font_render_glyph_func_t): Unit = extern
-
 @extern def cairo_user_font_face_set_render_glyph_func(font_face : Ptr[cairo_font_face_t], render_glyph_func : cairo_user_scaled_font_render_glyph_func_t): Unit = extern
 
 @extern def cairo_user_font_face_set_text_to_glyphs_func(font_face : Ptr[cairo_font_face_t], text_to_glyphs_func : cairo_user_scaled_font_text_to_glyphs_func_t): Unit = extern
 
 @extern def cairo_user_font_face_set_unicode_to_glyph_func(font_face : Ptr[cairo_font_face_t], unicode_to_glyph_func : cairo_user_scaled_font_unicode_to_glyph_func_t): Unit = extern
-
-@extern def cairo_user_scaled_font_get_foreground_marker(scaled_font : Ptr[cairo_scaled_font_t]): Ptr[cairo_pattern_t] = extern
-
-@extern def cairo_user_scaled_font_get_foreground_source(scaled_font : Ptr[cairo_scaled_font_t]): Ptr[cairo_pattern_t] = extern
 
 @extern def cairo_user_to_device(cr : Ptr[cairo_t], x : Ptr[Double], y : Ptr[Double]): Unit = extern
 
