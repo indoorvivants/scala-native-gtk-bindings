@@ -36,8 +36,6 @@ jobs:
           path: ./.remote-cache
           key: ${{ runner.os }}-remote-cache
 
-      - name: Pull cache 
-        run: sbt --client pullRemoteCache || echo 'remote cache not found'
 
       - name: Install GTK
         run: sudo apt-get install libgtk-4-dev libadwaita-1-dev
@@ -46,6 +44,9 @@ jobs:
         run: |
           sudo ./.github/workflows/scripts/setup.sh $LLVM_VERSION
           echo "LLVM_BIN=/usr/lib/llvm-$LLVM_VERSION/bin" >> $GITHUB_ENV
+
+      - name: Pull cache 
+        run: sbt --client pullRemoteCache || echo 'remote cache not found'
 
       - name: Check raw bindings
         run: |
