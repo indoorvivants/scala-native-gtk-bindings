@@ -52,6 +52,8 @@ import _root_.scala.scalanative.*
 
 @extern def g_binding_unbind(binding : Ptr[GBinding]): Unit = extern
 
+@extern def g_bookmark_file_get_type(): GType = extern
+
 @extern def g_boxed_copy(boxed_type : GType, src_boxed : _root_.sn.gnome.glib.internal.gconstpointer): _root_.sn.gnome.glib.internal.gpointer = extern
 
 @extern def g_boxed_free(boxed_type : GType, boxed : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
@@ -207,6 +209,8 @@ import _root_.scala.scalanative.*
 
 @extern def g_date_time_get_type(): GType = extern
 
+@extern def g_dir_get_type(): GType = extern
+
 @extern def g_enum_complete_type_info(g_enum_type : GType, info : Ptr[GTypeInfo], const_values : Ptr[GEnumValue]): Unit = extern
 
 @extern def g_enum_get_value(enum_class : Ptr[GEnumClass], value : _root_.sn.gnome.glib.internal.gint): Ptr[GEnumValue] = extern
@@ -238,6 +242,8 @@ import _root_.scala.scalanative.*
 @extern def g_gtype_get_type(): GType = extern
 
 @extern def g_hash_table_get_type(): GType = extern
+
+@extern def g_hmac_get_type(): GType = extern
 
 /**
  * GInitiallyUnowned:
@@ -426,6 +432,8 @@ import _root_.scala.scalanative.*
 
 @extern def g_param_spec_pointer(name : Ptr[_root_.sn.gnome.glib.internal.gchar], nick : Ptr[_root_.sn.gnome.glib.internal.gchar], blurb : Ptr[_root_.sn.gnome.glib.internal.gchar], flags : GParamFlags): Ptr[GParamSpec] = extern
 
+@extern def g_param_spec_pool_free(pool : Ptr[GParamSpecPool]): Unit = extern
+
 @extern def g_param_spec_pool_insert(pool : Ptr[GParamSpecPool], pspec : Ptr[GParamSpec], owner_type : GType): Unit = extern
 
 @extern def g_param_spec_pool_list(pool : Ptr[GParamSpecPool], owner_type : GType, n_pspecs_p : Ptr[_root_.sn.gnome.glib.internal.guint]): Ptr[Ptr[GParamSpec]] = extern
@@ -474,6 +482,8 @@ import _root_.scala.scalanative.*
 
 @extern def g_param_value_defaults(pspec : Ptr[GParamSpec], value : Ptr[GValue]): _root_.sn.gnome.glib.internal.gboolean = extern
 
+@extern def g_param_value_is_valid(pspec : Ptr[GParamSpec], value : Ptr[GValue]): _root_.sn.gnome.glib.internal.gboolean = extern
+
 @extern def g_param_value_set_default(pspec : Ptr[GParamSpec], value : Ptr[GValue]): Unit = extern
 
 @extern def g_param_value_validate(pspec : Ptr[GParamSpec], value : Ptr[GValue]): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -487,6 +497,8 @@ import _root_.scala.scalanative.*
 @extern def g_pollfd_get_type(): GType = extern
 
 @extern def g_ptr_array_get_type(): GType = extern
+
+@extern def g_rand_get_type(): GType = extern
 
 @extern def g_regex_get_type(): GType = extern
 
@@ -533,6 +545,8 @@ import _root_.scala.scalanative.*
 @extern def g_signal_group_connect(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], c_handler : GCallback, data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_signal_group_connect_after(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], c_handler : GCallback, data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+
+@extern def g_signal_group_connect_closure(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], closure : Ptr[GClosure], after : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 @extern def g_signal_group_connect_data(self : Ptr[GSignalGroup], detailed_signal : Ptr[_root_.sn.gnome.glib.internal.gchar], c_handler : GCallback, data : _root_.sn.gnome.glib.internal.gpointer, notify : GClosureNotify, flags : GConnectFlags): Unit = extern
 
@@ -611,6 +625,8 @@ import _root_.scala.scalanative.*
 @extern def g_source_set_dummy_callback(source : Ptr[_root_.sn.gnome.glib.internal.GSource]): Unit = extern
 
 @extern def g_strdup_value_contents(value : Ptr[GValue]): Ptr[_root_.sn.gnome.glib.internal.gchar] = extern
+
+@extern def g_strv_builder_get_type(): GType = extern
 
 @extern def g_strv_get_type(): GType = extern
 
@@ -935,6 +951,8 @@ import _root_.scala.scalanative.*
 @extern def g_value_set_ulong(value : Ptr[GValue], v_ulong : _root_.sn.gnome.glib.internal.gulong): Unit = extern
 
 @extern def g_value_set_variant(value : Ptr[GValue], variant : Ptr[_root_.sn.gnome.glib.internal.GVariant]): Unit = extern
+
+@extern def g_value_steal_string(value : Ptr[GValue]): Ptr[_root_.sn.gnome.glib.internal.gchar] = extern
 
 @extern def g_value_take_boxed(value : Ptr[GValue], v_boxed : _root_.sn.gnome.glib.internal.gconstpointer): Unit = extern
 

@@ -35,6 +35,48 @@ object AdwAnimationState extends CEnumU[AdwAnimationState]:
     inline def is(b: AdwAnimationState): Boolean = (a & b) == b
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointConditionLengthType = CUnsignedInt
+object AdwBreakpointConditionLengthType extends CEnumU[AdwBreakpointConditionLengthType]:
+  given _tag: Tag[AdwBreakpointConditionLengthType] = Tag.UInt
+  inline def define(inline a: Long): AdwBreakpointConditionLengthType = a.toUInt
+  val ADW_BREAKPOINT_CONDITION_MIN_WIDTH = define(0)
+  val ADW_BREAKPOINT_CONDITION_MAX_WIDTH = define(1)
+  val ADW_BREAKPOINT_CONDITION_MIN_HEIGHT = define(2)
+  val ADW_BREAKPOINT_CONDITION_MAX_HEIGHT = define(3)
+  inline def getName(inline value: AdwBreakpointConditionLengthType): Option[String] =
+    inline value match
+      case ADW_BREAKPOINT_CONDITION_MIN_WIDTH => Some("ADW_BREAKPOINT_CONDITION_MIN_WIDTH")
+      case ADW_BREAKPOINT_CONDITION_MAX_WIDTH => Some("ADW_BREAKPOINT_CONDITION_MAX_WIDTH")
+      case ADW_BREAKPOINT_CONDITION_MIN_HEIGHT => Some("ADW_BREAKPOINT_CONDITION_MIN_HEIGHT")
+      case ADW_BREAKPOINT_CONDITION_MAX_HEIGHT => Some("ADW_BREAKPOINT_CONDITION_MAX_HEIGHT")
+      case _ => _root_.scala.None
+  extension (a: AdwBreakpointConditionLengthType)
+    inline def &(b: AdwBreakpointConditionLengthType): AdwBreakpointConditionLengthType = a & b
+    inline def |(b: AdwBreakpointConditionLengthType): AdwBreakpointConditionLengthType = a | b
+    inline def is(b: AdwBreakpointConditionLengthType): Boolean = (a & b) == b
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointConditionRatioType = CUnsignedInt
+object AdwBreakpointConditionRatioType extends CEnumU[AdwBreakpointConditionRatioType]:
+  given _tag: Tag[AdwBreakpointConditionRatioType] = Tag.UInt
+  inline def define(inline a: Long): AdwBreakpointConditionRatioType = a.toUInt
+  val ADW_BREAKPOINT_CONDITION_MIN_ASPECT_RATIO = define(0)
+  val ADW_BREAKPOINT_CONDITION_MAX_ASPECT_RATIO = define(1)
+  inline def getName(inline value: AdwBreakpointConditionRatioType): Option[String] =
+    inline value match
+      case ADW_BREAKPOINT_CONDITION_MIN_ASPECT_RATIO => Some("ADW_BREAKPOINT_CONDITION_MIN_ASPECT_RATIO")
+      case ADW_BREAKPOINT_CONDITION_MAX_ASPECT_RATIO => Some("ADW_BREAKPOINT_CONDITION_MAX_ASPECT_RATIO")
+      case _ => _root_.scala.None
+  extension (a: AdwBreakpointConditionRatioType)
+    inline def &(b: AdwBreakpointConditionRatioType): AdwBreakpointConditionRatioType = a & b
+    inline def |(b: AdwBreakpointConditionRatioType): AdwBreakpointConditionRatioType = a | b
+    inline def is(b: AdwBreakpointConditionRatioType): Boolean = (a & b) == b
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
 opaque type AdwCenteringPolicy = CUnsignedInt
@@ -77,6 +119,27 @@ object AdwColorScheme extends CEnumU[AdwColorScheme]:
     inline def &(b: AdwColorScheme): AdwColorScheme = a & b
     inline def |(b: AdwColorScheme): AdwColorScheme = a | b
     inline def is(b: AdwColorScheme): Boolean = (a & b) == b
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialogPresentationMode = CUnsignedInt
+object AdwDialogPresentationMode extends CEnumU[AdwDialogPresentationMode]:
+  given _tag: Tag[AdwDialogPresentationMode] = Tag.UInt
+  inline def define(inline a: Long): AdwDialogPresentationMode = a.toUInt
+  val ADW_DIALOG_AUTO = define(0)
+  val ADW_DIALOG_FLOATING = define(1)
+  val ADW_DIALOG_BOTTOM_SHEET = define(2)
+  inline def getName(inline value: AdwDialogPresentationMode): Option[String] =
+    inline value match
+      case ADW_DIALOG_AUTO => Some("ADW_DIALOG_AUTO")
+      case ADW_DIALOG_FLOATING => Some("ADW_DIALOG_FLOATING")
+      case ADW_DIALOG_BOTTOM_SHEET => Some("ADW_DIALOG_BOTTOM_SHEET")
+      case _ => _root_.scala.None
+  extension (a: AdwDialogPresentationMode)
+    inline def &(b: AdwDialogPresentationMode): AdwDialogPresentationMode = a & b
+    inline def |(b: AdwDialogPresentationMode): AdwDialogPresentationMode = a | b
+    inline def is(b: AdwDialogPresentationMode): Boolean = (a & b) == b
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-easing.h
@@ -238,6 +301,27 @@ object AdwLeafletTransitionType extends CEnumU[AdwLeafletTransitionType]:
     inline def is(b: AdwLeafletTransitionType): Boolean = (a & b) == b
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-length-unit.h
+*/
+opaque type AdwLengthUnit = CUnsignedInt
+object AdwLengthUnit extends CEnumU[AdwLengthUnit]:
+  given _tag: Tag[AdwLengthUnit] = Tag.UInt
+  inline def define(inline a: Long): AdwLengthUnit = a.toUInt
+  val ADW_LENGTH_UNIT_PX = define(0)
+  val ADW_LENGTH_UNIT_PT = define(1)
+  val ADW_LENGTH_UNIT_SP = define(2)
+  inline def getName(inline value: AdwLengthUnit): Option[String] =
+    inline value match
+      case ADW_LENGTH_UNIT_PX => Some("ADW_LENGTH_UNIT_PX")
+      case ADW_LENGTH_UNIT_PT => Some("ADW_LENGTH_UNIT_PT")
+      case ADW_LENGTH_UNIT_SP => Some("ADW_LENGTH_UNIT_SP")
+      case _ => _root_.scala.None
+  extension (a: AdwLengthUnit)
+    inline def &(b: AdwLengthUnit): AdwLengthUnit = a & b
+    inline def |(b: AdwLengthUnit): AdwLengthUnit = a | b
+    inline def is(b: AdwLengthUnit): Boolean = (a & b) == b
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-direction.h
 */
 opaque type AdwNavigationDirection = CUnsignedInt
@@ -255,6 +339,27 @@ object AdwNavigationDirection extends CEnumU[AdwNavigationDirection]:
     inline def &(b: AdwNavigationDirection): AdwNavigationDirection = a & b
     inline def |(b: AdwNavigationDirection): AdwNavigationDirection = a | b
     inline def is(b: AdwNavigationDirection): Boolean = (a & b) == b
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwResponseAppearance = CUnsignedInt
+object AdwResponseAppearance extends CEnumU[AdwResponseAppearance]:
+  given _tag: Tag[AdwResponseAppearance] = Tag.UInt
+  inline def define(inline a: Long): AdwResponseAppearance = a.toUInt
+  val ADW_RESPONSE_DEFAULT = define(0)
+  val ADW_RESPONSE_SUGGESTED = define(1)
+  val ADW_RESPONSE_DESTRUCTIVE = define(2)
+  inline def getName(inline value: AdwResponseAppearance): Option[String] =
+    inline value match
+      case ADW_RESPONSE_DEFAULT => Some("ADW_RESPONSE_DEFAULT")
+      case ADW_RESPONSE_SUGGESTED => Some("ADW_RESPONSE_SUGGESTED")
+      case ADW_RESPONSE_DESTRUCTIVE => Some("ADW_RESPONSE_DESTRUCTIVE")
+      case _ => _root_.scala.None
+  extension (a: AdwResponseAppearance)
+    inline def &(b: AdwResponseAppearance): AdwResponseAppearance = a & b
+    inline def |(b: AdwResponseAppearance): AdwResponseAppearance = a | b
+    inline def is(b: AdwResponseAppearance): Boolean = (a & b) == b
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -276,6 +381,49 @@ object AdwSqueezerTransitionType extends CEnumU[AdwSqueezerTransitionType]:
     inline def is(b: AdwSqueezerTransitionType): Boolean = (a & b) == b
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+opaque type AdwTabViewShortcuts = CUnsignedInt
+object AdwTabViewShortcuts extends CEnumU[AdwTabViewShortcuts]:
+  given _tag: Tag[AdwTabViewShortcuts] = Tag.UInt
+  inline def define(inline a: Long): AdwTabViewShortcuts = a.toUInt
+  val ADW_TAB_VIEW_SHORTCUT_NONE = define(0)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_TAB = define(1)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_TAB = define(2)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_PAGE_UP = define(4)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_PAGE_DOWN = define(8)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_HOME = define(16)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_END = define(32)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_PAGE_UP = define(64)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_PAGE_DOWN = define(128)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_HOME = define(256)
+  val ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_END = define(512)
+  val ADW_TAB_VIEW_SHORTCUT_ALT_DIGITS = define(1024)
+  val ADW_TAB_VIEW_SHORTCUT_ALT_ZERO = define(2048)
+  val ADW_TAB_VIEW_SHORTCUT_ALL_SHORTCUTS = define(4095)
+  inline def getName(inline value: AdwTabViewShortcuts): Option[String] =
+    inline value match
+      case ADW_TAB_VIEW_SHORTCUT_NONE => Some("ADW_TAB_VIEW_SHORTCUT_NONE")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_TAB => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_TAB")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_TAB => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_TAB")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_PAGE_UP => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_PAGE_UP")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_PAGE_DOWN => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_PAGE_DOWN")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_HOME => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_HOME")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_END => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_END")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_PAGE_UP => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_PAGE_UP")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_PAGE_DOWN => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_PAGE_DOWN")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_HOME => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_HOME")
+      case ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_END => Some("ADW_TAB_VIEW_SHORTCUT_CONTROL_SHIFT_END")
+      case ADW_TAB_VIEW_SHORTCUT_ALT_DIGITS => Some("ADW_TAB_VIEW_SHORTCUT_ALT_DIGITS")
+      case ADW_TAB_VIEW_SHORTCUT_ALT_ZERO => Some("ADW_TAB_VIEW_SHORTCUT_ALT_ZERO")
+      case ADW_TAB_VIEW_SHORTCUT_ALL_SHORTCUTS => Some("ADW_TAB_VIEW_SHORTCUT_ALL_SHORTCUTS")
+      case _ => _root_.scala.None
+  extension (a: AdwTabViewShortcuts)
+    inline def &(b: AdwTabViewShortcuts): AdwTabViewShortcuts = a & b
+    inline def |(b: AdwTabViewShortcuts): AdwTabViewShortcuts = a | b
+    inline def is(b: AdwTabViewShortcuts): Boolean = (a & b) == b
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
 opaque type AdwToastPriority = CUnsignedInt
@@ -293,6 +441,27 @@ object AdwToastPriority extends CEnumU[AdwToastPriority]:
     inline def &(b: AdwToastPriority): AdwToastPriority = a & b
     inline def |(b: AdwToastPriority): AdwToastPriority = a | b
     inline def is(b: AdwToastPriority): Boolean = (a & b) == b
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarStyle = CUnsignedInt
+object AdwToolbarStyle extends CEnumU[AdwToolbarStyle]:
+  given _tag: Tag[AdwToolbarStyle] = Tag.UInt
+  inline def define(inline a: Long): AdwToolbarStyle = a.toUInt
+  val ADW_TOOLBAR_FLAT = define(0)
+  val ADW_TOOLBAR_RAISED = define(1)
+  val ADW_TOOLBAR_RAISED_BORDER = define(2)
+  inline def getName(inline value: AdwToolbarStyle): Option[String] =
+    inline value match
+      case ADW_TOOLBAR_FLAT => Some("ADW_TOOLBAR_FLAT")
+      case ADW_TOOLBAR_RAISED => Some("ADW_TOOLBAR_RAISED")
+      case ADW_TOOLBAR_RAISED_BORDER => Some("ADW_TOOLBAR_RAISED_BORDER")
+      case _ => _root_.scala.None
+  extension (a: AdwToolbarStyle)
+    inline def &(b: AdwToolbarStyle): AdwToolbarStyle = a & b
+    inline def |(b: AdwToolbarStyle): AdwToolbarStyle = a | b
+    inline def is(b: AdwToolbarStyle): Boolean = (a & b) == b
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h

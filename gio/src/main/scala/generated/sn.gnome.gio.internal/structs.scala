@@ -614,12 +614,13 @@ opaque type GApplicationCommandLineClass = CArray[CChar, Nat.Digit3[Nat._2, Nat.
 object GApplicationCommandLineClass:
   given _tag: Tag[GApplicationCommandLineClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._4, Nat._8]](Tag.Byte, Tag.Digit3[Nat._2, Nat._4, Nat._8](Tag.Nat2, Tag.Nat4, Tag.Nat8))
   def apply()(using Zone): Ptr[GApplicationCommandLineClass] = scala.scalanative.unsafe.alloc[GApplicationCommandLineClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, print_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], printerr_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], get_stdin : CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]])(using Zone): Ptr[GApplicationCommandLineClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, print_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], printerr_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], get_stdin : CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], done : CFuncPtr1[Ptr[GApplicationCommandLine], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[GApplicationCommandLineClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).print_literal = print_literal
     (!____ptr).printerr_literal = printerr_literal
     (!____ptr).get_stdin = get_stdin
+    (!____ptr).done = done
     (!____ptr).padding = padding
     ____ptr
   extension (struct: GApplicationCommandLineClass)
@@ -631,10 +632,12 @@ object GApplicationCommandLineClass:
     def printerr_literal_=(value: CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]]] = value
     def get_stdin: CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]] = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]]]
     def get_stdin_=(value: CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]]] = value
-    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]] = !struct.at(offsets(4)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]]
-    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]] = value
+    def done: CFuncPtr1[Ptr[GApplicationCommandLine], Unit] = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GApplicationCommandLine], Unit]]]
+    def done_=(value: CFuncPtr1[Ptr[GApplicationCommandLine], Unit]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GApplicationCommandLine], Unit]]] = value
+    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = !struct.at(offsets(5)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]]
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]] = value
   val offsets: Array[Int] = 
-    val res = Array.ofDim[Int](5)
+    val res = Array.ofDim[Int](6)
     def align(offset: Int, alignment: Int) = {
       val alignmentMask = alignment - 1
       val padding =
@@ -647,7 +650,8 @@ object GApplicationCommandLineClass:
     res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt, alignmentof[CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]].toInt)
     res(2) = align(res(1) + sizeof[CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]].toInt)
     res(3) = align(res(2) + sizeof[CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]].toInt)
-    res(4) = align(res(3) + sizeof[CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]].toInt, alignmentof[_root_.sn.gnome.glib.internal.gpointer].toInt)
+    res(4) = align(res(3) + sizeof[CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]].toInt, alignmentof[CFuncPtr1[Ptr[GApplicationCommandLine], Unit]].toInt)
+    res(5) = align(res(4) + sizeof[CFuncPtr1[Ptr[GApplicationCommandLine], Unit]].toInt, alignmentof[_root_.sn.gnome.glib.internal.gpointer].toInt)
     res
   end offsets
 
@@ -1438,9 +1442,6 @@ object GDBusInterfaceInfo:
     res
   end offsets
 
-/**
- * GDBusInterfaceSkeleton:
-*/
 opaque type GDBusInterfaceSkeleton = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusInterfaceSkeleton:
   given _tag: Tag[GDBusInterfaceSkeleton] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -1726,9 +1727,6 @@ opaque type GDBusObjectManager = CStruct0
 object GDBusObjectManager:
   given _tag: Tag[GDBusObjectManager] = Tag.materializeCStruct0Tag
 
-/**
- * GDBusObjectManagerClient:
-*/
 opaque type GDBusObjectManagerClient = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectManagerClient:
   given _tag: Tag[GDBusObjectManagerClient] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -1862,9 +1860,6 @@ object GDBusObjectManagerIface:
     res
   end offsets
 
-/**
- * GDBusObjectManagerServer:
-*/
 opaque type GDBusObjectManagerServer = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectManagerServer:
   given _tag: Tag[GDBusObjectManagerServer] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -1930,9 +1925,6 @@ opaque type GDBusObjectManagerServerPrivate = CStruct0
 object GDBusObjectManagerServerPrivate:
   given _tag: Tag[GDBusObjectManagerServerPrivate] = Tag.materializeCStruct0Tag
 
-/**
- * GDBusObjectProxy:
-*/
 opaque type GDBusObjectProxy = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectProxy:
   given _tag: Tag[GDBusObjectProxy] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -1998,9 +1990,6 @@ opaque type GDBusObjectProxyPrivate = CStruct0
 object GDBusObjectProxyPrivate:
   given _tag: Tag[GDBusObjectProxyPrivate] = Tag.materializeCStruct0Tag
 
-/**
- * GDBusObjectSkeleton:
-*/
 opaque type GDBusObjectSkeleton = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusObjectSkeleton:
   given _tag: Tag[GDBusObjectSkeleton] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -2114,9 +2103,6 @@ object GDBusPropertyInfo:
     res
   end offsets
 
-/**
- * GDBusProxy:
-*/
 opaque type GDBusProxy = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GDBusProxy:
   given _tag: Tag[GDBusProxy] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3010,10 +2996,6 @@ opaque type GFileAttributeMatcher = CStruct0
 object GFileAttributeMatcher:
   given _tag: Tag[GFileAttributeMatcher] = Tag.materializeCStruct0Tag
 
-opaque type GFileDescriptorBased = CStruct0
-object GFileDescriptorBased:
-  given _tag: Tag[GFileDescriptorBased] = Tag.materializeCStruct0Tag
-
 opaque type GFileEnumerator = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GFileEnumerator:
   given _tag: Tag[GFileEnumerator] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -3253,7 +3235,7 @@ opaque type GFileIface = CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]]
 object GFileIface:
   given _tag: Tag[GFileIface] = Tag.CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._8, Nat._4, Nat._0](Tag.Nat8, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[GFileIface] = scala.scalanative.unsafe.alloc[GFileIface](1)
-  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], _make_symbolic_link_async : CFuncPtr0[Unit], _make_symbolic_link_finish : CFuncPtr0[Unit], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[GFileIface] = 
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_symbolic_link_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[GFileIface] = 
     val ____ptr = apply()
     (!____ptr).g_iface = g_iface
     (!____ptr).dup = dup
@@ -3318,8 +3300,8 @@ object GFileIface:
     (!____ptr).make_directory_async = make_directory_async
     (!____ptr).make_directory_finish = make_directory_finish
     (!____ptr).make_symbolic_link = make_symbolic_link
-    (!____ptr)._make_symbolic_link_async = _make_symbolic_link_async
-    (!____ptr)._make_symbolic_link_finish = _make_symbolic_link_finish
+    (!____ptr).make_symbolic_link_async = make_symbolic_link_async
+    (!____ptr).make_symbolic_link_finish = make_symbolic_link_finish
     (!____ptr).copy = copy
     (!____ptr).copy_async = copy_async
     (!____ptr).copy_finish = copy_finish
@@ -3487,10 +3469,10 @@ object GFileIface:
     def make_directory_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(61)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def make_symbolic_link: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(62)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def make_symbolic_link_=(value: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(62)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _make_symbolic_link_async: CFuncPtr0[Unit] = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_async_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _make_symbolic_link_finish: CFuncPtr0[Unit] = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_finish_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def make_symbolic_link_async: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
+    def make_symbolic_link_async_=(value: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]): Unit = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]] = value
+    def make_symbolic_link_finish: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
+    def make_symbolic_link_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(65)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def copy_=(value: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(65)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy_async: CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(offsets(66)).asInstanceOf[Ptr[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
@@ -3642,9 +3624,9 @@ object GFileIface:
     res(60) = align(res(59) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt)
     res(61) = align(res(60) + sizeof[CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(62) = align(res(61) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
-    res(63) = align(res(62) + sizeof[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(64) = align(res(63) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(65) = align(res(64) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(63) = align(res(62) + sizeof[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt)
+    res(64) = align(res(63) + sizeof[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(65) = align(res(64) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(66) = align(res(65) + sizeof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt)
     res(67) = align(res(66) + sizeof[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(68) = align(res(67) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
@@ -3796,9 +3778,6 @@ opaque type GFileInputStreamPrivate = CStruct0
 object GFileInputStreamPrivate:
   given _tag: Tag[GFileInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
- * GFileMonitor:
-*/
 opaque type GFileMonitor = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GFileMonitor:
   given _tag: Tag[GFileMonitor] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -4200,9 +4179,6 @@ opaque type GIOSchedulerJob = CStruct0
 object GIOSchedulerJob:
   given _tag: Tag[GIOSchedulerJob] = Tag.materializeCStruct0Tag
 
-/**
- * GIOStream:
-*/
 opaque type GIOStream = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GIOStream:
   given _tag: Tag[GIOStream] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -6834,9 +6810,6 @@ opaque type GSimpleAction = CStruct0
 object GSimpleAction:
   given _tag: Tag[GSimpleAction] = Tag.materializeCStruct0Tag
 
-/**
- * GSimpleActionGroup:
-*/
 opaque type GSimpleActionGroup = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GSimpleActionGroup:
   given _tag: Tag[GSimpleActionGroup] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
@@ -8576,13 +8549,268 @@ object GTlsServerConnectionInterface:
     res
   end offsets
 
-opaque type GUnixCredentialsMessage = CStruct0
-object GUnixCredentialsMessage:
-  given _tag: Tag[GUnixCredentialsMessage] = Tag.materializeCStruct0Tag
+opaque type GUnixConnection = CArray[CChar, Nat.Digit2[Nat._4, Nat._8]]
+object GUnixConnection:
+  given _tag: Tag[GUnixConnection] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._8]](Tag.Byte, Tag.Digit2[Nat._4, Nat._8](Tag.Nat4, Tag.Nat8))
+  def apply()(using Zone): Ptr[GUnixConnection] = scala.scalanative.unsafe.alloc[GUnixConnection](1)
+  def apply(parent_instance : GSocketConnection, priv : Ptr[GUnixConnectionPrivate])(using Zone): Ptr[GUnixConnection] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixConnection)
+    def parent_instance: GSocketConnection = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketConnection]]
+    def parent_instance_=(value: GSocketConnection): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketConnection]] = value
+    def priv: Ptr[GUnixConnectionPrivate] = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixConnectionPrivate]]]
+    def priv_=(value: Ptr[GUnixConnectionPrivate]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixConnectionPrivate]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](2)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[GSocketConnection].toInt)
+    res(1) = align(res(0) + sizeof[GSocketConnection].toInt, alignmentof[Ptr[GUnixConnectionPrivate]].toInt)
+    res
+  end offsets
 
-opaque type GUnixFDList = CStruct0
+opaque type GUnixConnectionClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]]
+object GUnixConnectionClass:
+  given _tag: Tag[GUnixConnectionClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._0, Nat._4]](Tag.Byte, Tag.Digit3[Nat._3, Nat._0, Nat._4](Tag.Nat3, Tag.Nat0, Tag.Nat4))
+  def apply()(using Zone): Ptr[GUnixConnectionClass] = scala.scalanative.unsafe.alloc[GUnixConnectionClass](1)
+  def apply(parent_class : GSocketConnectionClass)(using Zone): Ptr[GUnixConnectionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GUnixConnectionClass)
+    def parent_class: GSocketConnectionClass = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketConnectionClass]]
+    def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketConnectionClass]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](1)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[GSocketConnectionClass].toInt)
+    res
+  end offsets
+
+opaque type GUnixConnectionPrivate = CStruct0
+object GUnixConnectionPrivate:
+  given _tag: Tag[GUnixConnectionPrivate] = Tag.materializeCStruct0Tag
+
+opaque type GUnixCredentialsMessage = CArray[CChar, Nat.Digit2[Nat._4, Nat._0]]
+object GUnixCredentialsMessage:
+  given _tag: Tag[GUnixCredentialsMessage] = Tag.CArray[CChar, Nat.Digit2[Nat._4, Nat._0]](Tag.Byte, Tag.Digit2[Nat._4, Nat._0](Tag.Nat4, Tag.Nat0))
+  def apply()(using Zone): Ptr[GUnixCredentialsMessage] = scala.scalanative.unsafe.alloc[GUnixCredentialsMessage](1)
+  def apply(parent_instance : GSocketControlMessage, priv : Ptr[GUnixCredentialsMessagePrivate])(using Zone): Ptr[GUnixCredentialsMessage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixCredentialsMessage)
+    def parent_instance: GSocketControlMessage = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketControlMessage]]
+    def parent_instance_=(value: GSocketControlMessage): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketControlMessage]] = value
+    def priv: Ptr[GUnixCredentialsMessagePrivate] = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixCredentialsMessagePrivate]]]
+    def priv_=(value: Ptr[GUnixCredentialsMessagePrivate]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixCredentialsMessagePrivate]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](2)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[GSocketControlMessage].toInt)
+    res(1) = align(res(0) + sizeof[GSocketControlMessage].toInt, alignmentof[Ptr[GUnixCredentialsMessagePrivate]].toInt)
+    res
+  end offsets
+
+/**
+ * GUnixCredentialsMessageClass:
+*/
+opaque type GUnixCredentialsMessageClass = CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]]
+object GUnixCredentialsMessageClass:
+  given _tag: Tag[GUnixCredentialsMessageClass] = Tag.CArray[CChar, Nat.Digit3[Nat._2, Nat._3, Nat._2]](Tag.Byte, Tag.Digit3[Nat._2, Nat._3, Nat._2](Tag.Nat2, Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixCredentialsMessageClass] = scala.scalanative.unsafe.alloc[GUnixCredentialsMessageClass](1)
+  def apply(parent_class : GSocketControlMessageClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[GUnixCredentialsMessageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    ____ptr
+  extension (struct: GUnixCredentialsMessageClass)
+    def parent_class: GSocketControlMessageClass = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketControlMessageClass]]
+    def parent_class_=(value: GSocketControlMessageClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketControlMessageClass]] = value
+    def _g_reserved1: CFuncPtr0[Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](3)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[GSocketControlMessageClass].toInt)
+    res(1) = align(res(0) + sizeof[GSocketControlMessageClass].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res
+  end offsets
+
+opaque type GUnixCredentialsMessagePrivate = CStruct0
+object GUnixCredentialsMessagePrivate:
+  given _tag: Tag[GUnixCredentialsMessagePrivate] = Tag.materializeCStruct0Tag
+
+opaque type GUnixFDList = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
 object GUnixFDList:
-  given _tag: Tag[GUnixFDList] = Tag.materializeCStruct0Tag
+  given _tag: Tag[GUnixFDList] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixFDList] = scala.scalanative.unsafe.alloc[GUnixFDList](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject, priv : Ptr[GUnixFDListPrivate])(using Zone): Ptr[GUnixFDList] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixFDList)
+    def parent_instance: _root_.sn.gnome.gobject.internal.GObject = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]]
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObject]] = value
+    def priv: Ptr[GUnixFDListPrivate] = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixFDListPrivate]]]
+    def priv_=(value: Ptr[GUnixFDListPrivate]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixFDListPrivate]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](2)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gobject.internal.GObject].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GObject].toInt, alignmentof[Ptr[GUnixFDListPrivate]].toInt)
+    res
+  end offsets
+
+opaque type GUnixFDListClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]]
+object GUnixFDListClass:
+  given _tag: Tag[GUnixFDListClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._7, Nat._6]](Tag.Byte, Tag.Digit3[Nat._1, Nat._7, Nat._6](Tag.Nat1, Tag.Nat7, Tag.Nat6))
+  def apply()(using Zone): Ptr[GUnixFDListClass] = scala.scalanative.unsafe.alloc[GUnixFDListClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit], _g_reserved3 : CFuncPtr0[Unit], _g_reserved4 : CFuncPtr0[Unit], _g_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[GUnixFDListClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    (!____ptr)._g_reserved3 = _g_reserved3
+    (!____ptr)._g_reserved4 = _g_reserved4
+    (!____ptr)._g_reserved5 = _g_reserved5
+    ____ptr
+  extension (struct: GUnixFDListClass)
+    def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]] = value
+    def _g_reserved1: CFuncPtr0[Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(4)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _g_reserved5: CFuncPtr0[Unit] = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(5)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](6)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gobject.internal.GObjectClass].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(3) = align(res(2) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(4) = align(res(3) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(5) = align(res(4) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res
+  end offsets
+
+opaque type GUnixFDListPrivate = CStruct0
+object GUnixFDListPrivate:
+  given _tag: Tag[GUnixFDListPrivate] = Tag.materializeCStruct0Tag
+
+opaque type GUnixSocketAddress = CArray[CChar, Nat.Digit2[Nat._3, Nat._2]]
+object GUnixSocketAddress:
+  given _tag: Tag[GUnixSocketAddress] = Tag.CArray[CChar, Nat.Digit2[Nat._3, Nat._2]](Tag.Byte, Tag.Digit2[Nat._3, Nat._2](Tag.Nat3, Tag.Nat2))
+  def apply()(using Zone): Ptr[GUnixSocketAddress] = scala.scalanative.unsafe.alloc[GUnixSocketAddress](1)
+  def apply(parent_instance : GSocketAddress, priv : Ptr[GUnixSocketAddressPrivate])(using Zone): Ptr[GUnixSocketAddress] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: GUnixSocketAddress)
+    def parent_instance: GSocketAddress = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketAddress]]
+    def parent_instance_=(value: GSocketAddress): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketAddress]] = value
+    def priv: Ptr[GUnixSocketAddressPrivate] = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixSocketAddressPrivate]]]
+    def priv_=(value: Ptr[GUnixSocketAddressPrivate]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[Ptr[GUnixSocketAddressPrivate]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](2)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[GSocketAddress].toInt)
+    res(1) = align(res(0) + sizeof[GSocketAddress].toInt, alignmentof[Ptr[GUnixSocketAddressPrivate]].toInt)
+    res
+  end offsets
+
+opaque type GUnixSocketAddressClass = CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]]
+object GUnixSocketAddressClass:
+  given _tag: Tag[GUnixSocketAddressClass] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._6, Nat._0]](Tag.Byte, Tag.Digit3[Nat._1, Nat._6, Nat._0](Tag.Nat1, Tag.Nat6, Tag.Nat0))
+  def apply()(using Zone): Ptr[GUnixSocketAddressClass] = scala.scalanative.unsafe.alloc[GUnixSocketAddressClass](1)
+  def apply(parent_class : GSocketAddressClass)(using Zone): Ptr[GUnixSocketAddressClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GUnixSocketAddressClass)
+    def parent_class: GSocketAddressClass = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketAddressClass]]
+    def parent_class_=(value: GSocketAddressClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[GSocketAddressClass]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](1)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[GSocketAddressClass].toInt)
+    res
+  end offsets
+
+opaque type GUnixSocketAddressPrivate = CStruct0
+object GUnixSocketAddressPrivate:
+  given _tag: Tag[GUnixSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
 opaque type GVfs = CArray[CChar, Nat.Digit2[Nat._2, Nat._4]]
 object GVfs:
@@ -9458,16 +9686,17 @@ object _GApplicationCommandLine:
     def priv : Ptr[GApplicationCommandLinePrivate] = struct._2
     def priv_=(value: Ptr[GApplicationCommandLinePrivate]): Unit = !struct.at2 = value
 
-opaque type _GApplicationCommandLineClass = CStruct5[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]
+opaque type _GApplicationCommandLineClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CFuncPtr1[Ptr[GApplicationCommandLine], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object _GApplicationCommandLineClass:
-  given _tag: Tag[_GApplicationCommandLineClass] = Tag.materializeCStruct5Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]]
+  given _tag: Tag[_GApplicationCommandLineClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], CFuncPtr1[Ptr[GApplicationCommandLine], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
   def apply()(using Zone): Ptr[_GApplicationCommandLineClass] = scala.scalanative.unsafe.alloc[_GApplicationCommandLineClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, print_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], printerr_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], get_stdin : CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]])(using Zone): Ptr[_GApplicationCommandLineClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, print_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], printerr_literal : CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit], get_stdin : CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]], done : CFuncPtr1[Ptr[GApplicationCommandLine], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[_GApplicationCommandLineClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).print_literal = print_literal
     (!____ptr).printerr_literal = printerr_literal
     (!____ptr).get_stdin = get_stdin
+    (!____ptr).done = done
     (!____ptr).padding = padding
     ____ptr
   extension (struct: _GApplicationCommandLineClass)
@@ -9479,8 +9708,10 @@ object _GApplicationCommandLineClass:
     def printerr_literal_=(value: CFuncPtr2[Ptr[GApplicationCommandLine], Ptr[_root_.sn.gnome.glib.internal.gchar], Unit]): Unit = !struct.at3 = value
     def get_stdin : CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]] = struct._4
     def get_stdin_=(value: CFuncPtr1[Ptr[GApplicationCommandLine], Ptr[GInputStream]]): Unit = !struct.at4 = value
-    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]] = struct._5
-    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._1]]): Unit = !struct.at5 = value
+    def done : CFuncPtr1[Ptr[GApplicationCommandLine], Unit] = struct._5
+    def done_=(value: CFuncPtr1[Ptr[GApplicationCommandLine], Unit]): Unit = !struct.at5 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._6
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at6 = value
 
 opaque type _GApplicationCommandLinePrivate = CStruct0
 object _GApplicationCommandLinePrivate:
@@ -9968,9 +10199,6 @@ object _GDBusInterfaceInfo:
     def annotations : Ptr[Ptr[GDBusAnnotationInfo]] = struct._6.asInstanceOf[Ptr[Ptr[GDBusAnnotationInfo]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at6 = value.asInstanceOf[Ptr[Byte]]
 
-/**
- * GDBusInterfaceSkeleton:
-*/
 opaque type _GDBusInterfaceSkeleton = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusInterfaceSkeletonPrivate]]
 object _GDBusInterfaceSkeleton:
   given _tag: Tag[_GDBusInterfaceSkeleton] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusInterfaceSkeletonPrivate]]
@@ -10154,9 +10382,6 @@ opaque type _GDBusObjectManager = CStruct0
 object _GDBusObjectManager:
   given _tag: Tag[_GDBusObjectManager] = Tag.materializeCStruct0Tag
 
-/**
- * GDBusObjectManagerClient:
-*/
 opaque type _GDBusObjectManagerClient = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectManagerClientPrivate]]
 object _GDBusObjectManagerClient:
   given _tag: Tag[_GDBusObjectManagerClient] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectManagerClientPrivate]]
@@ -10239,9 +10464,6 @@ object _GDBusObjectManagerIface:
     def interface_removed : CFuncPtr3[Ptr[GDBusObjectManager], Ptr[GDBusObject], Ptr[GDBusInterface], Unit] = struct._9
     def interface_removed_=(value: CFuncPtr3[Ptr[GDBusObjectManager], Ptr[GDBusObject], Ptr[GDBusInterface], Unit]): Unit = !struct.at9 = value
 
-/**
- * GDBusObjectManagerServer:
-*/
 opaque type _GDBusObjectManagerServer = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectManagerServerPrivate]]
 object _GDBusObjectManagerServer:
   given _tag: Tag[_GDBusObjectManagerServer] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectManagerServerPrivate]]
@@ -10279,9 +10501,6 @@ opaque type _GDBusObjectManagerServerPrivate = CStruct0
 object _GDBusObjectManagerServerPrivate:
   given _tag: Tag[_GDBusObjectManagerServerPrivate] = Tag.materializeCStruct0Tag
 
-/**
- * GDBusObjectProxy:
-*/
 opaque type _GDBusObjectProxy = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectProxyPrivate]]
 object _GDBusObjectProxy:
   given _tag: Tag[_GDBusObjectProxy] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectProxyPrivate]]
@@ -10319,9 +10538,6 @@ opaque type _GDBusObjectProxyPrivate = CStruct0
 object _GDBusObjectProxyPrivate:
   given _tag: Tag[_GDBusObjectProxyPrivate] = Tag.materializeCStruct0Tag
 
-/**
- * GDBusObjectSkeleton:
-*/
 opaque type _GDBusObjectSkeleton = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectSkeletonPrivate]]
 object _GDBusObjectSkeleton:
   given _tag: Tag[_GDBusObjectSkeleton] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusObjectSkeletonPrivate]]
@@ -10389,9 +10605,6 @@ object _GDBusPropertyInfo:
     def annotations : Ptr[Ptr[GDBusAnnotationInfo]] = struct._5.asInstanceOf[Ptr[Ptr[GDBusAnnotationInfo]]]
     def annotations_=(value: Ptr[Ptr[GDBusAnnotationInfo]]): Unit = !struct.at5 = value.asInstanceOf[Ptr[Byte]]
 
-/**
- * GDBusProxy:
-*/
 opaque type _GDBusProxy = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusProxyPrivate]]
 object _GDBusProxy:
   given _tag: Tag[_GDBusProxy] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GDBusProxyPrivate]]
@@ -10995,10 +11208,6 @@ opaque type _GFileAttributeMatcher = CStruct0
 object _GFileAttributeMatcher:
   given _tag: Tag[_GFileAttributeMatcher] = Tag.materializeCStruct0Tag
 
-opaque type _GFileDescriptorBased = CStruct0
-object _GFileDescriptorBased:
-  given _tag: Tag[_GFileDescriptorBased] = Tag.materializeCStruct0Tag
-
 opaque type _GFileEnumerator = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GFileEnumeratorPrivate]]
 object _GFileEnumerator:
   given _tag: Tag[_GFileEnumerator] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GFileEnumeratorPrivate]]
@@ -11157,7 +11366,7 @@ opaque type _GFileIface = CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]]
 object _GFileIface:
   given _tag: Tag[_GFileIface] = Tag.CArray[CChar, Nat.Digit3[Nat._8, Nat._4, Nat._0]](Tag.Byte, Tag.Digit3[Nat._8, Nat._4, Nat._0](Tag.Nat8, Tag.Nat4, Tag.Nat0))
   def apply()(using Zone): Ptr[_GFileIface] = scala.scalanative.unsafe.alloc[_GFileIface](1)
-  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], _make_symbolic_link_async : CFuncPtr0[Unit], _make_symbolic_link_finish : CFuncPtr0[Unit], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[_GFileIface] = 
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, dup : CFuncPtr1[Ptr[GFile], Ptr[GFile]], hash : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.guint], equal : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], is_native : CFuncPtr1[Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], has_uri_scheme : CFuncPtr2[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean], get_uri_scheme : CFuncPtr1[Ptr[GFile], CString], get_basename : CFuncPtr1[Ptr[GFile], CString], get_path : CFuncPtr1[Ptr[GFile], CString], get_uri : CFuncPtr1[Ptr[GFile], CString], get_parse_name : CFuncPtr1[Ptr[GFile], CString], get_parent : CFuncPtr1[Ptr[GFile], Ptr[GFile]], prefix_matches : CFuncPtr2[Ptr[GFile], Ptr[GFile], _root_.sn.gnome.glib.internal.gboolean], get_relative_path : CFuncPtr2[Ptr[GFile], Ptr[GFile], CString], resolve_relative_path : CFuncPtr2[Ptr[GFile], CString, Ptr[GFile]], get_child_for_display_name : CFuncPtr3[Ptr[GFile], CString, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], enumerate_children : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], enumerate_children_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], enumerate_children_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileEnumerator]], query_info : CFuncPtr5[Ptr[GFile], CString, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_info_async : CFuncPtr7[Ptr[GFile], CString, GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], query_filesystem_info_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], query_filesystem_info_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInfo]], find_enclosing_mount : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], find_enclosing_mount_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], find_enclosing_mount_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GMount]], set_display_name : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], set_display_name_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_display_name_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], query_settable_attributes : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_settable_attributes_async : CFuncPtr0[Unit], _query_settable_attributes_finish : CFuncPtr0[Unit], query_writable_namespaces : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileAttributeInfoList]], _query_writable_namespaces_async : CFuncPtr0[Unit], _query_writable_namespaces_finish : CFuncPtr0[Unit], set_attribute : CFuncPtr7[Ptr[GFile], CString, GFileAttributeType, _root_.sn.gnome.glib.internal.gpointer, GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_from_info : CFuncPtr5[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], set_attributes_async : CFuncPtr7[Ptr[GFile], Ptr[GFileInfo], GFileQueryInfoFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], set_attributes_finish : CFuncPtr4[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[GFileInfo]], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], read_fn : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], read_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], read_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileInputStream]], append_to : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], append_to_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], append_to_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], create_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], replace_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileOutputStream]], delete_file : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], delete_file_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], delete_file_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], trash_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], trash_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_directory_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_directory_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link : CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], make_symbolic_link_async : CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], make_symbolic_link_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], copy_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], copy_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move : CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], move_async : CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], move_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_mountable : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFile]], unmount_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable : CFuncPtr5[Ptr[GFile], GMountUnmountFlags, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], mount_enclosing_volume : CFuncPtr6[Ptr[GFile], GMountMountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], mount_enclosing_volume_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], monitor_dir : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], monitor_file : CFuncPtr4[Ptr[GFile], GFileMonitorFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileMonitor]], open_readwrite : CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], open_readwrite_async : CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], open_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite : CFuncPtr4[Ptr[GFile], GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], create_readwrite_async : CFuncPtr6[Ptr[GFile], GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], create_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite : CFuncPtr6[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], replace_readwrite_async : CFuncPtr8[Ptr[GFile], CString, _root_.sn.gnome.glib.internal.gboolean, GFileCreateFlags, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], replace_readwrite_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[GFileIOStream]], start_mountable : CFuncPtr6[Ptr[GFile], GDriveStartFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], start_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], stop_mountable : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], stop_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], supports_thread_contexts : _root_.sn.gnome.glib.internal.gboolean, unmount_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], unmount_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], eject_mountable_with_operation : CFuncPtr6[Ptr[GFile], GMountUnmountFlags, Ptr[GMountOperation], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], eject_mountable_with_operation_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], poll_mountable : CFuncPtr4[Ptr[GFile], Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], poll_mountable_finish : CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage : CFuncPtr9[Ptr[GFile], GFileMeasureFlags, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean], measure_disk_usage_async : CFuncPtr8[Ptr[GFile], GFileMeasureFlags, _root_.sn.gnome.glib.internal.gint, Ptr[GCancellable], GFileMeasureProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit], measure_disk_usage_finish : CFuncPtr6[Ptr[GFile], Ptr[GAsyncResult], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[_root_.sn.gnome.glib.internal.guint64], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[_GFileIface] = 
     val ____ptr = apply()
     (!____ptr).g_iface = g_iface
     (!____ptr).dup = dup
@@ -11222,8 +11431,8 @@ object _GFileIface:
     (!____ptr).make_directory_async = make_directory_async
     (!____ptr).make_directory_finish = make_directory_finish
     (!____ptr).make_symbolic_link = make_symbolic_link
-    (!____ptr)._make_symbolic_link_async = _make_symbolic_link_async
-    (!____ptr)._make_symbolic_link_finish = _make_symbolic_link_finish
+    (!____ptr).make_symbolic_link_async = make_symbolic_link_async
+    (!____ptr).make_symbolic_link_finish = make_symbolic_link_finish
     (!____ptr).copy = copy
     (!____ptr).copy_async = copy_async
     (!____ptr).copy_finish = copy_finish
@@ -11391,10 +11600,10 @@ object _GFileIface:
     def make_directory_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(61)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def make_symbolic_link: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(62)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def make_symbolic_link_=(value: CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(62)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _make_symbolic_link_async: CFuncPtr0[Unit] = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_async_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _make_symbolic_link_finish: CFuncPtr0[Unit] = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _make_symbolic_link_finish_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def make_symbolic_link_async: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
+    def make_symbolic_link_async_=(value: CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]): Unit = !struct.at(offsets(63)).asInstanceOf[Ptr[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]] = value
+    def make_symbolic_link_finish: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
+    def make_symbolic_link_finish_=(value: CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(64)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(65)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]]
     def copy_=(value: CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(65)).asInstanceOf[Ptr[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def copy_async: CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit] = !struct.at(offsets(66)).asInstanceOf[Ptr[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]]]
@@ -11546,9 +11755,9 @@ object _GFileIface:
     res(60) = align(res(59) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt)
     res(61) = align(res(60) + sizeof[CFuncPtr5[Ptr[GFile], CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(62) = align(res(61) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
-    res(63) = align(res(62) + sizeof[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(64) = align(res(63) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(65) = align(res(64) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(63) = align(res(62) + sizeof[CFuncPtr4[Ptr[GFile], CString, Ptr[GCancellable], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt)
+    res(64) = align(res(63) + sizeof[CFuncPtr6[Ptr[GFile], CString, CInt, Ptr[GCancellable], GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(65) = align(res(64) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(66) = align(res(65) + sizeof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt)
     res(67) = align(res(66) + sizeof[CFuncPtr9[Ptr[GFile], Ptr[GFile], GFileCopyFlags, CInt, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, GAsyncReadyCallback, _root_.sn.gnome.glib.internal.gpointer, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(68) = align(res(67) + sizeof[CFuncPtr3[Ptr[GFile], Ptr[GAsyncResult], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr7[Ptr[GFile], Ptr[GFile], GFileCopyFlags, Ptr[GCancellable], GFileProgressCallback, _root_.sn.gnome.glib.internal.gpointer, Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], _root_.sn.gnome.glib.internal.gboolean]].toInt)
@@ -11662,9 +11871,6 @@ opaque type _GFileInputStreamPrivate = CStruct0
 object _GFileInputStreamPrivate:
   given _tag: Tag[_GFileInputStreamPrivate] = Tag.materializeCStruct0Tag
 
-/**
- * GFileMonitor:
-*/
 opaque type _GFileMonitor = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GFileMonitorPrivate]]
 object _GFileMonitor:
   given _tag: Tag[_GFileMonitor] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GFileMonitorPrivate]]
@@ -11914,9 +12120,6 @@ opaque type _GIOSchedulerJob = CStruct0
 object _GIOSchedulerJob:
   given _tag: Tag[_GIOSchedulerJob] = Tag.materializeCStruct0Tag
 
-/**
- * GIOStream:
-*/
 opaque type _GIOStream = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GIOStreamPrivate]]
 object _GIOStream:
   given _tag: Tag[_GIOStream] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GIOStreamPrivate]]
@@ -13560,9 +13763,6 @@ opaque type _GSimpleAction = CStruct0
 object _GSimpleAction:
   given _tag: Tag[_GSimpleAction] = Tag.materializeCStruct0Tag
 
-/**
- * GSimpleActionGroup:
-*/
 opaque type _GSimpleActionGroup = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSimpleActionGroupPrivate]]
 object _GSimpleActionGroup:
   given _tag: Tag[_GSimpleActionGroup] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GSimpleActionGroupPrivate]]
@@ -14625,13 +14825,153 @@ object _GTlsServerConnectionInterface:
     def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
 
-opaque type _GUnixCredentialsMessage = CStruct0
-object _GUnixCredentialsMessage:
-  given _tag: Tag[_GUnixCredentialsMessage] = Tag.materializeCStruct0Tag
+opaque type _GUnixConnection = CStruct2[GSocketConnection, Ptr[GUnixConnectionPrivate]]
+object _GUnixConnection:
+  given _tag: Tag[_GUnixConnection] = Tag.materializeCStruct2Tag[GSocketConnection, Ptr[GUnixConnectionPrivate]]
+  def apply()(using Zone): Ptr[_GUnixConnection] = scala.scalanative.unsafe.alloc[_GUnixConnection](1)
+  def apply(parent_instance : GSocketConnection, priv : Ptr[GUnixConnectionPrivate])(using Zone): Ptr[_GUnixConnection] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixConnection)
+    def parent_instance : GSocketConnection = struct._1
+    def parent_instance_=(value: GSocketConnection): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixConnectionPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixConnectionPrivate]): Unit = !struct.at2 = value
 
-opaque type _GUnixFDList = CStruct0
+opaque type _GUnixConnectionClass = CStruct1[GSocketConnectionClass]
+object _GUnixConnectionClass:
+  given _tag: Tag[_GUnixConnectionClass] = Tag.materializeCStruct1Tag[GSocketConnectionClass]
+  def apply()(using Zone): Ptr[_GUnixConnectionClass] = scala.scalanative.unsafe.alloc[_GUnixConnectionClass](1)
+  def apply(parent_class : GSocketConnectionClass)(using Zone): Ptr[_GUnixConnectionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _GUnixConnectionClass)
+    def parent_class : GSocketConnectionClass = struct._1
+    def parent_class_=(value: GSocketConnectionClass): Unit = !struct.at1 = value
+
+opaque type _GUnixConnectionPrivate = CStruct0
+object _GUnixConnectionPrivate:
+  given _tag: Tag[_GUnixConnectionPrivate] = Tag.materializeCStruct0Tag
+
+opaque type _GUnixCredentialsMessage = CStruct2[GSocketControlMessage, Ptr[GUnixCredentialsMessagePrivate]]
+object _GUnixCredentialsMessage:
+  given _tag: Tag[_GUnixCredentialsMessage] = Tag.materializeCStruct2Tag[GSocketControlMessage, Ptr[GUnixCredentialsMessagePrivate]]
+  def apply()(using Zone): Ptr[_GUnixCredentialsMessage] = scala.scalanative.unsafe.alloc[_GUnixCredentialsMessage](1)
+  def apply(parent_instance : GSocketControlMessage, priv : Ptr[GUnixCredentialsMessagePrivate])(using Zone): Ptr[_GUnixCredentialsMessage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixCredentialsMessage)
+    def parent_instance : GSocketControlMessage = struct._1
+    def parent_instance_=(value: GSocketControlMessage): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixCredentialsMessagePrivate] = struct._2
+    def priv_=(value: Ptr[GUnixCredentialsMessagePrivate]): Unit = !struct.at2 = value
+
+/**
+ * GUnixCredentialsMessageClass:
+*/
+opaque type _GUnixCredentialsMessageClass = CStruct3[GSocketControlMessageClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
+object _GUnixCredentialsMessageClass:
+  given _tag: Tag[_GUnixCredentialsMessageClass] = Tag.materializeCStruct3Tag[GSocketControlMessageClass, CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  def apply()(using Zone): Ptr[_GUnixCredentialsMessageClass] = scala.scalanative.unsafe.alloc[_GUnixCredentialsMessageClass](1)
+  def apply(parent_class : GSocketControlMessageClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[_GUnixCredentialsMessageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    ____ptr
+  extension (struct: _GUnixCredentialsMessageClass)
+    def parent_class : GSocketControlMessageClass = struct._1
+    def parent_class_=(value: GSocketControlMessageClass): Unit = !struct.at1 = value
+    def _g_reserved1 : CFuncPtr0[Unit] = struct._2
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at2 = value
+    def _g_reserved2 : CFuncPtr0[Unit] = struct._3
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
+
+opaque type _GUnixCredentialsMessagePrivate = CStruct0
+object _GUnixCredentialsMessagePrivate:
+  given _tag: Tag[_GUnixCredentialsMessagePrivate] = Tag.materializeCStruct0Tag
+
+opaque type _GUnixFDList = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GUnixFDListPrivate]]
 object _GUnixFDList:
-  given _tag: Tag[_GUnixFDList] = Tag.materializeCStruct0Tag
+  given _tag: Tag[_GUnixFDList] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GUnixFDListPrivate]]
+  def apply()(using Zone): Ptr[_GUnixFDList] = scala.scalanative.unsafe.alloc[_GUnixFDList](1)
+  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject, priv : Ptr[GUnixFDListPrivate])(using Zone): Ptr[_GUnixFDList] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixFDList)
+    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixFDListPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixFDListPrivate]): Unit = !struct.at2 = value
+
+opaque type _GUnixFDListClass = CStruct6[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+object _GUnixFDListClass:
+  given _tag: Tag[_GUnixFDListClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  def apply()(using Zone): Ptr[_GUnixFDListClass] = scala.scalanative.unsafe.alloc[_GUnixFDListClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, _g_reserved1 : CFuncPtr0[Unit], _g_reserved2 : CFuncPtr0[Unit], _g_reserved3 : CFuncPtr0[Unit], _g_reserved4 : CFuncPtr0[Unit], _g_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[_GUnixFDListClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr)._g_reserved1 = _g_reserved1
+    (!____ptr)._g_reserved2 = _g_reserved2
+    (!____ptr)._g_reserved3 = _g_reserved3
+    (!____ptr)._g_reserved4 = _g_reserved4
+    (!____ptr)._g_reserved5 = _g_reserved5
+    ____ptr
+  extension (struct: _GUnixFDListClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+    def _g_reserved1 : CFuncPtr0[Unit] = struct._2
+    def _g_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at2 = value
+    def _g_reserved2 : CFuncPtr0[Unit] = struct._3
+    def _g_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at3 = value
+    def _g_reserved3 : CFuncPtr0[Unit] = struct._4
+    def _g_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at4 = value
+    def _g_reserved4 : CFuncPtr0[Unit] = struct._5
+    def _g_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at5 = value
+    def _g_reserved5 : CFuncPtr0[Unit] = struct._6
+    def _g_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
+
+opaque type _GUnixFDListPrivate = CStruct0
+object _GUnixFDListPrivate:
+  given _tag: Tag[_GUnixFDListPrivate] = Tag.materializeCStruct0Tag
+
+opaque type _GUnixSocketAddress = CStruct2[GSocketAddress, Ptr[GUnixSocketAddressPrivate]]
+object _GUnixSocketAddress:
+  given _tag: Tag[_GUnixSocketAddress] = Tag.materializeCStruct2Tag[GSocketAddress, Ptr[GUnixSocketAddressPrivate]]
+  def apply()(using Zone): Ptr[_GUnixSocketAddress] = scala.scalanative.unsafe.alloc[_GUnixSocketAddress](1)
+  def apply(parent_instance : GSocketAddress, priv : Ptr[GUnixSocketAddressPrivate])(using Zone): Ptr[_GUnixSocketAddress] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    (!____ptr).priv = priv
+    ____ptr
+  extension (struct: _GUnixSocketAddress)
+    def parent_instance : GSocketAddress = struct._1
+    def parent_instance_=(value: GSocketAddress): Unit = !struct.at1 = value
+    def priv : Ptr[GUnixSocketAddressPrivate] = struct._2
+    def priv_=(value: Ptr[GUnixSocketAddressPrivate]): Unit = !struct.at2 = value
+
+opaque type _GUnixSocketAddressClass = CStruct1[GSocketAddressClass]
+object _GUnixSocketAddressClass:
+  given _tag: Tag[_GUnixSocketAddressClass] = Tag.materializeCStruct1Tag[GSocketAddressClass]
+  def apply()(using Zone): Ptr[_GUnixSocketAddressClass] = scala.scalanative.unsafe.alloc[_GUnixSocketAddressClass](1)
+  def apply(parent_class : GSocketAddressClass)(using Zone): Ptr[_GUnixSocketAddressClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _GUnixSocketAddressClass)
+    def parent_class : GSocketAddressClass = struct._1
+    def parent_class_=(value: GSocketAddressClass): Unit = !struct.at1 = value
+
+opaque type _GUnixSocketAddressPrivate = CStruct0
+object _GUnixSocketAddressPrivate:
+  given _tag: Tag[_GUnixSocketAddressPrivate] = Tag.materializeCStruct0Tag
 
 opaque type _GVfs = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GVfs:

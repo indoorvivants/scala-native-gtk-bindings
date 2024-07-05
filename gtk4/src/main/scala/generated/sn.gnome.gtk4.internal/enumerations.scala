@@ -118,6 +118,25 @@ object GdkDragAction extends CEnumU[GdkDragAction]:
     inline def is(b: GdkDragAction): Boolean = (a & b) == b
 
 /**
+ * GdkGLAPI: _GL_API_GL: The OpenGL API _GL_API_GLES: The OpenGL ES API
+*/
+opaque type GdkGLAPI = CUnsignedInt
+object GdkGLAPI extends CEnumU[GdkGLAPI]:
+  given _tag: Tag[GdkGLAPI] = Tag.UInt
+  inline def define(inline a: Long): GdkGLAPI = a.toUInt
+  val GDK_GL_API_GL = define(1)
+  val GDK_GL_API_GLES = define(2)
+  inline def getName(inline value: GdkGLAPI): Option[String] =
+    inline value match
+      case GDK_GL_API_GL => Some("GDK_GL_API_GL")
+      case GDK_GL_API_GLES => Some("GDK_GL_API_GLES")
+      case _ => _root_.scala.None
+  extension (a: GdkGLAPI)
+    inline def &(b: GdkGLAPI): GdkGLAPI = a & b
+    inline def |(b: GdkGLAPI): GdkGLAPI = a | b
+    inline def is(b: GdkGLAPI): Boolean = (a & b) == b
+
+/**
  * GdkKeyMatch: _KEY_MATCH_NONE: The key event does not match _KEY_MATCH_PARTIAL: The key event matches if keyboard state (specifically, the currently active group) is ignored _KEY_MATCH_EXACT: The key event matches
 */
 opaque type GdkKeyMatch = CUnsignedInt
@@ -145,6 +164,7 @@ opaque type GdkModifierType = CUnsignedInt
 object GdkModifierType extends CEnumU[GdkModifierType]:
   given _tag: Tag[GdkModifierType] = Tag.UInt
   inline def define(inline a: Long): GdkModifierType = a.toUInt
+  val GDK_NO_MODIFIER_MASK = define(0)
   val GDK_SHIFT_MASK = define(1)
   val GDK_LOCK_MASK = define(2)
   val GDK_CONTROL_MASK = define(4)
@@ -159,6 +179,7 @@ object GdkModifierType extends CEnumU[GdkModifierType]:
   val GDK_META_MASK = define(268435456)
   inline def getName(inline value: GdkModifierType): Option[String] =
     inline value match
+      case GDK_NO_MODIFIER_MASK => Some("GDK_NO_MODIFIER_MASK")
       case GDK_SHIFT_MASK => Some("GDK_SHIFT_MASK")
       case GDK_LOCK_MASK => Some("GDK_LOCK_MASK")
       case GDK_CONTROL_MASK => Some("GDK_CONTROL_MASK")
@@ -176,6 +197,25 @@ object GdkModifierType extends CEnumU[GdkModifierType]:
     inline def &(b: GdkModifierType): GdkModifierType = a & b
     inline def |(b: GdkModifierType): GdkModifierType = a | b
     inline def is(b: GdkModifierType): Boolean = (a & b) == b
+
+/**
+ * GdkScrollUnit: _SCROLL_UNIT_WHEEL: The delta is in number of wheel clicks. _SCROLL_UNIT_SURFACE: The delta is in surface pixels to scroll directly on screen.
+*/
+opaque type GdkScrollUnit = CUnsignedInt
+object GdkScrollUnit extends CEnumU[GdkScrollUnit]:
+  given _tag: Tag[GdkScrollUnit] = Tag.UInt
+  inline def define(inline a: Long): GdkScrollUnit = a.toUInt
+  val GDK_SCROLL_UNIT_WHEEL = define(0)
+  val GDK_SCROLL_UNIT_SURFACE = define(1)
+  inline def getName(inline value: GdkScrollUnit): Option[String] =
+    inline value match
+      case GDK_SCROLL_UNIT_WHEEL => Some("GDK_SCROLL_UNIT_WHEEL")
+      case GDK_SCROLL_UNIT_SURFACE => Some("GDK_SCROLL_UNIT_SURFACE")
+      case _ => _root_.scala.None
+  extension (a: GdkScrollUnit)
+    inline def &(b: GdkScrollUnit): GdkScrollUnit = a & b
+    inline def |(b: GdkScrollUnit): GdkScrollUnit = a | b
+    inline def is(b: GdkScrollUnit): Boolean = (a & b) == b
 
 /**
  * GskBlendMode: _BLEND_MODE_DEFAULT: The default blend mode, which specifies no blending _BLEND_MODE_MULTIPLY: The source color is multiplied by the destination and replaces the destination _BLEND_MODE_SCREEN: Multiplies the complements of the destination and source color values, then complements the result. _BLEND_MODE_OVERLAY: Multiplies or screens the colors, depending on the destination color value. This is the inverse of hard-list _BLEND_MODE_DARKEN: Selects the darker of the destination and source colors _BLEND_MODE_LIGHTEN: Selects the lighter of the destination and source colors _BLEND_MODE_COLOR_DODGE: Brightens the destination color to reflect the source color _BLEND_MODE_COLOR_BURN: Darkens the destination color to reflect the source color _BLEND_MODE_HARD_LIGHT: Multiplies or screens the colors, depending on the source color value _BLEND_MODE_SOFT_LIGHT: Darkens or lightens the colors, depending on the source color value _BLEND_MODE_DIFFERENCE: Subtracts the darker of the two constituent colors from the lighter color _BLEND_MODE_EXCLUSION: Produces an effect similar to that of the difference mode but lower in contrast _BLEND_MODE_COLOR: Creates a color with the hue and saturation of the source color and the luminosity of the destination color _BLEND_MODE_HUE: Creates a color with the hue of the source color and the saturation and luminosity of the destination color _BLEND_MODE_SATURATION: Creates a color with the saturation of the source color and the hue and luminosity of the destination color _BLEND_MODE_LUMINOSITY: Creates a color with the luminosity of the source color and the hue and saturation of the destination color
@@ -225,6 +265,90 @@ object GskBlendMode extends CEnumU[GskBlendMode]:
     inline def is(b: GskBlendMode): Boolean = (a & b) == b
 
 /**
+ * GskFillRule: _FILL_RULE_WINDING: If the path crosses the ray from left-to-right, counts +1. If the path crosses the ray from right to left, counts -1. (Left and right are determined from the perspective of looking along the ray from the starting point.) If the total count is non-zero, the point will be filled. _FILL_RULE_EVEN_ODD: Counts the total number of intersections, without regard to the orientation of the contour. If the total number of intersections is odd, the point will be filled.
+*/
+opaque type GskFillRule = CUnsignedInt
+object GskFillRule extends CEnumU[GskFillRule]:
+  given _tag: Tag[GskFillRule] = Tag.UInt
+  inline def define(inline a: Long): GskFillRule = a.toUInt
+  val GSK_FILL_RULE_WINDING = define(0)
+  val GSK_FILL_RULE_EVEN_ODD = define(1)
+  inline def getName(inline value: GskFillRule): Option[String] =
+    inline value match
+      case GSK_FILL_RULE_WINDING => Some("GSK_FILL_RULE_WINDING")
+      case GSK_FILL_RULE_EVEN_ODD => Some("GSK_FILL_RULE_EVEN_ODD")
+      case _ => _root_.scala.None
+  extension (a: GskFillRule)
+    inline def &(b: GskFillRule): GskFillRule = a & b
+    inline def |(b: GskFillRule): GskFillRule = a | b
+    inline def is(b: GskFillRule): Boolean = (a & b) == b
+
+/**
+ * GskMaskMode: _MASK_MODE_ALPHA: Use the alpha channel of the mask _MASK_MODE_INVERTED_ALPHA: Use the inverted alpha channel of the mask _MASK_MODE_LUMINANCE: Use the luminance of the mask, multiplied by mask alpha _MASK_MODE_INVERTED_LUMINANCE: Use the inverted luminance of the mask, multiplied by mask alpha
+*/
+opaque type GskMaskMode = CUnsignedInt
+object GskMaskMode extends CEnumU[GskMaskMode]:
+  given _tag: Tag[GskMaskMode] = Tag.UInt
+  inline def define(inline a: Long): GskMaskMode = a.toUInt
+  val GSK_MASK_MODE_ALPHA = define(0)
+  val GSK_MASK_MODE_INVERTED_ALPHA = define(1)
+  val GSK_MASK_MODE_LUMINANCE = define(2)
+  val GSK_MASK_MODE_INVERTED_LUMINANCE = define(3)
+  inline def getName(inline value: GskMaskMode): Option[String] =
+    inline value match
+      case GSK_MASK_MODE_ALPHA => Some("GSK_MASK_MODE_ALPHA")
+      case GSK_MASK_MODE_INVERTED_ALPHA => Some("GSK_MASK_MODE_INVERTED_ALPHA")
+      case GSK_MASK_MODE_LUMINANCE => Some("GSK_MASK_MODE_LUMINANCE")
+      case GSK_MASK_MODE_INVERTED_LUMINANCE => Some("GSK_MASK_MODE_INVERTED_LUMINANCE")
+      case _ => _root_.scala.None
+  extension (a: GskMaskMode)
+    inline def &(b: GskMaskMode): GskMaskMode = a & b
+    inline def |(b: GskMaskMode): GskMaskMode = a | b
+    inline def is(b: GskMaskMode): Boolean = (a & b) == b
+
+/**
+ * GskScalingFilter: _SCALING_FILTER_LINEAR: linear interpolation filter _SCALING_FILTER_NEAREST: nearest neighbor interpolation filter _SCALING_FILTER_TRILINEAR: linear interpolation along each axis, plus mipmap generation, with linear interpolation along the mipmap levels
+*/
+opaque type GskScalingFilter = CUnsignedInt
+object GskScalingFilter extends CEnumU[GskScalingFilter]:
+  given _tag: Tag[GskScalingFilter] = Tag.UInt
+  inline def define(inline a: Long): GskScalingFilter = a.toUInt
+  val GSK_SCALING_FILTER_LINEAR = define(0)
+  val GSK_SCALING_FILTER_NEAREST = define(1)
+  val GSK_SCALING_FILTER_TRILINEAR = define(2)
+  inline def getName(inline value: GskScalingFilter): Option[String] =
+    inline value match
+      case GSK_SCALING_FILTER_LINEAR => Some("GSK_SCALING_FILTER_LINEAR")
+      case GSK_SCALING_FILTER_NEAREST => Some("GSK_SCALING_FILTER_NEAREST")
+      case GSK_SCALING_FILTER_TRILINEAR => Some("GSK_SCALING_FILTER_TRILINEAR")
+      case _ => _root_.scala.None
+  extension (a: GskScalingFilter)
+    inline def &(b: GskScalingFilter): GskScalingFilter = a & b
+    inline def |(b: GskScalingFilter): GskScalingFilter = a | b
+    inline def is(b: GskScalingFilter): Boolean = (a & b) == b
+
+/**
+ * GtkAccessibleAnnouncementPriority: _ANNOUNCEMENT_PRIORITY_LOW: The announcement is low priority, and might be read only on the user's request. _ANNOUNCEMENT_PRIORITY_MEDIUM: The announcement is of medium priority, and is usually spoken at the next opportunity, such as at the end of speaking the current sentence or when the user pauses typing. _ANNOUNCEMENT_PRIORITY_HIGH: The announcement is of high priority, and is usually spoken immediately. Because an interruption might disorient users or cause them to not complete their current task, authors SHOULD NOT use high priority announcements unless the interruption is imperative. An example would be a notification about a critical battery power level.
+*/
+opaque type GtkAccessibleAnnouncementPriority = CUnsignedInt
+object GtkAccessibleAnnouncementPriority extends CEnumU[GtkAccessibleAnnouncementPriority]:
+  given _tag: Tag[GtkAccessibleAnnouncementPriority] = Tag.UInt
+  inline def define(inline a: Long): GtkAccessibleAnnouncementPriority = a.toUInt
+  val GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_LOW = define(0)
+  val GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_MEDIUM = define(1)
+  val GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_HIGH = define(2)
+  inline def getName(inline value: GtkAccessibleAnnouncementPriority): Option[String] =
+    inline value match
+      case GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_LOW => Some("GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_LOW")
+      case GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_MEDIUM => Some("GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_MEDIUM")
+      case GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_HIGH => Some("GTK_ACCESSIBLE_ANNOUNCEMENT_PRIORITY_HIGH")
+      case _ => _root_.scala.None
+  extension (a: GtkAccessibleAnnouncementPriority)
+    inline def &(b: GtkAccessibleAnnouncementPriority): GtkAccessibleAnnouncementPriority = a & b
+    inline def |(b: GtkAccessibleAnnouncementPriority): GtkAccessibleAnnouncementPriority = a | b
+    inline def is(b: GtkAccessibleAnnouncementPriority): Boolean = (a & b) == b
+
+/**
  * GtkAccessibleAutocomplete: _ACCESSIBLE_AUTOCOMPLETE_NONE: Automatic suggestions are not displayed. _ACCESSIBLE_AUTOCOMPLETE_INLINE: When a user is providing input, text suggesting one way to complete the provided input may be dynamically inserted after the caret. _ACCESSIBLE_AUTOCOMPLETE_LIST: When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. _ACCESSIBLE_AUTOCOMPLETE_BOTH: When a user is providing input, an element containing a collection of values that could complete the provided input may be displayed. If displayed, one value in the collection is automatically selected, and the text needed to complete the automatically selected value appears after the caret in the input.
 */
 opaque type GtkAccessibleAutocomplete = CUnsignedInt
@@ -269,6 +393,27 @@ object GtkAccessibleInvalidState extends CEnumU[GtkAccessibleInvalidState]:
     inline def &(b: GtkAccessibleInvalidState): GtkAccessibleInvalidState = a & b
     inline def |(b: GtkAccessibleInvalidState): GtkAccessibleInvalidState = a | b
     inline def is(b: GtkAccessibleInvalidState): Boolean = (a & b) == b
+
+/**
+ * GtkAccessiblePlatformState: _ACCESSIBLE_PLATFORM_STATE_FOCUSABLE: whether the accessible can be focused _ACCESSIBLE_PLATFORM_STATE_FOCUSED: whether the accessible has focus _ACCESSIBLE_PLATFORM_STATE_ACTIVE: whether the accessible is active
+*/
+opaque type GtkAccessiblePlatformState = CUnsignedInt
+object GtkAccessiblePlatformState extends CEnumU[GtkAccessiblePlatformState]:
+  given _tag: Tag[GtkAccessiblePlatformState] = Tag.UInt
+  inline def define(inline a: Long): GtkAccessiblePlatformState = a.toUInt
+  val GTK_ACCESSIBLE_PLATFORM_STATE_FOCUSABLE = define(0)
+  val GTK_ACCESSIBLE_PLATFORM_STATE_FOCUSED = define(1)
+  val GTK_ACCESSIBLE_PLATFORM_STATE_ACTIVE = define(2)
+  inline def getName(inline value: GtkAccessiblePlatformState): Option[String] =
+    inline value match
+      case GTK_ACCESSIBLE_PLATFORM_STATE_FOCUSABLE => Some("GTK_ACCESSIBLE_PLATFORM_STATE_FOCUSABLE")
+      case GTK_ACCESSIBLE_PLATFORM_STATE_FOCUSED => Some("GTK_ACCESSIBLE_PLATFORM_STATE_FOCUSED")
+      case GTK_ACCESSIBLE_PLATFORM_STATE_ACTIVE => Some("GTK_ACCESSIBLE_PLATFORM_STATE_ACTIVE")
+      case _ => _root_.scala.None
+  extension (a: GtkAccessiblePlatformState)
+    inline def &(b: GtkAccessiblePlatformState): GtkAccessiblePlatformState = a & b
+    inline def |(b: GtkAccessiblePlatformState): GtkAccessiblePlatformState = a | b
+    inline def is(b: GtkAccessiblePlatformState): Boolean = (a & b) == b
 
 /**
  * GtkAccessibleProperty: _ACCESSIBLE_PROPERTY_AUTOCOMPLETE: Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made. Value type: [enum] _ACCESSIBLE_PROPERTY_DESCRIPTION: Defines a string value that describes or annotates the current element. Value type: string _ACCESSIBLE_PROPERTY_HAS_POPUP: Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element. _ACCESSIBLE_PROPERTY_KEY_SHORTCUTS: Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element. Value type: string _ACCESSIBLE_PROPERTY_LABEL: Defines a string value that labels the current element. Value type: string _ACCESSIBLE_PROPERTY_LEVEL: Defines the hierarchical level of an element within a structure. Value type: integer _ACCESSIBLE_PROPERTY_MODAL: Indicates whether an element is modal when displayed. Value type: boolean _ACCESSIBLE_PROPERTY_MULTI_LINE: Indicates whether a text box accepts multiple lines of input or only a single line. Value type: boolean _ACCESSIBLE_PROPERTY_MULTI_SELECTABLE: Indicates that the user may select more than one item from the current selectable descendants. Value type: boolean _ACCESSIBLE_PROPERTY_ORIENTATION: Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous. Value type: [enum] _ACCESSIBLE_PROPERTY_PLACEHOLDER: Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. A hint could be a sample value or a brief description of the expected format. Value type: string _ACCESSIBLE_PROPERTY_READ_ONLY: Indicates that the element is not editable, but is otherwise operable. Value type: boolean _ACCESSIBLE_PROPERTY_REQUIRED: Indicates that user input is required on the element before a form may be submitted. Value type: boolean _ACCESSIBLE_PROPERTY_ROLE_DESCRIPTION: Defines a human-readable, author-localized description for the role of an element. Value type: string _ACCESSIBLE_PROPERTY_SORT: Indicates if items in a table or grid are sorted in ascending or descending order. Value type: [enum] _ACCESSIBLE_PROPERTY_VALUE_MAX: Defines the maximum allowed value for a range widget. Value type: double _ACCESSIBLE_PROPERTY_VALUE_MIN: Defines the minimum allowed value for a range widget. Value type: double _ACCESSIBLE_PROPERTY_VALUE_NOW: Defines the current value for a range widget. Value type: double _ACCESSIBLE_PROPERTY_VALUE_TEXT: Defines the human readable text alternative of aria-valuenow for a range widget. Value type: string
@@ -375,7 +520,7 @@ object GtkAccessibleRelation extends CEnumU[GtkAccessibleRelation]:
     inline def is(b: GtkAccessibleRelation): Boolean = (a & b) == b
 
 /**
- * GtkAccessibleRole: _ACCESSIBLE_ROLE_ALERT: An element with important, and usually time-sensitive, information _ACCESSIBLE_ROLE_ALERT_DIALOG: A type of dialog that contains an alert message _ACCESSIBLE_ROLE_BANNER: Unused _ACCESSIBLE_ROLE_BUTTON: An input element that allows for user-triggered actions when clicked or pressed _ACCESSIBLE_ROLE_CAPTION: Unused _ACCESSIBLE_ROLE_CELL: Unused _ACCESSIBLE_ROLE_CHECKBOX: A checkable input element that has three possible values: `true`, `false`, or `mixed` _ACCESSIBLE_ROLE_COLUMN_HEADER: A header in a columned list. _ACCESSIBLE_ROLE_COMBO_BOX: An input that controls another element, such as a list or a grid, that can dynamically pop up to help the user set the value of the input _ACCESSIBLE_ROLE_COMMAND: Abstract role. _ACCESSIBLE_ROLE_COMPOSITE: Abstract role. _ACCESSIBLE_ROLE_DIALOG: A dialog is a window that is designed to interrupt the current processing of an application in order to prompt the user to enter information or require a response. _ACCESSIBLE_ROLE_DOCUMENT: Unused _ACCESSIBLE_ROLE_FEED: Unused _ACCESSIBLE_ROLE_FORM: Unused _ACCESSIBLE_ROLE_GENERIC: Unused _ACCESSIBLE_ROLE_GRID: A grid of items. _ACCESSIBLE_ROLE_GRID_CELL: An item in a grid or tree grid. _ACCESSIBLE_ROLE_GROUP: An element that groups multiple widgets. GTK uses this role for various containers, like [class], [class], and [class]. _ACCESSIBLE_ROLE_HEADING: Unused _ACCESSIBLE_ROLE_IMG: An image. _ACCESSIBLE_ROLE_INPUT: Abstract role. _ACCESSIBLE_ROLE_LABEL: A visible name or caption for a user interface component. _ACCESSIBLE_ROLE_LANDMARK: Abstract role. _ACCESSIBLE_ROLE_LEGEND: Unused _ACCESSIBLE_ROLE_LINK: A clickable link. _ACCESSIBLE_ROLE_LIST: A list of items. _ACCESSIBLE_ROLE_LIST_BOX: Unused. _ACCESSIBLE_ROLE_LIST_ITEM: An item in a list. _ACCESSIBLE_ROLE_LOG: Unused _ACCESSIBLE_ROLE_MAIN: Unused _ACCESSIBLE_ROLE_MARQUEE: Unused _ACCESSIBLE_ROLE_MATH: Unused _ACCESSIBLE_ROLE_METER: An element that represents a value within a known range. _ACCESSIBLE_ROLE_MENU: A menu. _ACCESSIBLE_ROLE_MENU_BAR: A menubar. _ACCESSIBLE_ROLE_MENU_ITEM: An item in a menu. _ACCESSIBLE_ROLE_MENU_ITEM_CHECKBOX: A check item in a menu. _ACCESSIBLE_ROLE_MENU_ITEM_RADIO: A radio item in a menu. _ACCESSIBLE_ROLE_NAVIGATION: Unused _ACCESSIBLE_ROLE_NONE: An element that is not represented to accessibility technologies. _ACCESSIBLE_ROLE_NOTE: Unused _ACCESSIBLE_ROLE_OPTION: Unused _ACCESSIBLE_ROLE_PRESENTATION: An element that is not represented to accessibility technologies. _ACCESSIBLE_ROLE_PROGRESS_BAR: An element that displays the progress status for tasks that take a long time. _ACCESSIBLE_ROLE_RADIO: A checkable input in a group of radio roles, only one of which can be checked at a time. _ACCESSIBLE_ROLE_RADIO_GROUP: Unused _ACCESSIBLE_ROLE_RANGE: Abstract role. _ACCESSIBLE_ROLE_REGION: Unused _ACCESSIBLE_ROLE_ROW: A row in a columned list. _ACCESSIBLE_ROLE_ROW_GROUP: Unused _ACCESSIBLE_ROLE_ROW_HEADER: Unused _ACCESSIBLE_ROLE_SCROLLBAR: A graphical object that controls the scrolling of content within a viewing area, regardless of whether the content is fully displayed within the viewing area. _ACCESSIBLE_ROLE_SEARCH: Unused _ACCESSIBLE_ROLE_SEARCH_BOX: A type of textbox intended for specifying search criteria. _ACCESSIBLE_ROLE_SECTION: Abstract role. _ACCESSIBLE_ROLE_SECTION_HEAD: Abstract role. _ACCESSIBLE_ROLE_SELECT: Abstract role. _ACCESSIBLE_ROLE_SEPARATOR: A divider that separates and distinguishes sections of content or groups of menuitems. _ACCESSIBLE_ROLE_SLIDER: A user input where the user selects a value from within a given range. _ACCESSIBLE_ROLE_SPIN_BUTTON: A form of range that expects the user to select from among discrete choices. _ACCESSIBLE_ROLE_STATUS: Unused _ACCESSIBLE_ROLE_STRUCTURE: Abstract role. _ACCESSIBLE_ROLE_SWITCH: A type of checkbox that represents on/off values, as opposed to checked/unchecked values. _ACCESSIBLE_ROLE_TAB: An item in a list of tab used for switching pages. _ACCESSIBLE_ROLE_TABLE: Unused _ACCESSIBLE_ROLE_TAB_LIST: A list of tabs for switching pages. _ACCESSIBLE_ROLE_TAB_PANEL: A page in a notebook or stack. _ACCESSIBLE_ROLE_TEXT_BOX: A type of input that allows free-form text as its value. _ACCESSIBLE_ROLE_TIME: Unused _ACCESSIBLE_ROLE_TIMER: Unused _ACCESSIBLE_ROLE_TOOLBAR: Unused _ACCESSIBLE_ROLE_TOOLTIP: Unused _ACCESSIBLE_ROLE_TREE: Unused _ACCESSIBLE_ROLE_TREE_GRID: A treeview-like, columned list. _ACCESSIBLE_ROLE_TREE_ITEM: Unused _ACCESSIBLE_ROLE_WIDGET: An interactive component of a graphical user interface. This is the role that GTK uses by default for widgets. _ACCESSIBLE_ROLE_WINDOW: An application window.
+ * GTK_ACCESSIBLE_ROLE_TERMINAL:
 */
 opaque type GtkAccessibleRole = CUnsignedInt
 object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
@@ -459,6 +604,13 @@ object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
   val GTK_ACCESSIBLE_ROLE_TREE_ITEM = define(75)
   val GTK_ACCESSIBLE_ROLE_WIDGET = define(76)
   val GTK_ACCESSIBLE_ROLE_WINDOW = define(77)
+  val GTK_ACCESSIBLE_ROLE_TOGGLE_BUTTON = define(78)
+  val GTK_ACCESSIBLE_ROLE_APPLICATION = define(79)
+  val GTK_ACCESSIBLE_ROLE_PARAGRAPH = define(80)
+  val GTK_ACCESSIBLE_ROLE_BLOCK_QUOTE = define(81)
+  val GTK_ACCESSIBLE_ROLE_ARTICLE = define(82)
+  val GTK_ACCESSIBLE_ROLE_COMMENT = define(83)
+  val GTK_ACCESSIBLE_ROLE_TERMINAL = define(84)
   inline def getName(inline value: GtkAccessibleRole): Option[String] =
     inline value match
       case GTK_ACCESSIBLE_ROLE_ALERT => Some("GTK_ACCESSIBLE_ROLE_ALERT")
@@ -539,6 +691,13 @@ object GtkAccessibleRole extends CEnumU[GtkAccessibleRole]:
       case GTK_ACCESSIBLE_ROLE_TREE_ITEM => Some("GTK_ACCESSIBLE_ROLE_TREE_ITEM")
       case GTK_ACCESSIBLE_ROLE_WIDGET => Some("GTK_ACCESSIBLE_ROLE_WIDGET")
       case GTK_ACCESSIBLE_ROLE_WINDOW => Some("GTK_ACCESSIBLE_ROLE_WINDOW")
+      case GTK_ACCESSIBLE_ROLE_TOGGLE_BUTTON => Some("GTK_ACCESSIBLE_ROLE_TOGGLE_BUTTON")
+      case GTK_ACCESSIBLE_ROLE_APPLICATION => Some("GTK_ACCESSIBLE_ROLE_APPLICATION")
+      case GTK_ACCESSIBLE_ROLE_PARAGRAPH => Some("GTK_ACCESSIBLE_ROLE_PARAGRAPH")
+      case GTK_ACCESSIBLE_ROLE_BLOCK_QUOTE => Some("GTK_ACCESSIBLE_ROLE_BLOCK_QUOTE")
+      case GTK_ACCESSIBLE_ROLE_ARTICLE => Some("GTK_ACCESSIBLE_ROLE_ARTICLE")
+      case GTK_ACCESSIBLE_ROLE_COMMENT => Some("GTK_ACCESSIBLE_ROLE_COMMENT")
+      case GTK_ACCESSIBLE_ROLE_TERMINAL => Some("GTK_ACCESSIBLE_ROLE_TERMINAL")
       case _ => _root_.scala.None
   extension (a: GtkAccessibleRole)
     inline def &(b: GtkAccessibleRole): GtkAccessibleRole = a & b
@@ -583,6 +742,7 @@ object GtkAccessibleState extends CEnumU[GtkAccessibleState]:
   val GTK_ACCESSIBLE_STATE_INVALID = define(5)
   val GTK_ACCESSIBLE_STATE_PRESSED = define(6)
   val GTK_ACCESSIBLE_STATE_SELECTED = define(7)
+  val GTK_ACCESSIBLE_STATE_VISITED = define(8)
   inline def getName(inline value: GtkAccessibleState): Option[String] =
     inline value match
       case GTK_ACCESSIBLE_STATE_BUSY => Some("GTK_ACCESSIBLE_STATE_BUSY")
@@ -593,11 +753,56 @@ object GtkAccessibleState extends CEnumU[GtkAccessibleState]:
       case GTK_ACCESSIBLE_STATE_INVALID => Some("GTK_ACCESSIBLE_STATE_INVALID")
       case GTK_ACCESSIBLE_STATE_PRESSED => Some("GTK_ACCESSIBLE_STATE_PRESSED")
       case GTK_ACCESSIBLE_STATE_SELECTED => Some("GTK_ACCESSIBLE_STATE_SELECTED")
+      case GTK_ACCESSIBLE_STATE_VISITED => Some("GTK_ACCESSIBLE_STATE_VISITED")
       case _ => _root_.scala.None
   extension (a: GtkAccessibleState)
     inline def &(b: GtkAccessibleState): GtkAccessibleState = a & b
     inline def |(b: GtkAccessibleState): GtkAccessibleState = a | b
     inline def is(b: GtkAccessibleState): Boolean = (a & b) == b
+
+/**
+ * GtkAccessibleTextContentChange: _ACCESSIBLE_TEXT_CONTENT_CHANGE_INSERT: contents change as the result of an insert operation _ACCESSIBLE_TEXT_CONTENT_CHANGE_REMOVE: contents change as the result of a remove operation
+*/
+opaque type GtkAccessibleTextContentChange = CUnsignedInt
+object GtkAccessibleTextContentChange extends CEnumU[GtkAccessibleTextContentChange]:
+  given _tag: Tag[GtkAccessibleTextContentChange] = Tag.UInt
+  inline def define(inline a: Long): GtkAccessibleTextContentChange = a.toUInt
+  val GTK_ACCESSIBLE_TEXT_CONTENT_CHANGE_INSERT = define(0)
+  val GTK_ACCESSIBLE_TEXT_CONTENT_CHANGE_REMOVE = define(1)
+  inline def getName(inline value: GtkAccessibleTextContentChange): Option[String] =
+    inline value match
+      case GTK_ACCESSIBLE_TEXT_CONTENT_CHANGE_INSERT => Some("GTK_ACCESSIBLE_TEXT_CONTENT_CHANGE_INSERT")
+      case GTK_ACCESSIBLE_TEXT_CONTENT_CHANGE_REMOVE => Some("GTK_ACCESSIBLE_TEXT_CONTENT_CHANGE_REMOVE")
+      case _ => _root_.scala.None
+  extension (a: GtkAccessibleTextContentChange)
+    inline def &(b: GtkAccessibleTextContentChange): GtkAccessibleTextContentChange = a & b
+    inline def |(b: GtkAccessibleTextContentChange): GtkAccessibleTextContentChange = a | b
+    inline def is(b: GtkAccessibleTextContentChange): Boolean = (a & b) == b
+
+/**
+ * GtkAccessibleTextGranularity: _ACCESSIBLE_TEXT_GRANULARITY_CHARACTER: Use the boundary between characters (including non-printing characters) _ACCESSIBLE_TEXT_GRANULARITY_WORD: Use the boundary between words, starting from the beginning of the current word and ending at the beginning of the next word _ACCESSIBLE_TEXT_GRANULARITY_SENTENCE: Use the boundary between sentences, starting from the beginning of the current sentence and ending at the beginning of the next sentence _ACCESSIBLE_TEXT_GRANULARITY_LINE: Use the boundary between lines, starting from the beginning of the current line and ending at the beginning of the next line _ACCESSIBLE_TEXT_GRANULARITY_PARAGRAPH: Use the boundary between paragraphs, starting from the beginning of the current paragraph and ending at the beginning of the next paragraph
+*/
+opaque type GtkAccessibleTextGranularity = CUnsignedInt
+object GtkAccessibleTextGranularity extends CEnumU[GtkAccessibleTextGranularity]:
+  given _tag: Tag[GtkAccessibleTextGranularity] = Tag.UInt
+  inline def define(inline a: Long): GtkAccessibleTextGranularity = a.toUInt
+  val GTK_ACCESSIBLE_TEXT_GRANULARITY_CHARACTER = define(0)
+  val GTK_ACCESSIBLE_TEXT_GRANULARITY_WORD = define(1)
+  val GTK_ACCESSIBLE_TEXT_GRANULARITY_SENTENCE = define(2)
+  val GTK_ACCESSIBLE_TEXT_GRANULARITY_LINE = define(3)
+  val GTK_ACCESSIBLE_TEXT_GRANULARITY_PARAGRAPH = define(4)
+  inline def getName(inline value: GtkAccessibleTextGranularity): Option[String] =
+    inline value match
+      case GTK_ACCESSIBLE_TEXT_GRANULARITY_CHARACTER => Some("GTK_ACCESSIBLE_TEXT_GRANULARITY_CHARACTER")
+      case GTK_ACCESSIBLE_TEXT_GRANULARITY_WORD => Some("GTK_ACCESSIBLE_TEXT_GRANULARITY_WORD")
+      case GTK_ACCESSIBLE_TEXT_GRANULARITY_SENTENCE => Some("GTK_ACCESSIBLE_TEXT_GRANULARITY_SENTENCE")
+      case GTK_ACCESSIBLE_TEXT_GRANULARITY_LINE => Some("GTK_ACCESSIBLE_TEXT_GRANULARITY_LINE")
+      case GTK_ACCESSIBLE_TEXT_GRANULARITY_PARAGRAPH => Some("GTK_ACCESSIBLE_TEXT_GRANULARITY_PARAGRAPH")
+      case _ => _root_.scala.None
+  extension (a: GtkAccessibleTextGranularity)
+    inline def &(b: GtkAccessibleTextGranularity): GtkAccessibleTextGranularity = a & b
+    inline def |(b: GtkAccessibleTextGranularity): GtkAccessibleTextGranularity = a | b
+    inline def is(b: GtkAccessibleTextGranularity): Boolean = (a & b) == b
 
 /**
  * GtkAccessibleTristate: _ACCESSIBLE_TRISTATE_FALSE: The state is `false` _ACCESSIBLE_TRISTATE_TRUE: The state is `true` _ACCESSIBLE_TRISTATE_MIXED: The state is `mixed`
@@ -621,7 +826,7 @@ object GtkAccessibleTristate extends CEnumU[GtkAccessibleTristate]:
     inline def is(b: GtkAccessibleTristate): Boolean = (a & b) == b
 
 /**
- * GtkAlign: _ALIGN_FILL: stretch to fill all space if possible, center if no meaningful way to stretch _ALIGN_START: snap to left or top side, leaving space on right or bottom _ALIGN_END: snap to right or bottom side, leaving space on left or top _ALIGN_CENTER: center natural width of widget inside the allocation _ALIGN_BASELINE: align the widget according to the baseline. See [class.Widget].
+ * GtkAlign: _ALIGN_FILL: stretch to fill all space if possible, center if no meaningful way to stretch _ALIGN_START: snap to left or top side, leaving space on right or bottom _ALIGN_END: snap to right or bottom side, leaving space on left or top _ALIGN_CENTER: center natural width of widget inside the allocation
 */
 opaque type GtkAlign = CUnsignedInt
 object GtkAlign extends CEnumU[GtkAlign]:
@@ -631,14 +836,18 @@ object GtkAlign extends CEnumU[GtkAlign]:
   val GTK_ALIGN_START = define(1)
   val GTK_ALIGN_END = define(2)
   val GTK_ALIGN_CENTER = define(3)
+  val GTK_ALIGN_BASELINE_FILL = define(4)
   val GTK_ALIGN_BASELINE = define(4)
+  val GTK_ALIGN_BASELINE_CENTER = define(5)
   inline def getName(inline value: GtkAlign): Option[String] =
     inline value match
       case GTK_ALIGN_FILL => Some("GTK_ALIGN_FILL")
       case GTK_ALIGN_START => Some("GTK_ALIGN_START")
       case GTK_ALIGN_END => Some("GTK_ALIGN_END")
       case GTK_ALIGN_CENTER => Some("GTK_ALIGN_CENTER")
+      case GTK_ALIGN_BASELINE_FILL => Some("GTK_ALIGN_BASELINE_FILL")
       case GTK_ALIGN_BASELINE => Some("GTK_ALIGN_BASELINE")
+      case GTK_ALIGN_BASELINE_CENTER => Some("GTK_ALIGN_BASELINE_CENTER")
       case _ => _root_.scala.None
   extension (a: GtkAlign)
     inline def &(b: GtkAlign): GtkAlign = a & b
@@ -932,6 +1141,27 @@ object GtkCellRendererState extends CEnumU[GtkCellRendererState]:
     inline def is(b: GtkCellRendererState): Boolean = (a & b) == b
 
 /**
+ * GtkCollation: _COLLATION_NONE: Don't do any collation _COLLATION_UNICODE: Use [func.utf8_collate_key] _COLLATION_FILENAME: Use [func.utf8_collate_key_for_filename]
+*/
+opaque type GtkCollation = CUnsignedInt
+object GtkCollation extends CEnumU[GtkCollation]:
+  given _tag: Tag[GtkCollation] = Tag.UInt
+  inline def define(inline a: Long): GtkCollation = a.toUInt
+  val GTK_COLLATION_NONE = define(0)
+  val GTK_COLLATION_UNICODE = define(1)
+  val GTK_COLLATION_FILENAME = define(2)
+  inline def getName(inline value: GtkCollation): Option[String] =
+    inline value match
+      case GTK_COLLATION_NONE => Some("GTK_COLLATION_NONE")
+      case GTK_COLLATION_UNICODE => Some("GTK_COLLATION_UNICODE")
+      case GTK_COLLATION_FILENAME => Some("GTK_COLLATION_FILENAME")
+      case _ => _root_.scala.None
+  extension (a: GtkCollation)
+    inline def &(b: GtkCollation): GtkCollation = a & b
+    inline def |(b: GtkCollation): GtkCollation = a | b
+    inline def is(b: GtkCollation): Boolean = (a & b) == b
+
+/**
  * GtkConstraintAttribute: _CONSTRAINT_ATTRIBUTE_NONE: No attribute, used for constant relations _CONSTRAINT_ATTRIBUTE_LEFT: The left edge of a widget, regardless of text direction _CONSTRAINT_ATTRIBUTE_RIGHT: The right edge of a widget, regardless of text direction _CONSTRAINT_ATTRIBUTE_TOP: The top edge of a widget _CONSTRAINT_ATTRIBUTE_BOTTOM: The bottom edge of a widget _CONSTRAINT_ATTRIBUTE_START: The leading edge of a widget, depending on text direction; equivalent to %GTK_CONSTRAINT_ATTRIBUTE_LEFT for LTR languages, and %GTK_CONSTRAINT_ATTRIBUTE_RIGHT for RTL ones _CONSTRAINT_ATTRIBUTE_END: The trailing edge of a widget, depending on text direction; equivalent to %GTK_CONSTRAINT_ATTRIBUTE_RIGHT for LTR languages, and %GTK_CONSTRAINT_ATTRIBUTE_LEFT for RTL ones _CONSTRAINT_ATTRIBUTE_WIDTH: The width of a widget _CONSTRAINT_ATTRIBUTE_HEIGHT: The height of a widget _CONSTRAINT_ATTRIBUTE_CENTER_X: The center of a widget, on the horizontal axis _CONSTRAINT_ATTRIBUTE_CENTER_Y: The center of a widget, on the vertical axis _CONSTRAINT_ATTRIBUTE_BASELINE: The baseline of a widget
 */
 opaque type GtkConstraintAttribute = CUnsignedInt
@@ -1042,6 +1272,29 @@ object GtkConstraintVflParserError extends CEnumU[GtkConstraintVflParserError]:
     inline def is(b: GtkConstraintVflParserError): Boolean = (a & b) == b
 
 /**
+ * GtkContentFit: _CONTENT_FIT_FILL: Make the content fill the entire allocation, without taking its aspect ratio in consideration. The resulting content will appear as stretched if its aspect ratio is different from the allocation aspect ratio. _CONTENT_FIT_CONTAIN: Scale the content to fit the allocation, while taking its aspect ratio in consideration. The resulting content will appear as letterboxed if its aspect ratio is different from the allocation aspect ratio. _CONTENT_FIT_COVER: Cover the entire allocation, while taking the content aspect ratio in consideration. The resulting content will appear as clipped if its aspect ratio is different from the allocation aspect ratio. _CONTENT_FIT_SCALE_DOWN: The content is scaled down to fit the allocation, if needed, otherwise its original size is used.
+*/
+opaque type GtkContentFit = CUnsignedInt
+object GtkContentFit extends CEnumU[GtkContentFit]:
+  given _tag: Tag[GtkContentFit] = Tag.UInt
+  inline def define(inline a: Long): GtkContentFit = a.toUInt
+  val GTK_CONTENT_FIT_FILL = define(0)
+  val GTK_CONTENT_FIT_CONTAIN = define(1)
+  val GTK_CONTENT_FIT_COVER = define(2)
+  val GTK_CONTENT_FIT_SCALE_DOWN = define(3)
+  inline def getName(inline value: GtkContentFit): Option[String] =
+    inline value match
+      case GTK_CONTENT_FIT_FILL => Some("GTK_CONTENT_FIT_FILL")
+      case GTK_CONTENT_FIT_CONTAIN => Some("GTK_CONTENT_FIT_CONTAIN")
+      case GTK_CONTENT_FIT_COVER => Some("GTK_CONTENT_FIT_COVER")
+      case GTK_CONTENT_FIT_SCALE_DOWN => Some("GTK_CONTENT_FIT_SCALE_DOWN")
+      case _ => _root_.scala.None
+  extension (a: GtkContentFit)
+    inline def &(b: GtkContentFit): GtkContentFit = a & b
+    inline def |(b: GtkContentFit): GtkContentFit = a | b
+    inline def is(b: GtkContentFit): Boolean = (a & b) == b
+
+/**
  * GtkCornerType: _CORNER_TOP_LEFT: Place the scrollbars on the right and bottom of the widget (default behaviour). _CORNER_BOTTOM_LEFT: Place the scrollbars on the top and right of the widget. _CORNER_TOP_RIGHT: Place the scrollbars on the left and bottom of the widget. _CORNER_BOTTOM_RIGHT: Place the scrollbars on the top and left of the widget.
 */
 opaque type GtkCornerType = CUnsignedInt
@@ -1111,7 +1364,7 @@ object GtkCssParserWarning extends CEnumU[GtkCssParserWarning]:
     inline def is(b: GtkCssParserWarning): Boolean = (a & b) == b
 
 /**
- * GtkDebugFlags: _DEBUG_TEXT: Information about GtkTextView _DEBUG_TREE: Information about GtkTreeView _DEBUG_KEYBINDINGS: Information about keyboard shortcuts _DEBUG_MODULES: Information about modules and extensions _DEBUG_GEOMETRY: Information about size allocation _DEBUG_ICONTHEME: Information about icon themes _DEBUG_PRINTING: Information about printing _DEBUG_BUILDER: Trace GtkBuilder operation _DEBUG_SIZE_REQUEST: Information about size requests _DEBUG_NO_CSS_CACHE: Disable the style property cache _DEBUG_INTERACTIVE: Open the GTK inspector _DEBUG_TOUCHSCREEN: Pretend the pointer is a touchscreen _DEBUG_ACTIONS: Information about actions and menu models _DEBUG_LAYOUT: Information from layout managers _DEBUG_SNAPSHOT: Include debug render nodes in the generated snapshots _DEBUG_CONSTRAINTS: Information from the constraints solver _DEBUG_BUILDER_OBJECTS: Log unused GtkBuilder objects _DEBUG_A11Y: Information about accessibility state changes _DEBUG_ICONFALLBACK: Information about icon fallback. Since: 4.2
+ * GTK_DEBUG_INVERT_TEXT_DIR:
 */
 opaque type GtkDebugFlags = CUnsignedInt
 object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
@@ -1128,7 +1381,6 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
   val GTK_DEBUG_SIZE_REQUEST = define(256)
   val GTK_DEBUG_NO_CSS_CACHE = define(512)
   val GTK_DEBUG_INTERACTIVE = define(1024)
-  val GTK_DEBUG_TOUCHSCREEN = define(2048)
   val GTK_DEBUG_ACTIONS = define(4096)
   val GTK_DEBUG_LAYOUT = define(8192)
   val GTK_DEBUG_SNAPSHOT = define(16384)
@@ -1136,6 +1388,7 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
   val GTK_DEBUG_BUILDER_OBJECTS = define(65536)
   val GTK_DEBUG_A11Y = define(131072)
   val GTK_DEBUG_ICONFALLBACK = define(262144)
+  val GTK_DEBUG_INVERT_TEXT_DIR = define(524288)
   inline def getName(inline value: GtkDebugFlags): Option[String] =
     inline value match
       case GTK_DEBUG_TEXT => Some("GTK_DEBUG_TEXT")
@@ -1149,7 +1402,6 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
       case GTK_DEBUG_SIZE_REQUEST => Some("GTK_DEBUG_SIZE_REQUEST")
       case GTK_DEBUG_NO_CSS_CACHE => Some("GTK_DEBUG_NO_CSS_CACHE")
       case GTK_DEBUG_INTERACTIVE => Some("GTK_DEBUG_INTERACTIVE")
-      case GTK_DEBUG_TOUCHSCREEN => Some("GTK_DEBUG_TOUCHSCREEN")
       case GTK_DEBUG_ACTIONS => Some("GTK_DEBUG_ACTIONS")
       case GTK_DEBUG_LAYOUT => Some("GTK_DEBUG_LAYOUT")
       case GTK_DEBUG_SNAPSHOT => Some("GTK_DEBUG_SNAPSHOT")
@@ -1157,6 +1409,7 @@ object GtkDebugFlags extends CEnumU[GtkDebugFlags]:
       case GTK_DEBUG_BUILDER_OBJECTS => Some("GTK_DEBUG_BUILDER_OBJECTS")
       case GTK_DEBUG_A11Y => Some("GTK_DEBUG_A11Y")
       case GTK_DEBUG_ICONFALLBACK => Some("GTK_DEBUG_ICONFALLBACK")
+      case GTK_DEBUG_INVERT_TEXT_DIR => Some("GTK_DEBUG_INVERT_TEXT_DIR")
       case _ => _root_.scala.None
   extension (a: GtkDebugFlags)
     inline def &(b: GtkDebugFlags): GtkDebugFlags = a & b
@@ -1193,6 +1446,27 @@ object GtkDeleteType extends CEnumU[GtkDeleteType]:
     inline def &(b: GtkDeleteType): GtkDeleteType = a & b
     inline def |(b: GtkDeleteType): GtkDeleteType = a | b
     inline def is(b: GtkDeleteType): Boolean = (a & b) == b
+
+/**
+ * GtkDialogError: _DIALOG_ERROR_FAILED: Generic error condition for when an operation fails and no more specific code is applicable _DIALOG_ERROR_CANCELLED: The async function call was cancelled via its `GCancellable` _DIALOG_ERROR_DISMISSED: The operation was cancelled by the user (via a Cancel or Close button)
+*/
+opaque type GtkDialogError = CUnsignedInt
+object GtkDialogError extends CEnumU[GtkDialogError]:
+  given _tag: Tag[GtkDialogError] = Tag.UInt
+  inline def define(inline a: Long): GtkDialogError = a.toUInt
+  val GTK_DIALOG_ERROR_FAILED = define(0)
+  val GTK_DIALOG_ERROR_CANCELLED = define(1)
+  val GTK_DIALOG_ERROR_DISMISSED = define(2)
+  inline def getName(inline value: GtkDialogError): Option[String] =
+    inline value match
+      case GTK_DIALOG_ERROR_FAILED => Some("GTK_DIALOG_ERROR_FAILED")
+      case GTK_DIALOG_ERROR_CANCELLED => Some("GTK_DIALOG_ERROR_CANCELLED")
+      case GTK_DIALOG_ERROR_DISMISSED => Some("GTK_DIALOG_ERROR_DISMISSED")
+      case _ => _root_.scala.None
+  extension (a: GtkDialogError)
+    inline def &(b: GtkDialogError): GtkDialogError = a & b
+    inline def |(b: GtkDialogError): GtkDialogError = a | b
+    inline def is(b: GtkDialogError): Boolean = (a & b) == b
 
 /**
  * GtkDialogFlags: _DIALOG_MODAL: Make the constructed dialog modal _DIALOG_DESTROY_WITH_PARENT: Destroy the dialog when its parent is destroyed _DIALOG_USE_HEADER_BAR: Create dialog with actions in header bar instead of action area
@@ -1454,6 +1728,48 @@ object GtkFontChooserLevel extends CEnumU[GtkFontChooserLevel]:
     inline def is(b: GtkFontChooserLevel): Boolean = (a & b) == b
 
 /**
+ * GtkFontLevel: _FONT_LEVEL_FAMILY: Select a font family _FONT_LEVEL_FACE: Select a font face (i.e. a family and a style) _FONT_LEVEL_FONT: Select a font (i.e. a face with a size, and possibly font variations) _FONT_LEVEL_FEATURES: Select a font and font features
+*/
+opaque type GtkFontLevel = CUnsignedInt
+object GtkFontLevel extends CEnumU[GtkFontLevel]:
+  given _tag: Tag[GtkFontLevel] = Tag.UInt
+  inline def define(inline a: Long): GtkFontLevel = a.toUInt
+  val GTK_FONT_LEVEL_FAMILY = define(0)
+  val GTK_FONT_LEVEL_FACE = define(1)
+  val GTK_FONT_LEVEL_FONT = define(2)
+  val GTK_FONT_LEVEL_FEATURES = define(3)
+  inline def getName(inline value: GtkFontLevel): Option[String] =
+    inline value match
+      case GTK_FONT_LEVEL_FAMILY => Some("GTK_FONT_LEVEL_FAMILY")
+      case GTK_FONT_LEVEL_FACE => Some("GTK_FONT_LEVEL_FACE")
+      case GTK_FONT_LEVEL_FONT => Some("GTK_FONT_LEVEL_FONT")
+      case GTK_FONT_LEVEL_FEATURES => Some("GTK_FONT_LEVEL_FEATURES")
+      case _ => _root_.scala.None
+  extension (a: GtkFontLevel)
+    inline def &(b: GtkFontLevel): GtkFontLevel = a & b
+    inline def |(b: GtkFontLevel): GtkFontLevel = a | b
+    inline def is(b: GtkFontLevel): Boolean = (a & b) == b
+
+/**
+ * GtkGraphicsOffloadEnabled: _GRAPHICS_OFFLOAD_ENABLED: Graphics offloading is enabled. _GRAPHICS_OFFLOAD_DISABLED: Graphics offloading is disabled.
+*/
+opaque type GtkGraphicsOffloadEnabled = CUnsignedInt
+object GtkGraphicsOffloadEnabled extends CEnumU[GtkGraphicsOffloadEnabled]:
+  given _tag: Tag[GtkGraphicsOffloadEnabled] = Tag.UInt
+  inline def define(inline a: Long): GtkGraphicsOffloadEnabled = a.toUInt
+  val GTK_GRAPHICS_OFFLOAD_ENABLED = define(0)
+  val GTK_GRAPHICS_OFFLOAD_DISABLED = define(1)
+  inline def getName(inline value: GtkGraphicsOffloadEnabled): Option[String] =
+    inline value match
+      case GTK_GRAPHICS_OFFLOAD_ENABLED => Some("GTK_GRAPHICS_OFFLOAD_ENABLED")
+      case GTK_GRAPHICS_OFFLOAD_DISABLED => Some("GTK_GRAPHICS_OFFLOAD_DISABLED")
+      case _ => _root_.scala.None
+  extension (a: GtkGraphicsOffloadEnabled)
+    inline def &(b: GtkGraphicsOffloadEnabled): GtkGraphicsOffloadEnabled = a & b
+    inline def |(b: GtkGraphicsOffloadEnabled): GtkGraphicsOffloadEnabled = a | b
+    inline def is(b: GtkGraphicsOffloadEnabled): Boolean = (a & b) == b
+
+/**
  * GtkIconLookupFlags: _ICON_LOOKUP_FORCE_REGULAR: Try to always load regular icons, even when symbolic icon names are given _ICON_LOOKUP_FORCE_SYMBOLIC: Try to always load symbolic icons, even when regular icon names are given _ICON_LOOKUP_PRELOAD: Starts loading the texture in the background so it is ready when later needed.
 */
 opaque type GtkIconLookupFlags = CUnsignedInt
@@ -1643,6 +1959,29 @@ object GtkInputPurpose extends CEnumU[GtkInputPurpose]:
     inline def is(b: GtkInputPurpose): Boolean = (a & b) == b
 
 /**
+ * GtkInscriptionOverflow: _INSCRIPTION_OVERFLOW_CLIP: Clip the remaining text _INSCRIPTION_OVERFLOW_ELLIPSIZE_START: Omit characters at the start of the text _INSCRIPTION_OVERFLOW_ELLIPSIZE_MIDDLE: Omit characters at the middle of the text _INSCRIPTION_OVERFLOW_ELLIPSIZE_END: Omit characters at the end of the text
+*/
+opaque type GtkInscriptionOverflow = CUnsignedInt
+object GtkInscriptionOverflow extends CEnumU[GtkInscriptionOverflow]:
+  given _tag: Tag[GtkInscriptionOverflow] = Tag.UInt
+  inline def define(inline a: Long): GtkInscriptionOverflow = a.toUInt
+  val GTK_INSCRIPTION_OVERFLOW_CLIP = define(0)
+  val GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_START = define(1)
+  val GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_MIDDLE = define(2)
+  val GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_END = define(3)
+  inline def getName(inline value: GtkInscriptionOverflow): Option[String] =
+    inline value match
+      case GTK_INSCRIPTION_OVERFLOW_CLIP => Some("GTK_INSCRIPTION_OVERFLOW_CLIP")
+      case GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_START => Some("GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_START")
+      case GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_MIDDLE => Some("GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_MIDDLE")
+      case GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_END => Some("GTK_INSCRIPTION_OVERFLOW_ELLIPSIZE_END")
+      case _ => _root_.scala.None
+  extension (a: GtkInscriptionOverflow)
+    inline def &(b: GtkInscriptionOverflow): GtkInscriptionOverflow = a & b
+    inline def |(b: GtkInscriptionOverflow): GtkInscriptionOverflow = a | b
+    inline def is(b: GtkInscriptionOverflow): Boolean = (a & b) == b
+
+/**
  * GtkJustification: _JUSTIFY_LEFT: The text is placed at the left edge of the label. _JUSTIFY_RIGHT: The text is placed at the right edge of the label. _JUSTIFY_CENTER: The text is placed in the center of the label. _JUSTIFY_FILL: The text is placed is distributed across the label.
 */
 opaque type GtkJustification = CUnsignedInt
@@ -1685,7 +2024,7 @@ object GtkLevelBarMode extends CEnumU[GtkLevelBarMode]:
     inline def is(b: GtkLevelBarMode): Boolean = (a & b) == b
 
 /**
- * GtkLicense: _LICENSE_UNKNOWN: No license specified _LICENSE_CUSTOM: A license text is going to be specified by the developer _LICENSE_GPL_2_0: The GNU General Public License, version 2.0 or later _LICENSE_GPL_3_0: The GNU General Public License, version 3.0 or later _LICENSE_LGPL_2_1: The GNU Lesser General Public License, version 2.1 or later _LICENSE_LGPL_3_0: The GNU Lesser General Public License, version 3.0 or later _LICENSE_BSD: The BSD standard license _LICENSE_MIT_X11: The MIT/X11 standard license _LICENSE_ARTISTIC: The Artistic License, version 2.0 _LICENSE_GPL_2_0_ONLY: The GNU General Public License, version 2.0 only _LICENSE_GPL_3_0_ONLY: The GNU General Public License, version 3.0 only _LICENSE_LGPL_2_1_ONLY: The GNU Lesser General Public License, version 2.1 only _LICENSE_LGPL_3_0_ONLY: The GNU Lesser General Public License, version 3.0 only _LICENSE_AGPL_3_0: The GNU Affero General Public License, version 3.0 or later _LICENSE_AGPL_3_0_ONLY: The GNU Affero General Public License, version 3.0 only _LICENSE_BSD_3: The 3-clause BSD licence _LICENSE_APACHE_2_0: The Apache License, version 2.0 _LICENSE_MPL_2_0: The Mozilla Public License, version 2.0
+ * GtkLicense: _LICENSE_UNKNOWN: No license specified _LICENSE_CUSTOM: A license text is going to be specified by the developer _LICENSE_GPL_2_0: The GNU General Public License, version 2.0 or later _LICENSE_GPL_3_0: The GNU General Public License, version 3.0 or later _LICENSE_LGPL_2_1: The GNU Lesser General Public License, version 2.1 or later _LICENSE_LGPL_3_0: The GNU Lesser General Public License, version 3.0 or later _LICENSE_BSD: The BSD standard license _LICENSE_MIT_X11: The MIT/X11 standard license _LICENSE_ARTISTIC: The Artistic License, version 2.0 _LICENSE_GPL_2_0_ONLY: The GNU General Public License, version 2.0 only _LICENSE_GPL_3_0_ONLY: The GNU General Public License, version 3.0 only _LICENSE_LGPL_2_1_ONLY: The GNU Lesser General Public License, version 2.1 only _LICENSE_LGPL_3_0_ONLY: The GNU Lesser General Public License, version 3.0 only _LICENSE_AGPL_3_0: The GNU Affero General Public License, version 3.0 or later _LICENSE_AGPL_3_0_ONLY: The GNU Affero General Public License, version 3.0 only _LICENSE_BSD_3: The 3-clause BSD licence _LICENSE_APACHE_2_0: The Apache License, version 2.0 _LICENSE_MPL_2_0: The Mozilla Public License, version 2.0 _LICENSE_0BSD: Zero-Clause BSD license
 */
 opaque type GtkLicense = CUnsignedInt
 object GtkLicense extends CEnumU[GtkLicense]:
@@ -1709,6 +2048,7 @@ object GtkLicense extends CEnumU[GtkLicense]:
   val GTK_LICENSE_BSD_3 = define(15)
   val GTK_LICENSE_APACHE_2_0 = define(16)
   val GTK_LICENSE_MPL_2_0 = define(17)
+  val GTK_LICENSE_0BSD = define(18)
   inline def getName(inline value: GtkLicense): Option[String] =
     inline value match
       case GTK_LICENSE_UNKNOWN => Some("GTK_LICENSE_UNKNOWN")
@@ -1729,11 +2069,54 @@ object GtkLicense extends CEnumU[GtkLicense]:
       case GTK_LICENSE_BSD_3 => Some("GTK_LICENSE_BSD_3")
       case GTK_LICENSE_APACHE_2_0 => Some("GTK_LICENSE_APACHE_2_0")
       case GTK_LICENSE_MPL_2_0 => Some("GTK_LICENSE_MPL_2_0")
+      case GTK_LICENSE_0BSD => Some("GTK_LICENSE_0BSD")
       case _ => _root_.scala.None
   extension (a: GtkLicense)
     inline def &(b: GtkLicense): GtkLicense = a & b
     inline def |(b: GtkLicense): GtkLicense = a | b
     inline def is(b: GtkLicense): Boolean = (a & b) == b
+
+/**
+ * GtkListScrollFlags: _LIST_SCROLL_NONE: Don't do anything extra _LIST_SCROLL_FOCUS: Focus the target item _LIST_SCROLL_SELECT: Select the target item and unselect all other items.
+*/
+opaque type GtkListScrollFlags = CUnsignedInt
+object GtkListScrollFlags extends CEnumU[GtkListScrollFlags]:
+  given _tag: Tag[GtkListScrollFlags] = Tag.UInt
+  inline def define(inline a: Long): GtkListScrollFlags = a.toUInt
+  val GTK_LIST_SCROLL_NONE = define(0)
+  val GTK_LIST_SCROLL_FOCUS = define(1)
+  val GTK_LIST_SCROLL_SELECT = define(2)
+  inline def getName(inline value: GtkListScrollFlags): Option[String] =
+    inline value match
+      case GTK_LIST_SCROLL_NONE => Some("GTK_LIST_SCROLL_NONE")
+      case GTK_LIST_SCROLL_FOCUS => Some("GTK_LIST_SCROLL_FOCUS")
+      case GTK_LIST_SCROLL_SELECT => Some("GTK_LIST_SCROLL_SELECT")
+      case _ => _root_.scala.None
+  extension (a: GtkListScrollFlags)
+    inline def &(b: GtkListScrollFlags): GtkListScrollFlags = a & b
+    inline def |(b: GtkListScrollFlags): GtkListScrollFlags = a | b
+    inline def is(b: GtkListScrollFlags): Boolean = (a & b) == b
+
+/**
+ * GtkListTabBehavior: _LIST_TAB_ALL: Cycle through all focusable items of the list _LIST_TAB_ITEM: Cycle through a single list element, then move focus out of the list. Moving focus between items needs to be done with the arrow keys. _LIST_TAB_CELL: Cycle only through a single cell, then move focus out of the list. Moving focus between cells needs to be done with the arrow keys. This is only relevant for cell-based widgets like #GtkColumnView, otherwise it behaves like `GTK_LIST_TAB_ITEM`.
+*/
+opaque type GtkListTabBehavior = CUnsignedInt
+object GtkListTabBehavior extends CEnumU[GtkListTabBehavior]:
+  given _tag: Tag[GtkListTabBehavior] = Tag.UInt
+  inline def define(inline a: Long): GtkListTabBehavior = a.toUInt
+  val GTK_LIST_TAB_ALL = define(0)
+  val GTK_LIST_TAB_ITEM = define(1)
+  val GTK_LIST_TAB_CELL = define(2)
+  inline def getName(inline value: GtkListTabBehavior): Option[String] =
+    inline value match
+      case GTK_LIST_TAB_ALL => Some("GTK_LIST_TAB_ALL")
+      case GTK_LIST_TAB_ITEM => Some("GTK_LIST_TAB_ITEM")
+      case GTK_LIST_TAB_CELL => Some("GTK_LIST_TAB_CELL")
+      case _ => _root_.scala.None
+  extension (a: GtkListTabBehavior)
+    inline def &(b: GtkListTabBehavior): GtkListTabBehavior = a & b
+    inline def |(b: GtkListTabBehavior): GtkListTabBehavior = a | b
+    inline def is(b: GtkListTabBehavior): Boolean = (a & b) == b
 
 /**
  * GtkMessageType: _MESSAGE_INFO: Informational message _MESSAGE_WARNING: Non-fatal warning message _MESSAGE_QUESTION: Question requiring a choice _MESSAGE_ERROR: Fatal error message _MESSAGE_OTHER: None of the above
@@ -2077,15 +2460,17 @@ object GtkPolicyType extends CEnumU[GtkPolicyType]:
     inline def is(b: GtkPolicyType): Boolean = (a & b) == b
 
 /**
- * GtkPopoverMenuFlags: _POPOVER_MENU_NESTED: Create submenus as nested popovers. Without this flag, submenus are created as sliding pages that replace the main menu.
+ * GtkPopoverMenuFlags: _POPOVER_MENU_NESTED: Submenus are presented as traditional, nested popovers.
 */
 opaque type GtkPopoverMenuFlags = CUnsignedInt
 object GtkPopoverMenuFlags extends CEnumU[GtkPopoverMenuFlags]:
   given _tag: Tag[GtkPopoverMenuFlags] = Tag.UInt
   inline def define(inline a: Long): GtkPopoverMenuFlags = a.toUInt
+  val GTK_POPOVER_MENU_SLIDING = define(0)
   val GTK_POPOVER_MENU_NESTED = define(1)
   inline def getName(inline value: GtkPopoverMenuFlags): Option[String] =
     inline value match
+      case GTK_POPOVER_MENU_SLIDING => Some("GTK_POPOVER_MENU_SLIDING")
       case GTK_POPOVER_MENU_NESTED => Some("GTK_POPOVER_MENU_NESTED")
       case _ => _root_.scala.None
   extension (a: GtkPopoverMenuFlags)
@@ -3222,76 +3607,3 @@ object GtkWrapMode extends CEnumU[GtkWrapMode]:
     inline def &(b: GtkWrapMode): GtkWrapMode = a & b
     inline def |(b: GtkWrapMode): GtkWrapMode = a | b
     inline def is(b: GtkWrapMode): Boolean = (a & b) == b
-
-/**
- * PangoDirection: _DIRECTION_LTR: A strong left-to-right direction _DIRECTION_RTL: A strong right-to-left direction _DIRECTION_TTB_LTR: Deprecated value; treated the same as `PANGO_DIRECTION_RTL`. _DIRECTION_TTB_RTL: Deprecated value; treated the same as `PANGO_DIRECTION_LTR` _DIRECTION_WEAK_LTR: A weak left-to-right direction _DIRECTION_WEAK_RTL: A weak right-to-left direction _DIRECTION_NEUTRAL: No direction specified
-*/
-opaque type PangoDirection = CUnsignedInt
-object PangoDirection extends CEnumU[PangoDirection]:
-  given _tag: Tag[PangoDirection] = Tag.UInt
-  inline def define(inline a: Long): PangoDirection = a.toUInt
-  val PANGO_DIRECTION_LTR = define(0)
-  val PANGO_DIRECTION_RTL = define(1)
-  val PANGO_DIRECTION_TTB_LTR = define(2)
-  val PANGO_DIRECTION_TTB_RTL = define(3)
-  val PANGO_DIRECTION_WEAK_LTR = define(4)
-  val PANGO_DIRECTION_WEAK_RTL = define(5)
-  val PANGO_DIRECTION_NEUTRAL = define(6)
-  inline def getName(inline value: PangoDirection): Option[String] =
-    inline value match
-      case PANGO_DIRECTION_LTR => Some("PANGO_DIRECTION_LTR")
-      case PANGO_DIRECTION_RTL => Some("PANGO_DIRECTION_RTL")
-      case PANGO_DIRECTION_TTB_LTR => Some("PANGO_DIRECTION_TTB_LTR")
-      case PANGO_DIRECTION_TTB_RTL => Some("PANGO_DIRECTION_TTB_RTL")
-      case PANGO_DIRECTION_WEAK_LTR => Some("PANGO_DIRECTION_WEAK_LTR")
-      case PANGO_DIRECTION_WEAK_RTL => Some("PANGO_DIRECTION_WEAK_RTL")
-      case PANGO_DIRECTION_NEUTRAL => Some("PANGO_DIRECTION_NEUTRAL")
-      case _ => _root_.scala.None
-  extension (a: PangoDirection)
-    inline def &(b: PangoDirection): PangoDirection = a & b
-    inline def |(b: PangoDirection): PangoDirection = a | b
-    inline def is(b: PangoDirection): Boolean = (a & b) == b
-
-/**
- * PangoEllipsizeMode: _ELLIPSIZE_NONE: No ellipsization _ELLIPSIZE_START: Omit characters at the start of the text _ELLIPSIZE_MIDDLE: Omit characters in the middle of the text _ELLIPSIZE_END: Omit characters at the end of the text
-*/
-opaque type PangoEllipsizeMode = CUnsignedInt
-object PangoEllipsizeMode extends CEnumU[PangoEllipsizeMode]:
-  given _tag: Tag[PangoEllipsizeMode] = Tag.UInt
-  inline def define(inline a: Long): PangoEllipsizeMode = a.toUInt
-  val PANGO_ELLIPSIZE_NONE = define(0)
-  val PANGO_ELLIPSIZE_START = define(1)
-  val PANGO_ELLIPSIZE_MIDDLE = define(2)
-  val PANGO_ELLIPSIZE_END = define(3)
-  inline def getName(inline value: PangoEllipsizeMode): Option[String] =
-    inline value match
-      case PANGO_ELLIPSIZE_NONE => Some("PANGO_ELLIPSIZE_NONE")
-      case PANGO_ELLIPSIZE_START => Some("PANGO_ELLIPSIZE_START")
-      case PANGO_ELLIPSIZE_MIDDLE => Some("PANGO_ELLIPSIZE_MIDDLE")
-      case PANGO_ELLIPSIZE_END => Some("PANGO_ELLIPSIZE_END")
-      case _ => _root_.scala.None
-  extension (a: PangoEllipsizeMode)
-    inline def &(b: PangoEllipsizeMode): PangoEllipsizeMode = a & b
-    inline def |(b: PangoEllipsizeMode): PangoEllipsizeMode = a | b
-    inline def is(b: PangoEllipsizeMode): Boolean = (a & b) == b
-
-/**
- * PangoWrapMode: _WRAP_WORD: wrap lines at word boundaries. _WRAP_CHAR: wrap lines at character boundaries. _WRAP_WORD_CHAR: wrap lines at word boundaries, but fall back to character boundaries if there is not enough space for a full word.
-*/
-opaque type PangoWrapMode = CUnsignedInt
-object PangoWrapMode extends CEnumU[PangoWrapMode]:
-  given _tag: Tag[PangoWrapMode] = Tag.UInt
-  inline def define(inline a: Long): PangoWrapMode = a.toUInt
-  val PANGO_WRAP_WORD = define(0)
-  val PANGO_WRAP_CHAR = define(1)
-  val PANGO_WRAP_WORD_CHAR = define(2)
-  inline def getName(inline value: PangoWrapMode): Option[String] =
-    inline value match
-      case PANGO_WRAP_WORD => Some("PANGO_WRAP_WORD")
-      case PANGO_WRAP_CHAR => Some("PANGO_WRAP_CHAR")
-      case PANGO_WRAP_WORD_CHAR => Some("PANGO_WRAP_WORD_CHAR")
-      case _ => _root_.scala.None
-  extension (a: PangoWrapMode)
-    inline def &(b: PangoWrapMode): PangoWrapMode = a & b
-    inline def |(b: PangoWrapMode): PangoWrapMode = a | b
-    inline def is(b: PangoWrapMode): Boolean = (a & b) == b

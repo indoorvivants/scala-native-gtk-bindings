@@ -6,6 +6,166 @@ import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialogClass_autoptr = Ptr[AdwAboutDialogClass]
+object AdwAboutDialogClass_autoptr: 
+  given _tag: Tag[AdwAboutDialogClass_autoptr] = Tag.Ptr[AdwAboutDialogClass](AdwAboutDialogClass._tag)
+  inline def apply(inline o: Ptr[AdwAboutDialogClass]): AdwAboutDialogClass_autoptr = o
+  extension (v: AdwAboutDialogClass_autoptr)
+    inline def value: Ptr[AdwAboutDialogClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwAboutDialogClass_listautoptr: 
+  given _tag: Tag[AdwAboutDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwAboutDialogClass_listautoptr = o
+  extension (v: AdwAboutDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwAboutDialogClass_queueautoptr: 
+  given _tag: Tag[AdwAboutDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwAboutDialogClass_queueautoptr = o
+  extension (v: AdwAboutDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwAboutDialogClass_slistautoptr: 
+  given _tag: Tag[AdwAboutDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwAboutDialogClass_slistautoptr = o
+  extension (v: AdwAboutDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialog_autoptr = Ptr[AdwAboutDialog]
+object AdwAboutDialog_autoptr: 
+  given _tag: Tag[AdwAboutDialog_autoptr] = Tag.Ptr[AdwAboutDialog](AdwAboutDialog._tag)
+  inline def apply(inline o: Ptr[AdwAboutDialog]): AdwAboutDialog_autoptr = o
+  extension (v: AdwAboutDialog_autoptr)
+    inline def value: Ptr[AdwAboutDialog] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwAboutDialog_listautoptr: 
+  given _tag: Tag[AdwAboutDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwAboutDialog_listautoptr = o
+  extension (v: AdwAboutDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwAboutDialog_queueautoptr: 
+  given _tag: Tag[AdwAboutDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwAboutDialog_queueautoptr = o
+  extension (v: AdwAboutDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwAboutDialog_slistautoptr: 
+  given _tag: Tag[AdwAboutDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwAboutDialog_slistautoptr = o
+  extension (v: AdwAboutDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindowClass_autoptr = Ptr[AdwAboutWindowClass]
+object AdwAboutWindowClass_autoptr: 
+  given _tag: Tag[AdwAboutWindowClass_autoptr] = Tag.Ptr[AdwAboutWindowClass](AdwAboutWindowClass._tag)
+  inline def apply(inline o: Ptr[AdwAboutWindowClass]): AdwAboutWindowClass_autoptr = o
+  extension (v: AdwAboutWindowClass_autoptr)
+    inline def value: Ptr[AdwAboutWindowClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwAboutWindowClass_listautoptr: 
+  given _tag: Tag[AdwAboutWindowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwAboutWindowClass_listautoptr = o
+  extension (v: AdwAboutWindowClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwAboutWindowClass_queueautoptr: 
+  given _tag: Tag[AdwAboutWindowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwAboutWindowClass_queueautoptr = o
+  extension (v: AdwAboutWindowClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwAboutWindowClass_slistautoptr: 
+  given _tag: Tag[AdwAboutWindowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwAboutWindowClass_slistautoptr = o
+  extension (v: AdwAboutWindowClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindow_autoptr = Ptr[AdwAboutWindow]
+object AdwAboutWindow_autoptr: 
+  given _tag: Tag[AdwAboutWindow_autoptr] = Tag.Ptr[AdwAboutWindow](AdwAboutWindow._tag)
+  inline def apply(inline o: Ptr[AdwAboutWindow]): AdwAboutWindow_autoptr = o
+  extension (v: AdwAboutWindow_autoptr)
+    inline def value: Ptr[AdwAboutWindow] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwAboutWindow_listautoptr: 
+  given _tag: Tag[AdwAboutWindow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwAboutWindow_listautoptr = o
+  extension (v: AdwAboutWindow_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwAboutWindow_queueautoptr: 
+  given _tag: Tag[AdwAboutWindow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwAboutWindow_queueautoptr = o
+  extension (v: AdwAboutWindow_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwAboutWindow_slistautoptr: 
+  given _tag: Tag[AdwAboutWindow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwAboutWindow_slistautoptr = o
+  extension (v: AdwAboutWindow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 opaque type AdwActionRowClass_autoptr = Ptr[AdwActionRowClass]
@@ -83,6 +243,86 @@ object AdwActionRow_slistautoptr:
   given _tag: Tag[AdwActionRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwActionRow_slistautoptr = o
   extension (v: AdwActionRow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialogClass_autoptr = Ptr[AdwAlertDialogClass]
+object AdwAlertDialogClass_autoptr: 
+  given _tag: Tag[AdwAlertDialogClass_autoptr] = Tag.Ptr[AdwAlertDialogClass](AdwAlertDialogClass._tag)
+  inline def apply(inline o: Ptr[AdwAlertDialogClass]): AdwAlertDialogClass_autoptr = o
+  extension (v: AdwAlertDialogClass_autoptr)
+    inline def value: Ptr[AdwAlertDialogClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwAlertDialogClass_listautoptr: 
+  given _tag: Tag[AdwAlertDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwAlertDialogClass_listautoptr = o
+  extension (v: AdwAlertDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwAlertDialogClass_queueautoptr: 
+  given _tag: Tag[AdwAlertDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwAlertDialogClass_queueautoptr = o
+  extension (v: AdwAlertDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwAlertDialogClass_slistautoptr: 
+  given _tag: Tag[AdwAlertDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwAlertDialogClass_slistautoptr = o
+  extension (v: AdwAlertDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialog_autoptr = Ptr[AdwAlertDialog]
+object AdwAlertDialog_autoptr: 
+  given _tag: Tag[AdwAlertDialog_autoptr] = Tag.Ptr[AdwAlertDialog](AdwAlertDialog._tag)
+  inline def apply(inline o: Ptr[AdwAlertDialog]): AdwAlertDialog_autoptr = o
+  extension (v: AdwAlertDialog_autoptr)
+    inline def value: Ptr[AdwAlertDialog] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwAlertDialog_listautoptr: 
+  given _tag: Tag[AdwAlertDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwAlertDialog_listautoptr = o
+  extension (v: AdwAlertDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwAlertDialog_queueautoptr: 
+  given _tag: Tag[AdwAlertDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwAlertDialog_queueautoptr = o
+  extension (v: AdwAlertDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwAlertDialog_slistautoptr: 
+  given _tag: Tag[AdwAlertDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwAlertDialog_slistautoptr = o
+  extension (v: AdwAlertDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
@@ -500,6 +740,86 @@ object AdwAvatar_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBannerClass_autoptr = Ptr[AdwBannerClass]
+object AdwBannerClass_autoptr: 
+  given _tag: Tag[AdwBannerClass_autoptr] = Tag.Ptr[AdwBannerClass](AdwBannerClass._tag)
+  inline def apply(inline o: Ptr[AdwBannerClass]): AdwBannerClass_autoptr = o
+  extension (v: AdwBannerClass_autoptr)
+    inline def value: Ptr[AdwBannerClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBannerClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBannerClass_listautoptr: 
+  given _tag: Tag[AdwBannerClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBannerClass_listautoptr = o
+  extension (v: AdwBannerClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBannerClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBannerClass_queueautoptr: 
+  given _tag: Tag[AdwBannerClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBannerClass_queueautoptr = o
+  extension (v: AdwBannerClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBannerClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBannerClass_slistautoptr: 
+  given _tag: Tag[AdwBannerClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBannerClass_slistautoptr = o
+  extension (v: AdwBannerClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBanner_autoptr = Ptr[AdwBanner]
+object AdwBanner_autoptr: 
+  given _tag: Tag[AdwBanner_autoptr] = Tag.Ptr[AdwBanner](AdwBanner._tag)
+  inline def apply(inline o: Ptr[AdwBanner]): AdwBanner_autoptr = o
+  extension (v: AdwBanner_autoptr)
+    inline def value: Ptr[AdwBanner] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBanner_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBanner_listautoptr: 
+  given _tag: Tag[AdwBanner_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBanner_listautoptr = o
+  extension (v: AdwBanner_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBanner_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBanner_queueautoptr: 
+  given _tag: Tag[AdwBanner_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBanner_queueautoptr = o
+  extension (v: AdwBanner_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBanner_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBanner_slistautoptr: 
+  given _tag: Tag[AdwBanner_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBanner_slistautoptr = o
+  extension (v: AdwBanner_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 opaque type AdwBinClass_autoptr = Ptr[AdwBinClass]
@@ -577,6 +897,206 @@ object AdwBin_slistautoptr:
   given _tag: Tag[AdwBin_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBin_slistautoptr = o
   extension (v: AdwBin_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBinClass_autoptr = Ptr[AdwBreakpointBinClass]
+object AdwBreakpointBinClass_autoptr: 
+  given _tag: Tag[AdwBreakpointBinClass_autoptr] = Tag.Ptr[AdwBreakpointBinClass](AdwBreakpointBinClass._tag)
+  inline def apply(inline o: Ptr[AdwBreakpointBinClass]): AdwBreakpointBinClass_autoptr = o
+  extension (v: AdwBreakpointBinClass_autoptr)
+    inline def value: Ptr[AdwBreakpointBinClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBinClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBreakpointBinClass_listautoptr: 
+  given _tag: Tag[AdwBreakpointBinClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBreakpointBinClass_listautoptr = o
+  extension (v: AdwBreakpointBinClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBinClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBreakpointBinClass_queueautoptr: 
+  given _tag: Tag[AdwBreakpointBinClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBreakpointBinClass_queueautoptr = o
+  extension (v: AdwBreakpointBinClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBinClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBreakpointBinClass_slistautoptr: 
+  given _tag: Tag[AdwBreakpointBinClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBreakpointBinClass_slistautoptr = o
+  extension (v: AdwBreakpointBinClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBin_autoptr = Ptr[AdwBreakpointBin]
+object AdwBreakpointBin_autoptr: 
+  given _tag: Tag[AdwBreakpointBin_autoptr] = Tag.Ptr[AdwBreakpointBin](AdwBreakpointBin._tag)
+  inline def apply(inline o: Ptr[AdwBreakpointBin]): AdwBreakpointBin_autoptr = o
+  extension (v: AdwBreakpointBin_autoptr)
+    inline def value: Ptr[AdwBreakpointBin] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBin_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBreakpointBin_listautoptr: 
+  given _tag: Tag[AdwBreakpointBin_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBreakpointBin_listautoptr = o
+  extension (v: AdwBreakpointBin_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBin_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBreakpointBin_queueautoptr: 
+  given _tag: Tag[AdwBreakpointBin_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBreakpointBin_queueautoptr = o
+  extension (v: AdwBreakpointBin_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBin_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBreakpointBin_slistautoptr: 
+  given _tag: Tag[AdwBreakpointBin_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBreakpointBin_slistautoptr = o
+  extension (v: AdwBreakpointBin_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointClass_autoptr = Ptr[AdwBreakpointClass]
+object AdwBreakpointClass_autoptr: 
+  given _tag: Tag[AdwBreakpointClass_autoptr] = Tag.Ptr[AdwBreakpointClass](AdwBreakpointClass._tag)
+  inline def apply(inline o: Ptr[AdwBreakpointClass]): AdwBreakpointClass_autoptr = o
+  extension (v: AdwBreakpointClass_autoptr)
+    inline def value: Ptr[AdwBreakpointClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBreakpointClass_listautoptr: 
+  given _tag: Tag[AdwBreakpointClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBreakpointClass_listautoptr = o
+  extension (v: AdwBreakpointClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBreakpointClass_queueautoptr: 
+  given _tag: Tag[AdwBreakpointClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBreakpointClass_queueautoptr = o
+  extension (v: AdwBreakpointClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBreakpointClass_slistautoptr: 
+  given _tag: Tag[AdwBreakpointClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBreakpointClass_slistautoptr = o
+  extension (v: AdwBreakpointClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointCondition_autoptr = Ptr[AdwBreakpointCondition]
+object AdwBreakpointCondition_autoptr: 
+  given _tag: Tag[AdwBreakpointCondition_autoptr] = Tag.Ptr[AdwBreakpointCondition](AdwBreakpointCondition._tag)
+  inline def apply(inline o: Ptr[AdwBreakpointCondition]): AdwBreakpointCondition_autoptr = o
+  extension (v: AdwBreakpointCondition_autoptr)
+    inline def value: Ptr[AdwBreakpointCondition] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointCondition_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBreakpointCondition_listautoptr: 
+  given _tag: Tag[AdwBreakpointCondition_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBreakpointCondition_listautoptr = o
+  extension (v: AdwBreakpointCondition_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointCondition_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBreakpointCondition_queueautoptr: 
+  given _tag: Tag[AdwBreakpointCondition_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBreakpointCondition_queueautoptr = o
+  extension (v: AdwBreakpointCondition_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointCondition_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBreakpointCondition_slistautoptr: 
+  given _tag: Tag[AdwBreakpointCondition_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBreakpointCondition_slistautoptr = o
+  extension (v: AdwBreakpointCondition_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpoint_autoptr = Ptr[AdwBreakpoint]
+object AdwBreakpoint_autoptr: 
+  given _tag: Tag[AdwBreakpoint_autoptr] = Tag.Ptr[AdwBreakpoint](AdwBreakpoint._tag)
+  inline def apply(inline o: Ptr[AdwBreakpoint]): AdwBreakpoint_autoptr = o
+  extension (v: AdwBreakpoint_autoptr)
+    inline def value: Ptr[AdwBreakpoint] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpoint_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwBreakpoint_listautoptr: 
+  given _tag: Tag[AdwBreakpoint_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwBreakpoint_listautoptr = o
+  extension (v: AdwBreakpoint_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpoint_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwBreakpoint_queueautoptr: 
+  given _tag: Tag[AdwBreakpoint_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwBreakpoint_queueautoptr = o
+  extension (v: AdwBreakpoint_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpoint_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwBreakpoint_slistautoptr: 
+  given _tag: Tag[AdwBreakpoint_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwBreakpoint_slistautoptr = o
+  extension (v: AdwBreakpoint_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
@@ -1300,6 +1820,166 @@ object AdwComboRow_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialogClass_autoptr = Ptr[AdwDialogClass]
+object AdwDialogClass_autoptr: 
+  given _tag: Tag[AdwDialogClass_autoptr] = Tag.Ptr[AdwDialogClass](AdwDialogClass._tag)
+  inline def apply(inline o: Ptr[AdwDialogClass]): AdwDialogClass_autoptr = o
+  extension (v: AdwDialogClass_autoptr)
+    inline def value: Ptr[AdwDialogClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwDialogClass_listautoptr: 
+  given _tag: Tag[AdwDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwDialogClass_listautoptr = o
+  extension (v: AdwDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwDialogClass_queueautoptr: 
+  given _tag: Tag[AdwDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwDialogClass_queueautoptr = o
+  extension (v: AdwDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwDialogClass_slistautoptr: 
+  given _tag: Tag[AdwDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwDialogClass_slistautoptr = o
+  extension (v: AdwDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialog_autoptr = Ptr[AdwDialog]
+object AdwDialog_autoptr: 
+  given _tag: Tag[AdwDialog_autoptr] = Tag.Ptr[AdwDialog](AdwDialog._tag)
+  inline def apply(inline o: Ptr[AdwDialog]): AdwDialog_autoptr = o
+  extension (v: AdwDialog_autoptr)
+    inline def value: Ptr[AdwDialog] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwDialog_listautoptr: 
+  given _tag: Tag[AdwDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwDialog_listautoptr = o
+  extension (v: AdwDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwDialog_queueautoptr: 
+  given _tag: Tag[AdwDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwDialog_queueautoptr = o
+  extension (v: AdwDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwDialog_slistautoptr: 
+  given _tag: Tag[AdwDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwDialog_slistautoptr = o
+  extension (v: AdwDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRowClass_autoptr = Ptr[AdwEntryRowClass]
+object AdwEntryRowClass_autoptr: 
+  given _tag: Tag[AdwEntryRowClass_autoptr] = Tag.Ptr[AdwEntryRowClass](AdwEntryRowClass._tag)
+  inline def apply(inline o: Ptr[AdwEntryRowClass]): AdwEntryRowClass_autoptr = o
+  extension (v: AdwEntryRowClass_autoptr)
+    inline def value: Ptr[AdwEntryRowClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwEntryRowClass_listautoptr: 
+  given _tag: Tag[AdwEntryRowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwEntryRowClass_listautoptr = o
+  extension (v: AdwEntryRowClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwEntryRowClass_queueautoptr: 
+  given _tag: Tag[AdwEntryRowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwEntryRowClass_queueautoptr = o
+  extension (v: AdwEntryRowClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwEntryRowClass_slistautoptr: 
+  given _tag: Tag[AdwEntryRowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwEntryRowClass_slistautoptr = o
+  extension (v: AdwEntryRowClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRow_autoptr = Ptr[AdwEntryRow]
+object AdwEntryRow_autoptr: 
+  given _tag: Tag[AdwEntryRow_autoptr] = Tag.Ptr[AdwEntryRow](AdwEntryRow._tag)
+  inline def apply(inline o: Ptr[AdwEntryRow]): AdwEntryRow_autoptr = o
+  extension (v: AdwEntryRow_autoptr)
+    inline def value: Ptr[AdwEntryRow] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwEntryRow_listautoptr: 
+  given _tag: Tag[AdwEntryRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwEntryRow_listautoptr = o
+  extension (v: AdwEntryRow_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwEntryRow_queueautoptr: 
+  given _tag: Tag[AdwEntryRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwEntryRow_queueautoptr = o
+  extension (v: AdwEntryRow_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwEntryRow_slistautoptr: 
+  given _tag: Tag[AdwEntryRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwEntryRow_slistautoptr = o
+  extension (v: AdwEntryRow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 opaque type AdwEnumListItemClass_autoptr = Ptr[AdwEnumListItemClass]
@@ -1860,6 +2540,566 @@ object AdwLeaflet_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialogClass_autoptr = Ptr[AdwMessageDialogClass]
+object AdwMessageDialogClass_autoptr: 
+  given _tag: Tag[AdwMessageDialogClass_autoptr] = Tag.Ptr[AdwMessageDialogClass](AdwMessageDialogClass._tag)
+  inline def apply(inline o: Ptr[AdwMessageDialogClass]): AdwMessageDialogClass_autoptr = o
+  extension (v: AdwMessageDialogClass_autoptr)
+    inline def value: Ptr[AdwMessageDialogClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwMessageDialogClass_listautoptr: 
+  given _tag: Tag[AdwMessageDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwMessageDialogClass_listautoptr = o
+  extension (v: AdwMessageDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwMessageDialogClass_queueautoptr: 
+  given _tag: Tag[AdwMessageDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwMessageDialogClass_queueautoptr = o
+  extension (v: AdwMessageDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwMessageDialogClass_slistautoptr: 
+  given _tag: Tag[AdwMessageDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwMessageDialogClass_slistautoptr = o
+  extension (v: AdwMessageDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialog_autoptr = Ptr[AdwMessageDialog]
+object AdwMessageDialog_autoptr: 
+  given _tag: Tag[AdwMessageDialog_autoptr] = Tag.Ptr[AdwMessageDialog](AdwMessageDialog._tag)
+  inline def apply(inline o: Ptr[AdwMessageDialog]): AdwMessageDialog_autoptr = o
+  extension (v: AdwMessageDialog_autoptr)
+    inline def value: Ptr[AdwMessageDialog] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwMessageDialog_listautoptr: 
+  given _tag: Tag[AdwMessageDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwMessageDialog_listautoptr = o
+  extension (v: AdwMessageDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwMessageDialog_queueautoptr: 
+  given _tag: Tag[AdwMessageDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwMessageDialog_queueautoptr = o
+  extension (v: AdwMessageDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwMessageDialog_slistautoptr: 
+  given _tag: Tag[AdwMessageDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwMessageDialog_slistautoptr = o
+  extension (v: AdwMessageDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPageClass_autoptr = Ptr[AdwNavigationPageClass]
+object AdwNavigationPageClass_autoptr: 
+  given _tag: Tag[AdwNavigationPageClass_autoptr] = Tag.Ptr[AdwNavigationPageClass](AdwNavigationPageClass._tag)
+  inline def apply(inline o: Ptr[AdwNavigationPageClass]): AdwNavigationPageClass_autoptr = o
+  extension (v: AdwNavigationPageClass_autoptr)
+    inline def value: Ptr[AdwNavigationPageClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPageClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwNavigationPageClass_listautoptr: 
+  given _tag: Tag[AdwNavigationPageClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwNavigationPageClass_listautoptr = o
+  extension (v: AdwNavigationPageClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPageClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwNavigationPageClass_queueautoptr: 
+  given _tag: Tag[AdwNavigationPageClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwNavigationPageClass_queueautoptr = o
+  extension (v: AdwNavigationPageClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPageClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwNavigationPageClass_slistautoptr: 
+  given _tag: Tag[AdwNavigationPageClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwNavigationPageClass_slistautoptr = o
+  extension (v: AdwNavigationPageClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPage_autoptr = Ptr[AdwNavigationPage]
+object AdwNavigationPage_autoptr: 
+  given _tag: Tag[AdwNavigationPage_autoptr] = Tag.Ptr[AdwNavigationPage](AdwNavigationPage._tag)
+  inline def apply(inline o: Ptr[AdwNavigationPage]): AdwNavigationPage_autoptr = o
+  extension (v: AdwNavigationPage_autoptr)
+    inline def value: Ptr[AdwNavigationPage] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPage_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwNavigationPage_listautoptr: 
+  given _tag: Tag[AdwNavigationPage_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwNavigationPage_listautoptr = o
+  extension (v: AdwNavigationPage_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPage_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwNavigationPage_queueautoptr: 
+  given _tag: Tag[AdwNavigationPage_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwNavigationPage_queueautoptr = o
+  extension (v: AdwNavigationPage_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPage_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwNavigationPage_slistautoptr: 
+  given _tag: Tag[AdwNavigationPage_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwNavigationPage_slistautoptr = o
+  extension (v: AdwNavigationPage_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitViewClass_autoptr = Ptr[AdwNavigationSplitViewClass]
+object AdwNavigationSplitViewClass_autoptr: 
+  given _tag: Tag[AdwNavigationSplitViewClass_autoptr] = Tag.Ptr[AdwNavigationSplitViewClass](AdwNavigationSplitViewClass._tag)
+  inline def apply(inline o: Ptr[AdwNavigationSplitViewClass]): AdwNavigationSplitViewClass_autoptr = o
+  extension (v: AdwNavigationSplitViewClass_autoptr)
+    inline def value: Ptr[AdwNavigationSplitViewClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitViewClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwNavigationSplitViewClass_listautoptr: 
+  given _tag: Tag[AdwNavigationSplitViewClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwNavigationSplitViewClass_listautoptr = o
+  extension (v: AdwNavigationSplitViewClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitViewClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwNavigationSplitViewClass_queueautoptr: 
+  given _tag: Tag[AdwNavigationSplitViewClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwNavigationSplitViewClass_queueautoptr = o
+  extension (v: AdwNavigationSplitViewClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitViewClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwNavigationSplitViewClass_slistautoptr: 
+  given _tag: Tag[AdwNavigationSplitViewClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwNavigationSplitViewClass_slistautoptr = o
+  extension (v: AdwNavigationSplitViewClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitView_autoptr = Ptr[AdwNavigationSplitView]
+object AdwNavigationSplitView_autoptr: 
+  given _tag: Tag[AdwNavigationSplitView_autoptr] = Tag.Ptr[AdwNavigationSplitView](AdwNavigationSplitView._tag)
+  inline def apply(inline o: Ptr[AdwNavigationSplitView]): AdwNavigationSplitView_autoptr = o
+  extension (v: AdwNavigationSplitView_autoptr)
+    inline def value: Ptr[AdwNavigationSplitView] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwNavigationSplitView_listautoptr: 
+  given _tag: Tag[AdwNavigationSplitView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwNavigationSplitView_listautoptr = o
+  extension (v: AdwNavigationSplitView_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwNavigationSplitView_queueautoptr: 
+  given _tag: Tag[AdwNavigationSplitView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwNavigationSplitView_queueautoptr = o
+  extension (v: AdwNavigationSplitView_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwNavigationSplitView_slistautoptr: 
+  given _tag: Tag[AdwNavigationSplitView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwNavigationSplitView_slistautoptr = o
+  extension (v: AdwNavigationSplitView_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationViewClass_autoptr = Ptr[AdwNavigationViewClass]
+object AdwNavigationViewClass_autoptr: 
+  given _tag: Tag[AdwNavigationViewClass_autoptr] = Tag.Ptr[AdwNavigationViewClass](AdwNavigationViewClass._tag)
+  inline def apply(inline o: Ptr[AdwNavigationViewClass]): AdwNavigationViewClass_autoptr = o
+  extension (v: AdwNavigationViewClass_autoptr)
+    inline def value: Ptr[AdwNavigationViewClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationViewClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwNavigationViewClass_listautoptr: 
+  given _tag: Tag[AdwNavigationViewClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwNavigationViewClass_listautoptr = o
+  extension (v: AdwNavigationViewClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationViewClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwNavigationViewClass_queueautoptr: 
+  given _tag: Tag[AdwNavigationViewClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwNavigationViewClass_queueautoptr = o
+  extension (v: AdwNavigationViewClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationViewClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwNavigationViewClass_slistautoptr: 
+  given _tag: Tag[AdwNavigationViewClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwNavigationViewClass_slistautoptr = o
+  extension (v: AdwNavigationViewClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationView_autoptr = Ptr[AdwNavigationView]
+object AdwNavigationView_autoptr: 
+  given _tag: Tag[AdwNavigationView_autoptr] = Tag.Ptr[AdwNavigationView](AdwNavigationView._tag)
+  inline def apply(inline o: Ptr[AdwNavigationView]): AdwNavigationView_autoptr = o
+  extension (v: AdwNavigationView_autoptr)
+    inline def value: Ptr[AdwNavigationView] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwNavigationView_listautoptr: 
+  given _tag: Tag[AdwNavigationView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwNavigationView_listautoptr = o
+  extension (v: AdwNavigationView_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwNavigationView_queueautoptr: 
+  given _tag: Tag[AdwNavigationView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwNavigationView_queueautoptr = o
+  extension (v: AdwNavigationView_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwNavigationView_slistautoptr: 
+  given _tag: Tag[AdwNavigationView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwNavigationView_slistautoptr = o
+  extension (v: AdwNavigationView_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitViewClass_autoptr = Ptr[AdwOverlaySplitViewClass]
+object AdwOverlaySplitViewClass_autoptr: 
+  given _tag: Tag[AdwOverlaySplitViewClass_autoptr] = Tag.Ptr[AdwOverlaySplitViewClass](AdwOverlaySplitViewClass._tag)
+  inline def apply(inline o: Ptr[AdwOverlaySplitViewClass]): AdwOverlaySplitViewClass_autoptr = o
+  extension (v: AdwOverlaySplitViewClass_autoptr)
+    inline def value: Ptr[AdwOverlaySplitViewClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitViewClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwOverlaySplitViewClass_listautoptr: 
+  given _tag: Tag[AdwOverlaySplitViewClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwOverlaySplitViewClass_listautoptr = o
+  extension (v: AdwOverlaySplitViewClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitViewClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwOverlaySplitViewClass_queueautoptr: 
+  given _tag: Tag[AdwOverlaySplitViewClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwOverlaySplitViewClass_queueautoptr = o
+  extension (v: AdwOverlaySplitViewClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitViewClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwOverlaySplitViewClass_slistautoptr: 
+  given _tag: Tag[AdwOverlaySplitViewClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwOverlaySplitViewClass_slistautoptr = o
+  extension (v: AdwOverlaySplitViewClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitView_autoptr = Ptr[AdwOverlaySplitView]
+object AdwOverlaySplitView_autoptr: 
+  given _tag: Tag[AdwOverlaySplitView_autoptr] = Tag.Ptr[AdwOverlaySplitView](AdwOverlaySplitView._tag)
+  inline def apply(inline o: Ptr[AdwOverlaySplitView]): AdwOverlaySplitView_autoptr = o
+  extension (v: AdwOverlaySplitView_autoptr)
+    inline def value: Ptr[AdwOverlaySplitView] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwOverlaySplitView_listautoptr: 
+  given _tag: Tag[AdwOverlaySplitView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwOverlaySplitView_listautoptr = o
+  extension (v: AdwOverlaySplitView_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwOverlaySplitView_queueautoptr: 
+  given _tag: Tag[AdwOverlaySplitView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwOverlaySplitView_queueautoptr = o
+  extension (v: AdwOverlaySplitView_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwOverlaySplitView_slistautoptr: 
+  given _tag: Tag[AdwOverlaySplitView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwOverlaySplitView_slistautoptr = o
+  extension (v: AdwOverlaySplitView_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRowClass_autoptr = Ptr[AdwPasswordEntryRowClass]
+object AdwPasswordEntryRowClass_autoptr: 
+  given _tag: Tag[AdwPasswordEntryRowClass_autoptr] = Tag.Ptr[AdwPasswordEntryRowClass](AdwPasswordEntryRowClass._tag)
+  inline def apply(inline o: Ptr[AdwPasswordEntryRowClass]): AdwPasswordEntryRowClass_autoptr = o
+  extension (v: AdwPasswordEntryRowClass_autoptr)
+    inline def value: Ptr[AdwPasswordEntryRowClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwPasswordEntryRowClass_listautoptr: 
+  given _tag: Tag[AdwPasswordEntryRowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwPasswordEntryRowClass_listautoptr = o
+  extension (v: AdwPasswordEntryRowClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwPasswordEntryRowClass_queueautoptr: 
+  given _tag: Tag[AdwPasswordEntryRowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwPasswordEntryRowClass_queueautoptr = o
+  extension (v: AdwPasswordEntryRowClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwPasswordEntryRowClass_slistautoptr: 
+  given _tag: Tag[AdwPasswordEntryRowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPasswordEntryRowClass_slistautoptr = o
+  extension (v: AdwPasswordEntryRowClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRow_autoptr = Ptr[AdwPasswordEntryRow]
+object AdwPasswordEntryRow_autoptr: 
+  given _tag: Tag[AdwPasswordEntryRow_autoptr] = Tag.Ptr[AdwPasswordEntryRow](AdwPasswordEntryRow._tag)
+  inline def apply(inline o: Ptr[AdwPasswordEntryRow]): AdwPasswordEntryRow_autoptr = o
+  extension (v: AdwPasswordEntryRow_autoptr)
+    inline def value: Ptr[AdwPasswordEntryRow] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwPasswordEntryRow_listautoptr: 
+  given _tag: Tag[AdwPasswordEntryRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwPasswordEntryRow_listautoptr = o
+  extension (v: AdwPasswordEntryRow_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwPasswordEntryRow_queueautoptr: 
+  given _tag: Tag[AdwPasswordEntryRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwPasswordEntryRow_queueautoptr = o
+  extension (v: AdwPasswordEntryRow_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwPasswordEntryRow_slistautoptr: 
+  given _tag: Tag[AdwPasswordEntryRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPasswordEntryRow_slistautoptr = o
+  extension (v: AdwPasswordEntryRow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialogClass_autoptr = Ptr[AdwPreferencesDialogClass]
+object AdwPreferencesDialogClass_autoptr: 
+  given _tag: Tag[AdwPreferencesDialogClass_autoptr] = Tag.Ptr[AdwPreferencesDialogClass](AdwPreferencesDialogClass._tag)
+  inline def apply(inline o: Ptr[AdwPreferencesDialogClass]): AdwPreferencesDialogClass_autoptr = o
+  extension (v: AdwPreferencesDialogClass_autoptr)
+    inline def value: Ptr[AdwPreferencesDialogClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwPreferencesDialogClass_listautoptr: 
+  given _tag: Tag[AdwPreferencesDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwPreferencesDialogClass_listautoptr = o
+  extension (v: AdwPreferencesDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwPreferencesDialogClass_queueautoptr: 
+  given _tag: Tag[AdwPreferencesDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwPreferencesDialogClass_queueautoptr = o
+  extension (v: AdwPreferencesDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwPreferencesDialogClass_slistautoptr: 
+  given _tag: Tag[AdwPreferencesDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPreferencesDialogClass_slistautoptr = o
+  extension (v: AdwPreferencesDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialog_autoptr = Ptr[AdwPreferencesDialog]
+object AdwPreferencesDialog_autoptr: 
+  given _tag: Tag[AdwPreferencesDialog_autoptr] = Tag.Ptr[AdwPreferencesDialog](AdwPreferencesDialog._tag)
+  inline def apply(inline o: Ptr[AdwPreferencesDialog]): AdwPreferencesDialog_autoptr = o
+  extension (v: AdwPreferencesDialog_autoptr)
+    inline def value: Ptr[AdwPreferencesDialog] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwPreferencesDialog_listautoptr: 
+  given _tag: Tag[AdwPreferencesDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwPreferencesDialog_listautoptr = o
+  extension (v: AdwPreferencesDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwPreferencesDialog_queueautoptr: 
+  given _tag: Tag[AdwPreferencesDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwPreferencesDialog_queueautoptr = o
+  extension (v: AdwPreferencesDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwPreferencesDialog_slistautoptr: 
+  given _tag: Tag[AdwPreferencesDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPreferencesDialog_slistautoptr = o
+  extension (v: AdwPreferencesDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 opaque type AdwPreferencesGroupClass_autoptr = Ptr[AdwPreferencesGroupClass]
@@ -2177,6 +3417,166 @@ object AdwPreferencesWindow_slistautoptr:
   given _tag: Tag[AdwPreferencesWindow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPreferencesWindow_slistautoptr = o
   extension (v: AdwPreferencesWindow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTargetClass_autoptr = Ptr[AdwPropertyAnimationTargetClass]
+object AdwPropertyAnimationTargetClass_autoptr: 
+  given _tag: Tag[AdwPropertyAnimationTargetClass_autoptr] = Tag.Ptr[AdwPropertyAnimationTargetClass](AdwPropertyAnimationTargetClass._tag)
+  inline def apply(inline o: Ptr[AdwPropertyAnimationTargetClass]): AdwPropertyAnimationTargetClass_autoptr = o
+  extension (v: AdwPropertyAnimationTargetClass_autoptr)
+    inline def value: Ptr[AdwPropertyAnimationTargetClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTargetClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwPropertyAnimationTargetClass_listautoptr: 
+  given _tag: Tag[AdwPropertyAnimationTargetClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwPropertyAnimationTargetClass_listautoptr = o
+  extension (v: AdwPropertyAnimationTargetClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTargetClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwPropertyAnimationTargetClass_queueautoptr: 
+  given _tag: Tag[AdwPropertyAnimationTargetClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwPropertyAnimationTargetClass_queueautoptr = o
+  extension (v: AdwPropertyAnimationTargetClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTargetClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwPropertyAnimationTargetClass_slistautoptr: 
+  given _tag: Tag[AdwPropertyAnimationTargetClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPropertyAnimationTargetClass_slistautoptr = o
+  extension (v: AdwPropertyAnimationTargetClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTarget_autoptr = Ptr[AdwPropertyAnimationTarget]
+object AdwPropertyAnimationTarget_autoptr: 
+  given _tag: Tag[AdwPropertyAnimationTarget_autoptr] = Tag.Ptr[AdwPropertyAnimationTarget](AdwPropertyAnimationTarget._tag)
+  inline def apply(inline o: Ptr[AdwPropertyAnimationTarget]): AdwPropertyAnimationTarget_autoptr = o
+  extension (v: AdwPropertyAnimationTarget_autoptr)
+    inline def value: Ptr[AdwPropertyAnimationTarget] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTarget_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwPropertyAnimationTarget_listautoptr: 
+  given _tag: Tag[AdwPropertyAnimationTarget_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwPropertyAnimationTarget_listautoptr = o
+  extension (v: AdwPropertyAnimationTarget_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTarget_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwPropertyAnimationTarget_queueautoptr: 
+  given _tag: Tag[AdwPropertyAnimationTarget_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwPropertyAnimationTarget_queueautoptr = o
+  extension (v: AdwPropertyAnimationTarget_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTarget_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwPropertyAnimationTarget_slistautoptr: 
+  given _tag: Tag[AdwPropertyAnimationTarget_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwPropertyAnimationTarget_slistautoptr = o
+  extension (v: AdwPropertyAnimationTarget_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRowClass_autoptr = Ptr[AdwSpinRowClass]
+object AdwSpinRowClass_autoptr: 
+  given _tag: Tag[AdwSpinRowClass_autoptr] = Tag.Ptr[AdwSpinRowClass](AdwSpinRowClass._tag)
+  inline def apply(inline o: Ptr[AdwSpinRowClass]): AdwSpinRowClass_autoptr = o
+  extension (v: AdwSpinRowClass_autoptr)
+    inline def value: Ptr[AdwSpinRowClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwSpinRowClass_listautoptr: 
+  given _tag: Tag[AdwSpinRowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwSpinRowClass_listautoptr = o
+  extension (v: AdwSpinRowClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwSpinRowClass_queueautoptr: 
+  given _tag: Tag[AdwSpinRowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwSpinRowClass_queueautoptr = o
+  extension (v: AdwSpinRowClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwSpinRowClass_slistautoptr: 
+  given _tag: Tag[AdwSpinRowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwSpinRowClass_slistautoptr = o
+  extension (v: AdwSpinRowClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRow_autoptr = Ptr[AdwSpinRow]
+object AdwSpinRow_autoptr: 
+  given _tag: Tag[AdwSpinRow_autoptr] = Tag.Ptr[AdwSpinRow](AdwSpinRow._tag)
+  inline def apply(inline o: Ptr[AdwSpinRow]): AdwSpinRow_autoptr = o
+  extension (v: AdwSpinRow_autoptr)
+    inline def value: Ptr[AdwSpinRow] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwSpinRow_listautoptr: 
+  given _tag: Tag[AdwSpinRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwSpinRow_listautoptr = o
+  extension (v: AdwSpinRow_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwSpinRow_queueautoptr: 
+  given _tag: Tag[AdwSpinRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwSpinRow_queueautoptr = o
+  extension (v: AdwSpinRow_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwSpinRow_slistautoptr: 
+  given _tag: Tag[AdwSpinRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwSpinRow_slistautoptr = o
+  extension (v: AdwSpinRow_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
@@ -2820,6 +4220,86 @@ object AdwSwipeable_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRowClass_autoptr = Ptr[AdwSwitchRowClass]
+object AdwSwitchRowClass_autoptr: 
+  given _tag: Tag[AdwSwitchRowClass_autoptr] = Tag.Ptr[AdwSwitchRowClass](AdwSwitchRowClass._tag)
+  inline def apply(inline o: Ptr[AdwSwitchRowClass]): AdwSwitchRowClass_autoptr = o
+  extension (v: AdwSwitchRowClass_autoptr)
+    inline def value: Ptr[AdwSwitchRowClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwSwitchRowClass_listautoptr: 
+  given _tag: Tag[AdwSwitchRowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwSwitchRowClass_listautoptr = o
+  extension (v: AdwSwitchRowClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwSwitchRowClass_queueautoptr: 
+  given _tag: Tag[AdwSwitchRowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwSwitchRowClass_queueautoptr = o
+  extension (v: AdwSwitchRowClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwSwitchRowClass_slistautoptr: 
+  given _tag: Tag[AdwSwitchRowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwSwitchRowClass_slistautoptr = o
+  extension (v: AdwSwitchRowClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRow_autoptr = Ptr[AdwSwitchRow]
+object AdwSwitchRow_autoptr: 
+  given _tag: Tag[AdwSwitchRow_autoptr] = Tag.Ptr[AdwSwitchRow](AdwSwitchRow._tag)
+  inline def apply(inline o: Ptr[AdwSwitchRow]): AdwSwitchRow_autoptr = o
+  extension (v: AdwSwitchRow_autoptr)
+    inline def value: Ptr[AdwSwitchRow] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwSwitchRow_listautoptr: 
+  given _tag: Tag[AdwSwitchRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwSwitchRow_listautoptr = o
+  extension (v: AdwSwitchRow_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwSwitchRow_queueautoptr: 
+  given _tag: Tag[AdwSwitchRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwSwitchRow_queueautoptr = o
+  extension (v: AdwSwitchRow_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwSwitchRow_slistautoptr: 
+  given _tag: Tag[AdwSwitchRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwSwitchRow_slistautoptr = o
+  extension (v: AdwSwitchRow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 opaque type AdwTabBarClass_autoptr = Ptr[AdwTabBarClass]
@@ -2897,6 +4377,166 @@ object AdwTabBar_slistautoptr:
   given _tag: Tag[AdwTabBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwTabBar_slistautoptr = o
   extension (v: AdwTabBar_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButtonClass_autoptr = Ptr[AdwTabButtonClass]
+object AdwTabButtonClass_autoptr: 
+  given _tag: Tag[AdwTabButtonClass_autoptr] = Tag.Ptr[AdwTabButtonClass](AdwTabButtonClass._tag)
+  inline def apply(inline o: Ptr[AdwTabButtonClass]): AdwTabButtonClass_autoptr = o
+  extension (v: AdwTabButtonClass_autoptr)
+    inline def value: Ptr[AdwTabButtonClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButtonClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwTabButtonClass_listautoptr: 
+  given _tag: Tag[AdwTabButtonClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwTabButtonClass_listautoptr = o
+  extension (v: AdwTabButtonClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButtonClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwTabButtonClass_queueautoptr: 
+  given _tag: Tag[AdwTabButtonClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwTabButtonClass_queueautoptr = o
+  extension (v: AdwTabButtonClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButtonClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwTabButtonClass_slistautoptr: 
+  given _tag: Tag[AdwTabButtonClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwTabButtonClass_slistautoptr = o
+  extension (v: AdwTabButtonClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButton_autoptr = Ptr[AdwTabButton]
+object AdwTabButton_autoptr: 
+  given _tag: Tag[AdwTabButton_autoptr] = Tag.Ptr[AdwTabButton](AdwTabButton._tag)
+  inline def apply(inline o: Ptr[AdwTabButton]): AdwTabButton_autoptr = o
+  extension (v: AdwTabButton_autoptr)
+    inline def value: Ptr[AdwTabButton] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwTabButton_listautoptr: 
+  given _tag: Tag[AdwTabButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwTabButton_listautoptr = o
+  extension (v: AdwTabButton_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwTabButton_queueautoptr: 
+  given _tag: Tag[AdwTabButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwTabButton_queueautoptr = o
+  extension (v: AdwTabButton_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwTabButton_slistautoptr: 
+  given _tag: Tag[AdwTabButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwTabButton_slistautoptr = o
+  extension (v: AdwTabButton_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverviewClass_autoptr = Ptr[AdwTabOverviewClass]
+object AdwTabOverviewClass_autoptr: 
+  given _tag: Tag[AdwTabOverviewClass_autoptr] = Tag.Ptr[AdwTabOverviewClass](AdwTabOverviewClass._tag)
+  inline def apply(inline o: Ptr[AdwTabOverviewClass]): AdwTabOverviewClass_autoptr = o
+  extension (v: AdwTabOverviewClass_autoptr)
+    inline def value: Ptr[AdwTabOverviewClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverviewClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwTabOverviewClass_listautoptr: 
+  given _tag: Tag[AdwTabOverviewClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwTabOverviewClass_listautoptr = o
+  extension (v: AdwTabOverviewClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverviewClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwTabOverviewClass_queueautoptr: 
+  given _tag: Tag[AdwTabOverviewClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwTabOverviewClass_queueautoptr = o
+  extension (v: AdwTabOverviewClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverviewClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwTabOverviewClass_slistautoptr: 
+  given _tag: Tag[AdwTabOverviewClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwTabOverviewClass_slistautoptr = o
+  extension (v: AdwTabOverviewClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverview_autoptr = Ptr[AdwTabOverview]
+object AdwTabOverview_autoptr: 
+  given _tag: Tag[AdwTabOverview_autoptr] = Tag.Ptr[AdwTabOverview](AdwTabOverview._tag)
+  inline def apply(inline o: Ptr[AdwTabOverview]): AdwTabOverview_autoptr = o
+  extension (v: AdwTabOverview_autoptr)
+    inline def value: Ptr[AdwTabOverview] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverview_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwTabOverview_listautoptr: 
+  given _tag: Tag[AdwTabOverview_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwTabOverview_listautoptr = o
+  extension (v: AdwTabOverview_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverview_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwTabOverview_queueautoptr: 
+  given _tag: Tag[AdwTabOverview_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwTabOverview_queueautoptr = o
+  extension (v: AdwTabOverview_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverview_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwTabOverview_slistautoptr: 
+  given _tag: Tag[AdwTabOverview_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwTabOverview_slistautoptr = o
+  extension (v: AdwTabOverview_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
@@ -3300,6 +4940,86 @@ object AdwToast_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarViewClass_autoptr = Ptr[AdwToolbarViewClass]
+object AdwToolbarViewClass_autoptr: 
+  given _tag: Tag[AdwToolbarViewClass_autoptr] = Tag.Ptr[AdwToolbarViewClass](AdwToolbarViewClass._tag)
+  inline def apply(inline o: Ptr[AdwToolbarViewClass]): AdwToolbarViewClass_autoptr = o
+  extension (v: AdwToolbarViewClass_autoptr)
+    inline def value: Ptr[AdwToolbarViewClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarViewClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwToolbarViewClass_listautoptr: 
+  given _tag: Tag[AdwToolbarViewClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwToolbarViewClass_listautoptr = o
+  extension (v: AdwToolbarViewClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarViewClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwToolbarViewClass_queueautoptr: 
+  given _tag: Tag[AdwToolbarViewClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwToolbarViewClass_queueautoptr = o
+  extension (v: AdwToolbarViewClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarViewClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwToolbarViewClass_slistautoptr: 
+  given _tag: Tag[AdwToolbarViewClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwToolbarViewClass_slistautoptr = o
+  extension (v: AdwToolbarViewClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarView_autoptr = Ptr[AdwToolbarView]
+object AdwToolbarView_autoptr: 
+  given _tag: Tag[AdwToolbarView_autoptr] = Tag.Ptr[AdwToolbarView](AdwToolbarView._tag)
+  inline def apply(inline o: Ptr[AdwToolbarView]): AdwToolbarView_autoptr = o
+  extension (v: AdwToolbarView_autoptr)
+    inline def value: Ptr[AdwToolbarView] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarView_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwToolbarView_listautoptr: 
+  given _tag: Tag[AdwToolbarView_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwToolbarView_listautoptr = o
+  extension (v: AdwToolbarView_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarView_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwToolbarView_queueautoptr: 
+  given _tag: Tag[AdwToolbarView_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwToolbarView_queueautoptr = o
+  extension (v: AdwToolbarView_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarView_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwToolbarView_slistautoptr: 
+  given _tag: Tag[AdwToolbarView_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwToolbarView_slistautoptr = o
+  extension (v: AdwToolbarView_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 opaque type AdwViewStackClass_autoptr = Ptr[AdwViewStackClass]
@@ -3417,6 +5137,86 @@ object AdwViewStackPage_slistautoptr:
   given _tag: Tag[AdwViewStackPage_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwViewStackPage_slistautoptr = o
   extension (v: AdwViewStackPage_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPagesClass_autoptr = Ptr[AdwViewStackPagesClass]
+object AdwViewStackPagesClass_autoptr: 
+  given _tag: Tag[AdwViewStackPagesClass_autoptr] = Tag.Ptr[AdwViewStackPagesClass](AdwViewStackPagesClass._tag)
+  inline def apply(inline o: Ptr[AdwViewStackPagesClass]): AdwViewStackPagesClass_autoptr = o
+  extension (v: AdwViewStackPagesClass_autoptr)
+    inline def value: Ptr[AdwViewStackPagesClass] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPagesClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwViewStackPagesClass_listautoptr: 
+  given _tag: Tag[AdwViewStackPagesClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwViewStackPagesClass_listautoptr = o
+  extension (v: AdwViewStackPagesClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPagesClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwViewStackPagesClass_queueautoptr: 
+  given _tag: Tag[AdwViewStackPagesClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwViewStackPagesClass_queueautoptr = o
+  extension (v: AdwViewStackPagesClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPagesClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwViewStackPagesClass_slistautoptr: 
+  given _tag: Tag[AdwViewStackPagesClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwViewStackPagesClass_slistautoptr = o
+  extension (v: AdwViewStackPagesClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPages_autoptr = Ptr[AdwViewStackPages]
+object AdwViewStackPages_autoptr: 
+  given _tag: Tag[AdwViewStackPages_autoptr] = Tag.Ptr[AdwViewStackPages](AdwViewStackPages._tag)
+  inline def apply(inline o: Ptr[AdwViewStackPages]): AdwViewStackPages_autoptr = o
+  extension (v: AdwViewStackPages_autoptr)
+    inline def value: Ptr[AdwViewStackPages] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPages_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object AdwViewStackPages_listautoptr: 
+  given _tag: Tag[AdwViewStackPages_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): AdwViewStackPages_listautoptr = o
+  extension (v: AdwViewStackPages_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPages_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object AdwViewStackPages_queueautoptr: 
+  given _tag: Tag[AdwViewStackPages_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): AdwViewStackPages_queueautoptr = o
+  extension (v: AdwViewStackPages_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPages_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object AdwViewStackPages_slistautoptr: 
+  given _tag: Tag[AdwViewStackPages_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): AdwViewStackPages_slistautoptr = o
+  extension (v: AdwViewStackPages_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
@@ -3868,3 +5668,10 @@ object __m128:
   inline def apply(inline o: CStruct4[Float, Float, Float, Float]): __m128 = o
   extension (v: __m128)
     inline def value: CStruct4[Float, Float, Float, Float] = v
+
+type va_list = unsafe.CVarArgList
+object va_list: 
+  val _tag: Tag[va_list] = summon[Tag[unsafe.CVarArgList]]
+  inline def apply(inline o: unsafe.CVarArgList): va_list = o
+  extension (v: va_list)
+    inline def value: unsafe.CVarArgList = v

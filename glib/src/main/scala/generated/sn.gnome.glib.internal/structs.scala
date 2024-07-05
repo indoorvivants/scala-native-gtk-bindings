@@ -568,6 +568,18 @@ opaque type GOptionGroup = CStruct0
 object GOptionGroup:
   given _tag: Tag[GOptionGroup] = Tag.materializeCStruct0Tag
 
+opaque type GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
+object GPathBuf:
+  given _tag: Tag[GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[GPathBuf] = scala.scalanative.unsafe.alloc[GPathBuf](1)
+  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[GPathBuf] = 
+    val ____ptr = apply()
+    (!____ptr).dummy = dummy
+    ____ptr
+  extension (struct: GPathBuf)
+    def dummy : CArray[gpointer, Nat._8] = struct._1
+    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
+
 opaque type GPatternSpec = CStruct0
 object GPatternSpec:
   given _tag: Tag[GPatternSpec] = Tag.materializeCStruct0Tag
@@ -1407,11 +1419,11 @@ opaque type GVariantBuilder = CStruct1[GVariantBuilder.Union0]
 object GVariantBuilder:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -1422,8 +1434,8 @@ object GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1435,16 +1447,16 @@ object GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]]
       def s_=(value: GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantBuilder] = Tag.materializeCStruct1Tag[GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[GVariantBuilder] = scala.scalanative.unsafe.alloc[GVariantBuilder](1)
   def apply(u : GVariantBuilder.Union0)(using Zone): Ptr[GVariantBuilder] = 
@@ -1459,11 +1471,11 @@ opaque type GVariantDict = CStruct1[GVariantDict.Union0]
 object GVariantDict:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -1474,8 +1486,8 @@ object GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -1487,16 +1499,16 @@ object GVariantDict:
       un.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]]
       def s_=(value: GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[GVariantDict.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[GVariantDict] = Tag.materializeCStruct1Tag[GVariantDict.Union0]
   def apply()(using Zone): Ptr[GVariantDict] = scala.scalanative.unsafe.alloc[GVariantDict](1)
   def apply(u : GVariantDict.Union0)(using Zone): Ptr[GVariantDict] = 
@@ -1507,17 +1519,17 @@ object GVariantDict:
     def u : GVariantDict.Union0 = struct._1
     def u_=(value: GVariantDict.Union0): Unit = !struct.at1 = value
 
-opaque type GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
 object GVariantIter:
-  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[GVariantIter] = scala.scalanative.unsafe.alloc[GVariantIter](1)
-  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
+  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: GVariantIter)
-    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
 opaque type GVariantType = CStruct0
 object GVariantType:
@@ -2089,6 +2101,18 @@ object _GOptionEntry:
 opaque type _GOptionGroup = CStruct0
 object _GOptionGroup:
   given _tag: Tag[_GOptionGroup] = Tag.materializeCStruct0Tag
+
+opaque type _GPathBuf = CStruct1[CArray[gpointer, Nat._8]]
+object _GPathBuf:
+  given _tag: Tag[_GPathBuf] = Tag.materializeCStruct1Tag[CArray[gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[_GPathBuf] = scala.scalanative.unsafe.alloc[_GPathBuf](1)
+  def apply(dummy : CArray[gpointer, Nat._8])(using Zone): Ptr[_GPathBuf] = 
+    val ____ptr = apply()
+    (!____ptr).dummy = dummy
+    ____ptr
+  extension (struct: _GPathBuf)
+    def dummy : CArray[gpointer, Nat._8] = struct._1
+    def dummy_=(value: CArray[gpointer, Nat._8]): Unit = !struct.at1 = value
 
 opaque type _GPatternSpec = CStruct0
 object _GPatternSpec:
@@ -2840,11 +2864,11 @@ opaque type _GVariantBuilder = CStruct1[_GVariantBuilder.Union0]
 object _GVariantBuilder:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[gsize, Ptr[GVariantType], CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(partial_magic : gsize, `type` : Ptr[GVariantType], y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).partial_magic = partial_magic
         (!____ptr).`type` = `type`
@@ -2855,8 +2879,8 @@ object _GVariantBuilder:
         def partial_magic_=(value: gsize): Unit = !struct.at1 = value
         def `type` : Ptr[GVariantType] = struct._2
         def type_=(value: Ptr[GVariantType]): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -2868,16 +2892,16 @@ object _GVariantBuilder:
       un.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantBuilder.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]]
       def s_=(value: _GVariantBuilder.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantBuilder.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantBuilder] = Tag.materializeCStruct1Tag[_GVariantBuilder.Union0]
   def apply()(using Zone): Ptr[_GVariantBuilder] = scala.scalanative.unsafe.alloc[_GVariantBuilder](1)
   def apply(u : _GVariantBuilder.Union0)(using Zone): Ptr[_GVariantBuilder] = 
@@ -2892,11 +2916,11 @@ opaque type _GVariantDict = CStruct1[_GVariantDict.Union0]
 object _GVariantDict:
   opaque type Union0 = CArray[Byte, Nat.Digit3[Nat._1, Nat._2, Nat._8]]
   object Union0:
-    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+    opaque type Struct0 = CStruct3[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
     object Struct0:
-      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]]
+      given _tag: Tag[Struct0] = Tag.materializeCStruct3Tag[Ptr[GVariant], gsize, CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]]
       def apply()(using Zone): Ptr[Struct0] = scala.scalanative.unsafe.alloc[Struct0](1)
-      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
+      def apply(asv : Ptr[GVariant], partial_magic : gsize, y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]])(using Zone): Ptr[Struct0] = 
         val ____ptr = apply()
         (!____ptr).asv = asv
         (!____ptr).partial_magic = partial_magic
@@ -2907,8 +2931,8 @@ object _GVariantDict:
         def asv_=(value: Ptr[GVariant]): Unit = !struct.at1 = value
         def partial_magic : gsize = struct._2
         def partial_magic_=(value: gsize): Unit = !struct.at2 = value
-        def y : CArray[gsize, Nat.Digit2[Nat._1, Nat._4]] = struct._3
-        def y_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
+        def y : CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]] = struct._3
+        def y_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._4]]): Unit = !struct.at3 = value
     given _tag: Tag[Union0] = Tag.CArray[CChar, Nat.Digit3[Nat._1, Nat._2, Nat._8]](Tag.Byte, Tag.Digit3[Nat._1, Nat._2, Nat._8](Tag.Nat1, Tag.Nat2, Tag.Nat8))
     def apply()(using Zone): Ptr[Union0] = 
       val ___ptr = alloc[Union0](1)
@@ -2920,16 +2944,16 @@ object _GVariantDict:
       un.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]].update(0, s)
       ___ptr
     @scala.annotation.targetName("apply_x")
-    def apply(x: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
+    def apply(x: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[Union0] =
       val ___ptr = alloc[Union0](1)
       val un = !___ptr
-      un.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
+      un.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]].update(0, x)
       ___ptr
     extension (struct: Union0)
       def s : _GVariantDict.Union0.Struct0 = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]]
       def s_=(value: _GVariantDict.Union0.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[_GVariantDict.Union0.Struct0]] = value
-      def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]]
-      def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]] = value
+      def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]]
+      def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at(0).asInstanceOf[Ptr[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]] = value
   given _tag: Tag[_GVariantDict] = Tag.materializeCStruct1Tag[_GVariantDict.Union0]
   def apply()(using Zone): Ptr[_GVariantDict] = scala.scalanative.unsafe.alloc[_GVariantDict](1)
   def apply(u : _GVariantDict.Union0)(using Zone): Ptr[_GVariantDict] = 
@@ -2940,17 +2964,17 @@ object _GVariantDict:
     def u : _GVariantDict.Union0 = struct._1
     def u_=(value: _GVariantDict.Union0): Unit = !struct.at1 = value
 
-opaque type _GVariantIter = CStruct1[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+opaque type _GVariantIter = CStruct1[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
 object _GVariantIter:
-  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]]
+  given _tag: Tag[_GVariantIter] = Tag.materializeCStruct1Tag[CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]]
   def apply()(using Zone): Ptr[_GVariantIter] = scala.scalanative.unsafe.alloc[_GVariantIter](1)
-  def apply(x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
+  def apply(x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]])(using Zone): Ptr[_GVariantIter] = 
     val ____ptr = apply()
     (!____ptr).x = x
     ____ptr
   extension (struct: _GVariantIter)
-    def x : CArray[gsize, Nat.Digit2[Nat._1, Nat._6]] = struct._1
-    def x_=(value: CArray[gsize, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
+    def x : CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]] = struct._1
+    def x_=(value: CArray[guintptr, Nat.Digit2[Nat._1, Nat._6]]): Unit = !struct.at1 = value
 
 opaque type _GVariantType = CStruct0
 object _GVariantType:

@@ -96,6 +96,62 @@ object GtkAboutDialog_slistautoptr:
   extension (v: GtkAboutDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkAccessibleRange_autoptr = Ptr[GtkAccessibleRange]
+object GtkAccessibleRange_autoptr: 
+  given _tag: Tag[GtkAccessibleRange_autoptr] = Tag.Ptr[GtkAccessibleRange](GtkAccessibleRange._tag)
+  inline def apply(inline o: Ptr[GtkAccessibleRange]): GtkAccessibleRange_autoptr = o
+  extension (v: GtkAccessibleRange_autoptr)
+    inline def value: Ptr[GtkAccessibleRange] = v
+
+opaque type GtkAccessibleRange_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkAccessibleRange_listautoptr: 
+  given _tag: Tag[GtkAccessibleRange_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkAccessibleRange_listautoptr = o
+  extension (v: GtkAccessibleRange_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkAccessibleRange_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkAccessibleRange_queueautoptr: 
+  given _tag: Tag[GtkAccessibleRange_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkAccessibleRange_queueautoptr = o
+  extension (v: GtkAccessibleRange_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkAccessibleRange_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkAccessibleRange_slistautoptr: 
+  given _tag: Tag[GtkAccessibleRange_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkAccessibleRange_slistautoptr = o
+  extension (v: GtkAccessibleRange_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkAccessibleText_autoptr = Ptr[GtkAccessibleText]
+object GtkAccessibleText_autoptr: 
+  given _tag: Tag[GtkAccessibleText_autoptr] = Tag.Ptr[GtkAccessibleText](GtkAccessibleText._tag)
+  inline def apply(inline o: Ptr[GtkAccessibleText]): GtkAccessibleText_autoptr = o
+  extension (v: GtkAccessibleText_autoptr)
+    inline def value: Ptr[GtkAccessibleText] = v
+
+opaque type GtkAccessibleText_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkAccessibleText_listautoptr: 
+  given _tag: Tag[GtkAccessibleText_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkAccessibleText_listautoptr = o
+  extension (v: GtkAccessibleText_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkAccessibleText_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkAccessibleText_queueautoptr: 
+  given _tag: Tag[GtkAccessibleText_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkAccessibleText_queueautoptr = o
+  extension (v: GtkAccessibleText_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkAccessibleText_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkAccessibleText_slistautoptr: 
+  given _tag: Tag[GtkAccessibleText_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkAccessibleText_slistautoptr = o
+  extension (v: GtkAccessibleText_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkAccessible_autoptr = Ptr[GtkAccessible]
 object GtkAccessible_autoptr: 
   given _tag: Tag[GtkAccessible_autoptr] = Tag.Ptr[GtkAccessible](GtkAccessible._tag)
@@ -262,6 +318,62 @@ object GtkAdjustment_slistautoptr:
   given _tag: Tag[GtkAdjustment_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkAdjustment_slistautoptr = o
   extension (v: GtkAdjustment_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkAlertDialogClass_autoptr = Ptr[GtkAlertDialogClass]
+object GtkAlertDialogClass_autoptr: 
+  given _tag: Tag[GtkAlertDialogClass_autoptr] = Tag.Ptr[GtkAlertDialogClass](GtkAlertDialogClass._tag)
+  inline def apply(inline o: Ptr[GtkAlertDialogClass]): GtkAlertDialogClass_autoptr = o
+  extension (v: GtkAlertDialogClass_autoptr)
+    inline def value: Ptr[GtkAlertDialogClass] = v
+
+opaque type GtkAlertDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkAlertDialogClass_listautoptr: 
+  given _tag: Tag[GtkAlertDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkAlertDialogClass_listautoptr = o
+  extension (v: GtkAlertDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkAlertDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkAlertDialogClass_queueautoptr: 
+  given _tag: Tag[GtkAlertDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkAlertDialogClass_queueautoptr = o
+  extension (v: GtkAlertDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkAlertDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkAlertDialogClass_slistautoptr: 
+  given _tag: Tag[GtkAlertDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkAlertDialogClass_slistautoptr = o
+  extension (v: GtkAlertDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkAlertDialog_autoptr = Ptr[GtkAlertDialog]
+object GtkAlertDialog_autoptr: 
+  given _tag: Tag[GtkAlertDialog_autoptr] = Tag.Ptr[GtkAlertDialog](GtkAlertDialog._tag)
+  inline def apply(inline o: Ptr[GtkAlertDialog]): GtkAlertDialog_autoptr = o
+  extension (v: GtkAlertDialog_autoptr)
+    inline def value: Ptr[GtkAlertDialog] = v
+
+opaque type GtkAlertDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkAlertDialog_listautoptr: 
+  given _tag: Tag[GtkAlertDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkAlertDialog_listautoptr = o
+  extension (v: GtkAlertDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkAlertDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkAlertDialog_queueautoptr: 
+  given _tag: Tag[GtkAlertDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkAlertDialog_queueautoptr = o
+  extension (v: GtkAlertDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkAlertDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkAlertDialog_slistautoptr: 
+  given _tag: Tag[GtkAlertDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkAlertDialog_slistautoptr = o
+  extension (v: GtkAlertDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
@@ -1834,6 +1946,174 @@ object GtkColorChooser_slistautoptr:
   extension (v: GtkColorChooser_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkColorDialogButtonClass_autoptr = Ptr[GtkColorDialogButtonClass]
+object GtkColorDialogButtonClass_autoptr: 
+  given _tag: Tag[GtkColorDialogButtonClass_autoptr] = Tag.Ptr[GtkColorDialogButtonClass](GtkColorDialogButtonClass._tag)
+  inline def apply(inline o: Ptr[GtkColorDialogButtonClass]): GtkColorDialogButtonClass_autoptr = o
+  extension (v: GtkColorDialogButtonClass_autoptr)
+    inline def value: Ptr[GtkColorDialogButtonClass] = v
+
+opaque type GtkColorDialogButtonClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColorDialogButtonClass_listautoptr: 
+  given _tag: Tag[GtkColorDialogButtonClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColorDialogButtonClass_listautoptr = o
+  extension (v: GtkColorDialogButtonClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColorDialogButtonClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColorDialogButtonClass_queueautoptr: 
+  given _tag: Tag[GtkColorDialogButtonClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColorDialogButtonClass_queueautoptr = o
+  extension (v: GtkColorDialogButtonClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColorDialogButtonClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColorDialogButtonClass_slistautoptr: 
+  given _tag: Tag[GtkColorDialogButtonClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColorDialogButtonClass_slistautoptr = o
+  extension (v: GtkColorDialogButtonClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColorDialogButton_autoptr = Ptr[GtkColorDialogButton]
+object GtkColorDialogButton_autoptr: 
+  given _tag: Tag[GtkColorDialogButton_autoptr] = Tag.Ptr[GtkColorDialogButton](GtkColorDialogButton._tag)
+  inline def apply(inline o: Ptr[GtkColorDialogButton]): GtkColorDialogButton_autoptr = o
+  extension (v: GtkColorDialogButton_autoptr)
+    inline def value: Ptr[GtkColorDialogButton] = v
+
+opaque type GtkColorDialogButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColorDialogButton_listautoptr: 
+  given _tag: Tag[GtkColorDialogButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColorDialogButton_listautoptr = o
+  extension (v: GtkColorDialogButton_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColorDialogButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColorDialogButton_queueautoptr: 
+  given _tag: Tag[GtkColorDialogButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColorDialogButton_queueautoptr = o
+  extension (v: GtkColorDialogButton_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColorDialogButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColorDialogButton_slistautoptr: 
+  given _tag: Tag[GtkColorDialogButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColorDialogButton_slistautoptr = o
+  extension (v: GtkColorDialogButton_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColorDialogClass_autoptr = Ptr[GtkColorDialogClass]
+object GtkColorDialogClass_autoptr: 
+  given _tag: Tag[GtkColorDialogClass_autoptr] = Tag.Ptr[GtkColorDialogClass](GtkColorDialogClass._tag)
+  inline def apply(inline o: Ptr[GtkColorDialogClass]): GtkColorDialogClass_autoptr = o
+  extension (v: GtkColorDialogClass_autoptr)
+    inline def value: Ptr[GtkColorDialogClass] = v
+
+opaque type GtkColorDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColorDialogClass_listautoptr: 
+  given _tag: Tag[GtkColorDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColorDialogClass_listautoptr = o
+  extension (v: GtkColorDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColorDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColorDialogClass_queueautoptr: 
+  given _tag: Tag[GtkColorDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColorDialogClass_queueautoptr = o
+  extension (v: GtkColorDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColorDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColorDialogClass_slistautoptr: 
+  given _tag: Tag[GtkColorDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColorDialogClass_slistautoptr = o
+  extension (v: GtkColorDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColorDialog_autoptr = Ptr[GtkColorDialog]
+object GtkColorDialog_autoptr: 
+  given _tag: Tag[GtkColorDialog_autoptr] = Tag.Ptr[GtkColorDialog](GtkColorDialog._tag)
+  inline def apply(inline o: Ptr[GtkColorDialog]): GtkColorDialog_autoptr = o
+  extension (v: GtkColorDialog_autoptr)
+    inline def value: Ptr[GtkColorDialog] = v
+
+opaque type GtkColorDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColorDialog_listautoptr: 
+  given _tag: Tag[GtkColorDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColorDialog_listautoptr = o
+  extension (v: GtkColorDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColorDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColorDialog_queueautoptr: 
+  given _tag: Tag[GtkColorDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColorDialog_queueautoptr = o
+  extension (v: GtkColorDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColorDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColorDialog_slistautoptr: 
+  given _tag: Tag[GtkColorDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColorDialog_slistautoptr = o
+  extension (v: GtkColorDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColumnViewCellClass_autoptr = Ptr[GtkColumnViewCellClass]
+object GtkColumnViewCellClass_autoptr: 
+  given _tag: Tag[GtkColumnViewCellClass_autoptr] = Tag.Ptr[GtkColumnViewCellClass](GtkColumnViewCellClass._tag)
+  inline def apply(inline o: Ptr[GtkColumnViewCellClass]): GtkColumnViewCellClass_autoptr = o
+  extension (v: GtkColumnViewCellClass_autoptr)
+    inline def value: Ptr[GtkColumnViewCellClass] = v
+
+opaque type GtkColumnViewCellClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColumnViewCellClass_listautoptr: 
+  given _tag: Tag[GtkColumnViewCellClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColumnViewCellClass_listautoptr = o
+  extension (v: GtkColumnViewCellClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColumnViewCellClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColumnViewCellClass_queueautoptr: 
+  given _tag: Tag[GtkColumnViewCellClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColumnViewCellClass_queueautoptr = o
+  extension (v: GtkColumnViewCellClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColumnViewCellClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColumnViewCellClass_slistautoptr: 
+  given _tag: Tag[GtkColumnViewCellClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewCellClass_slistautoptr = o
+  extension (v: GtkColumnViewCellClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColumnViewCell_autoptr = Ptr[GtkColumnViewCell]
+object GtkColumnViewCell_autoptr: 
+  given _tag: Tag[GtkColumnViewCell_autoptr] = Tag.Ptr[GtkColumnViewCell](GtkColumnViewCell._tag)
+  inline def apply(inline o: Ptr[GtkColumnViewCell]): GtkColumnViewCell_autoptr = o
+  extension (v: GtkColumnViewCell_autoptr)
+    inline def value: Ptr[GtkColumnViewCell] = v
+
+opaque type GtkColumnViewCell_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColumnViewCell_listautoptr: 
+  given _tag: Tag[GtkColumnViewCell_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColumnViewCell_listautoptr = o
+  extension (v: GtkColumnViewCell_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColumnViewCell_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColumnViewCell_queueautoptr: 
+  given _tag: Tag[GtkColumnViewCell_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColumnViewCell_queueautoptr = o
+  extension (v: GtkColumnViewCell_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColumnViewCell_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColumnViewCell_slistautoptr: 
+  given _tag: Tag[GtkColumnViewCell_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewCell_slistautoptr = o
+  extension (v: GtkColumnViewCell_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkColumnViewColumn_autoptr = Ptr[GtkColumnViewColumn]
 object GtkColumnViewColumn_autoptr: 
   given _tag: Tag[GtkColumnViewColumn_autoptr] = Tag.Ptr[GtkColumnViewColumn](GtkColumnViewColumn._tag)
@@ -1860,6 +2140,118 @@ object GtkColumnViewColumn_slistautoptr:
   given _tag: Tag[GtkColumnViewColumn_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewColumn_slistautoptr = o
   extension (v: GtkColumnViewColumn_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColumnViewRowClass_autoptr = Ptr[GtkColumnViewRowClass]
+object GtkColumnViewRowClass_autoptr: 
+  given _tag: Tag[GtkColumnViewRowClass_autoptr] = Tag.Ptr[GtkColumnViewRowClass](GtkColumnViewRowClass._tag)
+  inline def apply(inline o: Ptr[GtkColumnViewRowClass]): GtkColumnViewRowClass_autoptr = o
+  extension (v: GtkColumnViewRowClass_autoptr)
+    inline def value: Ptr[GtkColumnViewRowClass] = v
+
+opaque type GtkColumnViewRowClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColumnViewRowClass_listautoptr: 
+  given _tag: Tag[GtkColumnViewRowClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColumnViewRowClass_listautoptr = o
+  extension (v: GtkColumnViewRowClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColumnViewRowClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColumnViewRowClass_queueautoptr: 
+  given _tag: Tag[GtkColumnViewRowClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColumnViewRowClass_queueautoptr = o
+  extension (v: GtkColumnViewRowClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColumnViewRowClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColumnViewRowClass_slistautoptr: 
+  given _tag: Tag[GtkColumnViewRowClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewRowClass_slistautoptr = o
+  extension (v: GtkColumnViewRowClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColumnViewRow_autoptr = Ptr[GtkColumnViewRow]
+object GtkColumnViewRow_autoptr: 
+  given _tag: Tag[GtkColumnViewRow_autoptr] = Tag.Ptr[GtkColumnViewRow](GtkColumnViewRow._tag)
+  inline def apply(inline o: Ptr[GtkColumnViewRow]): GtkColumnViewRow_autoptr = o
+  extension (v: GtkColumnViewRow_autoptr)
+    inline def value: Ptr[GtkColumnViewRow] = v
+
+opaque type GtkColumnViewRow_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColumnViewRow_listautoptr: 
+  given _tag: Tag[GtkColumnViewRow_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColumnViewRow_listautoptr = o
+  extension (v: GtkColumnViewRow_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColumnViewRow_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColumnViewRow_queueautoptr: 
+  given _tag: Tag[GtkColumnViewRow_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColumnViewRow_queueautoptr = o
+  extension (v: GtkColumnViewRow_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColumnViewRow_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColumnViewRow_slistautoptr: 
+  given _tag: Tag[GtkColumnViewRow_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewRow_slistautoptr = o
+  extension (v: GtkColumnViewRow_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColumnViewSorterClass_autoptr = Ptr[GtkColumnViewSorterClass]
+object GtkColumnViewSorterClass_autoptr: 
+  given _tag: Tag[GtkColumnViewSorterClass_autoptr] = Tag.Ptr[GtkColumnViewSorterClass](GtkColumnViewSorterClass._tag)
+  inline def apply(inline o: Ptr[GtkColumnViewSorterClass]): GtkColumnViewSorterClass_autoptr = o
+  extension (v: GtkColumnViewSorterClass_autoptr)
+    inline def value: Ptr[GtkColumnViewSorterClass] = v
+
+opaque type GtkColumnViewSorterClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColumnViewSorterClass_listautoptr: 
+  given _tag: Tag[GtkColumnViewSorterClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColumnViewSorterClass_listautoptr = o
+  extension (v: GtkColumnViewSorterClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColumnViewSorterClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColumnViewSorterClass_queueautoptr: 
+  given _tag: Tag[GtkColumnViewSorterClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColumnViewSorterClass_queueautoptr = o
+  extension (v: GtkColumnViewSorterClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColumnViewSorterClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColumnViewSorterClass_slistautoptr: 
+  given _tag: Tag[GtkColumnViewSorterClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewSorterClass_slistautoptr = o
+  extension (v: GtkColumnViewSorterClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkColumnViewSorter_autoptr = Ptr[GtkColumnViewSorter]
+object GtkColumnViewSorter_autoptr: 
+  given _tag: Tag[GtkColumnViewSorter_autoptr] = Tag.Ptr[GtkColumnViewSorter](GtkColumnViewSorter._tag)
+  inline def apply(inline o: Ptr[GtkColumnViewSorter]): GtkColumnViewSorter_autoptr = o
+  extension (v: GtkColumnViewSorter_autoptr)
+    inline def value: Ptr[GtkColumnViewSorter] = v
+
+opaque type GtkColumnViewSorter_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkColumnViewSorter_listautoptr: 
+  given _tag: Tag[GtkColumnViewSorter_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkColumnViewSorter_listautoptr = o
+  extension (v: GtkColumnViewSorter_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkColumnViewSorter_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkColumnViewSorter_queueautoptr: 
+  given _tag: Tag[GtkColumnViewSorter_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkColumnViewSorter_queueautoptr = o
+  extension (v: GtkColumnViewSorter_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkColumnViewSorter_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkColumnViewSorter_slistautoptr: 
+  given _tag: Tag[GtkColumnViewSorter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkColumnViewSorter_slistautoptr = o
+  extension (v: GtkColumnViewSorter_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkComboBoxText_autoptr = Ptr[GtkComboBoxText]
@@ -3094,6 +3486,62 @@ object GtkFileChooserWidget_slistautoptr:
   extension (v: GtkFileChooserWidget_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkFileDialogClass_autoptr = Ptr[GtkFileDialogClass]
+object GtkFileDialogClass_autoptr: 
+  given _tag: Tag[GtkFileDialogClass_autoptr] = Tag.Ptr[GtkFileDialogClass](GtkFileDialogClass._tag)
+  inline def apply(inline o: Ptr[GtkFileDialogClass]): GtkFileDialogClass_autoptr = o
+  extension (v: GtkFileDialogClass_autoptr)
+    inline def value: Ptr[GtkFileDialogClass] = v
+
+opaque type GtkFileDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFileDialogClass_listautoptr: 
+  given _tag: Tag[GtkFileDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFileDialogClass_listautoptr = o
+  extension (v: GtkFileDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFileDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFileDialogClass_queueautoptr: 
+  given _tag: Tag[GtkFileDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFileDialogClass_queueautoptr = o
+  extension (v: GtkFileDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFileDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFileDialogClass_slistautoptr: 
+  given _tag: Tag[GtkFileDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFileDialogClass_slistautoptr = o
+  extension (v: GtkFileDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkFileDialog_autoptr = Ptr[GtkFileDialog]
+object GtkFileDialog_autoptr: 
+  given _tag: Tag[GtkFileDialog_autoptr] = Tag.Ptr[GtkFileDialog](GtkFileDialog._tag)
+  inline def apply(inline o: Ptr[GtkFileDialog]): GtkFileDialog_autoptr = o
+  extension (v: GtkFileDialog_autoptr)
+    inline def value: Ptr[GtkFileDialog] = v
+
+opaque type GtkFileDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFileDialog_listautoptr: 
+  given _tag: Tag[GtkFileDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFileDialog_listautoptr = o
+  extension (v: GtkFileDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFileDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFileDialog_queueautoptr: 
+  given _tag: Tag[GtkFileDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFileDialog_queueautoptr = o
+  extension (v: GtkFileDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFileDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFileDialog_slistautoptr: 
+  given _tag: Tag[GtkFileDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFileDialog_slistautoptr = o
+  extension (v: GtkFileDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkFileFilter_autoptr = Ptr[GtkFileFilter]
 object GtkFileFilter_autoptr: 
   given _tag: Tag[GtkFileFilter_autoptr] = Tag.Ptr[GtkFileFilter](GtkFileFilter._tag)
@@ -3120,6 +3568,62 @@ object GtkFileFilter_slistautoptr:
   given _tag: Tag[GtkFileFilter_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFileFilter_slistautoptr = o
   extension (v: GtkFileFilter_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkFileLauncherClass_autoptr = Ptr[GtkFileLauncherClass]
+object GtkFileLauncherClass_autoptr: 
+  given _tag: Tag[GtkFileLauncherClass_autoptr] = Tag.Ptr[GtkFileLauncherClass](GtkFileLauncherClass._tag)
+  inline def apply(inline o: Ptr[GtkFileLauncherClass]): GtkFileLauncherClass_autoptr = o
+  extension (v: GtkFileLauncherClass_autoptr)
+    inline def value: Ptr[GtkFileLauncherClass] = v
+
+opaque type GtkFileLauncherClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFileLauncherClass_listautoptr: 
+  given _tag: Tag[GtkFileLauncherClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFileLauncherClass_listautoptr = o
+  extension (v: GtkFileLauncherClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFileLauncherClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFileLauncherClass_queueautoptr: 
+  given _tag: Tag[GtkFileLauncherClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFileLauncherClass_queueautoptr = o
+  extension (v: GtkFileLauncherClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFileLauncherClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFileLauncherClass_slistautoptr: 
+  given _tag: Tag[GtkFileLauncherClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFileLauncherClass_slistautoptr = o
+  extension (v: GtkFileLauncherClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkFileLauncher_autoptr = Ptr[GtkFileLauncher]
+object GtkFileLauncher_autoptr: 
+  given _tag: Tag[GtkFileLauncher_autoptr] = Tag.Ptr[GtkFileLauncher](GtkFileLauncher._tag)
+  inline def apply(inline o: Ptr[GtkFileLauncher]): GtkFileLauncher_autoptr = o
+  extension (v: GtkFileLauncher_autoptr)
+    inline def value: Ptr[GtkFileLauncher] = v
+
+opaque type GtkFileLauncher_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFileLauncher_listautoptr: 
+  given _tag: Tag[GtkFileLauncher_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFileLauncher_listautoptr = o
+  extension (v: GtkFileLauncher_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFileLauncher_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFileLauncher_queueautoptr: 
+  given _tag: Tag[GtkFileLauncher_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFileLauncher_queueautoptr = o
+  extension (v: GtkFileLauncher_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFileLauncher_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFileLauncher_slistautoptr: 
+  given _tag: Tag[GtkFileLauncher_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFileLauncher_slistautoptr = o
+  extension (v: GtkFileLauncher_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkFilterClass_autoptr = Ptr[GtkFilterClass]
@@ -3637,16 +4141,128 @@ object GtkFontChooser_slistautoptr:
   extension (v: GtkFontChooser_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkFontDialogButtonClass_autoptr = Ptr[GtkFontDialogButtonClass]
+object GtkFontDialogButtonClass_autoptr: 
+  given _tag: Tag[GtkFontDialogButtonClass_autoptr] = Tag.Ptr[GtkFontDialogButtonClass](GtkFontDialogButtonClass._tag)
+  inline def apply(inline o: Ptr[GtkFontDialogButtonClass]): GtkFontDialogButtonClass_autoptr = o
+  extension (v: GtkFontDialogButtonClass_autoptr)
+    inline def value: Ptr[GtkFontDialogButtonClass] = v
+
+opaque type GtkFontDialogButtonClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFontDialogButtonClass_listautoptr: 
+  given _tag: Tag[GtkFontDialogButtonClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFontDialogButtonClass_listautoptr = o
+  extension (v: GtkFontDialogButtonClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFontDialogButtonClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFontDialogButtonClass_queueautoptr: 
+  given _tag: Tag[GtkFontDialogButtonClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFontDialogButtonClass_queueautoptr = o
+  extension (v: GtkFontDialogButtonClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFontDialogButtonClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFontDialogButtonClass_slistautoptr: 
+  given _tag: Tag[GtkFontDialogButtonClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFontDialogButtonClass_slistautoptr = o
+  extension (v: GtkFontDialogButtonClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkFontDialogButton_autoptr = Ptr[GtkFontDialogButton]
+object GtkFontDialogButton_autoptr: 
+  given _tag: Tag[GtkFontDialogButton_autoptr] = Tag.Ptr[GtkFontDialogButton](GtkFontDialogButton._tag)
+  inline def apply(inline o: Ptr[GtkFontDialogButton]): GtkFontDialogButton_autoptr = o
+  extension (v: GtkFontDialogButton_autoptr)
+    inline def value: Ptr[GtkFontDialogButton] = v
+
+opaque type GtkFontDialogButton_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFontDialogButton_listautoptr: 
+  given _tag: Tag[GtkFontDialogButton_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFontDialogButton_listautoptr = o
+  extension (v: GtkFontDialogButton_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFontDialogButton_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFontDialogButton_queueautoptr: 
+  given _tag: Tag[GtkFontDialogButton_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFontDialogButton_queueautoptr = o
+  extension (v: GtkFontDialogButton_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFontDialogButton_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFontDialogButton_slistautoptr: 
+  given _tag: Tag[GtkFontDialogButton_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFontDialogButton_slistautoptr = o
+  extension (v: GtkFontDialogButton_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkFontDialogClass_autoptr = Ptr[GtkFontDialogClass]
+object GtkFontDialogClass_autoptr: 
+  given _tag: Tag[GtkFontDialogClass_autoptr] = Tag.Ptr[GtkFontDialogClass](GtkFontDialogClass._tag)
+  inline def apply(inline o: Ptr[GtkFontDialogClass]): GtkFontDialogClass_autoptr = o
+  extension (v: GtkFontDialogClass_autoptr)
+    inline def value: Ptr[GtkFontDialogClass] = v
+
+opaque type GtkFontDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFontDialogClass_listautoptr: 
+  given _tag: Tag[GtkFontDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFontDialogClass_listautoptr = o
+  extension (v: GtkFontDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFontDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFontDialogClass_queueautoptr: 
+  given _tag: Tag[GtkFontDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFontDialogClass_queueautoptr = o
+  extension (v: GtkFontDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFontDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFontDialogClass_slistautoptr: 
+  given _tag: Tag[GtkFontDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFontDialogClass_slistautoptr = o
+  extension (v: GtkFontDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkFontDialog_autoptr = Ptr[GtkFontDialog]
+object GtkFontDialog_autoptr: 
+  given _tag: Tag[GtkFontDialog_autoptr] = Tag.Ptr[GtkFontDialog](GtkFontDialog._tag)
+  inline def apply(inline o: Ptr[GtkFontDialog]): GtkFontDialog_autoptr = o
+  extension (v: GtkFontDialog_autoptr)
+    inline def value: Ptr[GtkFontDialog] = v
+
+opaque type GtkFontDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkFontDialog_listautoptr: 
+  given _tag: Tag[GtkFontDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkFontDialog_listautoptr = o
+  extension (v: GtkFontDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkFontDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkFontDialog_queueautoptr: 
+  given _tag: Tag[GtkFontDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkFontDialog_queueautoptr = o
+  extension (v: GtkFontDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkFontDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkFontDialog_slistautoptr: 
+  given _tag: Tag[GtkFontDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkFontDialog_slistautoptr = o
+  extension (v: GtkFontDialog_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 /**
  * GtkFontFilterFunc: : a `PangoFontFamily` : a `PangoFontFace` belonging to
 */
-opaque type GtkFontFilterFunc = CFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+opaque type GtkFontFilterFunc = CFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkFontFilterFunc: 
-  given _tag: Tag[GtkFontFilterFunc] = Tag.materializeCFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+  given _tag: Tag[GtkFontFilterFunc] = Tag.materializeCFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
   inline def fromPtr(ptr: Ptr[Byte] | Ptr[?]): GtkFontFilterFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkFontFilterFunc = o
+  inline def apply(inline o: CFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkFontFilterFunc = o
   extension (v: GtkFontFilterFunc)
-    inline def value: CFuncPtr3[Ptr[PangoFontFamily], Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
+    inline def value: CFuncPtr3[Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
     inline def toPtr: Ptr[?] = CFuncPtr.toPtr(v)
 
 opaque type GtkFrame_autoptr = Ptr[GtkFrame]
@@ -3955,6 +4571,62 @@ object GtkGesture_slistautoptr:
   given _tag: Tag[GtkGesture_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkGesture_slistautoptr = o
   extension (v: GtkGesture_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkGraphicsOffloadClass_autoptr = Ptr[GtkGraphicsOffloadClass]
+object GtkGraphicsOffloadClass_autoptr: 
+  given _tag: Tag[GtkGraphicsOffloadClass_autoptr] = Tag.Ptr[GtkGraphicsOffloadClass](GtkGraphicsOffloadClass._tag)
+  inline def apply(inline o: Ptr[GtkGraphicsOffloadClass]): GtkGraphicsOffloadClass_autoptr = o
+  extension (v: GtkGraphicsOffloadClass_autoptr)
+    inline def value: Ptr[GtkGraphicsOffloadClass] = v
+
+opaque type GtkGraphicsOffloadClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkGraphicsOffloadClass_listautoptr: 
+  given _tag: Tag[GtkGraphicsOffloadClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkGraphicsOffloadClass_listautoptr = o
+  extension (v: GtkGraphicsOffloadClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkGraphicsOffloadClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkGraphicsOffloadClass_queueautoptr: 
+  given _tag: Tag[GtkGraphicsOffloadClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkGraphicsOffloadClass_queueautoptr = o
+  extension (v: GtkGraphicsOffloadClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkGraphicsOffloadClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkGraphicsOffloadClass_slistautoptr: 
+  given _tag: Tag[GtkGraphicsOffloadClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkGraphicsOffloadClass_slistautoptr = o
+  extension (v: GtkGraphicsOffloadClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkGraphicsOffload_autoptr = Ptr[GtkGraphicsOffload]
+object GtkGraphicsOffload_autoptr: 
+  given _tag: Tag[GtkGraphicsOffload_autoptr] = Tag.Ptr[GtkGraphicsOffload](GtkGraphicsOffload._tag)
+  inline def apply(inline o: Ptr[GtkGraphicsOffload]): GtkGraphicsOffload_autoptr = o
+  extension (v: GtkGraphicsOffload_autoptr)
+    inline def value: Ptr[GtkGraphicsOffload] = v
+
+opaque type GtkGraphicsOffload_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkGraphicsOffload_listautoptr: 
+  given _tag: Tag[GtkGraphicsOffload_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkGraphicsOffload_listautoptr = o
+  extension (v: GtkGraphicsOffload_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkGraphicsOffload_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkGraphicsOffload_queueautoptr: 
+  given _tag: Tag[GtkGraphicsOffload_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkGraphicsOffload_queueautoptr = o
+  extension (v: GtkGraphicsOffload_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkGraphicsOffload_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkGraphicsOffload_slistautoptr: 
+  given _tag: Tag[GtkGraphicsOffload_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkGraphicsOffload_slistautoptr = o
+  extension (v: GtkGraphicsOffload_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkGridLayoutChildClass_autoptr = Ptr[GtkGridLayoutChildClass]
@@ -4389,6 +5061,62 @@ object GtkInfoBar_slistautoptr:
   extension (v: GtkInfoBar_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkInscriptionClass_autoptr = Ptr[GtkInscriptionClass]
+object GtkInscriptionClass_autoptr: 
+  given _tag: Tag[GtkInscriptionClass_autoptr] = Tag.Ptr[GtkInscriptionClass](GtkInscriptionClass._tag)
+  inline def apply(inline o: Ptr[GtkInscriptionClass]): GtkInscriptionClass_autoptr = o
+  extension (v: GtkInscriptionClass_autoptr)
+    inline def value: Ptr[GtkInscriptionClass] = v
+
+opaque type GtkInscriptionClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkInscriptionClass_listautoptr: 
+  given _tag: Tag[GtkInscriptionClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkInscriptionClass_listautoptr = o
+  extension (v: GtkInscriptionClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkInscriptionClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkInscriptionClass_queueautoptr: 
+  given _tag: Tag[GtkInscriptionClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkInscriptionClass_queueautoptr = o
+  extension (v: GtkInscriptionClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkInscriptionClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkInscriptionClass_slistautoptr: 
+  given _tag: Tag[GtkInscriptionClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkInscriptionClass_slistautoptr = o
+  extension (v: GtkInscriptionClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkInscription_autoptr = Ptr[GtkInscription]
+object GtkInscription_autoptr: 
+  given _tag: Tag[GtkInscription_autoptr] = Tag.Ptr[GtkInscription](GtkInscription._tag)
+  inline def apply(inline o: Ptr[GtkInscription]): GtkInscription_autoptr = o
+  extension (v: GtkInscription_autoptr)
+    inline def value: Ptr[GtkInscription] = v
+
+opaque type GtkInscription_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkInscription_listautoptr: 
+  given _tag: Tag[GtkInscription_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkInscription_listautoptr = o
+  extension (v: GtkInscription_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkInscription_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkInscription_queueautoptr: 
+  given _tag: Tag[GtkInscription_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkInscription_queueautoptr = o
+  extension (v: GtkInscription_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkInscription_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkInscription_slistautoptr: 
+  given _tag: Tag[GtkInscription_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkInscription_slistautoptr = o
+  extension (v: GtkInscription_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkKeyvalTriggerClass_autoptr = Ptr[GtkKeyvalTriggerClass]
 object GtkKeyvalTriggerClass_autoptr: 
   given _tag: Tag[GtkKeyvalTriggerClass_autoptr] = Tag.Ptr[GtkKeyvalTriggerClass](GtkKeyvalTriggerClass._tag)
@@ -4752,6 +5480,90 @@ object GtkListBox_slistautoptr:
   given _tag: Tag[GtkListBox_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkListBox_slistautoptr = o
   extension (v: GtkListBox_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkListHeaderClass_autoptr = Ptr[GtkListHeaderClass]
+object GtkListHeaderClass_autoptr: 
+  given _tag: Tag[GtkListHeaderClass_autoptr] = Tag.Ptr[GtkListHeaderClass](GtkListHeaderClass._tag)
+  inline def apply(inline o: Ptr[GtkListHeaderClass]): GtkListHeaderClass_autoptr = o
+  extension (v: GtkListHeaderClass_autoptr)
+    inline def value: Ptr[GtkListHeaderClass] = v
+
+opaque type GtkListHeaderClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkListHeaderClass_listautoptr: 
+  given _tag: Tag[GtkListHeaderClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkListHeaderClass_listautoptr = o
+  extension (v: GtkListHeaderClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkListHeaderClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkListHeaderClass_queueautoptr: 
+  given _tag: Tag[GtkListHeaderClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkListHeaderClass_queueautoptr = o
+  extension (v: GtkListHeaderClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkListHeaderClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkListHeaderClass_slistautoptr: 
+  given _tag: Tag[GtkListHeaderClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkListHeaderClass_slistautoptr = o
+  extension (v: GtkListHeaderClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkListHeader_autoptr = Ptr[GtkListHeader]
+object GtkListHeader_autoptr: 
+  given _tag: Tag[GtkListHeader_autoptr] = Tag.Ptr[GtkListHeader](GtkListHeader._tag)
+  inline def apply(inline o: Ptr[GtkListHeader]): GtkListHeader_autoptr = o
+  extension (v: GtkListHeader_autoptr)
+    inline def value: Ptr[GtkListHeader] = v
+
+opaque type GtkListHeader_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkListHeader_listautoptr: 
+  given _tag: Tag[GtkListHeader_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkListHeader_listautoptr = o
+  extension (v: GtkListHeader_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkListHeader_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkListHeader_queueautoptr: 
+  given _tag: Tag[GtkListHeader_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkListHeader_queueautoptr = o
+  extension (v: GtkListHeader_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkListHeader_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkListHeader_slistautoptr: 
+  given _tag: Tag[GtkListHeader_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkListHeader_slistautoptr = o
+  extension (v: GtkListHeader_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkListItemClass_autoptr = Ptr[GtkListItemClass]
+object GtkListItemClass_autoptr: 
+  given _tag: Tag[GtkListItemClass_autoptr] = Tag.Ptr[GtkListItemClass](GtkListItemClass._tag)
+  inline def apply(inline o: Ptr[GtkListItemClass]): GtkListItemClass_autoptr = o
+  extension (v: GtkListItemClass_autoptr)
+    inline def value: Ptr[GtkListItemClass] = v
+
+opaque type GtkListItemClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkListItemClass_listautoptr: 
+  given _tag: Tag[GtkListItemClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkListItemClass_listautoptr = o
+  extension (v: GtkListItemClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkListItemClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkListItemClass_queueautoptr: 
+  given _tag: Tag[GtkListItemClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkListItemClass_queueautoptr = o
+  extension (v: GtkListItemClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkListItemClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkListItemClass_slistautoptr: 
+  given _tag: Tag[GtkListItemClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkListItemClass_slistautoptr = o
+  extension (v: GtkListItemClass_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkListItemFactory_autoptr = Ptr[GtkListItemFactory]
@@ -6274,6 +7086,34 @@ object GtkPicture_slistautoptr:
   extension (v: GtkPicture_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkPopoverMenuBar_autoptr = Ptr[GtkPopoverMenuBar]
+object GtkPopoverMenuBar_autoptr: 
+  given _tag: Tag[GtkPopoverMenuBar_autoptr] = Tag.Ptr[GtkPopoverMenuBar](GtkPopoverMenuBar._tag)
+  inline def apply(inline o: Ptr[GtkPopoverMenuBar]): GtkPopoverMenuBar_autoptr = o
+  extension (v: GtkPopoverMenuBar_autoptr)
+    inline def value: Ptr[GtkPopoverMenuBar] = v
+
+opaque type GtkPopoverMenuBar_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkPopoverMenuBar_listautoptr: 
+  given _tag: Tag[GtkPopoverMenuBar_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkPopoverMenuBar_listautoptr = o
+  extension (v: GtkPopoverMenuBar_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkPopoverMenuBar_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkPopoverMenuBar_queueautoptr: 
+  given _tag: Tag[GtkPopoverMenuBar_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkPopoverMenuBar_queueautoptr = o
+  extension (v: GtkPopoverMenuBar_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkPopoverMenuBar_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkPopoverMenuBar_slistautoptr: 
+  given _tag: Tag[GtkPopoverMenuBar_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkPopoverMenuBar_slistautoptr = o
+  extension (v: GtkPopoverMenuBar_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkPopoverMenu_autoptr = Ptr[GtkPopoverMenu]
 object GtkPopoverMenu_autoptr: 
   given _tag: Tag[GtkPopoverMenu_autoptr] = Tag.Ptr[GtkPopoverMenu](GtkPopoverMenu._tag)
@@ -6356,6 +7196,62 @@ object GtkPrintContext_slistautoptr:
   given _tag: Tag[GtkPrintContext_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkPrintContext_slistautoptr = o
   extension (v: GtkPrintContext_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkPrintDialogClass_autoptr = Ptr[GtkPrintDialogClass]
+object GtkPrintDialogClass_autoptr: 
+  given _tag: Tag[GtkPrintDialogClass_autoptr] = Tag.Ptr[GtkPrintDialogClass](GtkPrintDialogClass._tag)
+  inline def apply(inline o: Ptr[GtkPrintDialogClass]): GtkPrintDialogClass_autoptr = o
+  extension (v: GtkPrintDialogClass_autoptr)
+    inline def value: Ptr[GtkPrintDialogClass] = v
+
+opaque type GtkPrintDialogClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkPrintDialogClass_listautoptr: 
+  given _tag: Tag[GtkPrintDialogClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkPrintDialogClass_listautoptr = o
+  extension (v: GtkPrintDialogClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkPrintDialogClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkPrintDialogClass_queueautoptr: 
+  given _tag: Tag[GtkPrintDialogClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkPrintDialogClass_queueautoptr = o
+  extension (v: GtkPrintDialogClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkPrintDialogClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkPrintDialogClass_slistautoptr: 
+  given _tag: Tag[GtkPrintDialogClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkPrintDialogClass_slistautoptr = o
+  extension (v: GtkPrintDialogClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkPrintDialog_autoptr = Ptr[GtkPrintDialog]
+object GtkPrintDialog_autoptr: 
+  given _tag: Tag[GtkPrintDialog_autoptr] = Tag.Ptr[GtkPrintDialog](GtkPrintDialog._tag)
+  inline def apply(inline o: Ptr[GtkPrintDialog]): GtkPrintDialog_autoptr = o
+  extension (v: GtkPrintDialog_autoptr)
+    inline def value: Ptr[GtkPrintDialog] = v
+
+opaque type GtkPrintDialog_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkPrintDialog_listautoptr: 
+  given _tag: Tag[GtkPrintDialog_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkPrintDialog_listautoptr = o
+  extension (v: GtkPrintDialog_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkPrintDialog_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkPrintDialog_queueautoptr: 
+  given _tag: Tag[GtkPrintDialog_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkPrintDialog_queueautoptr = o
+  extension (v: GtkPrintDialog_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkPrintDialog_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkPrintDialog_slistautoptr: 
+  given _tag: Tag[GtkPrintDialog_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkPrintDialog_slistautoptr = o
+  extension (v: GtkPrintDialog_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkPrintOperationPreview_autoptr = Ptr[GtkPrintOperationPreview]
@@ -6715,6 +7611,34 @@ object GtkScale_slistautoptr:
   extension (v: GtkScale_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkScrollInfo_autoptr = Ptr[GtkScrollInfo]
+object GtkScrollInfo_autoptr: 
+  given _tag: Tag[GtkScrollInfo_autoptr] = Tag.Ptr[GtkScrollInfo](GtkScrollInfo._tag)
+  inline def apply(inline o: Ptr[GtkScrollInfo]): GtkScrollInfo_autoptr = o
+  extension (v: GtkScrollInfo_autoptr)
+    inline def value: Ptr[GtkScrollInfo] = v
+
+opaque type GtkScrollInfo_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkScrollInfo_listautoptr: 
+  given _tag: Tag[GtkScrollInfo_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkScrollInfo_listautoptr = o
+  extension (v: GtkScrollInfo_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkScrollInfo_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkScrollInfo_queueautoptr: 
+  given _tag: Tag[GtkScrollInfo_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkScrollInfo_queueautoptr = o
+  extension (v: GtkScrollInfo_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkScrollInfo_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkScrollInfo_slistautoptr: 
+  given _tag: Tag[GtkScrollInfo_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkScrollInfo_slistautoptr = o
+  extension (v: GtkScrollInfo_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkScrollable_autoptr = Ptr[GtkScrollable]
 object GtkScrollable_autoptr: 
   given _tag: Tag[GtkScrollable_autoptr] = Tag.Ptr[GtkScrollable](GtkScrollable._tag)
@@ -6853,6 +7777,34 @@ object GtkSearchEntry_slistautoptr:
   given _tag: Tag[GtkSearchEntry_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkSearchEntry_slistautoptr = o
   extension (v: GtkSearchEntry_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkSectionModel_autoptr = Ptr[GtkSectionModel]
+object GtkSectionModel_autoptr: 
+  given _tag: Tag[GtkSectionModel_autoptr] = Tag.Ptr[GtkSectionModel](GtkSectionModel._tag)
+  inline def apply(inline o: Ptr[GtkSectionModel]): GtkSectionModel_autoptr = o
+  extension (v: GtkSectionModel_autoptr)
+    inline def value: Ptr[GtkSectionModel] = v
+
+opaque type GtkSectionModel_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkSectionModel_listautoptr: 
+  given _tag: Tag[GtkSectionModel_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkSectionModel_listautoptr = o
+  extension (v: GtkSectionModel_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkSectionModel_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkSectionModel_queueautoptr: 
+  given _tag: Tag[GtkSectionModel_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkSectionModel_queueautoptr = o
+  extension (v: GtkSectionModel_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkSectionModel_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkSectionModel_slistautoptr: 
+  given _tag: Tag[GtkSectionModel_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkSectionModel_slistautoptr = o
+  extension (v: GtkSectionModel_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkSelectionFilterModelClass_autoptr = Ptr[GtkSelectionFilterModelClass]
@@ -7628,6 +8580,34 @@ object GtkSpinner_slistautoptr:
   given _tag: Tag[GtkSpinner_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
   inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkSpinner_slistautoptr = o
   extension (v: GtkSpinner_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkStackPage_autoptr = Ptr[GtkStackPage]
+object GtkStackPage_autoptr: 
+  given _tag: Tag[GtkStackPage_autoptr] = Tag.Ptr[GtkStackPage](GtkStackPage._tag)
+  inline def apply(inline o: Ptr[GtkStackPage]): GtkStackPage_autoptr = o
+  extension (v: GtkStackPage_autoptr)
+    inline def value: Ptr[GtkStackPage] = v
+
+opaque type GtkStackPage_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkStackPage_listautoptr: 
+  given _tag: Tag[GtkStackPage_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkStackPage_listautoptr = o
+  extension (v: GtkStackPage_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkStackPage_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkStackPage_queueautoptr: 
+  given _tag: Tag[GtkStackPage_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkStackPage_queueautoptr = o
+  extension (v: GtkStackPage_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkStackPage_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkStackPage_slistautoptr: 
+  given _tag: Tag[GtkStackPage_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkStackPage_slistautoptr = o
+  extension (v: GtkStackPage_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 opaque type GtkStackSidebar_autoptr = Ptr[GtkStackSidebar]
@@ -9098,6 +10078,62 @@ object GtkTreeView_slistautoptr:
   extension (v: GtkTreeView_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
+opaque type GtkUriLauncherClass_autoptr = Ptr[GtkUriLauncherClass]
+object GtkUriLauncherClass_autoptr: 
+  given _tag: Tag[GtkUriLauncherClass_autoptr] = Tag.Ptr[GtkUriLauncherClass](GtkUriLauncherClass._tag)
+  inline def apply(inline o: Ptr[GtkUriLauncherClass]): GtkUriLauncherClass_autoptr = o
+  extension (v: GtkUriLauncherClass_autoptr)
+    inline def value: Ptr[GtkUriLauncherClass] = v
+
+opaque type GtkUriLauncherClass_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkUriLauncherClass_listautoptr: 
+  given _tag: Tag[GtkUriLauncherClass_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkUriLauncherClass_listautoptr = o
+  extension (v: GtkUriLauncherClass_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkUriLauncherClass_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkUriLauncherClass_queueautoptr: 
+  given _tag: Tag[GtkUriLauncherClass_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkUriLauncherClass_queueautoptr = o
+  extension (v: GtkUriLauncherClass_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkUriLauncherClass_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkUriLauncherClass_slistautoptr: 
+  given _tag: Tag[GtkUriLauncherClass_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkUriLauncherClass_slistautoptr = o
+  extension (v: GtkUriLauncherClass_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
+opaque type GtkUriLauncher_autoptr = Ptr[GtkUriLauncher]
+object GtkUriLauncher_autoptr: 
+  given _tag: Tag[GtkUriLauncher_autoptr] = Tag.Ptr[GtkUriLauncher](GtkUriLauncher._tag)
+  inline def apply(inline o: Ptr[GtkUriLauncher]): GtkUriLauncher_autoptr = o
+  extension (v: GtkUriLauncher_autoptr)
+    inline def value: Ptr[GtkUriLauncher] = v
+
+opaque type GtkUriLauncher_listautoptr = Ptr[_root_.sn.gnome.glib.internal.GList]
+object GtkUriLauncher_listautoptr: 
+  given _tag: Tag[GtkUriLauncher_listautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GList](_root_.sn.gnome.glib.internal.GList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GList]): GtkUriLauncher_listautoptr = o
+  extension (v: GtkUriLauncher_listautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GList] = v
+
+opaque type GtkUriLauncher_queueautoptr = Ptr[_root_.sn.gnome.glib.internal.GQueue]
+object GtkUriLauncher_queueautoptr: 
+  given _tag: Tag[GtkUriLauncher_queueautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GQueue](_root_.sn.gnome.glib.internal.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GQueue]): GtkUriLauncher_queueautoptr = o
+  extension (v: GtkUriLauncher_queueautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GQueue] = v
+
+opaque type GtkUriLauncher_slistautoptr = Ptr[_root_.sn.gnome.glib.internal.GSList]
+object GtkUriLauncher_slistautoptr: 
+  given _tag: Tag[GtkUriLauncher_slistautoptr] = Tag.Ptr[_root_.sn.gnome.glib.internal.GSList](_root_.sn.gnome.glib.internal.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.sn.gnome.glib.internal.GSList]): GtkUriLauncher_slistautoptr = o
+  extension (v: GtkUriLauncher_slistautoptr)
+    inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
+
 opaque type GtkVideoClass_autoptr = Ptr[GtkVideoClass]
 object GtkVideoClass_autoptr: 
   given _tag: Tag[GtkVideoClass_autoptr] = Tag.Ptr[GtkVideoClass](GtkVideoClass._tag)
@@ -9211,7 +10247,7 @@ object GtkVolumeButton_slistautoptr:
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
 /**
- * GtkWidgetActionActivateFunc: : the widget to which the action belongs _name: the action name : parameter for activation
+ * GtkWidgetActionActivateFunc: : the widget to which the action belongs _name: the action name : (nullable): parameter for activation
 */
 opaque type GtkWidgetActionActivateFunc = CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
 object GtkWidgetActionActivateFunc: 
@@ -9480,13 +10516,6 @@ object __m128:
   inline def apply(inline o: CStruct4[Float, Float, Float, Float]): __m128 = o
   extension (v: __m128)
     inline def value: CStruct4[Float, Float, Float, Float] = v
-
-type graphene_simd4f_t = __m128
-object graphene_simd4f_t: 
-  given _tag: Tag[graphene_simd4f_t] = __m128._tag
-  inline def apply(inline o: __m128): graphene_simd4f_t = o
-  extension (v: graphene_simd4f_t)
-    inline def value: __m128 = v
 
 type va_list = unsafe.CVarArgList
 object va_list: 

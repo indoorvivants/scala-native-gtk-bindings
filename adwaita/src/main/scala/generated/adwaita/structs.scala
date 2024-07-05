@@ -6,6 +6,50 @@ import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialog = CStruct0
+object AdwAboutDialog:
+  given _tag: Tag[AdwAboutDialog] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type AdwAboutDialogClass = CStruct1[AdwDialogClass]
+object AdwAboutDialogClass:
+  given _tag: Tag[AdwAboutDialogClass] = Tag.materializeCStruct1Tag[AdwDialogClass]
+  def apply()(using Zone): Ptr[AdwAboutDialogClass] = scala.scalanative.unsafe.alloc[AdwAboutDialogClass](1)
+  def apply(parent_class : AdwDialogClass)(using Zone): Ptr[AdwAboutDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwAboutDialogClass)
+    def parent_class : AdwDialogClass = struct._1
+    def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindow = CStruct0
+object AdwAboutWindow:
+  given _tag: Tag[AdwAboutWindow] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type AdwAboutWindowClass = CStruct1[AdwWindowClass]
+object AdwAboutWindowClass:
+  given _tag: Tag[AdwAboutWindowClass] = Tag.materializeCStruct1Tag[AdwWindowClass]
+  def apply()(using Zone): Ptr[AdwAboutWindowClass] = scala.scalanative.unsafe.alloc[AdwAboutWindowClass](1)
+  def apply(parent_class : AdwWindowClass)(using Zone): Ptr[AdwAboutWindowClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwAboutWindowClass)
+    def parent_class : AdwWindowClass = struct._1
+    def parent_class_=(value: AdwWindowClass): Unit = !struct.at1 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 opaque type AdwActionRow = CStruct1[AdwPreferencesRow]
@@ -40,6 +84,42 @@ object AdwActionRowClass:
     def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at1 = value
     def activate : CFuncPtr1[Ptr[AdwActionRow], Unit] = struct._2
     def activate_=(value: CFuncPtr1[Ptr[AdwActionRow], Unit]): Unit = !struct.at2 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialog = CStruct1[AdwDialog]
+object AdwAlertDialog:
+  given _tag: Tag[AdwAlertDialog] = Tag.materializeCStruct1Tag[AdwDialog]
+  def apply()(using Zone): Ptr[AdwAlertDialog] = scala.scalanative.unsafe.alloc[AdwAlertDialog](1)
+  def apply(parent_instance : AdwDialog)(using Zone): Ptr[AdwAlertDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwAlertDialog)
+    def parent_instance : AdwDialog = struct._1
+    def parent_instance_=(value: AdwDialog): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type AdwAlertDialogClass = CStruct3[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object AdwAlertDialogClass:
+  given _tag: Tag[AdwAlertDialogClass] = Tag.materializeCStruct3Tag[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[AdwAlertDialogClass] = scala.scalanative.unsafe.alloc[AdwAlertDialogClass](1)
+  def apply(parent_class : AdwDialogClass, response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwAlertDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).response = response
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: AdwAlertDialogClass)
+    def parent_class : AdwDialogClass = struct._1
+    def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
+    def response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
 
@@ -170,6 +250,28 @@ object AdwAvatarClass:
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBanner = CStruct0
+object AdwBanner:
+  given _tag: Tag[AdwBanner] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type AdwBannerClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwBannerClass:
+  given _tag: Tag[AdwBannerClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwBannerClass] = scala.scalanative.unsafe.alloc[AdwBannerClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwBannerClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwBannerClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 opaque type AdwBin = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
@@ -198,6 +300,68 @@ object AdwBinClass:
   extension (struct: AdwBinClass)
     def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpoint = CStruct0
+object AdwBreakpoint:
+  given _tag: Tag[AdwBreakpoint] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBin = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
+object AdwBreakpointBin:
+  given _tag: Tag[AdwBreakpointBin] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidget]
+  def apply()(using Zone): Ptr[AdwBreakpointBin] = scala.scalanative.unsafe.alloc[AdwBreakpointBin](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget)(using Zone): Ptr[AdwBreakpointBin] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwBreakpointBin)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWidget): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type AdwBreakpointBinClass = CStruct2[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object AdwBreakpointBinClass:
+  given _tag: Tag[AdwBreakpointBinClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[AdwBreakpointBinClass] = scala.scalanative.unsafe.alloc[AdwBreakpointBinClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwBreakpointBinClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: AdwBreakpointBinClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._2
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object AdwBreakpointClass:
+  given _tag: Tag[AdwBreakpointClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[AdwBreakpointClass] = scala.scalanative.unsafe.alloc[AdwBreakpointClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[AdwBreakpointClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwBreakpointClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type AdwBreakpointCondition = CStruct0
+object AdwBreakpointCondition:
+  given _tag: Tag[AdwBreakpointCondition] = Tag.materializeCStruct0Tag
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -403,6 +567,77 @@ object AdwComboRowClass:
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialog = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
+object AdwDialog:
+  given _tag: Tag[AdwDialog] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidget]
+  def apply()(using Zone): Ptr[AdwDialog] = scala.scalanative.unsafe.alloc[AdwDialog](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget)(using Zone): Ptr[AdwDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwDialog)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWidget): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type AdwDialogClass = CStruct4[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwDialog], Unit], CFuncPtr1[Ptr[AdwDialog], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object AdwDialogClass:
+  given _tag: Tag[AdwDialogClass] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwDialog], Unit], CFuncPtr1[Ptr[AdwDialog], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[AdwDialogClass] = scala.scalanative.unsafe.alloc[AdwDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, close_attempt : CFuncPtr1[Ptr[AdwDialog], Unit], closed : CFuncPtr1[Ptr[AdwDialog], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).close_attempt = close_attempt
+    (!____ptr).closed = closed
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: AdwDialogClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+    def close_attempt : CFuncPtr1[Ptr[AdwDialog], Unit] = struct._2
+    def close_attempt_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at2 = value
+    def closed : CFuncPtr1[Ptr[AdwDialog], Unit] = struct._3
+    def closed_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at3 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._4
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at4 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRow = CStruct1[AdwPreferencesRow]
+object AdwEntryRow:
+  given _tag: Tag[AdwEntryRow] = Tag.materializeCStruct1Tag[AdwPreferencesRow]
+  def apply()(using Zone): Ptr[AdwEntryRow] = scala.scalanative.unsafe.alloc[AdwEntryRow](1)
+  def apply(parent_instance : AdwPreferencesRow)(using Zone): Ptr[AdwEntryRow] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwEntryRow)
+    def parent_instance : AdwPreferencesRow = struct._1
+    def parent_instance_=(value: AdwPreferencesRow): Unit = !struct.at1 = value
+
+/**
+ * AdwEntryRowClass _class: The parent class
+
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type AdwEntryRowClass = CStruct1[AdwPreferencesRowClass]
+object AdwEntryRowClass:
+  given _tag: Tag[AdwEntryRowClass] = Tag.materializeCStruct1Tag[AdwPreferencesRowClass]
+  def apply()(using Zone): Ptr[AdwEntryRowClass] = scala.scalanative.unsafe.alloc[AdwEntryRowClass](1)
+  def apply(parent_class : AdwPreferencesRowClass)(using Zone): Ptr[AdwEntryRowClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwEntryRowClass)
+    def parent_class : AdwPreferencesRowClass = struct._1
+    def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at1 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 opaque type AdwEnumListItem = CStruct0
@@ -570,6 +805,210 @@ object AdwLeafletPageClass:
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialog = CStruct1[_root_.sn.gnome.gtk.internal.GtkWindow]
+object AdwMessageDialog:
+  given _tag: Tag[AdwMessageDialog] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWindow]
+  def apply()(using Zone): Ptr[AdwMessageDialog] = scala.scalanative.unsafe.alloc[AdwMessageDialog](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWindow)(using Zone): Ptr[AdwMessageDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwMessageDialog)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWindow = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWindow): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type AdwMessageDialogClass = CStruct3[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object AdwMessageDialogClass:
+  given _tag: Tag[AdwMessageDialogClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[AdwMessageDialogClass] = scala.scalanative.unsafe.alloc[AdwMessageDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass, response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwMessageDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).response = response
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: AdwMessageDialogClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWindowClass): Unit = !struct.at1 = value
+    def response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit]): Unit = !struct.at2 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPage = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
+object AdwNavigationPage:
+  given _tag: Tag[AdwNavigationPage] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidget]
+  def apply()(using Zone): Ptr[AdwNavigationPage] = scala.scalanative.unsafe.alloc[AdwNavigationPage](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget)(using Zone): Ptr[AdwNavigationPage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwNavigationPage)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWidget): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationPageClass = CStruct6[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
+object AdwNavigationPageClass:
+  given _tag: Tag[AdwNavigationPageClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[AdwNavigationPageClass] = scala.scalanative.unsafe.alloc[AdwNavigationPageClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, showing : CFuncPtr1[Ptr[AdwNavigationPage], Unit], shown : CFuncPtr1[Ptr[AdwNavigationPage], Unit], hiding : CFuncPtr1[Ptr[AdwNavigationPage], Unit], hidden : CFuncPtr1[Ptr[AdwNavigationPage], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8])(using Zone): Ptr[AdwNavigationPageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).showing = showing
+    (!____ptr).shown = shown
+    (!____ptr).hiding = hiding
+    (!____ptr).hidden = hidden
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: AdwNavigationPageClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+    def showing : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._2
+    def showing_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at2 = value
+    def shown : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._3
+    def shown_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at3 = value
+    def hiding : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._4
+    def hiding_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at4 = value
+    def hidden : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._5
+    def hidden_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at5 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._6
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at6 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitView = CStruct0
+object AdwNavigationSplitView:
+  given _tag: Tag[AdwNavigationSplitView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type AdwNavigationSplitViewClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwNavigationSplitViewClass:
+  given _tag: Tag[AdwNavigationSplitViewClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwNavigationSplitViewClass] = scala.scalanative.unsafe.alloc[AdwNavigationSplitViewClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwNavigationSplitViewClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwNavigationSplitViewClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationView = CStruct0
+object AdwNavigationView:
+  given _tag: Tag[AdwNavigationView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type AdwNavigationViewClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwNavigationViewClass:
+  given _tag: Tag[AdwNavigationViewClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwNavigationViewClass] = scala.scalanative.unsafe.alloc[AdwNavigationViewClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwNavigationViewClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwNavigationViewClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitView = CStruct0
+object AdwOverlaySplitView:
+  given _tag: Tag[AdwOverlaySplitView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type AdwOverlaySplitViewClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwOverlaySplitViewClass:
+  given _tag: Tag[AdwOverlaySplitViewClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwOverlaySplitViewClass] = scala.scalanative.unsafe.alloc[AdwOverlaySplitViewClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwOverlaySplitViewClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwOverlaySplitViewClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRow = CStruct0
+object AdwPasswordEntryRow:
+  given _tag: Tag[AdwPasswordEntryRow] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type AdwPasswordEntryRowClass = CStruct1[AdwEntryRowClass]
+object AdwPasswordEntryRowClass:
+  given _tag: Tag[AdwPasswordEntryRowClass] = Tag.materializeCStruct1Tag[AdwEntryRowClass]
+  def apply()(using Zone): Ptr[AdwPasswordEntryRowClass] = scala.scalanative.unsafe.alloc[AdwPasswordEntryRowClass](1)
+  def apply(parent_class : AdwEntryRowClass)(using Zone): Ptr[AdwPasswordEntryRowClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwPasswordEntryRowClass)
+    def parent_class : AdwEntryRowClass = struct._1
+    def parent_class_=(value: AdwEntryRowClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialog = CStruct1[AdwDialog]
+object AdwPreferencesDialog:
+  given _tag: Tag[AdwPreferencesDialog] = Tag.materializeCStruct1Tag[AdwDialog]
+  def apply()(using Zone): Ptr[AdwPreferencesDialog] = scala.scalanative.unsafe.alloc[AdwPreferencesDialog](1)
+  def apply(parent_instance : AdwDialog)(using Zone): Ptr[AdwPreferencesDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: AdwPreferencesDialog)
+    def parent_instance : AdwDialog = struct._1
+    def parent_instance_=(value: AdwDialog): Unit = !struct.at1 = value
+
+/**
+ * AdwPreferencesDialogClass _class: The parent class
+
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type AdwPreferencesDialogClass = CStruct2[AdwDialogClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object AdwPreferencesDialogClass:
+  given _tag: Tag[AdwPreferencesDialogClass] = Tag.materializeCStruct2Tag[AdwDialogClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[AdwPreferencesDialogClass] = scala.scalanative.unsafe.alloc[AdwPreferencesDialogClass](1)
+  def apply(parent_class : AdwDialogClass, padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwPreferencesDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: AdwPreferencesDialogClass)
+    def parent_class : AdwDialogClass = struct._1
+    def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._2
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 opaque type AdwPreferencesGroup = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
@@ -708,6 +1147,42 @@ object AdwPreferencesWindowClass:
     def parent_class_=(value: AdwWindowClass): Unit = !struct.at1 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._2
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTarget = CStruct0
+object AdwPropertyAnimationTarget:
+  given _tag: Tag[AdwPropertyAnimationTarget] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type AdwPropertyAnimationTargetClass = CStruct0
+object AdwPropertyAnimationTargetClass:
+  given _tag: Tag[AdwPropertyAnimationTargetClass] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRow = CStruct0
+object AdwSpinRow:
+  given _tag: Tag[AdwSpinRow] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type AdwSpinRowClass = CStruct1[AdwActionRowClass]
+object AdwSpinRowClass:
+  given _tag: Tag[AdwSpinRowClass] = Tag.materializeCStruct1Tag[AdwActionRowClass]
+  def apply()(using Zone): Ptr[AdwSpinRowClass] = scala.scalanative.unsafe.alloc[AdwSpinRowClass](1)
+  def apply(parent_class : AdwActionRowClass)(using Zone): Ptr[AdwSpinRowClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwSpinRowClass)
+    def parent_class : AdwActionRowClass = struct._1
+    def parent_class_=(value: AdwActionRowClass): Unit = !struct.at1 = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -905,6 +1380,28 @@ object AdwSwipeableInterface:
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at7 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRow = CStruct0
+object AdwSwitchRow:
+  given _tag: Tag[AdwSwitchRow] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type AdwSwitchRowClass = CStruct1[AdwActionRowClass]
+object AdwSwitchRowClass:
+  given _tag: Tag[AdwSwitchRowClass] = Tag.materializeCStruct1Tag[AdwActionRowClass]
+  def apply()(using Zone): Ptr[AdwSwitchRowClass] = scala.scalanative.unsafe.alloc[AdwSwitchRowClass](1)
+  def apply(parent_class : AdwActionRowClass)(using Zone): Ptr[AdwSwitchRowClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwSwitchRowClass)
+    def parent_class : AdwActionRowClass = struct._1
+    def parent_class_=(value: AdwActionRowClass): Unit = !struct.at1 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 opaque type AdwTabBar = CStruct0
@@ -923,6 +1420,50 @@ object AdwTabBarClass:
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwTabBarClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButton = CStruct0
+object AdwTabButton:
+  given _tag: Tag[AdwTabButton] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type AdwTabButtonClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwTabButtonClass:
+  given _tag: Tag[AdwTabButtonClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwTabButtonClass] = scala.scalanative.unsafe.alloc[AdwTabButtonClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwTabButtonClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwTabButtonClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverview = CStruct0
+object AdwTabOverview:
+  given _tag: Tag[AdwTabOverview] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type AdwTabOverviewClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwTabOverviewClass:
+  given _tag: Tag[AdwTabOverviewClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwTabOverviewClass] = scala.scalanative.unsafe.alloc[AdwTabOverviewClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwTabOverviewClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwTabOverviewClass)
     def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
 
@@ -1029,6 +1570,28 @@ object AdwToastOverlayClass:
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarView = CStruct0
+object AdwToolbarView:
+  given _tag: Tag[AdwToolbarView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type AdwToolbarViewClass = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+object AdwToolbarViewClass:
+  given _tag: Tag[AdwToolbarViewClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass]
+  def apply()(using Zone): Ptr[AdwToolbarViewClass] = scala.scalanative.unsafe.alloc[AdwToolbarViewClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass)(using Zone): Ptr[AdwToolbarViewClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwToolbarViewClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 opaque type AdwViewStack = CStruct0
@@ -1069,6 +1632,28 @@ object AdwViewStackPageClass:
     (!____ptr).parent_class = parent_class
     ____ptr
   extension (struct: AdwViewStackPageClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPages = CStruct0
+object AdwViewStackPages:
+  given _tag: Tag[AdwViewStackPages] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type AdwViewStackPagesClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object AdwViewStackPagesClass:
+  given _tag: Tag[AdwViewStackPagesClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[AdwViewStackPagesClass] = scala.scalanative.unsafe.alloc[AdwViewStackPagesClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[AdwViewStackPagesClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: AdwViewStackPagesClass)
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
@@ -1194,6 +1779,20 @@ object AdwWindowTitleClass:
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+opaque type _AdwAboutDialog = CStruct0
+object _AdwAboutDialog:
+  given _tag: Tag[_AdwAboutDialog] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+opaque type _AdwAboutWindow = CStruct0
+object _AdwAboutWindow:
+  given _tag: Tag[_AdwAboutWindow] = Tag.materializeCStruct0Tag
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 opaque type _AdwActionRow = CStruct1[AdwPreferencesRow]
@@ -1228,6 +1827,42 @@ object _AdwActionRowClass:
     def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at1 = value
     def activate : CFuncPtr1[Ptr[AdwActionRow], Unit] = struct._2
     def activate_=(value: CFuncPtr1[Ptr[AdwActionRow], Unit]): Unit = !struct.at2 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type _AdwAlertDialog = CStruct1[AdwDialog]
+object _AdwAlertDialog:
+  given _tag: Tag[_AdwAlertDialog] = Tag.materializeCStruct1Tag[AdwDialog]
+  def apply()(using Zone): Ptr[_AdwAlertDialog] = scala.scalanative.unsafe.alloc[_AdwAlertDialog](1)
+  def apply(parent_instance : AdwDialog)(using Zone): Ptr[_AdwAlertDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwAlertDialog)
+    def parent_instance : AdwDialog = struct._1
+    def parent_instance_=(value: AdwDialog): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+opaque type _AdwAlertDialogClass = CStruct3[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object _AdwAlertDialogClass:
+  given _tag: Tag[_AdwAlertDialogClass] = Tag.materializeCStruct3Tag[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[_AdwAlertDialogClass] = scala.scalanative.unsafe.alloc[_AdwAlertDialogClass](1)
+  def apply(parent_class : AdwDialogClass, response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwAlertDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).response = response
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: _AdwAlertDialogClass)
+    def parent_class : AdwDialogClass = struct._1
+    def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
+    def response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
 
@@ -1343,6 +1978,13 @@ object _AdwAvatar:
   given _tag: Tag[_AdwAvatar] = Tag.materializeCStruct0Tag
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+opaque type _AdwBanner = CStruct0
+object _AdwBanner:
+  given _tag: Tag[_AdwBanner] = Tag.materializeCStruct0Tag
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 opaque type _AdwBin = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
@@ -1371,6 +2013,53 @@ object _AdwBinClass:
   extension (struct: _AdwBinClass)
     def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type _AdwBreakpoint = CStruct0
+object _AdwBreakpoint:
+  given _tag: Tag[_AdwBreakpoint] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type _AdwBreakpointBin = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
+object _AdwBreakpointBin:
+  given _tag: Tag[_AdwBreakpointBin] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidget]
+  def apply()(using Zone): Ptr[_AdwBreakpointBin] = scala.scalanative.unsafe.alloc[_AdwBreakpointBin](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget)(using Zone): Ptr[_AdwBreakpointBin] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwBreakpointBin)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWidget): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+opaque type _AdwBreakpointBinClass = CStruct2[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object _AdwBreakpointBinClass:
+  given _tag: Tag[_AdwBreakpointBinClass] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[_AdwBreakpointBinClass] = scala.scalanative.unsafe.alloc[_AdwBreakpointBinClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwBreakpointBinClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: _AdwBreakpointBinClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._2
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+opaque type _AdwBreakpointCondition = CStruct0
+object _AdwBreakpointCondition:
+  given _tag: Tag[_AdwBreakpointCondition] = Tag.materializeCStruct0Tag
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -1471,6 +2160,77 @@ object _AdwComboRowClass:
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type _AdwDialog = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
+object _AdwDialog:
+  given _tag: Tag[_AdwDialog] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidget]
+  def apply()(using Zone): Ptr[_AdwDialog] = scala.scalanative.unsafe.alloc[_AdwDialog](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget)(using Zone): Ptr[_AdwDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwDialog)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWidget): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+opaque type _AdwDialogClass = CStruct4[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwDialog], Unit], CFuncPtr1[Ptr[AdwDialog], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object _AdwDialogClass:
+  given _tag: Tag[_AdwDialogClass] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwDialog], Unit], CFuncPtr1[Ptr[AdwDialog], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[_AdwDialogClass] = scala.scalanative.unsafe.alloc[_AdwDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, close_attempt : CFuncPtr1[Ptr[AdwDialog], Unit], closed : CFuncPtr1[Ptr[AdwDialog], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).close_attempt = close_attempt
+    (!____ptr).closed = closed
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: _AdwDialogClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+    def close_attempt : CFuncPtr1[Ptr[AdwDialog], Unit] = struct._2
+    def close_attempt_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at2 = value
+    def closed : CFuncPtr1[Ptr[AdwDialog], Unit] = struct._3
+    def closed_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at3 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._4
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at4 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type _AdwEntryRow = CStruct1[AdwPreferencesRow]
+object _AdwEntryRow:
+  given _tag: Tag[_AdwEntryRow] = Tag.materializeCStruct1Tag[AdwPreferencesRow]
+  def apply()(using Zone): Ptr[_AdwEntryRow] = scala.scalanative.unsafe.alloc[_AdwEntryRow](1)
+  def apply(parent_instance : AdwPreferencesRow)(using Zone): Ptr[_AdwEntryRow] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwEntryRow)
+    def parent_instance : AdwPreferencesRow = struct._1
+    def parent_instance_=(value: AdwPreferencesRow): Unit = !struct.at1 = value
+
+/**
+ * AdwEntryRowClass _class: The parent class
+
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+opaque type _AdwEntryRowClass = CStruct1[AdwPreferencesRowClass]
+object _AdwEntryRowClass:
+  given _tag: Tag[_AdwEntryRowClass] = Tag.materializeCStruct1Tag[AdwPreferencesRowClass]
+  def apply()(using Zone): Ptr[_AdwEntryRowClass] = scala.scalanative.unsafe.alloc[_AdwEntryRowClass](1)
+  def apply(parent_class : AdwPreferencesRowClass)(using Zone): Ptr[_AdwEntryRowClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: _AdwEntryRowClass)
+    def parent_class : AdwPreferencesRowClass = struct._1
+    def parent_class_=(value: AdwPreferencesRowClass): Unit = !struct.at1 = value
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 opaque type _AdwEnumListItem = CStruct0
@@ -1546,6 +2306,150 @@ object _AdwLeaflet:
 opaque type _AdwLeafletPage = CStruct0
 object _AdwLeafletPage:
   given _tag: Tag[_AdwLeafletPage] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type _AdwMessageDialog = CStruct1[_root_.sn.gnome.gtk.internal.GtkWindow]
+object _AdwMessageDialog:
+  given _tag: Tag[_AdwMessageDialog] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWindow]
+  def apply()(using Zone): Ptr[_AdwMessageDialog] = scala.scalanative.unsafe.alloc[_AdwMessageDialog](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWindow)(using Zone): Ptr[_AdwMessageDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwMessageDialog)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWindow = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWindow): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+opaque type _AdwMessageDialogClass = CStruct3[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object _AdwMessageDialogClass:
+  given _tag: Tag[_AdwMessageDialogClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[_AdwMessageDialogClass] = scala.scalanative.unsafe.alloc[_AdwMessageDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass, response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwMessageDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).response = response
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: _AdwMessageDialogClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWindowClass): Unit = !struct.at1 = value
+    def response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit]): Unit = !struct.at2 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type _AdwNavigationPage = CStruct1[_root_.sn.gnome.gtk.internal.GtkWidget]
+object _AdwNavigationPage:
+  given _tag: Tag[_AdwNavigationPage] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gtk.internal.GtkWidget]
+  def apply()(using Zone): Ptr[_AdwNavigationPage] = scala.scalanative.unsafe.alloc[_AdwNavigationPage](1)
+  def apply(parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget)(using Zone): Ptr[_AdwNavigationPage] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwNavigationPage)
+    def parent_instance : _root_.sn.gnome.gtk.internal.GtkWidget = struct._1
+    def parent_instance_=(value: _root_.sn.gnome.gtk.internal.GtkWidget): Unit = !struct.at1 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type _AdwNavigationPageClass = CStruct6[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
+object _AdwNavigationPageClass:
+  given _tag: Tag[_AdwNavigationPageClass] = Tag.materializeCStruct6Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CFuncPtr1[Ptr[AdwNavigationPage], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]]
+  def apply()(using Zone): Ptr[_AdwNavigationPageClass] = scala.scalanative.unsafe.alloc[_AdwNavigationPageClass](1)
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, showing : CFuncPtr1[Ptr[AdwNavigationPage], Unit], shown : CFuncPtr1[Ptr[AdwNavigationPage], Unit], hiding : CFuncPtr1[Ptr[AdwNavigationPage], Unit], hidden : CFuncPtr1[Ptr[AdwNavigationPage], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8])(using Zone): Ptr[_AdwNavigationPageClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).showing = showing
+    (!____ptr).shown = shown
+    (!____ptr).hiding = hiding
+    (!____ptr).hidden = hidden
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: _AdwNavigationPageClass)
+    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
+    def showing : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._2
+    def showing_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at2 = value
+    def shown : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._3
+    def shown_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at3 = value
+    def hiding : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._4
+    def hiding_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at4 = value
+    def hidden : CFuncPtr1[Ptr[AdwNavigationPage], Unit] = struct._5
+    def hidden_=(value: CFuncPtr1[Ptr[AdwNavigationPage], Unit]): Unit = !struct.at5 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._6
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at6 = value
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+opaque type _AdwNavigationSplitView = CStruct0
+object _AdwNavigationSplitView:
+  given _tag: Tag[_AdwNavigationSplitView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+opaque type _AdwNavigationView = CStruct0
+object _AdwNavigationView:
+  given _tag: Tag[_AdwNavigationView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+opaque type _AdwOverlaySplitView = CStruct0
+object _AdwOverlaySplitView:
+  given _tag: Tag[_AdwOverlaySplitView] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+opaque type _AdwPasswordEntryRow = CStruct0
+object _AdwPasswordEntryRow:
+  given _tag: Tag[_AdwPasswordEntryRow] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type _AdwPreferencesDialog = CStruct1[AdwDialog]
+object _AdwPreferencesDialog:
+  given _tag: Tag[_AdwPreferencesDialog] = Tag.materializeCStruct1Tag[AdwDialog]
+  def apply()(using Zone): Ptr[_AdwPreferencesDialog] = scala.scalanative.unsafe.alloc[_AdwPreferencesDialog](1)
+  def apply(parent_instance : AdwDialog)(using Zone): Ptr[_AdwPreferencesDialog] = 
+    val ____ptr = apply()
+    (!____ptr).parent_instance = parent_instance
+    ____ptr
+  extension (struct: _AdwPreferencesDialog)
+    def parent_instance : AdwDialog = struct._1
+    def parent_instance_=(value: AdwDialog): Unit = !struct.at1 = value
+
+/**
+ * AdwPreferencesDialogClass _class: The parent class
+
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+opaque type _AdwPreferencesDialogClass = CStruct2[AdwDialogClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+object _AdwPreferencesDialogClass:
+  given _tag: Tag[_AdwPreferencesDialogClass] = Tag.materializeCStruct2Tag[AdwDialogClass, CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  def apply()(using Zone): Ptr[_AdwPreferencesDialogClass] = scala.scalanative.unsafe.alloc[_AdwPreferencesDialogClass](1)
+  def apply(parent_class : AdwDialogClass, padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwPreferencesDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    (!____ptr).padding = padding
+    ____ptr
+  extension (struct: _AdwPreferencesDialogClass)
+    def parent_class : AdwDialogClass = struct._1
+    def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
+    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._2
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -1688,6 +2592,27 @@ object _AdwPreferencesWindowClass:
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at2 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type _AdwPropertyAnimationTarget = CStruct0
+object _AdwPropertyAnimationTarget:
+  given _tag: Tag[_AdwPropertyAnimationTarget] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+opaque type _AdwPropertyAnimationTargetClass = CStruct0
+object _AdwPropertyAnimationTargetClass:
+  given _tag: Tag[_AdwPropertyAnimationTargetClass] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+opaque type _AdwSpinRow = CStruct0
+object _AdwSpinRow:
+  given _tag: Tag[_AdwSpinRow] = Tag.materializeCStruct0Tag
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
 opaque type _AdwSplitButton = CStruct0
@@ -1793,11 +2718,32 @@ object _AdwSwipeableInterface:
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at7 = value
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+opaque type _AdwSwitchRow = CStruct0
+object _AdwSwitchRow:
+  given _tag: Tag[_AdwSwitchRow] = Tag.materializeCStruct0Tag
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 opaque type _AdwTabBar = CStruct0
 object _AdwTabBar:
   given _tag: Tag[_AdwTabBar] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+opaque type _AdwTabButton = CStruct0
+object _AdwTabButton:
+  given _tag: Tag[_AdwTabButton] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+opaque type _AdwTabOverview = CStruct0
+object _AdwTabOverview:
+  given _tag: Tag[_AdwTabOverview] = Tag.materializeCStruct0Tag
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -1842,6 +2788,13 @@ object _AdwToastOverlay:
   given _tag: Tag[_AdwToastOverlay] = Tag.materializeCStruct0Tag
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+opaque type _AdwToolbarView = CStruct0
+object _AdwToolbarView:
+  given _tag: Tag[_AdwToolbarView] = Tag.materializeCStruct0Tag
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 opaque type _AdwViewStack = CStruct0
@@ -1854,6 +2807,13 @@ object _AdwViewStack:
 opaque type _AdwViewStackPage = CStruct0
 object _AdwViewStackPage:
   given _tag: Tag[_AdwViewStackPage] = Tag.materializeCStruct0Tag
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+opaque type _AdwViewStackPages = CStruct0
+object _AdwViewStackPages:
+  given _tag: Tag[_AdwViewStackPages] = Tag.materializeCStruct0Tag
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h

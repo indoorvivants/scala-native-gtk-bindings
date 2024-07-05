@@ -107,7 +107,7 @@ object GdkTexture:
   given _tag: Tag[GdkTexture] = Tag.materializeCStruct0Tag
 
 /**
- * GdkTimeCoord: : The timestamp for this event : Flags indicating what axes are present : (array fixed-size=12): axis values
+ * GdkTimeCoord: : The timestamp for this event : Flags indicating what axes are present, see [flags.AxisFlags] : (array fixed-size=12): axis values, indexed by [enum.AxisUse]
 */
 opaque type GdkTimeCoord = CStruct3[_root_.sn.gnome.glib.internal.guint32, GdkAxisFlags, CArray[Double, Nat.Digit2[Nat._1, Nat._2]]]
 object GdkTimeCoord:
@@ -149,6 +149,10 @@ opaque type GskGLShader = CStruct0
 object GskGLShader:
   given _tag: Tag[GskGLShader] = Tag.materializeCStruct0Tag
 
+opaque type GskPath = CStruct0
+object GskPath:
+  given _tag: Tag[GskPath] = Tag.materializeCStruct0Tag
+
 opaque type GskRenderNode = CStruct0
 object GskRenderNode:
   given _tag: Tag[GskRenderNode] = Tag.materializeCStruct0Tag
@@ -157,20 +161,20 @@ opaque type GskRenderer = CStruct0
 object GskRenderer:
   given _tag: Tag[GskRenderer] = Tag.materializeCStruct0Tag
 
-opaque type GskRoundedRect = CStruct2[graphene_rect_t, CArray[graphene_size_t, Nat._4]]
+opaque type GskRoundedRect = CStruct2[_root_.sn.gnome.graphene.internal.graphene_rect_t, CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4]]
 object GskRoundedRect:
-  given _tag: Tag[GskRoundedRect] = Tag.materializeCStruct2Tag[graphene_rect_t, CArray[graphene_size_t, Nat._4]]
+  given _tag: Tag[GskRoundedRect] = Tag.materializeCStruct2Tag[_root_.sn.gnome.graphene.internal.graphene_rect_t, CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4]]
   def apply()(using Zone): Ptr[GskRoundedRect] = scala.scalanative.unsafe.alloc[GskRoundedRect](1)
-  def apply(bounds : graphene_rect_t, corner : CArray[graphene_size_t, Nat._4])(using Zone): Ptr[GskRoundedRect] = 
+  def apply(bounds : _root_.sn.gnome.graphene.internal.graphene_rect_t, corner : CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4])(using Zone): Ptr[GskRoundedRect] = 
     val ____ptr = apply()
     (!____ptr).bounds = bounds
     (!____ptr).corner = corner
     ____ptr
   extension (struct: GskRoundedRect)
-    def bounds : graphene_rect_t = struct._1
-    def bounds_=(value: graphene_rect_t): Unit = !struct.at1 = value
-    def corner : CArray[graphene_size_t, Nat._4] = struct._2
-    def corner_=(value: CArray[graphene_size_t, Nat._4]): Unit = !struct.at2 = value
+    def bounds : _root_.sn.gnome.graphene.internal.graphene_rect_t = struct._1
+    def bounds_=(value: _root_.sn.gnome.graphene.internal.graphene_rect_t): Unit = !struct.at1 = value
+    def corner : CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4] = struct._2
+    def corner_=(value: CArray[_root_.sn.gnome.graphene.internal.graphene_size_t, Nat._4]): Unit = !struct.at2 = value
 
 /**
  * GskShadow: : the color of the shadow : the horizontal offset of the shadow : the vertical offset of the shadow : the radius of the shadow
@@ -196,6 +200,10 @@ object GskShadow:
     def radius : Float = struct._4
     def radius_=(value: Float): Unit = !struct.at4 = value
 
+opaque type GskStroke = CStruct0
+object GskStroke:
+  given _tag: Tag[GskStroke] = Tag.materializeCStruct0Tag
+
 opaque type GskTransform = CStruct0
 object GskTransform:
   given _tag: Tag[GskTransform] = Tag.materializeCStruct0Tag
@@ -216,9 +224,116 @@ opaque type GtkAccessible = CStruct0
 object GtkAccessible:
   given _tag: Tag[GtkAccessible] = Tag.materializeCStruct0Tag
 
-opaque type GtkAccessibleInterface = CStruct0
+/**
+ * GtkAccessibleInterface: _at_context: retrieve the platform-specific accessibility context for the accessible implementation _platform_state: retrieve the accessible state
+*/
+opaque type GtkAccessibleInterface = CStruct7[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]], CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]
 object GtkAccessibleInterface:
-  given _tag: Tag[GtkAccessibleInterface] = Tag.materializeCStruct0Tag
+  given _tag: Tag[GtkAccessibleInterface] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]], CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]
+  def apply()(using Zone): Ptr[GtkAccessibleInterface] = scala.scalanative.unsafe.alloc[GtkAccessibleInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_at_context : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]], get_platform_state : CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean], get_accessible_parent : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], get_first_accessible_child : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], get_next_accessible_sibling : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], get_bounds : CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[GtkAccessibleInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).get_at_context = get_at_context
+    (!____ptr).get_platform_state = get_platform_state
+    (!____ptr).get_accessible_parent = get_accessible_parent
+    (!____ptr).get_first_accessible_child = get_first_accessible_child
+    (!____ptr).get_next_accessible_sibling = get_next_accessible_sibling
+    (!____ptr).get_bounds = get_bounds
+    ____ptr
+  extension (struct: GtkAccessibleInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def get_at_context : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]] = struct._2
+    def get_at_context_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]]): Unit = !struct.at2 = value
+    def get_platform_state : CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean] = struct._3
+    def get_platform_state_=(value: CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at3 = value
+    def get_accessible_parent : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]] = struct._4
+    def get_accessible_parent_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]]): Unit = !struct.at4 = value
+    def get_first_accessible_child : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]] = struct._5
+    def get_first_accessible_child_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]]): Unit = !struct.at5 = value
+    def get_next_accessible_sibling : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]] = struct._6
+    def get_next_accessible_sibling_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]]): Unit = !struct.at6 = value
+    def get_bounds : CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = struct._7
+    def get_bounds_=(value: CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at7 = value
+
+opaque type GtkAccessibleList = CStruct0
+object GtkAccessibleList:
+  given _tag: Tag[GtkAccessibleList] = Tag.materializeCStruct0Tag
+
+opaque type GtkAccessibleRange = CStruct0
+object GtkAccessibleRange:
+  given _tag: Tag[GtkAccessibleRange] = Tag.materializeCStruct0Tag
+
+opaque type GtkAccessibleRangeInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean]]
+object GtkAccessibleRangeInterface:
+  given _tag: Tag[GtkAccessibleRangeInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean]]
+  def apply()(using Zone): Ptr[GtkAccessibleRangeInterface] = scala.scalanative.unsafe.alloc[GtkAccessibleRangeInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, set_current_value : CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[GtkAccessibleRangeInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).set_current_value = set_current_value
+    ____ptr
+  extension (struct: GtkAccessibleRangeInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def set_current_value : CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean] = struct._2
+    def set_current_value_=(value: CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
+
+opaque type GtkAccessibleText = CStruct0
+object GtkAccessibleText:
+  given _tag: Tag[GtkAccessibleText] = Tag.materializeCStruct0Tag
+
+/**
+ * GtkAccessibleTextInterface:
+*/
+opaque type GtkAccessibleTextInterface = CStruct7[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit]]
+object GtkAccessibleTextInterface:
+  given _tag: Tag[GtkAccessibleTextInterface] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit]]
+  def apply()(using Zone): Ptr[GtkAccessibleTextInterface] = scala.scalanative.unsafe.alloc[GtkAccessibleTextInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_contents : CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]], get_contents_at : CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]], get_caret_position : CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt], get_selection : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean], get_attributes : CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean], get_default_attributes : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit])(using Zone): Ptr[GtkAccessibleTextInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).get_contents = get_contents
+    (!____ptr).get_contents_at = get_contents_at
+    (!____ptr).get_caret_position = get_caret_position
+    (!____ptr).get_selection = get_selection
+    (!____ptr).get_attributes = get_attributes
+    (!____ptr).get_default_attributes = get_default_attributes
+    ____ptr
+  extension (struct: GtkAccessibleTextInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def get_contents : CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]] = struct._2
+    def get_contents_=(value: CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]]): Unit = !struct.at2 = value
+    def get_contents_at : CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]] = struct._3
+    def get_contents_at_=(value: CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]]): Unit = !struct.at3 = value
+    def get_caret_position : CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt] = struct._4
+    def get_caret_position_=(value: CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt]): Unit = !struct.at4 = value
+    def get_selection : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean] = struct._5
+    def get_selection_=(value: CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
+    def get_attributes : CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean] = struct._6
+    def get_attributes_=(value: CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at6 = value
+    def get_default_attributes : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit] = struct._7
+    def get_default_attributes_=(value: CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit]): Unit = !struct.at7 = value
+
+/**
+ * GtkAccessibleTextRange: : the start of the range, in characters : the length of the range, in characters
+*/
+opaque type GtkAccessibleTextRange = CStruct2[_root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize]
+object GtkAccessibleTextRange:
+  given _tag: Tag[GtkAccessibleTextRange] = Tag.materializeCStruct2Tag[_root_.sn.gnome.glib.internal.gsize, _root_.sn.gnome.glib.internal.gsize]
+  def apply()(using Zone): Ptr[GtkAccessibleTextRange] = scala.scalanative.unsafe.alloc[GtkAccessibleTextRange](1)
+  def apply(start : _root_.sn.gnome.glib.internal.gsize, length : _root_.sn.gnome.glib.internal.gsize)(using Zone): Ptr[GtkAccessibleTextRange] = 
+    val ____ptr = apply()
+    (!____ptr).start = start
+    (!____ptr).length = length
+    ____ptr
+  extension (struct: GtkAccessibleTextRange)
+    def start : _root_.sn.gnome.glib.internal.gsize = struct._1
+    def start_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at1 = value
+    def length : _root_.sn.gnome.glib.internal.gsize = struct._2
+    def length_=(value: _root_.sn.gnome.glib.internal.gsize): Unit = !struct.at2 = value
 
 opaque type GtkActionBar = CStruct0
 object GtkActionBar:
@@ -301,6 +416,22 @@ object GtkAdjustmentClass:
     def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._7
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
+
+opaque type GtkAlertDialog = CStruct0
+object GtkAlertDialog:
+  given _tag: Tag[GtkAlertDialog] = Tag.materializeCStruct0Tag
+
+opaque type GtkAlertDialogClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkAlertDialogClass:
+  given _tag: Tag[GtkAlertDialogClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkAlertDialogClass] = scala.scalanative.unsafe.alloc[GtkAlertDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkAlertDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkAlertDialogClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
 opaque type GtkAlternativeTrigger = CStruct0
 object GtkAlternativeTrigger:
@@ -671,7 +802,7 @@ object GtkBuilderScope:
   given _tag: Tag[GtkBuilderScope] = Tag.materializeCStruct0Tag
 
 /**
- * GtkBuilderScopeInterface: _type_from_name: Try to lookup a `GType` via the its name. See gtk_builder_get_type_from_name() for more details. The C implementation will use g_type_from_name() and if that fails try to guess the correct function name for registering the type and then use dlsym() to load it. The default implementation just tries g_type_from_name() and otherwise fails. _type_from_function: Try to lookup a `GType` via the given function name, specified explicitly in a GtkBuilder file, like via the "type-func" attribute in the "<object>" tag. This function is very rarely used. The C implementation will use dlsym() and call the resulting function as a `GTypeFunc`. The default implementation will fail and just return %G_TYPE_INVALID. _closure: Create a closure with the given arguments. See gtk_builder_create_closure() for more details on those. The C implementation will try to use dlsym() to locate the function name and then g_cclosure_new() to create a closure for the symbol. The default implementation just fails and returns %NULL.
+ * GtkBuilderScopeInterface: _type_from_name: Try to lookup a `GType` via the its name. See gtk_builder_get_type_from_name() for more details. The C implementation will use g_type_from_name() and if that fails try to guess the correct function name for registering the type and then use dlsym() to load it. The default implementation just tries g_type_from_name() and otherwise fails. _type_from_function: Try to lookup a `GType` via the given function name, specified explicitly in a GtkBuilder file, like via the "type-func" attribute in the `<object>` tag. This function is very rarely used. The C implementation will use dlsym() and call the resulting function as a `GTypeFunc`. The default implementation will fail and just return %G_TYPE_INVALID. _closure: Create a closure with the given arguments. See gtk_builder_create_closure() for more details on those. The C implementation will try to use dlsym() to locate the function name and then g_cclosure_new() to create a closure for the symbol. The default implementation just fails and returns %NULL.
 */
 opaque type GtkBuilderScopeInterface = CStruct4[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr3[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, _root_.sn.gnome.gobject.internal.GType], CFuncPtr3[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, _root_.sn.gnome.gobject.internal.GType], CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
 object GtkBuilderScopeInterface:
@@ -1201,9 +1332,49 @@ opaque type GtkColorChooserWidget = CStruct0
 object GtkColorChooserWidget:
   given _tag: Tag[GtkColorChooserWidget] = Tag.materializeCStruct0Tag
 
+opaque type GtkColorDialog = CStruct0
+object GtkColorDialog:
+  given _tag: Tag[GtkColorDialog] = Tag.materializeCStruct0Tag
+
+opaque type GtkColorDialogButton = CStruct0
+object GtkColorDialogButton:
+  given _tag: Tag[GtkColorDialogButton] = Tag.materializeCStruct0Tag
+
+opaque type GtkColorDialogButtonClass = CStruct1[GtkWidgetClass]
+object GtkColorDialogButtonClass:
+  given _tag: Tag[GtkColorDialogButtonClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
+  def apply()(using Zone): Ptr[GtkColorDialogButtonClass] = scala.scalanative.unsafe.alloc[GtkColorDialogButtonClass](1)
+  def apply(parent_class : GtkWidgetClass)(using Zone): Ptr[GtkColorDialogButtonClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkColorDialogButtonClass)
+    def parent_class : GtkWidgetClass = struct._1
+    def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
+
+opaque type GtkColorDialogClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkColorDialogClass:
+  given _tag: Tag[GtkColorDialogClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkColorDialogClass] = scala.scalanative.unsafe.alloc[GtkColorDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkColorDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkColorDialogClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+
 opaque type GtkColumnView = CStruct0
 object GtkColumnView:
   given _tag: Tag[GtkColumnView] = Tag.materializeCStruct0Tag
+
+opaque type GtkColumnViewCell = CStruct0
+object GtkColumnViewCell:
+  given _tag: Tag[GtkColumnViewCell] = Tag.materializeCStruct0Tag
+
+opaque type GtkColumnViewCellClass = CStruct0
+object GtkColumnViewCellClass:
+  given _tag: Tag[GtkColumnViewCellClass] = Tag.materializeCStruct0Tag
 
 opaque type GtkColumnViewClass = CStruct0
 object GtkColumnViewClass:
@@ -1216,6 +1387,30 @@ object GtkColumnViewColumn:
 opaque type GtkColumnViewColumnClass = CStruct0
 object GtkColumnViewColumnClass:
   given _tag: Tag[GtkColumnViewColumnClass] = Tag.materializeCStruct0Tag
+
+opaque type GtkColumnViewRow = CStruct0
+object GtkColumnViewRow:
+  given _tag: Tag[GtkColumnViewRow] = Tag.materializeCStruct0Tag
+
+opaque type GtkColumnViewRowClass = CStruct0
+object GtkColumnViewRowClass:
+  given _tag: Tag[GtkColumnViewRowClass] = Tag.materializeCStruct0Tag
+
+opaque type GtkColumnViewSorter = CStruct0
+object GtkColumnViewSorter:
+  given _tag: Tag[GtkColumnViewSorter] = Tag.materializeCStruct0Tag
+
+opaque type GtkColumnViewSorterClass = CStruct1[GtkSorterClass]
+object GtkColumnViewSorterClass:
+  given _tag: Tag[GtkColumnViewSorterClass] = Tag.materializeCStruct1Tag[GtkSorterClass]
+  def apply()(using Zone): Ptr[GtkColumnViewSorterClass] = scala.scalanative.unsafe.alloc[GtkColumnViewSorterClass](1)
+  def apply(parent_class : GtkSorterClass)(using Zone): Ptr[GtkColumnViewSorterClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkColumnViewSorterClass)
+    def parent_class : GtkSorterClass = struct._1
+    def parent_class_=(value: GtkSorterClass): Unit = !struct.at1 = value
 
 opaque type GtkComboBox = CStruct1[GtkWidget]
 object GtkComboBox:
@@ -1848,9 +2043,41 @@ opaque type GtkFileChooserWidget = CStruct0
 object GtkFileChooserWidget:
   given _tag: Tag[GtkFileChooserWidget] = Tag.materializeCStruct0Tag
 
+opaque type GtkFileDialog = CStruct0
+object GtkFileDialog:
+  given _tag: Tag[GtkFileDialog] = Tag.materializeCStruct0Tag
+
+opaque type GtkFileDialogClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkFileDialogClass:
+  given _tag: Tag[GtkFileDialogClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkFileDialogClass] = scala.scalanative.unsafe.alloc[GtkFileDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkFileDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkFileDialogClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+
 opaque type GtkFileFilter = CStruct0
 object GtkFileFilter:
   given _tag: Tag[GtkFileFilter] = Tag.materializeCStruct0Tag
+
+opaque type GtkFileLauncher = CStruct0
+object GtkFileLauncher:
+  given _tag: Tag[GtkFileLauncher] = Tag.materializeCStruct0Tag
+
+opaque type GtkFileLauncherClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkFileLauncherClass:
+  given _tag: Tag[GtkFileLauncherClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkFileLauncherClass] = scala.scalanative.unsafe.alloc[GtkFileLauncherClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkFileLauncherClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkFileLauncherClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
 opaque type GtkFilter = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object GtkFilter:
@@ -2043,11 +2270,11 @@ opaque type GtkFontChooserDialog = CStruct0
 object GtkFontChooserDialog:
   given _tag: Tag[GtkFontChooserDialog] = Tag.materializeCStruct0Tag
 
-opaque type GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+opaque type GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object GtkFontChooserIface:
-  given _tag: Tag[GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+  given _tag: Tag[GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
   def apply()(using Zone): Ptr[GtkFontChooserIface] = scala.scalanative.unsafe.alloc[GtkFontChooserIface](1)
-  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[GtkFontChooserIface] = 
+  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[GtkFontChooserIface] = 
     val ____ptr = apply()
     (!____ptr).base_iface = base_iface
     (!____ptr).get_font_family = get_font_family
@@ -2062,26 +2289,58 @@ object GtkFontChooserIface:
   extension (struct: GtkFontChooserIface)
     def base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def base_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
-    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]] = struct._2
-    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]]): Unit = !struct.at2 = value
-    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]] = struct._3
-    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]]): Unit = !struct.at3 = value
+    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]] = struct._2
+    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]]): Unit = !struct.at2 = value
+    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]] = struct._3
+    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]]): Unit = !struct.at3 = value
     def get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt] = struct._4
     def get_font_size_=(value: CFuncPtr1[Ptr[GtkFontChooser], CInt]): Unit = !struct.at4 = value
     def set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit] = struct._5
     def set_filter_func_=(value: CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit]): Unit = !struct.at5 = value
     def font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit] = struct._6
     def font_activated_=(value: CFuncPtr2[Ptr[GtkFontChooser], CString, Unit]): Unit = !struct.at6 = value
-    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit] = struct._7
-    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit]): Unit = !struct.at7 = value
-    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]] = struct._8
-    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]]): Unit = !struct.at8 = value
+    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit] = struct._7
+    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit]): Unit = !struct.at7 = value
+    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]] = struct._8
+    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]]): Unit = !struct.at8 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._9
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at9 = value
 
 opaque type GtkFontChooserWidget = CStruct0
 object GtkFontChooserWidget:
   given _tag: Tag[GtkFontChooserWidget] = Tag.materializeCStruct0Tag
+
+opaque type GtkFontDialog = CStruct0
+object GtkFontDialog:
+  given _tag: Tag[GtkFontDialog] = Tag.materializeCStruct0Tag
+
+opaque type GtkFontDialogButton = CStruct0
+object GtkFontDialogButton:
+  given _tag: Tag[GtkFontDialogButton] = Tag.materializeCStruct0Tag
+
+opaque type GtkFontDialogButtonClass = CStruct1[GtkWidgetClass]
+object GtkFontDialogButtonClass:
+  given _tag: Tag[GtkFontDialogButtonClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
+  def apply()(using Zone): Ptr[GtkFontDialogButtonClass] = scala.scalanative.unsafe.alloc[GtkFontDialogButtonClass](1)
+  def apply(parent_class : GtkWidgetClass)(using Zone): Ptr[GtkFontDialogButtonClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkFontDialogButtonClass)
+    def parent_class : GtkWidgetClass = struct._1
+    def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
+
+opaque type GtkFontDialogClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkFontDialogClass:
+  given _tag: Tag[GtkFontDialogClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkFontDialogClass] = scala.scalanative.unsafe.alloc[GtkFontDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkFontDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkFontDialogClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
 
 opaque type GtkFrame = CStruct1[GtkWidget]
 object GtkFrame:
@@ -2235,6 +2494,22 @@ opaque type GtkGestureZoomClass = CStruct0
 object GtkGestureZoomClass:
   given _tag: Tag[GtkGestureZoomClass] = Tag.materializeCStruct0Tag
 
+opaque type GtkGraphicsOffload = CStruct0
+object GtkGraphicsOffload:
+  given _tag: Tag[GtkGraphicsOffload] = Tag.materializeCStruct0Tag
+
+opaque type GtkGraphicsOffloadClass = CStruct1[GtkWidgetClass]
+object GtkGraphicsOffloadClass:
+  given _tag: Tag[GtkGraphicsOffloadClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
+  def apply()(using Zone): Ptr[GtkGraphicsOffloadClass] = scala.scalanative.unsafe.alloc[GtkGraphicsOffloadClass](1)
+  def apply(parent_class : GtkWidgetClass)(using Zone): Ptr[GtkGraphicsOffloadClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkGraphicsOffloadClass)
+    def parent_class : GtkWidgetClass = struct._1
+    def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
+
 opaque type GtkGrid = CStruct1[GtkWidget]
 object GtkGrid:
   given _tag: Tag[GtkGrid] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -2325,7 +2600,7 @@ opaque type GtkIMContextClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]
 object GtkIMContextClass:
   given _tag: Tag[GtkIMContextClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._0](Tag.Nat3, Tag.Nat2, Tag.Nat0))
   def apply()(using Zone): Ptr[GtkIMContextClass] = scala.scalanative.unsafe.alloc[GtkIMContextClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved1 : CFuncPtr0[Unit], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit], _gtk_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[GtkIMContextClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], activate_osk : CFuncPtr1[Ptr[GtkIMContext], Unit], activate_osk_with_event : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[GtkIMContextClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).preedit_start = preedit_start
@@ -2346,11 +2621,11 @@ object GtkIMContextClass:
     (!____ptr).get_surrounding = get_surrounding
     (!____ptr).set_surrounding_with_selection = set_surrounding_with_selection
     (!____ptr).get_surrounding_with_selection = get_surrounding_with_selection
-    (!____ptr)._gtk_reserved1 = _gtk_reserved1
+    (!____ptr).activate_osk = activate_osk
+    (!____ptr).activate_osk_with_event = activate_osk_with_event
     (!____ptr)._gtk_reserved2 = _gtk_reserved2
     (!____ptr)._gtk_reserved3 = _gtk_reserved3
     (!____ptr)._gtk_reserved4 = _gtk_reserved4
-    (!____ptr)._gtk_reserved5 = _gtk_reserved5
     ____ptr
   extension (struct: GtkIMContextClass)
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
@@ -2369,8 +2644,8 @@ object GtkIMContextClass:
     def delete_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]] = value
     def set_client_widget: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit] = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]]
     def set_client_widget_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]] = value
-    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]]
-    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]] = value
+    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]]
+    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]] = value
     def filter_keypress: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
     def filter_keypress_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def focus_in: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
@@ -2391,16 +2666,16 @@ object GtkIMContextClass:
     def set_surrounding_with_selection_=(value: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]] = value
     def get_surrounding_with_selection: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
     def get_surrounding_with_selection_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _gtk_reserved1: CFuncPtr0[Unit] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved5: CFuncPtr0[Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def activate_osk: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def activate_osk_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def activate_osk_with_event: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
+    def activate_osk_with_event_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
   val offsets: Array[Int] = 
     val res = Array.ofDim[Int](24)
     def align(offset: Int, alignment: Int) = {
@@ -2419,8 +2694,8 @@ object GtkIMContextClass:
     res(5) = align(res(4) + sizeof[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(6) = align(res(5) + sizeof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(7) = align(res(6) + sizeof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt)
-    res(8) = align(res(7) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt)
-    res(9) = align(res(8) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(8) = align(res(7) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]].toInt)
+    res(9) = align(res(8) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(10) = align(res(9) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
     res(11) = align(res(10) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
     res(12) = align(res(11) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
@@ -2430,9 +2705,9 @@ object GtkIMContextClass:
     res(16) = align(res(15) + sizeof[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(17) = align(res(16) + sizeof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt)
     res(18) = align(res(17) + sizeof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
-    res(19) = align(res(18) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(20) = align(res(19) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(21) = align(res(20) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(19) = align(res(18) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(20) = align(res(19) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(21) = align(res(20) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
     res(22) = align(res(21) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
     res(23) = align(res(22) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
     res
@@ -2531,6 +2806,22 @@ object GtkImage:
 opaque type GtkInfoBar = CStruct0
 object GtkInfoBar:
   given _tag: Tag[GtkInfoBar] = Tag.materializeCStruct0Tag
+
+opaque type GtkInscription = CStruct0
+object GtkInscription:
+  given _tag: Tag[GtkInscription] = Tag.materializeCStruct0Tag
+
+opaque type GtkInscriptionClass = CStruct1[GtkWidgetClass]
+object GtkInscriptionClass:
+  given _tag: Tag[GtkInscriptionClass] = Tag.materializeCStruct1Tag[GtkWidgetClass]
+  def apply()(using Zone): Ptr[GtkInscriptionClass] = scala.scalanative.unsafe.alloc[GtkInscriptionClass](1)
+  def apply(parent_class : GtkWidgetClass)(using Zone): Ptr[GtkInscriptionClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkInscriptionClass)
+    def parent_class : GtkWidgetClass = struct._1
+    def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
 opaque type GtkKeyvalTrigger = CStruct0
 object GtkKeyvalTrigger:
@@ -2671,6 +2962,14 @@ object GtkListBoxRowClass:
     def activate_=(value: CFuncPtr1[Ptr[GtkListBoxRow], Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
+
+opaque type GtkListHeader = CStruct0
+object GtkListHeader:
+  given _tag: Tag[GtkListHeader] = Tag.materializeCStruct0Tag
+
+opaque type GtkListHeaderClass = CStruct0
+object GtkListHeaderClass:
+  given _tag: Tag[GtkListHeaderClass] = Tag.materializeCStruct0Tag
 
 opaque type GtkListItem = CStruct0
 object GtkListItem:
@@ -3337,6 +3636,22 @@ opaque type GtkPrintContext = CStruct0
 object GtkPrintContext:
   given _tag: Tag[GtkPrintContext] = Tag.materializeCStruct0Tag
 
+opaque type GtkPrintDialog = CStruct0
+object GtkPrintDialog:
+  given _tag: Tag[GtkPrintDialog] = Tag.materializeCStruct0Tag
+
+opaque type GtkPrintDialogClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkPrintDialogClass:
+  given _tag: Tag[GtkPrintDialogClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkPrintDialogClass] = scala.scalanative.unsafe.alloc[GtkPrintDialogClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkPrintDialogClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkPrintDialogClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+
 opaque type GtkPrintOperation = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
 object GtkPrintOperation:
   given _tag: Tag[GtkPrintOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
@@ -3465,6 +3780,10 @@ object GtkPrintOperationPrivate:
 opaque type GtkPrintSettings = CStruct0
 object GtkPrintSettings:
   given _tag: Tag[GtkPrintSettings] = Tag.materializeCStruct0Tag
+
+opaque type GtkPrintSetup = CStruct0
+object GtkPrintSetup:
+  given _tag: Tag[GtkPrintSetup] = Tag.materializeCStruct0Tag
 
 opaque type GtkProgressBar = CStruct0
 object GtkProgressBar:
@@ -3713,6 +4032,10 @@ object GtkScaleClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
+opaque type GtkScrollInfo = CStruct0
+object GtkScrollInfo:
+  given _tag: Tag[GtkScrollInfo] = Tag.materializeCStruct0Tag
+
 opaque type GtkScrollable = CStruct0
 object GtkScrollable:
   given _tag: Tag[GtkScrollable] = Tag.materializeCStruct0Tag
@@ -3747,6 +4070,28 @@ object GtkSearchBar:
 opaque type GtkSearchEntry = CStruct0
 object GtkSearchEntry:
   given _tag: Tag[GtkSearchEntry] = Tag.materializeCStruct0Tag
+
+opaque type GtkSectionModel = CStruct0
+object GtkSectionModel:
+  given _tag: Tag[GtkSectionModel] = Tag.materializeCStruct0Tag
+
+/**
+ * GtkSectionModelInterface: _section: Return the section that covers the given position. If the position is outside the number of items, returns a single range from n_items to G_MAXUINT
+*/
+opaque type GtkSectionModelInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit]]
+object GtkSectionModelInterface:
+  given _tag: Tag[GtkSectionModelInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit]]
+  def apply()(using Zone): Ptr[GtkSectionModelInterface] = scala.scalanative.unsafe.alloc[GtkSectionModelInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_section : CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit])(using Zone): Ptr[GtkSectionModelInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).get_section = get_section
+    ____ptr
+  extension (struct: GtkSectionModelInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def get_section : CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit] = struct._2
+    def get_section_=(value: CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit]): Unit = !struct.at2 = value
 
 opaque type GtkSelectionFilterModel = CStruct0
 object GtkSelectionFilterModel:
@@ -5041,6 +5386,22 @@ opaque type GtkTreeViewColumn = CStruct0
 object GtkTreeViewColumn:
   given _tag: Tag[GtkTreeViewColumn] = Tag.materializeCStruct0Tag
 
+opaque type GtkUriLauncher = CStruct0
+object GtkUriLauncher:
+  given _tag: Tag[GtkUriLauncher] = Tag.materializeCStruct0Tag
+
+opaque type GtkUriLauncherClass = CStruct1[_root_.sn.gnome.gobject.internal.GObjectClass]
+object GtkUriLauncherClass:
+  given _tag: Tag[GtkUriLauncherClass] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObjectClass]
+  def apply()(using Zone): Ptr[GtkUriLauncherClass] = scala.scalanative.unsafe.alloc[GtkUriLauncherClass](1)
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass)(using Zone): Ptr[GtkUriLauncherClass] = 
+    val ____ptr = apply()
+    (!____ptr).parent_class = parent_class
+    ____ptr
+  extension (struct: GtkUriLauncherClass)
+    def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
+    def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
+
 opaque type GtkVideo = CStruct0
 object GtkVideo:
   given _tag: Tag[GtkVideo] = Tag.materializeCStruct0Tag
@@ -5368,75 +5729,6 @@ object GtkWindowHandleClass:
     def parent_class : GtkWidgetClass = struct._1
     def parent_class_=(value: GtkWidgetClass): Unit = !struct.at1 = value
 
-opaque type PangoAttrList = CStruct0
-object PangoAttrList:
-  given _tag: Tag[PangoAttrList] = Tag.materializeCStruct0Tag
-
-opaque type PangoContext = CStruct0
-object PangoContext:
-  given _tag: Tag[PangoContext] = Tag.materializeCStruct0Tag
-
-opaque type PangoFontDescription = CStruct0
-object PangoFontDescription:
-  given _tag: Tag[PangoFontDescription] = Tag.materializeCStruct0Tag
-
-/**
- * PangoFontFace:
-*/
-opaque type PangoFontFace = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
-object PangoFontFace:
-  given _tag: Tag[PangoFontFace] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
-  def apply()(using Zone): Ptr[PangoFontFace] = scala.scalanative.unsafe.alloc[PangoFontFace](1)
-  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject)(using Zone): Ptr[PangoFontFace] = 
-    val ____ptr = apply()
-    (!____ptr).parent_instance = parent_instance
-    ____ptr
-  extension (struct: PangoFontFace)
-    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
-    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
-
-/**
- * PangoFontFamily:
-*/
-opaque type PangoFontFamily = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
-object PangoFontFamily:
-  given _tag: Tag[PangoFontFamily] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
-  def apply()(using Zone): Ptr[PangoFontFamily] = scala.scalanative.unsafe.alloc[PangoFontFamily](1)
-  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject)(using Zone): Ptr[PangoFontFamily] = 
-    val ____ptr = apply()
-    (!____ptr).parent_instance = parent_instance
-    ____ptr
-  extension (struct: PangoFontFamily)
-    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
-    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
-
-/**
- * PangoFontMap:
-*/
-opaque type PangoFontMap = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
-object PangoFontMap:
-  given _tag: Tag[PangoFontMap] = Tag.materializeCStruct1Tag[_root_.sn.gnome.gobject.internal.GObject]
-  def apply()(using Zone): Ptr[PangoFontMap] = scala.scalanative.unsafe.alloc[PangoFontMap](1)
-  def apply(parent_instance : _root_.sn.gnome.gobject.internal.GObject)(using Zone): Ptr[PangoFontMap] = 
-    val ____ptr = apply()
-    (!____ptr).parent_instance = parent_instance
-    ____ptr
-  extension (struct: PangoFontMap)
-    def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
-    def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
-
-opaque type PangoLanguage = CStruct0
-object PangoLanguage:
-  given _tag: Tag[PangoLanguage] = Tag.materializeCStruct0Tag
-
-opaque type PangoLayout = CStruct0
-object PangoLayout:
-  given _tag: Tag[PangoLayout] = Tag.materializeCStruct0Tag
-
-opaque type PangoTabArray = CStruct0
-object PangoTabArray:
-  given _tag: Tag[PangoTabArray] = Tag.materializeCStruct0Tag
-
 opaque type _GtkATContext = CStruct0
 object _GtkATContext:
   given _tag: Tag[_GtkATContext] = Tag.materializeCStruct0Tag
@@ -5453,9 +5745,98 @@ opaque type _GtkAccessible = CStruct0
 object _GtkAccessible:
   given _tag: Tag[_GtkAccessible] = Tag.materializeCStruct0Tag
 
-opaque type _GtkAccessibleInterface = CStruct0
+/**
+ * GtkAccessibleInterface: _at_context: retrieve the platform-specific accessibility context for the accessible implementation _platform_state: retrieve the accessible state
+*/
+opaque type _GtkAccessibleInterface = CStruct7[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]], CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]
 object _GtkAccessibleInterface:
-  given _tag: Tag[_GtkAccessibleInterface] = Tag.materializeCStruct0Tag
+  given _tag: Tag[_GtkAccessibleInterface] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]], CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]
+  def apply()(using Zone): Ptr[_GtkAccessibleInterface] = scala.scalanative.unsafe.alloc[_GtkAccessibleInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_at_context : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]], get_platform_state : CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean], get_accessible_parent : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], get_first_accessible_child : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], get_next_accessible_sibling : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]], get_bounds : CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[_GtkAccessibleInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).get_at_context = get_at_context
+    (!____ptr).get_platform_state = get_platform_state
+    (!____ptr).get_accessible_parent = get_accessible_parent
+    (!____ptr).get_first_accessible_child = get_first_accessible_child
+    (!____ptr).get_next_accessible_sibling = get_next_accessible_sibling
+    (!____ptr).get_bounds = get_bounds
+    ____ptr
+  extension (struct: _GtkAccessibleInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def get_at_context : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]] = struct._2
+    def get_at_context_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkATContext]]): Unit = !struct.at2 = value
+    def get_platform_state : CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean] = struct._3
+    def get_platform_state_=(value: CFuncPtr2[Ptr[GtkAccessible], GtkAccessiblePlatformState, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at3 = value
+    def get_accessible_parent : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]] = struct._4
+    def get_accessible_parent_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]]): Unit = !struct.at4 = value
+    def get_first_accessible_child : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]] = struct._5
+    def get_first_accessible_child_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]]): Unit = !struct.at5 = value
+    def get_next_accessible_sibling : CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]] = struct._6
+    def get_next_accessible_sibling_=(value: CFuncPtr1[Ptr[GtkAccessible], Ptr[GtkAccessible]]): Unit = !struct.at6 = value
+    def get_bounds : CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = struct._7
+    def get_bounds_=(value: CFuncPtr5[Ptr[GtkAccessible], Ptr[CInt], Ptr[CInt], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at7 = value
+
+opaque type _GtkAccessibleList = CStruct0
+object _GtkAccessibleList:
+  given _tag: Tag[_GtkAccessibleList] = Tag.materializeCStruct0Tag
+
+opaque type _GtkAccessibleRange = CStruct0
+object _GtkAccessibleRange:
+  given _tag: Tag[_GtkAccessibleRange] = Tag.materializeCStruct0Tag
+
+opaque type _GtkAccessibleRangeInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean]]
+object _GtkAccessibleRangeInterface:
+  given _tag: Tag[_GtkAccessibleRangeInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean]]
+  def apply()(using Zone): Ptr[_GtkAccessibleRangeInterface] = scala.scalanative.unsafe.alloc[_GtkAccessibleRangeInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, set_current_value : CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean])(using Zone): Ptr[_GtkAccessibleRangeInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).set_current_value = set_current_value
+    ____ptr
+  extension (struct: _GtkAccessibleRangeInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def set_current_value : CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean] = struct._2
+    def set_current_value_=(value: CFuncPtr2[Ptr[GtkAccessibleRange], Double, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at2 = value
+
+opaque type _GtkAccessibleText = CStruct0
+object _GtkAccessibleText:
+  given _tag: Tag[_GtkAccessibleText] = Tag.materializeCStruct0Tag
+
+/**
+ * GtkAccessibleTextInterface:
+*/
+opaque type _GtkAccessibleTextInterface = CStruct7[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit]]
+object _GtkAccessibleTextInterface:
+  given _tag: Tag[_GtkAccessibleTextInterface] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]], CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit]]
+  def apply()(using Zone): Ptr[_GtkAccessibleTextInterface] = scala.scalanative.unsafe.alloc[_GtkAccessibleTextInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_contents : CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]], get_contents_at : CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]], get_caret_position : CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt], get_selection : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean], get_attributes : CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean], get_default_attributes : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit])(using Zone): Ptr[_GtkAccessibleTextInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).get_contents = get_contents
+    (!____ptr).get_contents_at = get_contents_at
+    (!____ptr).get_caret_position = get_caret_position
+    (!____ptr).get_selection = get_selection
+    (!____ptr).get_attributes = get_attributes
+    (!____ptr).get_default_attributes = get_default_attributes
+    ____ptr
+  extension (struct: _GtkAccessibleTextInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def get_contents : CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]] = struct._2
+    def get_contents_=(value: CFuncPtr3[Ptr[GtkAccessibleText], CUnsignedInt, CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.GBytes]]): Unit = !struct.at2 = value
+    def get_contents_at : CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]] = struct._3
+    def get_contents_at_=(value: CFuncPtr5[Ptr[GtkAccessibleText], CUnsignedInt, GtkAccessibleTextGranularity, Ptr[CUnsignedInt], Ptr[CUnsignedInt], Ptr[_root_.sn.gnome.glib.internal.GBytes]]): Unit = !struct.at3 = value
+    def get_caret_position : CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt] = struct._4
+    def get_caret_position_=(value: CFuncPtr1[Ptr[GtkAccessibleText], CUnsignedInt]): Unit = !struct.at4 = value
+    def get_selection : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean] = struct._5
+    def get_selection_=(value: CFuncPtr3[Ptr[GtkAccessibleText], Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
+    def get_attributes : CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean] = struct._6
+    def get_attributes_=(value: CFuncPtr6[Ptr[GtkAccessibleText], CUnsignedInt, Ptr[_root_.sn.gnome.glib.internal.gsize], Ptr[Ptr[GtkAccessibleTextRange]], Ptr[Ptr[CString]], Ptr[Ptr[CString]], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at6 = value
+    def get_default_attributes : CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit] = struct._7
+    def get_default_attributes_=(value: CFuncPtr3[Ptr[GtkAccessibleText], Ptr[Ptr[CString]], Ptr[Ptr[CString]], Unit]): Unit = !struct.at7 = value
 
 opaque type _GtkActionBar = CStruct0
 object _GtkActionBar:
@@ -5538,6 +5919,10 @@ object _GtkAdjustmentClass:
     def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at6 = value
     def _gtk_reserved4 : CFuncPtr0[Unit] = struct._7
     def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
+
+opaque type _GtkAlertDialog = CStruct0
+object _GtkAlertDialog:
+  given _tag: Tag[_GtkAlertDialog] = Tag.materializeCStruct0Tag
 
 opaque type _GtkAlternativeTrigger = CStruct0
 object _GtkAlternativeTrigger:
@@ -5860,7 +6245,7 @@ object _GtkBuilderScope:
   given _tag: Tag[_GtkBuilderScope] = Tag.materializeCStruct0Tag
 
 /**
- * GtkBuilderScopeInterface: _type_from_name: Try to lookup a `GType` via the its name. See gtk_builder_get_type_from_name() for more details. The C implementation will use g_type_from_name() and if that fails try to guess the correct function name for registering the type and then use dlsym() to load it. The default implementation just tries g_type_from_name() and otherwise fails. _type_from_function: Try to lookup a `GType` via the given function name, specified explicitly in a GtkBuilder file, like via the "type-func" attribute in the "<object>" tag. This function is very rarely used. The C implementation will use dlsym() and call the resulting function as a `GTypeFunc`. The default implementation will fail and just return %G_TYPE_INVALID. _closure: Create a closure with the given arguments. See gtk_builder_create_closure() for more details on those. The C implementation will try to use dlsym() to locate the function name and then g_cclosure_new() to create a closure for the symbol. The default implementation just fails and returns %NULL.
+ * GtkBuilderScopeInterface: _type_from_name: Try to lookup a `GType` via the its name. See gtk_builder_get_type_from_name() for more details. The C implementation will use g_type_from_name() and if that fails try to guess the correct function name for registering the type and then use dlsym() to load it. The default implementation just tries g_type_from_name() and otherwise fails. _type_from_function: Try to lookup a `GType` via the given function name, specified explicitly in a GtkBuilder file, like via the "type-func" attribute in the `<object>` tag. This function is very rarely used. The C implementation will use dlsym() and call the resulting function as a `GTypeFunc`. The default implementation will fail and just return %G_TYPE_INVALID. _closure: Create a closure with the given arguments. See gtk_builder_create_closure() for more details on those. The C implementation will try to use dlsym() to locate the function name and then g_cclosure_new() to create a closure for the symbol. The default implementation just fails and returns %NULL.
 */
 opaque type _GtkBuilderScopeInterface = CStruct4[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr3[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, _root_.sn.gnome.gobject.internal.GType], CFuncPtr3[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, _root_.sn.gnome.gobject.internal.GType], CFuncPtr6[Ptr[GtkBuilderScope], Ptr[GtkBuilder], CString, GtkBuilderClosureFlags, Ptr[_root_.sn.gnome.gobject.internal.GObject], Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], Ptr[Byte]]]
 object _GtkBuilderScopeInterface:
@@ -6378,9 +6763,25 @@ opaque type _GtkColorChooserWidget = CStruct0
 object _GtkColorChooserWidget:
   given _tag: Tag[_GtkColorChooserWidget] = Tag.materializeCStruct0Tag
 
+opaque type _GtkColorDialog = CStruct0
+object _GtkColorDialog:
+  given _tag: Tag[_GtkColorDialog] = Tag.materializeCStruct0Tag
+
+opaque type _GtkColorDialogButton = CStruct0
+object _GtkColorDialogButton:
+  given _tag: Tag[_GtkColorDialogButton] = Tag.materializeCStruct0Tag
+
 opaque type _GtkColumnView = CStruct0
 object _GtkColumnView:
   given _tag: Tag[_GtkColumnView] = Tag.materializeCStruct0Tag
+
+opaque type _GtkColumnViewCell = CStruct0
+object _GtkColumnViewCell:
+  given _tag: Tag[_GtkColumnViewCell] = Tag.materializeCStruct0Tag
+
+opaque type _GtkColumnViewCellClass = CStruct0
+object _GtkColumnViewCellClass:
+  given _tag: Tag[_GtkColumnViewCellClass] = Tag.materializeCStruct0Tag
 
 opaque type _GtkColumnViewClass = CStruct0
 object _GtkColumnViewClass:
@@ -6393,6 +6794,18 @@ object _GtkColumnViewColumn:
 opaque type _GtkColumnViewColumnClass = CStruct0
 object _GtkColumnViewColumnClass:
   given _tag: Tag[_GtkColumnViewColumnClass] = Tag.materializeCStruct0Tag
+
+opaque type _GtkColumnViewRow = CStruct0
+object _GtkColumnViewRow:
+  given _tag: Tag[_GtkColumnViewRow] = Tag.materializeCStruct0Tag
+
+opaque type _GtkColumnViewRowClass = CStruct0
+object _GtkColumnViewRowClass:
+  given _tag: Tag[_GtkColumnViewRowClass] = Tag.materializeCStruct0Tag
+
+opaque type _GtkColumnViewSorter = CStruct0
+object _GtkColumnViewSorter:
+  given _tag: Tag[_GtkColumnViewSorter] = Tag.materializeCStruct0Tag
 
 opaque type _GtkComboBox = CStruct1[GtkWidget]
 object _GtkComboBox:
@@ -6881,9 +7294,17 @@ opaque type _GtkFileChooserWidget = CStruct0
 object _GtkFileChooserWidget:
   given _tag: Tag[_GtkFileChooserWidget] = Tag.materializeCStruct0Tag
 
+opaque type _GtkFileDialog = CStruct0
+object _GtkFileDialog:
+  given _tag: Tag[_GtkFileDialog] = Tag.materializeCStruct0Tag
+
 opaque type _GtkFileFilter = CStruct0
 object _GtkFileFilter:
   given _tag: Tag[_GtkFileFilter] = Tag.materializeCStruct0Tag
+
+opaque type _GtkFileLauncher = CStruct0
+object _GtkFileLauncher:
+  given _tag: Tag[_GtkFileLauncher] = Tag.materializeCStruct0Tag
 
 opaque type _GtkFilter = CStruct1[_root_.sn.gnome.gobject.internal.GObject]
 object _GtkFilter:
@@ -7028,11 +7449,11 @@ opaque type _GtkFontChooserDialog = CStruct0
 object _GtkFontChooserDialog:
   given _tag: Tag[_GtkFontChooserDialog] = Tag.materializeCStruct0Tag
 
-opaque type _GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+opaque type _GtkFontChooserIface = CStruct9[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
 object _GtkFontChooserIface:
-  given _tag: Tag[_GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
+  given _tag: Tag[_GtkFontChooserIface] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], CFuncPtr1[Ptr[GtkFontChooser], CInt], CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]]
   def apply()(using Zone): Ptr[_GtkFontChooserIface] = scala.scalanative.unsafe.alloc[_GtkFontChooserIface](1)
-  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[_GtkFontChooserIface] = 
+  def apply(base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]], get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]], get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt], set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit], font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit], set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit], get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]])(using Zone): Ptr[_GtkFontChooserIface] = 
     val ____ptr = apply()
     (!____ptr).base_iface = base_iface
     (!____ptr).get_font_family = get_font_family
@@ -7047,26 +7468,34 @@ object _GtkFontChooserIface:
   extension (struct: _GtkFontChooserIface)
     def base_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
     def base_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
-    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]] = struct._2
-    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFamily]]): Unit = !struct.at2 = value
-    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]] = struct._3
-    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontFace]]): Unit = !struct.at3 = value
+    def get_font_family : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]] = struct._2
+    def get_font_family_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFamily]]): Unit = !struct.at2 = value
+    def get_font_face : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]] = struct._3
+    def get_font_face_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontFace]]): Unit = !struct.at3 = value
     def get_font_size : CFuncPtr1[Ptr[GtkFontChooser], CInt] = struct._4
     def get_font_size_=(value: CFuncPtr1[Ptr[GtkFontChooser], CInt]): Unit = !struct.at4 = value
     def set_filter_func : CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit] = struct._5
     def set_filter_func_=(value: CFuncPtr4[Ptr[GtkFontChooser], GtkFontFilterFunc, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.GDestroyNotify, Unit]): Unit = !struct.at5 = value
     def font_activated : CFuncPtr2[Ptr[GtkFontChooser], CString, Unit] = struct._6
     def font_activated_=(value: CFuncPtr2[Ptr[GtkFontChooser], CString, Unit]): Unit = !struct.at6 = value
-    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit] = struct._7
-    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[PangoFontMap], Unit]): Unit = !struct.at7 = value
-    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]] = struct._8
-    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[PangoFontMap]]): Unit = !struct.at8 = value
+    def set_font_map : CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit] = struct._7
+    def set_font_map_=(value: CFuncPtr2[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap], Unit]): Unit = !struct.at7 = value
+    def get_font_map : CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]] = struct._8
+    def get_font_map_=(value: CFuncPtr1[Ptr[GtkFontChooser], Ptr[_root_.sn.gnome.pango.internal.PangoFontMap]]): Unit = !struct.at8 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]] = struct._9
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat.Digit2[Nat._1, Nat._0]]): Unit = !struct.at9 = value
 
 opaque type _GtkFontChooserWidget = CStruct0
 object _GtkFontChooserWidget:
   given _tag: Tag[_GtkFontChooserWidget] = Tag.materializeCStruct0Tag
+
+opaque type _GtkFontDialog = CStruct0
+object _GtkFontDialog:
+  given _tag: Tag[_GtkFontDialog] = Tag.materializeCStruct0Tag
+
+opaque type _GtkFontDialogButton = CStruct0
+object _GtkFontDialogButton:
+  given _tag: Tag[_GtkFontDialogButton] = Tag.materializeCStruct0Tag
 
 opaque type _GtkFrame = CStruct1[GtkWidget]
 object _GtkFrame:
@@ -7220,6 +7649,10 @@ opaque type _GtkGestureZoomClass = CStruct0
 object _GtkGestureZoomClass:
   given _tag: Tag[_GtkGestureZoomClass] = Tag.materializeCStruct0Tag
 
+opaque type _GtkGraphicsOffload = CStruct0
+object _GtkGraphicsOffload:
+  given _tag: Tag[_GtkGraphicsOffload] = Tag.materializeCStruct0Tag
+
 opaque type _GtkGrid = CStruct1[GtkWidget]
 object _GtkGrid:
   given _tag: Tag[_GtkGrid] = Tag.materializeCStruct1Tag[GtkWidget]
@@ -7286,7 +7719,7 @@ opaque type _GtkIMContextClass = CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0
 object _GtkIMContextClass:
   given _tag: Tag[_GtkIMContextClass] = Tag.CArray[CChar, Nat.Digit3[Nat._3, Nat._2, Nat._0]](Tag.Byte, Tag.Digit3[Nat._3, Nat._2, Nat._0](Tag.Nat3, Tag.Nat2, Tag.Nat0))
   def apply()(using Zone): Ptr[_GtkIMContextClass] = scala.scalanative.unsafe.alloc[_GtkIMContextClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved1 : CFuncPtr0[Unit], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit], _gtk_reserved5 : CFuncPtr0[Unit])(using Zone): Ptr[_GtkIMContextClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, preedit_start : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_end : CFuncPtr1[Ptr[GtkIMContext], Unit], preedit_changed : CFuncPtr1[Ptr[GtkIMContext], Unit], commit : CFuncPtr2[Ptr[GtkIMContext], CString, Unit], retrieve_surrounding : CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean], delete_surrounding : CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean], set_client_widget : CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit], get_preedit_string : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit], filter_keypress : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], focus_in : CFuncPtr1[Ptr[GtkIMContext], Unit], focus_out : CFuncPtr1[Ptr[GtkIMContext], Unit], reset : CFuncPtr1[Ptr[GtkIMContext], Unit], set_cursor_location : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkRectangle], Unit], set_use_preedit : CFuncPtr2[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean, Unit], set_surrounding : CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit], get_surrounding : CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], set_surrounding_with_selection : CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit], get_surrounding_with_selection : CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean], activate_osk : CFuncPtr1[Ptr[GtkIMContext], Unit], activate_osk_with_event : CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean], _gtk_reserved2 : CFuncPtr0[Unit], _gtk_reserved3 : CFuncPtr0[Unit], _gtk_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[_GtkIMContextClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).preedit_start = preedit_start
@@ -7307,11 +7740,11 @@ object _GtkIMContextClass:
     (!____ptr).get_surrounding = get_surrounding
     (!____ptr).set_surrounding_with_selection = set_surrounding_with_selection
     (!____ptr).get_surrounding_with_selection = get_surrounding_with_selection
-    (!____ptr)._gtk_reserved1 = _gtk_reserved1
+    (!____ptr).activate_osk = activate_osk
+    (!____ptr).activate_osk_with_event = activate_osk_with_event
     (!____ptr)._gtk_reserved2 = _gtk_reserved2
     (!____ptr)._gtk_reserved3 = _gtk_reserved3
     (!____ptr)._gtk_reserved4 = _gtk_reserved4
-    (!____ptr)._gtk_reserved5 = _gtk_reserved5
     ____ptr
   extension (struct: _GtkIMContextClass)
     def parent_class: _root_.sn.gnome.gobject.internal.GObjectClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gobject.internal.GObjectClass]]
@@ -7330,8 +7763,8 @@ object _GtkIMContextClass:
     def delete_surrounding_=(value: CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(6)).asInstanceOf[Ptr[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]]] = value
     def set_client_widget: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit] = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]]
     def set_client_widget_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]): Unit = !struct.at(offsets(7)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]]] = value
-    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]]
-    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]]] = value
+    def get_preedit_string: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit] = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]]
+    def get_preedit_string_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]): Unit = !struct.at(offsets(8)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]]] = value
     def filter_keypress: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
     def filter_keypress_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(9)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
     def focus_in: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(10)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
@@ -7352,16 +7785,16 @@ object _GtkIMContextClass:
     def set_surrounding_with_selection_=(value: CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]): Unit = !struct.at(offsets(17)).asInstanceOf[Ptr[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]]] = value
     def get_surrounding_with_selection: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]]
     def get_surrounding_with_selection_=(value: CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(18)).asInstanceOf[Ptr[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]]] = value
-    def _gtk_reserved1: CFuncPtr0[Unit] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved1_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
-    def _gtk_reserved5: CFuncPtr0[Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
-    def _gtk_reserved5_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def activate_osk: CFuncPtr1[Ptr[GtkIMContext], Unit] = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]]
+    def activate_osk_=(value: CFuncPtr1[Ptr[GtkIMContext], Unit]): Unit = !struct.at(offsets(19)).asInstanceOf[Ptr[CFuncPtr1[Ptr[GtkIMContext], Unit]]] = value
+    def activate_osk_with_event: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean] = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]]
+    def activate_osk_with_event_=(value: CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at(offsets(20)).asInstanceOf[Ptr[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]]] = value
+    def _gtk_reserved2: CFuncPtr0[Unit] = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(21)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved3: CFuncPtr0[Unit] = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved3_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(22)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
+    def _gtk_reserved4: CFuncPtr0[Unit] = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]]
+    def _gtk_reserved4_=(value: CFuncPtr0[Unit]): Unit = !struct.at(offsets(23)).asInstanceOf[Ptr[CFuncPtr0[Unit]]] = value
   val offsets: Array[Int] = 
     val res = Array.ofDim[Int](24)
     def align(offset: Int, alignment: Int) = {
@@ -7380,8 +7813,8 @@ object _GtkIMContextClass:
     res(5) = align(res(4) + sizeof[CFuncPtr2[Ptr[GtkIMContext], CString, Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(6) = align(res(5) + sizeof[CFuncPtr1[Ptr[GtkIMContext], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(7) = align(res(6) + sizeof[CFuncPtr3[Ptr[GtkIMContext], CInt, CInt, _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt)
-    res(8) = align(res(7) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt)
-    res(9) = align(res(8) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[PangoAttrList]], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(8) = align(res(7) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GtkWidget], Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]].toInt)
+    res(9) = align(res(8) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]], Ptr[CInt], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(10) = align(res(9) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
     res(11) = align(res(10) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
     res(12) = align(res(11) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
@@ -7391,9 +7824,9 @@ object _GtkIMContextClass:
     res(16) = align(res(15) + sizeof[CFuncPtr4[Ptr[GtkIMContext], CString, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
     res(17) = align(res(16) + sizeof[CFuncPtr3[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt)
     res(18) = align(res(17) + sizeof[CFuncPtr5[Ptr[GtkIMContext], CString, CInt, CInt, CInt, Unit]].toInt, alignmentof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt)
-    res(19) = align(res(18) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(20) = align(res(19) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
-    res(21) = align(res(20) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
+    res(19) = align(res(18) + sizeof[CFuncPtr4[Ptr[GtkIMContext], Ptr[CString], Ptr[CInt], Ptr[CInt], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt)
+    res(20) = align(res(19) + sizeof[CFuncPtr1[Ptr[GtkIMContext], Unit]].toInt, alignmentof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt)
+    res(21) = align(res(20) + sizeof[CFuncPtr2[Ptr[GtkIMContext], Ptr[GdkEvent], _root_.sn.gnome.glib.internal.gboolean]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
     res(22) = align(res(21) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
     res(23) = align(res(22) + sizeof[CFuncPtr0[Unit]].toInt, alignmentof[CFuncPtr0[Unit]].toInt)
     res
@@ -7492,6 +7925,10 @@ object _GtkImage:
 opaque type _GtkInfoBar = CStruct0
 object _GtkInfoBar:
   given _tag: Tag[_GtkInfoBar] = Tag.materializeCStruct0Tag
+
+opaque type _GtkInscription = CStruct0
+object _GtkInscription:
+  given _tag: Tag[_GtkInscription] = Tag.materializeCStruct0Tag
 
 opaque type _GtkKeyvalTrigger = CStruct0
 object _GtkKeyvalTrigger:
@@ -7632,6 +8069,14 @@ object _GtkListBoxRowClass:
     def activate_=(value: CFuncPtr1[Ptr[GtkListBoxRow], Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
+
+opaque type _GtkListHeader = CStruct0
+object _GtkListHeader:
+  given _tag: Tag[_GtkListHeader] = Tag.materializeCStruct0Tag
+
+opaque type _GtkListHeaderClass = CStruct0
+object _GtkListHeaderClass:
+  given _tag: Tag[_GtkListHeaderClass] = Tag.materializeCStruct0Tag
 
 opaque type _GtkListItem = CStruct0
 object _GtkListItem:
@@ -8163,6 +8608,10 @@ opaque type _GtkPrintContext = CStruct0
 object _GtkPrintContext:
   given _tag: Tag[_GtkPrintContext] = Tag.materializeCStruct0Tag
 
+opaque type _GtkPrintDialog = CStruct0
+object _GtkPrintDialog:
+  given _tag: Tag[_GtkPrintDialog] = Tag.materializeCStruct0Tag
+
 opaque type _GtkPrintOperation = CStruct2[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
 object _GtkPrintOperation:
   given _tag: Tag[_GtkPrintOperation] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GObject, Ptr[GtkPrintOperationPrivate]]
@@ -8291,6 +8740,10 @@ object _GtkPrintOperationPrivate:
 opaque type _GtkPrintSettings = CStruct0
 object _GtkPrintSettings:
   given _tag: Tag[_GtkPrintSettings] = Tag.materializeCStruct0Tag
+
+opaque type _GtkPrintSetup = CStruct0
+object _GtkPrintSetup:
+  given _tag: Tag[_GtkPrintSetup] = Tag.materializeCStruct0Tag
 
 opaque type _GtkProgressBar = CStruct0
 object _GtkProgressBar:
@@ -8539,6 +8992,10 @@ object _GtkScaleClass:
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._8]): Unit = !struct.at3 = value
 
+opaque type _GtkScrollInfo = CStruct0
+object _GtkScrollInfo:
+  given _tag: Tag[_GtkScrollInfo] = Tag.materializeCStruct0Tag
+
 opaque type _GtkScrollable = CStruct0
 object _GtkScrollable:
   given _tag: Tag[_GtkScrollable] = Tag.materializeCStruct0Tag
@@ -8573,6 +9030,28 @@ object _GtkSearchBar:
 opaque type _GtkSearchEntry = CStruct0
 object _GtkSearchEntry:
   given _tag: Tag[_GtkSearchEntry] = Tag.materializeCStruct0Tag
+
+opaque type _GtkSectionModel = CStruct0
+object _GtkSectionModel:
+  given _tag: Tag[_GtkSectionModel] = Tag.materializeCStruct0Tag
+
+/**
+ * GtkSectionModelInterface: _section: Return the section that covers the given position. If the position is outside the number of items, returns a single range from n_items to G_MAXUINT
+*/
+opaque type _GtkSectionModelInterface = CStruct2[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit]]
+object _GtkSectionModelInterface:
+  given _tag: Tag[_GtkSectionModelInterface] = Tag.materializeCStruct2Tag[_root_.sn.gnome.gobject.internal.GTypeInterface, CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit]]
+  def apply()(using Zone): Ptr[_GtkSectionModelInterface] = scala.scalanative.unsafe.alloc[_GtkSectionModelInterface](1)
+  def apply(g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface, get_section : CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit])(using Zone): Ptr[_GtkSectionModelInterface] = 
+    val ____ptr = apply()
+    (!____ptr).g_iface = g_iface
+    (!____ptr).get_section = get_section
+    ____ptr
+  extension (struct: _GtkSectionModelInterface)
+    def g_iface : _root_.sn.gnome.gobject.internal.GTypeInterface = struct._1
+    def g_iface_=(value: _root_.sn.gnome.gobject.internal.GTypeInterface): Unit = !struct.at1 = value
+    def get_section : CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit] = struct._2
+    def get_section_=(value: CFuncPtr4[Ptr[GtkSectionModel], _root_.sn.gnome.glib.internal.guint, Ptr[_root_.sn.gnome.glib.internal.guint], Ptr[_root_.sn.gnome.glib.internal.guint], Unit]): Unit = !struct.at2 = value
 
 opaque type _GtkSelectionFilterModel = CStruct0
 object _GtkSelectionFilterModel:
@@ -9711,6 +10190,10 @@ opaque type _GtkTreeViewColumn = CStruct0
 object _GtkTreeViewColumn:
   given _tag: Tag[_GtkTreeViewColumn] = Tag.materializeCStruct0Tag
 
+opaque type _GtkUriLauncher = CStruct0
+object _GtkUriLauncher:
+  given _tag: Tag[_GtkUriLauncher] = Tag.materializeCStruct0Tag
+
 opaque type _GtkVideo = CStruct0
 object _GtkVideo:
   given _tag: Tag[_GtkVideo] = Tag.materializeCStruct0Tag
@@ -9989,144 +10472,3 @@ object _GtkWindowGroupPrivate:
 opaque type _GtkWindowHandle = CStruct0
 object _GtkWindowHandle:
   given _tag: Tag[_GtkWindowHandle] = Tag.materializeCStruct0Tag
-
-/**
- * graphene_matrix_t:
-*/
-opaque type graphene_matrix_t = CStruct1[graphene_simd4x4f_t]
-object graphene_matrix_t:
-  given _tag: Tag[graphene_matrix_t] = Tag.materializeCStruct1Tag[graphene_simd4x4f_t]
-  def apply()(using Zone): Ptr[graphene_matrix_t] = scala.scalanative.unsafe.alloc[graphene_matrix_t](1)
-  def apply(__graphene_private_value : graphene_simd4x4f_t)(using Zone): Ptr[graphene_matrix_t] = 
-    val ____ptr = apply()
-    (!____ptr).__graphene_private_value = __graphene_private_value
-    ____ptr
-  extension (struct: graphene_matrix_t)
-    def __graphene_private_value : graphene_simd4x4f_t = struct._1
-    def __graphene_private_value_=(value: graphene_simd4x4f_t): Unit = !struct.at1 = value
-
-/**
- * graphene_point3d_t: : the X coordinate : the Y coordinate : the Z coordinate
-*/
-opaque type graphene_point3d_t = CStruct3[Float, Float, Float]
-object graphene_point3d_t:
-  given _tag: Tag[graphene_point3d_t] = Tag.materializeCStruct3Tag[Float, Float, Float]
-  def apply()(using Zone): Ptr[graphene_point3d_t] = scala.scalanative.unsafe.alloc[graphene_point3d_t](1)
-  def apply(x : Float, y : Float, z : Float)(using Zone): Ptr[graphene_point3d_t] = 
-    val ____ptr = apply()
-    (!____ptr).x = x
-    (!____ptr).y = y
-    (!____ptr).z = z
-    ____ptr
-  extension (struct: graphene_point3d_t)
-    def x : Float = struct._1
-    def x_=(value: Float): Unit = !struct.at1 = value
-    def y : Float = struct._2
-    def y_=(value: Float): Unit = !struct.at2 = value
-    def z : Float = struct._3
-    def z_=(value: Float): Unit = !struct.at3 = value
-
-/**
- * graphene_point_t: : the X coordinate of the point : the Y coordinate of the point
-*/
-opaque type graphene_point_t = CStruct2[Float, Float]
-object graphene_point_t:
-  given _tag: Tag[graphene_point_t] = Tag.materializeCStruct2Tag[Float, Float]
-  def apply()(using Zone): Ptr[graphene_point_t] = scala.scalanative.unsafe.alloc[graphene_point_t](1)
-  def apply(x : Float, y : Float)(using Zone): Ptr[graphene_point_t] = 
-    val ____ptr = apply()
-    (!____ptr).x = x
-    (!____ptr).y = y
-    ____ptr
-  extension (struct: graphene_point_t)
-    def x : Float = struct._1
-    def x_=(value: Float): Unit = !struct.at1 = value
-    def y : Float = struct._2
-    def y_=(value: Float): Unit = !struct.at2 = value
-
-/**
- * graphene_rect_t: : the coordinates of the origin of the rectangle : the size of the rectangle
-*/
-opaque type graphene_rect_t = CStruct2[graphene_point_t, graphene_size_t]
-object graphene_rect_t:
-  given _tag: Tag[graphene_rect_t] = Tag.materializeCStruct2Tag[graphene_point_t, graphene_size_t]
-  def apply()(using Zone): Ptr[graphene_rect_t] = scala.scalanative.unsafe.alloc[graphene_rect_t](1)
-  def apply(origin : graphene_point_t, size : graphene_size_t)(using Zone): Ptr[graphene_rect_t] = 
-    val ____ptr = apply()
-    (!____ptr).origin = origin
-    (!____ptr).size = size
-    ____ptr
-  extension (struct: graphene_rect_t)
-    def origin : graphene_point_t = struct._1
-    def origin_=(value: graphene_point_t): Unit = !struct.at1 = value
-    def size : graphene_size_t = struct._2
-    def size_=(value: graphene_size_t): Unit = !struct.at2 = value
-
-opaque type graphene_simd4x4f_t = CStruct4[graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t]
-object graphene_simd4x4f_t:
-  given _tag: Tag[graphene_simd4x4f_t] = Tag.materializeCStruct4Tag[graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t, graphene_simd4f_t]
-  def apply()(using Zone): Ptr[graphene_simd4x4f_t] = scala.scalanative.unsafe.alloc[graphene_simd4x4f_t](1)
-  def apply(x : graphene_simd4f_t, y : graphene_simd4f_t, z : graphene_simd4f_t, w : graphene_simd4f_t)(using Zone): Ptr[graphene_simd4x4f_t] = 
-    val ____ptr = apply()
-    (!____ptr).x = x
-    (!____ptr).y = y
-    (!____ptr).z = z
-    (!____ptr).w = w
-    ____ptr
-  extension (struct: graphene_simd4x4f_t)
-    def x : graphene_simd4f_t = struct._1
-    def x_=(value: graphene_simd4f_t): Unit = !struct.at1 = value
-    def y : graphene_simd4f_t = struct._2
-    def y_=(value: graphene_simd4f_t): Unit = !struct.at2 = value
-    def z : graphene_simd4f_t = struct._3
-    def z_=(value: graphene_simd4f_t): Unit = !struct.at3 = value
-    def w : graphene_simd4f_t = struct._4
-    def w_=(value: graphene_simd4f_t): Unit = !struct.at4 = value
-
-/**
- * graphene_size_t: : the width : the height
-*/
-opaque type graphene_size_t = CStruct2[Float, Float]
-object graphene_size_t:
-  given _tag: Tag[graphene_size_t] = Tag.materializeCStruct2Tag[Float, Float]
-  def apply()(using Zone): Ptr[graphene_size_t] = scala.scalanative.unsafe.alloc[graphene_size_t](1)
-  def apply(width : Float, height : Float)(using Zone): Ptr[graphene_size_t] = 
-    val ____ptr = apply()
-    (!____ptr).width = width
-    (!____ptr).height = height
-    ____ptr
-  extension (struct: graphene_size_t)
-    def width : Float = struct._1
-    def width_=(value: Float): Unit = !struct.at1 = value
-    def height : Float = struct._2
-    def height_=(value: Float): Unit = !struct.at2 = value
-
-/**
- * graphene_vec3_t:
-*/
-opaque type graphene_vec3_t = CStruct1[graphene_simd4f_t]
-object graphene_vec3_t:
-  given _tag: Tag[graphene_vec3_t] = Tag.materializeCStruct1Tag[graphene_simd4f_t]
-  def apply()(using Zone): Ptr[graphene_vec3_t] = scala.scalanative.unsafe.alloc[graphene_vec3_t](1)
-  def apply(__graphene_private_value : graphene_simd4f_t)(using Zone): Ptr[graphene_vec3_t] = 
-    val ____ptr = apply()
-    (!____ptr).__graphene_private_value = __graphene_private_value
-    ____ptr
-  extension (struct: graphene_vec3_t)
-    def __graphene_private_value : graphene_simd4f_t = struct._1
-    def __graphene_private_value_=(value: graphene_simd4f_t): Unit = !struct.at1 = value
-
-/**
- * graphene_vec4_t:
-*/
-opaque type graphene_vec4_t = CStruct1[graphene_simd4f_t]
-object graphene_vec4_t:
-  given _tag: Tag[graphene_vec4_t] = Tag.materializeCStruct1Tag[graphene_simd4f_t]
-  def apply()(using Zone): Ptr[graphene_vec4_t] = scala.scalanative.unsafe.alloc[graphene_vec4_t](1)
-  def apply(__graphene_private_value : graphene_simd4f_t)(using Zone): Ptr[graphene_vec4_t] = 
-    val ____ptr = apply()
-    (!____ptr).__graphene_private_value = __graphene_private_value
-    ____ptr
-  extension (struct: graphene_vec4_t)
-    def __graphene_private_value : graphene_simd4f_t = struct._1
-    def __graphene_private_value_=(value: graphene_simd4f_t): Unit = !struct.at1 = value

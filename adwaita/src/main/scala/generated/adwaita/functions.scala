@@ -8,6 +8,16 @@ import _root_.scala.scalanative.*
 
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def ADW_ABOUT_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwAboutDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def ADW_ABOUT_WINDOW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwAboutWindow] = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def ADW_ACTION_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwActionRow] = extern
@@ -21,6 +31,21 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def ADW_ACTION_ROW_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwActionRowClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def ADW_ALERT_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwAlertDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def ADW_ALERT_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwAlertDialogClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def ADW_ALERT_DIALOG_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwAlertDialogClass] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -88,6 +113,11 @@ import _root_.scala.scalanative.*
 @extern def ADW_AVATAR(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwAvatar] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def ADW_BANNER(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBanner] = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def ADW_BIN(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBin] = extern
@@ -101,6 +131,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def ADW_BIN_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBinClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def ADW_BREAKPOINT(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBreakpoint] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def ADW_BREAKPOINT_BIN(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBreakpointBin] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def ADW_BREAKPOINT_BIN_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBreakpointBinClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def ADW_BREAKPOINT_BIN_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwBreakpointBinClass] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -168,6 +218,36 @@ import _root_.scala.scalanative.*
 @extern def ADW_COMBO_ROW_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwComboRowClass] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def ADW_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def ADW_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwDialogClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def ADW_DIALOG_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwDialogClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def ADW_ENTRY_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwEntryRow] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def ADW_ENTRY_ROW_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwEntryRowClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def ADW_ENTRY_ROW_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwEntryRowClass] = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def ADW_ENUM_LIST_ITEM(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwEnumListItem] = extern
@@ -203,6 +283,16 @@ import _root_.scala.scalanative.*
 @extern def ADW_HEADER_BAR(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwHeaderBar] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def ADW_IS_ABOUT_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def ADW_IS_ABOUT_WINDOW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def ADW_IS_ACTION_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -211,6 +301,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def ADW_IS_ACTION_ROW_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def ADW_IS_ALERT_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def ADW_IS_ALERT_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -258,6 +358,11 @@ import _root_.scala.scalanative.*
 @extern def ADW_IS_AVATAR(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def ADW_IS_BANNER(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def ADW_IS_BIN(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -266,6 +371,21 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def ADW_IS_BIN_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def ADW_IS_BREAKPOINT(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def ADW_IS_BREAKPOINT_BIN(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def ADW_IS_BREAKPOINT_BIN_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -323,6 +443,26 @@ import _root_.scala.scalanative.*
 @extern def ADW_IS_COMBO_ROW_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def ADW_IS_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def ADW_IS_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def ADW_IS_ENTRY_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def ADW_IS_ENTRY_ROW_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def ADW_IS_ENUM_LIST_ITEM(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -363,6 +503,56 @@ import _root_.scala.scalanative.*
 @extern def ADW_IS_LEAFLET_PAGE(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def ADW_IS_MESSAGE_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def ADW_IS_MESSAGE_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_IS_NAVIGATION_PAGE(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_IS_NAVIGATION_PAGE_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def ADW_IS_NAVIGATION_SPLIT_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_IS_NAVIGATION_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def ADW_IS_OVERLAY_SPLIT_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def ADW_IS_PASSWORD_ENTRY_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def ADW_IS_PREFERENCES_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def ADW_IS_PREFERENCES_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 @extern def ADW_IS_PREFERENCES_GROUP(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -401,6 +591,21 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
 @extern def ADW_IS_PREFERENCES_WINDOW_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def ADW_IS_PROPERTY_ANIMATION_TARGET(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def ADW_IS_PROPERTY_ANIMATION_TARGET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def ADW_IS_SPIN_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -448,9 +653,24 @@ import _root_.scala.scalanative.*
 @extern def ADW_IS_SWIPE_TRACKER(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def ADW_IS_SWITCH_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def ADW_IS_TAB_BAR(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def ADW_IS_TAB_BUTTON(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def ADW_IS_TAB_OVERVIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -483,6 +703,11 @@ import _root_.scala.scalanative.*
 @extern def ADW_IS_TOAST_OVERLAY(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def ADW_IS_TOOLBAR_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def ADW_IS_VIEW_STACK(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -491,6 +716,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def ADW_IS_VIEW_STACK_PAGE(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def ADW_IS_VIEW_STACK_PAGES(ptr : _root_.sn.gnome.glib.internal.gpointer): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -531,6 +761,71 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
 @extern def ADW_LEAFLET_PAGE(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwLeafletPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def ADW_MESSAGE_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwMessageDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def ADW_MESSAGE_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwMessageDialogClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def ADW_MESSAGE_DIALOG_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwMessageDialogClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_NAVIGATION_PAGE(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_NAVIGATION_PAGE_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwNavigationPageClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_NAVIGATION_PAGE_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwNavigationPageClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def ADW_NAVIGATION_SPLIT_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwNavigationSplitView] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def ADW_NAVIGATION_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwNavigationView] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def ADW_OVERLAY_SPLIT_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwOverlaySplitView] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def ADW_PASSWORD_ENTRY_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPasswordEntryRow] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def ADW_PREFERENCES_DIALOG(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPreferencesDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def ADW_PREFERENCES_DIALOG_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPreferencesDialogClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def ADW_PREFERENCES_DIALOG_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPreferencesDialogClass] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -593,6 +888,26 @@ import _root_.scala.scalanative.*
 @extern def ADW_PREFERENCES_WINDOW_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPreferencesWindowClass] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def ADW_PROPERTY_ANIMATION_TARGET(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPropertyAnimationTarget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def ADW_PROPERTY_ANIMATION_TARGET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPropertyAnimationTargetClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def ADW_PROPERTY_ANIMATION_TARGET_GET_CLASS(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwPropertyAnimationTargetClass] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def ADW_SPIN_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwSpinRow] = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
 @extern def ADW_SPLIT_BUTTON(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwSplitButton] = extern
@@ -648,9 +963,24 @@ import _root_.scala.scalanative.*
 @extern def ADW_SWIPE_TRACKER(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwSwipeTracker] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def ADW_SWITCH_ROW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwSwitchRow] = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def ADW_TAB_BAR(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwTabBar] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def ADW_TAB_BUTTON(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwTabButton] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def ADW_TAB_OVERVIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwTabOverview] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -688,6 +1018,11 @@ import _root_.scala.scalanative.*
 @extern def ADW_TOAST_OVERLAY(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwToastOverlay] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def ADW_TOOLBAR_VIEW(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwToolbarView] = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def ADW_VIEW_STACK(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwViewStack] = extern
@@ -696,6 +1031,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def ADW_VIEW_STACK_PAGE(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwViewStackPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def ADW_VIEW_STACK_PAGES(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwViewStackPages] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -733,6 +1073,476 @@ import _root_.scala.scalanative.*
 @extern def ADW_WINDOW_TITLE(ptr : _root_.sn.gnome.glib.internal.gpointer): Ptr[AdwWindowTitle] = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_add_acknowledgement_section(self : Ptr[AdwAboutDialog], name : CString, people : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_add_credit_section(self : Ptr[AdwAboutDialog], name : CString, people : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_add_legal_section(self : Ptr[AdwAboutDialog], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_add_link(self : Ptr[AdwAboutDialog], title : CString, url : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_application_icon(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_application_name(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_artists(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_comments(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_copyright(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_debug_info(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_debug_info_filename(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_designers(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_developer_name(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_developers(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_documenters(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_issue_url(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_license(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_license_type(self : Ptr[AdwAboutDialog]): _root_.sn.gnome.gtk.internal.GtkLicense = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_release_notes(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_release_notes_version(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_support_url(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_translator_credits(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_version(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_get_website(self : Ptr[AdwAboutDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_new(): Ptr[AdwDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_new_from_appdata(resource_path : CString, release_notes_version : CString): Ptr[AdwDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_application_icon(self : Ptr[AdwAboutDialog], application_icon : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_application_name(self : Ptr[AdwAboutDialog], application_name : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_artists(self : Ptr[AdwAboutDialog], artists : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_comments(self : Ptr[AdwAboutDialog], comments : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_copyright(self : Ptr[AdwAboutDialog], copyright : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_debug_info(self : Ptr[AdwAboutDialog], debug_info : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_debug_info_filename(self : Ptr[AdwAboutDialog], filename : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_designers(self : Ptr[AdwAboutDialog], designers : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_developer_name(self : Ptr[AdwAboutDialog], developer_name : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_developers(self : Ptr[AdwAboutDialog], developers : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_documenters(self : Ptr[AdwAboutDialog], documenters : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_issue_url(self : Ptr[AdwAboutDialog], issue_url : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_license(self : Ptr[AdwAboutDialog], license : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_license_type(self : Ptr[AdwAboutDialog], license_type : _root_.sn.gnome.gtk.internal.GtkLicense): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_release_notes(self : Ptr[AdwAboutDialog], release_notes : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_release_notes_version(self : Ptr[AdwAboutDialog], version : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_support_url(self : Ptr[AdwAboutDialog], support_url : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_translator_credits(self : Ptr[AdwAboutDialog], translator_credits : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_version(self : Ptr[AdwAboutDialog], version : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_about_dialog_set_website(self : Ptr[AdwAboutDialog], website : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_add_acknowledgement_section(self : Ptr[AdwAboutWindow], name : CString, people : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_add_credit_section(self : Ptr[AdwAboutWindow], name : CString, people : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_add_legal_section(self : Ptr[AdwAboutWindow], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_add_link(self : Ptr[AdwAboutWindow], title : CString, url : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_application_icon(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_application_name(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_artists(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_comments(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_copyright(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_debug_info(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_debug_info_filename(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_designers(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_developer_name(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_developers(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_documenters(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_issue_url(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_license(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_license_type(self : Ptr[AdwAboutWindow]): _root_.sn.gnome.gtk.internal.GtkLicense = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_release_notes(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_release_notes_version(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_support_url(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_translator_credits(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_version(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_get_website(self : Ptr[AdwAboutWindow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_new_from_appdata(resource_path : CString, release_notes_version : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_application_icon(self : Ptr[AdwAboutWindow], application_icon : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_application_name(self : Ptr[AdwAboutWindow], application_name : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_artists(self : Ptr[AdwAboutWindow], artists : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_comments(self : Ptr[AdwAboutWindow], comments : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_copyright(self : Ptr[AdwAboutWindow], copyright : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_debug_info(self : Ptr[AdwAboutWindow], debug_info : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_debug_info_filename(self : Ptr[AdwAboutWindow], filename : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_designers(self : Ptr[AdwAboutWindow], designers : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_developer_name(self : Ptr[AdwAboutWindow], developer_name : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_developers(self : Ptr[AdwAboutWindow], developers : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_documenters(self : Ptr[AdwAboutWindow], documenters : Ptr[CString]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_issue_url(self : Ptr[AdwAboutWindow], issue_url : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_license(self : Ptr[AdwAboutWindow], license : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_license_type(self : Ptr[AdwAboutWindow], license_type : _root_.sn.gnome.gtk.internal.GtkLicense): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_release_notes(self : Ptr[AdwAboutWindow], release_notes : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_release_notes_version(self : Ptr[AdwAboutWindow], version : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_support_url(self : Ptr[AdwAboutWindow], support_url : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_translator_credits(self : Ptr[AdwAboutWindow], translator_credits : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_version(self : Ptr[AdwAboutWindow], version : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_about_window_set_website(self : Ptr[AdwAboutWindow], website : CString): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def adw_action_row_activate(self : Ptr[AdwActionRow]): Unit = extern
@@ -766,6 +1576,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def adw_action_row_get_subtitle_lines(self : Ptr[AdwActionRow]): CInt = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
+*/
+@extern def adw_action_row_get_subtitle_selectable(self : Ptr[AdwActionRow]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -810,7 +1625,177 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
+@extern def adw_action_row_set_subtitle_selectable(self : Ptr[AdwActionRow], subtitle_selectable : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
+*/
 @extern def adw_action_row_set_title_lines(self : Ptr[AdwActionRow], title_lines : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_add_response(self : Ptr[AdwAlertDialog], id : CString, label : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_add_responses(self : Ptr[AdwAlertDialog], first_id : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_choose(self : Ptr[AdwAlertDialog], parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], callback : _root_.sn.gnome.gio.internal.GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_choose_finish(self : Ptr[AdwAlertDialog], result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_format_body(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_format_body_markup(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_format_heading(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_format_heading_markup(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_body(self : Ptr[AdwAlertDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_body_use_markup(self : Ptr[AdwAlertDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_close_response(self : Ptr[AdwAlertDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_default_response(self : Ptr[AdwAlertDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_extra_child(self : Ptr[AdwAlertDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_heading(self : Ptr[AdwAlertDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_heading_use_markup(self : Ptr[AdwAlertDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_response_appearance(self : Ptr[AdwAlertDialog], response : CString): AdwResponseAppearance = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_response_enabled(self : Ptr[AdwAlertDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_response_label(self : Ptr[AdwAlertDialog], response : CString): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_has_response(self : Ptr[AdwAlertDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_new(heading : CString, body : CString): Ptr[AdwDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_remove_response(self : Ptr[AdwAlertDialog], id : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_body(self : Ptr[AdwAlertDialog], body : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_body_use_markup(self : Ptr[AdwAlertDialog], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_close_response(self : Ptr[AdwAlertDialog], response : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_default_response(self : Ptr[AdwAlertDialog], response : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_extra_child(self : Ptr[AdwAlertDialog], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_heading(self : Ptr[AdwAlertDialog], heading : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_heading_use_markup(self : Ptr[AdwAlertDialog], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_response_appearance(self : Ptr[AdwAlertDialog], response : CString, appearance : AdwResponseAppearance): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_response_enabled(self : Ptr[AdwAlertDialog], response : CString, enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def adw_alert_dialog_set_response_label(self : Ptr[AdwAlertDialog], response : CString, label : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
+*/
+@extern def adw_animation_get_follow_enable_animations_setting(self : Ptr[AdwAnimation]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -860,6 +1845,16 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
 */
+@extern def adw_animation_set_follow_enable_animations_setting(self : Ptr[AdwAnimation], setting : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
+*/
+@extern def adw_animation_set_target(self : Ptr[AdwAnimation], target : Ptr[AdwAnimationTarget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
+*/
 @extern def adw_animation_skip(self : Ptr[AdwAnimation]): Unit = extern
 
 /**
@@ -890,12 +1885,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
+@extern def adw_application_window_add_breakpoint(self : Ptr[AdwApplicationWindow], breakpoint : Ptr[AdwBreakpoint]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
+*/
 @extern def adw_application_window_get_content(self : Ptr[AdwApplicationWindow]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
+@extern def adw_application_window_get_current_breakpoint(self : Ptr[AdwApplicationWindow]): Ptr[AdwBreakpoint] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
+*/
+@extern def adw_application_window_get_dialogs(self : Ptr[AdwApplicationWindow]): Ptr[_root_.sn.gnome.gio.internal.GListModel] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
+*/
 @extern def adw_application_window_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
+*/
+@extern def adw_application_window_get_visible_dialog(self : Ptr[AdwApplicationWindow]): Ptr[AdwDialog] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
@@ -973,6 +1988,56 @@ import _root_.scala.scalanative.*
 @extern def adw_avatar_set_text(self : Ptr[AdwAvatar], text : CString): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_get_button_label(self : Ptr[AdwBanner]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_get_revealed(self : Ptr[AdwBanner]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_get_title(self : Ptr[AdwBanner]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_get_use_markup(self : Ptr[AdwBanner]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_new(title : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_set_button_label(self : Ptr[AdwBanner], label : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_set_revealed(self : Ptr[AdwBanner], revealed : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_set_title(self : Ptr[AdwBanner], title : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def adw_banner_set_use_markup(self : Ptr[AdwBanner], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def adw_bin_get_child(self : Ptr[AdwBin]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
@@ -991,6 +2056,141 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def adw_bin_set_child(self : Ptr[AdwBin], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_add_setter(self : Ptr[AdwBreakpoint], `object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], property : CString, value : Ptr[_root_.sn.gnome.gobject.internal.GValue]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_add_setters(self : Ptr[AdwBreakpoint], first_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], first_property : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_add_setters_valist(self : Ptr[AdwBreakpoint], first_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], first_property : CString, args : va_list): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_add_settersv(self : Ptr[AdwBreakpoint], n_setters : CInt, objects : Ptr[Ptr[_root_.sn.gnome.gobject.internal.GObject]], names : Ptr[CString], values : Ptr[Ptr[_root_.sn.gnome.gobject.internal.GValue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_add_breakpoint(self : Ptr[AdwBreakpointBin], breakpoint : Ptr[AdwBreakpoint]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_get_child(self : Ptr[AdwBreakpointBin]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_get_current_breakpoint(self : Ptr[AdwBreakpointBin]): Ptr[AdwBreakpoint] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_remove_breakpoint(self : Ptr[AdwBreakpointBin], breakpoint : Ptr[AdwBreakpoint]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def adw_breakpoint_bin_set_child(self : Ptr[AdwBreakpointBin], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_copy(self : Ptr[AdwBreakpointCondition]): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_free(self : Ptr[AdwBreakpointCondition]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_breakpoint_condition_length_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_new_and(condition_1 : Ptr[AdwBreakpointCondition], condition_2 : Ptr[AdwBreakpointCondition]): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_new_length(`type` : AdwBreakpointConditionLengthType, value : Double, unit : AdwLengthUnit): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_new_or(condition_1 : Ptr[AdwBreakpointCondition], condition_2 : Ptr[AdwBreakpointCondition]): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_new_ratio(`type` : AdwBreakpointConditionRatioType, width : CInt, height : CInt): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_parse(str : CString): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_breakpoint_condition_ratio_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_condition_to_string(self : Ptr[AdwBreakpointCondition]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_get_condition(self : Ptr[AdwBreakpoint]): Ptr[AdwBreakpointCondition] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_new(condition : Ptr[AdwBreakpointCondition]): Ptr[AdwBreakpoint] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def adw_breakpoint_set_condition(self : Ptr[AdwBreakpoint], condition : Ptr[AdwBreakpointCondition]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
+*/
+@extern def adw_button_content_get_can_shrink(self : Ptr[AdwButtonContent]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -1016,6 +2216,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
 @extern def adw_button_content_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
+*/
+@extern def adw_button_content_set_can_shrink(self : Ptr[AdwButtonContent], can_shrink : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -1233,6 +2438,11 @@ import _root_.scala.scalanative.*
 @extern def adw_clamp_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
+*/
+@extern def adw_clamp_get_unit(self : Ptr[AdwClamp]): AdwLengthUnit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
 */
 @extern def adw_clamp_layout_get_maximum_size(self : Ptr[AdwClampLayout]): CInt = extern
@@ -1250,6 +2460,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
 */
+@extern def adw_clamp_layout_get_unit(self : Ptr[AdwClampLayout]): AdwLengthUnit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
+*/
 @extern def adw_clamp_layout_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkLayoutManager] = extern
 
 /**
@@ -1261,6 +2476,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
 */
 @extern def adw_clamp_layout_set_tightening_threshold(self : Ptr[AdwClampLayout], tightening_threshold : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
+*/
+@extern def adw_clamp_layout_set_unit(self : Ptr[AdwClampLayout], unit : AdwLengthUnit): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
@@ -1290,6 +2510,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
 */
+@extern def adw_clamp_scrollable_get_unit(self : Ptr[AdwClampScrollable]): AdwLengthUnit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
+*/
 @extern def adw_clamp_scrollable_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
@@ -1308,6 +2533,11 @@ import _root_.scala.scalanative.*
 @extern def adw_clamp_scrollable_set_tightening_threshold(self : Ptr[AdwClampScrollable], tightening_threshold : CInt): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
+*/
+@extern def adw_clamp_scrollable_set_unit(self : Ptr[AdwClampScrollable], unit : AdwLengthUnit): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
 */
 @extern def adw_clamp_set_child(self : Ptr[AdwClamp], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
@@ -1323,9 +2553,19 @@ import _root_.scala.scalanative.*
 @extern def adw_clamp_set_tightening_threshold(self : Ptr[AdwClamp], tightening_threshold : CInt): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
+*/
+@extern def adw_clamp_set_unit(self : Ptr[AdwClamp], unit : AdwLengthUnit): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
 */
 @extern def adw_color_scheme_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
+*/
+@extern def adw_combo_row_get_enable_search(self : Ptr[AdwComboRow]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
@@ -1375,6 +2615,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
+@extern def adw_combo_row_set_enable_search(self : Ptr[AdwComboRow], enable_search : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
+*/
 @extern def adw_combo_row_set_expression(self : Ptr[AdwComboRow], expression : Ptr[_root_.sn.gnome.gtk.internal.GtkExpression]): Unit = extern
 
 /**
@@ -1403,6 +2648,136 @@ import _root_.scala.scalanative.*
 @extern def adw_combo_row_set_use_subtitle(self : Ptr[AdwComboRow], use_subtitle : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_add_breakpoint(self : Ptr[AdwDialog], breakpoint : Ptr[AdwBreakpoint]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_close(self : Ptr[AdwDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_force_close(self : Ptr[AdwDialog]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_can_close(self : Ptr[AdwDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_child(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_content_height(self : Ptr[AdwDialog]): CInt = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_content_width(self : Ptr[AdwDialog]): CInt = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_current_breakpoint(self : Ptr[AdwDialog]): Ptr[AdwBreakpoint] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_default_widget(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_focus(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_follows_content_size(self : Ptr[AdwDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_presentation_mode(self : Ptr[AdwDialog]): AdwDialogPresentationMode = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_title(self : Ptr[AdwDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_new(): Ptr[AdwDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_present(self : Ptr[AdwDialog], parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_dialog_presentation_mode_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_can_close(self : Ptr[AdwDialog], can_close : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_child(self : Ptr[AdwDialog], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_content_height(self : Ptr[AdwDialog], content_height : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_content_width(self : Ptr[AdwDialog], content_width : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_default_widget(self : Ptr[AdwDialog], default_widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_focus(self : Ptr[AdwDialog], focus : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_follows_content_size(self : Ptr[AdwDialog], follows_content_size : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_presentation_mode(self : Ptr[AdwDialog], presentation_mode : AdwDialogPresentationMode): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def adw_dialog_set_title(self : Ptr[AdwDialog], title : CString): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-easing.h
 */
 @extern def adw_easing_ease(self : AdwEasing, value : Double): Double = extern
@@ -1411,6 +2786,101 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
 */
 @extern def adw_easing_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_add_prefix(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_add_suffix(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_activates_default(self : Ptr[AdwEntryRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_attributes(self : Ptr[AdwEntryRow]): Ptr[_root_.sn.gnome.pango.internal.PangoAttrList] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_enable_emoji_completion(self : Ptr[AdwEntryRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_input_hints(self : Ptr[AdwEntryRow]): _root_.sn.gnome.gtk.internal.GtkInputHints = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_input_purpose(self : Ptr[AdwEntryRow]): _root_.sn.gnome.gtk.internal.GtkInputPurpose = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_show_apply_button(self : Ptr[AdwEntryRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_text_length(self : Ptr[AdwEntryRow]): _root_.sn.gnome.glib.internal.guint = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_grab_focus_without_selecting(self : Ptr[AdwEntryRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_remove(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_set_activates_default(self : Ptr[AdwEntryRow], activates : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_set_attributes(self : Ptr[AdwEntryRow], attributes : Ptr[_root_.sn.gnome.pango.internal.PangoAttrList]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_set_enable_emoji_completion(self : Ptr[AdwEntryRow], enable_emoji_completion : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_set_input_hints(self : Ptr[AdwEntryRow], hints : _root_.sn.gnome.gtk.internal.GtkInputHints): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_set_input_purpose(self : Ptr[AdwEntryRow], purpose : _root_.sn.gnome.gtk.internal.GtkInputPurpose): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def adw_entry_row_set_show_apply_button(self : Ptr[AdwEntryRow], show_apply_button : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
@@ -1470,6 +2940,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
+@extern def adw_expander_row_add_suffix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
+*/
 @extern def adw_expander_row_get_enable_expansion(self : Ptr[AdwExpanderRow]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
@@ -1491,6 +2966,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
 @extern def adw_expander_row_get_subtitle(self : Ptr[AdwExpanderRow]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
+*/
+@extern def adw_expander_row_get_subtitle_lines(self : Ptr[AdwExpanderRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
+*/
+@extern def adw_expander_row_get_title_lines(self : Ptr[AdwExpanderRow]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -1531,6 +3016,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
 @extern def adw_expander_row_set_subtitle(self : Ptr[AdwExpanderRow], subtitle : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
+*/
+@extern def adw_expander_row_set_subtitle_lines(self : Ptr[AdwExpanderRow], subtitle_lines : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
+*/
+@extern def adw_expander_row_set_title_lines(self : Ptr[AdwExpanderRow], title_lines : CInt): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -1740,12 +3235,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
+@extern def adw_header_bar_get_show_back_button(self : Ptr[AdwHeaderBar]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
+*/
 @extern def adw_header_bar_get_show_end_title_buttons(self : Ptr[AdwHeaderBar]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
 @extern def adw_header_bar_get_show_start_title_buttons(self : Ptr[AdwHeaderBar]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
+*/
+@extern def adw_header_bar_get_show_title(self : Ptr[AdwHeaderBar]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -1790,12 +3295,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
+@extern def adw_header_bar_set_show_back_button(self : Ptr[AdwHeaderBar], show_back_button : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
+*/
 @extern def adw_header_bar_set_show_end_title_buttons(self : Ptr[AdwHeaderBar], setting : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
 @extern def adw_header_bar_set_show_start_title_buttons(self : Ptr[AdwHeaderBar], setting : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
+*/
+@extern def adw_header_bar_set_show_title(self : Ptr[AdwHeaderBar], show_title : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -2018,14 +3533,639 @@ import _root_.scala.scalanative.*
 @extern def adw_leaflet_transition_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-length-unit.h
+*/
+@extern def adw_length_unit_from_px(unit : AdwLengthUnit, value : Double, settings : Ptr[_root_.sn.gnome.gtk.internal.GtkSettings]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_length_unit_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-length-unit.h
+*/
+@extern def adw_length_unit_to_px(unit : AdwLengthUnit, value : Double, settings : Ptr[_root_.sn.gnome.gtk.internal.GtkSettings]): Double = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-util.h
 */
 @extern def adw_lerp(a : Double, b : Double, t : Double): Double = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_add_response(self : Ptr[AdwMessageDialog], id : CString, label : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_add_responses(self : Ptr[AdwMessageDialog], first_id : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_choose(self : Ptr[AdwMessageDialog], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], callback : _root_.sn.gnome.gio.internal.GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_choose_finish(self : Ptr[AdwMessageDialog], result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_format_body(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_format_body_markup(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_format_heading(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_format_heading_markup(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_body(self : Ptr[AdwMessageDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_body_use_markup(self : Ptr[AdwMessageDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_close_response(self : Ptr[AdwMessageDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_default_response(self : Ptr[AdwMessageDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_extra_child(self : Ptr[AdwMessageDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_heading(self : Ptr[AdwMessageDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_heading_use_markup(self : Ptr[AdwMessageDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_response_appearance(self : Ptr[AdwMessageDialog], response : CString): AdwResponseAppearance = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_response_enabled(self : Ptr[AdwMessageDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_response_label(self : Ptr[AdwMessageDialog], response : CString): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_has_response(self : Ptr[AdwMessageDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_new(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], heading : CString, body : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_remove_response(self : Ptr[AdwMessageDialog], id : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_response(self : Ptr[AdwMessageDialog], response : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_body(self : Ptr[AdwMessageDialog], body : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_body_use_markup(self : Ptr[AdwMessageDialog], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_close_response(self : Ptr[AdwMessageDialog], response : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_default_response(self : Ptr[AdwMessageDialog], response : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_extra_child(self : Ptr[AdwMessageDialog], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_heading(self : Ptr[AdwMessageDialog], heading : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_heading_use_markup(self : Ptr[AdwMessageDialog], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_response_appearance(self : Ptr[AdwMessageDialog], response : CString, appearance : AdwResponseAppearance): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_response_enabled(self : Ptr[AdwMessageDialog], response : CString, enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def adw_message_dialog_set_response_label(self : Ptr[AdwMessageDialog], response : CString, label : CString): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
 */
 @extern def adw_navigation_direction_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_get_can_pop(self : Ptr[AdwNavigationPage]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_get_child(self : Ptr[AdwNavigationPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_get_tag(self : Ptr[AdwNavigationPage]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_get_title(self : Ptr[AdwNavigationPage]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_new(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : CString): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_new_with_tag(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : CString, tag : CString): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_set_can_pop(self : Ptr[AdwNavigationPage], can_pop : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_set_child(self : Ptr[AdwNavigationPage], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_set_tag(self : Ptr[AdwNavigationPage], tag : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_page_set_title(self : Ptr[AdwNavigationPage], title : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_collapsed(self : Ptr[AdwNavigationSplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_content(self : Ptr[AdwNavigationSplitView]): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_max_sidebar_width(self : Ptr[AdwNavigationSplitView]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_min_sidebar_width(self : Ptr[AdwNavigationSplitView]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_show_content(self : Ptr[AdwNavigationSplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_sidebar(self : Ptr[AdwNavigationSplitView]): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_sidebar_width_fraction(self : Ptr[AdwNavigationSplitView]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_sidebar_width_unit(self : Ptr[AdwNavigationSplitView]): AdwLengthUnit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_collapsed(self : Ptr[AdwNavigationSplitView], collapsed : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_content(self : Ptr[AdwNavigationSplitView], content : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_max_sidebar_width(self : Ptr[AdwNavigationSplitView], width : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_min_sidebar_width(self : Ptr[AdwNavigationSplitView], width : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_show_content(self : Ptr[AdwNavigationSplitView], show_content : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_sidebar(self : Ptr[AdwNavigationSplitView], sidebar : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_sidebar_width_fraction(self : Ptr[AdwNavigationSplitView], fraction : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def adw_navigation_split_view_set_sidebar_width_unit(self : Ptr[AdwNavigationSplitView], unit : AdwLengthUnit): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_add(self : Ptr[AdwNavigationView], page : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_find_page(self : Ptr[AdwNavigationView], tag : CString): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_get_animate_transitions(self : Ptr[AdwNavigationView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_get_navigation_stack(self : Ptr[AdwNavigationView]): Ptr[_root_.sn.gnome.gio.internal.GListModel] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_get_pop_on_escape(self : Ptr[AdwNavigationView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_get_previous_page(self : Ptr[AdwNavigationView], page : Ptr[AdwNavigationPage]): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_get_visible_page(self : Ptr[AdwNavigationView]): Ptr[AdwNavigationPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_pop(self : Ptr[AdwNavigationView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_pop_to_page(self : Ptr[AdwNavigationView], page : Ptr[AdwNavigationPage]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_pop_to_tag(self : Ptr[AdwNavigationView], tag : CString): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_push(self : Ptr[AdwNavigationView], page : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_push_by_tag(self : Ptr[AdwNavigationView], tag : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_remove(self : Ptr[AdwNavigationView], page : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_replace(self : Ptr[AdwNavigationView], pages : Ptr[Ptr[AdwNavigationPage]], n_pages : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_replace_with_tags(self : Ptr[AdwNavigationView], tags : Ptr[CString], n_tags : CInt): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_set_animate_transitions(self : Ptr[AdwNavigationView], animate_transitions : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def adw_navigation_view_set_pop_on_escape(self : Ptr[AdwNavigationView], pop_on_escape : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_collapsed(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_content(self : Ptr[AdwOverlaySplitView]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_enable_hide_gesture(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_enable_show_gesture(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_max_sidebar_width(self : Ptr[AdwOverlaySplitView]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_min_sidebar_width(self : Ptr[AdwOverlaySplitView]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_pin_sidebar(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_show_sidebar(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_sidebar(self : Ptr[AdwOverlaySplitView]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_sidebar_position(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.gtk.internal.GtkPackType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_sidebar_width_fraction(self : Ptr[AdwOverlaySplitView]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_sidebar_width_unit(self : Ptr[AdwOverlaySplitView]): AdwLengthUnit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_collapsed(self : Ptr[AdwOverlaySplitView], collapsed : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_content(self : Ptr[AdwOverlaySplitView], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_enable_hide_gesture(self : Ptr[AdwOverlaySplitView], enable_hide_gesture : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_enable_show_gesture(self : Ptr[AdwOverlaySplitView], enable_show_gesture : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_max_sidebar_width(self : Ptr[AdwOverlaySplitView], width : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_min_sidebar_width(self : Ptr[AdwOverlaySplitView], width : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_pin_sidebar(self : Ptr[AdwOverlaySplitView], pin_sidebar : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_show_sidebar(self : Ptr[AdwOverlaySplitView], show_sidebar : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_sidebar(self : Ptr[AdwOverlaySplitView], sidebar : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_sidebar_position(self : Ptr[AdwOverlaySplitView], position : _root_.sn.gnome.gtk.internal.GtkPackType): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_sidebar_width_fraction(self : Ptr[AdwOverlaySplitView], fraction : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def adw_overlay_split_view_set_sidebar_width_unit(self : Ptr[AdwOverlaySplitView], unit : AdwLengthUnit): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def adw_password_entry_row_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def adw_password_entry_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_add(self : Ptr[AdwPreferencesDialog], page : Ptr[AdwPreferencesPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_add_toast(self : Ptr[AdwPreferencesDialog], toast : Ptr[AdwToast]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_get_search_enabled(self : Ptr[AdwPreferencesDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_get_visible_page(self : Ptr[AdwPreferencesDialog]): Ptr[AdwPreferencesPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_get_visible_page_name(self : Ptr[AdwPreferencesDialog]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_new(): Ptr[AdwDialog] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_pop_subpage(self : Ptr[AdwPreferencesDialog]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_push_subpage(self : Ptr[AdwPreferencesDialog], page : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_remove(self : Ptr[AdwPreferencesDialog], page : Ptr[AdwPreferencesPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_set_search_enabled(self : Ptr[AdwPreferencesDialog], search_enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_set_visible_page(self : Ptr[AdwPreferencesDialog], page : Ptr[AdwPreferencesPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def adw_preferences_dialog_set_visible_page_name(self : Ptr[AdwPreferencesDialog], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -2085,6 +4225,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
+@extern def adw_preferences_page_get_description(self : Ptr[AdwPreferencesPage]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
+*/
 @extern def adw_preferences_page_get_icon_name(self : Ptr[AdwPreferencesPage]): CString = extern
 
 /**
@@ -2116,6 +4261,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
 @extern def adw_preferences_page_remove(self : Ptr[AdwPreferencesPage], group : Ptr[AdwPreferencesGroup]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
+*/
+@extern def adw_preferences_page_scroll_to_top(self : Ptr[AdwPreferencesPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
+*/
+@extern def adw_preferences_page_set_description(self : Ptr[AdwPreferencesPage], description : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
@@ -2155,6 +4310,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
+@extern def adw_preferences_row_get_use_markup(self : Ptr[AdwPreferencesRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
+*/
 @extern def adw_preferences_row_get_use_underline(self : Ptr[AdwPreferencesRow]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
@@ -2171,6 +4331,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
 @extern def adw_preferences_row_set_title_selectable(self : Ptr[AdwPreferencesRow], title_selectable : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
+*/
+@extern def adw_preferences_row_set_use_markup(self : Ptr[AdwPreferencesRow], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
@@ -2225,7 +4390,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
+@extern def adw_preferences_window_pop_subpage(self : Ptr[AdwPreferencesWindow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
+*/
 @extern def adw_preferences_window_present_subpage(self : Ptr[AdwPreferencesWindow], subpage : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
+*/
+@extern def adw_preferences_window_push_subpage(self : Ptr[AdwPreferencesWindow], page : Ptr[AdwNavigationPage]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
@@ -2253,6 +4428,171 @@ import _root_.scala.scalanative.*
 @extern def adw_preferences_window_set_visible_page_name(self : Ptr[AdwPreferencesWindow], name : CString): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def adw_property_animation_target_get_object(self : Ptr[AdwPropertyAnimationTarget]): Ptr[_root_.sn.gnome.gobject.internal.GObject] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def adw_property_animation_target_get_pspec(self : Ptr[AdwPropertyAnimationTarget]): Ptr[_root_.sn.gnome.gobject.internal.GParamSpec] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def adw_property_animation_target_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def adw_property_animation_target_new(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], property_name : CString): Ptr[AdwAnimationTarget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def adw_property_animation_target_new_for_pspec(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], pspec : Ptr[_root_.sn.gnome.gobject.internal.GParamSpec]): Ptr[AdwAnimationTarget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_response_appearance_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_show_about_dialog(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], first_property_name : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def adw_show_about_dialog_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_show_about_window(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], first_property_name : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def adw_show_about_window_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_configure(self : Ptr[AdwSpinRow], adjustment : Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment], climb_rate : Double, digits : _root_.sn.gnome.glib.internal.guint): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_adjustment(self : Ptr[AdwSpinRow]): Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_climb_rate(self : Ptr[AdwSpinRow]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_digits(self : Ptr[AdwSpinRow]): _root_.sn.gnome.glib.internal.guint = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_numeric(self : Ptr[AdwSpinRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_snap_to_ticks(self : Ptr[AdwSpinRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_update_policy(self : Ptr[AdwSpinRow]): _root_.sn.gnome.gtk.internal.GtkSpinButtonUpdatePolicy = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_value(self : Ptr[AdwSpinRow]): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_get_wrap(self : Ptr[AdwSpinRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_new(adjustment : Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment], climb_rate : Double, digits : _root_.sn.gnome.glib.internal.guint): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_new_with_range(min : Double, max : Double, step : Double): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_adjustment(self : Ptr[AdwSpinRow], adjustment : Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_climb_rate(self : Ptr[AdwSpinRow], climb_rate : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_digits(self : Ptr[AdwSpinRow], digits : _root_.sn.gnome.glib.internal.guint): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_numeric(self : Ptr[AdwSpinRow], numeric : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_range(self : Ptr[AdwSpinRow], min : Double, max : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_snap_to_ticks(self : Ptr[AdwSpinRow], snap_to_ticks : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_update_policy(self : Ptr[AdwSpinRow], policy : _root_.sn.gnome.gtk.internal.GtkSpinButtonUpdatePolicy): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_value(self : Ptr[AdwSpinRow], value : Double): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_set_wrap(self : Ptr[AdwSpinRow], wrap : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def adw_spin_row_update(self : Ptr[AdwSpinRow]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
+*/
+@extern def adw_split_button_get_can_shrink(self : Ptr[AdwSplitButton]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
 @extern def adw_split_button_get_child(self : Ptr[AdwSplitButton]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
@@ -2261,6 +4601,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
 @extern def adw_split_button_get_direction(self : Ptr[AdwSplitButton]): _root_.sn.gnome.gtk.internal.GtkArrowType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
+*/
+@extern def adw_split_button_get_dropdown_tooltip(self : Ptr[AdwSplitButton]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2310,12 +4655,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
+@extern def adw_split_button_set_can_shrink(self : Ptr[AdwSplitButton], can_shrink : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
+*/
 @extern def adw_split_button_set_child(self : Ptr[AdwSplitButton], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
 @extern def adw_split_button_set_direction(self : Ptr[AdwSplitButton], direction : _root_.sn.gnome.gtk.internal.GtkArrowType): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
+*/
+@extern def adw_split_button_set_dropdown_tooltip(self : Ptr[AdwSplitButton], tooltip : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -2341,6 +4696,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
 @extern def adw_split_button_set_use_underline(self : Ptr[AdwSplitButton], use_underline : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
+*/
+@extern def adw_spring_animation_calculate_value(self : Ptr[AdwSpringAnimation], time : _root_.sn.gnome.glib.internal.guint): Double = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
+*/
+@extern def adw_spring_animation_calculate_velocity(self : Ptr[AdwSpringAnimation], time : _root_.sn.gnome.glib.internal.guint): Double = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
@@ -2730,7 +5095,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
 */
+@extern def adw_swipe_tracker_get_allow_window_handle(self : Ptr[AdwSwipeTracker]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
+*/
 @extern def adw_swipe_tracker_get_enabled(self : Ptr[AdwSwipeTracker]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
+*/
+@extern def adw_swipe_tracker_get_lower_overshoot(self : Ptr[AdwSwipeTracker]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
@@ -2750,6 +5125,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
 */
+@extern def adw_swipe_tracker_get_upper_overshoot(self : Ptr[AdwSwipeTracker]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
+*/
 @extern def adw_swipe_tracker_new(swipeable : Ptr[AdwSwipeable]): Ptr[AdwSwipeTracker] = extern
 
 /**
@@ -2765,12 +5145,27 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
 */
+@extern def adw_swipe_tracker_set_allow_window_handle(self : Ptr[AdwSwipeTracker], allow_window_handle : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
+*/
 @extern def adw_swipe_tracker_set_enabled(self : Ptr[AdwSwipeTracker], enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
 */
+@extern def adw_swipe_tracker_set_lower_overshoot(self : Ptr[AdwSwipeTracker], overshoot : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
+*/
 @extern def adw_swipe_tracker_set_reversed(self : Ptr[AdwSwipeTracker], reversed : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
+*/
+@extern def adw_swipe_tracker_set_upper_overshoot(self : Ptr[AdwSwipeTracker], overshoot : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipe-tracker.h
@@ -2808,6 +5203,26 @@ import _root_.scala.scalanative.*
 @extern def adw_swipeable_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def adw_switch_row_get_active(self : Ptr[AdwSwitchRow]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def adw_switch_row_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def adw_switch_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def adw_switch_row_set_active(self : Ptr[AdwSwitchRow], is_active : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def adw_tab_bar_get_autohide(self : Ptr[AdwTabBar]): _root_.sn.gnome.glib.internal.gboolean = extern
@@ -2821,6 +5236,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def adw_tab_bar_get_expand_tabs(self : Ptr[AdwTabBar]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
+*/
+@extern def adw_tab_bar_get_extra_drag_preferred_action(self : Ptr[AdwTabBar]): _root_.sn.gnome.gtk.internal.GdkDragAction = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
+*/
+@extern def adw_tab_bar_get_extra_drag_preload(self : Ptr[AdwTabBar]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -2875,6 +5300,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
+@extern def adw_tab_bar_set_extra_drag_preload(self : Ptr[AdwTabBar], preload : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
+*/
 @extern def adw_tab_bar_set_inverted(self : Ptr[AdwTabBar], inverted : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
@@ -2891,6 +5321,151 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def adw_tab_bar_setup_extra_drop_target(self : Ptr[AdwTabBar], actions : _root_.sn.gnome.gtk.internal.GdkDragAction, types : Ptr[_root_.sn.gnome.gobject.internal.GType], n_types : _root_.sn.gnome.glib.internal.gsize): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def adw_tab_button_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def adw_tab_button_get_view(self : Ptr[AdwTabButton]): Ptr[AdwTabView] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def adw_tab_button_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def adw_tab_button_set_view(self : Ptr[AdwTabButton], view : Ptr[AdwTabView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_child(self : Ptr[AdwTabOverview]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_enable_new_tab(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_enable_search(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_extra_drag_preferred_action(self : Ptr[AdwTabOverview]): _root_.sn.gnome.gtk.internal.GdkDragAction = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_extra_drag_preload(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_inverted(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_open(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_search_active(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_secondary_menu(self : Ptr[AdwTabOverview]): Ptr[_root_.sn.gnome.gio.internal.GMenuModel] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_show_end_title_buttons(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_show_start_title_buttons(self : Ptr[AdwTabOverview]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_get_view(self : Ptr[AdwTabOverview]): Ptr[AdwTabView] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_child(self : Ptr[AdwTabOverview], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_enable_new_tab(self : Ptr[AdwTabOverview], enable_new_tab : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_enable_search(self : Ptr[AdwTabOverview], enable_search : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_extra_drag_preload(self : Ptr[AdwTabOverview], preload : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_inverted(self : Ptr[AdwTabOverview], inverted : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_open(self : Ptr[AdwTabOverview], open : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_secondary_menu(self : Ptr[AdwTabOverview], secondary_menu : Ptr[_root_.sn.gnome.gio.internal.GMenuModel]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_show_end_title_buttons(self : Ptr[AdwTabOverview], show_end_title_buttons : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_show_start_title_buttons(self : Ptr[AdwTabOverview], show_start_title_buttons : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_set_view(self : Ptr[AdwTabOverview], view : Ptr[AdwTabView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def adw_tab_overview_setup_extra_drop_target(self : Ptr[AdwTabOverview], actions : _root_.sn.gnome.gtk.internal.GdkDragAction, types : Ptr[_root_.sn.gnome.gobject.internal.GType], n_types : _root_.sn.gnome.glib.internal.gsize): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -2911,6 +5486,21 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
 @extern def adw_tab_page_get_indicator_icon(self : Ptr[AdwTabPage]): Ptr[_root_.sn.gnome.gio.internal.GIcon] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_get_indicator_tooltip(self : Ptr[AdwTabPage]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_get_keyword(self : Ptr[AdwTabPage]): CString = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_get_live_thumbnail(self : Ptr[AdwTabPage]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -2940,6 +5530,16 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
+@extern def adw_tab_page_get_thumbnail_xalign(self : Ptr[AdwTabPage]): Float = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_get_thumbnail_yalign(self : Ptr[AdwTabPage]): Float = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
 @extern def adw_tab_page_get_title(self : Ptr[AdwTabPage]): CString = extern
 
 /**
@@ -2951,6 +5551,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
 @extern def adw_tab_page_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_invalidate_thumbnail(self : Ptr[AdwTabPage]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -2970,12 +5575,37 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
+@extern def adw_tab_page_set_indicator_tooltip(self : Ptr[AdwTabPage], tooltip : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_set_keyword(self : Ptr[AdwTabPage], keyword : CString): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_set_live_thumbnail(self : Ptr[AdwTabPage], live_thumbnail : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
 @extern def adw_tab_page_set_loading(self : Ptr[AdwTabPage], loading : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
 @extern def adw_tab_page_set_needs_attention(self : Ptr[AdwTabPage], needs_attention : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_set_thumbnail_xalign(self : Ptr[AdwTabPage], xalign : Float): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_page_set_thumbnail_yalign(self : Ptr[AdwTabPage], yalign : Float): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -2991,6 +5621,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
 @extern def adw_tab_view_add_page(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], parent : Ptr[AdwTabPage]): Ptr[AdwTabPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_view_add_shortcuts(self : Ptr[AdwTabView], shortcuts : AdwTabViewShortcuts): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3080,6 +5715,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
+@extern def adw_tab_view_get_shortcuts(self : Ptr[AdwTabView]): AdwTabViewShortcuts = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
 @extern def adw_tab_view_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 /**
@@ -3095,6 +5735,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
+@extern def adw_tab_view_invalidate_thumbnails(self : Ptr[AdwTabView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
 @extern def adw_tab_view_new(): Ptr[AdwTabView] = extern
 
 /**
@@ -3106,6 +5751,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
 @extern def adw_tab_view_prepend_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwTabPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_view_remove_shortcuts(self : Ptr[AdwTabView], shortcuts : AdwTabViewShortcuts): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3161,6 +5811,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
 @extern def adw_tab_view_set_selected_page(self : Ptr[AdwTabView], selected_page : Ptr[AdwTabPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
+*/
+@extern def adw_tab_view_set_shortcuts(self : Ptr[AdwTabView], shortcuts : AdwTabViewShortcuts): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_tab_view_shortcuts_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -3270,6 +5930,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
+@extern def adw_toast_get_custom_title(self : Ptr[AdwToast]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
+*/
 @extern def adw_toast_get_priority(self : Ptr[AdwToast]): AdwToastPriority = extern
 
 /**
@@ -3290,7 +5955,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
+@extern def adw_toast_get_use_markup(self : Ptr[AdwToast]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
+*/
 @extern def adw_toast_new(title : CString): Ptr[AdwToast] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
+*/
+@extern def adw_toast_new_format(format : CString, rest: Any*): Ptr[AdwToast] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
@@ -3345,6 +6020,11 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
+@extern def adw_toast_set_custom_title(self : Ptr[AdwToast], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
+*/
 @extern def adw_toast_set_detailed_action_name(self : Ptr[AdwToast], detailed_action_name : CString): Unit = extern
 
 /**
@@ -3363,6 +6043,121 @@ import _root_.scala.scalanative.*
 @extern def adw_toast_set_title(self : Ptr[AdwToast], title : CString): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
+*/
+@extern def adw_toast_set_use_markup(self : Ptr[AdwToast], use_markup : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
+*/
+@extern def adw_toolbar_style_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_add_bottom_bar(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_add_top_bar(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_bottom_bar_height(self : Ptr[AdwToolbarView]): CInt = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_bottom_bar_style(self : Ptr[AdwToolbarView]): AdwToolbarStyle = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_content(self : Ptr[AdwToolbarView]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_extend_content_to_bottom_edge(self : Ptr[AdwToolbarView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_extend_content_to_top_edge(self : Ptr[AdwToolbarView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_reveal_bottom_bars(self : Ptr[AdwToolbarView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_reveal_top_bars(self : Ptr[AdwToolbarView]): _root_.sn.gnome.glib.internal.gboolean = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_top_bar_height(self : Ptr[AdwToolbarView]): CInt = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_top_bar_style(self : Ptr[AdwToolbarView]): AdwToolbarStyle = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_remove(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_bottom_bar_style(self : Ptr[AdwToolbarView], style : AdwToolbarStyle): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_content(self : Ptr[AdwToolbarView], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_extend_content_to_bottom_edge(self : Ptr[AdwToolbarView], extend : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_extend_content_to_top_edge(self : Ptr[AdwToolbarView], extend : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_reveal_bottom_bars(self : Ptr[AdwToolbarView], reveal : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_reveal_top_bars(self : Ptr[AdwToolbarView], reveal : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def adw_toolbar_view_set_top_bar_style(self : Ptr[AdwToolbarView], style : AdwToolbarStyle): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def adw_view_stack_add(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwViewStackPage] = extern
@@ -3376,6 +6171,11 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString, title : CString): Ptr[AdwViewStackPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def adw_view_stack_add_titled_with_icon(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString, title : CString, icon_name : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3501,6 +6301,21 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def adw_view_stack_page_set_visible(self : Ptr[AdwViewStackPage], visible : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def adw_view_stack_pages_get_selected_page(self : Ptr[AdwViewStackPages]): Ptr[AdwViewStackPage] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def adw_view_stack_pages_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def adw_view_stack_pages_set_selected_page(self : Ptr[AdwViewStackPages], page : Ptr[AdwViewStackPage]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -3650,12 +6465,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
+@extern def adw_window_add_breakpoint(self : Ptr[AdwWindow], breakpoint : Ptr[AdwBreakpoint]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
+*/
 @extern def adw_window_get_content(self : Ptr[AdwWindow]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
+@extern def adw_window_get_current_breakpoint(self : Ptr[AdwWindow]): Ptr[AdwBreakpoint] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
+*/
+@extern def adw_window_get_dialogs(self : Ptr[AdwWindow]): Ptr[_root_.sn.gnome.gio.internal.GListModel] = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
+*/
 @extern def adw_window_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
+*/
+@extern def adw_window_get_visible_dialog(self : Ptr[AdwWindow]): Ptr[AdwDialog] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
@@ -3698,6 +6533,26 @@ import _root_.scala.scalanative.*
 @extern def adw_window_title_set_title(self : Ptr[AdwWindowTitle], title : CString): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwAboutDialog(_ptr : Ptr[Ptr[AdwAboutDialog]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwAboutDialogClass(_ptr : Ptr[Ptr[AdwAboutDialogClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_autoptr_cleanup_AdwAboutWindow(_ptr : Ptr[Ptr[AdwAboutWindow]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_autoptr_cleanup_AdwAboutWindowClass(_ptr : Ptr[Ptr[AdwAboutWindowClass]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_autoptr_cleanup_AdwActionRow(_ptr : Ptr[Ptr[AdwActionRow]]): Unit = extern
@@ -3706,6 +6561,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_autoptr_cleanup_AdwActionRowClass(_ptr : Ptr[Ptr[AdwActionRowClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwAlertDialog(_ptr : Ptr[Ptr[AdwAlertDialog]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwAlertDialogClass(_ptr : Ptr[Ptr[AdwAlertDialogClass]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -3758,6 +6623,16 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_AdwAvatarClass(_ptr : Ptr[Ptr[AdwAvatarClass]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_autoptr_cleanup_AdwBanner(_ptr : Ptr[Ptr[AdwBanner]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_autoptr_cleanup_AdwBannerClass(_ptr : Ptr[Ptr[AdwBannerClass]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_autoptr_cleanup_AdwBin(_ptr : Ptr[Ptr[AdwBin]]): Unit = extern
@@ -3766,6 +6641,31 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_autoptr_cleanup_AdwBinClass(_ptr : Ptr[Ptr[AdwBinClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_autoptr_cleanup_AdwBreakpoint(_ptr : Ptr[Ptr[AdwBreakpoint]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_autoptr_cleanup_AdwBreakpointBin(_ptr : Ptr[Ptr[AdwBreakpointBin]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_autoptr_cleanup_AdwBreakpointBinClass(_ptr : Ptr[Ptr[AdwBreakpointBinClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_autoptr_cleanup_AdwBreakpointClass(_ptr : Ptr[Ptr[AdwBreakpointClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_autoptr_cleanup_AdwBreakpointCondition(_ptr : Ptr[Ptr[AdwBreakpointCondition]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -3858,6 +6758,26 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_AdwComboRowClass(_ptr : Ptr[Ptr[AdwComboRowClass]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwDialog(_ptr : Ptr[Ptr[AdwDialog]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwDialogClass(_ptr : Ptr[Ptr[AdwDialogClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwEntryRow(_ptr : Ptr[Ptr[AdwEntryRow]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwEntryRowClass(_ptr : Ptr[Ptr[AdwEntryRowClass]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def glib_autoptr_cleanup_AdwEnumListItem(_ptr : Ptr[Ptr[AdwEnumListItem]]): Unit = extern
@@ -3928,6 +6848,76 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_AdwLeafletPageClass(_ptr : Ptr[Ptr[AdwLeafletPageClass]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwMessageDialog(_ptr : Ptr[Ptr[AdwMessageDialog]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwMessageDialogClass(_ptr : Ptr[Ptr[AdwMessageDialogClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwNavigationPage(_ptr : Ptr[Ptr[AdwNavigationPage]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwNavigationPageClass(_ptr : Ptr[Ptr[AdwNavigationPageClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwNavigationSplitView(_ptr : Ptr[Ptr[AdwNavigationSplitView]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwNavigationSplitViewClass(_ptr : Ptr[Ptr[AdwNavigationSplitViewClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwNavigationView(_ptr : Ptr[Ptr[AdwNavigationView]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwNavigationViewClass(_ptr : Ptr[Ptr[AdwNavigationViewClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwOverlaySplitView(_ptr : Ptr[Ptr[AdwOverlaySplitView]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwOverlaySplitViewClass(_ptr : Ptr[Ptr[AdwOverlaySplitViewClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwPasswordEntryRow(_ptr : Ptr[Ptr[AdwPasswordEntryRow]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwPasswordEntryRowClass(_ptr : Ptr[Ptr[AdwPasswordEntryRowClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwPreferencesDialog(_ptr : Ptr[Ptr[AdwPreferencesDialog]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_autoptr_cleanup_AdwPreferencesDialogClass(_ptr : Ptr[Ptr[AdwPreferencesDialogClass]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 @extern def glib_autoptr_cleanup_AdwPreferencesGroup(_ptr : Ptr[Ptr[AdwPreferencesGroup]]): Unit = extern
@@ -3966,6 +6956,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
 @extern def glib_autoptr_cleanup_AdwPreferencesWindowClass(_ptr : Ptr[Ptr[AdwPreferencesWindowClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_autoptr_cleanup_AdwPropertyAnimationTarget(_ptr : Ptr[Ptr[AdwPropertyAnimationTarget]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_autoptr_cleanup_AdwPropertyAnimationTargetClass(_ptr : Ptr[Ptr[AdwPropertyAnimationTargetClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwSpinRow(_ptr : Ptr[Ptr[AdwSpinRow]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwSpinRowClass(_ptr : Ptr[Ptr[AdwSpinRowClass]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4048,6 +7058,16 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_AdwSwipeable(_ptr : Ptr[Ptr[AdwSwipeable]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwSwitchRow(_ptr : Ptr[Ptr[AdwSwitchRow]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_autoptr_cleanup_AdwSwitchRowClass(_ptr : Ptr[Ptr[AdwSwitchRowClass]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_autoptr_cleanup_AdwTabBar(_ptr : Ptr[Ptr[AdwTabBar]]): Unit = extern
@@ -4056,6 +7076,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_autoptr_cleanup_AdwTabBarClass(_ptr : Ptr[Ptr[AdwTabBarClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_autoptr_cleanup_AdwTabButton(_ptr : Ptr[Ptr[AdwTabButton]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_autoptr_cleanup_AdwTabButtonClass(_ptr : Ptr[Ptr[AdwTabButtonClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_autoptr_cleanup_AdwTabOverview(_ptr : Ptr[Ptr[AdwTabOverview]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_autoptr_cleanup_AdwTabOverviewClass(_ptr : Ptr[Ptr[AdwTabOverviewClass]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -4108,6 +7148,16 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_AdwToastOverlayClass(_ptr : Ptr[Ptr[AdwToastOverlayClass]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwToolbarView(_ptr : Ptr[Ptr[AdwToolbarView]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_autoptr_cleanup_AdwToolbarViewClass(_ptr : Ptr[Ptr[AdwToolbarViewClass]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_autoptr_cleanup_AdwViewStack(_ptr : Ptr[Ptr[AdwViewStack]]): Unit = extern
@@ -4126,6 +7176,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_autoptr_cleanup_AdwViewStackPageClass(_ptr : Ptr[Ptr[AdwViewStackPageClass]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_autoptr_cleanup_AdwViewStackPages(_ptr : Ptr[Ptr[AdwViewStackPages]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_autoptr_cleanup_AdwViewStackPagesClass(_ptr : Ptr[Ptr[AdwViewStackPagesClass]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -4178,6 +7238,26 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_cleanup_AdwWindowTitleClass(_ptr : Ptr[Ptr[AdwWindowTitleClass]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwAboutDialog(_ptr : Ptr[AdwAboutDialog]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwAboutDialogClass(_ptr : Ptr[AdwAboutDialogClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_autoptr_clear_AdwAboutWindow(_ptr : Ptr[AdwAboutWindow]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_autoptr_clear_AdwAboutWindowClass(_ptr : Ptr[AdwAboutWindowClass]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_autoptr_clear_AdwActionRow(_ptr : Ptr[AdwActionRow]): Unit = extern
@@ -4186,6 +7266,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_autoptr_clear_AdwActionRowClass(_ptr : Ptr[AdwActionRowClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwAlertDialog(_ptr : Ptr[AdwAlertDialog]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwAlertDialogClass(_ptr : Ptr[AdwAlertDialogClass]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -4238,6 +7328,16 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_AdwAvatarClass(_ptr : Ptr[AdwAvatarClass]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_autoptr_clear_AdwBanner(_ptr : Ptr[AdwBanner]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_autoptr_clear_AdwBannerClass(_ptr : Ptr[AdwBannerClass]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_autoptr_clear_AdwBin(_ptr : Ptr[AdwBin]): Unit = extern
@@ -4246,6 +7346,31 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_autoptr_clear_AdwBinClass(_ptr : Ptr[AdwBinClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_autoptr_clear_AdwBreakpoint(_ptr : Ptr[AdwBreakpoint]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_autoptr_clear_AdwBreakpointBin(_ptr : Ptr[AdwBreakpointBin]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_autoptr_clear_AdwBreakpointBinClass(_ptr : Ptr[AdwBreakpointBinClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_autoptr_clear_AdwBreakpointClass(_ptr : Ptr[AdwBreakpointClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_autoptr_clear_AdwBreakpointCondition(_ptr : Ptr[AdwBreakpointCondition]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -4338,6 +7463,26 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_AdwComboRowClass(_ptr : Ptr[AdwComboRowClass]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwDialog(_ptr : Ptr[AdwDialog]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwDialogClass(_ptr : Ptr[AdwDialogClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_autoptr_clear_AdwEntryRow(_ptr : Ptr[AdwEntryRow]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_autoptr_clear_AdwEntryRowClass(_ptr : Ptr[AdwEntryRowClass]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def glib_autoptr_clear_AdwEnumListItem(_ptr : Ptr[AdwEnumListItem]): Unit = extern
@@ -4408,6 +7553,76 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_AdwLeafletPageClass(_ptr : Ptr[AdwLeafletPageClass]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwMessageDialog(_ptr : Ptr[AdwMessageDialog]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwMessageDialogClass(_ptr : Ptr[AdwMessageDialogClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_clear_AdwNavigationPage(_ptr : Ptr[AdwNavigationPage]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_clear_AdwNavigationPageClass(_ptr : Ptr[AdwNavigationPageClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_autoptr_clear_AdwNavigationSplitView(_ptr : Ptr[AdwNavigationSplitView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_autoptr_clear_AdwNavigationSplitViewClass(_ptr : Ptr[AdwNavigationSplitViewClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_clear_AdwNavigationView(_ptr : Ptr[AdwNavigationView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_autoptr_clear_AdwNavigationViewClass(_ptr : Ptr[AdwNavigationViewClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_autoptr_clear_AdwOverlaySplitView(_ptr : Ptr[AdwOverlaySplitView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_autoptr_clear_AdwOverlaySplitViewClass(_ptr : Ptr[AdwOverlaySplitViewClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_autoptr_clear_AdwPasswordEntryRow(_ptr : Ptr[AdwPasswordEntryRow]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_autoptr_clear_AdwPasswordEntryRowClass(_ptr : Ptr[AdwPasswordEntryRowClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwPreferencesDialog(_ptr : Ptr[AdwPreferencesDialog]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_autoptr_clear_AdwPreferencesDialogClass(_ptr : Ptr[AdwPreferencesDialogClass]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 @extern def glib_autoptr_clear_AdwPreferencesGroup(_ptr : Ptr[AdwPreferencesGroup]): Unit = extern
@@ -4446,6 +7661,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
 @extern def glib_autoptr_clear_AdwPreferencesWindowClass(_ptr : Ptr[AdwPreferencesWindowClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_autoptr_clear_AdwPropertyAnimationTarget(_ptr : Ptr[AdwPropertyAnimationTarget]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_autoptr_clear_AdwPropertyAnimationTargetClass(_ptr : Ptr[AdwPropertyAnimationTargetClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_autoptr_clear_AdwSpinRow(_ptr : Ptr[AdwSpinRow]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_autoptr_clear_AdwSpinRowClass(_ptr : Ptr[AdwSpinRowClass]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4528,6 +7763,16 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_AdwSwipeable(_ptr : Ptr[AdwSwipeable]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_autoptr_clear_AdwSwitchRow(_ptr : Ptr[AdwSwitchRow]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_autoptr_clear_AdwSwitchRowClass(_ptr : Ptr[AdwSwitchRowClass]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_autoptr_clear_AdwTabBar(_ptr : Ptr[AdwTabBar]): Unit = extern
@@ -4536,6 +7781,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_autoptr_clear_AdwTabBarClass(_ptr : Ptr[AdwTabBarClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_autoptr_clear_AdwTabButton(_ptr : Ptr[AdwTabButton]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_autoptr_clear_AdwTabButtonClass(_ptr : Ptr[AdwTabButtonClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_autoptr_clear_AdwTabOverview(_ptr : Ptr[AdwTabOverview]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_autoptr_clear_AdwTabOverviewClass(_ptr : Ptr[AdwTabOverviewClass]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -4588,6 +7853,16 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_AdwToastOverlayClass(_ptr : Ptr[AdwToastOverlayClass]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_autoptr_clear_AdwToolbarView(_ptr : Ptr[AdwToolbarView]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_autoptr_clear_AdwToolbarViewClass(_ptr : Ptr[AdwToolbarViewClass]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_autoptr_clear_AdwViewStack(_ptr : Ptr[AdwViewStack]): Unit = extern
@@ -4606,6 +7881,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_autoptr_clear_AdwViewStackPageClass(_ptr : Ptr[AdwViewStackPageClass]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_autoptr_clear_AdwViewStackPages(_ptr : Ptr[AdwViewStackPages]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_autoptr_clear_AdwViewStackPagesClass(_ptr : Ptr[AdwViewStackPagesClass]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -4658,6 +7943,26 @@ import _root_.scala.scalanative.*
 @extern def glib_autoptr_clear_AdwWindowTitleClass(_ptr : Ptr[AdwWindowTitleClass]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwAboutDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwAboutDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_listautoptr_cleanup_AdwAboutWindow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_listautoptr_cleanup_AdwAboutWindowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_listautoptr_cleanup_AdwActionRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -4666,6 +7971,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_listautoptr_cleanup_AdwActionRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwAlertDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwAlertDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -4718,6 +8033,16 @@ import _root_.scala.scalanative.*
 @extern def glib_listautoptr_cleanup_AdwAvatarClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBanner(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBannerClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_listautoptr_cleanup_AdwBin(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -4726,6 +8051,31 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_listautoptr_cleanup_AdwBinClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBreakpoint(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBreakpointBin(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBreakpointBinClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBreakpointClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_listautoptr_cleanup_AdwBreakpointCondition(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -4818,6 +8168,26 @@ import _root_.scala.scalanative.*
 @extern def glib_listautoptr_cleanup_AdwComboRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwEntryRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwEntryRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def glib_listautoptr_cleanup_AdwEnumListItem(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -4888,6 +8258,76 @@ import _root_.scala.scalanative.*
 @extern def glib_listautoptr_cleanup_AdwLeafletPageClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwMessageDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwMessageDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwNavigationPage(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwNavigationPageClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwNavigationSplitView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwNavigationSplitViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwNavigationView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwNavigationViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwOverlaySplitView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwOverlaySplitViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwPasswordEntryRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwPasswordEntryRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwPreferencesDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_listautoptr_cleanup_AdwPreferencesDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 @extern def glib_listautoptr_cleanup_AdwPreferencesGroup(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -4926,6 +8366,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
 @extern def glib_listautoptr_cleanup_AdwPreferencesWindowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_listautoptr_cleanup_AdwPropertyAnimationTarget(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_listautoptr_cleanup_AdwPropertyAnimationTargetClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwSpinRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwSpinRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -5008,6 +8468,16 @@ import _root_.scala.scalanative.*
 @extern def glib_listautoptr_cleanup_AdwSwipeable(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwSwitchRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_listautoptr_cleanup_AdwSwitchRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_listautoptr_cleanup_AdwTabBar(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -5016,6 +8486,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_listautoptr_cleanup_AdwTabBarClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_listautoptr_cleanup_AdwTabButton(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_listautoptr_cleanup_AdwTabButtonClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_listautoptr_cleanup_AdwTabOverview(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_listautoptr_cleanup_AdwTabOverviewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5068,6 +8558,16 @@ import _root_.scala.scalanative.*
 @extern def glib_listautoptr_cleanup_AdwToastOverlayClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwToolbarView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_listautoptr_cleanup_AdwToolbarViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_listautoptr_cleanup_AdwViewStack(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
@@ -5086,6 +8586,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_listautoptr_cleanup_AdwViewStackPageClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_listautoptr_cleanup_AdwViewStackPages(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_listautoptr_cleanup_AdwViewStackPagesClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -5138,6 +8648,26 @@ import _root_.scala.scalanative.*
 @extern def glib_listautoptr_cleanup_AdwWindowTitleClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwAboutDialog(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwAboutDialogClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwAboutWindow(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwAboutWindowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_queueautoptr_cleanup_AdwActionRow(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5146,6 +8676,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_queueautoptr_cleanup_AdwActionRowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwAlertDialog(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwAlertDialogClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -5198,6 +8738,16 @@ import _root_.scala.scalanative.*
 @extern def glib_queueautoptr_cleanup_AdwAvatarClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBanner(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBannerClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_queueautoptr_cleanup_AdwBin(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5206,6 +8756,31 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_queueautoptr_cleanup_AdwBinClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBreakpoint(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBreakpointBin(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBreakpointBinClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBreakpointClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwBreakpointCondition(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -5298,6 +8873,26 @@ import _root_.scala.scalanative.*
 @extern def glib_queueautoptr_cleanup_AdwComboRowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwDialog(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwDialogClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwEntryRow(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwEntryRowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def glib_queueautoptr_cleanup_AdwEnumListItem(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5368,6 +8963,76 @@ import _root_.scala.scalanative.*
 @extern def glib_queueautoptr_cleanup_AdwLeafletPageClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwMessageDialog(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwMessageDialogClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwNavigationPage(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwNavigationPageClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwNavigationSplitView(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwNavigationSplitViewClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwNavigationView(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwNavigationViewClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwOverlaySplitView(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwOverlaySplitViewClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwPasswordEntryRow(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwPasswordEntryRowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwPreferencesDialog(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwPreferencesDialogClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 @extern def glib_queueautoptr_cleanup_AdwPreferencesGroup(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5406,6 +9071,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
 @extern def glib_queueautoptr_cleanup_AdwPreferencesWindowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwPropertyAnimationTarget(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwPropertyAnimationTargetClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwSpinRow(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwSpinRowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -5488,6 +9173,16 @@ import _root_.scala.scalanative.*
 @extern def glib_queueautoptr_cleanup_AdwSwipeable(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwSwitchRow(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwSwitchRowClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_queueautoptr_cleanup_AdwTabBar(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5496,6 +9191,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_queueautoptr_cleanup_AdwTabBarClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwTabButton(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwTabButtonClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwTabOverview(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwTabOverviewClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5548,6 +9263,16 @@ import _root_.scala.scalanative.*
 @extern def glib_queueautoptr_cleanup_AdwToastOverlayClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwToolbarView(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwToolbarViewClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_queueautoptr_cleanup_AdwViewStack(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
@@ -5566,6 +9291,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_queueautoptr_cleanup_AdwViewStackPageClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwViewStackPages(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_queueautoptr_cleanup_AdwViewStackPagesClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
@@ -5618,6 +9353,26 @@ import _root_.scala.scalanative.*
 @extern def glib_queueautoptr_cleanup_AdwWindowTitleClass(_q : Ptr[Ptr[_root_.sn.gnome.glib.internal.GQueue]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwAboutDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwAboutDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwAboutWindow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwAboutWindowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_slistautoptr_cleanup_AdwActionRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
@@ -5626,6 +9381,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
 @extern def glib_slistautoptr_cleanup_AdwActionRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwAlertDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwAlertDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -5678,6 +9443,16 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_AdwAvatarClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBanner(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBannerClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_slistautoptr_cleanup_AdwBin(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
@@ -5686,6 +9461,31 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
 @extern def glib_slistautoptr_cleanup_AdwBinClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBreakpoint(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBreakpointBin(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBreakpointBinClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBreakpointClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwBreakpointCondition(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -5778,6 +9578,26 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_AdwComboRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwEntryRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwEntryRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
 @extern def glib_slistautoptr_cleanup_AdwEnumListItem(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
@@ -5848,6 +9668,76 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_AdwLeafletPageClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwMessageDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwMessageDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwNavigationPage(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwNavigationPageClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwNavigationSplitView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwNavigationSplitViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwNavigationView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwNavigationViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwOverlaySplitView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwOverlaySplitViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwPasswordEntryRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwPasswordEntryRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwPreferencesDialog(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwPreferencesDialogClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
 @extern def glib_slistautoptr_cleanup_AdwPreferencesGroup(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
@@ -5886,6 +9776,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
 @extern def glib_slistautoptr_cleanup_AdwPreferencesWindowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwPropertyAnimationTarget(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwPropertyAnimationTargetClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwSpinRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwSpinRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -5968,6 +9878,16 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_AdwSwipeable(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwSwitchRow(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwSwitchRowClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_slistautoptr_cleanup_AdwTabBar(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
@@ -5976,6 +9896,26 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
 @extern def glib_slistautoptr_cleanup_AdwTabBarClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwTabButton(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwTabButtonClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwTabOverview(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwTabOverviewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -6028,6 +9968,16 @@ import _root_.scala.scalanative.*
 @extern def glib_slistautoptr_cleanup_AdwToastOverlayClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwToolbarView(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwToolbarViewClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_slistautoptr_cleanup_AdwViewStack(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
@@ -6046,6 +9996,16 @@ import _root_.scala.scalanative.*
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
 @extern def glib_slistautoptr_cleanup_AdwViewStackPageClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwViewStackPages(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
+
+/**
+ * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
+*/
+@extern def glib_slistautoptr_cleanup_AdwViewStackPagesClass(_l : Ptr[Ptr[_root_.sn.gnome.glib.internal.GSList]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h

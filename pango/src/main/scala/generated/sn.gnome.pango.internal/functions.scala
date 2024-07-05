@@ -542,6 +542,8 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_map_load_fontset(fontmap : Ptr[PangoFontMap], context : Ptr[PangoContext], desc : Ptr[PangoFontDescription], language : Ptr[PangoLanguage]): Ptr[PangoFontset] = extern
 
+@extern def pango_font_map_reload_font(fontmap : Ptr[PangoFontMap], font : Ptr[PangoFont], scale : Double, context : Ptr[PangoContext], variations : CString): Ptr[PangoFont] = extern
+
 @extern def pango_font_mask_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def pango_font_metrics_get_approximate_char_width(metrics : Ptr[PangoFontMetrics]): CInt = extern

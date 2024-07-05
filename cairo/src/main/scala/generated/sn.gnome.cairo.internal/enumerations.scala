@@ -46,6 +46,27 @@ object _cairo_antialias extends CEnumU[_cairo_antialias]:
     inline def is(b: _cairo_antialias): Boolean = (a & b) == b
 
 /**
+ * cairo_color_mode_t: _COLOR_MODE_DEFAULT: Use the default color mode for font backend and target device, since 1.18. _COLOR_MODE_NO_COLOR: Disable rendering color glyphs. Glyphs are always rendered as outline glyphs, since 1.18. _COLOR_MODE_COLOR: Enable rendering color glyphs. If the font contains a color presentation for a glyph, and when supported by the font backend, the glyph will be rendered in color, since 1.18.
+*/
+opaque type _cairo_color_mode = CUnsignedInt
+object _cairo_color_mode extends CEnumU[_cairo_color_mode]:
+  given _tag: Tag[_cairo_color_mode] = Tag.UInt
+  inline def define(inline a: Long): _cairo_color_mode = a.toUInt
+  val CAIRO_COLOR_MODE_DEFAULT = define(0)
+  val CAIRO_COLOR_MODE_NO_COLOR = define(1)
+  val CAIRO_COLOR_MODE_COLOR = define(2)
+  inline def getName(inline value: _cairo_color_mode): Option[String] =
+    inline value match
+      case CAIRO_COLOR_MODE_DEFAULT => Some("CAIRO_COLOR_MODE_DEFAULT")
+      case CAIRO_COLOR_MODE_NO_COLOR => Some("CAIRO_COLOR_MODE_NO_COLOR")
+      case CAIRO_COLOR_MODE_COLOR => Some("CAIRO_COLOR_MODE_COLOR")
+      case _ => _root_.scala.None
+  extension (a: _cairo_color_mode)
+    inline def &(b: _cairo_color_mode): _cairo_color_mode = a & b
+    inline def |(b: _cairo_color_mode): _cairo_color_mode = a | b
+    inline def is(b: _cairo_color_mode): Boolean = (a & b) == b
+
+/**
  * cairo_content_t: _CONTENT_COLOR: The surface will hold color content only. (Since 1.0) _CONTENT_ALPHA: The surface will hold alpha content only. (Since 1.0) _CONTENT_COLOR_ALPHA: The surface will hold color and alpha content. (Since 1.0)
 */
 opaque type _cairo_content = CUnsignedInt
@@ -98,6 +119,31 @@ object _cairo_device_type extends CEnum[_cairo_device_type]:
     inline def &(b: _cairo_device_type): _cairo_device_type = a & b
     inline def |(b: _cairo_device_type): _cairo_device_type = a | b
     inline def is(b: _cairo_device_type): Boolean = (a & b) == b
+
+/**
+ * cairo_dither_t: _DITHER_NONE: No dithering. _DITHER_DEFAULT: Default choice at cairo compile time. Currently NONE. _DITHER_FAST: Fastest dithering algorithm supported by the backend _DITHER_GOOD: An algorithm with smoother dithering than FAST _DITHER_BEST: Best algorithm available in the backend
+*/
+opaque type _cairo_dither = CUnsignedInt
+object _cairo_dither extends CEnumU[_cairo_dither]:
+  given _tag: Tag[_cairo_dither] = Tag.UInt
+  inline def define(inline a: Long): _cairo_dither = a.toUInt
+  val CAIRO_DITHER_NONE = define(0)
+  val CAIRO_DITHER_DEFAULT = define(1)
+  val CAIRO_DITHER_FAST = define(2)
+  val CAIRO_DITHER_GOOD = define(3)
+  val CAIRO_DITHER_BEST = define(4)
+  inline def getName(inline value: _cairo_dither): Option[String] =
+    inline value match
+      case CAIRO_DITHER_NONE => Some("CAIRO_DITHER_NONE")
+      case CAIRO_DITHER_DEFAULT => Some("CAIRO_DITHER_DEFAULT")
+      case CAIRO_DITHER_FAST => Some("CAIRO_DITHER_FAST")
+      case CAIRO_DITHER_GOOD => Some("CAIRO_DITHER_GOOD")
+      case CAIRO_DITHER_BEST => Some("CAIRO_DITHER_BEST")
+      case _ => _root_.scala.None
+  extension (a: _cairo_dither)
+    inline def &(b: _cairo_dither): _cairo_dither = a & b
+    inline def |(b: _cairo_dither): _cairo_dither = a | b
+    inline def is(b: _cairo_dither): Boolean = (a & b) == b
 
 /**
  * cairo_extend_t: _EXTEND_NONE: pixels outside of the source pattern are fully transparent (Since 1.0) _EXTEND_REPEAT: the pattern is tiled by repeating (Since 1.0) _EXTEND_REFLECT: the pattern is tiled by reflecting at the edges (Since 1.0; but only implemented for surface patterns since 1.6) _EXTEND_PAD: pixels outside of the pattern copy the closest pixel from the source (Since 1.2; but only implemented for surface patterns since 1.6)
@@ -190,7 +236,7 @@ object _cairo_font_slant extends CEnumU[_cairo_font_slant]:
     inline def is(b: _cairo_font_slant): Boolean = (a & b) == b
 
 /**
- * cairo_font_type_t: _FONT_TYPE_TOY: The font was created using cairo's toy font api (Since: 1.2) _FONT_TYPE_FT: The font is of type FreeType (Since: 1.2) _FONT_TYPE_WIN32: The font is of type Win32 (Since: 1.2) _FONT_TYPE_QUARTZ: The font is of type Quartz (Since: 1.6, in 1.2 and 1.4 it was named CAIRO_FONT_TYPE_ATSUI) _FONT_TYPE_USER: The font was create using cairo's user font api (Since: 1.8)
+ * cairo_font_type_t: _FONT_TYPE_TOY: The font was created using cairo's toy font api (Since: 1.2) _FONT_TYPE_FT: The font is of type FreeType (Since: 1.2) _FONT_TYPE_WIN32: The font is of type Win32 (Since: 1.2) _FONT_TYPE_QUARTZ: The font is of type Quartz (Since: 1.6, in 1.2 and 1.4 it was named CAIRO_FONT_TYPE_ATSUI) _FONT_TYPE_USER: The font was create using cairo's user font api (Since: 1.8) _FONT_TYPE_DWRITE: The font is of type Win32 DWrite (Since: 1.18)
 */
 opaque type _cairo_font_type = CUnsignedInt
 object _cairo_font_type extends CEnumU[_cairo_font_type]:
@@ -201,6 +247,7 @@ object _cairo_font_type extends CEnumU[_cairo_font_type]:
   val CAIRO_FONT_TYPE_WIN32 = define(2)
   val CAIRO_FONT_TYPE_QUARTZ = define(3)
   val CAIRO_FONT_TYPE_USER = define(4)
+  val CAIRO_FONT_TYPE_DWRITE = define(5)
   inline def getName(inline value: _cairo_font_type): Option[String] =
     inline value match
       case CAIRO_FONT_TYPE_TOY => Some("CAIRO_FONT_TYPE_TOY")
@@ -208,6 +255,7 @@ object _cairo_font_type extends CEnumU[_cairo_font_type]:
       case CAIRO_FONT_TYPE_WIN32 => Some("CAIRO_FONT_TYPE_WIN32")
       case CAIRO_FONT_TYPE_QUARTZ => Some("CAIRO_FONT_TYPE_QUARTZ")
       case CAIRO_FONT_TYPE_USER => Some("CAIRO_FONT_TYPE_USER")
+      case CAIRO_FONT_TYPE_DWRITE => Some("CAIRO_FONT_TYPE_DWRITE")
       case _ => _root_.scala.None
   extension (a: _cairo_font_type)
     inline def &(b: _cairo_font_type): _cairo_font_type = a & b
@@ -234,7 +282,7 @@ object _cairo_font_weight extends CEnumU[_cairo_font_weight]:
     inline def is(b: _cairo_font_weight): Boolean = (a & b) == b
 
 /**
- * cairo_format_t: _FORMAT_INVALID: no such format exists or is supported. _FORMAT_ARGB32: each pixel is a 32-bit quantity, with alpha in the upper 8 bits, then red, then green, then blue. The 32-bit quantities are stored native-endian. Pre-multiplied alpha is used. (That is, 50% transparent red is 0x80800000, not 0x80ff0000.) (Since 1.0) _FORMAT_RGB24: each pixel is a 32-bit quantity, with the upper 8 bits unused. Red, Green, and Blue are stored in the remaining 24 bits in that order. (Since 1.0) _FORMAT_A8: each pixel is a 8-bit quantity holding an alpha value. (Since 1.0) _FORMAT_A1: each pixel is a 1-bit quantity holding an alpha value. Pixels are packed together into 32-bit quantities. The ordering of the bits matches the endianness of the platform. On a big-endian machine, the first pixel is in the uppermost bit, on a little-endian machine the first pixel is in the least-significant bit. (Since 1.0) _FORMAT_RGB16_565: each pixel is a 16-bit quantity with red in the upper 5 bits, then green in the middle 6 bits, and blue in the lower 5 bits. (Since 1.2) _FORMAT_RGB30: like RGB24 but with 10bpc. (Since 1.12)
+ * cairo_format_t: _FORMAT_INVALID: no such format exists or is supported. _FORMAT_ARGB32: each pixel is a 32-bit quantity, with alpha in the upper 8 bits, then red, then green, then blue. The 32-bit quantities are stored native-endian. Pre-multiplied alpha is used. (That is, 50% transparent red is 0x80800000, not 0x80ff0000.) (Since 1.0) _FORMAT_RGB24: each pixel is a 32-bit quantity, with the upper 8 bits unused. Red, Green, and Blue are stored in the remaining 24 bits in that order. (Since 1.0) _FORMAT_A8: each pixel is a 8-bit quantity holding an alpha value. (Since 1.0) _FORMAT_A1: each pixel is a 1-bit quantity holding an alpha value. Pixels are packed together into 32-bit quantities. The ordering of the bits matches the endianness of the platform. On a big-endian machine, the first pixel is in the uppermost bit, on a little-endian machine the first pixel is in the least-significant bit. (Since 1.0) _FORMAT_RGB16_565: each pixel is a 16-bit quantity with red in the upper 5 bits, then green in the middle 6 bits, and blue in the lower 5 bits. (Since 1.2) _FORMAT_RGB30: like RGB24 but with 10bpc. (Since 1.12) _FORMAT_RGB96F: 3 floats, R, G, B. (Since 1.17.2) _FORMAT_RGBA128F: 4 floats, R, G, B, A. (Since 1.17.2)
 */
 opaque type _cairo_format = CInt
 object _cairo_format extends CEnum[_cairo_format]:
@@ -247,6 +295,8 @@ object _cairo_format extends CEnum[_cairo_format]:
   val CAIRO_FORMAT_A1 = define(3)
   val CAIRO_FORMAT_RGB16_565 = define(4)
   val CAIRO_FORMAT_RGB30 = define(5)
+  val CAIRO_FORMAT_RGB96F = define(6)
+  val CAIRO_FORMAT_RGBA128F = define(7)
   inline def getName(inline value: _cairo_format): Option[String] =
     inline value match
       case CAIRO_FORMAT_INVALID => Some("CAIRO_FORMAT_INVALID")
@@ -256,6 +306,8 @@ object _cairo_format extends CEnum[_cairo_format]:
       case CAIRO_FORMAT_A1 => Some("CAIRO_FORMAT_A1")
       case CAIRO_FORMAT_RGB16_565 => Some("CAIRO_FORMAT_RGB16_565")
       case CAIRO_FORMAT_RGB30 => Some("CAIRO_FORMAT_RGB30")
+      case CAIRO_FORMAT_RGB96F => Some("CAIRO_FORMAT_RGB96F")
+      case CAIRO_FORMAT_RGBA128F => Some("CAIRO_FORMAT_RGBA128F")
       case _ => _root_.scala.None
   extension (a: _cairo_format)
     inline def &(b: _cairo_format): _cairo_format = a & b
@@ -495,7 +547,7 @@ object _cairo_region_overlap extends CEnumU[_cairo_region_overlap]:
     inline def is(b: _cairo_region_overlap): Boolean = (a & b) == b
 
 /**
- * cairo_status_t: _STATUS_SUCCESS: no error has occurred (Since 1.0) _STATUS_NO_MEMORY: out of memory (Since 1.0) _STATUS_INVALID_RESTORE: cairo_restore() called without matching cairo_save() (Since 1.0) _STATUS_INVALID_POP_GROUP: no saved group to pop, i.e. cairo_pop_group() without matching cairo_push_group() (Since 1.0) _STATUS_NO_CURRENT_POINT: no current point defined (Since 1.0) _STATUS_INVALID_MATRIX: invalid matrix (not invertible) (Since 1.0) _STATUS_INVALID_STATUS: invalid value for an input #cairo_status_t (Since 1.0) _STATUS_NULL_POINTER: %NULL pointer (Since 1.0) _STATUS_INVALID_STRING: input string not valid UTF-8 (Since 1.0) _STATUS_INVALID_PATH_DATA: input path data not valid (Since 1.0) _STATUS_READ_ERROR: error while reading from input stream (Since 1.0) _STATUS_WRITE_ERROR: error while writing to output stream (Since 1.0) _STATUS_SURFACE_FINISHED: target surface has been finished (Since 1.0) _STATUS_SURFACE_TYPE_MISMATCH: the surface type is not appropriate for the operation (Since 1.0) _STATUS_PATTERN_TYPE_MISMATCH: the pattern type is not appropriate for the operation (Since 1.0) _STATUS_INVALID_CONTENT: invalid value for an input #cairo_content_t (Since 1.0) _STATUS_INVALID_FORMAT: invalid value for an input #cairo_format_t (Since 1.0) _STATUS_INVALID_VISUAL: invalid value for an input Visual* (Since 1.0) _STATUS_FILE_NOT_FOUND: file not found (Since 1.0) _STATUS_INVALID_DASH: invalid value for a dash setting (Since 1.0) _STATUS_INVALID_DSC_COMMENT: invalid value for a DSC comment (Since 1.2) _STATUS_INVALID_INDEX: invalid index passed to getter (Since 1.4) _STATUS_CLIP_NOT_REPRESENTABLE: clip region not representable in desired format (Since 1.4) _STATUS_TEMP_FILE_ERROR: error creating or writing to a temporary file (Since 1.6) _STATUS_INVALID_STRIDE: invalid value for stride (Since 1.6) _STATUS_FONT_TYPE_MISMATCH: the font type is not appropriate for the operation (Since 1.8) _STATUS_USER_FONT_IMMUTABLE: the user-font is immutable (Since 1.8) _STATUS_USER_FONT_ERROR: error occurred in a user-font callback function (Since 1.8) _STATUS_NEGATIVE_COUNT: negative number used where it is not allowed (Since 1.8) _STATUS_INVALID_CLUSTERS: input clusters do not represent the accompanying text and glyph array (Since 1.8) _STATUS_INVALID_SLANT: invalid value for an input #cairo_font_slant_t (Since 1.8) _STATUS_INVALID_WEIGHT: invalid value for an input #cairo_font_weight_t (Since 1.8) _STATUS_INVALID_SIZE: invalid value (typically too big) for the size of the input (surface, pattern, etc.) (Since 1.10) _STATUS_USER_FONT_NOT_IMPLEMENTED: user-font method not implemented (Since 1.10) _STATUS_DEVICE_TYPE_MISMATCH: the device type is not appropriate for the operation (Since 1.10) _STATUS_DEVICE_ERROR: an operation to the device caused an unspecified error (Since 1.10) _STATUS_INVALID_MESH_CONSTRUCTION: a mesh pattern construction operation was used outside of a cairo_mesh_pattern_begin_patch()/cairo_mesh_pattern_end_patch() pair (Since 1.12) _STATUS_DEVICE_FINISHED: target device has been finished (Since 1.12) _STATUS_JBIG2_GLOBAL_MISSING: %CAIRO_MIME_TYPE_JBIG2_GLOBAL_ID has been used on at least one image but no image provided %CAIRO_MIME_TYPE_JBIG2_GLOBAL (Since 1.14) _STATUS_PNG_ERROR: error occurred in libpng while reading from or writing to a PNG file (Since 1.16) _STATUS_FREETYPE_ERROR: error occurred in libfreetype (Since 1.16) _STATUS_WIN32_GDI_ERROR: error occurred in the Windows Graphics Device Interface (Since 1.16) _STATUS_TAG_ERROR: invalid tag name, attributes, or nesting (Since 1.16) _STATUS_LAST_STATUS: this is a special value indicating the number of status values defined in this enumeration. When using this value, note that the version of cairo at run-time may have additional status values defined than the value of this symbol at compile-time. (Since 1.10)
+ * cairo_status_t: _STATUS_SUCCESS: no error has occurred (Since 1.0) _STATUS_NO_MEMORY: out of memory (Since 1.0) _STATUS_INVALID_RESTORE: cairo_restore() called without matching cairo_save() (Since 1.0) _STATUS_INVALID_POP_GROUP: no saved group to pop, i.e. cairo_pop_group() without matching cairo_push_group() (Since 1.0) _STATUS_NO_CURRENT_POINT: no current point defined (Since 1.0) _STATUS_INVALID_MATRIX: invalid matrix (not invertible) (Since 1.0) _STATUS_INVALID_STATUS: invalid value for an input #cairo_status_t (Since 1.0) _STATUS_NULL_POINTER: %NULL pointer (Since 1.0) _STATUS_INVALID_STRING: input string not valid UTF-8 (Since 1.0) _STATUS_INVALID_PATH_DATA: input path data not valid (Since 1.0) _STATUS_READ_ERROR: error while reading from input stream (Since 1.0) _STATUS_WRITE_ERROR: error while writing to output stream (Since 1.0) _STATUS_SURFACE_FINISHED: target surface has been finished (Since 1.0) _STATUS_SURFACE_TYPE_MISMATCH: the surface type is not appropriate for the operation (Since 1.0) _STATUS_PATTERN_TYPE_MISMATCH: the pattern type is not appropriate for the operation (Since 1.0) _STATUS_INVALID_CONTENT: invalid value for an input #cairo_content_t (Since 1.0) _STATUS_INVALID_FORMAT: invalid value for an input #cairo_format_t (Since 1.0) _STATUS_INVALID_VISUAL: invalid value for an input Visual* (Since 1.0) _STATUS_FILE_NOT_FOUND: file not found (Since 1.0) _STATUS_INVALID_DASH: invalid value for a dash setting (Since 1.0) _STATUS_INVALID_DSC_COMMENT: invalid value for a DSC comment (Since 1.2) _STATUS_INVALID_INDEX: invalid index passed to getter (Since 1.4) _STATUS_CLIP_NOT_REPRESENTABLE: clip region not representable in desired format (Since 1.4) _STATUS_TEMP_FILE_ERROR: error creating or writing to a temporary file (Since 1.6) _STATUS_INVALID_STRIDE: invalid value for stride (Since 1.6) _STATUS_FONT_TYPE_MISMATCH: the font type is not appropriate for the operation (Since 1.8) _STATUS_USER_FONT_IMMUTABLE: the user-font is immutable (Since 1.8) _STATUS_USER_FONT_ERROR: error occurred in a user-font callback function (Since 1.8) _STATUS_NEGATIVE_COUNT: negative number used where it is not allowed (Since 1.8) _STATUS_INVALID_CLUSTERS: input clusters do not represent the accompanying text and glyph array (Since 1.8) _STATUS_INVALID_SLANT: invalid value for an input #cairo_font_slant_t (Since 1.8) _STATUS_INVALID_WEIGHT: invalid value for an input #cairo_font_weight_t (Since 1.8) _STATUS_INVALID_SIZE: invalid value (typically too big) for the size of the input (surface, pattern, etc.) (Since 1.10) _STATUS_USER_FONT_NOT_IMPLEMENTED: user-font method not implemented (Since 1.10) _STATUS_DEVICE_TYPE_MISMATCH: the device type is not appropriate for the operation (Since 1.10) _STATUS_DEVICE_ERROR: an operation to the device caused an unspecified error (Since 1.10) _STATUS_INVALID_MESH_CONSTRUCTION: a mesh pattern construction operation was used outside of a cairo_mesh_pattern_begin_patch()/cairo_mesh_pattern_end_patch() pair (Since 1.12) _STATUS_DEVICE_FINISHED: target device has been finished (Since 1.12) _STATUS_JBIG2_GLOBAL_MISSING: %CAIRO_MIME_TYPE_JBIG2_GLOBAL_ID has been used on at least one image but no image provided %CAIRO_MIME_TYPE_JBIG2_GLOBAL (Since 1.14) _STATUS_PNG_ERROR: error occurred in libpng while reading from or writing to a PNG file (Since 1.16) _STATUS_FREETYPE_ERROR: error occurred in libfreetype (Since 1.16) _STATUS_WIN32_GDI_ERROR: error occurred in the Windows Graphics Device Interface (Since 1.16) _STATUS_TAG_ERROR: invalid tag name, attributes, or nesting (Since 1.16) _STATUS_DWRITE_ERROR: error occurred in the Windows Direct Write API (Since 1.18) _STATUS_SVG_FONT_ERROR: error occurred in OpenType-SVG font rendering (Since 1.18) _STATUS_LAST_STATUS: this is a special value indicating the number of status values defined in this enumeration. When using this value, note that the version of cairo at run-time may have additional status values defined than the value of this symbol at compile-time. (Since 1.10)
 */
 opaque type _cairo_status = CUnsignedInt
 object _cairo_status extends CEnumU[_cairo_status]:
@@ -544,7 +596,9 @@ object _cairo_status extends CEnumU[_cairo_status]:
   val CAIRO_STATUS_FREETYPE_ERROR = define(40)
   val CAIRO_STATUS_WIN32_GDI_ERROR = define(41)
   val CAIRO_STATUS_TAG_ERROR = define(42)
-  val CAIRO_STATUS_LAST_STATUS = define(43)
+  val CAIRO_STATUS_DWRITE_ERROR = define(43)
+  val CAIRO_STATUS_SVG_FONT_ERROR = define(44)
+  val CAIRO_STATUS_LAST_STATUS = define(45)
   inline def getName(inline value: _cairo_status): Option[String] =
     inline value match
       case CAIRO_STATUS_SUCCESS => Some("CAIRO_STATUS_SUCCESS")
@@ -590,6 +644,8 @@ object _cairo_status extends CEnumU[_cairo_status]:
       case CAIRO_STATUS_FREETYPE_ERROR => Some("CAIRO_STATUS_FREETYPE_ERROR")
       case CAIRO_STATUS_WIN32_GDI_ERROR => Some("CAIRO_STATUS_WIN32_GDI_ERROR")
       case CAIRO_STATUS_TAG_ERROR => Some("CAIRO_STATUS_TAG_ERROR")
+      case CAIRO_STATUS_DWRITE_ERROR => Some("CAIRO_STATUS_DWRITE_ERROR")
+      case CAIRO_STATUS_SVG_FONT_ERROR => Some("CAIRO_STATUS_SVG_FONT_ERROR")
       case CAIRO_STATUS_LAST_STATUS => Some("CAIRO_STATUS_LAST_STATUS")
       case _ => _root_.scala.None
   extension (a: _cairo_status)
@@ -623,7 +679,7 @@ object _cairo_subpixel_order extends CEnumU[_cairo_subpixel_order]:
     inline def is(b: _cairo_subpixel_order): Boolean = (a & b) == b
 
 /**
- * cairo_surface_type_t: _SURFACE_TYPE_IMAGE: The surface is of type image, since 1.2 _SURFACE_TYPE_PDF: The surface is of type pdf, since 1.2 _SURFACE_TYPE_PS: The surface is of type ps, since 1.2 _SURFACE_TYPE_XLIB: The surface is of type xlib, since 1.2 _SURFACE_TYPE_XCB: The surface is of type xcb, since 1.2 _SURFACE_TYPE_GLITZ: The surface is of type glitz, since 1.2 _SURFACE_TYPE_QUARTZ: The surface is of type quartz, since 1.2 _SURFACE_TYPE_WIN32: The surface is of type win32, since 1.2 _SURFACE_TYPE_BEOS: The surface is of type beos, since 1.2 _SURFACE_TYPE_DIRECTFB: The surface is of type directfb, since 1.2 _SURFACE_TYPE_SVG: The surface is of type svg, since 1.2 _SURFACE_TYPE_OS2: The surface is of type os2, since 1.4 _SURFACE_TYPE_WIN32_PRINTING: The surface is a win32 printing surface, since 1.6 _SURFACE_TYPE_QUARTZ_IMAGE: The surface is of type quartz_image, since 1.6 _SURFACE_TYPE_SCRIPT: The surface is of type script, since 1.10 _SURFACE_TYPE_QT: The surface is of type Qt, since 1.10 _SURFACE_TYPE_RECORDING: The surface is of type recording, since 1.10 _SURFACE_TYPE_VG: The surface is a OpenVG surface, since 1.10 _SURFACE_TYPE_GL: The surface is of type OpenGL, since 1.10 _SURFACE_TYPE_DRM: The surface is of type Direct Render Manager, since 1.10 _SURFACE_TYPE_TEE: The surface is of type 'tee' (a multiplexing surface), since 1.10 _SURFACE_TYPE_XML: The surface is of type XML (for debugging), since 1.10 _SURFACE_TYPE_SUBSURFACE: The surface is a subsurface created with cairo_surface_create_for_rectangle(), since 1.10 _SURFACE_TYPE_COGL: This surface is of type Cogl, since 1.12
+ * cairo_surface_type_t: _SURFACE_TYPE_IMAGE: The surface is of type image, since 1.2 _SURFACE_TYPE_PDF: The surface is of type pdf, since 1.2 _SURFACE_TYPE_PS: The surface is of type ps, since 1.2 _SURFACE_TYPE_XLIB: The surface is of type xlib, since 1.2 _SURFACE_TYPE_XCB: The surface is of type xcb, since 1.2 _SURFACE_TYPE_GLITZ: The surface is of type glitz, since 1.2, deprecated 1.18 (glitz support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_QUARTZ: The surface is of type quartz, since 1.2 _SURFACE_TYPE_WIN32: The surface is of type win32, since 1.2 _SURFACE_TYPE_BEOS: The surface is of type beos, since 1.2, deprecated 1.18 (beos support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_DIRECTFB: The surface is of type directfb, since 1.2, deprecated 1.18 (directfb support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_SVG: The surface is of type svg, since 1.2 _SURFACE_TYPE_OS2: The surface is of type os2, since 1.4, deprecated 1.18 (os2 support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_WIN32_PRINTING: The surface is a win32 printing surface, since 1.6 _SURFACE_TYPE_QUARTZ_IMAGE: The surface is of type quartz_image, since 1.6 _SURFACE_TYPE_SCRIPT: The surface is of type script, since 1.10 _SURFACE_TYPE_QT: The surface is of type Qt, since 1.10, deprecated 1.18 (Ot support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_RECORDING: The surface is of type recording, since 1.10 _SURFACE_TYPE_VG: The surface is a OpenVG surface, since 1.10, deprecated 1.18 (OpenVG support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_GL: The surface is of type OpenGL, since 1.10, deprecated 1.18 (OpenGL support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_DRM: The surface is of type Direct Render Manager, since 1.10, deprecated 1.18 (DRM support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_TEE: The surface is of type 'tee' (a multiplexing surface), since 1.10 _SURFACE_TYPE_XML: The surface is of type XML (for debugging), since 1.10 _SURFACE_TYPE_SKIA: The surface is of type Skia, since 1.10, deprecated 1.18 (Skia support have been removed, this surface type will never be set by cairo) _SURFACE_TYPE_SUBSURFACE: The surface is a subsurface created with cairo_surface_create_for_rectangle(), since 1.10 _SURFACE_TYPE_COGL: This surface is of type Cogl, since 1.12, deprecated 1.18 (Cogl support have been removed, this surface type will never be set by cairo)
 */
 opaque type _cairo_surface_type = CUnsignedInt
 object _cairo_surface_type extends CEnumU[_cairo_surface_type]:
