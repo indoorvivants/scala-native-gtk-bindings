@@ -354,7 +354,7 @@ def pkgConfiguredSimple: Project => Project = { proj =>
         )
       ),
       resolvers ++= Resolver.sonatypeOssRepos("snapshots"),
-      scalaVersion := "3.3.3"
+      scalaVersion := "3.3.4"
     )
 }
 
