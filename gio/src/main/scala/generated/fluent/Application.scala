@@ -42,7 +42,7 @@ class Application(raw: Ptr[GApplication])
   )(using Zone): Unit = g_application_add_main_option(
     this.raw.asInstanceOf,
     __sn_extract_string(long_name),
-    gchar(short_name),
+    gchar(short_name).asInstanceOf,
     flags,
     arg,
     __sn_extract_string(description),
