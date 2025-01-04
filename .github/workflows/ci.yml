@@ -51,10 +51,10 @@ jobs:
         run: sudo apt-get update
 
       - name: Install GTK
-        run: sudo apt-get install \\
-          libgtk-4-dev \\
-          libadwaita-1-dev \\
-          libgirepository1.0-dev \\
+        run: sudo apt-get install
+          libgtk-4-dev
+          libadwaita-1-dev
+          libgirepository1.0-dev
 
       - name: Compile
         run: sbt --client Test/compile
