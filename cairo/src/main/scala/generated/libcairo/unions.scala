@@ -1,23 +1,17 @@
 package libcairo
-package unions
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-import _root_.libcairo.enumerations.*
-import _root_.libcairo.aliases.*
-import _root_.libcairo.structs.*
-import _root_.libcairo.unions.*
-
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.2/include/cairo/cairo.h
 */
 opaque type _cairo_path_data_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object _cairo_path_data_t:
   /**
-   * [bindgen] header: /usr/include/cairo/cairo.h
+   * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.2/include/cairo/cairo.h
   */
   opaque type Struct0 = CStruct2[cairo_path_data_type_t, CInt]
   object Struct0:
@@ -34,7 +28,7 @@ object _cairo_path_data_t:
       def length : CInt = struct._2
       def length_=(value: CInt): Unit = !struct.at2 = value
   /**
-   * [bindgen] header: /usr/include/cairo/cairo.h
+   * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.2/include/cairo/cairo.h
   */
   opaque type Struct1 = CStruct2[Double, Double]
   object Struct1:
@@ -73,12 +67,12 @@ object _cairo_path_data_t:
     def point_=(value: _cairo_path_data_t.Struct1): Unit = !struct.at(0).asInstanceOf[Ptr[_cairo_path_data_t.Struct1]] = value
 
 /**
- * [bindgen] header: /usr/include/cairo/cairo.h
+ * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.2/include/cairo/cairo.h
 */
 opaque type cairo_path_data_t = CArray[Byte, Nat.Digit2[Nat._1, Nat._6]]
 object cairo_path_data_t:
   /**
-   * [bindgen] header: /usr/include/cairo/cairo.h
+   * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.2/include/cairo/cairo.h
   */
   opaque type Struct0 = CStruct2[cairo_path_data_type_t, CInt]
   object Struct0:
@@ -95,7 +89,7 @@ object cairo_path_data_t:
       def length : CInt = struct._2
       def length_=(value: CInt): Unit = !struct.at2 = value
   /**
-   * [bindgen] header: /usr/include/cairo/cairo.h
+   * [bindgen] header: /opt/homebrew/Cellar/cairo/1.18.2/include/cairo/cairo.h
   */
   opaque type Struct1 = CStruct2[Double, Double]
   object Struct1:
@@ -132,4 +126,3 @@ object cairo_path_data_t:
     def header_=(value: cairo_path_data_t.Struct0): Unit = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct0]] = value
     def point : cairo_path_data_t.Struct1 = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct1]]
     def point_=(value: cairo_path_data_t.Struct1): Unit = !struct.at(0).asInstanceOf[Ptr[cairo_path_data_t.Struct1]] = value
-

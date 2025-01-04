@@ -1,18 +1,10 @@
 package gio
-package aliases
 
 import _root_.scala.scalanative.unsafe.*
 import _root_.scala.scalanative.unsigned.*
 import _root_.scala.scalanative.libc.*
 import _root_.scala.scalanative.*
 
-import _root_.gio.enumerations.*
-import _root_.gio.aliases.*
-import _root_.gio.structs.*
-
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GActionMap_autoptr = Ptr[GActionMap]
 object GActionMap_autoptr: 
   given _tag: Tag[GActionMap_autoptr] = Tag.Ptr[GActionMap](GActionMap._tag)
@@ -20,39 +12,27 @@ object GActionMap_autoptr:
   extension (v: GActionMap_autoptr)
     inline def value: Ptr[GActionMap] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GActionMap_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GActionMap_listautoptr = Ptr[_root_.glib.GList]
 object GActionMap_listautoptr: 
-  given _tag: Tag[GActionMap_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GActionMap_listautoptr = o
+  given _tag: Tag[GActionMap_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GActionMap_listautoptr = o
   extension (v: GActionMap_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GActionMap_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GActionMap_queueautoptr = Ptr[_root_.glib.GQueue]
 object GActionMap_queueautoptr: 
-  given _tag: Tag[GActionMap_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GActionMap_queueautoptr = o
+  given _tag: Tag[GActionMap_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GActionMap_queueautoptr = o
   extension (v: GActionMap_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GActionMap_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GActionMap_slistautoptr = Ptr[_root_.glib.GSList]
 object GActionMap_slistautoptr: 
-  given _tag: Tag[GActionMap_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GActionMap_slistautoptr = o
+  given _tag: Tag[GActionMap_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GActionMap_slistautoptr = o
   extension (v: GActionMap_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GAction_autoptr = Ptr[GAction]
 object GAction_autoptr: 
   given _tag: Tag[GAction_autoptr] = Tag.Ptr[GAction](GAction._tag)
@@ -60,39 +40,27 @@ object GAction_autoptr:
   extension (v: GAction_autoptr)
     inline def value: Ptr[GAction] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAction_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GAction_listautoptr = Ptr[_root_.glib.GList]
 object GAction_listautoptr: 
-  given _tag: Tag[GAction_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GAction_listautoptr = o
+  given _tag: Tag[GAction_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAction_listautoptr = o
   extension (v: GAction_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAction_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GAction_queueautoptr = Ptr[_root_.glib.GQueue]
 object GAction_queueautoptr: 
-  given _tag: Tag[GAction_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GAction_queueautoptr = o
+  given _tag: Tag[GAction_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAction_queueautoptr = o
   extension (v: GAction_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAction_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GAction_slistautoptr = Ptr[_root_.glib.GSList]
 object GAction_slistautoptr: 
-  given _tag: Tag[GAction_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GAction_slistautoptr = o
+  given _tag: Tag[GAction_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAction_slistautoptr = o
   extension (v: GAction_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GAppInfoMonitor_autoptr = Ptr[GAppInfoMonitor]
 object GAppInfoMonitor_autoptr: 
   given _tag: Tag[GAppInfoMonitor_autoptr] = Tag.Ptr[GAppInfoMonitor](GAppInfoMonitor._tag)
@@ -100,39 +68,27 @@ object GAppInfoMonitor_autoptr:
   extension (v: GAppInfoMonitor_autoptr)
     inline def value: Ptr[GAppInfoMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppInfoMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GAppInfoMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GAppInfoMonitor_listautoptr: 
-  given _tag: Tag[GAppInfoMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GAppInfoMonitor_listautoptr = o
+  given _tag: Tag[GAppInfoMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAppInfoMonitor_listautoptr = o
   extension (v: GAppInfoMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppInfoMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GAppInfoMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GAppInfoMonitor_queueautoptr: 
-  given _tag: Tag[GAppInfoMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GAppInfoMonitor_queueautoptr = o
+  given _tag: Tag[GAppInfoMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAppInfoMonitor_queueautoptr = o
   extension (v: GAppInfoMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppInfoMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GAppInfoMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GAppInfoMonitor_slistautoptr: 
-  given _tag: Tag[GAppInfoMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GAppInfoMonitor_slistautoptr = o
+  given _tag: Tag[GAppInfoMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAppInfoMonitor_slistautoptr = o
   extension (v: GAppInfoMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GAppInfo_autoptr = Ptr[GAppInfo]
 object GAppInfo_autoptr: 
   given _tag: Tag[GAppInfo_autoptr] = Tag.Ptr[GAppInfo](GAppInfo._tag)
@@ -140,39 +96,27 @@ object GAppInfo_autoptr:
   extension (v: GAppInfo_autoptr)
     inline def value: Ptr[GAppInfo] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppInfo_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GAppInfo_listautoptr = Ptr[_root_.glib.GList]
 object GAppInfo_listautoptr: 
-  given _tag: Tag[GAppInfo_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GAppInfo_listautoptr = o
+  given _tag: Tag[GAppInfo_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAppInfo_listautoptr = o
   extension (v: GAppInfo_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppInfo_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GAppInfo_queueautoptr = Ptr[_root_.glib.GQueue]
 object GAppInfo_queueautoptr: 
-  given _tag: Tag[GAppInfo_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GAppInfo_queueautoptr = o
+  given _tag: Tag[GAppInfo_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAppInfo_queueautoptr = o
   extension (v: GAppInfo_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppInfo_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GAppInfo_slistautoptr = Ptr[_root_.glib.GSList]
 object GAppInfo_slistautoptr: 
-  given _tag: Tag[GAppInfo_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GAppInfo_slistautoptr = o
+  given _tag: Tag[GAppInfo_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAppInfo_slistautoptr = o
   extension (v: GAppInfo_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GAppLaunchContext_autoptr = Ptr[GAppLaunchContext]
 object GAppLaunchContext_autoptr: 
   given _tag: Tag[GAppLaunchContext_autoptr] = Tag.Ptr[GAppLaunchContext](GAppLaunchContext._tag)
@@ -180,39 +124,27 @@ object GAppLaunchContext_autoptr:
   extension (v: GAppLaunchContext_autoptr)
     inline def value: Ptr[GAppLaunchContext] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppLaunchContext_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GAppLaunchContext_listautoptr = Ptr[_root_.glib.GList]
 object GAppLaunchContext_listautoptr: 
-  given _tag: Tag[GAppLaunchContext_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GAppLaunchContext_listautoptr = o
+  given _tag: Tag[GAppLaunchContext_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAppLaunchContext_listautoptr = o
   extension (v: GAppLaunchContext_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppLaunchContext_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GAppLaunchContext_queueautoptr = Ptr[_root_.glib.GQueue]
 object GAppLaunchContext_queueautoptr: 
-  given _tag: Tag[GAppLaunchContext_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GAppLaunchContext_queueautoptr = o
+  given _tag: Tag[GAppLaunchContext_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAppLaunchContext_queueautoptr = o
   extension (v: GAppLaunchContext_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAppLaunchContext_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GAppLaunchContext_slistautoptr = Ptr[_root_.glib.GSList]
 object GAppLaunchContext_slistautoptr: 
-  given _tag: Tag[GAppLaunchContext_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GAppLaunchContext_slistautoptr = o
+  given _tag: Tag[GAppLaunchContext_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAppLaunchContext_slistautoptr = o
   extension (v: GAppLaunchContext_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GApplicationCommandLine_autoptr = Ptr[GApplicationCommandLine]
 object GApplicationCommandLine_autoptr: 
   given _tag: Tag[GApplicationCommandLine_autoptr] = Tag.Ptr[GApplicationCommandLine](GApplicationCommandLine._tag)
@@ -220,39 +152,27 @@ object GApplicationCommandLine_autoptr:
   extension (v: GApplicationCommandLine_autoptr)
     inline def value: Ptr[GApplicationCommandLine] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GApplicationCommandLine_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GApplicationCommandLine_listautoptr = Ptr[_root_.glib.GList]
 object GApplicationCommandLine_listautoptr: 
-  given _tag: Tag[GApplicationCommandLine_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GApplicationCommandLine_listautoptr = o
+  given _tag: Tag[GApplicationCommandLine_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GApplicationCommandLine_listautoptr = o
   extension (v: GApplicationCommandLine_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GApplicationCommandLine_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GApplicationCommandLine_queueautoptr = Ptr[_root_.glib.GQueue]
 object GApplicationCommandLine_queueautoptr: 
-  given _tag: Tag[GApplicationCommandLine_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GApplicationCommandLine_queueautoptr = o
+  given _tag: Tag[GApplicationCommandLine_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GApplicationCommandLine_queueautoptr = o
   extension (v: GApplicationCommandLine_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GApplicationCommandLine_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GApplicationCommandLine_slistautoptr = Ptr[_root_.glib.GSList]
 object GApplicationCommandLine_slistautoptr: 
-  given _tag: Tag[GApplicationCommandLine_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GApplicationCommandLine_slistautoptr = o
+  given _tag: Tag[GApplicationCommandLine_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GApplicationCommandLine_slistautoptr = o
   extension (v: GApplicationCommandLine_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GApplication_autoptr = Ptr[GApplication]
 object GApplication_autoptr: 
   given _tag: Tag[GApplication_autoptr] = Tag.Ptr[GApplication](GApplication._tag)
@@ -260,39 +180,55 @@ object GApplication_autoptr:
   extension (v: GApplication_autoptr)
     inline def value: Ptr[GApplication] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GApplication_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GApplication_listautoptr = Ptr[_root_.glib.GList]
 object GApplication_listautoptr: 
-  given _tag: Tag[GApplication_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GApplication_listautoptr = o
+  given _tag: Tag[GApplication_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GApplication_listautoptr = o
   extension (v: GApplication_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GApplication_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GApplication_queueautoptr = Ptr[_root_.glib.GQueue]
 object GApplication_queueautoptr: 
-  given _tag: Tag[GApplication_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GApplication_queueautoptr = o
+  given _tag: Tag[GApplication_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GApplication_queueautoptr = o
   extension (v: GApplication_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GApplication_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GApplication_slistautoptr = Ptr[_root_.glib.GSList]
 object GApplication_slistautoptr: 
-  given _tag: Tag[GApplication_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GApplication_slistautoptr = o
+  given _tag: Tag[GApplication_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GApplication_slistautoptr = o
   extension (v: GApplication_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GArray_autoptr = Ptr[_root_.glib.GArray]
+object GArray_autoptr: 
+  given _tag: Tag[GArray_autoptr] = Tag.Ptr[_root_.glib.GArray](_root_.glib.GArray._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GArray]): GArray_autoptr = o
+  extension (v: GArray_autoptr)
+    inline def value: Ptr[_root_.glib.GArray] = v
+
+opaque type GArray_listautoptr = Ptr[_root_.glib.GList]
+object GArray_listautoptr: 
+  given _tag: Tag[GArray_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GArray_listautoptr = o
+  extension (v: GArray_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GArray_queueautoptr = Ptr[_root_.glib.GQueue]
+object GArray_queueautoptr: 
+  given _tag: Tag[GArray_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GArray_queueautoptr = o
+  extension (v: GArray_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GArray_slistautoptr = Ptr[_root_.glib.GSList]
+object GArray_slistautoptr: 
+  given _tag: Tag[GArray_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GArray_slistautoptr = o
+  extension (v: GArray_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GAsyncInitable_autoptr = Ptr[GAsyncInitable]
 object GAsyncInitable_autoptr: 
   given _tag: Tag[GAsyncInitable_autoptr] = Tag.Ptr[GAsyncInitable](GAsyncInitable._tag)
@@ -300,51 +236,69 @@ object GAsyncInitable_autoptr:
   extension (v: GAsyncInitable_autoptr)
     inline def value: Ptr[GAsyncInitable] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAsyncInitable_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GAsyncInitable_listautoptr = Ptr[_root_.glib.GList]
 object GAsyncInitable_listautoptr: 
-  given _tag: Tag[GAsyncInitable_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GAsyncInitable_listautoptr = o
+  given _tag: Tag[GAsyncInitable_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAsyncInitable_listautoptr = o
   extension (v: GAsyncInitable_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAsyncInitable_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GAsyncInitable_queueautoptr = Ptr[_root_.glib.GQueue]
 object GAsyncInitable_queueautoptr: 
-  given _tag: Tag[GAsyncInitable_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GAsyncInitable_queueautoptr = o
+  given _tag: Tag[GAsyncInitable_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAsyncInitable_queueautoptr = o
   extension (v: GAsyncInitable_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAsyncInitable_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GAsyncInitable_slistautoptr = Ptr[_root_.glib.GSList]
 object GAsyncInitable_slistautoptr: 
-  given _tag: Tag[GAsyncInitable_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GAsyncInitable_slistautoptr = o
+  given _tag: Tag[GAsyncInitable_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAsyncInitable_slistautoptr = o
   extension (v: GAsyncInitable_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GAsyncQueue_autoptr = Ptr[_root_.glib.GAsyncQueue]
+object GAsyncQueue_autoptr: 
+  given _tag: Tag[GAsyncQueue_autoptr] = Tag.Ptr[_root_.glib.GAsyncQueue](_root_.glib.GAsyncQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GAsyncQueue]): GAsyncQueue_autoptr = o
+  extension (v: GAsyncQueue_autoptr)
+    inline def value: Ptr[_root_.glib.GAsyncQueue] = v
+
+opaque type GAsyncQueue_listautoptr = Ptr[_root_.glib.GList]
+object GAsyncQueue_listautoptr: 
+  given _tag: Tag[GAsyncQueue_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAsyncQueue_listautoptr = o
+  extension (v: GAsyncQueue_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GAsyncQueue_queueautoptr = Ptr[_root_.glib.GQueue]
+object GAsyncQueue_queueautoptr: 
+  given _tag: Tag[GAsyncQueue_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAsyncQueue_queueautoptr = o
+  extension (v: GAsyncQueue_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GAsyncQueue_slistautoptr = Ptr[_root_.glib.GSList]
+object GAsyncQueue_slistautoptr: 
+  given _tag: Tag[GAsyncQueue_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAsyncQueue_slistautoptr = o
+  extension (v: GAsyncQueue_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GAsyncReadyCallback: _object: (nullable): the object the asynchronous operation was started with. : a #GAsyncResult. _data: user data passed to the callback.
+ * GAsyncReadyCallback: _object: (nullable): the object the asynchronous operation was started with. : a #GAsyncResult.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GAsyncReadyCallback = CFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit]
+opaque type GAsyncReadyCallback = CFuncPtr3[Ptr[_root_.gobject.GObject], Ptr[GAsyncResult], _root_.glib.gpointer, Unit]
 object GAsyncReadyCallback: 
-  given _tag: Tag[GAsyncReadyCallback] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit]): GAsyncReadyCallback = o
+  given _tag: Tag[GAsyncReadyCallback] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.GObject], Ptr[GAsyncResult], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GAsyncReadyCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.GObject], Ptr[GAsyncResult], _root_.glib.gpointer, Unit]): GAsyncReadyCallback = o
   extension (v: GAsyncReadyCallback)
-    inline def value: CFuncPtr3[Ptr[_root_.gobject.all.GObject], Ptr[GAsyncResult], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr3[Ptr[_root_.gobject.GObject], Ptr[GAsyncResult], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GAsyncResult_autoptr = Ptr[GAsyncResult]
 object GAsyncResult_autoptr: 
   given _tag: Tag[GAsyncResult_autoptr] = Tag.Ptr[GAsyncResult](GAsyncResult._tag)
@@ -352,39 +306,55 @@ object GAsyncResult_autoptr:
   extension (v: GAsyncResult_autoptr)
     inline def value: Ptr[GAsyncResult] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAsyncResult_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GAsyncResult_listautoptr = Ptr[_root_.glib.GList]
 object GAsyncResult_listautoptr: 
-  given _tag: Tag[GAsyncResult_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GAsyncResult_listautoptr = o
+  given _tag: Tag[GAsyncResult_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GAsyncResult_listautoptr = o
   extension (v: GAsyncResult_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAsyncResult_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GAsyncResult_queueautoptr = Ptr[_root_.glib.GQueue]
 object GAsyncResult_queueautoptr: 
-  given _tag: Tag[GAsyncResult_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GAsyncResult_queueautoptr = o
+  given _tag: Tag[GAsyncResult_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GAsyncResult_queueautoptr = o
   extension (v: GAsyncResult_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GAsyncResult_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GAsyncResult_slistautoptr = Ptr[_root_.glib.GSList]
 object GAsyncResult_slistautoptr: 
-  given _tag: Tag[GAsyncResult_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GAsyncResult_slistautoptr = o
+  given _tag: Tag[GAsyncResult_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GAsyncResult_slistautoptr = o
   extension (v: GAsyncResult_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GBookmarkFile_autoptr = Ptr[_root_.glib.GBookmarkFile]
+object GBookmarkFile_autoptr: 
+  given _tag: Tag[GBookmarkFile_autoptr] = Tag.Ptr[_root_.glib.GBookmarkFile](_root_.glib.GBookmarkFile._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GBookmarkFile]): GBookmarkFile_autoptr = o
+  extension (v: GBookmarkFile_autoptr)
+    inline def value: Ptr[_root_.glib.GBookmarkFile] = v
+
+opaque type GBookmarkFile_listautoptr = Ptr[_root_.glib.GList]
+object GBookmarkFile_listautoptr: 
+  given _tag: Tag[GBookmarkFile_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GBookmarkFile_listautoptr = o
+  extension (v: GBookmarkFile_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GBookmarkFile_queueautoptr = Ptr[_root_.glib.GQueue]
+object GBookmarkFile_queueautoptr: 
+  given _tag: Tag[GBookmarkFile_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GBookmarkFile_queueautoptr = o
+  extension (v: GBookmarkFile_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GBookmarkFile_slistautoptr = Ptr[_root_.glib.GSList]
+object GBookmarkFile_slistautoptr: 
+  given _tag: Tag[GBookmarkFile_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GBookmarkFile_slistautoptr = o
+  extension (v: GBookmarkFile_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GBufferedInputStream_autoptr = Ptr[GBufferedInputStream]
 object GBufferedInputStream_autoptr: 
   given _tag: Tag[GBufferedInputStream_autoptr] = Tag.Ptr[GBufferedInputStream](GBufferedInputStream._tag)
@@ -392,39 +362,27 @@ object GBufferedInputStream_autoptr:
   extension (v: GBufferedInputStream_autoptr)
     inline def value: Ptr[GBufferedInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBufferedInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GBufferedInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GBufferedInputStream_listautoptr: 
-  given _tag: Tag[GBufferedInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GBufferedInputStream_listautoptr = o
+  given _tag: Tag[GBufferedInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GBufferedInputStream_listautoptr = o
   extension (v: GBufferedInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBufferedInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GBufferedInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GBufferedInputStream_queueautoptr: 
-  given _tag: Tag[GBufferedInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GBufferedInputStream_queueautoptr = o
+  given _tag: Tag[GBufferedInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GBufferedInputStream_queueautoptr = o
   extension (v: GBufferedInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBufferedInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GBufferedInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GBufferedInputStream_slistautoptr: 
-  given _tag: Tag[GBufferedInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GBufferedInputStream_slistautoptr = o
+  given _tag: Tag[GBufferedInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GBufferedInputStream_slistautoptr = o
   extension (v: GBufferedInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GBufferedOutputStream_autoptr = Ptr[GBufferedOutputStream]
 object GBufferedOutputStream_autoptr: 
   given _tag: Tag[GBufferedOutputStream_autoptr] = Tag.Ptr[GBufferedOutputStream](GBufferedOutputStream._tag)
@@ -432,99 +390,125 @@ object GBufferedOutputStream_autoptr:
   extension (v: GBufferedOutputStream_autoptr)
     inline def value: Ptr[GBufferedOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBufferedOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GBufferedOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GBufferedOutputStream_listautoptr: 
-  given _tag: Tag[GBufferedOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GBufferedOutputStream_listautoptr = o
+  given _tag: Tag[GBufferedOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GBufferedOutputStream_listautoptr = o
   extension (v: GBufferedOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBufferedOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GBufferedOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GBufferedOutputStream_queueautoptr: 
-  given _tag: Tag[GBufferedOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GBufferedOutputStream_queueautoptr = o
+  given _tag: Tag[GBufferedOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GBufferedOutputStream_queueautoptr = o
   extension (v: GBufferedOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBufferedOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GBufferedOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GBufferedOutputStream_slistautoptr: 
-  given _tag: Tag[GBufferedOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GBufferedOutputStream_slistautoptr = o
+  given _tag: Tag[GBufferedOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GBufferedOutputStream_slistautoptr = o
   extension (v: GBufferedOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GBusAcquiredCallback: : The #GDBusConnection to a message bus. _data: User data passed to g_bus_own_name().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnameowning.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusnameowning.h
 */
-opaque type GBusAcquiredCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+opaque type GBusAcquiredCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
 object GBusAcquiredCallback: 
-  given _tag: Tag[GBusAcquiredCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusAcquiredCallback = o
+  given _tag: Tag[GBusAcquiredCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GBusAcquiredCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]): GBusAcquiredCallback = o
   extension (v: GBusAcquiredCallback)
-    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameAcquiredCallback: : The #GDBusConnection on which to acquired the name. _data: User data passed to g_bus_own_name() or g_bus_own_name_on_connection().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnameowning.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusnameowning.h
 */
-opaque type GBusNameAcquiredCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+opaque type GBusNameAcquiredCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
 object GBusNameAcquiredCallback: 
-  given _tag: Tag[GBusNameAcquiredCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameAcquiredCallback = o
+  given _tag: Tag[GBusNameAcquiredCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GBusNameAcquiredCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]): GBusNameAcquiredCallback = o
   extension (v: GBusNameAcquiredCallback)
-    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameAppearedCallback: : The #GDBusConnection the name is being watched on. _data: User data passed to g_bus_watch_name().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnamewatching.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusnamewatching.h
 */
-opaque type GBusNameAppearedCallback = CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+opaque type GBusNameAppearedCallback = CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
 object GBusNameAppearedCallback: 
-  given _tag: Tag[GBusNameAppearedCallback] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameAppearedCallback = o
+  given _tag: Tag[GBusNameAppearedCallback] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GBusNameAppearedCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]): GBusNameAppearedCallback = o
   extension (v: GBusNameAppearedCallback)
-    inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameLostCallback: : The #GDBusConnection on which to acquire the name or %NULL if the connection was disconnected. _data: User data passed to g_bus_own_name() or g_bus_own_name_on_connection().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnameowning.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusnameowning.h
 */
-opaque type GBusNameLostCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+opaque type GBusNameLostCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
 object GBusNameLostCallback: 
-  given _tag: Tag[GBusNameLostCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameLostCallback = o
+  given _tag: Tag[GBusNameLostCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GBusNameLostCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]): GBusNameLostCallback = o
   extension (v: GBusNameLostCallback)
-    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GBusNameVanishedCallback: : The #GDBusConnection the name is being watched on, or %NULL. _data: User data passed to g_bus_watch_name().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusnamewatching.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusnamewatching.h
 */
-opaque type GBusNameVanishedCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
+opaque type GBusNameVanishedCallback = CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
 object GBusNameVanishedCallback: 
-  given _tag: Tag[GBusNameVanishedCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit]): GBusNameVanishedCallback = o
+  given _tag: Tag[GBusNameVanishedCallback] = Tag.materializeCFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GBusNameVanishedCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit]): GBusNameVanishedCallback = o
   extension (v: GBusNameVanishedCallback)
-    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr3[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GByteArray_autoptr = Ptr[_root_.glib.GByteArray]
+object GByteArray_autoptr: 
+  given _tag: Tag[GByteArray_autoptr] = Tag.Ptr[_root_.glib.GByteArray](_root_.glib.GByteArray._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GByteArray]): GByteArray_autoptr = o
+  extension (v: GByteArray_autoptr)
+    inline def value: Ptr[_root_.glib.GByteArray] = v
+
+opaque type GByteArray_listautoptr = Ptr[_root_.glib.GList]
+object GByteArray_listautoptr: 
+  given _tag: Tag[GByteArray_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GByteArray_listautoptr = o
+  extension (v: GByteArray_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GByteArray_queueautoptr = Ptr[_root_.glib.GQueue]
+object GByteArray_queueautoptr: 
+  given _tag: Tag[GByteArray_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GByteArray_queueautoptr = o
+  extension (v: GByteArray_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GByteArray_slistautoptr = Ptr[_root_.glib.GSList]
+object GByteArray_slistautoptr: 
+  given _tag: Tag[GByteArray_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GByteArray_slistautoptr = o
+  extension (v: GByteArray_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GBytesIcon_autoptr = Ptr[GBytesIcon]
 object GBytesIcon_autoptr: 
   given _tag: Tag[GBytesIcon_autoptr] = Tag.Ptr[GBytesIcon](GBytesIcon._tag)
@@ -532,51 +516,69 @@ object GBytesIcon_autoptr:
   extension (v: GBytesIcon_autoptr)
     inline def value: Ptr[GBytesIcon] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBytesIcon_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GBytesIcon_listautoptr = Ptr[_root_.glib.GList]
 object GBytesIcon_listautoptr: 
-  given _tag: Tag[GBytesIcon_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GBytesIcon_listautoptr = o
+  given _tag: Tag[GBytesIcon_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GBytesIcon_listautoptr = o
   extension (v: GBytesIcon_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBytesIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GBytesIcon_queueautoptr = Ptr[_root_.glib.GQueue]
 object GBytesIcon_queueautoptr: 
-  given _tag: Tag[GBytesIcon_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GBytesIcon_queueautoptr = o
+  given _tag: Tag[GBytesIcon_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GBytesIcon_queueautoptr = o
   extension (v: GBytesIcon_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GBytesIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GBytesIcon_slistautoptr = Ptr[_root_.glib.GSList]
 object GBytesIcon_slistautoptr: 
-  given _tag: Tag[GBytesIcon_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GBytesIcon_slistautoptr = o
+  given _tag: Tag[GBytesIcon_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GBytesIcon_slistautoptr = o
   extension (v: GBytesIcon_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GBytes_autoptr = Ptr[_root_.glib.GBytes]
+object GBytes_autoptr: 
+  given _tag: Tag[GBytes_autoptr] = Tag.Ptr[_root_.glib.GBytes](_root_.glib.GBytes._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GBytes]): GBytes_autoptr = o
+  extension (v: GBytes_autoptr)
+    inline def value: Ptr[_root_.glib.GBytes] = v
+
+opaque type GBytes_listautoptr = Ptr[_root_.glib.GList]
+object GBytes_listautoptr: 
+  given _tag: Tag[GBytes_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GBytes_listautoptr = o
+  extension (v: GBytes_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GBytes_queueautoptr = Ptr[_root_.glib.GQueue]
+object GBytes_queueautoptr: 
+  given _tag: Tag[GBytes_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GBytes_queueautoptr = o
+  extension (v: GBytes_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GBytes_slistautoptr = Ptr[_root_.glib.GSList]
+object GBytes_slistautoptr: 
+  given _tag: Tag[GBytes_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GBytes_slistautoptr = o
+  extension (v: GBytes_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GCancellableSourceFunc: : the #GCancellable _data: data passed in by the user.
+ * GCancellableSourceFunc: : the #GCancellable
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GCancellableSourceFunc = CFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GCancellableSourceFunc = CFuncPtr2[Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean]
 object GCancellableSourceFunc: 
-  given _tag: Tag[GCancellableSourceFunc] = Tag.materializeCFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GCancellableSourceFunc = o
+  given _tag: Tag[GCancellableSourceFunc] = Tag.materializeCFuncPtr2[Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GCancellableSourceFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr2[Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean]): GCancellableSourceFunc = o
   extension (v: GCancellableSourceFunc)
-    inline def value: CFuncPtr2[Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr2[Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GCancellable_autoptr = Ptr[GCancellable]
 object GCancellable_autoptr: 
   given _tag: Tag[GCancellable_autoptr] = Tag.Ptr[GCancellable](GCancellable._tag)
@@ -584,39 +586,27 @@ object GCancellable_autoptr:
   extension (v: GCancellable_autoptr)
     inline def value: Ptr[GCancellable] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCancellable_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GCancellable_listautoptr = Ptr[_root_.glib.GList]
 object GCancellable_listautoptr: 
-  given _tag: Tag[GCancellable_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GCancellable_listautoptr = o
+  given _tag: Tag[GCancellable_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GCancellable_listautoptr = o
   extension (v: GCancellable_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCancellable_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GCancellable_queueautoptr = Ptr[_root_.glib.GQueue]
 object GCancellable_queueautoptr: 
-  given _tag: Tag[GCancellable_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GCancellable_queueautoptr = o
+  given _tag: Tag[GCancellable_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GCancellable_queueautoptr = o
   extension (v: GCancellable_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCancellable_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GCancellable_slistautoptr = Ptr[_root_.glib.GSList]
 object GCancellable_slistautoptr: 
-  given _tag: Tag[GCancellable_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GCancellable_slistautoptr = o
+  given _tag: Tag[GCancellable_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GCancellable_slistautoptr = o
   extension (v: GCancellable_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GCharsetConverter_autoptr = Ptr[GCharsetConverter]
 object GCharsetConverter_autoptr: 
   given _tag: Tag[GCharsetConverter_autoptr] = Tag.Ptr[GCharsetConverter](GCharsetConverter._tag)
@@ -624,39 +614,83 @@ object GCharsetConverter_autoptr:
   extension (v: GCharsetConverter_autoptr)
     inline def value: Ptr[GCharsetConverter] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCharsetConverter_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GCharsetConverter_listautoptr = Ptr[_root_.glib.GList]
 object GCharsetConverter_listautoptr: 
-  given _tag: Tag[GCharsetConverter_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GCharsetConverter_listautoptr = o
+  given _tag: Tag[GCharsetConverter_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GCharsetConverter_listautoptr = o
   extension (v: GCharsetConverter_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCharsetConverter_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GCharsetConverter_queueautoptr = Ptr[_root_.glib.GQueue]
 object GCharsetConverter_queueautoptr: 
-  given _tag: Tag[GCharsetConverter_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GCharsetConverter_queueautoptr = o
+  given _tag: Tag[GCharsetConverter_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GCharsetConverter_queueautoptr = o
   extension (v: GCharsetConverter_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCharsetConverter_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GCharsetConverter_slistautoptr = Ptr[_root_.glib.GSList]
 object GCharsetConverter_slistautoptr: 
-  given _tag: Tag[GCharsetConverter_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GCharsetConverter_slistautoptr = o
+  given _tag: Tag[GCharsetConverter_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GCharsetConverter_slistautoptr = o
   extension (v: GCharsetConverter_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GChecksum_autoptr = Ptr[_root_.glib.GChecksum]
+object GChecksum_autoptr: 
+  given _tag: Tag[GChecksum_autoptr] = Tag.Ptr[_root_.glib.GChecksum](_root_.glib.GChecksum._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GChecksum]): GChecksum_autoptr = o
+  extension (v: GChecksum_autoptr)
+    inline def value: Ptr[_root_.glib.GChecksum] = v
+
+opaque type GChecksum_listautoptr = Ptr[_root_.glib.GList]
+object GChecksum_listautoptr: 
+  given _tag: Tag[GChecksum_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GChecksum_listautoptr = o
+  extension (v: GChecksum_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GChecksum_queueautoptr = Ptr[_root_.glib.GQueue]
+object GChecksum_queueautoptr: 
+  given _tag: Tag[GChecksum_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GChecksum_queueautoptr = o
+  extension (v: GChecksum_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GChecksum_slistautoptr = Ptr[_root_.glib.GSList]
+object GChecksum_slistautoptr: 
+  given _tag: Tag[GChecksum_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GChecksum_slistautoptr = o
+  extension (v: GChecksum_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GClosure_autoptr = Ptr[_root_.gobject.GClosure]
+object GClosure_autoptr: 
+  given _tag: Tag[GClosure_autoptr] = Tag.Ptr[_root_.gobject.GClosure](_root_.gobject.GClosure._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GClosure]): GClosure_autoptr = o
+  extension (v: GClosure_autoptr)
+    inline def value: Ptr[_root_.gobject.GClosure] = v
+
+opaque type GClosure_listautoptr = Ptr[_root_.glib.GList]
+object GClosure_listautoptr: 
+  given _tag: Tag[GClosure_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GClosure_listautoptr = o
+  extension (v: GClosure_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GClosure_queueautoptr = Ptr[_root_.glib.GQueue]
+object GClosure_queueautoptr: 
+  given _tag: Tag[GClosure_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GClosure_queueautoptr = o
+  extension (v: GClosure_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GClosure_slistautoptr = Ptr[_root_.glib.GSList]
+object GClosure_slistautoptr: 
+  given _tag: Tag[GClosure_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GClosure_slistautoptr = o
+  extension (v: GClosure_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GConverterInputStream_autoptr = Ptr[GConverterInputStream]
 object GConverterInputStream_autoptr: 
   given _tag: Tag[GConverterInputStream_autoptr] = Tag.Ptr[GConverterInputStream](GConverterInputStream._tag)
@@ -664,39 +698,27 @@ object GConverterInputStream_autoptr:
   extension (v: GConverterInputStream_autoptr)
     inline def value: Ptr[GConverterInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverterInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GConverterInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GConverterInputStream_listautoptr: 
-  given _tag: Tag[GConverterInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GConverterInputStream_listautoptr = o
+  given _tag: Tag[GConverterInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GConverterInputStream_listautoptr = o
   extension (v: GConverterInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverterInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GConverterInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GConverterInputStream_queueautoptr: 
-  given _tag: Tag[GConverterInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GConverterInputStream_queueautoptr = o
+  given _tag: Tag[GConverterInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GConverterInputStream_queueautoptr = o
   extension (v: GConverterInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverterInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GConverterInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GConverterInputStream_slistautoptr: 
-  given _tag: Tag[GConverterInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GConverterInputStream_slistautoptr = o
+  given _tag: Tag[GConverterInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GConverterInputStream_slistautoptr = o
   extension (v: GConverterInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GConverterOutputStream_autoptr = Ptr[GConverterOutputStream]
 object GConverterOutputStream_autoptr: 
   given _tag: Tag[GConverterOutputStream_autoptr] = Tag.Ptr[GConverterOutputStream](GConverterOutputStream._tag)
@@ -704,39 +726,27 @@ object GConverterOutputStream_autoptr:
   extension (v: GConverterOutputStream_autoptr)
     inline def value: Ptr[GConverterOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverterOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GConverterOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GConverterOutputStream_listautoptr: 
-  given _tag: Tag[GConverterOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GConverterOutputStream_listautoptr = o
+  given _tag: Tag[GConverterOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GConverterOutputStream_listautoptr = o
   extension (v: GConverterOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverterOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GConverterOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GConverterOutputStream_queueautoptr: 
-  given _tag: Tag[GConverterOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GConverterOutputStream_queueautoptr = o
+  given _tag: Tag[GConverterOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GConverterOutputStream_queueautoptr = o
   extension (v: GConverterOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverterOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GConverterOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GConverterOutputStream_slistautoptr: 
-  given _tag: Tag[GConverterOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GConverterOutputStream_slistautoptr = o
+  given _tag: Tag[GConverterOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GConverterOutputStream_slistautoptr = o
   extension (v: GConverterOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GConverter_autoptr = Ptr[GConverter]
 object GConverter_autoptr: 
   given _tag: Tag[GConverter_autoptr] = Tag.Ptr[GConverter](GConverter._tag)
@@ -744,39 +754,27 @@ object GConverter_autoptr:
   extension (v: GConverter_autoptr)
     inline def value: Ptr[GConverter] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverter_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GConverter_listautoptr = Ptr[_root_.glib.GList]
 object GConverter_listautoptr: 
-  given _tag: Tag[GConverter_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GConverter_listautoptr = o
+  given _tag: Tag[GConverter_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GConverter_listautoptr = o
   extension (v: GConverter_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverter_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GConverter_queueautoptr = Ptr[_root_.glib.GQueue]
 object GConverter_queueautoptr: 
-  given _tag: Tag[GConverter_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GConverter_queueautoptr = o
+  given _tag: Tag[GConverter_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GConverter_queueautoptr = o
   extension (v: GConverter_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GConverter_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GConverter_slistautoptr = Ptr[_root_.glib.GSList]
 object GConverter_slistautoptr: 
-  given _tag: Tag[GConverter_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GConverter_slistautoptr = o
+  given _tag: Tag[GConverter_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GConverter_slistautoptr = o
   extension (v: GConverter_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GCredentials_autoptr = Ptr[GCredentials]
 object GCredentials_autoptr: 
   given _tag: Tag[GCredentials_autoptr] = Tag.Ptr[GCredentials](GCredentials._tag)
@@ -784,39 +782,27 @@ object GCredentials_autoptr:
   extension (v: GCredentials_autoptr)
     inline def value: Ptr[GCredentials] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCredentials_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GCredentials_listautoptr = Ptr[_root_.glib.GList]
 object GCredentials_listautoptr: 
-  given _tag: Tag[GCredentials_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GCredentials_listautoptr = o
+  given _tag: Tag[GCredentials_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GCredentials_listautoptr = o
   extension (v: GCredentials_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCredentials_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GCredentials_queueautoptr = Ptr[_root_.glib.GQueue]
 object GCredentials_queueautoptr: 
-  given _tag: Tag[GCredentials_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GCredentials_queueautoptr = o
+  given _tag: Tag[GCredentials_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GCredentials_queueautoptr = o
   extension (v: GCredentials_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GCredentials_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GCredentials_slistautoptr = Ptr[_root_.glib.GSList]
 object GCredentials_slistautoptr: 
-  given _tag: Tag[GCredentials_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GCredentials_slistautoptr = o
+  given _tag: Tag[GCredentials_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GCredentials_slistautoptr = o
   extension (v: GCredentials_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusActionGroup_autoptr = Ptr[GDBusActionGroup]
 object GDBusActionGroup_autoptr: 
   given _tag: Tag[GDBusActionGroup_autoptr] = Tag.Ptr[GDBusActionGroup](GDBusActionGroup._tag)
@@ -824,39 +810,27 @@ object GDBusActionGroup_autoptr:
   extension (v: GDBusActionGroup_autoptr)
     inline def value: Ptr[GDBusActionGroup] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusActionGroup_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusActionGroup_listautoptr = Ptr[_root_.glib.GList]
 object GDBusActionGroup_listautoptr: 
-  given _tag: Tag[GDBusActionGroup_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusActionGroup_listautoptr = o
+  given _tag: Tag[GDBusActionGroup_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusActionGroup_listautoptr = o
   extension (v: GDBusActionGroup_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusActionGroup_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusActionGroup_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusActionGroup_queueautoptr: 
-  given _tag: Tag[GDBusActionGroup_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusActionGroup_queueautoptr = o
+  given _tag: Tag[GDBusActionGroup_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusActionGroup_queueautoptr = o
   extension (v: GDBusActionGroup_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusActionGroup_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusActionGroup_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusActionGroup_slistautoptr: 
-  given _tag: Tag[GDBusActionGroup_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusActionGroup_slistautoptr = o
+  given _tag: Tag[GDBusActionGroup_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusActionGroup_slistautoptr = o
   extension (v: GDBusActionGroup_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusAuthObserver_autoptr = Ptr[GDBusAuthObserver]
 object GDBusAuthObserver_autoptr: 
   given _tag: Tag[GDBusAuthObserver_autoptr] = Tag.Ptr[GDBusAuthObserver](GDBusAuthObserver._tag)
@@ -864,39 +838,27 @@ object GDBusAuthObserver_autoptr:
   extension (v: GDBusAuthObserver_autoptr)
     inline def value: Ptr[GDBusAuthObserver] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusAuthObserver_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusAuthObserver_listautoptr = Ptr[_root_.glib.GList]
 object GDBusAuthObserver_listautoptr: 
-  given _tag: Tag[GDBusAuthObserver_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusAuthObserver_listautoptr = o
+  given _tag: Tag[GDBusAuthObserver_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusAuthObserver_listautoptr = o
   extension (v: GDBusAuthObserver_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusAuthObserver_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusAuthObserver_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusAuthObserver_queueautoptr: 
-  given _tag: Tag[GDBusAuthObserver_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusAuthObserver_queueautoptr = o
+  given _tag: Tag[GDBusAuthObserver_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusAuthObserver_queueautoptr = o
   extension (v: GDBusAuthObserver_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusAuthObserver_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusAuthObserver_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusAuthObserver_slistautoptr: 
-  given _tag: Tag[GDBusAuthObserver_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusAuthObserver_slistautoptr = o
+  given _tag: Tag[GDBusAuthObserver_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusAuthObserver_slistautoptr = o
   extension (v: GDBusAuthObserver_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusConnection_autoptr = Ptr[GDBusConnection]
 object GDBusConnection_autoptr: 
   given _tag: Tag[GDBusConnection_autoptr] = Tag.Ptr[GDBusConnection](GDBusConnection._tag)
@@ -904,75 +866,69 @@ object GDBusConnection_autoptr:
   extension (v: GDBusConnection_autoptr)
     inline def value: Ptr[GDBusConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusConnection_listautoptr = Ptr[_root_.glib.GList]
 object GDBusConnection_listautoptr: 
-  given _tag: Tag[GDBusConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusConnection_listautoptr = o
+  given _tag: Tag[GDBusConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusConnection_listautoptr = o
   extension (v: GDBusConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusConnection_queueautoptr: 
-  given _tag: Tag[GDBusConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusConnection_queueautoptr = o
+  given _tag: Tag[GDBusConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusConnection_queueautoptr = o
   extension (v: GDBusConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusConnection_slistautoptr: 
-  given _tag: Tag[GDBusConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusConnection_slistautoptr = o
+  given _tag: Tag[GDBusConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusConnection_slistautoptr = o
   extension (v: GDBusConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GDBusInterfaceGetPropertyFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that the method was invoked on. : Return location for error. _data: The _data #gpointer passed to g_dbus_connection_register_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusInterfaceGetPropertyFunc = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
+opaque type GDBusInterfaceGetPropertyFunc = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]]
 object GDBusInterfaceGetPropertyFunc: 
-  given _tag: Tag[GDBusInterfaceGetPropertyFunc] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
-  inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]): GDBusInterfaceGetPropertyFunc = o
+  given _tag: Tag[GDBusInterfaceGetPropertyFunc] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusInterfaceGetPropertyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]]): GDBusInterfaceGetPropertyFunc = o
   extension (v: GDBusInterfaceGetPropertyFunc)
-    inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]] = v
+    inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GDBusInterfaceMethodCallFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that the method was invoked on. : A #GVariant tuple with parameters. : (transfer full): A #GDBusMethodInvocation object that must be used to return a value or error. _data: The _data #gpointer passed to g_dbus_connection_register_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusInterfaceMethodCallFunc = CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit]
+opaque type GDBusInterfaceMethodCallFunc = CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.gpointer, Unit]
 object GDBusInterfaceMethodCallFunc: 
-  given _tag: Tag[GDBusInterfaceMethodCallFunc] = Tag.materializeCFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit]): GDBusInterfaceMethodCallFunc = o
+  given _tag: Tag[GDBusInterfaceMethodCallFunc] = Tag.materializeCFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusInterfaceMethodCallFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.gpointer, Unit]): GDBusInterfaceMethodCallFunc = o
   extension (v: GDBusInterfaceMethodCallFunc)
-    inline def value: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[GDBusMethodInvocation], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GDBusInterfaceSetPropertyFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that the method was invoked on. : The value to set the property to. : Return location for error. _data: The _data #gpointer passed to g_dbus_connection_register_object().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusInterfaceSetPropertyFunc = CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GDBusInterfaceSetPropertyFunc = CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, _root_.glib.gboolean]
 object GDBusInterfaceSetPropertyFunc: 
-  given _tag: Tag[GDBusInterfaceSetPropertyFunc] = Tag.materializeCFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GDBusInterfaceSetPropertyFunc = o
+  given _tag: Tag[GDBusInterfaceSetPropertyFunc] = Tag.materializeCFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusInterfaceSetPropertyFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, _root_.glib.gboolean]): GDBusInterfaceSetPropertyFunc = o
   extension (v: GDBusInterfaceSetPropertyFunc)
-    inline def value: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], Ptr[Ptr[_root_.glib.all.GError]], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr8[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], Ptr[Ptr[_root_.glib.GError]], _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusInterfaceSkeleton_autoptr = Ptr[GDBusInterfaceSkeleton]
 object GDBusInterfaceSkeleton_autoptr: 
   given _tag: Tag[GDBusInterfaceSkeleton_autoptr] = Tag.Ptr[GDBusInterfaceSkeleton](GDBusInterfaceSkeleton._tag)
@@ -980,39 +936,27 @@ object GDBusInterfaceSkeleton_autoptr:
   extension (v: GDBusInterfaceSkeleton_autoptr)
     inline def value: Ptr[GDBusInterfaceSkeleton] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusInterfaceSkeleton_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusInterfaceSkeleton_listautoptr = Ptr[_root_.glib.GList]
 object GDBusInterfaceSkeleton_listautoptr: 
-  given _tag: Tag[GDBusInterfaceSkeleton_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusInterfaceSkeleton_listautoptr = o
+  given _tag: Tag[GDBusInterfaceSkeleton_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusInterfaceSkeleton_listautoptr = o
   extension (v: GDBusInterfaceSkeleton_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusInterfaceSkeleton_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusInterfaceSkeleton_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusInterfaceSkeleton_queueautoptr: 
-  given _tag: Tag[GDBusInterfaceSkeleton_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusInterfaceSkeleton_queueautoptr = o
+  given _tag: Tag[GDBusInterfaceSkeleton_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusInterfaceSkeleton_queueautoptr = o
   extension (v: GDBusInterfaceSkeleton_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusInterfaceSkeleton_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusInterfaceSkeleton_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusInterfaceSkeleton_slistautoptr: 
-  given _tag: Tag[GDBusInterfaceSkeleton_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusInterfaceSkeleton_slistautoptr = o
+  given _tag: Tag[GDBusInterfaceSkeleton_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusInterfaceSkeleton_slistautoptr = o
   extension (v: GDBusInterfaceSkeleton_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusInterface_autoptr = Ptr[GDBusInterface]
 object GDBusInterface_autoptr: 
   given _tag: Tag[GDBusInterface_autoptr] = Tag.Ptr[GDBusInterface](GDBusInterface._tag)
@@ -1020,39 +964,27 @@ object GDBusInterface_autoptr:
   extension (v: GDBusInterface_autoptr)
     inline def value: Ptr[GDBusInterface] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusInterface_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusInterface_listautoptr = Ptr[_root_.glib.GList]
 object GDBusInterface_listautoptr: 
-  given _tag: Tag[GDBusInterface_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusInterface_listautoptr = o
+  given _tag: Tag[GDBusInterface_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusInterface_listautoptr = o
   extension (v: GDBusInterface_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusInterface_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusInterface_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusInterface_queueautoptr: 
-  given _tag: Tag[GDBusInterface_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusInterface_queueautoptr = o
+  given _tag: Tag[GDBusInterface_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusInterface_queueautoptr = o
   extension (v: GDBusInterface_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusInterface_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusInterface_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusInterface_slistautoptr: 
-  given _tag: Tag[GDBusInterface_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusInterface_slistautoptr = o
+  given _tag: Tag[GDBusInterface_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusInterface_slistautoptr = o
   extension (v: GDBusInterface_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusMenuModel_autoptr = Ptr[GDBusMenuModel]
 object GDBusMenuModel_autoptr: 
   given _tag: Tag[GDBusMenuModel_autoptr] = Tag.Ptr[GDBusMenuModel](GDBusMenuModel._tag)
@@ -1060,51 +992,41 @@ object GDBusMenuModel_autoptr:
   extension (v: GDBusMenuModel_autoptr)
     inline def value: Ptr[GDBusMenuModel] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMenuModel_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusMenuModel_listautoptr = Ptr[_root_.glib.GList]
 object GDBusMenuModel_listautoptr: 
-  given _tag: Tag[GDBusMenuModel_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusMenuModel_listautoptr = o
+  given _tag: Tag[GDBusMenuModel_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusMenuModel_listautoptr = o
   extension (v: GDBusMenuModel_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMenuModel_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusMenuModel_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusMenuModel_queueautoptr: 
-  given _tag: Tag[GDBusMenuModel_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusMenuModel_queueautoptr = o
+  given _tag: Tag[GDBusMenuModel_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusMenuModel_queueautoptr = o
   extension (v: GDBusMenuModel_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMenuModel_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusMenuModel_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusMenuModel_slistautoptr: 
-  given _tag: Tag[GDBusMenuModel_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusMenuModel_slistautoptr = o
+  given _tag: Tag[GDBusMenuModel_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusMenuModel_slistautoptr = o
   extension (v: GDBusMenuModel_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GDBusMessageFilterFunction: : (transfer none): A #GDBusConnection. : (transfer full): A locked #GDBusMessage that the filter function takes ownership of. : %TRUE if it is a message received from the other peer, %FALSE if it is a message to be sent to the other peer. _data: User data passed when adding the filter.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusMessageFilterFunction = CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]]
+opaque type GDBusMessageFilterFunction = CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.gboolean, _root_.glib.gpointer, Ptr[GDBusMessage]]
 object GDBusMessageFilterFunction: 
-  given _tag: Tag[GDBusMessageFilterFunction] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]]
-  inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]]): GDBusMessageFilterFunction = o
+  given _tag: Tag[GDBusMessageFilterFunction] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.gboolean, _root_.glib.gpointer, Ptr[GDBusMessage]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusMessageFilterFunction = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.gboolean, _root_.glib.gpointer, Ptr[GDBusMessage]]): GDBusMessageFilterFunction = o
   extension (v: GDBusMessageFilterFunction)
-    inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.all.gboolean, _root_.glib.all.gpointer, Ptr[GDBusMessage]] = v
+    inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[GDBusMessage], _root_.glib.gboolean, _root_.glib.gpointer, Ptr[GDBusMessage]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusMessage_autoptr = Ptr[GDBusMessage]
 object GDBusMessage_autoptr: 
   given _tag: Tag[GDBusMessage_autoptr] = Tag.Ptr[GDBusMessage](GDBusMessage._tag)
@@ -1112,39 +1034,27 @@ object GDBusMessage_autoptr:
   extension (v: GDBusMessage_autoptr)
     inline def value: Ptr[GDBusMessage] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMessage_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusMessage_listautoptr = Ptr[_root_.glib.GList]
 object GDBusMessage_listautoptr: 
-  given _tag: Tag[GDBusMessage_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusMessage_listautoptr = o
+  given _tag: Tag[GDBusMessage_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusMessage_listautoptr = o
   extension (v: GDBusMessage_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMessage_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusMessage_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusMessage_queueautoptr: 
-  given _tag: Tag[GDBusMessage_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusMessage_queueautoptr = o
+  given _tag: Tag[GDBusMessage_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusMessage_queueautoptr = o
   extension (v: GDBusMessage_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMessage_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusMessage_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusMessage_slistautoptr: 
-  given _tag: Tag[GDBusMessage_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusMessage_slistautoptr = o
+  given _tag: Tag[GDBusMessage_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusMessage_slistautoptr = o
   extension (v: GDBusMessage_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusMethodInvocation_autoptr = Ptr[GDBusMethodInvocation]
 object GDBusMethodInvocation_autoptr: 
   given _tag: Tag[GDBusMethodInvocation_autoptr] = Tag.Ptr[GDBusMethodInvocation](GDBusMethodInvocation._tag)
@@ -1152,39 +1062,27 @@ object GDBusMethodInvocation_autoptr:
   extension (v: GDBusMethodInvocation_autoptr)
     inline def value: Ptr[GDBusMethodInvocation] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMethodInvocation_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusMethodInvocation_listautoptr = Ptr[_root_.glib.GList]
 object GDBusMethodInvocation_listautoptr: 
-  given _tag: Tag[GDBusMethodInvocation_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusMethodInvocation_listautoptr = o
+  given _tag: Tag[GDBusMethodInvocation_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusMethodInvocation_listautoptr = o
   extension (v: GDBusMethodInvocation_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMethodInvocation_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusMethodInvocation_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusMethodInvocation_queueautoptr: 
-  given _tag: Tag[GDBusMethodInvocation_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusMethodInvocation_queueautoptr = o
+  given _tag: Tag[GDBusMethodInvocation_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusMethodInvocation_queueautoptr = o
   extension (v: GDBusMethodInvocation_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusMethodInvocation_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusMethodInvocation_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusMethodInvocation_slistautoptr: 
-  given _tag: Tag[GDBusMethodInvocation_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusMethodInvocation_slistautoptr = o
+  given _tag: Tag[GDBusMethodInvocation_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusMethodInvocation_slistautoptr = o
   extension (v: GDBusMethodInvocation_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusNodeInfo_autoptr = Ptr[GDBusNodeInfo]
 object GDBusNodeInfo_autoptr: 
   given _tag: Tag[GDBusNodeInfo_autoptr] = Tag.Ptr[GDBusNodeInfo](GDBusNodeInfo._tag)
@@ -1192,39 +1090,27 @@ object GDBusNodeInfo_autoptr:
   extension (v: GDBusNodeInfo_autoptr)
     inline def value: Ptr[GDBusNodeInfo] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusNodeInfo_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusNodeInfo_listautoptr = Ptr[_root_.glib.GList]
 object GDBusNodeInfo_listautoptr: 
-  given _tag: Tag[GDBusNodeInfo_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusNodeInfo_listautoptr = o
+  given _tag: Tag[GDBusNodeInfo_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusNodeInfo_listautoptr = o
   extension (v: GDBusNodeInfo_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusNodeInfo_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusNodeInfo_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusNodeInfo_queueautoptr: 
-  given _tag: Tag[GDBusNodeInfo_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusNodeInfo_queueautoptr = o
+  given _tag: Tag[GDBusNodeInfo_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusNodeInfo_queueautoptr = o
   extension (v: GDBusNodeInfo_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusNodeInfo_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusNodeInfo_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusNodeInfo_slistautoptr: 
-  given _tag: Tag[GDBusNodeInfo_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusNodeInfo_slistautoptr = o
+  given _tag: Tag[GDBusNodeInfo_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusNodeInfo_slistautoptr = o
   extension (v: GDBusNodeInfo_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusObjectManagerClient_autoptr = Ptr[GDBusObjectManagerClient]
 object GDBusObjectManagerClient_autoptr: 
   given _tag: Tag[GDBusObjectManagerClient_autoptr] = Tag.Ptr[GDBusObjectManagerClient](GDBusObjectManagerClient._tag)
@@ -1232,39 +1118,27 @@ object GDBusObjectManagerClient_autoptr:
   extension (v: GDBusObjectManagerClient_autoptr)
     inline def value: Ptr[GDBusObjectManagerClient] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManagerClient_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusObjectManagerClient_listautoptr = Ptr[_root_.glib.GList]
 object GDBusObjectManagerClient_listautoptr: 
-  given _tag: Tag[GDBusObjectManagerClient_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusObjectManagerClient_listautoptr = o
+  given _tag: Tag[GDBusObjectManagerClient_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusObjectManagerClient_listautoptr = o
   extension (v: GDBusObjectManagerClient_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManagerClient_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusObjectManagerClient_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusObjectManagerClient_queueautoptr: 
-  given _tag: Tag[GDBusObjectManagerClient_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusObjectManagerClient_queueautoptr = o
+  given _tag: Tag[GDBusObjectManagerClient_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusObjectManagerClient_queueautoptr = o
   extension (v: GDBusObjectManagerClient_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManagerClient_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusObjectManagerClient_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusObjectManagerClient_slistautoptr: 
-  given _tag: Tag[GDBusObjectManagerClient_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusObjectManagerClient_slistautoptr = o
+  given _tag: Tag[GDBusObjectManagerClient_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusObjectManagerClient_slistautoptr = o
   extension (v: GDBusObjectManagerClient_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusObjectManagerServer_autoptr = Ptr[GDBusObjectManagerServer]
 object GDBusObjectManagerServer_autoptr: 
   given _tag: Tag[GDBusObjectManagerServer_autoptr] = Tag.Ptr[GDBusObjectManagerServer](GDBusObjectManagerServer._tag)
@@ -1272,39 +1146,27 @@ object GDBusObjectManagerServer_autoptr:
   extension (v: GDBusObjectManagerServer_autoptr)
     inline def value: Ptr[GDBusObjectManagerServer] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManagerServer_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusObjectManagerServer_listautoptr = Ptr[_root_.glib.GList]
 object GDBusObjectManagerServer_listautoptr: 
-  given _tag: Tag[GDBusObjectManagerServer_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusObjectManagerServer_listautoptr = o
+  given _tag: Tag[GDBusObjectManagerServer_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusObjectManagerServer_listautoptr = o
   extension (v: GDBusObjectManagerServer_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManagerServer_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusObjectManagerServer_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusObjectManagerServer_queueautoptr: 
-  given _tag: Tag[GDBusObjectManagerServer_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusObjectManagerServer_queueautoptr = o
+  given _tag: Tag[GDBusObjectManagerServer_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusObjectManagerServer_queueautoptr = o
   extension (v: GDBusObjectManagerServer_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManagerServer_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusObjectManagerServer_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusObjectManagerServer_slistautoptr: 
-  given _tag: Tag[GDBusObjectManagerServer_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusObjectManagerServer_slistautoptr = o
+  given _tag: Tag[GDBusObjectManagerServer_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusObjectManagerServer_slistautoptr = o
   extension (v: GDBusObjectManagerServer_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusObjectManager_autoptr = Ptr[GDBusObjectManager]
 object GDBusObjectManager_autoptr: 
   given _tag: Tag[GDBusObjectManager_autoptr] = Tag.Ptr[GDBusObjectManager](GDBusObjectManager._tag)
@@ -1312,39 +1174,27 @@ object GDBusObjectManager_autoptr:
   extension (v: GDBusObjectManager_autoptr)
     inline def value: Ptr[GDBusObjectManager] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManager_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusObjectManager_listautoptr = Ptr[_root_.glib.GList]
 object GDBusObjectManager_listautoptr: 
-  given _tag: Tag[GDBusObjectManager_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusObjectManager_listautoptr = o
+  given _tag: Tag[GDBusObjectManager_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusObjectManager_listautoptr = o
   extension (v: GDBusObjectManager_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManager_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusObjectManager_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusObjectManager_queueautoptr: 
-  given _tag: Tag[GDBusObjectManager_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusObjectManager_queueautoptr = o
+  given _tag: Tag[GDBusObjectManager_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusObjectManager_queueautoptr = o
   extension (v: GDBusObjectManager_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectManager_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusObjectManager_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusObjectManager_slistautoptr: 
-  given _tag: Tag[GDBusObjectManager_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusObjectManager_slistautoptr = o
+  given _tag: Tag[GDBusObjectManager_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusObjectManager_slistautoptr = o
   extension (v: GDBusObjectManager_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusObjectProxy_autoptr = Ptr[GDBusObjectProxy]
 object GDBusObjectProxy_autoptr: 
   given _tag: Tag[GDBusObjectProxy_autoptr] = Tag.Ptr[GDBusObjectProxy](GDBusObjectProxy._tag)
@@ -1352,39 +1202,27 @@ object GDBusObjectProxy_autoptr:
   extension (v: GDBusObjectProxy_autoptr)
     inline def value: Ptr[GDBusObjectProxy] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectProxy_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusObjectProxy_listautoptr = Ptr[_root_.glib.GList]
 object GDBusObjectProxy_listautoptr: 
-  given _tag: Tag[GDBusObjectProxy_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusObjectProxy_listautoptr = o
+  given _tag: Tag[GDBusObjectProxy_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusObjectProxy_listautoptr = o
   extension (v: GDBusObjectProxy_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectProxy_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusObjectProxy_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusObjectProxy_queueautoptr: 
-  given _tag: Tag[GDBusObjectProxy_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusObjectProxy_queueautoptr = o
+  given _tag: Tag[GDBusObjectProxy_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusObjectProxy_queueautoptr = o
   extension (v: GDBusObjectProxy_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectProxy_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusObjectProxy_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusObjectProxy_slistautoptr: 
-  given _tag: Tag[GDBusObjectProxy_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusObjectProxy_slistautoptr = o
+  given _tag: Tag[GDBusObjectProxy_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusObjectProxy_slistautoptr = o
   extension (v: GDBusObjectProxy_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusObjectSkeleton_autoptr = Ptr[GDBusObjectSkeleton]
 object GDBusObjectSkeleton_autoptr: 
   given _tag: Tag[GDBusObjectSkeleton_autoptr] = Tag.Ptr[GDBusObjectSkeleton](GDBusObjectSkeleton._tag)
@@ -1392,39 +1230,27 @@ object GDBusObjectSkeleton_autoptr:
   extension (v: GDBusObjectSkeleton_autoptr)
     inline def value: Ptr[GDBusObjectSkeleton] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectSkeleton_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusObjectSkeleton_listautoptr = Ptr[_root_.glib.GList]
 object GDBusObjectSkeleton_listautoptr: 
-  given _tag: Tag[GDBusObjectSkeleton_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusObjectSkeleton_listautoptr = o
+  given _tag: Tag[GDBusObjectSkeleton_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusObjectSkeleton_listautoptr = o
   extension (v: GDBusObjectSkeleton_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectSkeleton_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusObjectSkeleton_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusObjectSkeleton_queueautoptr: 
-  given _tag: Tag[GDBusObjectSkeleton_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusObjectSkeleton_queueautoptr = o
+  given _tag: Tag[GDBusObjectSkeleton_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusObjectSkeleton_queueautoptr = o
   extension (v: GDBusObjectSkeleton_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObjectSkeleton_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusObjectSkeleton_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusObjectSkeleton_slistautoptr: 
-  given _tag: Tag[GDBusObjectSkeleton_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusObjectSkeleton_slistautoptr = o
+  given _tag: Tag[GDBusObjectSkeleton_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusObjectSkeleton_slistautoptr = o
   extension (v: GDBusObjectSkeleton_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusObject_autoptr = Ptr[GDBusObject]
 object GDBusObject_autoptr: 
   given _tag: Tag[GDBusObject_autoptr] = Tag.Ptr[GDBusObject](GDBusObject._tag)
@@ -1432,51 +1258,41 @@ object GDBusObject_autoptr:
   extension (v: GDBusObject_autoptr)
     inline def value: Ptr[GDBusObject] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObject_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusObject_listautoptr = Ptr[_root_.glib.GList]
 object GDBusObject_listautoptr: 
-  given _tag: Tag[GDBusObject_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusObject_listautoptr = o
+  given _tag: Tag[GDBusObject_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusObject_listautoptr = o
   extension (v: GDBusObject_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObject_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusObject_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusObject_queueautoptr: 
-  given _tag: Tag[GDBusObject_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusObject_queueautoptr = o
+  given _tag: Tag[GDBusObject_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusObject_queueautoptr = o
   extension (v: GDBusObject_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusObject_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusObject_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusObject_slistautoptr: 
-  given _tag: Tag[GDBusObject_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusObject_slistautoptr = o
+  given _tag: Tag[GDBusObject_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusObject_slistautoptr = o
   extension (v: GDBusObject_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GDBusProxyTypeFunc: : A #GDBusObjectManagerClient. _path: The object path of the remote object. _data: User data.
+ * GDBusProxyTypeFunc: : A #GDBusObjectManagerClient. _path: The object path of the remote object.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GDBusProxyTypeFunc = CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType]
+opaque type GDBusProxyTypeFunc = CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, _root_.gobject.GType]
 object GDBusProxyTypeFunc: 
-  given _tag: Tag[GDBusProxyTypeFunc] = Tag.materializeCFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType]
-  inline def apply(inline o: CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType]): GDBusProxyTypeFunc = o
+  given _tag: Tag[GDBusProxyTypeFunc] = Tag.materializeCFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, _root_.gobject.GType]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusProxyTypeFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, _root_.gobject.GType]): GDBusProxyTypeFunc = o
   extension (v: GDBusProxyTypeFunc)
-    inline def value: CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, _root_.gobject.all.GType] = v
+    inline def value: CFuncPtr4[Ptr[GDBusObjectManagerClient], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, _root_.gobject.GType] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusProxy_autoptr = Ptr[GDBusProxy]
 object GDBusProxy_autoptr: 
   given _tag: Tag[GDBusProxy_autoptr] = Tag.Ptr[GDBusProxy](GDBusProxy._tag)
@@ -1484,39 +1300,27 @@ object GDBusProxy_autoptr:
   extension (v: GDBusProxy_autoptr)
     inline def value: Ptr[GDBusProxy] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusProxy_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusProxy_listautoptr = Ptr[_root_.glib.GList]
 object GDBusProxy_listautoptr: 
-  given _tag: Tag[GDBusProxy_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusProxy_listautoptr = o
+  given _tag: Tag[GDBusProxy_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusProxy_listautoptr = o
   extension (v: GDBusProxy_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusProxy_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusProxy_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusProxy_queueautoptr: 
-  given _tag: Tag[GDBusProxy_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusProxy_queueautoptr = o
+  given _tag: Tag[GDBusProxy_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusProxy_queueautoptr = o
   extension (v: GDBusProxy_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusProxy_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusProxy_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusProxy_slistautoptr: 
-  given _tag: Tag[GDBusProxy_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusProxy_slistautoptr = o
+  given _tag: Tag[GDBusProxy_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusProxy_slistautoptr = o
   extension (v: GDBusProxy_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDBusServer_autoptr = Ptr[GDBusServer]
 object GDBusServer_autoptr: 
   given _tag: Tag[GDBusServer_autoptr] = Tag.Ptr[GDBusServer](GDBusServer._tag)
@@ -1524,87 +1328,83 @@ object GDBusServer_autoptr:
   extension (v: GDBusServer_autoptr)
     inline def value: Ptr[GDBusServer] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusServer_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDBusServer_listautoptr = Ptr[_root_.glib.GList]
 object GDBusServer_listautoptr: 
-  given _tag: Tag[GDBusServer_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDBusServer_listautoptr = o
+  given _tag: Tag[GDBusServer_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDBusServer_listautoptr = o
   extension (v: GDBusServer_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusServer_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDBusServer_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDBusServer_queueautoptr: 
-  given _tag: Tag[GDBusServer_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDBusServer_queueautoptr = o
+  given _tag: Tag[GDBusServer_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDBusServer_queueautoptr = o
   extension (v: GDBusServer_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDBusServer_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDBusServer_slistautoptr = Ptr[_root_.glib.GSList]
 object GDBusServer_slistautoptr: 
-  given _tag: Tag[GDBusServer_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDBusServer_slistautoptr = o
+  given _tag: Tag[GDBusServer_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDBusServer_slistautoptr = o
   extension (v: GDBusServer_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GDBusSignalCallback: : A #GDBusConnection. _name: (nullable): The unique bus name of the sender of the signal, or %NULL on a peer-to-peer D-Bus connection. _path: The object path that the signal was emitted on. _name: The name of the signal. : A #GVariant tuple with parameters for the signal. _data: User data passed when subscribing to the signal.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusSignalCallback = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit]
+opaque type GDBusSignalCallback = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, Unit]
 object GDBusSignalCallback: 
-  given _tag: Tag[GDBusSignalCallback] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit]): GDBusSignalCallback = o
+  given _tag: Tag[GDBusSignalCallback] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusSignalCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, Unit]): GDBusSignalCallback = o
   extension (v: GDBusSignalCallback)
-    inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GDBusSubtreeDispatchFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that was registered with g_dbus_connection_register_subtree(). : A node that is a child of _path (relative to _path) or %NULL for the root of the subtree. _user_data: (nullable) (not optional): Return location for user data to pass to functions in the returned #GDBusInterfaceVTable. _data: The _data #gpointer passed to g_dbus_connection_register_subtree().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusSubtreeDispatchFunc = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]]
+opaque type GDBusSubtreeDispatchFunc = CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, Ptr[GDBusInterfaceVTable]]
 object GDBusSubtreeDispatchFunc: 
-  given _tag: Tag[GDBusSubtreeDispatchFunc] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]]
-  inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]]): GDBusSubtreeDispatchFunc = o
+  given _tag: Tag[GDBusSubtreeDispatchFunc] = Tag.materializeCFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, Ptr[GDBusInterfaceVTable]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusSubtreeDispatchFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, Ptr[GDBusInterfaceVTable]]): GDBusSubtreeDispatchFunc = o
   extension (v: GDBusSubtreeDispatchFunc)
-    inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, Ptr[GDBusInterfaceVTable]] = v
+    inline def value: CFuncPtr7[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, Ptr[GDBusInterfaceVTable]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GDBusSubtreeEnumerateFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that was registered with g_dbus_connection_register_subtree(). _data: The _data #gpointer passed to g_dbus_connection_register_subtree().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusSubtreeEnumerateFunc = CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]]
+opaque type GDBusSubtreeEnumerateFunc = CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[_root_.glib.gchar]]]
 object GDBusSubtreeEnumerateFunc: 
-  given _tag: Tag[GDBusSubtreeEnumerateFunc] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]]
-  inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]]): GDBusSubtreeEnumerateFunc = o
+  given _tag: Tag[GDBusSubtreeEnumerateFunc] = Tag.materializeCFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[_root_.glib.gchar]]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusSubtreeEnumerateFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[_root_.glib.gchar]]]): GDBusSubtreeEnumerateFunc = o
   extension (v: GDBusSubtreeEnumerateFunc)
-    inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[_root_.glib.all.gchar]]] = v
+    inline def value: CFuncPtr4[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[_root_.glib.gchar]]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GDBusSubtreeIntrospectFunc: : A #GDBusConnection. : The unique bus name of the remote caller. _path: The object path that was registered with g_dbus_connection_register_subtree(). : A node that is a child of _path (relative to _path) or %NULL for the root of the subtree. _data: The _data #gpointer passed to g_dbus_connection_register_subtree().
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gdbusconnection.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gdbusconnection.h
 */
-opaque type GDBusSubtreeIntrospectFunc = CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]
+opaque type GDBusSubtreeIntrospectFunc = CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]
 object GDBusSubtreeIntrospectFunc: 
-  given _tag: Tag[GDBusSubtreeIntrospectFunc] = Tag.materializeCFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]
-  inline def apply(inline o: CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]): GDBusSubtreeIntrospectFunc = o
+  given _tag: Tag[GDBusSubtreeIntrospectFunc] = Tag.materializeCFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDBusSubtreeIntrospectFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]]): GDBusSubtreeIntrospectFunc = o
   extension (v: GDBusSubtreeIntrospectFunc)
-    inline def value: CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], Ptr[_root_.glib.all.gchar], _root_.glib.all.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]] = v
+    inline def value: CFuncPtr5[Ptr[GDBusConnection], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], Ptr[_root_.glib.gchar], _root_.glib.gpointer, Ptr[Ptr[GDBusInterfaceInfo]]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDataInputStream_autoptr = Ptr[GDataInputStream]
 object GDataInputStream_autoptr: 
   given _tag: Tag[GDataInputStream_autoptr] = Tag.Ptr[GDataInputStream](GDataInputStream._tag)
@@ -1612,39 +1412,27 @@ object GDataInputStream_autoptr:
   extension (v: GDataInputStream_autoptr)
     inline def value: Ptr[GDataInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDataInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDataInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GDataInputStream_listautoptr: 
-  given _tag: Tag[GDataInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDataInputStream_listautoptr = o
+  given _tag: Tag[GDataInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDataInputStream_listautoptr = o
   extension (v: GDataInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDataInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDataInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDataInputStream_queueautoptr: 
-  given _tag: Tag[GDataInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDataInputStream_queueautoptr = o
+  given _tag: Tag[GDataInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDataInputStream_queueautoptr = o
   extension (v: GDataInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDataInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDataInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GDataInputStream_slistautoptr: 
-  given _tag: Tag[GDataInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDataInputStream_slistautoptr = o
+  given _tag: Tag[GDataInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDataInputStream_slistautoptr = o
   extension (v: GDataInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDataOutputStream_autoptr = Ptr[GDataOutputStream]
 object GDataOutputStream_autoptr: 
   given _tag: Tag[GDataOutputStream_autoptr] = Tag.Ptr[GDataOutputStream](GDataOutputStream._tag)
@@ -1652,51 +1440,41 @@ object GDataOutputStream_autoptr:
   extension (v: GDataOutputStream_autoptr)
     inline def value: Ptr[GDataOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDataOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDataOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GDataOutputStream_listautoptr: 
-  given _tag: Tag[GDataOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDataOutputStream_listautoptr = o
+  given _tag: Tag[GDataOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDataOutputStream_listautoptr = o
   extension (v: GDataOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDataOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDataOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDataOutputStream_queueautoptr: 
-  given _tag: Tag[GDataOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDataOutputStream_queueautoptr = o
+  given _tag: Tag[GDataOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDataOutputStream_queueautoptr = o
   extension (v: GDataOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDataOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDataOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GDataOutputStream_slistautoptr: 
-  given _tag: Tag[GDataOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDataOutputStream_slistautoptr = o
+  given _tag: Tag[GDataOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDataOutputStream_slistautoptr = o
   extension (v: GDataOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GDatagramBasedSourceFunc: _based: the #GDatagramBased : the current condition at the source fired _data: data passed in by the user
+ * GDatagramBasedSourceFunc: _based: the #GDatagramBased : the current condition at the source fired
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GDatagramBasedSourceFunc = CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GDatagramBasedSourceFunc = CFuncPtr3[Ptr[GDatagramBased], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean]
 object GDatagramBasedSourceFunc: 
-  given _tag: Tag[GDatagramBasedSourceFunc] = Tag.materializeCFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GDatagramBasedSourceFunc = o
+  given _tag: Tag[GDatagramBasedSourceFunc] = Tag.materializeCFuncPtr3[Ptr[GDatagramBased], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GDatagramBasedSourceFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GDatagramBased], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean]): GDatagramBasedSourceFunc = o
   extension (v: GDatagramBasedSourceFunc)
-    inline def value: CFuncPtr3[Ptr[GDatagramBased], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr3[Ptr[GDatagramBased], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GDatagramBased_autoptr = Ptr[GDatagramBased]
 object GDatagramBased_autoptr: 
   given _tag: Tag[GDatagramBased_autoptr] = Tag.Ptr[GDatagramBased](GDatagramBased._tag)
@@ -1704,39 +1482,83 @@ object GDatagramBased_autoptr:
   extension (v: GDatagramBased_autoptr)
     inline def value: Ptr[GDatagramBased] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDatagramBased_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDatagramBased_listautoptr = Ptr[_root_.glib.GList]
 object GDatagramBased_listautoptr: 
-  given _tag: Tag[GDatagramBased_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDatagramBased_listautoptr = o
+  given _tag: Tag[GDatagramBased_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDatagramBased_listautoptr = o
   extension (v: GDatagramBased_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDatagramBased_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDatagramBased_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDatagramBased_queueautoptr: 
-  given _tag: Tag[GDatagramBased_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDatagramBased_queueautoptr = o
+  given _tag: Tag[GDatagramBased_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDatagramBased_queueautoptr = o
   extension (v: GDatagramBased_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDatagramBased_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDatagramBased_slistautoptr = Ptr[_root_.glib.GSList]
 object GDatagramBased_slistautoptr: 
-  given _tag: Tag[GDatagramBased_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDatagramBased_slistautoptr = o
+  given _tag: Tag[GDatagramBased_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDatagramBased_slistautoptr = o
   extension (v: GDatagramBased_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
+opaque type GDateTime_autoptr = Ptr[_root_.glib.GDateTime]
+object GDateTime_autoptr: 
+  given _tag: Tag[GDateTime_autoptr] = Tag.Ptr[_root_.glib.GDateTime](_root_.glib.GDateTime._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GDateTime]): GDateTime_autoptr = o
+  extension (v: GDateTime_autoptr)
+    inline def value: Ptr[_root_.glib.GDateTime] = v
+
+opaque type GDateTime_listautoptr = Ptr[_root_.glib.GList]
+object GDateTime_listautoptr: 
+  given _tag: Tag[GDateTime_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDateTime_listautoptr = o
+  extension (v: GDateTime_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GDateTime_queueautoptr = Ptr[_root_.glib.GQueue]
+object GDateTime_queueautoptr: 
+  given _tag: Tag[GDateTime_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDateTime_queueautoptr = o
+  extension (v: GDateTime_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GDateTime_slistautoptr = Ptr[_root_.glib.GSList]
+object GDateTime_slistautoptr: 
+  given _tag: Tag[GDateTime_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDateTime_slistautoptr = o
+  extension (v: GDateTime_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GDate_autoptr = Ptr[_root_.glib.GDate]
+object GDate_autoptr: 
+  given _tag: Tag[GDate_autoptr] = Tag.Ptr[_root_.glib.GDate](_root_.glib.GDate._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GDate]): GDate_autoptr = o
+  extension (v: GDate_autoptr)
+    inline def value: Ptr[_root_.glib.GDate] = v
+
+opaque type GDate_listautoptr = Ptr[_root_.glib.GList]
+object GDate_listautoptr: 
+  given _tag: Tag[GDate_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDate_listautoptr = o
+  extension (v: GDate_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GDate_queueautoptr = Ptr[_root_.glib.GQueue]
+object GDate_queueautoptr: 
+  given _tag: Tag[GDate_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDate_queueautoptr = o
+  extension (v: GDate_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GDate_slistautoptr = Ptr[_root_.glib.GSList]
+object GDate_slistautoptr: 
+  given _tag: Tag[GDate_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDate_slistautoptr = o
+  extension (v: GDate_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GDebugControllerDBusClass_autoptr = Ptr[GDebugControllerDBusClass]
 object GDebugControllerDBusClass_autoptr: 
   given _tag: Tag[GDebugControllerDBusClass_autoptr] = Tag.Ptr[GDebugControllerDBusClass](GDebugControllerDBusClass._tag)
@@ -1744,39 +1566,27 @@ object GDebugControllerDBusClass_autoptr:
   extension (v: GDebugControllerDBusClass_autoptr)
     inline def value: Ptr[GDebugControllerDBusClass] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
-opaque type GDebugControllerDBusClass_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDebugControllerDBusClass_listautoptr = Ptr[_root_.glib.GList]
 object GDebugControllerDBusClass_listautoptr: 
-  given _tag: Tag[GDebugControllerDBusClass_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDebugControllerDBusClass_listautoptr = o
+  given _tag: Tag[GDebugControllerDBusClass_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDebugControllerDBusClass_listautoptr = o
   extension (v: GDebugControllerDBusClass_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
-opaque type GDebugControllerDBusClass_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDebugControllerDBusClass_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDebugControllerDBusClass_queueautoptr: 
-  given _tag: Tag[GDebugControllerDBusClass_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDebugControllerDBusClass_queueautoptr = o
+  given _tag: Tag[GDebugControllerDBusClass_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDebugControllerDBusClass_queueautoptr = o
   extension (v: GDebugControllerDBusClass_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
-opaque type GDebugControllerDBusClass_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDebugControllerDBusClass_slistautoptr = Ptr[_root_.glib.GSList]
 object GDebugControllerDBusClass_slistautoptr: 
-  given _tag: Tag[GDebugControllerDBusClass_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDebugControllerDBusClass_slistautoptr = o
+  given _tag: Tag[GDebugControllerDBusClass_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDebugControllerDBusClass_slistautoptr = o
   extension (v: GDebugControllerDBusClass_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
 opaque type GDebugControllerDBus_autoptr = Ptr[GDebugControllerDBus]
 object GDebugControllerDBus_autoptr: 
   given _tag: Tag[GDebugControllerDBus_autoptr] = Tag.Ptr[GDebugControllerDBus](GDebugControllerDBus._tag)
@@ -1784,39 +1594,27 @@ object GDebugControllerDBus_autoptr:
   extension (v: GDebugControllerDBus_autoptr)
     inline def value: Ptr[GDebugControllerDBus] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
-opaque type GDebugControllerDBus_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDebugControllerDBus_listautoptr = Ptr[_root_.glib.GList]
 object GDebugControllerDBus_listautoptr: 
-  given _tag: Tag[GDebugControllerDBus_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDebugControllerDBus_listautoptr = o
+  given _tag: Tag[GDebugControllerDBus_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDebugControllerDBus_listautoptr = o
   extension (v: GDebugControllerDBus_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
-opaque type GDebugControllerDBus_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDebugControllerDBus_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDebugControllerDBus_queueautoptr: 
-  given _tag: Tag[GDebugControllerDBus_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDebugControllerDBus_queueautoptr = o
+  given _tag: Tag[GDebugControllerDBus_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDebugControllerDBus_queueautoptr = o
   extension (v: GDebugControllerDBus_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontrollerdbus.h
-*/
-opaque type GDebugControllerDBus_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDebugControllerDBus_slistautoptr = Ptr[_root_.glib.GSList]
 object GDebugControllerDBus_slistautoptr: 
-  given _tag: Tag[GDebugControllerDBus_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDebugControllerDBus_slistautoptr = o
+  given _tag: Tag[GDebugControllerDBus_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDebugControllerDBus_slistautoptr = o
   extension (v: GDebugControllerDBus_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
-*/
 opaque type GDebugController_autoptr = Ptr[GDebugController]
 object GDebugController_autoptr: 
   given _tag: Tag[GDebugController_autoptr] = Tag.Ptr[GDebugController](GDebugController._tag)
@@ -1824,39 +1622,55 @@ object GDebugController_autoptr:
   extension (v: GDebugController_autoptr)
     inline def value: Ptr[GDebugController] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
-*/
-opaque type GDebugController_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDebugController_listautoptr = Ptr[_root_.glib.GList]
 object GDebugController_listautoptr: 
-  given _tag: Tag[GDebugController_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDebugController_listautoptr = o
+  given _tag: Tag[GDebugController_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDebugController_listautoptr = o
   extension (v: GDebugController_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
-*/
-opaque type GDebugController_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDebugController_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDebugController_queueautoptr: 
-  given _tag: Tag[GDebugController_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDebugController_queueautoptr = o
+  given _tag: Tag[GDebugController_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDebugController_queueautoptr = o
   extension (v: GDebugController_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gdebugcontroller.h
-*/
-opaque type GDebugController_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDebugController_slistautoptr = Ptr[_root_.glib.GSList]
 object GDebugController_slistautoptr: 
-  given _tag: Tag[GDebugController_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDebugController_slistautoptr = o
+  given _tag: Tag[GDebugController_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDebugController_slistautoptr = o
   extension (v: GDebugController_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GDir_autoptr = Ptr[_root_.glib.GDir]
+object GDir_autoptr: 
+  given _tag: Tag[GDir_autoptr] = Tag.Ptr[_root_.glib.GDir](_root_.glib.GDir._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GDir]): GDir_autoptr = o
+  extension (v: GDir_autoptr)
+    inline def value: Ptr[_root_.glib.GDir] = v
+
+opaque type GDir_listautoptr = Ptr[_root_.glib.GList]
+object GDir_listautoptr: 
+  given _tag: Tag[GDir_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDir_listautoptr = o
+  extension (v: GDir_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GDir_queueautoptr = Ptr[_root_.glib.GQueue]
+object GDir_queueautoptr: 
+  given _tag: Tag[GDir_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDir_queueautoptr = o
+  extension (v: GDir_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GDir_slistautoptr = Ptr[_root_.glib.GSList]
+object GDir_slistautoptr: 
+  given _tag: Tag[GDir_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDir_slistautoptr = o
+  extension (v: GDir_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GDrive_autoptr = Ptr[GDrive]
 object GDrive_autoptr: 
   given _tag: Tag[GDrive_autoptr] = Tag.Ptr[GDrive](GDrive._tag)
@@ -1864,39 +1678,27 @@ object GDrive_autoptr:
   extension (v: GDrive_autoptr)
     inline def value: Ptr[GDrive] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDrive_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GDrive_listautoptr = Ptr[_root_.glib.GList]
 object GDrive_listautoptr: 
-  given _tag: Tag[GDrive_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GDrive_listautoptr = o
+  given _tag: Tag[GDrive_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GDrive_listautoptr = o
   extension (v: GDrive_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDrive_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GDrive_queueautoptr = Ptr[_root_.glib.GQueue]
 object GDrive_queueautoptr: 
-  given _tag: Tag[GDrive_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GDrive_queueautoptr = o
+  given _tag: Tag[GDrive_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GDrive_queueautoptr = o
   extension (v: GDrive_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GDrive_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GDrive_slistautoptr = Ptr[_root_.glib.GSList]
 object GDrive_slistautoptr: 
-  given _tag: Tag[GDrive_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GDrive_slistautoptr = o
+  given _tag: Tag[GDrive_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GDrive_slistautoptr = o
   extension (v: GDrive_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GEmblem_autoptr = Ptr[GEmblem]
 object GEmblem_autoptr: 
   given _tag: Tag[GEmblem_autoptr] = Tag.Ptr[GEmblem](GEmblem._tag)
@@ -1904,39 +1706,27 @@ object GEmblem_autoptr:
   extension (v: GEmblem_autoptr)
     inline def value: Ptr[GEmblem] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GEmblem_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GEmblem_listautoptr = Ptr[_root_.glib.GList]
 object GEmblem_listautoptr: 
-  given _tag: Tag[GEmblem_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GEmblem_listautoptr = o
+  given _tag: Tag[GEmblem_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GEmblem_listautoptr = o
   extension (v: GEmblem_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GEmblem_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GEmblem_queueautoptr = Ptr[_root_.glib.GQueue]
 object GEmblem_queueautoptr: 
-  given _tag: Tag[GEmblem_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GEmblem_queueautoptr = o
+  given _tag: Tag[GEmblem_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GEmblem_queueautoptr = o
   extension (v: GEmblem_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GEmblem_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GEmblem_slistautoptr = Ptr[_root_.glib.GSList]
 object GEmblem_slistautoptr: 
-  given _tag: Tag[GEmblem_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GEmblem_slistautoptr = o
+  given _tag: Tag[GEmblem_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GEmblem_slistautoptr = o
   extension (v: GEmblem_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GEmblemedIcon_autoptr = Ptr[GEmblemedIcon]
 object GEmblemedIcon_autoptr: 
   given _tag: Tag[GEmblemedIcon_autoptr] = Tag.Ptr[GEmblemedIcon](GEmblemedIcon._tag)
@@ -1944,39 +1734,83 @@ object GEmblemedIcon_autoptr:
   extension (v: GEmblemedIcon_autoptr)
     inline def value: Ptr[GEmblemedIcon] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GEmblemedIcon_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GEmblemedIcon_listautoptr = Ptr[_root_.glib.GList]
 object GEmblemedIcon_listautoptr: 
-  given _tag: Tag[GEmblemedIcon_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GEmblemedIcon_listautoptr = o
+  given _tag: Tag[GEmblemedIcon_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GEmblemedIcon_listautoptr = o
   extension (v: GEmblemedIcon_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GEmblemedIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GEmblemedIcon_queueautoptr = Ptr[_root_.glib.GQueue]
 object GEmblemedIcon_queueautoptr: 
-  given _tag: Tag[GEmblemedIcon_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GEmblemedIcon_queueautoptr = o
+  given _tag: Tag[GEmblemedIcon_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GEmblemedIcon_queueautoptr = o
   extension (v: GEmblemedIcon_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GEmblemedIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GEmblemedIcon_slistautoptr = Ptr[_root_.glib.GSList]
 object GEmblemedIcon_slistautoptr: 
-  given _tag: Tag[GEmblemedIcon_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GEmblemedIcon_slistautoptr = o
+  given _tag: Tag[GEmblemedIcon_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GEmblemedIcon_slistautoptr = o
   extension (v: GEmblemedIcon_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GEnumClass_autoptr = Ptr[_root_.gobject.GEnumClass]
+object GEnumClass_autoptr: 
+  given _tag: Tag[GEnumClass_autoptr] = Tag.Ptr[_root_.gobject.GEnumClass](_root_.gobject.GEnumClass._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GEnumClass]): GEnumClass_autoptr = o
+  extension (v: GEnumClass_autoptr)
+    inline def value: Ptr[_root_.gobject.GEnumClass] = v
+
+opaque type GEnumClass_listautoptr = Ptr[_root_.glib.GList]
+object GEnumClass_listautoptr: 
+  given _tag: Tag[GEnumClass_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GEnumClass_listautoptr = o
+  extension (v: GEnumClass_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GEnumClass_queueautoptr = Ptr[_root_.glib.GQueue]
+object GEnumClass_queueautoptr: 
+  given _tag: Tag[GEnumClass_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GEnumClass_queueautoptr = o
+  extension (v: GEnumClass_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GEnumClass_slistautoptr = Ptr[_root_.glib.GSList]
+object GEnumClass_slistautoptr: 
+  given _tag: Tag[GEnumClass_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GEnumClass_slistautoptr = o
+  extension (v: GEnumClass_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GError_autoptr = Ptr[_root_.glib.GError]
+object GError_autoptr: 
+  given _tag: Tag[GError_autoptr] = Tag.Ptr[_root_.glib.GError](_root_.glib.GError._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GError]): GError_autoptr = o
+  extension (v: GError_autoptr)
+    inline def value: Ptr[_root_.glib.GError] = v
+
+opaque type GError_listautoptr = Ptr[_root_.glib.GList]
+object GError_listautoptr: 
+  given _tag: Tag[GError_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GError_listautoptr = o
+  extension (v: GError_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GError_queueautoptr = Ptr[_root_.glib.GQueue]
+object GError_queueautoptr: 
+  given _tag: Tag[GError_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GError_queueautoptr = o
+  extension (v: GError_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GError_slistautoptr = Ptr[_root_.glib.GSList]
+object GError_slistautoptr: 
+  given _tag: Tag[GError_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GError_slistautoptr = o
+  extension (v: GError_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GFileAttributeInfoList_autoptr = Ptr[GFileAttributeInfoList]
 object GFileAttributeInfoList_autoptr: 
   given _tag: Tag[GFileAttributeInfoList_autoptr] = Tag.Ptr[GFileAttributeInfoList](GFileAttributeInfoList._tag)
@@ -1984,39 +1818,27 @@ object GFileAttributeInfoList_autoptr:
   extension (v: GFileAttributeInfoList_autoptr)
     inline def value: Ptr[GFileAttributeInfoList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileAttributeInfoList_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileAttributeInfoList_listautoptr = Ptr[_root_.glib.GList]
 object GFileAttributeInfoList_listautoptr: 
-  given _tag: Tag[GFileAttributeInfoList_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileAttributeInfoList_listautoptr = o
+  given _tag: Tag[GFileAttributeInfoList_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileAttributeInfoList_listautoptr = o
   extension (v: GFileAttributeInfoList_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileAttributeInfoList_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileAttributeInfoList_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileAttributeInfoList_queueautoptr: 
-  given _tag: Tag[GFileAttributeInfoList_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileAttributeInfoList_queueautoptr = o
+  given _tag: Tag[GFileAttributeInfoList_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileAttributeInfoList_queueautoptr = o
   extension (v: GFileAttributeInfoList_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileAttributeInfoList_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileAttributeInfoList_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileAttributeInfoList_slistautoptr: 
-  given _tag: Tag[GFileAttributeInfoList_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileAttributeInfoList_slistautoptr = o
+  given _tag: Tag[GFileAttributeInfoList_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileAttributeInfoList_slistautoptr = o
   extension (v: GFileAttributeInfoList_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileEnumerator_autoptr = Ptr[GFileEnumerator]
 object GFileEnumerator_autoptr: 
   given _tag: Tag[GFileEnumerator_autoptr] = Tag.Ptr[GFileEnumerator](GFileEnumerator._tag)
@@ -2024,39 +1846,27 @@ object GFileEnumerator_autoptr:
   extension (v: GFileEnumerator_autoptr)
     inline def value: Ptr[GFileEnumerator] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileEnumerator_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileEnumerator_listautoptr = Ptr[_root_.glib.GList]
 object GFileEnumerator_listautoptr: 
-  given _tag: Tag[GFileEnumerator_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileEnumerator_listautoptr = o
+  given _tag: Tag[GFileEnumerator_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileEnumerator_listautoptr = o
   extension (v: GFileEnumerator_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileEnumerator_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileEnumerator_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileEnumerator_queueautoptr: 
-  given _tag: Tag[GFileEnumerator_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileEnumerator_queueautoptr = o
+  given _tag: Tag[GFileEnumerator_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileEnumerator_queueautoptr = o
   extension (v: GFileEnumerator_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileEnumerator_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileEnumerator_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileEnumerator_slistautoptr: 
-  given _tag: Tag[GFileEnumerator_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileEnumerator_slistautoptr = o
+  given _tag: Tag[GFileEnumerator_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileEnumerator_slistautoptr = o
   extension (v: GFileEnumerator_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileIOStream_autoptr = Ptr[GFileIOStream]
 object GFileIOStream_autoptr: 
   given _tag: Tag[GFileIOStream_autoptr] = Tag.Ptr[GFileIOStream](GFileIOStream._tag)
@@ -2064,39 +1874,27 @@ object GFileIOStream_autoptr:
   extension (v: GFileIOStream_autoptr)
     inline def value: Ptr[GFileIOStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileIOStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileIOStream_listautoptr = Ptr[_root_.glib.GList]
 object GFileIOStream_listautoptr: 
-  given _tag: Tag[GFileIOStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileIOStream_listautoptr = o
+  given _tag: Tag[GFileIOStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileIOStream_listautoptr = o
   extension (v: GFileIOStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileIOStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileIOStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileIOStream_queueautoptr: 
-  given _tag: Tag[GFileIOStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileIOStream_queueautoptr = o
+  given _tag: Tag[GFileIOStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileIOStream_queueautoptr = o
   extension (v: GFileIOStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileIOStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileIOStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileIOStream_slistautoptr: 
-  given _tag: Tag[GFileIOStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileIOStream_slistautoptr = o
+  given _tag: Tag[GFileIOStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileIOStream_slistautoptr = o
   extension (v: GFileIOStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileIcon_autoptr = Ptr[GFileIcon]
 object GFileIcon_autoptr: 
   given _tag: Tag[GFileIcon_autoptr] = Tag.Ptr[GFileIcon](GFileIcon._tag)
@@ -2104,39 +1902,27 @@ object GFileIcon_autoptr:
   extension (v: GFileIcon_autoptr)
     inline def value: Ptr[GFileIcon] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileIcon_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileIcon_listautoptr = Ptr[_root_.glib.GList]
 object GFileIcon_listautoptr: 
-  given _tag: Tag[GFileIcon_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileIcon_listautoptr = o
+  given _tag: Tag[GFileIcon_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileIcon_listautoptr = o
   extension (v: GFileIcon_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileIcon_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileIcon_queueautoptr: 
-  given _tag: Tag[GFileIcon_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileIcon_queueautoptr = o
+  given _tag: Tag[GFileIcon_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileIcon_queueautoptr = o
   extension (v: GFileIcon_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileIcon_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileIcon_slistautoptr: 
-  given _tag: Tag[GFileIcon_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileIcon_slistautoptr = o
+  given _tag: Tag[GFileIcon_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileIcon_slistautoptr = o
   extension (v: GFileIcon_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileInfo_autoptr = Ptr[GFileInfo]
 object GFileInfo_autoptr: 
   given _tag: Tag[GFileInfo_autoptr] = Tag.Ptr[GFileInfo](GFileInfo._tag)
@@ -2144,39 +1930,27 @@ object GFileInfo_autoptr:
   extension (v: GFileInfo_autoptr)
     inline def value: Ptr[GFileInfo] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileInfo_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileInfo_listautoptr = Ptr[_root_.glib.GList]
 object GFileInfo_listautoptr: 
-  given _tag: Tag[GFileInfo_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileInfo_listautoptr = o
+  given _tag: Tag[GFileInfo_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileInfo_listautoptr = o
   extension (v: GFileInfo_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileInfo_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileInfo_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileInfo_queueautoptr: 
-  given _tag: Tag[GFileInfo_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileInfo_queueautoptr = o
+  given _tag: Tag[GFileInfo_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileInfo_queueautoptr = o
   extension (v: GFileInfo_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileInfo_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileInfo_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileInfo_slistautoptr: 
-  given _tag: Tag[GFileInfo_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileInfo_slistautoptr = o
+  given _tag: Tag[GFileInfo_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileInfo_slistautoptr = o
   extension (v: GFileInfo_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileInputStream_autoptr = Ptr[GFileInputStream]
 object GFileInputStream_autoptr: 
   given _tag: Tag[GFileInputStream_autoptr] = Tag.Ptr[GFileInputStream](GFileInputStream._tag)
@@ -2184,51 +1958,41 @@ object GFileInputStream_autoptr:
   extension (v: GFileInputStream_autoptr)
     inline def value: Ptr[GFileInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GFileInputStream_listautoptr: 
-  given _tag: Tag[GFileInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileInputStream_listautoptr = o
+  given _tag: Tag[GFileInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileInputStream_listautoptr = o
   extension (v: GFileInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileInputStream_queueautoptr: 
-  given _tag: Tag[GFileInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileInputStream_queueautoptr = o
+  given _tag: Tag[GFileInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileInputStream_queueautoptr = o
   extension (v: GFileInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileInputStream_slistautoptr: 
-  given _tag: Tag[GFileInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileInputStream_slistautoptr = o
+  given _tag: Tag[GFileInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileInputStream_slistautoptr = o
   extension (v: GFileInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GFileMeasureProgressCallback: : %TRUE if more reports will come _size: the current cumulative size measurement _data: the data passed to the original request for this callback
+ * GFileMeasureProgressCallback: : %TRUE if more reports will come _size: the current cumulative size measurement
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GFileMeasureProgressCallback = CFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit]
+opaque type GFileMeasureProgressCallback = CFuncPtr5[_root_.glib.gboolean, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.gpointer, Unit]
 object GFileMeasureProgressCallback: 
-  given _tag: Tag[GFileMeasureProgressCallback] = Tag.materializeCFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit]): GFileMeasureProgressCallback = o
+  given _tag: Tag[GFileMeasureProgressCallback] = Tag.materializeCFuncPtr5[_root_.glib.gboolean, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GFileMeasureProgressCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr5[_root_.glib.gboolean, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.gpointer, Unit]): GFileMeasureProgressCallback = o
   extension (v: GFileMeasureProgressCallback)
-    inline def value: CFuncPtr5[_root_.glib.all.gboolean, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.guint64, _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr5[_root_.glib.gboolean, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.guint64, _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileMonitor_autoptr = Ptr[GFileMonitor]
 object GFileMonitor_autoptr: 
   given _tag: Tag[GFileMonitor_autoptr] = Tag.Ptr[GFileMonitor](GFileMonitor._tag)
@@ -2236,39 +2000,27 @@ object GFileMonitor_autoptr:
   extension (v: GFileMonitor_autoptr)
     inline def value: Ptr[GFileMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GFileMonitor_listautoptr: 
-  given _tag: Tag[GFileMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileMonitor_listautoptr = o
+  given _tag: Tag[GFileMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileMonitor_listautoptr = o
   extension (v: GFileMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileMonitor_queueautoptr: 
-  given _tag: Tag[GFileMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileMonitor_queueautoptr = o
+  given _tag: Tag[GFileMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileMonitor_queueautoptr = o
   extension (v: GFileMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileMonitor_slistautoptr: 
-  given _tag: Tag[GFileMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileMonitor_slistautoptr = o
+  given _tag: Tag[GFileMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileMonitor_slistautoptr = o
   extension (v: GFileMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFileOutputStream_autoptr = Ptr[GFileOutputStream]
 object GFileOutputStream_autoptr: 
   given _tag: Tag[GFileOutputStream_autoptr] = Tag.Ptr[GFileOutputStream](GFileOutputStream._tag)
@@ -2276,63 +2028,55 @@ object GFileOutputStream_autoptr:
   extension (v: GFileOutputStream_autoptr)
     inline def value: Ptr[GFileOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFileOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GFileOutputStream_listautoptr: 
-  given _tag: Tag[GFileOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFileOutputStream_listautoptr = o
+  given _tag: Tag[GFileOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFileOutputStream_listautoptr = o
   extension (v: GFileOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFileOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFileOutputStream_queueautoptr: 
-  given _tag: Tag[GFileOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFileOutputStream_queueautoptr = o
+  given _tag: Tag[GFileOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFileOutputStream_queueautoptr = o
   extension (v: GFileOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFileOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFileOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GFileOutputStream_slistautoptr: 
-  given _tag: Tag[GFileOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFileOutputStream_slistautoptr = o
+  given _tag: Tag[GFileOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFileOutputStream_slistautoptr = o
   extension (v: GFileOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GFileProgressCallback: _num_bytes: the current number of bytes in the operation. _num_bytes: the total number of bytes in the operation. _data: user data passed to the callback.
+ * GFileProgressCallback: _num_bytes: the current number of bytes in the operation. _num_bytes: the total number of bytes in the operation.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GFileProgressCallback = CFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit]
+opaque type GFileProgressCallback = CFuncPtr3[_root_.glib.goffset, _root_.glib.goffset, _root_.glib.gpointer, Unit]
 object GFileProgressCallback: 
-  given _tag: Tag[GFileProgressCallback] = Tag.materializeCFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit]
-  inline def apply(inline o: CFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit]): GFileProgressCallback = o
+  given _tag: Tag[GFileProgressCallback] = Tag.materializeCFuncPtr3[_root_.glib.goffset, _root_.glib.goffset, _root_.glib.gpointer, Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GFileProgressCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[_root_.glib.goffset, _root_.glib.goffset, _root_.glib.gpointer, Unit]): GFileProgressCallback = o
   extension (v: GFileProgressCallback)
-    inline def value: CFuncPtr3[_root_.glib.all.goffset, _root_.glib.all.goffset, _root_.glib.all.gpointer, Unit] = v
+    inline def value: CFuncPtr3[_root_.glib.goffset, _root_.glib.goffset, _root_.glib.gpointer, Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GFileReadMoreCallback:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GFileReadMoreCallback = CFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GFileReadMoreCallback = CFuncPtr3[CString, _root_.glib.goffset, _root_.glib.gpointer, _root_.glib.gboolean]
 object GFileReadMoreCallback: 
-  given _tag: Tag[GFileReadMoreCallback] = Tag.materializeCFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GFileReadMoreCallback = o
+  given _tag: Tag[GFileReadMoreCallback] = Tag.materializeCFuncPtr3[CString, _root_.glib.goffset, _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GFileReadMoreCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[CString, _root_.glib.goffset, _root_.glib.gpointer, _root_.glib.gboolean]): GFileReadMoreCallback = o
   extension (v: GFileReadMoreCallback)
-    inline def value: CFuncPtr3[CString, _root_.glib.all.goffset, _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr3[CString, _root_.glib.goffset, _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFile_autoptr = Ptr[GFile]
 object GFile_autoptr: 
   given _tag: Tag[GFile_autoptr] = Tag.Ptr[GFile](GFile._tag)
@@ -2340,39 +2084,27 @@ object GFile_autoptr:
   extension (v: GFile_autoptr)
     inline def value: Ptr[GFile] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFile_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFile_listautoptr = Ptr[_root_.glib.GList]
 object GFile_listautoptr: 
-  given _tag: Tag[GFile_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFile_listautoptr = o
+  given _tag: Tag[GFile_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFile_listautoptr = o
   extension (v: GFile_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFile_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFile_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFile_queueautoptr: 
-  given _tag: Tag[GFile_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFile_queueautoptr = o
+  given _tag: Tag[GFile_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFile_queueautoptr = o
   extension (v: GFile_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFile_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFile_slistautoptr = Ptr[_root_.glib.GSList]
 object GFile_slistautoptr: 
-  given _tag: Tag[GFile_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFile_slistautoptr = o
+  given _tag: Tag[GFile_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFile_slistautoptr = o
   extension (v: GFile_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFilenameCompleter_autoptr = Ptr[GFilenameCompleter]
 object GFilenameCompleter_autoptr: 
   given _tag: Tag[GFilenameCompleter_autoptr] = Tag.Ptr[GFilenameCompleter](GFilenameCompleter._tag)
@@ -2380,39 +2112,27 @@ object GFilenameCompleter_autoptr:
   extension (v: GFilenameCompleter_autoptr)
     inline def value: Ptr[GFilenameCompleter] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilenameCompleter_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFilenameCompleter_listautoptr = Ptr[_root_.glib.GList]
 object GFilenameCompleter_listautoptr: 
-  given _tag: Tag[GFilenameCompleter_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFilenameCompleter_listautoptr = o
+  given _tag: Tag[GFilenameCompleter_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFilenameCompleter_listautoptr = o
   extension (v: GFilenameCompleter_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilenameCompleter_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFilenameCompleter_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFilenameCompleter_queueautoptr: 
-  given _tag: Tag[GFilenameCompleter_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFilenameCompleter_queueautoptr = o
+  given _tag: Tag[GFilenameCompleter_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFilenameCompleter_queueautoptr = o
   extension (v: GFilenameCompleter_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilenameCompleter_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFilenameCompleter_slistautoptr = Ptr[_root_.glib.GSList]
 object GFilenameCompleter_slistautoptr: 
-  given _tag: Tag[GFilenameCompleter_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFilenameCompleter_slistautoptr = o
+  given _tag: Tag[GFilenameCompleter_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFilenameCompleter_slistautoptr = o
   extension (v: GFilenameCompleter_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFilterInputStream_autoptr = Ptr[GFilterInputStream]
 object GFilterInputStream_autoptr: 
   given _tag: Tag[GFilterInputStream_autoptr] = Tag.Ptr[GFilterInputStream](GFilterInputStream._tag)
@@ -2420,39 +2140,27 @@ object GFilterInputStream_autoptr:
   extension (v: GFilterInputStream_autoptr)
     inline def value: Ptr[GFilterInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilterInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFilterInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GFilterInputStream_listautoptr: 
-  given _tag: Tag[GFilterInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFilterInputStream_listautoptr = o
+  given _tag: Tag[GFilterInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFilterInputStream_listautoptr = o
   extension (v: GFilterInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilterInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFilterInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFilterInputStream_queueautoptr: 
-  given _tag: Tag[GFilterInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFilterInputStream_queueautoptr = o
+  given _tag: Tag[GFilterInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFilterInputStream_queueautoptr = o
   extension (v: GFilterInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilterInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFilterInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GFilterInputStream_slistautoptr: 
-  given _tag: Tag[GFilterInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFilterInputStream_slistautoptr = o
+  given _tag: Tag[GFilterInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFilterInputStream_slistautoptr = o
   extension (v: GFilterInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GFilterOutputStream_autoptr = Ptr[GFilterOutputStream]
 object GFilterOutputStream_autoptr: 
   given _tag: Tag[GFilterOutputStream_autoptr] = Tag.Ptr[GFilterOutputStream](GFilterOutputStream._tag)
@@ -2460,39 +2168,139 @@ object GFilterOutputStream_autoptr:
   extension (v: GFilterOutputStream_autoptr)
     inline def value: Ptr[GFilterOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilterOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GFilterOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GFilterOutputStream_listautoptr: 
-  given _tag: Tag[GFilterOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GFilterOutputStream_listautoptr = o
+  given _tag: Tag[GFilterOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFilterOutputStream_listautoptr = o
   extension (v: GFilterOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilterOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GFilterOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GFilterOutputStream_queueautoptr: 
-  given _tag: Tag[GFilterOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GFilterOutputStream_queueautoptr = o
+  given _tag: Tag[GFilterOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFilterOutputStream_queueautoptr = o
   extension (v: GFilterOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GFilterOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GFilterOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GFilterOutputStream_slistautoptr: 
-  given _tag: Tag[GFilterOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GFilterOutputStream_slistautoptr = o
+  given _tag: Tag[GFilterOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFilterOutputStream_slistautoptr = o
   extension (v: GFilterOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GFlagsClass_autoptr = Ptr[_root_.gobject.GFlagsClass]
+object GFlagsClass_autoptr: 
+  given _tag: Tag[GFlagsClass_autoptr] = Tag.Ptr[_root_.gobject.GFlagsClass](_root_.gobject.GFlagsClass._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GFlagsClass]): GFlagsClass_autoptr = o
+  extension (v: GFlagsClass_autoptr)
+    inline def value: Ptr[_root_.gobject.GFlagsClass] = v
+
+opaque type GFlagsClass_listautoptr = Ptr[_root_.glib.GList]
+object GFlagsClass_listautoptr: 
+  given _tag: Tag[GFlagsClass_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GFlagsClass_listautoptr = o
+  extension (v: GFlagsClass_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GFlagsClass_queueautoptr = Ptr[_root_.glib.GQueue]
+object GFlagsClass_queueautoptr: 
+  given _tag: Tag[GFlagsClass_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GFlagsClass_queueautoptr = o
+  extension (v: GFlagsClass_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GFlagsClass_slistautoptr = Ptr[_root_.glib.GSList]
+object GFlagsClass_slistautoptr: 
+  given _tag: Tag[GFlagsClass_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GFlagsClass_slistautoptr = o
+  extension (v: GFlagsClass_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GHashTable_autoptr = Ptr[_root_.glib.GHashTable]
+object GHashTable_autoptr: 
+  given _tag: Tag[GHashTable_autoptr] = Tag.Ptr[_root_.glib.GHashTable](_root_.glib.GHashTable._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GHashTable]): GHashTable_autoptr = o
+  extension (v: GHashTable_autoptr)
+    inline def value: Ptr[_root_.glib.GHashTable] = v
+
+opaque type GHashTable_listautoptr = Ptr[_root_.glib.GList]
+object GHashTable_listautoptr: 
+  given _tag: Tag[GHashTable_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GHashTable_listautoptr = o
+  extension (v: GHashTable_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GHashTable_queueautoptr = Ptr[_root_.glib.GQueue]
+object GHashTable_queueautoptr: 
+  given _tag: Tag[GHashTable_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GHashTable_queueautoptr = o
+  extension (v: GHashTable_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GHashTable_slistautoptr = Ptr[_root_.glib.GSList]
+object GHashTable_slistautoptr: 
+  given _tag: Tag[GHashTable_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GHashTable_slistautoptr = o
+  extension (v: GHashTable_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GHmac_autoptr = Ptr[_root_.glib.GHmac]
+object GHmac_autoptr: 
+  given _tag: Tag[GHmac_autoptr] = Tag.Ptr[_root_.glib.GHmac](_root_.glib.GHmac._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GHmac]): GHmac_autoptr = o
+  extension (v: GHmac_autoptr)
+    inline def value: Ptr[_root_.glib.GHmac] = v
+
+opaque type GHmac_listautoptr = Ptr[_root_.glib.GList]
+object GHmac_listautoptr: 
+  given _tag: Tag[GHmac_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GHmac_listautoptr = o
+  extension (v: GHmac_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GHmac_queueautoptr = Ptr[_root_.glib.GQueue]
+object GHmac_queueautoptr: 
+  given _tag: Tag[GHmac_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GHmac_queueautoptr = o
+  extension (v: GHmac_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GHmac_slistautoptr = Ptr[_root_.glib.GSList]
+object GHmac_slistautoptr: 
+  given _tag: Tag[GHmac_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GHmac_slistautoptr = o
+  extension (v: GHmac_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GIOChannel_autoptr = Ptr[_root_.glib.GIOChannel]
+object GIOChannel_autoptr: 
+  given _tag: Tag[GIOChannel_autoptr] = Tag.Ptr[_root_.glib.GIOChannel](_root_.glib.GIOChannel._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GIOChannel]): GIOChannel_autoptr = o
+  extension (v: GIOChannel_autoptr)
+    inline def value: Ptr[_root_.glib.GIOChannel] = v
+
+opaque type GIOChannel_listautoptr = Ptr[_root_.glib.GList]
+object GIOChannel_listautoptr: 
+  given _tag: Tag[GIOChannel_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GIOChannel_listautoptr = o
+  extension (v: GIOChannel_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GIOChannel_queueautoptr = Ptr[_root_.glib.GQueue]
+object GIOChannel_queueautoptr: 
+  given _tag: Tag[GIOChannel_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GIOChannel_queueautoptr = o
+  extension (v: GIOChannel_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GIOChannel_slistautoptr = Ptr[_root_.glib.GSList]
+object GIOChannel_slistautoptr: 
+  given _tag: Tag[GIOChannel_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GIOChannel_slistautoptr = o
+  extension (v: GIOChannel_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GIOModule_autoptr = Ptr[GIOModule]
 object GIOModule_autoptr: 
   given _tag: Tag[GIOModule_autoptr] = Tag.Ptr[GIOModule](GIOModule._tag)
@@ -2500,51 +2308,41 @@ object GIOModule_autoptr:
   extension (v: GIOModule_autoptr)
     inline def value: Ptr[GIOModule] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIOModule_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GIOModule_listautoptr = Ptr[_root_.glib.GList]
 object GIOModule_listautoptr: 
-  given _tag: Tag[GIOModule_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GIOModule_listautoptr = o
+  given _tag: Tag[GIOModule_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GIOModule_listautoptr = o
   extension (v: GIOModule_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIOModule_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GIOModule_queueautoptr = Ptr[_root_.glib.GQueue]
 object GIOModule_queueautoptr: 
-  given _tag: Tag[GIOModule_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GIOModule_queueautoptr = o
+  given _tag: Tag[GIOModule_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GIOModule_queueautoptr = o
   extension (v: GIOModule_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIOModule_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GIOModule_slistautoptr = Ptr[_root_.glib.GSList]
 object GIOModule_slistautoptr: 
-  given _tag: Tag[GIOModule_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GIOModule_slistautoptr = o
+  given _tag: Tag[GIOModule_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GIOModule_slistautoptr = o
   extension (v: GIOModule_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GIOSchedulerJobFunc: : a #GIOSchedulerJob. : optional #GCancellable object, %NULL to ignore. _data: the data to pass to callback function
+ * GIOSchedulerJobFunc: : a #GIOSchedulerJob. : optional #GCancellable object, %NULL to ignore.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GIOSchedulerJobFunc = CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GIOSchedulerJobFunc = CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean]
 object GIOSchedulerJobFunc: 
-  given _tag: Tag[GIOSchedulerJobFunc] = Tag.materializeCFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GIOSchedulerJobFunc = o
+  given _tag: Tag[GIOSchedulerJobFunc] = Tag.materializeCFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GIOSchedulerJobFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean]): GIOSchedulerJobFunc = o
   extension (v: GIOSchedulerJobFunc)
-    inline def value: CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr3[Ptr[GIOSchedulerJob], Ptr[GCancellable], _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GIOStream_autoptr = Ptr[GIOStream]
 object GIOStream_autoptr: 
   given _tag: Tag[GIOStream_autoptr] = Tag.Ptr[GIOStream](GIOStream._tag)
@@ -2552,39 +2350,27 @@ object GIOStream_autoptr:
   extension (v: GIOStream_autoptr)
     inline def value: Ptr[GIOStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIOStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GIOStream_listautoptr = Ptr[_root_.glib.GList]
 object GIOStream_listautoptr: 
-  given _tag: Tag[GIOStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GIOStream_listautoptr = o
+  given _tag: Tag[GIOStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GIOStream_listautoptr = o
   extension (v: GIOStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIOStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GIOStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GIOStream_queueautoptr: 
-  given _tag: Tag[GIOStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GIOStream_queueautoptr = o
+  given _tag: Tag[GIOStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GIOStream_queueautoptr = o
   extension (v: GIOStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIOStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GIOStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GIOStream_slistautoptr: 
-  given _tag: Tag[GIOStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GIOStream_slistautoptr = o
+  given _tag: Tag[GIOStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GIOStream_slistautoptr = o
   extension (v: GIOStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GIcon_autoptr = Ptr[GIcon]
 object GIcon_autoptr: 
   given _tag: Tag[GIcon_autoptr] = Tag.Ptr[GIcon](GIcon._tag)
@@ -2592,39 +2378,27 @@ object GIcon_autoptr:
   extension (v: GIcon_autoptr)
     inline def value: Ptr[GIcon] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIcon_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GIcon_listautoptr = Ptr[_root_.glib.GList]
 object GIcon_listautoptr: 
-  given _tag: Tag[GIcon_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GIcon_listautoptr = o
+  given _tag: Tag[GIcon_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GIcon_listautoptr = o
   extension (v: GIcon_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GIcon_queueautoptr = Ptr[_root_.glib.GQueue]
 object GIcon_queueautoptr: 
-  given _tag: Tag[GIcon_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GIcon_queueautoptr = o
+  given _tag: Tag[GIcon_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GIcon_queueautoptr = o
   extension (v: GIcon_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GIcon_slistautoptr = Ptr[_root_.glib.GSList]
 object GIcon_slistautoptr: 
-  given _tag: Tag[GIcon_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GIcon_slistautoptr = o
+  given _tag: Tag[GIcon_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GIcon_slistautoptr = o
   extension (v: GIcon_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GInetAddressMask_autoptr = Ptr[GInetAddressMask]
 object GInetAddressMask_autoptr: 
   given _tag: Tag[GInetAddressMask_autoptr] = Tag.Ptr[GInetAddressMask](GInetAddressMask._tag)
@@ -2632,39 +2406,27 @@ object GInetAddressMask_autoptr:
   extension (v: GInetAddressMask_autoptr)
     inline def value: Ptr[GInetAddressMask] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetAddressMask_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GInetAddressMask_listautoptr = Ptr[_root_.glib.GList]
 object GInetAddressMask_listautoptr: 
-  given _tag: Tag[GInetAddressMask_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GInetAddressMask_listautoptr = o
+  given _tag: Tag[GInetAddressMask_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GInetAddressMask_listautoptr = o
   extension (v: GInetAddressMask_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetAddressMask_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GInetAddressMask_queueautoptr = Ptr[_root_.glib.GQueue]
 object GInetAddressMask_queueautoptr: 
-  given _tag: Tag[GInetAddressMask_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GInetAddressMask_queueautoptr = o
+  given _tag: Tag[GInetAddressMask_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GInetAddressMask_queueautoptr = o
   extension (v: GInetAddressMask_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetAddressMask_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GInetAddressMask_slistautoptr = Ptr[_root_.glib.GSList]
 object GInetAddressMask_slistautoptr: 
-  given _tag: Tag[GInetAddressMask_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GInetAddressMask_slistautoptr = o
+  given _tag: Tag[GInetAddressMask_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GInetAddressMask_slistautoptr = o
   extension (v: GInetAddressMask_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GInetAddress_autoptr = Ptr[GInetAddress]
 object GInetAddress_autoptr: 
   given _tag: Tag[GInetAddress_autoptr] = Tag.Ptr[GInetAddress](GInetAddress._tag)
@@ -2672,39 +2434,27 @@ object GInetAddress_autoptr:
   extension (v: GInetAddress_autoptr)
     inline def value: Ptr[GInetAddress] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetAddress_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GInetAddress_listautoptr = Ptr[_root_.glib.GList]
 object GInetAddress_listautoptr: 
-  given _tag: Tag[GInetAddress_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GInetAddress_listautoptr = o
+  given _tag: Tag[GInetAddress_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GInetAddress_listautoptr = o
   extension (v: GInetAddress_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GInetAddress_queueautoptr = Ptr[_root_.glib.GQueue]
 object GInetAddress_queueautoptr: 
-  given _tag: Tag[GInetAddress_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GInetAddress_queueautoptr = o
+  given _tag: Tag[GInetAddress_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GInetAddress_queueautoptr = o
   extension (v: GInetAddress_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GInetAddress_slistautoptr = Ptr[_root_.glib.GSList]
 object GInetAddress_slistautoptr: 
-  given _tag: Tag[GInetAddress_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GInetAddress_slistautoptr = o
+  given _tag: Tag[GInetAddress_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GInetAddress_slistautoptr = o
   extension (v: GInetAddress_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GInetSocketAddress_autoptr = Ptr[GInetSocketAddress]
 object GInetSocketAddress_autoptr: 
   given _tag: Tag[GInetSocketAddress_autoptr] = Tag.Ptr[GInetSocketAddress](GInetSocketAddress._tag)
@@ -2712,39 +2462,27 @@ object GInetSocketAddress_autoptr:
   extension (v: GInetSocketAddress_autoptr)
     inline def value: Ptr[GInetSocketAddress] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetSocketAddress_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GInetSocketAddress_listautoptr = Ptr[_root_.glib.GList]
 object GInetSocketAddress_listautoptr: 
-  given _tag: Tag[GInetSocketAddress_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GInetSocketAddress_listautoptr = o
+  given _tag: Tag[GInetSocketAddress_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GInetSocketAddress_listautoptr = o
   extension (v: GInetSocketAddress_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetSocketAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GInetSocketAddress_queueautoptr = Ptr[_root_.glib.GQueue]
 object GInetSocketAddress_queueautoptr: 
-  given _tag: Tag[GInetSocketAddress_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GInetSocketAddress_queueautoptr = o
+  given _tag: Tag[GInetSocketAddress_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GInetSocketAddress_queueautoptr = o
   extension (v: GInetSocketAddress_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInetSocketAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GInetSocketAddress_slistautoptr = Ptr[_root_.glib.GSList]
 object GInetSocketAddress_slistautoptr: 
-  given _tag: Tag[GInetSocketAddress_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GInetSocketAddress_slistautoptr = o
+  given _tag: Tag[GInetSocketAddress_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GInetSocketAddress_slistautoptr = o
   extension (v: GInetSocketAddress_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GInitable_autoptr = Ptr[GInitable]
 object GInitable_autoptr: 
   given _tag: Tag[GInitable_autoptr] = Tag.Ptr[GInitable](GInitable._tag)
@@ -2752,39 +2490,55 @@ object GInitable_autoptr:
   extension (v: GInitable_autoptr)
     inline def value: Ptr[GInitable] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInitable_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GInitable_listautoptr = Ptr[_root_.glib.GList]
 object GInitable_listautoptr: 
-  given _tag: Tag[GInitable_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GInitable_listautoptr = o
+  given _tag: Tag[GInitable_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GInitable_listautoptr = o
   extension (v: GInitable_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInitable_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GInitable_queueautoptr = Ptr[_root_.glib.GQueue]
 object GInitable_queueautoptr: 
-  given _tag: Tag[GInitable_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GInitable_queueautoptr = o
+  given _tag: Tag[GInitable_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GInitable_queueautoptr = o
   extension (v: GInitable_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInitable_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GInitable_slistautoptr = Ptr[_root_.glib.GSList]
 object GInitable_slistautoptr: 
-  given _tag: Tag[GInitable_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GInitable_slistautoptr = o
+  given _tag: Tag[GInitable_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GInitable_slistautoptr = o
   extension (v: GInitable_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GInitiallyUnowned_autoptr = Ptr[_root_.gobject.GInitiallyUnowned]
+object GInitiallyUnowned_autoptr: 
+  given _tag: Tag[GInitiallyUnowned_autoptr] = Tag.Ptr[_root_.gobject.GInitiallyUnowned](_root_.gobject.GInitiallyUnowned._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GInitiallyUnowned]): GInitiallyUnowned_autoptr = o
+  extension (v: GInitiallyUnowned_autoptr)
+    inline def value: Ptr[_root_.gobject.GInitiallyUnowned] = v
+
+opaque type GInitiallyUnowned_listautoptr = Ptr[_root_.glib.GList]
+object GInitiallyUnowned_listautoptr: 
+  given _tag: Tag[GInitiallyUnowned_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GInitiallyUnowned_listautoptr = o
+  extension (v: GInitiallyUnowned_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GInitiallyUnowned_queueautoptr = Ptr[_root_.glib.GQueue]
+object GInitiallyUnowned_queueautoptr: 
+  given _tag: Tag[GInitiallyUnowned_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GInitiallyUnowned_queueautoptr = o
+  extension (v: GInitiallyUnowned_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GInitiallyUnowned_slistautoptr = Ptr[_root_.glib.GSList]
+object GInitiallyUnowned_slistautoptr: 
+  given _tag: Tag[GInitiallyUnowned_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GInitiallyUnowned_slistautoptr = o
+  extension (v: GInitiallyUnowned_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GInputStream_autoptr = Ptr[GInputStream]
 object GInputStream_autoptr: 
   given _tag: Tag[GInputStream_autoptr] = Tag.Ptr[GInputStream](GInputStream._tag)
@@ -2792,39 +2546,55 @@ object GInputStream_autoptr:
   extension (v: GInputStream_autoptr)
     inline def value: Ptr[GInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GInputStream_listautoptr: 
-  given _tag: Tag[GInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GInputStream_listautoptr = o
+  given _tag: Tag[GInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GInputStream_listautoptr = o
   extension (v: GInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GInputStream_queueautoptr: 
-  given _tag: Tag[GInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GInputStream_queueautoptr = o
+  given _tag: Tag[GInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GInputStream_queueautoptr = o
   extension (v: GInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GInputStream_slistautoptr: 
-  given _tag: Tag[GInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GInputStream_slistautoptr = o
+  given _tag: Tag[GInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GInputStream_slistautoptr = o
   extension (v: GInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
-*/
+opaque type GKeyFile_autoptr = Ptr[_root_.glib.GKeyFile]
+object GKeyFile_autoptr: 
+  given _tag: Tag[GKeyFile_autoptr] = Tag.Ptr[_root_.glib.GKeyFile](_root_.glib.GKeyFile._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GKeyFile]): GKeyFile_autoptr = o
+  extension (v: GKeyFile_autoptr)
+    inline def value: Ptr[_root_.glib.GKeyFile] = v
+
+opaque type GKeyFile_listautoptr = Ptr[_root_.glib.GList]
+object GKeyFile_listautoptr: 
+  given _tag: Tag[GKeyFile_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GKeyFile_listautoptr = o
+  extension (v: GKeyFile_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GKeyFile_queueautoptr = Ptr[_root_.glib.GQueue]
+object GKeyFile_queueautoptr: 
+  given _tag: Tag[GKeyFile_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GKeyFile_queueautoptr = o
+  extension (v: GKeyFile_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GKeyFile_slistautoptr = Ptr[_root_.glib.GSList]
+object GKeyFile_slistautoptr: 
+  given _tag: Tag[GKeyFile_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GKeyFile_slistautoptr = o
+  extension (v: GKeyFile_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GListModel_autoptr = Ptr[GListModel]
 object GListModel_autoptr: 
   given _tag: Tag[GListModel_autoptr] = Tag.Ptr[GListModel](GListModel._tag)
@@ -2832,39 +2602,27 @@ object GListModel_autoptr:
   extension (v: GListModel_autoptr)
     inline def value: Ptr[GListModel] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
-*/
-opaque type GListModel_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GListModel_listautoptr = Ptr[_root_.glib.GList]
 object GListModel_listautoptr: 
-  given _tag: Tag[GListModel_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GListModel_listautoptr = o
+  given _tag: Tag[GListModel_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GListModel_listautoptr = o
   extension (v: GListModel_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
-*/
-opaque type GListModel_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GListModel_queueautoptr = Ptr[_root_.glib.GQueue]
 object GListModel_queueautoptr: 
-  given _tag: Tag[GListModel_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GListModel_queueautoptr = o
+  given _tag: Tag[GListModel_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GListModel_queueautoptr = o
   extension (v: GListModel_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/glistmodel.h
-*/
-opaque type GListModel_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GListModel_slistautoptr = Ptr[_root_.glib.GSList]
 object GListModel_slistautoptr: 
-  given _tag: Tag[GListModel_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GListModel_slistautoptr = o
+  given _tag: Tag[GListModel_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GListModel_slistautoptr = o
   extension (v: GListModel_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
 opaque type GListStoreClass_autoptr = Ptr[GListStoreClass]
 object GListStoreClass_autoptr: 
   given _tag: Tag[GListStoreClass_autoptr] = Tag.Ptr[GListStoreClass](GListStoreClass._tag)
@@ -2872,39 +2630,27 @@ object GListStoreClass_autoptr:
   extension (v: GListStoreClass_autoptr)
     inline def value: Ptr[GListStoreClass] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
-opaque type GListStoreClass_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GListStoreClass_listautoptr = Ptr[_root_.glib.GList]
 object GListStoreClass_listautoptr: 
-  given _tag: Tag[GListStoreClass_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GListStoreClass_listautoptr = o
+  given _tag: Tag[GListStoreClass_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GListStoreClass_listautoptr = o
   extension (v: GListStoreClass_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
-opaque type GListStoreClass_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GListStoreClass_queueautoptr = Ptr[_root_.glib.GQueue]
 object GListStoreClass_queueautoptr: 
-  given _tag: Tag[GListStoreClass_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GListStoreClass_queueautoptr = o
+  given _tag: Tag[GListStoreClass_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GListStoreClass_queueautoptr = o
   extension (v: GListStoreClass_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
-opaque type GListStoreClass_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GListStoreClass_slistautoptr = Ptr[_root_.glib.GSList]
 object GListStoreClass_slistautoptr: 
-  given _tag: Tag[GListStoreClass_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GListStoreClass_slistautoptr = o
+  given _tag: Tag[GListStoreClass_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GListStoreClass_slistautoptr = o
   extension (v: GListStoreClass_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
 opaque type GListStore_autoptr = Ptr[GListStore]
 object GListStore_autoptr: 
   given _tag: Tag[GListStore_autoptr] = Tag.Ptr[GListStore](GListStore._tag)
@@ -2912,39 +2658,55 @@ object GListStore_autoptr:
   extension (v: GListStore_autoptr)
     inline def value: Ptr[GListStore] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
-opaque type GListStore_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GListStore_listautoptr = Ptr[_root_.glib.GList]
 object GListStore_listautoptr: 
-  given _tag: Tag[GListStore_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GListStore_listautoptr = o
+  given _tag: Tag[GListStore_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GListStore_listautoptr = o
   extension (v: GListStore_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
-opaque type GListStore_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GListStore_queueautoptr = Ptr[_root_.glib.GQueue]
 object GListStore_queueautoptr: 
-  given _tag: Tag[GListStore_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GListStore_queueautoptr = o
+  given _tag: Tag[GListStore_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GListStore_queueautoptr = o
   extension (v: GListStore_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gliststore.h
-*/
-opaque type GListStore_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GListStore_slistautoptr = Ptr[_root_.glib.GSList]
 object GListStore_slistautoptr: 
-  given _tag: Tag[GListStore_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GListStore_slistautoptr = o
+  given _tag: Tag[GListStore_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GListStore_slistautoptr = o
   extension (v: GListStore_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GList_autoptr = Ptr[_root_.glib.GList]
+object GList_autoptr: 
+  given _tag: Tag[GList_autoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GList_autoptr = o
+  extension (v: GList_autoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GList_listautoptr = Ptr[_root_.glib.GList]
+object GList_listautoptr: 
+  given _tag: Tag[GList_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GList_listautoptr = o
+  extension (v: GList_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GList_queueautoptr = Ptr[_root_.glib.GQueue]
+object GList_queueautoptr: 
+  given _tag: Tag[GList_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GList_queueautoptr = o
+  extension (v: GList_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GList_slistautoptr = Ptr[_root_.glib.GSList]
+object GList_slistautoptr: 
+  given _tag: Tag[GList_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GList_slistautoptr = o
+  extension (v: GList_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GLoadableIcon_autoptr = Ptr[GLoadableIcon]
 object GLoadableIcon_autoptr: 
   given _tag: Tag[GLoadableIcon_autoptr] = Tag.Ptr[GLoadableIcon](GLoadableIcon._tag)
@@ -2952,39 +2714,195 @@ object GLoadableIcon_autoptr:
   extension (v: GLoadableIcon_autoptr)
     inline def value: Ptr[GLoadableIcon] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GLoadableIcon_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GLoadableIcon_listautoptr = Ptr[_root_.glib.GList]
 object GLoadableIcon_listautoptr: 
-  given _tag: Tag[GLoadableIcon_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GLoadableIcon_listautoptr = o
+  given _tag: Tag[GLoadableIcon_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GLoadableIcon_listautoptr = o
   extension (v: GLoadableIcon_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GLoadableIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GLoadableIcon_queueautoptr = Ptr[_root_.glib.GQueue]
 object GLoadableIcon_queueautoptr: 
-  given _tag: Tag[GLoadableIcon_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GLoadableIcon_queueautoptr = o
+  given _tag: Tag[GLoadableIcon_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GLoadableIcon_queueautoptr = o
   extension (v: GLoadableIcon_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GLoadableIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GLoadableIcon_slistautoptr = Ptr[_root_.glib.GSList]
 object GLoadableIcon_slistautoptr: 
-  given _tag: Tag[GLoadableIcon_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GLoadableIcon_slistautoptr = o
+  given _tag: Tag[GLoadableIcon_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GLoadableIcon_slistautoptr = o
   extension (v: GLoadableIcon_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GMainContextPusher_autoptr = Ptr[_root_.glib.GMainContextPusher]
+object GMainContextPusher_autoptr: 
+  given _tag: Tag[GMainContextPusher_autoptr] = Tag.Ptr[_root_.glib.GMainContextPusher](_root_.glib.GMainContextPusher._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMainContextPusher]): GMainContextPusher_autoptr = o
+  extension (v: GMainContextPusher_autoptr)
+    inline def value: Ptr[_root_.glib.GMainContextPusher] = v
+
+opaque type GMainContextPusher_listautoptr = Ptr[_root_.glib.GList]
+object GMainContextPusher_listautoptr: 
+  given _tag: Tag[GMainContextPusher_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMainContextPusher_listautoptr = o
+  extension (v: GMainContextPusher_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMainContextPusher_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMainContextPusher_queueautoptr: 
+  given _tag: Tag[GMainContextPusher_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMainContextPusher_queueautoptr = o
+  extension (v: GMainContextPusher_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMainContextPusher_slistautoptr = Ptr[_root_.glib.GSList]
+object GMainContextPusher_slistautoptr: 
+  given _tag: Tag[GMainContextPusher_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMainContextPusher_slistautoptr = o
+  extension (v: GMainContextPusher_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GMainContext_autoptr = Ptr[_root_.glib.GMainContext]
+object GMainContext_autoptr: 
+  given _tag: Tag[GMainContext_autoptr] = Tag.Ptr[_root_.glib.GMainContext](_root_.glib.GMainContext._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMainContext]): GMainContext_autoptr = o
+  extension (v: GMainContext_autoptr)
+    inline def value: Ptr[_root_.glib.GMainContext] = v
+
+opaque type GMainContext_listautoptr = Ptr[_root_.glib.GList]
+object GMainContext_listautoptr: 
+  given _tag: Tag[GMainContext_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMainContext_listautoptr = o
+  extension (v: GMainContext_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMainContext_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMainContext_queueautoptr: 
+  given _tag: Tag[GMainContext_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMainContext_queueautoptr = o
+  extension (v: GMainContext_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMainContext_slistautoptr = Ptr[_root_.glib.GSList]
+object GMainContext_slistautoptr: 
+  given _tag: Tag[GMainContext_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMainContext_slistautoptr = o
+  extension (v: GMainContext_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GMainLoop_autoptr = Ptr[_root_.glib.GMainLoop]
+object GMainLoop_autoptr: 
+  given _tag: Tag[GMainLoop_autoptr] = Tag.Ptr[_root_.glib.GMainLoop](_root_.glib.GMainLoop._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMainLoop]): GMainLoop_autoptr = o
+  extension (v: GMainLoop_autoptr)
+    inline def value: Ptr[_root_.glib.GMainLoop] = v
+
+opaque type GMainLoop_listautoptr = Ptr[_root_.glib.GList]
+object GMainLoop_listautoptr: 
+  given _tag: Tag[GMainLoop_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMainLoop_listautoptr = o
+  extension (v: GMainLoop_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMainLoop_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMainLoop_queueautoptr: 
+  given _tag: Tag[GMainLoop_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMainLoop_queueautoptr = o
+  extension (v: GMainLoop_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMainLoop_slistautoptr = Ptr[_root_.glib.GSList]
+object GMainLoop_slistautoptr: 
+  given _tag: Tag[GMainLoop_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMainLoop_slistautoptr = o
+  extension (v: GMainLoop_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GMappedFile_autoptr = Ptr[_root_.glib.GMappedFile]
+object GMappedFile_autoptr: 
+  given _tag: Tag[GMappedFile_autoptr] = Tag.Ptr[_root_.glib.GMappedFile](_root_.glib.GMappedFile._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMappedFile]): GMappedFile_autoptr = o
+  extension (v: GMappedFile_autoptr)
+    inline def value: Ptr[_root_.glib.GMappedFile] = v
+
+opaque type GMappedFile_listautoptr = Ptr[_root_.glib.GList]
+object GMappedFile_listautoptr: 
+  given _tag: Tag[GMappedFile_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMappedFile_listautoptr = o
+  extension (v: GMappedFile_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMappedFile_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMappedFile_queueautoptr: 
+  given _tag: Tag[GMappedFile_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMappedFile_queueautoptr = o
+  extension (v: GMappedFile_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMappedFile_slistautoptr = Ptr[_root_.glib.GSList]
+object GMappedFile_slistautoptr: 
+  given _tag: Tag[GMappedFile_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMappedFile_slistautoptr = o
+  extension (v: GMappedFile_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GMarkupParseContext_autoptr = Ptr[_root_.glib.GMarkupParseContext]
+object GMarkupParseContext_autoptr: 
+  given _tag: Tag[GMarkupParseContext_autoptr] = Tag.Ptr[_root_.glib.GMarkupParseContext](_root_.glib.GMarkupParseContext._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMarkupParseContext]): GMarkupParseContext_autoptr = o
+  extension (v: GMarkupParseContext_autoptr)
+    inline def value: Ptr[_root_.glib.GMarkupParseContext] = v
+
+opaque type GMarkupParseContext_listautoptr = Ptr[_root_.glib.GList]
+object GMarkupParseContext_listautoptr: 
+  given _tag: Tag[GMarkupParseContext_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMarkupParseContext_listautoptr = o
+  extension (v: GMarkupParseContext_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMarkupParseContext_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMarkupParseContext_queueautoptr: 
+  given _tag: Tag[GMarkupParseContext_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMarkupParseContext_queueautoptr = o
+  extension (v: GMarkupParseContext_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMarkupParseContext_slistautoptr = Ptr[_root_.glib.GSList]
+object GMarkupParseContext_slistautoptr: 
+  given _tag: Tag[GMarkupParseContext_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMarkupParseContext_slistautoptr = o
+  extension (v: GMarkupParseContext_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GMatchInfo_autoptr = Ptr[_root_.glib.GMatchInfo]
+object GMatchInfo_autoptr: 
+  given _tag: Tag[GMatchInfo_autoptr] = Tag.Ptr[_root_.glib.GMatchInfo](_root_.glib.GMatchInfo._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMatchInfo]): GMatchInfo_autoptr = o
+  extension (v: GMatchInfo_autoptr)
+    inline def value: Ptr[_root_.glib.GMatchInfo] = v
+
+opaque type GMatchInfo_listautoptr = Ptr[_root_.glib.GList]
+object GMatchInfo_listautoptr: 
+  given _tag: Tag[GMatchInfo_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMatchInfo_listautoptr = o
+  extension (v: GMatchInfo_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMatchInfo_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMatchInfo_queueautoptr: 
+  given _tag: Tag[GMatchInfo_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMatchInfo_queueautoptr = o
+  extension (v: GMatchInfo_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMatchInfo_slistautoptr = Ptr[_root_.glib.GSList]
+object GMatchInfo_slistautoptr: 
+  given _tag: Tag[GMatchInfo_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMatchInfo_slistautoptr = o
+  extension (v: GMatchInfo_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GMemoryInputStream_autoptr = Ptr[GMemoryInputStream]
 object GMemoryInputStream_autoptr: 
   given _tag: Tag[GMemoryInputStream_autoptr] = Tag.Ptr[GMemoryInputStream](GMemoryInputStream._tag)
@@ -2992,39 +2910,27 @@ object GMemoryInputStream_autoptr:
   extension (v: GMemoryInputStream_autoptr)
     inline def value: Ptr[GMemoryInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMemoryInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMemoryInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GMemoryInputStream_listautoptr: 
-  given _tag: Tag[GMemoryInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMemoryInputStream_listautoptr = o
+  given _tag: Tag[GMemoryInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMemoryInputStream_listautoptr = o
   extension (v: GMemoryInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMemoryInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMemoryInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMemoryInputStream_queueautoptr: 
-  given _tag: Tag[GMemoryInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMemoryInputStream_queueautoptr = o
+  given _tag: Tag[GMemoryInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMemoryInputStream_queueautoptr = o
   extension (v: GMemoryInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMemoryInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMemoryInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GMemoryInputStream_slistautoptr: 
-  given _tag: Tag[GMemoryInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMemoryInputStream_slistautoptr = o
+  given _tag: Tag[GMemoryInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMemoryInputStream_slistautoptr = o
   extension (v: GMemoryInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
-*/
 opaque type GMemoryMonitor_autoptr = Ptr[GMemoryMonitor]
 object GMemoryMonitor_autoptr: 
   given _tag: Tag[GMemoryMonitor_autoptr] = Tag.Ptr[GMemoryMonitor](GMemoryMonitor._tag)
@@ -3032,39 +2938,27 @@ object GMemoryMonitor_autoptr:
   extension (v: GMemoryMonitor_autoptr)
     inline def value: Ptr[GMemoryMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
-*/
-opaque type GMemoryMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMemoryMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GMemoryMonitor_listautoptr: 
-  given _tag: Tag[GMemoryMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMemoryMonitor_listautoptr = o
+  given _tag: Tag[GMemoryMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMemoryMonitor_listautoptr = o
   extension (v: GMemoryMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
-*/
-opaque type GMemoryMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMemoryMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMemoryMonitor_queueautoptr: 
-  given _tag: Tag[GMemoryMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMemoryMonitor_queueautoptr = o
+  given _tag: Tag[GMemoryMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMemoryMonitor_queueautoptr = o
   extension (v: GMemoryMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemorymonitor.h
-*/
-opaque type GMemoryMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMemoryMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GMemoryMonitor_slistautoptr: 
-  given _tag: Tag[GMemoryMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMemoryMonitor_slistautoptr = o
+  given _tag: Tag[GMemoryMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMemoryMonitor_slistautoptr = o
   extension (v: GMemoryMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMemoryOutputStream_autoptr = Ptr[GMemoryOutputStream]
 object GMemoryOutputStream_autoptr: 
   given _tag: Tag[GMemoryOutputStream_autoptr] = Tag.Ptr[GMemoryOutputStream](GMemoryOutputStream._tag)
@@ -3072,39 +2966,27 @@ object GMemoryOutputStream_autoptr:
   extension (v: GMemoryOutputStream_autoptr)
     inline def value: Ptr[GMemoryOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMemoryOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMemoryOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GMemoryOutputStream_listautoptr: 
-  given _tag: Tag[GMemoryOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMemoryOutputStream_listautoptr = o
+  given _tag: Tag[GMemoryOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMemoryOutputStream_listautoptr = o
   extension (v: GMemoryOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMemoryOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMemoryOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMemoryOutputStream_queueautoptr: 
-  given _tag: Tag[GMemoryOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMemoryOutputStream_queueautoptr = o
+  given _tag: Tag[GMemoryOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMemoryOutputStream_queueautoptr = o
   extension (v: GMemoryOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMemoryOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMemoryOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GMemoryOutputStream_slistautoptr: 
-  given _tag: Tag[GMemoryOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMemoryOutputStream_slistautoptr = o
+  given _tag: Tag[GMemoryOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMemoryOutputStream_slistautoptr = o
   extension (v: GMemoryOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMenuAttributeIter_autoptr = Ptr[GMenuAttributeIter]
 object GMenuAttributeIter_autoptr: 
   given _tag: Tag[GMenuAttributeIter_autoptr] = Tag.Ptr[GMenuAttributeIter](GMenuAttributeIter._tag)
@@ -3112,39 +2994,27 @@ object GMenuAttributeIter_autoptr:
   extension (v: GMenuAttributeIter_autoptr)
     inline def value: Ptr[GMenuAttributeIter] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuAttributeIter_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMenuAttributeIter_listautoptr = Ptr[_root_.glib.GList]
 object GMenuAttributeIter_listautoptr: 
-  given _tag: Tag[GMenuAttributeIter_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMenuAttributeIter_listautoptr = o
+  given _tag: Tag[GMenuAttributeIter_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMenuAttributeIter_listautoptr = o
   extension (v: GMenuAttributeIter_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuAttributeIter_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMenuAttributeIter_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMenuAttributeIter_queueautoptr: 
-  given _tag: Tag[GMenuAttributeIter_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMenuAttributeIter_queueautoptr = o
+  given _tag: Tag[GMenuAttributeIter_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMenuAttributeIter_queueautoptr = o
   extension (v: GMenuAttributeIter_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuAttributeIter_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMenuAttributeIter_slistautoptr = Ptr[_root_.glib.GSList]
 object GMenuAttributeIter_slistautoptr: 
-  given _tag: Tag[GMenuAttributeIter_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMenuAttributeIter_slistautoptr = o
+  given _tag: Tag[GMenuAttributeIter_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMenuAttributeIter_slistautoptr = o
   extension (v: GMenuAttributeIter_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMenuItem_autoptr = Ptr[GMenuItem]
 object GMenuItem_autoptr: 
   given _tag: Tag[GMenuItem_autoptr] = Tag.Ptr[GMenuItem](GMenuItem._tag)
@@ -3152,39 +3022,27 @@ object GMenuItem_autoptr:
   extension (v: GMenuItem_autoptr)
     inline def value: Ptr[GMenuItem] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuItem_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMenuItem_listautoptr = Ptr[_root_.glib.GList]
 object GMenuItem_listautoptr: 
-  given _tag: Tag[GMenuItem_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMenuItem_listautoptr = o
+  given _tag: Tag[GMenuItem_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMenuItem_listautoptr = o
   extension (v: GMenuItem_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuItem_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMenuItem_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMenuItem_queueautoptr: 
-  given _tag: Tag[GMenuItem_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMenuItem_queueautoptr = o
+  given _tag: Tag[GMenuItem_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMenuItem_queueautoptr = o
   extension (v: GMenuItem_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuItem_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMenuItem_slistautoptr = Ptr[_root_.glib.GSList]
 object GMenuItem_slistautoptr: 
-  given _tag: Tag[GMenuItem_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMenuItem_slistautoptr = o
+  given _tag: Tag[GMenuItem_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMenuItem_slistautoptr = o
   extension (v: GMenuItem_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMenuLinkIter_autoptr = Ptr[GMenuLinkIter]
 object GMenuLinkIter_autoptr: 
   given _tag: Tag[GMenuLinkIter_autoptr] = Tag.Ptr[GMenuLinkIter](GMenuLinkIter._tag)
@@ -3192,39 +3050,27 @@ object GMenuLinkIter_autoptr:
   extension (v: GMenuLinkIter_autoptr)
     inline def value: Ptr[GMenuLinkIter] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuLinkIter_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMenuLinkIter_listautoptr = Ptr[_root_.glib.GList]
 object GMenuLinkIter_listautoptr: 
-  given _tag: Tag[GMenuLinkIter_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMenuLinkIter_listautoptr = o
+  given _tag: Tag[GMenuLinkIter_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMenuLinkIter_listautoptr = o
   extension (v: GMenuLinkIter_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuLinkIter_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMenuLinkIter_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMenuLinkIter_queueautoptr: 
-  given _tag: Tag[GMenuLinkIter_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMenuLinkIter_queueautoptr = o
+  given _tag: Tag[GMenuLinkIter_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMenuLinkIter_queueautoptr = o
   extension (v: GMenuLinkIter_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuLinkIter_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMenuLinkIter_slistautoptr = Ptr[_root_.glib.GSList]
 object GMenuLinkIter_slistautoptr: 
-  given _tag: Tag[GMenuLinkIter_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMenuLinkIter_slistautoptr = o
+  given _tag: Tag[GMenuLinkIter_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMenuLinkIter_slistautoptr = o
   extension (v: GMenuLinkIter_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMenuModel_autoptr = Ptr[GMenuModel]
 object GMenuModel_autoptr: 
   given _tag: Tag[GMenuModel_autoptr] = Tag.Ptr[GMenuModel](GMenuModel._tag)
@@ -3232,39 +3078,27 @@ object GMenuModel_autoptr:
   extension (v: GMenuModel_autoptr)
     inline def value: Ptr[GMenuModel] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuModel_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMenuModel_listautoptr = Ptr[_root_.glib.GList]
 object GMenuModel_listautoptr: 
-  given _tag: Tag[GMenuModel_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMenuModel_listautoptr = o
+  given _tag: Tag[GMenuModel_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMenuModel_listautoptr = o
   extension (v: GMenuModel_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuModel_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMenuModel_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMenuModel_queueautoptr: 
-  given _tag: Tag[GMenuModel_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMenuModel_queueautoptr = o
+  given _tag: Tag[GMenuModel_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMenuModel_queueautoptr = o
   extension (v: GMenuModel_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenuModel_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMenuModel_slistautoptr = Ptr[_root_.glib.GSList]
 object GMenuModel_slistautoptr: 
-  given _tag: Tag[GMenuModel_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMenuModel_slistautoptr = o
+  given _tag: Tag[GMenuModel_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMenuModel_slistautoptr = o
   extension (v: GMenuModel_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMenu_autoptr = Ptr[GMenu]
 object GMenu_autoptr: 
   given _tag: Tag[GMenu_autoptr] = Tag.Ptr[GMenu](GMenu._tag)
@@ -3272,39 +3106,27 @@ object GMenu_autoptr:
   extension (v: GMenu_autoptr)
     inline def value: Ptr[GMenu] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenu_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMenu_listautoptr = Ptr[_root_.glib.GList]
 object GMenu_listautoptr: 
-  given _tag: Tag[GMenu_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMenu_listautoptr = o
+  given _tag: Tag[GMenu_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMenu_listautoptr = o
   extension (v: GMenu_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenu_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMenu_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMenu_queueautoptr: 
-  given _tag: Tag[GMenu_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMenu_queueautoptr = o
+  given _tag: Tag[GMenu_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMenu_queueautoptr = o
   extension (v: GMenu_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMenu_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMenu_slistautoptr = Ptr[_root_.glib.GSList]
 object GMenu_slistautoptr: 
-  given _tag: Tag[GMenu_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMenu_slistautoptr = o
+  given _tag: Tag[GMenu_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMenu_slistautoptr = o
   extension (v: GMenu_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMountOperation_autoptr = Ptr[GMountOperation]
 object GMountOperation_autoptr: 
   given _tag: Tag[GMountOperation_autoptr] = Tag.Ptr[GMountOperation](GMountOperation._tag)
@@ -3312,39 +3134,27 @@ object GMountOperation_autoptr:
   extension (v: GMountOperation_autoptr)
     inline def value: Ptr[GMountOperation] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMountOperation_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMountOperation_listautoptr = Ptr[_root_.glib.GList]
 object GMountOperation_listautoptr: 
-  given _tag: Tag[GMountOperation_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMountOperation_listautoptr = o
+  given _tag: Tag[GMountOperation_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMountOperation_listautoptr = o
   extension (v: GMountOperation_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMountOperation_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMountOperation_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMountOperation_queueautoptr: 
-  given _tag: Tag[GMountOperation_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMountOperation_queueautoptr = o
+  given _tag: Tag[GMountOperation_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMountOperation_queueautoptr = o
   extension (v: GMountOperation_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMountOperation_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMountOperation_slistautoptr = Ptr[_root_.glib.GSList]
 object GMountOperation_slistautoptr: 
-  given _tag: Tag[GMountOperation_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMountOperation_slistautoptr = o
+  given _tag: Tag[GMountOperation_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMountOperation_slistautoptr = o
   extension (v: GMountOperation_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GMount_autoptr = Ptr[GMount]
 object GMount_autoptr: 
   given _tag: Tag[GMount_autoptr] = Tag.Ptr[GMount](GMount._tag)
@@ -3352,39 +3162,55 @@ object GMount_autoptr:
   extension (v: GMount_autoptr)
     inline def value: Ptr[GMount] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMount_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GMount_listautoptr = Ptr[_root_.glib.GList]
 object GMount_listautoptr: 
-  given _tag: Tag[GMount_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GMount_listautoptr = o
+  given _tag: Tag[GMount_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMount_listautoptr = o
   extension (v: GMount_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMount_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GMount_queueautoptr = Ptr[_root_.glib.GQueue]
 object GMount_queueautoptr: 
-  given _tag: Tag[GMount_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GMount_queueautoptr = o
+  given _tag: Tag[GMount_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMount_queueautoptr = o
   extension (v: GMount_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GMount_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GMount_slistautoptr = Ptr[_root_.glib.GSList]
 object GMount_slistautoptr: 
-  given _tag: Tag[GMount_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GMount_slistautoptr = o
+  given _tag: Tag[GMount_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMount_slistautoptr = o
   extension (v: GMount_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GMutexLocker_autoptr = Ptr[_root_.glib.GMutexLocker]
+object GMutexLocker_autoptr: 
+  given _tag: Tag[GMutexLocker_autoptr] = Tag.Ptr[_root_.glib.GMutexLocker](_root_.glib.GMutexLocker._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GMutexLocker]): GMutexLocker_autoptr = o
+  extension (v: GMutexLocker_autoptr)
+    inline def value: Ptr[_root_.glib.GMutexLocker] = v
+
+opaque type GMutexLocker_listautoptr = Ptr[_root_.glib.GList]
+object GMutexLocker_listautoptr: 
+  given _tag: Tag[GMutexLocker_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GMutexLocker_listautoptr = o
+  extension (v: GMutexLocker_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GMutexLocker_queueautoptr = Ptr[_root_.glib.GQueue]
+object GMutexLocker_queueautoptr: 
+  given _tag: Tag[GMutexLocker_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GMutexLocker_queueautoptr = o
+  extension (v: GMutexLocker_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GMutexLocker_slistautoptr = Ptr[_root_.glib.GSList]
+object GMutexLocker_slistautoptr: 
+  given _tag: Tag[GMutexLocker_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GMutexLocker_slistautoptr = o
+  extension (v: GMutexLocker_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GNativeVolumeMonitor_autoptr = Ptr[GNativeVolumeMonitor]
 object GNativeVolumeMonitor_autoptr: 
   given _tag: Tag[GNativeVolumeMonitor_autoptr] = Tag.Ptr[GNativeVolumeMonitor](GNativeVolumeMonitor._tag)
@@ -3392,39 +3218,27 @@ object GNativeVolumeMonitor_autoptr:
   extension (v: GNativeVolumeMonitor_autoptr)
     inline def value: Ptr[GNativeVolumeMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNativeVolumeMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GNativeVolumeMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GNativeVolumeMonitor_listautoptr: 
-  given _tag: Tag[GNativeVolumeMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GNativeVolumeMonitor_listautoptr = o
+  given _tag: Tag[GNativeVolumeMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GNativeVolumeMonitor_listautoptr = o
   extension (v: GNativeVolumeMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNativeVolumeMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GNativeVolumeMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GNativeVolumeMonitor_queueautoptr: 
-  given _tag: Tag[GNativeVolumeMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GNativeVolumeMonitor_queueautoptr = o
+  given _tag: Tag[GNativeVolumeMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GNativeVolumeMonitor_queueautoptr = o
   extension (v: GNativeVolumeMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNativeVolumeMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GNativeVolumeMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GNativeVolumeMonitor_slistautoptr: 
-  given _tag: Tag[GNativeVolumeMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GNativeVolumeMonitor_slistautoptr = o
+  given _tag: Tag[GNativeVolumeMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GNativeVolumeMonitor_slistautoptr = o
   extension (v: GNativeVolumeMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GNetworkAddress_autoptr = Ptr[GNetworkAddress]
 object GNetworkAddress_autoptr: 
   given _tag: Tag[GNetworkAddress_autoptr] = Tag.Ptr[GNetworkAddress](GNetworkAddress._tag)
@@ -3432,39 +3246,27 @@ object GNetworkAddress_autoptr:
   extension (v: GNetworkAddress_autoptr)
     inline def value: Ptr[GNetworkAddress] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkAddress_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GNetworkAddress_listautoptr = Ptr[_root_.glib.GList]
 object GNetworkAddress_listautoptr: 
-  given _tag: Tag[GNetworkAddress_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GNetworkAddress_listautoptr = o
+  given _tag: Tag[GNetworkAddress_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GNetworkAddress_listautoptr = o
   extension (v: GNetworkAddress_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GNetworkAddress_queueautoptr = Ptr[_root_.glib.GQueue]
 object GNetworkAddress_queueautoptr: 
-  given _tag: Tag[GNetworkAddress_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GNetworkAddress_queueautoptr = o
+  given _tag: Tag[GNetworkAddress_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GNetworkAddress_queueautoptr = o
   extension (v: GNetworkAddress_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GNetworkAddress_slistautoptr = Ptr[_root_.glib.GSList]
 object GNetworkAddress_slistautoptr: 
-  given _tag: Tag[GNetworkAddress_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GNetworkAddress_slistautoptr = o
+  given _tag: Tag[GNetworkAddress_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GNetworkAddress_slistautoptr = o
   extension (v: GNetworkAddress_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GNetworkMonitor_autoptr = Ptr[GNetworkMonitor]
 object GNetworkMonitor_autoptr: 
   given _tag: Tag[GNetworkMonitor_autoptr] = Tag.Ptr[GNetworkMonitor](GNetworkMonitor._tag)
@@ -3472,39 +3274,27 @@ object GNetworkMonitor_autoptr:
   extension (v: GNetworkMonitor_autoptr)
     inline def value: Ptr[GNetworkMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GNetworkMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GNetworkMonitor_listautoptr: 
-  given _tag: Tag[GNetworkMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GNetworkMonitor_listautoptr = o
+  given _tag: Tag[GNetworkMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GNetworkMonitor_listautoptr = o
   extension (v: GNetworkMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GNetworkMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GNetworkMonitor_queueautoptr: 
-  given _tag: Tag[GNetworkMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GNetworkMonitor_queueautoptr = o
+  given _tag: Tag[GNetworkMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GNetworkMonitor_queueautoptr = o
   extension (v: GNetworkMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GNetworkMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GNetworkMonitor_slistautoptr: 
-  given _tag: Tag[GNetworkMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GNetworkMonitor_slistautoptr = o
+  given _tag: Tag[GNetworkMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GNetworkMonitor_slistautoptr = o
   extension (v: GNetworkMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GNetworkService_autoptr = Ptr[GNetworkService]
 object GNetworkService_autoptr: 
   given _tag: Tag[GNetworkService_autoptr] = Tag.Ptr[GNetworkService](GNetworkService._tag)
@@ -3512,39 +3302,55 @@ object GNetworkService_autoptr:
   extension (v: GNetworkService_autoptr)
     inline def value: Ptr[GNetworkService] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkService_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GNetworkService_listautoptr = Ptr[_root_.glib.GList]
 object GNetworkService_listautoptr: 
-  given _tag: Tag[GNetworkService_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GNetworkService_listautoptr = o
+  given _tag: Tag[GNetworkService_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GNetworkService_listautoptr = o
   extension (v: GNetworkService_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkService_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GNetworkService_queueautoptr = Ptr[_root_.glib.GQueue]
 object GNetworkService_queueautoptr: 
-  given _tag: Tag[GNetworkService_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GNetworkService_queueautoptr = o
+  given _tag: Tag[GNetworkService_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GNetworkService_queueautoptr = o
   extension (v: GNetworkService_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNetworkService_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GNetworkService_slistautoptr = Ptr[_root_.glib.GSList]
 object GNetworkService_slistautoptr: 
-  given _tag: Tag[GNetworkService_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GNetworkService_slistautoptr = o
+  given _tag: Tag[GNetworkService_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GNetworkService_slistautoptr = o
   extension (v: GNetworkService_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GNode_autoptr = Ptr[_root_.glib.GNode]
+object GNode_autoptr: 
+  given _tag: Tag[GNode_autoptr] = Tag.Ptr[_root_.glib.GNode](_root_.glib.GNode._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GNode]): GNode_autoptr = o
+  extension (v: GNode_autoptr)
+    inline def value: Ptr[_root_.glib.GNode] = v
+
+opaque type GNode_listautoptr = Ptr[_root_.glib.GList]
+object GNode_listautoptr: 
+  given _tag: Tag[GNode_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GNode_listautoptr = o
+  extension (v: GNode_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GNode_queueautoptr = Ptr[_root_.glib.GQueue]
+object GNode_queueautoptr: 
+  given _tag: Tag[GNode_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GNode_queueautoptr = o
+  extension (v: GNode_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GNode_slistautoptr = Ptr[_root_.glib.GSList]
+object GNode_slistautoptr: 
+  given _tag: Tag[GNode_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GNode_slistautoptr = o
+  extension (v: GNode_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GNotification_autoptr = Ptr[GNotification]
 object GNotification_autoptr: 
   given _tag: Tag[GNotification_autoptr] = Tag.Ptr[GNotification](GNotification._tag)
@@ -3552,39 +3358,111 @@ object GNotification_autoptr:
   extension (v: GNotification_autoptr)
     inline def value: Ptr[GNotification] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNotification_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GNotification_listautoptr = Ptr[_root_.glib.GList]
 object GNotification_listautoptr: 
-  given _tag: Tag[GNotification_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GNotification_listautoptr = o
+  given _tag: Tag[GNotification_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GNotification_listautoptr = o
   extension (v: GNotification_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNotification_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GNotification_queueautoptr = Ptr[_root_.glib.GQueue]
 object GNotification_queueautoptr: 
-  given _tag: Tag[GNotification_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GNotification_queueautoptr = o
+  given _tag: Tag[GNotification_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GNotification_queueautoptr = o
   extension (v: GNotification_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GNotification_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GNotification_slistautoptr = Ptr[_root_.glib.GSList]
 object GNotification_slistautoptr: 
-  given _tag: Tag[GNotification_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GNotification_slistautoptr = o
+  given _tag: Tag[GNotification_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GNotification_slistautoptr = o
   extension (v: GNotification_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GObject_autoptr = Ptr[_root_.gobject.GObject]
+object GObject_autoptr: 
+  given _tag: Tag[GObject_autoptr] = Tag.Ptr[_root_.gobject.GObject](_root_.gobject.GObject._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GObject]): GObject_autoptr = o
+  extension (v: GObject_autoptr)
+    inline def value: Ptr[_root_.gobject.GObject] = v
+
+opaque type GObject_listautoptr = Ptr[_root_.glib.GList]
+object GObject_listautoptr: 
+  given _tag: Tag[GObject_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GObject_listautoptr = o
+  extension (v: GObject_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GObject_queueautoptr = Ptr[_root_.glib.GQueue]
+object GObject_queueautoptr: 
+  given _tag: Tag[GObject_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GObject_queueautoptr = o
+  extension (v: GObject_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GObject_slistautoptr = Ptr[_root_.glib.GSList]
+object GObject_slistautoptr: 
+  given _tag: Tag[GObject_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GObject_slistautoptr = o
+  extension (v: GObject_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GOptionContext_autoptr = Ptr[_root_.glib.GOptionContext]
+object GOptionContext_autoptr: 
+  given _tag: Tag[GOptionContext_autoptr] = Tag.Ptr[_root_.glib.GOptionContext](_root_.glib.GOptionContext._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GOptionContext]): GOptionContext_autoptr = o
+  extension (v: GOptionContext_autoptr)
+    inline def value: Ptr[_root_.glib.GOptionContext] = v
+
+opaque type GOptionContext_listautoptr = Ptr[_root_.glib.GList]
+object GOptionContext_listautoptr: 
+  given _tag: Tag[GOptionContext_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GOptionContext_listautoptr = o
+  extension (v: GOptionContext_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GOptionContext_queueautoptr = Ptr[_root_.glib.GQueue]
+object GOptionContext_queueautoptr: 
+  given _tag: Tag[GOptionContext_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GOptionContext_queueautoptr = o
+  extension (v: GOptionContext_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GOptionContext_slistautoptr = Ptr[_root_.glib.GSList]
+object GOptionContext_slistautoptr: 
+  given _tag: Tag[GOptionContext_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GOptionContext_slistautoptr = o
+  extension (v: GOptionContext_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GOptionGroup_autoptr = Ptr[_root_.glib.GOptionGroup]
+object GOptionGroup_autoptr: 
+  given _tag: Tag[GOptionGroup_autoptr] = Tag.Ptr[_root_.glib.GOptionGroup](_root_.glib.GOptionGroup._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GOptionGroup]): GOptionGroup_autoptr = o
+  extension (v: GOptionGroup_autoptr)
+    inline def value: Ptr[_root_.glib.GOptionGroup] = v
+
+opaque type GOptionGroup_listautoptr = Ptr[_root_.glib.GList]
+object GOptionGroup_listautoptr: 
+  given _tag: Tag[GOptionGroup_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GOptionGroup_listautoptr = o
+  extension (v: GOptionGroup_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GOptionGroup_queueautoptr = Ptr[_root_.glib.GQueue]
+object GOptionGroup_queueautoptr: 
+  given _tag: Tag[GOptionGroup_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GOptionGroup_queueautoptr = o
+  extension (v: GOptionGroup_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GOptionGroup_slistautoptr = Ptr[_root_.glib.GSList]
+object GOptionGroup_slistautoptr: 
+  given _tag: Tag[GOptionGroup_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GOptionGroup_slistautoptr = o
+  extension (v: GOptionGroup_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GOutputStream_autoptr = Ptr[GOutputStream]
 object GOutputStream_autoptr: 
   given _tag: Tag[GOutputStream_autoptr] = Tag.Ptr[GOutputStream](GOutputStream._tag)
@@ -3592,39 +3470,111 @@ object GOutputStream_autoptr:
   extension (v: GOutputStream_autoptr)
     inline def value: Ptr[GOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GOutputStream_listautoptr: 
-  given _tag: Tag[GOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GOutputStream_listautoptr = o
+  given _tag: Tag[GOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GOutputStream_listautoptr = o
   extension (v: GOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GOutputStream_queueautoptr: 
-  given _tag: Tag[GOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GOutputStream_queueautoptr = o
+  given _tag: Tag[GOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GOutputStream_queueautoptr = o
   extension (v: GOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GOutputStream_slistautoptr: 
-  given _tag: Tag[GOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GOutputStream_slistautoptr = o
+  given _tag: Tag[GOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GOutputStream_slistautoptr = o
   extension (v: GOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GParamSpec_autoptr = Ptr[_root_.gobject.GParamSpec]
+object GParamSpec_autoptr: 
+  given _tag: Tag[GParamSpec_autoptr] = Tag.Ptr[_root_.gobject.GParamSpec](_root_.gobject.GParamSpec._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GParamSpec]): GParamSpec_autoptr = o
+  extension (v: GParamSpec_autoptr)
+    inline def value: Ptr[_root_.gobject.GParamSpec] = v
+
+opaque type GParamSpec_listautoptr = Ptr[_root_.glib.GList]
+object GParamSpec_listautoptr: 
+  given _tag: Tag[GParamSpec_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GParamSpec_listautoptr = o
+  extension (v: GParamSpec_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GParamSpec_queueautoptr = Ptr[_root_.glib.GQueue]
+object GParamSpec_queueautoptr: 
+  given _tag: Tag[GParamSpec_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GParamSpec_queueautoptr = o
+  extension (v: GParamSpec_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GParamSpec_slistautoptr = Ptr[_root_.glib.GSList]
+object GParamSpec_slistautoptr: 
+  given _tag: Tag[GParamSpec_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GParamSpec_slistautoptr = o
+  extension (v: GParamSpec_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GPathBuf_autoptr = Ptr[_root_.glib.GPathBuf]
+object GPathBuf_autoptr: 
+  given _tag: Tag[GPathBuf_autoptr] = Tag.Ptr[_root_.glib.GPathBuf](_root_.glib.GPathBuf._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GPathBuf]): GPathBuf_autoptr = o
+  extension (v: GPathBuf_autoptr)
+    inline def value: Ptr[_root_.glib.GPathBuf] = v
+
+opaque type GPathBuf_listautoptr = Ptr[_root_.glib.GList]
+object GPathBuf_listautoptr: 
+  given _tag: Tag[GPathBuf_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPathBuf_listautoptr = o
+  extension (v: GPathBuf_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GPathBuf_queueautoptr = Ptr[_root_.glib.GQueue]
+object GPathBuf_queueautoptr: 
+  given _tag: Tag[GPathBuf_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPathBuf_queueautoptr = o
+  extension (v: GPathBuf_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GPathBuf_slistautoptr = Ptr[_root_.glib.GSList]
+object GPathBuf_slistautoptr: 
+  given _tag: Tag[GPathBuf_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPathBuf_slistautoptr = o
+  extension (v: GPathBuf_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GPatternSpec_autoptr = Ptr[_root_.glib.GPatternSpec]
+object GPatternSpec_autoptr: 
+  given _tag: Tag[GPatternSpec_autoptr] = Tag.Ptr[_root_.glib.GPatternSpec](_root_.glib.GPatternSpec._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GPatternSpec]): GPatternSpec_autoptr = o
+  extension (v: GPatternSpec_autoptr)
+    inline def value: Ptr[_root_.glib.GPatternSpec] = v
+
+opaque type GPatternSpec_listautoptr = Ptr[_root_.glib.GList]
+object GPatternSpec_listautoptr: 
+  given _tag: Tag[GPatternSpec_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPatternSpec_listautoptr = o
+  extension (v: GPatternSpec_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GPatternSpec_queueautoptr = Ptr[_root_.glib.GQueue]
+object GPatternSpec_queueautoptr: 
+  given _tag: Tag[GPatternSpec_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPatternSpec_queueautoptr = o
+  extension (v: GPatternSpec_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GPatternSpec_slistautoptr = Ptr[_root_.glib.GSList]
+object GPatternSpec_slistautoptr: 
+  given _tag: Tag[GPatternSpec_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPatternSpec_slistautoptr = o
+  extension (v: GPatternSpec_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GPermission_autoptr = Ptr[GPermission]
 object GPermission_autoptr: 
   given _tag: Tag[GPermission_autoptr] = Tag.Ptr[GPermission](GPermission._tag)
@@ -3632,39 +3582,27 @@ object GPermission_autoptr:
   extension (v: GPermission_autoptr)
     inline def value: Ptr[GPermission] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPermission_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GPermission_listautoptr = Ptr[_root_.glib.GList]
 object GPermission_listautoptr: 
-  given _tag: Tag[GPermission_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GPermission_listautoptr = o
+  given _tag: Tag[GPermission_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPermission_listautoptr = o
   extension (v: GPermission_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPermission_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GPermission_queueautoptr = Ptr[_root_.glib.GQueue]
 object GPermission_queueautoptr: 
-  given _tag: Tag[GPermission_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GPermission_queueautoptr = o
+  given _tag: Tag[GPermission_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPermission_queueautoptr = o
   extension (v: GPermission_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPermission_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GPermission_slistautoptr = Ptr[_root_.glib.GSList]
 object GPermission_slistautoptr: 
-  given _tag: Tag[GPermission_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GPermission_slistautoptr = o
+  given _tag: Tag[GPermission_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPermission_slistautoptr = o
   extension (v: GPermission_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GPollableInputStream_autoptr = Ptr[GPollableInputStream]
 object GPollableInputStream_autoptr: 
   given _tag: Tag[GPollableInputStream_autoptr] = Tag.Ptr[GPollableInputStream](GPollableInputStream._tag)
@@ -3672,39 +3610,27 @@ object GPollableInputStream_autoptr:
   extension (v: GPollableInputStream_autoptr)
     inline def value: Ptr[GPollableInputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPollableInputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GPollableInputStream_listautoptr = Ptr[_root_.glib.GList]
 object GPollableInputStream_listautoptr: 
-  given _tag: Tag[GPollableInputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GPollableInputStream_listautoptr = o
+  given _tag: Tag[GPollableInputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPollableInputStream_listautoptr = o
   extension (v: GPollableInputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPollableInputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GPollableInputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GPollableInputStream_queueautoptr: 
-  given _tag: Tag[GPollableInputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GPollableInputStream_queueautoptr = o
+  given _tag: Tag[GPollableInputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPollableInputStream_queueautoptr = o
   extension (v: GPollableInputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPollableInputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GPollableInputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GPollableInputStream_slistautoptr: 
-  given _tag: Tag[GPollableInputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GPollableInputStream_slistautoptr = o
+  given _tag: Tag[GPollableInputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPollableInputStream_slistautoptr = o
   extension (v: GPollableInputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GPollableOutputStream_autoptr = Ptr[GPollableOutputStream]
 object GPollableOutputStream_autoptr: 
   given _tag: Tag[GPollableOutputStream_autoptr] = Tag.Ptr[GPollableOutputStream](GPollableOutputStream._tag)
@@ -3712,51 +3638,41 @@ object GPollableOutputStream_autoptr:
   extension (v: GPollableOutputStream_autoptr)
     inline def value: Ptr[GPollableOutputStream] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPollableOutputStream_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GPollableOutputStream_listautoptr = Ptr[_root_.glib.GList]
 object GPollableOutputStream_listautoptr: 
-  given _tag: Tag[GPollableOutputStream_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GPollableOutputStream_listautoptr = o
+  given _tag: Tag[GPollableOutputStream_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPollableOutputStream_listautoptr = o
   extension (v: GPollableOutputStream_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPollableOutputStream_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GPollableOutputStream_queueautoptr = Ptr[_root_.glib.GQueue]
 object GPollableOutputStream_queueautoptr: 
-  given _tag: Tag[GPollableOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GPollableOutputStream_queueautoptr = o
+  given _tag: Tag[GPollableOutputStream_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPollableOutputStream_queueautoptr = o
   extension (v: GPollableOutputStream_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPollableOutputStream_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GPollableOutputStream_slistautoptr = Ptr[_root_.glib.GSList]
 object GPollableOutputStream_slistautoptr: 
-  given _tag: Tag[GPollableOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GPollableOutputStream_slistautoptr = o
+  given _tag: Tag[GPollableOutputStream_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPollableOutputStream_slistautoptr = o
   extension (v: GPollableOutputStream_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GPollableSourceFunc: _stream: the #GPollableInputStream or #GPollableOutputStream _data: data passed in by the user.
+ * GPollableSourceFunc: _stream: the #GPollableInputStream or #GPollableOutputStream
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GPollableSourceFunc = CFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GPollableSourceFunc = CFuncPtr2[Ptr[_root_.gobject.GObject], _root_.glib.gpointer, _root_.glib.gboolean]
 object GPollableSourceFunc: 
-  given _tag: Tag[GPollableSourceFunc] = Tag.materializeCFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GPollableSourceFunc = o
+  given _tag: Tag[GPollableSourceFunc] = Tag.materializeCFuncPtr2[Ptr[_root_.gobject.GObject], _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GPollableSourceFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr2[Ptr[_root_.gobject.GObject], _root_.glib.gpointer, _root_.glib.gboolean]): GPollableSourceFunc = o
   extension (v: GPollableSourceFunc)
-    inline def value: CFuncPtr2[Ptr[_root_.gobject.all.GObject], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr2[Ptr[_root_.gobject.GObject], _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
-*/
 opaque type GPowerProfileMonitor_autoptr = Ptr[GPowerProfileMonitor]
 object GPowerProfileMonitor_autoptr: 
   given _tag: Tag[GPowerProfileMonitor_autoptr] = Tag.Ptr[GPowerProfileMonitor](GPowerProfileMonitor._tag)
@@ -3764,39 +3680,27 @@ object GPowerProfileMonitor_autoptr:
   extension (v: GPowerProfileMonitor_autoptr)
     inline def value: Ptr[GPowerProfileMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
-*/
-opaque type GPowerProfileMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GPowerProfileMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GPowerProfileMonitor_listautoptr: 
-  given _tag: Tag[GPowerProfileMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GPowerProfileMonitor_listautoptr = o
+  given _tag: Tag[GPowerProfileMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPowerProfileMonitor_listautoptr = o
   extension (v: GPowerProfileMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
-*/
-opaque type GPowerProfileMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GPowerProfileMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GPowerProfileMonitor_queueautoptr: 
-  given _tag: Tag[GPowerProfileMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GPowerProfileMonitor_queueautoptr = o
+  given _tag: Tag[GPowerProfileMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPowerProfileMonitor_queueautoptr = o
   extension (v: GPowerProfileMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gpowerprofilemonitor.h
-*/
-opaque type GPowerProfileMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GPowerProfileMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GPowerProfileMonitor_slistautoptr: 
-  given _tag: Tag[GPowerProfileMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GPowerProfileMonitor_slistautoptr = o
+  given _tag: Tag[GPowerProfileMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPowerProfileMonitor_slistautoptr = o
   extension (v: GPowerProfileMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GPropertyAction_autoptr = Ptr[GPropertyAction]
 object GPropertyAction_autoptr: 
   given _tag: Tag[GPropertyAction_autoptr] = Tag.Ptr[GPropertyAction](GPropertyAction._tag)
@@ -3804,39 +3708,27 @@ object GPropertyAction_autoptr:
   extension (v: GPropertyAction_autoptr)
     inline def value: Ptr[GPropertyAction] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPropertyAction_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GPropertyAction_listautoptr = Ptr[_root_.glib.GList]
 object GPropertyAction_listautoptr: 
-  given _tag: Tag[GPropertyAction_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GPropertyAction_listautoptr = o
+  given _tag: Tag[GPropertyAction_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPropertyAction_listautoptr = o
   extension (v: GPropertyAction_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPropertyAction_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GPropertyAction_queueautoptr = Ptr[_root_.glib.GQueue]
 object GPropertyAction_queueautoptr: 
-  given _tag: Tag[GPropertyAction_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GPropertyAction_queueautoptr = o
+  given _tag: Tag[GPropertyAction_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPropertyAction_queueautoptr = o
   extension (v: GPropertyAction_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GPropertyAction_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GPropertyAction_slistautoptr = Ptr[_root_.glib.GSList]
 object GPropertyAction_slistautoptr: 
-  given _tag: Tag[GPropertyAction_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GPropertyAction_slistautoptr = o
+  given _tag: Tag[GPropertyAction_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPropertyAction_slistautoptr = o
   extension (v: GPropertyAction_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GProxyAddressEnumerator_autoptr = Ptr[GProxyAddressEnumerator]
 object GProxyAddressEnumerator_autoptr: 
   given _tag: Tag[GProxyAddressEnumerator_autoptr] = Tag.Ptr[GProxyAddressEnumerator](GProxyAddressEnumerator._tag)
@@ -3844,39 +3736,27 @@ object GProxyAddressEnumerator_autoptr:
   extension (v: GProxyAddressEnumerator_autoptr)
     inline def value: Ptr[GProxyAddressEnumerator] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyAddressEnumerator_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GProxyAddressEnumerator_listautoptr = Ptr[_root_.glib.GList]
 object GProxyAddressEnumerator_listautoptr: 
-  given _tag: Tag[GProxyAddressEnumerator_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GProxyAddressEnumerator_listautoptr = o
+  given _tag: Tag[GProxyAddressEnumerator_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GProxyAddressEnumerator_listautoptr = o
   extension (v: GProxyAddressEnumerator_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyAddressEnumerator_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GProxyAddressEnumerator_queueautoptr = Ptr[_root_.glib.GQueue]
 object GProxyAddressEnumerator_queueautoptr: 
-  given _tag: Tag[GProxyAddressEnumerator_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GProxyAddressEnumerator_queueautoptr = o
+  given _tag: Tag[GProxyAddressEnumerator_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GProxyAddressEnumerator_queueautoptr = o
   extension (v: GProxyAddressEnumerator_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyAddressEnumerator_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GProxyAddressEnumerator_slistautoptr = Ptr[_root_.glib.GSList]
 object GProxyAddressEnumerator_slistautoptr: 
-  given _tag: Tag[GProxyAddressEnumerator_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GProxyAddressEnumerator_slistautoptr = o
+  given _tag: Tag[GProxyAddressEnumerator_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GProxyAddressEnumerator_slistautoptr = o
   extension (v: GProxyAddressEnumerator_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GProxyAddress_autoptr = Ptr[GProxyAddress]
 object GProxyAddress_autoptr: 
   given _tag: Tag[GProxyAddress_autoptr] = Tag.Ptr[GProxyAddress](GProxyAddress._tag)
@@ -3884,39 +3764,27 @@ object GProxyAddress_autoptr:
   extension (v: GProxyAddress_autoptr)
     inline def value: Ptr[GProxyAddress] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyAddress_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GProxyAddress_listautoptr = Ptr[_root_.glib.GList]
 object GProxyAddress_listautoptr: 
-  given _tag: Tag[GProxyAddress_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GProxyAddress_listautoptr = o
+  given _tag: Tag[GProxyAddress_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GProxyAddress_listautoptr = o
   extension (v: GProxyAddress_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GProxyAddress_queueautoptr = Ptr[_root_.glib.GQueue]
 object GProxyAddress_queueautoptr: 
-  given _tag: Tag[GProxyAddress_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GProxyAddress_queueautoptr = o
+  given _tag: Tag[GProxyAddress_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GProxyAddress_queueautoptr = o
   extension (v: GProxyAddress_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GProxyAddress_slistautoptr = Ptr[_root_.glib.GSList]
 object GProxyAddress_slistautoptr: 
-  given _tag: Tag[GProxyAddress_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GProxyAddress_slistautoptr = o
+  given _tag: Tag[GProxyAddress_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GProxyAddress_slistautoptr = o
   extension (v: GProxyAddress_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GProxyResolver_autoptr = Ptr[GProxyResolver]
 object GProxyResolver_autoptr: 
   given _tag: Tag[GProxyResolver_autoptr] = Tag.Ptr[GProxyResolver](GProxyResolver._tag)
@@ -3924,39 +3792,27 @@ object GProxyResolver_autoptr:
   extension (v: GProxyResolver_autoptr)
     inline def value: Ptr[GProxyResolver] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyResolver_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GProxyResolver_listautoptr = Ptr[_root_.glib.GList]
 object GProxyResolver_listautoptr: 
-  given _tag: Tag[GProxyResolver_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GProxyResolver_listautoptr = o
+  given _tag: Tag[GProxyResolver_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GProxyResolver_listautoptr = o
   extension (v: GProxyResolver_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyResolver_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GProxyResolver_queueautoptr = Ptr[_root_.glib.GQueue]
 object GProxyResolver_queueautoptr: 
-  given _tag: Tag[GProxyResolver_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GProxyResolver_queueautoptr = o
+  given _tag: Tag[GProxyResolver_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GProxyResolver_queueautoptr = o
   extension (v: GProxyResolver_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxyResolver_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GProxyResolver_slistautoptr = Ptr[_root_.glib.GSList]
 object GProxyResolver_slistautoptr: 
-  given _tag: Tag[GProxyResolver_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GProxyResolver_slistautoptr = o
+  given _tag: Tag[GProxyResolver_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GProxyResolver_slistautoptr = o
   extension (v: GProxyResolver_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GProxy_autoptr = Ptr[GProxy]
 object GProxy_autoptr: 
   given _tag: Tag[GProxy_autoptr] = Tag.Ptr[GProxy](GProxy._tag)
@@ -3964,51 +3820,265 @@ object GProxy_autoptr:
   extension (v: GProxy_autoptr)
     inline def value: Ptr[GProxy] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxy_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GProxy_listautoptr = Ptr[_root_.glib.GList]
 object GProxy_listautoptr: 
-  given _tag: Tag[GProxy_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GProxy_listautoptr = o
+  given _tag: Tag[GProxy_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GProxy_listautoptr = o
   extension (v: GProxy_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxy_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GProxy_queueautoptr = Ptr[_root_.glib.GQueue]
 object GProxy_queueautoptr: 
-  given _tag: Tag[GProxy_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GProxy_queueautoptr = o
+  given _tag: Tag[GProxy_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GProxy_queueautoptr = o
   extension (v: GProxy_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GProxy_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GProxy_slistautoptr = Ptr[_root_.glib.GSList]
 object GProxy_slistautoptr: 
-  given _tag: Tag[GProxy_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GProxy_slistautoptr = o
+  given _tag: Tag[GProxy_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GProxy_slistautoptr = o
   extension (v: GProxy_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GPtrArray_autoptr = Ptr[_root_.glib.GPtrArray]
+object GPtrArray_autoptr: 
+  given _tag: Tag[GPtrArray_autoptr] = Tag.Ptr[_root_.glib.GPtrArray](_root_.glib.GPtrArray._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GPtrArray]): GPtrArray_autoptr = o
+  extension (v: GPtrArray_autoptr)
+    inline def value: Ptr[_root_.glib.GPtrArray] = v
+
+opaque type GPtrArray_listautoptr = Ptr[_root_.glib.GList]
+object GPtrArray_listautoptr: 
+  given _tag: Tag[GPtrArray_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GPtrArray_listautoptr = o
+  extension (v: GPtrArray_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GPtrArray_queueautoptr = Ptr[_root_.glib.GQueue]
+object GPtrArray_queueautoptr: 
+  given _tag: Tag[GPtrArray_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GPtrArray_queueautoptr = o
+  extension (v: GPtrArray_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GPtrArray_slistautoptr = Ptr[_root_.glib.GSList]
+object GPtrArray_slistautoptr: 
+  given _tag: Tag[GPtrArray_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GPtrArray_slistautoptr = o
+  extension (v: GPtrArray_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GQueue_autoptr = Ptr[_root_.glib.GQueue]
+object GQueue_autoptr: 
+  given _tag: Tag[GQueue_autoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GQueue_autoptr = o
+  extension (v: GQueue_autoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GQueue_listautoptr = Ptr[_root_.glib.GList]
+object GQueue_listautoptr: 
+  given _tag: Tag[GQueue_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GQueue_listautoptr = o
+  extension (v: GQueue_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GQueue_queueautoptr = Ptr[_root_.glib.GQueue]
+object GQueue_queueautoptr: 
+  given _tag: Tag[GQueue_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GQueue_queueautoptr = o
+  extension (v: GQueue_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GQueue_slistautoptr = Ptr[_root_.glib.GSList]
+object GQueue_slistautoptr: 
+  given _tag: Tag[GQueue_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GQueue_slistautoptr = o
+  extension (v: GQueue_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GRWLockReaderLocker_autoptr = Ptr[_root_.glib.GRWLockReaderLocker]
+object GRWLockReaderLocker_autoptr: 
+  given _tag: Tag[GRWLockReaderLocker_autoptr] = Tag.Ptr[_root_.glib.GRWLockReaderLocker](_root_.glib.GRWLockReaderLocker._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GRWLockReaderLocker]): GRWLockReaderLocker_autoptr = o
+  extension (v: GRWLockReaderLocker_autoptr)
+    inline def value: Ptr[_root_.glib.GRWLockReaderLocker] = v
+
+opaque type GRWLockReaderLocker_listautoptr = Ptr[_root_.glib.GList]
+object GRWLockReaderLocker_listautoptr: 
+  given _tag: Tag[GRWLockReaderLocker_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRWLockReaderLocker_listautoptr = o
+  extension (v: GRWLockReaderLocker_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GRWLockReaderLocker_queueautoptr = Ptr[_root_.glib.GQueue]
+object GRWLockReaderLocker_queueautoptr: 
+  given _tag: Tag[GRWLockReaderLocker_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRWLockReaderLocker_queueautoptr = o
+  extension (v: GRWLockReaderLocker_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GRWLockReaderLocker_slistautoptr = Ptr[_root_.glib.GSList]
+object GRWLockReaderLocker_slistautoptr: 
+  given _tag: Tag[GRWLockReaderLocker_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRWLockReaderLocker_slistautoptr = o
+  extension (v: GRWLockReaderLocker_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GRWLockWriterLocker_autoptr = Ptr[_root_.glib.GRWLockWriterLocker]
+object GRWLockWriterLocker_autoptr: 
+  given _tag: Tag[GRWLockWriterLocker_autoptr] = Tag.Ptr[_root_.glib.GRWLockWriterLocker](_root_.glib.GRWLockWriterLocker._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GRWLockWriterLocker]): GRWLockWriterLocker_autoptr = o
+  extension (v: GRWLockWriterLocker_autoptr)
+    inline def value: Ptr[_root_.glib.GRWLockWriterLocker] = v
+
+opaque type GRWLockWriterLocker_listautoptr = Ptr[_root_.glib.GList]
+object GRWLockWriterLocker_listautoptr: 
+  given _tag: Tag[GRWLockWriterLocker_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRWLockWriterLocker_listautoptr = o
+  extension (v: GRWLockWriterLocker_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GRWLockWriterLocker_queueautoptr = Ptr[_root_.glib.GQueue]
+object GRWLockWriterLocker_queueautoptr: 
+  given _tag: Tag[GRWLockWriterLocker_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRWLockWriterLocker_queueautoptr = o
+  extension (v: GRWLockWriterLocker_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GRWLockWriterLocker_slistautoptr = Ptr[_root_.glib.GSList]
+object GRWLockWriterLocker_slistautoptr: 
+  given _tag: Tag[GRWLockWriterLocker_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRWLockWriterLocker_slistautoptr = o
+  extension (v: GRWLockWriterLocker_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GRand_autoptr = Ptr[_root_.glib.GRand]
+object GRand_autoptr: 
+  given _tag: Tag[GRand_autoptr] = Tag.Ptr[_root_.glib.GRand](_root_.glib.GRand._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GRand]): GRand_autoptr = o
+  extension (v: GRand_autoptr)
+    inline def value: Ptr[_root_.glib.GRand] = v
+
+opaque type GRand_listautoptr = Ptr[_root_.glib.GList]
+object GRand_listautoptr: 
+  given _tag: Tag[GRand_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRand_listautoptr = o
+  extension (v: GRand_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GRand_queueautoptr = Ptr[_root_.glib.GQueue]
+object GRand_queueautoptr: 
+  given _tag: Tag[GRand_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRand_queueautoptr = o
+  extension (v: GRand_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GRand_slistautoptr = Ptr[_root_.glib.GSList]
+object GRand_slistautoptr: 
+  given _tag: Tag[GRand_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRand_slistautoptr = o
+  extension (v: GRand_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GReallocFunc:
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gmemoryoutputstream.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gmemoryoutputstream.h
 */
-opaque type GReallocFunc = CFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer]
+opaque type GReallocFunc = CFuncPtr2[_root_.glib.gpointer, _root_.glib.gsize, _root_.glib.gpointer]
 object GReallocFunc: 
-  given _tag: Tag[GReallocFunc] = Tag.materializeCFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer]
-  inline def apply(inline o: CFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer]): GReallocFunc = o
+  given _tag: Tag[GReallocFunc] = Tag.materializeCFuncPtr2[_root_.glib.gpointer, _root_.glib.gsize, _root_.glib.gpointer]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GReallocFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr2[_root_.glib.gpointer, _root_.glib.gsize, _root_.glib.gpointer]): GReallocFunc = o
   extension (v: GReallocFunc)
-    inline def value: CFuncPtr2[_root_.glib.all.gpointer, _root_.glib.all.gsize, _root_.glib.all.gpointer] = v
+    inline def value: CFuncPtr2[_root_.glib.gpointer, _root_.glib.gsize, _root_.glib.gpointer] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GRecMutexLocker_autoptr = Ptr[_root_.glib.GRecMutexLocker]
+object GRecMutexLocker_autoptr: 
+  given _tag: Tag[GRecMutexLocker_autoptr] = Tag.Ptr[_root_.glib.GRecMutexLocker](_root_.glib.GRecMutexLocker._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GRecMutexLocker]): GRecMutexLocker_autoptr = o
+  extension (v: GRecMutexLocker_autoptr)
+    inline def value: Ptr[_root_.glib.GRecMutexLocker] = v
+
+opaque type GRecMutexLocker_listautoptr = Ptr[_root_.glib.GList]
+object GRecMutexLocker_listautoptr: 
+  given _tag: Tag[GRecMutexLocker_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRecMutexLocker_listautoptr = o
+  extension (v: GRecMutexLocker_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GRecMutexLocker_queueautoptr = Ptr[_root_.glib.GQueue]
+object GRecMutexLocker_queueautoptr: 
+  given _tag: Tag[GRecMutexLocker_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRecMutexLocker_queueautoptr = o
+  extension (v: GRecMutexLocker_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GRecMutexLocker_slistautoptr = Ptr[_root_.glib.GSList]
+object GRecMutexLocker_slistautoptr: 
+  given _tag: Tag[GRecMutexLocker_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRecMutexLocker_slistautoptr = o
+  extension (v: GRecMutexLocker_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GRefString_autoptr = Ptr[_root_.glib.GRefString]
+object GRefString_autoptr: 
+  given _tag: Tag[GRefString_autoptr] = Tag.Ptr[_root_.glib.GRefString](_root_.glib.GRefString._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GRefString]): GRefString_autoptr = o
+  extension (v: GRefString_autoptr)
+    inline def value: Ptr[_root_.glib.GRefString] = v
+
+opaque type GRefString_listautoptr = Ptr[_root_.glib.GList]
+object GRefString_listautoptr: 
+  given _tag: Tag[GRefString_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRefString_listautoptr = o
+  extension (v: GRefString_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GRefString_queueautoptr = Ptr[_root_.glib.GQueue]
+object GRefString_queueautoptr: 
+  given _tag: Tag[GRefString_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRefString_queueautoptr = o
+  extension (v: GRefString_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GRefString_slistautoptr = Ptr[_root_.glib.GSList]
+object GRefString_slistautoptr: 
+  given _tag: Tag[GRefString_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRefString_slistautoptr = o
+  extension (v: GRefString_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GRegex_autoptr = Ptr[_root_.glib.GRegex]
+object GRegex_autoptr: 
+  given _tag: Tag[GRegex_autoptr] = Tag.Ptr[_root_.glib.GRegex](_root_.glib.GRegex._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GRegex]): GRegex_autoptr = o
+  extension (v: GRegex_autoptr)
+    inline def value: Ptr[_root_.glib.GRegex] = v
+
+opaque type GRegex_listautoptr = Ptr[_root_.glib.GList]
+object GRegex_listautoptr: 
+  given _tag: Tag[GRegex_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRegex_listautoptr = o
+  extension (v: GRegex_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GRegex_queueautoptr = Ptr[_root_.glib.GQueue]
+object GRegex_queueautoptr: 
+  given _tag: Tag[GRegex_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRegex_queueautoptr = o
+  extension (v: GRegex_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GRegex_slistautoptr = Ptr[_root_.glib.GSList]
+object GRegex_slistautoptr: 
+  given _tag: Tag[GRegex_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRegex_slistautoptr = o
+  extension (v: GRegex_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GRemoteActionGroup_autoptr = Ptr[GRemoteActionGroup]
 object GRemoteActionGroup_autoptr: 
   given _tag: Tag[GRemoteActionGroup_autoptr] = Tag.Ptr[GRemoteActionGroup](GRemoteActionGroup._tag)
@@ -4016,39 +4086,27 @@ object GRemoteActionGroup_autoptr:
   extension (v: GRemoteActionGroup_autoptr)
     inline def value: Ptr[GRemoteActionGroup] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GRemoteActionGroup_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GRemoteActionGroup_listautoptr = Ptr[_root_.glib.GList]
 object GRemoteActionGroup_listautoptr: 
-  given _tag: Tag[GRemoteActionGroup_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GRemoteActionGroup_listautoptr = o
+  given _tag: Tag[GRemoteActionGroup_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GRemoteActionGroup_listautoptr = o
   extension (v: GRemoteActionGroup_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GRemoteActionGroup_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GRemoteActionGroup_queueautoptr = Ptr[_root_.glib.GQueue]
 object GRemoteActionGroup_queueautoptr: 
-  given _tag: Tag[GRemoteActionGroup_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GRemoteActionGroup_queueautoptr = o
+  given _tag: Tag[GRemoteActionGroup_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GRemoteActionGroup_queueautoptr = o
   extension (v: GRemoteActionGroup_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GRemoteActionGroup_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GRemoteActionGroup_slistautoptr = Ptr[_root_.glib.GSList]
 object GRemoteActionGroup_slistautoptr: 
-  given _tag: Tag[GRemoteActionGroup_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GRemoteActionGroup_slistautoptr = o
+  given _tag: Tag[GRemoteActionGroup_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GRemoteActionGroup_slistautoptr = o
   extension (v: GRemoteActionGroup_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GResolver_autoptr = Ptr[GResolver]
 object GResolver_autoptr: 
   given _tag: Tag[GResolver_autoptr] = Tag.Ptr[GResolver](GResolver._tag)
@@ -4056,39 +4114,27 @@ object GResolver_autoptr:
   extension (v: GResolver_autoptr)
     inline def value: Ptr[GResolver] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GResolver_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GResolver_listautoptr = Ptr[_root_.glib.GList]
 object GResolver_listautoptr: 
-  given _tag: Tag[GResolver_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GResolver_listautoptr = o
+  given _tag: Tag[GResolver_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GResolver_listautoptr = o
   extension (v: GResolver_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GResolver_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GResolver_queueautoptr = Ptr[_root_.glib.GQueue]
 object GResolver_queueautoptr: 
-  given _tag: Tag[GResolver_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GResolver_queueautoptr = o
+  given _tag: Tag[GResolver_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GResolver_queueautoptr = o
   extension (v: GResolver_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GResolver_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GResolver_slistautoptr = Ptr[_root_.glib.GSList]
 object GResolver_slistautoptr: 
-  given _tag: Tag[GResolver_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GResolver_slistautoptr = o
+  given _tag: Tag[GResolver_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GResolver_slistautoptr = o
   extension (v: GResolver_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GResource_autoptr = Ptr[GResource]
 object GResource_autoptr: 
   given _tag: Tag[GResource_autoptr] = Tag.Ptr[GResource](GResource._tag)
@@ -4096,39 +4142,83 @@ object GResource_autoptr:
   extension (v: GResource_autoptr)
     inline def value: Ptr[GResource] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GResource_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GResource_listautoptr = Ptr[_root_.glib.GList]
 object GResource_listautoptr: 
-  given _tag: Tag[GResource_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GResource_listautoptr = o
+  given _tag: Tag[GResource_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GResource_listautoptr = o
   extension (v: GResource_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GResource_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GResource_queueautoptr = Ptr[_root_.glib.GQueue]
 object GResource_queueautoptr: 
-  given _tag: Tag[GResource_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GResource_queueautoptr = o
+  given _tag: Tag[GResource_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GResource_queueautoptr = o
   extension (v: GResource_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GResource_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GResource_slistautoptr = Ptr[_root_.glib.GSList]
 object GResource_slistautoptr: 
-  given _tag: Tag[GResource_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GResource_slistautoptr = o
+  given _tag: Tag[GResource_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GResource_slistautoptr = o
   extension (v: GResource_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GSList_autoptr = Ptr[_root_.glib.GSList]
+object GSList_autoptr: 
+  given _tag: Tag[GSList_autoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSList_autoptr = o
+  extension (v: GSList_autoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GSList_listautoptr = Ptr[_root_.glib.GList]
+object GSList_listautoptr: 
+  given _tag: Tag[GSList_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSList_listautoptr = o
+  extension (v: GSList_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GSList_queueautoptr = Ptr[_root_.glib.GQueue]
+object GSList_queueautoptr: 
+  given _tag: Tag[GSList_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSList_queueautoptr = o
+  extension (v: GSList_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GSList_slistautoptr = Ptr[_root_.glib.GSList]
+object GSList_slistautoptr: 
+  given _tag: Tag[GSList_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSList_slistautoptr = o
+  extension (v: GSList_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GScanner_autoptr = Ptr[_root_.glib.GScanner]
+object GScanner_autoptr: 
+  given _tag: Tag[GScanner_autoptr] = Tag.Ptr[_root_.glib.GScanner](_root_.glib.GScanner._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GScanner]): GScanner_autoptr = o
+  extension (v: GScanner_autoptr)
+    inline def value: Ptr[_root_.glib.GScanner] = v
+
+opaque type GScanner_listautoptr = Ptr[_root_.glib.GList]
+object GScanner_listautoptr: 
+  given _tag: Tag[GScanner_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GScanner_listautoptr = o
+  extension (v: GScanner_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GScanner_queueautoptr = Ptr[_root_.glib.GQueue]
+object GScanner_queueautoptr: 
+  given _tag: Tag[GScanner_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GScanner_queueautoptr = o
+  extension (v: GScanner_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GScanner_slistautoptr = Ptr[_root_.glib.GSList]
+object GScanner_slistautoptr: 
+  given _tag: Tag[GScanner_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GScanner_slistautoptr = o
+  extension (v: GScanner_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GSeekable_autoptr = Ptr[GSeekable]
 object GSeekable_autoptr: 
   given _tag: Tag[GSeekable_autoptr] = Tag.Ptr[GSeekable](GSeekable._tag)
@@ -4136,39 +4226,55 @@ object GSeekable_autoptr:
   extension (v: GSeekable_autoptr)
     inline def value: Ptr[GSeekable] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSeekable_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSeekable_listautoptr = Ptr[_root_.glib.GList]
 object GSeekable_listautoptr: 
-  given _tag: Tag[GSeekable_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSeekable_listautoptr = o
+  given _tag: Tag[GSeekable_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSeekable_listautoptr = o
   extension (v: GSeekable_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSeekable_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSeekable_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSeekable_queueautoptr: 
-  given _tag: Tag[GSeekable_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSeekable_queueautoptr = o
+  given _tag: Tag[GSeekable_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSeekable_queueautoptr = o
   extension (v: GSeekable_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSeekable_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSeekable_slistautoptr = Ptr[_root_.glib.GSList]
 object GSeekable_slistautoptr: 
-  given _tag: Tag[GSeekable_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSeekable_slistautoptr = o
+  given _tag: Tag[GSeekable_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSeekable_slistautoptr = o
   extension (v: GSeekable_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GSequence_autoptr = Ptr[_root_.glib.GSequence]
+object GSequence_autoptr: 
+  given _tag: Tag[GSequence_autoptr] = Tag.Ptr[_root_.glib.GSequence](_root_.glib.GSequence._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSequence]): GSequence_autoptr = o
+  extension (v: GSequence_autoptr)
+    inline def value: Ptr[_root_.glib.GSequence] = v
+
+opaque type GSequence_listautoptr = Ptr[_root_.glib.GList]
+object GSequence_listautoptr: 
+  given _tag: Tag[GSequence_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSequence_listautoptr = o
+  extension (v: GSequence_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GSequence_queueautoptr = Ptr[_root_.glib.GQueue]
+object GSequence_queueautoptr: 
+  given _tag: Tag[GSequence_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSequence_queueautoptr = o
+  extension (v: GSequence_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GSequence_slistautoptr = Ptr[_root_.glib.GSList]
+object GSequence_slistautoptr: 
+  given _tag: Tag[GSequence_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSequence_slistautoptr = o
+  extension (v: GSequence_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GSettingsBackend_autoptr = Ptr[GSettingsBackend]
 object GSettingsBackend_autoptr: 
   given _tag: Tag[GSettingsBackend_autoptr] = Tag.Ptr[GSettingsBackend](GSettingsBackend._tag)
@@ -4176,75 +4282,69 @@ object GSettingsBackend_autoptr:
   extension (v: GSettingsBackend_autoptr)
     inline def value: Ptr[GSettingsBackend] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsBackend_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSettingsBackend_listautoptr = Ptr[_root_.glib.GList]
 object GSettingsBackend_listautoptr: 
-  given _tag: Tag[GSettingsBackend_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSettingsBackend_listautoptr = o
+  given _tag: Tag[GSettingsBackend_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSettingsBackend_listautoptr = o
   extension (v: GSettingsBackend_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsBackend_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSettingsBackend_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSettingsBackend_queueautoptr: 
-  given _tag: Tag[GSettingsBackend_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSettingsBackend_queueautoptr = o
+  given _tag: Tag[GSettingsBackend_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSettingsBackend_queueautoptr = o
   extension (v: GSettingsBackend_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsBackend_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSettingsBackend_slistautoptr = Ptr[_root_.glib.GSList]
 object GSettingsBackend_slistautoptr: 
-  given _tag: Tag[GSettingsBackend_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSettingsBackend_slistautoptr = o
+  given _tag: Tag[GSettingsBackend_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSettingsBackend_slistautoptr = o
   extension (v: GSettingsBackend_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GSettingsBindGetMapping: : return location for the property value : the #GVariant _data: user data that was specified when the binding was created
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gsettings.h
 */
-opaque type GSettingsBindGetMapping = CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GSettingsBindGetMapping = CFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, _root_.glib.gboolean]
 object GSettingsBindGetMapping: 
-  given _tag: Tag[GSettingsBindGetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GSettingsBindGetMapping = o
+  given _tag: Tag[GSettingsBindGetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GSettingsBindGetMapping = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, _root_.glib.gboolean]): GSettingsBindGetMapping = o
   extension (v: GSettingsBindGetMapping)
-    inline def value: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariant], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariant], _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GSettingsBindSetMapping: : a #GValue containing the property value to map _type: the #GVariantType to create _data: user data that was specified when the binding was created
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gsettings.h
 */
-opaque type GSettingsBindSetMapping = CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
+opaque type GSettingsBindSetMapping = CFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariantType], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]]
 object GSettingsBindSetMapping: 
-  given _tag: Tag[GSettingsBindSetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]
-  inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]]): GSettingsBindSetMapping = o
+  given _tag: Tag[GSettingsBindSetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariantType], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GSettingsBindSetMapping = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariantType], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]]): GSettingsBindSetMapping = o
   extension (v: GSettingsBindSetMapping)
-    inline def value: CFuncPtr3[Ptr[_root_.gobject.all.GValue], Ptr[_root_.glib.all.GVariantType], _root_.glib.all.gpointer, Ptr[_root_.glib.all.GVariant]] = v
+    inline def value: CFuncPtr3[Ptr[_root_.gobject.GValue], Ptr[_root_.glib.GVariantType], _root_.glib.gpointer, Ptr[_root_.glib.GVariant]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
  * GSettingsGetMapping: : the #GVariant to map, or %NULL
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gsettings.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gsettings.h
 */
-opaque type GSettingsGetMapping = CFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GSettingsGetMapping = CFuncPtr3[Ptr[_root_.glib.GVariant], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, _root_.glib.gboolean]
 object GSettingsGetMapping: 
-  given _tag: Tag[GSettingsGetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GSettingsGetMapping = o
+  given _tag: Tag[GSettingsGetMapping] = Tag.materializeCFuncPtr3[Ptr[_root_.glib.GVariant], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GSettingsGetMapping = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[_root_.glib.GVariant], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, _root_.glib.gboolean]): GSettingsGetMapping = o
   extension (v: GSettingsGetMapping)
-    inline def value: CFuncPtr3[Ptr[_root_.glib.all.GVariant], Ptr[_root_.glib.all.gpointer], _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr3[Ptr[_root_.glib.GVariant], Ptr[_root_.glib.gpointer], _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSettingsSchemaKey_autoptr = Ptr[GSettingsSchemaKey]
 object GSettingsSchemaKey_autoptr: 
   given _tag: Tag[GSettingsSchemaKey_autoptr] = Tag.Ptr[GSettingsSchemaKey](GSettingsSchemaKey._tag)
@@ -4252,39 +4352,27 @@ object GSettingsSchemaKey_autoptr:
   extension (v: GSettingsSchemaKey_autoptr)
     inline def value: Ptr[GSettingsSchemaKey] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchemaKey_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSettingsSchemaKey_listautoptr = Ptr[_root_.glib.GList]
 object GSettingsSchemaKey_listautoptr: 
-  given _tag: Tag[GSettingsSchemaKey_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSettingsSchemaKey_listautoptr = o
+  given _tag: Tag[GSettingsSchemaKey_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSettingsSchemaKey_listautoptr = o
   extension (v: GSettingsSchemaKey_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchemaKey_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSettingsSchemaKey_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSettingsSchemaKey_queueautoptr: 
-  given _tag: Tag[GSettingsSchemaKey_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSettingsSchemaKey_queueautoptr = o
+  given _tag: Tag[GSettingsSchemaKey_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSettingsSchemaKey_queueautoptr = o
   extension (v: GSettingsSchemaKey_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchemaKey_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSettingsSchemaKey_slistautoptr = Ptr[_root_.glib.GSList]
 object GSettingsSchemaKey_slistautoptr: 
-  given _tag: Tag[GSettingsSchemaKey_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSettingsSchemaKey_slistautoptr = o
+  given _tag: Tag[GSettingsSchemaKey_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSettingsSchemaKey_slistautoptr = o
   extension (v: GSettingsSchemaKey_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSettingsSchemaSource_autoptr = Ptr[GSettingsSchemaSource]
 object GSettingsSchemaSource_autoptr: 
   given _tag: Tag[GSettingsSchemaSource_autoptr] = Tag.Ptr[GSettingsSchemaSource](GSettingsSchemaSource._tag)
@@ -4292,39 +4380,27 @@ object GSettingsSchemaSource_autoptr:
   extension (v: GSettingsSchemaSource_autoptr)
     inline def value: Ptr[GSettingsSchemaSource] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchemaSource_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSettingsSchemaSource_listautoptr = Ptr[_root_.glib.GList]
 object GSettingsSchemaSource_listautoptr: 
-  given _tag: Tag[GSettingsSchemaSource_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSettingsSchemaSource_listautoptr = o
+  given _tag: Tag[GSettingsSchemaSource_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSettingsSchemaSource_listautoptr = o
   extension (v: GSettingsSchemaSource_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchemaSource_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSettingsSchemaSource_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSettingsSchemaSource_queueautoptr: 
-  given _tag: Tag[GSettingsSchemaSource_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSettingsSchemaSource_queueautoptr = o
+  given _tag: Tag[GSettingsSchemaSource_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSettingsSchemaSource_queueautoptr = o
   extension (v: GSettingsSchemaSource_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchemaSource_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSettingsSchemaSource_slistautoptr = Ptr[_root_.glib.GSList]
 object GSettingsSchemaSource_slistautoptr: 
-  given _tag: Tag[GSettingsSchemaSource_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSettingsSchemaSource_slistautoptr = o
+  given _tag: Tag[GSettingsSchemaSource_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSettingsSchemaSource_slistautoptr = o
   extension (v: GSettingsSchemaSource_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSettingsSchema_autoptr = Ptr[GSettingsSchema]
 object GSettingsSchema_autoptr: 
   given _tag: Tag[GSettingsSchema_autoptr] = Tag.Ptr[GSettingsSchema](GSettingsSchema._tag)
@@ -4332,39 +4408,27 @@ object GSettingsSchema_autoptr:
   extension (v: GSettingsSchema_autoptr)
     inline def value: Ptr[GSettingsSchema] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchema_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSettingsSchema_listautoptr = Ptr[_root_.glib.GList]
 object GSettingsSchema_listautoptr: 
-  given _tag: Tag[GSettingsSchema_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSettingsSchema_listautoptr = o
+  given _tag: Tag[GSettingsSchema_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSettingsSchema_listautoptr = o
   extension (v: GSettingsSchema_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchema_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSettingsSchema_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSettingsSchema_queueautoptr: 
-  given _tag: Tag[GSettingsSchema_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSettingsSchema_queueautoptr = o
+  given _tag: Tag[GSettingsSchema_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSettingsSchema_queueautoptr = o
   extension (v: GSettingsSchema_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettingsSchema_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSettingsSchema_slistautoptr = Ptr[_root_.glib.GSList]
 object GSettingsSchema_slistautoptr: 
-  given _tag: Tag[GSettingsSchema_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSettingsSchema_slistautoptr = o
+  given _tag: Tag[GSettingsSchema_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSettingsSchema_slistautoptr = o
   extension (v: GSettingsSchema_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSettings_autoptr = Ptr[GSettings]
 object GSettings_autoptr: 
   given _tag: Tag[GSettings_autoptr] = Tag.Ptr[GSettings](GSettings._tag)
@@ -4372,39 +4436,27 @@ object GSettings_autoptr:
   extension (v: GSettings_autoptr)
     inline def value: Ptr[GSettings] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettings_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSettings_listautoptr = Ptr[_root_.glib.GList]
 object GSettings_listautoptr: 
-  given _tag: Tag[GSettings_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSettings_listautoptr = o
+  given _tag: Tag[GSettings_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSettings_listautoptr = o
   extension (v: GSettings_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettings_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSettings_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSettings_queueautoptr: 
-  given _tag: Tag[GSettings_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSettings_queueautoptr = o
+  given _tag: Tag[GSettings_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSettings_queueautoptr = o
   extension (v: GSettings_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSettings_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSettings_slistautoptr = Ptr[_root_.glib.GSList]
 object GSettings_slistautoptr: 
-  given _tag: Tag[GSettings_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSettings_slistautoptr = o
+  given _tag: Tag[GSettings_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSettings_slistautoptr = o
   extension (v: GSettings_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSimpleActionGroup_autoptr = Ptr[GSimpleActionGroup]
 object GSimpleActionGroup_autoptr: 
   given _tag: Tag[GSimpleActionGroup_autoptr] = Tag.Ptr[GSimpleActionGroup](GSimpleActionGroup._tag)
@@ -4412,39 +4464,27 @@ object GSimpleActionGroup_autoptr:
   extension (v: GSimpleActionGroup_autoptr)
     inline def value: Ptr[GSimpleActionGroup] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleActionGroup_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSimpleActionGroup_listautoptr = Ptr[_root_.glib.GList]
 object GSimpleActionGroup_listautoptr: 
-  given _tag: Tag[GSimpleActionGroup_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSimpleActionGroup_listautoptr = o
+  given _tag: Tag[GSimpleActionGroup_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSimpleActionGroup_listautoptr = o
   extension (v: GSimpleActionGroup_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleActionGroup_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSimpleActionGroup_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSimpleActionGroup_queueautoptr: 
-  given _tag: Tag[GSimpleActionGroup_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSimpleActionGroup_queueautoptr = o
+  given _tag: Tag[GSimpleActionGroup_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSimpleActionGroup_queueautoptr = o
   extension (v: GSimpleActionGroup_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleActionGroup_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSimpleActionGroup_slistautoptr = Ptr[_root_.glib.GSList]
 object GSimpleActionGroup_slistautoptr: 
-  given _tag: Tag[GSimpleActionGroup_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSimpleActionGroup_slistautoptr = o
+  given _tag: Tag[GSimpleActionGroup_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSimpleActionGroup_slistautoptr = o
   extension (v: GSimpleActionGroup_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSimpleAction_autoptr = Ptr[GSimpleAction]
 object GSimpleAction_autoptr: 
   given _tag: Tag[GSimpleAction_autoptr] = Tag.Ptr[GSimpleAction](GSimpleAction._tag)
@@ -4452,39 +4492,27 @@ object GSimpleAction_autoptr:
   extension (v: GSimpleAction_autoptr)
     inline def value: Ptr[GSimpleAction] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleAction_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSimpleAction_listautoptr = Ptr[_root_.glib.GList]
 object GSimpleAction_listautoptr: 
-  given _tag: Tag[GSimpleAction_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSimpleAction_listautoptr = o
+  given _tag: Tag[GSimpleAction_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSimpleAction_listautoptr = o
   extension (v: GSimpleAction_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleAction_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSimpleAction_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSimpleAction_queueautoptr: 
-  given _tag: Tag[GSimpleAction_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSimpleAction_queueautoptr = o
+  given _tag: Tag[GSimpleAction_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSimpleAction_queueautoptr = o
   extension (v: GSimpleAction_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleAction_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSimpleAction_slistautoptr = Ptr[_root_.glib.GSList]
 object GSimpleAction_slistautoptr: 
-  given _tag: Tag[GSimpleAction_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSimpleAction_slistautoptr = o
+  given _tag: Tag[GSimpleAction_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSimpleAction_slistautoptr = o
   extension (v: GSimpleAction_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSimpleAsyncResult_autoptr = Ptr[GSimpleAsyncResult]
 object GSimpleAsyncResult_autoptr: 
   given _tag: Tag[GSimpleAsyncResult_autoptr] = Tag.Ptr[GSimpleAsyncResult](GSimpleAsyncResult._tag)
@@ -4492,51 +4520,41 @@ object GSimpleAsyncResult_autoptr:
   extension (v: GSimpleAsyncResult_autoptr)
     inline def value: Ptr[GSimpleAsyncResult] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleAsyncResult_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSimpleAsyncResult_listautoptr = Ptr[_root_.glib.GList]
 object GSimpleAsyncResult_listautoptr: 
-  given _tag: Tag[GSimpleAsyncResult_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSimpleAsyncResult_listautoptr = o
+  given _tag: Tag[GSimpleAsyncResult_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSimpleAsyncResult_listautoptr = o
   extension (v: GSimpleAsyncResult_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleAsyncResult_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSimpleAsyncResult_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSimpleAsyncResult_queueautoptr: 
-  given _tag: Tag[GSimpleAsyncResult_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSimpleAsyncResult_queueautoptr = o
+  given _tag: Tag[GSimpleAsyncResult_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSimpleAsyncResult_queueautoptr = o
   extension (v: GSimpleAsyncResult_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleAsyncResult_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSimpleAsyncResult_slistautoptr = Ptr[_root_.glib.GSList]
 object GSimpleAsyncResult_slistautoptr: 
-  given _tag: Tag[GSimpleAsyncResult_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSimpleAsyncResult_slistautoptr = o
+  given _tag: Tag[GSimpleAsyncResult_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSimpleAsyncResult_slistautoptr = o
   extension (v: GSimpleAsyncResult_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GSimpleAsyncThreadFunc: : a #GSimpleAsyncResult. : a #GObject. : optional #GCancellable object, %NULL to ignore.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GSimpleAsyncThreadFunc = CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit]
+opaque type GSimpleAsyncThreadFunc = CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.GObject], Ptr[GCancellable], Unit]
 object GSimpleAsyncThreadFunc: 
-  given _tag: Tag[GSimpleAsyncThreadFunc] = Tag.materializeCFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit]
-  inline def apply(inline o: CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit]): GSimpleAsyncThreadFunc = o
+  given _tag: Tag[GSimpleAsyncThreadFunc] = Tag.materializeCFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.GObject], Ptr[GCancellable], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GSimpleAsyncThreadFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.GObject], Ptr[GCancellable], Unit]): GSimpleAsyncThreadFunc = o
   extension (v: GSimpleAsyncThreadFunc)
-    inline def value: CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.all.GObject], Ptr[GCancellable], Unit] = v
+    inline def value: CFuncPtr3[Ptr[GSimpleAsyncResult], Ptr[_root_.gobject.GObject], Ptr[GCancellable], Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSimplePermission_autoptr = Ptr[GSimplePermission]
 object GSimplePermission_autoptr: 
   given _tag: Tag[GSimplePermission_autoptr] = Tag.Ptr[GSimplePermission](GSimplePermission._tag)
@@ -4544,39 +4562,27 @@ object GSimplePermission_autoptr:
   extension (v: GSimplePermission_autoptr)
     inline def value: Ptr[GSimplePermission] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimplePermission_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSimplePermission_listautoptr = Ptr[_root_.glib.GList]
 object GSimplePermission_listautoptr: 
-  given _tag: Tag[GSimplePermission_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSimplePermission_listautoptr = o
+  given _tag: Tag[GSimplePermission_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSimplePermission_listautoptr = o
   extension (v: GSimplePermission_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimplePermission_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSimplePermission_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSimplePermission_queueautoptr: 
-  given _tag: Tag[GSimplePermission_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSimplePermission_queueautoptr = o
+  given _tag: Tag[GSimplePermission_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSimplePermission_queueautoptr = o
   extension (v: GSimplePermission_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimplePermission_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSimplePermission_slistautoptr = Ptr[_root_.glib.GSList]
 object GSimplePermission_slistautoptr: 
-  given _tag: Tag[GSimplePermission_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSimplePermission_slistautoptr = o
+  given _tag: Tag[GSimplePermission_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSimplePermission_slistautoptr = o
   extension (v: GSimplePermission_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSimpleProxyResolver_autoptr = Ptr[GSimpleProxyResolver]
 object GSimpleProxyResolver_autoptr: 
   given _tag: Tag[GSimpleProxyResolver_autoptr] = Tag.Ptr[GSimpleProxyResolver](GSimpleProxyResolver._tag)
@@ -4584,39 +4590,27 @@ object GSimpleProxyResolver_autoptr:
   extension (v: GSimpleProxyResolver_autoptr)
     inline def value: Ptr[GSimpleProxyResolver] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleProxyResolver_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSimpleProxyResolver_listautoptr = Ptr[_root_.glib.GList]
 object GSimpleProxyResolver_listautoptr: 
-  given _tag: Tag[GSimpleProxyResolver_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSimpleProxyResolver_listautoptr = o
+  given _tag: Tag[GSimpleProxyResolver_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSimpleProxyResolver_listautoptr = o
   extension (v: GSimpleProxyResolver_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleProxyResolver_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSimpleProxyResolver_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSimpleProxyResolver_queueautoptr: 
-  given _tag: Tag[GSimpleProxyResolver_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSimpleProxyResolver_queueautoptr = o
+  given _tag: Tag[GSimpleProxyResolver_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSimpleProxyResolver_queueautoptr = o
   extension (v: GSimpleProxyResolver_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSimpleProxyResolver_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSimpleProxyResolver_slistautoptr = Ptr[_root_.glib.GSList]
 object GSimpleProxyResolver_slistautoptr: 
-  given _tag: Tag[GSimpleProxyResolver_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSimpleProxyResolver_slistautoptr = o
+  given _tag: Tag[GSimpleProxyResolver_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSimpleProxyResolver_slistautoptr = o
   extension (v: GSimpleProxyResolver_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketAddressEnumerator_autoptr = Ptr[GSocketAddressEnumerator]
 object GSocketAddressEnumerator_autoptr: 
   given _tag: Tag[GSocketAddressEnumerator_autoptr] = Tag.Ptr[GSocketAddressEnumerator](GSocketAddressEnumerator._tag)
@@ -4624,39 +4618,27 @@ object GSocketAddressEnumerator_autoptr:
   extension (v: GSocketAddressEnumerator_autoptr)
     inline def value: Ptr[GSocketAddressEnumerator] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketAddressEnumerator_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketAddressEnumerator_listautoptr = Ptr[_root_.glib.GList]
 object GSocketAddressEnumerator_listautoptr: 
-  given _tag: Tag[GSocketAddressEnumerator_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketAddressEnumerator_listautoptr = o
+  given _tag: Tag[GSocketAddressEnumerator_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketAddressEnumerator_listautoptr = o
   extension (v: GSocketAddressEnumerator_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketAddressEnumerator_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketAddressEnumerator_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketAddressEnumerator_queueautoptr: 
-  given _tag: Tag[GSocketAddressEnumerator_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketAddressEnumerator_queueautoptr = o
+  given _tag: Tag[GSocketAddressEnumerator_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketAddressEnumerator_queueautoptr = o
   extension (v: GSocketAddressEnumerator_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketAddressEnumerator_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketAddressEnumerator_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketAddressEnumerator_slistautoptr: 
-  given _tag: Tag[GSocketAddressEnumerator_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketAddressEnumerator_slistautoptr = o
+  given _tag: Tag[GSocketAddressEnumerator_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketAddressEnumerator_slistautoptr = o
   extension (v: GSocketAddressEnumerator_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketAddress_autoptr = Ptr[GSocketAddress]
 object GSocketAddress_autoptr: 
   given _tag: Tag[GSocketAddress_autoptr] = Tag.Ptr[GSocketAddress](GSocketAddress._tag)
@@ -4664,39 +4646,27 @@ object GSocketAddress_autoptr:
   extension (v: GSocketAddress_autoptr)
     inline def value: Ptr[GSocketAddress] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketAddress_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketAddress_listautoptr = Ptr[_root_.glib.GList]
 object GSocketAddress_listautoptr: 
-  given _tag: Tag[GSocketAddress_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketAddress_listautoptr = o
+  given _tag: Tag[GSocketAddress_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketAddress_listautoptr = o
   extension (v: GSocketAddress_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketAddress_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketAddress_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketAddress_queueautoptr: 
-  given _tag: Tag[GSocketAddress_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketAddress_queueautoptr = o
+  given _tag: Tag[GSocketAddress_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketAddress_queueautoptr = o
   extension (v: GSocketAddress_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketAddress_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketAddress_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketAddress_slistautoptr: 
-  given _tag: Tag[GSocketAddress_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketAddress_slistautoptr = o
+  given _tag: Tag[GSocketAddress_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketAddress_slistautoptr = o
   extension (v: GSocketAddress_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketClient_autoptr = Ptr[GSocketClient]
 object GSocketClient_autoptr: 
   given _tag: Tag[GSocketClient_autoptr] = Tag.Ptr[GSocketClient](GSocketClient._tag)
@@ -4704,39 +4674,27 @@ object GSocketClient_autoptr:
   extension (v: GSocketClient_autoptr)
     inline def value: Ptr[GSocketClient] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketClient_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketClient_listautoptr = Ptr[_root_.glib.GList]
 object GSocketClient_listautoptr: 
-  given _tag: Tag[GSocketClient_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketClient_listautoptr = o
+  given _tag: Tag[GSocketClient_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketClient_listautoptr = o
   extension (v: GSocketClient_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketClient_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketClient_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketClient_queueautoptr: 
-  given _tag: Tag[GSocketClient_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketClient_queueautoptr = o
+  given _tag: Tag[GSocketClient_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketClient_queueautoptr = o
   extension (v: GSocketClient_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketClient_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketClient_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketClient_slistautoptr: 
-  given _tag: Tag[GSocketClient_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketClient_slistautoptr = o
+  given _tag: Tag[GSocketClient_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketClient_slistautoptr = o
   extension (v: GSocketClient_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketConnectable_autoptr = Ptr[GSocketConnectable]
 object GSocketConnectable_autoptr: 
   given _tag: Tag[GSocketConnectable_autoptr] = Tag.Ptr[GSocketConnectable](GSocketConnectable._tag)
@@ -4744,39 +4702,27 @@ object GSocketConnectable_autoptr:
   extension (v: GSocketConnectable_autoptr)
     inline def value: Ptr[GSocketConnectable] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketConnectable_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketConnectable_listautoptr = Ptr[_root_.glib.GList]
 object GSocketConnectable_listautoptr: 
-  given _tag: Tag[GSocketConnectable_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketConnectable_listautoptr = o
+  given _tag: Tag[GSocketConnectable_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketConnectable_listautoptr = o
   extension (v: GSocketConnectable_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketConnectable_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketConnectable_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketConnectable_queueautoptr: 
-  given _tag: Tag[GSocketConnectable_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketConnectable_queueautoptr = o
+  given _tag: Tag[GSocketConnectable_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketConnectable_queueautoptr = o
   extension (v: GSocketConnectable_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketConnectable_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketConnectable_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketConnectable_slistautoptr: 
-  given _tag: Tag[GSocketConnectable_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketConnectable_slistautoptr = o
+  given _tag: Tag[GSocketConnectable_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketConnectable_slistautoptr = o
   extension (v: GSocketConnectable_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketConnection_autoptr = Ptr[GSocketConnection]
 object GSocketConnection_autoptr: 
   given _tag: Tag[GSocketConnection_autoptr] = Tag.Ptr[GSocketConnection](GSocketConnection._tag)
@@ -4784,39 +4730,27 @@ object GSocketConnection_autoptr:
   extension (v: GSocketConnection_autoptr)
     inline def value: Ptr[GSocketConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketConnection_listautoptr = Ptr[_root_.glib.GList]
 object GSocketConnection_listautoptr: 
-  given _tag: Tag[GSocketConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketConnection_listautoptr = o
+  given _tag: Tag[GSocketConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketConnection_listautoptr = o
   extension (v: GSocketConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketConnection_queueautoptr: 
-  given _tag: Tag[GSocketConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketConnection_queueautoptr = o
+  given _tag: Tag[GSocketConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketConnection_queueautoptr = o
   extension (v: GSocketConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketConnection_slistautoptr: 
-  given _tag: Tag[GSocketConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketConnection_slistautoptr = o
+  given _tag: Tag[GSocketConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketConnection_slistautoptr = o
   extension (v: GSocketConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketControlMessage_autoptr = Ptr[GSocketControlMessage]
 object GSocketControlMessage_autoptr: 
   given _tag: Tag[GSocketControlMessage_autoptr] = Tag.Ptr[GSocketControlMessage](GSocketControlMessage._tag)
@@ -4824,39 +4758,27 @@ object GSocketControlMessage_autoptr:
   extension (v: GSocketControlMessage_autoptr)
     inline def value: Ptr[GSocketControlMessage] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketControlMessage_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketControlMessage_listautoptr = Ptr[_root_.glib.GList]
 object GSocketControlMessage_listautoptr: 
-  given _tag: Tag[GSocketControlMessage_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketControlMessage_listautoptr = o
+  given _tag: Tag[GSocketControlMessage_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketControlMessage_listautoptr = o
   extension (v: GSocketControlMessage_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketControlMessage_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketControlMessage_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketControlMessage_queueautoptr: 
-  given _tag: Tag[GSocketControlMessage_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketControlMessage_queueautoptr = o
+  given _tag: Tag[GSocketControlMessage_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketControlMessage_queueautoptr = o
   extension (v: GSocketControlMessage_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketControlMessage_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketControlMessage_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketControlMessage_slistautoptr: 
-  given _tag: Tag[GSocketControlMessage_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketControlMessage_slistautoptr = o
+  given _tag: Tag[GSocketControlMessage_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketControlMessage_slistautoptr = o
   extension (v: GSocketControlMessage_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketListener_autoptr = Ptr[GSocketListener]
 object GSocketListener_autoptr: 
   given _tag: Tag[GSocketListener_autoptr] = Tag.Ptr[GSocketListener](GSocketListener._tag)
@@ -4864,39 +4786,27 @@ object GSocketListener_autoptr:
   extension (v: GSocketListener_autoptr)
     inline def value: Ptr[GSocketListener] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketListener_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketListener_listautoptr = Ptr[_root_.glib.GList]
 object GSocketListener_listautoptr: 
-  given _tag: Tag[GSocketListener_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketListener_listautoptr = o
+  given _tag: Tag[GSocketListener_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketListener_listautoptr = o
   extension (v: GSocketListener_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketListener_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketListener_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketListener_queueautoptr: 
-  given _tag: Tag[GSocketListener_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketListener_queueautoptr = o
+  given _tag: Tag[GSocketListener_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketListener_queueautoptr = o
   extension (v: GSocketListener_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketListener_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketListener_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketListener_slistautoptr: 
-  given _tag: Tag[GSocketListener_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketListener_slistautoptr = o
+  given _tag: Tag[GSocketListener_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketListener_slistautoptr = o
   extension (v: GSocketListener_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocketService_autoptr = Ptr[GSocketService]
 object GSocketService_autoptr: 
   given _tag: Tag[GSocketService_autoptr] = Tag.Ptr[GSocketService](GSocketService._tag)
@@ -4904,51 +4814,41 @@ object GSocketService_autoptr:
   extension (v: GSocketService_autoptr)
     inline def value: Ptr[GSocketService] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketService_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocketService_listautoptr = Ptr[_root_.glib.GList]
 object GSocketService_listautoptr: 
-  given _tag: Tag[GSocketService_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocketService_listautoptr = o
+  given _tag: Tag[GSocketService_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocketService_listautoptr = o
   extension (v: GSocketService_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketService_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocketService_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocketService_queueautoptr: 
-  given _tag: Tag[GSocketService_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocketService_queueautoptr = o
+  given _tag: Tag[GSocketService_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocketService_queueautoptr = o
   extension (v: GSocketService_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocketService_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocketService_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocketService_slistautoptr: 
-  given _tag: Tag[GSocketService_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocketService_slistautoptr = o
+  given _tag: Tag[GSocketService_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocketService_slistautoptr = o
   extension (v: GSocketService_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GSocketSourceFunc: : the #GSocket : the current condition at the source fired. _data: data passed in by the user.
+ * GSocketSourceFunc: : the #GSocket : the current condition at the source fired.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/giotypes.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/giotypes.h
 */
-opaque type GSocketSourceFunc = CFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
+opaque type GSocketSourceFunc = CFuncPtr3[Ptr[GSocket], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean]
 object GSocketSourceFunc: 
-  given _tag: Tag[GSocketSourceFunc] = Tag.materializeCFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]
-  inline def apply(inline o: CFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean]): GSocketSourceFunc = o
+  given _tag: Tag[GSocketSourceFunc] = Tag.materializeCFuncPtr3[Ptr[GSocket], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GSocketSourceFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GSocket], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean]): GSocketSourceFunc = o
   extension (v: GSocketSourceFunc)
-    inline def value: CFuncPtr3[Ptr[GSocket], _root_.glib.all.GIOCondition, _root_.glib.all.gpointer, _root_.glib.all.gboolean] = v
+    inline def value: CFuncPtr3[Ptr[GSocket], _root_.glib.GIOCondition, _root_.glib.gpointer, _root_.glib.gboolean] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSocket_autoptr = Ptr[GSocket]
 object GSocket_autoptr: 
   given _tag: Tag[GSocket_autoptr] = Tag.Ptr[GSocket](GSocket._tag)
@@ -4956,39 +4856,139 @@ object GSocket_autoptr:
   extension (v: GSocket_autoptr)
     inline def value: Ptr[GSocket] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocket_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSocket_listautoptr = Ptr[_root_.glib.GList]
 object GSocket_listautoptr: 
-  given _tag: Tag[GSocket_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSocket_listautoptr = o
+  given _tag: Tag[GSocket_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSocket_listautoptr = o
   extension (v: GSocket_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocket_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSocket_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSocket_queueautoptr: 
-  given _tag: Tag[GSocket_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSocket_queueautoptr = o
+  given _tag: Tag[GSocket_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSocket_queueautoptr = o
   extension (v: GSocket_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSocket_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSocket_slistautoptr = Ptr[_root_.glib.GSList]
 object GSocket_slistautoptr: 
-  given _tag: Tag[GSocket_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSocket_slistautoptr = o
+  given _tag: Tag[GSocket_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSocket_slistautoptr = o
   extension (v: GSocket_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GSource_autoptr = Ptr[_root_.glib.GSource]
+object GSource_autoptr: 
+  given _tag: Tag[GSource_autoptr] = Tag.Ptr[_root_.glib.GSource](_root_.glib.GSource._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSource]): GSource_autoptr = o
+  extension (v: GSource_autoptr)
+    inline def value: Ptr[_root_.glib.GSource] = v
+
+opaque type GSource_listautoptr = Ptr[_root_.glib.GList]
+object GSource_listautoptr: 
+  given _tag: Tag[GSource_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSource_listautoptr = o
+  extension (v: GSource_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GSource_queueautoptr = Ptr[_root_.glib.GQueue]
+object GSource_queueautoptr: 
+  given _tag: Tag[GSource_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSource_queueautoptr = o
+  extension (v: GSource_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GSource_slistautoptr = Ptr[_root_.glib.GSList]
+object GSource_slistautoptr: 
+  given _tag: Tag[GSource_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSource_slistautoptr = o
+  extension (v: GSource_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GStringChunk_autoptr = Ptr[_root_.glib.GStringChunk]
+object GStringChunk_autoptr: 
+  given _tag: Tag[GStringChunk_autoptr] = Tag.Ptr[_root_.glib.GStringChunk](_root_.glib.GStringChunk._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GStringChunk]): GStringChunk_autoptr = o
+  extension (v: GStringChunk_autoptr)
+    inline def value: Ptr[_root_.glib.GStringChunk] = v
+
+opaque type GStringChunk_listautoptr = Ptr[_root_.glib.GList]
+object GStringChunk_listautoptr: 
+  given _tag: Tag[GStringChunk_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GStringChunk_listautoptr = o
+  extension (v: GStringChunk_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GStringChunk_queueautoptr = Ptr[_root_.glib.GQueue]
+object GStringChunk_queueautoptr: 
+  given _tag: Tag[GStringChunk_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GStringChunk_queueautoptr = o
+  extension (v: GStringChunk_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GStringChunk_slistautoptr = Ptr[_root_.glib.GSList]
+object GStringChunk_slistautoptr: 
+  given _tag: Tag[GStringChunk_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GStringChunk_slistautoptr = o
+  extension (v: GStringChunk_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GString_autoptr = Ptr[_root_.glib.GString]
+object GString_autoptr: 
+  given _tag: Tag[GString_autoptr] = Tag.Ptr[_root_.glib.GString](_root_.glib.GString._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GString]): GString_autoptr = o
+  extension (v: GString_autoptr)
+    inline def value: Ptr[_root_.glib.GString] = v
+
+opaque type GString_listautoptr = Ptr[_root_.glib.GList]
+object GString_listautoptr: 
+  given _tag: Tag[GString_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GString_listautoptr = o
+  extension (v: GString_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GString_queueautoptr = Ptr[_root_.glib.GQueue]
+object GString_queueautoptr: 
+  given _tag: Tag[GString_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GString_queueautoptr = o
+  extension (v: GString_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GString_slistautoptr = Ptr[_root_.glib.GSList]
+object GString_slistautoptr: 
+  given _tag: Tag[GString_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GString_slistautoptr = o
+  extension (v: GString_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GStrvBuilder_autoptr = Ptr[_root_.glib.GStrvBuilder]
+object GStrvBuilder_autoptr: 
+  given _tag: Tag[GStrvBuilder_autoptr] = Tag.Ptr[_root_.glib.GStrvBuilder](_root_.glib.GStrvBuilder._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GStrvBuilder]): GStrvBuilder_autoptr = o
+  extension (v: GStrvBuilder_autoptr)
+    inline def value: Ptr[_root_.glib.GStrvBuilder] = v
+
+opaque type GStrvBuilder_listautoptr = Ptr[_root_.glib.GList]
+object GStrvBuilder_listautoptr: 
+  given _tag: Tag[GStrvBuilder_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GStrvBuilder_listautoptr = o
+  extension (v: GStrvBuilder_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GStrvBuilder_queueautoptr = Ptr[_root_.glib.GQueue]
+object GStrvBuilder_queueautoptr: 
+  given _tag: Tag[GStrvBuilder_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GStrvBuilder_queueautoptr = o
+  extension (v: GStrvBuilder_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GStrvBuilder_slistautoptr = Ptr[_root_.glib.GSList]
+object GStrvBuilder_slistautoptr: 
+  given _tag: Tag[GStrvBuilder_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GStrvBuilder_slistautoptr = o
+  extension (v: GStrvBuilder_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GSubprocessLauncher_autoptr = Ptr[GSubprocessLauncher]
 object GSubprocessLauncher_autoptr: 
   given _tag: Tag[GSubprocessLauncher_autoptr] = Tag.Ptr[GSubprocessLauncher](GSubprocessLauncher._tag)
@@ -4996,39 +4996,27 @@ object GSubprocessLauncher_autoptr:
   extension (v: GSubprocessLauncher_autoptr)
     inline def value: Ptr[GSubprocessLauncher] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSubprocessLauncher_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSubprocessLauncher_listautoptr = Ptr[_root_.glib.GList]
 object GSubprocessLauncher_listautoptr: 
-  given _tag: Tag[GSubprocessLauncher_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSubprocessLauncher_listautoptr = o
+  given _tag: Tag[GSubprocessLauncher_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSubprocessLauncher_listautoptr = o
   extension (v: GSubprocessLauncher_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSubprocessLauncher_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSubprocessLauncher_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSubprocessLauncher_queueautoptr: 
-  given _tag: Tag[GSubprocessLauncher_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSubprocessLauncher_queueautoptr = o
+  given _tag: Tag[GSubprocessLauncher_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSubprocessLauncher_queueautoptr = o
   extension (v: GSubprocessLauncher_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSubprocessLauncher_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSubprocessLauncher_slistautoptr = Ptr[_root_.glib.GSList]
 object GSubprocessLauncher_slistautoptr: 
-  given _tag: Tag[GSubprocessLauncher_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSubprocessLauncher_slistautoptr = o
+  given _tag: Tag[GSubprocessLauncher_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSubprocessLauncher_slistautoptr = o
   extension (v: GSubprocessLauncher_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GSubprocess_autoptr = Ptr[GSubprocess]
 object GSubprocess_autoptr: 
   given _tag: Tag[GSubprocess_autoptr] = Tag.Ptr[GSubprocess](GSubprocess._tag)
@@ -5036,49 +5024,39 @@ object GSubprocess_autoptr:
   extension (v: GSubprocess_autoptr)
     inline def value: Ptr[GSubprocess] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSubprocess_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GSubprocess_listautoptr = Ptr[_root_.glib.GList]
 object GSubprocess_listautoptr: 
-  given _tag: Tag[GSubprocess_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GSubprocess_listautoptr = o
+  given _tag: Tag[GSubprocess_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GSubprocess_listautoptr = o
   extension (v: GSubprocess_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSubprocess_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GSubprocess_queueautoptr = Ptr[_root_.glib.GQueue]
 object GSubprocess_queueautoptr: 
-  given _tag: Tag[GSubprocess_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GSubprocess_queueautoptr = o
+  given _tag: Tag[GSubprocess_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GSubprocess_queueautoptr = o
   extension (v: GSubprocess_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GSubprocess_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GSubprocess_slistautoptr = Ptr[_root_.glib.GSList]
 object GSubprocess_slistautoptr: 
-  given _tag: Tag[GSubprocess_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GSubprocess_slistautoptr = o
+  given _tag: Tag[GSubprocess_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GSubprocess_slistautoptr = o
   extension (v: GSubprocess_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * [bindgen] header: /usr/include/glib-2.0/gio/gtask.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gtask.h
 */
-opaque type GTaskThreadFunc = CFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit]
+opaque type GTaskThreadFunc = CFuncPtr4[Ptr[GTask], _root_.glib.gpointer, _root_.glib.gpointer, Ptr[GCancellable], Unit]
 object GTaskThreadFunc: 
-  given _tag: Tag[GTaskThreadFunc] = Tag.materializeCFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit]
-  inline def apply(inline o: CFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit]): GTaskThreadFunc = o
+  given _tag: Tag[GTaskThreadFunc] = Tag.materializeCFuncPtr4[Ptr[GTask], _root_.glib.gpointer, _root_.glib.gpointer, Ptr[GCancellable], Unit]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GTaskThreadFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr4[Ptr[GTask], _root_.glib.gpointer, _root_.glib.gpointer, Ptr[GCancellable], Unit]): GTaskThreadFunc = o
   extension (v: GTaskThreadFunc)
-    inline def value: CFuncPtr4[Ptr[GTask], _root_.glib.all.gpointer, _root_.glib.all.gpointer, Ptr[GCancellable], Unit] = v
+    inline def value: CFuncPtr4[Ptr[GTask], _root_.glib.gpointer, _root_.glib.gpointer, Ptr[GCancellable], Unit] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTask_autoptr = Ptr[GTask]
 object GTask_autoptr: 
   given _tag: Tag[GTask_autoptr] = Tag.Ptr[GTask](GTask._tag)
@@ -5086,39 +5064,27 @@ object GTask_autoptr:
   extension (v: GTask_autoptr)
     inline def value: Ptr[GTask] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTask_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTask_listautoptr = Ptr[_root_.glib.GList]
 object GTask_listautoptr: 
-  given _tag: Tag[GTask_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTask_listautoptr = o
+  given _tag: Tag[GTask_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTask_listautoptr = o
   extension (v: GTask_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTask_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTask_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTask_queueautoptr: 
-  given _tag: Tag[GTask_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTask_queueautoptr = o
+  given _tag: Tag[GTask_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTask_queueautoptr = o
   extension (v: GTask_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTask_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTask_slistautoptr = Ptr[_root_.glib.GSList]
 object GTask_slistautoptr: 
-  given _tag: Tag[GTask_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTask_slistautoptr = o
+  given _tag: Tag[GTask_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTask_slistautoptr = o
   extension (v: GTask_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTcpConnection_autoptr = Ptr[GTcpConnection]
 object GTcpConnection_autoptr: 
   given _tag: Tag[GTcpConnection_autoptr] = Tag.Ptr[GTcpConnection](GTcpConnection._tag)
@@ -5126,39 +5092,27 @@ object GTcpConnection_autoptr:
   extension (v: GTcpConnection_autoptr)
     inline def value: Ptr[GTcpConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTcpConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTcpConnection_listautoptr = Ptr[_root_.glib.GList]
 object GTcpConnection_listautoptr: 
-  given _tag: Tag[GTcpConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTcpConnection_listautoptr = o
+  given _tag: Tag[GTcpConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTcpConnection_listautoptr = o
   extension (v: GTcpConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTcpConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTcpConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTcpConnection_queueautoptr: 
-  given _tag: Tag[GTcpConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTcpConnection_queueautoptr = o
+  given _tag: Tag[GTcpConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTcpConnection_queueautoptr = o
   extension (v: GTcpConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTcpConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTcpConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GTcpConnection_slistautoptr: 
-  given _tag: Tag[GTcpConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTcpConnection_slistautoptr = o
+  given _tag: Tag[GTcpConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTcpConnection_slistautoptr = o
   extension (v: GTcpConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTcpWrapperConnection_autoptr = Ptr[GTcpWrapperConnection]
 object GTcpWrapperConnection_autoptr: 
   given _tag: Tag[GTcpWrapperConnection_autoptr] = Tag.Ptr[GTcpWrapperConnection](GTcpWrapperConnection._tag)
@@ -5166,39 +5120,27 @@ object GTcpWrapperConnection_autoptr:
   extension (v: GTcpWrapperConnection_autoptr)
     inline def value: Ptr[GTcpWrapperConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTcpWrapperConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTcpWrapperConnection_listautoptr = Ptr[_root_.glib.GList]
 object GTcpWrapperConnection_listautoptr: 
-  given _tag: Tag[GTcpWrapperConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTcpWrapperConnection_listautoptr = o
+  given _tag: Tag[GTcpWrapperConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTcpWrapperConnection_listautoptr = o
   extension (v: GTcpWrapperConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTcpWrapperConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTcpWrapperConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTcpWrapperConnection_queueautoptr: 
-  given _tag: Tag[GTcpWrapperConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTcpWrapperConnection_queueautoptr = o
+  given _tag: Tag[GTcpWrapperConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTcpWrapperConnection_queueautoptr = o
   extension (v: GTcpWrapperConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTcpWrapperConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTcpWrapperConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GTcpWrapperConnection_slistautoptr: 
-  given _tag: Tag[GTcpWrapperConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTcpWrapperConnection_slistautoptr = o
+  given _tag: Tag[GTcpWrapperConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTcpWrapperConnection_slistautoptr = o
   extension (v: GTcpWrapperConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTestDBus_autoptr = Ptr[GTestDBus]
 object GTestDBus_autoptr: 
   given _tag: Tag[GTestDBus_autoptr] = Tag.Ptr[GTestDBus](GTestDBus._tag)
@@ -5206,39 +5148,27 @@ object GTestDBus_autoptr:
   extension (v: GTestDBus_autoptr)
     inline def value: Ptr[GTestDBus] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTestDBus_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTestDBus_listautoptr = Ptr[_root_.glib.GList]
 object GTestDBus_listautoptr: 
-  given _tag: Tag[GTestDBus_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTestDBus_listautoptr = o
+  given _tag: Tag[GTestDBus_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTestDBus_listautoptr = o
   extension (v: GTestDBus_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTestDBus_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTestDBus_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTestDBus_queueautoptr: 
-  given _tag: Tag[GTestDBus_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTestDBus_queueautoptr = o
+  given _tag: Tag[GTestDBus_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTestDBus_queueautoptr = o
   extension (v: GTestDBus_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTestDBus_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTestDBus_slistautoptr = Ptr[_root_.glib.GSList]
 object GTestDBus_slistautoptr: 
-  given _tag: Tag[GTestDBus_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTestDBus_slistautoptr = o
+  given _tag: Tag[GTestDBus_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTestDBus_slistautoptr = o
   extension (v: GTestDBus_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GThemedIcon_autoptr = Ptr[GThemedIcon]
 object GThemedIcon_autoptr: 
   given _tag: Tag[GThemedIcon_autoptr] = Tag.Ptr[GThemedIcon](GThemedIcon._tag)
@@ -5246,39 +5176,55 @@ object GThemedIcon_autoptr:
   extension (v: GThemedIcon_autoptr)
     inline def value: Ptr[GThemedIcon] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GThemedIcon_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GThemedIcon_listautoptr = Ptr[_root_.glib.GList]
 object GThemedIcon_listautoptr: 
-  given _tag: Tag[GThemedIcon_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GThemedIcon_listautoptr = o
+  given _tag: Tag[GThemedIcon_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GThemedIcon_listautoptr = o
   extension (v: GThemedIcon_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GThemedIcon_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GThemedIcon_queueautoptr = Ptr[_root_.glib.GQueue]
 object GThemedIcon_queueautoptr: 
-  given _tag: Tag[GThemedIcon_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GThemedIcon_queueautoptr = o
+  given _tag: Tag[GThemedIcon_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GThemedIcon_queueautoptr = o
   extension (v: GThemedIcon_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GThemedIcon_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GThemedIcon_slistautoptr = Ptr[_root_.glib.GSList]
 object GThemedIcon_slistautoptr: 
-  given _tag: Tag[GThemedIcon_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GThemedIcon_slistautoptr = o
+  given _tag: Tag[GThemedIcon_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GThemedIcon_slistautoptr = o
   extension (v: GThemedIcon_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GThread_autoptr = Ptr[_root_.glib.GThread]
+object GThread_autoptr: 
+  given _tag: Tag[GThread_autoptr] = Tag.Ptr[_root_.glib.GThread](_root_.glib.GThread._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GThread]): GThread_autoptr = o
+  extension (v: GThread_autoptr)
+    inline def value: Ptr[_root_.glib.GThread] = v
+
+opaque type GThread_listautoptr = Ptr[_root_.glib.GList]
+object GThread_listautoptr: 
+  given _tag: Tag[GThread_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GThread_listautoptr = o
+  extension (v: GThread_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GThread_queueautoptr = Ptr[_root_.glib.GQueue]
+object GThread_queueautoptr: 
+  given _tag: Tag[GThread_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GThread_queueautoptr = o
+  extension (v: GThread_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GThread_slistautoptr = Ptr[_root_.glib.GSList]
+object GThread_slistautoptr: 
+  given _tag: Tag[GThread_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GThread_slistautoptr = o
+  extension (v: GThread_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GThreadedSocketService_autoptr = Ptr[GThreadedSocketService]
 object GThreadedSocketService_autoptr: 
   given _tag: Tag[GThreadedSocketService_autoptr] = Tag.Ptr[GThreadedSocketService](GThreadedSocketService._tag)
@@ -5286,39 +5232,83 @@ object GThreadedSocketService_autoptr:
   extension (v: GThreadedSocketService_autoptr)
     inline def value: Ptr[GThreadedSocketService] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GThreadedSocketService_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GThreadedSocketService_listautoptr = Ptr[_root_.glib.GList]
 object GThreadedSocketService_listautoptr: 
-  given _tag: Tag[GThreadedSocketService_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GThreadedSocketService_listautoptr = o
+  given _tag: Tag[GThreadedSocketService_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GThreadedSocketService_listautoptr = o
   extension (v: GThreadedSocketService_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GThreadedSocketService_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GThreadedSocketService_queueautoptr = Ptr[_root_.glib.GQueue]
 object GThreadedSocketService_queueautoptr: 
-  given _tag: Tag[GThreadedSocketService_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GThreadedSocketService_queueautoptr = o
+  given _tag: Tag[GThreadedSocketService_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GThreadedSocketService_queueautoptr = o
   extension (v: GThreadedSocketService_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GThreadedSocketService_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GThreadedSocketService_slistautoptr = Ptr[_root_.glib.GSList]
 object GThreadedSocketService_slistautoptr: 
-  given _tag: Tag[GThreadedSocketService_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GThreadedSocketService_slistautoptr = o
+  given _tag: Tag[GThreadedSocketService_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GThreadedSocketService_slistautoptr = o
   extension (v: GThreadedSocketService_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
+opaque type GTimeZone_autoptr = Ptr[_root_.glib.GTimeZone]
+object GTimeZone_autoptr: 
+  given _tag: Tag[GTimeZone_autoptr] = Tag.Ptr[_root_.glib.GTimeZone](_root_.glib.GTimeZone._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GTimeZone]): GTimeZone_autoptr = o
+  extension (v: GTimeZone_autoptr)
+    inline def value: Ptr[_root_.glib.GTimeZone] = v
+
+opaque type GTimeZone_listautoptr = Ptr[_root_.glib.GList]
+object GTimeZone_listautoptr: 
+  given _tag: Tag[GTimeZone_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTimeZone_listautoptr = o
+  extension (v: GTimeZone_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GTimeZone_queueautoptr = Ptr[_root_.glib.GQueue]
+object GTimeZone_queueautoptr: 
+  given _tag: Tag[GTimeZone_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTimeZone_queueautoptr = o
+  extension (v: GTimeZone_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GTimeZone_slistautoptr = Ptr[_root_.glib.GSList]
+object GTimeZone_slistautoptr: 
+  given _tag: Tag[GTimeZone_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTimeZone_slistautoptr = o
+  extension (v: GTimeZone_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GTimer_autoptr = Ptr[_root_.glib.GTimer]
+object GTimer_autoptr: 
+  given _tag: Tag[GTimer_autoptr] = Tag.Ptr[_root_.glib.GTimer](_root_.glib.GTimer._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GTimer]): GTimer_autoptr = o
+  extension (v: GTimer_autoptr)
+    inline def value: Ptr[_root_.glib.GTimer] = v
+
+opaque type GTimer_listautoptr = Ptr[_root_.glib.GList]
+object GTimer_listautoptr: 
+  given _tag: Tag[GTimer_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTimer_listautoptr = o
+  extension (v: GTimer_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GTimer_queueautoptr = Ptr[_root_.glib.GQueue]
+object GTimer_queueautoptr: 
+  given _tag: Tag[GTimer_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTimer_queueautoptr = o
+  extension (v: GTimer_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GTimer_slistautoptr = Ptr[_root_.glib.GSList]
+object GTimer_slistautoptr: 
+  given _tag: Tag[GTimer_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTimer_slistautoptr = o
+  extension (v: GTimer_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
 opaque type GTlsBackend_autoptr = Ptr[GTlsBackend]
 object GTlsBackend_autoptr: 
   given _tag: Tag[GTlsBackend_autoptr] = Tag.Ptr[GTlsBackend](GTlsBackend._tag)
@@ -5326,39 +5316,27 @@ object GTlsBackend_autoptr:
   extension (v: GTlsBackend_autoptr)
     inline def value: Ptr[GTlsBackend] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsBackend_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsBackend_listautoptr = Ptr[_root_.glib.GList]
 object GTlsBackend_listautoptr: 
-  given _tag: Tag[GTlsBackend_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsBackend_listautoptr = o
+  given _tag: Tag[GTlsBackend_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsBackend_listautoptr = o
   extension (v: GTlsBackend_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsBackend_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsBackend_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsBackend_queueautoptr: 
-  given _tag: Tag[GTlsBackend_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsBackend_queueautoptr = o
+  given _tag: Tag[GTlsBackend_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsBackend_queueautoptr = o
   extension (v: GTlsBackend_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsBackend_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsBackend_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsBackend_slistautoptr: 
-  given _tag: Tag[GTlsBackend_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsBackend_slistautoptr = o
+  given _tag: Tag[GTlsBackend_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsBackend_slistautoptr = o
   extension (v: GTlsBackend_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsCertificate_autoptr = Ptr[GTlsCertificate]
 object GTlsCertificate_autoptr: 
   given _tag: Tag[GTlsCertificate_autoptr] = Tag.Ptr[GTlsCertificate](GTlsCertificate._tag)
@@ -5366,39 +5344,27 @@ object GTlsCertificate_autoptr:
   extension (v: GTlsCertificate_autoptr)
     inline def value: Ptr[GTlsCertificate] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsCertificate_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsCertificate_listautoptr = Ptr[_root_.glib.GList]
 object GTlsCertificate_listautoptr: 
-  given _tag: Tag[GTlsCertificate_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsCertificate_listautoptr = o
+  given _tag: Tag[GTlsCertificate_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsCertificate_listautoptr = o
   extension (v: GTlsCertificate_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsCertificate_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsCertificate_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsCertificate_queueautoptr: 
-  given _tag: Tag[GTlsCertificate_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsCertificate_queueautoptr = o
+  given _tag: Tag[GTlsCertificate_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsCertificate_queueautoptr = o
   extension (v: GTlsCertificate_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsCertificate_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsCertificate_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsCertificate_slistautoptr: 
-  given _tag: Tag[GTlsCertificate_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsCertificate_slistautoptr = o
+  given _tag: Tag[GTlsCertificate_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsCertificate_slistautoptr = o
   extension (v: GTlsCertificate_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsClientConnection_autoptr = Ptr[GTlsClientConnection]
 object GTlsClientConnection_autoptr: 
   given _tag: Tag[GTlsClientConnection_autoptr] = Tag.Ptr[GTlsClientConnection](GTlsClientConnection._tag)
@@ -5406,39 +5372,27 @@ object GTlsClientConnection_autoptr:
   extension (v: GTlsClientConnection_autoptr)
     inline def value: Ptr[GTlsClientConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsClientConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsClientConnection_listautoptr = Ptr[_root_.glib.GList]
 object GTlsClientConnection_listautoptr: 
-  given _tag: Tag[GTlsClientConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsClientConnection_listautoptr = o
+  given _tag: Tag[GTlsClientConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsClientConnection_listautoptr = o
   extension (v: GTlsClientConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsClientConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsClientConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsClientConnection_queueautoptr: 
-  given _tag: Tag[GTlsClientConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsClientConnection_queueautoptr = o
+  given _tag: Tag[GTlsClientConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsClientConnection_queueautoptr = o
   extension (v: GTlsClientConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsClientConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsClientConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsClientConnection_slistautoptr: 
-  given _tag: Tag[GTlsClientConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsClientConnection_slistautoptr = o
+  given _tag: Tag[GTlsClientConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsClientConnection_slistautoptr = o
   extension (v: GTlsClientConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsConnection_autoptr = Ptr[GTlsConnection]
 object GTlsConnection_autoptr: 
   given _tag: Tag[GTlsConnection_autoptr] = Tag.Ptr[GTlsConnection](GTlsConnection._tag)
@@ -5446,39 +5400,27 @@ object GTlsConnection_autoptr:
   extension (v: GTlsConnection_autoptr)
     inline def value: Ptr[GTlsConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsConnection_listautoptr = Ptr[_root_.glib.GList]
 object GTlsConnection_listautoptr: 
-  given _tag: Tag[GTlsConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsConnection_listautoptr = o
+  given _tag: Tag[GTlsConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsConnection_listautoptr = o
   extension (v: GTlsConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsConnection_queueautoptr: 
-  given _tag: Tag[GTlsConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsConnection_queueautoptr = o
+  given _tag: Tag[GTlsConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsConnection_queueautoptr = o
   extension (v: GTlsConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsConnection_slistautoptr: 
-  given _tag: Tag[GTlsConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsConnection_slistautoptr = o
+  given _tag: Tag[GTlsConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsConnection_slistautoptr = o
   extension (v: GTlsConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsDatabase_autoptr = Ptr[GTlsDatabase]
 object GTlsDatabase_autoptr: 
   given _tag: Tag[GTlsDatabase_autoptr] = Tag.Ptr[GTlsDatabase](GTlsDatabase._tag)
@@ -5486,39 +5428,27 @@ object GTlsDatabase_autoptr:
   extension (v: GTlsDatabase_autoptr)
     inline def value: Ptr[GTlsDatabase] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsDatabase_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsDatabase_listautoptr = Ptr[_root_.glib.GList]
 object GTlsDatabase_listautoptr: 
-  given _tag: Tag[GTlsDatabase_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsDatabase_listautoptr = o
+  given _tag: Tag[GTlsDatabase_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsDatabase_listautoptr = o
   extension (v: GTlsDatabase_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsDatabase_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsDatabase_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsDatabase_queueautoptr: 
-  given _tag: Tag[GTlsDatabase_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsDatabase_queueautoptr = o
+  given _tag: Tag[GTlsDatabase_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsDatabase_queueautoptr = o
   extension (v: GTlsDatabase_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsDatabase_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsDatabase_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsDatabase_slistautoptr: 
-  given _tag: Tag[GTlsDatabase_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsDatabase_slistautoptr = o
+  given _tag: Tag[GTlsDatabase_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsDatabase_slistautoptr = o
   extension (v: GTlsDatabase_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsFileDatabase_autoptr = Ptr[GTlsFileDatabase]
 object GTlsFileDatabase_autoptr: 
   given _tag: Tag[GTlsFileDatabase_autoptr] = Tag.Ptr[GTlsFileDatabase](GTlsFileDatabase._tag)
@@ -5526,39 +5456,27 @@ object GTlsFileDatabase_autoptr:
   extension (v: GTlsFileDatabase_autoptr)
     inline def value: Ptr[GTlsFileDatabase] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsFileDatabase_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsFileDatabase_listautoptr = Ptr[_root_.glib.GList]
 object GTlsFileDatabase_listautoptr: 
-  given _tag: Tag[GTlsFileDatabase_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsFileDatabase_listautoptr = o
+  given _tag: Tag[GTlsFileDatabase_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsFileDatabase_listautoptr = o
   extension (v: GTlsFileDatabase_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsFileDatabase_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsFileDatabase_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsFileDatabase_queueautoptr: 
-  given _tag: Tag[GTlsFileDatabase_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsFileDatabase_queueautoptr = o
+  given _tag: Tag[GTlsFileDatabase_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsFileDatabase_queueautoptr = o
   extension (v: GTlsFileDatabase_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsFileDatabase_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsFileDatabase_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsFileDatabase_slistautoptr: 
-  given _tag: Tag[GTlsFileDatabase_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsFileDatabase_slistautoptr = o
+  given _tag: Tag[GTlsFileDatabase_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsFileDatabase_slistautoptr = o
   extension (v: GTlsFileDatabase_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsInteraction_autoptr = Ptr[GTlsInteraction]
 object GTlsInteraction_autoptr: 
   given _tag: Tag[GTlsInteraction_autoptr] = Tag.Ptr[GTlsInteraction](GTlsInteraction._tag)
@@ -5566,40 +5484,31 @@ object GTlsInteraction_autoptr:
   extension (v: GTlsInteraction_autoptr)
     inline def value: Ptr[GTlsInteraction] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsInteraction_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsInteraction_listautoptr = Ptr[_root_.glib.GList]
 object GTlsInteraction_listautoptr: 
-  given _tag: Tag[GTlsInteraction_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsInteraction_listautoptr = o
+  given _tag: Tag[GTlsInteraction_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsInteraction_listautoptr = o
   extension (v: GTlsInteraction_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsInteraction_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsInteraction_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsInteraction_queueautoptr: 
-  given _tag: Tag[GTlsInteraction_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsInteraction_queueautoptr = o
+  given _tag: Tag[GTlsInteraction_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsInteraction_queueautoptr = o
   extension (v: GTlsInteraction_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsInteraction_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsInteraction_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsInteraction_slistautoptr: 
-  given _tag: Tag[GTlsInteraction_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsInteraction_slistautoptr = o
+  given _tag: Tag[GTlsInteraction_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsInteraction_slistautoptr = o
   extension (v: GTlsInteraction_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
  * GTlsPasswordFlags: _TLS_PASSWORD_NONE: No flags _TLS_PASSWORD_RETRY: The password was wrong, and the user should retry. _TLS_PASSWORD_MANY_TRIES: Hint to the user that the password has been wrong many times, and the user may not have many chances left. _TLS_PASSWORD_FINAL_TRY: Hint to the user that this is the last try to get this password right. _TLS_PASSWORD_PKCS11_USER: For PKCS #11, the user PIN is required. Since: 2.70. _TLS_PASSWORD_PKCS11_SECURITY_OFFICER: For PKCS #11, the security officer PIN is required. Since: 2.70. _TLS_PASSWORD_PKCS11_CONTEXT_SPECIFIC: For PKCS #11, the context-specific PIN is required. Since: 2.70.
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gioenums.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gioenums.h
 */
 type GTlsPasswordFlags = _GTlsPasswordFlags
 object GTlsPasswordFlags: 
@@ -5608,9 +5517,6 @@ object GTlsPasswordFlags:
   extension (v: GTlsPasswordFlags)
     inline def value: _GTlsPasswordFlags = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsPassword_autoptr = Ptr[GTlsPassword]
 object GTlsPassword_autoptr: 
   given _tag: Tag[GTlsPassword_autoptr] = Tag.Ptr[GTlsPassword](GTlsPassword._tag)
@@ -5618,39 +5524,27 @@ object GTlsPassword_autoptr:
   extension (v: GTlsPassword_autoptr)
     inline def value: Ptr[GTlsPassword] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsPassword_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsPassword_listautoptr = Ptr[_root_.glib.GList]
 object GTlsPassword_listautoptr: 
-  given _tag: Tag[GTlsPassword_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsPassword_listautoptr = o
+  given _tag: Tag[GTlsPassword_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsPassword_listautoptr = o
   extension (v: GTlsPassword_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsPassword_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsPassword_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsPassword_queueautoptr: 
-  given _tag: Tag[GTlsPassword_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsPassword_queueautoptr = o
+  given _tag: Tag[GTlsPassword_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsPassword_queueautoptr = o
   extension (v: GTlsPassword_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsPassword_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsPassword_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsPassword_slistautoptr: 
-  given _tag: Tag[GTlsPassword_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsPassword_slistautoptr = o
+  given _tag: Tag[GTlsPassword_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsPassword_slistautoptr = o
   extension (v: GTlsPassword_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GTlsServerConnection_autoptr = Ptr[GTlsServerConnection]
 object GTlsServerConnection_autoptr: 
   given _tag: Tag[GTlsServerConnection_autoptr] = Tag.Ptr[GTlsServerConnection](GTlsServerConnection._tag)
@@ -5658,51 +5552,405 @@ object GTlsServerConnection_autoptr:
   extension (v: GTlsServerConnection_autoptr)
     inline def value: Ptr[GTlsServerConnection] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsServerConnection_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GTlsServerConnection_listautoptr = Ptr[_root_.glib.GList]
 object GTlsServerConnection_listautoptr: 
-  given _tag: Tag[GTlsServerConnection_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GTlsServerConnection_listautoptr = o
+  given _tag: Tag[GTlsServerConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTlsServerConnection_listautoptr = o
   extension (v: GTlsServerConnection_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsServerConnection_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GTlsServerConnection_queueautoptr = Ptr[_root_.glib.GQueue]
 object GTlsServerConnection_queueautoptr: 
-  given _tag: Tag[GTlsServerConnection_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GTlsServerConnection_queueautoptr = o
+  given _tag: Tag[GTlsServerConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTlsServerConnection_queueautoptr = o
   extension (v: GTlsServerConnection_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GTlsServerConnection_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GTlsServerConnection_slistautoptr = Ptr[_root_.glib.GSList]
 object GTlsServerConnection_slistautoptr: 
-  given _tag: Tag[GTlsServerConnection_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GTlsServerConnection_slistautoptr = o
+  given _tag: Tag[GTlsServerConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTlsServerConnection_slistautoptr = o
   extension (v: GTlsServerConnection_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GTree_autoptr = Ptr[_root_.glib.GTree]
+object GTree_autoptr: 
+  given _tag: Tag[GTree_autoptr] = Tag.Ptr[_root_.glib.GTree](_root_.glib.GTree._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GTree]): GTree_autoptr = o
+  extension (v: GTree_autoptr)
+    inline def value: Ptr[_root_.glib.GTree] = v
+
+opaque type GTree_listautoptr = Ptr[_root_.glib.GList]
+object GTree_listautoptr: 
+  given _tag: Tag[GTree_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTree_listautoptr = o
+  extension (v: GTree_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GTree_queueautoptr = Ptr[_root_.glib.GQueue]
+object GTree_queueautoptr: 
+  given _tag: Tag[GTree_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTree_queueautoptr = o
+  extension (v: GTree_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GTree_slistautoptr = Ptr[_root_.glib.GSList]
+object GTree_slistautoptr: 
+  given _tag: Tag[GTree_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTree_slistautoptr = o
+  extension (v: GTree_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GTypeClass_autoptr = Ptr[_root_.gobject.GTypeClass]
+object GTypeClass_autoptr: 
+  given _tag: Tag[GTypeClass_autoptr] = Tag.Ptr[_root_.gobject.GTypeClass](_root_.gobject.GTypeClass._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GTypeClass]): GTypeClass_autoptr = o
+  extension (v: GTypeClass_autoptr)
+    inline def value: Ptr[_root_.gobject.GTypeClass] = v
+
+opaque type GTypeClass_listautoptr = Ptr[_root_.glib.GList]
+object GTypeClass_listautoptr: 
+  given _tag: Tag[GTypeClass_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTypeClass_listautoptr = o
+  extension (v: GTypeClass_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GTypeClass_queueautoptr = Ptr[_root_.glib.GQueue]
+object GTypeClass_queueautoptr: 
+  given _tag: Tag[GTypeClass_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTypeClass_queueautoptr = o
+  extension (v: GTypeClass_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GTypeClass_slistautoptr = Ptr[_root_.glib.GSList]
+object GTypeClass_slistautoptr: 
+  given _tag: Tag[GTypeClass_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTypeClass_slistautoptr = o
+  extension (v: GTypeClass_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GTypeModule_autoptr = Ptr[_root_.gobject.GTypeModule]
+object GTypeModule_autoptr: 
+  given _tag: Tag[GTypeModule_autoptr] = Tag.Ptr[_root_.gobject.GTypeModule](_root_.gobject.GTypeModule._tag)
+  inline def apply(inline o: Ptr[_root_.gobject.GTypeModule]): GTypeModule_autoptr = o
+  extension (v: GTypeModule_autoptr)
+    inline def value: Ptr[_root_.gobject.GTypeModule] = v
+
+opaque type GTypeModule_listautoptr = Ptr[_root_.glib.GList]
+object GTypeModule_listautoptr: 
+  given _tag: Tag[GTypeModule_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GTypeModule_listautoptr = o
+  extension (v: GTypeModule_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GTypeModule_queueautoptr = Ptr[_root_.glib.GQueue]
+object GTypeModule_queueautoptr: 
+  given _tag: Tag[GTypeModule_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GTypeModule_queueautoptr = o
+  extension (v: GTypeModule_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GTypeModule_slistautoptr = Ptr[_root_.glib.GSList]
+object GTypeModule_slistautoptr: 
+  given _tag: Tag[GTypeModule_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GTypeModule_slistautoptr = o
+  extension (v: GTypeModule_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GUnixConnection_autoptr = Ptr[GUnixConnection]
+object GUnixConnection_autoptr: 
+  given _tag: Tag[GUnixConnection_autoptr] = Tag.Ptr[GUnixConnection](GUnixConnection._tag)
+  inline def apply(inline o: Ptr[GUnixConnection]): GUnixConnection_autoptr = o
+  extension (v: GUnixConnection_autoptr)
+    inline def value: Ptr[GUnixConnection] = v
+
+opaque type GUnixConnection_listautoptr = Ptr[_root_.glib.GList]
+object GUnixConnection_listautoptr: 
+  given _tag: Tag[GUnixConnection_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GUnixConnection_listautoptr = o
+  extension (v: GUnixConnection_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GUnixConnection_queueautoptr = Ptr[_root_.glib.GQueue]
+object GUnixConnection_queueautoptr: 
+  given _tag: Tag[GUnixConnection_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GUnixConnection_queueautoptr = o
+  extension (v: GUnixConnection_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GUnixConnection_slistautoptr = Ptr[_root_.glib.GSList]
+object GUnixConnection_slistautoptr: 
+  given _tag: Tag[GUnixConnection_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GUnixConnection_slistautoptr = o
+  extension (v: GUnixConnection_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GUnixCredentialsMessage_autoptr = Ptr[GUnixCredentialsMessage]
+object GUnixCredentialsMessage_autoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_autoptr] = Tag.Ptr[GUnixCredentialsMessage](GUnixCredentialsMessage._tag)
+  inline def apply(inline o: Ptr[GUnixCredentialsMessage]): GUnixCredentialsMessage_autoptr = o
+  extension (v: GUnixCredentialsMessage_autoptr)
+    inline def value: Ptr[GUnixCredentialsMessage] = v
+
+opaque type GUnixCredentialsMessage_listautoptr = Ptr[_root_.glib.GList]
+object GUnixCredentialsMessage_listautoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GUnixCredentialsMessage_listautoptr = o
+  extension (v: GUnixCredentialsMessage_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GUnixCredentialsMessage_queueautoptr = Ptr[_root_.glib.GQueue]
+object GUnixCredentialsMessage_queueautoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GUnixCredentialsMessage_queueautoptr = o
+  extension (v: GUnixCredentialsMessage_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GUnixCredentialsMessage_slistautoptr = Ptr[_root_.glib.GSList]
+object GUnixCredentialsMessage_slistautoptr: 
+  given _tag: Tag[GUnixCredentialsMessage_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GUnixCredentialsMessage_slistautoptr = o
+  extension (v: GUnixCredentialsMessage_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GUnixFDList_autoptr = Ptr[GUnixFDList]
+object GUnixFDList_autoptr: 
+  given _tag: Tag[GUnixFDList_autoptr] = Tag.Ptr[GUnixFDList](GUnixFDList._tag)
+  inline def apply(inline o: Ptr[GUnixFDList]): GUnixFDList_autoptr = o
+  extension (v: GUnixFDList_autoptr)
+    inline def value: Ptr[GUnixFDList] = v
+
+opaque type GUnixFDList_listautoptr = Ptr[_root_.glib.GList]
+object GUnixFDList_listautoptr: 
+  given _tag: Tag[GUnixFDList_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GUnixFDList_listautoptr = o
+  extension (v: GUnixFDList_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GUnixFDList_queueautoptr = Ptr[_root_.glib.GQueue]
+object GUnixFDList_queueautoptr: 
+  given _tag: Tag[GUnixFDList_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GUnixFDList_queueautoptr = o
+  extension (v: GUnixFDList_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GUnixFDList_slistautoptr = Ptr[_root_.glib.GSList]
+object GUnixFDList_slistautoptr: 
+  given _tag: Tag[GUnixFDList_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GUnixFDList_slistautoptr = o
+  extension (v: GUnixFDList_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GUnixSocketAddress_autoptr = Ptr[GUnixSocketAddress]
+object GUnixSocketAddress_autoptr: 
+  given _tag: Tag[GUnixSocketAddress_autoptr] = Tag.Ptr[GUnixSocketAddress](GUnixSocketAddress._tag)
+  inline def apply(inline o: Ptr[GUnixSocketAddress]): GUnixSocketAddress_autoptr = o
+  extension (v: GUnixSocketAddress_autoptr)
+    inline def value: Ptr[GUnixSocketAddress] = v
+
+opaque type GUnixSocketAddress_listautoptr = Ptr[_root_.glib.GList]
+object GUnixSocketAddress_listautoptr: 
+  given _tag: Tag[GUnixSocketAddress_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GUnixSocketAddress_listautoptr = o
+  extension (v: GUnixSocketAddress_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GUnixSocketAddress_queueautoptr = Ptr[_root_.glib.GQueue]
+object GUnixSocketAddress_queueautoptr: 
+  given _tag: Tag[GUnixSocketAddress_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GUnixSocketAddress_queueautoptr = o
+  extension (v: GUnixSocketAddress_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GUnixSocketAddress_slistautoptr = Ptr[_root_.glib.GSList]
+object GUnixSocketAddress_slistautoptr: 
+  given _tag: Tag[GUnixSocketAddress_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GUnixSocketAddress_slistautoptr = o
+  extension (v: GUnixSocketAddress_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GUri_autoptr = Ptr[_root_.glib.GUri]
+object GUri_autoptr: 
+  given _tag: Tag[GUri_autoptr] = Tag.Ptr[_root_.glib.GUri](_root_.glib.GUri._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GUri]): GUri_autoptr = o
+  extension (v: GUri_autoptr)
+    inline def value: Ptr[_root_.glib.GUri] = v
+
+opaque type GUri_listautoptr = Ptr[_root_.glib.GList]
+object GUri_listautoptr: 
+  given _tag: Tag[GUri_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GUri_listautoptr = o
+  extension (v: GUri_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GUri_queueautoptr = Ptr[_root_.glib.GQueue]
+object GUri_queueautoptr: 
+  given _tag: Tag[GUri_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GUri_queueautoptr = o
+  extension (v: GUri_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GUri_slistautoptr = Ptr[_root_.glib.GSList]
+object GUri_slistautoptr: 
+  given _tag: Tag[GUri_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GUri_slistautoptr = o
+  extension (v: GUri_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GVariantBuilder_autoptr = Ptr[_root_.glib.GVariantBuilder]
+object GVariantBuilder_autoptr: 
+  given _tag: Tag[GVariantBuilder_autoptr] = Tag.Ptr[_root_.glib.GVariantBuilder](_root_.glib.GVariantBuilder._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GVariantBuilder]): GVariantBuilder_autoptr = o
+  extension (v: GVariantBuilder_autoptr)
+    inline def value: Ptr[_root_.glib.GVariantBuilder] = v
+
+opaque type GVariantBuilder_listautoptr = Ptr[_root_.glib.GList]
+object GVariantBuilder_listautoptr: 
+  given _tag: Tag[GVariantBuilder_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVariantBuilder_listautoptr = o
+  extension (v: GVariantBuilder_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GVariantBuilder_queueautoptr = Ptr[_root_.glib.GQueue]
+object GVariantBuilder_queueautoptr: 
+  given _tag: Tag[GVariantBuilder_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVariantBuilder_queueautoptr = o
+  extension (v: GVariantBuilder_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GVariantBuilder_slistautoptr = Ptr[_root_.glib.GSList]
+object GVariantBuilder_slistautoptr: 
+  given _tag: Tag[GVariantBuilder_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVariantBuilder_slistautoptr = o
+  extension (v: GVariantBuilder_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GVariantDict_autoptr = Ptr[_root_.glib.GVariantDict]
+object GVariantDict_autoptr: 
+  given _tag: Tag[GVariantDict_autoptr] = Tag.Ptr[_root_.glib.GVariantDict](_root_.glib.GVariantDict._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GVariantDict]): GVariantDict_autoptr = o
+  extension (v: GVariantDict_autoptr)
+    inline def value: Ptr[_root_.glib.GVariantDict] = v
+
+opaque type GVariantDict_listautoptr = Ptr[_root_.glib.GList]
+object GVariantDict_listautoptr: 
+  given _tag: Tag[GVariantDict_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVariantDict_listautoptr = o
+  extension (v: GVariantDict_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GVariantDict_queueautoptr = Ptr[_root_.glib.GQueue]
+object GVariantDict_queueautoptr: 
+  given _tag: Tag[GVariantDict_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVariantDict_queueautoptr = o
+  extension (v: GVariantDict_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GVariantDict_slistautoptr = Ptr[_root_.glib.GSList]
+object GVariantDict_slistautoptr: 
+  given _tag: Tag[GVariantDict_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVariantDict_slistautoptr = o
+  extension (v: GVariantDict_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GVariantIter_autoptr = Ptr[_root_.glib.GVariantIter]
+object GVariantIter_autoptr: 
+  given _tag: Tag[GVariantIter_autoptr] = Tag.Ptr[_root_.glib.GVariantIter](_root_.glib.GVariantIter._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GVariantIter]): GVariantIter_autoptr = o
+  extension (v: GVariantIter_autoptr)
+    inline def value: Ptr[_root_.glib.GVariantIter] = v
+
+opaque type GVariantIter_listautoptr = Ptr[_root_.glib.GList]
+object GVariantIter_listautoptr: 
+  given _tag: Tag[GVariantIter_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVariantIter_listautoptr = o
+  extension (v: GVariantIter_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GVariantIter_queueautoptr = Ptr[_root_.glib.GQueue]
+object GVariantIter_queueautoptr: 
+  given _tag: Tag[GVariantIter_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVariantIter_queueautoptr = o
+  extension (v: GVariantIter_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GVariantIter_slistautoptr = Ptr[_root_.glib.GSList]
+object GVariantIter_slistautoptr: 
+  given _tag: Tag[GVariantIter_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVariantIter_slistautoptr = o
+  extension (v: GVariantIter_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GVariantType_autoptr = Ptr[_root_.glib.GVariantType]
+object GVariantType_autoptr: 
+  given _tag: Tag[GVariantType_autoptr] = Tag.Ptr[_root_.glib.GVariantType](_root_.glib.GVariantType._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GVariantType]): GVariantType_autoptr = o
+  extension (v: GVariantType_autoptr)
+    inline def value: Ptr[_root_.glib.GVariantType] = v
+
+opaque type GVariantType_listautoptr = Ptr[_root_.glib.GList]
+object GVariantType_listautoptr: 
+  given _tag: Tag[GVariantType_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVariantType_listautoptr = o
+  extension (v: GVariantType_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GVariantType_queueautoptr = Ptr[_root_.glib.GQueue]
+object GVariantType_queueautoptr: 
+  given _tag: Tag[GVariantType_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVariantType_queueautoptr = o
+  extension (v: GVariantType_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GVariantType_slistautoptr = Ptr[_root_.glib.GSList]
+object GVariantType_slistautoptr: 
+  given _tag: Tag[GVariantType_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVariantType_slistautoptr = o
+  extension (v: GVariantType_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
+
+opaque type GVariant_autoptr = Ptr[_root_.glib.GVariant]
+object GVariant_autoptr: 
+  given _tag: Tag[GVariant_autoptr] = Tag.Ptr[_root_.glib.GVariant](_root_.glib.GVariant._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GVariant]): GVariant_autoptr = o
+  extension (v: GVariant_autoptr)
+    inline def value: Ptr[_root_.glib.GVariant] = v
+
+opaque type GVariant_listautoptr = Ptr[_root_.glib.GList]
+object GVariant_listautoptr: 
+  given _tag: Tag[GVariant_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVariant_listautoptr = o
+  extension (v: GVariant_listautoptr)
+    inline def value: Ptr[_root_.glib.GList] = v
+
+opaque type GVariant_queueautoptr = Ptr[_root_.glib.GQueue]
+object GVariant_queueautoptr: 
+  given _tag: Tag[GVariant_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVariant_queueautoptr = o
+  extension (v: GVariant_queueautoptr)
+    inline def value: Ptr[_root_.glib.GQueue] = v
+
+opaque type GVariant_slistautoptr = Ptr[_root_.glib.GSList]
+object GVariant_slistautoptr: 
+  given _tag: Tag[GVariant_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVariant_slistautoptr = o
+  extension (v: GVariant_slistautoptr)
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 /**
- * GVfsFileLookupFunc: : a #GVfs : the identifier to look up a #GFile for. This can either be an URI or a parse name as returned by g_file_get_parse_name() _data: user data passed to the function
+ * GVfsFileLookupFunc: : a #GVfs : the identifier to look up a #GFile for. This can either be a URI or a parse name as returned by g_file_get_parse_name() _data: user data passed to the function
 
- * [bindgen] header: /usr/include/glib-2.0/gio/gvfs.h
+ * [bindgen] header: /opt/homebrew/Cellar/glib/2.82.4/include/glib-2.0/gio/gvfs.h
 */
-opaque type GVfsFileLookupFunc = CFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]]
+opaque type GVfsFileLookupFunc = CFuncPtr3[Ptr[GVfs], CString, _root_.glib.gpointer, Ptr[GFile]]
 object GVfsFileLookupFunc: 
-  given _tag: Tag[GVfsFileLookupFunc] = Tag.materializeCFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]]
-  inline def apply(inline o: CFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]]): GVfsFileLookupFunc = o
+  given _tag: Tag[GVfsFileLookupFunc] = Tag.materializeCFuncPtr3[Ptr[GVfs], CString, _root_.glib.gpointer, Ptr[GFile]]
+  inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GVfsFileLookupFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
+  inline def apply(inline o: CFuncPtr3[Ptr[GVfs], CString, _root_.glib.gpointer, Ptr[GFile]]): GVfsFileLookupFunc = o
   extension (v: GVfsFileLookupFunc)
-    inline def value: CFuncPtr3[Ptr[GVfs], CString, _root_.glib.all.gpointer, Ptr[GFile]] = v
+    inline def value: CFuncPtr3[Ptr[GVfs], CString, _root_.glib.gpointer, Ptr[GFile]] = v
+    inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GVfs_autoptr = Ptr[GVfs]
 object GVfs_autoptr: 
   given _tag: Tag[GVfs_autoptr] = Tag.Ptr[GVfs](GVfs._tag)
@@ -5710,39 +5958,27 @@ object GVfs_autoptr:
   extension (v: GVfs_autoptr)
     inline def value: Ptr[GVfs] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVfs_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GVfs_listautoptr = Ptr[_root_.glib.GList]
 object GVfs_listautoptr: 
-  given _tag: Tag[GVfs_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GVfs_listautoptr = o
+  given _tag: Tag[GVfs_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVfs_listautoptr = o
   extension (v: GVfs_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVfs_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GVfs_queueautoptr = Ptr[_root_.glib.GQueue]
 object GVfs_queueautoptr: 
-  given _tag: Tag[GVfs_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GVfs_queueautoptr = o
+  given _tag: Tag[GVfs_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVfs_queueautoptr = o
   extension (v: GVfs_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVfs_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GVfs_slistautoptr = Ptr[_root_.glib.GSList]
 object GVfs_slistautoptr: 
-  given _tag: Tag[GVfs_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GVfs_slistautoptr = o
+  given _tag: Tag[GVfs_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVfs_slistautoptr = o
   extension (v: GVfs_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GVolumeMonitor_autoptr = Ptr[GVolumeMonitor]
 object GVolumeMonitor_autoptr: 
   given _tag: Tag[GVolumeMonitor_autoptr] = Tag.Ptr[GVolumeMonitor](GVolumeMonitor._tag)
@@ -5750,39 +5986,27 @@ object GVolumeMonitor_autoptr:
   extension (v: GVolumeMonitor_autoptr)
     inline def value: Ptr[GVolumeMonitor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVolumeMonitor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GVolumeMonitor_listautoptr = Ptr[_root_.glib.GList]
 object GVolumeMonitor_listautoptr: 
-  given _tag: Tag[GVolumeMonitor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GVolumeMonitor_listautoptr = o
+  given _tag: Tag[GVolumeMonitor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVolumeMonitor_listautoptr = o
   extension (v: GVolumeMonitor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVolumeMonitor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GVolumeMonitor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GVolumeMonitor_queueautoptr: 
-  given _tag: Tag[GVolumeMonitor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GVolumeMonitor_queueautoptr = o
+  given _tag: Tag[GVolumeMonitor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVolumeMonitor_queueautoptr = o
   extension (v: GVolumeMonitor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVolumeMonitor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GVolumeMonitor_slistautoptr = Ptr[_root_.glib.GSList]
 object GVolumeMonitor_slistautoptr: 
-  given _tag: Tag[GVolumeMonitor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GVolumeMonitor_slistautoptr = o
+  given _tag: Tag[GVolumeMonitor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVolumeMonitor_slistautoptr = o
   extension (v: GVolumeMonitor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GVolume_autoptr = Ptr[GVolume]
 object GVolume_autoptr: 
   given _tag: Tag[GVolume_autoptr] = Tag.Ptr[GVolume](GVolume._tag)
@@ -5790,39 +6014,27 @@ object GVolume_autoptr:
   extension (v: GVolume_autoptr)
     inline def value: Ptr[GVolume] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVolume_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GVolume_listautoptr = Ptr[_root_.glib.GList]
 object GVolume_listautoptr: 
-  given _tag: Tag[GVolume_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GVolume_listautoptr = o
+  given _tag: Tag[GVolume_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GVolume_listautoptr = o
   extension (v: GVolume_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVolume_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GVolume_queueautoptr = Ptr[_root_.glib.GQueue]
 object GVolume_queueautoptr: 
-  given _tag: Tag[GVolume_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GVolume_queueautoptr = o
+  given _tag: Tag[GVolume_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GVolume_queueautoptr = o
   extension (v: GVolume_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GVolume_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GVolume_slistautoptr = Ptr[_root_.glib.GSList]
 object GVolume_slistautoptr: 
-  given _tag: Tag[GVolume_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GVolume_slistautoptr = o
+  given _tag: Tag[GVolume_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GVolume_slistautoptr = o
   extension (v: GVolume_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GZlibCompressor_autoptr = Ptr[GZlibCompressor]
 object GZlibCompressor_autoptr: 
   given _tag: Tag[GZlibCompressor_autoptr] = Tag.Ptr[GZlibCompressor](GZlibCompressor._tag)
@@ -5830,39 +6042,27 @@ object GZlibCompressor_autoptr:
   extension (v: GZlibCompressor_autoptr)
     inline def value: Ptr[GZlibCompressor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GZlibCompressor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GZlibCompressor_listautoptr = Ptr[_root_.glib.GList]
 object GZlibCompressor_listautoptr: 
-  given _tag: Tag[GZlibCompressor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GZlibCompressor_listautoptr = o
+  given _tag: Tag[GZlibCompressor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GZlibCompressor_listautoptr = o
   extension (v: GZlibCompressor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GZlibCompressor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GZlibCompressor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GZlibCompressor_queueautoptr: 
-  given _tag: Tag[GZlibCompressor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GZlibCompressor_queueautoptr = o
+  given _tag: Tag[GZlibCompressor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GZlibCompressor_queueautoptr = o
   extension (v: GZlibCompressor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GZlibCompressor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GZlibCompressor_slistautoptr = Ptr[_root_.glib.GSList]
 object GZlibCompressor_slistautoptr: 
-  given _tag: Tag[GZlibCompressor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GZlibCompressor_slistautoptr = o
+  given _tag: Tag[GZlibCompressor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GZlibCompressor_slistautoptr = o
   extension (v: GZlibCompressor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
 opaque type GZlibDecompressor_autoptr = Ptr[GZlibDecompressor]
 object GZlibDecompressor_autoptr: 
   given _tag: Tag[GZlibDecompressor_autoptr] = Tag.Ptr[GZlibDecompressor](GZlibDecompressor._tag)
@@ -5870,35 +6070,26 @@ object GZlibDecompressor_autoptr:
   extension (v: GZlibDecompressor_autoptr)
     inline def value: Ptr[GZlibDecompressor] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GZlibDecompressor_listautoptr = Ptr[_root_.glib.all.GList]
+opaque type GZlibDecompressor_listautoptr = Ptr[_root_.glib.GList]
 object GZlibDecompressor_listautoptr: 
-  given _tag: Tag[GZlibDecompressor_listautoptr] = Tag.Ptr[_root_.glib.all.GList](_root_.glib.all.GList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GList]): GZlibDecompressor_listautoptr = o
+  given _tag: Tag[GZlibDecompressor_listautoptr] = Tag.Ptr[_root_.glib.GList](_root_.glib.GList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GList]): GZlibDecompressor_listautoptr = o
   extension (v: GZlibDecompressor_listautoptr)
-    inline def value: Ptr[_root_.glib.all.GList] = v
+    inline def value: Ptr[_root_.glib.GList] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GZlibDecompressor_queueautoptr = Ptr[_root_.glib.all.GQueue]
+opaque type GZlibDecompressor_queueautoptr = Ptr[_root_.glib.GQueue]
 object GZlibDecompressor_queueautoptr: 
-  given _tag: Tag[GZlibDecompressor_queueautoptr] = Tag.Ptr[_root_.glib.all.GQueue](_root_.glib.all.GQueue._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GQueue]): GZlibDecompressor_queueautoptr = o
+  given _tag: Tag[GZlibDecompressor_queueautoptr] = Tag.Ptr[_root_.glib.GQueue](_root_.glib.GQueue._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GQueue]): GZlibDecompressor_queueautoptr = o
   extension (v: GZlibDecompressor_queueautoptr)
-    inline def value: Ptr[_root_.glib.all.GQueue] = v
+    inline def value: Ptr[_root_.glib.GQueue] = v
 
-/**
- * [bindgen] header: /usr/include/glib-2.0/gio/gio-autocleanups.h
-*/
-opaque type GZlibDecompressor_slistautoptr = Ptr[_root_.glib.all.GSList]
+opaque type GZlibDecompressor_slistautoptr = Ptr[_root_.glib.GSList]
 object GZlibDecompressor_slistautoptr: 
-  given _tag: Tag[GZlibDecompressor_slistautoptr] = Tag.Ptr[_root_.glib.all.GSList](_root_.glib.all.GSList._tag)
-  inline def apply(inline o: Ptr[_root_.glib.all.GSList]): GZlibDecompressor_slistautoptr = o
+  given _tag: Tag[GZlibDecompressor_slistautoptr] = Tag.Ptr[_root_.glib.GSList](_root_.glib.GSList._tag)
+  inline def apply(inline o: Ptr[_root_.glib.GSList]): GZlibDecompressor_slistautoptr = o
   extension (v: GZlibDecompressor_slistautoptr)
-    inline def value: Ptr[_root_.glib.all.GSList] = v
+    inline def value: Ptr[_root_.glib.GSList] = v
 
 type pid_t = posix.sys.types.pid_t
 object pid_t: 
@@ -5920,6 +6111,13 @@ object pthread_t:
   inline def apply(inline o: posix.sys.types.pthread_t): pthread_t = o
   extension (v: pthread_t)
     inline def value: posix.sys.types.pthread_t = v
+
+type size_t = libc.stddef.size_t
+object size_t: 
+  val _tag: Tag[size_t] = summon[Tag[libc.stddef.size_t]]
+  inline def apply(inline o: libc.stddef.size_t): size_t = o
+  extension (v: size_t)
+    inline def value: libc.stddef.size_t = v
 
 type time_t = posix.sys.types.time_t
 object time_t: 
@@ -5948,4 +6146,3 @@ object va_list:
   inline def apply(inline o: unsafe.CVarArgList): va_list = o
   extension (v: va_list)
     inline def value: unsafe.CVarArgList = v
-

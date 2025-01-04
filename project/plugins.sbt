@@ -1,10 +1,10 @@
 resolvers ++= Resolver.sonatypeOssRepos("snapshots")
 
-addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.4.17")
+addSbtPlugin("org.scala-native" % "sbt-scala-native" % "0.5.6")
 
 addSbtPlugin("com.indoorvivants" % "sbt-commandmatrix" % "0.0.5")
 
-addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.5.11")
+addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.9.2")
 
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.6")
 
@@ -13,7 +13,7 @@ addSbtPlugin(
 )
 
 val BindgenVersion =
-  sys.env.getOrElse("SN_BINDGEN_VERSION", "0.0.16+1-f12b1354-SNAPSHOT")
+  sys.env.getOrElse("SN_BINDGEN_VERSION", "0.1.5")
 
 addSbtPlugin(
   "com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion
