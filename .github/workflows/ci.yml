@@ -28,6 +28,9 @@ jobs:
           java-version: '17'
           cache: sbt
 
+      - name: Install sbt
+        run: sudo curl -Lo /usr/local/bin/sbt https://raw.githubusercontent.com/sbt/sbt/refs/heads/1.10.x/sbt && chmod +x /usr/local/bin/sbt
+
       - name: SBT remote cache
         id: remote-cache
         uses: actions/cache@v3
