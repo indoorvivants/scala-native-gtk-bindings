@@ -38,6 +38,9 @@ jobs:
       - name: Pull cache 
         run: sbt --client pullRemoteCache || echo 'remote cache not found'
 
+      - name: apt-get update
+        run: sudo apt-get update
+
       - name: Install GTK
         run: sudo apt-get install libgtk-4-dev libadwaita-1-dev
 
