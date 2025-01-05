@@ -1422,12 +1422,12 @@ object GRecMutexLocker_slistautoptr:
 /**
  * GRefString:
 */
-opaque type GRefString = CUnsignedChar
+opaque type GRefString = CChar
 object GRefString: 
-  given _tag: Tag[GRefString] = Tag.UByte
-  inline def apply(inline o: CUnsignedChar): GRefString = o
+  given _tag: Tag[GRefString] = Tag.Byte
+  inline def apply(inline o: CChar): GRefString = o
   extension (v: GRefString)
-    inline def value: CUnsignedChar = v
+    inline def value: CChar = v
 
 opaque type GRefString_autoptr = Ptr[GRefString]
 object GRefString_autoptr: 
@@ -2182,12 +2182,12 @@ object gboolean:
   extension (v: gboolean)
     inline def value: gint = v
 
-opaque type gchar = CUnsignedChar
+opaque type gchar = CChar
 object gchar: 
-  given _tag: Tag[gchar] = Tag.UByte
-  inline def apply(inline o: CUnsignedChar): gchar = o
+  given _tag: Tag[gchar] = Tag.Byte
+  inline def apply(inline o: CChar): gchar = o
   extension (v: gchar)
-    inline def value: CUnsignedChar = v
+    inline def value: CChar = v
 
 opaque type gconstpointer = Ptr[Byte]
 object gconstpointer: 

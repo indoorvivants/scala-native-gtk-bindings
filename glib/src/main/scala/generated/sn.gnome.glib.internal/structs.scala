@@ -925,11 +925,11 @@ opaque type GSequenceIter = CStruct0
 object GSequenceIter:
   given _tag: Tag[GSequenceIter] = Tag.materializeCStruct0Tag
 
-opaque type GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[CUnsignedChar], Ptr[GSourcePrivate]]
+opaque type GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
 object GSource:
-  given _tag: Tag[GSource] = Tag.materializeCStruct13Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[CUnsignedChar], Ptr[GSourcePrivate]]
+  given _tag: Tag[GSource] = Tag.materializeCStruct13Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
   def apply()(using Zone): Ptr[GSource] = scala.scalanative.unsafe.alloc[GSource](1)
-  def apply(callback_data : gpointer, callback_funcs : Ptr[GSourceCallbackFuncs], source_funcs : Ptr[GSourceFuncs], ref_count : guint, context : Ptr[GMainContext], priority : gint, flags : guint, source_id : guint, poll_fds : Ptr[GSList], prev : Ptr[GSource], next : Ptr[GSource], name : Ptr[CUnsignedChar], priv : Ptr[GSourcePrivate])(using Zone): Ptr[GSource] = 
+  def apply(callback_data : gpointer, callback_funcs : Ptr[GSourceCallbackFuncs], source_funcs : Ptr[GSourceFuncs], ref_count : guint, context : Ptr[GMainContext], priority : gint, flags : guint, source_id : guint, poll_fds : Ptr[GSList], prev : Ptr[GSource], next : Ptr[GSource], name : CString, priv : Ptr[GSourcePrivate])(using Zone): Ptr[GSource] = 
     val ____ptr = apply()
     (!____ptr).callback_data = callback_data
     (!____ptr).callback_funcs = callback_funcs
@@ -968,8 +968,8 @@ object GSource:
     def prev_=(value: Ptr[GSource]): Unit = !struct.at10 = value.asInstanceOf[Ptr[Byte]]
     def next : Ptr[GSource] = struct._11.asInstanceOf[Ptr[GSource]]
     def next_=(value: Ptr[GSource]): Unit = !struct.at11 = value.asInstanceOf[Ptr[Byte]]
-    def name : Ptr[CUnsignedChar] = struct._12
-    def name_=(value: Ptr[CUnsignedChar]): Unit = !struct.at12 = value
+    def name : CString = struct._12
+    def name_=(value: CString): Unit = !struct.at12 = value
     def priv : Ptr[GSourcePrivate] = struct._13
     def priv_=(value: Ptr[GSourcePrivate]): Unit = !struct.at13 = value
 
@@ -2459,11 +2459,11 @@ opaque type _GSequenceNode = CStruct0
 object _GSequenceNode:
   given _tag: Tag[_GSequenceNode] = Tag.materializeCStruct0Tag
 
-opaque type _GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[CUnsignedChar], Ptr[GSourcePrivate]]
+opaque type _GSource = CStruct13[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
 object _GSource:
-  given _tag: Tag[_GSource] = Tag.materializeCStruct13Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], Ptr[CUnsignedChar], Ptr[GSourcePrivate]]
+  given _tag: Tag[_GSource] = Tag.materializeCStruct13Tag[gpointer, Ptr[Byte], Ptr[Byte], guint, Ptr[GMainContext], gint, guint, guint, Ptr[Byte], Ptr[Byte], Ptr[Byte], CString, Ptr[GSourcePrivate]]
   def apply()(using Zone): Ptr[_GSource] = scala.scalanative.unsafe.alloc[_GSource](1)
-  def apply(callback_data : gpointer, callback_funcs : Ptr[GSourceCallbackFuncs], source_funcs : Ptr[GSourceFuncs], ref_count : guint, context : Ptr[GMainContext], priority : gint, flags : guint, source_id : guint, poll_fds : Ptr[GSList], prev : Ptr[GSource], next : Ptr[GSource], name : Ptr[CUnsignedChar], priv : Ptr[GSourcePrivate])(using Zone): Ptr[_GSource] = 
+  def apply(callback_data : gpointer, callback_funcs : Ptr[GSourceCallbackFuncs], source_funcs : Ptr[GSourceFuncs], ref_count : guint, context : Ptr[GMainContext], priority : gint, flags : guint, source_id : guint, poll_fds : Ptr[GSList], prev : Ptr[GSource], next : Ptr[GSource], name : CString, priv : Ptr[GSourcePrivate])(using Zone): Ptr[_GSource] = 
     val ____ptr = apply()
     (!____ptr).callback_data = callback_data
     (!____ptr).callback_funcs = callback_funcs
@@ -2502,8 +2502,8 @@ object _GSource:
     def prev_=(value: Ptr[GSource]): Unit = !struct.at10 = value.asInstanceOf[Ptr[Byte]]
     def next : Ptr[GSource] = struct._11.asInstanceOf[Ptr[GSource]]
     def next_=(value: Ptr[GSource]): Unit = !struct.at11 = value.asInstanceOf[Ptr[Byte]]
-    def name : Ptr[CUnsignedChar] = struct._12
-    def name_=(value: Ptr[CUnsignedChar]): Unit = !struct.at12 = value
+    def name : CString = struct._12
+    def name_=(value: CString): Unit = !struct.at12 = value
     def priv : Ptr[GSourcePrivate] = struct._13
     def priv_=(value: Ptr[GSourcePrivate]): Unit = !struct.at13 = value
 

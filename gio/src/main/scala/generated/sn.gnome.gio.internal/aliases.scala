@@ -1692,13 +1692,13 @@ object GFileProgressCallback:
 /**
  * GFileReadMoreCallback:
 */
-opaque type GFileReadMoreCallback = CFuncPtr3[Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+opaque type GFileReadMoreCallback = CFuncPtr3[CString, _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GFileReadMoreCallback: 
-  given _tag: Tag[GFileReadMoreCallback] = Tag.materializeCFuncPtr3[Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+  given _tag: Tag[GFileReadMoreCallback] = Tag.materializeCFuncPtr3[CString, _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GFileReadMoreCallback = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GFileReadMoreCallback = o
+  inline def apply(inline o: CFuncPtr3[CString, _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GFileReadMoreCallback = o
   extension (v: GFileReadMoreCallback)
-    inline def value: CFuncPtr3[Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
+    inline def value: CFuncPtr3[CString, _root_.sn.gnome.glib.internal.goffset, _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GFile_autoptr = Ptr[GFile]
@@ -4199,13 +4199,13 @@ object GUnixSocketAddress_slistautoptr:
 /**
  * GVfsFileLookupFunc: : a #GVfs : the identifier to look up a #GFile for. This can either be an URI or a parse name as returned by g_file_get_parse_name() _data: user data passed to the function
 */
-opaque type GVfsFileLookupFunc = CFuncPtr3[Ptr[GVfs], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]]
+opaque type GVfsFileLookupFunc = CFuncPtr3[Ptr[GVfs], CString, _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]]
 object GVfsFileLookupFunc: 
-  given _tag: Tag[GVfsFileLookupFunc] = Tag.materializeCFuncPtr3[Ptr[GVfs], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]]
+  given _tag: Tag[GVfsFileLookupFunc] = Tag.materializeCFuncPtr3[Ptr[GVfs], CString, _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GVfsFileLookupFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[Ptr[GVfs], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]]): GVfsFileLookupFunc = o
+  inline def apply(inline o: CFuncPtr3[Ptr[GVfs], CString, _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]]): GVfsFileLookupFunc = o
   extension (v: GVfsFileLookupFunc)
-    inline def value: CFuncPtr3[Ptr[GVfs], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]] = v
+    inline def value: CFuncPtr3[Ptr[GVfs], CString, _root_.sn.gnome.glib.internal.gpointer, Ptr[GFile]] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GVfs_autoptr = Ptr[GVfs]

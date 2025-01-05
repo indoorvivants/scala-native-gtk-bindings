@@ -121,7 +121,7 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_font_options_get_subpixel_order(options : Ptr[cairo_font_options_t]): cairo_subpixel_order_t = extern
 
-@extern def cairo_font_options_get_variations(options : Ptr[cairo_font_options_t]): Ptr[CUnsignedChar] = extern
+@extern def cairo_font_options_get_variations(options : Ptr[cairo_font_options_t]): CString = extern
 
 @extern def cairo_font_options_hash(options : Ptr[cairo_font_options_t]): CUnsignedLongInt = extern
 
@@ -141,7 +141,7 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_font_options_set_subpixel_order(options : Ptr[cairo_font_options_t], subpixel_order : cairo_subpixel_order_t): Unit = extern
 
-@extern def cairo_font_options_set_variations(options : Ptr[cairo_font_options_t], variations : Ptr[CUnsignedChar]): Unit = extern
+@extern def cairo_font_options_set_variations(options : Ptr[cairo_font_options_t], variations : CString): Unit = extern
 
 @extern def cairo_font_options_status(options : Ptr[cairo_font_options_t]): cairo_status_t = extern
 
@@ -207,7 +207,7 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_image_surface_create_for_data(data : Ptr[CUnsignedChar], format : cairo_format_t, width : CInt, height : CInt, stride : CInt): Ptr[cairo_surface_t] = extern
 
-@extern def cairo_image_surface_create_from_png(filename : Ptr[CUnsignedChar]): Ptr[cairo_surface_t] = extern
+@extern def cairo_image_surface_create_from_png(filename : CString): Ptr[cairo_surface_t] = extern
 
 @extern def cairo_image_surface_create_from_png_stream(read_func : cairo_read_func_t, closure : Ptr[Byte]): Ptr[cairo_surface_t] = extern
 
@@ -487,11 +487,11 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_scaled_font_status(scaled_font : Ptr[cairo_scaled_font_t]): cairo_status_t = extern
 
-@extern def cairo_scaled_font_text_extents(scaled_font : Ptr[cairo_scaled_font_t], utf8 : Ptr[CUnsignedChar], extents : Ptr[cairo_text_extents_t]): Unit = extern
+@extern def cairo_scaled_font_text_extents(scaled_font : Ptr[cairo_scaled_font_t], utf8 : CString, extents : Ptr[cairo_text_extents_t]): Unit = extern
 
-@extern def cairo_scaled_font_text_to_glyphs(scaled_font : Ptr[cairo_scaled_font_t], x : Double, y : Double, utf8 : Ptr[CUnsignedChar], utf8_len : CInt, glyphs : Ptr[Ptr[cairo_glyph_t]], num_glyphs : Ptr[CInt], clusters : Ptr[Ptr[cairo_text_cluster_t]], num_clusters : Ptr[CInt], cluster_flags : Ptr[cairo_text_cluster_flags_t]): cairo_status_t = extern
+@extern def cairo_scaled_font_text_to_glyphs(scaled_font : Ptr[cairo_scaled_font_t], x : Double, y : Double, utf8 : CString, utf8_len : CInt, glyphs : Ptr[Ptr[cairo_glyph_t]], num_glyphs : Ptr[CInt], clusters : Ptr[Ptr[cairo_text_cluster_t]], num_clusters : Ptr[CInt], cluster_flags : Ptr[cairo_text_cluster_flags_t]): cairo_status_t = extern
 
-@extern def cairo_select_font_face(cr : Ptr[cairo_t], family : Ptr[CUnsignedChar], slant : cairo_font_slant_t, weight : cairo_font_weight_t): Unit = extern
+@extern def cairo_select_font_face(cr : Ptr[cairo_t], family : CString, slant : cairo_font_slant_t, weight : cairo_font_weight_t): Unit = extern
 
 @extern def cairo_set_antialias(cr : Ptr[cairo_t], antialias : cairo_antialias_t): Unit = extern
 
@@ -539,13 +539,13 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_show_page(cr : Ptr[cairo_t]): Unit = extern
 
-@extern def cairo_show_text(cr : Ptr[cairo_t], utf8 : Ptr[CUnsignedChar]): Unit = extern
+@extern def cairo_show_text(cr : Ptr[cairo_t], utf8 : CString): Unit = extern
 
-@extern def cairo_show_text_glyphs(cr : Ptr[cairo_t], utf8 : Ptr[CUnsignedChar], utf8_len : CInt, glyphs : Ptr[cairo_glyph_t], num_glyphs : CInt, clusters : Ptr[cairo_text_cluster_t], num_clusters : CInt, cluster_flags : cairo_text_cluster_flags_t): Unit = extern
+@extern def cairo_show_text_glyphs(cr : Ptr[cairo_t], utf8 : CString, utf8_len : CInt, glyphs : Ptr[cairo_glyph_t], num_glyphs : CInt, clusters : Ptr[cairo_text_cluster_t], num_clusters : CInt, cluster_flags : cairo_text_cluster_flags_t): Unit = extern
 
 @extern def cairo_status(cr : Ptr[cairo_t]): cairo_status_t = extern
 
-@extern def cairo_status_to_string(status : cairo_status_t): Ptr[CUnsignedChar] = extern
+@extern def cairo_status_to_string(status : cairo_status_t): CString = extern
 
 @extern def cairo_stroke(cr : Ptr[cairo_t]): Unit = extern
 
@@ -581,7 +581,7 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_surface_get_font_options(surface : Ptr[cairo_surface_t], options : Ptr[cairo_font_options_t]): Unit = extern
 
-@extern def cairo_surface_get_mime_data(surface : Ptr[cairo_surface_t], mime_type : Ptr[CUnsignedChar], data : Ptr[Ptr[CUnsignedChar]], length : Ptr[CUnsignedLongInt]): Unit = extern
+@extern def cairo_surface_get_mime_data(surface : Ptr[cairo_surface_t], mime_type : CString, data : Ptr[Ptr[CUnsignedChar]], length : Ptr[CUnsignedLongInt]): Unit = extern
 
 @extern def cairo_surface_get_reference_count(surface : Ptr[cairo_surface_t]): CUnsignedInt = extern
 
@@ -623,7 +623,7 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_surface_set_fallback_resolution(surface : Ptr[cairo_surface_t], x_pixels_per_inch : Double, y_pixels_per_inch : Double): Unit = extern
 
-@extern def cairo_surface_set_mime_data(surface : Ptr[cairo_surface_t], mime_type : Ptr[CUnsignedChar], data : Ptr[CUnsignedChar], length : CUnsignedLongInt, destroy : cairo_destroy_func_t, closure : Ptr[Byte]): cairo_status_t = extern
+@extern def cairo_surface_set_mime_data(surface : Ptr[cairo_surface_t], mime_type : CString, data : Ptr[CUnsignedChar], length : CUnsignedLongInt, destroy : cairo_destroy_func_t, closure : Ptr[Byte]): cairo_status_t = extern
 
 @extern def cairo_surface_set_user_data(surface : Ptr[cairo_surface_t], key : Ptr[cairo_user_data_key_t], user_data : Ptr[Byte], destroy : cairo_destroy_func_t): cairo_status_t = extern
 
@@ -631,29 +631,29 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_surface_status(surface : Ptr[cairo_surface_t]): cairo_status_t = extern
 
-@extern def cairo_surface_supports_mime_type(surface : Ptr[cairo_surface_t], mime_type : Ptr[CUnsignedChar]): cairo_bool_t = extern
+@extern def cairo_surface_supports_mime_type(surface : Ptr[cairo_surface_t], mime_type : CString): cairo_bool_t = extern
 
 @extern def cairo_surface_unmap_image(surface : Ptr[cairo_surface_t], image : Ptr[cairo_surface_t]): Unit = extern
 
-@extern def cairo_surface_write_to_png(surface : Ptr[cairo_surface_t], filename : Ptr[CUnsignedChar]): cairo_status_t = extern
+@extern def cairo_surface_write_to_png(surface : Ptr[cairo_surface_t], filename : CString): cairo_status_t = extern
 
 @extern def cairo_surface_write_to_png_stream(surface : Ptr[cairo_surface_t], write_func : cairo_write_func_t, closure : Ptr[Byte]): cairo_status_t = extern
 
-@extern def cairo_tag_begin(cr : Ptr[cairo_t], tag_name : Ptr[CUnsignedChar], attributes : Ptr[CUnsignedChar]): Unit = extern
+@extern def cairo_tag_begin(cr : Ptr[cairo_t], tag_name : CString, attributes : CString): Unit = extern
 
-@extern def cairo_tag_end(cr : Ptr[cairo_t], tag_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def cairo_tag_end(cr : Ptr[cairo_t], tag_name : CString): Unit = extern
 
 @extern def cairo_text_cluster_allocate(num_clusters : CInt): Ptr[cairo_text_cluster_t] = extern
 
 @extern def cairo_text_cluster_free(clusters : Ptr[cairo_text_cluster_t]): Unit = extern
 
-@extern def cairo_text_extents(cr : Ptr[cairo_t], utf8 : Ptr[CUnsignedChar], extents : Ptr[cairo_text_extents_t]): Unit = extern
+@extern def cairo_text_extents(cr : Ptr[cairo_t], utf8 : CString, extents : Ptr[cairo_text_extents_t]): Unit = extern
 
-@extern def cairo_text_path(cr : Ptr[cairo_t], utf8 : Ptr[CUnsignedChar]): Unit = extern
+@extern def cairo_text_path(cr : Ptr[cairo_t], utf8 : CString): Unit = extern
 
-@extern def cairo_toy_font_face_create(family : Ptr[CUnsignedChar], slant : cairo_font_slant_t, weight : cairo_font_weight_t): Ptr[cairo_font_face_t] = extern
+@extern def cairo_toy_font_face_create(family : CString, slant : cairo_font_slant_t, weight : cairo_font_weight_t): Ptr[cairo_font_face_t] = extern
 
-@extern def cairo_toy_font_face_get_family(font_face : Ptr[cairo_font_face_t]): Ptr[CUnsignedChar] = extern
+@extern def cairo_toy_font_face_get_family(font_face : Ptr[cairo_font_face_t]): CString = extern
 
 @extern def cairo_toy_font_face_get_slant(font_face : Ptr[cairo_font_face_t]): cairo_font_slant_t = extern
 
@@ -695,4 +695,4 @@ import _root_.scala.scalanative.*
 
 @extern def cairo_version(): CInt = extern
 
-@extern def cairo_version_string(): Ptr[CUnsignedChar] = extern
+@extern def cairo_version_string(): CString = extern

@@ -7,7 +7,7 @@ import _root_.scala.scalanative.*
 
 
 
-@extern def g_irepository_dump(arg : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_irepository_dump(arg : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_irepository_enumerate_versions(repository : Ptr[GIRepository], `namespace_` : Ptr[_root_.sn.gnome.glib.internal.gchar]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
@@ -49,11 +49,11 @@ import _root_.scala.scalanative.*
 
 @extern def g_irepository_is_registered(repository : Ptr[GIRepository], `namespace_` : Ptr[_root_.sn.gnome.glib.internal.gchar], version : Ptr[_root_.sn.gnome.glib.internal.gchar]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_irepository_load_typelib(repository : Ptr[GIRepository], typelib : Ptr[GITypelib], flags : GIRepositoryLoadFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_irepository_load_typelib(repository : Ptr[GIRepository], typelib : Ptr[GITypelib], flags : GIRepositoryLoadFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
-@extern def g_irepository_prepend_library_path(directory : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_irepository_prepend_library_path(directory : CString): Unit = extern
 
-@extern def g_irepository_prepend_search_path(directory : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_irepository_prepend_search_path(directory : CString): Unit = extern
 
 @extern def g_irepository_require(repository : Ptr[GIRepository], `namespace_` : Ptr[_root_.sn.gnome.glib.internal.gchar], version : Ptr[_root_.sn.gnome.glib.internal.gchar], flags : GIRepositoryLoadFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GITypelib] = extern
 

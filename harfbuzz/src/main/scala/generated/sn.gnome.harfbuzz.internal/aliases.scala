@@ -18,13 +18,13 @@ object hb_bool_t:
 /**
  * hb_buffer_message_func_t: : An #hb_buffer_t to work upon : The #hb_font_t the is shaped with : `NULL`-terminated message passed to the function _data: User data pointer passed by the caller
 */
-opaque type hb_buffer_message_func_t = CFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], Ptr[CUnsignedChar], Ptr[Byte], hb_bool_t]
+opaque type hb_buffer_message_func_t = CFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], CString, Ptr[Byte], hb_bool_t]
 object hb_buffer_message_func_t: 
-  given _tag: Tag[hb_buffer_message_func_t] = Tag.materializeCFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], Ptr[CUnsignedChar], Ptr[Byte], hb_bool_t]
+  given _tag: Tag[hb_buffer_message_func_t] = Tag.materializeCFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], CString, Ptr[Byte], hb_bool_t]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): hb_buffer_message_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], Ptr[CUnsignedChar], Ptr[Byte], hb_bool_t]): hb_buffer_message_func_t = o
+  inline def apply(inline o: CFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], CString, Ptr[Byte], hb_bool_t]): hb_buffer_message_func_t = o
   extension (v: hb_buffer_message_func_t)
-    inline def value: CFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], Ptr[CUnsignedChar], Ptr[Byte], hb_bool_t] = v
+    inline def value: CFuncPtr4[Ptr[hb_buffer_t], Ptr[hb_font_t], CString, Ptr[Byte], hb_bool_t] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
@@ -238,13 +238,13 @@ object hb_font_get_glyph_extents_func_t:
 /**
  * hb_font_get_glyph_from_name_func_t: : #hb_font_t to work upon _data: user data pointer : The length of the name queried : (out): The glyph ID retrieved _data: User data pointer passed by the caller
 */
-opaque type hb_font_get_glyph_from_name_func_t = CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], Ptr[CUnsignedChar], CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t]
+opaque type hb_font_get_glyph_from_name_func_t = CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], CString, CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t]
 object hb_font_get_glyph_from_name_func_t: 
-  given _tag: Tag[hb_font_get_glyph_from_name_func_t] = Tag.materializeCFuncPtr6[Ptr[hb_font_t], Ptr[Byte], Ptr[CUnsignedChar], CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t]
+  given _tag: Tag[hb_font_get_glyph_from_name_func_t] = Tag.materializeCFuncPtr6[Ptr[hb_font_t], Ptr[Byte], CString, CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): hb_font_get_glyph_from_name_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], Ptr[CUnsignedChar], CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t]): hb_font_get_glyph_from_name_func_t = o
+  inline def apply(inline o: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], CString, CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t]): hb_font_get_glyph_from_name_func_t = o
   extension (v: hb_font_get_glyph_from_name_func_t)
-    inline def value: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], Ptr[CUnsignedChar], CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t] = v
+    inline def value: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], CString, CInt, Ptr[hb_codepoint_t], Ptr[Byte], hb_bool_t] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**
@@ -314,13 +314,13 @@ object hb_font_get_glyph_kerning_func_t:
 /**
  * hb_font_get_glyph_name_func_t: : #hb_font_t to work upon _data: user data pointer : The glyph ID to query : Length of the glyph-name string retrieved _data: User data pointer passed by the caller
 */
-opaque type hb_font_get_glyph_name_func_t = CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], hb_bool_t]
+opaque type hb_font_get_glyph_name_func_t = CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, CString, CUnsignedInt, Ptr[Byte], hb_bool_t]
 object hb_font_get_glyph_name_func_t: 
-  given _tag: Tag[hb_font_get_glyph_name_func_t] = Tag.materializeCFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], hb_bool_t]
+  given _tag: Tag[hb_font_get_glyph_name_func_t] = Tag.materializeCFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, CString, CUnsignedInt, Ptr[Byte], hb_bool_t]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): hb_font_get_glyph_name_func_t = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], hb_bool_t]): hb_font_get_glyph_name_func_t = o
+  inline def apply(inline o: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, CString, CUnsignedInt, Ptr[Byte], hb_bool_t]): hb_font_get_glyph_name_func_t = o
   extension (v: hb_font_get_glyph_name_func_t)
-    inline def value: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], hb_bool_t] = v
+    inline def value: CFuncPtr6[Ptr[hb_font_t], Ptr[Byte], hb_codepoint_t, CString, CUnsignedInt, Ptr[Byte], hb_bool_t] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 /**

@@ -9,21 +9,21 @@ import _root_.scala.scalanative.*
 
 @extern def hb_blob_copy_writable_or_fail(blob : Ptr[hb_blob_t]): Ptr[hb_blob_t] = extern
 
-@extern def hb_blob_create(data : Ptr[CUnsignedChar], length : CUnsignedInt, mode : hb_memory_mode_t, user_data : Ptr[Byte], destroy : hb_destroy_func_t): Ptr[hb_blob_t] = extern
+@extern def hb_blob_create(data : CString, length : CUnsignedInt, mode : hb_memory_mode_t, user_data : Ptr[Byte], destroy : hb_destroy_func_t): Ptr[hb_blob_t] = extern
 
-@extern def hb_blob_create_from_file(file_name : Ptr[CUnsignedChar]): Ptr[hb_blob_t] = extern
+@extern def hb_blob_create_from_file(file_name : CString): Ptr[hb_blob_t] = extern
 
-@extern def hb_blob_create_from_file_or_fail(file_name : Ptr[CUnsignedChar]): Ptr[hb_blob_t] = extern
+@extern def hb_blob_create_from_file_or_fail(file_name : CString): Ptr[hb_blob_t] = extern
 
-@extern def hb_blob_create_or_fail(data : Ptr[CUnsignedChar], length : CUnsignedInt, mode : hb_memory_mode_t, user_data : Ptr[Byte], destroy : hb_destroy_func_t): Ptr[hb_blob_t] = extern
+@extern def hb_blob_create_or_fail(data : CString, length : CUnsignedInt, mode : hb_memory_mode_t, user_data : Ptr[Byte], destroy : hb_destroy_func_t): Ptr[hb_blob_t] = extern
 
 @extern def hb_blob_create_sub_blob(parent : Ptr[hb_blob_t], offset : CUnsignedInt, length : CUnsignedInt): Ptr[hb_blob_t] = extern
 
 @extern def hb_blob_destroy(blob : Ptr[hb_blob_t]): Unit = extern
 
-@extern def hb_blob_get_data(blob : Ptr[hb_blob_t], length : Ptr[CUnsignedInt]): Ptr[CUnsignedChar] = extern
+@extern def hb_blob_get_data(blob : Ptr[hb_blob_t], length : Ptr[CUnsignedInt]): CString = extern
 
-@extern def hb_blob_get_data_writable(blob : Ptr[hb_blob_t], length : Ptr[CUnsignedInt]): Ptr[CUnsignedChar] = extern
+@extern def hb_blob_get_data_writable(blob : Ptr[hb_blob_t], length : Ptr[CUnsignedInt]): CString = extern
 
 @extern def hb_blob_get_empty(): Ptr[hb_blob_t] = extern
 
@@ -49,7 +49,7 @@ import _root_.scala.scalanative.*
 
 @extern def hb_buffer_add_utf32(buffer : Ptr[hb_buffer_t], text : Ptr[uint32_t], text_length : CInt, item_offset : CUnsignedInt, item_length : CInt): Unit = extern
 
-@extern def hb_buffer_add_utf8(buffer : Ptr[hb_buffer_t], text : Ptr[CUnsignedChar], text_length : CInt, item_offset : CUnsignedInt, item_length : CInt): Unit = extern
+@extern def hb_buffer_add_utf8(buffer : Ptr[hb_buffer_t], text : CString, text_length : CInt, item_offset : CUnsignedInt, item_length : CInt): Unit = extern
 
 @extern def hb_buffer_allocation_successful(buffer : Ptr[hb_buffer_t]): hb_bool_t = extern
 
@@ -61,9 +61,9 @@ import _root_.scala.scalanative.*
 
 @extern def hb_buffer_create_similar(src : Ptr[hb_buffer_t]): Ptr[hb_buffer_t] = extern
 
-@extern def hb_buffer_deserialize_glyphs(buffer : Ptr[hb_buffer_t], buf : Ptr[CUnsignedChar], buf_len : CInt, end_ptr : Ptr[Ptr[CUnsignedChar]], font : Ptr[hb_font_t], format : hb_buffer_serialize_format_t): hb_bool_t = extern
+@extern def hb_buffer_deserialize_glyphs(buffer : Ptr[hb_buffer_t], buf : CString, buf_len : CInt, end_ptr : Ptr[CString], font : Ptr[hb_font_t], format : hb_buffer_serialize_format_t): hb_bool_t = extern
 
-@extern def hb_buffer_deserialize_unicode(buffer : Ptr[hb_buffer_t], buf : Ptr[CUnsignedChar], buf_len : CInt, end_ptr : Ptr[Ptr[CUnsignedChar]], format : hb_buffer_serialize_format_t): hb_bool_t = extern
+@extern def hb_buffer_deserialize_unicode(buffer : Ptr[hb_buffer_t], buf : CString, buf_len : CInt, end_ptr : Ptr[CString], format : hb_buffer_serialize_format_t): hb_bool_t = extern
 
 @extern def hb_buffer_destroy(buffer : Ptr[hb_buffer_t]): Unit = extern
 
@@ -119,17 +119,17 @@ import _root_.scala.scalanative.*
 
 @extern def hb_buffer_reverse_range(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt): Unit = extern
 
-@extern def hb_buffer_serialize(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt, buf : Ptr[CUnsignedChar], buf_size : CUnsignedInt, buf_consumed : Ptr[CUnsignedInt], font : Ptr[hb_font_t], format : hb_buffer_serialize_format_t, flags : hb_buffer_serialize_flags_t): CUnsignedInt = extern
+@extern def hb_buffer_serialize(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt, buf : CString, buf_size : CUnsignedInt, buf_consumed : Ptr[CUnsignedInt], font : Ptr[hb_font_t], format : hb_buffer_serialize_format_t, flags : hb_buffer_serialize_flags_t): CUnsignedInt = extern
 
-@extern def hb_buffer_serialize_format_from_string(str : Ptr[CUnsignedChar], len : CInt): hb_buffer_serialize_format_t = extern
+@extern def hb_buffer_serialize_format_from_string(str : CString, len : CInt): hb_buffer_serialize_format_t = extern
 
-@extern def hb_buffer_serialize_format_to_string(format : hb_buffer_serialize_format_t): Ptr[CUnsignedChar] = extern
+@extern def hb_buffer_serialize_format_to_string(format : hb_buffer_serialize_format_t): CString = extern
 
-@extern def hb_buffer_serialize_glyphs(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt, buf : Ptr[CUnsignedChar], buf_size : CUnsignedInt, buf_consumed : Ptr[CUnsignedInt], font : Ptr[hb_font_t], format : hb_buffer_serialize_format_t, flags : hb_buffer_serialize_flags_t): CUnsignedInt = extern
+@extern def hb_buffer_serialize_glyphs(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt, buf : CString, buf_size : CUnsignedInt, buf_consumed : Ptr[CUnsignedInt], font : Ptr[hb_font_t], format : hb_buffer_serialize_format_t, flags : hb_buffer_serialize_flags_t): CUnsignedInt = extern
 
-@extern def hb_buffer_serialize_list_formats(): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def hb_buffer_serialize_list_formats(): Ptr[CString] = extern
 
-@extern def hb_buffer_serialize_unicode(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt, buf : Ptr[CUnsignedChar], buf_size : CUnsignedInt, buf_consumed : Ptr[CUnsignedInt], format : hb_buffer_serialize_format_t, flags : hb_buffer_serialize_flags_t): CUnsignedInt = extern
+@extern def hb_buffer_serialize_unicode(buffer : Ptr[hb_buffer_t], start : CUnsignedInt, end : CUnsignedInt, buf : CString, buf_size : CUnsignedInt, buf_consumed : Ptr[CUnsignedInt], format : hb_buffer_serialize_format_t, flags : hb_buffer_serialize_flags_t): CUnsignedInt = extern
 
 @extern def hb_buffer_set_cluster_level(buffer : Ptr[hb_buffer_t], cluster_level : hb_buffer_cluster_level_t): Unit = extern
 
@@ -171,9 +171,9 @@ import _root_.scala.scalanative.*
 
 @extern def hb_color_line_get_extend(color_line : Ptr[hb_color_line_t]): hb_paint_extend_t = extern
 
-@extern def hb_direction_from_string(str : Ptr[CUnsignedChar], len : CInt): hb_direction_t = extern
+@extern def hb_direction_from_string(str : CString, len : CInt): hb_direction_t = extern
 
-@extern def hb_direction_to_string(direction : hb_direction_t): Ptr[CUnsignedChar] = extern
+@extern def hb_direction_to_string(direction : hb_direction_t): CString = extern
 
 @extern def hb_draw_close_path(dfuncs : Ptr[hb_draw_funcs_t], draw_data : Ptr[Byte], st : Ptr[hb_draw_state_t]): Unit = extern
 
@@ -278,9 +278,9 @@ import _root_.scala.scalanative.*
 
 @extern def hb_face_set_user_data(face : Ptr[hb_face_t], key : Ptr[hb_user_data_key_t], data : Ptr[Byte], destroy : hb_destroy_func_t, replace : hb_bool_t): hb_bool_t = extern
 
-@extern def hb_feature_from_string(str : Ptr[CUnsignedChar], len : CInt, feature : Ptr[hb_feature_t]): hb_bool_t = extern
+@extern def hb_feature_from_string(str : CString, len : CInt, feature : Ptr[hb_feature_t]): hb_bool_t = extern
 
-@extern def hb_feature_to_string(feature : Ptr[hb_feature_t], buf : Ptr[CUnsignedChar], size : CUnsignedInt): Unit = extern
+@extern def hb_feature_to_string(feature : Ptr[hb_feature_t], buf : CString, size : CUnsignedInt): Unit = extern
 
 @extern def hb_font_add_glyph_origin_for_direction(font : Ptr[hb_font_t], glyph : hb_codepoint_t, direction : hb_direction_t, x : Ptr[hb_position_t], y : Ptr[hb_position_t]): Unit = extern
 
@@ -432,7 +432,7 @@ import _root_.scala.scalanative.*
 
 @extern def hb_font_get_glyph_extents_for_origin(font : Ptr[hb_font_t], glyph : hb_codepoint_t, direction : hb_direction_t, extents : Ptr[hb_glyph_extents_t]): hb_bool_t = extern
 
-@extern def hb_font_get_glyph_from_name(font : Ptr[hb_font_t], name : Ptr[CUnsignedChar], len : CInt, glyph : Ptr[hb_codepoint_t]): hb_bool_t = extern
+@extern def hb_font_get_glyph_from_name(font : Ptr[hb_font_t], name : CString, len : CInt, glyph : Ptr[hb_codepoint_t]): hb_bool_t = extern
 
 @extern def hb_font_get_glyph_h_advance(font : Ptr[hb_font_t], glyph : hb_codepoint_t): hb_position_t = extern
 
@@ -444,7 +444,7 @@ import _root_.scala.scalanative.*
 
 @extern def hb_font_get_glyph_kerning_for_direction(font : Ptr[hb_font_t], first_glyph : hb_codepoint_t, second_glyph : hb_codepoint_t, direction : hb_direction_t, x : Ptr[hb_position_t], y : Ptr[hb_position_t]): Unit = extern
 
-@extern def hb_font_get_glyph_name(font : Ptr[hb_font_t], glyph : hb_codepoint_t, name : Ptr[CUnsignedChar], size : CUnsignedInt): hb_bool_t = extern
+@extern def hb_font_get_glyph_name(font : Ptr[hb_font_t], glyph : hb_codepoint_t, name : CString, size : CUnsignedInt): hb_bool_t = extern
 
 @extern def hb_font_get_glyph_origin_for_direction(font : Ptr[hb_font_t], glyph : hb_codepoint_t, direction : hb_direction_t, x : Ptr[hb_position_t], y : Ptr[hb_position_t]): Unit = extern
 
@@ -490,9 +490,9 @@ import _root_.scala.scalanative.*
 
 @extern def hb_font_get_variation_glyph(font : Ptr[hb_font_t], unicode : hb_codepoint_t, variation_selector : hb_codepoint_t, glyph : Ptr[hb_codepoint_t]): hb_bool_t = extern
 
-@extern def hb_font_glyph_from_string(font : Ptr[hb_font_t], s : Ptr[CUnsignedChar], len : CInt, glyph : Ptr[hb_codepoint_t]): hb_bool_t = extern
+@extern def hb_font_glyph_from_string(font : Ptr[hb_font_t], s : CString, len : CInt, glyph : Ptr[hb_codepoint_t]): hb_bool_t = extern
 
-@extern def hb_font_glyph_to_string(font : Ptr[hb_font_t], glyph : hb_codepoint_t, s : Ptr[CUnsignedChar], size : CUnsignedInt): Unit = extern
+@extern def hb_font_glyph_to_string(font : Ptr[hb_font_t], glyph : hb_codepoint_t, s : CString, size : CUnsignedInt): Unit = extern
 
 @extern def hb_font_is_immutable(font : Ptr[hb_font_t]): hb_bool_t = extern
 
@@ -536,13 +536,13 @@ import _root_.scala.scalanative.*
 
 @extern def hb_glyph_info_get_glyph_flags(info : Ptr[hb_glyph_info_t]): hb_glyph_flags_t = extern
 
-@extern def hb_language_from_string(str : Ptr[CUnsignedChar], len : CInt): hb_language_t = extern
+@extern def hb_language_from_string(str : CString, len : CInt): hb_language_t = extern
 
 @extern def hb_language_get_default(): hb_language_t = extern
 
 @extern def hb_language_matches(language : hb_language_t, specific : hb_language_t): hb_bool_t = extern
 
-@extern def hb_language_to_string(language : hb_language_t): Ptr[CUnsignedChar] = extern
+@extern def hb_language_to_string(language : hb_language_t): CString = extern
 
 @extern def hb_map_allocation_successful(map : Ptr[hb_map_t]): hb_bool_t = extern
 
@@ -702,7 +702,7 @@ import _root_.scala.scalanative.*
 
 @extern def hb_script_from_iso15924_tag(tag : hb_tag_t): hb_script_t = extern
 
-@extern def hb_script_from_string(str : Ptr[CUnsignedChar], len : CInt): hb_script_t = extern
+@extern def hb_script_from_string(str : CString, len : CInt): hb_script_t = extern
 
 @extern def hb_script_get_horizontal_direction(script : hb_script_t): hb_direction_t = extern
 
@@ -784,19 +784,19 @@ import _root_.scala.scalanative.*
 
 @extern def hb_shape(font : Ptr[hb_font_t], buffer : Ptr[hb_buffer_t], features : Ptr[hb_feature_t], num_features : CUnsignedInt): Unit = extern
 
-@extern def hb_shape_full(font : Ptr[hb_font_t], buffer : Ptr[hb_buffer_t], features : Ptr[hb_feature_t], num_features : CUnsignedInt, shaper_list : Ptr[Ptr[CUnsignedChar]]): hb_bool_t = extern
+@extern def hb_shape_full(font : Ptr[hb_font_t], buffer : Ptr[hb_buffer_t], features : Ptr[hb_feature_t], num_features : CUnsignedInt, shaper_list : Ptr[CString]): hb_bool_t = extern
 
-@extern def hb_shape_justify(font : Ptr[hb_font_t], buffer : Ptr[hb_buffer_t], features : Ptr[hb_feature_t], num_features : CUnsignedInt, shaper_list : Ptr[Ptr[CUnsignedChar]], min_target_advance : Float, max_target_advance : Float, advance : Ptr[Float], var_tag : Ptr[hb_tag_t], var_value : Ptr[Float]): hb_bool_t = extern
+@extern def hb_shape_justify(font : Ptr[hb_font_t], buffer : Ptr[hb_buffer_t], features : Ptr[hb_feature_t], num_features : CUnsignedInt, shaper_list : Ptr[CString], min_target_advance : Float, max_target_advance : Float, advance : Ptr[Float], var_tag : Ptr[hb_tag_t], var_value : Ptr[Float]): hb_bool_t = extern
 
-@extern def hb_shape_list_shapers(): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def hb_shape_list_shapers(): Ptr[CString] = extern
 
-@extern def hb_shape_plan_create(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, shaper_list : Ptr[Ptr[CUnsignedChar]]): Ptr[hb_shape_plan_t] = extern
+@extern def hb_shape_plan_create(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, shaper_list : Ptr[CString]): Ptr[hb_shape_plan_t] = extern
 
-@extern def hb_shape_plan_create2(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, coords : Ptr[CInt], num_coords : CUnsignedInt, shaper_list : Ptr[Ptr[CUnsignedChar]]): Ptr[hb_shape_plan_t] = extern
+@extern def hb_shape_plan_create2(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, coords : Ptr[CInt], num_coords : CUnsignedInt, shaper_list : Ptr[CString]): Ptr[hb_shape_plan_t] = extern
 
-@extern def hb_shape_plan_create_cached(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, shaper_list : Ptr[Ptr[CUnsignedChar]]): Ptr[hb_shape_plan_t] = extern
+@extern def hb_shape_plan_create_cached(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, shaper_list : Ptr[CString]): Ptr[hb_shape_plan_t] = extern
 
-@extern def hb_shape_plan_create_cached2(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, coords : Ptr[CInt], num_coords : CUnsignedInt, shaper_list : Ptr[Ptr[CUnsignedChar]]): Ptr[hb_shape_plan_t] = extern
+@extern def hb_shape_plan_create_cached2(face : Ptr[hb_face_t], props : Ptr[hb_segment_properties_t], user_features : Ptr[hb_feature_t], num_user_features : CUnsignedInt, coords : Ptr[CInt], num_coords : CUnsignedInt, shaper_list : Ptr[CString]): Ptr[hb_shape_plan_t] = extern
 
 @extern def hb_shape_plan_destroy(shape_plan : Ptr[hb_shape_plan_t]): Unit = extern
 
@@ -804,7 +804,7 @@ import _root_.scala.scalanative.*
 
 @extern def hb_shape_plan_get_empty(): Ptr[hb_shape_plan_t] = extern
 
-@extern def hb_shape_plan_get_shaper(shape_plan : Ptr[hb_shape_plan_t]): Ptr[CUnsignedChar] = extern
+@extern def hb_shape_plan_get_shaper(shape_plan : Ptr[hb_shape_plan_t]): CString = extern
 
 @extern def hb_shape_plan_get_user_data(shape_plan : Ptr[hb_shape_plan_t], key : Ptr[hb_user_data_key_t]): Ptr[Byte] = extern
 
@@ -814,9 +814,9 @@ import _root_.scala.scalanative.*
 
 @extern def hb_style_get_value(font : Ptr[hb_font_t], style_tag : hb_style_tag_t): Float = extern
 
-@extern def hb_tag_from_string(str : Ptr[CUnsignedChar], len : CInt): hb_tag_t = extern
+@extern def hb_tag_from_string(str : CString, len : CInt): hb_tag_t = extern
 
-@extern def hb_tag_to_string(tag : hb_tag_t, buf : Ptr[CUnsignedChar]): Unit = extern
+@extern def hb_tag_to_string(tag : hb_tag_t, buf : CString): Unit = extern
 
 /**
  * hb_unicode_combining_class: : The Unicode-functions structure : The code point to query
@@ -909,12 +909,12 @@ import _root_.scala.scalanative.*
 */
 @extern def hb_unicode_script(ufuncs : Ptr[hb_unicode_funcs_t], unicode : hb_codepoint_t): hb_script_t = extern
 
-@extern def hb_variation_from_string(str : Ptr[CUnsignedChar], len : CInt, variation : Ptr[hb_variation_t]): hb_bool_t = extern
+@extern def hb_variation_from_string(str : CString, len : CInt, variation : Ptr[hb_variation_t]): hb_bool_t = extern
 
-@extern def hb_variation_to_string(variation : Ptr[hb_variation_t], buf : Ptr[CUnsignedChar], size : CUnsignedInt): Unit = extern
+@extern def hb_variation_to_string(variation : Ptr[hb_variation_t], buf : CString, size : CUnsignedInt): Unit = extern
 
 @extern def hb_version(major : Ptr[CUnsignedInt], minor : Ptr[CUnsignedInt], micro : Ptr[CUnsignedInt]): Unit = extern
 
 @extern def hb_version_atleast(major : CUnsignedInt, minor : CUnsignedInt, micro : CUnsignedInt): hb_bool_t = extern
 
-@extern def hb_version_string(): Ptr[CUnsignedChar] = extern
+@extern def hb_version_string(): CString = extern

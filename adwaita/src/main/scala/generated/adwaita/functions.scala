@@ -1075,87 +1075,87 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_add_acknowledgement_section(self : Ptr[AdwAboutDialog], name : Ptr[CUnsignedChar], people : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_dialog_add_acknowledgement_section(self : Ptr[AdwAboutDialog], name : CString, people : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_add_credit_section(self : Ptr[AdwAboutDialog], name : Ptr[CUnsignedChar], people : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_dialog_add_credit_section(self : Ptr[AdwAboutDialog], name : CString, people : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_add_legal_section(self : Ptr[AdwAboutDialog], title : Ptr[CUnsignedChar], copyright : Ptr[CUnsignedChar], license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_add_legal_section(self : Ptr[AdwAboutDialog], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_add_link(self : Ptr[AdwAboutDialog], title : Ptr[CUnsignedChar], url : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_add_link(self : Ptr[AdwAboutDialog], title : CString, url : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_application_icon(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_application_icon(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_application_name(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_application_name(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_artists(self : Ptr[AdwAboutDialog]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_dialog_get_artists(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_comments(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_comments(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_copyright(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_copyright(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_debug_info(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_debug_info(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_debug_info_filename(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_debug_info_filename(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_designers(self : Ptr[AdwAboutDialog]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_dialog_get_designers(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_developer_name(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_developer_name(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_developers(self : Ptr[AdwAboutDialog]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_dialog_get_developers(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_documenters(self : Ptr[AdwAboutDialog]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_dialog_get_documenters(self : Ptr[AdwAboutDialog]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_issue_url(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_issue_url(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_license(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_license(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1165,22 +1165,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_release_notes(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_release_notes(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_release_notes_version(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_release_notes_version(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_support_url(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_support_url(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_translator_credits(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_translator_credits(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1190,12 +1190,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_version(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_version(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_website(self : Ptr[AdwAboutDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_dialog_get_website(self : Ptr[AdwAboutDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1205,72 +1205,72 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_new_from_appdata(resource_path : Ptr[CUnsignedChar], release_notes_version : Ptr[CUnsignedChar]): Ptr[AdwDialog] = extern
+@extern def adw_about_dialog_new_from_appdata(resource_path : CString, release_notes_version : CString): Ptr[AdwDialog] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_application_icon(self : Ptr[AdwAboutDialog], application_icon : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_application_icon(self : Ptr[AdwAboutDialog], application_icon : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_application_name(self : Ptr[AdwAboutDialog], application_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_application_name(self : Ptr[AdwAboutDialog], application_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_artists(self : Ptr[AdwAboutDialog], artists : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_dialog_set_artists(self : Ptr[AdwAboutDialog], artists : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_comments(self : Ptr[AdwAboutDialog], comments : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_comments(self : Ptr[AdwAboutDialog], comments : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_copyright(self : Ptr[AdwAboutDialog], copyright : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_copyright(self : Ptr[AdwAboutDialog], copyright : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_debug_info(self : Ptr[AdwAboutDialog], debug_info : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_debug_info(self : Ptr[AdwAboutDialog], debug_info : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_debug_info_filename(self : Ptr[AdwAboutDialog], filename : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_debug_info_filename(self : Ptr[AdwAboutDialog], filename : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_designers(self : Ptr[AdwAboutDialog], designers : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_dialog_set_designers(self : Ptr[AdwAboutDialog], designers : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_developer_name(self : Ptr[AdwAboutDialog], developer_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_developer_name(self : Ptr[AdwAboutDialog], developer_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_developers(self : Ptr[AdwAboutDialog], developers : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_dialog_set_developers(self : Ptr[AdwAboutDialog], developers : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_documenters(self : Ptr[AdwAboutDialog], documenters : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_dialog_set_documenters(self : Ptr[AdwAboutDialog], documenters : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_issue_url(self : Ptr[AdwAboutDialog], issue_url : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_issue_url(self : Ptr[AdwAboutDialog], issue_url : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_license(self : Ptr[AdwAboutDialog], license : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_license(self : Ptr[AdwAboutDialog], license : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1280,117 +1280,117 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_release_notes(self : Ptr[AdwAboutDialog], release_notes : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_release_notes(self : Ptr[AdwAboutDialog], release_notes : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_release_notes_version(self : Ptr[AdwAboutDialog], version : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_release_notes_version(self : Ptr[AdwAboutDialog], version : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_support_url(self : Ptr[AdwAboutDialog], support_url : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_support_url(self : Ptr[AdwAboutDialog], support_url : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_translator_credits(self : Ptr[AdwAboutDialog], translator_credits : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_translator_credits(self : Ptr[AdwAboutDialog], translator_credits : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_version(self : Ptr[AdwAboutDialog], version : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_version(self : Ptr[AdwAboutDialog], version : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_website(self : Ptr[AdwAboutDialog], website : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_dialog_set_website(self : Ptr[AdwAboutDialog], website : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_add_acknowledgement_section(self : Ptr[AdwAboutWindow], name : Ptr[CUnsignedChar], people : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_window_add_acknowledgement_section(self : Ptr[AdwAboutWindow], name : CString, people : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_add_credit_section(self : Ptr[AdwAboutWindow], name : Ptr[CUnsignedChar], people : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_window_add_credit_section(self : Ptr[AdwAboutWindow], name : CString, people : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_add_legal_section(self : Ptr[AdwAboutWindow], title : Ptr[CUnsignedChar], copyright : Ptr[CUnsignedChar], license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_add_legal_section(self : Ptr[AdwAboutWindow], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_add_link(self : Ptr[AdwAboutWindow], title : Ptr[CUnsignedChar], url : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_add_link(self : Ptr[AdwAboutWindow], title : CString, url : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_application_icon(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_application_icon(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_application_name(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_application_name(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_artists(self : Ptr[AdwAboutWindow]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_window_get_artists(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_comments(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_comments(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_copyright(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_copyright(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_debug_info(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_debug_info(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_debug_info_filename(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_debug_info_filename(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_designers(self : Ptr[AdwAboutWindow]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_window_get_designers(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_developer_name(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_developer_name(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_developers(self : Ptr[AdwAboutWindow]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_window_get_developers(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_documenters(self : Ptr[AdwAboutWindow]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def adw_about_window_get_documenters(self : Ptr[AdwAboutWindow]): Ptr[CString] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_issue_url(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_issue_url(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_license(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_license(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1400,22 +1400,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_release_notes(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_release_notes(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_release_notes_version(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_release_notes_version(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_support_url(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_support_url(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_translator_credits(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_translator_credits(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1425,12 +1425,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_version(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_version(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_website(self : Ptr[AdwAboutWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_about_window_get_website(self : Ptr[AdwAboutWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1440,72 +1440,72 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_new_from_appdata(resource_path : Ptr[CUnsignedChar], release_notes_version : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_about_window_new_from_appdata(resource_path : CString, release_notes_version : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_application_icon(self : Ptr[AdwAboutWindow], application_icon : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_application_icon(self : Ptr[AdwAboutWindow], application_icon : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_application_name(self : Ptr[AdwAboutWindow], application_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_application_name(self : Ptr[AdwAboutWindow], application_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_artists(self : Ptr[AdwAboutWindow], artists : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_window_set_artists(self : Ptr[AdwAboutWindow], artists : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_comments(self : Ptr[AdwAboutWindow], comments : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_comments(self : Ptr[AdwAboutWindow], comments : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_copyright(self : Ptr[AdwAboutWindow], copyright : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_copyright(self : Ptr[AdwAboutWindow], copyright : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_debug_info(self : Ptr[AdwAboutWindow], debug_info : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_debug_info(self : Ptr[AdwAboutWindow], debug_info : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_debug_info_filename(self : Ptr[AdwAboutWindow], filename : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_debug_info_filename(self : Ptr[AdwAboutWindow], filename : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_designers(self : Ptr[AdwAboutWindow], designers : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_window_set_designers(self : Ptr[AdwAboutWindow], designers : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_developer_name(self : Ptr[AdwAboutWindow], developer_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_developer_name(self : Ptr[AdwAboutWindow], developer_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_developers(self : Ptr[AdwAboutWindow], developers : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_window_set_developers(self : Ptr[AdwAboutWindow], developers : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_documenters(self : Ptr[AdwAboutWindow], documenters : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def adw_about_window_set_documenters(self : Ptr[AdwAboutWindow], documenters : Ptr[CString]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_issue_url(self : Ptr[AdwAboutWindow], issue_url : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_issue_url(self : Ptr[AdwAboutWindow], issue_url : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_license(self : Ptr[AdwAboutWindow], license : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_license(self : Ptr[AdwAboutWindow], license : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1515,32 +1515,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_release_notes(self : Ptr[AdwAboutWindow], release_notes : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_release_notes(self : Ptr[AdwAboutWindow], release_notes : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_release_notes_version(self : Ptr[AdwAboutWindow], version : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_release_notes_version(self : Ptr[AdwAboutWindow], version : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_support_url(self : Ptr[AdwAboutWindow], support_url : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_support_url(self : Ptr[AdwAboutWindow], support_url : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_translator_credits(self : Ptr[AdwAboutWindow], translator_credits : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_translator_credits(self : Ptr[AdwAboutWindow], translator_credits : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_version(self : Ptr[AdwAboutWindow], version : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_version(self : Ptr[AdwAboutWindow], version : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_website(self : Ptr[AdwAboutWindow], website : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_about_window_set_website(self : Ptr[AdwAboutWindow], website : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -1565,12 +1565,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_get_icon_name(self : Ptr[AdwActionRow]): Ptr[CUnsignedChar] = extern
+@extern def adw_action_row_get_icon_name(self : Ptr[AdwActionRow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_get_subtitle(self : Ptr[AdwActionRow]): Ptr[CUnsignedChar] = extern
+@extern def adw_action_row_get_subtitle(self : Ptr[AdwActionRow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -1610,12 +1610,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_set_icon_name(self : Ptr[AdwActionRow], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_action_row_set_icon_name(self : Ptr[AdwActionRow], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_set_subtitle(self : Ptr[AdwActionRow], subtitle : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_action_row_set_subtitle(self : Ptr[AdwActionRow], subtitle : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -1635,12 +1635,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_add_response(self : Ptr[AdwAlertDialog], id : Ptr[CUnsignedChar], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_add_response(self : Ptr[AdwAlertDialog], id : CString, label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_add_responses(self : Ptr[AdwAlertDialog], first_id : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_alert_dialog_add_responses(self : Ptr[AdwAlertDialog], first_id : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1650,32 +1650,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_choose_finish(self : Ptr[AdwAlertDialog], result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult]): Ptr[CUnsignedChar] = extern
+@extern def adw_alert_dialog_choose_finish(self : Ptr[AdwAlertDialog], result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_format_body(self : Ptr[AdwAlertDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_alert_dialog_format_body(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_format_body_markup(self : Ptr[AdwAlertDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_alert_dialog_format_body_markup(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_format_heading(self : Ptr[AdwAlertDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_alert_dialog_format_heading(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_format_heading_markup(self : Ptr[AdwAlertDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_alert_dialog_format_heading_markup(self : Ptr[AdwAlertDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_body(self : Ptr[AdwAlertDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_alert_dialog_get_body(self : Ptr[AdwAlertDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1685,12 +1685,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_close_response(self : Ptr[AdwAlertDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_alert_dialog_get_close_response(self : Ptr[AdwAlertDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_default_response(self : Ptr[AdwAlertDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_alert_dialog_get_default_response(self : Ptr[AdwAlertDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1700,7 +1700,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_heading(self : Ptr[AdwAlertDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_alert_dialog_get_heading(self : Ptr[AdwAlertDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1710,17 +1710,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_response_appearance(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar]): AdwResponseAppearance = extern
+@extern def adw_alert_dialog_get_response_appearance(self : Ptr[AdwAlertDialog], response : CString): AdwResponseAppearance = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_response_enabled(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def adw_alert_dialog_get_response_enabled(self : Ptr[AdwAlertDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_response_label(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def adw_alert_dialog_get_response_label(self : Ptr[AdwAlertDialog], response : CString): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1730,22 +1730,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_has_response(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def adw_alert_dialog_has_response(self : Ptr[AdwAlertDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_new(heading : Ptr[CUnsignedChar], body : Ptr[CUnsignedChar]): Ptr[AdwDialog] = extern
+@extern def adw_alert_dialog_new(heading : CString, body : CString): Ptr[AdwDialog] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_remove_response(self : Ptr[AdwAlertDialog], id : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_remove_response(self : Ptr[AdwAlertDialog], id : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_body(self : Ptr[AdwAlertDialog], body : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_set_body(self : Ptr[AdwAlertDialog], body : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1755,12 +1755,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_close_response(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_set_close_response(self : Ptr[AdwAlertDialog], response : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_default_response(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_set_default_response(self : Ptr[AdwAlertDialog], response : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1770,7 +1770,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_heading(self : Ptr[AdwAlertDialog], heading : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_set_heading(self : Ptr[AdwAlertDialog], heading : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1780,17 +1780,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_response_appearance(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar], appearance : AdwResponseAppearance): Unit = extern
+@extern def adw_alert_dialog_set_response_appearance(self : Ptr[AdwAlertDialog], response : CString, appearance : AdwResponseAppearance): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_response_enabled(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar], enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+@extern def adw_alert_dialog_set_response_enabled(self : Ptr[AdwAlertDialog], response : CString, enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_response_label(self : Ptr[AdwAlertDialog], response : Ptr[CUnsignedChar], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_alert_dialog_set_response_label(self : Ptr[AdwAlertDialog], response : CString, label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -1880,7 +1880,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application.h
 */
-@extern def adw_application_new(application_id : Ptr[CUnsignedChar], flags : _root_.sn.gnome.gio.internal.GApplicationFlags): Ptr[AdwApplication] = extern
+@extern def adw_application_new(application_id : CString, flags : _root_.sn.gnome.gio.internal.GApplicationFlags): Ptr[AdwApplication] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
@@ -1935,7 +1935,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_get_icon_name(self : Ptr[AdwAvatar]): Ptr[CUnsignedChar] = extern
+@extern def adw_avatar_get_icon_name(self : Ptr[AdwAvatar]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1950,7 +1950,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_get_text(self : Ptr[AdwAvatar]): Ptr[CUnsignedChar] = extern
+@extern def adw_avatar_get_text(self : Ptr[AdwAvatar]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1960,7 +1960,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_new(size : CInt, text : Ptr[CUnsignedChar], show_initials : _root_.sn.gnome.glib.internal.gboolean): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_avatar_new(size : CInt, text : CString, show_initials : _root_.sn.gnome.glib.internal.gboolean): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1970,7 +1970,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_set_icon_name(self : Ptr[AdwAvatar], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_avatar_set_icon_name(self : Ptr[AdwAvatar], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1985,12 +1985,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_set_text(self : Ptr[AdwAvatar], text : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_avatar_set_text(self : Ptr[AdwAvatar], text : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
 */
-@extern def adw_banner_get_button_label(self : Ptr[AdwBanner]): Ptr[CUnsignedChar] = extern
+@extern def adw_banner_get_button_label(self : Ptr[AdwBanner]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
@@ -2000,7 +2000,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
 */
-@extern def adw_banner_get_title(self : Ptr[AdwBanner]): Ptr[CUnsignedChar] = extern
+@extern def adw_banner_get_title(self : Ptr[AdwBanner]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
@@ -2015,12 +2015,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
 */
-@extern def adw_banner_new(title : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_banner_new(title : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
 */
-@extern def adw_banner_set_button_label(self : Ptr[AdwBanner], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_banner_set_button_label(self : Ptr[AdwBanner], label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
@@ -2030,7 +2030,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
 */
-@extern def adw_banner_set_title(self : Ptr[AdwBanner], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_banner_set_title(self : Ptr[AdwBanner], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
@@ -2060,22 +2060,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
 */
-@extern def adw_breakpoint_add_setter(self : Ptr[AdwBreakpoint], `object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], property : Ptr[CUnsignedChar], value : Ptr[_root_.sn.gnome.gobject.internal.GValue]): Unit = extern
+@extern def adw_breakpoint_add_setter(self : Ptr[AdwBreakpoint], `object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], property : CString, value : Ptr[_root_.sn.gnome.gobject.internal.GValue]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
 */
-@extern def adw_breakpoint_add_setters(self : Ptr[AdwBreakpoint], first_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], first_property : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_breakpoint_add_setters(self : Ptr[AdwBreakpoint], first_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], first_property : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
 */
-@extern def adw_breakpoint_add_setters_valist(self : Ptr[AdwBreakpoint], first_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], first_property : Ptr[CUnsignedChar], args : va_list): Unit = extern
+@extern def adw_breakpoint_add_setters_valist(self : Ptr[AdwBreakpoint], first_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], first_property : CString, args : va_list): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
 */
-@extern def adw_breakpoint_add_settersv(self : Ptr[AdwBreakpoint], n_setters : CInt, objects : Ptr[Ptr[_root_.sn.gnome.gobject.internal.GObject]], names : Ptr[Ptr[CUnsignedChar]], values : Ptr[Ptr[_root_.sn.gnome.gobject.internal.GValue]]): Unit = extern
+@extern def adw_breakpoint_add_settersv(self : Ptr[AdwBreakpoint], n_setters : CInt, objects : Ptr[Ptr[_root_.sn.gnome.gobject.internal.GObject]], names : Ptr[CString], values : Ptr[Ptr[_root_.sn.gnome.gobject.internal.GValue]]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
@@ -2155,7 +2155,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
 */
-@extern def adw_breakpoint_condition_parse(str : Ptr[CUnsignedChar]): Ptr[AdwBreakpointCondition] = extern
+@extern def adw_breakpoint_condition_parse(str : CString): Ptr[AdwBreakpointCondition] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -2165,7 +2165,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
 */
-@extern def adw_breakpoint_condition_to_string(self : Ptr[AdwBreakpointCondition]): Ptr[CUnsignedChar] = extern
+@extern def adw_breakpoint_condition_to_string(self : Ptr[AdwBreakpointCondition]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
@@ -2195,12 +2195,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
-@extern def adw_button_content_get_icon_name(self : Ptr[AdwButtonContent]): Ptr[CUnsignedChar] = extern
+@extern def adw_button_content_get_icon_name(self : Ptr[AdwButtonContent]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
-@extern def adw_button_content_get_label(self : Ptr[AdwButtonContent]): Ptr[CUnsignedChar] = extern
+@extern def adw_button_content_get_label(self : Ptr[AdwButtonContent]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -2225,12 +2225,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
-@extern def adw_button_content_set_icon_name(self : Ptr[AdwButtonContent], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_button_content_set_icon_name(self : Ptr[AdwButtonContent], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
-@extern def adw_button_content_set_label(self : Ptr[AdwButtonContent], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_button_content_set_label(self : Ptr[AdwButtonContent], label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -2710,7 +2710,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_get_title(self : Ptr[AdwDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_dialog_get_title(self : Ptr[AdwDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
@@ -2775,7 +2775,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_set_title(self : Ptr[AdwDialog], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_dialog_set_title(self : Ptr[AdwDialog], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-easing.h
@@ -2885,12 +2885,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
-@extern def adw_enum_list_item_get_name(self : Ptr[AdwEnumListItem]): Ptr[CUnsignedChar] = extern
+@extern def adw_enum_list_item_get_name(self : Ptr[AdwEnumListItem]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
 */
-@extern def adw_enum_list_item_get_nick(self : Ptr[AdwEnumListItem]): Ptr[CUnsignedChar] = extern
+@extern def adw_enum_list_item_get_nick(self : Ptr[AdwEnumListItem]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enum-list-model.h
@@ -2955,7 +2955,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_get_icon_name(self : Ptr[AdwExpanderRow]): Ptr[CUnsignedChar] = extern
+@extern def adw_expander_row_get_icon_name(self : Ptr[AdwExpanderRow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -2965,7 +2965,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_get_subtitle(self : Ptr[AdwExpanderRow]): Ptr[CUnsignedChar] = extern
+@extern def adw_expander_row_get_subtitle(self : Ptr[AdwExpanderRow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -3005,7 +3005,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_set_icon_name(self : Ptr[AdwExpanderRow], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_expander_row_set_icon_name(self : Ptr[AdwExpanderRow], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -3015,7 +3015,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_set_subtitle(self : Ptr[AdwExpanderRow], subtitle : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_expander_row_set_subtitle(self : Ptr[AdwExpanderRow], subtitle : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -3230,7 +3230,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_get_decoration_layout(self : Ptr[AdwHeaderBar]): Ptr[CUnsignedChar] = extern
+@extern def adw_header_bar_get_decoration_layout(self : Ptr[AdwHeaderBar]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -3290,7 +3290,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_set_decoration_layout(self : Ptr[AdwHeaderBar], layout : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_header_bar_set_decoration_layout(self : Ptr[AdwHeaderBar], layout : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -3355,7 +3355,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_child_by_name(self : Ptr[AdwLeaflet], name : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_leaflet_get_child_by_name(self : Ptr[AdwLeaflet], name : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3415,7 +3415,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_visible_child_name(self : Ptr[AdwLeaflet]): Ptr[CUnsignedChar] = extern
+@extern def adw_leaflet_get_visible_child_name(self : Ptr[AdwLeaflet]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3440,7 +3440,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_page_get_name(self : Ptr[AdwLeafletPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_leaflet_page_get_name(self : Ptr[AdwLeafletPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3455,7 +3455,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_page_set_name(self : Ptr[AdwLeafletPage], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_leaflet_page_set_name(self : Ptr[AdwLeafletPage], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3525,7 +3525,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_set_visible_child_name(self : Ptr[AdwLeaflet], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_leaflet_set_visible_child_name(self : Ptr[AdwLeaflet], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -3555,12 +3555,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_add_response(self : Ptr[AdwMessageDialog], id : Ptr[CUnsignedChar], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_add_response(self : Ptr[AdwMessageDialog], id : CString, label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_add_responses(self : Ptr[AdwMessageDialog], first_id : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_message_dialog_add_responses(self : Ptr[AdwMessageDialog], first_id : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3570,32 +3570,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_choose_finish(self : Ptr[AdwMessageDialog], result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult]): Ptr[CUnsignedChar] = extern
+@extern def adw_message_dialog_choose_finish(self : Ptr[AdwMessageDialog], result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_format_body(self : Ptr[AdwMessageDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_message_dialog_format_body(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_format_body_markup(self : Ptr[AdwMessageDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_message_dialog_format_body_markup(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_format_heading(self : Ptr[AdwMessageDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_message_dialog_format_heading(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_format_heading_markup(self : Ptr[AdwMessageDialog], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_message_dialog_format_heading_markup(self : Ptr[AdwMessageDialog], format : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_body(self : Ptr[AdwMessageDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_message_dialog_get_body(self : Ptr[AdwMessageDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3605,12 +3605,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_close_response(self : Ptr[AdwMessageDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_message_dialog_get_close_response(self : Ptr[AdwMessageDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_default_response(self : Ptr[AdwMessageDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_message_dialog_get_default_response(self : Ptr[AdwMessageDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3620,7 +3620,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_heading(self : Ptr[AdwMessageDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_message_dialog_get_heading(self : Ptr[AdwMessageDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3630,17 +3630,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_response_appearance(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): AdwResponseAppearance = extern
+@extern def adw_message_dialog_get_response_appearance(self : Ptr[AdwMessageDialog], response : CString): AdwResponseAppearance = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_response_enabled(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def adw_message_dialog_get_response_enabled(self : Ptr[AdwMessageDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_response_label(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def adw_message_dialog_get_response_label(self : Ptr[AdwMessageDialog], response : CString): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3650,27 +3650,27 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_has_response(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def adw_message_dialog_has_response(self : Ptr[AdwMessageDialog], response : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_new(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], heading : Ptr[CUnsignedChar], body : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_message_dialog_new(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], heading : CString, body : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_remove_response(self : Ptr[AdwMessageDialog], id : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_remove_response(self : Ptr[AdwMessageDialog], id : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_response(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_response(self : Ptr[AdwMessageDialog], response : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_body(self : Ptr[AdwMessageDialog], body : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_set_body(self : Ptr[AdwMessageDialog], body : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3680,12 +3680,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_close_response(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_set_close_response(self : Ptr[AdwMessageDialog], response : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_default_response(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_set_default_response(self : Ptr[AdwMessageDialog], response : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3695,7 +3695,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_heading(self : Ptr[AdwMessageDialog], heading : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_set_heading(self : Ptr[AdwMessageDialog], heading : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3705,17 +3705,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_response_appearance(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar], appearance : AdwResponseAppearance): Unit = extern
+@extern def adw_message_dialog_set_response_appearance(self : Ptr[AdwMessageDialog], response : CString, appearance : AdwResponseAppearance): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_response_enabled(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar], enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+@extern def adw_message_dialog_set_response_enabled(self : Ptr[AdwMessageDialog], response : CString, enabled : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_response_label(self : Ptr[AdwMessageDialog], response : Ptr[CUnsignedChar], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_message_dialog_set_response_label(self : Ptr[AdwMessageDialog], response : CString, label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -3735,12 +3735,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_get_tag(self : Ptr[AdwNavigationPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_navigation_page_get_tag(self : Ptr[AdwNavigationPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_get_title(self : Ptr[AdwNavigationPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_navigation_page_get_title(self : Ptr[AdwNavigationPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3750,12 +3750,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_new(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : Ptr[CUnsignedChar]): Ptr[AdwNavigationPage] = extern
+@extern def adw_navigation_page_new(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : CString): Ptr[AdwNavigationPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_new_with_tag(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : Ptr[CUnsignedChar], tag : Ptr[CUnsignedChar]): Ptr[AdwNavigationPage] = extern
+@extern def adw_navigation_page_new_with_tag(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : CString, tag : CString): Ptr[AdwNavigationPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3770,12 +3770,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_set_tag(self : Ptr[AdwNavigationPage], tag : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_navigation_page_set_tag(self : Ptr[AdwNavigationPage], tag : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_set_title(self : Ptr[AdwNavigationPage], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_navigation_page_set_title(self : Ptr[AdwNavigationPage], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
@@ -3875,7 +3875,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_view_find_page(self : Ptr[AdwNavigationView], tag : Ptr[CUnsignedChar]): Ptr[AdwNavigationPage] = extern
+@extern def adw_navigation_view_find_page(self : Ptr[AdwNavigationView], tag : CString): Ptr[AdwNavigationPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3925,7 +3925,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_view_pop_to_tag(self : Ptr[AdwNavigationView], tag : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def adw_navigation_view_pop_to_tag(self : Ptr[AdwNavigationView], tag : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3935,7 +3935,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_view_push_by_tag(self : Ptr[AdwNavigationView], tag : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_navigation_view_push_by_tag(self : Ptr[AdwNavigationView], tag : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3950,7 +3950,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_view_replace_with_tags(self : Ptr[AdwNavigationView], tags : Ptr[Ptr[CUnsignedChar]], n_tags : CInt): Unit = extern
+@extern def adw_navigation_view_replace_with_tags(self : Ptr[AdwNavigationView], tags : Ptr[CString], n_tags : CInt): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -4130,7 +4130,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
 */
-@extern def adw_preferences_dialog_get_visible_page_name(self : Ptr[AdwPreferencesDialog]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_dialog_get_visible_page_name(self : Ptr[AdwPreferencesDialog]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
@@ -4165,7 +4165,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
 */
-@extern def adw_preferences_dialog_set_visible_page_name(self : Ptr[AdwPreferencesDialog], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_dialog_set_visible_page_name(self : Ptr[AdwPreferencesDialog], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4175,7 +4175,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_get_description(self : Ptr[AdwPreferencesGroup]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_group_get_description(self : Ptr[AdwPreferencesGroup]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4185,7 +4185,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_get_title(self : Ptr[AdwPreferencesGroup]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_group_get_title(self : Ptr[AdwPreferencesGroup]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4205,7 +4205,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_set_description(self : Ptr[AdwPreferencesGroup], description : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_group_set_description(self : Ptr[AdwPreferencesGroup], description : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4215,7 +4215,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_set_title(self : Ptr[AdwPreferencesGroup], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_group_set_title(self : Ptr[AdwPreferencesGroup], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
@@ -4225,22 +4225,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_get_description(self : Ptr[AdwPreferencesPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_page_get_description(self : Ptr[AdwPreferencesPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_get_icon_name(self : Ptr[AdwPreferencesPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_page_get_icon_name(self : Ptr[AdwPreferencesPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_get_name(self : Ptr[AdwPreferencesPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_page_get_name(self : Ptr[AdwPreferencesPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_get_title(self : Ptr[AdwPreferencesPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_page_get_title(self : Ptr[AdwPreferencesPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
@@ -4270,22 +4270,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_set_description(self : Ptr[AdwPreferencesPage], description : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_page_set_description(self : Ptr[AdwPreferencesPage], description : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_set_icon_name(self : Ptr[AdwPreferencesPage], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_page_set_icon_name(self : Ptr[AdwPreferencesPage], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_set_name(self : Ptr[AdwPreferencesPage], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_page_set_name(self : Ptr[AdwPreferencesPage], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_set_title(self : Ptr[AdwPreferencesPage], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_page_set_title(self : Ptr[AdwPreferencesPage], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
@@ -4295,7 +4295,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
-@extern def adw_preferences_row_get_title(self : Ptr[AdwPreferencesRow]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_row_get_title(self : Ptr[AdwPreferencesRow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
@@ -4325,7 +4325,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
-@extern def adw_preferences_row_set_title(self : Ptr[AdwPreferencesRow], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_row_set_title(self : Ptr[AdwPreferencesRow], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
@@ -4380,7 +4380,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
-@extern def adw_preferences_window_get_visible_page_name(self : Ptr[AdwPreferencesWindow]): Ptr[CUnsignedChar] = extern
+@extern def adw_preferences_window_get_visible_page_name(self : Ptr[AdwPreferencesWindow]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
@@ -4425,7 +4425,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
-@extern def adw_preferences_window_set_visible_page_name(self : Ptr[AdwPreferencesWindow], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_preferences_window_set_visible_page_name(self : Ptr[AdwPreferencesWindow], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
@@ -4445,7 +4445,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
 */
-@extern def adw_property_animation_target_new(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], property_name : Ptr[CUnsignedChar]): Ptr[AdwAnimationTarget] = extern
+@extern def adw_property_animation_target_new(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], property_name : CString): Ptr[AdwAnimationTarget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-target.h
@@ -4460,22 +4460,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_show_about_dialog(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], first_property_name : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_show_about_dialog(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_show_about_dialog_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], resource_path : Ptr[CUnsignedChar], release_notes_version : Ptr[CUnsignedChar], first_property_name : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_show_about_dialog_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_show_about_window(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], first_property_name : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_show_about_window(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_show_about_window_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], resource_path : Ptr[CUnsignedChar], release_notes_version : Ptr[CUnsignedChar], first_property_name : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_show_about_window_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
@@ -4605,17 +4605,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_get_dropdown_tooltip(self : Ptr[AdwSplitButton]): Ptr[CUnsignedChar] = extern
+@extern def adw_split_button_get_dropdown_tooltip(self : Ptr[AdwSplitButton]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_get_icon_name(self : Ptr[AdwSplitButton]): Ptr[CUnsignedChar] = extern
+@extern def adw_split_button_get_icon_name(self : Ptr[AdwSplitButton]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_get_label(self : Ptr[AdwSplitButton]): Ptr[CUnsignedChar] = extern
+@extern def adw_split_button_get_label(self : Ptr[AdwSplitButton]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4670,17 +4670,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_set_dropdown_tooltip(self : Ptr[AdwSplitButton], tooltip : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_split_button_set_dropdown_tooltip(self : Ptr[AdwSplitButton], tooltip : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_set_icon_name(self : Ptr[AdwSplitButton], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_split_button_set_icon_name(self : Ptr[AdwSplitButton], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_set_label(self : Ptr[AdwSplitButton], label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_split_button_set_label(self : Ptr[AdwSplitButton], label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4985,12 +4985,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_get_description(self : Ptr[AdwStatusPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_status_page_get_description(self : Ptr[AdwStatusPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_get_icon_name(self : Ptr[AdwStatusPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_status_page_get_icon_name(self : Ptr[AdwStatusPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -5000,7 +5000,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_get_title(self : Ptr[AdwStatusPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_status_page_get_title(self : Ptr[AdwStatusPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -5020,12 +5020,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_set_description(self : Ptr[AdwStatusPage], description : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_status_page_set_description(self : Ptr[AdwStatusPage], description : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_set_icon_name(self : Ptr[AdwStatusPage], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_status_page_set_icon_name(self : Ptr[AdwStatusPage], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -5035,7 +5035,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_set_title(self : Ptr[AdwStatusPage], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_status_page_set_title(self : Ptr[AdwStatusPage], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
@@ -5490,12 +5490,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_get_indicator_tooltip(self : Ptr[AdwTabPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_tab_page_get_indicator_tooltip(self : Ptr[AdwTabPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_get_keyword(self : Ptr[AdwTabPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_tab_page_get_keyword(self : Ptr[AdwTabPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5540,12 +5540,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_get_title(self : Ptr[AdwTabPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_tab_page_get_title(self : Ptr[AdwTabPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_get_tooltip(self : Ptr[AdwTabPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_tab_page_get_tooltip(self : Ptr[AdwTabPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5575,12 +5575,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_set_indicator_tooltip(self : Ptr[AdwTabPage], tooltip : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_tab_page_set_indicator_tooltip(self : Ptr[AdwTabPage], tooltip : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_set_keyword(self : Ptr[AdwTabPage], keyword : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_tab_page_set_keyword(self : Ptr[AdwTabPage], keyword : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5610,12 +5610,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_set_title(self : Ptr[AdwTabPage], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_tab_page_set_title(self : Ptr[AdwTabPage], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_set_tooltip(self : Ptr[AdwTabPage], tooltip : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_tab_page_set_tooltip(self : Ptr[AdwTabPage], tooltip : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5915,7 +5915,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_get_action_name(self : Ptr[AdwToast]): Ptr[CUnsignedChar] = extern
+@extern def adw_toast_get_action_name(self : Ptr[AdwToast]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -5925,7 +5925,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_get_button_label(self : Ptr[AdwToast]): Ptr[CUnsignedChar] = extern
+@extern def adw_toast_get_button_label(self : Ptr[AdwToast]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -5945,7 +5945,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_get_title(self : Ptr[AdwToast]): Ptr[CUnsignedChar] = extern
+@extern def adw_toast_get_title(self : Ptr[AdwToast]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -5960,12 +5960,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_new(title : Ptr[CUnsignedChar]): Ptr[AdwToast] = extern
+@extern def adw_toast_new(title : CString): Ptr[AdwToast] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_new_format(format : Ptr[CUnsignedChar], rest: Any*): Ptr[AdwToast] = extern
+@extern def adw_toast_new_format(format : CString, rest: Any*): Ptr[AdwToast] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
@@ -6000,12 +6000,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_set_action_name(self : Ptr[AdwToast], action_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_toast_set_action_name(self : Ptr[AdwToast], action_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_set_action_target(self : Ptr[AdwToast], format_string : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def adw_toast_set_action_target(self : Ptr[AdwToast], format_string : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -6015,7 +6015,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_set_button_label(self : Ptr[AdwToast], button_label : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_toast_set_button_label(self : Ptr[AdwToast], button_label : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -6025,7 +6025,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_set_detailed_action_name(self : Ptr[AdwToast], detailed_action_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_toast_set_detailed_action_name(self : Ptr[AdwToast], detailed_action_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -6040,7 +6040,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_set_title(self : Ptr[AdwToast], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_toast_set_title(self : Ptr[AdwToast], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -6165,22 +6165,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add_named(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : Ptr[CUnsignedChar]): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add_named(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : Ptr[CUnsignedChar], title : Ptr[CUnsignedChar]): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString, title : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add_titled_with_icon(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : Ptr[CUnsignedChar], title : Ptr[CUnsignedChar], icon_name : Ptr[CUnsignedChar]): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add_titled_with_icon(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString, title : CString, icon_name : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_get_child_by_name(self : Ptr[AdwViewStack], name : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_stack_get_child_by_name(self : Ptr[AdwViewStack], name : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6215,7 +6215,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_get_visible_child_name(self : Ptr[AdwViewStack]): Ptr[CUnsignedChar] = extern
+@extern def adw_view_stack_get_visible_child_name(self : Ptr[AdwViewStack]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6235,12 +6235,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_get_icon_name(self : Ptr[AdwViewStackPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_view_stack_page_get_icon_name(self : Ptr[AdwViewStackPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_get_name(self : Ptr[AdwViewStackPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_view_stack_page_get_name(self : Ptr[AdwViewStackPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6250,7 +6250,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_get_title(self : Ptr[AdwViewStackPage]): Ptr[CUnsignedChar] = extern
+@extern def adw_view_stack_page_get_title(self : Ptr[AdwViewStackPage]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6275,12 +6275,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_set_icon_name(self : Ptr[AdwViewStackPage], icon_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_view_stack_page_set_icon_name(self : Ptr[AdwViewStackPage], icon_name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_set_name(self : Ptr[AdwViewStackPage], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_view_stack_page_set_name(self : Ptr[AdwViewStackPage], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6290,7 +6290,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_set_title(self : Ptr[AdwViewStackPage], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_view_stack_page_set_title(self : Ptr[AdwViewStackPage], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6340,7 +6340,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_set_visible_child_name(self : Ptr[AdwViewStack], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_view_stack_set_visible_child_name(self : Ptr[AdwViewStack], name : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-bar.h
@@ -6415,12 +6415,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
 */
-@extern def adw_view_switcher_title_get_subtitle(self : Ptr[AdwViewSwitcherTitle]): Ptr[CUnsignedChar] = extern
+@extern def adw_view_switcher_title_get_subtitle(self : Ptr[AdwViewSwitcherTitle]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
 */
-@extern def adw_view_switcher_title_get_title(self : Ptr[AdwViewSwitcherTitle]): Ptr[CUnsignedChar] = extern
+@extern def adw_view_switcher_title_get_title(self : Ptr[AdwViewSwitcherTitle]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
@@ -6450,12 +6450,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
 */
-@extern def adw_view_switcher_title_set_subtitle(self : Ptr[AdwViewSwitcherTitle], subtitle : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_view_switcher_title_set_subtitle(self : Ptr[AdwViewSwitcherTitle], subtitle : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
 */
-@extern def adw_view_switcher_title_set_title(self : Ptr[AdwViewSwitcherTitle], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_view_switcher_title_set_title(self : Ptr[AdwViewSwitcherTitle], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
@@ -6505,12 +6505,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-@extern def adw_window_title_get_subtitle(self : Ptr[AdwWindowTitle]): Ptr[CUnsignedChar] = extern
+@extern def adw_window_title_get_subtitle(self : Ptr[AdwWindowTitle]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-@extern def adw_window_title_get_title(self : Ptr[AdwWindowTitle]): Ptr[CUnsignedChar] = extern
+@extern def adw_window_title_get_title(self : Ptr[AdwWindowTitle]): CString = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
@@ -6520,17 +6520,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-@extern def adw_window_title_new(title : Ptr[CUnsignedChar], subtitle : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_window_title_new(title : CString, subtitle : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-@extern def adw_window_title_set_subtitle(self : Ptr[AdwWindowTitle], subtitle : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_window_title_set_subtitle(self : Ptr[AdwWindowTitle], subtitle : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-@extern def adw_window_title_set_title(self : Ptr[AdwWindowTitle], title : Ptr[CUnsignedChar]): Unit = extern
+@extern def adw_window_title_set_title(self : Ptr[AdwWindowTitle], title : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h

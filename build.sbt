@@ -82,9 +82,12 @@ lazy val adwaita = project
       ) {
         val headerPath = findHeader("libadwaita-1", _ / "adwaita.h")
         Binding(headerPath, "adwaita")
-          .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
+          .withClangFlags(
+            pkgConfig("libadwaita-1", "cflags") :+ "-fsigned-char"
+          )
           .addCImport("adwaita.h")
           .withMultiFile(true)
+          .withOpaqueStructs(Set("AdwDialogClass"))
           .addExcludedSystemPath(headerPath.toPath().getParent())
       }
   )
@@ -101,15 +104,13 @@ lazy val gio = project
           headerPath,
           bindingPackage("gio")
         )
-          .withClangFlags(pkgConfig("gio-2.0", "cflags"))
+          .withClangFlags(pkgConfig("gio-2.0", "cflags") :+ "-fsigned-char")
           .addCImport("gio.h")
           .withOpaqueStructs(Set("G*"))
           .withNoLocation(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())
           .withMultiFile(true)
-      },
-    girModuleName := "gio-2.0",
-    withFluentBindings
+      }
   )
 
 lazy val glib = project
@@ -119,14 +120,12 @@ lazy val glib = project
     bindgenBindings += {
       val headerPath = findHeader("glib-2.0", _ / "glib.h")
       Binding(headerPath, bindingPackage("glib"))
-        .withClangFlags(pkgConfig("glib-2.0", "cflags"))
+        .withClangFlags(pkgConfig("glib-2.0", "cflags") :+ "-fsigned-char")
         .addCImport("glib.h")
         .withNoLocation(true)
         .withMultiFile(true)
         .addExcludedSystemPath(headerPath.toPath().getParent())
-    },
-    girModuleName := "glib-2.0",
-    withFluentBindings
+    }
   )
 
 lazy val gtk4 = project
@@ -151,7 +150,7 @@ lazy val gtk4 = project
           headerPath,
           bindingPackage("gtk4")
         )
-          .withClangFlags(pkgConfig("gtk4", "cflags"))
+          .withClangFlags(pkgConfig("gtk4", "cflags") :+ "-fsigned-char")
           .addCImport("graphene.h")
           .withNoLocation(true)
           .withMultiFile(true)
@@ -172,14 +171,14 @@ lazy val gobject =
             headerPath,
             bindingPackage("gobject")
           )
-            .withClangFlags(pkgConfig("gobject-2.0", "cflags"))
+            .withClangFlags(
+              pkgConfig("gobject-2.0", "cflags") :+ "-fsigned-char"
+            )
             .addCImport("glib-object.h")
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent()),
-        },
-      girModuleName := "gobject-2.0",
-      withFluentBindings
+        }
     )
 
 lazy val pango =
@@ -195,14 +194,12 @@ lazy val pango =
             headerPath,
             bindingPackage("pango")
           )
-            .withClangFlags(pkgConfig("pango", "cflags"))
+            .withClangFlags(pkgConfig("pango", "cflags") :+ "-fsigned-char")
             .addCImport("pango.h")
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
-        },
-      girModuleName := "pango-1.0",
-      withFluentBindings
+        }
     )
 
 lazy val gdkpixbuf =
@@ -219,13 +216,13 @@ lazy val gdkpixbuf =
             headerPath,
             bindingPackage("gdkpixbuf")
           )
-            .withClangFlags(pkgConfig("gdk-pixbuf-2.0", "cflags"))
+            .withClangFlags(
+              pkgConfig("gdk-pixbuf-2.0", "cflags") :+ "-fsigned-char"
+            )
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
-        },
-      girModuleName := "gdkpixbuf-2.0",
-      withFluentBindings
+        }
     )
 
 lazy val cairo =
@@ -237,7 +234,7 @@ lazy val cairo =
       bindgenBindings += {
         val headerPath = findHeader("cairo", _ / "cairo.h")
         Binding(headerPath, bindingPackage("cairo"))
-          .withClangFlags(pkgConfig("cairo", "cflags"))
+          .withClangFlags(pkgConfig("cairo", "cflags") :+ "-fsigned-char")
           .addCImport("cairo.h")
           .withNoLocation(true)
           .withMultiFile(true)
@@ -257,7 +254,7 @@ lazy val graphene =
         Binding(
           headerPath,
           bindingPackage("graphene")
-        ).withClangFlags(pkgConfig("graphene-1.0", "cflags"))
+        ).withClangFlags(pkgConfig("graphene-1.0", "cflags") :+ "-fsigned-char")
           .addCImport("graphene.h")
           .addClangFlag(
             List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false")
@@ -281,7 +278,12 @@ lazy val girepository =
             findHeader("gobject-introspection-1.0", _ / "girepository.h"),
             "girepository"
           )
-            .withClangFlags(pkgConfig("gobject-introspection-1.0", "cflags"))
+            .withClangFlags(
+              pkgConfig(
+                "gobject-introspection-1.0",
+                "cflags"
+              ) :+ "-fsigned-char"
+            )
             .addCImport("girepository.h")
             .withNoLocation(true)
             .withMultiFile(true)
@@ -300,7 +302,7 @@ lazy val harfbuzz =
           headerPath,
           bindingPackage("harfbuzz")
         )
-          .withClangFlags(pkgConfig("harfbuzz", "cflags"))
+          .withClangFlags(pkgConfig("harfbuzz", "cflags") :+ "-fsigned-char")
           .addCImport("hb.h")
           .withNoLocation(true)
           .withMultiFile(true)
@@ -366,52 +368,6 @@ lazy val `gir-schema` = project
       "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
     )
   )
-
-lazy val `fluent-generator` = project
-  .in(file("fluent-generator"))
-  .dependsOn(`gir-schema`)
-  .settings(scalaVersion := "3.3.3")
-  .settings(
-    libraryDependencies += "com.outr" %%% "scribe" % "3.13.0",
-    libraryDependencies += "com.indoorvivants" %%% "rendition" % "0.0.3+4-818d0ad8-SNAPSHOT",
-    libraryDependencies += "com.monovore" %%% "decline" % "2.4.1",
-    libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.9.1",
-    fork := true,
-    run / baseDirectory := (ThisBuild / baseDirectory).value
-  )
-
-lazy val girModuleName = settingKey[String]("")
-
-lazy val generateFluentBindings = inputKey[Unit]("")
-
-val withFluentBindings = Seq(
-  generateFluentBindings := Def.inputTaskDyn {
-    val girModule = girModuleName.value
-    val girFiles = (ThisBuild / baseDirectory).value / "gir-files"
-    val out =
-      (Compile / sourceDirectory).value / "scala" / "generated" / "fluent"
-
-    val generatedFiles =
-      (Compile / target).value / "fluent-generator" / "files.txt"
-
-    val task = InputKey[Unit]("scalafmtOnly")
-
-    Def.sequential(
-      Def
-        .taskDyn {
-          (`fluent-generator` / Compile / run)
-            .toTask(
-              s" --module $girModule --gir-files $girFiles --out $out --dump-files-list $generatedFiles"
-            )
-        },
-      Def.taskDyn {
-        val files = IO.readLines(generatedFiles)
-        (Compile / task).toTask(s" ${files.mkString(" ")}")
-      }
-    )
-
-  }.evaluated
-)
 
 def pkgConfig(pkg: String, arg: String) = {
   import sys.process.*

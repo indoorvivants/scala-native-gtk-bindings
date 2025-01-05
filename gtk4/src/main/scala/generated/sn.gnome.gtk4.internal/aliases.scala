@@ -3157,13 +3157,13 @@ object GtkEntryBuffer_slistautoptr:
 /**
  * GtkEntryCompletionMatchFunc: : the `GtkEntryCompletion` : the string to match, normalized and case-folded : a `GtkTreeIter` indicating the row to match _data: user data given to gtk_entry_completion_set_match_func()
 */
-opaque type GtkEntryCompletionMatchFunc = CFuncPtr4[Ptr[GtkEntryCompletion], Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+opaque type GtkEntryCompletionMatchFunc = CFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkEntryCompletionMatchFunc: 
-  given _tag: Tag[GtkEntryCompletionMatchFunc] = Tag.materializeCFuncPtr4[Ptr[GtkEntryCompletion], Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+  given _tag: Tag[GtkEntryCompletionMatchFunc] = Tag.materializeCFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GtkEntryCompletionMatchFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr4[Ptr[GtkEntryCompletion], Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkEntryCompletionMatchFunc = o
+  inline def apply(inline o: CFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkEntryCompletionMatchFunc = o
   extension (v: GtkEntryCompletionMatchFunc)
-    inline def value: CFuncPtr4[Ptr[GtkEntryCompletion], Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
+    inline def value: CFuncPtr4[Ptr[GtkEntryCompletion], CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GtkEntryCompletion_autoptr = Ptr[GtkEntryCompletion]
@@ -7310,13 +7310,13 @@ object GtkPrintOperation_slistautoptr:
   extension (v: GtkPrintOperation_slistautoptr)
     inline def value: Ptr[_root_.sn.gnome.glib.internal.GSList] = v
 
-opaque type GtkPrintSettingsFunc = CFuncPtr3[Ptr[CUnsignedChar], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Unit]
+opaque type GtkPrintSettingsFunc = CFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit]
 object GtkPrintSettingsFunc: 
-  given _tag: Tag[GtkPrintSettingsFunc] = Tag.materializeCFuncPtr3[Ptr[CUnsignedChar], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Unit]
+  given _tag: Tag[GtkPrintSettingsFunc] = Tag.materializeCFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GtkPrintSettingsFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[Ptr[CUnsignedChar], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkPrintSettingsFunc = o
+  inline def apply(inline o: CFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit]): GtkPrintSettingsFunc = o
   extension (v: GtkPrintSettingsFunc)
-    inline def value: CFuncPtr3[Ptr[CUnsignedChar], Ptr[CUnsignedChar], _root_.sn.gnome.glib.internal.gpointer, Unit] = v
+    inline def value: CFuncPtr3[CString, CString, _root_.sn.gnome.glib.internal.gpointer, Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GtkPrintSettings_autoptr = Ptr[GtkPrintSettings]
@@ -7574,13 +7574,13 @@ object GtkScaleButton_slistautoptr:
 /**
  * GtkScaleFormatValueFunc: : The `GtkScale` : The numeric value to format _data: (closure): user data
 */
-opaque type GtkScaleFormatValueFunc = CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, Ptr[CUnsignedChar]]
+opaque type GtkScaleFormatValueFunc = CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString]
 object GtkScaleFormatValueFunc: 
-  given _tag: Tag[GtkScaleFormatValueFunc] = Tag.materializeCFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, Ptr[CUnsignedChar]]
+  given _tag: Tag[GtkScaleFormatValueFunc] = Tag.materializeCFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GtkScaleFormatValueFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, Ptr[CUnsignedChar]]): GtkScaleFormatValueFunc = o
+  inline def apply(inline o: CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString]): GtkScaleFormatValueFunc = o
   extension (v: GtkScaleFormatValueFunc)
-    inline def value: CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, Ptr[CUnsignedChar]] = v
+    inline def value: CFuncPtr3[Ptr[GtkScale], Double, _root_.sn.gnome.glib.internal.gpointer, CString] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GtkScale_autoptr = Ptr[GtkScale]
@@ -10041,13 +10041,13 @@ object GtkTreeViewRowSeparatorFunc:
 /**
  * GtkTreeViewSearchEqualFunc: : the `GtkTreeModel` being searched : the search column set by gtk_tree_view_set_search_column() : the key string to compare with : a `GtkTreeIter` pointing the row of that should be compared with . _data: (closure): user data from gtk_tree_view_set_search_equal_func()
 */
-opaque type GtkTreeViewSearchEqualFunc = CFuncPtr5[Ptr[GtkTreeModel], CInt, Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+opaque type GtkTreeViewSearchEqualFunc = CFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
 object GtkTreeViewSearchEqualFunc: 
-  given _tag: Tag[GtkTreeViewSearchEqualFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeModel], CInt, Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
+  given _tag: Tag[GtkTreeViewSearchEqualFunc] = Tag.materializeCFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GtkTreeViewSearchEqualFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeModel], CInt, Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeViewSearchEqualFunc = o
+  inline def apply(inline o: CFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean]): GtkTreeViewSearchEqualFunc = o
   extension (v: GtkTreeViewSearchEqualFunc)
-    inline def value: CFuncPtr5[Ptr[GtkTreeModel], CInt, Ptr[CUnsignedChar], Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
+    inline def value: CFuncPtr5[Ptr[GtkTreeModel], CInt, CString, Ptr[GtkTreeIter], _root_.sn.gnome.glib.internal.gpointer, _root_.sn.gnome.glib.internal.gboolean] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GtkTreeView_autoptr = Ptr[GtkTreeView]
@@ -10249,13 +10249,13 @@ object GtkVolumeButton_slistautoptr:
 /**
  * GtkWidgetActionActivateFunc: : the widget to which the action belongs _name: the action name : (nullable): parameter for activation
 */
-opaque type GtkWidgetActionActivateFunc = CFuncPtr3[Ptr[GtkWidget], Ptr[CUnsignedChar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
+opaque type GtkWidgetActionActivateFunc = CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
 object GtkWidgetActionActivateFunc: 
-  given _tag: Tag[GtkWidgetActionActivateFunc] = Tag.materializeCFuncPtr3[Ptr[GtkWidget], Ptr[CUnsignedChar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
+  given _tag: Tag[GtkWidgetActionActivateFunc] = Tag.materializeCFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]
   inline def fromPtr(ptr: Ptr[Byte] | CVoidPtr): GtkWidgetActionActivateFunc = CFuncPtr.fromPtr(ptr.asInstanceOf[Ptr[Byte]])
-  inline def apply(inline o: CFuncPtr3[Ptr[GtkWidget], Ptr[CUnsignedChar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): GtkWidgetActionActivateFunc = o
+  inline def apply(inline o: CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit]): GtkWidgetActionActivateFunc = o
   extension (v: GtkWidgetActionActivateFunc)
-    inline def value: CFuncPtr3[Ptr[GtkWidget], Ptr[CUnsignedChar], Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = v
+    inline def value: CFuncPtr3[Ptr[GtkWidget], CString, Ptr[_root_.sn.gnome.glib.internal.GVariant], Unit] = v
     inline def toPtr: CVoidPtr = CFuncPtr.toPtr(v)
 
 opaque type GtkWidgetPaintableClass_autoptr = Ptr[GtkWidgetPaintableClass]

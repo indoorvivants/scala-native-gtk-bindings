@@ -137,15 +137,15 @@ import _root_.scala.scalanative.*
 
 @extern def pango_attr_baseline_shift_new(shift : CInt): Ptr[PangoAttribute] = extern
 
-@extern def pango_attr_break(text : Ptr[CUnsignedChar], length : CInt, attr_list : Ptr[PangoAttrList], offset : CInt, attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
+@extern def pango_attr_break(text : CString, length : CInt, attr_list : Ptr[PangoAttrList], offset : CInt, attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
 
 @extern def pango_attr_fallback_new(enable_fallback : _root_.sn.gnome.glib.internal.gboolean): Ptr[PangoAttribute] = extern
 
-@extern def pango_attr_family_new(family : Ptr[CUnsignedChar]): Ptr[PangoAttribute] = extern
+@extern def pango_attr_family_new(family : CString): Ptr[PangoAttribute] = extern
 
 @extern def pango_attr_font_desc_new(desc : Ptr[PangoFontDescription]): Ptr[PangoAttribute] = extern
 
-@extern def pango_attr_font_features_new(features : Ptr[CUnsignedChar]): Ptr[PangoAttribute] = extern
+@extern def pango_attr_font_features_new(features : CString): Ptr[PangoAttribute] = extern
 
 @extern def pango_attr_font_scale_new(scale : PangoFontScale): Ptr[PangoAttribute] = extern
 
@@ -191,7 +191,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_attr_list_filter(list : Ptr[PangoAttrList], func : PangoAttrFilterFunc, data : _root_.sn.gnome.glib.internal.gpointer): Ptr[PangoAttrList] = extern
 
-@extern def pango_attr_list_from_string(text : Ptr[CUnsignedChar]): Ptr[PangoAttrList] = extern
+@extern def pango_attr_list_from_string(text : CString): Ptr[PangoAttrList] = extern
 
 @extern def pango_attr_list_get_attributes(list : Ptr[PangoAttrList]): Ptr[_root_.sn.gnome.glib.internal.GSList] = extern
 
@@ -212,7 +212,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_attr_list_splice(list : Ptr[PangoAttrList], other : Ptr[PangoAttrList], pos : CInt, len : CInt): Unit = extern
 
-@extern def pango_attr_list_to_string(list : Ptr[PangoAttrList]): Ptr[CUnsignedChar] = extern
+@extern def pango_attr_list_to_string(list : Ptr[PangoAttrList]): CString = extern
 
 @extern def pango_attr_list_unref(list : Ptr[PangoAttrList]): Unit = extern
 
@@ -248,11 +248,11 @@ import _root_.scala.scalanative.*
 
 @extern def pango_attr_text_transform_new(transform : PangoTextTransform): Ptr[PangoAttribute] = extern
 
-@extern def pango_attr_type_get_name(`type` : PangoAttrType): Ptr[CUnsignedChar] = extern
+@extern def pango_attr_type_get_name(`type` : PangoAttrType): CString = extern
 
 @extern def pango_attr_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_attr_type_register(name : Ptr[CUnsignedChar]): PangoAttrType = extern
+@extern def pango_attr_type_register(name : CString): PangoAttrType = extern
 
 @extern def pango_attr_underline_color_new(red : _root_.sn.gnome.glib.internal.guint16, green : _root_.sn.gnome.glib.internal.guint16, blue : _root_.sn.gnome.glib.internal.guint16): Ptr[PangoAttribute] = extern
 
@@ -298,7 +298,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_bidi_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_break(text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
+@extern def pango_break(text : CString, length : CInt, analysis : Ptr[PangoAnalysis], attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
 
 @extern def pango_color_copy(src : Ptr[PangoColor]): Ptr[PangoColor] = extern
 
@@ -306,11 +306,11 @@ import _root_.scala.scalanative.*
 
 @extern def pango_color_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_color_parse(color : Ptr[PangoColor], spec : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_color_parse(color : Ptr[PangoColor], spec : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_color_parse_with_alpha(color : Ptr[PangoColor], alpha : Ptr[_root_.sn.gnome.glib.internal.guint16], spec : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_color_parse_with_alpha(color : Ptr[PangoColor], alpha : Ptr[_root_.sn.gnome.glib.internal.guint16], spec : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_color_to_string(color : Ptr[PangoColor]): Ptr[CUnsignedChar] = extern
+@extern def pango_color_to_string(color : Ptr[PangoColor]): CString = extern
 
 @extern def pango_context_changed(context : Ptr[PangoContext]): Unit = extern
 
@@ -384,7 +384,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_coverage_unref(coverage : Ptr[PangoCoverage]): Unit = extern
 
-@extern def pango_default_break(text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
+@extern def pango_default_break(text : CString, length : CInt, analysis : Ptr[PangoAnalysis], attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
 
 @extern def pango_direction_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -400,7 +400,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_find_base_dir(text : Ptr[_root_.sn.gnome.glib.internal.gchar], length : _root_.sn.gnome.glib.internal.gint): PangoDirection = extern
 
-@extern def pango_find_paragraph_boundary(text : Ptr[CUnsignedChar], length : CInt, paragraph_delimiter_index : Ptr[CInt], next_paragraph_start : Ptr[CInt]): Unit = extern
+@extern def pango_find_paragraph_boundary(text : CString, length : CInt, paragraph_delimiter_index : Ptr[CInt], next_paragraph_start : Ptr[CInt]): Unit = extern
 
 @extern def pango_font_describe(font : Ptr[PangoFont]): Ptr[PangoFontDescription] = extern
 
@@ -416,9 +416,9 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_description_free(desc : Ptr[PangoFontDescription]): Unit = extern
 
-@extern def pango_font_description_from_string(str : Ptr[CUnsignedChar]): Ptr[PangoFontDescription] = extern
+@extern def pango_font_description_from_string(str : CString): Ptr[PangoFontDescription] = extern
 
-@extern def pango_font_description_get_family(desc : Ptr[PangoFontDescription]): Ptr[CUnsignedChar] = extern
+@extern def pango_font_description_get_family(desc : Ptr[PangoFontDescription]): CString = extern
 
 @extern def pango_font_description_get_gravity(desc : Ptr[PangoFontDescription]): PangoGravity = extern
 
@@ -436,7 +436,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_description_get_variant(desc : Ptr[PangoFontDescription]): PangoVariant = extern
 
-@extern def pango_font_description_get_variations(desc : Ptr[PangoFontDescription]): Ptr[CUnsignedChar] = extern
+@extern def pango_font_description_get_variations(desc : Ptr[PangoFontDescription]): CString = extern
 
 @extern def pango_font_description_get_weight(desc : Ptr[PangoFontDescription]): PangoWeight = extern
 
@@ -450,9 +450,9 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_description_set_absolute_size(desc : Ptr[PangoFontDescription], size : Double): Unit = extern
 
-@extern def pango_font_description_set_family(desc : Ptr[PangoFontDescription], family : Ptr[CUnsignedChar]): Unit = extern
+@extern def pango_font_description_set_family(desc : Ptr[PangoFontDescription], family : CString): Unit = extern
 
-@extern def pango_font_description_set_family_static(desc : Ptr[PangoFontDescription], family : Ptr[CUnsignedChar]): Unit = extern
+@extern def pango_font_description_set_family_static(desc : Ptr[PangoFontDescription], family : CString): Unit = extern
 
 @extern def pango_font_description_set_gravity(desc : Ptr[PangoFontDescription], gravity : PangoGravity): Unit = extern
 
@@ -464,15 +464,15 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_description_set_variant(desc : Ptr[PangoFontDescription], variant : PangoVariant): Unit = extern
 
-@extern def pango_font_description_set_variations(desc : Ptr[PangoFontDescription], variations : Ptr[CUnsignedChar]): Unit = extern
+@extern def pango_font_description_set_variations(desc : Ptr[PangoFontDescription], variations : CString): Unit = extern
 
-@extern def pango_font_description_set_variations_static(desc : Ptr[PangoFontDescription], variations : Ptr[CUnsignedChar]): Unit = extern
+@extern def pango_font_description_set_variations_static(desc : Ptr[PangoFontDescription], variations : CString): Unit = extern
 
 @extern def pango_font_description_set_weight(desc : Ptr[PangoFontDescription], weight : PangoWeight): Unit = extern
 
-@extern def pango_font_description_to_filename(desc : Ptr[PangoFontDescription]): Ptr[CUnsignedChar] = extern
+@extern def pango_font_description_to_filename(desc : Ptr[PangoFontDescription]): CString = extern
 
-@extern def pango_font_description_to_string(desc : Ptr[PangoFontDescription]): Ptr[CUnsignedChar] = extern
+@extern def pango_font_description_to_string(desc : Ptr[PangoFontDescription]): CString = extern
 
 @extern def pango_font_description_unset_fields(desc : Ptr[PangoFontDescription], to_unset : PangoFontMask): Unit = extern
 
@@ -482,7 +482,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_face_describe(face : Ptr[PangoFontFace]): Ptr[PangoFontDescription] = extern
 
-@extern def pango_font_face_get_face_name(face : Ptr[PangoFontFace]): Ptr[CUnsignedChar] = extern
+@extern def pango_font_face_get_face_name(face : Ptr[PangoFontFace]): CString = extern
 
 @extern def pango_font_face_get_family(face : Ptr[PangoFontFace]): Ptr[PangoFontFamily] = extern
 
@@ -492,9 +492,9 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_face_list_sizes(face : Ptr[PangoFontFace], sizes : Ptr[Ptr[CInt]], n_sizes : Ptr[CInt]): Unit = extern
 
-@extern def pango_font_family_get_face(family : Ptr[PangoFontFamily], name : Ptr[CUnsignedChar]): Ptr[PangoFontFace] = extern
+@extern def pango_font_family_get_face(family : Ptr[PangoFontFamily], name : CString): Ptr[PangoFontFace] = extern
 
-@extern def pango_font_family_get_name(family : Ptr[PangoFontFamily]): Ptr[CUnsignedChar] = extern
+@extern def pango_font_family_get_name(family : Ptr[PangoFontFamily]): CString = extern
 
 @extern def pango_font_family_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -530,7 +530,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_map_create_context(fontmap : Ptr[PangoFontMap]): Ptr[PangoContext] = extern
 
-@extern def pango_font_map_get_family(fontmap : Ptr[PangoFontMap], name : Ptr[CUnsignedChar]): Ptr[PangoFontFamily] = extern
+@extern def pango_font_map_get_family(fontmap : Ptr[PangoFontMap], name : CString): Ptr[PangoFontFamily] = extern
 
 @extern def pango_font_map_get_serial(fontmap : Ptr[PangoFontMap]): _root_.sn.gnome.glib.internal.guint = extern
 
@@ -542,7 +542,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_font_map_load_fontset(fontmap : Ptr[PangoFontMap], context : Ptr[PangoContext], desc : Ptr[PangoFontDescription], language : Ptr[PangoLanguage]): Ptr[PangoFontset] = extern
 
-@extern def pango_font_map_reload_font(fontmap : Ptr[PangoFontMap], font : Ptr[PangoFont], scale : Double, context : Ptr[PangoContext], variations : Ptr[CUnsignedChar]): Ptr[PangoFont] = extern
+@extern def pango_font_map_reload_font(fontmap : Ptr[PangoFontMap], font : Ptr[PangoFont], scale : Double, context : Ptr[PangoContext], variations : CString): Ptr[PangoFont] = extern
 
 @extern def pango_font_mask_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -590,17 +590,17 @@ import _root_.scala.scalanative.*
 
 @extern def pango_fontset_simple_size(fontset : Ptr[PangoFontsetSimple]): CInt = extern
 
-@extern def pango_get_log_attrs(text : Ptr[CUnsignedChar], length : CInt, level : CInt, language : Ptr[PangoLanguage], attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
+@extern def pango_get_log_attrs(text : CString, length : CInt, level : CInt, language : Ptr[PangoLanguage], attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
 
 @extern def pango_get_mirror_char(ch : _root_.sn.gnome.glib.internal.gunichar, mirrored_ch : Ptr[_root_.sn.gnome.glib.internal.gunichar]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_glyph_item_apply_attrs(glyph_item : Ptr[PangoGlyphItem], text : Ptr[CUnsignedChar], list : Ptr[PangoAttrList]): Ptr[_root_.sn.gnome.glib.internal.GSList] = extern
+@extern def pango_glyph_item_apply_attrs(glyph_item : Ptr[PangoGlyphItem], text : CString, list : Ptr[PangoAttrList]): Ptr[_root_.sn.gnome.glib.internal.GSList] = extern
 
 @extern def pango_glyph_item_copy(orig : Ptr[PangoGlyphItem]): Ptr[PangoGlyphItem] = extern
 
 @extern def pango_glyph_item_free(glyph_item : Ptr[PangoGlyphItem]): Unit = extern
 
-@extern def pango_glyph_item_get_logical_widths(glyph_item : Ptr[PangoGlyphItem], text : Ptr[CUnsignedChar], logical_widths : Ptr[CInt]): Unit = extern
+@extern def pango_glyph_item_get_logical_widths(glyph_item : Ptr[PangoGlyphItem], text : CString, logical_widths : Ptr[CInt]): Unit = extern
 
 @extern def pango_glyph_item_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -610,17 +610,17 @@ import _root_.scala.scalanative.*
 
 @extern def pango_glyph_item_iter_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_glyph_item_iter_init_end(iter : Ptr[PangoGlyphItemIter], glyph_item : Ptr[PangoGlyphItem], text : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_glyph_item_iter_init_end(iter : Ptr[PangoGlyphItemIter], glyph_item : Ptr[PangoGlyphItem], text : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_glyph_item_iter_init_start(iter : Ptr[PangoGlyphItemIter], glyph_item : Ptr[PangoGlyphItem], text : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_glyph_item_iter_init_start(iter : Ptr[PangoGlyphItemIter], glyph_item : Ptr[PangoGlyphItem], text : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_glyph_item_iter_next_cluster(iter : Ptr[PangoGlyphItemIter]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_glyph_item_iter_prev_cluster(iter : Ptr[PangoGlyphItemIter]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_glyph_item_letter_space(glyph_item : Ptr[PangoGlyphItem], text : Ptr[CUnsignedChar], log_attrs : Ptr[PangoLogAttr], letter_spacing : CInt): Unit = extern
+@extern def pango_glyph_item_letter_space(glyph_item : Ptr[PangoGlyphItem], text : CString, log_attrs : Ptr[PangoLogAttr], letter_spacing : CInt): Unit = extern
 
-@extern def pango_glyph_item_split(orig : Ptr[PangoGlyphItem], text : Ptr[CUnsignedChar], split_index : CInt): Ptr[PangoGlyphItem] = extern
+@extern def pango_glyph_item_split(orig : Ptr[PangoGlyphItem], text : CString, split_index : CInt): Ptr[PangoGlyphItem] = extern
 
 @extern def pango_glyph_string_copy(string : Ptr[PangoGlyphString]): Ptr[PangoGlyphString] = extern
 
@@ -630,21 +630,21 @@ import _root_.scala.scalanative.*
 
 @extern def pango_glyph_string_free(string : Ptr[PangoGlyphString]): Unit = extern
 
-@extern def pango_glyph_string_get_logical_widths(glyphs : Ptr[PangoGlyphString], text : Ptr[CUnsignedChar], length : CInt, embedding_level : CInt, logical_widths : Ptr[CInt]): Unit = extern
+@extern def pango_glyph_string_get_logical_widths(glyphs : Ptr[PangoGlyphString], text : CString, length : CInt, embedding_level : CInt, logical_widths : Ptr[CInt]): Unit = extern
 
 @extern def pango_glyph_string_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def pango_glyph_string_get_width(glyphs : Ptr[PangoGlyphString]): CInt = extern
 
-@extern def pango_glyph_string_index_to_x(glyphs : Ptr[PangoGlyphString], text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], `index_` : CInt, trailing : _root_.sn.gnome.glib.internal.gboolean, x_pos : Ptr[CInt]): Unit = extern
+@extern def pango_glyph_string_index_to_x(glyphs : Ptr[PangoGlyphString], text : CString, length : CInt, analysis : Ptr[PangoAnalysis], `index_` : CInt, trailing : _root_.sn.gnome.glib.internal.gboolean, x_pos : Ptr[CInt]): Unit = extern
 
-@extern def pango_glyph_string_index_to_x_full(glyphs : Ptr[PangoGlyphString], text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], attrs : Ptr[PangoLogAttr], `index_` : CInt, trailing : _root_.sn.gnome.glib.internal.gboolean, x_pos : Ptr[CInt]): Unit = extern
+@extern def pango_glyph_string_index_to_x_full(glyphs : Ptr[PangoGlyphString], text : CString, length : CInt, analysis : Ptr[PangoAnalysis], attrs : Ptr[PangoLogAttr], `index_` : CInt, trailing : _root_.sn.gnome.glib.internal.gboolean, x_pos : Ptr[CInt]): Unit = extern
 
 @extern def pango_glyph_string_new(): Ptr[PangoGlyphString] = extern
 
 @extern def pango_glyph_string_set_size(string : Ptr[PangoGlyphString], new_len : CInt): Unit = extern
 
-@extern def pango_glyph_string_x_to_index(glyphs : Ptr[PangoGlyphString], text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], x_pos : CInt, `index_` : Ptr[CInt], trailing : Ptr[CInt]): Unit = extern
+@extern def pango_glyph_string_x_to_index(glyphs : Ptr[PangoGlyphString], text : CString, length : CInt, analysis : Ptr[PangoAnalysis], x_pos : CInt, `index_` : Ptr[CInt], trailing : Ptr[CInt]): Unit = extern
 
 @extern def pango_gravity_get_for_matrix(matrix : Ptr[PangoMatrix]): PangoGravity = extern
 
@@ -672,17 +672,17 @@ import _root_.scala.scalanative.*
 
 @extern def pango_item_split(orig : Ptr[PangoItem], split_index : CInt, split_offset : CInt): Ptr[PangoItem] = extern
 
-@extern def pango_itemize(context : Ptr[PangoContext], text : Ptr[CUnsignedChar], start_index : CInt, length : CInt, attrs : Ptr[PangoAttrList], cached_iter : Ptr[PangoAttrIterator]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
+@extern def pango_itemize(context : Ptr[PangoContext], text : CString, start_index : CInt, length : CInt, attrs : Ptr[PangoAttrList], cached_iter : Ptr[PangoAttrIterator]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def pango_itemize_with_base_dir(context : Ptr[PangoContext], base_dir : PangoDirection, text : Ptr[CUnsignedChar], start_index : CInt, length : CInt, attrs : Ptr[PangoAttrList], cached_iter : Ptr[PangoAttrIterator]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
+@extern def pango_itemize_with_base_dir(context : Ptr[PangoContext], base_dir : PangoDirection, text : CString, start_index : CInt, length : CInt, attrs : Ptr[PangoAttrList], cached_iter : Ptr[PangoAttrIterator]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def pango_language_from_string(language : Ptr[CUnsignedChar]): Ptr[PangoLanguage] = extern
+@extern def pango_language_from_string(language : CString): Ptr[PangoLanguage] = extern
 
 @extern def pango_language_get_default(): Ptr[PangoLanguage] = extern
 
 @extern def pango_language_get_preferred(): Ptr[Ptr[PangoLanguage]] = extern
 
-@extern def pango_language_get_sample_string(language : Ptr[PangoLanguage]): Ptr[CUnsignedChar] = extern
+@extern def pango_language_get_sample_string(language : Ptr[PangoLanguage]): CString = extern
 
 @extern def pango_language_get_scripts(language : Ptr[PangoLanguage], num_scripts : Ptr[CInt]): Ptr[PangoScript] = extern
 
@@ -690,9 +690,9 @@ import _root_.scala.scalanative.*
 
 @extern def pango_language_includes_script(language : Ptr[PangoLanguage], script : PangoScript): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_language_matches(language : Ptr[PangoLanguage], range_list : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_language_matches(language : Ptr[PangoLanguage], range_list : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_language_to_string(language : Ptr[PangoLanguage]): Ptr[CUnsignedChar] = extern
+@extern def pango_language_to_string(language : Ptr[PangoLanguage]): CString = extern
 
 @extern def pango_layout_context_changed(layout : Ptr[PangoLayout]): Unit = extern
 
@@ -770,7 +770,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_layout_get_tabs(layout : Ptr[PangoLayout]): Ptr[PangoTabArray] = extern
 
-@extern def pango_layout_get_text(layout : Ptr[PangoLayout]): Ptr[CUnsignedChar] = extern
+@extern def pango_layout_get_text(layout : Ptr[PangoLayout]): CString = extern
 
 @extern def pango_layout_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -886,9 +886,9 @@ import _root_.scala.scalanative.*
 
 @extern def pango_layout_set_line_spacing(layout : Ptr[PangoLayout], factor : Float): Unit = extern
 
-@extern def pango_layout_set_markup(layout : Ptr[PangoLayout], markup : Ptr[CUnsignedChar], length : CInt): Unit = extern
+@extern def pango_layout_set_markup(layout : Ptr[PangoLayout], markup : CString, length : CInt): Unit = extern
 
-@extern def pango_layout_set_markup_with_accel(layout : Ptr[PangoLayout], markup : Ptr[CUnsignedChar], length : CInt, accel_marker : _root_.sn.gnome.glib.internal.gunichar, accel_char : Ptr[_root_.sn.gnome.glib.internal.gunichar]): Unit = extern
+@extern def pango_layout_set_markup_with_accel(layout : Ptr[PangoLayout], markup : CString, length : CInt, accel_marker : _root_.sn.gnome.glib.internal.gunichar, accel_char : Ptr[_root_.sn.gnome.glib.internal.gunichar]): Unit = extern
 
 @extern def pango_layout_set_single_paragraph_mode(layout : Ptr[PangoLayout], setting : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
@@ -896,19 +896,19 @@ import _root_.scala.scalanative.*
 
 @extern def pango_layout_set_tabs(layout : Ptr[PangoLayout], tabs : Ptr[PangoTabArray]): Unit = extern
 
-@extern def pango_layout_set_text(layout : Ptr[PangoLayout], text : Ptr[CUnsignedChar], length : CInt): Unit = extern
+@extern def pango_layout_set_text(layout : Ptr[PangoLayout], text : CString, length : CInt): Unit = extern
 
 @extern def pango_layout_set_width(layout : Ptr[PangoLayout], width : CInt): Unit = extern
 
 @extern def pango_layout_set_wrap(layout : Ptr[PangoLayout], wrap : PangoWrapMode): Unit = extern
 
-@extern def pango_layout_write_to_file(layout : Ptr[PangoLayout], flags : PangoLayoutSerializeFlags, filename : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_layout_write_to_file(layout : Ptr[PangoLayout], flags : PangoLayoutSerializeFlags, filename : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_layout_xy_to_index(layout : Ptr[PangoLayout], x : CInt, y : CInt, `index_` : Ptr[CInt], trailing : Ptr[CInt]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_log2vis_get_embedding_levels(text : Ptr[_root_.sn.gnome.glib.internal.gchar], length : CInt, pbase_dir : Ptr[PangoDirection]): Ptr[_root_.sn.gnome.glib.internal.guint8] = extern
 
-@extern def pango_markup_parser_finish(context : Ptr[_root_.sn.gnome.glib.internal.GMarkupParseContext], attr_list : Ptr[Ptr[PangoAttrList]], text : Ptr[Ptr[CUnsignedChar]], accel_char : Ptr[_root_.sn.gnome.glib.internal.gunichar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_markup_parser_finish(context : Ptr[_root_.sn.gnome.glib.internal.GMarkupParseContext], attr_list : Ptr[Ptr[PangoAttrList]], text : Ptr[CString], accel_char : Ptr[_root_.sn.gnome.glib.internal.gunichar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_markup_parser_new(accel_marker : _root_.sn.gnome.glib.internal.gunichar): Ptr[_root_.sn.gnome.glib.internal.GMarkupParseContext] = extern
 
@@ -942,17 +942,17 @@ import _root_.scala.scalanative.*
 
 @extern def pango_overline_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_parse_enum(`type` : _root_.sn.gnome.gobject.internal.GType, str : Ptr[CUnsignedChar], value : Ptr[CInt], warn : _root_.sn.gnome.glib.internal.gboolean, possible_values : Ptr[Ptr[CUnsignedChar]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_parse_enum(`type` : _root_.sn.gnome.gobject.internal.GType, str : CString, value : Ptr[CInt], warn : _root_.sn.gnome.glib.internal.gboolean, possible_values : Ptr[CString]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_parse_markup(markup_text : Ptr[CUnsignedChar], length : CInt, accel_marker : _root_.sn.gnome.glib.internal.gunichar, attr_list : Ptr[Ptr[PangoAttrList]], text : Ptr[Ptr[CUnsignedChar]], accel_char : Ptr[_root_.sn.gnome.glib.internal.gunichar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_parse_markup(markup_text : CString, length : CInt, accel_marker : _root_.sn.gnome.glib.internal.gunichar, attr_list : Ptr[Ptr[PangoAttrList]], text : Ptr[CString], accel_char : Ptr[_root_.sn.gnome.glib.internal.gunichar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_parse_stretch(str : Ptr[CUnsignedChar], stretch : Ptr[PangoStretch], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_parse_stretch(str : CString, stretch : Ptr[PangoStretch], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_parse_style(str : Ptr[CUnsignedChar], style : Ptr[PangoStyle], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_parse_style(str : CString, style : Ptr[PangoStyle], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_parse_variant(str : Ptr[CUnsignedChar], variant : Ptr[PangoVariant], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_parse_variant(str : CString, variant : Ptr[PangoVariant], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_parse_weight(str : Ptr[CUnsignedChar], weight : Ptr[PangoWeight], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_parse_weight(str : CString, weight : Ptr[PangoWeight], warn : _root_.sn.gnome.glib.internal.gboolean): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_quantize_line_geometry(thickness : Ptr[CInt], position : Ptr[CInt]): Unit = extern
 
@@ -968,7 +968,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_renderer_draw_glyph(renderer : Ptr[PangoRenderer], font : Ptr[PangoFont], glyph : PangoGlyph, x : Double, y : Double): Unit = extern
 
-@extern def pango_renderer_draw_glyph_item(renderer : Ptr[PangoRenderer], text : Ptr[CUnsignedChar], glyph_item : Ptr[PangoGlyphItem], x : CInt, y : CInt): Unit = extern
+@extern def pango_renderer_draw_glyph_item(renderer : Ptr[PangoRenderer], text : CString, glyph_item : Ptr[PangoGlyphItem], x : CInt, y : CInt): Unit = extern
 
 @extern def pango_renderer_draw_glyphs(renderer : Ptr[PangoRenderer], font : Ptr[PangoFont], glyphs : Ptr[PangoGlyphString], x : CInt, y : CInt): Unit = extern
 
@@ -1002,11 +1002,11 @@ import _root_.scala.scalanative.*
 
 @extern def pango_reorder_items(items : Ptr[_root_.sn.gnome.glib.internal.GList]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def pango_scan_int(pos : Ptr[Ptr[CUnsignedChar]], out : Ptr[CInt]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_scan_int(pos : Ptr[CString], out : Ptr[CInt]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_scan_string(pos : Ptr[Ptr[CUnsignedChar]], out : Ptr[_root_.sn.gnome.glib.internal.GString]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_scan_string(pos : Ptr[CString], out : Ptr[_root_.sn.gnome.glib.internal.GString]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_scan_word(pos : Ptr[Ptr[CUnsignedChar]], out : Ptr[_root_.sn.gnome.glib.internal.GString]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_scan_word(pos : Ptr[CString], out : Ptr[_root_.sn.gnome.glib.internal.GString]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def pango_script_for_unichar(ch : _root_.sn.gnome.glib.internal.gunichar): PangoScript = extern
 
@@ -1016,29 +1016,29 @@ import _root_.scala.scalanative.*
 
 @extern def pango_script_iter_free(iter : Ptr[PangoScriptIter]): Unit = extern
 
-@extern def pango_script_iter_get_range(iter : Ptr[PangoScriptIter], start : Ptr[Ptr[CUnsignedChar]], end : Ptr[Ptr[CUnsignedChar]], script : Ptr[PangoScript]): Unit = extern
+@extern def pango_script_iter_get_range(iter : Ptr[PangoScriptIter], start : Ptr[CString], end : Ptr[CString], script : Ptr[PangoScript]): Unit = extern
 
 @extern def pango_script_iter_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_script_iter_new(text : Ptr[CUnsignedChar], length : CInt): Ptr[PangoScriptIter] = extern
+@extern def pango_script_iter_new(text : CString, length : CInt): Ptr[PangoScriptIter] = extern
 
 @extern def pango_script_iter_next(iter : Ptr[PangoScriptIter]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_shape(text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], glyphs : Ptr[PangoGlyphString]): Unit = extern
+@extern def pango_shape(text : CString, length : CInt, analysis : Ptr[PangoAnalysis], glyphs : Ptr[PangoGlyphString]): Unit = extern
 
 @extern def pango_shape_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_shape_full(item_text : Ptr[CUnsignedChar], item_length : CInt, paragraph_text : Ptr[CUnsignedChar], paragraph_length : CInt, analysis : Ptr[PangoAnalysis], glyphs : Ptr[PangoGlyphString]): Unit = extern
+@extern def pango_shape_full(item_text : CString, item_length : CInt, paragraph_text : CString, paragraph_length : CInt, analysis : Ptr[PangoAnalysis], glyphs : Ptr[PangoGlyphString]): Unit = extern
 
-@extern def pango_shape_item(item : Ptr[PangoItem], paragraph_text : Ptr[CUnsignedChar], paragraph_length : CInt, log_attrs : Ptr[PangoLogAttr], glyphs : Ptr[PangoGlyphString], flags : PangoShapeFlags): Unit = extern
+@extern def pango_shape_item(item : Ptr[PangoItem], paragraph_text : CString, paragraph_length : CInt, log_attrs : Ptr[PangoLogAttr], glyphs : Ptr[PangoGlyphString], flags : PangoShapeFlags): Unit = extern
 
-@extern def pango_shape_with_flags(item_text : Ptr[CUnsignedChar], item_length : CInt, paragraph_text : Ptr[CUnsignedChar], paragraph_length : CInt, analysis : Ptr[PangoAnalysis], glyphs : Ptr[PangoGlyphString], flags : PangoShapeFlags): Unit = extern
+@extern def pango_shape_with_flags(item_text : CString, item_length : CInt, paragraph_text : CString, paragraph_length : CInt, analysis : Ptr[PangoAnalysis], glyphs : Ptr[PangoGlyphString], flags : PangoShapeFlags): Unit = extern
 
 @extern def pango_show_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_skip_space(pos : Ptr[Ptr[CUnsignedChar]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def pango_skip_space(pos : Ptr[CString]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def pango_split_file_list(str : Ptr[CUnsignedChar]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def pango_split_file_list(str : CString): Ptr[CString] = extern
 
 @extern def pango_stretch_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -1050,7 +1050,7 @@ import _root_.scala.scalanative.*
 
 @extern def pango_tab_array_free(tab_array : Ptr[PangoTabArray]): Unit = extern
 
-@extern def pango_tab_array_from_string(text : Ptr[CUnsignedChar]): Ptr[PangoTabArray] = extern
+@extern def pango_tab_array_from_string(text : CString): Ptr[PangoTabArray] = extern
 
 @extern def pango_tab_array_get_decimal_point(tab_array : Ptr[PangoTabArray], tab_index : CInt): _root_.sn.gnome.glib.internal.gunichar = extern
 
@@ -1078,13 +1078,13 @@ import _root_.scala.scalanative.*
 
 @extern def pango_tab_array_sort(tab_array : Ptr[PangoTabArray]): Unit = extern
 
-@extern def pango_tab_array_to_string(tab_array : Ptr[PangoTabArray]): Ptr[CUnsignedChar] = extern
+@extern def pango_tab_array_to_string(tab_array : Ptr[PangoTabArray]): CString = extern
 
-@extern def pango_tailor_break(text : Ptr[CUnsignedChar], length : CInt, analysis : Ptr[PangoAnalysis], offset : CInt, attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
+@extern def pango_tailor_break(text : CString, length : CInt, analysis : Ptr[PangoAnalysis], offset : CInt, attrs : Ptr[PangoLogAttr], attrs_len : CInt): Unit = extern
 
 @extern def pango_text_transform_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def pango_trim_string(str : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def pango_trim_string(str : CString): CString = extern
 
 @extern def pango_underline_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -1098,9 +1098,9 @@ import _root_.scala.scalanative.*
 
 @extern def pango_version(): CInt = extern
 
-@extern def pango_version_check(required_major : CInt, required_minor : CInt, required_micro : CInt): Ptr[CUnsignedChar] = extern
+@extern def pango_version_check(required_major : CInt, required_minor : CInt, required_micro : CInt): CString = extern
 
-@extern def pango_version_string(): Ptr[CUnsignedChar] = extern
+@extern def pango_version_string(): CString = extern
 
 @extern def pango_weight_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -1109,7 +1109,7 @@ import _root_.scala.scalanative.*
 /**
  * script_engine_create: (skip)
 */
-@extern def script_engine_create(id : Ptr[CUnsignedChar]): Ptr[PangoEngine] = extern
+@extern def script_engine_create(id : CString): Ptr[PangoEngine] = extern
 
 /**
  * script_engine_exit: (skip)

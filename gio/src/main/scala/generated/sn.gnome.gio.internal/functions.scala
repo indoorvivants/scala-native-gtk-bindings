@@ -99,7 +99,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_action_print_detailed_name(action_name : Ptr[_root_.sn.gnome.glib.internal.gchar], target_value : Ptr[_root_.sn.gnome.glib.internal.GVariant]): Ptr[_root_.sn.gnome.glib.internal.gchar] = extern
 
-@extern def g_app_info_add_supports_type(appinfo : Ptr[GAppInfo], content_type : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_app_info_add_supports_type(appinfo : Ptr[GAppInfo], content_type : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_app_info_can_delete(appinfo : Ptr[GAppInfo]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -107,7 +107,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_app_info_create_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_app_info_create_from_commandline(commandline : Ptr[CUnsignedChar], application_name : Ptr[CUnsignedChar], flags : GAppInfoCreateFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GAppInfo] = extern
+@extern def g_app_info_create_from_commandline(commandline : CString, application_name : CString, flags : GAppInfoCreateFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GAppInfo] = extern
 
 @extern def g_app_info_delete(appinfo : Ptr[GAppInfo]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -117,47 +117,47 @@ import _root_.scala.scalanative.*
 
 @extern def g_app_info_get_all(): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def g_app_info_get_all_for_type(content_type : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
+@extern def g_app_info_get_all_for_type(content_type : CString): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def g_app_info_get_commandline(appinfo : Ptr[GAppInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_app_info_get_commandline(appinfo : Ptr[GAppInfo]): CString = extern
 
-@extern def g_app_info_get_default_for_type(content_type : Ptr[CUnsignedChar], must_support_uris : _root_.sn.gnome.glib.internal.gboolean): Ptr[GAppInfo] = extern
+@extern def g_app_info_get_default_for_type(content_type : CString, must_support_uris : _root_.sn.gnome.glib.internal.gboolean): Ptr[GAppInfo] = extern
 
-@extern def g_app_info_get_default_for_type_async(content_type : Ptr[CUnsignedChar], must_support_uris : _root_.sn.gnome.glib.internal.gboolean, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_app_info_get_default_for_type_async(content_type : CString, must_support_uris : _root_.sn.gnome.glib.internal.gboolean, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_app_info_get_default_for_type_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GAppInfo] = extern
 
-@extern def g_app_info_get_default_for_uri_scheme(uri_scheme : Ptr[CUnsignedChar]): Ptr[GAppInfo] = extern
+@extern def g_app_info_get_default_for_uri_scheme(uri_scheme : CString): Ptr[GAppInfo] = extern
 
-@extern def g_app_info_get_default_for_uri_scheme_async(uri_scheme : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_app_info_get_default_for_uri_scheme_async(uri_scheme : CString, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_app_info_get_default_for_uri_scheme_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GAppInfo] = extern
 
-@extern def g_app_info_get_description(appinfo : Ptr[GAppInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_app_info_get_description(appinfo : Ptr[GAppInfo]): CString = extern
 
-@extern def g_app_info_get_display_name(appinfo : Ptr[GAppInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_app_info_get_display_name(appinfo : Ptr[GAppInfo]): CString = extern
 
-@extern def g_app_info_get_executable(appinfo : Ptr[GAppInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_app_info_get_executable(appinfo : Ptr[GAppInfo]): CString = extern
 
 @extern def g_app_info_get_fallback_for_type(content_type : Ptr[_root_.sn.gnome.glib.internal.gchar]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
 @extern def g_app_info_get_icon(appinfo : Ptr[GAppInfo]): Ptr[GIcon] = extern
 
-@extern def g_app_info_get_id(appinfo : Ptr[GAppInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_app_info_get_id(appinfo : Ptr[GAppInfo]): CString = extern
 
-@extern def g_app_info_get_name(appinfo : Ptr[GAppInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_app_info_get_name(appinfo : Ptr[GAppInfo]): CString = extern
 
 @extern def g_app_info_get_recommended_for_type(content_type : Ptr[_root_.sn.gnome.glib.internal.gchar]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def g_app_info_get_supported_types(appinfo : Ptr[GAppInfo]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_app_info_get_supported_types(appinfo : Ptr[GAppInfo]): Ptr[CString] = extern
 
 @extern def g_app_info_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def g_app_info_launch(appinfo : Ptr[GAppInfo], files : Ptr[_root_.sn.gnome.glib.internal.GList], context : Ptr[GAppLaunchContext], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_app_info_launch_default_for_uri(uri : Ptr[CUnsignedChar], context : Ptr[GAppLaunchContext], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_app_info_launch_default_for_uri(uri : CString, context : Ptr[GAppLaunchContext], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_app_info_launch_default_for_uri_async(uri : Ptr[CUnsignedChar], context : Ptr[GAppLaunchContext], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_app_info_launch_default_for_uri_async(uri : CString, context : Ptr[GAppLaunchContext], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_app_info_launch_default_for_uri_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -171,15 +171,15 @@ import _root_.scala.scalanative.*
 
 @extern def g_app_info_monitor_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_app_info_remove_supports_type(appinfo : Ptr[GAppInfo], content_type : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_app_info_remove_supports_type(appinfo : Ptr[GAppInfo], content_type : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_app_info_reset_type_associations(content_type : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_app_info_reset_type_associations(content_type : CString): Unit = extern
 
-@extern def g_app_info_set_as_default_for_extension(appinfo : Ptr[GAppInfo], extension : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_app_info_set_as_default_for_extension(appinfo : Ptr[GAppInfo], extension : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_app_info_set_as_default_for_type(appinfo : Ptr[GAppInfo], content_type : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_app_info_set_as_default_for_type(appinfo : Ptr[GAppInfo], content_type : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_app_info_set_as_last_used_for_type(appinfo : Ptr[GAppInfo], content_type : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_app_info_set_as_last_used_for_type(appinfo : Ptr[GAppInfo], content_type : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_app_info_should_show(appinfo : Ptr[GAppInfo]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -187,25 +187,25 @@ import _root_.scala.scalanative.*
 
 @extern def g_app_info_supports_uris(appinfo : Ptr[GAppInfo]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_app_launch_context_get_display(context : Ptr[GAppLaunchContext], info : Ptr[GAppInfo], files : Ptr[_root_.sn.gnome.glib.internal.GList]): Ptr[CUnsignedChar] = extern
+@extern def g_app_launch_context_get_display(context : Ptr[GAppLaunchContext], info : Ptr[GAppInfo], files : Ptr[_root_.sn.gnome.glib.internal.GList]): CString = extern
 
-@extern def g_app_launch_context_get_environment(context : Ptr[GAppLaunchContext]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_app_launch_context_get_environment(context : Ptr[GAppLaunchContext]): Ptr[CString] = extern
 
-@extern def g_app_launch_context_get_startup_notify_id(context : Ptr[GAppLaunchContext], info : Ptr[GAppInfo], files : Ptr[_root_.sn.gnome.glib.internal.GList]): Ptr[CUnsignedChar] = extern
+@extern def g_app_launch_context_get_startup_notify_id(context : Ptr[GAppLaunchContext], info : Ptr[GAppInfo], files : Ptr[_root_.sn.gnome.glib.internal.GList]): CString = extern
 
 @extern def g_app_launch_context_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_app_launch_context_launch_failed(context : Ptr[GAppLaunchContext], startup_notify_id : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_app_launch_context_launch_failed(context : Ptr[GAppLaunchContext], startup_notify_id : CString): Unit = extern
 
 @extern def g_app_launch_context_new(): Ptr[GAppLaunchContext] = extern
 
-@extern def g_app_launch_context_setenv(context : Ptr[GAppLaunchContext], variable : Ptr[CUnsignedChar], value : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_app_launch_context_setenv(context : Ptr[GAppLaunchContext], variable : CString, value : CString): Unit = extern
 
-@extern def g_app_launch_context_unsetenv(context : Ptr[GAppLaunchContext], variable : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_app_launch_context_unsetenv(context : Ptr[GAppLaunchContext], variable : CString): Unit = extern
 
 @extern def g_application_activate(application : Ptr[GApplication]): Unit = extern
 
-@extern def g_application_add_main_option(application : Ptr[GApplication], long_name : Ptr[CUnsignedChar], short_name : CUnsignedChar, flags : _root_.sn.gnome.glib.internal.GOptionFlags, arg : _root_.sn.gnome.glib.internal.GOptionArg, description : Ptr[CUnsignedChar], arg_description : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_application_add_main_option(application : Ptr[GApplication], long_name : CString, short_name : CChar, flags : _root_.sn.gnome.glib.internal.GOptionFlags, arg : _root_.sn.gnome.glib.internal.GOptionArg, description : CString, arg_description : CString): Unit = extern
 
 @extern def g_application_add_main_option_entries(application : Ptr[GApplication], entries : Ptr[_root_.sn.gnome.glib.internal.GOptionEntry]): Unit = extern
 
@@ -289,7 +289,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_application_release(application : Ptr[GApplication]): Unit = extern
 
-@extern def g_application_run(application : Ptr[GApplication], argc : CInt, argv : Ptr[Ptr[CUnsignedChar]]): CInt = extern
+@extern def g_application_run(application : Ptr[GApplication], argc : CInt, argv : Ptr[CString]): CInt = extern
 
 @extern def g_application_send_notification(application : Ptr[GApplication], id : Ptr[_root_.sn.gnome.glib.internal.gchar], notification : Ptr[GNotification]): Unit = extern
 
@@ -551,15 +551,15 @@ import _root_.scala.scalanative.*
 
 @extern def g_data_input_stream_read_int64(stream : Ptr[GDataInputStream], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gint64 = extern
 
-@extern def g_data_input_stream_read_line(stream : Ptr[GDataInputStream], length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_line(stream : Ptr[GDataInputStream], length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
 @extern def g_data_input_stream_read_line_async(stream : Ptr[GDataInputStream], io_priority : _root_.sn.gnome.glib.internal.gint, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_data_input_stream_read_line_finish(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_line_finish(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
-@extern def g_data_input_stream_read_line_finish_utf8(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_line_finish_utf8(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
-@extern def g_data_input_stream_read_line_utf8(stream : Ptr[GDataInputStream], length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_line_utf8(stream : Ptr[GDataInputStream], length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
 @extern def g_data_input_stream_read_uint16(stream : Ptr[GDataInputStream], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.guint16 = extern
 
@@ -567,17 +567,17 @@ import _root_.scala.scalanative.*
 
 @extern def g_data_input_stream_read_uint64(stream : Ptr[GDataInputStream], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.guint64 = extern
 
-@extern def g_data_input_stream_read_until(stream : Ptr[GDataInputStream], stop_chars : Ptr[_root_.sn.gnome.glib.internal.gchar], length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_until(stream : Ptr[GDataInputStream], stop_chars : Ptr[_root_.sn.gnome.glib.internal.gchar], length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
 @extern def g_data_input_stream_read_until_async(stream : Ptr[GDataInputStream], stop_chars : Ptr[_root_.sn.gnome.glib.internal.gchar], io_priority : _root_.sn.gnome.glib.internal.gint, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_data_input_stream_read_until_finish(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_until_finish(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
-@extern def g_data_input_stream_read_upto(stream : Ptr[GDataInputStream], stop_chars : Ptr[_root_.sn.gnome.glib.internal.gchar], stop_chars_len : _root_.sn.gnome.glib.internal.gssize, length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_upto(stream : Ptr[GDataInputStream], stop_chars : Ptr[_root_.sn.gnome.glib.internal.gchar], stop_chars_len : _root_.sn.gnome.glib.internal.gssize, length : Ptr[_root_.sn.gnome.glib.internal.gsize], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
 @extern def g_data_input_stream_read_upto_async(stream : Ptr[GDataInputStream], stop_chars : Ptr[_root_.sn.gnome.glib.internal.gchar], stop_chars_len : _root_.sn.gnome.glib.internal.gssize, io_priority : _root_.sn.gnome.glib.internal.gint, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_data_input_stream_read_upto_finish(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_data_input_stream_read_upto_finish(stream : Ptr[GDataInputStream], result : Ptr[GAsyncResult], length : Ptr[_root_.sn.gnome.glib.internal.gsize], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
 @extern def g_data_input_stream_set_byte_order(stream : Ptr[GDataInputStream], order : GDataStreamByteOrder): Unit = extern
 
@@ -597,7 +597,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_data_output_stream_put_int64(stream : Ptr[GDataOutputStream], data : _root_.sn.gnome.glib.internal.gint64, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_data_output_stream_put_string(stream : Ptr[GDataOutputStream], str : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_data_output_stream_put_string(stream : Ptr[GDataOutputStream], str : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_data_output_stream_put_uint16(stream : Ptr[GDataOutputStream], data : _root_.sn.gnome.glib.internal.guint16, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -1245,13 +1245,13 @@ import _root_.scala.scalanative.*
 
 @extern def g_drive_eject_with_operation_finish(drive : Ptr[GDrive], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_drive_enumerate_identifiers(drive : Ptr[GDrive]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_drive_enumerate_identifiers(drive : Ptr[GDrive]): Ptr[CString] = extern
 
 @extern def g_drive_get_icon(drive : Ptr[GDrive]): Ptr[GIcon] = extern
 
-@extern def g_drive_get_identifier(drive : Ptr[GDrive], kind : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_drive_get_identifier(drive : Ptr[GDrive], kind : CString): CString = extern
 
-@extern def g_drive_get_name(drive : Ptr[GDrive]): Ptr[CUnsignedChar] = extern
+@extern def g_drive_get_name(drive : Ptr[GDrive]): CString = extern
 
 @extern def g_drive_get_sort_key(drive : Ptr[GDrive]): Ptr[_root_.sn.gnome.glib.internal.gchar] = extern
 
@@ -1395,13 +1395,13 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_attribute_info_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_attribute_info_list_add(list : Ptr[GFileAttributeInfoList], name : Ptr[CUnsignedChar], `type` : GFileAttributeType, flags : GFileAttributeInfoFlags): Unit = extern
+@extern def g_file_attribute_info_list_add(list : Ptr[GFileAttributeInfoList], name : CString, `type` : GFileAttributeType, flags : GFileAttributeInfoFlags): Unit = extern
 
 @extern def g_file_attribute_info_list_dup(list : Ptr[GFileAttributeInfoList]): Ptr[GFileAttributeInfoList] = extern
 
 @extern def g_file_attribute_info_list_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_attribute_info_list_lookup(list : Ptr[GFileAttributeInfoList], name : Ptr[CUnsignedChar]): Ptr[GFileAttributeInfo] = extern
+@extern def g_file_attribute_info_list_lookup(list : Ptr[GFileAttributeInfoList], name : CString): Ptr[GFileAttributeInfo] = extern
 
 @extern def g_file_attribute_info_list_new(): Ptr[GFileAttributeInfoList] = extern
 
@@ -1409,23 +1409,23 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_attribute_info_list_unref(list : Ptr[GFileAttributeInfoList]): Unit = extern
 
-@extern def g_file_attribute_matcher_enumerate_namespace(matcher : Ptr[GFileAttributeMatcher], ns : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_attribute_matcher_enumerate_namespace(matcher : Ptr[GFileAttributeMatcher], ns : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_attribute_matcher_enumerate_next(matcher : Ptr[GFileAttributeMatcher]): Ptr[CUnsignedChar] = extern
+@extern def g_file_attribute_matcher_enumerate_next(matcher : Ptr[GFileAttributeMatcher]): CString = extern
 
 @extern def g_file_attribute_matcher_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_attribute_matcher_matches(matcher : Ptr[GFileAttributeMatcher], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_attribute_matcher_matches(matcher : Ptr[GFileAttributeMatcher], attribute : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_attribute_matcher_matches_only(matcher : Ptr[GFileAttributeMatcher], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_attribute_matcher_matches_only(matcher : Ptr[GFileAttributeMatcher], attribute : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_attribute_matcher_new(attributes : Ptr[CUnsignedChar]): Ptr[GFileAttributeMatcher] = extern
+@extern def g_file_attribute_matcher_new(attributes : CString): Ptr[GFileAttributeMatcher] = extern
 
 @extern def g_file_attribute_matcher_ref(matcher : Ptr[GFileAttributeMatcher]): Ptr[GFileAttributeMatcher] = extern
 
 @extern def g_file_attribute_matcher_subtract(matcher : Ptr[GFileAttributeMatcher], subtract : Ptr[GFileAttributeMatcher]): Ptr[GFileAttributeMatcher] = extern
 
-@extern def g_file_attribute_matcher_to_string(matcher : Ptr[GFileAttributeMatcher]): Ptr[CUnsignedChar] = extern
+@extern def g_file_attribute_matcher_to_string(matcher : Ptr[GFileAttributeMatcher]): CString = extern
 
 @extern def g_file_attribute_matcher_unref(matcher : Ptr[GFileAttributeMatcher]): Unit = extern
 
@@ -1433,7 +1433,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_attribute_type_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_build_attribute_list_for_copy(file : Ptr[GFile], flags : GFileCopyFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CUnsignedChar] = extern
+@extern def g_file_build_attribute_list_for_copy(file : Ptr[GFile], flags : GFileCopyFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): CString = extern
 
 @extern def g_file_copy(source : Ptr[GFile], destination : Ptr[GFile], flags : GFileCopyFlags, cancellable : Ptr[GCancellable], progress_callback : GFileProgressCallback, progress_callback_data : _root_.sn.gnome.glib.internal.gpointer, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -1475,9 +1475,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_eject_mountable_with_operation_finish(file : Ptr[GFile], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_enumerate_children(file : Ptr[GFile], attributes : Ptr[CUnsignedChar], flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileEnumerator] = extern
+@extern def g_file_enumerate_children(file : Ptr[GFile], attributes : CString, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileEnumerator] = extern
 
-@extern def g_file_enumerate_children_async(file : Ptr[GFile], attributes : Ptr[CUnsignedChar], flags : GFileQueryInfoFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_enumerate_children_async(file : Ptr[GFile], attributes : CString, flags : GFileQueryInfoFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_enumerate_children_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileEnumerator] = extern
 
@@ -1515,31 +1515,31 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_find_enclosing_mount_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GMount] = extern
 
-@extern def g_file_get_basename(file : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_get_basename(file : Ptr[GFile]): CString = extern
 
-@extern def g_file_get_child(file : Ptr[GFile], name : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_file_get_child(file : Ptr[GFile], name : CString): Ptr[GFile] = extern
 
-@extern def g_file_get_child_for_display_name(file : Ptr[GFile], display_name : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
+@extern def g_file_get_child_for_display_name(file : Ptr[GFile], display_name : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
 
 @extern def g_file_get_parent(file : Ptr[GFile]): Ptr[GFile] = extern
 
-@extern def g_file_get_parse_name(file : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_get_parse_name(file : Ptr[GFile]): CString = extern
 
-@extern def g_file_get_path(file : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_get_path(file : Ptr[GFile]): CString = extern
 
-@extern def g_file_get_relative_path(parent : Ptr[GFile], descendant : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_get_relative_path(parent : Ptr[GFile], descendant : Ptr[GFile]): CString = extern
 
 @extern def g_file_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_get_uri(file : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_get_uri(file : Ptr[GFile]): CString = extern
 
-@extern def g_file_get_uri_scheme(file : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_get_uri_scheme(file : Ptr[GFile]): CString = extern
 
 @extern def g_file_has_parent(file : Ptr[GFile], parent : Ptr[GFile]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_has_prefix(file : Ptr[GFile], prefix : Ptr[GFile]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_has_uri_scheme(file : Ptr[GFile], uri_scheme : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_has_uri_scheme(file : Ptr[GFile], uri_scheme : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_hash(file : _root_.sn.gnome.glib.internal.gconstpointer): _root_.sn.gnome.glib.internal.guint = extern
 
@@ -1557,45 +1557,45 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_info_get_access_date_time(info : Ptr[GFileInfo]): Ptr[_root_.sn.gnome.glib.internal.GDateTime] = extern
 
-@extern def g_file_info_get_attribute_as_string(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_attribute_as_string(info : Ptr[GFileInfo], attribute : CString): CString = extern
 
-@extern def g_file_info_get_attribute_boolean(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_info_get_attribute_boolean(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_info_get_attribute_byte_string(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_attribute_byte_string(info : Ptr[GFileInfo], attribute : CString): CString = extern
 
-@extern def g_file_info_get_attribute_data(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], `type` : Ptr[GFileAttributeType], value_pp : Ptr[_root_.sn.gnome.glib.internal.gpointer], status : Ptr[GFileAttributeStatus]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_info_get_attribute_data(info : Ptr[GFileInfo], attribute : CString, `type` : Ptr[GFileAttributeType], value_pp : Ptr[_root_.sn.gnome.glib.internal.gpointer], status : Ptr[GFileAttributeStatus]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_info_get_attribute_file_path(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_attribute_file_path(info : Ptr[GFileInfo], attribute : CString): CString = extern
 
-@extern def g_file_info_get_attribute_int32(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gint32 = extern
+@extern def g_file_info_get_attribute_int32(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.gint32 = extern
 
-@extern def g_file_info_get_attribute_int64(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gint64 = extern
+@extern def g_file_info_get_attribute_int64(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.gint64 = extern
 
-@extern def g_file_info_get_attribute_object(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Ptr[_root_.sn.gnome.gobject.internal.GObject] = extern
+@extern def g_file_info_get_attribute_object(info : Ptr[GFileInfo], attribute : CString): Ptr[_root_.sn.gnome.gobject.internal.GObject] = extern
 
-@extern def g_file_info_get_attribute_status(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): GFileAttributeStatus = extern
+@extern def g_file_info_get_attribute_status(info : Ptr[GFileInfo], attribute : CString): GFileAttributeStatus = extern
 
-@extern def g_file_info_get_attribute_string(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_attribute_string(info : Ptr[GFileInfo], attribute : CString): CString = extern
 
-@extern def g_file_info_get_attribute_stringv(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_file_info_get_attribute_stringv(info : Ptr[GFileInfo], attribute : CString): Ptr[CString] = extern
 
-@extern def g_file_info_get_attribute_type(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): GFileAttributeType = extern
+@extern def g_file_info_get_attribute_type(info : Ptr[GFileInfo], attribute : CString): GFileAttributeType = extern
 
-@extern def g_file_info_get_attribute_uint32(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.guint32 = extern
+@extern def g_file_info_get_attribute_uint32(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.guint32 = extern
 
-@extern def g_file_info_get_attribute_uint64(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.guint64 = extern
+@extern def g_file_info_get_attribute_uint64(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.guint64 = extern
 
-@extern def g_file_info_get_content_type(info : Ptr[GFileInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_content_type(info : Ptr[GFileInfo]): CString = extern
 
 @extern def g_file_info_get_creation_date_time(info : Ptr[GFileInfo]): Ptr[_root_.sn.gnome.glib.internal.GDateTime] = extern
 
 @extern def g_file_info_get_deletion_date(info : Ptr[GFileInfo]): Ptr[_root_.sn.gnome.glib.internal.GDateTime] = extern
 
-@extern def g_file_info_get_display_name(info : Ptr[GFileInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_display_name(info : Ptr[GFileInfo]): CString = extern
 
-@extern def g_file_info_get_edit_name(info : Ptr[GFileInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_edit_name(info : Ptr[GFileInfo]): CString = extern
 
-@extern def g_file_info_get_etag(info : Ptr[GFileInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_etag(info : Ptr[GFileInfo]): CString = extern
 
 @extern def g_file_info_get_file_type(info : Ptr[GFileInfo]): GFileType = extern
 
@@ -1611,7 +1611,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_info_get_modification_time(info : Ptr[GFileInfo], result : Ptr[_root_.sn.gnome.glib.internal.GTimeVal]): Unit = extern
 
-@extern def g_file_info_get_name(info : Ptr[GFileInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_name(info : Ptr[GFileInfo]): CString = extern
 
 @extern def g_file_info_get_size(info : Ptr[GFileInfo]): _root_.sn.gnome.glib.internal.goffset = extern
 
@@ -1619,55 +1619,55 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_info_get_symbolic_icon(info : Ptr[GFileInfo]): Ptr[GIcon] = extern
 
-@extern def g_file_info_get_symlink_target(info : Ptr[GFileInfo]): Ptr[CUnsignedChar] = extern
+@extern def g_file_info_get_symlink_target(info : Ptr[GFileInfo]): CString = extern
 
 @extern def g_file_info_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_info_has_attribute(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_info_has_attribute(info : Ptr[GFileInfo], attribute : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_info_has_namespace(info : Ptr[GFileInfo], name_space : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_info_has_namespace(info : Ptr[GFileInfo], name_space : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_info_list_attributes(info : Ptr[GFileInfo], name_space : Ptr[CUnsignedChar]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_file_info_list_attributes(info : Ptr[GFileInfo], name_space : CString): Ptr[CString] = extern
 
 @extern def g_file_info_new(): Ptr[GFileInfo] = extern
 
-@extern def g_file_info_remove_attribute(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_remove_attribute(info : Ptr[GFileInfo], attribute : CString): Unit = extern
 
 @extern def g_file_info_set_access_date_time(info : Ptr[GFileInfo], atime : Ptr[_root_.sn.gnome.glib.internal.GDateTime]): Unit = extern
 
-@extern def g_file_info_set_attribute(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], `type` : GFileAttributeType, value_p : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_info_set_attribute(info : Ptr[GFileInfo], attribute : CString, `type` : GFileAttributeType, value_p : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_info_set_attribute_boolean(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+@extern def g_file_info_set_attribute_boolean(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
-@extern def g_file_info_set_attribute_byte_string(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_attribute_byte_string(info : Ptr[GFileInfo], attribute : CString, attr_value : CString): Unit = extern
 
-@extern def g_file_info_set_attribute_file_path(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_attribute_file_path(info : Ptr[GFileInfo], attribute : CString, attr_value : CString): Unit = extern
 
-@extern def g_file_info_set_attribute_int32(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : _root_.sn.gnome.glib.internal.gint32): Unit = extern
+@extern def g_file_info_set_attribute_int32(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.gint32): Unit = extern
 
-@extern def g_file_info_set_attribute_int64(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : _root_.sn.gnome.glib.internal.gint64): Unit = extern
+@extern def g_file_info_set_attribute_int64(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.gint64): Unit = extern
 
 @extern def g_file_info_set_attribute_mask(info : Ptr[GFileInfo], mask : Ptr[GFileAttributeMatcher]): Unit = extern
 
-@extern def g_file_info_set_attribute_object(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : Ptr[_root_.sn.gnome.gobject.internal.GObject]): Unit = extern
+@extern def g_file_info_set_attribute_object(info : Ptr[GFileInfo], attribute : CString, attr_value : Ptr[_root_.sn.gnome.gobject.internal.GObject]): Unit = extern
 
-@extern def g_file_info_set_attribute_status(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], status : GFileAttributeStatus): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_info_set_attribute_status(info : Ptr[GFileInfo], attribute : CString, status : GFileAttributeStatus): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_info_set_attribute_string(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_attribute_string(info : Ptr[GFileInfo], attribute : CString, attr_value : CString): Unit = extern
 
-@extern def g_file_info_set_attribute_stringv(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : Ptr[Ptr[CUnsignedChar]]): Unit = extern
+@extern def g_file_info_set_attribute_stringv(info : Ptr[GFileInfo], attribute : CString, attr_value : Ptr[CString]): Unit = extern
 
-@extern def g_file_info_set_attribute_uint32(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : _root_.sn.gnome.glib.internal.guint32): Unit = extern
+@extern def g_file_info_set_attribute_uint32(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.guint32): Unit = extern
 
-@extern def g_file_info_set_attribute_uint64(info : Ptr[GFileInfo], attribute : Ptr[CUnsignedChar], attr_value : _root_.sn.gnome.glib.internal.guint64): Unit = extern
+@extern def g_file_info_set_attribute_uint64(info : Ptr[GFileInfo], attribute : CString, attr_value : _root_.sn.gnome.glib.internal.guint64): Unit = extern
 
-@extern def g_file_info_set_content_type(info : Ptr[GFileInfo], content_type : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_content_type(info : Ptr[GFileInfo], content_type : CString): Unit = extern
 
 @extern def g_file_info_set_creation_date_time(info : Ptr[GFileInfo], creation_time : Ptr[_root_.sn.gnome.glib.internal.GDateTime]): Unit = extern
 
-@extern def g_file_info_set_display_name(info : Ptr[GFileInfo], display_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_display_name(info : Ptr[GFileInfo], display_name : CString): Unit = extern
 
-@extern def g_file_info_set_edit_name(info : Ptr[GFileInfo], edit_name : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_edit_name(info : Ptr[GFileInfo], edit_name : CString): Unit = extern
 
 @extern def g_file_info_set_file_type(info : Ptr[GFileInfo], `type` : GFileType): Unit = extern
 
@@ -1681,7 +1681,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_info_set_modification_time(info : Ptr[GFileInfo], mtime : Ptr[_root_.sn.gnome.glib.internal.GTimeVal]): Unit = extern
 
-@extern def g_file_info_set_name(info : Ptr[GFileInfo], name : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_name(info : Ptr[GFileInfo], name : CString): Unit = extern
 
 @extern def g_file_info_set_size(info : Ptr[GFileInfo], size : _root_.sn.gnome.glib.internal.goffset): Unit = extern
 
@@ -1689,25 +1689,25 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_info_set_symbolic_icon(info : Ptr[GFileInfo], icon : Ptr[GIcon]): Unit = extern
 
-@extern def g_file_info_set_symlink_target(info : Ptr[GFileInfo], symlink_target : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_file_info_set_symlink_target(info : Ptr[GFileInfo], symlink_target : CString): Unit = extern
 
 @extern def g_file_info_unset_attribute_mask(info : Ptr[GFileInfo]): Unit = extern
 
 @extern def g_file_input_stream_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_input_stream_query_info(stream : Ptr[GFileInputStream], attributes : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
+@extern def g_file_input_stream_query_info(stream : Ptr[GFileInputStream], attributes : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_input_stream_query_info_async(stream : Ptr[GFileInputStream], attributes : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_input_stream_query_info_async(stream : Ptr[GFileInputStream], attributes : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_input_stream_query_info_finish(stream : Ptr[GFileInputStream], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_io_stream_get_etag(stream : Ptr[GFileIOStream]): Ptr[CUnsignedChar] = extern
+@extern def g_file_io_stream_get_etag(stream : Ptr[GFileIOStream]): CString = extern
 
 @extern def g_file_io_stream_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_io_stream_query_info(stream : Ptr[GFileIOStream], attributes : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
+@extern def g_file_io_stream_query_info(stream : Ptr[GFileIOStream], attributes : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_io_stream_query_info_async(stream : Ptr[GFileIOStream], attributes : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_io_stream_query_info_async(stream : Ptr[GFileIOStream], attributes : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_io_stream_query_info_finish(stream : Ptr[GFileIOStream], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
@@ -1719,15 +1719,15 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_load_bytes_finish(file : Ptr[GFile], result : Ptr[GAsyncResult], etag_out : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[_root_.sn.gnome.glib.internal.GBytes] = extern
 
-@extern def g_file_load_contents(file : Ptr[GFile], cancellable : Ptr[GCancellable], contents : Ptr[Ptr[CUnsignedChar]], length : Ptr[_root_.sn.gnome.glib.internal.gsize], etag_out : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_load_contents(file : Ptr[GFile], cancellable : Ptr[GCancellable], contents : Ptr[CString], length : Ptr[_root_.sn.gnome.glib.internal.gsize], etag_out : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_load_contents_async(file : Ptr[GFile], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_load_contents_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], contents : Ptr[Ptr[CUnsignedChar]], length : Ptr[_root_.sn.gnome.glib.internal.gsize], etag_out : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_load_contents_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], contents : Ptr[CString], length : Ptr[_root_.sn.gnome.glib.internal.gsize], etag_out : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_load_partial_contents_async(file : Ptr[GFile], cancellable : Ptr[GCancellable], read_more_callback : GFileReadMoreCallback, callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_load_partial_contents_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], contents : Ptr[Ptr[CUnsignedChar]], length : Ptr[_root_.sn.gnome.glib.internal.gsize], etag_out : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_load_partial_contents_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], contents : Ptr[CString], length : Ptr[_root_.sn.gnome.glib.internal.gsize], etag_out : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_make_directory(file : Ptr[GFile], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -1737,9 +1737,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_make_directory_with_parents(file : Ptr[GFile], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_make_symbolic_link(file : Ptr[GFile], symlink_value : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_make_symbolic_link(file : Ptr[GFile], symlink_value : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_make_symbolic_link_async(file : Ptr[GFile], symlink_value : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_make_symbolic_link_async(file : Ptr[GFile], symlink_value : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_make_symbolic_link_finish(file : Ptr[GFile], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -1789,19 +1789,19 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_new_build_filenamev(args : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]]): Ptr[GFile] = extern
 
-@extern def g_file_new_for_commandline_arg(arg : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_file_new_for_commandline_arg(arg : CString): Ptr[GFile] = extern
 
 @extern def g_file_new_for_commandline_arg_and_cwd(arg : Ptr[_root_.sn.gnome.glib.internal.gchar], cwd : Ptr[_root_.sn.gnome.glib.internal.gchar]): Ptr[GFile] = extern
 
-@extern def g_file_new_for_path(path : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_file_new_for_path(path : CString): Ptr[GFile] = extern
 
-@extern def g_file_new_for_uri(uri : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_file_new_for_uri(uri : CString): Ptr[GFile] = extern
 
-@extern def g_file_new_tmp(tmpl : Ptr[CUnsignedChar], iostream : Ptr[Ptr[GFileIOStream]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
+@extern def g_file_new_tmp(tmpl : CString, iostream : Ptr[Ptr[GFileIOStream]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
 
-@extern def g_file_new_tmp_async(tmpl : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_new_tmp_async(tmpl : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_new_tmp_dir_async(tmpl : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_new_tmp_dir_async(tmpl : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_new_tmp_dir_finish(result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
 
@@ -1813,19 +1813,19 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_open_readwrite_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileIOStream] = extern
 
-@extern def g_file_output_stream_get_etag(stream : Ptr[GFileOutputStream]): Ptr[CUnsignedChar] = extern
+@extern def g_file_output_stream_get_etag(stream : Ptr[GFileOutputStream]): CString = extern
 
 @extern def g_file_output_stream_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_file_output_stream_query_info(stream : Ptr[GFileOutputStream], attributes : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
+@extern def g_file_output_stream_query_info(stream : Ptr[GFileOutputStream], attributes : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_output_stream_query_info_async(stream : Ptr[GFileOutputStream], attributes : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_output_stream_query_info_async(stream : Ptr[GFileOutputStream], attributes : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_output_stream_query_info_finish(stream : Ptr[GFileOutputStream], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_parse_name(parse_name : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_file_parse_name(parse_name : CString): Ptr[GFile] = extern
 
-@extern def g_file_peek_path(file : Ptr[GFile]): Ptr[CUnsignedChar] = extern
+@extern def g_file_peek_path(file : Ptr[GFile]): CString = extern
 
 @extern def g_file_poll_mountable(file : Ptr[GFile], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
@@ -1841,15 +1841,15 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_query_file_type(file : Ptr[GFile], flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable]): GFileType = extern
 
-@extern def g_file_query_filesystem_info(file : Ptr[GFile], attributes : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
+@extern def g_file_query_filesystem_info(file : Ptr[GFile], attributes : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_query_filesystem_info_async(file : Ptr[GFile], attributes : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_query_filesystem_info_async(file : Ptr[GFile], attributes : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_query_filesystem_info_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_query_info(file : Ptr[GFile], attributes : Ptr[CUnsignedChar], flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
+@extern def g_file_query_info(file : Ptr[GFile], attributes : CString, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
-@extern def g_file_query_info_async(file : Ptr[GFile], attributes : Ptr[CUnsignedChar], flags : GFileQueryInfoFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_query_info_async(file : Ptr[GFile], attributes : CString, flags : GFileQueryInfoFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_query_info_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInfo] = extern
 
@@ -1865,41 +1865,41 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_read_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileInputStream] = extern
 
-@extern def g_file_replace(file : Ptr[GFile], etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileOutputStream] = extern
+@extern def g_file_replace(file : Ptr[GFile], etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileOutputStream] = extern
 
-@extern def g_file_replace_async(file : Ptr[GFile], etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_replace_async(file : Ptr[GFile], etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_replace_contents(file : Ptr[GFile], contents : Ptr[CUnsignedChar], length : _root_.sn.gnome.glib.internal.gsize, etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, new_etag : Ptr[Ptr[CUnsignedChar]], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_replace_contents(file : Ptr[GFile], contents : CString, length : _root_.sn.gnome.glib.internal.gsize, etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, new_etag : Ptr[CString], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_replace_contents_async(file : Ptr[GFile], contents : Ptr[CUnsignedChar], length : _root_.sn.gnome.glib.internal.gsize, etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_replace_contents_async(file : Ptr[GFile], contents : CString, length : _root_.sn.gnome.glib.internal.gsize, etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_replace_contents_bytes_async(file : Ptr[GFile], contents : Ptr[_root_.sn.gnome.glib.internal.GBytes], etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_replace_contents_bytes_async(file : Ptr[GFile], contents : Ptr[_root_.sn.gnome.glib.internal.GBytes], etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_file_replace_contents_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], new_etag : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_replace_contents_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], new_etag : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_replace_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileOutputStream] = extern
 
-@extern def g_file_replace_readwrite(file : Ptr[GFile], etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileIOStream] = extern
+@extern def g_file_replace_readwrite(file : Ptr[GFile], etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileIOStream] = extern
 
-@extern def g_file_replace_readwrite_async(file : Ptr[GFile], etag : Ptr[CUnsignedChar], make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_replace_readwrite_async(file : Ptr[GFile], etag : CString, make_backup : _root_.sn.gnome.glib.internal.gboolean, flags : GFileCreateFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_replace_readwrite_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFileIOStream] = extern
 
-@extern def g_file_resolve_relative_path(file : Ptr[GFile], relative_path : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_file_resolve_relative_path(file : Ptr[GFile], relative_path : CString): Ptr[GFile] = extern
 
-@extern def g_file_set_attribute(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], `type` : GFileAttributeType, value_p : _root_.sn.gnome.glib.internal.gpointer, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute(file : Ptr[GFile], attribute : CString, `type` : GFileAttributeType, value_p : _root_.sn.gnome.glib.internal.gpointer, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_attribute_byte_string(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], value : Ptr[CUnsignedChar], flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute_byte_string(file : Ptr[GFile], attribute : CString, value : CString, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_attribute_int32(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], value : _root_.sn.gnome.glib.internal.gint32, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute_int32(file : Ptr[GFile], attribute : CString, value : _root_.sn.gnome.glib.internal.gint32, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_attribute_int64(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], value : _root_.sn.gnome.glib.internal.gint64, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute_int64(file : Ptr[GFile], attribute : CString, value : _root_.sn.gnome.glib.internal.gint64, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_attribute_string(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], value : Ptr[CUnsignedChar], flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute_string(file : Ptr[GFile], attribute : CString, value : CString, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_attribute_uint32(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], value : _root_.sn.gnome.glib.internal.guint32, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute_uint32(file : Ptr[GFile], attribute : CString, value : _root_.sn.gnome.glib.internal.guint32, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_attribute_uint64(file : Ptr[GFile], attribute : Ptr[CUnsignedChar], value : _root_.sn.gnome.glib.internal.guint64, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_file_set_attribute_uint64(file : Ptr[GFile], attribute : CString, value : _root_.sn.gnome.glib.internal.guint64, flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_file_set_attributes_async(file : Ptr[GFile], info : Ptr[GFileInfo], flags : GFileQueryInfoFlags, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
@@ -1907,9 +1907,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_set_attributes_from_info(file : Ptr[GFile], info : Ptr[GFileInfo], flags : GFileQueryInfoFlags, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_file_set_display_name(file : Ptr[GFile], display_name : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
+@extern def g_file_set_display_name(file : Ptr[GFile], display_name : CString, cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
 
-@extern def g_file_set_display_name_async(file : Ptr[GFile], display_name : Ptr[CUnsignedChar], io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_file_set_display_name_async(file : Ptr[GFile], display_name : CString, io_priority : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 @extern def g_file_set_display_name_finish(file : Ptr[GFile], res : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GFile] = extern
 
@@ -1939,9 +1939,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_file_unmount_mountable_with_operation_finish(file : Ptr[GFile], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_filename_completer_get_completion_suffix(completer : Ptr[GFilenameCompleter], initial_text : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_filename_completer_get_completion_suffix(completer : Ptr[GFilenameCompleter], initial_text : CString): CString = extern
 
-@extern def g_filename_completer_get_completions(completer : Ptr[GFilenameCompleter], initial_text : Ptr[CUnsignedChar]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_filename_completer_get_completions(completer : Ptr[GFilenameCompleter], initial_text : CString): Ptr[CString] = extern
 
 @extern def g_filename_completer_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -2051,7 +2051,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_inet_socket_address_new(address : Ptr[GInetAddress], port : _root_.sn.gnome.glib.internal.guint16): Ptr[GSocketAddress] = extern
 
-@extern def g_inet_socket_address_new_from_string(address : Ptr[CUnsignedChar], port : _root_.sn.gnome.glib.internal.guint): Ptr[GSocketAddress] = extern
+@extern def g_inet_socket_address_new_from_string(address : CString, port : _root_.sn.gnome.glib.internal.guint): Ptr[GSocketAddress] = extern
 
 @extern def g_initable_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -2111,23 +2111,23 @@ import _root_.scala.scalanative.*
 
 @extern def g_io_error_quark(): _root_.sn.gnome.glib.internal.GQuark = extern
 
-@extern def g_io_extension_get_name(extension : Ptr[GIOExtension]): Ptr[CUnsignedChar] = extern
+@extern def g_io_extension_get_name(extension : Ptr[GIOExtension]): CString = extern
 
 @extern def g_io_extension_get_priority(extension : Ptr[GIOExtension]): _root_.sn.gnome.glib.internal.gint = extern
 
 @extern def g_io_extension_get_type(extension : Ptr[GIOExtension]): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_io_extension_point_get_extension_by_name(extension_point : Ptr[GIOExtensionPoint], name : Ptr[CUnsignedChar]): Ptr[GIOExtension] = extern
+@extern def g_io_extension_point_get_extension_by_name(extension_point : Ptr[GIOExtensionPoint], name : CString): Ptr[GIOExtension] = extern
 
 @extern def g_io_extension_point_get_extensions(extension_point : Ptr[GIOExtensionPoint]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
 @extern def g_io_extension_point_get_required_type(extension_point : Ptr[GIOExtensionPoint]): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_io_extension_point_implement(extension_point_name : Ptr[CUnsignedChar], `type` : _root_.sn.gnome.gobject.internal.GType, extension_name : Ptr[CUnsignedChar], priority : _root_.sn.gnome.glib.internal.gint): Ptr[GIOExtension] = extern
+@extern def g_io_extension_point_implement(extension_point_name : CString, `type` : _root_.sn.gnome.gobject.internal.GType, extension_name : CString, priority : _root_.sn.gnome.glib.internal.gint): Ptr[GIOExtension] = extern
 
-@extern def g_io_extension_point_lookup(name : Ptr[CUnsignedChar]): Ptr[GIOExtensionPoint] = extern
+@extern def g_io_extension_point_lookup(name : CString): Ptr[GIOExtensionPoint] = extern
 
-@extern def g_io_extension_point_register(name : Ptr[CUnsignedChar]): Ptr[GIOExtensionPoint] = extern
+@extern def g_io_extension_point_register(name : CString): Ptr[GIOExtensionPoint] = extern
 
 @extern def g_io_extension_point_set_required_type(extension_point : Ptr[GIOExtensionPoint], `type` : _root_.sn.gnome.gobject.internal.GType): Unit = extern
 
@@ -2145,7 +2145,7 @@ import _root_.scala.scalanative.*
 /**
  * g_io_module_query:
 */
-@extern def g_io_module_query(): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_io_module_query(): Ptr[CString] = extern
 
 @extern def g_io_module_scope_block(scope : Ptr[GIOModuleScope], basename : Ptr[_root_.sn.gnome.glib.internal.gchar]): Unit = extern
 
@@ -2164,7 +2164,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_io_modules_load_all_in_directory_with_scope(dirname : Ptr[_root_.sn.gnome.glib.internal.gchar], scope : Ptr[GIOModuleScope]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def g_io_modules_scan_all_in_directory(dirname : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_io_modules_scan_all_in_directory(dirname : CString): Unit = extern
 
 @extern def g_io_modules_scan_all_in_directory_with_scope(dirname : Ptr[_root_.sn.gnome.glib.internal.gchar], scope : Ptr[GIOModuleScope]): Unit = extern
 
@@ -2240,11 +2240,11 @@ import _root_.scala.scalanative.*
 
 @extern def g_loadable_icon_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_loadable_icon_load(icon : Ptr[GLoadableIcon], size : CInt, `type` : Ptr[Ptr[CUnsignedChar]], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
+@extern def g_loadable_icon_load(icon : Ptr[GLoadableIcon], size : CInt, `type` : Ptr[CString], cancellable : Ptr[GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
 
 @extern def g_loadable_icon_load_async(icon : Ptr[GLoadableIcon], size : CInt, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_loadable_icon_load_finish(icon : Ptr[GLoadableIcon], res : Ptr[GAsyncResult], `type` : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
+@extern def g_loadable_icon_load_finish(icon : Ptr[GLoadableIcon], res : Ptr[GAsyncResult], `type` : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
 
 @extern def g_memory_input_stream_add_bytes(stream : Ptr[GMemoryInputStream], bytes : Ptr[_root_.sn.gnome.glib.internal.GBytes]): Unit = extern
 
@@ -2410,7 +2410,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_mount_get_icon(mount : Ptr[GMount]): Ptr[GIcon] = extern
 
-@extern def g_mount_get_name(mount : Ptr[GMount]): Ptr[CUnsignedChar] = extern
+@extern def g_mount_get_name(mount : Ptr[GMount]): CString = extern
 
 @extern def g_mount_get_root(mount : Ptr[GMount]): Ptr[GFile] = extern
 
@@ -2420,7 +2420,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_mount_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_mount_get_uuid(mount : Ptr[GMount]): Ptr[CUnsignedChar] = extern
+@extern def g_mount_get_uuid(mount : Ptr[GMount]): CString = extern
 
 @extern def g_mount_get_volume(mount : Ptr[GMount]): Ptr[GVolume] = extern
 
@@ -2438,13 +2438,13 @@ import _root_.scala.scalanative.*
 
 @extern def g_mount_operation_get_choice(op : Ptr[GMountOperation]): CInt = extern
 
-@extern def g_mount_operation_get_domain(op : Ptr[GMountOperation]): Ptr[CUnsignedChar] = extern
+@extern def g_mount_operation_get_domain(op : Ptr[GMountOperation]): CString = extern
 
 @extern def g_mount_operation_get_is_tcrypt_hidden_volume(op : Ptr[GMountOperation]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_mount_operation_get_is_tcrypt_system_volume(op : Ptr[GMountOperation]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_mount_operation_get_password(op : Ptr[GMountOperation]): Ptr[CUnsignedChar] = extern
+@extern def g_mount_operation_get_password(op : Ptr[GMountOperation]): CString = extern
 
 @extern def g_mount_operation_get_password_save(op : Ptr[GMountOperation]): GPasswordSave = extern
 
@@ -2452,7 +2452,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_mount_operation_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_mount_operation_get_username(op : Ptr[GMountOperation]): Ptr[CUnsignedChar] = extern
+@extern def g_mount_operation_get_username(op : Ptr[GMountOperation]): CString = extern
 
 @extern def g_mount_operation_new(): Ptr[GMountOperation] = extern
 
@@ -2464,19 +2464,19 @@ import _root_.scala.scalanative.*
 
 @extern def g_mount_operation_set_choice(op : Ptr[GMountOperation], choice : CInt): Unit = extern
 
-@extern def g_mount_operation_set_domain(op : Ptr[GMountOperation], domain : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_mount_operation_set_domain(op : Ptr[GMountOperation], domain : CString): Unit = extern
 
 @extern def g_mount_operation_set_is_tcrypt_hidden_volume(op : Ptr[GMountOperation], hidden_volume : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 @extern def g_mount_operation_set_is_tcrypt_system_volume(op : Ptr[GMountOperation], system_volume : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
-@extern def g_mount_operation_set_password(op : Ptr[GMountOperation], password : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_mount_operation_set_password(op : Ptr[GMountOperation], password : CString): Unit = extern
 
 @extern def g_mount_operation_set_password_save(op : Ptr[GMountOperation], save : GPasswordSave): Unit = extern
 
 @extern def g_mount_operation_set_pim(op : Ptr[GMountOperation], pim : _root_.sn.gnome.glib.internal.guint): Unit = extern
 
-@extern def g_mount_operation_set_username(op : Ptr[GMountOperation], username : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_mount_operation_set_username(op : Ptr[GMountOperation], username : CString): Unit = extern
 
 @extern def g_mount_remount(mount : Ptr[GMount], flags : GMountMountFlags, mount_operation : Ptr[GMountOperation], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
@@ -2820,7 +2820,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_resolver_set_timeout(resolver : Ptr[GResolver], timeout_ms : CUnsignedInt): Unit = extern
 
-@extern def g_resource_enumerate_children(resource : Ptr[GResource], path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_resource_enumerate_children(resource : Ptr[GResource], path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CString] = extern
 
 @extern def g_resource_error_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -2828,31 +2828,31 @@ import _root_.scala.scalanative.*
 
 @extern def g_resource_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_resource_get_info(resource : Ptr[GResource], path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, size : Ptr[_root_.sn.gnome.glib.internal.gsize], flags : Ptr[_root_.sn.gnome.glib.internal.guint32], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_resource_get_info(resource : Ptr[GResource], path : CString, lookup_flags : GResourceLookupFlags, size : Ptr[_root_.sn.gnome.glib.internal.gsize], flags : Ptr[_root_.sn.gnome.glib.internal.guint32], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_resource_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def g_resource_load(filename : Ptr[_root_.sn.gnome.glib.internal.gchar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GResource] = extern
 
-@extern def g_resource_lookup_data(resource : Ptr[GResource], path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[_root_.sn.gnome.glib.internal.GBytes] = extern
+@extern def g_resource_lookup_data(resource : Ptr[GResource], path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[_root_.sn.gnome.glib.internal.GBytes] = extern
 
 @extern def g_resource_lookup_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
 @extern def g_resource_new_from_data(data : Ptr[_root_.sn.gnome.glib.internal.GBytes], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GResource] = extern
 
-@extern def g_resource_open_stream(resource : Ptr[GResource], path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
+@extern def g_resource_open_stream(resource : Ptr[GResource], path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
 
 @extern def g_resource_ref(resource : Ptr[GResource]): Ptr[GResource] = extern
 
 @extern def g_resource_unref(resource : Ptr[GResource]): Unit = extern
 
-@extern def g_resources_enumerate_children(path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_resources_enumerate_children(path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[CString] = extern
 
-@extern def g_resources_get_info(path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, size : Ptr[_root_.sn.gnome.glib.internal.gsize], flags : Ptr[_root_.sn.gnome.glib.internal.guint32], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_resources_get_info(path : CString, lookup_flags : GResourceLookupFlags, size : Ptr[_root_.sn.gnome.glib.internal.gsize], flags : Ptr[_root_.sn.gnome.glib.internal.guint32], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_resources_lookup_data(path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[_root_.sn.gnome.glib.internal.GBytes] = extern
+@extern def g_resources_lookup_data(path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[_root_.sn.gnome.glib.internal.GBytes] = extern
 
-@extern def g_resources_open_stream(path : Ptr[CUnsignedChar], lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
+@extern def g_resources_open_stream(path : CString, lookup_flags : GResourceLookupFlags, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GInputStream] = extern
 
 @extern def g_resources_register(resource : Ptr[GResource]): Unit = extern
 
@@ -3052,7 +3052,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_simple_action_set_state_hint(simple : Ptr[GSimpleAction], state_hint : Ptr[_root_.sn.gnome.glib.internal.GVariant]): Unit = extern
 
-@extern def g_simple_async_report_error_in_idle(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def g_simple_async_report_error_in_idle(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : CString, rest: Any*): Unit = extern
 
 @extern def g_simple_async_report_gerror_in_idle(`object` : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, error : Ptr[_root_.sn.gnome.glib.internal.GError]): Unit = extern
 
@@ -3076,7 +3076,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_simple_async_result_new(source_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, source_tag : _root_.sn.gnome.glib.internal.gpointer): Ptr[GSimpleAsyncResult] = extern
 
-@extern def g_simple_async_result_new_error(source_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : Ptr[CUnsignedChar], rest: Any*): Ptr[GSimpleAsyncResult] = extern
+@extern def g_simple_async_result_new_error(source_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : CString, rest: Any*): Ptr[GSimpleAsyncResult] = extern
 
 @extern def g_simple_async_result_new_from_error(source_object : Ptr[_root_.sn.gnome.gobject.internal.GObject], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, error : Ptr[_root_.sn.gnome.glib.internal.GError]): Ptr[GSimpleAsyncResult] = extern
 
@@ -3088,9 +3088,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_simple_async_result_set_check_cancellable(simple : Ptr[GSimpleAsyncResult], check_cancellable : Ptr[GCancellable]): Unit = extern
 
-@extern def g_simple_async_result_set_error(simple : Ptr[GSimpleAsyncResult], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def g_simple_async_result_set_error(simple : Ptr[GSimpleAsyncResult], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : CString, rest: Any*): Unit = extern
 
-@extern def g_simple_async_result_set_error_va(simple : Ptr[GSimpleAsyncResult], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : Ptr[CUnsignedChar], args : va_list): Unit = extern
+@extern def g_simple_async_result_set_error_va(simple : Ptr[GSimpleAsyncResult], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : CString, args : va_list): Unit = extern
 
 @extern def g_simple_async_result_set_from_error(simple : Ptr[GSimpleAsyncResult], error : Ptr[_root_.sn.gnome.glib.internal.GError]): Unit = extern
 
@@ -3448,11 +3448,11 @@ import _root_.scala.scalanative.*
 
 @extern def g_subprocess_communicate_finish(subprocess : Ptr[GSubprocess], result : Ptr[GAsyncResult], stdout_buf : Ptr[Ptr[_root_.sn.gnome.glib.internal.GBytes]], stderr_buf : Ptr[Ptr[_root_.sn.gnome.glib.internal.GBytes]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_subprocess_communicate_utf8(subprocess : Ptr[GSubprocess], stdin_buf : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], stdout_buf : Ptr[Ptr[CUnsignedChar]], stderr_buf : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_subprocess_communicate_utf8(subprocess : Ptr[GSubprocess], stdin_buf : CString, cancellable : Ptr[GCancellable], stdout_buf : Ptr[CString], stderr_buf : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_subprocess_communicate_utf8_async(subprocess : Ptr[GSubprocess], stdin_buf : Ptr[CUnsignedChar], cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def g_subprocess_communicate_utf8_async(subprocess : Ptr[GSubprocess], stdin_buf : CString, cancellable : Ptr[GCancellable], callback : GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def g_subprocess_communicate_utf8_finish(subprocess : Ptr[GSubprocess], result : Ptr[GAsyncResult], stdout_buf : Ptr[Ptr[CUnsignedChar]], stderr_buf : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_subprocess_communicate_utf8_finish(subprocess : Ptr[GSubprocess], result : Ptr[GAsyncResult], stdout_buf : Ptr[CString], stderr_buf : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_subprocess_flags_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -3581,7 +3581,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_task_report_error(source_object : _root_.sn.gnome.glib.internal.gpointer, callback : GAsyncReadyCallback, callback_data : _root_.sn.gnome.glib.internal.gpointer, source_tag : _root_.sn.gnome.glib.internal.gpointer, error : Ptr[_root_.sn.gnome.glib.internal.GError]): Unit = extern
 
-@extern def g_task_report_new_error(source_object : _root_.sn.gnome.glib.internal.gpointer, callback : GAsyncReadyCallback, callback_data : _root_.sn.gnome.glib.internal.gpointer, source_tag : _root_.sn.gnome.glib.internal.gpointer, domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def g_task_report_new_error(source_object : _root_.sn.gnome.glib.internal.gpointer, callback : GAsyncReadyCallback, callback_data : _root_.sn.gnome.glib.internal.gpointer, source_tag : _root_.sn.gnome.glib.internal.gpointer, domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : CString, rest: Any*): Unit = extern
 
 @extern def g_task_return_boolean(task : Ptr[GTask], result : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
@@ -3591,13 +3591,13 @@ import _root_.scala.scalanative.*
 
 @extern def g_task_return_int(task : Ptr[GTask], result : _root_.sn.gnome.glib.internal.gssize): Unit = extern
 
-@extern def g_task_return_new_error(task : Ptr[GTask], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def g_task_return_new_error(task : Ptr[GTask], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, format : CString, rest: Any*): Unit = extern
 
-@extern def g_task_return_new_error_literal(task : Ptr[GTask], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, message : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_task_return_new_error_literal(task : Ptr[GTask], domain : _root_.sn.gnome.glib.internal.GQuark, code : _root_.sn.gnome.glib.internal.gint, message : CString): Unit = extern
 
 @extern def g_task_return_pointer(task : Ptr[GTask], result : _root_.sn.gnome.glib.internal.gpointer, result_destroy : _root_.sn.gnome.glib.internal.GDestroyNotify): Unit = extern
 
-@extern def g_task_return_prefixed_error(task : Ptr[GTask], error : Ptr[_root_.sn.gnome.glib.internal.GError], format : Ptr[CUnsignedChar], rest: Any*): Unit = extern
+@extern def g_task_return_prefixed_error(task : Ptr[GTask], error : Ptr[_root_.sn.gnome.glib.internal.GError], format : CString, rest: Any*): Unit = extern
 
 @extern def g_task_return_value(task : Ptr[GTask], result : Ptr[_root_.sn.gnome.gobject.internal.GValue]): Unit = extern
 
@@ -3651,19 +3651,19 @@ import _root_.scala.scalanative.*
 
 @extern def g_test_dbus_up(self : Ptr[GTestDBus]): Unit = extern
 
-@extern def g_themed_icon_append_name(icon : Ptr[GThemedIcon], iconname : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_themed_icon_append_name(icon : Ptr[GThemedIcon], iconname : CString): Unit = extern
 
 @extern def g_themed_icon_get_names(icon : Ptr[GThemedIcon]): Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]] = extern
 
 @extern def g_themed_icon_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_themed_icon_new(iconname : Ptr[CUnsignedChar]): Ptr[GIcon] = extern
+@extern def g_themed_icon_new(iconname : CString): Ptr[GIcon] = extern
 
-@extern def g_themed_icon_new_from_names(iconnames : Ptr[Ptr[CUnsignedChar]], len : CInt): Ptr[GIcon] = extern
+@extern def g_themed_icon_new_from_names(iconnames : Ptr[CString], len : CInt): Ptr[GIcon] = extern
 
-@extern def g_themed_icon_new_with_default_fallbacks(iconname : Ptr[CUnsignedChar]): Ptr[GIcon] = extern
+@extern def g_themed_icon_new_with_default_fallbacks(iconname : CString): Ptr[GIcon] = extern
 
-@extern def g_themed_icon_prepend_name(icon : Ptr[GThemedIcon], iconname : Ptr[CUnsignedChar]): Unit = extern
+@extern def g_themed_icon_prepend_name(icon : Ptr[GThemedIcon], iconname : CString): Unit = extern
 
 @extern def g_threaded_socket_service_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
@@ -3949,7 +3949,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_unix_socket_address_get_is_abstract(address : Ptr[GUnixSocketAddress]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_unix_socket_address_get_path(address : Ptr[GUnixSocketAddress]): Ptr[CUnsignedChar] = extern
+@extern def g_unix_socket_address_get_path(address : Ptr[GUnixSocketAddress]): CString = extern
 
 @extern def g_unix_socket_address_get_path_len(address : Ptr[GUnixSocketAddress]): _root_.sn.gnome.glib.internal.gsize = extern
 
@@ -3965,9 +3965,9 @@ import _root_.scala.scalanative.*
 
 @extern def g_vfs_get_default(): Ptr[GVfs] = extern
 
-@extern def g_vfs_get_file_for_path(vfs : Ptr[GVfs], path : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_vfs_get_file_for_path(vfs : Ptr[GVfs], path : CString): Ptr[GFile] = extern
 
-@extern def g_vfs_get_file_for_uri(vfs : Ptr[GVfs], uri : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_vfs_get_file_for_uri(vfs : Ptr[GVfs], uri : CString): Ptr[GFile] = extern
 
 @extern def g_vfs_get_local(): Ptr[GVfs] = extern
 
@@ -3977,11 +3977,11 @@ import _root_.scala.scalanative.*
 
 @extern def g_vfs_is_active(vfs : Ptr[GVfs]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_vfs_parse_name(vfs : Ptr[GVfs], parse_name : Ptr[CUnsignedChar]): Ptr[GFile] = extern
+@extern def g_vfs_parse_name(vfs : Ptr[GVfs], parse_name : CString): Ptr[GFile] = extern
 
-@extern def g_vfs_register_uri_scheme(vfs : Ptr[GVfs], scheme : Ptr[CUnsignedChar], uri_func : GVfsFileLookupFunc, uri_data : _root_.sn.gnome.glib.internal.gpointer, uri_destroy : _root_.sn.gnome.glib.internal.GDestroyNotify, parse_name_func : GVfsFileLookupFunc, parse_name_data : _root_.sn.gnome.glib.internal.gpointer, parse_name_destroy : _root_.sn.gnome.glib.internal.GDestroyNotify): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_vfs_register_uri_scheme(vfs : Ptr[GVfs], scheme : CString, uri_func : GVfsFileLookupFunc, uri_data : _root_.sn.gnome.glib.internal.gpointer, uri_destroy : _root_.sn.gnome.glib.internal.GDestroyNotify, parse_name_func : GVfsFileLookupFunc, parse_name_data : _root_.sn.gnome.glib.internal.gpointer, parse_name_destroy : _root_.sn.gnome.glib.internal.GDestroyNotify): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_vfs_unregister_uri_scheme(vfs : Ptr[GVfs], scheme : Ptr[CUnsignedChar]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def g_vfs_unregister_uri_scheme(vfs : Ptr[GVfs], scheme : CString): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def g_volume_can_eject(volume : Ptr[GVolume]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -3995,7 +3995,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_volume_eject_with_operation_finish(volume : Ptr[GVolume], result : Ptr[GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def g_volume_enumerate_identifiers(volume : Ptr[GVolume]): Ptr[Ptr[CUnsignedChar]] = extern
+@extern def g_volume_enumerate_identifiers(volume : Ptr[GVolume]): Ptr[CString] = extern
 
 @extern def g_volume_get_activation_root(volume : Ptr[GVolume]): Ptr[GFile] = extern
 
@@ -4003,11 +4003,11 @@ import _root_.scala.scalanative.*
 
 @extern def g_volume_get_icon(volume : Ptr[GVolume]): Ptr[GIcon] = extern
 
-@extern def g_volume_get_identifier(volume : Ptr[GVolume], kind : Ptr[CUnsignedChar]): Ptr[CUnsignedChar] = extern
+@extern def g_volume_get_identifier(volume : Ptr[GVolume], kind : CString): CString = extern
 
 @extern def g_volume_get_mount(volume : Ptr[GVolume]): Ptr[GMount] = extern
 
-@extern def g_volume_get_name(volume : Ptr[GVolume]): Ptr[CUnsignedChar] = extern
+@extern def g_volume_get_name(volume : Ptr[GVolume]): CString = extern
 
 @extern def g_volume_get_sort_key(volume : Ptr[GVolume]): Ptr[_root_.sn.gnome.glib.internal.gchar] = extern
 
@@ -4015,7 +4015,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_volume_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_volume_get_uuid(volume : Ptr[GVolume]): Ptr[CUnsignedChar] = extern
+@extern def g_volume_get_uuid(volume : Ptr[GVolume]): CString = extern
 
 @extern def g_volume_monitor_adopt_orphan_mount(mount : Ptr[GMount]): Ptr[GVolume] = extern
 
@@ -4023,13 +4023,13 @@ import _root_.scala.scalanative.*
 
 @extern def g_volume_monitor_get_connected_drives(volume_monitor : Ptr[GVolumeMonitor]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
-@extern def g_volume_monitor_get_mount_for_uuid(volume_monitor : Ptr[GVolumeMonitor], uuid : Ptr[CUnsignedChar]): Ptr[GMount] = extern
+@extern def g_volume_monitor_get_mount_for_uuid(volume_monitor : Ptr[GVolumeMonitor], uuid : CString): Ptr[GMount] = extern
 
 @extern def g_volume_monitor_get_mounts(volume_monitor : Ptr[GVolumeMonitor]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 
 @extern def g_volume_monitor_get_type(): _root_.sn.gnome.gobject.internal.GType = extern
 
-@extern def g_volume_monitor_get_volume_for_uuid(volume_monitor : Ptr[GVolumeMonitor], uuid : Ptr[CUnsignedChar]): Ptr[GVolume] = extern
+@extern def g_volume_monitor_get_volume_for_uuid(volume_monitor : Ptr[GVolumeMonitor], uuid : CString): Ptr[GVolume] = extern
 
 @extern def g_volume_monitor_get_volumes(volume_monitor : Ptr[GVolumeMonitor]): Ptr[_root_.sn.gnome.glib.internal.GList] = extern
 

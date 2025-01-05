@@ -238,11 +238,11 @@ object PangoAttrSize:
 /**
  * PangoAttrString: : the common portion of the attribute : the string which is the value of the attribute
 */
-opaque type PangoAttrString = CStruct2[PangoAttribute, Ptr[CUnsignedChar]]
+opaque type PangoAttrString = CStruct2[PangoAttribute, CString]
 object PangoAttrString:
-  given _tag: Tag[PangoAttrString] = Tag.materializeCStruct2Tag[PangoAttribute, Ptr[CUnsignedChar]]
+  given _tag: Tag[PangoAttrString] = Tag.materializeCStruct2Tag[PangoAttribute, CString]
   def apply()(using Zone): Ptr[PangoAttrString] = scala.scalanative.unsafe.alloc[PangoAttrString](1)
-  def apply(attr : PangoAttribute, value : Ptr[CUnsignedChar])(using Zone): Ptr[PangoAttrString] = 
+  def apply(attr : PangoAttribute, value : CString)(using Zone): Ptr[PangoAttrString] = 
     val ____ptr = apply()
     (!____ptr).attr = attr
     (!____ptr).value = value
@@ -250,8 +250,8 @@ object PangoAttrString:
   extension (struct: PangoAttrString)
     def attr : PangoAttribute = struct._1
     def attr_=(value: PangoAttribute): Unit = !struct.at1 = value
-    def value : Ptr[CUnsignedChar] = struct._2
-    def value_=(value: Ptr[CUnsignedChar]): Unit = !struct.at2 = value
+    def value : CString = struct._2
+    def value_=(value: CString): Unit = !struct.at2 = value
 
 /**
  * PangoAttribute: _index: the start index of the range (in bytes). _index: end index of the range (in bytes). The character at this index is not included in the range.
@@ -382,11 +382,11 @@ object PangoEngineLang:
 /**
  * PangoEngineLangClass: _break: (nullable): Provides a custom implementation of pango_break(). If %NULL, pango_default_break() is used instead. If not %NULL, for Pango versions before 1.16 (module interface version before 1.6.0), this was called instead of pango_default_break(), but in newer versions, pango_default_break() is always called and this is called after that to allow tailoring the breaking results.
 */
-opaque type PangoEngineLangClass = CStruct2[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
+opaque type PangoEngineLangClass = CStruct2[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
 object PangoEngineLangClass:
-  given _tag: Tag[PangoEngineLangClass] = Tag.materializeCStruct2Tag[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
+  given _tag: Tag[PangoEngineLangClass] = Tag.materializeCStruct2Tag[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
   def apply()(using Zone): Ptr[PangoEngineLangClass] = scala.scalanative.unsafe.alloc[PangoEngineLangClass](1)
-  def apply(parent_class : PangoEngineClass, script_break : CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit])(using Zone): Ptr[PangoEngineLangClass] = 
+  def apply(parent_class : PangoEngineClass, script_break : CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit])(using Zone): Ptr[PangoEngineLangClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).script_break = script_break
@@ -394,8 +394,8 @@ object PangoEngineLangClass:
   extension (struct: PangoEngineLangClass)
     def parent_class : PangoEngineClass = struct._1
     def parent_class_=(value: PangoEngineClass): Unit = !struct.at1 = value
-    def script_break : CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit] = struct._2.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]]
-    def script_break_=(value: CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
+    def script_break : CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit] = struct._2.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]]
+    def script_break_=(value: CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
 
 /**
  * PangoEngineScriptInfo: : a `PangoScript`. The value %PANGO_SCRIPT_COMMON has the special meaning here of "all scripts" : a semicolon separated list of languages that this engine handles for this script. This may be empty, in which case the engine is saying that it is a fallback choice for all languages for this range, but should not be used if another engine indicates that it is specific for the language for a given code point. An entry in this list of "*" indicates that this engine is specific to all languages for this range.
@@ -433,11 +433,11 @@ object PangoEngineShape:
 /**
  * PangoEngineShapeClass: _shape: Given a font, a piece of text, and a `PangoAnalysis` structure, converts characters to glyphs and positions the resulting glyphs. The results are stored in the `PangoGlyphString` that is passed in. (The implementation should resize it appropriately using pango_glyph_string_set_size()). All fields of the _clusters and array must be filled in, with the exception that Pango will automatically generate `glyphs->glyphs[i].attr.is_cluster_start` using the _clusters array. Each input character must occur in one of the output logical clusters; if no rendering is desired for a character, this may involve inserting glyphs with the `PangoGlyph` ID %PANGO_GLYPH_EMPTY, which is guaranteed never to render. If the shaping fails for any reason, the shaper should return with an empty (zero-size) glyph string. If the shaper has not set the size on the glyph string yet, simply returning signals the failure too. : Returns the characters that this engine can cover with a given font for a given language. If not overridden, the default implementation simply returns the coverage information for the font itself unmodified.
 */
-opaque type PangoEngineShapeClass = CStruct3[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
+opaque type PangoEngineShapeClass = CStruct3[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
 object PangoEngineShapeClass:
-  given _tag: Tag[PangoEngineShapeClass] = Tag.materializeCStruct3Tag[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
+  given _tag: Tag[PangoEngineShapeClass] = Tag.materializeCStruct3Tag[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
   def apply()(using Zone): Ptr[PangoEngineShapeClass] = scala.scalanative.unsafe.alloc[PangoEngineShapeClass](1)
-  def apply(parent_class : PangoEngineClass, script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit], covers : CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel])(using Zone): Ptr[PangoEngineShapeClass] = 
+  def apply(parent_class : PangoEngineClass, script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], covers : CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel])(using Zone): Ptr[PangoEngineShapeClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).script_shape = script_shape
@@ -446,8 +446,8 @@ object PangoEngineShapeClass:
   extension (struct: PangoEngineShapeClass)
     def parent_class : PangoEngineClass = struct._1
     def parent_class_=(value: PangoEngineClass): Unit = !struct.at1 = value
-    def script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit] = struct._2.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit]]
-    def script_shape_=(value: CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit]]
+    def script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit] = struct._2.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit]]
+    def script_shape_=(value: CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit]]
     def covers : CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel] = struct._3
     def covers_=(value: CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]): Unit = !struct.at3 = value
 
@@ -521,11 +521,11 @@ object PangoFontFace:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-opaque type PangoFontFaceClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+opaque type PangoFontFaceClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object PangoFontFaceClass:
-  given _tag: Tag[PangoFontFaceClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  given _tag: Tag[PangoFontFaceClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
   def apply()(using Zone): Ptr[PangoFontFaceClass] = scala.scalanative.unsafe.alloc[PangoFontFaceClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, get_face_name : CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]], describe : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], list_sizes : CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], is_synthesized : CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], get_family : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[PangoFontFaceClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, get_face_name : CFuncPtr1[Ptr[PangoFontFace], CString], describe : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], list_sizes : CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], is_synthesized : CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], get_family : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[PangoFontFaceClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).get_face_name = get_face_name
@@ -539,8 +539,8 @@ object PangoFontFaceClass:
   extension (struct: PangoFontFaceClass)
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
-    def get_face_name : CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]] = struct._2
-    def get_face_name_=(value: CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]]): Unit = !struct.at2 = value
+    def get_face_name : CFuncPtr1[Ptr[PangoFontFace], CString] = struct._2
+    def get_face_name_=(value: CFuncPtr1[Ptr[PangoFontFace], CString]): Unit = !struct.at2 = value
     def describe : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]] = struct._3
     def describe_=(value: CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]]): Unit = !struct.at3 = value
     def list_sizes : CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit] = struct._4
@@ -569,11 +569,11 @@ object PangoFontFamily:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-opaque type PangoFontFamilyClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]], CFuncPtr0[Unit]]
+opaque type PangoFontFamilyClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
 object PangoFontFamilyClass:
-  given _tag: Tag[PangoFontFamilyClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]], CFuncPtr0[Unit]]
+  given _tag: Tag[PangoFontFamilyClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
   def apply()(using Zone): Ptr[PangoFontFamilyClass] = scala.scalanative.unsafe.alloc[PangoFontFamilyClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, list_faces : CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], get_name : CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]], is_monospace : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], is_variable : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], get_face : CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]], _pango_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[PangoFontFamilyClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, list_faces : CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], get_name : CFuncPtr1[Ptr[PangoFontFamily], CString], is_monospace : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], is_variable : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], get_face : CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], _pango_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[PangoFontFamilyClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).list_faces = list_faces
@@ -588,14 +588,14 @@ object PangoFontFamilyClass:
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
     def list_faces : CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit] = struct._2
     def list_faces_=(value: CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit]): Unit = !struct.at2 = value
-    def get_name : CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]] = struct._3
-    def get_name_=(value: CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]]): Unit = !struct.at3 = value
+    def get_name : CFuncPtr1[Ptr[PangoFontFamily], CString] = struct._3
+    def get_name_=(value: CFuncPtr1[Ptr[PangoFontFamily], CString]): Unit = !struct.at3 = value
     def is_monospace : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean] = struct._4
     def is_monospace_=(value: CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at4 = value
     def is_variable : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean] = struct._5
     def is_variable_=(value: CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
-    def get_face : CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]] = struct._6
-    def get_face_=(value: CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]]): Unit = !struct.at6 = value
+    def get_face : CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]] = struct._6
+    def get_face_=(value: CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]]): Unit = !struct.at6 = value
     def _pango_reserved2 : CFuncPtr0[Unit] = struct._7
     def _pango_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
@@ -617,11 +617,11 @@ object PangoFontMap:
 /**
  * PangoFontMapClass: _class: parent `GObjectClass` _font: a function to load a font with a given description. See pango_font_map_load_font(). _families: A function to list available font families. See pango_font_map_list_families(). _fontset: a function to load a fontset with a given given description suitable for a particular language. See pango_font_map_load_fontset(). _engine_type: the type of rendering-system-dependent engines that can handle fonts of this fonts loaded with this fontmap. _serial: a function to get the serial number of the fontmap. See pango_font_map_get_serial(). : See pango_font_map_changed()
 */
-opaque type PangoFontMapClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], Ptr[CUnsignedChar], CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
+opaque type PangoFontMapClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], CString, CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
 object PangoFontMapClass:
-  given _tag: Tag[PangoFontMapClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], Ptr[CUnsignedChar], CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
+  given _tag: Tag[PangoFontMapClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], CString, CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
   def apply()(using Zone): Ptr[PangoFontMapClass] = scala.scalanative.unsafe.alloc[PangoFontMapClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, load_font : CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], list_families : CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], load_fontset : CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], shape_engine_type : Ptr[CUnsignedChar], get_serial : CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], changed : CFuncPtr1[Ptr[PangoFontMap], Unit], get_family : CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]], get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]])(using Zone): Ptr[PangoFontMapClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, load_font : CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], list_families : CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], load_fontset : CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], shape_engine_type : CString, get_serial : CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], changed : CFuncPtr1[Ptr[PangoFontMap], Unit], get_family : CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]])(using Zone): Ptr[PangoFontMapClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).load_font = load_font
@@ -642,14 +642,14 @@ object PangoFontMapClass:
     def list_families_=(value: CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit]): Unit = !struct.at3 = value
     def load_fontset : CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]] = struct._4
     def load_fontset_=(value: CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]]): Unit = !struct.at4 = value
-    def shape_engine_type : Ptr[CUnsignedChar] = struct._5
-    def shape_engine_type_=(value: Ptr[CUnsignedChar]): Unit = !struct.at5 = value
+    def shape_engine_type : CString = struct._5
+    def shape_engine_type_=(value: CString): Unit = !struct.at5 = value
     def get_serial : CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint] = struct._6
     def get_serial_=(value: CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint]): Unit = !struct.at6 = value
     def changed : CFuncPtr1[Ptr[PangoFontMap], Unit] = struct._7
     def changed_=(value: CFuncPtr1[Ptr[PangoFontMap], Unit]): Unit = !struct.at7 = value
-    def get_family : CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]] = struct._8
-    def get_family_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]]): Unit = !struct.at8 = value
+    def get_family : CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]] = struct._8
+    def get_family_=(value: CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]]): Unit = !struct.at8 = value
     def get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]] = struct._9
     def get_face_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]): Unit = !struct.at9 = value
 
@@ -1112,11 +1112,11 @@ object PangoRenderer:
 /**
  * PangoRendererClass: _glyphs: draws a `PangoGlyphString` _rectangle: draws a rectangle _error_underline: draws a squiggly line that approximately covers the given rectangle in the style of an underline used to indicate a spelling error. _shape: draw content for a glyph shaped with `PangoAttrShape` , are the coordinates of the left edge of the baseline, in user coordinates. _trapezoid: draws a trapezoidal filled area _glyph: draws a single glyph
 */
-opaque type PangoRendererClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+opaque type PangoRendererClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object PangoRendererClass:
-  given _tag: Tag[PangoRendererClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  given _tag: Tag[PangoRendererClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
   def apply()(using Zone): Ptr[PangoRendererClass] = scala.scalanative.unsafe.alloc[PangoRendererClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, draw_glyphs : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], draw_rectangle : CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], draw_error_underline : CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], draw_shape : CFuncPtr4[Ptr[PangoRenderer], Ptr[PangoAttrShape], CInt, CInt, Unit], draw_trapezoid : CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], draw_glyph : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], part_changed : CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], begin : CFuncPtr1[Ptr[PangoRenderer], Unit], end : CFuncPtr1[Ptr[PangoRenderer], Unit], prepare_run : CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit], draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit], _pango_reserved2 : CFuncPtr0[Unit], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[PangoRendererClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, draw_glyphs : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], draw_rectangle : CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], draw_error_underline : CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], draw_shape : CFuncPtr4[Ptr[PangoRenderer], Ptr[PangoAttrShape], CInt, CInt, Unit], draw_trapezoid : CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], draw_glyph : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], part_changed : CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], begin : CFuncPtr1[Ptr[PangoRenderer], Unit], end : CFuncPtr1[Ptr[PangoRenderer], Unit], prepare_run : CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit], draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit], _pango_reserved2 : CFuncPtr0[Unit], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[PangoRendererClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).draw_glyphs = draw_glyphs
@@ -1157,8 +1157,8 @@ object PangoRendererClass:
     def end_=(value: CFuncPtr1[Ptr[PangoRenderer], Unit]): Unit = !struct.at10 = value
     def prepare_run : CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit] = struct._11.asInstanceOf[CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit]]
     def prepare_run_=(value: CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit]): Unit = !struct.at11 = value.asInstanceOf[CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit]]
-    def draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit] = struct._12.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit]]
-    def draw_glyph_item_=(value: CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit]): Unit = !struct.at12 = value.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[Byte], CInt, CInt, Unit]]
+    def draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit] = struct._12.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit]]
+    def draw_glyph_item_=(value: CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit]): Unit = !struct.at12 = value.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit]]
     def _pango_reserved2 : CFuncPtr0[Unit] = struct._13
     def _pango_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at13 = value
     def _pango_reserved3 : CFuncPtr0[Unit] = struct._14
@@ -1411,11 +1411,11 @@ object _PangoAttrSize:
 /**
  * PangoAttrString: : the common portion of the attribute : the string which is the value of the attribute
 */
-opaque type _PangoAttrString = CStruct2[PangoAttribute, Ptr[CUnsignedChar]]
+opaque type _PangoAttrString = CStruct2[PangoAttribute, CString]
 object _PangoAttrString:
-  given _tag: Tag[_PangoAttrString] = Tag.materializeCStruct2Tag[PangoAttribute, Ptr[CUnsignedChar]]
+  given _tag: Tag[_PangoAttrString] = Tag.materializeCStruct2Tag[PangoAttribute, CString]
   def apply()(using Zone): Ptr[_PangoAttrString] = scala.scalanative.unsafe.alloc[_PangoAttrString](1)
-  def apply(attr : PangoAttribute, value : Ptr[CUnsignedChar])(using Zone): Ptr[_PangoAttrString] = 
+  def apply(attr : PangoAttribute, value : CString)(using Zone): Ptr[_PangoAttrString] = 
     val ____ptr = apply()
     (!____ptr).attr = attr
     (!____ptr).value = value
@@ -1423,8 +1423,8 @@ object _PangoAttrString:
   extension (struct: _PangoAttrString)
     def attr : PangoAttribute = struct._1
     def attr_=(value: PangoAttribute): Unit = !struct.at1 = value
-    def value : Ptr[CUnsignedChar] = struct._2
-    def value_=(value: Ptr[CUnsignedChar]): Unit = !struct.at2 = value
+    def value : CString = struct._2
+    def value_=(value: CString): Unit = !struct.at2 = value
 
 /**
  * PangoAttribute: _index: the start index of the range (in bytes). _index: end index of the range (in bytes). The character at this index is not included in the range.
@@ -1555,11 +1555,11 @@ object _PangoEngineLang:
 /**
  * PangoEngineLangClass: _break: (nullable): Provides a custom implementation of pango_break(). If %NULL, pango_default_break() is used instead. If not %NULL, for Pango versions before 1.16 (module interface version before 1.6.0), this was called instead of pango_default_break(), but in newer versions, pango_default_break() is always called and this is called after that to allow tailoring the breaking results.
 */
-opaque type _PangoEngineLangClass = CStruct2[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
+opaque type _PangoEngineLangClass = CStruct2[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
 object _PangoEngineLangClass:
-  given _tag: Tag[_PangoEngineLangClass] = Tag.materializeCStruct2Tag[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
+  given _tag: Tag[_PangoEngineLangClass] = Tag.materializeCStruct2Tag[PangoEngineClass, CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
   def apply()(using Zone): Ptr[_PangoEngineLangClass] = scala.scalanative.unsafe.alloc[_PangoEngineLangClass](1)
-  def apply(parent_class : PangoEngineClass, script_break : CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit])(using Zone): Ptr[_PangoEngineLangClass] = 
+  def apply(parent_class : PangoEngineClass, script_break : CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit])(using Zone): Ptr[_PangoEngineLangClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).script_break = script_break
@@ -1567,8 +1567,8 @@ object _PangoEngineLangClass:
   extension (struct: _PangoEngineLangClass)
     def parent_class : PangoEngineClass = struct._1
     def parent_class_=(value: PangoEngineClass): Unit = !struct.at1 = value
-    def script_break : CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit] = struct._2.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]]
-    def script_break_=(value: CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], Ptr[CUnsignedChar], CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
+    def script_break : CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit] = struct._2.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]]
+    def script_break_=(value: CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[PangoAnalysis], Ptr[PangoLogAttr], CInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr6[Ptr[PangoEngineLang], CString, CInt, Ptr[Byte], Ptr[PangoLogAttr], CInt, Unit]]
 
 /**
  * PangoEngineScriptInfo: : a `PangoScript`. The value %PANGO_SCRIPT_COMMON has the special meaning here of "all scripts" : a semicolon separated list of languages that this engine handles for this script. This may be empty, in which case the engine is saying that it is a fallback choice for all languages for this range, but should not be used if another engine indicates that it is specific for the language for a given code point. An entry in this list of "*" indicates that this engine is specific to all languages for this range.
@@ -1606,11 +1606,11 @@ object _PangoEngineShape:
 /**
  * PangoEngineShapeClass: _shape: Given a font, a piece of text, and a `PangoAnalysis` structure, converts characters to glyphs and positions the resulting glyphs. The results are stored in the `PangoGlyphString` that is passed in. (The implementation should resize it appropriately using pango_glyph_string_set_size()). All fields of the _clusters and array must be filled in, with the exception that Pango will automatically generate `glyphs->glyphs[i].attr.is_cluster_start` using the _clusters array. Each input character must occur in one of the output logical clusters; if no rendering is desired for a character, this may involve inserting glyphs with the `PangoGlyph` ID %PANGO_GLYPH_EMPTY, which is guaranteed never to render. If the shaping fails for any reason, the shaper should return with an empty (zero-size) glyph string. If the shaper has not set the size on the glyph string yet, simply returning signals the failure too. : Returns the characters that this engine can cover with a given font for a given language. If not overridden, the default implementation simply returns the coverage information for the font itself unmodified.
 */
-opaque type _PangoEngineShapeClass = CStruct3[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
+opaque type _PangoEngineShapeClass = CStruct3[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
 object _PangoEngineShapeClass:
-  given _tag: Tag[_PangoEngineShapeClass] = Tag.materializeCStruct3Tag[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
+  given _tag: Tag[_PangoEngineShapeClass] = Tag.materializeCStruct3Tag[PangoEngineClass, CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]]
   def apply()(using Zone): Ptr[_PangoEngineShapeClass] = scala.scalanative.unsafe.alloc[_PangoEngineShapeClass](1)
-  def apply(parent_class : PangoEngineClass, script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit], covers : CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel])(using Zone): Ptr[_PangoEngineShapeClass] = 
+  def apply(parent_class : PangoEngineClass, script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit], covers : CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel])(using Zone): Ptr[_PangoEngineShapeClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).script_shape = script_shape
@@ -1619,8 +1619,8 @@ object _PangoEngineShapeClass:
   extension (struct: _PangoEngineShapeClass)
     def parent_class : PangoEngineClass = struct._1
     def parent_class_=(value: PangoEngineClass): Unit = !struct.at1 = value
-    def script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit] = struct._2.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit]]
-    def script_shape_=(value: CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[CUnsignedChar], CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], Ptr[CUnsignedChar], CUnsignedInt, Unit]]
+    def script_shape : CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit] = struct._2.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit]]
+    def script_shape_=(value: CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[PangoAnalysis], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit]): Unit = !struct.at2 = value.asInstanceOf[CFuncPtr8[Ptr[PangoEngineShape], Ptr[PangoFont], CString, CUnsignedInt, Ptr[Byte], Ptr[PangoGlyphString], CString, CUnsignedInt, Unit]]
     def covers : CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel] = struct._3
     def covers_=(value: CFuncPtr4[Ptr[PangoEngineShape], Ptr[PangoFont], Ptr[PangoLanguage], _root_.sn.gnome.glib.internal.gunichar, PangoCoverageLevel]): Unit = !struct.at3 = value
 
@@ -1694,11 +1694,11 @@ object _PangoFontFace:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-opaque type _PangoFontFaceClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+opaque type _PangoFontFaceClass = CStruct8[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _PangoFontFaceClass:
-  given _tag: Tag[_PangoFontFaceClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  given _tag: Tag[_PangoFontFaceClass] = Tag.materializeCStruct8Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr1[Ptr[PangoFontFace], CString], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], CFuncPtr0[Unit], CFuncPtr0[Unit]]
   def apply()(using Zone): Ptr[_PangoFontFaceClass] = scala.scalanative.unsafe.alloc[_PangoFontFaceClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, get_face_name : CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]], describe : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], list_sizes : CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], is_synthesized : CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], get_family : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[_PangoFontFaceClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, get_face_name : CFuncPtr1[Ptr[PangoFontFace], CString], describe : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]], list_sizes : CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit], is_synthesized : CFuncPtr1[Ptr[PangoFontFace], _root_.sn.gnome.glib.internal.gboolean], get_family : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontFamily]], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[_PangoFontFaceClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).get_face_name = get_face_name
@@ -1712,8 +1712,8 @@ object _PangoFontFaceClass:
   extension (struct: _PangoFontFaceClass)
     def parent_class : _root_.sn.gnome.gobject.internal.GObjectClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
-    def get_face_name : CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]] = struct._2
-    def get_face_name_=(value: CFuncPtr1[Ptr[PangoFontFace], Ptr[CUnsignedChar]]): Unit = !struct.at2 = value
+    def get_face_name : CFuncPtr1[Ptr[PangoFontFace], CString] = struct._2
+    def get_face_name_=(value: CFuncPtr1[Ptr[PangoFontFace], CString]): Unit = !struct.at2 = value
     def describe : CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]] = struct._3
     def describe_=(value: CFuncPtr1[Ptr[PangoFontFace], Ptr[PangoFontDescription]]): Unit = !struct.at3 = value
     def list_sizes : CFuncPtr3[Ptr[PangoFontFace], Ptr[Ptr[CInt]], Ptr[CInt], Unit] = struct._4
@@ -1742,11 +1742,11 @@ object _PangoFontFamily:
     def parent_instance : _root_.sn.gnome.gobject.internal.GObject = struct._1
     def parent_instance_=(value: _root_.sn.gnome.gobject.internal.GObject): Unit = !struct.at1 = value
 
-opaque type _PangoFontFamilyClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]], CFuncPtr0[Unit]]
+opaque type _PangoFontFamilyClass = CStruct7[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
 object _PangoFontFamilyClass:
-  given _tag: Tag[_PangoFontFamilyClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]], CFuncPtr0[Unit]]
+  given _tag: Tag[_PangoFontFamilyClass] = Tag.materializeCStruct7Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], CFuncPtr1[Ptr[PangoFontFamily], CString], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], CFuncPtr0[Unit]]
   def apply()(using Zone): Ptr[_PangoFontFamilyClass] = scala.scalanative.unsafe.alloc[_PangoFontFamilyClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, list_faces : CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], get_name : CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]], is_monospace : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], is_variable : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], get_face : CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]], _pango_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[_PangoFontFamilyClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, list_faces : CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit], get_name : CFuncPtr1[Ptr[PangoFontFamily], CString], is_monospace : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], is_variable : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean], get_face : CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]], _pango_reserved2 : CFuncPtr0[Unit])(using Zone): Ptr[_PangoFontFamilyClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).list_faces = list_faces
@@ -1761,14 +1761,14 @@ object _PangoFontFamilyClass:
     def parent_class_=(value: _root_.sn.gnome.gobject.internal.GObjectClass): Unit = !struct.at1 = value
     def list_faces : CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit] = struct._2
     def list_faces_=(value: CFuncPtr3[Ptr[PangoFontFamily], Ptr[Ptr[Ptr[PangoFontFace]]], Ptr[CInt], Unit]): Unit = !struct.at2 = value
-    def get_name : CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]] = struct._3
-    def get_name_=(value: CFuncPtr1[Ptr[PangoFontFamily], Ptr[CUnsignedChar]]): Unit = !struct.at3 = value
+    def get_name : CFuncPtr1[Ptr[PangoFontFamily], CString] = struct._3
+    def get_name_=(value: CFuncPtr1[Ptr[PangoFontFamily], CString]): Unit = !struct.at3 = value
     def is_monospace : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean] = struct._4
     def is_monospace_=(value: CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at4 = value
     def is_variable : CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean] = struct._5
     def is_variable_=(value: CFuncPtr1[Ptr[PangoFontFamily], _root_.sn.gnome.glib.internal.gboolean]): Unit = !struct.at5 = value
-    def get_face : CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]] = struct._6
-    def get_face_=(value: CFuncPtr2[Ptr[PangoFontFamily], Ptr[CUnsignedChar], Ptr[PangoFontFace]]): Unit = !struct.at6 = value
+    def get_face : CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]] = struct._6
+    def get_face_=(value: CFuncPtr2[Ptr[PangoFontFamily], CString, Ptr[PangoFontFace]]): Unit = !struct.at6 = value
     def _pango_reserved2 : CFuncPtr0[Unit] = struct._7
     def _pango_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at7 = value
 
@@ -1790,11 +1790,11 @@ object _PangoFontMap:
 /**
  * PangoFontMapClass: _class: parent `GObjectClass` _font: a function to load a font with a given description. See pango_font_map_load_font(). _families: A function to list available font families. See pango_font_map_list_families(). _fontset: a function to load a fontset with a given given description suitable for a particular language. See pango_font_map_load_fontset(). _engine_type: the type of rendering-system-dependent engines that can handle fonts of this fonts loaded with this fontmap. _serial: a function to get the serial number of the fontmap. See pango_font_map_get_serial(). : See pango_font_map_changed()
 */
-opaque type _PangoFontMapClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], Ptr[CUnsignedChar], CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
+opaque type _PangoFontMapClass = CStruct9[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], CString, CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
 object _PangoFontMapClass:
-  given _tag: Tag[_PangoFontMapClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], Ptr[CUnsignedChar], CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
+  given _tag: Tag[_PangoFontMapClass] = Tag.materializeCStruct9Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], CString, CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], CFuncPtr1[Ptr[PangoFontMap], Unit], CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]]
   def apply()(using Zone): Ptr[_PangoFontMapClass] = scala.scalanative.unsafe.alloc[_PangoFontMapClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, load_font : CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], list_families : CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], load_fontset : CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], shape_engine_type : Ptr[CUnsignedChar], get_serial : CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], changed : CFuncPtr1[Ptr[PangoFontMap], Unit], get_family : CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]], get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]])(using Zone): Ptr[_PangoFontMapClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, load_font : CFuncPtr3[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoFont]], list_families : CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit], load_fontset : CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]], shape_engine_type : CString, get_serial : CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint], changed : CFuncPtr1[Ptr[PangoFontMap], Unit], get_family : CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]], get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]])(using Zone): Ptr[_PangoFontMapClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).load_font = load_font
@@ -1815,14 +1815,14 @@ object _PangoFontMapClass:
     def list_families_=(value: CFuncPtr3[Ptr[PangoFontMap], Ptr[Ptr[Ptr[PangoFontFamily]]], Ptr[CInt], Unit]): Unit = !struct.at3 = value
     def load_fontset : CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]] = struct._4
     def load_fontset_=(value: CFuncPtr4[Ptr[PangoFontMap], Ptr[PangoContext], Ptr[PangoFontDescription], Ptr[PangoLanguage], Ptr[PangoFontset]]): Unit = !struct.at4 = value
-    def shape_engine_type : Ptr[CUnsignedChar] = struct._5
-    def shape_engine_type_=(value: Ptr[CUnsignedChar]): Unit = !struct.at5 = value
+    def shape_engine_type : CString = struct._5
+    def shape_engine_type_=(value: CString): Unit = !struct.at5 = value
     def get_serial : CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint] = struct._6
     def get_serial_=(value: CFuncPtr1[Ptr[PangoFontMap], _root_.sn.gnome.glib.internal.guint]): Unit = !struct.at6 = value
     def changed : CFuncPtr1[Ptr[PangoFontMap], Unit] = struct._7
     def changed_=(value: CFuncPtr1[Ptr[PangoFontMap], Unit]): Unit = !struct.at7 = value
-    def get_family : CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]] = struct._8
-    def get_family_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[CUnsignedChar], Ptr[PangoFontFamily]]): Unit = !struct.at8 = value
+    def get_family : CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]] = struct._8
+    def get_family_=(value: CFuncPtr2[Ptr[PangoFontMap], CString, Ptr[PangoFontFamily]]): Unit = !struct.at8 = value
     def get_face : CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]] = struct._9
     def get_face_=(value: CFuncPtr2[Ptr[PangoFontMap], Ptr[PangoFont], Ptr[PangoFontFace]]): Unit = !struct.at9 = value
 
@@ -2285,11 +2285,11 @@ object _PangoRenderer:
 /**
  * PangoRendererClass: _glyphs: draws a `PangoGlyphString` _rectangle: draws a rectangle _error_underline: draws a squiggly line that approximately covers the given rectangle in the style of an underline used to indicate a spelling error. _shape: draw content for a glyph shaped with `PangoAttrShape` , are the coordinates of the left edge of the baseline, in user coordinates. _trapezoid: draws a trapezoidal filled area _glyph: draws a single glyph
 */
-opaque type _PangoRendererClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+opaque type _PangoRendererClass = CStruct15[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
 object _PangoRendererClass:
-  given _tag: Tag[_PangoRendererClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
+  given _tag: Tag[_PangoRendererClass] = Tag.materializeCStruct15Tag[_root_.sn.gnome.gobject.internal.GObjectClass, CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], CFuncPtr4[Ptr[PangoRenderer], Ptr[Byte], CInt, CInt, Unit], CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr1[Ptr[PangoRenderer], Unit], CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit], CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit], CFuncPtr0[Unit], CFuncPtr0[Unit], CFuncPtr0[Unit]]
   def apply()(using Zone): Ptr[_PangoRendererClass] = scala.scalanative.unsafe.alloc[_PangoRendererClass](1)
-  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, draw_glyphs : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], draw_rectangle : CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], draw_error_underline : CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], draw_shape : CFuncPtr4[Ptr[PangoRenderer], Ptr[PangoAttrShape], CInt, CInt, Unit], draw_trapezoid : CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], draw_glyph : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], part_changed : CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], begin : CFuncPtr1[Ptr[PangoRenderer], Unit], end : CFuncPtr1[Ptr[PangoRenderer], Unit], prepare_run : CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit], draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit], _pango_reserved2 : CFuncPtr0[Unit], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[_PangoRendererClass] = 
+  def apply(parent_class : _root_.sn.gnome.gobject.internal.GObjectClass, draw_glyphs : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], Ptr[PangoGlyphString], CInt, CInt, Unit], draw_rectangle : CFuncPtr6[Ptr[PangoRenderer], PangoRenderPart, CInt, CInt, CInt, CInt, Unit], draw_error_underline : CFuncPtr5[Ptr[PangoRenderer], CInt, CInt, CInt, CInt, Unit], draw_shape : CFuncPtr4[Ptr[PangoRenderer], Ptr[PangoAttrShape], CInt, CInt, Unit], draw_trapezoid : CFuncPtr8[Ptr[PangoRenderer], PangoRenderPart, Double, Double, Double, Double, Double, Double, Unit], draw_glyph : CFuncPtr5[Ptr[PangoRenderer], Ptr[PangoFont], PangoGlyph, Double, Double, Unit], part_changed : CFuncPtr2[Ptr[PangoRenderer], PangoRenderPart, Unit], begin : CFuncPtr1[Ptr[PangoRenderer], Unit], end : CFuncPtr1[Ptr[PangoRenderer], Unit], prepare_run : CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit], draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit], _pango_reserved2 : CFuncPtr0[Unit], _pango_reserved3 : CFuncPtr0[Unit], _pango_reserved4 : CFuncPtr0[Unit])(using Zone): Ptr[_PangoRendererClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).draw_glyphs = draw_glyphs
@@ -2330,8 +2330,8 @@ object _PangoRendererClass:
     def end_=(value: CFuncPtr1[Ptr[PangoRenderer], Unit]): Unit = !struct.at10 = value
     def prepare_run : CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit] = struct._11.asInstanceOf[CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit]]
     def prepare_run_=(value: CFuncPtr2[Ptr[PangoRenderer], Ptr[PangoLayoutRun], Unit]): Unit = !struct.at11 = value.asInstanceOf[CFuncPtr2[Ptr[PangoRenderer], Ptr[Byte], Unit]]
-    def draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit] = struct._12.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit]]
-    def draw_glyph_item_=(value: CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[PangoGlyphItem], CInt, CInt, Unit]): Unit = !struct.at12 = value.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], Ptr[CUnsignedChar], Ptr[Byte], CInt, CInt, Unit]]
+    def draw_glyph_item : CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit] = struct._12.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit]]
+    def draw_glyph_item_=(value: CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[PangoGlyphItem], CInt, CInt, Unit]): Unit = !struct.at12 = value.asInstanceOf[CFuncPtr5[Ptr[PangoRenderer], CString, Ptr[Byte], CInt, CInt, Unit]]
     def _pango_reserved2 : CFuncPtr0[Unit] = struct._13
     def _pango_reserved2_=(value: CFuncPtr0[Unit]): Unit = !struct.at13 = value
     def _pango_reserved3 : CFuncPtr0[Unit] = struct._14

@@ -353,17 +353,17 @@ object hb_unicode_funcs_t:
 /**
  * hb_user_data_key_t:
 */
-opaque type hb_user_data_key_t = CStruct1[CUnsignedChar]
+opaque type hb_user_data_key_t = CStruct1[CChar]
 object hb_user_data_key_t:
-  given _tag: Tag[hb_user_data_key_t] = Tag.materializeCStruct1Tag[CUnsignedChar]
+  given _tag: Tag[hb_user_data_key_t] = Tag.materializeCStruct1Tag[CChar]
   def apply()(using Zone): Ptr[hb_user_data_key_t] = scala.scalanative.unsafe.alloc[hb_user_data_key_t](1)
-  def apply(unused : CUnsignedChar)(using Zone): Ptr[hb_user_data_key_t] = 
+  def apply(unused : CChar)(using Zone): Ptr[hb_user_data_key_t] = 
     val ____ptr = apply()
     (!____ptr).unused = unused
     ____ptr
   extension (struct: hb_user_data_key_t)
-    def unused : CUnsignedChar = struct._1
-    def unused_=(value: CUnsignedChar): Unit = !struct.at1 = value
+    def unused : CChar = struct._1
+    def unused_=(value: CChar): Unit = !struct.at1 = value
 
 /**
  * hb_variation_t: : The #hb_tag_t tag of the variation-axis name : The value of the variation axis

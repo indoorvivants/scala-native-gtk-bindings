@@ -328,7 +328,7 @@ import _root_.scala.scalanative.*
 
 @extern def g_object_new_valist(object_type : GType, first_property_name : Ptr[_root_.sn.gnome.glib.internal.gchar], var_args : va_list): Ptr[GObject] = extern
 
-@extern def g_object_new_with_properties(object_type : GType, n_properties : _root_.sn.gnome.glib.internal.guint, names : Ptr[Ptr[CUnsignedChar]], values : Ptr[GValue]): Ptr[GObject] = extern
+@extern def g_object_new_with_properties(object_type : GType, n_properties : _root_.sn.gnome.glib.internal.guint, names : Ptr[CString], values : Ptr[GValue]): Ptr[GObject] = extern
 
 @extern def g_object_newv(object_type : GType, n_parameters : _root_.sn.gnome.glib.internal.guint, parameters : Ptr[GParameter]): _root_.sn.gnome.glib.internal.gpointer = extern
 

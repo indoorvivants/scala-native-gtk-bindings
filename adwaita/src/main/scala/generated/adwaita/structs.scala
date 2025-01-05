@@ -105,11 +105,11 @@ object AdwAlertDialog:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-opaque type AdwAlertDialogClass = CStruct3[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+opaque type AdwAlertDialogClass = CStruct3[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
 object AdwAlertDialogClass:
-  given _tag: Tag[AdwAlertDialogClass] = Tag.materializeCStruct3Tag[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  given _tag: Tag[AdwAlertDialogClass] = Tag.materializeCStruct3Tag[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[AdwAlertDialogClass] = scala.scalanative.unsafe.alloc[AdwAlertDialogClass](1)
-  def apply(parent_class : AdwDialogClass, response : CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwAlertDialogClass] = 
+  def apply(parent_class : AdwDialogClass, response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwAlertDialogClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).response = response
@@ -118,8 +118,8 @@ object AdwAlertDialogClass:
   extension (struct: AdwAlertDialogClass)
     def parent_class : AdwDialogClass = struct._1
     def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
-    def response : CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit] = struct._2
-    def response_=(value: CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit]): Unit = !struct.at2 = value
+    def response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
 
@@ -584,9 +584,9 @@ object AdwDialog:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-opaque type AdwDialogClass = CStruct4[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwDialog], Unit], CFuncPtr1[Ptr[AdwDialog], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+opaque type AdwDialogClass = CArray[CChar, Nat.Digit3[Nat._4, Nat._5, Nat._6]]
 object AdwDialogClass:
-  given _tag: Tag[AdwDialogClass] = Tag.materializeCStruct4Tag[_root_.sn.gnome.gtk.internal.GtkWidgetClass, CFuncPtr1[Ptr[AdwDialog], Unit], CFuncPtr1[Ptr[AdwDialog], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  given _tag: Tag[AdwDialogClass] = Tag.CArray[CChar, Nat.Digit3[Nat._4, Nat._5, Nat._6]](Tag.Byte, Tag.Digit3[Nat._4, Nat._5, Nat._6](Tag.Nat4, Tag.Nat5, Tag.Nat6))
   def apply()(using Zone): Ptr[AdwDialogClass] = scala.scalanative.unsafe.alloc[AdwDialogClass](1)
   def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass, close_attempt : CFuncPtr1[Ptr[AdwDialog], Unit], closed : CFuncPtr1[Ptr[AdwDialog], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwDialogClass] = 
     val ____ptr = apply()
@@ -596,14 +596,30 @@ object AdwDialogClass:
     (!____ptr).padding = padding
     ____ptr
   extension (struct: AdwDialogClass)
-    def parent_class : _root_.sn.gnome.gtk.internal.GtkWidgetClass = struct._1
-    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at1 = value
-    def close_attempt : CFuncPtr1[Ptr[AdwDialog], Unit] = struct._2
-    def close_attempt_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at2 = value
-    def closed : CFuncPtr1[Ptr[AdwDialog], Unit] = struct._3
-    def closed_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at3 = value
-    def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._4
-    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at4 = value
+    def parent_class: _root_.sn.gnome.gtk.internal.GtkWidgetClass = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gtk.internal.GtkWidgetClass]]
+    def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWidgetClass): Unit = !struct.at(offsets(0)).asInstanceOf[Ptr[_root_.sn.gnome.gtk.internal.GtkWidgetClass]] = value
+    def close_attempt: CFuncPtr1[Ptr[AdwDialog], Unit] = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwDialog], Unit]]]
+    def close_attempt_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at(offsets(1)).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwDialog], Unit]]] = value
+    def closed: CFuncPtr1[Ptr[AdwDialog], Unit] = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwDialog], Unit]]]
+    def closed_=(value: CFuncPtr1[Ptr[AdwDialog], Unit]): Unit = !struct.at(offsets(2)).asInstanceOf[Ptr[CFuncPtr1[Ptr[AdwDialog], Unit]]] = value
+    def padding: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = !struct.at(offsets(3)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]]
+    def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at(offsets(3)).asInstanceOf[Ptr[CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]] = value
+  val offsets: Array[Int] = 
+    val res = Array.ofDim[Int](4)
+    def align(offset: Int, alignment: Int) = {
+      val alignmentMask = alignment - 1
+      val padding =
+        if ((offset & alignmentMask) == 0) 0
+        else alignment - (offset & alignmentMask)
+      offset + padding
+    }
+    
+    res(0) = align(0, alignmentof[_root_.sn.gnome.gtk.internal.GtkWidgetClass].toInt)
+    res(1) = align(res(0) + sizeof[_root_.sn.gnome.gtk.internal.GtkWidgetClass].toInt, alignmentof[CFuncPtr1[Ptr[AdwDialog], Unit]].toInt)
+    res(2) = align(res(1) + sizeof[CFuncPtr1[Ptr[AdwDialog], Unit]].toInt, alignmentof[CFuncPtr1[Ptr[AdwDialog], Unit]].toInt)
+    res(3) = align(res(2) + sizeof[CFuncPtr1[Ptr[AdwDialog], Unit]].toInt, alignmentof[_root_.sn.gnome.glib.internal.gpointer].toInt)
+    res
+  end offsets
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
@@ -822,11 +838,11 @@ object AdwMessageDialog:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-opaque type AdwMessageDialogClass = CStruct3[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+opaque type AdwMessageDialogClass = CStruct3[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
 object AdwMessageDialogClass:
-  given _tag: Tag[AdwMessageDialogClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  given _tag: Tag[AdwMessageDialogClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[AdwMessageDialogClass] = scala.scalanative.unsafe.alloc[AdwMessageDialogClass](1)
-  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass, response : CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwMessageDialogClass] = 
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass, response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[AdwMessageDialogClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).response = response
@@ -835,8 +851,8 @@ object AdwMessageDialogClass:
   extension (struct: AdwMessageDialogClass)
     def parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWindowClass): Unit = !struct.at1 = value
-    def response : CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit] = struct._2
-    def response_=(value: CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit]): Unit = !struct.at2 = value
+    def response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
 
@@ -1848,11 +1864,11 @@ object _AdwAlertDialog:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-opaque type _AdwAlertDialogClass = CStruct3[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+opaque type _AdwAlertDialogClass = CStruct3[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
 object _AdwAlertDialogClass:
-  given _tag: Tag[_AdwAlertDialogClass] = Tag.materializeCStruct3Tag[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  given _tag: Tag[_AdwAlertDialogClass] = Tag.materializeCStruct3Tag[AdwDialogClass, CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[_AdwAlertDialogClass] = scala.scalanative.unsafe.alloc[_AdwAlertDialogClass](1)
-  def apply(parent_class : AdwDialogClass, response : CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwAlertDialogClass] = 
+  def apply(parent_class : AdwDialogClass, response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwAlertDialogClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).response = response
@@ -1861,8 +1877,8 @@ object _AdwAlertDialogClass:
   extension (struct: _AdwAlertDialogClass)
     def parent_class : AdwDialogClass = struct._1
     def parent_class_=(value: AdwDialogClass): Unit = !struct.at1 = value
-    def response : CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit] = struct._2
-    def response_=(value: CFuncPtr2[Ptr[AdwAlertDialog], Ptr[CUnsignedChar], Unit]): Unit = !struct.at2 = value
+    def response : CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwAlertDialog], CString, Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
 
@@ -2325,11 +2341,11 @@ object _AdwMessageDialog:
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-opaque type _AdwMessageDialogClass = CStruct3[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+opaque type _AdwMessageDialogClass = CStruct3[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
 object _AdwMessageDialogClass:
-  given _tag: Tag[_AdwMessageDialogClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
+  given _tag: Tag[_AdwMessageDialogClass] = Tag.materializeCStruct3Tag[_root_.sn.gnome.gtk.internal.GtkWindowClass, CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]]
   def apply()(using Zone): Ptr[_AdwMessageDialogClass] = scala.scalanative.unsafe.alloc[_AdwMessageDialogClass](1)
-  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass, response : CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwMessageDialogClass] = 
+  def apply(parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass, response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit], padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4])(using Zone): Ptr[_AdwMessageDialogClass] = 
     val ____ptr = apply()
     (!____ptr).parent_class = parent_class
     (!____ptr).response = response
@@ -2338,8 +2354,8 @@ object _AdwMessageDialogClass:
   extension (struct: _AdwMessageDialogClass)
     def parent_class : _root_.sn.gnome.gtk.internal.GtkWindowClass = struct._1
     def parent_class_=(value: _root_.sn.gnome.gtk.internal.GtkWindowClass): Unit = !struct.at1 = value
-    def response : CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit] = struct._2
-    def response_=(value: CFuncPtr2[Ptr[AdwMessageDialog], Ptr[CUnsignedChar], Unit]): Unit = !struct.at2 = value
+    def response : CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit] = struct._2
+    def response_=(value: CFuncPtr2[Ptr[AdwMessageDialog], CString, Unit]): Unit = !struct.at2 = value
     def padding : CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4] = struct._3
     def padding_=(value: CArray[_root_.sn.gnome.glib.internal.gpointer, Nat._4]): Unit = !struct.at3 = value
 

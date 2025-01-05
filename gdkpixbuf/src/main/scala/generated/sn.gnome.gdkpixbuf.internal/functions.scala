@@ -37,9 +37,9 @@ import _root_.scala.scalanative.*
 
 @extern def gdk_pixbuf_animation_iter_on_currently_loading_frame(iter : Ptr[GdkPixbufAnimationIter]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_animation_new_from_file(filename : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufAnimation] = extern
+@extern def gdk_pixbuf_animation_new_from_file(filename : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufAnimation] = extern
 
-@extern def gdk_pixbuf_animation_new_from_resource(resource_path : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufAnimation] = extern
+@extern def gdk_pixbuf_animation_new_from_resource(resource_path : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufAnimation] = extern
 
 @extern def gdk_pixbuf_animation_new_from_stream(stream : Ptr[_root_.sn.gnome.gio.internal.GInputStream], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufAnimation] = extern
 
@@ -135,7 +135,7 @@ import _root_.scala.scalanative.*
 
 @extern def gdk_pixbuf_get_width(pixbuf : Ptr[GdkPixbuf]): CInt = extern
 
-@extern def gdk_pixbuf_init_modules(path : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_init_modules(path : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def gdk_pixbuf_loader_close(loader : Ptr[GdkPixbufLoader], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
@@ -149,9 +149,9 @@ import _root_.scala.scalanative.*
 
 @extern def gdk_pixbuf_loader_new(): Ptr[GdkPixbufLoader] = extern
 
-@extern def gdk_pixbuf_loader_new_with_mime_type(mime_type : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufLoader] = extern
+@extern def gdk_pixbuf_loader_new_with_mime_type(mime_type : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufLoader] = extern
 
-@extern def gdk_pixbuf_loader_new_with_type(image_type : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufLoader] = extern
+@extern def gdk_pixbuf_loader_new_with_type(image_type : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbufLoader] = extern
 
 @extern def gdk_pixbuf_loader_set_size(loader : Ptr[GdkPixbufLoader], width : CInt, height : CInt): Unit = extern
 
@@ -165,17 +165,17 @@ import _root_.scala.scalanative.*
 
 @extern def gdk_pixbuf_new_from_data(data : Ptr[_root_.sn.gnome.glib.internal.guchar], colorspace : GdkColorspace, has_alpha : _root_.sn.gnome.glib.internal.gboolean, bits_per_sample : CInt, width : CInt, height : CInt, rowstride : CInt, destroy_fn : GdkPixbufDestroyNotify, destroy_fn_data : _root_.sn.gnome.glib.internal.gpointer): Ptr[GdkPixbuf] = extern
 
-@extern def gdk_pixbuf_new_from_file(filename : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
+@extern def gdk_pixbuf_new_from_file(filename : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
-@extern def gdk_pixbuf_new_from_file_at_scale(filename : Ptr[CUnsignedChar], width : CInt, height : CInt, preserve_aspect_ratio : _root_.sn.gnome.glib.internal.gboolean, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
+@extern def gdk_pixbuf_new_from_file_at_scale(filename : CString, width : CInt, height : CInt, preserve_aspect_ratio : _root_.sn.gnome.glib.internal.gboolean, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
-@extern def gdk_pixbuf_new_from_file_at_size(filename : Ptr[CUnsignedChar], width : CInt, height : CInt, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
+@extern def gdk_pixbuf_new_from_file_at_size(filename : CString, width : CInt, height : CInt, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
 @extern def gdk_pixbuf_new_from_inline(data_length : _root_.sn.gnome.glib.internal.gint, data : Ptr[_root_.sn.gnome.glib.internal.guint8], copy_pixels : _root_.sn.gnome.glib.internal.gboolean, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
-@extern def gdk_pixbuf_new_from_resource(resource_path : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
+@extern def gdk_pixbuf_new_from_resource(resource_path : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
-@extern def gdk_pixbuf_new_from_resource_at_scale(resource_path : Ptr[CUnsignedChar], width : CInt, height : CInt, preserve_aspect_ratio : _root_.sn.gnome.glib.internal.gboolean, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
+@extern def gdk_pixbuf_new_from_resource_at_scale(resource_path : CString, width : CInt, height : CInt, preserve_aspect_ratio : _root_.sn.gnome.glib.internal.gboolean, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
 @extern def gdk_pixbuf_new_from_stream(stream : Ptr[_root_.sn.gnome.gio.internal.GInputStream], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
@@ -187,7 +187,7 @@ import _root_.scala.scalanative.*
 
 @extern def gdk_pixbuf_new_from_stream_finish(async_result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): Ptr[GdkPixbuf] = extern
 
-@extern def gdk_pixbuf_new_from_xpm_data(data : Ptr[Ptr[CUnsignedChar]]): Ptr[GdkPixbuf] = extern
+@extern def gdk_pixbuf_new_from_xpm_data(data : Ptr[CString]): Ptr[GdkPixbuf] = extern
 
 @extern def gdk_pixbuf_new_subpixbuf(src_pixbuf : Ptr[GdkPixbuf], src_x : CInt, src_y : CInt, width : CInt, height : CInt): Ptr[GdkPixbuf] = extern
 
@@ -205,27 +205,27 @@ import _root_.scala.scalanative.*
 
 @extern def gdk_pixbuf_saturate_and_pixelate(src : Ptr[GdkPixbuf], dest : Ptr[GdkPixbuf], saturation : _root_.sn.gnome.glib.internal.gfloat, pixelate : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
-@extern def gdk_pixbuf_save(pixbuf : Ptr[GdkPixbuf], filename : Ptr[CUnsignedChar], `type` : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save(pixbuf : Ptr[GdkPixbuf], filename : CString, `type` : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_save_to_buffer(pixbuf : Ptr[GdkPixbuf], buffer : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], buffer_size : Ptr[_root_.sn.gnome.glib.internal.gsize], `type` : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save_to_buffer(pixbuf : Ptr[GdkPixbuf], buffer : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], buffer_size : Ptr[_root_.sn.gnome.glib.internal.gsize], `type` : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_save_to_bufferv(pixbuf : Ptr[GdkPixbuf], buffer : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], buffer_size : Ptr[_root_.sn.gnome.glib.internal.gsize], `type` : Ptr[CUnsignedChar], option_keys : Ptr[Ptr[CUnsignedChar]], option_values : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save_to_bufferv(pixbuf : Ptr[GdkPixbuf], buffer : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], buffer_size : Ptr[_root_.sn.gnome.glib.internal.gsize], `type` : CString, option_keys : Ptr[CString], option_values : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_save_to_callback(pixbuf : Ptr[GdkPixbuf], save_func : GdkPixbufSaveFunc, user_data : _root_.sn.gnome.glib.internal.gpointer, `type` : Ptr[CUnsignedChar], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save_to_callback(pixbuf : Ptr[GdkPixbuf], save_func : GdkPixbufSaveFunc, user_data : _root_.sn.gnome.glib.internal.gpointer, `type` : CString, error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_save_to_callbackv(pixbuf : Ptr[GdkPixbuf], save_func : GdkPixbufSaveFunc, user_data : _root_.sn.gnome.glib.internal.gpointer, `type` : Ptr[CUnsignedChar], option_keys : Ptr[Ptr[CUnsignedChar]], option_values : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save_to_callbackv(pixbuf : Ptr[GdkPixbuf], save_func : GdkPixbufSaveFunc, user_data : _root_.sn.gnome.glib.internal.gpointer, `type` : CString, option_keys : Ptr[CString], option_values : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_save_to_stream(pixbuf : Ptr[GdkPixbuf], stream : Ptr[_root_.sn.gnome.gio.internal.GOutputStream], `type` : Ptr[CUnsignedChar], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save_to_stream(pixbuf : Ptr[GdkPixbuf], stream : Ptr[_root_.sn.gnome.gio.internal.GOutputStream], `type` : CString, cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]], rest: Any*): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def gdk_pixbuf_save_to_stream_async(pixbuf : Ptr[GdkPixbuf], stream : Ptr[_root_.sn.gnome.gio.internal.GOutputStream], `type` : Ptr[_root_.sn.gnome.glib.internal.gchar], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], callback : _root_.sn.gnome.gio.internal.GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer, rest: Any*): Unit = extern
 
 @extern def gdk_pixbuf_save_to_stream_finish(async_result : Ptr[_root_.sn.gnome.gio.internal.GAsyncResult], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
-@extern def gdk_pixbuf_save_to_streamv(pixbuf : Ptr[GdkPixbuf], stream : Ptr[_root_.sn.gnome.gio.internal.GOutputStream], `type` : Ptr[CUnsignedChar], option_keys : Ptr[Ptr[CUnsignedChar]], option_values : Ptr[Ptr[CUnsignedChar]], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_save_to_streamv(pixbuf : Ptr[GdkPixbuf], stream : Ptr[_root_.sn.gnome.gio.internal.GOutputStream], `type` : CString, option_keys : Ptr[CString], option_values : Ptr[CString], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def gdk_pixbuf_save_to_streamv_async(pixbuf : Ptr[GdkPixbuf], stream : Ptr[_root_.sn.gnome.gio.internal.GOutputStream], `type` : Ptr[_root_.sn.gnome.glib.internal.gchar], option_keys : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], option_values : Ptr[Ptr[_root_.sn.gnome.glib.internal.gchar]], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], callback : _root_.sn.gnome.gio.internal.GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
-@extern def gdk_pixbuf_savev(pixbuf : Ptr[GdkPixbuf], filename : Ptr[CUnsignedChar], `type` : Ptr[CUnsignedChar], option_keys : Ptr[Ptr[CUnsignedChar]], option_values : Ptr[Ptr[CUnsignedChar]], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def gdk_pixbuf_savev(pixbuf : Ptr[GdkPixbuf], filename : CString, `type` : CString, option_keys : Ptr[CString], option_values : Ptr[CString], error : Ptr[Ptr[_root_.sn.gnome.glib.internal.GError]]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 @extern def gdk_pixbuf_scale(src : Ptr[GdkPixbuf], dest : Ptr[GdkPixbuf], dest_x : CInt, dest_y : CInt, dest_width : CInt, dest_height : CInt, offset_x : Double, offset_y : Double, scale_x : Double, scale_y : Double, interp_type : GdkInterpType): Unit = extern
 
