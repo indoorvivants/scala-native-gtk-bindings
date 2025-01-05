@@ -16,10 +16,10 @@ ENV LLVM_BIN=/usr/lib/llvm-17/bin
 
 WORKDIR /source/sn-bindgen
 ENV SCALANATIVE_MODE=release-fast
-ENV BINDGEN_REV=remove-boundary-error-handling
-ENV SN_BINDGEN_VERSION=0.2.0+1-76aacd0b-SNAPSHOT
+ENV BINDGEN_REV=6068826558cd150ec3f3fc4a99ae1dbc5e2ec81b
+ENV SN_BINDGEN_VERSION=0.2.0+1-60688265-SNAPSHOT
 RUN git clone https://github.com/indoorvivants/sn-bindgen . && git checkout $BINDGEN_REV && sbt devPublish
-RUN chmod +x /root/.ivy2/local/com.indoorvivants/bindgen_native0.5_3/$SN_BINDGEN_VERSION/jars/bindgen_native0.5_3-aarch64-linux.jar
+RUN chmod +x /root/.ivy2/local/com.indoorvivants/bindgen_native0.5_3/$SN_BINDGEN_VERSION/jars/bindgen_native0.5_3-*.jar
 
 WORKDIR /source/build
 
@@ -31,4 +31,4 @@ RUN sbt update
 
 
 WORKDIR /source/tmp
-ENTRYPOINT ["sbt", "bindgenGenerateAll"]
+ENTRYPOINT ["sbt", "clean", "bindgenGenerateAll"]
