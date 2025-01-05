@@ -41,7 +41,7 @@ jobs:
           key: ${{ runner.os }}-remote-cache
 
       - name: Pull cache 
-        run: ./sbt --client pullRemoteCache || echo 'remote cache not found'
+        run: ./sbt pullRemoteCache || echo 'remote cache not found'
 
       - name: apt-get update
         run: sudo apt-get update
