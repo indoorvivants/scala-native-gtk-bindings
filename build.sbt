@@ -259,7 +259,7 @@ lazy val graphene =
           .addClangFlag(
             List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false")
           )
-          // .addExternalName("graphene_simd4f_get", "<nopackage>")
+          .addExternalName("graphene_simd4f_get", "<nopackage>")
           .withNoLocation(true)
           .withMultiFile(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())

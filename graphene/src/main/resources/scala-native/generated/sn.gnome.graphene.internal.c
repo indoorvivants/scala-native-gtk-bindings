@@ -111,11 +111,6 @@ void __sn_wrap_sn_gnome_graphene_internal_graphene_simd4f_flip_sign_1010(const g
 }
 
 
-float __sn_wrap_sn_gnome_graphene_internal_graphene_simd4f_get(const graphene_simd4f_t *s, unsigned int i) {
- return graphene_simd4f_get(*s, i);
-};
-
-
 float __sn_wrap_sn_gnome_graphene_internal_graphene_simd4f_get_w(const graphene_simd4f_t *s) {
  return graphene_simd4f_get_w(*s);
 };
