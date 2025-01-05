@@ -13,7 +13,7 @@ addSbtPlugin(
 )
 
 val BindgenVersion =
-  sys.env.getOrElse("SN_BINDGEN_VERSION", "0.1.5")
+  sys.env.getOrElse("SN_BINDGEN_VERSION", "0.2.0")
 
 addSbtPlugin(
   "com.indoorvivants" % "bindgen-sbt-plugin" % BindgenVersion
