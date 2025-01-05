@@ -1,8 +1,8 @@
-import gio.all.*
-import glib.all.*
-import gtk.all.*
-import gtk.fluent.*
-import scala.scalanative.unsafe.*
+import sn.gnome.gio.internal.*
+import sn.gnome.glib.internal.*
+import sn.gnome.gtk4.internal.*
+import sn.gnome.gtk4.fluent.*
+import scalanative.unsafe.*
 
 @main def example =
   gtk_init()
@@ -14,7 +14,7 @@ import scala.scalanative.unsafe.*
 
       gtk_window_set_title(
         window.asInstanceOf[Ptr[GtkWindow]],
-        c"Hello from Scala Native"
+        c"Hello from Scala Native 0.5"
       )
       gtk_window_set_default_size(window.asPtr[GtkWindow], 200, 200)
 
@@ -28,7 +28,7 @@ import scala.scalanative.unsafe.*
 
       val printHello = CFuncPtr2.fromScalaFunction {
         (widget: Ptr[GtkWidget], data: gpointer) =>
-          g_print(c"Yoooo, click!".asGString)
+          g_print(c"Click! I come from the 0.5 version of Gtk examples\n".asGString)
       }
 
       g_signal_connect(button, c"clicked", printHello)

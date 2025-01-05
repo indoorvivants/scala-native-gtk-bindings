@@ -11,7 +11,7 @@ You can check the installation by running `pkg-config --cflags gtk4` - it should
 
 The bindings are published to Maven central, with gtk4 specifically being available at the following coordinates:
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.indoorvivants.gnome/gtk4_native0.4_3.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.indoorvivants.gnome/gtk4_native0.4_3/)
+[![Maven Central](https://img.shields.io/maven-central/v/com.indoorvivants.gnome/gtk4_native0.5_3.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.indoorvivants.gnome/gtk4_native0.5_3/)
 
 ```
 com.indoorvivants.gnome::gtk4::<version> // Scala CLI/Mill format

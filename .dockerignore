@@ -1,0 +1,10 @@
+**/.scala-build
+**/.bsp
+*.class
+**/.bloop
+**/.metals
+**/metals.sbt
+.vscode
+Dockerfile
+*.ll
+*.o

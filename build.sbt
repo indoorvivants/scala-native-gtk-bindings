@@ -28,7 +28,6 @@ sonatypeProfileName := "com.indoorvivants"
 val publishing = Seq(
   organization := "com.indoorvivants.gnome",
   sonatypeProfileName := "com.indoorvivants"
-  /* sonatypeCredentialHost := "s01.oss.sonatype.org" */
 )
 
 lazy val root = project
@@ -76,16 +75,20 @@ lazy val adwaita = project
         "glib",
         "gobject",
         "graphene",
-        "gtk",
-        "libcairo",
-        "libharfbuzz",
+        "gtk4",
+        "cairo",
+        "harfbuzz",
         "pango"
       ) {
-        Binding
-          .builder(findHeader("libadwaita-1", _ / "adwaita.h"), "adwaita")
-          .withClangFlags(pkgConfig("libadwaita-1", "cflags"))
+        val headerPath = findHeader("libadwaita-1", _ / "adwaita.h")
+        Binding(headerPath, "adwaita")
+          .withClangFlags(
+            pkgConfig("libadwaita-1", "cflags") :+ "-fsigned-char"
+          )
           .addCImport("adwaita.h")
           .withMultiFile(true)
+          // .withOpaqueStructs(Set("AdwDialogClass"))
+          .addExcludedSystemPath(headerPath.toPath().getParent())
       }
   )
 
@@ -96,11 +99,16 @@ lazy val gio = project
   .settings(
     bindgenBindings +=
       buildWithDependencies("glib", "gobject") {
-        Binding
-          .builder(findHeader("gio-2.0", _ / "gio" / "gio.h"), "gio")
-          .withClangFlags(pkgConfig("gio-2.0", "cflags"))
+        val headerPath = findHeader("gio-2.0", _ / "gio" / "gio.h")
+        Binding(
+          headerPath,
+          bindingPackage("gio")
+        )
+          .withClangFlags(pkgConfig("gio-2.0", "cflags") :+ "-fsigned-char")
           .addCImport("gio.h")
           .withOpaqueStructs(Set("G*"))
+          .withNoLocation(true)
+          .addExcludedSystemPath(headerPath.toPath.getParent())
           .withMultiFile(true)
       }
   )
@@ -109,13 +117,15 @@ lazy val glib = project
   .in(file("glib"))
   .configure(pkgConfigured("glib-2.0"))
   .settings(
-    bindgenBindings +=
-      Binding
-        .builder(findHeader("glib-2.0", _ / "glib.h"), "glib")
-        .withClangFlags(pkgConfig("glib-2.0", "cflags"))
+    bindgenBindings += {
+      val headerPath = findHeader("glib-2.0", _ / "glib.h")
+      Binding(headerPath, bindingPackage("glib"))
+        .withClangFlags(pkgConfig("glib-2.0", "cflags") :+ "-fsigned-char")
         .addCImport("glib.h")
+        .withNoLocation(true)
         .withMultiFile(true)
-        .build
+        .addExcludedSystemPath(headerPath.toPath().getParent())
+    }
   )
 
 lazy val gtk4 = project
@@ -129,16 +139,22 @@ lazy val gtk4 = project
         "gio",
         "glib",
         "gobject",
+        "cairo",
+        "harfbuzz",
+        "gdkpixbuf",
         "graphene",
-        "libcairo",
-        "libharfbuzz",
         "pango"
       ) {
-        Binding
-          .builder(findHeader("gtk4", _ / "gtk" / "gtk.h"), "gtk")
-          .withClangFlags(pkgConfig("gtk4", "cflags"))
+        val headerPath = findHeader("gtk4", _ / "gtk" / "gtk.h")
+        Binding(
+          headerPath,
+          bindingPackage("gtk4")
+        )
+          .withClangFlags(pkgConfig("gtk4", "cflags") :+ "-fsigned-char")
           .addCImport("graphene.h")
+          .withNoLocation(true)
           .withMultiFile(true)
+          .addExcludedSystemPath(headerPath.toPath.getParent())
       }
   )
 
@@ -150,11 +166,18 @@ lazy val gobject =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "gio") {
-          Binding
-            .builder(findHeader("gobject-2.0", _ / "glib-object.h"), "gobject")
-            .withClangFlags(pkgConfig("gobject-2.0", "cflags"))
+          val headerPath = findHeader("gobject-2.0", _ / "glib-object.h")
+          Binding(
+            headerPath,
+            bindingPackage("gobject")
+          )
+            .withClangFlags(
+              pkgConfig("gobject-2.0", "cflags") :+ "-fsigned-char"
+            )
             .addCImport("glib-object.h")
+            .withNoLocation(true)
             .withMultiFile(true)
+            .addExcludedSystemPath(headerPath.toPath.getParent()),
         }
     )
 
@@ -165,12 +188,17 @@ lazy val pango =
     .configure(pkgConfigured("pango"))
     .settings(
       bindgenBindings +=
-        buildWithDependencies("glib", "libcairo", "gobject", "libharfbuzz") {
-          Binding
-            .builder(findHeader("pango", _ / "pango" / "pango.h"), "libpango")
-            .withClangFlags(pkgConfig("pango", "cflags"))
+        buildWithDependencies("glib", "cairo", "gobject", "harfbuzz") {
+          val headerPath = findHeader("pango", _ / "pango" / "pango.h")
+          Binding(
+            headerPath,
+            bindingPackage("pango")
+          )
+            .withClangFlags(pkgConfig("pango", "cflags") :+ "-fsigned-char")
             .addCImport("pango.h")
+            .withNoLocation(true)
             .withMultiFile(true)
+            .addExcludedSystemPath(headerPath.toPath.getParent())
         }
     )
 
@@ -181,14 +209,19 @@ lazy val gdkpixbuf =
     .configure(pkgConfigured("gdk-pixbuf-2.0"))
     .settings(
       bindgenBindings +=
-        buildWithDependencies("glib", "gobject", "gio", "libcairo") {
-          Binding
-            .builder(
-              findHeader("gdk-pixbuf-2.0", _ / "gdk-pixbuf" / "gdk-pixbuf.h"),
-              "libgdkpixbuf"
+        buildWithDependencies("glib", "gobject", "gio", "cairo") {
+          val headerPath =
+            findHeader("gdk-pixbuf-2.0", _ / "gdk-pixbuf" / "gdk-pixbuf.h")
+          Binding(
+            headerPath,
+            bindingPackage("gdkpixbuf")
+          )
+            .withClangFlags(
+              pkgConfig("gdk-pixbuf-2.0", "cflags") :+ "-fsigned-char"
             )
-            .withClangFlags(pkgConfig("gdk-pixbuf-2.0", "cflags"))
+            .withNoLocation(true)
             .withMultiFile(true)
+            .addExcludedSystemPath(headerPath.toPath.getParent())
         }
     )
 
@@ -198,13 +231,15 @@ lazy val cairo =
     .dependsOn(glib)
     .configure(pkgConfigured("cairo"))
     .settings(
-      bindgenBindings +=
-        Binding
-          .builder(findHeader("cairo", _ / "cairo.h"), "libcairo")
-          .withClangFlags(pkgConfig("cairo", "cflags"))
+      bindgenBindings += {
+        val headerPath = findHeader("cairo", _ / "cairo.h")
+        Binding(headerPath, bindingPackage("cairo"))
+          .withClangFlags(pkgConfig("cairo", "cflags") :+ "-fsigned-char")
           .addCImport("cairo.h")
+          .withNoLocation(true)
           .withMultiFile(true)
-          .build
+          .addExcludedSystemPath(headerPath.toPath.getParent())
+      }
     )
 
 lazy val graphene =
@@ -213,17 +248,22 @@ lazy val graphene =
     .dependsOn(glib)
     .configure(pkgConfigured("graphene-1.0"))
     .settings(
-      bindgenBindings +=
-        Binding
-          .builder(findHeader("graphene-1.0", _ / "graphene.h"), "libgraphene")
-          .withClangFlags(pkgConfig("graphene-1.0", "cflags"))
+      bindgenBindings += {
+        val headerPath = findHeader("graphene-1.0", _ / "graphene.h")
+
+        Binding(
+          headerPath,
+          bindingPackage("graphene")
+        ).withClangFlags(pkgConfig("graphene-1.0", "cflags") :+ "-fsigned-char")
           .addCImport("graphene.h")
           .addClangFlag(
             List("-Dsse2=false", "-Darm_neon=false", "-Dgcc_vector=false")
           )
           .addExternalName("graphene_simd4f_get", "<nopackage>")
+          .withNoLocation(true)
           .withMultiFile(true)
-          .build
+          .addExcludedSystemPath(headerPath.toPath.getParent())
+      }
     )
 
 lazy val girepository =
@@ -234,13 +274,18 @@ lazy val girepository =
     .settings(
       bindgenBindings +=
         buildWithDependencies("glib", "gobject") {
-          Binding
-            .builder(
-              findHeader("gobject-introspection-1.0", _ / "girepository.h"),
-              "girepository"
+          Binding(
+            findHeader("gobject-introspection-1.0", _ / "girepository.h"),
+            "girepository"
+          )
+            .withClangFlags(
+              pkgConfig(
+                "gobject-introspection-1.0",
+                "cflags"
+              ) :+ "-fsigned-char"
             )
-            .withClangFlags(pkgConfig("gobject-introspection-1.0", "cflags"))
             .addCImport("girepository.h")
+            .withNoLocation(true)
             .withMultiFile(true)
         }
     )
@@ -251,13 +296,18 @@ lazy val harfbuzz =
     .dependsOn(glib)
     .configure(pkgConfigured("harfbuzz"))
     .settings(
-      bindgenBindings +=
-        Binding
-          .builder(findHeader("harfbuzz", _ / "hb.h"), "libharfbuzz")
-          .withClangFlags(pkgConfig("harfbuzz", "cflags"))
+      bindgenBindings += {
+        val headerPath = findHeader("harfbuzz", _ / "hb.h")
+        Binding(
+          headerPath,
+          bindingPackage("harfbuzz")
+        )
+          .withClangFlags(pkgConfig("harfbuzz", "cflags") :+ "-fsigned-char")
           .addCImport("hb.h")
+          .withNoLocation(true)
           .withMultiFile(true)
-          .build
+          .addExcludedSystemPath(headerPath.toPath.getParent())
+      }
     )
 
 def generateXsd(
@@ -363,11 +413,10 @@ def pkgConfigured(name: String): Project => Project = { proj =>
     .enablePlugins(BindgenPlugin)
     .settings(publishing)
     .settings(
-      nativeCompileOptions ++= {
-        pkgConfig(name, "cflags")
-      },
-      nativeLinkingOptions ++= {
-        pkgConfig(name, "libs")
+      nativeConfig ~= { config =>
+        config
+          .withCompileOptions(_ ++ pkgConfig(name, "cflags"))
+          .withLinkingOptions(_ ++ pkgConfig(name, "libs"))
       },
       bindgenMode := BindgenMode.Manual(
         scalaDir = sourceDirectory.value / "main" / "scala" / "generated",
@@ -377,7 +426,7 @@ def pkgConfigured(name: String): Project => Project = { proj =>
     )
 }
 
-def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
+def buildWithDependencies(deps: String*)(bb: Binding) = {
   def extPaths(dep: String) = dep match {
     case "glib" =>
       List(
@@ -395,10 +444,10 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
         "*/glib-2.0/gobject/*",
         "*/glib-2.0/gobject.h"
       )
-    case "libcairo" =>
+    case "cairo" =>
       List("*/cairo/*")
-    case "libharfbuzz" => List("*/harfbuzz/*")
-    case "gtk" =>
+    case "harfbuzz" => List("*/harfbuzz/*")
+    case "gtk4" =>
       List(
         "*/gtk-4.0/gdk/*",
         "*/gtk-4.0/gsk/*",
@@ -410,10 +459,14 @@ def buildWithDependencies(deps: String*)(bb: Binding.Builder) = {
   }
 
   val externals =
-    deps.flatMap { dep => extPaths(dep).map(_ -> dep).toMap }.toMap
+    deps.flatMap { dep =>
+      extPaths(dep).map(_ -> bindingPackage(dep)).toMap
+    }.toMap
 
-  bb.addExternalPaths(externals).build
+  bb.addExternalPaths(externals)
 }
+
+def bindingPackage(name: String) = s"sn.gnome.$name.internal"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
