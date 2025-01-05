@@ -75,7 +75,7 @@ lazy val adwaita = project
         "glib",
         "gobject",
         "graphene",
-        "gtk",
+        "gtk4",
         "cairo",
         "harfbuzz",
         "pango"
@@ -87,7 +87,7 @@ lazy val adwaita = project
           )
           .addCImport("adwaita.h")
           .withMultiFile(true)
-          .withOpaqueStructs(Set("AdwDialogClass"))
+          // .withOpaqueStructs(Set("AdwDialogClass"))
           .addExcludedSystemPath(headerPath.toPath().getParent())
       }
   )
@@ -447,7 +447,7 @@ def buildWithDependencies(deps: String*)(bb: Binding) = {
     case "cairo" =>
       List("*/cairo/*")
     case "harfbuzz" => List("*/harfbuzz/*")
-    case "gtk" =>
+    case "gtk4" =>
       List(
         "*/gtk-4.0/gdk/*",
         "*/gtk-4.0/gsk/*",

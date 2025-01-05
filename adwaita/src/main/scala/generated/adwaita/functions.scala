@@ -1085,7 +1085,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_add_legal_section(self : Ptr[AdwAboutDialog], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : CString): Unit = extern
+@extern def adw_about_dialog_add_legal_section(self : Ptr[AdwAboutDialog], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk4.internal.GtkLicense, license : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1160,7 +1160,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_get_license_type(self : Ptr[AdwAboutDialog]): _root_.sn.gnome.gtk.internal.GtkLicense = extern
+@extern def adw_about_dialog_get_license_type(self : Ptr[AdwAboutDialog]): _root_.sn.gnome.gtk4.internal.GtkLicense = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1275,7 +1275,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_about_dialog_set_license_type(self : Ptr[AdwAboutDialog], license_type : _root_.sn.gnome.gtk.internal.GtkLicense): Unit = extern
+@extern def adw_about_dialog_set_license_type(self : Ptr[AdwAboutDialog], license_type : _root_.sn.gnome.gtk4.internal.GtkLicense): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
@@ -1320,7 +1320,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_add_legal_section(self : Ptr[AdwAboutWindow], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk.internal.GtkLicense, license : CString): Unit = extern
+@extern def adw_about_window_add_legal_section(self : Ptr[AdwAboutWindow], title : CString, copyright : CString, license_type : _root_.sn.gnome.gtk4.internal.GtkLicense, license : CString): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1395,7 +1395,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_get_license_type(self : Ptr[AdwAboutWindow]): _root_.sn.gnome.gtk.internal.GtkLicense = extern
+@extern def adw_about_window_get_license_type(self : Ptr[AdwAboutWindow]): _root_.sn.gnome.gtk4.internal.GtkLicense = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1435,12 +1435,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_about_window_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_new_from_appdata(resource_path : CString, release_notes_version : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_about_window_new_from_appdata(resource_path : CString, release_notes_version : CString): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1510,7 +1510,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_about_window_set_license_type(self : Ptr[AdwAboutWindow], license_type : _root_.sn.gnome.gtk.internal.GtkLicense): Unit = extern
+@extern def adw_about_window_set_license_type(self : Ptr[AdwAboutWindow], license_type : _root_.sn.gnome.gtk4.internal.GtkLicense): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
@@ -1550,17 +1550,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_add_prefix(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_action_row_add_prefix(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_add_suffix(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_action_row_add_suffix(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_get_activatable_widget(self : Ptr[AdwActionRow]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_action_row_get_activatable_widget(self : Ptr[AdwActionRow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -1595,17 +1595,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_action_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_remove(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_action_row_remove(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
 */
-@extern def adw_action_row_set_activatable_widget(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_action_row_set_activatable_widget(self : Ptr[AdwActionRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-action-row.h
@@ -1645,7 +1645,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_choose(self : Ptr[AdwAlertDialog], parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], callback : _root_.sn.gnome.gio.internal.GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
+@extern def adw_alert_dialog_choose(self : Ptr[AdwAlertDialog], parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], cancellable : Ptr[_root_.sn.gnome.gio.internal.GCancellable], callback : _root_.sn.gnome.gio.internal.GAsyncReadyCallback, user_data : _root_.sn.gnome.glib.internal.gpointer): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1695,7 +1695,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_get_extra_child(self : Ptr[AdwAlertDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_alert_dialog_get_extra_child(self : Ptr[AdwAlertDialog]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1765,7 +1765,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
 */
-@extern def adw_alert_dialog_set_extra_child(self : Ptr[AdwAlertDialog], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_alert_dialog_set_extra_child(self : Ptr[AdwAlertDialog], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-alert-dialog.h
@@ -1820,7 +1820,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
 */
-@extern def adw_animation_get_widget(self : Ptr[AdwAnimation]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_animation_get_widget(self : Ptr[AdwAnimation]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation.h
@@ -1890,7 +1890,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
-@extern def adw_application_window_get_content(self : Ptr[AdwApplicationWindow]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_application_window_get_content(self : Ptr[AdwApplicationWindow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
@@ -1915,22 +1915,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
-@extern def adw_application_window_new(app : Ptr[_root_.sn.gnome.gtk.internal.GtkApplication]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_application_window_new(app : Ptr[_root_.sn.gnome.gtk4.internal.GtkApplication]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-application-window.h
 */
-@extern def adw_application_window_set_content(self : Ptr[AdwApplicationWindow], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_application_window_set_content(self : Ptr[AdwApplicationWindow], content : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_draw_to_texture(self : Ptr[AdwAvatar], scale_factor : CInt): Ptr[_root_.sn.gnome.gtk.internal.GdkTexture] = extern
+@extern def adw_avatar_draw_to_texture(self : Ptr[AdwAvatar], scale_factor : CInt): Ptr[_root_.sn.gnome.gtk4.internal.GdkTexture] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_get_custom_image(self : Ptr[AdwAvatar]): Ptr[_root_.sn.gnome.gtk.internal.GdkPaintable] = extern
+@extern def adw_avatar_get_custom_image(self : Ptr[AdwAvatar]): Ptr[_root_.sn.gnome.gtk4.internal.GdkPaintable] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -1960,12 +1960,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_new(size : CInt, text : CString, show_initials : _root_.sn.gnome.glib.internal.gboolean): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_avatar_new(size : CInt, text : CString, show_initials : _root_.sn.gnome.glib.internal.gboolean): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
 */
-@extern def adw_avatar_set_custom_image(self : Ptr[AdwAvatar], custom_image : Ptr[_root_.sn.gnome.gtk.internal.GdkPaintable]): Unit = extern
+@extern def adw_avatar_set_custom_image(self : Ptr[AdwAvatar], custom_image : Ptr[_root_.sn.gnome.gtk4.internal.GdkPaintable]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-avatar.h
@@ -2015,7 +2015,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
 */
-@extern def adw_banner_new(title : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_banner_new(title : CString): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-banner.h
@@ -2040,7 +2040,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
-@extern def adw_bin_get_child(self : Ptr[AdwBin]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_bin_get_child(self : Ptr[AdwBin]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
@@ -2050,12 +2050,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
-@extern def adw_bin_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_bin_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-bin.h
 */
-@extern def adw_bin_set_child(self : Ptr[AdwBin], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_bin_set_child(self : Ptr[AdwBin], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
@@ -2085,7 +2085,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
 */
-@extern def adw_breakpoint_bin_get_child(self : Ptr[AdwBreakpointBin]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_breakpoint_bin_get_child(self : Ptr[AdwBreakpointBin]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
@@ -2100,7 +2100,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
 */
-@extern def adw_breakpoint_bin_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_breakpoint_bin_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
@@ -2110,7 +2110,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint-bin.h
 */
-@extern def adw_breakpoint_bin_set_child(self : Ptr[AdwBreakpointBin], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_breakpoint_bin_set_child(self : Ptr[AdwBreakpointBin], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-breakpoint.h
@@ -2215,7 +2215,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
 */
-@extern def adw_button_content_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_button_content_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-button-content.h
@@ -2250,7 +2250,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_append(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_carousel_append(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
@@ -2280,7 +2280,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_get_nth_page(self : Ptr[AdwCarousel], n : _root_.sn.gnome.glib.internal.guint): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_carousel_get_nth_page(self : Ptr[AdwCarousel], n : _root_.sn.gnome.glib.internal.guint): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
@@ -2320,7 +2320,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
 */
-@extern def adw_carousel_indicator_dots_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_carousel_indicator_dots_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-dots.h
@@ -2340,7 +2340,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
 */
-@extern def adw_carousel_indicator_lines_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_carousel_indicator_lines_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel-indicator-lines.h
@@ -2350,32 +2350,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_insert(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], position : CInt): Unit = extern
+@extern def adw_carousel_insert(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], position : CInt): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_carousel_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_prepend(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_carousel_prepend(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_remove(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_carousel_remove(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_reorder(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], position : CInt): Unit = extern
+@extern def adw_carousel_reorder(self : Ptr[AdwCarousel], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], position : CInt): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
 */
-@extern def adw_carousel_scroll_to(self : Ptr[AdwCarousel], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], animate : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
+@extern def adw_carousel_scroll_to(self : Ptr[AdwCarousel], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], animate : _root_.sn.gnome.glib.internal.gboolean): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-carousel.h
@@ -2420,7 +2420,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
 */
-@extern def adw_clamp_get_child(self : Ptr[AdwClamp]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_clamp_get_child(self : Ptr[AdwClamp]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
@@ -2465,7 +2465,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
 */
-@extern def adw_clamp_layout_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkLayoutManager] = extern
+@extern def adw_clamp_layout_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkLayoutManager] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-layout.h
@@ -2485,12 +2485,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
 */
-@extern def adw_clamp_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_clamp_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
 */
-@extern def adw_clamp_scrollable_get_child(self : Ptr[AdwClampScrollable]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_clamp_scrollable_get_child(self : Ptr[AdwClampScrollable]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
@@ -2515,12 +2515,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
 */
-@extern def adw_clamp_scrollable_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_clamp_scrollable_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
 */
-@extern def adw_clamp_scrollable_set_child(self : Ptr[AdwClampScrollable], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_clamp_scrollable_set_child(self : Ptr[AdwClampScrollable], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp-scrollable.h
@@ -2540,7 +2540,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
 */
-@extern def adw_clamp_set_child(self : Ptr[AdwClamp], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_clamp_set_child(self : Ptr[AdwClamp], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-clamp.h
@@ -2570,17 +2570,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_get_expression(self : Ptr[AdwComboRow]): Ptr[_root_.sn.gnome.gtk.internal.GtkExpression] = extern
+@extern def adw_combo_row_get_expression(self : Ptr[AdwComboRow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkExpression] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_get_factory(self : Ptr[AdwComboRow]): Ptr[_root_.sn.gnome.gtk.internal.GtkListItemFactory] = extern
+@extern def adw_combo_row_get_factory(self : Ptr[AdwComboRow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkListItemFactory] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_get_list_factory(self : Ptr[AdwComboRow]): Ptr[_root_.sn.gnome.gtk.internal.GtkListItemFactory] = extern
+@extern def adw_combo_row_get_list_factory(self : Ptr[AdwComboRow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkListItemFactory] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
@@ -2610,7 +2610,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_combo_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
@@ -2620,17 +2620,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_set_expression(self : Ptr[AdwComboRow], expression : Ptr[_root_.sn.gnome.gtk.internal.GtkExpression]): Unit = extern
+@extern def adw_combo_row_set_expression(self : Ptr[AdwComboRow], expression : Ptr[_root_.sn.gnome.gtk4.internal.GtkExpression]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_set_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.sn.gnome.gtk.internal.GtkListItemFactory]): Unit = extern
+@extern def adw_combo_row_set_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.sn.gnome.gtk4.internal.GtkListItemFactory]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
 */
-@extern def adw_combo_row_set_list_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.sn.gnome.gtk.internal.GtkListItemFactory]): Unit = extern
+@extern def adw_combo_row_set_list_factory(self : Ptr[AdwComboRow], factory : Ptr[_root_.sn.gnome.gtk4.internal.GtkListItemFactory]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-combo-row.h
@@ -2670,7 +2670,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_get_child(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_dialog_get_child(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
@@ -2690,12 +2690,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_get_default_widget(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_dialog_get_default_widget(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_get_focus(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_dialog_get_focus(self : Ptr[AdwDialog]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
@@ -2725,7 +2725,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_present(self : Ptr[AdwDialog], parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_dialog_present(self : Ptr[AdwDialog], parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -2740,7 +2740,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_set_child(self : Ptr[AdwDialog], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_dialog_set_child(self : Ptr[AdwDialog], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
@@ -2755,12 +2755,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_set_default_widget(self : Ptr[AdwDialog], default_widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_dialog_set_default_widget(self : Ptr[AdwDialog], default_widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
 */
-@extern def adw_dialog_set_focus(self : Ptr[AdwDialog], focus : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_dialog_set_focus(self : Ptr[AdwDialog], focus : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-dialog.h
@@ -2790,12 +2790,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_add_prefix(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_entry_row_add_prefix(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_add_suffix(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_entry_row_add_suffix(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
@@ -2815,12 +2815,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_get_input_hints(self : Ptr[AdwEntryRow]): _root_.sn.gnome.gtk.internal.GtkInputHints = extern
+@extern def adw_entry_row_get_input_hints(self : Ptr[AdwEntryRow]): _root_.sn.gnome.gtk4.internal.GtkInputHints = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_get_input_purpose(self : Ptr[AdwEntryRow]): _root_.sn.gnome.gtk.internal.GtkInputPurpose = extern
+@extern def adw_entry_row_get_input_purpose(self : Ptr[AdwEntryRow]): _root_.sn.gnome.gtk4.internal.GtkInputPurpose = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
@@ -2845,12 +2845,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_entry_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_remove(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_entry_row_remove(self : Ptr[AdwEntryRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
@@ -2870,12 +2870,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_set_input_hints(self : Ptr[AdwEntryRow], hints : _root_.sn.gnome.gtk.internal.GtkInputHints): Unit = extern
+@extern def adw_entry_row_set_input_hints(self : Ptr[AdwEntryRow], hints : _root_.sn.gnome.gtk4.internal.GtkInputHints): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
 */
-@extern def adw_entry_row_set_input_purpose(self : Ptr[AdwEntryRow], purpose : _root_.sn.gnome.gtk.internal.GtkInputPurpose): Unit = extern
+@extern def adw_entry_row_set_input_purpose(self : Ptr[AdwEntryRow], purpose : _root_.sn.gnome.gtk4.internal.GtkInputPurpose): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-entry-row.h
@@ -2925,22 +2925,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_add_action(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_expander_row_add_action(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_add_prefix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_expander_row_add_prefix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_add_row(self : Ptr[AdwExpanderRow], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_expander_row_add_row(self : Ptr[AdwExpanderRow], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_add_suffix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_expander_row_add_suffix(self : Ptr[AdwExpanderRow], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -2985,12 +2985,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_expander_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
 */
-@extern def adw_expander_row_remove(self : Ptr[AdwExpanderRow], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_expander_row_remove(self : Ptr[AdwExpanderRow], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-expander-row.h
@@ -3035,17 +3035,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_get_content(self : Ptr[AdwFlap]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_flap_get_content(self : Ptr[AdwFlap]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_get_flap(self : Ptr[AdwFlap]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_flap_get_flap(self : Ptr[AdwFlap]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_get_flap_position(self : Ptr[AdwFlap]): _root_.sn.gnome.gtk.internal.GtkPackType = extern
+@extern def adw_flap_get_flap_position(self : Ptr[AdwFlap]): _root_.sn.gnome.gtk4.internal.GtkPackType = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -3095,7 +3095,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_get_separator(self : Ptr[AdwFlap]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_flap_get_separator(self : Ptr[AdwFlap]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -3120,22 +3120,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_flap_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_set_content(self : Ptr[AdwFlap], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_flap_set_content(self : Ptr[AdwFlap], content : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_set_flap(self : Ptr[AdwFlap], flap : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_flap_set_flap(self : Ptr[AdwFlap], flap : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_set_flap_position(self : Ptr[AdwFlap], position : _root_.sn.gnome.gtk.internal.GtkPackType): Unit = extern
+@extern def adw_flap_set_flap_position(self : Ptr[AdwFlap], position : _root_.sn.gnome.gtk4.internal.GtkPackType): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -3175,7 +3175,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
 */
-@extern def adw_flap_set_separator(self : Ptr[AdwFlap], separator : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_flap_set_separator(self : Ptr[AdwFlap], separator : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-flap.h
@@ -3205,7 +3205,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-util.h
 */
-@extern def adw_get_enable_animations(widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): _root_.sn.gnome.glib.internal.gboolean = extern
+@extern def adw_get_enable_animations(widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): _root_.sn.gnome.glib.internal.gboolean = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-version.h
@@ -3255,7 +3255,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_get_title_widget(self : Ptr[AdwHeaderBar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_header_bar_get_title_widget(self : Ptr[AdwHeaderBar]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -3265,22 +3265,22 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_header_bar_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_pack_end(self : Ptr[AdwHeaderBar], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_header_bar_pack_end(self : Ptr[AdwHeaderBar], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_pack_start(self : Ptr[AdwHeaderBar], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_header_bar_pack_start(self : Ptr[AdwHeaderBar], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_remove(self : Ptr[AdwHeaderBar], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_header_bar_remove(self : Ptr[AdwHeaderBar], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
@@ -3315,7 +3315,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-header-bar.h
 */
-@extern def adw_header_bar_set_title_widget(self : Ptr[AdwHeaderBar], title_widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_header_bar_set_title_widget(self : Ptr[AdwHeaderBar], title_widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-main.h
@@ -3330,12 +3330,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_append(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
+@extern def adw_leaflet_append(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_adjacent_child(self : Ptr[AdwLeaflet], direction : AdwNavigationDirection): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_leaflet_get_adjacent_child(self : Ptr[AdwLeaflet], direction : AdwNavigationDirection): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3355,7 +3355,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_child_by_name(self : Ptr[AdwLeaflet], name : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_leaflet_get_child_by_name(self : Ptr[AdwLeaflet], name : CString): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3390,12 +3390,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_page(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
+@extern def adw_leaflet_get_page(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_pages(self : Ptr[AdwLeaflet]): Ptr[_root_.sn.gnome.gtk.internal.GtkSelectionModel] = extern
+@extern def adw_leaflet_get_pages(self : Ptr[AdwLeaflet]): Ptr[_root_.sn.gnome.gtk4.internal.GtkSelectionModel] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3410,7 +3410,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_get_visible_child(self : Ptr[AdwLeaflet]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_leaflet_get_visible_child(self : Ptr[AdwLeaflet]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3420,7 +3420,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_insert_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], sibling : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
+@extern def adw_leaflet_insert_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], sibling : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3430,12 +3430,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_leaflet_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_page_get_child(self : Ptr[AdwLeafletPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_leaflet_page_get_child(self : Ptr[AdwLeafletPage]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3465,17 +3465,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_prepend(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
+@extern def adw_leaflet_prepend(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwLeafletPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_remove(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_leaflet_remove(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_reorder_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], sibling : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_leaflet_reorder_child_after(self : Ptr[AdwLeaflet], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], sibling : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3520,7 +3520,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
 */
-@extern def adw_leaflet_set_visible_child(self : Ptr[AdwLeaflet], visible_child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_leaflet_set_visible_child(self : Ptr[AdwLeaflet], visible_child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-leaflet.h
@@ -3535,7 +3535,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-length-unit.h
 */
-@extern def adw_length_unit_from_px(unit : AdwLengthUnit, value : Double, settings : Ptr[_root_.sn.gnome.gtk.internal.GtkSettings]): Double = extern
+@extern def adw_length_unit_from_px(unit : AdwLengthUnit, value : Double, settings : Ptr[_root_.sn.gnome.gtk4.internal.GtkSettings]): Double = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -3545,7 +3545,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-length-unit.h
 */
-@extern def adw_length_unit_to_px(unit : AdwLengthUnit, value : Double, settings : Ptr[_root_.sn.gnome.gtk.internal.GtkSettings]): Double = extern
+@extern def adw_length_unit_to_px(unit : AdwLengthUnit, value : Double, settings : Ptr[_root_.sn.gnome.gtk4.internal.GtkSettings]): Double = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-animation-util.h
@@ -3615,7 +3615,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_get_extra_child(self : Ptr[AdwMessageDialog]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_message_dialog_get_extra_child(self : Ptr[AdwMessageDialog]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3655,7 +3655,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_new(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], heading : CString, body : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_message_dialog_new(parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWindow], heading : CString, body : CString): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3690,7 +3690,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
 */
-@extern def adw_message_dialog_set_extra_child(self : Ptr[AdwMessageDialog], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_message_dialog_set_extra_child(self : Ptr[AdwMessageDialog], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-message-dialog.h
@@ -3730,7 +3730,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_get_child(self : Ptr[AdwNavigationPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_navigation_page_get_child(self : Ptr[AdwNavigationPage]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3750,12 +3750,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_new(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : CString): Ptr[AdwNavigationPage] = extern
+@extern def adw_navigation_page_new(child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], title : CString): Ptr[AdwNavigationPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_new_with_tag(child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], title : CString, tag : CString): Ptr[AdwNavigationPage] = extern
+@extern def adw_navigation_page_new_with_tag(child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], title : CString, tag : CString): Ptr[AdwNavigationPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3765,7 +3765,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_page_set_child(self : Ptr[AdwNavigationPage], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_navigation_page_set_child(self : Ptr[AdwNavigationPage], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3825,7 +3825,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
 */
-@extern def adw_navigation_split_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_navigation_split_view_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-split-view.h
@@ -3910,7 +3910,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
 */
-@extern def adw_navigation_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_navigation_view_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-navigation-view.h
@@ -3970,7 +3970,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_get_content(self : Ptr[AdwOverlaySplitView]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_overlay_split_view_get_content(self : Ptr[AdwOverlaySplitView]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
@@ -4005,12 +4005,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_get_sidebar(self : Ptr[AdwOverlaySplitView]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_overlay_split_view_get_sidebar(self : Ptr[AdwOverlaySplitView]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_get_sidebar_position(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.gtk.internal.GtkPackType = extern
+@extern def adw_overlay_split_view_get_sidebar_position(self : Ptr[AdwOverlaySplitView]): _root_.sn.gnome.gtk4.internal.GtkPackType = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
@@ -4030,7 +4030,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_overlay_split_view_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
@@ -4040,7 +4040,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_set_content(self : Ptr[AdwOverlaySplitView], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_overlay_split_view_set_content(self : Ptr[AdwOverlaySplitView], content : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
@@ -4075,12 +4075,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_set_sidebar(self : Ptr[AdwOverlaySplitView], sidebar : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_overlay_split_view_set_sidebar(self : Ptr[AdwOverlaySplitView], sidebar : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
 */
-@extern def adw_overlay_split_view_set_sidebar_position(self : Ptr[AdwOverlaySplitView], position : _root_.sn.gnome.gtk.internal.GtkPackType): Unit = extern
+@extern def adw_overlay_split_view_set_sidebar_position(self : Ptr[AdwOverlaySplitView], position : _root_.sn.gnome.gtk4.internal.GtkPackType): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-overlay-split-view.h
@@ -4100,7 +4100,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-password-entry-row.h
 */
-@extern def adw_password_entry_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_password_entry_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-dialog.h
@@ -4170,7 +4170,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_add(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_preferences_group_add(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4180,7 +4180,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_get_header_suffix(self : Ptr[AdwPreferencesGroup]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_preferences_group_get_header_suffix(self : Ptr[AdwPreferencesGroup]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4195,12 +4195,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_preferences_group_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_remove(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_preferences_group_remove(self : Ptr[AdwPreferencesGroup], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4210,7 +4210,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
 */
-@extern def adw_preferences_group_set_header_suffix(self : Ptr[AdwPreferencesGroup], suffix : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_preferences_group_set_header_suffix(self : Ptr[AdwPreferencesGroup], suffix : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-group.h
@@ -4255,7 +4255,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
 */
-@extern def adw_preferences_page_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_preferences_page_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-page.h
@@ -4320,7 +4320,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
 */
-@extern def adw_preferences_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_preferences_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-row.h
@@ -4385,7 +4385,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
-@extern def adw_preferences_window_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_preferences_window_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
@@ -4395,7 +4395,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
 */
-@extern def adw_preferences_window_present_subpage(self : Ptr[AdwPreferencesWindow], subpage : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_preferences_window_present_subpage(self : Ptr[AdwPreferencesWindow], subpage : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-preferences-window.h
@@ -4460,32 +4460,32 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_show_about_dialog(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], first_property_name : CString, rest: Any*): Unit = extern
+@extern def adw_show_about_dialog(parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-dialog.h
 */
-@extern def adw_show_about_dialog_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
+@extern def adw_show_about_dialog_from_appdata(parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_show_about_window(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], first_property_name : CString, rest: Any*): Unit = extern
+@extern def adw_show_about_window(parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWindow], first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-about-window.h
 */
-@extern def adw_show_about_window_from_appdata(parent : Ptr[_root_.sn.gnome.gtk.internal.GtkWindow], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
+@extern def adw_show_about_window_from_appdata(parent : Ptr[_root_.sn.gnome.gtk4.internal.GtkWindow], resource_path : CString, release_notes_version : CString, first_property_name : CString, rest: Any*): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_configure(self : Ptr[AdwSpinRow], adjustment : Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment], climb_rate : Double, digits : _root_.sn.gnome.glib.internal.guint): Unit = extern
+@extern def adw_spin_row_configure(self : Ptr[AdwSpinRow], adjustment : Ptr[_root_.sn.gnome.gtk4.internal.GtkAdjustment], climb_rate : Double, digits : _root_.sn.gnome.glib.internal.guint): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_get_adjustment(self : Ptr[AdwSpinRow]): Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment] = extern
+@extern def adw_spin_row_get_adjustment(self : Ptr[AdwSpinRow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkAdjustment] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
@@ -4515,7 +4515,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_get_update_policy(self : Ptr[AdwSpinRow]): _root_.sn.gnome.gtk.internal.GtkSpinButtonUpdatePolicy = extern
+@extern def adw_spin_row_get_update_policy(self : Ptr[AdwSpinRow]): _root_.sn.gnome.gtk4.internal.GtkSpinButtonUpdatePolicy = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
@@ -4530,17 +4530,17 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_new(adjustment : Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment], climb_rate : Double, digits : _root_.sn.gnome.glib.internal.guint): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_spin_row_new(adjustment : Ptr[_root_.sn.gnome.gtk4.internal.GtkAdjustment], climb_rate : Double, digits : _root_.sn.gnome.glib.internal.guint): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_new_with_range(min : Double, max : Double, step : Double): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_spin_row_new_with_range(min : Double, max : Double, step : Double): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_set_adjustment(self : Ptr[AdwSpinRow], adjustment : Ptr[_root_.sn.gnome.gtk.internal.GtkAdjustment]): Unit = extern
+@extern def adw_spin_row_set_adjustment(self : Ptr[AdwSpinRow], adjustment : Ptr[_root_.sn.gnome.gtk4.internal.GtkAdjustment]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
@@ -4570,7 +4570,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
 */
-@extern def adw_spin_row_set_update_policy(self : Ptr[AdwSpinRow], policy : _root_.sn.gnome.gtk.internal.GtkSpinButtonUpdatePolicy): Unit = extern
+@extern def adw_spin_row_set_update_policy(self : Ptr[AdwSpinRow], policy : _root_.sn.gnome.gtk4.internal.GtkSpinButtonUpdatePolicy): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spin-row.h
@@ -4595,12 +4595,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_get_child(self : Ptr[AdwSplitButton]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_split_button_get_child(self : Ptr[AdwSplitButton]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_get_direction(self : Ptr[AdwSplitButton]): _root_.sn.gnome.gtk.internal.GtkArrowType = extern
+@extern def adw_split_button_get_direction(self : Ptr[AdwSplitButton]): _root_.sn.gnome.gtk4.internal.GtkArrowType = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4625,7 +4625,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_get_popover(self : Ptr[AdwSplitButton]): Ptr[_root_.sn.gnome.gtk.internal.GtkPopover] = extern
+@extern def adw_split_button_get_popover(self : Ptr[AdwSplitButton]): Ptr[_root_.sn.gnome.gtk4.internal.GtkPopover] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4640,7 +4640,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_split_button_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4660,12 +4660,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_set_child(self : Ptr[AdwSplitButton], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_split_button_set_child(self : Ptr[AdwSplitButton], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_set_direction(self : Ptr[AdwSplitButton], direction : _root_.sn.gnome.gtk.internal.GtkArrowType): Unit = extern
+@extern def adw_split_button_set_direction(self : Ptr[AdwSplitButton], direction : _root_.sn.gnome.gtk4.internal.GtkArrowType): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4690,7 +4690,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
 */
-@extern def adw_split_button_set_popover(self : Ptr[AdwSplitButton], popover : Ptr[_root_.sn.gnome.gtk.internal.GtkPopover]): Unit = extern
+@extern def adw_split_button_set_popover(self : Ptr[AdwSplitButton], popover : Ptr[_root_.sn.gnome.gtk4.internal.GtkPopover]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-split-button.h
@@ -4755,7 +4755,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
 */
-@extern def adw_spring_animation_new(widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], from : Double, to : Double, spring_params : Ptr[AdwSpringParams], target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
+@extern def adw_spring_animation_new(widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], from : Double, to : Double, spring_params : Ptr[AdwSpringParams], target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-spring-animation.h
@@ -4835,7 +4835,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_add(self : Ptr[AdwSqueezer], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwSqueezerPage] = extern
+@extern def adw_squeezer_add(self : Ptr[AdwSqueezer], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwSqueezerPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -4855,12 +4855,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_get_page(self : Ptr[AdwSqueezer], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwSqueezerPage] = extern
+@extern def adw_squeezer_get_page(self : Ptr[AdwSqueezer], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwSqueezerPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_get_pages(self : Ptr[AdwSqueezer]): Ptr[_root_.sn.gnome.gtk.internal.GtkSelectionModel] = extern
+@extern def adw_squeezer_get_pages(self : Ptr[AdwSqueezer]): Ptr[_root_.sn.gnome.gtk4.internal.GtkSelectionModel] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -4890,7 +4890,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_get_visible_child(self : Ptr[AdwSqueezer]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_squeezer_get_visible_child(self : Ptr[AdwSqueezer]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -4905,12 +4905,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_squeezer_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_page_get_child(self : Ptr[AdwSqueezerPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_squeezer_page_get_child(self : Ptr[AdwSqueezerPage]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -4930,7 +4930,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
 */
-@extern def adw_squeezer_remove(self : Ptr[AdwSqueezer], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_squeezer_remove(self : Ptr[AdwSqueezer], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-squeezer.h
@@ -4980,7 +4980,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_get_child(self : Ptr[AdwStatusPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_status_page_get_child(self : Ptr[AdwStatusPage]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -4995,7 +4995,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_get_paintable(self : Ptr[AdwStatusPage]): Ptr[_root_.sn.gnome.gtk.internal.GdkPaintable] = extern
+@extern def adw_status_page_get_paintable(self : Ptr[AdwStatusPage]): Ptr[_root_.sn.gnome.gtk4.internal.GdkPaintable] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -5010,12 +5010,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_status_page_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_set_child(self : Ptr[AdwStatusPage], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_status_page_set_child(self : Ptr[AdwStatusPage], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -5030,7 +5030,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
 */
-@extern def adw_status_page_set_paintable(self : Ptr[AdwStatusPage], paintable : Ptr[_root_.sn.gnome.gtk.internal.GdkPaintable]): Unit = extern
+@extern def adw_status_page_set_paintable(self : Ptr[AdwStatusPage], paintable : Ptr[_root_.sn.gnome.gtk4.internal.GdkPaintable]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-status-page.h
@@ -5055,12 +5055,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
 */
-@extern def adw_style_manager_get_display(self : Ptr[AdwStyleManager]): Ptr[_root_.sn.gnome.gtk.internal.GdkDisplay] = extern
+@extern def adw_style_manager_get_display(self : Ptr[AdwStyleManager]): Ptr[_root_.sn.gnome.gtk4.internal.GdkDisplay] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
 */
-@extern def adw_style_manager_get_for_display(display : Ptr[_root_.sn.gnome.gtk.internal.GdkDisplay]): Ptr[AdwStyleManager] = extern
+@extern def adw_style_manager_get_for_display(display : Ptr[_root_.sn.gnome.gtk4.internal.GdkDisplay]): Ptr[AdwStyleManager] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-style-manager.h
@@ -5195,7 +5195,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
 */
-@extern def adw_swipeable_get_swipe_area(self : Ptr[AdwSwipeable], navigation_direction : AdwNavigationDirection, is_drag : _root_.sn.gnome.glib.internal.gboolean, rect : Ptr[_root_.sn.gnome.gtk.internal.GdkRectangle]): Unit = extern
+@extern def adw_swipeable_get_swipe_area(self : Ptr[AdwSwipeable], navigation_direction : AdwNavigationDirection, is_drag : _root_.sn.gnome.glib.internal.gboolean, rect : Ptr[_root_.sn.gnome.gtk4.internal.GdkRectangle]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-swipeable.h
@@ -5215,7 +5215,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
 */
-@extern def adw_switch_row_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_switch_row_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-switch-row.h
@@ -5230,7 +5230,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-@extern def adw_tab_bar_get_end_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_tab_bar_get_end_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -5240,7 +5240,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-@extern def adw_tab_bar_get_extra_drag_preferred_action(self : Ptr[AdwTabBar]): _root_.sn.gnome.gtk.internal.GdkDragAction = extern
+@extern def adw_tab_bar_get_extra_drag_preferred_action(self : Ptr[AdwTabBar]): _root_.sn.gnome.gtk4.internal.GdkDragAction = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -5260,7 +5260,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-@extern def adw_tab_bar_get_start_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_tab_bar_get_start_action_widget(self : Ptr[AdwTabBar]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -5290,7 +5290,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-@extern def adw_tab_bar_set_end_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_tab_bar_set_end_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -5310,7 +5310,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-@extern def adw_tab_bar_set_start_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_tab_bar_set_start_action_widget(self : Ptr[AdwTabBar], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
@@ -5320,7 +5320,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-bar.h
 */
-@extern def adw_tab_bar_setup_extra_drop_target(self : Ptr[AdwTabBar], actions : _root_.sn.gnome.gtk.internal.GdkDragAction, types : Ptr[_root_.sn.gnome.gobject.internal.GType], n_types : _root_.sn.gnome.glib.internal.gsize): Unit = extern
+@extern def adw_tab_bar_setup_extra_drop_target(self : Ptr[AdwTabBar], actions : _root_.sn.gnome.gtk4.internal.GdkDragAction, types : Ptr[_root_.sn.gnome.gobject.internal.GType], n_types : _root_.sn.gnome.glib.internal.gsize): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
@@ -5335,7 +5335,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
 */
-@extern def adw_tab_button_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_tab_button_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-button.h
@@ -5345,7 +5345,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
 */
-@extern def adw_tab_overview_get_child(self : Ptr[AdwTabOverview]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_tab_overview_get_child(self : Ptr[AdwTabOverview]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
@@ -5360,7 +5360,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
 */
-@extern def adw_tab_overview_get_extra_drag_preferred_action(self : Ptr[AdwTabOverview]): _root_.sn.gnome.gtk.internal.GdkDragAction = extern
+@extern def adw_tab_overview_get_extra_drag_preferred_action(self : Ptr[AdwTabOverview]): _root_.sn.gnome.gtk4.internal.GdkDragAction = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
@@ -5410,12 +5410,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
 */
-@extern def adw_tab_overview_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_tab_overview_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
 */
-@extern def adw_tab_overview_set_child(self : Ptr[AdwTabOverview], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_tab_overview_set_child(self : Ptr[AdwTabOverview], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
@@ -5465,12 +5465,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-overview.h
 */
-@extern def adw_tab_overview_setup_extra_drop_target(self : Ptr[AdwTabOverview], actions : _root_.sn.gnome.gtk.internal.GdkDragAction, types : Ptr[_root_.sn.gnome.gobject.internal.GType], n_types : _root_.sn.gnome.glib.internal.gsize): Unit = extern
+@extern def adw_tab_overview_setup_extra_drop_target(self : Ptr[AdwTabOverview], actions : _root_.sn.gnome.gtk4.internal.GdkDragAction, types : Ptr[_root_.sn.gnome.gobject.internal.GType], n_types : _root_.sn.gnome.glib.internal.gsize): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_page_get_child(self : Ptr[AdwTabPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_tab_page_get_child(self : Ptr[AdwTabPage]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5620,7 +5620,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_add_page(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], parent : Ptr[AdwTabPage]): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_add_page(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], parent : Ptr[AdwTabPage]): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5630,12 +5630,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_append(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_append(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_append_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_append_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5695,7 +5695,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_get_page(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_get_page(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5705,7 +5705,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_get_pages(self : Ptr[AdwTabView]): Ptr[_root_.sn.gnome.gtk.internal.GtkSelectionModel] = extern
+@extern def adw_tab_view_get_pages(self : Ptr[AdwTabView]): Ptr[_root_.sn.gnome.gtk4.internal.GtkSelectionModel] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5725,12 +5725,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_insert(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_insert(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_insert_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_insert_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], position : CInt): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5745,12 +5745,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_prepend(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_prepend(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
 */
-@extern def adw_tab_view_prepend_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwTabPage] = extern
+@extern def adw_tab_view_prepend_pinned(self : Ptr[AdwTabView], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwTabPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-tab-view.h
@@ -5870,7 +5870,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-timed-animation.h
 */
-@extern def adw_timed_animation_new(widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], from : Double, to : Double, duration : _root_.sn.gnome.glib.internal.guint, target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
+@extern def adw_timed_animation_new(widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], from : Double, to : Double, duration : _root_.sn.gnome.glib.internal.guint, target : Ptr[AdwAnimationTarget]): Ptr[AdwAnimation] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-timed-animation.h
@@ -5930,7 +5930,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_get_custom_title(self : Ptr[AdwToast]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_toast_get_custom_title(self : Ptr[AdwToast]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -5975,7 +5975,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
 */
-@extern def adw_toast_overlay_get_child(self : Ptr[AdwToastOverlay]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_toast_overlay_get_child(self : Ptr[AdwToastOverlay]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
@@ -5985,12 +5985,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
 */
-@extern def adw_toast_overlay_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_toast_overlay_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast-overlay.h
 */
-@extern def adw_toast_overlay_set_child(self : Ptr[AdwToastOverlay], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_toast_overlay_set_child(self : Ptr[AdwToastOverlay], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -6020,7 +6020,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
 */
-@extern def adw_toast_set_custom_title(self : Ptr[AdwToast], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_toast_set_custom_title(self : Ptr[AdwToast], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toast.h
@@ -6055,12 +6055,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
 */
-@extern def adw_toolbar_view_add_bottom_bar(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_toolbar_view_add_bottom_bar(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
 */
-@extern def adw_toolbar_view_add_top_bar(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_toolbar_view_add_top_bar(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
@@ -6075,7 +6075,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
 */
-@extern def adw_toolbar_view_get_content(self : Ptr[AdwToolbarView]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_toolbar_view_get_content(self : Ptr[AdwToolbarView]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
@@ -6115,12 +6115,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
 */
-@extern def adw_toolbar_view_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_toolbar_view_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
 */
-@extern def adw_toolbar_view_remove(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_toolbar_view_remove(self : Ptr[AdwToolbarView], widget : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
@@ -6130,7 +6130,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
 */
-@extern def adw_toolbar_view_set_content(self : Ptr[AdwToolbarView], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_toolbar_view_set_content(self : Ptr[AdwToolbarView], content : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-toolbar-view.h
@@ -6160,27 +6160,27 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add_named(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add_named(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], name : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString, title : CString): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add_titled(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], name : CString, title : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_add_titled_with_icon(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget], name : CString, title : CString, icon_name : CString): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_add_titled_with_icon(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget], name : CString, title : CString, icon_name : CString): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_get_child_by_name(self : Ptr[AdwViewStack], name : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_stack_get_child_by_name(self : Ptr[AdwViewStack], name : CString): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6190,12 +6190,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_get_page(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Ptr[AdwViewStackPage] = extern
+@extern def adw_view_stack_get_page(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Ptr[AdwViewStackPage] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_get_pages(self : Ptr[AdwViewStack]): Ptr[_root_.sn.gnome.gtk.internal.GtkSelectionModel] = extern
+@extern def adw_view_stack_get_pages(self : Ptr[AdwViewStack]): Ptr[_root_.sn.gnome.gtk4.internal.GtkSelectionModel] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6210,7 +6210,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_get_visible_child(self : Ptr[AdwViewStack]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_stack_get_visible_child(self : Ptr[AdwViewStack]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6220,7 +6220,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_stack_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6230,7 +6230,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_page_get_child(self : Ptr[AdwViewStackPage]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_stack_page_get_child(self : Ptr[AdwViewStackPage]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6320,7 +6320,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_remove(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_view_stack_remove(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6335,7 +6335,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
 */
-@extern def adw_view_stack_set_visible_child(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_view_stack_set_visible_child(self : Ptr[AdwViewStack], child : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-stack.h
@@ -6360,7 +6360,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-bar.h
 */
-@extern def adw_view_switcher_bar_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_switcher_bar_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-bar.h
@@ -6390,7 +6390,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher.h
 */
-@extern def adw_view_switcher_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_switcher_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-enums.h
@@ -6440,7 +6440,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
 */
-@extern def adw_view_switcher_title_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_view_switcher_title_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-view-switcher-title.h
@@ -6470,7 +6470,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
-@extern def adw_window_get_content(self : Ptr[AdwWindow]): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_window_get_content(self : Ptr[AdwWindow]): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
@@ -6495,12 +6495,12 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
-@extern def adw_window_new(): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_window_new(): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window.h
 */
-@extern def adw_window_set_content(self : Ptr[AdwWindow], content : Ptr[_root_.sn.gnome.gtk.internal.GtkWidget]): Unit = extern
+@extern def adw_window_set_content(self : Ptr[AdwWindow], content : Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget]): Unit = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
@@ -6520,7 +6520,7 @@ import _root_.scala.scalanative.*
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
 */
-@extern def adw_window_title_new(title : CString, subtitle : CString): Ptr[_root_.sn.gnome.gtk.internal.GtkWidget] = extern
+@extern def adw_window_title_new(title : CString, subtitle : CString): Ptr[_root_.sn.gnome.gtk4.internal.GtkWidget] = extern
 
 /**
  * [bindgen] header: /usr/include/libadwaita-1/adw-window-title.h
