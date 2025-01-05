@@ -14,7 +14,7 @@ import scalanative.unsafe.*
 
       gtk_window_set_title(
         window.asInstanceOf[Ptr[GtkWindow]],
-        c"Hello from Scala Native"
+        c"Hello from Scala Native 0.5"
       )
       gtk_window_set_default_size(window.asPtr[GtkWindow], 200, 200)
 
@@ -28,7 +28,7 @@ import scalanative.unsafe.*
 
       val printHello = CFuncPtr2.fromScalaFunction {
         (widget: Ptr[GtkWidget], data: gpointer) =>
-          g_print(c"Yoooo, click!".asGString)
+          g_print(c"Click! I come from the 0.5 version of Gtk examples\n".asGString)
       }
 
       g_signal_connect(button, c"clicked", printHello)
