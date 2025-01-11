@@ -99,9 +99,12 @@ jobs:
       - name: Regenerate raw bindings in docker
         run: sbt generateRawBindings && git diff
 
-
       - name: Regenerate XSD schema
         run: sbt generateIntrospectionSchema && git diff
+
+      - name: Regenerate XSD schema
+        run: sbt generateFluentBindings && git diff
+
 
   mergify-build-checkpoint:
     runs-on: ubuntu-24.04

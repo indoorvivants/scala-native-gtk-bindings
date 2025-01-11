@@ -48,7 +48,6 @@ end config
     case Right(value) =>
       val root = os.Path(value.girFiles.toAbsolutePath())
       val target = os.Path(value.out.toAbsolutePath())
-      os.makeDir.all(target)
       val includeResolver = IncludeResolver(root.toNIO)
       val reader = Reader(includeResolver)
 
@@ -69,12 +68,20 @@ end config
 
       val nonEmptyFiles = List.newBuilder[os.Path]
 
+      val createTarget = 
+        var created = false
+        () => 
+          if !created then 
+            os.makeDir.all(target)
+            created = true
+
       streams
         .renderMapping()
         .foreach: (relative, contents) =>
           val filePath = target / relative
           if contents.trim.nonEmpty then
             scribe.debug(s"Rendering ${relative}")
+            createTarget()
             os.write.over(filePath, contents)
             nonEmptyFiles += filePath
           else scribe.warn(s"Filepath $filePath was empty, not writing to disk")

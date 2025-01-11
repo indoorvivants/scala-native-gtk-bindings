@@ -207,7 +207,9 @@ lazy val gobject =
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent()),
-        }
+        },
+      girModuleName := "gobject-2.0",
+      withFluentBindings
     )
 
 lazy val pango =
@@ -229,8 +231,7 @@ lazy val pango =
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
         },
-      girModuleName := "pango-1.0"
-      // withFluentBindings
+      girModuleName := "pango-1.0",
     )
 
 lazy val gdkpixbuf =
@@ -342,7 +343,9 @@ lazy val harfbuzz =
           .withNoLocation(true)
           .withMultiFile(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())
-      }
+      },
+      girModuleName := "harfbuzz-0.0",
+      withFluentBindings
     )
 
 def generateXsd(

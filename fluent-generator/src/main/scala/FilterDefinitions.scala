@@ -9,14 +9,14 @@ def filterDefinitions(
     method: Option[Method] = None,
     constructor: Option[Constructor] = None
 ): Option[String] =
-  val isiFltered = cls
-    .map(_.name)
-    .collect:
-      case "Application" => None
-      case other         => Some(s"skipping $other")
-    .flatten
+  // val isiFltered = cls
+  //   .map(_.name)
+  //   .collect:
+  //     case "Application" => None
+  //     case other         => Some(s"skipping $other")
+  //   .flatten
 
-  return isiFltered
+  // return isiFltered
 
   def isNamespace(name: String) =
     namespace.exists(_.name.exists(n => n.equalsIgnoreCase(name)))
