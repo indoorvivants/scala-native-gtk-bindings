@@ -88,6 +88,8 @@ jobs:
 
       - uses: coursier/cache-action@v6
 
+      - uses: docker/setup-buildx-action@v1
+
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
@@ -95,6 +97,12 @@ jobs:
           cache: sbt
 
       - uses: sbt/setup-sbt@v1
+
+      - uses: docker/build-push-action@v2
+        with:
+          context: .
+          cache-from: type=gha
+          cache-to: type=gha, mode=max
 
       - name: Regenerate raw bindings in docker
         run: sbt generateRawBindings && git diff

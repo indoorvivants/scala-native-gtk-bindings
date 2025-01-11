@@ -73,7 +73,7 @@ lazy val root = project
       val destination =
         (`gir-schema` / baseDirectory).value / "src/main/relaxng" / "gir.rnc"
 
-      streams.value.log.info(s"Downloading ${rncURL} into $destination")
+      sLog.value.info(s"Downloading ${rncURL} into $destination")
 
       import sbt.io.*
       Using.urlInputStream(new java.net.URI(rncURL).toURL) { inputStream =>
@@ -231,7 +231,7 @@ lazy val pango =
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
         },
-      girModuleName := "pango-1.0",
+      girModuleName := "pango-1.0"
     )
 
 lazy val gdkpixbuf =
