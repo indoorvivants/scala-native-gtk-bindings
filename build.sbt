@@ -46,6 +46,7 @@ lazy val root = project
     `gir-schema`,
     girepository
   )
+  .enablePlugins(sbtdocker.DockerPlugin)
   .settings(
     publish / skip := true,
     publishLocal / skip := true,
@@ -54,7 +55,33 @@ lazy val root = project
         "local-cache",
         (ThisBuild / baseDirectory).value / ".remote-cache"
       )
-    )
+    ),
+    docker / dockerfile := NativeDockerfile(
+      (ThisBuild / baseDirectory).value / "Dockerfile"
+    ),
+    docker / imageNames := Seq(ImageName("scala-native-gtk/generator:latest")),
+    generateRawBindings := {
+      import sys.process.*
+      val imageId = docker.value
+      val cwd = (ThisBuild / baseDirectory).value
+      val cmd = s"""docker run --rm -v $cwd:/source/tmp $imageId""".!!
+    },
+    generateIntrospectionSchema := {
+      val rncURL =
+        "https://gitlab.gnome.org/GNOME/gobject-introspection/-/raw/main/docs/gir-1.2.rnc"
+
+      val destination =
+        (`gir-schema` / baseDirectory).value / "src/main/relaxng" / "gir.rnc"
+
+      sLog.value.info(s"Downloading ${rncURL} into $destination")
+
+      import sbt.io.*
+      Using.urlInputStream(new java.net.URI(rncURL).toURL) { inputStream =>
+        IO.transfer(inputStream, destination)
+      }
+
+      (`gir-schema` / Compile / generateXsd).value
+    }
   )
 
 lazy val examples = project
@@ -125,7 +152,9 @@ lazy val glib = project
         .withNoLocation(true)
         .withMultiFile(true)
         .addExcludedSystemPath(headerPath.toPath().getParent())
-    }
+    },
+    girModuleName := "glib-2.0",
+    withFluentBindings
   )
 
 lazy val gtk4 = project
@@ -178,7 +207,9 @@ lazy val gobject =
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent()),
-        }
+        },
+      girModuleName := "gobject-2.0",
+      withFluentBindings
     )
 
 lazy val pango =
@@ -199,7 +230,8 @@ lazy val pango =
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
-        }
+        },
+      girModuleName := "pango-1.0"
     )
 
 lazy val gdkpixbuf =
@@ -222,7 +254,9 @@ lazy val gdkpixbuf =
             .withNoLocation(true)
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
-        }
+        },
+      girModuleName := "gdkpixbuf-2.0"
+      // withFluentBindings
     )
 
 lazy val cairo =
@@ -239,7 +273,9 @@ lazy val cairo =
           .withNoLocation(true)
           .withMultiFile(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())
-      }
+      },
+      girModuleName := "cairo-1.0",
+      withFluentBindings
     )
 
 lazy val graphene =
@@ -307,7 +343,9 @@ lazy val harfbuzz =
           .withNoLocation(true)
           .withMultiFile(true)
           .addExcludedSystemPath(headerPath.toPath.getParent())
-      }
+      },
+      girModuleName := "harfbuzz-0.0",
+      withFluentBindings
     )
 
 def generateXsd(
@@ -364,8 +402,8 @@ lazy val `gir-schema` = project
     Compile / scalaxb / scalaxbPackageName := "com.indoorvivants.gnome.gir_schema",
     libraryDependencies ++= List(
       "javax.xml.bind" % "jaxb-api" % "2.3.1",
-      "org.scala-lang.modules" %% "scala-parser-combinators" % "2.2.0",
-      "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
+      "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0",
+      "org.scala-lang.modules" %% "scala-xml" % "2.3.0"
     )
   )
 
@@ -467,6 +505,54 @@ def buildWithDependencies(deps: String*)(bb: Binding) = {
 }
 
 def bindingPackage(name: String) = s"sn.gnome.$name.internal"
+
+lazy val `fluent-generator` = project
+  .in(file("fluent-generator"))
+  .dependsOn(`gir-schema`)
+  .settings(scalaVersion := "3.3.3")
+  .settings(
+    libraryDependencies += "com.outr" %%% "scribe" % "3.13.0",
+    libraryDependencies += "com.indoorvivants" %%% "rendition" % "0.0.3+4-818d0ad8-SNAPSHOT",
+    libraryDependencies += "com.monovore" %%% "decline" % "2.4.1",
+    libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.9.1",
+    fork := true,
+    run / baseDirectory := (ThisBuild / baseDirectory).value
+  )
+
+lazy val girModuleName = settingKey[String]("")
+
+lazy val generateRawBindings = taskKey[Unit]("")
+lazy val generateFluentBindings = inputKey[Unit]("")
+lazy val generateIntrospectionSchema = inputKey[Unit]("")
+
+val withFluentBindings = Seq(
+  generateFluentBindings := Def.inputTaskDyn {
+    val girModule = girModuleName.value
+    val girFiles = (ThisBuild / baseDirectory).value / "gir-files"
+    val out =
+      (Compile / sourceDirectory).value / "scala" / "generated" / "fluent"
+
+    val generatedFiles =
+      (Compile / target).value / "fluent-generator" / "files.txt"
+
+    val task = InputKey[Unit]("scalafmtOnly")
+
+    Def.sequential(
+      Def
+        .taskDyn {
+          (`fluent-generator` / Compile / run)
+            .toTask(
+              s" --module $girModule --gir-files $girFiles --out $out --dump-files-list $generatedFiles"
+            )
+        },
+      Def.taskDyn {
+        val files = IO.readLines(generatedFiles)
+        (Compile / task).toTask(s" ${files.mkString(" ")}")
+      }
+    )
+
+  }.evaluated
+)
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 

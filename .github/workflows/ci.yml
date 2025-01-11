@@ -78,9 +78,40 @@ jobs:
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
 
+  gen-check:
+    name: Generator infrastructure
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - uses: coursier/cache-action@v6
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: sbt
+
+      - uses: sbt/setup-sbt@v1
+
+      - name: Regenerate XSD schema
+        run: sbt --client generateIntrospectionSchema && git diff
+
+      - name: Regenerate fluent bindings
+        run: sbt --client generateFluentBindings && git diff
+
+      - name: Regenerate raw bindings in docker
+        run: sbt --client generateRawBindings && git diff
+
+
   mergify-build-checkpoint:
     runs-on: ubuntu-24.04
-    needs: [ build ]
+    needs: [ build, gen-check ]
     steps:
       - name: I only exist to please Mergify :(
         run: echo "It's a sad existence but necessary"
