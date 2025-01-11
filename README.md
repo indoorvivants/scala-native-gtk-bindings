@@ -1,5 +1,12 @@
 # Gtk4 bindings for Scala 3 Native
 
+<!--toc:start-->
+- [Gtk4 bindings for Scala 3 Native](#gtk4-bindings-for-scala-3-native)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+<!--toc:end-->
+
 ## Installation
 
 Make sure you have Gtk4 installed:
@@ -32,3 +39,13 @@ $ scala-cli run ./examples/src/main/scala/example.scala --native --native-compil
 Bindings generated using [sn-bindgen](https://sn-bindgen.indoorvivants.com/)
 
 ![GtkBindingsDemo](https://user-images.githubusercontent.com/1052965/217792578-a4faa191-053b-48a7-aa2a-207709690fa1.gif)
+
+
+## Contributing
+
+This section is under construction
+
+- Regenerate raw bindings: `sbt generateRawBindings`
+- Regenerate XSD schema for RNC: `sbt generateIntrospectionSchema`
+  
+  This will automatically re-download the [RNC specification from GNOME](https://gitlab.gnome.org/GNOME/gobject-introspection/-/blob/main/docs/gir-1.2.rnc)

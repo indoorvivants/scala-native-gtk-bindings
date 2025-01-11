@@ -56,13 +56,31 @@ lazy val root = project
         (ThisBuild / baseDirectory).value / ".remote-cache"
       )
     ),
-    docker / dockerfile := NativeDockerfile((ThisBuild / baseDirectory).value / "Dockerfile"),
+    docker / dockerfile := NativeDockerfile(
+      (ThisBuild / baseDirectory).value / "Dockerfile"
+    ),
     docker / imageNames := Seq(ImageName("scala-native-gtk/generator:latest")),
-    regenerateRawBindings := {
+    generateRawBindings := {
       import sys.process.*
       val imageId = docker.value
       val cwd = (ThisBuild / baseDirectory).value
       val cmd = s"""docker run --rm -v $cwd:/source/tmp $imageId""".!!
+    },
+    generateIntrospectionSchema := {
+      val rncURL =
+        "https://gitlab.gnome.org/GNOME/gobject-introspection/-/raw/main/docs/gir-1.2.rnc"
+
+      val destination =
+        (`gir-schema` / baseDirectory).value / "src/main/relaxng" / "gir.rnc"
+
+      streams.value.log.info(s"Downloading ${rncURL} into $destination")
+
+      import sbt.io.*
+      Using.urlInputStream(new java.net.URI(rncURL).toURL) { inputStream =>
+        IO.transfer(inputStream, destination)
+      }
+
+      (`gir-schema` / Compile / generateXsd).value
     }
   )
 
@@ -211,7 +229,7 @@ lazy val pango =
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
         },
-      girModuleName := "pango-1.0",
+      girModuleName := "pango-1.0"
       // withFluentBindings
     )
 
@@ -236,7 +254,7 @@ lazy val gdkpixbuf =
             .withMultiFile(true)
             .addExcludedSystemPath(headerPath.toPath.getParent())
         },
-      girModuleName := "gdkpixbuf-2.0",
+      girModuleName := "gdkpixbuf-2.0"
       // withFluentBindings
     )
 
@@ -381,8 +399,8 @@ lazy val `gir-schema` = project
     Compile / scalaxb / scalaxbPackageName := "com.indoorvivants.gnome.gir_schema",
     libraryDependencies ++= List(
       "javax.xml.bind" % "jaxb-api" % "2.3.1",
-      "org.scala-lang.modules" %% "scala-parser-combinators" % "2.2.0",
-      "org.scala-lang.modules" %% "scala-xml" % "2.1.0"
+      "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0",
+      "org.scala-lang.modules" %% "scala-xml" % "2.3.0"
     )
   )
 
@@ -500,9 +518,9 @@ lazy val `fluent-generator` = project
 
 lazy val girModuleName = settingKey[String]("")
 
-lazy val regenerateRawBindings = taskKey[Unit]("")
-
+lazy val generateRawBindings = taskKey[Unit]("")
 lazy val generateFluentBindings = inputKey[Unit]("")
+lazy val generateIntrospectionSchema = inputKey[Unit]("")
 
 val withFluentBindings = Seq(
   generateFluentBindings := Def.inputTaskDyn {

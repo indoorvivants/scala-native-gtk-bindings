@@ -19,9 +19,6 @@
     </xs:annotation>
   </xs:attribute>
   <xs:element name="include">
-    <xs:annotation>
-      <xs:documentation>Dependant C header file which should be included in C programs</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string">
         <xs:annotation>

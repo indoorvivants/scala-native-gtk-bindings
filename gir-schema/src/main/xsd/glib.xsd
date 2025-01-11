@@ -77,13 +77,11 @@
     </xs:simpleType>
   </xs:attribute>
   <xs:element name="boxed">
-    <xs:annotation>
-      <xs:documentation>Boxed type (wrapper to opaque C structures registered by the type system)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
         <xs:element ref="core:function"/>
+        <xs:element ref="core:function-inline"/>
       </xs:choice>
       <xs:attributeGroup ref="core:Info.attrs"/>
       <xs:attribute name="name" use="required" form="qualified" type="xs:string">
@@ -124,9 +122,6 @@
     </xs:annotation>
   </xs:attribute>
   <xs:element name="signal">
-    <xs:annotation>
-      <xs:documentation>A signal as defined in the GObject system (https://docs.gtk.org/gobject/concepts.html#signals)</xs:documentation>
-    </xs:annotation>
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:group ref="core:Info.elements"/>
@@ -202,6 +197,21 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
+  <xs:attribute name="async-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The name of the asynchronous version of this callable</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="sync-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The name of the synchronous version of this callable</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+  <xs:attribute name="finish-func" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The name of the callable which finishes the asynchronuos operation of this function</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
   <xs:attribute name="set-property" type="xs:string">
     <xs:annotation>
       <xs:documentation>The GObject property that is set by this method</xs:documentation>
